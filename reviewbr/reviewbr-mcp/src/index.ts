@@ -29,7 +29,7 @@ const dataService = new DataService();
 const pubmedService = new PubMedService();
 
 const server = new McpServer({
-    name: "mcp-repos-br",
+    name: "reviewbr-mcp",
     version: "1.0.0",
 });
 
