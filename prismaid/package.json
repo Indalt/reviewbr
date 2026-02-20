@@ -1,0 +1,33 @@
+{
+  "name": "prismaid",
+  "version": "1.0.0",
+  "description": "prismAId offers a suite of tools using generative AI models to streamline systematic reviews of scientific literature.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/open-and-sustainable/prismaid.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/open-and-sustainable/prismaid/issues"
+  },
+  "homepage": "https://github.com/open-and-sustainable/prismaid#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "commander": "^14.0.3",
+    "cors": "^2.8.6",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  }
+}

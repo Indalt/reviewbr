@@ -1,0 +1,1815 @@
+{
+  "query": "caju",
+  "timestamp": "2026-02-15T02:47:26.043Z",
+  "strategy": "exhaustive-mcp-repos-br",
+  "total_results": 140,
+  "results": [
+    {
+      "repo_id": "BR-FED-0001",
+      "repo_name": "Repositório Institucional da UFBA",
+      "title": "DE QUINTAIS, SÍTIOS E FAZENDAS: POR UMA ETNOGRAFIA DA CAJUCULTURA DE ALTOS, PIAUÍ",
+      "url": "https://repositorio.ufba.br/handle/ri/26084",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0001",
+      "repo_name": "Repositório Institucional da UFBA",
+      "title": "O desenvolvimento na Guiné-Bissau e os problemas ambientais: contexto e atuação local no caso do Parque Natural das Lagoas de Cufada",
+      "url": "https://repositorio.ufba.br/handle/ri/42648",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0001",
+      "repo_name": "Repositório Institucional da UFBA",
+      "title": "O desenvolvimento na Guiné-Bissau e os problemas ambientais: contexto e atuação local no caso do Parque Natural das Lagoas de Cufada.",
+      "url": "https://repositorio.ufba.br/handle/ri/42230",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0003",
+      "repo_name": "Repositório Institucional da UFSC",
+      "title": "Valorização do resíduo do pseudofruto de caju-de-árvore-do-cerrado (Anacardium othonianum Rizz.): caracterização físico-química, composição fenólica e bioacessibilidade in vitro",
+      "url": "https://repositorio.ufsc.br/handle/123456789/256565",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0003",
+      "repo_name": "Repositório Institucional da UFSC",
+      "title": "Otimização da extração assistida por ultrassom de compostos fenólicos da película de castanha de caju (Anacardium occidentale L.)",
+      "url": "https://repositorio.ufsc.br/handle/123456789/251285",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0003",
+      "repo_name": "Repositório Institucional da UFSC",
+      "title": "Potencial tecnológico e nutricional do bagaço do pseudofruto de caju-de-árvore-do-cerrado (Anacardium othonianum Rizz.)",
+      "url": "https://repositorio.ufsc.br/handle/123456789/226009",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0004",
+      "repo_name": "Repositório Institucional da UFC",
+      "title": "Uma avaliação das agroindústrias do Nordeste:  o caso da cajucultura",
+      "url": "https://repositorio.ufc.br/handle/riufc/63114",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0004",
+      "repo_name": "Repositório Institucional da UFC",
+      "title": "Dimensão do mercado de refrigerante de Caju",
+      "url": "https://repositorio.ufc.br/handle/riufc/65353",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0004",
+      "repo_name": "Repositório Institucional da UFC",
+      "title": "Culinária em Pacajus – Ceará: a carne de caju com suas variedades e opções",
+      "url": "https://repositorio.ufc.br/handle/riufc/41170",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0006",
+      "repo_name": "Repositório Institucional da UFS",
+      "title": "Vacinação pública contra o Papilomavirus Humano no Brasil",
+      "url": "https://ri.ufs.br/jspui/handle/riufs/20850",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2025-01-23T13:56:29Z",
+      "type": "Monografia",
+      "creators": [
+        "Santos, José Gilmar Costa"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0006",
+      "repo_name": "Repositório Institucional da UFS",
+      "title": "Intervenções de enfermagem em saúde mental durante o puerpério: uma revisão integrativa",
+      "url": "https://ri.ufs.br/jspui/handle/riufs/18190",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2023-08-30T12:03:06Z",
+      "type": "Monografia",
+      "creators": [
+        "Mendonça, Amanda Almeida",
+        "Ramos, Danielle Rolemberg da Silva"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0007",
+      "repo_name": "Repositório Institucional da UFPA",
+      "title": "Subsídios à gestão da Reserva Extrativista Marinha de Soure-Marajó-Pará: uma análise dos problemas e conflitos socioambientais",
+      "url": "https://repositorio.ufpa.br/handle/2011/9777",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2012-02-16",
+      "type": "Dissertação",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0007",
+      "repo_name": "Repositório Institucional da UFPA",
+      "title": "Estudo da estabilidade de polpas de frutas tropicais mistas congeladas utilizadas na formulação de bebidas",
+      "url": "https://repositorio.ufpa.br/handle/2011/11222",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2017-05",
+      "type": "Artigo de Periódico",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0007",
+      "repo_name": "Repositório Institucional da UFPA",
+      "title": "Ações e políticas do Estado e da sociedade acerca da geração de renda na Reserva Extrativista Marinha de Soure/Marajó-PA",
+      "url": "https://repositorio.ufpa.br/handle/2011/1965",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2006-12-26",
+      "type": "Dissertação",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0008",
+      "repo_name": "Repositório Institucional da UFT",
+      "title": "Óleo essencial de Caju (Anacardium Occidentale l.) na fermentação  ruminal in vitro de dietas com diferentes relações volumoso:  concentrado",
+      "url": "http://repositorio.uft.edu.br/handle/11612/6804",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0008",
+      "repo_name": "Repositório Institucional da UFT",
+      "title": "Aproveitamento do carvão ativado obtido da casca de castanha de caju no processo de tratamento de águas cinzas",
+      "url": "http://repositorio.uft.edu.br/handle/11612/3312",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0008",
+      "repo_name": "Repositório Institucional da UFT",
+      "title": "Obtenção e aplicação do líquido extraído da casca da castanha do caju (Anacardium Occidentale L.) como antioxidante para o biodiesel",
+      "url": "http://repositorio.uft.edu.br/handle/11612/5282",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0009",
+      "repo_name": "Repositório Institucional da UFES",
+      "title": "Extrato pirolenhoso na alimentação de codornas japonesas em postura",
+      "url": "https://repositorio.ufes.br/handle/10/11197",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2019-02-28",
+      "type": "masterThesis",
+      "creators": [
+        "Nunes, Thaís de Souza."
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0009",
+      "repo_name": "Repositório Institucional da UFES",
+      "title": "Extrato pirolenhoso na alimentação de codornas japonesas em postura",
+      "url": "https://repositorio.ufes.br/handle/10/13676",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2019-02-28",
+      "type": "masterThesis",
+      "creators": [
+        "Nunes, Thais de Souza"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0009",
+      "repo_name": "Repositório Institucional da UFES",
+      "title": "Alimentação saudável no cotidiano de uma quarentena (e além)",
+      "url": "https://repositorio.ufes.br/handle/10/11497",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "book",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0010",
+      "repo_name": "Repositório Institucional da UFU",
+      "title": "Produção de biossurfactante de baixo custo a partir de resíduos agroindustriais",
+      "url": "https://repositorio.ufu.br/handle/123456789/21648",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0010",
+      "repo_name": "Repositório Institucional da UFU",
+      "title": "Uma contribuição à pirólise de biomassa: avaliação de alguns resíduos\nda agroindústria como fonte de energia alternativa",
+      "url": "https://repositorio.ufu.br/handle/123456789/15138",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0010",
+      "repo_name": "Repositório Institucional da UFU",
+      "title": "Coliformes totais e termotolerantes, bolores e leveduras e bactérias mesófilas em polpas de frutas congeladas comercializadas na cidade de Uberlândia-MG",
+      "url": "https://repositorio.ufu.br/handle/123456789/22936",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0011",
+      "repo_name": "Repositório Institucional da UFPB",
+      "title": "CONTROLE DE QUALIDADE FÍSICO-QUÍMICO DE SUCOS CONCENTRADOS SABOR CAJU",
+      "url": "https://repositorio.ufpb.br/jspui/handle/123456789/36187",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0011",
+      "repo_name": "Repositório Institucional da UFPB",
+      "title": "Obtenção da farinha do pedúnculo de caju e seu emprego na formulação de bolo rico em fibras",
+      "url": "https://repositorio.ufpb.br/jspui/handle/123456789/15876",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0011",
+      "repo_name": "Repositório Institucional da UFPB",
+      "title": "ASPECTOS DA PRODUÇÃO E ANÁLISE DA AGUARDENTE DE CAJU",
+      "url": "https://repositorio.ufpb.br/jspui/handle/123456789/27165",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0013",
+      "repo_name": "Repositório Institucional da UFMG",
+      "title": "Digestão e desempenho de vacas leiteiras consumindo dietas com castanha de caju",
+      "url": "https://repositorio.ufmg.br/handle/1843/31773",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2007-03-30",
+      "type": "Tese de doutorado",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0013",
+      "repo_name": "Repositório Institucional da UFMG",
+      "title": "Cajuzinho-do-cerrado: caracterização física, química e nutricional",
+      "url": "https://repositorio.ufmg.br/handle/1843/76920",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2023",
+      "type": "Capítulo de livro",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0013",
+      "repo_name": "Repositório Institucional da UFMG",
+      "title": "Aplicação de frutos do cerrado na elaboração de barra de cereal: caracterização físico-química e sensorial",
+      "url": "https://repositorio.ufmg.br/handle/1843/83598",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2024",
+      "type": "Artigo de evento",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0016",
+      "repo_name": "Repositório Institucional da FURG",
+      "title": "Oyster Mushrooms Species Differentation Through Molecular Markers RAPD",
+      "url": "https://repositorio.furg.br/handle/1/4475",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2008",
+      "type": "article",
+      "creators": [
+        "Fonseca, Gustavo Graciano",
+        "Gandra, Eliezer Avila",
+        "Sclowitz, Liana Fossati",
+        "Corrêa, Ana Paula Antunes",
+        "Costa, Jorge Alberto Vieira",
+        "Levy, Jose Alberto"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0016",
+      "repo_name": "Repositório Institucional da FURG",
+      "title": "Perfil de textura",
+      "url": "https://repositorio.furg.br/handle/1/9410",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2014",
+      "type": "lecture",
+      "creators": [
+        "Burkert, Janaina Fernandes de Medeiros"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0016",
+      "repo_name": "Repositório Institucional da FURG",
+      "title": "Avaliação econômica de uma agroindústria familiar para produção de polpa e suco de frutas",
+      "url": "https://repositorio.furg.br/handle/123456789/12361",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2024",
+      "type": "bachelorThesis",
+      "creators": [
+        "Macedo, Enêliça Ramalho"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0017",
+      "repo_name": "Repositório Institucional da UNILA",
+      "title": "Dinâmicas comerciais da castanha de caju em Guiné-Bissau: contribuições e desafios para o desenvolvimento socioeconômico do país",
+      "url": "https://dspace.unila.edu.br/handle/123456789/9157",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2025-07-21",
+      "type": "",
+      "creators": [
+        "Djau, Suaibo"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0019",
+      "repo_name": "Repositório Institucional da UFOP",
+      "title": "Efeito da adição de polpa de caju sobre as qualidades sensoriais de iogurte integral adoçado com mel de abelha.",
+      "url": "https://www.repositorio.ufop.br/handle/123456789/5578",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2014",
+      "type": "Artigo publicado em periodico",
+      "creators": [
+        "Macedo, Maiane Alves de",
+        "Salierno, Camila Carvalho Menezes",
+        "Portela, Julianne Viana Freire",
+        "Arcanjo, Stella Regina Sobral",
+        "Moura, Maria Rosiane",
+        "Oliveira, Amanda Mazza Cruz de"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0019",
+      "repo_name": "Repositório Institucional da UFOP",
+      "title": "Avaliação da qualidade biológica da proteína da farinha da semente do pequi (Caryocar brasiliense Cambess) desengordurada e suplementada com lisina em ratos (Rattus norvegicus).",
+      "url": "https://www.repositorio.ufop.br/handle/123456789/11840",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2017",
+      "type": "Dissertacao",
+      "creators": [
+        "Fagundes, Miliane Martins de Andrade"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0019",
+      "repo_name": "Repositório Institucional da UFOP",
+      "title": "Avaliação da estabilidade de geleias de amora-preta acondicionadas em diferentes embalagens.",
+      "url": "https://www.repositorio.ufop.br/handle/123456789/9012",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2016",
+      "type": "Artigo publicado em periodico",
+      "creators": [
+        "Carneiro, Ludmilla Magalhães",
+        "Pires, Caroline Roberta Freitas",
+        "Lima, Juliana Pinto de",
+        "Pereira, Patrícia Aparecida Pimenta",
+        "Lima, Luiz Carlos de Oliveira"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0020",
+      "repo_name": "Guaiaca - Repositório Institucional",
+      "title": "Cultivo de Lentinus sajor-caju (Fr.) Fr. [=Pleurotus sajor-caju (Fr.) Singer] e Pleurotus spp. em diferentes substratos",
+      "url": "https://guaiaca.ufpel.edu.br/handle/123456789/2410",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0020",
+      "repo_name": "Guaiaca - Repositório Institucional",
+      "title": "Análise química preliminar das espécies Anacardium giganteum W. Hancock Ex Engler e Eucalyptus tereticornis Smith para produção de compósitos",
+      "url": "https://guaiaca.ufpel.edu.br/handle/prefix/18743",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0020",
+      "repo_name": "Guaiaca - Repositório Institucional",
+      "title": "Revestimentos à base de amido na conservação pós-colheita de pedúnculos de caju anão precoce CCP-76 e goiabas Paluma",
+      "url": "https://guaiaca.ufpel.edu.br/handle/prefix/4535",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0022",
+      "repo_name": "Repositório Institucional da Unifesp",
+      "title": "Determinação da teor de proteínas e da concentração total e concentração bioacessível de Fe e Zn em castanha de caju (Anacardium ocidentale L.)",
+      "url": "https://repositorio.unifesp.br/handle/11600/52838",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2018-03-28",
+      "type": "info:eu-repo/semantics/masterThesis",
+      "creators": [
+        "Xavier, Alexsandra Dias de Souza [UNIFESP]"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0022",
+      "repo_name": "Repositório Institucional da Unifesp",
+      "title": "O peso do meu coração: amor entrelaçado à raça e identidade de gênero nas letras do álbum CAJU (2024), de Liniker",
+      "url": "https://repositorio.unifesp.br/handle/11600/74771",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2025-07-24",
+      "type": "info:eu-repo/semantics/bachelorThesis",
+      "creators": [
+        "Nascimento, Louis Muller Gomes Seixas do [UNIFESP]",
+        "Muller, Louis [UNIFESP]"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0022",
+      "repo_name": "Repositório Institucional da Unifesp",
+      "title": "Desenvolvimento de procedimento analítico para determinação da concentração total e bioacessibilidade de B, Cu, Mg, Mn e Zn em castanhas.",
+      "url": "https://repositorio.unifesp.br/handle/11600/64082",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2022-05-27",
+      "type": "info:eu-repo/semantics/doctoralThesis",
+      "creators": [
+        "Santos, Marília Mayumi dos [UNIFESP]"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0023",
+      "repo_name": "Repositório Institucional da UFSCar",
+      "title": "San Tiago Dantas: ideias e rumos para a Revolução Brasileira (1929-1964)",
+      "url": "https://repositorio.ufscar.br/handle/20.500.14289/14504",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2021-03-31",
+      "type": "Tese",
+      "creators": [
+        "Ribeiro, Renato Ferreira"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0023",
+      "repo_name": "Repositório Institucional da UFSCar",
+      "title": "Ensino informatizado de leitura e de escrita: Atividade suplementar para alunos do 1º ano do Ensino Fundamental",
+      "url": "https://repositorio.ufscar.br/handle/20.500.14289/14363",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2020-12-14",
+      "type": "TCC",
+      "creators": [
+        "Souza, Lorena Fernandes"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0023",
+      "repo_name": "Repositório Institucional da UFSCar",
+      "title": "Sobrevivência e movimento pós-soltura de jacutingas (Aburria jacutinga) (Spix, 1825)  reintroduzidas na Serra da Mantiqueira",
+      "url": "https://repositorio.ufscar.br/handle/20.500.14289/19807",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2023-02-15",
+      "type": "Dissertação",
+      "creators": [
+        "Bezerra, Aline Sales"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0024",
+      "repo_name": "Repositório Institucional da UFRN",
+      "title": "Extração de óleo essencial e fixo da amêndoa da castanha de caju (Anacardium occidentale L.) e do tegumento",
+      "url": "https://repositorio.ufrn.br/handle/123456789/37175",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2019-11-29",
+      "type": "bachelorThesis",
+      "creators": [
+        "Costa, Josicléia Gabriel"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0024",
+      "repo_name": "Repositório Institucional da UFRN",
+      "title": "Desenvolvimento e caracterização de bebida alcoólica fermentada de caju obtida pelo método tradicional de elaboração de espumante",
+      "url": "https://repositorio.ufrn.br/handle/123456789/65711",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2025-07-21",
+      "type": "masterThesis",
+      "creators": [
+        "Medeiros, Alberto Augusto Bezerra de"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0024",
+      "repo_name": "Repositório Institucional da UFRN",
+      "title": "Potencial de valorização na indústria alimentícia: o aproveitamento da castanha de caju cajuí (anacardium occidentale) e a criação de amêndoas crocantes",
+      "url": "https://repositorio.ufrn.br/handle/123456789/61459",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2024-12-06",
+      "type": "bachelorThesis",
+      "creators": [
+        "Freitas, Dayvison Luan Ribeiro de"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-EST-0002",
+      "repo_name": "Repositório Institucional da Unesp",
+      "title": "Acayu: sustentabilidade na contemporaneidade : redesign da embalagem comercial do pedúnculo do caju in natura",
+      "url": "https://repositorio.unesp.br/handle/11449/156852",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2017-03-10",
+      "type": "Trabalho de conclusão de curso",
+      "creators": [
+        "Tarozzo, Marina Jardim [UNESP]"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-EST-0002",
+      "repo_name": "Repositório Institucional da Unesp",
+      "title": "Caracterização dos produtores familiares de caju, de uma associação informal, na região Noroeste do Estado de São Paulo",
+      "url": "https://repositorio.unesp.br/handle/11449/98890",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2006-10-19",
+      "type": "Dissertação de mestrado",
+      "creators": [
+        "Silva, Edicléia Aparecida da [UNESP]"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-EST-0002",
+      "repo_name": "Repositório Institucional da Unesp",
+      "title": "Comercialização de caju in natura na região noroeste do estado de São Paulo",
+      "url": "https://repositorio.unesp.br/handle/11449/27446",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2002-12-01",
+      "type": "Artigo",
+      "creators": [
+        "Petinari, Ricardo Alessandro [UNESP]",
+        "Tarsitano, Maria Aparecida Anselmo [UNESP]"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0001",
+      "repo_name": "Repositório da PUCSP",
+      "title": "Como o design de serviços e a transmídia influenciam na música pop dos anos 2020’s e nas relações parassociais entre fãs e ídolos?",
+      "url": "https://repositorio.pucsp.br/handle/handle/46405",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0001",
+      "repo_name": "Repositório da PUCSP",
+      "title": "Processo de integração da união econômica e monetária do Oeste Africano - Uemoa: vantagens da adesão da Guiné- Bissau",
+      "url": "https://repositorio.pucsp.br/handle/handle/19028",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0001",
+      "repo_name": "Repositório da PUCSP",
+      "title": "A L I (n°1): a barreira do mar esfacela Soure, Ilha de Marajó",
+      "url": "https://repositorio.pucsp.br/handle/handle/46117",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0003",
+      "repo_name": "Repositório Digital da Biblioteca da Unisinos",
+      "title": "TV Caju e TV Cidade, o conteúdo local no mercado de televisão por assinatura em Aracajú",
+      "url": "http://www.repositorio.jesuita.org.br/handle/UNISINOS/2621",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0003",
+      "repo_name": "Repositório Digital da Biblioteca da Unisinos",
+      "title": "Identificação de competências organizacionais no contexto da gestão social no terceiro setor: o caso casa da juventude padre Burnier",
+      "url": "http://www.repositorio.jesuita.org.br/handle/UNISINOS/5011",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0003",
+      "repo_name": "Repositório Digital da Biblioteca da Unisinos",
+      "title": "Manual",
+      "url": "http://www.repositorio.jesuita.org.br/handle/UNISINOS/1789",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0005",
+      "repo_name": "Repositório Digital",
+      "title": "Injustiça ambiental: um estudo de caso do bairro do Caju, Zona Portuária do Rio de Janeiro",
+      "url": "https://repositorio.fgv.br/handle/10438/13397",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2014-04-08",
+      "type": "Dissertation",
+      "creators": [
+        "Ramos, Felipe Pitaro"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0005",
+      "repo_name": "Repositório Digital",
+      "title": "Evidences of the sustainable innovation in the cashew agribusiness context in Ceará - Brazil",
+      "url": "https://repositorio.fgv.br/handle/10438/21601",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2011-10-01",
+      "type": "Article (Journal/Review)",
+      "creators": [
+        "Oliveira, Leonel Gois Lima",
+        "Ipiranga, Ana Sílvia Rocha"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0005",
+      "repo_name": "Repositório Digital",
+      "title": "Revista Acadêmica CAJU",
+      "url": "https://repositorio.fgv.br/handle/10438/36217",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2024-11",
+      "type": "Presentation",
+      "creators": [
+        "Vinci, Amanda Carolina Silva",
+        "Drummond, João Pedro",
+        "Martinelli, Luís Fernando",
+        "Palermo, Maria Luisa Basile",
+        "Rezende, Matias Falcone de",
+        "Danelon, Thomás Furtado",
+        "Santos, Tiago Henrique Cavalcanti"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-EST-0007",
+      "repo_name": "UEMA Repositório",
+      "title": "Projeto de requalificação de área urbana degradada: Praia da Ponta D'areia",
+      "url": "https://repositorio.uema.br/jspui/handle/123456789/4217",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2025-01-28T13:00:23Z",
+      "type": "Trabalho de Conclusão de Curso",
+      "creators": [
+        "Ferreira, Luciana Macedo"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-EST-0009",
+      "repo_name": "Saber Aberto",
+      "title": "Tieta(s) do agreste no Pingo do Caju",
+      "url": "https://saberaberto.uneb.br/handle/20.500.11896/8171",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2002-10-30",
+      "type": "info:eu-repo/semantics/doctoralThesis",
+      "creators": [
+        "Melo, Cíntia Bianca Liberal de"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-EST-0009",
+      "repo_name": "Saber Aberto",
+      "title": "A cadeia produtiva da castanha de caju no entorno do município de Santo Antônio de Jesus – Ba",
+      "url": "https://saberaberto.uneb.br/handle/20.500.11896/5524",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2023-07-11",
+      "type": "info:eu-repo/semantics/bachelorThesis",
+      "creators": [
+        "Lima, Anderson Oliveira"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-EST-0009",
+      "repo_name": "Saber Aberto",
+      "title": "Tungstênio: os aspectos de uma Salvador desenhada por Marcello Quintanilha",
+      "url": "https://saberaberto.uneb.br/handle/20.500.11896/5856",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2021",
+      "type": "info:eu-repo/semantics/bachelorThesis",
+      "creators": [
+        "Batista, Mailane Almeida"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-EST-0014",
+      "repo_name": "Biblioteca Digital UNIOESTE",
+      "title": "O gerenciamento de impressão no processo de nomeação do perito contábil no Paraná: uma análise a partir da dramaturgia goffmaniana",
+      "url": "https://tede.unioeste.br/handle/tede/6186",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-EST-0014",
+      "repo_name": "Biblioteca Digital UNIOESTE",
+      "title": "A influência da ambidestria na qualidade e no desempenho dos serviços prestados pelo perito contábil ao tribunal de justiça do estado do Paraná",
+      "url": "https://tede.unioeste.br/handle/tede/7021",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-EST-0014",
+      "repo_name": "Biblioteca Digital UNIOESTE",
+      "title": "Utilização da casca da castanha de caju Anarcadium occidentale L. como biossorvente de metais",
+      "url": "https://tede.unioeste.br/handle/tede/1249",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0013",
+      "repo_name": "Repositório Institucional PUC Goiás",
+      "title": "Análise da área de concentração de vestígios culturais no sítio arqueológico Cacau do Caju - Itagibá, BA",
+      "url": "https://repositorio.pucgoias.edu.br/jspui/handle/123456789/2284",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0016",
+      "repo_name": "Repositório Digital Unicesumar",
+      "title": "BENEFICIAMENTO DA PRODUÇÃO DE POLPAS DE FRUTAS EM ASSOCIAÇÃO DO SEMIÁRIDO BAIANO",
+      "url": "http://rdu.unicesumar.edu.br/handle/123456789/4822",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0016",
+      "repo_name": "Repositório Digital Unicesumar",
+      "title": "ESTABILIDADE MICROBIOLÓGICA DE BARRA DE CEREAIS ENRIQUECIDA COM RESÍDUO DA CASCA DO GRÃO-DE-BICO",
+      "url": "http://rdu.unicesumar.edu.br/handle/123456789/11492",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0016",
+      "repo_name": "Repositório Digital Unicesumar",
+      "title": "DESENVOLVIMENTO E ANÁLISE SENSORIAL DE BARRA DE CEREAIS ENRIQUECIDA COM RESÍDUO DA CASCA DO GRÃO-DE-BICO",
+      "url": "http://rdu.unicesumar.edu.br/handle/123456789/11436",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0020",
+      "repo_name": "Repositório Institucional da UCS",
+      "title": "Crescimento e capacidade de biosorção de metais por Pleurotus sajor-caju, em cultivo líquido e em cultivo sólido",
+      "url": "https://repositorio.ucs.br/handle/11338/268",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2014-05-19",
+      "type": "Tese",
+      "creators": [
+        "Silva, Stela Maris da"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0020",
+      "repo_name": "Repositório Institucional da UCS",
+      "title": "Produção de cogumelos comestíveis e fenol-oxidases de Pleurotus sajor-caju e Lentinula edodes em resíduos lignocelulósicos",
+      "url": "https://repositorio.ucs.br/handle/11338/1419",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2016-12-09",
+      "type": "Dissertação",
+      "creators": [
+        "Finimundi, Jane Maria"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0020",
+      "repo_name": "Repositório Institucional da UCS",
+      "title": "Melhoramento genético de Lentinula edodes e Pleurotus sajor-caju para aumento da atividade  extracelular de fenol-oxidases e produtividade de basidiomas",
+      "url": "https://repositorio.ucs.br/handle/11338/671",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2014-06-12",
+      "type": "Dissertação",
+      "creators": [
+        "Lipreri, Anaméli"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0022",
+      "repo_name": "Repositório Institucional da UNISC",
+      "title": "O chão do sertão em transformação : interações espaciais e reestruturação urbano-regional piauiense : uma análise da região de influência da cidade de Picos/PI.",
+      "url": "https://repositorio.unisc.br/jspui/handle/11624/2481",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0024",
+      "repo_name": "Repositório Institucional Uniso",
+      "title": "Culturas de rendimento e Insegurança Alimentar no Leste da Guine-Bissau",
+      "url": "https://comum.rcaap.pt/handle/10400.26/17416",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2014-09-04",
+      "type": "master thesis",
+      "creators": [
+        "Santos, Pedro Miguel Palma dos"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0024",
+      "repo_name": "Repositório Institucional Uniso",
+      "title": "Plásticos em ecossistemas costeiros e análise de co-gaseificação como alternativa para mitigação de seu impacto ambiental",
+      "url": "https://comum.rcaap.pt/handle/10400.26/50574",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2023-12-07",
+      "type": "master thesis",
+      "creators": [
+        "Thomé de Deus, Beatriz Corrêa"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0024",
+      "repo_name": "Repositório Institucional Uniso",
+      "title": "Empreendedorismo na Guiné-Bissau: o estudo de caso da empresa CR TRADING, SARL",
+      "url": "https://comum.rcaap.pt/handle/10400.26/50233",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2023-10-26",
+      "type": "master thesis",
+      "creators": [
+        "Cassamá, Patricia Romana Lopes"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0025",
+      "repo_name": "Memoria - Repositório Institucional",
+      "title": "Tecnologia e processamento de frutos e hortaliças",
+      "url": "http://memoria.ifrn.edu.br/handle/1044/363",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0025",
+      "repo_name": "Memoria - Repositório Institucional",
+      "title": "Composição química da silagem de sorgo com adição de bagaço de caju desidratado: matéria seca, proteína bruta, FDN e FDA",
+      "url": "http://memoria.ifrn.edu.br/handle/1044/1873",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0025",
+      "repo_name": "Memoria - Repositório Institucional",
+      "title": "Alfabeto ecológico",
+      "url": "http://memoria.ifrn.edu.br/handle/1044/1666",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Tieta(s) do agreste no Pingo do Caju",
+      "url": "https://saberaberto.uneb.br/handle/20.500.11896/8171",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Melo, Cíntia Bianca Liberal de"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Os Termos da Cultura e Industrialização do Caju",
+      "url": "https://siduece.uece.br/siduece/trabalhoAcademicoPublico.jsf?id=87218",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Pontes, Antonio Luciano"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Os termos da cultura e industrialização do caju",
+      "url": "https://siduece.uece.br/siduece/trabalhoAcademicoPublico.jsf?id=103775",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Pontes, Antonio Luciano"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0088",
+      "repo_name": "IPEA - Repositório do Conhecimento",
+      "title": "Projeto de Desenvolvimento de Agroindústria no Nordeste do Brasil : caju",
+      "url": "http://repositorio.ipea.gov.br/handle/11058/17118",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "1974",
+      "type": "Report",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0088",
+      "repo_name": "IPEA - Repositório do Conhecimento",
+      "title": "Direitos de propriedade e bem-estar: avaliação do impacto do programa de regularização fundiária na Quinta do Caju",
+      "url": "http://repositorio.ipea.gov.br/handle/11058/5088",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2011-04",
+      "type": "Journal article",
+      "creators": [
+        "Andrade, Maria Isabel de Toledo",
+        "Pero, Valéria Lúcia"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0088",
+      "repo_name": "IPEA - Repositório do Conhecimento",
+      "title": "Economias baseadas em biomas : estudo das cadeias de comercialização de produtos florestais não madeireiros na região de planejamento dos Lençóis Maranhenses",
+      "url": "http://repositorio.ipea.gov.br/handle/11058/7457",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2016",
+      "type": "Book",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0093",
+      "repo_name": "RIDI - Repositório Digital do IBICT",
+      "title": "Evolução e tendências da Ciência da Informação,  no exterior e no Brasil: quadro comparativo a partir de pesquisas históricas e empíricas",
+      "url": "http://repositorio.ibict.br/handle/123456789/64",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0093",
+      "repo_name": "RIDI - Repositório Digital do IBICT",
+      "title": "Entre reconhecíveis e irreconhecíveis: aspectos políticos, econômicos e éticos da adoção de tecnologias de reconhecimento facial no Brasil",
+      "url": "http://repositorio.ibict.br/handle/123456789/1412",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0093",
+      "repo_name": "RIDI - Repositório Digital do IBICT",
+      "title": "Informação das terras do Brasil : a constituição dos saberes agrários brasileiros: um fenômeno em transmutação no Estado monárquico português",
+      "url": "http://repositorio.ibict.br/handle/123456789/254",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0094",
+      "repo_name": "ENAP - Repositório Institucional",
+      "title": "A educação digital como instrumento de desenvolvimento local e aceleradora dos Objetivos do Desenvolvimento Sustentável",
+      "url": "http://repositorio.enap.gov.br/handle/1/4958",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0094",
+      "repo_name": "ENAP - Repositório Institucional",
+      "title": "Assistente virtual agro: aplicação de machine learning na classificação de temas e culturas como base para a criação de  um sistema virtual",
+      "url": "http://repositorio.enap.gov.br/handle/1/6765",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0094",
+      "repo_name": "ENAP - Repositório Institucional",
+      "title": "Ilha universitária",
+      "url": "http://repositorio.enap.gov.br/handle/1/8458",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0095",
+      "repo_name": "Biblioteca Digital do Senado Federal",
+      "title": "Em Icapuí, aulas só depois de colher o caju",
+      "url": "http://www2.senado.gov.br/bdsf/handle/id/761455",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0095",
+      "repo_name": "Biblioteca Digital do Senado Federal",
+      "title": "Caju e o poder do MDB",
+      "url": "http://www2.senado.gov.br/bdsf/handle/id/547488",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0095",
+      "repo_name": "Biblioteca Digital do Senado Federal",
+      "title": "A moral do caju",
+      "url": "http://www2.senado.gov.br/bdsf/handle/id/412145",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0098",
+      "repo_name": "Livro Aberto - IBICT",
+      "title": "Guia de fontes de informação em tecnologias apropriadas",
+      "url": "http://livroaberto.ibict.br/handle/123456789/1005",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0098",
+      "repo_name": "Livro Aberto - IBICT",
+      "title": "Agenda de convergência das ações de CT & I para inclusão social: Rio Grande do Norte",
+      "url": "http://livroaberto.ibict.br/handle/123456789/675",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0098",
+      "repo_name": "Livro Aberto - IBICT",
+      "title": "Quadro de atores selecionados no Sistema Nacional de Ciência, Tecnologia e Inovação: Instituições de CT&I.",
+      "url": "http://livroaberto.ibict.br/handle/123456789/662",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0099",
+      "repo_name": "Pantheon - Repositório UFRJ",
+      "title": "Tendências tecnológicas das aplicações do líquido da casca da castanha de caju",
+      "url": "https://pantheon.ufrj.br/handle/11422/21147",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0099",
+      "repo_name": "Pantheon - Repositório UFRJ",
+      "title": "Avaliação de parâmetros físico-químicos de cor e rotulagem em néctares e sucos concentrados de caju",
+      "url": "https://pantheon.ufrj.br/handle/11422/20062",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0099",
+      "repo_name": "Pantheon - Repositório UFRJ",
+      "title": "Estudo de contaminação química e avaliação de risco à saúde de  crianças por metais pesados em solos do bairro do Caju, Rio de Janeiro (RJ): uma análise  dos impactos por atividades antrópicas",
+      "url": "https://pantheon.ufrj.br/handle/11422/16452",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0100",
+      "repo_name": "Manancial - UFSM",
+      "title": "Produção de ácido hialurônico cosmético via rota biotecnológica a partir do bagaço de caju",
+      "url": "http://repositorio.ufsm.br/handle/1/25071",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0100",
+      "repo_name": "Manancial - UFSM",
+      "title": "Determinantes das exportações de castanha de caju da Guiné-Bissau (1986-2011): uma análise sob a ótica do modelo de gravidade de Bergstrand",
+      "url": "http://repositorio.ufsm.br/handle/1/6626",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0100",
+      "repo_name": "Manancial - UFSM",
+      "title": "Uso de óleos funcionais em substituição a antibióticos  ionóforos na nutrição de ruminantes: estudo meta-analítico",
+      "url": "http://repositorio.ufsm.br/handle/1/21130",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0101",
+      "repo_name": "Repositório UFJF",
+      "title": "Valorização dos resíduos oriundos do processamento de extrato hidrossolúvel de castanha de caju (Anacardium occidentale L.): produção, caracterização e aplicação da farinha em brownies",
+      "url": "https://repositorio.ufjf.br/jspui/handle/ufjf/20224",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0101",
+      "repo_name": "Repositório UFJF",
+      "title": "Plásticos em ecossistemas costeiros e análise da co-gaseificação como alternativa para mitigação de seu impacto ambiental",
+      "url": "https://repositorio.ufjf.br/jspui/handle/ufjf/16476",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0101",
+      "repo_name": "Repositório UFJF",
+      "title": "Desenvolvimento de biosubstratos transparentes para a aplicação em diodos orgânicos emissores de luz flexíveis",
+      "url": "https://repositorio.ufjf.br/jspui/handle/ufjf/11835",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0104",
+      "repo_name": "Acervo Digital UFPR",
+      "title": "Entraves para o desenvolvimento da cadeia produtiva do  caju : análise histórica e perspectivas de futuro",
+      "url": "http://acervodigital.ufpr.br/jspui/handle/1884/87644",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0104",
+      "repo_name": "Acervo Digital UFPR",
+      "title": "Projeto de comercialização de castanhas de caju em Santa Catarina : análise de cenário, objetivos e metas, análise estratégica",
+      "url": "http://acervodigital.ufpr.br/jspui/handle/1884/74954",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0104",
+      "repo_name": "Acervo Digital UFPR",
+      "title": "Análise da viabilidade econômica, no cultivo dos novos clones de cajueiro anão em sistema de plantio de sequeiro em empreendimentos patronais e familiares no estado do Ceará",
+      "url": "http://acervodigital.ufpr.br/jspui/handle/1884/52828",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0105",
+      "repo_name": "Repositório UFRA",
+      "title": "O cajueiro (Anacardium occidentale l) e suas possibilidades culturais no litoral paraense",
+      "url": "http://repositorio.ufra.edu.br/jspui/handle/123456789/356",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0105",
+      "repo_name": "Repositório UFRA",
+      "title": "Análise econômica de sistemas agroflorestais e sua contribuição para a renda familiar em estabelecimentos agrícolas familiares, São Domingos do Araguaia-PA.",
+      "url": "http://repositorio.ufra.edu.br/jspui/handle/123456789/1894",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0105",
+      "repo_name": "Repositório UFRA",
+      "title": "Valoração e sustentabilidade da castanha-do brasil na Amazônia",
+      "url": "http://repositorio.ufra.edu.br/jspui/handle/123456789/304",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0106",
+      "repo_name": "Repositório UFERSA",
+      "title": "Avaliação do potencial do bagaço de caju como adsorvente na remoção de corantes em efluentes industriais",
+      "url": "https://repositorio.ufersa.edu.br/handle/prefix/4254",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2019-03-13",
+      "type": "info:eu-repo/semantics/bachelorThesis",
+      "creators": [
+        "Azevedo, Paulo Henrique Alves de"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0106",
+      "repo_name": "Repositório UFERSA",
+      "title": "Produção, caracterização físico-química e análise sensorial de fermentados de caju desenvolvidos por técnicas distintas",
+      "url": "https://repositorio.ufersa.edu.br/handle/prefix/6061",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2018-04-12",
+      "type": "info:eu-repo/semantics/bachelorThesis",
+      "creators": [
+        "Neves, Waleskha Benevenuto Pinto"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0106",
+      "repo_name": "Repositório UFERSA",
+      "title": "Uso da castanha de caju na construção civil",
+      "url": "https://repositorio.ufersa.edu.br/handle/prefix/4540",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2018-04-17",
+      "type": "info:eu-repo/semantics/bachelorThesis",
+      "creators": [
+        "Felício, Ítalo Bruno Rodrigues"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0109",
+      "repo_name": "RD-UFFS",
+      "title": "Elaboração e caracterização de extratos vegetais hidrossolúveis de castanha de caju e de baru",
+      "url": "https://rd.uffs.edu.br/handle/prefix/2717",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0109",
+      "repo_name": "RD-UFFS",
+      "title": "Produção de gases “in vitro” de dietas com blend de óleos essenciais para ruminantes",
+      "url": "https://rd.uffs.edu.br/handle/prefix/4997",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0109",
+      "repo_name": "RD-UFFS",
+      "title": "Cultivo de cogumelos e a utilização de resíduos agrícolas e agroindustriais gerados no estado do Paraná",
+      "url": "https://rd.uffs.edu.br/handle/prefix/7697",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-IF-0114",
+      "repo_name": "RI-IFES",
+      "title": "Desvendando o mundo das abelhas nativas",
+      "url": "http://repositorio.ifes.edu.br/handle/123456789/3624",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2023",
+      "type": "Livro",
+      "creators": [
+        "Costa, Willian Moreira da",
+        "Nascimento, Emily Suellen Fernandes",
+        "Fraga, Felipe Bertholdi",
+        "Souza, Luceli",
+        "Oliveira, Aparecida de Fátima Madella de"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-IF-0114",
+      "repo_name": "RI-IFES",
+      "title": "Narrativas (auto)biográficas e memórias: significados e vivências de pessoas com necessidades específicas",
+      "url": "http://repositorio.ifes.edu.br/handle/123456789/5934",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2024-12-20",
+      "type": "Trabalho de conclusão de curso",
+      "creators": [
+        "Barbosa, Geovane Carlos"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-IF-0114",
+      "repo_name": "RI-IFES",
+      "title": "Abelhas",
+      "url": "http://repositorio.ifes.edu.br/handle/123456789/4766",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2024",
+      "type": "Livro",
+      "creators": [
+        "Costa, Willian Moreira da",
+        "Nascimento, Emily Suellen Fernandes",
+        "Teixeira, Isabella da Costa",
+        "Souza, Luceli de",
+        "Oliveira, Aparecida de Fátima Madella de"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0117",
+      "repo_name": "Repositório UniCEUB",
+      "title": "Redescobrindo o nordeste",
+      "url": "http://repositorio.uniceub.br/jspui/handle/235/6301",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0117",
+      "repo_name": "Repositório UniCEUB",
+      "title": "Portfólio sabores do Brasil",
+      "url": "http://repositorio.uniceub.br/jspui/handle/235/6303",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0117",
+      "repo_name": "Repositório UniCEUB",
+      "title": "Cerrado à mesa",
+      "url": "http://repositorio.uniceub.br/jspui/handle/235/8671",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0121",
+      "repo_name": "Repositório FJP",
+      "title": "Pesquisa por amostra de domicílios de Minas Gerais - PAD-MG",
+      "url": "https://repositorio.fjp.mg.gov.br/handle/123456789/3283",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2010",
+      "type": "Relatório",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0121",
+      "repo_name": "Repositório FJP",
+      "title": "As infrações da Lei nº 11.705/08: um estudo sobre a Lei Seca em Belo Horizonte/Minas Gerais",
+      "url": "https://repositorio.fjp.mg.gov.br/handle/mono/1835",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2010-11",
+      "type": "Monografia",
+      "creators": [
+        "Bastos, Sinara Araújo"
+      ],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0121",
+      "repo_name": "Repositório FJP",
+      "title": "Reassentamento urbano: um estudo de caso",
+      "url": "https://repositorio.fjp.mg.gov.br/handle/tede/327",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "2006-04-25",
+      "type": "Dissertação",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0123",
+      "repo_name": "RUBI - Casa de Rui Barbosa",
+      "title": "Caju etc.",
+      "url": "http://rubi.casaruibarbosa.gov.br/handle/20.500.11997/4674",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0123",
+      "repo_name": "RUBI - Casa de Rui Barbosa",
+      "title": "Caju e beija-flor",
+      "url": "http://rubi.casaruibarbosa.gov.br/handle/20.500.11997/4853",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0123",
+      "repo_name": "RUBI - Casa de Rui Barbosa",
+      "title": "Caju e proteínas",
+      "url": "http://rubi.casaruibarbosa.gov.br/handle/20.500.11997/5219",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0124",
+      "repo_name": "ARES - UNA-SUS",
+      "title": "Caso Vila Caju",
+      "url": "https://ares.unasus.gov.br/acervo/handle/ARES/15199",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0124",
+      "repo_name": "ARES - UNA-SUS",
+      "title": "Caso Vila Caju [Preceptoria]",
+      "url": "https://ares.unasus.gov.br/acervo/handle/ARES/15136",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0124",
+      "repo_name": "ARES - UNA-SUS",
+      "title": "Adesão ao tratamento anti-hipertensivo de idosos na Unidade Básica de Saúde de Cajueiro da Praia, Piauí",
+      "url": "https://ares.unasus.gov.br/acervo/handle/ARES/11651",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0126",
+      "repo_name": "Repositório UNILAB",
+      "title": "Economia da Guiné-Bissau: um diagnóstico sobre a comercialização da castanha de caju (2011-2019)",
+      "url": "http://www.repositorio.unilab.edu.br/jspui/handle/123456789/1794",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0126",
+      "repo_name": "Repositório UNILAB",
+      "title": "A representação social das autoridades tradicionais na região do Samba Caju em Angola",
+      "url": "http://www.repositorio.unilab.edu.br/jspui/handle/123456789/6058",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0126",
+      "repo_name": "Repositório UNILAB",
+      "title": "Vulnerabilidade ás secas: análise da produção de castanha de caju no Ceará",
+      "url": "http://www.repositorio.unilab.edu.br/jspui/handle/123456789/3431",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-FED-0128",
+      "repo_name": "Base de Dados Científicos UFPR",
+      "title": "TABELAS DE RESULTADOS DO ALINHAMENTO SEMÂNTICO",
+      "url": "https://bdc.c3sl.ufpr.br/handle/123456789/73",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    },
+    {
+      "repo_id": "BR-PRI-0132",
+      "repo_name": "Repositório CFB/CRB",
+      "title": "Boletim Eletrônico CFB n.° 029, de 04 de novembro de 2009",
+      "url": "http://repositorio.cfb.org.br/handle/123456789/277",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "",
+      "creators": [],
+      "scraped_at": "2026-02-15T02:47:26.046Z"
+    }
+  ]
+}

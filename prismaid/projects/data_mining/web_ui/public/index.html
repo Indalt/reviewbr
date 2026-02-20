@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrismAId Research Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="brand">💎 PrismAId</div>
+        <div class="nav-buttons">
+            <button class="nav-btn active" id="btn-workspace">
+                <span>⚡ Área de Trabalho</span>
+            </button>
+            <button class="nav-btn" id="btn-projects">
+                <span>📂 Projetos</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- STAGE 1: Discovery -->
+        <div id="stage-1" class="wizard-stage active">
+            <div class="glass-card">
+                <h1>Etapa 1: Descoberta e Pré-Seleção</h1>
+                <p style="color:var(--text-muted)">Defina seu termo de pesquisa e filtre o ruído inicial.</p>
+
+                <div class="search-input-group">
+                    <input type="text" id="input-research-term"
+                        placeholder="Digite seu termo de pesquisa (ex: 'Produção de Caju no Brasil')" />
+
+                    <div style="display: flex; gap: 10px; margin-top: 10px;">
+                        <input type="number" id="input-start-year" placeholder="Ano Início (ex: 2015)"
+                            style="flex:1; padding:10px; border-radius:8px; border:1px solid #444; background:#222; color:#fff;" />
+                        <input type="number" id="input-end-year" placeholder="Ano Fim (ex: 2025)"
+                            style="flex:1; padding:10px; border-radius:8px; border:1px solid #444; background:#222; color:#fff;" />
+                    </div>
+
+                    <div style="margin-top: 10px;">
+                        <button class="btn-primary" id="btn-analyze-term">Analisar Termo ✨</button>
+                    </div>
+
+                    <!-- Analysis Result Box -->
+                    <div id="analysis-result" style="display:none; margin-top: 15px;"></div>
+                </div>
+
+                <!-- AI Feedback Area -->
+                <div id="term-analysis-feedback" style="margin-bottom:20px; color:var(--warning); display:none;">
+                </div>
+
+                <!-- Repository Filter Section -->
+                <div class="filter-section" style="margin-bottom: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; cursor:pointer;"
+                        onclick="toggleFilters()">
+                        <h4 style="margin:0; color:#ddd;">🌍 Filtrar por Região/Estado (Opcional)</h4>
+                        <span id="filter-toggle-icon">▼</span>
+                    </div>
+                    <div id="repo-filters" style="display:none; margin-top:15px;">
+                        <div id="filters-loading">Carregando repositórios...</div>
+                        <div id="filters-container"
+                            style="display:grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap:10px;">
+                            <!-- Checkboxes injected by JS -->
+                        </div>
+                        <div style="margin-top:10px; font-size:0.8em; color:#666;">
+                            Selecionado: <span id="selected-states-count">Todos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display:flex; gap:10px; align-items:center;">
+                    <button class="btn-primary" id="btn-run-search" flex="1" disabled>Executar Pesquisa
+                        (MCP)</button>
+                    <button class="btn-danger" id="btn-stop-search"
+                        style="display:none; background: #d32f2f; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">🛑
+                        Parar</button>
+                </div>
+
+                <!-- Real-time Logs -->
+                <div id="search-terminal"
+                    style="display:none; background:#111; color:#0f0; padding:15px; border-radius:8px; margin-top:15px; font-family:monospace; max-height:200px; overflow-y:auto; font-size:0.9rem;">
+                    <div style="color:#666; border-bottom:1px solid #333; margin-bottom:5px;">Logs do Sistema...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Table (Hidden initially) -->
+            <div id="results-area" class="glass-card" style="display:none;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <h3>Resultados da Pesquisa</h3>
+                    <div style="color:var(--text-muted)">Encontrados: <span id="results-count">0</span> |
+                        Selecionados: <span id="count-selected" style="color:var(--success)">0</span></div>
+                </div>
+
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th width="30">✔</th>
+                            <th>Título</th>
+                            <th>Autor/Ano</th>
+                            <th>Repositório</th>
+                        </tr>
+                    </thead>
+                    <tbody id="search-results-body">
+                        <!-- Filled by JS -->
+                    </tbody>
+                </table>
+
+                <div style="margin-top:20px; text-align:right;">
+                    <button class="btn-primary" id="btn-next-step">Próximo: Protocolo e Config ➔</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STAGE 2: Protocol -->
+        <div id="stage-2" class="wizard-stage">
+            <div class="glass-card">
+                <h2>Etapa 2: Protocolo e Configuração de Ferramentas</h2>
+                <div style="display:flex; gap:20px;">
+                    <!-- Left: Protocol -->
+                    <div style="flex:1;">
+                        <h3>Protocolo PRISMA</h3>
+                        <textarea id="protocol-picos" rows="6" placeholder="A IA sugerirá o PICOS aqui..."></textarea>
+                        <button class="btn-primary" id="btn-generate-protocol" style="margin-top:10px;">Gerar
+                            Rascunho
+                            do Protocolo ✨</button>
+                    </div>
+                </div>
+
+                <div style="margin-top:20px; text-align:right;">
+                    <button class="btn-primary" id="btn-goto-stage-3">Próximo: Execução ➔</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exclusion Reason Popup (Hidden/Legacy) -->
+        <div id="exclusion-popup" class="exclusion-popup" style="display:none;">
+            <h4 style="margin:0 0 10px 0; color:#fff;">Motivo da Exclusão?</h4>
+            <div class="exclusion-options">
+                <button onclick="confirmExclusion('Out of Scope')">Fora do Escopo</button>
+                <button onclick="confirmExclusion('Wrong Document Type')">Tipo de Documento Errado</button>
+                <button onclick="confirmExclusion('Duplicate')">Duplicado</button>
+                <button onclick="confirmExclusion('Other')">Outro</button>
+            </div>
+        </div>
+
+
+
+        <!-- Project Selection Modal -->
+        <div id="project-modal" class="modal-overlay"
+            style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:1000; justify-content:center; align-items:center;">
+            <div class="glass-card" style="width:500px; max-height:80vh; overflow-y:auto; margin-top:50px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <h2 style="margin:0;">📂 Meus Projetos</h2>
+                    <button onclick="document.getElementById('project-modal').style.display='none'"
+                        style="background:none; border:none; color:#fff; font-size:1.5em; cursor:pointer;">&times;</button>
+                </div>
+                <div id="project-list" style="display:flex; flex-direction:column; gap:10px;">
+                    <!-- Filled by JS -->
+                    <div style="padding:20px; text-align:center; color:#666;">Carregando...</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

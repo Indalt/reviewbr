@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "prismaid"
+dynamic = ["version"]
+description = "PrismAId library package"
+authors = [{ name = "Riccardo Boero", email = "ribo@nilu.no" }]
+keywords = ["open science", "systematic reviews", "AI"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Information Analysis"
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "AGPL-3.0-only" }
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+homepage = "https://github.com/open-and-sustainable/prismaid"
+documentation = "https://prismaid.review/"
+repository = "https://github.com/open-and-sustainable/prismaid"
+issues = "https://github.com/open-and-sustainable/prismaid/issues"
+
+[project.optional-dependencies]
+testing = ["pytest", "pytest-cov"]
+
+[tool.hatch.version]
+source = "env"
+variable = "HATCH_VERSION"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.sdist]
+include = ["prismaid", "LICENSE"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["prismaid"]
+
+[tool.hatch.build]
+include = [
+    "prismaid/libprismaid_linux_amd64.so",
+    "prismaid/libprismaid_windows_amd64.dll",
+    "prismaid/libprismaid_darwin_arm64.dylib"
+]

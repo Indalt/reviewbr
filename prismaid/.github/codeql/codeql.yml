@@ -1,0 +1,23 @@
+name: "CodeQL config for Go"
+
+paths:
+    - "."
+paths-ignore:
+    - "docs/**"
+    - "projects/**"
+    - "julia/**"
+    - "r-package/**"
+    - "python/**"
+    - "sharedlib/**"
+
+languages: [go]
+
+query-filters:
+    - exclude:
+          id: go/redundant-assignment
+    - exclude:
+          tags: maintainability
+    - include:
+          precision: [very-high, high] # Only include high precision queries
+
+build-mode: autobuild

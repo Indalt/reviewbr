@@ -1,0 +1,567 @@
+#!/usr/bin/env node
+/**
+ * MCP Server entry point.
+ * Registers all tools, resources, and starts the stdio transport.
+ */
+
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { z } from "zod";
+import { Registry } from "./registry/loader.js";
+import { AccessStrategy } from "./access/strategy.js";
+import { SearchService } from "./services/search.js";
+import { DeduplicationService } from "./services/dedupe.js";
+import { ScreeningService } from "./services/screen.js";
+import { SnowballService } from "./services/snowball.js";
+import { DataService } from "./services/data.js";
+import { PubMedService } from "./services/pubmed.js";
+import { PrismaFlowValidator, PrismaFlowSchema } from "./services/prisma_validator.js";
+
+// ─── Initialize ───────────────────────────────────────────────
+
+const registry = Registry.loadDefault();
+const strategy = new AccessStrategy();
+const searchService = new SearchService(registry, strategy);
+const dedupeService = new DeduplicationService();
+const screeningService = new ScreeningService(process.env.GOOGLE_API_KEY ?? "");
+const snowballService = new SnowballService();
+const dataService = new DataService();
+const pubmedService = new PubMedService();
+
+const server = new McpServer({
+    name: "mcp-repos-br",
+    version: "1.0.0",
+});
+
+// ─── Resources ────────────────────────────────────────────────
+
+server.resource(
+    "registry",
+    "repos://registry",
+    { description: "Cadastro mestre de repositórios acadêmicos brasileiros" },
+    async () => ({
+        contents: [{
+            uri: "repos://registry",
+            mimeType: "application/json",
+            text: JSON.stringify(registry.getAll(), null, 2),
+        }],
+    })
+);
+
+server.resource(
+    "stats",
+    "repos://stats",
+    { description: "Estatísticas agregadas do cadastro de repositórios" },
+    async () => ({
+        contents: [{
+            uri: "repos://stats",
+            mimeType: "application/json",
+            text: JSON.stringify(registry.getStats(), null, 2),
+        }],
+    })
+);
+
+// ─── Tools ────────────────────────────────────────────────────
+
+server.tool(
+    "search_papers_optimized",
+    "Busca artigos em repositórios organizados por Camadas de Cobertura (Estratégia Nacional 5-Camadas).",
+    {
+        query: z.string().describe("Termo de busca"),
+        layers: z.array(z.number())
+            .default([1, 3])
+            .describe("Camadas: 1=Agregadores (Oasisbr/SciELO), 2=Instituições (Cobertas pelo Oasisbr - Passivo), 3=Prioridade (UFC/Embrapa - Ativo), 4=Especializados, 5=Literatura Cinzenta"),
+        dateFrom: z.string().optional(),
+        dateUntil: z.string().optional(),
+    },
+    async (params) => {
+        const { results, errors } = await searchService.searchPapers(params.query, params.layers, {
+            dateFrom: params.dateFrom,
+            dateUntil: params.dateUntil
+        });
+
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify({
+                    count: results.length,
+                    errors: errors,
+                    results: results
+                }, null, 2)
+            }]
+        };
+    }
+);
+
+server.tool(
+    "deduplicate_dataset",
+    "Remove duplicatas de um conjunto de resultados (JSON).",
+    {
+        dataset: z.string().describe("JSON string com array de resultados (SearchResult[])"),
+    },
+    async (params) => {
+        let records;
+        try {
+            records = JSON.parse(params.dataset);
+        } catch (e) {
+            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
+        }
+
+        const result = dedupeService.deduplicate(records);
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify(result, null, 2)
+            }]
+        };
+    }
+);
+
+server.tool(
+    "screen_candidates",
+    "Triagem de candidatos usando IA (Gemini). Requer GOOGLE_API_KEY.",
+    {
+        candidates: z.string().describe("JSON string com array de candidatos"),
+        criteria: z.string().describe("Critérios de inclusão/exclusão"),
+    },
+    async (params) => {
+        if (!process.env.GOOGLE_API_KEY) {
+            return { content: [{ type: "text", text: "GOOGLE_API_KEY não configurada." }] };
+        }
+
+        let records;
+        try {
+            records = JSON.parse(params.candidates);
+        } catch (e) {
+            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
+        }
+
+        const result = await screeningService.screenCandidates(records, params.criteria);
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify(result, null, 2)
+            }]
+        };
+    }
+);
+
+// ─── Tools (Snowball & Data) ──────────────────────────────────
+
+server.tool(
+    "expand_search_snowball",
+    "Expande a busca via Snowballing (Citações e Referências via OpenAlex).",
+    {
+        dataset: z.string().describe("JSON string com sementes (SearchResult[])"),
+    },
+    async (params) => {
+        let seeds;
+        try {
+            seeds = JSON.parse(params.dataset);
+        } catch (e) {
+            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
+        }
+
+        const result = await snowballService.expandSearch(seeds);
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify(result, null, 2)
+            }]
+        };
+    }
+);
+
+server.tool(
+    "export_dataset",
+    "Exporta dados para CSV, Markdown (Bibliografia) ou JSON.",
+    {
+        dataset: z.string().describe("JSON string com resultados"),
+        format: z.enum(["csv", "markdown", "json"]).default("json"),
+    },
+    async (params) => {
+        let records;
+        try {
+            records = JSON.parse(params.dataset);
+            if (records.results) records = records.results; // Handle wrapper
+        } catch (e) {
+            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
+        }
+
+        const output = dataService.exportDataset(records, params.format as any);
+        return {
+            content: [{
+                type: "text",
+                text: output
+            }]
+        };
+    }
+);
+
+
+server.tool(
+    "import_dataset_ris",
+    "Importa dados de arquivo RIS (ex: Zotero/EndNote).",
+    {
+        content: z.string().describe("Conteúdo do arquivo .ris"),
+    },
+    async (params) => {
+        const results = dataService.importRis(params.content);
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify(results, null, 2)
+            }]
+        };
+    }
+);
+
+server.tool(
+    "search_pubmed",
+    "Busca artigos no PubMed (via Biopython). Ideal para literatura internacional biomédica e de saúde.",
+    {
+        query: z.string().describe("Termo de busca (ex: 'Anacardium occidentale AND antioxidant')"),
+        maxResults: z.number().default(20).describe("Máximo de resultados"),
+    },
+    async (params) => {
+        const { results, error } = await pubmedService.search(params.query, params.maxResults);
+
+        if (error) {
+            return { content: [{ type: "text", text: `Erro na busca PubMed: ${error}` }] };
+        }
+
+        const summary = [
+            `## Resultados PubMed: "${params.query}"`,
+            `**Encontrados:** ${results.length}`,
+            "",
+            ...results.map((r, i) => [
+                `### ${i + 1}. ${r.title}`,
+                r.creators.length > 0 ? `**Autores:** ${r.creators.join("; ")}` : "",
+                r.description ? `**Resumo:** ${r.description.slice(0, 300)}...` : "",
+                r.date ? `**Data:** ${r.date}` : "",
+                r.doi ? `**DOI:** [${r.doi}](https://doi.org/${r.doi})` : "",
+                `**PMID:** ${r.identifier}`,
+                `**URL:** ${r.url}`,
+                "",
+            ].filter(Boolean).join("\n"))
+        ].join("\n");
+
+        return {
+            content: [{
+                type: "text",
+                text: summary // Return summary for easy reading
+            }, {
+                type: "text",
+                text: JSON.stringify(results, null, 2) // Return JSON for processing
+            }]
+        };
+    }
+);
+
+
+// ─── Legacy Tools ─────────────────────────────────────────────
+
+server.tool(
+    "search_repository",
+    "Busca artigos/teses em repositórios acadêmicos brasileiros. Usa OAI-PMH, DSpace REST ou scraping conforme disponibilidade.",
+    {
+        query: z.string().describe("Termo(s) de busca por tema (ex: 'bebida fermentada', 'inteligência artificial')"),
+        repositories: z.array(z.string()).optional()
+            .describe("IDs dos repos (ex: ['BR-FED-0001', 'BR-AGG-0001']). Omita para buscar em todos os ativos."),
+        title: z.string().optional().describe("Buscar especificamente no título"),
+        author: z.string().optional().describe("Filtrar por autor"),
+        state: z.string().optional().describe("Filtrar por UF (ex: 'BA', 'SP')"),
+        institutionType: z.enum(["federal", "estadual", "privada", "comunitaria", "instituto_federal"]).optional()
+            .describe("Filtrar por tipo de instituição"),
+        institution: z.string().optional().describe("Filtrar por universidade (ex: 'Universidade Federal da Bahia')"),
+        degreeType: z.enum(["graduacao", "mestrado", "doutorado", "pos-doutorado", "livre-docencia"]).optional()
+            .describe("Tipo de grau (mestrado, doutorado, etc.) — funciona em BDTD"),
+        subjectArea: z.string().optional().describe("Área do conhecimento (ex: 'ciências agrárias')"),
+        issn: z.string().optional().describe("ISSN do periódico — funciona em SciELO"),
+        dateFrom: z.string().optional().describe("Data inicial (ISO: '2020-01-01')"),
+        dateUntil: z.string().optional().describe("Data final (ISO: '2025-12-31')"),
+        maxResults: z.number().default(50).describe("Máximo de resultados por repositório"),
+    },
+    async (params) => {
+        let repos = registry.getActive();
+
+        if (params.repositories && params.repositories.length > 0) {
+            repos = params.repositories
+                .map((id) => registry.getById(id))
+                .filter((r): r is NonNullable<typeof r> => r !== undefined);
+        } else {
+            if (params.state) {
+                repos = repos.filter((r) => r.institution.state.toUpperCase() === params.state!.toUpperCase());
+            }
+            if (params.institutionType) {
+                repos = repos.filter((r) => r.institution.type === params.institutionType);
+            }
+        }
+
+        if (repos.length === 0) {
+            return { content: [{ type: "text", text: "Nenhum repositório encontrado com os filtros especificados." }] };
+        }
+
+        const allResults = [];
+        const errors: string[] = [];
+
+        for (const repo of repos) {
+            try {
+                const results = await strategy.search(repo, params.query, {
+                    title: params.title,
+                    author: params.author,
+                    dateFrom: params.dateFrom,
+                    dateUntil: params.dateUntil,
+                    degreeType: params.degreeType,
+                    institution: params.institution,
+                    state: params.state,
+                    subjectArea: params.subjectArea,
+                    issn: params.issn,
+                    maxResults: params.maxResults,
+                });
+                allResults.push(...results);
+            } catch (error) {
+                errors.push(`${repo.id} (${repo.institution.acronym}): ${(error as Error).message}`);
+            }
+        }
+
+        const summary = [
+            `## Resultados da Busca: "${params.query}"`,
+            `**Repositórios consultados:** ${repos.length}`,
+            `**Resultados encontrados:** ${allResults.length}`,
+            errors.length > 0 ? `**Erros:** ${errors.length}\n${errors.map((e) => `- ${e}`).join("\n")}` : "",
+            "",
+            ...allResults.map((r, i) => [
+                `### ${i + 1}. ${r.title}`,
+                r.creators.length > 0 ? `**Autores:** ${r.creators.join("; ")}` : "",
+                r.description ? `**Resumo:** ${r.description.slice(0, 300)}${r.description.length > 300 ? "..." : ""}` : "",
+                r.date ? `**Data:** ${r.date}` : "",
+                r.doi ? `**DOI:** [${r.doi}](https://doi.org/${r.doi})` : "",
+                r.journal ? `**Periódico:** ${r.journal}${r.issn ? ` (ISSN: ${r.issn})` : ""}` : "",
+                r.degreeType ? `**Tipo:** ${r.degreeType}` : "",
+                r.institution ? `**Instituição:** ${r.institution}${r.state ? ` (${r.state})` : ""}` : "",
+                r.subjectAreas?.length ? `**Áreas:** ${r.subjectAreas.join(", ")}` : "",
+                `**Repositório:** ${r.repositoryName}`,
+                `**URL:** ${r.url}`,
+                r.pdfUrl ? `**PDF:** ${r.pdfUrl}` : "",
+                `**Método:** ${r.accessMethod}`,
+                "",
+            ].filter(Boolean).join("\n")),
+        ].filter(Boolean).join("\n");
+
+        return { content: [{ type: "text", text: summary }] };
+    }
+);
+
+server.tool(
+    "get_record_metadata",
+    "Obtém metadados completos (Dublin Core) de um registro específico em um repositório.",
+    {
+        repositoryId: z.string().describe("ID do repositório (ex: 'BR-FED-0001')"),
+        recordIdentifier: z.string()
+            .describe("Identificador OAI ou URL/handle do registro (ex: 'oai:repositorio.ufba.br:ri/36884' ou 'https://repositorio.ufba.br/handle/ri/36884')"),
+    },
+    async (params) => {
+        const repo = registry.getById(params.repositoryId);
+        if (!repo) {
+            return { content: [{ type: "text", text: `Repositório ${params.repositoryId} não encontrado.` }] };
+        }
+
+        const metadata = await strategy.getMetadata(repo, params.recordIdentifier);
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify(metadata, null, 2),
+            }],
+        };
+    }
+);
+
+server.tool(
+    "harvest_records",
+    "Coleta registros em massa via OAI-PMH de um repositório específico. Ideal para harvesting completo ou por coleção.",
+    {
+        repositoryId: z.string().describe("ID do repositório"),
+        set: z.string().optional().describe("Coleção/comunidade OAI-PMH (setSpec)"),
+        dateFrom: z.string().optional().describe("Data inicial (ISO)"),
+        dateUntil: z.string().optional().describe("Data final (ISO)"),
+        maxRecords: z.number().default(100).describe("Máximo de registros a coletar"),
+        metadataPrefix: z.string().default("oai_dc").describe("Formato de metadados"),
+    },
+    async (params) => {
+        const repo = registry.getById(params.repositoryId);
+        if (!repo) {
+            return { content: [{ type: "text", text: `Repositório ${params.repositoryId} não encontrado.` }] };
+        }
+
+        if (!repo.access.oaiPmh.available || !repo.access.oaiPmh.endpoint) {
+            return { content: [{ type: "text", text: `Repositório ${params.repositoryId} não tem OAI-PMH disponível. Use search_repository como alternativa.` }] };
+        }
+
+        const oai = strategy.getOaiClient();
+        const records = await oai.listAllRecords(repo.access.oaiPmh.endpoint, {
+            set: params.set,
+            from: params.dateFrom,
+            until: params.dateUntil,
+            metadataPrefix: params.metadataPrefix,
+            maxRecords: params.maxRecords,
+        });
+
+        const summary = [
+            `## Harvest: ${repo.repository.name}`,
+            `**Registros coletados:** ${records.length}`,
+            "",
+            ...records.slice(0, 20).map((r, i) => [
+                `### ${i + 1}. ${r.metadata.title[0] ?? "(sem título)"}`,
+                r.metadata.creator.length > 0 ? `**Autores:** ${r.metadata.creator.join("; ")}` : "",
+                r.metadata.date[0] ? `**Data:** ${r.metadata.date[0]}` : "",
+                `**ID:** ${r.identifier}`,
+                "",
+            ].filter(Boolean).join("\n")),
+            records.length > 20 ? `\n... e mais ${records.length - 20} registros (use maxRecords para controlar)` : "",
+        ].join("\n");
+
+        return { content: [{ type: "text", text: summary }] };
+    }
+);
+
+server.tool(
+    "validate_repository",
+    "Verifica a saúde e capacidades de um ou mais repositórios (conectividade, OAI-PMH, REST API).",
+    {
+        repositoryId: z.string().optional()
+            .describe("ID específico ou omita para validar todos os ativos"),
+        checks: z.array(z.enum(["connectivity", "oai_pmh", "rest_api", "search"]))
+            .default(["connectivity", "oai_pmh"])
+            .describe("Tipos de verificação a executar"),
+    },
+    async (params) => {
+        const repos = params.repositoryId
+            ? [registry.getById(params.repositoryId)].filter(Boolean) as NonNullable<ReturnType<Registry['getById']>>[]
+            : registry.getActive();
+
+        if (repos.length === 0) {
+            return { content: [{ type: "text", text: "Nenhum repositório encontrado." }] };
+        }
+
+        const oai = strategy.getOaiClient();
+        const rest = strategy.getRestClient();
+        const results: string[] = [];
+
+        for (const repo of repos) {
+            const checks: string[] = [];
+
+            // Connectivity
+            if (params.checks.includes("connectivity")) {
+                const start = Date.now();
+                try {
+                    const res = await fetch(repo.repository.url, {
+                        signal: AbortSignal.timeout(10_000),
+                    });
+                    checks.push(`✅ Conectividade: HTTP ${res.status} (${Date.now() - start}ms)`);
+                } catch (e) {
+                    checks.push(`❌ Conectividade: ${(e as Error).message}`);
+                }
+            }
+
+            // OAI-PMH
+            if (params.checks.includes("oai_pmh") && repo.access.oaiPmh.endpoint) {
+                const start = Date.now();
+                try {
+                    const identify = await oai.identify(repo.access.oaiPmh.endpoint);
+                    checks.push(`✅ OAI-PMH: ${identify.repositoryName} (${Date.now() - start}ms)`);
+                } catch (e) {
+                    checks.push(`❌ OAI-PMH: ${(e as Error).message}`);
+                }
+            } else if (params.checks.includes("oai_pmh")) {
+                checks.push("⏭️ OAI-PMH: sem endpoint configurado");
+            }
+
+            // REST API
+            if (params.checks.includes("rest_api")) {
+                const start = Date.now();
+                const works = await rest.detect(repo.repository.url);
+                if (works) {
+                    checks.push(`✅ REST API: DSpace 7 detectado (${Date.now() - start}ms)`);
+                } else {
+                    checks.push(`❌ REST API: não detectado (${Date.now() - start}ms)`);
+                }
+            }
+
+            // Search
+            if (params.checks.includes("search")) {
+                const start = Date.now();
+                try {
+                    const searchResults = await strategy.search(repo, "teste", { maxResults: 1 });
+                    checks.push(`✅ Busca: ${searchResults.length > 0 ? "funcional" : "sem resultados"} (${Date.now() - start}ms)`);
+                } catch (e) {
+                    checks.push(`❌ Busca: ${(e as Error).message}`);
+                }
+            }
+
+            results.push([
+                `### ${repo.institution.acronym} — ${repo.repository.name}`,
+                `**ID:** ${repo.id} | **URL:** ${repo.repository.url}`,
+                ...checks,
+            ].join("\n"));
+        }
+
+        return {
+            content: [{
+                type: "text",
+                text: `# Relatório de Validação\n\n${results.join("\n\n---\n\n")}`,
+            }],
+        };
+    }
+);
+
+// ─── Verification Tools ─────────────────────────────────────────
+
+server.tool(
+    "validate_prisma_flow",
+    "Valida matematicamente a consistência do Fluxograma PRISMA (Regra RV-05).",
+    {
+        flowData: z.string().describe("JSON string contendo os 10 campos obrigatórios do PRISMA Flow (ex: identified_db, screened, etc)"),
+    },
+    async (params) => {
+        let data;
+        try {
+            data = JSON.parse(params.flowData);
+        } catch (e) {
+            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
+        }
+
+        const parseResult = PrismaFlowSchema.safeParse(data);
+        if (!parseResult.success) {
+            return {
+                content: [{
+                    type: "text",
+                    text: `Estrutura JSON inválida. Faltam campos obrigatórios ou valores não são numéricos:\n${parseResult.error.message}`
+                }]
+            };
+        }
+
+        const validator = new PrismaFlowValidator();
+        const validation = validator.validate(parseResult.data);
+
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify(validation, null, 2)
+            }]
+        };
+    }
+);
+
+// ─── Start Server ─────────────────────────────────────────────
+
+async function main() {
+    const transport = new StdioServerTransport();
+    await server.connect(transport);
+    console.error("mcp-repos-br server ready");
+}
+
+main().catch((error) => {
+    console.error("Fatal error:", error);
+    process.exit(1);
+});

@@ -1,0 +1,12 @@
+{
+    "identified_db": 72,
+    "identified_other": 984,
+    "duplicates_removed": 737,
+    "screened": 319,
+    "title_abstract_excluded": 260,
+    "retrieved_fulltext": 46,
+    "fulltext_not_retrieved": 13,
+    "fulltext_assessed": 46,
+    "fulltext_excluded": 4,
+    "included": 42
+}

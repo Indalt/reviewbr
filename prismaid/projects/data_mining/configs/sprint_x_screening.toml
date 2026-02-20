@@ -1,0 +1,57 @@
+[project]
+name = "Sprint X - Blind Discovery Screening"
+author = "Agent"
+version = "1.0"
+input_file = "./projects/data_mining/sprint_x_candidates_direct.csv"
+output_file = "./projects/data_mining/sprint_x_screened_direct"
+text_column = "title"
+identifier_column = "link"
+output_format = "csv"
+log_level = "info"
+
+[filters]
+
+[filters.deduplication]
+enabled = true
+use_ai = false
+compare_fields = ["title", "abstract"]
+
+[filters.language]
+enabled = false
+accepted_languages = ["pt"]
+use_ai = false
+
+[filters.article_type]
+enabled = false
+use_ai = false
+exclude_reviews = false
+exclude_editorials = false
+exclude_letters = false
+exclude_case_reports = false
+exclude_commentary = false
+exclude_perspectives = false
+exclude_theoretical = false
+exclude_empirical = false
+exclude_methods = false
+exclude_single_case = false
+exclude_sample = false
+include_types = []
+
+[filters.topic_relevance]
+enabled = true
+use_ai = false
+topics = ["bebida", "garrafada", "licor", "fermentado", "infusao", "tônico"]
+min_score = 0.1
+
+[filters.topic_relevance.score_weights]
+keyword_match = 0.8
+concept_match = 0.2
+field_relevance = 0.0
+
+[[filters.llm]]
+provider = "DeepSeek"
+api_key = ""
+model = "deepseek-chat"
+temperature = 0.001
+tpm_limit = 0
+rpm_limit = 0

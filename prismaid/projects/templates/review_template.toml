@@ -1,0 +1,81 @@
+### The [project] section contains some basic information for internal reference
+[project]
+name = "Use of LLM for systematic review" # Project title
+author = "John Doe"                       # Project author
+version = "1.0"                           # Project configuration version
+
+### The [project.configuration] section contains the main parameters and of options defining the review project
+[project.configuration]
+input_directory = "/path/to/txt/files"      # The location of the manuscript to be reviewed
+results_file_name = "/path/to/save/results" # Location and filename for storing outputs, the path must exists, file extension will be added
+output_format = "json"                      # Can be "csv" [default] or "json"
+log_level = "low"                           # Can be "low" [default], "medium" showing entries on stdout, or "high" saving entries on file, see user manual for details
+duplication = "no"                          # Can be "yes" or "no" [default]. It duplicates the manuscripts to review, hence running model queries twice, for debugging.
+cot_justification = "no"                    # Can be "yes" or "no" [default]. It requests and saves the model justification in terms of chain of thought for the answers provided.
+summary = "no"                              # Can be "yes" or "no" [default].  If positive, manuscript summaries will be generated an saved.
+
+### The [project.llm] section, if more than 1 will be an ensemble project
+[project.llm]
+[project.llm.1]
+provider = "OpenAI"   # Can be 'OpenAI', 'GoogleAI', 'Cohere', 'Anthropic', 'DeepSeek', or 'Perplexity'.
+api_key = ""          # If left empty, the tool will look for API key in env variables. Adding a key here is useful for tracking costs per prokect through project keys
+model = "gpt-4o-mini" # Depending on provider, options are (empty '' string indicate to dynamically choose the model that minimize the reviewing cost):
+# OpenAI: 'gpt-5-nano', 'gpt-5-mini', 'gpt-5.2', 'gpt-5.1', 'gpt-5', 'o4-mini', 'o3-mini', 'o3', 'o1-mini', 'o1', 'gpt-4.1-nano', 'gpt-4.1-mini', 'gpt-4.1', 'gpt-4o-mini', 'gpt-4o', 'gpt-4-turbo', 'gpt-3.5-turbo', or '' [default].
+# GoogleAI: 'gemini-3-flash-preview', 'gemini-3-pro-preview', 'gemini-2.5-flash-lite', 'gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-2.0-flash-lite', 'gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-1.5-pro', or '' [default].
+# Cohere: 'command-a-reasoning-08-2025', 'command-a-03-2025', 'command-r-08-2024', 'command-r7b-12-2024', 'command-r-plus', 'command-r', 'command-light', 'command', or '' [default].
+# Anthropic: 'claude-4-5-haiku', 'claude-4-5-sonnet', 'claude-4-5-opus', 'claude-4-0-opus', 'claude-4-0-sonnet', 'claude-3-7-sonnet', 'claude-3-5-sonnet', 'claude-3-5-haiku', 'claude-3-opus', 'claude-3-sonnet', 'claude-3-haiku', or '' [default].
+# DeepSeek: 'deepseek-chat', 'deepseek-reasoner', or '' [default].
+# Perplexity: 'sonar-deep-research', 'sonar-reasoning-pro', 'sonar-pro', 'sonar', or '' [default].
+temperature = 0.01 # Between 0 and 1 for all but between 0 and 2 on GoogleAI. Lower model temperature to decrease randomness and ensure replicability
+tpm_limit = 0      # The maximum number of Tokens Per Minute before delaying prompts. If 0 [default], no delay in prompts.
+rpm_limit = 0      # The maximin number of Requests Per Minute before delaying prompts. If 0 [default], no delay in prompts.
+##################                          # If more than 1 'llm' is specified, an ensemble review will be run
+[project.llm.2]
+provider = "GoogleAI"
+api_key = ""
+model = "gemini-1.5-flash"
+temperature = 0.01
+tpm_limit = 0
+rpm_limit = 0
+[project.llm.3]
+provider = "Cohere"
+api_key = ""
+model = "command-r"
+temperature = 0.01
+tpm_limit = 0
+rpm_limit = 0
+[project.llm.4]
+provider = "Anthropic"
+api_key = ""
+model = "claude-3-haiku"
+temperature = 0.01
+tpm_limit = 0
+rpm_limit = 0
+##################
+
+### The [prompt] section defines the main components of the prompt for reviews
+[prompt]
+# The persona section is optional and may contain some text telling the model what role should be played
+persona = "You are an experienced scientist working on a systematic review of the literature."
+# The task section is compulsory and starts framing the task the model has to execute
+task = "You are asked to map the concepts discussed in a scientific paper attached here."
+# The expected_result section is compulsory and it introduces the structure of the output in JSON as specified below in the [review] section
+expected_result = "You should output a JSON object with the following keys and possible values: "
+# The definitions section is a chance to define the concepts we are asking to the model, to avoid misconceptions
+definitions = "'Interest rate' is the percentage charged by a lender for borrowing money or earned by an investor on a deposit over a specific period, typically expressed annually."
+# The example section is a chance to provide an example of the concepts we are asking to the model, to avoid misconceptions
+example = ""
+# The failsafe section is an option to avoid forcing answers in values provided
+failsafe = "If the concepts neither are clearly discussed in the document nor they can be deduced from the text, respond with an empty '' value."
+
+### The [review] section defines the JSON object storing the review items, i.e., the knowledge map that needs to be filled in
+[review]
+[review.1]
+key = "interest rate"
+values = [""]
+[review.2]
+key = "regression models"
+values = ["yes", "no"]
+[review.3]
+key = "geographical scale"
+values = ["world", "continent", "river basin"]

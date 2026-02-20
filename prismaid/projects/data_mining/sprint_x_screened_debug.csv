@@ -1,0 +1,11 @@
+id,title,abstract,url,source_query,include,exclusion_reason
+CAND-001,Garrafada Batatão Hipólito,"Garrafada composta por Baccharis crispa, Cenostigma pyramidale e outras plantas medicinais. Usada na medicina popular.",https://proceedings.science/garrafada-batatao,garrafada,true,
+CAND-002,Garrafadas Especiais,"Preparações com eucalipto, malvarisco, agrião, hortelã para gripes e resfriados.",https://ac24horas.com/garrafadas-especiais,garrafada,true,
+CAND-003,Mocororó e Aluá,"Bebidas fermentadas de caju e abacaxi (aluá), tradicionais e artesanais.",https://elle.com.br/mocororo-alua,bebida feita de,true,
+CAND-004,Cauim e Pajuaru,Bebidas indígenas fermentadas à base de mandioca e outros ingredientes.,https://elle.com.br/cauim-pajuaru,bebida feita de,true,
+CAND-005,Licor de Licuri,"Licor produzido na região da Bacia do Jacuípe, Piemonte da Diamantina.",https://aregiao.com.br/licor-licuri,licor de regiao,true,
+CAND-006,Licor de Cajazeiras,Licor tradicional de São João produzido em Salvador (Boca da Mata).,https://cajaon.com.br/licor-cajazeiras,licor de regiao,true,
+CAND-007,Licor de Umbu e Inhame,Variações regionais de licores do Recôncavo e São Francisco.,https://aregiao.com.br/licor-umbu,licor de regiao,true,
+CAND-008,Tepache,Bebida de abacaxi fermentado com especiarias.,https://elle.com.br/tepache,bebida feita de,true,
+CAND-009,Infusão de Kefir,Bebida fermentada aromatizada com frutas.,https://gzrecipes.com/kefir,infusao fermentado,true,
+CAND-010,Aguardente de Medronho,Aguardente típica mencionada em contexto regional.,https://lojadovinho.com/aguardente-medronho,licor de regiao,true,

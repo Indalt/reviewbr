@@ -1,0 +1,48 @@
+# Jekyll theme
+remote_theme: open-and-sustainable/greendoc_theme
+# title and description, URLs
+title: "prismAId"
+description: "Documentation of prismAId"
+baseurl: ""
+url: "https://prismaid.review"
+github_repo: "https://github.com/open-and-sustainable/prismaid"
+# logo and favicon
+logo: "assets/images/prismaid-logo.png"
+favicon: "assets/images/prismaid-favicon.ico"
+# configuration of navigation entries
+nav_links:
+    - name: "/Installation/Setup Overview"
+      url: "/installation/setup-overview.html"
+    - name: "/Installation/CLI Binaries"
+      url: "/installation/cli-binaries.html"
+    - name: "/Installation/Go Package"
+      url: "/installation/go.html"
+    - name: "/Installation/Python Package"
+      url: "/installation/python.html"
+    - name: "/Installation/R Package"
+      url: "/installation/r.html"
+    - name: "/Installation/Julia Package"
+      url: "/installation/julia.html"
+    - name: "/Installation/Additional Information"
+      url: "/installation/additional-setup.html"
+    - name: "/Review/Workflow"
+      url: "/review/review-workflow.html"
+    - name: "/Review/Configurator"
+      url: "/review/review-configurator.html"
+    - name: "/Tools/Screening"
+      url: "/tools/screening-tool.html"
+    - name: "/Tools/Download"
+      url: "/tools/download-tool.html"
+    - name: "/Tools/Convert"
+      url: "/tools/convert-tool.html"
+    - name: "/Tools/Review"
+      url: "/tools/review-tool.html"
+    - name: "/Support/Help"
+      url: "/support/help.html"
+    - name: "/Support/Development"
+      url: "/support/development.html"
+# configuration of custom colors
+nav_background_color: "#0056b3" # Override nav bar color (darker blue)
+nav_hover_color: "#007BFF" # Override hover color (blue)
+nav_link_color: "#ffffff" # Override link text color (white)
+toc-hover-color: "#007BFF" # Override TOC hover color (blue)

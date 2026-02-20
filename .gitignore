@@ -1,0 +1,27 @@
+# Environment variables
+.env
+.env.*
+
+# Node / JS
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Large Datasets / Downloads
+projects/*/01_raw/
+projects/*/02_deduplicated/
+projects/*/03_screening/pdfs/
+projects/data_mining/downloads/
+
+# IDE / System
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,2513 @@
+[
+  {
+    "id": "BR-AGG-0001",
+    "institution": {
+      "name": "Instituto Brasileiro de Informação em Ciência e Tecnologia",
+      "acronym": "IBICT",
+      "type": "other",
+      "state": "DF",
+      "city": "Brasília"
+    },
+    "repository": {
+      "name": "Oasisbr",
+      "url": "https://oasisbr.ibict.br/",
+      "platform": "Primo",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://harvester.ibict.br:8092/request",
+        "verified": false,
+        "lastVerified": "2026-02-19"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "1"
+  },
+  {
+    "id": "BR-EST-0001",
+    "institution": {
+      "name": "Universidade de São Paulo",
+      "acronym": "USP",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "Repositório Institucional da USP",
+      "url": "https://repositorio.usp.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.usp.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0002",
+    "institution": {
+      "name": "Universidade Estadual Paulista",
+      "acronym": "Unesp",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "Repositório Institucional da Unesp",
+      "url": "https://repositorio.unesp.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.unesp.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0003",
+    "institution": {
+      "name": "Universidade Estadual de Campinas",
+      "acronym": "Unicamp",
+      "type": "federal",
+      "state": "SP",
+      "city": "Campinas"
+    },
+    "repository": {
+      "name": "Repositório Institucional da Unicamp",
+      "url": "http://repositorio.unicamp.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://repositorio.unicamp.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0004",
+    "institution": {
+      "name": "Universidade Estadual do Rio de Janeiro",
+      "acronym": "UERJ",
+      "type": "federal",
+      "state": "RJ",
+      "city": "Rio de Janeiro"
+    },
+    "repository": {
+      "name": "BDTD UERJ",
+      "url": "https://www.bdtd.uerj.br/",
+      "platform": "TEDE",
+      "contentType": "Teses/Dissertações"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://www.bdtd.uerj.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0005",
+    "institution": {
+      "name": "Universidade Estadual de Londrina",
+      "acronym": "UEL",
+      "type": "federal",
+      "state": "PR",
+      "city": "Londrina"
+    },
+    "repository": {
+      "name": "Biblioteca Digital da UEL",
+      "url": "https://www.bibliotecadigital.uel.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0006",
+    "institution": {
+      "name": "Universidade Estadual do Ceará",
+      "acronym": "UECE",
+      "type": "federal",
+      "state": "CE",
+      "city": "Fortaleza"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UECE",
+      "url": "https://siduece.uece.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://siduece.uece.br/rodeo/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0007",
+    "institution": {
+      "name": "Universidade Estadual do Maranhão",
+      "acronym": "UEMA",
+      "type": "federal",
+      "state": "MA",
+      "city": "São Luís"
+    },
+    "repository": {
+      "name": "UEMA Repositório",
+      "url": "https://repositorio.uema.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.uema.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0008",
+    "institution": {
+      "name": "Universidade do Estado do Pará",
+      "acronym": "UEPA",
+      "type": "federal",
+      "state": "PA",
+      "city": "Belém"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UEPA",
+      "url": "https://repositorio.uepa.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.uepa.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0009",
+    "institution": {
+      "name": "Universidade do Estado da Bahia",
+      "acronym": "UNEB",
+      "type": "federal",
+      "state": "BA",
+      "city": "Salvador"
+    },
+    "repository": {
+      "name": "Saber Aberto",
+      "url": "https://saberaberto.uneb.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://saberaberto.uneb.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0010",
+    "institution": {
+      "name": "Universidade do Estado de Mato Grosso",
+      "acronym": "UNEMAT",
+      "type": "federal",
+      "state": "MT",
+      "city": "Cáceres"
+    },
+    "repository": {
+      "name": "Repositório UNEMAT",
+      "url": "https://repositorio.unemat.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.unemat.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0011",
+    "institution": {
+      "name": "Universidade Estadual de Mato Grosso do Sul",
+      "acronym": "UEMS",
+      "type": "federal",
+      "state": "MS",
+      "city": "Dourados"
+    },
+    "repository": {
+      "name": "Repositório Institucional UEMS",
+      "url": "https://repositorio.uems.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.uems.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0012",
+    "institution": {
+      "name": "Universidade Estadual de Maringá",
+      "acronym": "UEM",
+      "type": "federal",
+      "state": "PR",
+      "city": "Maringá"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UEM",
+      "url": "http://repositorio.uem.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://repositorio.uem.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0013",
+    "institution": {
+      "name": "Universidade Estadual de Ponta Grossa",
+      "acronym": "UEPG",
+      "type": "federal",
+      "state": "PR",
+      "city": "Ponta Grossa"
+    },
+    "repository": {
+      "name": "Repositório Institucional UEPG",
+      "url": "https://ri.uepg.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://ri.uepg.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0014",
+    "institution": {
+      "name": "Universidade Estadual do Oeste do Paraná",
+      "acronym": "UNIOESTE",
+      "type": "federal",
+      "state": "PR",
+      "city": "Cascavel"
+    },
+    "repository": {
+      "name": "Biblioteca Digital UNIOESTE",
+      "url": "https://tede.unioeste.br/",
+      "platform": "TEDE",
+      "contentType": "Teses"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://tede.unioeste.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0015",
+    "institution": {
+      "name": "Universidade Estadual do Centro-Oeste",
+      "acronym": "UNICENTRO",
+      "type": "federal",
+      "state": "PR",
+      "city": "Guarapuava"
+    },
+    "repository": {
+      "name": "Repositório Institucional UNICENTRO",
+      "url": "https://repositorio.unicentro.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.unicentro.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0016",
+    "institution": {
+      "name": "Universidade Estadual de Feira de Santana",
+      "acronym": "UEFS",
+      "type": "federal",
+      "state": "BA",
+      "city": "Feira de Santana"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UEFS",
+      "url": "http://avalon.uefs.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://avalon.uefs.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0017",
+    "institution": {
+      "name": "Universidade Estadual de Santa Cruz",
+      "acronym": "UESC",
+      "type": "federal",
+      "state": "BA",
+      "city": "Ilhéus"
+    },
+    "repository": {
+      "name": "Biblioteca Digital de Teses e Dissertações da UESC",
+      "url": "http://www.biblioteca.uesc.br/biblioteca_digital/",
+      "platform": "Outro",
+      "contentType": "Teses"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0018",
+    "institution": {
+      "name": "Universidade do Estado do Amazonas",
+      "acronym": "UEA",
+      "type": "federal",
+      "state": "AM",
+      "city": "Manaus"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UEA",
+      "url": "https://repositorio.uea.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.uea.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-EST-0019",
+    "institution": {
+      "name": "Universidade Estadual de Roraima",
+      "acronym": "UERR",
+      "type": "federal",
+      "state": "RR",
+      "city": "Boa Vista"
+    },
+    "repository": {
+      "name": "Repositório Institucional UERR",
+      "url": "https://repositorio.uerr.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.uerr.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0001",
+    "institution": {
+      "name": "Universidade Federal da Bahia",
+      "acronym": "UFBA",
+      "type": "federal",
+      "state": "BA",
+      "city": "Salvador"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFBA",
+      "url": "https://repositorio.ufba.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufba.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0002",
+    "institution": {
+      "name": "Universidade Federal Fluminense",
+      "acronym": "UFF",
+      "type": "federal",
+      "state": "RJ",
+      "city": "Niterói"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFF",
+      "url": "https://app.uff.br/riuff/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://app.uff.br/riuff/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0003",
+    "institution": {
+      "name": "Universidade Federal de Santa Catarina",
+      "acronym": "UFSC",
+      "type": "federal",
+      "state": "SC",
+      "city": "Florianópolis"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFSC",
+      "url": "https://repositorio.ufsc.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufsc.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0004",
+    "institution": {
+      "name": "Universidade Federal do Ceará",
+      "acronym": "UFC",
+      "type": "federal",
+      "state": "CE",
+      "city": "Fortaleza"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFC",
+      "url": "https://repositorio.ufc.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufc.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "3"
+  },
+  {
+    "id": "BR-FED-0005",
+    "institution": {
+      "name": "Universidade de Brasília",
+      "acronym": "UnB",
+      "type": "federal",
+      "state": "DF",
+      "city": "Brasília"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UnB",
+      "url": "https://repositorio.unb.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.unb.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0006",
+    "institution": {
+      "name": "Universidade Federal de Sergipe",
+      "acronym": "UFS",
+      "type": "federal",
+      "state": "SE",
+      "city": "São Cristóvão"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFS",
+      "url": "https://ri.ufs.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://ri.ufs.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0007",
+    "institution": {
+      "name": "Universidade Federal do Pará",
+      "acronym": "UFPA",
+      "type": "federal",
+      "state": "PA",
+      "city": "Belém"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFPA",
+      "url": "https://repositorio.ufpa.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufpa.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0008",
+    "institution": {
+      "name": "Universidade Federal do Tocantins",
+      "acronym": "UFT",
+      "type": "federal",
+      "state": "TO",
+      "city": "Palmas"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFT",
+      "url": "http://repositorio.uft.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://repositorio.uft.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0009",
+    "institution": {
+      "name": "Universidade Federal do Espírito Santo",
+      "acronym": "UFES",
+      "type": "federal",
+      "state": "ES",
+      "city": "Vitória"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFES",
+      "url": "https://repositorio.ufes.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufes.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0010",
+    "institution": {
+      "name": "Universidade Federal de Uberlândia",
+      "acronym": "UFU",
+      "type": "federal",
+      "state": "MG",
+      "city": "Uberlândia"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFU",
+      "url": "https://repositorio.ufu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0011",
+    "institution": {
+      "name": "Universidade Federal da Paraíba",
+      "acronym": "UFPB",
+      "type": "federal",
+      "state": "PB",
+      "city": "João Pessoa"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFPB",
+      "url": "https://repositorio.ufpb.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufpb.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0012",
+    "institution": {
+      "name": "Universidade Federal de Goiás",
+      "acronym": "UFG",
+      "type": "federal",
+      "state": "GO",
+      "city": "Goiânia"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFG",
+      "url": "https://repositorio.bc.ufg.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.bc.ufg.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0013",
+    "institution": {
+      "name": "Universidade Federal de Minas Gerais",
+      "acronym": "UFMG",
+      "type": "federal",
+      "state": "MG",
+      "city": "Belo Horizonte"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFMG",
+      "url": "https://repositorio.ufmg.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufmg.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0014",
+    "institution": {
+      "name": "Universidade Federal do Piauí",
+      "acronym": "UFPI",
+      "type": "federal",
+      "state": "PI",
+      "city": "Teresina"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFPI",
+      "url": "https://repositorio.ufpi.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufpi.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "3"
+  },
+  {
+    "id": "BR-FED-0015",
+    "institution": {
+      "name": "Universidade Federal do Rio Grande do Sul",
+      "acronym": "UFRGS",
+      "type": "federal",
+      "state": "RS",
+      "city": "Porto Alegre"
+    },
+    "repository": {
+      "name": "LUME - Repositório Digital da UFRGS",
+      "url": "https://lume.ufrgs.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://lume.ufrgs.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0016",
+    "institution": {
+      "name": "Universidade Federal do Rio Grande",
+      "acronym": "FURG",
+      "type": "federal",
+      "state": "RS",
+      "city": "Rio Grande"
+    },
+    "repository": {
+      "name": "Repositório Institucional da FURG",
+      "url": "https://repositorio.furg.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.furg.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0017",
+    "institution": {
+      "name": "Universidade Federal da Integração Latino-Americana",
+      "acronym": "UNILA",
+      "type": "federal",
+      "state": "PR",
+      "city": "Foz do Iguaçu"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UNILA",
+      "url": "https://dspace.unila.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://dspace.unila.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0018",
+    "institution": {
+      "name": "Universidade Federal de Lavras",
+      "acronym": "UFLA",
+      "type": "federal",
+      "state": "MG",
+      "city": "Lavras"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFLA",
+      "url": "https://repositorio.ufla.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufla.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0019",
+    "institution": {
+      "name": "Universidade Federal de Ouro Preto",
+      "acronym": "UFOP",
+      "type": "federal",
+      "state": "MG",
+      "city": "Ouro Preto"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFOP",
+      "url": "https://www.repositorio.ufop.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://www.repositorio.ufop.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0020",
+    "institution": {
+      "name": "Universidade Federal de Pelotas",
+      "acronym": "UFPel",
+      "type": "federal",
+      "state": "RS",
+      "city": "Pelotas"
+    },
+    "repository": {
+      "name": "Guaiaca - Repositório Institucional",
+      "url": "https://guaiaca.ufpel.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://guaiaca.ufpel.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0021",
+    "institution": {
+      "name": "Universidade Federal de Pernambuco",
+      "acronym": "UFPE",
+      "type": "federal",
+      "state": "PE",
+      "city": "Recife"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFPE",
+      "url": "https://repositorio.ufpe.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufpe.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0022",
+    "institution": {
+      "name": "Universidade Federal de São Paulo",
+      "acronym": "UNIFESP",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "Repositório Institucional da Unifesp",
+      "url": "https://repositorio.unifesp.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.unifesp.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "3"
+  },
+  {
+    "id": "BR-FED-0023",
+    "institution": {
+      "name": "Universidade Federal de São Carlos",
+      "acronym": "UFSCar",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Carlos"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFSCar",
+      "url": "https://repositorio.ufscar.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufscar.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0024",
+    "institution": {
+      "name": "Universidade Federal do Rio Grande do Norte",
+      "acronym": "UFRN",
+      "type": "federal",
+      "state": "RN",
+      "city": "Natal"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFRN",
+      "url": "https://repositorio.ufrn.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufrn.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0025",
+    "institution": {
+      "name": "Instituto Federal do Rio Grande do Norte",
+      "acronym": "IFRN",
+      "type": "federal",
+      "state": "RN",
+      "city": "Natal"
+    },
+    "repository": {
+      "name": "Memoria - Repositório Institucional",
+      "url": "http://memoria.ifrn.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://memoria.ifrn.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0026",
+    "institution": {
+      "name": "Instituto Federal da Paraíba",
+      "acronym": "IFPB",
+      "type": "federal",
+      "state": "PB",
+      "city": "João Pessoa"
+    },
+    "repository": {
+      "name": "Repositório Digital do IFPB",
+      "url": "https://repositorio.ifpb.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ifpb.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0027",
+    "institution": {
+      "name": "Instituto Federal do Ceará",
+      "acronym": "IFCE",
+      "type": "federal",
+      "state": "CE",
+      "city": "Fortaleza"
+    },
+    "repository": {
+      "name": "Repositório Institucional IFCE",
+      "url": "https://repositorio.ifce.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ifce.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0028",
+    "institution": {
+      "name": "Instituto Federal do Rio Grande do Sul",
+      "acronym": "IFRS",
+      "type": "federal",
+      "state": "RS",
+      "city": "Bento Gonçalves"
+    },
+    "repository": {
+      "name": "Repositório Institucional IFRS",
+      "url": "https://dspace.ifrs.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://dspace.ifrs.edu.br/xmlui/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0029",
+    "institution": {
+      "name": "Instituto Federal de Santa Catarina",
+      "acronym": "IFSC",
+      "type": "federal",
+      "state": "SC",
+      "city": "Florianópolis"
+    },
+    "repository": {
+      "name": "Repositório Institucional IFSC",
+      "url": "https://repositorio.ifsc.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ifsc.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-FED-0030",
+    "institution": {
+      "name": "Universidade Federal Rural do Semi-Árido",
+      "acronym": "UFERSA",
+      "type": "federal",
+      "state": "RN",
+      "city": "Mossoró"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UFERSA",
+      "url": "https://repositorio.ufersa.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ufersa.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-19"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "3"
+  },
+  {
+    "id": "BR-FED-0033",
+    "institution": {
+      "name": "Universidade Federal de Campina Grande",
+      "acronym": "UFCG",
+      "type": "federal",
+      "state": "PB",
+      "city": "Campina Grande"
+    },
+    "repository": {
+      "name": "Biblioteca Digital de Teses e Dissertações",
+      "url": "https://dspace.sti.ufcg.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://dspace.sti.ufcg.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-19"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "3"
+  },
+  {
+    "id": "BR-PRI-0001",
+    "institution": {
+      "name": "Pontifícia Universidade Católica de São Paulo",
+      "acronym": "PUC-SP",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "Repositório da PUCSP",
+      "url": "https://repositorio.pucsp.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.pucsp.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0002",
+    "institution": {
+      "name": "Pontifícia Universidade Católica do Rio Grande do Sul",
+      "acronym": "PUCRS",
+      "type": "federal",
+      "state": "RS",
+      "city": "Porto Alegre"
+    },
+    "repository": {
+      "name": "Repositório Institucional da PUCRS",
+      "url": "https://repositorio.pucrs.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.pucrs.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0003",
+    "institution": {
+      "name": "Universidade do Vale do Rio dos Sinos",
+      "acronym": "UNISINOS",
+      "type": "federal",
+      "state": "RS",
+      "city": "São Leopoldo"
+    },
+    "repository": {
+      "name": "Repositório Digital da Biblioteca da Unisinos",
+      "url": "http://www.repositorio.jesuita.org.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://www.repositorio.jesuita.org.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0004",
+    "institution": {
+      "name": "Universidade Presbiteriana Mackenzie",
+      "acronym": "Mackenzie",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "DSpace Mackenzie",
+      "url": "https://dspace.mackenzie.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://dspace.mackenzie.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0005",
+    "institution": {
+      "name": "Fundação Getulio Vargas",
+      "acronym": "FGV",
+      "type": "other",
+      "state": "RJ",
+      "city": "Rio de Janeiro"
+    },
+    "repository": {
+      "name": "Repositório Digital",
+      "url": "https://repositorio.fgv.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.fgv.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0006",
+    "institution": {
+      "name": "Insper",
+      "acronym": "Insper",
+      "type": "other",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "Repositório Institucional Insper",
+      "url": "https://repositorio.insper.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.insper.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0007",
+    "institution": {
+      "name": "Universidade Paulista",
+      "acronym": "UNIP",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "Repositório Institucional UNIP",
+      "url": "https://repositorio.unip.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0008",
+    "institution": {
+      "name": "Universidade Estácio de Sá",
+      "acronym": "Estácio",
+      "type": "federal",
+      "state": "RJ",
+      "city": "Rio de Janeiro"
+    },
+    "repository": {
+      "name": "Portal de Periódicos Estácio (Repositório)",
+      "url": "https://portal.estacio.br/",
+      "platform": "OJS",
+      "contentType": "Artigos"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0009",
+    "institution": {
+      "name": "Universidade Anhanguera",
+      "acronym": "Anhanguera",
+      "type": "federal",
+      "state": "SP",
+      "city": "Valinhos"
+    },
+    "repository": {
+      "name": "Repositório Cogna",
+      "url": "https://repositorio.pgsscogna.com.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0010",
+    "institution": {
+      "name": "Universidade Católica de Brasília",
+      "acronym": "UCB",
+      "type": "federal",
+      "state": "DF",
+      "city": "Brasília"
+    },
+    "repository": {
+      "name": "Repositório Digital da UCB",
+      "url": "https://repositorio.ucb.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ucb.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0011",
+    "institution": {
+      "name": "Pontifícia Universidade Católica de Campinas",
+      "acronym": "PUC-Campinas",
+      "type": "federal",
+      "state": "SP",
+      "city": "Campinas"
+    },
+    "repository": {
+      "name": "Repositório Institucional PUC-Campinas",
+      "url": "https://repositorio.puc-campinas.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.puc-campinas.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0012",
+    "institution": {
+      "name": "Pontifícia Universidade Católica de Minas Gerais",
+      "acronym": "PUC-Minas",
+      "type": "federal",
+      "state": "MG",
+      "city": "Belo Horizonte"
+    },
+    "repository": {
+      "name": "Biblioteca Digital PUC Minas",
+      "url": "https://biblioteca.pucminas.br/teses",
+      "platform": "DSpace",
+      "contentType": "Teses"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://biblioteca.pucminas.br/teses/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0013",
+    "institution": {
+      "name": "Pontifícia Universidade Católica de Goiás",
+      "acronym": "PUC-Goiás",
+      "type": "federal",
+      "state": "GO",
+      "city": "Goiânia"
+    },
+    "repository": {
+      "name": "Repositório Institucional PUC Goiás",
+      "url": "https://repositorio.pucgoias.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.pucgoias.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0014",
+    "institution": {
+      "name": "Pontifícia Universidade Católica do Paraná",
+      "acronym": "PUCPR",
+      "type": "federal",
+      "state": "PR",
+      "city": "Curitiba"
+    },
+    "repository": {
+      "name": "Biblioteca Digital PUCPR",
+      "url": "https://bibliotecadigital.pucpr.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://bibliotecadigital.pucpr.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0015",
+    "institution": {
+      "name": "Universidade de Fortaleza",
+      "acronym": "Unifor",
+      "type": "federal",
+      "state": "CE",
+      "city": "Fortaleza"
+    },
+    "repository": {
+      "name": "Biblioteca Digital de Teses e Dissertações",
+      "url": "https://uol.unifor.br/btd/",
+      "platform": "Outro",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0016",
+    "institution": {
+      "name": "Unicesumar",
+      "acronym": "Unicesumar",
+      "type": "other",
+      "state": "PR",
+      "city": "Maringá"
+    },
+    "repository": {
+      "name": "Repositório Digital Unicesumar",
+      "url": "http://rdu.unicesumar.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://rdu.unicesumar.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0017",
+    "institution": {
+      "name": "Unochapecó",
+      "acronym": "Unochapecó",
+      "type": "federal",
+      "state": "SC",
+      "city": "Chapecó"
+    },
+    "repository": {
+      "name": "Repositório Institucional Unochapecó",
+      "url": "https://rd.unochapeco.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://rd.unochapeco.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0018",
+    "institution": {
+      "name": "Universidade do Vale do Taquari",
+      "acronym": "Univates",
+      "type": "federal",
+      "state": "RS",
+      "city": "Lajeado"
+    },
+    "repository": {
+      "name": "Biblioteca Digital Univates",
+      "url": "https://www.univates.br/bdu/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://www.univates.br/bdu/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0019",
+    "institution": {
+      "name": "Universidade Feevale",
+      "acronym": "Feevale",
+      "type": "federal",
+      "state": "RS",
+      "city": "Novo Hamburgo"
+    },
+    "repository": {
+      "name": "Repositório Institucional Feevale",
+      "url": "https://biblioteca.feevale.br/RI/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://biblioteca.feevale.br/RI/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0020",
+    "institution": {
+      "name": "Universidade de Caxias do Sul",
+      "acronym": "UCS",
+      "type": "federal",
+      "state": "RS",
+      "city": "Caxias do Sul"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UCS",
+      "url": "https://repositorio.ucs.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.ucs.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0021",
+    "institution": {
+      "name": "Universidade de Passo Fundo",
+      "acronym": "UPF",
+      "type": "federal",
+      "state": "RS",
+      "city": "Passo Fundo"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UPF",
+      "url": "http://ri.upf.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://ri.upf.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0022",
+    "institution": {
+      "name": "Universidade de Santa Cruz do Sul",
+      "acronym": "UNISC",
+      "type": "federal",
+      "state": "RS",
+      "city": "Santa Cruz do Sul"
+    },
+    "repository": {
+      "name": "Repositório Institucional da UNISC",
+      "url": "https://repositorio.unisc.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.unisc.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0023",
+    "institution": {
+      "name": "Universidade do Vale do Itajaí",
+      "acronym": "Univali",
+      "type": "federal",
+      "state": "SC",
+      "city": "Itajaí"
+    },
+    "repository": {
+      "name": "Repositório Institucional Univali",
+      "url": "https://siaiapp28.univali.br/repositorio/",
+      "platform": "Outro",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0024",
+    "institution": {
+      "name": "Universidade de Sorocaba",
+      "acronym": "Uniso",
+      "type": "federal",
+      "state": "SP",
+      "city": "Sorocaba"
+    },
+    "repository": {
+      "name": "Repositório Institucional Uniso",
+      "url": "https://comum.rcaap.pt/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://comum.rcaap.pt/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0025",
+    "institution": {
+      "name": "Universidade de Marília",
+      "acronym": "Unimar",
+      "type": "federal",
+      "state": "SP",
+      "city": "Marília"
+    },
+    "repository": {
+      "name": "Repositório Institucional Unimar",
+      "url": "https://ri.unimar.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://ri.unimar.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0026",
+    "institution": {
+      "name": "Universidade Católica de Pernambuco",
+      "acronym": "Unicap",
+      "type": "federal",
+      "state": "PE",
+      "city": "Recife"
+    },
+    "repository": {
+      "name": "Biblioteca Digital de Teses e Dissertações",
+      "url": "http://senhorinha.unicap.br/jspui/",
+      "platform": "DSpace",
+      "contentType": "Teses"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://senhorinha.unicap.br/jspui/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0027",
+    "institution": {
+      "name": "Universidade Católica de Santos",
+      "acronym": "UniSantos",
+      "type": "federal",
+      "state": "SP",
+      "city": "Santos"
+    },
+    "repository": {
+      "name": "Biblioteca Digital",
+      "url": "https://biblioteca.unisantos.br/",
+      "platform": "Outro",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0028",
+    "institution": {
+      "name": "Universidade Metodista de São Paulo",
+      "acronym": "Umesp",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Bernardo do Campo"
+    },
+    "repository": {
+      "name": "Repositório Digital",
+      "url": "http://repositorio.metodista.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://repositorio.metodista.br/jspui/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0029",
+    "institution": {
+      "name": "Universidade Cruzeiro do Sul",
+      "acronym": "Unicsul",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "Repositório Institucional",
+      "url": "https://repositorio.cruzeirodosul.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0030",
+    "institution": {
+      "name": "Universidade Cidade de São Paulo",
+      "acronym": "UNICID",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "Repositório Institucional",
+      "url": "https://repositorio.unicid.edu.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0031",
+    "institution": {
+      "name": "Universidade Nove de Julho",
+      "acronym": "UNINOVE",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "Biblioteca Digital de Teses e Dissertações",
+      "url": "https://bibliotecadigital.uninove.br/",
+      "platform": "TEDE",
+      "contentType": "Teses"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0032",
+    "institution": {
+      "name": "Universidade Anhembi Morumbi",
+      "acronym": "UAM",
+      "type": "federal",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "Repositório Universitário da Ânima (RUNA)",
+      "url": "https://repositorio.animaeducacao.com.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.animaeducacao.com.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0033",
+    "institution": {
+      "name": "Universidade Potiguar",
+      "acronym": "UnP",
+      "type": "federal",
+      "state": "RN",
+      "city": "Natal"
+    },
+    "repository": {
+      "name": "Repositório Universitário da Ânima (RUNA)",
+      "url": "https://repositorio.animaeducacao.com.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.animaeducacao.com.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-PRI-0034",
+    "institution": {
+      "name": "Universidade Salvador",
+      "acronym": "UNIFACS",
+      "type": "federal",
+      "state": "BA",
+      "city": "Salvador"
+    },
+    "repository": {
+      "name": "Repositório Universitário da Ânima (RUNA)",
+      "url": "https://repositorio.animaeducacao.com.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://repositorio.animaeducacao.com.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-11"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-RES-0001",
+    "institution": {
+      "name": "Empresa Brasileira de Pesquisa Agropecuária",
+      "acronym": "Embrapa",
+      "type": "other",
+      "state": "DF",
+      "city": "Brasília"
+    },
+    "repository": {
+      "name": "ALICE - Repositório Embrapa",
+      "url": "https://www.alice.cnptia.embrapa.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://www.alice.cnptia.embrapa.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-19"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "2"
+  },
+  {
+    "id": "BR-RES-0002",
+    "institution": {
+      "name": "Rede SciELO",
+      "acronym": "SciELO",
+      "type": "other",
+      "state": "SP",
+      "city": "São Paulo"
+    },
+    "repository": {
+      "name": "SciELO Brasil",
+      "url": "https://scielo.br/",
+      "platform": "OJS",
+      "contentType": "Artigos"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "http://www.scielo.br/oai/scielo-oai.php",
+        "verified": false,
+        "lastVerified": "2026-02-19"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "1"
+  },
+  {
+    "id": "BR-RES-0004",
+    "institution": {
+      "name": "Empresa Brasileira de Pesquisa Agropecuária",
+      "acronym": "Embrapa",
+      "type": "other",
+      "state": "DF",
+      "city": "Brasília"
+    },
+    "repository": {
+      "name": "Infoteca-e",
+      "url": "https://www.infoteca.cnptia.embrapa.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://www.infoteca.cnptia.embrapa.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-19"
+      },
+      "searchEndpoints": []
+    },
+    "status": "inactive",
+    "layer": "3"
+  },
+  {
+    "id": "BR-AGG-0003",
+    "institution": {
+      "name": "Coordena��o de Aperfei�oamento de Pessoal de N�vel Superior",
+      "acronym": "CAPES",
+      "type": "other",
+      "state": "DF",
+      "city": "Bras�lia"
+    },
+    "repository": {
+      "name": "Cat�logo de Teses e Disserta��es CAPES",
+      "url": "https://catalogodeteses.capes.gov.br/",
+      "platform": "Outro",
+      "contentType": "Teses/Disserta��es"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-19"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "1"
+  },
+  {
+    "id": "BR-AGG-0004",
+    "institution": {
+      "name": "Coordena��o de Aperfei�oamento de Pessoal de N�vel Superior",
+      "acronym": "CAPES",
+      "type": "other",
+      "state": "DF",
+      "city": "Bras�lia"
+    },
+    "repository": {
+      "name": "Portal de Peri�dicos CAPES",
+      "url": "https://www.periodicos.capes.gov.br/",
+      "platform": "Outro",
+      "contentType": "Artigos"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-19"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "1"
+  },
+  {
+    "id": "BR-AGG-0005",
+    "institution": {
+      "name": "Centro Latino-Americano e do Caribe de Informa��o em Ci�ncias da Sa�de",
+      "acronym": "BIREME",
+      "type": "other",
+      "state": "SP",
+      "city": "S�o Paulo"
+    },
+    "repository": {
+      "name": "BVS LILACS",
+      "url": "https://pesquisa.bvsalud.org/",
+      "platform": "Outro",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "endpoint": "",
+        "verified": false,
+        "lastVerified": "2026-02-19"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "1"
+  },
+  {
+    "id": "BR-FED-0034",
+    "institution": {
+      "name": "Universidade Federal do Amazonas",
+      "acronym": "UFAM",
+      "type": "federal",
+      "state": "AM",
+      "city": "Manaus"
+    },
+    "repository": {
+      "name": "TEDE UFAM",
+      "url": "https://tede.ufam.edu.br/",
+      "platform": "TEDE",
+      "contentType": "Teses"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://tede.ufam.edu.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-19"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "3"
+  },
+  {
+    "id": "BR-FED-0035",
+    "institution": {
+      "name": "Universidade Federal do Rio de Janeiro",
+      "acronym": "UFRJ",
+      "type": "federal",
+      "state": "RJ",
+      "city": "Rio de Janeiro"
+    },
+    "repository": {
+      "name": "Pantheon UFRJ",
+      "url": "https://pantheon.ufrj.br/",
+      "platform": "DSpace",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": true,
+        "endpoint": "https://pantheon.ufrj.br/oai/request",
+        "verified": false,
+        "lastVerified": "2026-02-19"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "3"
+  }
+]
