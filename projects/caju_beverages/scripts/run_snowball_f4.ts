@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { ScreeningService } from '../../../prismaid/mcp-repos-br/src/services/screen.js';
+import { ScreeningService } from '../../../prismaid/reviewbr-mcp/src/services/screen.js';
 
 const projDir = "c:\\Users\\Vicente\\prismaid\\projects\\caju_beverages";
 

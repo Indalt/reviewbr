@@ -5,7 +5,7 @@ const path = require('path');
 const cmd = `npx tsx src/scripts/run_search_cli.ts --query "\\"Anacardium occidentale\\" AND (bebida OR bebidas OR suco OR néctar OR vinho OR fermentado OR cajuína OR \\"cajuina\\")" --ids BR-AGG-0001,BR-AGG-0002,BR-AGG-0003,BR-AGG-0004,BR-AGG-0005,BR-RES-0002 --max 50`;
 
 console.log("Running search...");
-const stdout = execSync(cmd, { cwd: 'c:\\Users\\Vicente\\prismaid\\prismaid\\mcp-repos-br', encoding: 'utf-8', maxBuffer: 1024 * 1024 * 10 });
+const stdout = execSync(cmd, { cwd: 'c:\\Users\\Vicente\\prismaid\\prismaid\\reviewbr-mcp', encoding: 'utf-8', maxBuffer: 1024 * 1024 * 10 });
 
 const startIdx = stdout.indexOf('__JSON_START__') + '__JSON_START__'.length;
 const endIdx = stdout.indexOf('__JSON_END__');

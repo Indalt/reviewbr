@@ -17,7 +17,7 @@ async function fetchFromOpenAlex(query: string) {
 
     try {
         const response = await fetch(url, {
-            headers: { 'User-Agent': 'mcp-repos-br (mailto:vicente@example.com)' }
+            headers: { 'User-Agent': 'reviewbr-mcp (mailto:vicente@example.com)' }
         });
 
         if (!response.ok) {

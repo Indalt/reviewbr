@@ -6,7 +6,7 @@ const cmd = `npx tsx src/scripts/run_search_cli.ts --query '${query}' --ids BR-A
 
 console.log("Running:", cmd);
 try {
-    const stdout = execSync(cmd, { cwd: 'c:\\\\Users\\\\Vicente\\\\prismaid\\\\prismaid\\\\mcp-repos-br', encoding: 'utf-8', maxBuffer: 1024 * 1024 * 50 });
+    const stdout = execSync(cmd, { cwd: 'c:\\\\Users\\\\Vicente\\\\prismaid\\\\prismaid\\\\reviewbr-mcp', encoding: 'utf-8', maxBuffer: 1024 * 1024 * 50 });
 
     // Extract JSON
     const startIdx = stdout.indexOf('__JSON_START__') + '__JSON_START__'.length;

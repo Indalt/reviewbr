@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { DeduplicationService } from '../../../prismaid/mcp-repos-br/src/services/dedupe.js';
-import { ScreeningService } from '../../../prismaid/mcp-repos-br/src/services/screen.js';
+import { DeduplicationService } from '../../../prismaid/reviewbr-mcp/src/services/dedupe.js';
+import { ScreeningService } from '../../../prismaid/reviewbr-mcp/src/services/screen.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projDir = path.resolve(__dirname, '..');
