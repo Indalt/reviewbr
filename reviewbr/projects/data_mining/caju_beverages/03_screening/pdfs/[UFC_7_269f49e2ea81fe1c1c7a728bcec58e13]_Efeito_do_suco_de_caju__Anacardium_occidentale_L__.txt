@@ -1,0 +1,3425 @@
+ 
+ 
+ 
+UNIVERSIDADE FEDERAL DO CEARÁ 
+CENTRO DE CIÊNCIAS 
+DEPARTAMENTO DE BIOQUÍMICA E BIOLOGIA MOLECULAR 
+PROGRAMA DE PÓS-GRADUAÇÃO EM BIOQUÍMICA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CAMILA FREITAS BEZERRA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EFEITO DO SUCO DE CAJU (Anacardium occidentale L.) ADICIONADO DE 
+FARINHAS DO BAGAÇO DE CAJU SOBRE A RESPOSTA IMUNOLÓGICA EM 
+CAMUNDONGOS  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA – CE 
+2013 
+ 
+ 
+CAMILA FREITAS BEZERRA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EFEITO DO SUCO DE CAJU (Anacardium occidentale L.) ADICIONADO DE 
+FARINHAS DO BAGAÇO DE CAJU SOBRE A RESPOSTA IMUNOLÓGICA EM 
+CAMUNDONGOS  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Dissertação apresentada ao Programa de Pós-
+Graduação em Bioquímica da Universidade 
+Federal do Ceará, como requisito parcial para 
+obtenção do grau de Mestre em Bioquímica. 
+                                                                
+Orientadora: Prof. Dra. Dirce Fernandes de 
+Melo 
+Co-orientadora: Prof. Dra. Erika Freitas Mota 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA – CE 
+2013 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Ao meu esposo, Leandro Bezerra de Oliveira, meus 
+pais, Carlos e Ivonete, e aos meus irmãos Carla e 
+Henrique. 
+ 
+AGRADECIMENTOS 
+ 
+A Deus, pelo dom da vida e por ter se mostrado de muitas formas quando menos 
+esperei. 
+À Universidade Federal do Ceará - UFC, por toda minha formação.  
+À Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES), pela 
+concessão da bolsa de estudo e pelo suporte financeiro. 
+À Empresa Brasileira de Pesquisa Agropecuária (Embrapa Agroindústria Tropical) por 
+disponibilizar os frutos para realização desse trabalho. 
+À Profa. Dra. Dirce Fernandes de Melo, pelo apoio constante, pelas palavras certas no 
+momento certo, compreensão, incentivo, injeções de ânimo que sempre me fizeram tentar, por 
+acreditar que eu seria capaz, pelo exemplo de competência, integridade, humildade, 
+humanidade e sabedoria e acima de tudo pela agradável amizade.  
+a
+À Prof. Dra. Erika Freitas Mota, pelo exemplo de coragem e persistência, pela atenção, 
+pelos cuidados constantes na orientação deste trabalho, por todos os ensinamentos, incentivos, 
+pela amizade e confiança em mim depositada. 
+a
+À Prof. Dra. Diana Célia Sousa Nunes Pinheiro, pelos valiosos ensinamentos e 
+orientação, pela amizade, atenção, confiança, constante incentivo, indispensável ajuda e ter 
+aceitado o convite para participar dessa banca.  Obrigada por disponibilizar seu laboratório e 
+seus estudantes para realização de etapas fundamentais desse trabalho. 
+À Profª. Dra. Ana Claudia Marinho da Silva, por todos os ensinamentos, pela incansável 
+ajuda, apoio, força, incentivos e amizade. Obrigada por transformar em alegria os momentos 
+difíceis. 
+À Dra. Neuza Felix Gomes, pelos ensinamentos, pela ajuda, extrema disponibilidade e 
+atenção dispensadas desde a Iniciação Científica e por ter aceitado o convite para participar 
+dessa banca. Obrigada pela paciência, pelas palavras de apoio e principalmente pela 
+verdadeira amizade.     
+A todos os amigos do Laboratório de Bioenergética do Departamento de Bioquímica e 
+Biologia Molecular, em especial a Andresiane, Beatriz, Carol, Carine, Lívia, Michelle, 
+Georgia, Albert, Joanna e Samilly pela ajuda, apoio e amizade. 
+A todos os membros do Laboratório de Imunologia e Bioquímica (LIBA) da UECE, em 
+especial Luana, Belize e Cláudio pela ajuda e atenção. 
+ 
+À Profª. Dra. Raquel Miranda, pelo fornecimento do caju, ensinamentos, sugestões e 
+pela disponibilização do seu laboratório de Fisiologia dos Frutos no Departamento de 
+Bioquímica e Biologia Molecular da UFC. 
+A todos os professores e funcionários do Departamento de Bioquímica e Biologia 
+Molecular da UFC, que direta ou indiretamente contribuíram para realização deste trabalho. 
+Aos colegas do laboratório de Produtos Naturais no Departamento de Química Orgânica 
+e Inorgânica da UFC, pela ajuda e gentileza. 
+À amiga Aletheia Souza, pelo suporte em algumas etapas deste trabalho, pelo apoio e 
+amizade. 
+Às amigas Camilla Salviano e Luana Guabiraba pelo carinho concedido, pela força, 
+apoio, por estarem sempre dispostas a me ajudar e por transformarem em alegria meus 
+momentos difíceis.  
+Aos meus amáveis pais, Carlos Alberto Bezerra e Francisca Ivonete de Freitas Bezerra, 
+exemplo de força, amor e bondade, aos meus queridos irmãos, Carlos Henrique e Carla de 
+Freitas, pelo carinho, pela confiança em mim depositada, pelo apoio de sempre, e aos meus 
+adoráveis sobrinhos Laís, Rafael e Pedro, pela injeção de ânimo disponibilizada sendo 
+fundamental para a continuidade deste trabalho. Obrigada por estarem sempre presentes em 
+minha vida. 
+Em especial, agradeço ao meu esposo, amigo e companheiro, Leandro Bezerra de 
+Oliveira, que esteve comigo durante todos os momentos difíceis e em todas as minhas 
+conquistas. Obrigada pela força, pela paciência e pelas diversas vezes que me encheu de 
+forças com suas palavras de apoio e carinho. Você é uma dádiva, um presente divino, 
+obrigada por tudo. 
+Enfim, a todos aqueles que de alguma forma contribuíram para execução desta 
+produção. 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+"Se pude ver mais longe, foi por ter-me 
+apoiado em ombros de gigantes.” 
+(Isaac Newton)
+ 
+RESUMO 
+ 
+O caju e a castanha, pseudofruto e fruto do cajueiro (Anacardium occidentale L.),  apresentam 
+alto valor nutricional, porém menos de 10% do pedúnculo proveniente do beneficiamento da 
+castanha são aproveitados. Uma alternativa para o aproveitamento do bagaço de caju seria seu 
+processamento em farinha, a qual poderia ser adicionada ao suco de caju e assim aumentar 
+suas propriedades nutricionais. O objetivo do trabalho foi avaliar a composição fitoquímica, o 
+potencial antioxidante total e a atividade imunomoduladora do suco de caju adicionado com 
+farinha do bagaço de caju maduro (SFM) e verde (SFV).  Para tanto, avaliou-se a capacidade 
+antioxidante do suco e das farinhas de caju (clone CCP-76) por dois métodos, ABTS e DPPH. 
+Os compostos fitoquímicos determinados foram os polifenóis, vitamina C, carotenoides, 
+antocianinas e flavonoides amarelos. Os testes in vivo foram realizados com camundongos 
+Swiss machos, provenientes do Biotério Central da UFC. O protocolo experimental foi 
+aprovado pelo Comitê de Ética em Pesquisa com Animal da UFC (N° 102/2011). Para os 
+ensaios toxicológicos, camundongos foram tratados por 19 dias, por via oral, com diferentes 
+doses de SFM e SFV e os parâmetros fisiológicos como peso do animal, peso relativo dos 
+órgãos, peroxidação lipídica e dosagem das enzimas ALT e AST foram determinados. Para 
+avaliação da resposta imune humoral e celular, os animais foram imunizados com hemácias 
+de carneiro (HC) para determinar o título de anticorpos pelo método de hemaglutinação e 
+posteriormente desafiados com HC, para avaliar a resposta de hipersensibilidade tardia 
+(DTH). Para verificar as diferenças significativas entre as médias dos diferentes grupos, 
+aplicou-se o teste ANOVA seguido de Tukey ou Newman-Keuls, considerando as diferenças 
+significativas quando p < 0,05. A farinha verde de bagaço de caju apresentou a maior 
+capacidade antioxidante e os maiores teores de polifenóis, constituinte predominante também 
+na farinha de caju maduro e no suco. Não se constatou alterações significativas em nenhum 
+parâmetro avaliado no ensaio toxicológico. Na resposta humoral, o suco de caju e o SFV na 
+dose de 300 mg/kg apresentaram os maiores títulos de anticorpos com aumento de 120,69 e 
+100% em relação ao controle. Já na resposta celular, o suco, SFM e SFV (dose de 300 mg/kg) 
+induziram um aumento na DTH de  10,66; 10,66 e 11,11%, respectivamente, em relação ao 
+controle. O suco adicionado da farinha do bagaço do caju em diferentes estádios de 
+maturidade pode ser uma alternativa para melhoria da resposta imunológica. No entanto, são 
+necessários estudos complementares para viabilizar essa suplementação do suco com as 
+farinhas.   
+Palavras chave: Anacardium occidentale, Antioxidantes, Hemácias de Carneiro, Imunomodulação. 
+ 
+ 
+ABSTRACT 
+ 
+The cashew apple and cashew nut, pseudo fruit and fruit (Anacardium occidentale L.) have 
+high nutritional value, but less than 10% of the cashew apple from the processing of  cashew 
+nut is availed. The cashew apple juice added with bagasse flour could therefore be an 
+alternative for the improvement of its nutritional properties. The aim of this study was to 
+evaluate the phytochemical composition, the total antioxidant potential and  
+immunomodulatory  activity of cashew apple juice with added of the  flour mature bagasse 
+(CAJM) and immature (CAJIM) of the cashew apple. Therefore, we evaluated the antioxidant 
+capacity of juice and flour of cashew apple (clone CCP-76) by two methods, ABTS and 
+DPPH. The phytochemicals compounds quantified were polyphenols, vitamin C, carotenoids, 
+anthocyanins and flavonoids yellow.  In vivo tests were performed with male swiss mice, from 
+the animal colony of UFC, with approval by the Ethics Committee on Animal Research 
+(CEPA) under the UFC protocol No. 102/2011.  Toxicity tests were carried out on mice 
+treated for 19 days orally with CAJM and CAJIM at different doses. Physiological parameters 
+such as body weight, relative organ to body weight, lipid peroxidation and dosage of the ALT 
+and AST enzymes were determined. To evaluate the humoral and cellular immune response, 
+the treated animals were immunized with sheep red blood cells (SRBC) to determine the 
+antibody titer by hemagglutination method and later challenged with (SRBC) to evaluate the 
+delayed type hypersensitivity (DTH) reaction. To analyze the significant differences between 
+the means of different groups, we applied the ANOVA followed by Tukey or Newman-Keuls 
+and differences were considered significant at p < 0.05. Flour Cashew green bagasse showed 
+the highest antioxidant capacity and the highest levels of polyphenols, also predominant 
+constituent in flour and ripe cashew juice. The ripe flour showed the highest antioxidant 
+capacity and the highest levels of polyphenols, also predominant constituent in ripe flour and 
+cashew apple juice. There were no significant changes in any parameters evaluated in toxicity 
+test. In the  humoral  response, the cashew apple  juice and CAJIM at dose of 300 mg / kg 
+showed  higher antibody titer with  an  increase  of  120.69  and  100.00 % compared to the 
+control group. Already in cellular response, juice, SFM and SFV (300 mg / kg) induced an 
+increase in DTH of 10.66, 10.66 and 11.11% respectively, compared to control. The cashew 
+apple juice added with the flour of cashew bagasse  in  stages of maturity different can be an 
+alternative for improving the immune system. However, further studies are needed to enable 
+this supplementation of juice with flours.   
+Keywords: Anacardium occidentale, Antioxidants, Sheep red blood cells, Immunomodulation. 
+ 
+ 
+LISTA DE FIGURAS 
+ 
+Figura 01 Planta de Cajueiro anão-precoce, clone CCP-76 20 
+Figura 02 Pedúnculos verdes e maduros de clone cajueiro anão-precoce CCP-76 22 
+Ativação de células B dependente de células T 29 
+Figura 03 
+Figura 04 Ativação de células B independente de células T 30 
+Figura 05 Gráfico representativo da resposta primária e secundária em relação à 33 
+quantidade de anticorpos em diferentes dias após a exposição ao 
+antígeno 
+Figura 06 Características gerais das células T com destaque para os linfócitos T ���
+auxiliares (subtipos Th e Th), células Th, linfócitos T citolíticos, 
+1217
+linfócitos Tγδ e células T reguladoras naturais (TREGs) e induzidas 
+����������
+Figura 07 Fluxograma do preparo do suco de caju e das farinhas de bagaços de 41 
+caju maduro e verde 
+Figura 08 Esquema de Imunização e Desafio com Hemácias de Carneiro. 52 
+Figura 09 Capacidade Antioxidante Total (ABTS) do suco de caju, farinha do 53 
+bagaço de caju maduro (FM) e caju verde (FV) 
+Figura 10 Capacidade Antioxidante Total (DPPH) do suco de caju, farinha do 54 
+bagaço de caju maduro (FM) e caju verde (FV). 
+Figura 11 Polifenóis Extraíveis Totais do suco de caju, farinha do bagaço de caju 56 
+maduro (FM) e caju verde (FV) 
+Figura 12 Títulos de Anticorpos aglutinantes anti-hemácias de carneiro no 7° 61 
+(título primário) e no 14° (título secundário) dia de imunização 
+Espessura da pata, em porcentagem, calculado entre os tempos zeros e 64 
+Figura 13 
+24 horas, 48 horas e 72 horas nos grupos Controle, Levamisol e Suco 
+(A); SFM75 e SFM300 (B) e SFV75 e SFV300 (C) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE TABELAS 
+ 
+Tabela 01 Principais funções das Imunoglobulinas 31 
+Tabela 02 Caracterização Fitoquímica das Farinhas dos Bagaços de Caju 55 
+Maduro (FM) e Verde (FV) 
+Tabela 03 Conteúdo de compostos fitoquímicos do Suco de Caju, da Farinha do 56 
+Bagaço de caju maduro (FM) e da Farinha do Bagaço de caju verde 
+(FV) 
+Tabela 04 Efeitos do tratamento com Suco de Caju adicionado com as Farinhas 57 
+do Bagaço de Caju sobre parâmetros da toxicidade em camundongos 
+Tabela 05 Efeito do Suco de Caju adicionado com a Farinha do Baço sobre o 58 
+peso relativo dos órgãos 
+Tabela 06 Efeito do Suco de Caju adicionado com a Farinha do Baço sobre a 59 
+Enzimas Transaminases e a Peroxidação Lipídica 
+Títulos de  anticorpos  aglutinantes anti - hemácias de carneiro 60 
+Tabela 07 
+Tabela 08 Efeito da  imunização com hemácias de carneiro sobre o peso  61 
+relativo do timo e do baço 
+Reação de Hipersensibilidade Tardia (DTH) induzida pelo desafio 63 
+Tabela 09 
+com  Hemácias de Carneiro   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE ABREVIATURAS E SIGLAS 
+ 
+ABTS 2,2´-azinobis (3-etilbenzotiazolina-6-ácido sulfônico) 
+ALT Alanina aminotransferase 
+APCs Células apresentadoras de antígenos 
+AST Aspartato aminotransferase 
+CEPA Comitê de Ética em Pesquisa com Animal 
+CD4+ correceptor presente em células T restritas ao MHC de classe II 
+CD8+ correceptor presente em células T restritas ao MHC de classe I 
+CONCEA Conselho Nacional de Controle da Experimentação Animal 
+DFI 2,6-dicloro-fenol-indofenol 
+DPPH 1,1-difenil-2-picrilhidrazil 
+DTH Reação de Hipersensibilidade Tardia 
+EC50 Quantidade necessária para reduzir em 50% a concentração inicial do radical 
+DPPH 
+FM Farinha do bagaço de caju maduro 
+FV Farinha do bagaço de caju verde 
+HC Hemácias de Carneiro 
+HCl  Ácido Clorídrico 
+Ig Imunoglobulina 
+IL Interleucina 
+INF-γ�Interferon Gama 
+LB Linfócitos B 
+LT Linfócitos T 
+MDA Malondialdeído 
+MHC Complexo principal de histocompatibilidade 
+NaOH Hidróxido de Sódio 
+NK Natural killer 
+SFM Suco adicionado com farinha do bagaço de caju maduro 
+SFV Suco adicionado com farinha do bagaço de caju verde 
+Swiss  Linhagem de camundongos 
+TBA Ácido tiobarbitúrico 
+TC Célula T citotóxica 
+ 
+ 
+Th “T help” (célula T auxiliar)  
+Th1 “T help” 1 (célula T auxiliar do tipo 1) 
+Th2 “T help” 2 (célula T auxiliar do tipo 2) 
+TNF-α fator de necrose tumoral alfa  
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+ 
+1 INTRODUÇÃO_______________________________________________ 18 
+2 REVISÃO BIBLIOGRÁFICA__________________________________ 20 
+2.1 Caju (Anacardium occidentale)___________________________________ 
+21 
+2.2 Alimentos Funcionais e Compostos Fitoquímicos _____________________ 23 
+2.3 Compostos Fitoquímicos e Resposta Imunológica_____________________ 25 
+2.4 Características Gerais do Sistema Imunológico______________________ 
+26 
+2.4.1 Imunidade Inata_______________________________________________ 27 
+2.4.2 Imunidade Adaptativa___________________________________________ 28 
+2.4.2.1 Imunidade Humoral ____________________________________________ 29 
+2.4.2.2 Imunidade Celular _____________________________________________ 
+33 
+2.5 Imunomodulação ______________________________________________ 36 
+2.6 Modelo de Imunização por Hemácias de Carneiro____________________ 37 
+3 
+OBJETIVOS_________________________________________________ 38 
+3.1  Objetivos Gerais______________________________________________ 38 
+3.2 Objetivos Específicos___________________________________________ 38 
+4 
+MATERIAIS ________________________________________________ 39 
+4.1 Material Vegetal_______________________________________________ 39 
+4.2 Animais______________________________________________________ 39 
+4.3 Reagentes Químicos____________________________________________ 39 
+5 
+MÉTODOS__________________________________________________ 40 
+5.1 Preparo das Amostras__________________________________________ 40 
+5.1.1 Amostra de Caju para Preparo do Suco____________________________ 40 
+5.1.2 Farinha do Bagaço de Caju_____________________________________ 
+40 
+5.1.3 Preparo do Suco Adicionado com as Farinhas______________________ 40 
+5.1.4 Preparo do Extrato Bruto para Análises de Antioxidante Total e Polifenóis 41 
+Totais_______________________________________________________ 
+ 
+5.2 Estudo da atividade antioxidante total e dos compostos fitoquímicos_____ 42 
+5.2.1 Atividade Antioxidante Total pelo método do Radical ABTS_____________ 42 
+5.2.2 Atividade Antioxidante Total pelo método do Radical DPPH____________ 42 
+5.2.3 
+Determinação qualitativa dos compostos fitoquímico_________________ 43 
+5.2.3.1 Preparo dos extratos___________________________________________ 43 
+ 
+ 
+5.2.3.2 Determinação de Fenóis e Taninos________________________________ 44 
+5.2.3.3 Determinação de Flavonoides____________________________________ 44 
+5.2.3.4 Determinação de Leucoantocianidinas, Catequinas e Flavanonas________ 44 
+5.2.3.5 Determinação de Flavonóis, Flavanonas, Flavanonóis e Xantonas_______ 44 
+5.2.3.6 Determinação de Catequinas_____________________________________ 
+45 
+5.2.3.7 Determinação de Esteroides e Triterpenoides________________________ 45 
+5.2.3.8 Determinação de Saponinas______________________________________ 45 
+5.2.3.9 Teste confirmatório para saponinas________________________________ 
+45 
+5.2.3.10 Determinação de Alcaloides______________________________________ 46 
+5.2.4 Determinação dos Antioxidante não enzimáticos ____________________ 46 
+5.2.4.1 Determinação dos Polifenóis Extraíveis Totais_______________________ 46 
+5.2.4.2 Determinação de Vitamina C Total________________________________ 
+47 
+5.2.4.3 Determinação de Antocianinas___________________________________ 47 
+5.2.4.4 Determinação de Flavonoides Amarelos____________________________ 48 
+5.2.4.5 Determinação de Carotenoides Totais______________________________ 
+48 
+5.3 Avaliação da toxicidade sub-aguda das farinhas de caju______________ 48 
+5.3.1 Grupos experimentais__________________________________________ 48 
+5.3.2 Determinação da atividade das enzimas alanina aminotransferase (ALT), 
+ 
+aspartato aminotransferase (AST) no soro de camundongos____________ 
+49 
+ 
+5.3.3 Ensaio de peroxidação lipídica___________________________________ 49 
+5.4 Estudo do efeito imunomodulador do caju_________________________ 50 
+5.4.1 Antígenos ___________________________________________________ 
+50 
+5.4.2 Divisão dos grupos____________________________________________ 50 
+5.4.3 Desenho Experimental_________________________________________ 51 
+5.4.4 Avaliação da Resposta Imune Humoral pelo teste de Hemaglutinação____ 
+51 
+5.4.5 Avaliação da resposta imune celular pela reação de hipersensibilidade  
+tardia________________________________________________________ 
+51 
+ 
+5.4.6 Determinação do  peso  relativo do timo e do baço____________________ 52 
+5.5 Análise Estatística_____________________________________________ 52 
+6 RESULTADOS_______________________________________________ 53 
+6.1 Capacidade  Antioxidante  Total__________________________________  53 
+6.2 
+Perfil  Fitoquímico e Antioxidantes não enzimáticos__________________ 54 
+6.2.1 Perfil  Fitoquímico _____________________________________________ 54 
+ 
+ 
+6.2.2 Antioxidantes não enzimáticos ___________________________________ 54 
+6.3 Toxicidade Sub-aguda_________________________________________  57 
+6.4 Resposta Imune Humoral______________________________________ 59 
+6.5 Resposta Imune Celular________________________________________ 61 
+7 
+DISCUSSÃO_________________________________________________ 65 
+8 CONCLUSÕES________________________________________________ 75 
+ REFERÊNCIAS ______________________________________________ 76 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+18 
+ 
+Introdução                                                                                                                                          Bezerra, C. F. 
+1. INTRODUÇÃO 
+Nos últimos anos, os hábitos alimentares estão sendo considerados fatores importantes 
+associados à saúde (VO; KIM, 2012). Os consumidores estão atualmente interessados nos 
+benefícios potenciais de um suporte nutricional para prevenir ou controlar uma possível 
+enfermidade (HARDY, 2000). Diante deste novo perfil dos consumidores, a indústria 
+alimentícia tem voltado sua atenção para a fabricação de novos produtos que visam melhorar 
+a saúde (ANJO, 2004). Nesse contexto, podem ser citados os alimentos funcionais que são 
+definidos como qualquer substância ou componente de um alimento capaz de proporcionar 
+benefícios para a saúde, como a prevenção e/ou tratamento de doenças. Esses produtos podem 
+variar de nutrientes isolados, produtos de biotecnologia, suplementos dietéticos, alimentos 
+geneticamente modificados até alimentos processados e derivados de plantas (POLLONIO, 
+2000). 
+O funcionamento adequado do sistema imune é fortemente influenciado pelo estado 
+nutricional do organismo e pelos nutrientes ingeridos na alimentação. Diversos nutrientes 
+apresentam propriedades moduladoras do sistema imunológico. O uso de substâncias com 
+capacidade de modular a resposta imunológica, melhorando a defesa do hospedeiro, parece 
+ser uma das alternativas mais promissoras para auxiliar o tratamento de doenças com 
+antibióticos (TZIANABOS, 2000).  Muitas dessas substâncias são comumente encontradas 
+em espécies vegetais, tais como os ácidos fenólicos, flavonoides, taninos e alcaloides, 
+considerados os principais constituintes que potencializam a resposta imunológica 
+(HALLIWELL; RAFTER; JENNER, 2005). 
+Diante do fato que as substâncias naturalmente encontradas nos vegetais, mais 
+particularmente nos frutos, possuem capacidade de modular a resposta imunológica e de que o 
+Brasil apresenta uma economia expressiva no mercado de fruticultura, essa é uma área 
+promissora de estudos para validação desses frutos como nutracêuticos. Vale ainda ressaltar 
+que poucos são os trabalhos que exploram as atividades imunomoduladoras dos frutos e 
+principalmente dos frutos tropicais que são ricos em vitaminas e polifenóis (SHIVAPRASAD 
+et al., 2006).  
+ Tendo em vista que a cultura do caju apresenta-se como importante atividade 
+econômica na região nordestina, com ênfase maior ainda para o Estado do Ceará, esse fruto 
+seria um bom candidato aos estudos sobre o potencial imunomodulador. O seu pseudofruto 
+apresenta alto valor nutritivo com teores de vitamina C, cinco vezes superior ao determinado 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+19 
+ 
+Introdução                                                                                                                                          Bezerra, C. F. 
+em suco de laranja (SILVA et al., 2007). Ademais, o caju possui vários compostos com 
+propriedades antioxidantes, como os carotenoides (ASSUNÇÃO; MERCADANTE, 2003), 
+flavonoides (BRITO et al., 2007), ácidos fenólicos, taninos (MICHODJEHOUN-MESTRES 
+et al., 2009) e ácido anacárdico (KUBO et al., 2006; TREVISAN et al., 2006). Porém, 
+dependendo de fatores como variedade, solo, safra, grau de maturidade e condições 
+climáticas, o caju pode ter sua composição química, físico-química e qualidade nutricional 
+alterada (PINHEIRO, 2008). Para tanto é importante analisar as influências que esses fatores 
+podem realizar no potencial imunológico do fruto, principalmente em relação ao grau de 
+maturidade.  
+Os destinos dados aos pseudofrutos são diversos, porém muitas tecnologias devem ser 
+desenvolvidas no intuito de aumentar o aproveitamento destes de forma mais significativa, 
+principalmente devido suas imensuráveis propriedades terapêuticas. Uma grande problemática 
+ocasionada pelas indústrias de processamento do pedúnculo do caju consiste na geração de 
+resíduos provenientes da fabricação do suco integral, como a película e o bagaço do caju 
+(AGUIAR et al., 2000). Algumas alternativas são realizadas para minimizar esta 
+problemática, utilizando os resíduos para a produção de rações ou fertilizantes (KOBORI ; 
+JORGE, 2005).  Estas medidas ainda são consideradas insuficientes diante da quantidade de 
+resíduos gerados, sendo sempre necessárias novas ideias que gerem alternativas para o destino 
+destes resíduos, diminuindo assim a poluição ambiental e melhorando o aproveitamento como 
+um todo.  
+Uma alternativa para o aproveitamento do bagaço de caju poderia ser seu 
+processamento em farinha, a qual pode ser adicionada ao suco de caju e assim aumentar suas 
+propriedades fitoquímicas devido aos constituintes concentrados no bagaço. Nesse contexto, a 
+avaliação do potencial imunomodular desta bebida em camundongos, torna-se interessante 
+tanto para fins nutricionais, como econômicos e ambientais. 
+  
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               20                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+2. REVISÃO BIBLIOGRÁFICA 
+2.1 Caju (Anacardium occidentale) 
+ 
+O cajueiro, Anacardium occidentale L., pertencente à família Anacardiaceae, é uma 
+árvore tropical nativa do Nordeste do Brasil, onde é largamente cultivado e comercializado 
+(ABREU et al., 2013). O cajueiro anão precoce vem sendo eleito para o cultivo em função do 
+pequeno porte e da produção precoce e elevada. Entre os clones cultivados no Ceará, o clone 
+CCP-76 apresenta destaque pela grande preferência pela fruta fresca.  O clone CCP-76 
+apresenta plantas de porte baixo, altura média de 2,68 m e diâmetro médio da copa de 4,98 m 
+no sexto ano de idade. Os indicadores agroindustriais para o pedúnculo indicam o peso médio 
+de 135 g e coloração laranja. A exploração comercial desse clone vem sendo feita tanto em 
+cultivo de sequeiro, como irrigado, com aproveitamento do pedúnculo para o mercado de 
+mesa, e da castanha para o mercado de amêndoa (EMBRAPA, 2013) (Figura 01). 
+ 
+         Figura 01.  Planta de Cajueiro anão-precoce, clone CCP-76 
+ 
+             Fonte: EMBRAPA (2013). 
+ 
+ O pseudofruto do caju apresenta alto valor nutritivo, sendo um dos frutos mais ricos 
+em vitamina C, contendo cerca de 200 mg/100 mL de ácido ascórbico (LAVINAS et al., 
+2006), com teores cinco vezes superiores ao suco de laranja (SILVA et al., 2007). Além disso, 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               21                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+possui vários compostos com propriedades antioxidantes, como os carotenoides 
+(ASSUNÇÃO; MERCADANTE, 2003), flavonoides (BRITO et al., 2007), ácidos fenólicos, 
+taninos (MICHODJEHOUN-MESTRES, et al., 2009) e ácidos anacárdicos  (KUBO et al., 
+2006;  TREVISAN et al., 2006) que já foram identificados até o momento. 
+O perfil fitoquímico do caju revela uma complexa fonte natural de antioxidantes que 
+faz deste suco um excelente alvo nas pesquisas medicinais (CAVALCANTE et al., 2003).  A 
+cultura do cajueiro tem sido amplamente utilizada na medicina popular do Brasil, Índia e 
+África para tratar desordens como a inflamação, doenças gastrointestinais e hipertensão 
+(CAVALCANTE  et al.,  2003;  KONAN; BACCHI, 2007). Extrato hidroetanólico de folhas 
+de caju, que são ricos em polifenóis, inibiu lesões gástricas induzida por HCl / etanol em ratos 
+(KONAN; BACCHI, 2007). Já os extratos metanólicos do caule do cajueiro apresentaram 
+atividades antimutagênicas e antigenotôxicas, reforçando as propriedades terapêuticas desta 
+planta (BARCELOS et al., 2007). 
+Cavalcante et al. (2003)  mostraram que o suco de caju tem maior capacidade 
+antioxidante do que o suco processado (cajuína),  verificando a proteção de danos no DNA 
+pelas espécies reativas de oxigênio. Esses autores correlacionaram as propriedades 
+antioxidantes com o conteúdo de ácido anacárdico no suco de caju (17,9 mg/100 g ) e na 
+Cajuína (0,41 mg/100 g).  Runnie et al. (2004) mostraram o efeito vasorrelaxador de folhas de 
+A. occidentale  em aorta isolado de ratos. 
+O caju pode ter sua composição química, físico-química e qualidade nutricional 
+alterada dependendo de diversos fatores como: variedade, solo, safra, grau de maturidade 
+(Figura 02) e condições climáticas (PINHEIRO, 2008). Mudanças sensoriais e bioquímicas 
+que ditam as características de qualidade dos frutos ocorrem durante a pós-colheita e estão 
+diretamente relacionadas com o metabolismo oxidativo (MATTOO et al., 2001). 
+De acordo com o grau de maturidade, os teores dos compostos fitoquímicos podem 
+variar e a atuação terapêutica do fruto será diretamente afetada. Vasconcelos (2011) avaliou a 
+atividade antioxidante, anti-inflamatória e cicatrizante do suco de caju nos estádios de 
+maturidade e imaturidade e observou uma maior atividade anti-inflamatória e cicatrizante de 
+feridas, induzidas em camundongos swiss, pelo suco de caju imaturo. Para tanto, torna-se 
+importante considerar o grau de maturidade dos vegetais nos estudos com os compostos 
+bioativos. 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               22                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+   Figura 02. Pedúnculos verdes e maduros de clone cajueiro anão-precoce CCP-76 
+    
+                 Fonte:  RIBEIRO; SILVA; RIBEIRO (2013). 
+ 
+A cultura do caju gerou para o Brasil 1.687.565,00 de dólares no ano de 2011, sendo o 
+Brasil, o país que mais lucrou com o caju seguido de Mali, Madagascar e Guiana (FAO, 
+2011).  Esta cultura é de fundamental importância para a economia do Nordeste do Brasil com 
+destaque para o Estado do Ceará, considerado um dos maiores produtores. Tanto o 
+pseudofruto como a castanha do caju podem ser consumidos in natura e transformados em 
+vários produtos nutricionais como sucos, chás, compotas e bebidas (TREVISAN et al., 2006). 
+A castanha de caju é botanicamente definida como o fruto e é o principal produto de 
+exportação (EMBRAPA, 2013). O pedúnculo ou pseudofruto, também conhecido como caju, 
+é suculento, tem um sabor agradável e é de preferência comercializado como polpa congelada, 
+suco e néctar (QUEIROZ et al., 2011). Provavelmente não mais que 10% do potencial de 
+produção do pedúnculo são consumidos ou utilizados na forma fresca ou processada. Embora 
+o pedúnculo represente uma fonte rica de compostos nutritivos, sua aceitação fora do Brasil 
+tem sido reduzida em função da elevada adstringência (AGOSTINI-COSTA et al., 2002). 
+O processamento do pedúnculo do caju pode originar diversos produtos, sendo o suco 
+integral o mais representativo, o qual gera como resíduo a película e a fibra ou bagaço do 
+pedúnculo (AGUIAR et al., 2000). Os resíduos industriais são muitas vezes utilizados como 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               23                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+ração ou na forma de fertilizantes. O custo de secagem, armazenagem e transporte de 
+subprodutos são fatores que economicamente limitam seu aproveitamento (KOBORI; 
+JORGE, 2005). 
+O sabor adstringente do pedúnculo do caju é decorrente da presença de taninos. Este 
+constituinte, entre outros, contribui para a atividade antioxidante, capaz de prevenir doenças 
+cardiovasculares e câncer, abrindo perspectivas para um melhor aproveitamento dos resíduos 
+resultantes do processamento do pedúnculo (BROIZINI et al., 2007; SANTOS-BUELGA; 
+SCALBERT, 2000). 
+ A película do caju apresenta grandes quantidades de compostos fenólicos simples 
+como quercetina, miricetina, pentosídeos e raminosídeos, sendo estes constituintes 
+encontrados em quantidades significativas em farinhas fabricadas a partir do bagaço do 
+pedúnculo provenientes do processamento do suco integral do caju (MICHODJEHOUN-
+MESTRES et al., 2009).  
+Formas de aproveitamento do pedúnculo do caju e seus resíduos, gerados na indústria 
+de processamento, são alvo de pesquisas que visam beneficiar ação dos seus constituintes e ao 
+mesmo tempo proporcionar alternativas de manejo de resíduos para as indústrias, diminuindo 
+assim a poluição ambiental. 
+2.2 Alimentos Funcionais e Compostos Fitoquímicos 
+Os meios de comunicação atualmente têm focado maciçamente no binômio 
+alimentação e saúde, consequentemente a preocupação da sociedade ocidental com os 
+alimentos tem aumentado de forma exponencial. Uma grande quantidade de novos produtos 
+que supostamente proporcionam saúde tem sido apresentada pela indústria alimentícia 
+diariamente (ANJO, 2004). 
+Segundo Jones e Jew (2007) e Siro et al., (2008), alimentos funcionais representam 
+uma das áreas mais interessantes de investigação e inovação na indústria de alimentos e são 
+definidos como qualquer substância ou componente de um alimento que proporciona 
+benefícios para a saúde, inclusive a prevenção e o tratamento de doenças. Esses produtos 
+podem variar de nutrientes isolados, produtos de biotecnologia, suplementos dietéticos, 
+alimentos geneticamente modificados até alimentos processados e derivados de plantas 
+(POLLONI, 2000). 
+Alguns parâmetros devem ser levados em conta em relação aos alimentos funcionais. 
+Para Borges (2001), eles devem exercer um efeito metabólico ou fisiológico que contribua 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               24                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+para a saúde física e para a redução do risco de desenvolvimento de doenças crônicas. Nesse 
+sentido, devem fazer parte da alimentação usual e proporcionar efeitos positivos, obtidos com 
+quantidades não tóxicas e que exerçam tais efeitos mesmo após a suspensão da ingestão e que 
+não se destinem a tratar ou curar doenças, estando seu papel ligado à redução do risco de 
+contrair doenças. 
+Estudos sugerem que uma dieta rica em frutas e vegetais pode diminuir o risco de 
+doenças crônicas, devido ao baixo teor de gordura e de altos níveis de fibra e substâncias 
+antioxidantes, como o ácido ascórbico e polifenóis (QUEIROZ et al., 2011). O papel 
+desempenhado por fatores dietéticos sobre o estado de saúde humano tem sido reconhecido, 
+mas foi apenas recentemente que estudos epidemiológicos e clínicos forneceram uma visão 
+mais clara sobre a composição química e os efeitos de moléculas bioativas encontradas em 
+alimentos sobre os mecanismos fisiológicos (SHAHIDI, 2009). 
+Os compostos fenólicos são fitoquímicos que estão presentes, em torno de 100%, em 
+grupos de plantas da região da Caatinga (ALMEIDA et al., 2005). Além disso, estes 
+compostos aparecem em concentrações elevadas em algumas espécies que são intensamente 
+utilizadas pelas comunidades locais e as propriedades terapêuticas destas espécies são 
+atribuídas aos compostos fenólicos (MONTEIRO et al., 2006). Os fenólicos desempenham 
+um papel crucial na promoção da saúde e prevenção de doenças através de mecanismos 
+relacionados com a diferenciação celular, desativação de pro-carcinógenos, manutenção no 
+reparo do DNA, formação N- nitrosaminas e mudança no metabolismo do estrogênio, entre 
+outros (SHAHIDI, 2004). 
+Taninos e flavonoides apresentam usos terapêuticos, devido às suas atividades anti-
+inflamatórias, antifúngicas e antioxidantes que lhes conferem propriedades curativas 
+(ZUANAZZI; MONTANHA, 2004; SANTOS; MELLO, 2004). Alguns tipos de taninos 
+agem sobre o metabolismo do ácido araquidônico em leucócitos, com papéis importantes na 
+reversão do processo inflamatório (OKUDA, 2005) e são usados em tratamentos de 
+cicatrização de feridas. Flavonoides podem afetar as funções das células ligadas a processos 
+inflamatórios, agindo sobre as enzimas (MIDDLETON; KANDASWAMI; THEOHARIDES, 
+2000) e nos teores de  prostaglandina (PG) E2,  TNF-α,  macrófagos e COX- 2 mRNA ( 
+TALHOUK et al., 2007). 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               25                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+Compostos fenólicos tais como ácidos fenólicos, flavonoides, taninos e ligninas 
+podem eliminar as espécies reativas de oxigênio e, portanto, fornecer meios eficazes para 
+prevenir doenças relacionadas (RAMFULA et al., 2010). 
+2.3 Compostos Fitoquímicos e Resposta Imunológica 
+ 
+ A modulação da resposta imunológica através da estimulação ou supressão pode 
+ajudar na manutenção de um estado fisiológico livre de doenças (GHULE  et al., 2006).  Os 
+constituintes de muitas plantas com atividade imunomoduladora têm sido isolados 
+(JUANITA, 2005).  Estas substâncias têm como alvo a regulação do sistema imunológico que 
+é constituído por órgãos, células e sistema linfático, protegendo o organismo de patógenos 
+invasores e eliminando consequentemente as doenças relacionadas (OSADEBE; OMEJE, 
+2009).  
+ Determinados nutrientes desempenham um papel crucial na manutenção da resposta 
+imune, onde a deficiência ou ingestão excessiva dos mesmo pode afetar negativamente o 
+número e a atividade das células do sistema imunológico. O mecanismo subjacente pelo qual 
+os nutrientes dão suporte ao sistema imune é através do fornecimento de antioxidantes 
+(GHATAK; PANCHAL, 2012). As membranas das células do sistema imune são ricas em 
+ácidos graxos poli-insaturados e são suscetíveis a ação das espécies reativas de oxigênio 
+(CHEW; PARK, 2004) e portanto, uma suplementação com nutrientes que possuem 
+propriedades antioxidantes tais como carotenos, vitamina E, vitamina C, zinco e selênio, pode 
+inibir esses radicais livres e influenciar na atividade de vários componentes do sistema imune 
+(ERICKSON; MEDINA; HUBBARD, 2000). 
+ Estudos realizados com extratos das sementes de Nelumbo nucifera Gaertn in vivo 
+mostraram um aumento na estimulação do sistema imune avaliado através de vários 
+parâmetros, sendo esse atividade atribuída ao potencial antioxidante desta planta 
+(MUKHERJEE et al., 2010). Outros estudos também avaliaram o funcionamento do sistema 
+imune frente a compostos fitoquímicos presentes em diversos tipos de plantas. Cosentino e 
+colaboradores (2008) realizaram um estudos com leucócitos humanos e observaram que o 
+extrato aquoso das folhas de Achyrocline satureoide, rico em quercetina, induziu a 
+proliferação dos leucócitos e produção de INF-γ e de IL-4 em humanos que receberam a 
+infusão do extrato, constituindo-se um potente imunoestimulante. O extrato metanólico da 
+raiz de Curculigo orchioides  teve efeito imunoestimulante, com aumento da resposta imune 
+humoral e celular induzidos por hemácias de carneiro, em camundongos imunossuprimidos 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               26                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+com ciclofosfamida. O estudo fitoquímico do extrato relevou a presença de alcaloides, fenóis, 
+taninos, saponinas e esteróides (BAFNA; MISHRA, 2006a). 
+Além disso, a fração metabólica bioativa de Sphaeranthus indicus, produziu um 
+aumento da resposta imune humoral e da resposta de hipersensibilidade tardia, evidenciando-
+se um aumento na produção de anticorpos e do edema de pata, induzidos por hemácias de 
+carneiro, em animais imunossuprimidos com ciclofosfamida. A imunoestimulação conferida 
+pelo extrato deve-se também a uma resposta exacerbada de macrófagos juntamente com 
+linfócitos T e B. O estudo fitoquímico do extrato revelou a presença de alcaloides, fenóis e 
+flavonoides (BAFNA; MISHRA, 2006b). 
+2.4 Características Gerais do Sistema Imunológico 
+ 
+O sistema imunológico é um sistema fisiológico altamente dinâmico, composto por 
+redes complexas e regulado por várias células linfoides e outros tipos celulares que interagem 
+por contato direto célula-célula e que se comunicam através de mediadores solúveis como 
+citocinas (HERZYK; GORE, 2004). A principal função deste sistema é prover proteção ao 
+hospedeiro contra a invasão de micro-organismos. Baseia-se no reconhecimento do não 
+próprio e possui habilidades para reconhecer um potente patógeno invasor, ativando assim 
+uma efetiva resposta imune. O reconhecimento imunológico de determinantes não próprios 
+ocorre de forma direta, através de interações, ligando-se a receptores e, indiretamente, via 
+intermediários codificados pelo hospedeiro (CUNHA, MCFALL; MACKEY, 2006) 
+A resposta imunológica compreende a resposta imune inata e a adquirida. A 
+imunidade inata é constituída pelas barreiras físicas, mecânicas, bioquímicas, pelo sistema 
+fagocítico, células citotóxicas naturais, sistema complemento e citocinas. A imunidade 
+adquirida é composta pelos órgãos, células linfoides e seus produtos (ABBAS; LICHTMAN; 
+PILLAI, 2008). Fagócitos como neutrófilos, monócitos e macrófagos são participantes - 
+chave na resposta imune inata (BIRK et al., 2001; LINGEN, 2001) entre os tipos celulares, 
+são os que primeiro respondem à invasão de organismos patogênicos.  
+A imunidade inata pode usar uma variedade de mecanismos efetores para eliminar ou 
+conter uma infecção. No entanto, em caso de falha destes mecanismos será acionado o 
+sistema imune adaptativo (NUNES-PINHEIRO et al., 2003). Já as respostas adaptativas são 
+mediadas por linfócitos B e T, que proporcionam a imunidade duradoura (JANEWAY et al., 
+2010; MANZ et al., 2005). 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               27                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+2.4.1 Imunidade Inata 
+A primeira linha de defesa do sistema imunológico contra os invasores consiste na 
+barreira física composta pela pele queratinizada, membranas mucosas que revestem o trato 
+respiratório e gastrointestinal e barreiras químicas representadas por uma variedade de 
+enzimas e outras substâncias antibacterianas nas superfícies epiteliais que têm ação direta ou 
+inibem a aderência microbiana às superfícies orgânicas (MUSSI-PINHATA ; REGO, 2005).
+ A imunidade inata também envolve elementos humorais, como as proteínas do sistema 
+complemento, as proteínas de fase aguda e as citocinas, e elementos celulares, como 
+monócitos, macrófagos, granulócitos, células dendríticas e células natural killer (NK) 
+(MUSSI-PINHATA; REGO, 2005).  
+Os macrófagos são os primeiros fagócitos que reconhecem imediatamente o invasor, 
+quando esse atravessa a barreira epitelial e começa a se replicar no tecido do hospedeiro. Os 
+neutrófilos e macrófagos são dois tipos de células fagocíticas que possuem um papel-chave na 
+imunidade inata, porque podem reconhecer, fagocitar e destruir muitos patógenos sem a ajuda 
+da resposta imune adaptativa (JANEWAY et al., 2010). 
+A imunidade inata caracteriza-se por ter capacidade limitada de diferenciar um micro-
+organismo do outro e de apresentar resposta semelhante para diferentes micro-organismos 
+(SOMPAYRAC, 1999). Há desenvolvimento de um número limitado de receptores de 
+reconhecimento (PRR), com especificidade para as estruturas antigênicas microbianas, 
+discriminando-as. Além disso, estes receptores são capazes de reconhecer o próprio sistema 
+imunológico do hospedeiro (PEREIRA, 2008). 
+A imunidade inata não só faz a primeira defesa contra os micro-organismos como 
+também desempenha importante papel na indução da resposta específica, e esta, por sua vez, 
+aumenta os mecanismos protetores da imunidade inata (SOMPAYRAC, 1999). 
+O sistema de complemento é mais um dos componentes da imunidade inata que 
+também está presente na imunidade adaptativa. Ele é composto por aproximadamente 20 
+proteínas produzidas principalmente no fígado e muito abundantes no sangue e tecidos, 
+requerendo ativação sequencial. Há três vias de ativação do sistema complemento: a via 
+alternativa, a dependente de lectina e a clássica. As duas primeiras são ativadas de forma 
+inespecífica pelo contato com certos componentes da superfície de micro-organismos, 
+independente da presença de anticorpos específicos, característica da imunidade inata. 
+Consequentemente, é gerada uma série de substâncias que liberam mediadores inflamatórios, 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               28                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+estimulam a quimiotaxia e fagocitose e, quando a ativação se completa, causam lise 
+microbiana pelos componentes do complexo de ataque à membrana. A via clássica é iniciada 
+pela ligação de anticorpos, normalmente existentes na circulação, à primeira proteína do 
+sistema complemento (MUSSI-PINHATA; REGO, 2005).  
+As citocinas apresentam também um papel fundamental na comunicação química entre 
+os diversos componentes da resposta imune. São pequenas proteínas liberadas por várias 
+células do organismo, normalmente em resposta a um estímulo ativador, e induzem respostas 
+por meio de ligações a receptores específicos (JANEWAY et al., 2010). Elas medeiam 
+diretamente às interações entre as células, regulando assim as funções celulares e dos tecidos, 
+coordenando a resposta imunológica (DUNLOP; CAMPBELL, 2000). 
+2.4.2 Imunidade Adaptativa 
+ Uma resposta imune adaptativa é induzida quando uma infecção domina os 
+mecanismos de defesa da imunidade inata. O patógeno continua sua replicação e  antígenos 
+tornam-se abundantes. A presença do patógeno e as mudanças no ambiente celular, 
+decorrentes da imunidade inata, ativam a resposta imune adaptativa (JANEWAY et al., 2010). 
+Esta resposta está dividida entre imunidade humoral e imunidade celular. 
+2.4.2.1 Imunidade Humoral 
+Os componentes da imunidade humoral incluem os linfócitos B (LB) que secretam 
+anticorpos antígeno-específicos, com a função de neutralizar e opsonizar patógenos 
+extracelulares e suas toxinas (ESSER  et  al.,  2003). Sabe-se que a produção de anticorpos 
+envolve, na maioria dos casos, pelo menos três principais tipos de células: os macrófagos, 
+linfócitos B e linfócitos T (OSADEBE; OMEJE, 2009). 
+A resposta imune humoral envolve a produção e secreção de anticorpos por linfócitos 
+B por duas vias, uma dependente de Linfócitos T (LT) e outra independente da participação 
+de LT (NUNES-PINHEIRO et al. ,2003). A via dependente de LT ocorre inicialmente quando 
+as células T são ativadas por antígenos que são apresentados pelas células apresentadoras de 
+antígenos (APCs), em seguida as células B interagem com as células T auxiliares antígeno-
+específicas e só então, os linfócitos B ativados proliferam (expansão clonal) e diferenciam-se 
+em plasmócitos e células B de memória (MCHEYZER-WILLIAMS; MCHEYZER-
+WILLIAMS, 2005). Antígenos proteicos induzem uma resposta imune humoral dependente 
+de LT, a qual estimulando a expansão clonal dos LB, a mudança de classe, a maturação de 
+afinidade e a diferenciação em LB de memória (MESQUITA et al., 2010)  (Figura 03).  
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               29                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+                     Figura 03.  Ativação de células B dependente de células T 
+ 
+                        Fonte: ABBAS; LICHTMAN; PILLAI ( 2008). 
+ 
+A resposta imune humoral T- independente não necessita da presença de células T 
+auxiliares, sendo induzida por antígenos T – independentes que se caracterizam por grandes 
+moléculas poliméricas, não proteicas, altamente resistentes a degradação, sendo a maioria de 
+origem bacteriana, que provocam respostas mais fracas que os antígenos T – dependentes 
+(JANEWAY et al., 2010).  Estes antígenos geram, principalmente, resposta IgM e como não 
+há ativação de LT, não serão geradas as citocinas necessárias para a mudança de classe, 
+maturação de afinidade ou formação de LB de memória  (ABBAS; LICHTMAN; PILLAI, 
+2008). Entretanto tais respostas têm papel crucial na defesa do hospedeiro contra os patógenos 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               30                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+cujos antígenos de superfície não possam desencadear respostas de células T peptídeo-
+específicas (MESQUITA et al., 2010)  (Figura 04). 
+  Figura 04. Ativação de células B independente de células T  
+ 
+                Fonte:  MOSER ; LEO (2010) (modificada). 
+ Estes anticorpos produzidos, dependentes ou não de LT, atuam de três formas 
+principalmente: neutralização, opsonização e ativação do complemento. A neutralização inibe 
+os efeitos tóxicos ou a infectividade dos patógenos ligando-se a eles. A opsonização atua 
+recobrindo os patógenos, permitindo que células acessórias reconheçam porções Fc de 
+arranjos de anticorpos e fagocitem o patógeno, inibindo sua ação. E por último, a ativação da 
+via clássica do complemento que ocorre através dos anticorpos que ativam este sistema, que 
+por sua vez podem aumentar fortemente a opsonização matando diretamente certas células 
+bacterianas (JANEWAY et al., 2010).  
+ As células B são dotadas de genes altamente polimórficos que sofrem rearranjo, 
+permitindo a diversidade das imunoglobulinas (anticorpos), que funcionam também como 
+receptores expressos na membrana celular (RCB). Cada imunoglobulina (Ig) é constituída por 
+duas cadeias pesadas e duas cadeias leves ligadas por pontes dissulfetos. Existem cinco tipos 
+de cadeias pesadas denominadas μ, δ, γ, α e ε , que definem as classes de imunoglobulina 
+IgM, IgD, IgG, IgA e IgE. As cadeias leves são de dois tipos, κappa (κ) e lambda (λ) 
+(ABBAS; LICHTMAN; PILLAI, 2008; THOMPSON et al.,1998). As propriedades 
+características de cada classe de Ig podem ser vistas na Tabela 01.  
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               31                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+Tabela 01. Principais funções das Imunoglobulinas 
+Imunoglobulinas Funções 
+1. IgG  Secretada durante a resposta secundária; Principal 
+forma de anticorpo circulante 
+1.1 Subclasses: Subclasse mais abundante, correspondendo a 65 % do 
+total das IgG. Produz a resposta timo-dependente 
+      IgG
+1 
+dominante contra antígenos protéicos/polipeptídicos.  
+ 
+      IgG Subclasse que provê a resposta imune dominante 
+2
+contra antígenos de carboidratos e polissacarídicos. Ela 
+constitui 20 a 25 % do total das IgG . 
+      IgG Contribui com 5 a 10 % do total das IgG e proporciona 
+3
+uma boa resposta a antígenos protéicos/polipeptídicos, 
+às vezes até com maior afinidade que as IgG1. 
+      IgG Corresponde a menos de 5 % do total das IgG. A IgG 
+44
+não atua sobre antígenos polissacarídicos. Seus níveis 
+são altos em doenças alérgicas e podem bloquear as 
+IgE.  
+2. IgA   Principal forma de anticorpo em secreção externa nas 
+mucosas. 
+2.1 Subclasses: É a subclasse de IgA predominante no plasma,  
+representando ± 85 % das IgA  plasmáticas. A IgA 
+1
+      IgA 
+1
+provê uma boa resposta contra antígenos protéicos, 
+mediana contra antígenos polissacarídicos e fraca 
+contra antígenos lipopolissacarídicos. 
+     IgA Compreende ± 15 % do total das IgA plasmáticas e 
+2
+representa a resposta dominante das mucosas contra 
+antígenos polissacarídicos e lipopolissacarídicos. 
+Existem dois alotipos, A2m(1) e A2m(2), que são 
+especificados por alelos alternativos nos locus das 
+cadeias pesadas α����
+������������������������������������
+������
+������������������
+�������������������������������
+�����������������������
+����������������������
+Fonte: MOSER ; LEO (2010) (modificada). 
+ 
+ O processo de mudança de classe das imunoglobulinas ocorre através da troca da 
+porção constante da cadeia pesada de  μ ou  δ para γ, α ou ε. Esta etapa envolve eventos 
+moleculares complexos como rearranjo  no DNA genômico e splicing do RNA mensageiro. 
+Neste processo a resposta imune torna-se mais diversificada, uma vez que as diferentes 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               32                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+classes de Ig apresentam diferentes características funcionais. O aumento da afinidade de 
+anticorpos para um dado antígeno, durante a progressão da resposta humoral T dependente, é 
+resultado de mutação somática nos genes de Ig durante a expansão clonal. Algumas destas 
+mutações vão gerar células capazes de produzir anticorpos de alta afinidade, contudo, outras 
+podem resultar na diminuição ou mesmo na perda da capacidade de ligação com o antígeno 
+(MESQUITA et al., 2010). 
+ A resposta imune humoral pode ser dividida de acordo com as exposições ao antígeno, 
+em reposta imune primária e secundária. O primeiro contato com um antígeno, leva à ativação 
+de LB virgens, que se diferenciam em plasmócitos produtores de anticorpos e em células de 
+memória, resultando na produção de anticorpos específicos contra o antígeno indutor. Ao 
+entrar em contato com o antígeno pela segunda vez, já existe uma população de LB capazes 
+de reconhecer esse antígeno devido à expansão clonal e células de memória geradas 
+anteriormente, na resposta primária (MESQUITA et al., 2010) (Figura. 06).  
+ Nos dois tipos de resposta, primária e secundária, ocorre a produção de isotipos IgM e 
+IgG,  porém,  na resposta primária,  IgM é a principal Ig e a produção de IgG é menor e mais 
+tardia. Na resposta secundária, a IgG é a imunoglobulina predominante. Nas duas respostas, a 
+concentração de IgM sérica diminui rapidamente e após uma ou duas semanas, observa-se 
+queda acentuada, enquanto que a produção de IgG continua persistindo (MESQUITA et al., 
+2010). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               33                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+Figura 05. Gráfico representativo da resposta primária e secundária em relação à quantidade 
+de anticorpos em diferentes dias após a exposição ao antígeno 
+ 
+ 
+  Fonte: MESQUITA  et al. (2010). 
+ 
+2.4.2.2 Imunidade Celular 
+Os principais componentes da imunidade mediada por células compreendem os 
+mecanismos especializados que envolvem a citotoxicidade mediada por linfócitos T e a 
+ativação de macrófagos pelas células T auxiliares (JANEWAY et al., 2010).  Os linfócitos T 
+amadurecem no timo, diferenciando-se em linfócitos T auxiliares, que expressam a proteína 
+CD4, que modulam a intensidade, duração e eficácia da reação imunológica na membrana 
+celular ou em linfócitos T citotóxicos, que expressam a proteína CD8 (PARHAM, 2001; 
+MOSER; LEO, 2010). 
+Todas as funções efetoras dos linfócitos T envolvem a interação de um LT auxiliar 
+com uma célula-alvo. As suas ações dependem de um conjunto de proteínas de membranas e 
+proteínas secretadas que as mesmas expressam ou secretam após a ligação com o receptor 
+(NUNES-PINHEIRO et al.,2003). 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               34                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+Os LT reconhecem apenas a sequência primária de pequenos peptídeos derivados de 
+antígenos proteicos. Para tal reconhecimento é necessário que estes peptídeos estejam ligados 
+a determinadas moléculas expressas na superfície de células apresentadoras de antígenos 
+(APCs), as proteínas do complexo principal de histocompatibilidade (MHC). Os antígenos 
+proteicos extracelulares são fagocitados pelas (APCs), processados até pequenos peptídeos 
+pela ação de proteases, e ligados às moléculas de MHC de classe II e expressos na membrana 
+celular para que possam ser reconhecidos pelo LT CD4 (ROCHA; GORESCU; BELTRAME, 
+2007). As células T CD4 naïves, após reconhecerem o seu antígeno, diferenciam-se em duas 
+vias distintas para produzir subpopulações de células efetoras com diferentes funções imunes. 
+ As principais populações CD4 efetoras são atualmente distinguidas como T1, T2 e 
+HH
+T17, as quais ativam suas células-alvo e várias subpopulações de células T reguladoras que 
+H
+têm atividade inibidora limitando a extensão da ativação imune (JANEWAY et al., 2010). Já 
+os antígenos proteicos intracelulares sintetizados no citosol são processados em pequenos 
+peptídeos pelo proteossoma, transportados para o retículo endoplasmático e então ligados às 
+moléculas do MHC de classe I e expressos na superfície da célula para posteriormente serem 
+reconhecidos pelo LT CD8 (ROCHA; GORESCU; BELTRAME, 2007) que se diferenciam 
+em células T efetoras citotóxicas que reconhecem e matam as células infectadas (JANEWAY 
+et al., 2010) (Figura 06).  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               35                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+Figura 06. Características gerais das células T com destaque para os linfócitos T auxiliares 
+(subtipos Th e Th), células Th, linfócitos T citolíticos, linfócitos Tγδ e células T 
+1217
+reguladoras naturais (TREGs) e induzidas (TR-1 e Th3)  
+ 
+ 
+                                 Fonte: MESQUITA et al. (2010). 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               36                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+As moléculas co-estimulatórias que interagem durante a apresentação do antígeno 
+fornecem um segundo sinal para a ativação dos linfócitos T (MURTAUGH; FOSS, 2002). 
+Sem este segundo sinal não há uma resposta adequada e as células T tornam-se inativas, 
+produzindo um estado de tolerância imunológica específica, conhecido por anergia clonal 
+(KAMRADT; MITCHISON, 2001). 
+As respostas imunes adquiridas declinam à medida que o antígeno vai sendo eliminado 
+e a imunidade inata vai se extinguindo, cessando os estímulos que são necessários para a 
+sobrevivência dos linfócitos. Esse processo mantém a homeostase do sistema imune, fazendo-
+o retornar ao seu estado de repouso basal (MURTAUGH; FOSS, 2002). 
+2.5 Imunomodulação 
+ 
+A imunomodulação é um procedimento que interfere nas funções do organismo, onde 
+a imunoestimulação resulta no aumento das respostas imunes inata ou adaptativa, enquanto 
+que a imunossupressão implica na redução das respostas imunes (SILVA, 2008). 
+As respostas imunes são estimuladas quando o organismo é ameaçado. A ativação do 
+sistema imunológico frente à colonização por agentes infecciosos propaga os sinais de 
+distúrbio na balança fisiológica do hospedeiro o qual dispõe de mecanismos reguladores para 
+o retorno à homeostase, no entanto, em algumas situações esses mecanismos poderão estar 
+prejudicados (HOLLAND; VIZI, 2002). Os imunomoduladores são capazes de 
+simultaneamente estimular algumas células do sistema imune e suprimir outras. Por exemplo, 
+alguns compostos podem estimular a produção de anticorpos IgG2 e simultaneamente inibir a 
+produção de  IgM, ou ainda estimular linfócitos T e inibir linfócitos B (NUNES-PINHEIRO 
+et al.,2003). 
+Compostos imunoestimulantes podem induzir a produção de macrófagos citotóxicos 
+contra células tumorais e micro-organismos, a atividade fagocítica, aumentar a secreção de 
+citocinas e quimiocinas, como fator de necrose tumoral (TNF- α), interleucina (IL -1, IL-6, 
+IL-8, IL -12), interferon gama ( IFN- γ ) e IFN- β2.  Como potente imunoestimulador 
+podemos citar o Levamisol®, que possui a capacidade de aumentar a atividade imunológica 
+mediada por células, em que se incluem a diferenciação e a proliferação dos LT, e da 
+atividade dos LT efetores (ANDRADE; SANTARÉM, 2002; BRAGA et. al., 2007). 
+O uso de substâncias imunomoduladoras para melhorar a resposta de defesa do 
+hospedeiro é uma das alternativas mais promissoras no tratamento com antibiótico clássico no 
+(TZIANABOS, 2000).  A ativação do sistema imune, em algumas situações, pode culminar 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                               37                                                                                      
+ 
+Revisão Bibliográfica                                                                                                                          Bezerra, C. F. 
+em patologias, necessitando de substâncias imunossupressoras para o controle, em 
+contrapartida, fatores ambientais, parasitas e imunodeficiências tornam necessário o uso de 
+substâncias imunoestimulantes (VASCONCELOS, 2006). 
+2.6 Modelo de Imunização por Hemácias de Carneiro 
+ 
+Muitos são os fatores que modulam o resultado de qualquer resposta imune e estes 
+incluem o próprio antígeno. Quanto à natureza química do antígeno, os antígenos proteicos 
+induzem imunidade celular e humoral. Os polissacarídeos e lipídios são incapazes de 
+estimular células T através das moléculas de MHC classes I e II. No tocante às quantidades, 
+doses elevadas do antígeno podem induzir tolerância específica das células T, ou em algumas 
+vezes, das células B (KAMRADT; MITCHISON, 2001). A via de administração do antígeno 
+também influencia a resposta imune, os antígenos administrados por via subcutânea ou 
+intradérmica induzem uma resposta imune, sendo considerados como imunogênicos, enquanto 
+que os antígenos administrado por via endovenosa, oral ou aerossol, muitas vezes induzem a 
+falta de imunidade específica. O histórico anterior da exposição ao antígeno em questão 
+também influencia na resposta imune. Se o animal já estiver sido exposto a um determinado 
+antígeno, a memória imunológica permitirá uma resposta mais rápida (JANEWAY et al., 
+2010). 
+As hemácias de carneiro são antígenos potentes, pois estimulam tanto a resposta 
+mediada por linfócitos T, quanto por linfócitos B através da cooperação entre T e B, são 
+caracterizadas como antígeno T – dependente, portanto o primeiro contato do antígeno com o 
+organismo sensibiliza os linfócitos T tornando-os ativos, os quais sintetizam e liberam 
+substâncias fisiologicamente ativas em células como macrófagos, monócitos, leucócitos 
+polimorfonucleares e, provavelmente, outros leucócitos não- sensibilizados na área de contato 
+com o antígeno (OSADEBE; OMEJE, 2009). Os linfócitos T auxiliares interagem com os 
+linfócitos B promovendo sua diferenciação e consequentemente liberação de anticorpos. 
+Este antígeno promove a reação de hipersensibilidade do tipo tardia (DTH) que é uma 
+reação desencadeada por linfócitos TCD4+ e células CD8+, e ambas secretam citocinas que 
+ativam macrófagos (Interferon-γ) e induzem inflamação (fator de necrose tumoral (TNF)) 
+(ABBAS; LICHTMAN; PILLAI, 2008). Esta reação é conhecida por iniciar reações entre as 
+células T antígeno-específicos e o antígeno, que resulta na liberação de linfocinas que afetam 
+uma variedade de células, especialmente os macrófagos (OSADEBE; OMEJE, 2009).
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                38 
+ 
+ Objetivos                                                                                                                                            Bezerra, C. F. 
+3. OBJETIVOS 
+3.1. Objetivo Geral 
+ Avaliar a composição fitoquímica, o potencial antioxidante total in vitro e a atividade 
+imunomoduladora in vivo do suco de caju (Anacardium occidentale L.) adicionado com 
+farinha do bagaço de caju em diferentes estádios de maturidade. 
+3.2. Objetivos Específicos 
+ Determinar a capacidade antioxidante total do suco e da farinha do bagaço de caju 
+maduro e verde in vitro; 
+ Identificar a composição fitoquímica do suco de caju maduro e da farinha do bagaço 
+do caju maduro e verde in vitro;  
+ Avaliar a toxicidade in vivo do suco de caju maduro e do mesmo suco adicionado com 
+farinha do bagaço de caju maduro e verde;  
+ Estudar a atividade do suco de caju maduro e do mesmo suco adicionado com farinhas 
+do bagaço de caju maduro ou verde na modulação da resposta imune humoral de 
+camundongos imunizados com hemácias de carneiro; 
+ Estudar a atividade do suco de caju maduro e do mesmo suco adicionado com farinhas 
+do bagaço de caju maduro ou verde na modulação da resposta imune celular de 
+camundongos imunizados com hemácias de carneiro. 
+ 
+ 
+  
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                39 
+ 
+ Material                                                                                                                                            Bezerra, C. F. 
+4. MATERIAIS 
+4.1 Material Vegetal 
+O trabalho experimental foi realizado com pedúnculos de caju (Anacardium 
+occidentale L.), clone CCP-76, coletados em setembro de 2011. Os pedúnculos foram obtidos 
+do plantio da estação experimental da EMBRAPA em Horizonte-CE, colhidos manualmente e 
+previamente selecionados quanto as suas características físicas, tais como aspecto, tamanho, 
+maturidade (estádios 2 e 6) e qualidade sensorial. Estes estádios de maturidade foram 
+escolhidos com base no trabalho de Vasconcelos, 2011, que investigou as atividades 
+antioxidante, anti-inflamatória e cicatrizante do caju (Anacardium occidentale L.) nos estádios 
+2 e 6 de maturidade. Os pseudofrutos foram transportados para o laboratório de Bioenergética 
+da Universidade Federal do Ceará (UFC) e armazenados a – 20ºC, em sacos plásticos 
+devidamente identificados. 
+4.2 Animais 
+Foram utilizados camundongos swiss machos, pesando entre 30-40 g, provenientes do 
+Biotério Central da Universidade Federal do Ceará, cujas matrizes são oriundas do Centro de 
+Bioterismo da UNICAMP/São Paulo. Os animais foram mantidos sob-regime alimentar 
+conveniente, água ad libitum, com ciclos de 12 horas no escuro e 12 horas no claro e 
+condições de controle da temperatura e umidade. 
+O projeto foi aprovado pelo Comitê de Ética em Pesquisa com Animal (CEPA) da 
+UFC com protocolo de N° 102/2011 e os animais foram manipulados de acordo com as 
+normas do Conselho Nacional de Controle da Experimentação Animal (CONCEA). 
+4.3 Reagentes Químicos 
+2,2´-azinobis (3-etilbenzotiazolina-6-ácido sulfônico) (ABTS); 1,1-difenil-2-
+picrilhidrazil (DPPH) e Ácido Tiobarbitúrico (TBA) adquiridos na Sigma Aldrich. Kits 
+Labtest ref.: 53-200 (ALT) e 52-200 (AST). Todos os outros produtos químicos foram de grau 
+analítico. 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                40 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+5. MÉTODOS 
+5.1 Preparo das Amostras 
+5.1.1 Amostra de Caju para Preparo do Suco 
+Os pseudofrutos, em estádio 6 de amadurecimento, foram triturados em 
+multiprocessador e filtrados em peneira para a obtenção da polpa e do bagaço que fica retido 
+na peneira (figura 08). A partir da polpa de caju maduro, o suco foi preparado com água em 
+uma proporção de 1:1 (v:v), acondicionado em microtubos âmbares a -20°C por 10 dias e 
+utilizados para determinação dos compostos fitoquímicos, da atividade antioxidante total e 
+atividade imunomoduladora. 
+5.1.2 Farinha do Bagaço de Caju 
+Para preparar a farinha, foram utilizados bagaços de caju nos estádios 2 e 6 de 
+maturidade, submetidos à liofilização durante um período de 14 horas para manter as 
+propriedades nutricionais e sensoriais. Posteriormente, os resíduos liofilizados foram 
+triturados em multiprocessador (figura 08) e logo após, os mesmos foram peneirados para 
+obtenção da farinha de caju maduro e de caju verde (PINHO, 2009). As farinhas foram 
+armazenadas em recipientes âmbares a 10°C por tempo indeterminado e utilizadas para 
+determinação dos compostos fitoquímicos, da atividade antioxidante total e atividade 
+imunomoduladora. 
+5.1.3 Preparo do Suco Adicionado com as Farinhas 
+As farinhas dos bagaços de caju maduro e verde nas doses de 75, 150 e 300 mg/kg 
+foram adicionadas ao suco de caju maduro (figura 08), homogeneizadas manualmente e 
+armazenadas em microtubos âmbares a -20°C por 10 dias. As amostras foram administradas 
+aos camundongos posteriormente para a realização das análises toxicológicas e 
+imunomoduladoras. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                41 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+Figura 08. Fluxograma do preparo do suco de caju e das farinhas de bagaços de caju maduro 
+e verde 
+ 
+ 
+ Fonte: BEZERRA (2013). 
+ 
+5.1.4  Preparo do Extrato Bruto para Análises de Antioxidante Total e Polifenóis Totais 
+O extrato utilizado para determinação da atividade antioxidante total e polifenóis totais 
+foi obtido a partir de 2 g das amostras de suco de caju maduro e das farinhas de caju maduro e 
+verde seguindo a metodologia de Larruri e colaboradores (1997) com adaptações por Rufino e 
+colaborados (2007). Primeiramente 2 gramas de cada amostra foram colocados em um 
+béquer, adicionado com 40 mL de metanol 50%, homogeneizados e deixados em repouso por 
+60 minutos à temperatura ambiente. A centrifugação foi realizada a 15.000 rpm durante 15 
+minutos. Após centrifugação, o sobrenadante foi recolhido em um balão volumétrico de 100 
+mL e denominado sobrenadante 1. Ao precipitado da primeira extração, foram adicionados 40 
+mL de acetona 70% e depois homogeneizados e deixado em repouso por 60 minutos a 
+temperatura ambiente. Uma nova centrifugação foi realizada a 15.000 rpm durante 15 
+minutos, sendo o sobrenadante recolhido (sobrenadante 2) adicionado ao balão volumétrico 
+contendo o sobrenadante 1. O volume final (balão) foi ajustado para 100 mL com água 
+destilada. 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                42 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+Os extratos foram armazenados em recipientes âmbares a -20°C durante 30 dias para 
+realização das análises posteriores. 
+5.2 Estudo da atividade antioxidante total e dos compostos fitoquímicos 
+5.2.1 Atividade antioxidante total pelo método ABTS 
+A atividade antioxidante total foi determinada através de ensaio com o radical 2,2’-
+azinobis [3-etilbenzotiazolina-6-ácido sulfônico] (ABTS), obtido pela reação de 5mL de 
+ABTS 7 mM com 88 µL de persulfato de potássio 140 mM. A solução foi mantida em 
+repouso, à temperatura ambiente (25°C), durante 16 h, na ausência de luz. Uma vez formado 
+o radical ABTS, 1 mL do mesmo foi diluído em álcool etílico até se obter um valor de 
+absorbância de 0,700± 0,05 nm em um comprimento de onda de 734 nm. 
+Para o preparo da curva padrão com o reagente Trolox, foram preparadas soluções 
+variando as concentrações de 100 a 1500 µM a partir de uma solução estoque de Trolox de 
+2000 µM. Em ambiente escuro, uma alíquota de 30 µL de cada solução de Trolox foi 
+●+
+adicionada a 3 mL da solução do radical ABTS e homogeneizada em agitador de tubos. O 
+decréscimo da absorbância a 734 nm foi medido depois de 6 min. A partir dos dados obtidos 
+foi possível construir uma curva com os valores das absorbâncias e concentrações das 
+amostras, obtendo-se uma equação da reta (y = - ax + b) e calculou-se a absorbância referente 
+a 1000 µM trolox. 
+A partir dos extratos obtidos no item 5.1.4, foram preparadas três diluições diferentes, 
+em triplicata, para cada amostra e procedeu-se o experimento de forma similar ao realizado no 
+preparo da curva padrão. Os valores da atividade antioxidante total foram obtidos a partir da 
+equação da reta (y = - ax + b), substituindo o valor de y pela absorbância equivalente a 1000 
+µM de Trolox, sendo os resultados expressos como TEAC (Atividade Antioxidante 
+Equivalente ao Trolox) em µM de Trolox/g de amostra (RUFINO et al., 2007)a. 
+5.2.2 Atividade antioxidante total pelo método DPPH 
+●
+O método do radical DPPH é baseado na captura do radical DPPH (2,2-difenil-1-
+picril-hidrazil) por antioxidantes, produzindo um decréscimo da absorbância a 515 nm 
+(BRAND-WILLIAMS; CUVELIER; BERSET, 1995) com modificações de Rufino e 
+colaboradores (2007b). 
+Para o preparo da curva padrão foi utilizada a solução inicial de DPPH (60µM) da qual 
+foram preparadas várias soluções variando a concentração de 10 a 50 µM e utilizando álcool 
+metílico como diluente. Em ambiente escuro, foi transferida uma alíquota de 4 mL de cada 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                43 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+solução de DPPH para cubetas de vidro e realizou-se a leitura em espectrofotômetro a 515 
+nm. Logo após, calculou-se a equação da reta a partir das concentrações das soluções de 
+DPPH e das respectivas absorbâncias. 
+A partir dos extratos obtidos no item 5.1.4, foram preparadas três diluições diferentes, 
+em triplicata, para cada amostra e transferiu-se uma alíquota de 0,1mL de cada diluição para 
+●
+tubos de ensaio com 3,9 mL do radical DPPH (60 µM) e homogeneizou-se em agitador de 
+tubos. Uma alíquota de 0,1 mL da solução controle (álcool metílico 50%, acetona 70% e água 
+●
+destilada) também foi adicionada ao radical DPPH e homogeneizada em agitador de tubos. 
+As leituras foram lidas a 515 nm e monitoradas a cada minuto, observando-se a 
+redução da absorbância até sua estabilização. A leitura da absorbância final para o cálculo da 
+quantidade da amostra necessária para reduzir em 50% a concentração inicial do radical 
+DPPH (EC50) só foi feita após a estabilização da absorbância. 
+Para encontrar o consumo em g DPPH, foi utilizado o valor da absorbância do 
+controle e substituído na equação da reta obtido no ensaio da curva padrão.  As absorbâncias 
+obtidas pelas diferentes diluições das amostras foram utilizadas para determinara equação da 
+reta e calcular a atividade antioxidante total da seguinte forma: 
+ 
+y = - ax + b 
+ 
+onde: 
+y = Absorbância inicial do controle / 2  
+x = EC50 (mg/L). 
+O valor de EC50 foi dividido pelo valor encontrado em g DPPH para obter o resultado 
+final que é expresso em g de fruta / g DPPH. 
+5.2.3 Determinação qualitativa dos compostos fitoquímicos 
+5.2.3.1 Preparo dos extratos 
+ Para avaliar as amostras de farinhas de bagaço de caju maduro e verde foi preparado 
+um extrato hidroetanólico utilizando 200 mg de cada amostra com 12 mL de água destilada e 
+28 mL de etanol. A partir destes extratos foram realizados vários testes para determinação dos 
+fitoquímicos (itens 5.2.3.2 até 5.2.3.10), seguindo metodologia proposta por MATOS (2009). 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                44 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+5.2.3.2 Determinação de fenóis e taninos 
+ Para avaliar a presença de fenóis foram adicionadas três gotas de solução alcoólica de 
+cloreto férrico a dois tubos de ensaio contendo, cada um, 3-4 mL dos extratos. Depois de 
+agitar vigorosamente cada tubo, observou-se cada reação em relação à variação da cor ou 
+formação de precipitado escuro em abundância. O teste em branco foi realizado usando 
+somente água destilada. 
+ Uma coloração variável entre azul e o vermelho confirma a presença de fenóis, quando 
+o teste “branco” for negativo.  Já para identificar os taninos, a formação de um precipitado 
+escuro de tonalidade azul indica a presença de taninos pirogálicos (taninos hidrolisáveis) e 
+verde, a presença de taninos flobabênicos (taninos condensados ou catéquicos) (MATOS, 
+2009). 
+5.2.3.3 Determinação de flavonoides 
+ Para determinar a presença de flavonoides, como flavonas, flavonóis, xantonas, 
+chalconas, auronas e flavonónois, pegou-se um tubo e alcalinizou-se até um pH 11. A 
+observação de mudança de coloração para vermelho-laranja indica possível presença de 
+flavanonóis, já para amarela, possível presença de flavonas, flavonóis e xantonas; quando a 
+mudança de cor é para vermelho púrpura, possível presença de chalconas e auronas  
+(MATOS, 2009). 
+5.2.3.4 Determinação de leucoantocianidinas, catequinas e flavanonas 
+A presença de leucoantocianidinas, catequinas e flavanonas foi verificada utilizando 
+dois tubos de ensaios com 3-4 mL das amostras, de modo que um dos tubos foi acidificado 
+com HCl até atingir uma faixa de pH 1-3 e o outro tubo foi alcalinizado com NaOH até atingir 
+o pH 11. Com o auxílio de uma lamparina, durante 2-3 minutos, o material foi aquecido. No 
+tubo com pH ácido, a mudança de coloração para vermelho indica a possível presença de 
+leucoantocianidinas  e pardo-amarela a possível presença de catequinas. Já no tubo que foi 
+alcalinizado, a mudança de coloração para vermelho alaranjado indica a possível presença de 
+flavanonas (MATOS, 2009). 
+5.2.3.5 Determinação de flavonóis, flavanonas, flavanonóis e xantonas 
+ A confirmação da presença de alguns constituintes do teste do item 5.2.3.3  e 5.2.3.4 
+foi realizada adicionando-se alguns centigramas de magnésio granulado e 0,5 mL de HCl 
+concentrado em tubos de ensaio contendo 3-4 mL de cada extrato. Depois do término da 
+reação, identificado pelo fim da efervescência, observou-se a reação a fim de detectar 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                45 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+mudanças na coloração da mesma. O aparecimento ou intensificação da cor vermelha é 
+positivo para a presença de flavonóis, flavanonas, flavanonóis e xantonas (MATOS, 2009). 
+5.2.3.6 Determinação de catequinas 
+ Para confirmar a presença de catequinas avaliadas no item 5.2.3.4, utilizou-se um 
+palito de fósforo embebido nos extratos hidroetanólico preparados de acordo com o item 
+5.2.3.1. Foi realizada a evaporação do etanol que estava embebido no palito e o mesmo foi 
+novamente umedecido, em apenas uma face, com ácido clorídrico concentrado. Aqueceu-se o 
+palito por 2-3 minutos ao calor de uma chama de álcool e então se observou aparecimento ou 
+não de uma de coloração do lado acidulado do palito. A presença de cor vermelha ou parda-
+avermelhada confirma a presença de catequinas (MATOS, 2009). 
+5.2.3.7 Determinação de esteróides e triterpenóides 
+A presença ou ausência de esteroides e triterpenoides foi determinada. As amostras 
+foram submetidas a uma extração com 2 mL de clorofórmio, formando uma solução que, em 
+seguida, foi filtrada em um funil fechado com um fragmento de algodão, coberto com 100 mg 
+de sulfato de sódio anidro. Logo após, foi adicionado 1 mL de anidrido acético, agitou-se 
+cuidadosamente e juntou-se 3 gotas de ácido sulfúrico concentrado. Tornou-se a agitar 
+suavemente e observou-se em relação à mudança de coloração. 
+Coloração azul evanescente seguida de verde permanente indica a presença de 
+esteroides livres e coloração parda até vermelha indica a presença de triterpenoides 
+pentacíclicos livres (MATOS, 2009). 
+5.2.3.8 Determinação de saponinas 
+A presença ou ausência de saponinas foi determinada a partir do resíduo insolúvel em 
+clorofórmio obtido do teste anterior. Este foi redissolvido em 5-10 mL de água destilada e 
+filtrado para um tubo de ensaio. Agitou-se, fortemente por 2-3 minutos, o líquido obtido e em 
+seguida observou-se quanto à formação ou não de espumas. 
+Espuma persistente e abundante (colarinho) é indicativa da presença de saponina 
+(heterosídeos saponínicos) (MATOS, 2009). 
+5.2.3.9 Teste confirmatório para saponinas 
+ Para confirmar a presença de saponinas, ao tubo obtido no item 5.2.3.8, foram 
+adicionados 2 mL de HCl concentrado. Então o tubo foi deixado, durante pelo menos uma 
+hora, imerso em banho-maria. Após retirar o tubo do banho-maria, deixou-se que este 
+atingisse a temperatura ambiente (25°C) e realizou-se a neutralização seguida de agitação. 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                46 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+ A presença de precipitado e a não formação de espuma, confirma a presença de 
+saponinas (MATOS, 2009). 
+5.2.3.10 Determinação de alcalóides 
+A presença ou ausência de alcaloides foi determinada dissolvendo-se algumas 
+miligramas das amostras brutas (farinha do bagaço de caju maduro e verde) em 5 mL de uma 
+solução de HCl a 5%. A partir desta solução, separou-se 1 mL da mesma e adicionaram-se 
+algumas gotas do reagente de Dragendoff, que é um reagente de precipitação de alcaloides. 
+Teste positivo para alcaloides se confirma com a formação de um precipitado de cor 
+vermelho tijolo (MATOS, 2009). 
+5.2.4 Determinação dos Antioxidante não enzimáticos 
+5.2.4.1 Determinação dos polifenóis extraíveis totais 
+A quantificação de compostos polifenólicos foi realizada para as amostras de suco de 
+caju maduro e para as farinhas dos bagaços de caju maduro e verde, conforme descrito por 
+Obanda e Awuor (1997). Esse método envolve a redução do reagente Folin-Ciocalteau pelos 
+compostos fenólicos das amostras com concomitante formação de um complexo azul cuja 
+intensidade aumenta linearmente a 700 nm. Para a quantificação de polifenóis, foram 
+preparadas diferentes concentrações dos extratos do suco de caju e das farinhas (extrato 
+preparado conforme item 5.2.4.1) e em seguida foi retirado de cada extrato uma alíquota de 
+250μL do extrato de suco ou farinha e adicionados, em microtubos, juntamente com 250 μL 
+do reagente de Folin Ciocalteau (1:3), 500 μL da solução de carbonato de sódio anidro 
+(Na2CO3) a 20 % e 500 μL água destilada. A mistura foi submetida à homogeneização e 
+deixada em repouso à temperatura ambiente (25°C) por 30 minutos, protegida da luz. As 
+leituras foram realizadas em espectrofotômetro em comprimento de onda de 700 nm. Como 
+padrão, foi utilizada uma solução de ácido gálico em diferentes concentrações e procedeu-se o 
+experimento de forma semelhante ao realizado com os extratos. As concentrações de 
+polifenóis solúveis totais foram calculadas com base nos dados obtidos a partir da curva 
+padrão do ácido gálico 98%. Os resultados foram expressos em mg de ácido gálico/ 100 g de 
+amostra.  
+ 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                47 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+5.2.4.2 Determinação de Vitamina C Total 
+Para a determinação do teor de vitamina C nas diferentes amostras, foi utilizada a 
+solução de Tilman (2,6-dicloro-fenol-indofenol, 0,02%-DFI) segundo metodologia de 
+Strohecker e Henning (1967). Primeiramente, realizou-se a padronização da solução de 
+Tilman, tomando-se 5 mL da solução da ácido ascórbico (50 µg/ml) em um erlenmeyer de 
+125 mL e completando o volume com ± 50 mL de água destilada. Realizou-se a titulação com 
+a solução de Tilman refrigerada até o ponto de viragem, róseo claro, persistente por 15 
+segundos. A titulação foi realizada em triplicata e os volumes obtidos foram utilizados para 
+calcular o título do reagente, ou seja, quantidade de ácido ascórbico necessária para titular 1 
+mL da solução de Tilman.  
+Já para determinar a quantidade de vitamina C nas amostras de suco de caju e farinhas 
+do bagaços de caju, utilizou-se 1 ou 3 g do suco e das farinhas, respectivamente e adicionou-
+se ácido gálico a 0,5% até aferição em um balão de 100 mL. A partir desta solução com ácido 
+gálico, pegou-se 5 mL de cada extrato e colocou-se em um erlenmeyer de 125 mL e 
+completou-se com ± 50 mL de água destilada. A titulação com a solução de Tilman foi 
+realizada até o ponto de viragem. Foram feitas 3 repetições por amostra. O teor de vitamina C 
+foi calculado utilizando os volumes das titulações juntamente com o título determinado na 
+padronização da solução de Tilman. Os valores foram expresso em mg de vitamina C por 100 
+g da amostra. 
+5.2.4.3 Determinação de antocianinas  
+Para o preparo do extrato utilizado na determinação de antocianinas foi utilizado 1 g 
+da amostra de suco de caju maduro e 0,5 g das amostras de farinhas de bagaço de caju maduro 
+e verde, seguindo metodologia proposta por Francis (1982). As amostras foram transferidas 
+para um balão volumétrico âmbar (50 mL), aferidas com solução extratora (etanol-HCl 1,5 
+M), agitadas e por fim mantidas em repouso a 4°C overnight. Após esse tempo, o material foi 
+filtrado para um béquer (50 mL) protegido da luz e em seguida, a absorbância foi medida a 
+535 nm. O branco foi composto apenas pela solução extratora. Todas as análises foram feitas 
+em triplicata e os resultados expressos em mg/100 g de amostra através da fórmula: 
+ 
+Absorbância x fator de diluição 
+98,2 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                48 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+5.2.4.4 Determinação de flavonoides amarelos 
+Para a determinação dos flavonoides amarelos nas amostras de suco de caju maduro e 
+farinha do bagaço de caju maduro e verde, as análises foram realizadas de forma semelhante à 
+análise de antocianinas, porém com uma leitura em espectrofotômetro em comprimento de 
+onda de 374 nm. 
+  Todas as análises foram feitas em triplicata e os resultados expressos em mg/100 g de 
+amostra através da fórmula: 
+ 
+Absorbância x fator de diluição 
+ 
+76,6 
+5.2.4.5 Determinação de carotenoides totais 
+Os carotenoides totais de suco de caju maduro e das farinhas dos bagaços de caju 
+maduro e verde foram determinados pelo método de Higby (1962). Em um béquer de 100 mL, 
+foram adicionados as amostras, 5 g de suco ou 1 g de farinha, 15 mL de álcool isopropílico e 
+5mL de hexano, seguido de agitação por 1 min. A solução foi transferida para um funil de 
+separação âmbar de 125 mL e o volume do mesmo foi ajustado com água destilada. Após 
+repouso por 30 minutos, a lavagem do material foi realizada retirando a fase aquosa e 
+deixando a fase de cor amarela. Esta operação foi realizada por mais 2 vezes. O conteúdo foi 
+filtrado com o auxílio de um algodão pulverizado com sulfato de sódio anidro para um balão 
+volumétrico de 50 mL protegido da luz, ao qual foram adicionados 2,5 mL de acetona e o 
+volume ajustado com hexano. O branco foi composto de 2,5 mL de acetona e 22,5 mL de 
+hexano. As leituras foram feitas a 450 nm e os resultados expressos em mg/100 g. 
+5.3 Avaliação da toxicidade sub-aguda das farinhas de caju 
+5.3.1 Grupos experimentais 
+Para avaliação dos possíveis efeitos tóxicos do suco de caju maduro suplementado 
+com a farinha do bagaço de caju maduro nas concentrações de 75 (SFM75), 150 (SFM150) e 
+300 (SFM300) mg/kg de  peso corporal, suco de caju maduro adicionado com a farinha do 
+bagaço de caju verde nas concentrações de 75 (SFV75), 150 (SFV150) e  300 (SFV300) 
+mg/kg de peso corporal e para os grupos controle e suco, foram utilizados 80 camundongos 
+swiss machos pesando entre 30-40 g, divididos em 8 grupos experimentais (n=10). 
+ Os animais receberam 200 μL das diferentes amostras em dose única diária por via 
+oral, através de sonda orogástrica, durante 19 dias consecutivos de acordo com o seguinte 
+protocolo: Grupo Controle: animais que receberam água destilada; Grupo Suco: animais que 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                49 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+receberam suco de caju; Grupos SFM75, SFM150 e SFM300: animais que receberam suco de 
+caju adicionado com a farinha do bagaço de caju maduro nas concentrações de 75, 150 e 300 
+mg/kg, respectivamente;  Grupos SFV75, SFV150 e SFV300: animais que receberam suco de 
+caju adicionado com a farinha do bagaço de caju verde nas concentrações de 75, 150 e 300 
+mg/kg, respectivamente. 
+Os animais foram observados diariamente após a administração das amostras. Durante 
+o tratamento, a massa corporal dos animais foi registrada semanalmente e estes avaliados 
+quanto a sinais clínicos de toxicidade. O exame clínico foi realizado baseado na observação 
+das frequências respiratória e cardíaca; mudanças comportamentais e parâmetros como: 
+diarreia e constipação, lacrimejamento, sialorreia, eriçamento de pelos, cianose e mortalidade. 
+No último dia (19º dia), os animais foram pesados, amostras de sangue foram coletadas pelo 
+plexo retro-orbital e, em seguida, estes foram eutanasiados por deslocamento cervical e 
+necropsiados para observação macroscópica. 
+A retirada do timo, do baço, do rim e do fígado de forma asséptica foi realizada para 
+registro de seus pesos. O peso relativo de cada órgão foi calculado pela fórmula: 100x (peso 
+do órgão)/peso corporal do animal. O fígado de cada animal foi assepticamente retirado, uma 
+porção de 0,1 g foi pesada e congelada rapidamente em nitrogênio líquido e armazenado a -
+80°C para análise posterior de peroxidação lipídica.  
+5.3.2 Determinação da atividade das enzimas alanina aminotransferase (ALT), aspartato 
+aminotransferase (AST) no soro de camundongos 
+ 
+Foram realizados ensaios para a avaliação da função hepática através da dosagem  das 
+enzimas alanina aminotransferase (ALT) e aspartatoaminotransferase (AST). Para tanto, 
+foram utilizados os soros dos animais de cada grupo teste. Os resultados foram expressos em 
+UI/mL. Todas as dosagens foram realizadas utilizando-se Kit’s comerciais (Labtest®) e as 
+metodologias específicas foram seguidas conforme instruções do fabricante, utilizando 
+espectrofotômetro para obtenção dos resultados. 
+5.3.3 Ensaio de peroxidação lipídica 
+O ensaio de peroxidação lipídica foi realizado de acordo com Agar e colaboradores 
+(1999). Esse método avalia o estresse oxidativo pela medida do malondialdeído (MDA), que 
+consiste no último produto da quebra dos lipídios causada pelo estresse oxidativo.  
+Primeiramente, pegou-se 0,1 g de fígado de camundongos e macerou-se com 1 mL de 
+tampão cloreto de potássio 10% (pH 7,4). Logo após, foram retirados 250 µL desse 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                50 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+homogenato e as amostras foram mantidas a 37°C durante 60 minutos em banho-maria. 
+Posteriormente, 400 µL de ácido perclórico 35% foram adicionados ao homogenato e 
+centrifugados a 14.000 rpm por 10 minutos a 4°C. O sobrenadante (600 µL) foi misturado 
+com 200 µL de ácido tiobarbitúrico 1,2% e aquecido a 98°C durante 30 minutos em banho-
+maria. Após esse período, as amostras foram mantidas à temperatura ambiente até o 
+resfriamento e depois foram colocadas em placas de 96 poços sendo a absorbância lida em 
+leitor de placa a 532 nm. Para a realização dos cálculos, utilizou-se o reagente 1,1,3,3 
+tetrametoxipropano como padrão, construindo-se uma curva com diferentes concentrações. Os 
+resultados foram expressos em nanomoles de MDA por grama de tecido (nmol MDA/g de 
+tecido). 
+5.4  Estudo do efeito imunomodulador do caju 
+5.4.1 Antígenos  
+ As hemácias de carneiro (HC) foram obtidas por punção da veia jugular de carneiros 
+oriundos da FAVET (Faculdade de Veterinária) da Universidade Estadual do Ceará. O sangue 
+dos carneiros coletados em tubos com EDTA foi submetido a três lavagens com solução 
+salina estéril (NaCl, 0,9%)  através de centrifugações a 5000 rpm por 10 min. O concentrado 
+de hemácias obtido foi ajustado para uma concentração de 5% (imunização) ou 1% (desafio) 
+(VASCONCELOS, 2006). 
+5.4.2 Divisão dos grupos 
+ Foram utilizados 70 camundongos swiss machos pesando entre 30-40 g, distribuídos 
+em 7 grupos de 10 animais, recebendo doses diárias de 200 µL por via oral dos diferentes 
+tratamentos, por 19 dias consecutivos, de acordo com o seguinte protocolo: Grupo Controle: 
+animais que receberam água destilada; Grupo Leva: animais que receberam levamisol (10 
+mg/kg) diluído em água destilada; Grupo Suco: animais que  receberam suco de caju; Grupos 
+SFM75 e SFM300: animais que receberam suco de caju adicionado com a farinha do bagaço 
+de caju maduro nas concentrações de 75 e 300 mg/kg, respectivamente;  Grupos SFV75 e 
+SFV300: animais que receberam suco de caju adicionado com a farinha do bagaço de caju 
+verde nas concentrações de 75 e 300 mg/kg, respectivamente. Todos os grupos foram 
+imunizados com 100 µL de HC 5% por via intraperitoneal (via i.p.) nos dias 5 e 12 após início 
+dos tratamentos.  
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                51 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+5.4.3 Desenho Experimental 
+ Os animais foram submetidos aos diferentes tratamentos (levamisol, suco, SFM75, 
+SFM 300, SFV75 e SFV300), por via oral, durante 19 dias consecutivos. A metodologia 
+seguiu protocolo estabelecido por Sharma e colaboradores (1996) com modificações. Após 5 
+dias de tratamento, os animais foram sangrados pelo plexo retro-orbital e imunizados com HC 
+5% (via i.p.) (dia zero da imunização). No 7º dia após a primeira imunização, os animais 
+foram novamente sangrados e imunizados nas mesmas condições.  Finalmente, no 14° dia 
+após a primeira imunização (7 dias após o reforço), os animais foram sangrados. Todos os 
+soros obtidos (0, 7 e 14 dias) foram armazenados a -80°C (Figura 09). 
+5.4.4 Avaliação da resposta imune humoral pelo teste de hemaglutinação 
+ Os títulos de anticorpos específicos para hemácias de carneiro foram determinados 
+pelo método de hemaglutinação (SHARMA  et al., 1996). Para uma alíquota de 25 µL do soro 
+de cada animal, foram realizadas diluições em série com solução salina estéril (NaCl 0,9%) 
+em placas de microtitulações de 96 poços. Em seguida, sensibilizou-se cada poço com 
+hemácia de carneiro a 1%. As placas foram incubadas a 37°C por 1 hora. A reação de 
+aglutinação foi observada ao microscópio óptico e o título de anticorpos de cada animal foi 
+expresso como o inverso da maior diluição positiva para hemaglutinação.  
+5.4.5 Avaliação da resposta imune celular pela reação de hipersensibilidade tardia 
+ Para avaliação da resposta imune celular, no 19º dia de tratamento os camundongos 
+foram desafiados com 50 μL de HC a 1% no coxim plantar da pata traseira direita (Figura 09). 
+Após 24, 48 e 72 horas do desafio, as patas direitas foram medidas com um micrômetro 
+circular para a determinação do edema. Tais medidas referem-se à reação de 
+hipersensibilidade tardia (DTH) (TITUS; CHILLER, 1981)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+                                                                                                                                                                                52 
+ 
+ Métodos                                                                                                                                              Bezerra, C. F. 
+Figura 08.  Esquema de Imunização e Desafio com Hemácias de Carneiro 
+                        
+               
+Fonte: BEZERRA (2013). 
+5.4.6  Determinação do  peso  relativo do timo e do baço 
+ Ao final do experimento que avaliou a resposta imune celular, os animais foram 
+sacrificados por deslocamento cervical e os órgãos timo e baço foram retirados de forma 
+asséptica para registro de seus pesos. O peso relativo de cada órgão foi calculado pela 
+fórmula: 100x (peso do órgão)/peso corporal do animal. 
+5.5 Análise estatística 
+Os resultados foram expressos como a média ± erro padrão. Para comparar os dados 
+entre os grupos, foi realizada a análise estatística dos dados, utilizando a análise de variância 
+(ANOVA), seguida do teste de Tukey ou Newman-Keuls.  As diferenças foram consideradas 
+significativas com um nível de confiança de 95% (p<0,05).  
+  
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+53 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+6. RESULTADOS  
+6.1 Capacidade Antioxidante Total  
+O suco de caju e a farinha do bagaço de caju maduro (FM) e de caju verde (FV) foram 
+avaliados quanto à capacidade antioxidante total pelo método de sequestro do radical ABTS e 
+do radical DPPH. Os resultados obtidos foram calculados através das médias de análises 
+realizadas em duplicata de dois experimentos independentes. Em relação ao método do radical 
+ABTS, as atividades obtidas para as duas farinhas do bagaço de caju (maduro e verde) e para 
+o suco de caju foram de 292,10 ± 6,4; 356,52 ± 7,94 e 19,83 ± 8,11µM Trolox/g, 
+respectivamente (Figura 10).  Já para o método do radical DPPH, os valores encontrados 
+foram 382,68 ± 0,43; 176,82 ± 22,49 e 4076,3 ± 131,35 g de fruta/g de DPPH para as farinhas 
+do bagaço de caju maduro e verde e para o suco de caju, respectivamente (Figura 11).  
+ 
+Figura 09. Capacidade antioxidante total do suco de caju, farinha do bagaço de caju maduro 
+(FM) e caju verde (FV) obtida pelo método ABTS 
+ 
+ABTS
+400
+350
+300
+250
+Suco
+200
+FM
+150
+µM Trolox/g
+FV
+100
+50
+0
+SucoFMFV
+ 
+                 Os resultados representam a média de dois experimentos independentes ± erro padrão. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+54 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+Figura 10. Capacidade antioxidante total do suco de caju, farinha do bagaço de caju maduro 
+(FM) e caju verde (FV) obtida pelo método DPPH 
+ 
+DPPH
+4500
+4000
+3500
+3000
+Suco
+2500
+FM
+2000
+1500FV
+g fruta/g DPPH
+1000
+500
+0
+SucoFMFV
+ 
+                 Os resultados representam a média de dois experimentos independentes ± erro padrão. 
+ 
+6.2  Perfil  Fitoquímico e Antioxidantes não enzimáticos 
+6.2.1 Perfil  Fitoquímico 
+A determinação qualitativa dos compostos fitoquímicos foi realizada em amostras de 
+farinha de bagaço de caju maduro e verde. Foi determinada presença de fenóis, taninos 
+pirogálicos, flavonas, flavonóis, xantonas, flavanonas e esteroides em ambas as amostras 
+(Tabela 02). 
+6.2.2 Antioxidantes não enzimáticos 
+ Os antioxidantes não enzimáticos do suco de caju, da farinha do bagaço de caju 
+maduro e da farinha do bagaço de caju verde estão apresentados na tabela 03 e na figura 12. 
+ Os teores encontrados no suco de caju para vitamina C; antocianinas; flavonoides  
+amarelos e carotenoides foram  81,43 ± 0,0;  0,6 ± 0,09;  1,33 ± 0,16; 0,26 ± 0,03 mg/100g de 
+amostra, respectivamente.  Os valores de vitamina C, antocianinas, flavonoides  amarelos e 
+carotenoides  para a farinha de caju maduro foram 242,05 ± 41,19; 5,95 ± 0,40;  56,76 ± 1,06; 
+10,35 ± 0,15 mg/100g de amostra, respectivamente, enquanto que para a farinha verde foram 
+de 31,76 ± 0,80; 4,17 ± 0,45; 57,70 ± 1,7; 3,45 ± 0,07 mg/100g de amostra para vitamina C, 
+antocianinas, flavonoides amarelos e carotenoides, respectivamente (Tabela 03).   
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+55 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+Tabela 02. Caracterização Fitoquímica das Farinhas dos Bagaços de Caju Maduro (FM) e 
+Verde (FV) 
+ 
+Constituintes fitoquímicos FM FV 
+   
++ + 
+Fenóis 
+Taninos Pirogálicos + + 
+Taninos Flobabênicos _ _ 
++ + 
+Flavonas 
+Flavonóis + + 
+Xantonas + + 
+Chalconas _ _ 
+_ _ 
+Auronas 
+Flavanonóis _ _ 
+Flavanonas + + 
+_ _ 
+Leucoantocianidinas 
+Catequinas _ _ 
+Esteróides + + 
+Triterpenóides _ _ 
+Saponinas _ _ 
+Alcaloides _ _ 
+(+) Presença e (-) Ausência 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+56 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+Tabela 03. Conteúdo de compostos fitoquímicos do Suco de Caju, da Farinha do Bagaço de 
+caju maduro (FM) e da Farinha do Bagaço de caju verde (FV) 
+ 
+Fitoquímicos (mg/100g amostra)      Suco       FM      FV 
+ 
+            
+Vitamina C 242,05 ± 41,19            31,76±0,80  
+81,43 ± 0,0                   
+Antocianinas                       5,95 ± 0,40 4,17 ± 0,45                      
+0,6 ± 0,09 
+Flavonoides Amarelo 56,76 ± 1,06 57,70 ± 1,7 
+1,33 ± 0,16                    
+Carotenoides Totais 10,35 ± 0,15 3,45  ± 0,07 
+0,26± 0,03   
+Os resultados representam a média de dois experimentos independentes ± erro padrão 
+ 
+Foram determinados teores de polifenóis extraíveis totais. Para a amostra de suco de 
+caju foi de 270,04 ± 2,17; para a farinha do bagaço de caju maduro de 3.541,44 ± 49,63 e para 
+a farinha do bagaço de caju verde de 4.450,62 ± 24,81 mg/100g de amostra (Figura 12).  
+Figura 11. Polifenóis extraíveis totais do suco de caju, farinha do bagaço de caju maduro 
+(FM) e caju verde (FV) 
+ 
+Polifenois
+5000
+4500
+4000
+3500
+3000
+Suco
+2500
+FM
+2000
+FV
+1500
+mg/ 100g de amostra
+1000
+500
+0
+SucoFMFV
+ 
+                 Os resultados representam a média de dois experimentos independentes ± erro padrão. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+57 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+6.3 Toxicidade Sub-aguda  
+ Para avaliar a toxicidade em animais alimentados com suco de caju adicionado com a 
+farinha do bagaço de caju maduro ou verde, parâmetros comportamentais, fisiológicos e 
+bioquímicos foram avaliados. 
+ Não foi observado nenhum sintoma de toxicidade, tais como alterações nas 
+frequências respiratória e cardíaca, diarreia, lacrimejamento, sialorréia e eriçamento de pelos. 
+Os órgãos, avaliados macroscopicamente, não apresentaram nenhum sinal de anormalidade e 
+o peso corporal aumentou de acordo com o esperado para o desenvolvimento fisiológico 
+normal dos animais durante o período do experimento (Tabela 04).  Não houve morte de 
+animais em nenhum dos grupos. Em relação ao peso relativo dos órgãos, não foi observada 
+variação significativa para nenhum dos órgãos avaliados de qualquer grupo em relação ao 
+controle (Tabela 05). 
+Tabela 04. Efeitos do tratamento com suco de caju adicionado com as farinhas do bagaço de 
+caju sobre parâmetros fisiológicos e comportamentais em camundongos 
+ 
+Tratamento Mortalidade Peso (g) Sintomas Tóxicos 
+(n° de morte/ n) Dia 0            Dia 19 
+     
+Controle 0/10 32,55 ± 0,69  39,59 ± 0,49ª Nenhum 
+Suco 0/10 30,10 ± 0,41 38,84 ± 0,40ª Nenhum 
+SFM75 0/10 32,56 ± 0,80 35,94 ± 1,15ª Nenhum 
+SFM150 0/10 33,89 ± 0,76 37,83 ± 0,97ª Nenhum 
+SFM300 0/10 34,10 ± 0,69 37,65 ± 0,75ª Nenhum 
+SFV75 0/10 31,78 ± 0,70 35,17 ± 0,67ª Nenhum 
+SFV150 0/10 33,20 ± 0,96 36,65 ± 1,16ª Nenhum 
+SFV300 0/10 32,85 ± 0,76 36,80 ± 0,98ª Nenhum 
+Dados apresentados como média ± erro padrão. Os grupos fazem referência a animais tratados com Água 
+(Controle), Suco de Caju (Suco), Suco de Caju adicionado de Farinha do Bagaço de Caju Maduro nas doses de 
+75, 150 e 300 mg/Kg (SFM75, SFM150 e SFM300) e Suco de Caju adicionado de Farinha do Bagaço de Caju 
+Verde nas doses de 75, 150 e 300 mg/Kg (SFV75, SFV150 e SFV300). 
+(a) Diferença estatística em relação ao peso do animal no dia zero (p < 0,05). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+58 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+Tabela 05.  Efeito do suco de caju adicionado com a farinha do bagaço de caju sobre o peso 
+relativo dos órgãos  
+ 
+Tratamento Fígado Rim Baço Timo 
+3,695 ± 0,08 0,646 ± 0,02 0,309 ± 0,03 0,102 ± 0,01 
+Controle 
+3,657 ± 0,08 0,689 ± 0,03 0,277 ± 0,02 0,108 ± 0,01 
+Suco 
+3,743 ± 0,08 0,662 ± 0,02 0,363 ± 0,03 0,091 ± 0,01 
+SFM75 
+3,782 ± 0,08 0,698 ± 0,01 0,265 ± 0,02 0,104 ± 0,01 
+SFM150 
+3,603 ± 0,05 0,693 ± 0,02 0,261 ± 0,02 0,090 ± 0,01 
+SFM300 
+3,761 ± 0,13 0,658 ± 0,02 0,329 ± 0,03 0,090 ± 0,01 
+SFV75 
+3,655 ± 0,11 0,628 ± 0,03 0,267 ± 0,01 0,114 ± 0,01 
+SFV150 
+3,895 ± 0,07 0,710 ± 0,01 0,302 ± 0,02 0,097 ± 0,01 
+SFV300 
+Dados apresentados como média ± erro padrão. Os grupos fazem referência a animais tratados com Água 
+(Controle), Suco de Caju (Suco), Suco de Caju adicionado de Farinha do Bagaço de Caju Maduro nas doses de 
+75, 150 e 300 mg/Kg (SFM75, SFM150 e SFM300) e Suco de Caju adicionado de Farinha do Bagaço de Caju 
+Verde nas doses de 75, 150 e 300 mg/Kg (SFV75, SFV150 e SFV300).  
+Os valores dos pesos dos órgãos foram calculados como 100 x (peso do órgão)/(peso do animal). 
+ 
+A tabela 06 apresenta o efeito do tratamento com suco de caju adicionado ou não com 
+a farinha do bagaço de caju maduro ou verde sobre a atividade da ALT, da AST e sobre a 
+peroxidação lipídica no fígado.  
+Em relação à atividade da ALT, foram obtidos valores para o grupo Controle de 61,09 
+± 5,25; Suco de 73,36 ± 4,46; SFM 75 de 49,35 ± 6,85; SFM150 de 37,47 ± 3,19; SFM300 de 
+37,73 ± 6,54; SFV75 de 38,53 ± 3,27; SFV150 de 46,82 ± 4,05 e SFV300 de 54,68 ± 5,69 
+U/L. Não foi observada diferença estatística entre o grupo controle e os demais grupos, 
+entretanto houve uma diminuição significativa nos grupos SFM150 (48,92%), SFM300 
+(48,98%) e SFV75 (47,48%) em relação ao grupo Suco.  
+Perfil semelhante foi evidenciado para a atividade da AST, foram obtidos valores em 
+U/L para os grupos:  Controle de 146,2 ± 6,93; Suco de 164,3 ± 5,73; SFM 75 de 134,0 ± 
+6,79; SFM150 de 125,6 ±  6,46; SFM300 de 129,1 ± 4,72; SFV75 de 134,8 ± 5,22; SFV150 
+de 135,7 ± 7,83 e SFV300 de 140,4 ± 9,30, observando-se uma diminuição significativa nos 
+grupos SFM150 (23,55%) e M300 (21,42%) em relação ao grupo Suco (Tabela 06). 
+Para a peroxidação lipídica, foram evidenciados valores de nmol MDA/g tecido para os 
+grupos controle e suco de 166,2 ± 20,94 e  214,1 ± 30,51, respectivamente; para os grupos 
+SFM75, SFM 150 e SFM 300 de 229,8 ± 23,79; 157,3 ± 21,83 e 147,3 ± 21,31, 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+59 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+respectivamente; enquanto  para os grupos  SFV75,  SFV150  e  SFV300 de 170,1 ± 25,71; 
+190,4 ± 23,94 e 173,9 ± 29,73, respectivamente (Tabela 06). Não foi observado nenhuma 
+diferença significativa nos níveis de MDA dos grupos tratados com suco de caju adicionado 
+com a farinha do bagaço de caju maduro e com a farinha do bagaço de caju verde (75, 150 e 
+300 mg/kg) quando comparados ao controle.  
+Tabela 06. Efeito do suco de caju adicionado com a farinha do bagaço do caju sobre as 
+enzimas: alanina transaminase (ALT) e aspartato transaminase (AST) e sobre a peroxidação 
+lipídica 
+ 
+Tratamento  ALT (U/L)                  AST (U/L) Peroxidação Lipídica 
+(nmol MDA/g tecido) 
+                          
+    
+Controle 61,09 ± 5,25 146,2 ± 6,93 166,2 ± 20,94 
+Suco 73,36 ± 4,46 164,3 ± 5,73 214,1 ± 30,51 
+SFM75 49,35 ± 6,85 134,0 ± 6,79 229,8 ± 23,79 
+bb
+SFM150 37,47 ± 3,19 125,6 ±  6,46 157,3 ± 21,83 
+bb
+SFM300 37,73 ± 6,54 129,1 ± 4,72 147,3 ± 21,31 
+b
+SFV75 38,53 ± 3,27 134,8 ± 5,22 170,1 ± 25,71 
+SFV150 46,82 ± 4,05 135,7 ± 7,83 190,4 ± 23,94 
+SFV300 54,68 ± 5,69 140,4 ± 9,30 173,9 ± 29,73 
+Dados apresentados como média ± erro padrão. Os grupos fazem referência a animais tratados com Água 
+(Controle), Suco de Caju (Suco), Suco de Caju adicionado de Farinha do Bagaço de Caju Maduro nas doses de 
+75, 150 e 300 mg/Kg (SFM75, SFM150 e SFM300) e Suco de Caju adicionado de Farinha do Bagaço de Caju 
+Verde nas doses de 75, 150 e 300 mg/Kg (SFV75, SFV150 e SFV300). 
+A letra a representa diferença estatística (p < 0,05) em relação ao controle e a letra b em relação ao suco. 
+ 
+6.4 Resposta Imune Humoral 
+ A Tabela 07 e a Figura 13 apresentam os resultados dos títulos de anticorpos primários 
+e secundários do soro de camundongos imunizados com hemácias de carneiro, que foram 
+tratados ou não com suco de caju adicionado com as farinhas dos bagaços de caju maduro ou 
+verde. 
+ Na resposta primária, houve produção de anticorpos anti-hemácias de carneiro em 
+todos os grupos (Tabela 07 e Figura 13). Foram evidenciados títulos de anticorpos 
+aglutinantes anti-hemácia de carneiro que variaram de 73,60 ± 9,60 (Grupo Suco) a 124,8 ± 
+24,53 (Grupo SFM300), entretanto não houve diferença significativa (p > 0,05) entre os 
+grupos (Tabela 07). 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+60 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+ Na resposta secundária, foi evidenciado um aumento na produção de anticorpo anti-
+hemácias de carneiro para todos os grupos em relação à sua resposta primária (Figura 13). 
+Como mostrado na Tabela 07, os títulos de anticorpos variaram de 371,2 ± 48,46 (Grupo 
+Controle) a 819,2 ± 106,6 (Grupo Suco).  Os grupos Levamisol, Suco e SFV300 apresentaram 
+os maiores títulos de anticorpos, com aumento significativo (p < 0,05) de 99,25 %; 120,6 %; e 
+100,00 %, respectivamente, em relação ao Controle.  Ademais, o grupo suplementado com o 
+suco apresentou um aumento significativo (p < 0,05) em relação aos grupos SFM75 (46,18 
+%), SFM300 (53,13 %) e SFV75 (44,45%) (Tabela 07).  
+ A figura 13 mostra que houve um aumento significativo (p < 0,05) nos título de 
+anticorpos secundários, em todos os tratamentos, em relação aos títulos de anticorpos 
+primários correspondentes. Esse aumento foi de 1013,04 % para Suco; 376,96% para SFM75; 
+207,69% para SFM300; 312,98% para SFV75; 603,03% para SFV300; 824,50% para 
+Levamisol e 262,50% para controle. 
+ Na tabela 08 podem ser observados os pesos relativos dos órgãos timo e baço dos 
+camundongos no último dia dos tratamentos. Não houve diferença estatística, entre o peso do 
+timo e do baço dos animais tratados quando comparados com o controle (p > 0,05). 
+Tabela 07. Títulos de anticorpos aglutinantes anti-hemácias de carneiro 
+*
+Tratamento Título de Anticorpos  Estimulação (%) 
+ Título Primário Título Secundário  
+7 Dias 14 Dias 
+AB
+102,4 ± 28,14 371,2 ± 48,46 262,50 
+Controle 
+Aa,B
+80,00 ± 13,70 739,6 ± 89,95 824,50 
+Levamisol 
+Aa,B
+73,60 ± 9,60 819,2 ± 106,6  1013,04 
+Suco 
+Ab,B
+SFM75 92,44 ± 27,94 440,9 ± 88,25 376,96 
+Ab,d,B
+SFM300 124,8 ± 24,53 384,0 ± 85,33 207,69 
+Ab,B
+SFV75 110,2 ± 32,49 455,1 ± 37,63 312,98 
+A,B
+SFV300 105,6 ± 11,73 742,4 ± 96,92 ª 603,03 
+Dados apresentados como média ± erro padrão (n = 10).  Os grupos fazem referência a animais tratados com 
+Água (Controle), Levamisol 10 mg/kg (Levamisol), Suco de Caju (Suco), Suco de Caju adicionado de Farinha 
+do Bagaço de Caju Maduro nas doses de 75 e 300 mg/Kg (SFM75 e SFM300) e Suco de Caju adicionado de 
+Farinha do Bagaço de Caju Verde nas doses de 75 e 300 mg/Kg (SFV75 e SFV300). 
+A letra a representa diferença estatística (p < 0,05) em relação ao controle, a letra b em relação ao suco, a letra c 
+em relação ao Levamisol  e a letra d em relação ao SFV300. 
+Diferenças estatísticas significativas (p < 0,05) entre os intervalos de tempo analisados dentro de cada grupo 
+foram representadas pelas letras A e B.  
+* 
+Estimulação do título de anticorpos da resposta secundária em relação à resposta primária. 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+61 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+Figura 12. Títulos de anticorpos aglutinantes anti-hemácias de carneiro no 7° (título 
+primário) e no 14° (título secundário) dia de imunização 
+ 
+1000
+a 
+900
+a a 
+800
+700
+600
+a 
+a 
+a 
+Título Primário
+500
+a 
+Título Secundário
+400
+300
+200
+Título de Anticorpos Aglutinantes
+100
+0
+ControleLevaSucoSFM75SFM300SFV75SFV300
+ 
+Os grupos fazem referência a animais tratados com Água (Controle), Levamisol 10mg/kg (Levamisol), Suco de 
+Caju (Suco), Suco de Caju adicionado de Farinha do Bagaço de Caju Maduro nas doses de 75 e 300 mg/Kg 
+(SFM75 e SFM300) e Suco de Caju adicionado de Farinha do Bagaço de Caju Verde nas doses de 75 e 300 
+mg/Kg (SFV75 e SFV300). 
+A letra a representa diferença estatística significativa (p < 0,05) em relação ao dia 7 (resposta primária). 
+ 
+Tabela 08.  Efeito da imunização com hemácias de carneiro sobre o peso relativo do timo e 
+do baço  
+ 
+Tratamento                   Timo                    Baço 
+  
+ 
+0,102 ± 0,01 0,309 ± 0,03 
+Controle 
+0,113 ± 0,01 0,311 ± 0,03 
+Levamisol 
+0,108 ± 0,01 0,277 ± 0,02 
+Suco 
+0,091 ± 0,01 0,363 ± 0,03 
+SFM75 
+0,090 ± 0,01 0,261 ± 0,02 
+SFM300 
+0,090 ± 0,01 0,329 ± 0,03 
+SFV75 
+0,097 ± 0,01 0,302 ± 0,02 
+SFV300 
+Dados apresentados como média ± erro padrão. (n = 10) 
+ 
+6.5  Resposta Imune Celular 
+ A Tabela 09 e a Figura 14 apresentam os resultados obtidos para reação de 
+hipersensibilidade tardia (DTH), após desafio com hemácias de carneiro, de camundongos 
+imunizados com hemácias de carneiro, que foram tratados ou não com suco de caju 
+adicionado com as farinhas dos bagaços de caju maduro ou verde. A espessura da pata foi 
+medida em quatro tempos: antes (tempo zero), 24, 48 e 72 horas após o desafio com hemácias 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+62 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+de carneiro. Não foi evidenciada variação na espessura das patas do grupo Controle, sendo os 
+valores (expressos em mm) para o dia zero de 2,25 ± 0,07; para 24 h de 2,26 ± 0,07; para 48 h 
+de 2,27 ± 0,07 e para 72 h de 2,25 ± 0,07 (Tabela 9). Para o Levamisol, os valores (em mm) 
+foram de 2,35 ± 0,05 para o dia zero; de 2,46 ± 0,04 após 24 h; de 2,50 ± 0,02 após 48 h e de 
+2,42 ± 0,03 após 72 h (Tabela 9). Os valores de DTH para o Suco foram de 2,29 ± 0,03 para o 
+tempo zero; 2,40 ± 0,05 após 24 h; 2,49 ± 0,04 após 48 h e 2,46 ± 0,03 para 72 h. Para 
+SFM75, nos tempos zero, 24, 48 e 72 h, os valores de DTH (em mm) foram de 2,31 ± 0,05; 
+2,30 ± 0,03; 2,37 ± 0,02 e 2,34 ± 0,03; respectivamente. Já para SFM300, nos tempos zero, 
+24, 48 e 72 h, os valores de DTH (em mm) foram de 2,29 ± 0,03; 2,34 ± 0,02; 2,49 ± 0,02 e 
+2,47 ± 0,03; respectivamente. Os valores de DTH para o SFV75 foram de 2,26 ± 0,01 para o 
+tempo zero; 2,35 ± 0,03 após 24 h; 2,43 ± 0,05 após 48 h e 2,38 ± 0,02 após 72 h. Para 
+SFV300, foram determinados valores de DTH (em mm) de 2,27 ± 0,02 para o tempo zero; 
+2,43 ± 0,03 após 24 h; 2,40 ± 0,02 após 48 h e 2,50 ± 0,03 após 72 h. 
+Os maiores valores de DTH foram evidenciados nos grupos suco, SFM300 e SFV300, 
+com um aumento da espessura da pata de 8,66% entre o tempo zero e 48 h; 8,58% entre o 
+tempo zero e 48 h e de 10,27% entre o tempo zero e 72 h, respectivamente (Figura 14). 
+Os grupos Levamisol, Suco, SFM300 e SFV75 exibiram o pico da reação em 48 horas, 
+diferindo significativamente do Controle (p < 0,05) com um aumento de 11,11%; 10,66%; 
+10,66% e 8,00%, respectivamente. Enquanto o grupo SFV300 exibiu o pico da reação em 72 
+horas com um aumento significativo (p < 0,05) de 11,11% em relação ao controle. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+63 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+Tabela 09.  Reação de Hipersensibilidade Tardia (DTH) induzida em camundongos 
+imunizados com hemácia de carneiro   
+ Espessura da pata (mm)  
+Tratamento Tempo (h) após o desafio com Hemácia de Carneiro 
+ 
+0 24 48 72 
+Controle 2,25 ± 0,07 2,26 ± 0,07 2,27 ± 0,07 2,25 ± 0,07 
+a,Aa,Aa
+Levamisol 2,35 ± 0,05 2,46 ± 0,04 2,50 ± 0,02 2,42 ± 0,03 
+Aa,Aa,A
+Suco 2,29 ± 0,03 2,40 ± 0,05 2,49 ± 0,04 2,46 ± 0,03 
+SFM75 2,31 ± 0,05 2,30 ± 0,03 2,37 ± 0,02 2,34 ± 0,03 
+a,Aa,A
+SFM300 2,29 ± 0,03 2,34 ± 0,02 2,49 ± 0,02 2,47 ± 0,03 
+Aa,AA
+SFV75 2,26 ± 0,01 2,35 ± 0,03 2,43 ± 0,05 2,38 ± 0,02 
+AA,A
+SFV300 2,27 ± 0,02 2,43 ± 0,03 2,40 ± 0,02 2,50 ± 0,03ª 
+Dados apresentados como media ± erro padrão. (n = 10). Os grupos fazem referência a animais tratados com 
+Água (Controle), Levamisol 10mg/kg (Levamisol), Suco de Caju (Suco), Suco de Caju adicionado de Farinha do 
+Bagaço de Caju Maduro nas doses de 75 e 300 mg/Kg (SFM75 e  SFM300) e Suco de Caju adicionado de 
+Farinha do Bagaço Verde nas doses de 75 e  300 mg/Kg (SFV75 e  SFV300). 
+Diferença estatística em cada hora em relação ao controle (a), suco (b) e levamisol (c). p < 0,05. 
+Diferença estatística em cada grupo em relação 0 h (A). p < 0,05. 
+ 
+  
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+64 
+ 
+Resultados                                                                                                                                           Bezerra, C. F. 
+Figura 13. Espessura da pata, em porcentagem, calculado entre a 0 hora e 24 horas, 48 horas 
+e 72 horas nos grupos Controle, Levamisol e Suco (A); SFM75 e SFM300 (B) e SFV75 e 
+SFV300 (C) 
+ 
+A 
+Suco
+ControleLevamisol
+12
+1212
+10
+1010
+888
+6
+66
+444
+Espessura  (%)
+Espessura   (%)
+Espessura  (%)
+222
+000
+244872244872244872
+            
+ 
+B 
+SFM75SFM300
+1212
+1010
+88
+66
+44
+Espessura  (%)Espessura  (%)
+22
+00
+244872244872
+        
+ 
+C 
+SFV75SFV300
+1212
+1010
+88
+66
+44
+Espessura  (%)
+Espessura  (%)
+22
+00
+244872244872
+                 
+Os grupos fazem referência a animais tratados com Água (Controle), Levamisol 10mg/kg (Levamisol), Suco de 
+Caju (Suco), Suco de Caju adicionado de Farinha do Bagaço Maduro nas doses de 75 e 300 mg/Kg (SFM75 e  
+SFM300) e Suco de Caju adicionado de Farinha do Bagaço Verde nas doses de 75 e  300 mg/Kg (SFV75 e  
+SFV300). 
+ 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+65 
+ 
+Discussão                                                                                                                                             Bezerra, C. F. 
+7. DISCUSSÃO 
+ Uma das estratégias das políticas de saúde pública é promover o aumento da ingestão 
+de frutas e legumes, pois são boas fontes de antioxidantes naturais (QUEIROZ et al., 2011). 
+Uma boa nutrição, rica em antioxidantes, promove impactos sobre processos fisiológicos 
+corporais e pode ter implicações importantes sobre as funções do sistema imunológico, a 
+resistência à infecção e a autoimunidade (GHATAK; PANCHAL, 2012). 
+ O interesse em se estudar os efeitos de uma boa nutrição e seus compostos naturais 
+sobre as respostas imunológicas dá-se em grande parte porque o sistema imune está envolvido 
+tanto na etiologia como na fisiopatologia de muitas doenças. A modulação da reposta imune 
+para aliviar essas doenças, tem sido de grande interesse por muitos anos (SARAVANAN et 
+al., 2012).  Muitos grupos de pesquisa têm focado na identificação de substâncias naturais de 
+plantas que podem servir como imunomoduladores, controlando certas respostas imunes 
+(MUKAND; CHORGADE, 2006). Nesse contexto, buscou-se avaliar uma cultura de interesse 
+regional, o caju, sobre a modulação da resposta imunológica.  
+ Vale ainda salientar que a cultura do caju no Nordeste do Brasil é uma agroindústria 
+geradora de milhares de empregos diretos e indiretos que sustentam toda a cadeia produtiva 
+do caju (LOPES et al., 2011). No entanto, o principal foco na indústria que trabalha com esta 
+cultura é o beneficiamento da castanha, sendo o pedúnculo e o bagaço gerado do seu 
+processamento muitas vezes descartado. Esses produtos são grandes fontes de compostos 
+bioativos, o que despertou o interesse de estudar suas propriedades na modulação da resposta 
+imunológica, gerando com isso também o aproveitamento de resíduos, como o bagaço do 
+caju, normalmente descartados.  
+ Para tanto, primeiramente foi analisada a capacidade antioxidante do suco de caju e 
+das farinhas do bagaço de caju, de clones de cajueiro CCP 76, pelos métodos de sequestros do 
+●+●
+radical ABTS e DPPH.  A capacidade antioxidante de uma substância é definida como a 
+sua capacidade de sequestrar espécies reativas de oxigênio e eletrólitos. Estas espécies são 
+formadas durante os processos normais do organismo, mas a sua acumulação conduz a várias 
+doenças, entre elas o câncer (QUEIROZ et al., 2011).  No presente estudo, as farinhas do 
+bagaço de caju maduro (FM) e verde (FV) apresentaram o maior potencial antioxidante em 
+relação ao suco de caju, em média 16,5 vezes superiores, nos dois métodos, tendo a FV ainda 
+capacidade superior a FM (Figuras 08 e 09). Rufino e colaboradores (2010) evidenciaram 
+uma capacidade antioxidante para a polpa de caju (matéria fresca) de 11,2 µmol Trolox/g 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+66 
+ 
+Discussão                                                                                                                                             Bezerra, C. F. 
+(ABTS) e 7142 g de fruta/g de DPPH (DPPH), classificando o caju como um fruto com 
+potencial antioxidante médio. Estes valores são inferiores aos encontrados neste trabalho para 
+o suco de caju.  Entretanto, quando comparados os valores encontrados por Contreras-
+Calderón e colaboradores (2010), foi possível observar  um aumento  considerável  na 
+atividade  antioxidante da polpa de caju que foi de 115 µmol Trolox/g  para o método ABTS, 
+superiores aos encontrados neste trabalho. Já Queiroz e colaboradores (2011) encontraram um 
+forte potencial antioxidante para polpa de caju pelo método de DPPH, corroborando com os 
+resultados encontrados neste trabalho. As grandes variações evidenciadas nos diferentes 
+resultados devem-se, muitas vezes, as diferenças no preparo das amostras, tornando difícil a 
+comparação de resultados, sendo um problema que merece bastante atenção dos 
+pesquisadores (RUFINO et al., 2010). Diversos estudos mostram que o potencial antioxidante 
+do bagaço de caju maduro é superior ao da polpa de caju, concordando com os valores 
+encontrados neste trabalho para farinha do bagaço de caju maduro em relação ao suco de caju.  
+Broinizi e colaboradores (2008) avaliaram a capacidade antioxidante de extratos 
+hidroalcoólicos de bagaço de caju e encontraram uma forte capacidade antioxidante pelo 
+método de DPPH, esses resultados foram superiores aos evidenciados por Queiroz e 
+colaboradores (2011) para polpa de caju.  O processamento realizado por Rufino e 
+colaboradores (2010) para matéria seca (liofilizada) é semelhante ao realizado para as farinhas 
+do bagaço de caju do presente trabalho, porém utilizando o pedúnculo inteiro, polpa e pele. 
+Esses pesquisadores encontraram valores superiores para polpa de caju liofilizada (79,4 µmol 
+Trolox/g para o teste ABTS e 906 g de fruta/g de DPPH para o teste DPPH) em relação aos 
+valores encontrados para polpa de caju matéria fresca citados anteriormente (RUFINO et al., 
+2010).   No presente trabalho, a farinha do bagaço de caju verde apresentou o maior potencial 
+antioxidante em ambos os métodos. Sua capacidade antioxidante pode ser considerada alta 
+quando comparamos com os valores encontrados por Rufino e colaboradores (2010) pelo 
+método DPPH para jaboticaba (138 g de fruta/g de DPPH), murici (238 g de fruta/g de 
+DPPH) e  uvaia (276 g de fruta/g de DPPH)  e  pelo método de ABTS para  jaboticaba  (317 
+µmol Trolox/g), murici  (412 µmol Trolox/g)  e  puça-preto (346 µmol Trolox/g).  Esses 
+frutos são considerados potentes antioxidantes e apresentaram valores de atividade 
+antioxidante similares aos da farinha do bagaço de caju verde. Lopes e colaboradores (2012) 
+avaliaram diversos clones de caju, entre eles o CCP 76, em diferentes estádios de maturidade 
+e observaram pelo método de ABTS que a capacidade antioxidante do fruto tende a reduzir 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+67 
+ 
+Discussão                                                                                                                                             Bezerra, C. F. 
+com o amadurecimento, ou seja, o fruto possui a maior capacidade antioxidante no estádio de 
+imaturidade. Este resultado corrobora com o valor encontrado para a farinha de caju verde, 
+que apresentou maior capacidade antioxidante que a farinha de caju maduro pelo método  
+ABTS. 
+A partir de análises qualitativas, foi determinado, nas farinhas de caju, a presença de 
+fenóis, taninos pirogálicos, flavonas, flavonóis, xantonas, flavanonas e esteroides em ambas 
+as amostras (Tabela 04).  Esses resultados estão de acordo com Omena e colaboradores 
+(2012) que realizaram um ensaio fitoquímico em pele de siriguela, fruto também da família 
+Anacardiaceae, e identificaram a presença de fenóis, taninos, flavonoides e esteroides. 
+Vasconcelos (2011) trabalhou com suco de caju (clone CCP 76) e observou maior teor de 
+polifenóis totais, vitamina C, flavonoides amarelos, antocianinas e carotenoides no suco de 
+caju maduro quando comparado ao suco de caju verde. O autor sugere que há diferença no 
+perfil fitoquímico de sucos de caju relacionada com os diferentes estádios de maturação. 
+Para as amostras de suco de caju e farinhas do bagaço de caju maduro e verde, foram 
+determinados os teores de vitamina C, antocianinas, flavonoides amarelos, carotenoides totais 
+(Tabela 5) e polifenóis extraíveis totais (Figura 10). Dentre os fitoquímicos analisados, os 
+polifenóis foram os compostos majoritários, seguidos da vitamina C para quase todas as 
+amostras. O perfil encontrado para os polifenóis foi semelhante ao encontrado para 
+capacidade antioxidante total, tendo a farinha de caju verde os maiores teores de polifenóis 
+seguida pela farinha de caju maduro e suco de caju (Figura 10). Vários estudos relatam uma 
+correlação positiva entre atividade antioxidante e conteúdo total de polifenóis encontrados em 
+alguns vegetais tropicais (KAUR; KAPOOR, 2002; MAISUTHISAKUL, SUTTAJIT; 
+PONGSAWATMANIT, 2007), sugerindo que as plantas que contêm elevada composição de 
+compostos fenólicos podem ser uma boa fonte de antioxidantes. Polifenóis agem como 
+potentes antioxidantes, em virtude de seus grupos hidroxilas que facilitam a doação de 
+elétrons e diminuem efetivamente os radicais livres. Os valores de polifenóis do suco de caju 
+e da farinha do bagaço de caju maduro do presente estudo foram superiores aos encontrados 
+por Rufino e colaboradores (2010) para polpa de caju e para polpa liofilizada. A variação no 
+conteúdo de polifenóis pode ser justificada pelas diferenças no solo, nas condições climáticas, 
+no período de cultivo, no armazenamento pós-colheita e nos métodos de extração de 
+polifenóis. Além disso, as plantas podem ativar a síntese de polifenóis em resposta a uma 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+68 
+ 
+Discussão                                                                                                                                             Bezerra, C. F. 
+situação de estresse, tais como lesões, patógenos ou baixos nutrientes (QUEIROZ et al., 
+2011).  
+Rufino e colaboradores (2010) definiram uma classificação para frutos de acordo com 
+os teores de polifenóis, sendo baixo (< 100 mg/100g), médio (100-500 mg/100g) e alto (> 500 
+mg/100g) teores de polifenóis para matéria fresca e  baixo (< 1000 mg/100g), médio (1000-
+5000 mg/100g) e alto (> 5000 mg/100g) teores de polifenóis para frutos liofilizados. Os teores 
+de polifenóis do suco de caju e das farinhas do bagaço do caju (maduro e verde) determinados 
+neste trabalho encontram-se dentro da faixa de níveis médios de polifenóis classificados por 
+Rufino e colaboradores. Lopes e colaboradores (2012) observaram uma diminuição 
+significativa nos teores de polifenóis no decorrer do amadurecimento do caju, clone CCP76, 
+como evidenciado no presente estudo com as farinhas do bagaço de caju maduro e verde, em 
+que a farinha do bagaço de caju verde apresentou um valor superior de polifenóis em 
+comparação com a farinha do bagaço de caju maduro. Esses resultados divergem dos de 
+Vasconcelos (2011), trabalhando com suco de caju maduro e verde, evidenciou valores de 
+polifenóis maiores no suco de caju maduro.  
+ Em relação ao conteúdo de vitamina C, a farinha de bagaço de caju maduro apresentou 
+o maior valor, seguida do suco e da farinha do bagaço de caju verde. Os valores encontrados 
+para suco de caju foram inferiores aos encontrados por Rufino e colaboradores (2010) com 
+190 mg/100g  e  por Queiroz  e colaboradores (2011) com 163 mg/100 g.  Contreras-Calderón 
+e colaboradores (2010) analisaram vitamina C no caju  de forma integral, ou seja, polpa 
+juntamente com a pele e encontraram  228 mg/100g  de vitamina C, mostrando um aumento 
+no conteúdo de vitamina C quando a polpa é analisada juntamente com a pele, concordando 
+com os valores encontrados neste trabalho que foram superiores para a farinha do bagaço de 
+caju maduro em relação ao suco de caju.  Sabe-se que baixos níveis de vitamina C podem 
+induzir a síntese de polifenóis (REYS; VILLAREAL; CISNEROS-ZEVALLOS, 2007), 
+portanto os altos níveis de polifenóis encontrados na farinha de caju verde podem ser 
+justificados pelos baixos níveis de vitamina C. A diferença entre a quantidade de vitamina C 
+da farinha do bagaço de caju maduro em relação à farinha do bagaço de caju verde estão de 
+acordo com o estudo de Lopes e colaboradores (2012) que mostraram um aumento no teor de 
+vitamina C com o amadurecimento do caju e também corroboram com os estudos de 
+Vasconcelos (2011) que observou um maior quantidade de vitamina C no suco de caju 
+maduro em relação ao suco de caju verde.  
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+69 
+ 
+Discussão                                                                                                                                             Bezerra, C. F. 
+ Os demais compostos analisados (antocianinas, carotenoides e flavonoides amarelos) 
+apresentaram baixas quantidades em relação aos polifenóis e a vitamina C. Valores de 
+carotenoides encontrados por Lopes e colaboradores (2012) (0,30 mg/100g)  e Rufino e 
+colaboradores (2010) (0,40 mg/100g)  para polpa de caju estão de acordo com os valores 
+evidenciados neste trabalho. Já os valores encontrados para antocianinas e flavonoides 
+amarelos, por esses mesmos pesquisadores, mostram-se superiores aos determinados no 
+presente trabalho. A farinha do bagaço de caju maduro apresentou valores de carotenoides 
+superiores aos determinados por Abreu e colaboradores (2013) que evidenciaram 0,6 mg/ 
+100g de carotenoides para extrato aquoso de bagaço de caju. Carotenoides são precursores de 
+vitamina A que exibem atividade de sequestro do oxigênio singlet (ABREU et al., 2013).  
+Apesar dos baixos teores de carotenoides quantificados nas diferentes amostras de caju neste 
+trabalho, quando comparados com outros frutos, ainda assim estes podem contribuir para o 
+potencial antioxidante do caju.  
+Tendo em vista que o perfil fitoquímico do suco do caju e das farinhas do bagaço do 
+caju verde e maduro, os mesmos revelaram-se uma complexa fonte natural de antioxidantes, 
+partiu-se para avaliação do potencial toxicológico do suco de caju adicionado com a farinha 
+do bagaço de caju em camundongos, a fim de poder verificar o grau de segurança da adição 
+das farinhas do bagaço de caju como suplemento a serem utilizados como nutracêuticos. 
+  Essa etapa dos estudos toxicológicos é de extrema relevância uma vez que a 
+toxicidade é um parâmetro importante a ser determinado para posteriores utilizações das 
+substâncias in vivo. A toxicidade pode ser classificada em quatro categorias, considerando a 
+exposição de animais a produtos químicos: aguda, subaguda, subcrônica e crônica 
+(KLAASSEN, 2001). A exposição aguda é definida como a exposição a um produto químico 
+por menos de 24 h. A exposição subaguda refere-se à exposição repetida a um produto 
+químico por um período menor ou igual a um mês ou menos, a subcrônica por 1-3 meses e a 
+crônica por mais de 3 meses (KLAASSEN, 2001).  
+O ensaio de toxicidade realizado foi de exposição subaguda e os animais não 
+apresentaram nenhum sinal de toxicidade em relação aos parâmetros observados, tais como 
+peso corporal, peso relativo dos órgãos e mudanças no comportamento dos animais (Tabelas 
+06 e 07). Outro parâmetro avaliado foi o da atividade das enzimas transaminases, ALT e AST. 
+Após as análises, não foi evidenciado aumento na atividade dessas enzimas nos grupos 
+tratados com as diferentes amostras em relação ao grupo controle. Porém foi observada uma 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+70 
+ 
+Discussão                                                                                                                                             Bezerra, C. F. 
+diminuição na atividade de ALT para SFM150, SFM300 e SFV75 e na atividade de AST para 
+SFM150 e SFM300 em relação ao grupo tratado com suco de caju (Tabela 08). Níveis 
+elevados dessas enzimas combinados com evidências histopatológicas são usados para 
+identificar injúrias hepatocelulares agudas (RAMAIAH, 2007).  Essas alterações ocorrem no 
+sangue quando a permeabilidade celular hepática é alterada ou quando ocorrem injúrias e 
+necroses celulares (UPUR et al., 2009). O fato de ter havido uma diminuição nas atividades 
+de ambas as enzimas pode ser relacionado com o aumento do potencial antioxidante do suco 
+quando adicionado das farinhas, amenizando possíveis injúrias nas células hepáticas. Vale 
+salientar que os valores de ALT e AST para os grupos SFM e SFV diminuíram em relação ao 
+grupo tratado com suco, mas mesmo assim se mantiveram dentro da faixa determinada por 
+Araújo (2012) para os parâmetros bioquímicos em camundongos machos, que foram de 32 - 
+86 U/L para ALT e de 73 - 188 U/L para AST.  
+Para a determinação da peroxidação lipídica, os níveis de MDA, que é produto final da 
+peroxidação de lipídios de membrana celular, foram determinados pelo método do TBARS  
+em homogenatos de fígados. Como apresentado na Tabela 06, não foram evidenciadas 
+mudanças significativas nos níveis de MDA dos grupos que receberam os diversos 
+tratamentos em relação ao grupo controle. Portanto, o suco adicionado com as farinhas de 
+bagaço de caju maduro ou verde não apresentou toxicidade hepática, como indicado pela não 
+elevação das atividades das enzimas transaminases e nem dos níveis de MDA. 
+Após os resultados obtidos no estudo toxicológico, o suco adicionado com as farinhas 
+foi considerado seguro para avaliação de suas propriedades funcionais sobre o sistema 
+imunológico. Para tanto, camundongos foram tratados ou não com suco de caju, adicionado 
+ou não com farinha de bagaço de caju maduro ou verde, e imunizados com hemácia de 
+carneiro, a fim de avaliar o efeito imunomodulador in vivo. O modelo de avaliação da resposta 
+imune por hemácias de carneiro possui vantagens, tais como determinar a resposta imune 
+humoral e celular na mesma espécie sob condições ideais de experimento, além de ser fácil de 
+executar e viável economicamente (GHATAK; PANCHAL, 2012). Hemácias de carneiro são 
+antígenos T- dependente, portanto, o primeiro contato do antígeno com o organismo promove 
+a sensibilização dos linfócitos T para se tornarem ativados para sintetizarem e segregarem 
+substâncias fisiologicamente ativas tais como os macrófagos, monócitos, leucócitos 
+polimorfonucleares e, provavelmente, outros leucócitos não sensibilizadas para a área de 
+contato com o antígeno (OSADEBE; OMEJE, 2009). 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+71 
+ 
+Discussão                                                                                                                                             Bezerra, C. F. 
+Em relação à resposta imune humoral, observou-se um aumento significativo (p<0,05) 
+na produção de anticorpos anti-hemácias de carneiro, quando se comparou o título de 
+anticorpos secundários em relação ao título de anticorpos primários no mesmo grupo (Figura 
+11). Vale ainda ressaltar que os grupos suco e SFV300 apresentaram comportamento 
+semelhante ao levamisol que foi utilizado como imunoestimulante padrão. O levamisol é 
+reconhecido por estimular as células B, células T, monócitos e macrófagos (KOGANEI et al., 
+2007). Mangathayarua, Umadevi e Reddya (2009) observaram um aumento no título de 
+anticorpos anti-hemácia de carneiro em camundongos tratados com suco de Cynodon 
+dactylon. Esses autores sugerem que o potencial imunomodulador do suco de C. dactylon está 
+relacionado ao conteúdo de polifenóis, o que pode explicar também o fato do suco de caju e 
+SFV300 que estimularam uma maior produção de anticorpos anti-hemácia de carneiro e 
+apresentaram como principais constituintes dentre os compostos fitoquímicos determinados, 
+os polifenóis.   
+Os grupos SFM75, SFM300 e SFV75 apresentaram uma menor produção de 
+anticorpos anti-hemácia de carneiro na resposta secundária, quando comparados com o suco, 
+SFV300 e levamisol, entretanto aumentaram os níveis dos títulos de anticorpos da resposta 
+secundária em relação à resposta primária significativamente. O aumento na resposta 
+secundária em relação à resposta primária é resultante da expansão clonal de células de 
+memória originas após primeira exposição ao antígeno. Na resposta primária a 
+imunoglobulina presente principalmente é a imunoglobulina M (IgM), já na resposta 
+secundária, há predominância de outras classes de imunoglobulinas, tais como IgG, pela 
+indução da troca de classe de anticorpos nos plasmócitos e com isso também aumentando a 
+eficiência e especificidade da resposta imunológica (OSADEBE ; OMEJE, 2009). A maior 
+eficiência e especificidade da resposta secundária podem ser atribuídas não só à troca de 
+classe de anticorpo, mas também ao fato dos mesmos serem derivados de poucas células 
+precursoras, como muitas mutações somáticas, o que confere a esta resposta uma reação mais 
+vigorosa do que na resposta primária e com ação quase imediata frente à exposição do 
+antígeno (JANEWAY et al., 2010). 
+ Os grupos suplementados com suco de caju e suco adicionado da farinha do bagaço 
+de caju maduro ou verde, assim como o grupo que foi tratado com levamisol não 
+apresentaram mudanças significativas no peso relativo dos órgãos: timo e baço (p>0,05).  
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+72 
+ 
+Discussão                                                                                                                                             Bezerra, C. F. 
+Quando comparados ao controle, os grupos SFM75, SFM300 e SFV75 parecem não 
+influenciar a indução da resposta imune humoral.  Rasool e Varalakshmi (2006) avaliaram os 
+títulos de anticorpos anti-hemácias de carneiros em ratos tratados com extrato aquoso das 
+raízes de Withania somnifera e mostraram que este extrato não teve influência na reposta 
+imune humoral, não alterando os níveis de título de anticorpos e relacionaram a não 
+estimulação com a presença de alguns flavonoides e lactonas esteroidais no extrato.  Xu e 
+colaboradores (2008) submeteram camundongos a um tratamento com extrato das raízes de 
+Tetrastigma hemsleyanum, imunizaram com hemácias de carneiros para avaliar o efeito desse 
+extrato na resposta humoral e celular. Esses autores evidenciaram um efeito estimulador do 
+extrato na resposta de DTH e nenhuma influência sobre o título de anticorpos, relacionando 
+essa não estimulação aos flavonóis, como quercetina, kaempferol e β-sitosterol, encontrados 
+nas raízes desta planta. Com isso, pode-se sugerir que o efeito das farinhas do bagaço de caju 
+maduro e verde, em estimular ou inibir a resposta imunológica, pode estar associado aos seus 
+constituintes predominantes que são os polifenóis, os quais, dependendo da classe, podem ter 
+atividades imunoestimulantes ou imunossupressoras.    
+Para avaliarmos o efeito suco de caju, adicionado ou não com farinha de bagaço de 
+caju maduro ou verde, sobre a resposta imune celular, foi utilizado um modelo de reação de 
+hipersensibilidade tardia (DTH) induzida em camundongos imunizados com hemácias de 
+carneiro. A DTH está relacionada com a resposta imune mediada por células. Os linfócitos T 
+sensibilizados, quando desafiados por antígenos, são convertidos em linfoblastos e secretam 
+linfocinas, atraindo assim mais células acessórias ao local da reação, promovendo uma reação 
+inflamatória (GHATAK; PANCHAL, 2012). Vale ainda salientar que a DTH é mediada por 
+++
+interferon-gama (IFN-ɣ), produzido por células T CD4  (Th) ou células T CD8  (CTL) 
+1
+(BIEDERMANN et al., 2001). Esta reação geralmente leva de 24 a 72 h para se desenvolver e 
+envolve a ativação de células T, que resulta na mobilização de monócitos e linfócitos em 
+áreas que estão necessitando de estimulação imune. É  iniciada quando ocorre uma  reação 
+entre  células T  antígeno-específico e o antígeno, resultando  na liberação de linfocinas que 
+afetam uma grande variedade de tipos de células,  especialmente os  macrófagos (OSADEBE; 
+OMEJE, 2009).   
+Em relação à imunidade celular, todos os grupos, exceto o SFM75, apresentaram 
+significativa reação de DTH, com aumento significativo da espessura das patas, quando 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+73 
+ 
+Discussão                                                                                                                                             Bezerra, C. F. 
+comparados com o controle, sendo o aumento mais expressivo nos grupos suplementados 
+com o suco e com o suco adicionado com as farinhas nas maiores doses. Esses resultados 
+corroboram com os encontrados por Osadebe e Omeje (2009) que identificaram um aumento 
+na reação de DTH e no título de anticorpos em animais tratados com extratos hidro-
+metanólicos de folhas de Loranthus micranthus Linn. O ensaio fitoquímico com esse extrato 
+identificou a presença de flavonoides, taninos e esteroides, assim como foi determinado no 
+presente trabalho para as amostras de suco de caju e de farinha de bagaço do caju maduro e 
+verde. Mishra e Bhatia (2010) encontraram valores superiores de títulos de anticorpos anti-
+hemácia de carneiro para a resposta secundária, quando comparados com a resposta primária, 
+em camundongos tratados com extratos hidroetanólicos de sementes de Ziziphus mauritiana 
+Lamk., também evidenciaram uma modulação da resposta imune celular pelo aumento na 
+reação de DTH. A análise fitoquímica deste extrato identificou a presença de alcaloides, 
+terpenos, taninos, flavonoides e saponinas; já em nossas amostras foi evidenciada presença de 
+flavonoides e taninos. Estes fitoquímicos poderiam ser os responsáveis pela modulação da 
+resposta imune humoral e celular.  
+Há alguns estudos mostrando efeito de extratos em estimular tanto a resposta humoral, 
+com aumento do título de anticorpos; quanto a resposta imune celular, com indução da reação 
+de DTH em animais imunizados com hemácia de carneiro. Ghule e colaboradores (2006) 
+encontraram um aumento no título de anticorpos e na reação de DTH em camundongos 
+tratados com extratos etanólicos e aquosos de folhas de Capparis zeylanica L. O ensaio 
+fitoquímico deste trabalho  identificou a presença de flavonoides, esteroides e taninos.  Shukla 
+e colaboradores (2009) também evidenciaram aumento no título de anticorpos anti-hemácias 
+de carneiro e na DTH em ratos tratados com extrato etanólico de sementes de Caesalpinia 
+bonducella e o teste fitoquímico identificou a presença de alcaloides, saponinas, terpenoides, 
+compostos fenólicos e polissacarídeos.  
+O suco e o grupo SFV300 aumentaram as respostas imunes humoral e celular, isto 
+provavelmente está relacionado com o fato do modelo de indução da resposta imune por 
+hemácias de carneiro ser antígeno T- dependente, ou seja, promove o aumento da resposta 
+mediada por células T que ativa os linfócitos B e consequentemente a liberação de anticorpos 
+(MOSER ; LEO, 2010).   
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+74 
+ 
+Discussão                                                                                                                                             Bezerra, C. F. 
+ Zhang e colaboradores (2009), estudaram o sinergismo entre o levamisol e o adjuvante 
+potássio de alumínio em vacinas contra Hepatite B e constataram que esta combinação pode 
+aumentar uma resposta mediada por células Thque por sua vez ativa linfócitos B induzindo 
+1, 
+a liberação de IgG2a Como os grupos suco e SFV300 apresentaram comportamento 
+.
+semelhante ao levamisol, sugere-se que o efeito estimulatório sobre a imunidade celular pode 
+ser atribuído às células Th com produção de IFN- γ, induzindo assim a proliferação de 
+1
+células B e consequentemente a  diferenciação de classes de imunoglobulinas aumentando os 
+títulos de anticorpos. Thé considerado como fundamental  para a regulação de antígenos 
+1 
+específicos clássicos mediados por  DTH, macrófagos e  ativação de células B 
+(BOURGEOLS ; CORINNE, 2003).  
+ Os grupos SFM75, SFM300 e SFV75, entretanto, apresentaram o comportamento 
+clássico, com aumento da DTH e diminuição dos títulos de anticorpos, indicando regulação 
+entre as células Th e Th do sistema imune (SIERRA et al., 2005).  A homeostasia 
+12
+imunológica requer uma expressão diferencial e regulada da resposta imune humoral e 
+mediada por células. Vários estudos indicam haver necessidade de pesquisar compostos que 
+são capazes de modular o equilíbrio entre Th/Th (WHELAN et al., 2003) e com isso 
+12
+promover  melhora do sistema imune em indivíduos doentes (STEPHENS et al., 2002).  
+  Como evidenciado, o suco de caju e o suco adicionado com as farinhas maduras ou 
+verdes, dependendo da dose,  podem vir a serem usados como imunoestimulante ou como 
+reguladores da resposta humoral e celular. Entretanto, mais estudos devem ser realizados, com 
+maiores doses, a fim de uma melhor compreensão dos resultados.  
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+75 
+ 
+Conclusões                                                                                                                                           Bezerra, C. F. 
+8. CONCLUSÕES 
+ O suco de caju e as farinhas do bagaço de caju maduro e verde apresentaram elevada 
+capacidade antioxidante e quantidades significativas de polifenóis e vitamina C. Ademais, o 
+suco de caju adicionado com as farinhas do bagaço de caju maduro ou verde não 
+apresentaram efeitos tóxicos em nenhum dos parâmetros avaliados. Em modelos de 
+imunização de camundongos com hemácias de carneiro, o suco de caju e o suco adicionado 
+com a farinha do bagaço de caju verde na dose de 300 mg/kg modularam positivamente as 
+respostas imunes humoral e celular.  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+76 
+ 
+Referências                                                                                                                                          Bezerra, C. F. 
+REFERÊNCIAS 
+ 
+a
+ABBAS, A. K.; LICHTMAN, A. H.; PILLAI, S. Imunologia Celular e Molecular. 6  
+edição, Editora Elsevier, 2008.  
+ 
+ABREU, F. P.; DORNIER, M.; DIONISIO, A. P.; CARAIL, M.; CARIS-VEYRAT, C.; 
+DHUIQUE-MAYER, C. Cashew apple (Anacardium occidentale L.) extract from by-product 
+of juice processing: A focus on carotenoids. Food Chemistry, v. 138, p. 25–31, 2013. 
+ 
+AGAR, E.; BOSNAK, M.; AMANVERMEZ, R.; DEMIR, S.; AYYILDIZ, M.; CELIK, C. 
+The effect of ethanol on lipid peroxidation and glutathione level in the brain stem of rat, 
+Neuroreport, v. 10, p.1799-1801, 1999. 
+ 
+AGOSTINI-COSTA, T. S.; LIMA, M. V.; LIMA, A.; AGUIAR, M. J.; LIMA, J. B.; PAIVA, 
+J. Tanino em pedúnculos de caju: efeito de algumas variações genéticas e climáticas. Boletim 
+CEPPA, v. 20, p. 267-278, 2002. 
+ 
+AGUIAR, L. P.; ALVES, R. E.; LIMA, D. P.; BASTOS, M. do S. R.; BARROS, F. F. C. 
+Carotenóides totais em pedúnculos de clones de caju anão precoce (Anacardium occidentale, 
+L. var. Nanum). Resumo – Congresso Brasileiro de Tecnologia de Alimentos, v. 2, p. 55, 
+2000. 
+ 
+ALMEIDA, C. F. C. B. R.;  LIMA E SILVA, T. C.;  AMORIM, E. L. C.; MAIA, M. B. S.;  
+ALBUQUERQUE, U. P. Life strategy and chemical composition as predictors of the 
+selection of medicinal plants from the Caatinga (Northeast Brazil). Journal of Arid 
+Environments, v. 62, p. 127–142, 2005. 
+ 
+ANDRADE, S. F.; SANTARÉM, V. A. Endopa rasiticidas e ectoparasiticidas. In: 
+ANDRADE, S. F. Manual de terapêutica veterinária. 2ª edição, Editora São Paulo: Roca,   
+2002.  
+ 
+ANJO, D. F. C. Alimentos funcionais em angiologia e cirurgia vascular. Jornal Vascular 
+Brasileiro, v. 3, p. 145-154, 2004. 
+ 
+ARAÚJO, F. T. M. Estabelecimento de valores de referência para parâmetros 
+hematológicos e bioquímicos e avaliação do perfil imunológico de linhagens de 
+camundongos produzidas nos biotérios do Centro de Pesquisas René Rachou / 
+FIOCRUZ - Minas e do Centro de Criação de Animais de Laboratório / FIOCRUZ. 
+Belo Horizonte, 2012. Dissertação.  Programa de Pós-Graduação em Ciências da Saúde. 
+FIOCRUZ. 
+ 
+ASSUNÇÃO, R. B.; MERCADANTE, A. Z. Carotenoids and ascorbic acid from cashew 
+apple (Anacardium occidentale, L.): A variety and geographic effects. Food Chemistry, v. 
+81, p. 495−502, 2003. 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+77 
+ 
+Referências                                                                                                                                          Bezerra, C. F. 
+BAFNA, A. R.; MISHRA, S. H. Immunoestimulatory effect of methanol extract of Curculigo 
+orchioides on immunossupressed mice. Journal of Ethnopharmacology, v. 104, p. 1-4, 
+2006a. 
+ 
+BAFNA, A. R.; MISHRA, S. H. Protective effect of bioactive fraction of Sphaeranthus 
+indicus Linn. against cyclophosphamide induced suppression of humoral immunity in mice. 
+Journal of Ethnopharmacology, v. 104, p. 426-429, 2006b. 
+ 
+BARCELOS, G. R. M.; SHIMABUKURO, F.; MORI, M. P.; MACIEL, M. A. M.; CÓLUS, 
+I. M. S. Evaluation of mutagenicity and antimutagenicity of cashew stem bark methanolic 
+extract in vitro. Journal of Ethnopharmacology, v. 114, p. 268–273, 2007. 
+ 
+BIEDERMANN, T. R.; MAILHAMMER, A.; MAI, C.; SANDER, A.; OGILIVIE, F.; 
+BROMBACHER, K.; MAIER, A. D.; LEVINE, M. R. Reversal of established delayed-type 
+hypersensitivity reactions following therapy with IL-4 or antigen specific Th2 cells. 
+European Journal of Immunology, v. 5, p. 1582–1591, 2001. 
+ 
+BIRK, R.W.; GRATCHEV, A.; HAKIY N; POLITZ O; SCHLEDZEWSKI K, GUILLOT P.  
+Alternative activation of antigen-presenting cells: concepts and clinical relevance. Hautarzt, 
+vo. 52, p. 193–200, 2001. 
+ 
+BORGES, V. C. Nutrição oral enteral e parenteral na prática clínica. 3ª edição. Editora: 
+Atheneu; 2001. 
+ 
+BOURGEOLS, C.; CORINNE, T. CD4 T cells are required for CD8 T cell memory 
+generation. European Journal of Immunology, v. 33, p. 3225–3231, 2003. 
+ 
+BRAGA, L. T; NUNES-PINHEIRO, D. C. S.; SOUSA, J. A. V.; SILVA, F. M. S.; FARIAS, 
+V. M.; LEITE, A. K. R. M.; LOPES, C. A. P.; FAÇO, O.; CAMPELLO, C. C.; COSTA, J. 
+H.; NOGUEIRA, T. N. A. G. Efeito do levamisol e do extrato etanólico de folhas de 
+Momordica charantia sobre a dermatofitose experimental em coelhos. Ciência Animal 
+Brasileira, v.8, p. 285-95, 2007. 
+ 
+BRAND-WILIAMS, W.; CUVELIER, M.E.; BERSET, C. Use of a free radical method to 
+evaluate antioxidant activity. Food Science and Technology, v. 28, p. 25-30. 1995. 
+ 
+BRITO , E. S.; ARAÚJO, M. C. P.; LIN, L. Z..; HARNLY, J. Determination of the flavonoid 
+components of cashew apple (Anacardium occidentale) by LC-DAD-ESI/MS. Food 
+Chemistry, v. 105, p. 1112–1118, 2007.  
+ 
+BROINIZI, P. R. B.; ANDRADE-WARTHA, E. R. S. de; SILVA, A. M de O.; NOVOA,   A. 
+J. V.; TORRES, R. P.; AZEREDO, H. M. C.; ALVES, R. E.;, MANCINI-FILHO, J. 
+Avaliação da atividade antioxidante dos compostos fenólicos naturalmente presentes em 
+subprodutos do pseudofruto de caju (Anacardium occidentale L.). Ciências e Tecnologia de . 
+Alimentos, v. 27, p. 902-908, 2007.  
+ 
+BROINIZI, P. R. B.; ANDRADE-WARTHA, E. R. S. de; SILVA, A. M de O.; TORRES, R. 
+P.; AZEREDO, H. M. C.; ALVES, R. E.;, MANCINI-FILHO, J. Propriedades antioxidantes 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+78 
+ 
+Referências                                                                                                                                          Bezerra, C. F. 
+em subproduto do pedúnculo de caju (Anacardium occidentale L.): efeito sobre a 
+lipoperoxidação e o perfil de ácidos graxos poliinsaturados em ratos. Revista Brasileira de 
+Ciências Farmacêuticas, v. 44, p. 773-781, 2008. 
+ 
+CAVALCANTE, A. A. M.; RUBENSAM, G.; PICADA, J. N.; SILVA, E. G.; MOREIRA, J. 
+C. F.; HENRIQUES, J. A. P. Mutagenicity, antioxidant potencial, and antimutagenic activity 
+against hydrogen peroxide of cashew (Anacardium occidentale) apple juice and cajuina. 
+Environmental and Molecular Mutagenesis, v. 41, p. 360–369, 2003. 
+ 
+CHEW, B. P.; PARK, J. S. Carotenoid action on the immune response. Journal of Nutrition, 
+v. 134, p. 257S–261S, 2004. 
+ 
+CONTRERAS-CALDERÓN, J.; CALDERÓN-JAIMES, L.; GUERRA-HERNÁNDEZ, E.; 
+GARCÍA-VILLANOVA, B.  Antioxidant capacity, phenolic content and vitamin C in pulp, 
+peel and seed from 24 exotic fruits from Colombia. Food Research International, v.40, p. 1-
+7, 2010. 
+ 
+COSENTINO, M.; BOMBELLI, R.; CARCANO, E.; LUINI, A.; MARINO, F.; CREMAB, 
+F.; DAJAS, F.; LECCHINI, S. Immunomodulatory properties of Achyrocline satureioides 
+(Lam.) D. C. infusion: A study on human leukocytes. Journal of Ethnopharmacology, v. 
+116, p. 501-507, 2008. 
+ 
+CRUVINEL, W. de M.; MESQUITA JÚNIOR, D.; ARAÚJO, J. A. P.; CATELAN, T. T. T.; 
+SOUZA, A. W. S.; SILVA, N. P.; ANDRADE, L. E. C. Sistema Imunitário – Parte I 
+Fundamentos da imunidade inata com ênfase nos mecanismos moleculares e celulares da 
+resposta inflamatória. Revista Brasileira de Reumatologia, v. 50, p. 434-61, 2010. 
+ 
+CUNHA, L.; MCFALL, A. J.; MACKEY, D.  Innate immunity in plants: a continuum of 
+layered defenses. Microbes and Infection, v. 8, p. 1372 – 1381, 2006. 
+ 
+DUNLOP,  R.  J.;  CAMPBELL, C. W.  Cytokines and Advanced Cancer. Journal of Pain 
+and Symptom Management, v.20, p. 3, 2000. 
+ 
+EMBRAPA.  Empresa Brasileira de Pesquisa Agropecuária. Cajueiro Anão Precoce - Clone 
+CCP76. Data, 2013. Disponível em: ˂http://www.cnpat.embrapa.br/home/portfolio/ 
+tecnologia.php?id=24>. Acesso em: 05/02/2013.  
+ 
+ERICKSON,  K. L.; MEDINA, E. A.; HUBBARD, N. E. Micronutrients and innate 
+immunity. The Journal of Infectious Diseases, v.182, p. S5–S10, 2000.   
+ 
+ESSER, M. T.; MARCHESE, R. D.; KIERSTEAD, L. S.; TUSSEY, L. G.; WANG, F. 
+CHIRMULE, N.; WASHABAUGH, M. W. Memory T Cells Vaccines. Vaccine, v. 21, p. 
+419-430, 2003. 
+ 
+FAO. Food and Agriculture Organization. FAOSTAT Agriculture. Data, 2011. Disponível 
+em: ˂http://faostat.fao.org/site/339/default.aspx>. Acesso em: 05/02/2013. 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+79 
+ 
+Referências                                                                                                                                          Bezerra, C. F. 
+FRANCIS, F. J. Analysis of anthocyanins. In: MARKAKIS,P. Anthocyanins as food colors. 
+New York: Academic Press, 181-207, 1982. 
+ 
+GHATAK, S. B.; PANCHAL, S. J. Investigation of the Immunomodulatory Potential of 
+Oryzanol Isolated from Crude Rice Bran Oil in Experimental Animal Models. Phytotherapy 
+Research ,v. 26, p. 1701–1708, 2012. 
+ 
+GHULE, B. V.; MURUGANANTHAN, G.; NAKHAT, P. D.; YEOLE, P. G. 
+Immunostimulant effects of Capparis zeylanica Linn. leaves. Journal of 
+Ethnopharmacology, v. 108, p. 311–315, 2006.  
+ 
+HALLIWELL, B.; RAFTER, J.; JENNER, A. Health promotion by flavonoids, tocopherols, 
+tocotrienols, and other phenols: direct or indirect effects? Antioxidant or not? The American 
+Journal of Clinical Nutrition, v. 81, p.268S–276S, 2005. 
+ 
+HARDY, G. Nutraceuticals and functional foods: Introduction and meaning. Nutrition, v. 16, 
+p. 688–689, 2000. 
+ 
+HIGBY, W. K. A simplified method for determination of some the carotenoid distribution in 
+natural and carotene-fortified orange juice. Journal of Food Science, v. 27, p. 42-49, 1962. 
+ 
+HERZYK, D. J; GORE, E. R. Adequate  immunotoxicity testing in drug development. 
+Toxicology Letters, v. 149, p. 115-122, 2004. 
+ 
+HOLLAND, S. M.; VIZI, E. S. Immunomodulation. Current Opinion in Pharmacology, v. 
+2, p. 425- 427,  2002. 
+ 
+ a
+JANEWAY; MURPHY, K.; TRAVERS, P.; WALPORT, M. Imunobiologia. 7 ed. Editora 
+Artmed, 2010.  
+ 
+JUANITA, E. Mistletoe: good for more than free kisses. Herbal Gram, v. 68, p. 50–59, 
+2005. 
+ 
+JONES, P. J.;  JEW, S. Functional food development: Concept to reality. Trends in Food 
+Science and Technology, v. 18, p. 387–390, 2007. 
+ 
+KAMRADT, T., MITCHISON, N. A. Tolerance and autoimmunity. New England. Journal 
+of Medicine, v. 344, p. 655–664, 2001.   
+ 
+KAUR, C.; KAPOOR, H. C. Anti-oxidant activity and total phenolic content of some Asian 
+vegetables. International Journal of Food Science and Technology, v. 37, p. 153–161, 
+2002. 
+ 
+ a
+KLAASSEN, C. D. Casarett & Doull’s Toxicology: The Basic Science of Poisons, 6 ed. 
+Editora  Medical Publications Division,  2001. 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+80 
+ 
+Referências                                                                                                                                          Bezerra, C. F. 
+KOBORI, C. N.; JORGE, N. Caracterização dos óleos de algumas sementes de frutos como 
+aproveitamento de resíduos industriais. Ciências Agrárias, v. 29, p. 1008 – 1014, 2005. 
+ 
+KOGANEI, A.; TSUCHIYA, T.; SAMURA, K.; NISHIKIBE, M. Use of whole sheep red 
+blood cells in ELISA to assess immunosuppression in vivo. Journal of Immunotoxicology, 
+v. 4, p. 77–82, 2007. 
+ 
+KONAN, N. A.; BACCHI, E. M. Antiulcerogenic effect and acute toxicity of a 
+hydroethanolic extract from the cashew (Anacardium occidentale L.) leaves. Journal of 
+Ethnopharmacology, v. 112, p. 237–242, 2007. 
+ 
+KUBO, I.; MASUOKA, N.; HA, T. J.; TSUJIMOTO, K. Antioxidant activity of anacardic 
+acids. Food Chemistry, v. 99, p. 555−562, 2006. 
+ 
+LAVINAS, F. C.; ALMEIDA, N. C.; MIGUEL, M. A. L.; LOPES, M. L. M.; VALENTE-
+MESQUITA, V. L. N. Study of the chemical and microbiological stability of cashew apple 
+juice in different storage conditions. Ciência e Tecnologia de Alimentos, v. 26, p. 875−883, 
+2006. 
+ 
+LARRAURI, J. A.; RUPÉREZ, P.; SAURA-CALIXTO, F. Effect of drying temperature on 
+the stabilitity of polyphenols and antioxidant activity of red grape pomace peels. Journal of 
+Agricultural and Food Chemistry, v. 45, p. 1390-1393, 1997. 
+ 
+LINGEN, M. W. Role of leukocytes and endothelial cells in the development of angiogenesis 
+in inflammation and wound healing. Archives of Pathology and Laboratory Medicine. v. 
+125, p. 67–71, 2001. 
+ 
+LOPES, M. M. de A.; MOURA, C. F. H.; ARAGÃO, F. A. S.; CARDOSO, T. G.; ENÉAS 
+FILHO, J. Caracterização física de pedúnculos de clones de cajueiro anão precoce em 
+diferentes estádios de maturação. Revista Ciência Agronômica, v. 42, p. 914-920, 2011. 
+ 
+LOPES, M. M. de A.; MIRANDA, M. R. A.; MOURA, C. F. H.; ENÉAS FILHO, J. 
+Bioactive compounds and total antioxidant capacity of cashew apples (Anacardium 
+occidentale l.) during the ripening of early dwarf cashew clones. Ciência e Agrotecnologia, 
+v. 36, p. 325-332, 2012. 
+ 
+MAISUTHISAKUL, P.; SUTTAJIT, M.; PONGSAWATMANIT, R. Assessment of phenolic 
+content and free radical-scavenging capacity of some Thai indigenous plants. Food 
+Chemistry, v.100, p. 1409–1418, 2007. 
+ 
+MANGATHAYARUA, K.; UMADEVI, M.; REDDYA, C. U. Evaluation of the 
+immunomodulatory and DNA protective activities of the shoots of Cynodon dactylon. 
+Journal of Ethnopharmacology, v. 123, p. 181–184, 2009.  
+ 
+MANZ, R. A; HAUSER, A. E.; HIEPE, F.; RADBRUCH A.  Maintenance of serum  
+antibody  levels.  Annual  reviews  in immunology, v. 23, p. 367-386, 2005. 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+81 
+ 
+Referências                                                                                                                                          Bezerra, C. F. 
+MATOS, F. J. A. Introdução à Fitoquímica Experimental, 3° edição, Editora UFC, 2009. 
+ 
+MATTOO, A. K.; MURATA, T.; PANTASTICO, E. B.; CHACHIN, K.; OGATA, K.; 
+MELO, D. F. de; LIMA, M. da G. S.; NOGUEIRA, F. D. L. Manejo na Pós Colheita Melhora 
+a Conservação de Frutas Tropicais. Revista de Ciência e Tecnologia, v. 2, p. 16 - 17, 2001. 
+ 
+MCHEYZER-WILLIAMS L. J.; MCHEYZER-WILLIAMS M. G. Antigen-specific 
+development. Annual Review of Immunology, v. 23, p. 487-513, 2005. 
+ 
+MESQUITA J., D.; ARAÚJO, J. A. P; CATELAN, T. T. T; SOUSA, A. W. S; CRUVINEL, 
+W. M; ANDRADE, L. E. C; SILVA, N. P. Sistema imunitário - parte II: fundamentos da 
+resposta imunológica mediada por linfócitos T e B. Revista Brasileira de Reumatologia, 
+v.50, p. 552-580, 2010. 
+ 
+MICHODJEHOUN-MESTRES, L.; SOUQUET, J. M.; FULCRAND, H.; BOUCHUT, C.; 
+REYNES, M.; BRILLOUET, J. M. Monomeric phenols of cashew apple (Anacardium 
+occidentale L.). Food Chemistry, v. 112, p. 851−857, 2009. 
+ 
+MIDDLETON, J. R. E.; KANDASWAMI, C.;  THEOHARIDES, T. C. The effects of plant 
+flavonoids on mammalian cells: implications for inflammation, heart disease, and câncer. 
+Pharmacological Review, v. 52, p. 673–751, 2000. 
+ 
+MISHRA, T.; BHATIA, A. Augmentation of expression of immunocytes functions by seed 
+extract of Ziziphus mauritiana (Lamk.). Journal of Ethnopharmacology, v. 127, p. 341–345, 
+2010.  
+ 
+MONTEIRO, J. M.; ALBUQUERQUE, U. P.; LINS-NETO, E. M. F; ARAÚJO, E. L.; 
+AMORIM, E. L. C. Use patterns and knowledge of medicinal species among two rural 
+communities in Brazil’s semi-arid northeastern region. Journal of Ethnopharmacology, v. 
+105, p. 173–183, 2006. 
+ 
+MOSER, M.; LEO, O. Key concepts in immunology. Vaccine; v. 28, p. C2-C13; 2010. 
+ 
+MUKAND, S.; CHORGADE, P. Drug Discovery and Development (vols. I and II). Editora 
+John Wiley & Sons Publications Ltd., 2006. 
+ 
+MUKHERJEE, D.; KHATUA, T. N.; VENKATESH, P.; SAHA, B. P.;  MUKHERJEE, P. K. 
+Immunomodulatory potential of rhizome and seed extracts of Nelumbo nucifera Gaertn. 
+Journal of Ethnopharmacology, v. 128, p. 490–494, 2010.  
+ 
+MURTAUGH, M. P.; FOSS, D. L. Inflammatory cytokines and antigen presenting cell 
+activation. Veterinary Immunology and Immunopathology, v. 87, p. 109-121, 2002. 
+ 
+MUSSI-PINHATA, M. M.; REGO, M. A. C. Particularidades imunológicas do pré-termo 
+extremo:um desafio para a prevenção da sepse hospitalar. Jornal de Pediatria, v.81, p. 59-
+68, 2005. 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+82 
+ 
+Referências                                                                                                                                          Bezerra, C. F. 
+NUNES-PINHEIRO,  D. C. S.; LEITE A. K. R. de M.;  FARIAS, V. M.;  BRAGA, L. T. 
+LOPES, C. A. P. Ativividade imunomoduladora das plantas medicinais: perspectivas em 
+medicina veterinária. Ciência Animal, v. 13, p. 23-32, 2003. 
+ 
+OBANDA, M.; OWUOR, P. O. Flavanol composition and caffeine content of green leaf as 
+quality potential indicators of Kenyan black teas. Journal Agricultural and Food 
+Chemistry, v. 74, p. 209-215, 1997. 
+ 
+OKUDA, T.  Systematics and health effects of chemically distinct tannins in medicinal plants. 
+Phytochemistry, v. 66, p. 2012–2031, 2005. 
+ 
+OMENA, C. M. B.; VALENTIM, I. B.; GUEDES, G. da S.; RABELO, L. A.; MANO, C. M.; 
+BECHARA, E. J. H.; SAWAYA, A. C. H. F.; TREVISAN,  M. T. S.; COSTA, J. G. da, 
+FERREIRA, R. C. S.; SANT'ANA, A. E. G.; GOULART, M. O. F. Antioxidant, anti-
+acetylcholinesterase and cytotoxic activities of ethanol extracts of peel, pulp and seeds of 
+exotic Brazilian fruits. Food Research International, v. 49, p. 334–344, 2012.   
+ 
+OSADEBE, P. O.; OMEJE, E. O. Comparative acute toxicities and immunomodulatory 
+potentials of five Eastern Nigeria mistletoes. Journal of Ethnopharmacology, v. 126, p. 
+287–293, 2009.  
+ 
+ a
+PARHAM, P. O sistema immune. 1 edição. Editora Artes Médicas, 2001. 
+ 
+PEREIRA, J. C. B. Systemic lupus erythematosus association with tuberculosis. Revista 
+Portuguesa de Pneumologia, v.14, p. 843-855, 2008. 
+ 
+PINHEIRO, A. M. Desenvolvimento de néctares mistos à base de caju ((Anacardium 
+occidentale L.) e açaí (Euterpe oleracea mart). Fortaleza, 2008. Dissertação. Depto. de 
+Tecnologia de Alimentos - Universidade Federal do Ceará. 
+ 
+PINHO, L. X. Aproveitamento do resíduo do pedúnculo de caju (Anacardium occidentale 
+L.) para a alimentação humana. Fortaleza, 2009. Dissertação. Curso de pós-graduação em 
+Ciências e Tecnologia de Alimentos. Universidade Federal do Ceará. 
+ 
+POLLONIO, M. Alimentos funcionais: as recentes tendências e os envolvidos no consumo. 
+Higiene Alimentar, v. 14, p. 26-31, 2000. 
+ 
+QUEIROZ , C.; LOPES, M. L. M.; FIALHO, E.; VALENTE-MESQUITA, V. L.  Changes in 
+bioactive compounds and antioxidant capacity of fresh-cut cashew apple. Food Research 
+International, v. 44, p. 1459–1462, 2011. 
+ 
+RAMAIAH, S. K. A toxicologist guide to the diagnostic interpretation of hepatic biochemical 
+parameters. Food and Chemical Toxicology, v. 45, p. 1551–1557, 2007. 
+ 
+RAMFULA , D.; BAHORUNB,  T.;  BOURDONC,  E.;  TARNUSC,  E.;  OKEZIE,  I. A. 
+Bioactive phenolics and antioxidant propensity of flavedo extracts of Mauritian citrus fruits: 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+83 
+ 
+Referências                                                                                                                                          Bezerra, C. F. 
+Potential prophylactic ingredients for functional foods application. Toxicology, v. 278, p. 75–
+87, 2010. 
+ 
+RASOOL, M.; VARALAKSHMI, P. Immunomodulatory role of Withania somnifera root 
+powder on experimental induced inflammation: An in vivo and in vitro study. Vascular 
+Pharmacology, v. 44, p. 406–410, 2006.  
+ 
+REYES, L. F.; VILLARREAL, J. E.; CISNEROS-ZEVALLOS, L.  The increase in 
+antioxidant capacity after wounding depends on the type of fruit or vegetable tissue. Food 
+Chemistry, v. 101, p.1254-1262, 2007. 
+ 
+RIBEIRO, J. L.; SILVA, P. H. S.; RIBEIRO, H. A. M. Desempenho produtivo de oito clones 
+de cajueiro anão precoce cultivados no semi-árido piauiense sob regime de sequeiro. 
+Comunicado Técnico (INFOTECA-E). Data, 2013. Disponível em 
+˂http://www.infoteca.cnptia.embrapa.br/handle/doc/65743>. Acesso em: 05/01/2013. 
+ 
+ROCHA, K. C.; GORESCU, R. A. G.; BELTRAME, R. L. Metodologia laboratorial para 
+estudo da resposta imune celular. 1ª edição, Editora Guanabara Koogan, 2007. 
+ 
+RUNNIE, I.; SALLEH, M. N.; MOHAMED, S.; HEAD, R. J.; ABEYWARDENA, M. Y. 
+Vasorelaxation induced by common edible tropical plant extracts in isolated rat aorta and 
+mesenteric vascular bed. Journal of Ethnopharmacology, v. 92, p. 311–316, 2004.   
+ 
+RUFINO, M. do S. M.; ALVES, R. E.; BRITO,  E. S. de; MORAIS, S. M. de; SAMPAIO, C. 
+de G.; PÉREZ-JIMÉNEZ, J.; SAURA-CALIXTO, F. D.  Metodologia Científica: 
+Determinação da Atividade Antioxidante Total em Frutas pela Captura do Radical Livre 
+ + 
+ABTS. Comunicado Técnico 128. Data, 2007a. Disponível em 
+˂www.cnpat.embrapa.br/cnpat/down/index.php?pub/Cot_128.pdf>. Acesso em: 05/05/2011. 
+ 
+RUFINO, M. do S. M.; ALVES, R. E.; BRITO,  E. S. de; MORAIS, S. M. de; SAMPAIO, C. 
+de G.; PÉREZ-JIMÉNEZ, J.; SAURA-CALIXTO, F. D.  Metodologia Científica: 
+Determinação da Atividade Antioxidante Total em Frutas pela Captura do Radical Livre 
+DPPH. Comunicado Técnico 127. Data, 2007b. Disponível em ˂ 
+www.cnpat.embrapa.br/cnpat/cd/jss/acervo/Ct_127.pdf >. Acesso em: 05/05/2011. 
+ 
+RUFINO, M. do S. M.; ALVES, R. E.; BRITO,  E. S. de; PÉREZ-JIMÉNEZ, J.; SAURA-
+CALIXTO, F.; MANCINI-FILHO, J. Bioactive compounds and antioxidant capacities of 18 
+non-traditional tropical fruits from Brazil. Food Chemistry, v. 121, p. 996–1002, 2010. 
+ 
+SANTOS-BUELGA, C.; SCALBERT, A. Review protoanthocyanidins and tanin-like 
+compounds, ocurrence, dietary intake and effects on nutrition and health. Journal of the 
+Science of Food and agriculture, v. 80, p. 1094 – 1117, 2000. 
+ 
+SANTOS, S. C.; MELLO, J. C. P. Taninos. In: Farmacognosia: da planta ao 
+ a
+medicamento. Simões, C.M.O., Guerra, M. P. et al. 5 edição, Editora UFSC, 2004. 
+ 
+SARAVANANA, S.; BABU, N. P.; PANDIKUMAR, P.; RAJA, M. K.; PAULRAJA, M. G.; 
+IGNACIMUTHUA, S. Immunomodulatory potential of Enicostema axillare (Lam.) A. 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+84 
+ 
+Referências                                                                                                                                          Bezerra, C. F. 
+Raynal, a traditional medicinal plant. Journal of Ethnopharmacology, v. 140, p. 239– 246, 
+2012. 
+ 
+SHAHIDI, F. Functional foods: their role in health promotion and disease prevention. 
+Journal of Food Science., v. 69, p. 146–149, 2004. 
+ 
+SHAHIDI, F. Nutraceuticals and functional foods: whole versus processed foods. Trends and 
+Food Science &Technol., v. 20, p. 376–387, 2009. 
+ 
+SHARMA, M. L.; SINGH, B.; CHANDAN, B. K.; KHAJURIA, A.; KAUL, A.; BANI, S.; 
+BANERJEE, S. K.; GAMBHIR, S. S. Actions of some flavonoids on specific and non-
+specific immune mechanisms. Phytomedicine, v. 3, p. 191–195, 1996. 
+ 
+SHIVAPRASAD, H. N.; KHARYA, M. D.; RANA, A. C.; MOHAN, S.  Preliminary 
+immunomodulatory activities of aqueous extract of Terminalia chebula. Pharmaceutical 
+Biology, v. 44, p. 32–34, 2006. 
+ 
+SHUKLA, S.; MEHTA, A.; JOHN, J.; MEHTA, P.; VYAS, S. P.; SHUKLA, S. 
+Immunomodulatory activities of the ethanolic extract of Caesalpinia bonducella seeds. 
+Journal of Ethnopharmacology, v. 125, p. 252–256, 2009.  
+ 
+SIERRA, S.; LARA-VILLOSLADA, F.; OLIVARES, M.; JIMÉNEZ, J.; BOZA, J.; XAUS, 
+J. Increased immune response in mice consuming rice bran oil. European Journal of 
+Nutrition, v. 44, p. 509–516, 2005.   
+ 
+SILVA , L. C. R. DA . Efeito do extrato acetato de etila de cocos nucifera linn (palmae) 
+sobre a resposta inflamatória e sobre a resposta imunológica in vivo. Fortaleza, 2008.  
+Dissertação. Faculdade de Veterinária. Universidade Estadual do Ceará. 
+ 
+SILVA, P. T.; OLIVEIRA, E. F.; LOPES, M. L. M.; VALENTE-MESQUITA, V. L. 
+Estabilidades química, físico-química e microbiológica do suco de laranja cv. “pera” 
+submetido a diferentes condições de estocagem. Boletim do Centro de Pesquisa e 
+Processamento de Alimentos, v. 25, p. 235−246, 2007. 
+ 
+SIRO, I.; KAPOLNA, E.; KAPOLNA, B.; LUGASI, A. Functional food. Product 
+development, marketing and consumer acceptance. Appetite, v. 51, p. 456–467, 2008. 
+ 
+a 
+SOMPAYRAC, L. How the immune system works. 1edição, Editora Malden, MA: 
+Blackwell Science, 1999. 
+ 
+STEPHENS, R.; EISENBARTH, S. C.; CHAPLIN, D. D. T helper type I cells in asthma: 
+friend or foe? Current Opinion in Allergy and Clinically Immunology, v. 2, p. 31–37, 
+2002. 
+ 
+STROHECKER , R.;  HENNING, H. M. Analises de vitaminas: métodos comprovados. 1º 
+edição. Editora: Madrid: Paz Montalvo, 1967. 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+85 
+ 
+Referências                                                                                                                                          Bezerra, C. F. 
+TALHOUK, R. S.; KARAM, C.; FOSTOK, S.; EL-JOUNI, W.; BARBOUR, E. K.. 
+Antiinflammatory bioactivities in plant extracts. Journal of Medicinal Food, v.10, p. 1–10, 
+2007. 
+ 
+TITUS, R.G.; CHILLER, J. M. A simple and effective method to assess murine delayed-type 
+hypersensitivity to proteins. Journal of Immunological Methods, v. 45, p. 65–78, 1981. 
+ 
+THOMPSON,  R. C. M. CB. B-Cell Development and Maturation. Seminar in Oncology,  v. 
+25, p. 435-46, 1998. 
+ 
+TREVISAN, M. T. S.; SPIEGELHALDER, B.; BARTSCH, H.; OWEN, R.; WURTELE, G.; 
+PFUNDSTEIN, B.; HAUBNER, R. Characterization of alkyl phenols in cashew (Anacardium 
+occidentale) products and assay of their antioxidant capacity. Food and Chemical 
+Toxicology, v. 44, p.88–197, 2006. 
+ 
+TZIANABOS, A. O. Polysaccharide immunomodulators as therapeutic agents: structural 
+aspects and biological function. Clinical Microbiology and Infection, v.13, p. 523–33, 2000. 
+ 
+UPUR, H.; AMAT, N.; BLAZEKOVIC, B.; TALIP, A. Protective effect of Cichorium 
+glandulosum root extract on carbon-tetrachloride induced and galactosamine induced 
+hepatotoxicity in mice. Food and Chemical Toxicology, v. 47, p. 2022–2030, 2009. 
+ 
+VASCONCELOS, A. K.  P. Ação biológica dos extratos hexânico e etanólico das folhas de 
+Momordica charantia sobre a resposta imune e a cicatrização em animais de 
+experimentação. Fortaleza, 2006. Dissertação. Faculdade de Veterinária. Universidade 
+Estadual do Ceará. 
+ 
+VASCONCELOS, M. da S. Atividades Antioxidante, Anti-inflamatória e Cicatrizante do 
+caju (Anacardium occidentale L.). Fortaleza, 2011. Dissertação. Curso de Pós-Graduação em 
+Bioquímica. Universidade Federal do Ceará. 
+ 
+VO, T. S.;   KIM,  S. K.  Fucoidans  as a natural bioactive ingredient for functional foods. 
+Journal of functional foods, v. 14, p. 250-255,  2012 . 
+ 
+WHELAN, M.; WHELAN, J.; RUSSEL, N.; DALGLEISH, A. Cancer immunotherapy: an 
+embarrassment of riches. Drug Discovery Today, v. 8, p. 253–258, 2003. 
+ 
+XU, C. J.; DING, G. Q.; FU, J. Y.; MENG, J.; ZHANG, R. H.; LOU, X. M. 
+Immunoregulatory Effects of Ethyl-acetate Fraction of Extracts from Tetrastigma 
+Hemsleyanum Diels et. Gilg on Immune Functions of ICR Mice. Biomedical and 
+Environmental Sciences, v. 21, p. 325-331, 2008.  
+ 
+ZHANG, W.; DU1, X.; ZHAO, G.; JIN, H.; KANG, Y.; XIAO, C.; LIU, M.; WANG, B.  
+Levamisole is a potential facilitator for the activation of Th1 responses of the subunit HBV 
+vaccination. Vaccine, v. 27 p. 4938–4946, 2009. 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 
+86 
+ 
+Referências                                                                                                                                          Bezerra, C. F. 
+ZUANAZZI, J. A. S.; MONTANHA, J. A. Flavonóides. In: Farmacognosia: da planta ao 
+medicamento. Simões, C. M. O., Guerra, M.P. et al. 5 edição, Editora da UFSC, 2004. 
+ 
+ 
+Efeito do Suco de Caju (Anacardium Occidentale L.) adicionado de Farinhas do Bagaço de Caju sobre a 
+Resposta  Imunológica em camundongos  
+ 

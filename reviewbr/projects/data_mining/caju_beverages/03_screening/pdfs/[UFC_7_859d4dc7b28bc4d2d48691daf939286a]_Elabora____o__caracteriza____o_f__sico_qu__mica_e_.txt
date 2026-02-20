@@ -1,0 +1,132 @@
+1    UNIVERSIDADE FEDERAL DO CEARÁ CENTRO DE CIÊNCIAS AGRÁRIAS DEPARTAMENTO DE TECNOLOGIA DE ALIMENTOS PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIAS E TECNOLOGIA DE ALIMENTOS      IANA MARIA CRISTINO PEREIRA    ELABORAÇÃO, CARACTERIZAÇÃO FÍSICO-QUÍMICA E AVALIAÇÃO DA CAPACIDADE ANTIOXIDANTE DE CERVEJA DE TRIGO ADICIONADA DE PSEUDOFRUTO DE CAJU (Anacardium occidenale) E CASCA DE LARANJA (Citrus sinensis)       FORTALEZA 2016 
+Dissertação apresentada ao Programa de Pós-Graduação em Ciência e Tecnologia de Alimentos, do Departamento de Tecnologia de Alimentos da Universidade Federal do Ceará como parte das exigências para obtenção do título de Mestre.   Área de concentração: Processamento de Alimentos de Origem Microbiana e Enzimática.  Orientadora: Profª. Drª. Socorro Vanesca Frota Gaban.   
+2   IANA MARIA CRISTINO PEREIRA     ELABORAÇÃO, CARACTERIZAÇÃO FÍSICO-QUÍMICA E AVALIAÇÃO DA CAPACIDADE ANTIOXIDANTE DE CERVEJA DE TRIGO ADICIONADA DE PSEUDOFRUTO DE CAJU (Anacardium occidenale) E CASCA DE LARANJA (Citrus sinensis)                FORTALEZA 2016   
+3   
+4   IANA MARIA CRISTINO PEREIRA   ELABORAÇÃO, CARACTERIZAÇÃO FÍSICO-QUÍMICA E AVALIAÇÃO DA CAPACIDADE ANTIOXIDANTE DE CERVEJA DE TRIGO ADICIONADA DE PSEUDOFRUTO DE CAJU (Anacardium occidenale) E CASCA DE LARANJA (Citrus sinensis)     Dissertação apresentada ao Programa de Pós-Graduação em Ciência e Tecnologia de Alimentos, do Departamento de Tecnologia de Alimentos da Universidade Federal do Ceará como parte das exigências para obtenção do título de Mestre.    Dissertação aprovada em: 13/07/2016 BANCA EXAMINADORA  
+5                            A Deus, ao meu filho, Carlos Vinícius, ao meu esposo, Jefferson Carlos, aos meus pais, Mª. Ivone e Fco. Irajá e à minha irmã, Ila Maria, por todo apoio, inspiração e motivação, dedico este trabalho.   
+6  AGRADECIMENTOS               A Deus, Senhor de todas as coisas, de todo o conhecimento e de toda sabedoria, agradeço por ter me confiado este trabalho e ter me dado forças, suporte e inspiração para concluí-lo.               Ao meu amado esposo, Jefferson Carlos, por estar sempre presente incentivando-me e encorajando-me, e ao meu filho, Carlos Vinícius, razão de minha existência. Tenho certeza de que sem vocês não teria conseguido.              Ao meu pai, Francisco Irajá, e, de maneira especial, à minha amada mãe, Maria Ivone, pelo exemplo, força e dedicação em me ajudar sempre e de todas as formas possíveis.              À minha querida irmã, Ila Maria, por ter acreditado na minha capacidade, ter me encorajado e apoiado em todos momentos que precisei.               À Universidade Federal do Ceará, pela disponibilização do curso de pós-graduação, da equipe de professores que o compõem, do espaço dos laboratórios e do suporte necessário para realização deste projeto.              À Funcap, por ter disponibilizado o apoio financeiro.              À professora Socorro Vanesca, por ter me orientado e confiado este projeto, pelo apoio, pela paciência e dedicação disponibilizadas a mim.             Ao Núcleo de Tecnologia Industrial do Ceará, ao Laboratório de Laticínios, na pessoa da professora Juliane Döering, ao Laboratório de Frutos Tropicais, na pessoa do professor Raimundo Wilane, ao Laboratório de Microbiologia de Alimentos, na pessoa da professora Evânia Altina, pela colaboração na realização das análises desse projeto.            Aos professores, Sueli Rodrigues e Raimundo Wilane, ao pesquisador Kirley Marques e à doutora Tigressa Helena, pela contribuição na finalização desta pesquisa.            Aos funcionários do Departamento de Tecnologia de Alimentos, em especial, Luís Gonzaga, Gisani Souza e Ana Célia, por toda a colaboração e amizade, obrigada.           Aos colegas que contribuíram diretamente neste projeto, José Duarte Matos, Aline Almeida, Rita Monteiro, Ana Cristina e Gleice Gadelha, por toda ajuda e colaboração na elaboração das formulações e análises.           A todos os amigos que a Universidade Federal do Ceará me presenteou, em especial, Gizele Almada, Layane Maciel e Otília Mônica, pela a amizade, parceria, ajuda e companheirismo sempre encontrados.          A todos os familiares e amigos que de forma direta ou indireta contribuíram para que este projeto fosse finalizado, meus mais sinceros agradecimentos.  
+7                              “Não tenho tempo de desfraldar outra bandeira que não seja a da compreensão, do encontro e do entendimento entre as pessoas”. (Elis Regina).  
+ alcoólica do mosto cervejeiro proveniente do malte de cevada e água potável, por ação da levedura, com adição de lúpulo. Dentre suas variações, tem-se a cerveja artesanal de trigo. No seu preparo, podem ser utilizados adjuntos como fonte de carboidrato, que reduzem custos e possibilitam melhorar características físico-químicas e sensoriais. A casca da laranja (Citrus sinensis) e o pseudofruto do caju (Anacardium occidentale), atualmente descartados como subprodutos da indústria, podem ser reaproveitados por possuírem em sua constituição características interessantes para utilização na elaboração de cerveja. Dentro desse contexto, objetivou-se elaborar e caracterizar uma cerveja de trigo com a adição de pedúnculo do caju e casca da laranja pelo processo artesanal. Para tanto, foi realizado um planejamento com essas matérias-primas, com percentual calculado em relação ao malte. As concentrações da casca foram de 0 e 0,6 % (m/m) e do caju, 0, 5 e 10% (m/m), dando origem a seis diferentes combinações. As matérias-primas foram caracterizadas por avaliação físico-química e adicionadas na etapa de fermentação. As formulações foram submetidas à baixa fermentação, maturação e carbonatação. Posteriormente, foram caracterizadas quanto às análises de acidez total, pH, extratos real, original e aparente, sólidos totais, grau alcoólico, açúcares redutores, não redutores e totais, composição centesimal, valor calórico, compostos fenólicos, atividade antioxidante, coliformes a 35 °C e 45 °C, bolores e leveduras. Os resultados mostraram que os valores obtidos nas análises de pH, acidez total e sólidos solúveis totais do caju estavam dentro do padrão sugerido pela legislação para este fruto, assim como o teor de sólidos solúveis das laranjas das quais foram extraídas as cascas. Em relação às análises das formulações de cerveja, todas apresentaram características dentro dos parâmetros exigidos pela legislação. As que continham maiores teores de caju demostraram-se mais ácidas, com maiores percentuais de compostos fenólicos e atividade antioxidante, embora, nesta última análise, não tenha sido observada diferença significativa entre todas as formulações que continham peudofruto do caju em relação à padrão que não continha os subprodutos. A casca da laranja contribuiu para maiores teores de cinzas, extratos original e real. Embora possua atividade antioxidante e compostos fenólicos, a casca adicionada não contribuiu para o aumento desses compostos, talvez pela baixa concentração utilizada. As análises microbiológicas apresentaram-se com resultados satisfatórios em todas as formulações, indicando boas condições sanitárias e estabilidade microbiológica. É possível concluir que o uso dessas matérias-primas na elaboração de cervejas artesanais é viável e, além de reaproveitar resíduos agroindustriais e reduzir custos de processo, pode acrescentar características físico-químicas importantes à bebida, dentre as quais, a formulação de número seis, que continha 10% de pseudofruto de caju (m/m) e 0,6% de casca de laranja (m/m), apresentou os resultados mais satisfatórios.  Palavras-chave: Bebida fermentada, Saccharomyces cerevisiae, adjuntos, cerveja artesanal.   
+8  RESUMO  A cerveja é a bebida obtida pela fermentação
+Beer is the beverage obtained by alcoholic fermentation of beer wort formed by 
+drinking water and barley malt, by the action of yeast, with the addition of hops. Among 
+its variations, this is how wheat beer is made. During its preparation, adjuncts can be 
+used as a source of carbohydrate that reduce costs and make it possible to improve 
+physical, chemical and sensory characteristics of the beer. The peel of orange (Citrus 
+sinensis) and the cashew pseudofruit (Anacardium occidentale), currently discarded as 
+industrial by-products, can be reused by having in its constitution interesting features 
+for use in the preparation of beer. In this context, the objective was to develop a wheat 
+beer with the addition of cashew peduncle and orange peel by the craft process. 
+Therefore, an experimental strategy with such raw materials was carried out, with a 
+percentage calculated on malt. The bark concentrations were 0 and 0.6 % (m/m) and 
+cashew, 0, 5 and 10 % (m/m), resulted in six different combinations. The raw materials 
+were characterized by physico-chemical assessment and added to the fermentation 
+phase. The formulations were subjected to low fermentation, maturation and 
+carbonation. Subsequently, they were characterized regarding the total acidity analysis, 
+pH, real, unique and apparent extracts, total solids, alcohol content, reducing sugars, 
+non-reducing and total chemical composition, calorie, phenolic compounds, antioxidant 
+activity, coliforms at 35 ° C and 45 ° C, molds and yeasts. The results showed that the 
+values obtained from the analysis of pH, total acidity and total soluble solids of cashew 
+were within the standard suggested by the legislation for this fruit, as well as the soluble 
+solids content of oranges from which the peels were extracted. Regarding the analysis of 
+beer formulations, all of them presented characteristics within the parameters required 
+by the legislation. Those containing higher levels of cashew demonstrated to be more 
+acidic, with largest percentage of phenolic compounds and antioxidant activity; 
+although, in this last analysis, there was not a significant difference between all 
+formulations containing the cashew pseudofruit compared to the standard, which did not 
+contain byproducts. The orange peel contributed to higher ash content, original and real 
+extract. Although it has antioxidant activity and phenolic compounds, the added bark 
+did not contribute to increase these compounds, perhaps for the low concentration used. 
+The microbiological analysis presented satisfactory results in all formulations, 
+indicating good sanitary conditions and microbiological stability. It is possible to 
+conclude that the use of these raw materials in the preparation of craft beers is feasible 
+and, in addition to reuse organic residues and reduce process costs, it can add important 
+physical and chemical characteristics to the drink, among which, the formulation 
+number six, containing 10% cashew pseudofruit (m/m) and 0.6% orange peel (m/m), 
+presented the most satisfactory results. 
+ 
+Keywords: Fermented beverage, Saccharomyces cerevisiae, adjuncts, craft beer. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+9  ABSTRACT  
+ 
+LISTA DE FIGURAS 
+Figura 01 Fluxograma do processamento da cerveja............................................. 27 
+Formação e degradação do diacetil na cerveja em maturação............... 
+Figura 02 33 
+Figura 03 Fluxograma de produção de cerveja artesanal com adição de pseudofruto do caju e casca de laranja..................................................  48 
+Figura 04 Gráfico da redução dos sólidos solúveis totais em função do tempo… 56 
+                        
+10  
+Tabela 01 Composição de trigo e malte de cevada..................................................... 19 
+Tabela 02 Mudanças ocorridas no grão de cevada malteado ..................................... 23 
+Tabela 03 Composição química do lúpulo.................................................................. 25 
+Tabela 04 Composição química do pedúnculo do caju............................................... 36 
+Tabela 05 Composição química da casca de laranja................................................... 37 
+Tabela 06 Formulações de cerveja.............................................................................. 45 
+Tabela 07 Valores experimentais das análises de pH, acidez total, açúcares redutores, não redutores e totais e sólidos solúveis totais no pseudofruto do caju.........................................................................................................   58 
+Tabela 08 Valores experimentais das análises de pH, umidade e acidez total na casca da laranja...........................................................................................  59 
+Tabela 09 Valores experimentais das análises físico-químicas das cervejas elaboradas...................................................................................................  61 
+Tabela 10 Resultados das análises de açúcares não-redutores, redutores e totais nas formulações de cerveja...............................................................................  64 
+Tabela 11 Resultados das análises de composição centesimal e valor calórico das seis formulações de cerveja........................................................................  65 
+Tabela 12 Resultados referentes às análises de compostos fenólicos e antioxidantes...............................................................................................  68 
+Tabela 13 Resultados das análises microbiológicas nas cervejas................................ 71 
+        
+11   LISTA DE TABELAS 
+1 INTRODUÇÃO................................................................................................... 13 
+2 REVISÃO DE LITERATURA............................................................................ 15 
+ 2.1. Histórico da cerveja....................................................................................... 15 
+ 2.2. Produção e consumo da cerveja.................................................................... 15 
+ 2.3. Legislação e Classificação............................................................................ 16 
+ 2.4. Cerveja Artesanal.......................................................................................... 17 
+ 2.5. Cerveja de Trigo............................................................................................ 19 
+ 2.6. Aspectos nutricionais e constituintes químicos da cerveja........................... 20 
+ 2.7. Tecnologia de produção da cerveja............................................................... 22 
+        2.7.1. Matérias-primas................................................................................... 22 
+                2.7.1.1. Água......................................................................................... 22 
+                2.7.1.2. Malte......................................................................................... 23 
+                2.7.1.3. Lúpulo...................................................................................... 24 
+                2.7.1.4. Levedura................................................................................... 25  
+                2.7.1.5. Adjuntos do malte.................................................................... 25 
+        2.7.2. Etapas do processamento.................................................................... 27 
+                2.7.2.1. Maltagem.................................................................................. 28 
+                2.7.2.1. Moagem.................................................................................... 29 
+                2.7.2.3. Mosturação................ .............................................................. 29 
+                2.7.2.4.  Filtração.................................................................................. 30 
+                2.7.2.5.  Fervura e Lupulagem.............................................................. 31 
+                2.7.2.6.  Resfriamento........................................................................... 31 
+ 2.7.2.7. Fermentação............................................................................. 32 
+ 2.7.2.8. Maturação................................................................................ 32 
+ 2.7.2.9. Priming................................................................................... 33 
+ 2.7.2.10. Envase.................................................................................... 33 
+ 2.7.2.11. Pasteurização.......................................................................... 34 
+ 2.8. O pedúnculo do caju (Anacardium occidentale) ......................................... 34 
+ 2.9. A casca da laranja (Citrus sinensis) ............................................................ 2.10. Cerveja com adição de frutas..................................................................... 36 37 
+3 METODOLOGIA E PROCEDIMENTO............................................................ 40 
+ 3.1. Matérias-primas............................................................................................. 40 
+12  SUMÁRIO 
+ 3.2. Análises físico-químicas dos frutos............................................................... 41 
+ 3.3. Formulações.................................................................................................. 44 
+ 3.4. Etapas do processamento da cerveja............................................................. 46 
+ 3.5. Análises para caracterização das amostras de cervejas................................. 49 
+ 3.6. Análises microbiológicas.............................................................................. 56 
+ 3.7. Análise estatística.......................................................................................... 57 
+4 RESULTADOS E DISCUSSÕES....................................................................... 58 
+ 4.1. Análises físico-químicas das matérias-primas.............................................. 58 
+ 4.2. Controle da fermentação das formulações de cerveja................................... 59 
+ 4.3. Análises Físico-químicas das formulações de cerveja.................................. 61 
+ 4.4. Quantificação de compostos fenólicos e capacidade antioxidante............... 67 
+ 4.5. Análises microbiológicas.............................................................................. 70 
+5 CONCLUSÕES.................................................................................................... 74 
+6 CONSIDERAÇÕES FINAIS............................................................................... 75 
+ REFERÊNCIAS................................................................................................... 76 
+ ANEXOS.............................................................................................................. 95 
+  
+13  

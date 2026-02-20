@@ -1,0 +1,1248 @@
+﻿__JSON_START__
+{
+  "stats": {
+    "total": 50,
+    "repos_queried": 5,
+    "errors": []
+  },
+  "results": [
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_bd79abacd709279e03cc6e6c2a73dbd8",
+      "title": "Desenvolvimento de uma bebida fermentada ├á base de xer├®m de castanha de caju (Anacardium occidentale L.)",
+      "creators": [
+        "Nascimento, Rita Sannara Bandeira do"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://repositorio.ufc.br/handle/riufc/76812",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "CNPQ::CIENCIAS AGRARIAS::CIENCIA E TECNOLOGIA DE ALIMENTOS"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_231a484d995ddefa096eb7c2fbf806f9",
+      "title": "Avalia├º├úo sensorial e caracteriza├º├úo de cerveja de trigo adicionada de pseudofruto do caju (Anacardium occidentale, L.) e casca de laranja (Citrus sinensis)",
+      "creators": [
+        "Menezes, Nat├ília Viviane Santos de"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/39653",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Bebidas fermentadas",
+        "Cerveja de trigo",
+        "Fruitbeer"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_0eccea928da3cb82c6fbf898425a34fe",
+      "title": "Desenvolvimento de n├®ctares mistos ├á base de caju (Anacardium occidentale L) e a├ºa├¡ (Euterpe oleracea Mart.)",
+      "creators": [
+        "Pinheiro, Analia Maria"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/17223",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Tecnologia de alimentos",
+        "Superf├¡cie de resposta",
+        "Bebida mista",
+        "F├¡sico-qu├¡mica",
+        "Surface response methodology",
+        "Mix beverage",
+        "Physicochemical",
+        "Embalagens",
+        "Packaging"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFPE_7c031fe762a6e7c746ff9b41749ba508",
+      "title": "Desenvolvimento de uma bebida funcional a base de caju (Anacardium occidentale L.) com Lactobacillus casei DN 114-001 livre e microencapsulado",
+      "creators": [
+        "SOARES, Bruna L├║cia de Mendon├ºa"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://repositorio.ufpe.br/handle/123456789/17621",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Anacardium occidentale",
+        "Microc├ípsulas",
+        "Probi├│ticos",
+        "Quitosana",
+        "Microcapsules",
+        "Probiotics",
+        "Chitosan"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UNICAMP-30_b0957cb7d361956d8fa3603f9c2be6f3",
+      "title": "Din├ómica da perda e forma├º├úo de compostos vol├íteis durante a concentra├º├úo de suco de caju (Anacardium Occidentale L.) e impacto sobre o perfil sensorial da bebida",
+      "creators": [
+        "Biasoto, Aline Camar├úo Telles, 1981-"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://hdl.handle.net/20.500.12733/1620060",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Suco de fruta concentrado",
+        "CG-EM",
+        "Aroma",
+        "Olfatometria",
+        "Avalia├º├úo sensorial",
+        "Fruit juice concentrate",
+        "GC-MS",
+        "Olfactometry",
+        "Sensory analysis"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UNICAMP-30_8f729a9319db5fb939bf10fe0f46d59c",
+      "title": "Estudo do processamento de suco de caju (anacardium occidentale L.)",
+      "creators": [
+        "Telles, Paulo Roberto Siqueira"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://hdl.handle.net/20.500.12733/1578886",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Suco de frutas",
+        "Castanha-de-caju - Processamento"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_155bb9a7cef2bffab6fbc00b43ecfd57",
+      "title": "Desenvolvimento de bebida vegetal ├á base de am├¬ndoa de castanha de caju (Anacardium occidentale L.), arroz (Oryza sativa L.) e ameixa (Prunus domestica L.)",
+      "creators": [
+        "Pinto, Daiane dos Santos"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/56720",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Bebida vegetal",
+        "Arroz",
+        "Castanha de caju",
+        "Ameixa"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "EMBR_fe566643b70b949602aa0ad23cbf8a53",
+      "title": "Antecipa├º├úo do ponto de colheita do caju CCP 76 visando ao beneficiamento da am├¬ndoa e ped├║nculo imaturo.",
+      "creators": [
+        "ARAUJO, P. G. L. DE"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.alice.cnptia.embrapa.br/alice/handle/doc/1174608",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Beneficiamento da castanha",
+        "Bebidas mistas",
+        "Caju",
+        "Anacardium Occidentale",
+        "Cashew fruit"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UNICAMP-30_93cb420fbe4045b332737572815f9cad",
+      "title": "Estudo da estabiliza├º├úo fisica de suco de caju (Anacardium occidentale, Linn)",
+      "creators": [
+        "Maria, Zilda Luiz"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://hdl.handle.net/20.500.12733/1578802",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Suco de caju",
+        "Processos quimicos"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "URPE_15ad485b1aa755f34407845a78c07436",
+      "title": "Desenvolvimento e caracteriza├º├úo de bebida com potencial probi├│tico ├á base de extrato hidrossol├║vel de castanha de caju (Anacardium occidentale L.)",
+      "creators": [
+        "SOUSA, Thaynna Leoc├ídio Trajano Lacerda"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.tede2.ufrpe.br:8080/tede2/handle/tede2/8862",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Extrato vegetal",
+        "Alimento funcional",
+        "Lactobacillus paracasei",
+        "Anacardium occidentale L.",
+        "Castanha de caju",
+        "Bebida probi├│tica",
+        "CIENCIAS AGRARIAS::CIENCIA E TECNOLOGIA DE ALIMENTOS"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_988e31ac1a02682de181c8e8cb031007",
+      "title": "Caracteriza├º├úo e estudo da aplicabilidade do biossurfactante produzido por Bacillus subtilis LAMI005 a partir do suco de caju",
+      "creators": [
+        "Felix, Anne Kamilly Nogueira"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/57667",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Surfactina",
+        "Anacardium occidentale",
+        "Bioensaio"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_441afd419b28a579724a7123cae5808d",
+      "title": "Fermenta├º├úo alco├│lica do suco de caju (anacardium occidentale L.): influencia de condi├º├Áes operacionais",
+      "creators": [
+        "Pinheiro, ├ülvaro Daniel Teles"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/3680",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Engenharia qu├¡mica",
+        "Etanol",
+        "Suco de caju",
+        "Processos qu├¡micos"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UECE-0_e6dd8eabc937603f41aba608816c46f9",
+      "title": "Estudo da Estabilidade do Suco de Caju (Anacardium Occidentale L.) Preservado Pelos Processos Hot",
+      "creators": [
+        "Costa, Maria Cecilia Oliveira da"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://siduece.uece.br/siduece/trabalhoAcademicoPublico.jsf?id=12538",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Caju - Ind├║stria",
+        "Tecnologia de alimentos"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_6f368b8a2a062636fc33aafcdfe01967",
+      "title": "Efeito do processamento sobre caracter├¡sticas de qualidade do suco de caju (Anacardium occidentale L.).",
+      "creators": [
+        "Sancho, Soraya de Oliveira"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/18027",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Ci├¬ncia e tecnologia de alimentos",
+        "Caju",
+        "Processamento industrial",
+        "├ücido f├│lico",
+        "Qualidade",
+        "Cashew",
+        "Suco",
+        "Industrial processing",
+        "Folic acid",
+        "Qualy",
+        "Valor nutritivo",
+        "Nutritional value"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_25560a39a214a7125ebac33f0994b334",
+      "title": "Avalia├º├úo da toxicidade de suco de caju (Anacardium occidentale) processado por plasma frio e ultrassom",
+      "creators": [
+        "Mota, Luiza Michelly Gon├ºalves Lima"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/71359",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Artemia salina",
+        "Suco de caju",
+        "Processamento n├úo t├®rmico",
+        "Toxicidade"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFV_a7fce3608ba27f273d7dea1c189a54e5",
+      "title": "Desenvolvimento, caracteriza├º├úo e efeitos saciet├│geno de uma bebida plant-based elaborada com coprodutos da am├¬ndoa da castanha de caju (Anacardium occidentale L.)",
+      "creators": [
+        "Santana, Bianca Ferreira de"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://locus.ufv.br/handle/123456789/34651",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Prote├¡nas de plantas",
+        "Alimento funcional",
+        "Resposta de saciedade",
+        "Ingest├úo de energia",
+        "Apetite",
+        "CIENCIAS DA SAUDE::NUTRICAO::BIOQUIMICA DA NUTRICAO"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_269f49e2ea81fe1c1c7a728bcec58e13",
+      "title": "Efeito do suco de caju (Anacardium occidentale L.) adicionado de farinhas do baga├ºo de caju sobre a resposta imunol├│gica em camundongos",
+      "creators": [
+        "Bezerra, Camila Freitas"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/9650",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Bioqu├¡mica",
+        "Anacardium occidentale",
+        "Antioxidantes",
+        "Suco de caju"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "EMBR_e4e774d94b8c5183e83764f29ef8da70",
+      "title": "Avalia├º├úo das caracter├¡sticas fisico-qu├¡micas e sensoriais de diferentes formula├º├Áes do n├®ctar de caj├║ (Anacardium Occidentale, L.).",
+      "creators": [
+        "SABE, I. L. S."
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.alice.cnptia.embrapa.br/alice/handle/doc/1062724",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Caracteristicas fisico-quimicas e sensoriais",
+        "Caju",
+        "N├®ctar"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_859d4dc7b28bc4d2d48691daf939286a",
+      "title": "Elabora├º├úo, caracteriza├º├úo f├¡sico-qu├¡mica e avalia├º├úo da capacidade antioxidante de cerveja de trigo adicionada de pseudofruto de caju (anacardium occidenale) e casca de laranja (citrus sinensis)",
+      "creators": [
+        "Pereira, Iana Maria Cristino"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/40027",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Bebida fermentada",
+        "Saccharomyces cerevisiae",
+        "Adjuntos",
+        "Cerveja artesanal"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_bb347466f0ae18399a2a091a79cd7b26",
+      "title": "Desidrata├º├úo de polpa de manga e suco de caju integral por atomiza├º├úo e caracteriza├º├úo dos produtos obtidos",
+      "creators": [
+        "Rocha, ├ërica Mil├┤ de Freitas Felipe"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/18643",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Ci├¬ncia e tecnologia de alimentos",
+        "Desidrata├º├úo",
+        "Qualidade",
+        "Mangifera indica L.",
+        "Anacardium occidentale L.",
+        "Estabilidade"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFRN_3ae2fd2cfe1cc3231b251371adfbf862",
+      "title": "Produ├º├úo de bioetanol a partir de ped├║nculo de caju (Anacardium occidentale L.) por fermenta├º├úo submersa",
+      "creators": [
+        "Rocha, Maria Valderez Ponte"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://repositorio.ufrn.br/jspui/handle/123456789/15906",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Etanol",
+        "Suco de caju",
+        "Baga├ºo de caju",
+        "Saccharomyces cerevisiae",
+        "Kluyveromyces marxianus",
+        "Pr├®-tratamento",
+        "Hidr├│lise Enzim├ítica",
+        "Ethanol",
+        "Cashew apple juice",
+        "Cashew apple bagasse",
+        "Pretreatment",
+        "Enzymatic hydrolysis",
+        "CNPQ::ENGENHARIAS::ENGENHARIA QUIMICA"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFRN_95d57b6cb04eef1f7340616907065b12",
+      "title": "S├¡ntese e caracteriza├º├úo de membranas biopolim├®ricas microfiltrantes, ├á base de quitosana, para uso no processo de obten├º├úo de caju├¡na",
+      "creators": [
+        "Said, Jamil Mois├®s"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://repositorio.ufrn.br/jspui/handle/123456789/23086",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "S├¡ntese",
+        "Caracteriza├º├úo",
+        "Membranas",
+        "Quitosana",
+        "Microfiltra├º├úo",
+        "Caju├¡na",
+        "CNPQ::ENGENHARIAS::ENGENHARIA DE MATERIAIS E METALURGICA"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_84aacb2d22ca7ab512b6298546fad251",
+      "title": "Efeito prebi├│tico de suco de caju (Anacardium occidentale) contendo glico-oligossacar├¡deos, dextrana e tagatose",
+      "creators": [
+        "Leite, Ana Karoline Ferreira"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/50946",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Engenharia qu├¡mica",
+        "Bioacessibilidade",
+        "Vitamina C",
+        "Probi├│ticos",
+        "In vitro digestion",
+        "Tagatose"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_6d20213f8e4e63e8e4b1b40a0fb8ac44",
+      "title": "Estudo da viabilidade da produ├º├úo de etanol a partir de suco de caju (Anacardium occidentale L.) utilizando c├®lulas imobilizadas em baga├ºo de caju",
+      "creators": [
+        "Pacheco, Alexandre Monteiro"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/15755",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Engenharia qu├¡mica",
+        "Suco de caju",
+        "Baga├ºo de caju",
+        "Fermenta├º├úo alco├│lica",
+        "Levedura Saccharomyces cerevisiae",
+        "Imobiliza├º├úo celular"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFRN_7a67d87c5f2582fcd6cd0ed31a8b632f",
+      "title": "Suco desidratado de caju (Anacardium occidentale L.) por atomiza├º├úo: caracteriza├º├úo f├¡sico-qu├¡mica, bioativa e estudo da vida de prateleira do produto",
+      "creators": [
+        "Moraes, Francisca Pereira de"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://repositorio.ufrn.br/jspui/handle/123456789/15859",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Caju. Secagem. Bioativos. Vida de prateleira",
+        "Cashew. Drying. Bioactive. Shelf life",
+        "CNPQ::ENGENHARIAS::ENGENHARIA QUIMICA"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_d382bdede3442d0974d4ebf10047eab2",
+      "title": "Processamento de suco de caju (Anacardium occidentale) por tecnologias n├úo t├®rmicas: efeitos nas caracter├¡sticas f├¡sico-qu├¡micas e compostos bioativos",
+      "creators": [
+        "Barroso, Maria Karolina de Ara├║jo"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/43823",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Engenharia qu├¡mica",
+        "Oz├┤nio",
+        "Compostos bioativos",
+        "Peroxidase",
+        "Ultrassom",
+        "Ultrasound",
+        "Ozone",
+        "Pulsed light",
+        "Bioactive compounds"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFRRJ-1_a65b9001a5d15e492aee146f32f3ca0a",
+      "title": "Efeito do processo combinado de enzimas e membranas na estabiliza├º├úo do suco de caju clarificado (anacardium occidentale L.)",
+      "creators": [
+        "Campos, Denise de Carvalho P"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://rima.ufrrj.br/jspui/handle/20.500.14407/23771",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Ci├¬ncia e Tecnologia de Alimentos",
+        "suco de caju clarificado",
+        "enzimas e membranas",
+        "clarified cashew juice",
+        "enzymes and membranes"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UECE-0_ec8c1a24de613abd257b6110f39928ac",
+      "title": "COMPOSTOS VOL├üTEIS RESPONS├üVEIS PELA QUALIDADE SENSORIAL DE FERMENTADOS ESPUMANTES DE DIFERENTES CLONES DE CAJU (ANACARDIUM OCCIDENTALE L.)",
+      "creators": [
+        "OBERG, MILENA LIDIANI BOMFIM DE MELO"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://siduece.uece.br/siduece/trabalhoAcademicoPublico.jsf?id=84200",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Biotecnologia"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_314767da999ae7ca39886fb7a836a296",
+      "title": "Estudo qu├¡mico e tecnol├│gico do caju (Anacardium occidentale L.)",
+      "creators": [
+        "Maia, Geraldo Arraes"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/67276",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Caju - An├ílise",
+        "Castanha-de-caju - An├ílise",
+        "Castanha de caju - Armazenamento",
+        "Castanha-de-caju - Qu├¡mica",
+        "Caju - Qu├¡mica",
+        "Anacardium - Chemistry",
+        "Anacardium - Storage",
+        "Anacardium - Analysis"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_5d88fd420edeb8e8f9de2cf22f0702dc",
+      "title": "Atividades antioxidante, anti-inflamat├│ria e cicatrizante do caju (Anacardium occidentale L.)",
+      "creators": [
+        "Vasconcelos, Mirele da Silveira"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/17797",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Bioqu├¡mica",
+        "Caju",
+        "Antioxidantes",
+        "Inflama├º├úo",
+        "Cicatriza├º├úo",
+        "Anacardium occidentale",
+        "Anacardiaceae",
+        "Antioxidants",
+        "Anti-inflammatory",
+        "Wound healing",
+        "Caju - A├º├úo antioxidante",
+        "Anti-inflamat├│rios",
+        "Cicatriza├º├úo de feridas"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UECE-0_379843f6f0bcd3ed3a3913c61d3f600c",
+      "title": "An├ílises biom├®tricas e quimiom├®tricas relacionadas a longevidade e vigor de sementes de cajueiro Anacardium occidentale L.",
+      "creators": [
+        "Queiros, Joao Ravelly Alves De"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://siduece.uece.br/siduece/trabalhoAcademicoPublico.jsf?id=110809",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "N├úo Informado pela institui├º├úo"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_08c3e9c589aa3db3c173e0f913940fcf",
+      "title": "Aproveitamento da fibra de caju (Anacardium occidentale L.) na formula├º├úo de um produto tipo hamb├║rguer",
+      "creators": [
+        "Galv├úo, Ana Maria Pinheiro"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/17220",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Tecnologia de alimentos",
+        "Caju",
+        "Fibra de caju",
+        "Hamb├║rguer de caju - Processamento",
+        "Cashew"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_531d9351177cc07dc912496adfe00c14",
+      "title": "Efeito do extrato do baga├ºo do pend├║culo de caju (Anacardium occidentale L.) contra Streptococcus mutans.",
+      "creators": [
+        "Montenegro, Manuela Almeida"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/26138",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Anacardium occidentale Lin",
+        "cajueiro",
+        "Streptococcus mutans",
+        "antimicrobiano",
+        "antibiofilme"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_e93b52ce7d7625a805aa10a231061b4c",
+      "title": "Estudo de fibras do baga├ºo de caju (Anacardium occidentale L.) no metabolismo normal e na obesidade em camundongos",
+      "creators": [
+        "Carvalho, Diana Valesca"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/33513",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Anacardium occidentale",
+        "Fibra diet├®tica",
+        "Obesidade",
+        "RMN",
+        "SFCA"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFCG_94a42571832b0b95e3380a4a9f3f2430",
+      "title": "Processo de obten├º├úo de etanol por hidr├│lise enzim├ítica do baga├ºo do ped├║nculo do caju (Anacardium Occidentale L.).",
+      "creators": [
+        "ROCHA, Aleksandra Silva."
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://dspace.sti.ufcg.edu.br/handle/riufcg/1723",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Caj├║",
+        "Hidr├│lise enzim├ítica",
+        "Etanol",
+        "Biomassa",
+        "Bioetanol",
+        "Cashew",
+        "Enzymatic hydrolysis",
+        "Ethanol",
+        "Biomass",
+        "Bioethanol",
+        "Tecnologia de Alimentos"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UCB-2_ac71aea94ca4418e83d64ff9e5129bf3",
+      "title": "Processo de obten├º├úo de etanol por hidr├│lise enzim├ítica do baga├ºo do ped├║nculo do caju (Anacardium Occidentale L.).",
+      "creators": [
+        "ROCHA, Aleksandra Silva."
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://dspace.sti.ufcg.edu.br:8080/jspui/handle/riufcg/1723",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Caj├║",
+        "Hidr├│lise enzim├ítica",
+        "Etanol",
+        "Biomassa",
+        "Bioetanol",
+        "Cashew",
+        "Enzymatic hydrolysis",
+        "Ethanol",
+        "Biomass",
+        "Bioethanol",
+        "Tecnologia de Alimentos"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UECE-0_af7ce84888392881b4567b6dfcec33c1",
+      "title": "QUALIDADE DE PED├ÜNCULOS E PERFIL DE COMPOSTOS VOL├üTEIS DE NOVOS CLONES DE CAJUEIRO (Anacardium occidentale L.)",
+      "creators": [
+        "FREITAS, AILANE SOUZA DE"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://siduece.uece.br/siduece/trabalhoAcademicoPublico.jsf?id=94829",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Fruta Tropical"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UEPB_6aba0904c7450cdcf70eaeba5f5a7244",
+      "title": "Produ├º├úo de biomol├®culas por Fusarium sp utilizando a casca do caule do cajueiro Anacardium occidentale L",
+      "creators": [
+        "Martins, Lucas Emanuel Pereira"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://tede.bc.uepb.edu.br/jspui/handle/tede/5308",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Biotecnologia",
+        "Atividade antif├║ngica",
+        "Bioemulsificantes",
+        "MICROBIOLOGIA APLICADA::MICROBIOLOGIA INDUSTRIAL E DE FERMENTACAO"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "USP_ecaf30786b2b1b00538339a5b023e098",
+      "title": "Aplica├º├úo do subproduto de caju (Anacardium occidentale) em leite fermentado probi├│tico: compostos bioativos, avalia├º├úo de grupos bacterianos no armazenamento, digest├úo e impacto na microbiota intestinal",
+      "creators": [
+        "Medeiros, Igor Ucella Dantas de"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://www.teses.usp.br/teses/disponiveis/9/9131/tde-29072022-204218/",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Agro-industrial waste",
+        "Fitoqu├¡micos",
+        "Frutas tropicais",
+        "Intestinal microbiota",
+        "Microbiota intestinal",
+        "Phytochemicals",
+        "Prebi├│ticos",
+        "Prebiotics",
+        "Probi├│ticos",
+        "Probiotics",
+        "Res├¡duos agroindustriais",
+        "Tropical fruits"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "EMBR_f8295c340411437197859d0f064d13cf",
+      "title": "Compostos fen├│licos em ped├║nculos de clones de cajueiro e a rela├º├úo com a adstring├¬ncia e suas subqualidades.",
+      "creators": [
+        "BRAGA, D. C."
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.alice.cnptia.embrapa.br/alice/handle/doc/1106803",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Anacardium occidentale L",
+        "UPLC",
+        "An├ílise sensorial",
+        "Chemometrics"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_db7ee032cb690e2ce79bd17687f2b3ad",
+      "title": "Processamento de fibra de caju por extra├º├úo de subst├óncias sol├║veis seguida de secagem para aplica├º├úo como ingrediente em produto plant-based",
+      "creators": [
+        "Saldanha, Gecyene Rodrigues do Nascimento"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/68822",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Desidrata├º├úo",
+        "Subproduto",
+        "Ped├║nculo",
+        "Anacardium occidentale L."
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_85fb59ad86b275bbe7419c59c76906e1",
+      "title": "Efeito esofagoprotetor de um biopol├¡mero, a goma do cajueiro, na doen├ºa do refluxo n├úo-erosiva em murinos e em bi├│psias esof├ígicas humanas: perfil anti-inflamat├│rio e efeito t├│pico",
+      "creators": [
+        "Nicolau, Lucas Antonio Duarte"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/29302",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Anacardium occidentale",
+        "Neopreno",
+        "Inflama├º├úo",
+        "Refluxo Gastroesof├ígico"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "USP_aece952a877456ab1084c19a950dbb2b",
+      "title": "M├®todos de redu├º├úo da adstring├¬ncia de ped├║nculos de caju in natura e seus efeitos sobre a qualidade f├¡sico-qu├¡mica, nutricional e arom├ítica",
+      "creators": [
+        "Tezotto-Uliana, Jaqueline Visioni"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.teses.usp.br/teses/disponiveis/11/11136/tde-29092017-153306/",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Anacardium occidentale L.",
+        "Carbon dioxide",
+        "Di├│xido de carbono",
+        "Ethanol vapor",
+        "Filme pl├ístico",
+        "Packing film",
+        "Vapor de etnol"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_90648fd930b9d8543469455bbbf1e115",
+      "title": "Desenvolvimento e trocas gasosas de plantas de cajueiro-an├úo precoce sob irriga├º├úo salina em neossolo quartzar├¬nico",
+      "creators": [
+        "Ara├║jo, La├¡se Ferreira de"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/18624",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Engenharia de ├ígua e solo",
+        "Anacardium occidentale L.",
+        "Salinidade",
+        "Fotoss├¡ntese",
+        "Crescimento",
+        "Salinity"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFER_71c0dc20b1fa1cfcf6fb61879782af70",
+      "title": "P├│len ap├¡cola coletado por abelhas Apis mellifera L. (africanizadas) no semi├írido potiguar",
+      "creators": [
+        "Medeiros, Anna Jacinta Dantas de"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://doi.org/10.21708/bdtd.ppgca.tese.831",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Apis mellifera",
+        "Florapol├¡nica",
+        "Composi├º├úo qu├¡mica",
+        "Anacardium occidentale L",
+        "Mimosa tenuiflora",
+        "Pollenflora",
+        "Chemical composition",
+        "Anacardium occidentaleL",
+        "CNPQ::CIENCIAS AGRARIAS::MEDICINA VETERINARIA"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UNICAMP-30_0062bb71a0d35bff5f2b9a1f53b6a42e",
+      "title": "Identifica├º├úo do perfil de volateis e caracteriza├º├úo de seus impactos odoriferos em water phase e essencias naturais de caju (Anacardium occidentale L.)",
+      "creators": [
+        "Sampaio, Karina de Lemos, 1975-"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://hdl.handle.net/20.500.12733/1605058",
+      "degreeType": "doctoralThesis",
+      "subjectAreas": [
+        "Caju",
+        "Aroma",
+        "Ess├¬ncias",
+        "Cromatografia gasosa",
+        "Water phase",
+        "Cashew",
+        "Essences",
+        "Gas chromatography",
+        "Waer phase"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UNICAMP-30_3517ab4c7158548d3740dd5d2df8dcad",
+      "title": "Estudo da produ├º├úo de acido hialuronico por fermenta├º├úo de Streptococcus zooepidemicus em substrato de caju (Anacardium occidentale L.)",
+      "creators": [
+        "Macedo, Andre Casimiro de"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://hdl.handle.net/20.500.12733/1605230",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Polissacar├¡deos",
+        "Fermenta├º├úo",
+        "Caju",
+        "Hyaluronic acid",
+        "Fermentation",
+        "Cashew"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_30ec96eece353dc45e1b9445cf1b8254",
+      "title": "Estudo cin├®tico da fermenta├º├úo de kefir e kombucha em extrato hidrossol├║vel de am├¬ndoa de castanha de caju (Anacardium Occidentale L.)",
+      "creators": [
+        "Araujo Filho, Antonio Augusto Lima"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/65855",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Leite vegetal",
+        "Bact├®rias ├ícido l├íticas",
+        "Bact├®rias ├ícido ac├®ticas",
+        "├ücido glucur├┤nico",
+        "Rafinose"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFC-7_c6276a130aa1d77d53503346bc95b88d",
+      "title": "Estudo de n├¡veis de substitui├º├úo do milho pelo pseudo-fruto desidratado do cajueiro (Anacardium occidentale, L.) em ra├º├Áes para frangos de corte.",
+      "creators": [
+        "Ara├║jo, Zelma Bastos de"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "http://www.repositorio.ufc.br/handle/riufc/45925",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Zootecnia"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    },
+    {
+      "repositoryId": "BR-AGG-0001",
+      "repositoryName": "BDTD (IBICT)",
+      "identifier": "UFPB_f68f571ba8a8a3480f2c8fd6fd946475",
+      "title": "Avalia├º├úo in vitro do potencial prebi├│tico do subproduto do do processamento do ped├║nculo do caju(Anacardium occidentale L.) frente ├á Lactobacillus spp.",
+      "creators": [
+        "Menezes, Francisca Nayara Dantas Duarte"
+      ],
+      "description": "",
+      "date": "",
+      "type": "thesis/dissertation",
+      "url": "https://repositorio.ufpb.br/jspui/handle/tede/8800",
+      "degreeType": "masterThesis",
+      "subjectAreas": [
+        "Subprodutos Agroindustriais",
+        "Caju",
+        "Prebi├│tico",
+        "Lactobacillus",
+        "Prebiotic",
+        "Lactobacilli",
+        "Agro-industrial Byproducts",
+        "Cashew",
+        "CIENCIAS DA SAUDE::NUTRICAO"
+      ],
+      "language": "por",
+      "accessMethod": "bdtd-vufind",
+      "_origin": "BR-AGG-0001"
+    }
+  ]
+}
+__JSON_END__

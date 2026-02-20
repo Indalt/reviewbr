@@ -1,0 +1,4030 @@
+  
+UNIVERSIDADE FEDERAL DO CEARÁ 
+DEPARTAMENTO DE ENGENHARIA QUÍMICA 
+PROGRAMA DE PÓS-GRADUAÇÃO EM ENGENHARIA QUÍMICA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ANNE KAMILLY NOGUEIRA FELIX 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CARACTERIZAÇÃO E ESTUDO DA APLICABILIDADE DO BIOSSURFACTANTE 
+PRODUZIDO POR Bacillus subtilis LAMI005 A PARTIR DO SUCO DE CAJU 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2012 
+  
+ANNE KAMILLY NOGUEIRA FELIX 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CARACTERIZAÇÃO E ESTUDO DA APLICABILIDADE DO BIOSSURFACTANTE 
+PRODUZIDO POR Bacillus subtilis LAMI005 A PARTIR DO SUCO DE CAJU 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Dissertação de Mestrado apresentada ao 
+Programa de Pós-Graduação em Engenharia 
+Química, do Centro de Tecnologia da 
+Universidade Federal do Ceará, como requisito 
+parcial para obtenção do grau de Mestre em 
+Engenharia Química. Área de concentração: 
+Processos Químicos e Bioquímicos. 
+ 
+Orientadora: Profª. Dra. Rílvia Saraiva de 
+Santiago Aguiar  
+Coorientadora: Profª. Dra. Luciana Rocha 
+Barros Gonçalves 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2012 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ANNE KAMILLY NOGUEIRA FELIX 
+ 
+ 
+ 
+CARACTERIZAÇÃO E ESTUDO DA APLICABILIDADE DO BIOSSURFACTANTE 
+PRODUZIDO POR Bacillus subtilis LAMI005 A PARTIR DO SUCO DE CAJU  
+ 
+ 
+ 
+ 
+ 
+ 
+Dissertação de Mestrado apresentada ao 
+Programa de Pós-Graduação em Engenharia 
+Química da Universidade Federal do Ceará, 
+como requisito parcial para a obtenção do 
+Título de Mestre em Engenharia Química. 
+Área de concentração: Processos Químicos e 
+Bioquímicos. 
+ 
+ 
+Aprovado em 30 / 07 / 2012. 
+ 
+BANCA EXAMINADORA 
+ 
+ 
+a
+Prof. Dra. Rílvia Saraiva de Santiago Aguiar (Orientadora) 
+Universidade Federal do Ceará – UFC 
+ 
+ 
+ 
+a
+Prof. Dra. Luciana Rocha Barros Gonçalves (Coorientadora) 
+Universidade Federal do Ceará – UFC 
+ 
+ 
+ 
+a
+Prof. Dra. Maria Valderez Ponte Rocha 
+Universidade Federal do Ceará – UFC 
+ 
+ 
+ 
+a
+Prof. Dra. Sandra de Aguiar Soares 
+Universidade Federal do Ceará – UFC 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+À minha família, base de tudo na minha 
+vida. Meus pais, Wilson e Idelzuite, 
+minhas irmãs, Ludmila e Karollyne, meu 
+noivo Marcelo e minha madrinha 
+Alzenir. 
+  
+AGRADECIMENTOS 
+ 
+ 
+Agradeço principalmente a Deus, pois em nenhum momento da minha vida Ele me 
+desamparou. 
+ 
+A Nossa Senhora Aparecida e Santo Expedito, dos quais sou devota, agradeço pela vida, 
+saúde e por me atender prontamente em momentos difíceis e me proporcionar momentos 
+inesquecíveis. 
+ 
+Agradeço aos meus pais pelo exemplo, incentivo, apoio e carinho. Meu paizão Wilson, 
+exemplo de homem, pai, alegria e companheirismo, por diariamente me proporcionar 
+manhãs maravilhosas me fortalecendo para a luta do dia-dia. Minha mamãe Idelzuite, 
+exemplo de mulher guerreira, mãe, profissional e zelo, por sempre cuidar de mim com tanto 
+carinho e me apoiar em todas as decisões. 
+ 
+As minhas irmãs, meu orgulho, meninas batalhadoras, estudiosas, lindas e muito especiais. 
+Karollyne, minha gordinha linda que amo incondicionalmente, por ser minha confidente e 
+sempre me apoiar em tudo na minha vida. Ludmila, por ser o alicerce de toda a nossa 
+família e sempre ter a palavra certa na hora certa. 
+ 
+A minha madrinha Alzenir, minha segunda mãe, por proporcionar momentos inigualáveis em 
+minha vida, principalmente em minha infância, pessoa com a qual, mesmo distante, sempre 
+posso contar. 
+ 
+Ao meu noivo Marcelo, pelo amor, companheirismo, paciência ao entender minha ausência 
+em muitos momentos e, ao mesmo tempo, por ser uma pessoa tão presente. 
+ 
+Aos meus amigos Júnior, Carolina Freire e Fernanda por uma amizade tão especial e 
+cúmplice. 
+ 
+A professora Dra. Luciana Rocha Barros Gonçalves, meus sinceros agradecimentos, por 
+sempre acreditar em meu potencial. 
+ 
+ 
+  
+A professora Dra. Rílvia Saraiva de Santiago Aguiar, por acreditar em mim ao me aceitar 
+como sua orientanda. 
+ 
+A professora Dra. Maria Valderez Ponte Rocha, pelas correções na dissertação e, 
+principalmente, por estar sempre à disposição de todos no grupo GPBio do qual fazemos 
+parte. 
+ 
+A enorme galerinha do GPBio:  Álvaro, Bete, Cleiton, Cristiane, Darlane, Diana, Edvan, 
+Emanuel, Iuri, Ítalo, Jéssyca, Juliana, Kênia, Leonardo, Ticiane e Tigressa, obrigada pelo 
+companheirismo de todos, pelos conhecimentos compartilhados e momentos de descontração. 
+Em especial a minhas amigas Camilla, Jéssyca, Juliana, Kênia, Marylane e Ticiane por essa 
+amizade tão especial, presente em momentos bons e ruins. 
+ 
+A todos do GPTA: Ana Alice, Daniel, Filipe, Marcinha, Regiane e todos os outros que fazem 
+parte desse grupo que me recebeu de braços abertos. 
+ 
+Ao Gustavo, um amigo que me ajudou muito no desenvolvimento desse trabalho, meus 
+sinceros agradecimentos. 
+ 
+A Larissa e Gaby, pessoas muito queridas. 
+ 
+Enfim, a todos que direta ou indiretamente me ajudaram no desenvolvimento deste trabalho.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+“A amizade desenvolve a felicidade e 
+reduz o sofrimento, duplicando a nossa 
+alegria e dividindo a nossa dor.” 
+(Joseph Addison) 
+ 
+ 
+RESUMO 
+ 
+Os surfactantes são moléculas anfipáticas, que possuem em sua estrutura química segmentos 
+hidrofóbicos e hidrofílicos, espacialmente separados que auxiliam na formação de emulsões 
+e disponibilizam compostos à célula microbiana. Em função dessas características, os 
+emulsificantes reduzem a tensão superficial na interface das fases imiscíveis, permitindo, 
+portanto, que elas se misturem, formando a emulsão. Muitos tipos de surfactantes 
+quimicamente sintetizados são hoje utilizados, embora o desenvolvimento de produtos 
+alternativos, biodegradáveis e menos tóxicos, como os chamados biossurfactantes, agentes 
+obtidos por via microbiológica, seja uma estratégia importante na obtenção de componentes 
+mais compatíveis com o meio ambiente e na ampliação das propriedades específicas e 
+aplicações desses compostos. Nesse contexto, o presente trabalho tem como objetivo, 
+caracterizar o biossurfactante produzido por Bacillus subtilis LAMI005 utilizando suco de 
+caju como fonte de carbono, ao realizar estudos de conformação e estrutura dos compostos, 
+determinando assim os grupos funcionais pertencentes à molécula; estudar os efeitos 
+toxicológicos da surfactina produzida, visando um maior entendimento sobre a toxicidade do 
+biossurfactante em organismos vegetais e animais; avaliar a manutenção das características 
+tensoativas da surfactina ao ser submetida a diferentes condições ambientais, além de estudar 
+a estabilidade das emulsões formadas com o biossurfactante que foi produzido em suco de 
+caju clarificado, agregando-se valor ao processo, uma vez que a fonte utilizada é disponível 
+e de baixo custo. Os espectros obtidos indicaram a similaridade entre a surfactina 
+produzida neste trabalho e a surfactina padrão (Sigma). O lipopeptídeo produzido 
+-1 
+apresentou atividade superficial altamente estável, com uma CMC igual a 12,5 mg.Le 
+-1 
+sendo capaz de reduzir a tensão superficial da água para 31,8 mN.me a tensão interfacial 
+-1
+do n-hexadecano para 2 mN.m. A habilidade de emulsificação a altas temperaturas, pHs 
+ácidos e básicos e diferentes concentrações de NaCl também foi demonstrada. Os 
+diagramas de fase mostraram a possibilidade de aplicação do biossurfactante na 
+biorremediação, no tratamento de resíduos e em fluidos de corte. O biossurfactante também 
+-1 
+apresentou atóxico quando analisado frente à Artemia salina com CLigual 612,27 μg.mL
+50 
+e frente Lactuca sativa, no qual apresentou índice de germinação superior a 80% em 
+concentrações elevadas, evidenciando seu potencial para aplicações na indústria de 
+cosméticos, alimentos e fármacos. O biossurfactante produzido também se mostrou eficiente 
+ao remover, aproximadamente, 82% do diesel e 77% do petróleo adsorvidos em areia. 
+ 
+ 
+Palavras-chave: surfactina, Anacardium occidentale, bioensaio 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ABSTRACT 
+ 
+The surfactants are amphipathic molecules which have in their chemical structure 
+hydrophobic and hydrophilic segments, spatially separated to assist in the formation of 
+emulsions available compounds and the microbial cell. Due to these characteristics, the 
+emulsifiers decrease the surface tension at the interface of immiscible phases, allowing thus 
+that they mix to form the emulsion. Many types of chemically synthesized surfactants are 
+used used today, although the development of alternative products, less toxic and 
+biodegradable, as so-called biosurfactants obtained by microbiological agents, is an important 
+strategy in obtaining components more compatible with the environment and expanding 
+specific properties and applications of these compounds. In this context, this study aims to 
+characterize the biosurfactant produced by Bacillus subtilis LAMI005 using cashew apple 
+juice as carbon source, to conduct studies of the structure and conformation of the 
+compounds, thereby determining the functional groups belonging to the molecule, to study the 
+toxicological effects of surfactin produced, designed to further understanding of the toxicity 
+of the biosurfactant in vegetable and animal organisms; evaluate the maintenance of the 
+characteristics of surfactants surfactin to be subjected to different environmental conditions, 
+in addition to studying the stability of emulsions formed with biosurfactant which was 
+produced in clarified cashew juice, adding value to the process, since the source used is 
+available and inexpensive. The spectra obtained indicated the similarity between this work 
+produced surfactin and surfactin standard (Sigma). The lipopeptide surface produced had a 
+-1
+highly stable activity, with a CMC 12.5 mg.l and capable of reducing the surface tension of 
+-1
+water to 31.8 mN.m-1 and interfacial tension of n-hexadecane to 2 mN.m. The ability of 
+emulsifying at high temperatures, acidic and basic pH and different concentrations of NaCl 
+was also demonstrated. The phase diagrams shown the possibility of application of the 
+biosurfactant in the bioremediation of waste treatment and cutting fluids. The biosurfactant 
+-1
+also showed non-toxic when analyzed in the brine shrimp with LC equal to 612.27 µg.mL 
+50
+forward and Lactuca sativa, presented at which germination index higher than 80% high 
+concentrations, demostrating its potential for applications in the cosmetics industry , food and 
+drugs. The biosurfactant produced also efficient in removing, approximately, 82% diesel and 
+77% petroleum adsorbed on sand. 
+ 
+ 
+Keywords: surfactin, Anacardium occidentale, bioassay 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE FIGURAS 
+ 
+Figura 1 –��������������������������������������������������������������������
+��������������
+����������������������������������������������������������������
+Figura 2 –�
+���������������������������������������������������������
+��������������������������
+���������������������������������������������������������
+Figura 3 –�
+����
+Figura 4 –�����������������������������������������������������������������34 
+����������������������������Bacillus subtilis LAMI005 utilizando 
+suco de caju. 
+Figura 5 –������������������������������������������������������������40 
+������������������������������������������������������������
+���������������Lactuca sativa. 
+Figura 6 –��������������������������������������������������������
+�����������
+1
+Figura 7 –�46 
+�����������H da fração F:29-35 (300 MHz, piridina-d5). 
+13
+48 
+Figura 8 –�
+�������������C da fração F:29-35 (75 MHz, piridina-d5). 
+Figura 9 –�������������������������������������������������������������������
+���������������
+����������������������������������������������������������et 50 
+Figura 10 –�
+al., 1994). 
+Figura 11 –�������������������������������������������������������������B. 51 
+subtilis LAMI005 a partir do suco de caju clarificado. Barras de erro 
+representam o desvio padrão. 
+Figura 12 –������������������������) de diferentes emulsões de 53 
+24
+hidrocarbonetos com biossurfactante de Bacillus subtilis LAMI005. 
+Barras de erro representam o desvio padrão. 
+Figura 13 –���������������������������������������������������������������������
+�■������������●�����������▲������������▼��������������◄�
+�����������►������������������������������������������������
+��������������������������������������������������������
+Figura 14 –�
+ 
+ 
+formada com diesel (■) e na atividade superficial (■) do 
+biossurfactante produzido por Bacillus subtilis LAMI005. Barras de 
+erro representam o desvio padrão. 
+Figura 15 – Efeito da variação da força iônica no Índice de Emulsificação de  57 
+emulsão formada com diesel (■) e na atividade superficial (■) do 
+biossurfactante produzido por Bacillus subtilis LAMI005. Barras de 
+erro representam o desvio padrão. 
+Efeito da variação da temperatura no Índice de Emulsificação de 59 
+Figura 16 – 
+emulsão formada com diesel (■) e na atividade superficial (■) do 
+biossurfactante produzido por Bacillus subtilis LAMI005. Barras de 
+erro representam o desvio padrão. 
+Figura 17 – Ilustração da obtenção de dados para a construção dos diagramas de 61 
+fases, com composições de 20 a 90% (v/v) de solução de 
+biossurfactante. a. Condição inicial (surfactina – querosene); b. 
+Condição inicial (surfactina – diesel); c. Condição final após ser 
+submetido a 90ºC (surfactina – querosene); d. Condição final após ser 
+submetido a 90ºC (surfactina – diesel). 
+Figura 18 – Diagramas de fases para o sistema de composição A/O em função da 62 
+temperatura. (1) Querosene; (2) Diesel. E - fase emulsionada; A – fase 
+aquosa; O - fase óleo. 
+Índice de Germinação (■) e crescimento das raízes (■) da espécie 64 
+Figura 19 – 
+Lactuca sativa em diferentes concentrações do biossurfactante 
+produzido por LAMI005 em suco de caju. Barras de erro representam o 
+desvio padrão. 
+Taxa de mortalidade da espécie Artemia salina em diferentes 65 
+Figura 20 – 
+concentrações do biossurfactante produzido por LAMI005. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE TABELAS 
+ 
+Remoção de hidrocarbonetos de areia contaminada. 67 
+Tabela 1 – 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE SÍMBOLOS 
+ 
+IE Índice de emulsificação 
+24
+H Altura da fase emulsionada 
+FE
+H Altura total da solução 
+TOTAL
+%GS Porcentagem de germinação de sementes 
+%GE Porcentagem de germinação no extrato 
+%GC Porcentagem de germinação no controle 
+%CR Porcentagem de crescimento da raiz 
+MCE Crescimento no extrato (média) 
+MCC Crescimento no controle (média) 
+CL Concentração letal para 50% da população 
+50
+ppm Partes por milhão 
+δ 
+Deslocamento químico em ressonância magnética nuclear de hidrogênio 
+H
+δ Deslocamento químico em ressonância magnética nuclear de carbono 
+C
+A Fase aquosa 
+O Fase óleo 
+E Fase emulsionada 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+ 
+1 INTRODUÇÃO................................................................................................ 15 
+2 REVISÃO BIBLIOGRÁFICA........................................................................ 17 
+2.1 Surfactantes e biosssurfactantes..................................................................... 17 
+2.2 Classificação dos biossurfactantes.................................................................. 18 
+2.3 Aplicação dos biossurfactantes....................................................................... 21 
+22 
+2.3.1 Biorremediação................................................................................................. 
+2.3.2 Recuperação melhorada do petróleo................................................................ 22 
+2.3.3 Indústrias de alimentos e cosméticos............................................................... 23 
+2.3.4 Aplicações terapêuticas..................................................................................... 23 
+2.4 Propriedades funcionais dos biossurfactantes............................................... 24 
+2.5 A utilização de substratos alternativos na produção de biossurfactantes.. 26 
+2.6 Surfactina.......................................................................................................... 27 
+30 
+2.7 Recuperação e elucidação estrutural da surfactina...................................... 
+3 MATERIAIS E MÉTODOS........................................................................... 32 
+3.1 Produção do biossurfactante........................................................................... 32 
+3.1.1 Substrato e meios de cultura............................................................................. 32 
+3.1.2 Produção do biossurfactante............................................................................ 33 
+3.2 Extração e purificação do biossurfactante..................................................... 33 
+33 
+3.2.1 Extração líquido-líquido................................................................................... 
+3.2.2 Cromatografia em coluna de fase reversa C18................................................ 34 
+3.3 Análise estrutural do biossurfactante............................................................ 35 
+3.3.1 Espectroscopia de Infravermelho (FTIR)........................................................ 35 
+35 
+3.3.2 Ressonância Magnética Nuclear (RMN)......................................................... 
+3.3.3 Espectrometria de Massa de Alta Resolução................................................... 36 
+3.4 Caracterização físico-química do biossurfactante........................................ 36 
+3.4.1 Tensão superficial e determinação da Concentração Micelar Crítica 
+(CMC)................................................................................................................ 36 
+3.4.2 Índice de Emulsificação e estabilidade da emulsão......................................... 37 
+3.4.3 Avaliação da estabilidade do biossurfactante (efeito do pH, da salinidade e 
+37 
+da temperatura)................................................................................................. 
+3.5 Diagrama de fases............................................................................................ 38 
+ 
+ 
+38 
+3.6 Testes de toxicidade......................................................................................... 
+3.6.1 Teste de germinação com Lactuca sativa......................................................... 39 
+3.6.1.1 Procedimento de teste........................................................................................ 39 
+3.6.2 Bioensaio toxicológico frente às larvas de Artemia salina ............................. 41 
+3.7 Aplicação do biossurfactante na remoção de hidrocarbonetos 
+contaminantes de areia.................................................................................... 41 
+4 RESULTADOS E DISCUSSÕES................................................................... 43 
+43 
+4.1 Caracterização estrutural do biossurfactante purificado............................ 
+4.2 Tensão superficial e determinação da Concentração Micelar Crítica 
+(CMC)............................................................................................................... 50 
+4.3 Índice de emulsificação e estabilidade da emulsão....................................... 52 
+4.4 Efeito do pH, da força iônica e da temperatura na atividade do 
+biossurfactante................................................................................................. 55         
+4.4.1 Efeito do pH....................................................................................................... 55 
+57 
+4.4.2 Efeito da força iônica........................................................................................ 
+4.4.3 Efeito da temperatura....................................................................................... 58 
+4.5 Diagramas de fases........................................................................................... 60 
+4.6 Bioensaios toxicológicos................................................................................... 63 
+4.6.1 Teste de germinação com Lactuca sativa......................................................... 63 
+4.6.2 Teste de mortalidade do microcrustáceo da espécie Artemia salina............... 64 
+4.7 Aplicação do biossurfactante na remoção de hidrocarbonetos 
+contaminantes de areia.................................................................................... 66 
+5 CONCLUSÕES................................................................................................ 68 
+ REFERÊNCIAS............................................................................................... 69 
+87 
+ ANEXO A......................................................................................................... 
+ ANEXO B.......................................................................................................... 89 
+ ANEXO C......................................................................................................... 95 
+97 
+ ANEXO D......................................................................................................... 
+ ANEXO E.......................................................................................................... 99 
+   
+ 
+15 
+ 
+Capítulo 1 – Introdução                                                                                                                     Felix, A. K. N. 
+1 – INTRODUÇÃO 
+ 
+ 
+Os surfactantes são agentes ativos de superfície que reduzem a energia livre do 
+sistema substituindo parte das moléculas, na interface, com alta energia, o que diminui a 
+tensão superficial e interfacial dos líquidos (BUENO, 2010). São moléculas anfipáticas com 
+frações hidrofílicas e hidrofóbicas que se particionam nas interfaces óleo/água ou ar/água, 
+fases que possuem pontes de hidrogênio e diferentes graus de polaridade (FRACCHIA et al., 
+2012; BANAT, 2010). A porção apolar é uma cadeia hidrocarbonada e a porção polar pode 
+ser iônica (catiônica ou aniônica), não-iônica ou anfotérica (DESAI e BANAT, 1997). Todas 
+essas características inerentes aos surfactantes os permitem formar microemulsões, onde os 
+hidrocarbonetos se solubilizam em água ou a água se solubiliza em hidrocarbonetos (RON e 
+ROSENBERG, 2001). 
+ Uma propriedade fundamental dos surfactantes é sua capacidade de formar micelas 
+(agregados) que são compostos formados a baixas concentrações em água, com estabilidade 
+termodinâmica e facilmente reprodutíveis (MRESTANI et al., 2000). A concentração mínima 
+para iniciar a formação desses agregados (micelas) chama-se Concentração Micelar Crítica 
+(CMC) e, é um dos índices mais utilizados para a avaliação da atividade surfactante, podendo 
+também ser definida, como a solubilidade de um surfactante dentro da fase aquosa (RUFINO, 
+2006; BARROS et al., 2007). As características básicas que determinam um bom surfactante 
+são a eficiência, medida através da CMC, e a efetividade, que está relacionada com as tensões 
+superficiais e interfaciais, essas dois atributos habilitam os surfactantes para aplicações em 
+setores industriais que exijam processos de: lubrificação, capacidade espumante, detergência, 
+capacidade molhante, emulsificação, solubilização e dispersão de fases (NITSCHKE e 
+PASTORE, 2002; BARROS et al., 2007). 
+A grande maioria dos surfactantes disponíveis comercialmente hoje em dia são 
+quimicamente sintetizados a partir do petróleo (NITSCHKE e PASTORE, 2002). Dado que os 
+surfactantes químicos são derivados de produtos petrolíferos, caros e, potencialmente, uma 
+ameaça ambiental, devido sua natureza recalcitrante, torna-se evidente a necessidade da busca 
+por biossurfactantes como alternativa para substituição aos existentes (BARROS et al., 2008).  
+Biossurfactantes são moléculas com atividade superficial, recuperados dos 
+metabólicos de bactérias, fungos e leveduras, sintetizados a partir de diversos substratos como 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+16 
+ 
+Capítulo 1 – Introdução                                                                                                                     Felix, A. K. N. 
+açúcares, óleos, alcanos e resíduos agroindustriais (CAMEOTRA e MAKKAR, 2004; 
+NITSCHKE E PASTORE, 2002; MESQUITA, 2004).  
+O que torna os biossurfactantes comparáveis ou superiores aos surfactantes sintéticos 
+quanto à sua eficiência, é a possibilidade de sua produção a partir de substratos renováveis 
+utilizando diferentes espécies microbianas, com inúmeras combinações, o que resulta em 
+compostos com características estruturais e propriedades físicas distintas, específicas e 
+seletivas (REISER et al., 1989). A superioridade dos biossurfactantes é enaltecida nas 
+vantagens que estes exercem sobre os seus análogos químicos: menor toxicidade, maior 
+biodegradabilidade, biocompatibilidade, elevada estabilidade em extremos de temperatura, pH 
+e salinidade (CANET et al., 2002; APARNA et al., 2012; MEDEIROS, 2007). Contudo, sua  
+produção apresenta problemas como o alto custo dos substratos aliado aos métodos 
+ineficientes de recuperação (NITSCHKE E PASTORE, 2006). Assim, para aumentar a 
+utilização industrial de biossurfactantes, o custo de produção deve ser equiparado ao dos 
+surfactantes sintéticos e, com inúmeras possibilidades de rejeito orgânico disponíveis no 
+Brasil, uma possível estratégia para alcançar este objetivo é o uso dessas matérias primas 
+como alternativa, um exemplo é o caju, um produto com 80% de seu total desperdiçado 
+(OLIVEIRA et al., 2013). 
+O objetivo deste trabalho foi estudar a aplicabilidade do biossurfactante em 
+biorremediação de solo contaminado, avaliar seu efeito toxicológico a partir da realização de 
+testes sobre sementes de alface Lactuca sativa e sobre o microcrustáceo Artemia salina. O 
+biossurfactante produzido também foi analisado por metodologias qualitativas e quantitativas, 
+tais como, cromatografia líquida de alta eficiência (CLAE), ressonância magnética nuclear 
+113
+(RMN) nas frequências do H e C, espectroscopia na região do infravermelho (IV), tensão 
+superficial e CMC, estabilidade em diferentes condições de pH, temperatura e salinidade e 
+avaliação na formação de emulsões através da construção de diagramas de fases. 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+17 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+2 – REVISÃO BIBLIOGRÁFICA 
+ 
+ 
+2.1 Surfactantes e biossurfactantes 
+ 
+ 
+Os surfactantes são agentes superficiais ativos que diminuem a tensão superficial e 
+interfacial dos líquidos, reduzindo a energia livre do sistema ao substituir as moléculas de 
+alta energia na interface (BUENO, 2010).  São moléculas anfipáticas com frações 
+hidrofílicas e hidrofóbicas que se particionam na interface entre fases fluidas (óleo/água ou 
+ar/água) com diferentes graus de polaridade e pontes de hidrogênio (BANAT, 2010; 
+FRACCHIA et al., 2012). A porção apolar é formada por hidrocarbonetos de cadeias 
+alifáticas, grupos aromáticos ou policíclicos (LIMA, 2007), e a porção polar pode ser iônica 
+(catiônica ou aniônica), não-iônica ou anfotérica (DESAI e BANAT, 1997). Essas 
+características inerentes aos surfactantes os permitem formar microemulsões, onde os 
+hidrocarbonetos se solubilizam em água ou a água se solubiliza em hidrocarbonetos (RON e 
+ROSENBERG, 2001). Outra propriedade fundamental dos surfactantes é sua capacidade em 
+formar micelas, onde a concentração mínima na qual se inicia a formação destas é chamada 
+Concentração Micelar Crítica (CMC) (BARROS et  
+al., 2007). 
+Os surfactantes que existem atualmente são quimicamente sintetizados a partir 
+do petróleo, não degradáveis e seu processo de produção e geração de subprodutos podem 
+ser ambientalmente danosos, podendo causar toxicidade (MAKKAR e CAMEOTRA, 
+2002), com isso, a demanda por produtos surfactantes obtidos biotecnologicamente, vem 
+crescendo e, isso se deve ao fato de este ser compatível ambientalmente, apresentar elevada 
+eficácia, o que interfere diretamente nos dividendos de indústrias que utilizam essas 
+biomoléculas  (AL-BAHRY et al., 2012). 
+O nome biossurfactante é dado a um grupo estruturalmente variado, de 
+metabólicos de origem microbiana com diferentes estruturas químicas e propriedades de 
+superfície, propriedades essas comuns aos surfactantes sintéticos (BOSCH, 1988; 
+ 
+CAMEOTRA e MAKKAR, 1998).
+Ao final da produção, os biossurfactantes podem ficar retidos na parede celular ou 
+serem liberados para o meio, ao permanecerem na superfície celular microbiana, essas 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+18 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+biomoléculas auxiliam no transporte de substratos insolúveis através da membrana 
+(NITSCHKE e PASTORE, 2002). Quando segregados, emulsionam e solubilizam 
+hidrocarbonetos ou compostos insolúveis em água, favorecendo o crescimento e 
+desenvolvimento desses micro-organismos em substratos de natureza apolar, além de 
+influenciarem na adesão e liberação da célula a superfícies (NITSCHKE e PASTORE, 
+2002; MANEERAT e PHETRONG, 2007; VIRAMONTES-RAMOS et al.,  
+2010).
+Pesquisas com biossurfactantes vêm se intensificando nas últimas décadas, devido 
+às diversas vantagens oferecidas por eles quando comparados aos homólogos sintéticos, 
+como: menor tensão superficial a menores concentrações; maior estabilidade frente às 
+condições extremas de temperatura, pH e salinidade; alta biodegradabilidade na água e no 
+solo; especificidade devido sua grande diversidade química; baixa toxicidade; síntese a partir 
+de fontes de carbono renováveis; possibilidade de modificação de sua estrutura química e 
+suas propriedades físicas por meio de manipulações genéticas, biológicas ou químicas 
+(COOPER e PADDOCK, 1984; MULLIGAN e GIBBS, 1989; BANAT, 1993; DESAI e 
+BANAT, 1997; MAKKAR e CAMEOTRA, 1998; BOGNOLO, 1999; MAKKAR e 
+CAMEOTRA 1999; SCHIPPERS et al., 2000; MAKKAR e CAMEOTRA, 2002; 
+EDWARDS et al, 2003; MAKKAR e ROCKNE, 2003; DAS e MUKHERJEE, 2005; ILORI 
+et al., 2005; MANEERAT, 2005; SEPAHY et al., 2005; MUKHERJEE et al., 2006; ROCHA 
+et al., 2007). 
+Não obstante, o uso de biossurfactantes em larga escala ainda encontra-se em fase 
+inicial, devido seu alto custo de produção, de substratos caros, métodos imperitos de 
+recuperação dos produtos e baixo rendimento de produção (NITSCHKE e PASTORE, 2002). 
+ 
+ 
+2.2 Classificação dos biossurfactantes 
+ 
+ 
+Os biossurfactantes são classificados de acordo com sua composição e o micro-
+organismo de origem, já os surfactantes sintéticos são classificados de acordo com a 
+natureza do seu grupo polar (NITSCHKE e PASTORE, 2002). Nas principais classes estão 
+os glicolipídeos, fosfolipídeos e ácidos graxos, lipopeptídeos e lipoproteínas, surfactantes 
+particulados e surfactantes poliméricos (DESAI e BANAT, 1997; NITSCHKE e PASTORE, 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+19 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+2002). 
+No grupo dos biossurfactantes de baixo peso molecular, considerados os mais 
+efetivos na redução da tensão superficial, estão os glicolipídeos e os lipopeptídeos (LIN, 
+1996). Já no grupo dos biossurfactantes de alto peso molecular, que atuam como 
+dispersantes, estão os polissacarídeos, as proteínas, os lipopolissacarídeos, lipoproteínas 
+ou complexos de mistura desses biopolímeros (RON e ROSENBERG, 2002). 
+ 
+ 
+Glicolipídeos 
+ 
+ 
+Os glicolipídeos são moléculas de carboidratos - glicose, manose, galactose ou 
+ramnose - combinados com ácidos alifáticos de cadeias longas, entre muitos, os mais 
+conhecidos são os soforolipídeos, ramnolipídeos e os trealolipídeos (HOLMBERG, 2001; 
+LIMA, 2008). 
+Os soforolipídeos, produzidos por leveduras da espécie Candida, apresentam um 
+carboidrato dimérico (soforose) ligado glicosidicamente ao grupo hidroxil do penúltimo 
+carbono do ácido graxo de cadeia longa (C16-C18) (LIMA, 2008). Têm suas propriedades 
+tensoativas mantidas em condições extremas de pH, NaCl e temperatura, apresentando 
+grande potencial como agente terapêutico (COOPER e PADDOCK, 1984; LIMA, 2008).  
+Os ramnolipídeos são biosurfactantes produzidos por cepas de Pseudomonas 
+aeruginosa, possuem em sua estrutura ramnose ligada à ácido β-hidroxidecanóico, onde 
+sete de seus homólogos já tiveram sua estrutura determinada (ABALOS et al., 2001; LIMA, 
+2008). 
+Os trealolipídeos são surfactantes que apresentam tamanho e estrutura 
+determinados pelo organismo de origem - Mycobacterium, Nocardia e 
+ ácido micólico 
+Corynebacterium – nestes a molécula de trealose está ligada ao
+(ASSELINEAU e ASSELINEAU, 1978; GAUTAM e TAYAGI, 2006). 
+   
+ 
+ 
+Fosfolipídeos, ácidos graxos e lipídeos neutros
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+20 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+Ao utilizar alcanos como fonte de carbono e de energia, as bactérias e leveduras 
+aplicadas em um processo de produção, sintetizam grandes quantidades de ácidos graxos e 
+fosfolipídeos surfactantes (CIRIGLIANO e GARMAN, 1984). O comprimento da cadeia 
+hidrocarbônica nas estruturas desses biossurfactantes é diretamente relacionado ao seu 
+balanço hidrófilo-lipófilo (HLB) (LIMA, 2008). 
+Os lipídeos neutros englobam os ácidos graxos, triacilgliceróis e ácidos micólicos, 
+onde a maioria apresenta algum grau de atividade tensoativa (COOPER e ZAJIC, 1980; 
+LIMA, 2008). 
+ 
+ 
+ 
+Lipopeptídeos e lipoproteínas
+ 
+ 
+Lipopeptídeos e lipoproteínas são os chamados surfactantes lipoprotéicos, 
+apesentam potencial atividade antimicrobiana (LIMA, 2008) e possuem estrutura cíclica 
+(VATER et al., 2002), os mais relatados são, micosubtilisina (PEYPOUX et al., 1976), 
+bacilomicina (PEYPOUX et al., 1984) e surfactina, iturina, fengicina, liquenisina (VATER 
+et al., 2002). A surfactina possui um ácido graxo β-hidroxi e a iturina, por sua vez 
+apresenta um ácido graxo β-amino, como componente lipofílico, e por isso são chamados de 
+são ciclolipoheptapeptídeos (LIMA, 2008).  
+ 
+ 
+Surfactantes particulados 
+ 
+ 
+Entende-se por biossurfactantes particulados, as células microbianas e vesículas 
+extracelulares com atividades tensoativas e elevada hidrofobicidade superficial, como por 
+exemplo, algumas espécies de cianobactérias e patógenos – S. aureus e Serratia sp. (LIMA, 
+2008).  As bactérias do gênero Acinetobacter sp., quando crescem em meio com 
+hexadecano, produzem vesículas extracelulares com elevada atividade surfactante que captam 
+alcanos para a célula (GAUTAM e TAYAGI, 1979). 
+Embora as funções ainda não tenham sido totalmente elucidadas, grande número de 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+21 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+micro-organismos tem se mostrado capaz de produzir compostos com variada atividade 
+superficial (LIMA, 2008). 
+ 
+ 
+Surfactantes poliméricos 
+ 
+ 
+Lipopolissacarídeos ou biossurfactantes poliméricos são polissacarídeos ligados 
+covalentemente a ácidos graxos, e os mais conhecidos são o liposan, o emulsan e a 
+manoproteína (LIMA, 2008).  
+Liposan é um emulsificante produzido de forma extracelular a partir da C. lipolytica, 
+composto, aproximadamente, de 83% de carboidrato e 17% de proteínas, suas propriedades 
+emulsificantes e estabilizantes se equiparam à surfactantes comerciais (CIRIGLIANO e 
+GARMAN, 1985).  
+Emulsan, o primeiro surfactante microbiano a ser produzido e comercializado em 
+larga escala, é um bioemulsificante extracelular, caracterizado como um heteropolissacarídeo 
+polianiônico e considerado um dos emulsificantes mais efetivos (FERRAREZZO, 1998; 
+ROSENBERG e RON, 1999). 
+ A manoproteína é sintetizada pela S. cerevisiae, em um processo biotecnológico 
+simples, de larga escala e de baixo custo, com excelente atividade emulsificante frente 
+a diferentes óleos, alcanos e solventes orgânicos e estável em uma larga faixa de pH 
+(CAMERON et al., 1988; BARROS et al., 2007). 
+ 
+ 
+2.3 Aplicação dos biossurfactantes 
+ 
+ 
+Os biossurfactantes são compostos que possuem ampla diversidade química com 
+propriedades para aplicações específicas, sua aplicação comercial é determinada por seu 
+custo de produção e suas propriedades em relação aos surfactantes sintéticos, no entanto, sua 
+utilização industrial em larga escala ainda não é competitiva devido aos altos custos de 
+produção (DESAI e BANAT, 1997; NITSCHKE e PASTORE, 2002; RODRIGUES et al., 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+22 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+2006; FARIA, 2010). No entanto, em um futuro próximo, os biossurfactantes poderão se 
+tornar compostos de aplicação comum nas indústrias, devido sua baixa toxicidade, 
+biodegradabilidade e versatilidade (NITSCHKE e PASTORE, 2002). 
+Os biossurfactantes são moléculas com aplicabilidade em diferentes setores, entre os 
+quais podemos citar a 
+biorremediação, recuperação melhorada do petróleo, indústria de 
+cosméticos e alimentos, aplicações terapêuticas e nanotecnologia (FARIA, 2010). 
+ 
+ 
+2.3.1 Biorremediação 
+ 
+ 
+Na remediação de água e solo contaminados por compostos hidrofóbicos, a atuação 
+dos biossurfactantes consiste em emulsificar misturas de hidrocarbonetos, auxiliando na 
+biodegradação de contaminantes orgânicos em água e solo (LIN, 1996; FARIA, 2010). De 
+acordo com ZHANG e MAIER, 1992, duas explicações dão amparo científico para esse tipo 
+de biodegradação: (i) maior acessibilidade dos compostos hidrofóbicos à célula devido o 
+aumento da solubilidade; (ii) aumento da hidrofobicidade através da interação dos 
+surfactantes com a superfície celular. 
+ 
+ 
+2.3.2 Recuperação melhorada do petróleo 
+ 
+ 
+A utilização de micro-organismo e seus metabólitos na recuperação de petróleo são 
+o óleo residual que permanece nos reservatórios após os 
+aplicados no resgate d
+procedimentos de recuperação primária e secundária (BANAT, 1995; BANAT et al., 2000; 
+FARIA, 2010). Em cooperação à essa tecnologia tem-se os biossurfactantes, que atuam 
+na redução da tensão interfacial e das forças capilares entre óleo/rocha, permitindo a retirada 
+do óleo presente nos poros da rocha,  pois sofrem emulsificação (BANAT  et  al.,  2000; 
+NITSCHKE e PASTORE, 2002; FARIA, 2010).   
+No entanto, para a aplicação dos biossurfactantes na MEOR- Microbial 
+Enhanced Oil Recovery, três técnicas podem ser aplicadas de forma isolada ou 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+23 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+associadas, são elas: (i) adição dos biossurfactantes nos reservatórios; (ii) adição 
+de micro-organismo nos reservatórios, para que a produção do biossurfactante 
+ocorra na interface óleo-água; (iii) estimulação dos micro-organismo nativos par a produção 
+de biossurfactantes através da inserção  de nutrientes apropriados no próprio reservatório 
+(BANAT, 1995).    
+ 
+ 
+2.3.3 Indústria de alimentos e cosméticos 
+ 
+ 
+O aumento da exigência pelos consumidores, por produtos naturais e biodegradáveis 
+no processamento de alimentos e cosméticos tem diminuído a demanda na procura por 
+compostos sintéticos (SHEPHERD et al., 1995; FARIA, 2010). Dentro dessas imposições, os 
+biossurfactantes apresentam todos os requisitos. 
+Na indústria de alimentos, os biossurfactantes podem atuar na formação da 
+consistência e da textura, na dispersão de fases, na solubilização de aromas e na prevenção da 
+formação de biofilmes (BANAT et al., 2000; BANAT, 2000; NITSCHKE e PASTORE, 
+2002; FARIA, 2010).   
+Já na indústria farmacêutica e de higiene pessoal, os surfactantes biológicos podem 
+atuar como umectantes por apresentarem boa compatibilidade com a pele e aceitabilidade 
+ecológica (BROWN, 1991; BANAT et al., 2000; NITSCHKE e PASTORE, 2002). 
+Outras características apresentadas pelos biossurfactantes como solubilização, 
+detergência, dispersão, emulsificação e formação de espumas, possibilita sua utilização em 
+uma infinidade setores industriaisFARIA, 2010
+ (BANAT et al., 2000; ). 
+ 
+2.3.4 Aplicações terapêuticas 
+ 
+A atuação dos biossurfactantes como agentes terapêuticos e medicamentos sintéticos 
+no combate à doenças fez com que seu uso comercial tenha aumentado nos últimos anos 
+(ARIMA et al., 1968; PEYPOUX et al., 1999; NITSCHKE e PASTORE, 2002; 
+RODRIGUES et al., 2006; FARIA, 2010). Sua atuação ocorre com a desestruturação de 
+membranas a partir da emulsificação de lipídios, lipoproteínas e fosfolipídios (FARIA, 2010). 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+24 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+O interesse biotecnológico e farmacêutico pela surfactina tem crescido devido sua 
+expressiva atividade de superfície e potencial antimicrobiano, além de ser relacionada a 
+diversas propriedades biológicas, como atividade antimicrobiana, antitumoral, anti-
+inflamatória e antiviral, sendo a última relacionada, principalmente, às interações físico-
+químicas entre o biossurfactante e a bicamada lipídica (DESAI e BANAT, 1997; KIM et al., 
+1998; SEYDLOVÁ e SVOBODOVÁ,  2008; FARIA, 2010). 
+RODRIGUES et al. (2006) e FERNANDES et al. (2007) mostraram, 
+respectivamente, a ação de surfactantes lipopeptídicos produzidos por  Bacillus e da surfactina 
+contra várias linhagens bacterianas. 
+ 
+ 
+2.4 Propriedades funcionais dos biossurfactantes 
+ 
+ 
+Os surfactantes substituem parte das moléculas de alta energia na interface, 
+reduzindo a energia livre do sistema, que por sua vez diminui a tensão superficial e 
+interfacial dos líquidos (BUENO, 2010). A tensão superficial acontece na interface ar-água 
+(na superfície do sistema), onde forças coesivas se acumulam, já as forças coesivas entre 
+moléculas de água da tensão interfacial se agrupam na interface óleo/agua (no interior do 
+sistema), conforme mostrado na Figura 1(BARRETO, 2011).   
+ 
+Figura 1 – Organização das moléculas na (1) tensão superficial e (2) interfacial (Barreto, 2011). 
+ 
+As tensões superficial e a interfacial sofrem redução quando na presença de agentes 
+-1  
+tensoativos, podendo diminuir a tensão superficial da água de 72 para 35 mN.me a 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+25 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+-1 
+tensão interfacial do sistema água/n-hexadecano de 40 para 1 mN.m(MULLIGAN, 2005).  
+Os surfactantes também têm a capacidade de formar grandes agregados de dimensões 
+coloidais, chamados micelas, compostos com estabilidade termodinâmica, de fácil 
+reprodução e, formados a baixas concentrações em água, sendo essa concentração mínima 
+para a formação de micelas, micelização, chamada de Concentração Micelar Crítica (CMC) 
+(PELIZZETI e PRAMAURO, 1985; MRESTANI et al., 2000; MANIASSO, 2001).   
+A formação das micelas acontece em curtos intervalos de alteração na concentração 
+do surfactante e isso pode ser detectado através das grandes alterações nas propriedades 
+físico-químicas da solução (MANIASSO, 2001; RIZZATTI et al., 2009). Acima da CMC, as 
+moléculas do tensoativo formam micelas com 30-200 monômeros (Figura 2), em solução 
+aquosa essas micelas apresentam caudas hidrofóbicas com orientação para o interior e grupos 
+hidrofílicos ou carregados, orientados para o exterior (MANIASSO, 2001; MORAES e 
+REZENDE, 2004; BARRETO, 2011). Abaixo da CMC, o tensoativo está predominantemente 
+na forma de monômeros (MORAES e REZENDE, 2004; CORRER et al., 2007; BARRETO, 
+2011). 
+ 
+Figura 2 – Relação da tensão superficial com a concentração de surfactante no sistema. Em destaque a CMC, 
+momento em que as micelas começam a ser formadas (Barreto, 2011). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A CMC, também definida como a solubilidade de um surfactante dentro da fase 
+aquosa, é um dos índices mais utilizados para a avaliação da atividade surfactante (RUFINO, 
+2006).  A caracterização de um bom surfactante se dá pela eficiência que é medida através da 
+CMC e, pela efetividade que está relacionada com as tensões superficiais e interfaciais do 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+26 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+sistema (BARROS et al., 2007). 
+As micelas se particionam devido à presença das frações hidrofílicas e hidrofóbicas 
+na composição dos biossurfactantes, a partição acontece nas interfaces óleo/água ou ar/água, 
+que possuem diferentes graus de polaridade e pontes de hidrogênio (FRACCHIA et al., 
+2012; BANAT, 2010). Essa diferença de polaridade - porção apolar composta de uma cadeia 
+hidrocarbonada e a porção polar pode ser iônica, não-iônica ou anfotérica - permite aos 
+surfactantes a formação de microemulsões onde os hidrocarbonetos se solubilizam em água 
+ou a agua nestes (DESAI e BANAT, 1997; RON e ROSENBERG, 2001). 
+ 
+ 
+2.5 A utilização de substratos alternativos na produção de biossurfactantes 
+ 
+ 
+A surfactina não é explorada comercialmente principalmente devido seu elevado 
+custo de produção devido a utilização de substratos caros, processos ineficientes de 
+recuperação e baixo rendimento (NITSCHKE e PASTORE,  2006; BARRETO, 2011), 
+entretanto apresenta vantagens se comparada aos surfactantes existentes (sintéticos), 
+especialmente no ramo econômico, ao considerar a absorção dos elevados valores de 
+produção com a adição desse composto em formulações industriais de alto valor agregado 
+(VELIKONJA e KOSARIC, 1993), o que sugere potencial aplicação industrial para esse 
+lipopeptídeo BARROS et al., 2007).  
+(
+Assim, visando o aumento do uso industrial de biossurfactantes, com um custo de 
+produção competitivo quando comparado aos surfactantes sintéticos, a utilização de resíduos 
+agroindustriais como matérias-primas alternativas para substrato na produção destes em 
+escala industrial, é estrategicamente possível (BARROS et al., 2007) e ambientalmente correto.  
+Com a produção industrial da surfactina ainda não especificada, aliada ao grande 
+montante de resíduos agroindustriais gerados anualmente, a utilização desses rejeitos 
+como substrato em processos biotecnológicos parece ser uma alternativa  
+plausível
+(PANDEY et al., 2000; BARROS et al., 2007).  
+BARROS  et  al.  (2007)  descreveram  a  importância  da utilização de resíduos 
+industriais como insumo em bioprocessos, segundo os autores, a utilização desses rejeios na 
+linha de produção de biossurfactantes, viabiliza a implantação desses processos em escala 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+27 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+industrial, no entanto, para a síntese desses compostos se faz necessário um 
+balanço de nutrientes para desenvolver condições ideais de produção. 
+Dentro desse contexto, o suco de caju é um potencial substrato para a produção de 
+surfactina, visto que em estudo realizado por OLIVEIRA et al. (2013), o Bacillus subtilis 
+-1
+LAMI005 em meio contendo suco de caju, foi capaz de produzir 220 mg.L. 
+O cajueiro é uma planta originaria da região Nordeste do país, embora 
+esteja presente em todo o território brasileiro. Para o agronegócio, o caju apresenta 
+grande diversidade de derivados: da castanha, que é o fruto verdadeiro, obtêm-se a 
+amêndoa (ACC) e o líquido da casca (LCC), geralmente voltados para a exportação, 
+constituindo o sustentáculo econômico do agronegócio caju; e do pedúnculo do caju 
+(pseudofruto), fabrica-se bebidas, doces, que são, quase que em sua totalidade, consumidos 
+em âmbito regional (EMBRAPA). Devido a grande desvalorização do pedúnculo, calcula-se 
+que cerca de 80% do pedúnculo produzido é desperdiçado, assim vislumbra-se o 
+aproveitamento deste co-produto na viabilização da utilização da surfactina (OLIVEIRA, 
+2010). 
+Diversos autores já estudaram muitos outros substratos alternativos na produção de 
+biosusrfactantes, como SOUSA et al. (2011) que estudaram a produção de ramnolipídeos a 
+partir  de um  co-produto  do  biodiesel,  co-produto  este também utilizado  na produção  de 
+surfactina, em estudo desenvolvido por SOUSA, 2011. 
+ 
+ 
+2.6 Surfactina 
+ 
+ 
+A surfactina tem sido alvo de diversas pesquisas que exploram sua excepcional 
+atividade surfactante, e é considerada o principal e mais efetivo surfactante produzido por 
+linhagens de Bacillus subtilis (BARROS et al., 2007). 
+Esse lipopeptídeo, inicialmente descrito em 1968, por ARIMA, KAKINUMA e 
+TAMURA, foi assim denominado devido seu caráter tensoativo muito evidente, mas sua 
+exploração só se deu a partir de 1980, no entanto pesquisas sobre a molécula e seus micro-
+organismos produtores continuam bastante intensas até hoje (PEYPOUX et al., 1999). A 
+surfactina é capaz de reduzir a tensão superficial da água e interfacial do sistema água/n-
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+28 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+-1-1
+hexadecano de 72 para 27 mN.m, e de 43 para 1 mN.m, respectivamente (NITSCHKE e 
+PASTORE, 2006). 
+Apesar de o gênero Bacillus ser bastante visado em pesquisas relacionadas à 
+produção de biossurfactantes, apenas 20 linhagens de Bacillus foram cadastradas como 
+produtoras de surfactina (HSIEH et al., 2004; BARRETO, 2011). A comercialização da 
+surfactina padrão, para utilização em pesquisas é realizada a R$ 88,00 o miligrama (SIGMA), 
+esse alto valor comprova a urgência em buscar novas cepas produtoras e substratos 
+alternativos, para aplicação e não, necessariamente, comercialização desse 
+biossurfactante (BARRETO, 2011). 
+A surfactina (Figura 3), produto gerado pela fermentação com Bacillus subtilis, 
+apresenta estruturalmente um peptídeo cíclico de sete aminoácidos ligados a uma cadeia de 
+ácido graxo β-hidróxi (13 a 15 átomos de carbono), o que permite diferentes homólogos e 
+isômeros, seu principal componente é a ligação lactona do ácido 3 hidroxi-13-metil-
+tetradecanóico (ARIMA et al., 1968; LANG, 2002; KOWALL  et  al.,  1998; KLUGE  et  
+al., 1988; COSTA, 2005; BARROS et al., 2007). 
+ 
+Figura 3 – Estrutura química da molécula de surfactina (Nitschke e Pastore , 2002). 
+ 
+ 
+ 
+ 
+ 
+ 
+A surfactina apresenta atividade biológica que depende da composição e da forma 
+como seus aminoácidos se organizam em cadeia e da estrutura de sua porção lipídica, 
+onde qualquer mudança estrutural pode alterar suas propriedades (KOWALL et al., 1998; 
+BARROS et al., 2007). 
+Outra característica inerente à surfactina é sua estabilidade frente à condições 
+extremas de pH,  temperatura,  força  iônica, pressão  e presença de  solventes  orgânicos 
+(CAMEOTRA e  MAKKAR,  1998). A surfactina também apresenta baixa CMC, alto 
+poder de redução da tensão superficial, além de diversas funções biológicas, como listado 
+abaixo 
+(ARIMA et al., 1968; COOPER et al., 1981; KIM et al., 1997; COSTA, 2005; 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+29 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+2004; BARROS et al., 2007 ). 
+NITSCHKE, 
+ Ação anticarcinogênica (BARROS, et al., 2007); 
+ atividade antitumoral (NITSCHKE, et al., 2004); 
+ inibição   da   formação   de   biofilmes   de   outras   bactéria   com  sua   ação 
+antimicrobiana e antifúngica (STEIN, 2005); 
+ ação antibiótica (NITSCHKE, et al., 2004); 
+ agente facilitador na absorção de fármacos (BARROS, et al., 2007); 
+ 
+atividade antiviral (BARROS, et al., 2007).
+Todas as propriedades apresentadas pela surfactina a caracterizam como uma 
+molécula biologicamente ativa e possibilita sua aplicação em diversos setores industriais 
+(BARROS, et al., 2007).  
+Apesar de a surfactina ser muito citada como agente tensoativo em processos de 
+remediação de águas e solos contaminados com poluentes orgânicos hidrofóbicos, o 
+aumento de sua aplicação é limitada, pois sua toxicidade ainda não é conhecida, 
+não se sabe como acontece a biodegradação dessas moléculas e de seus metabólitos 
+intermediários e, é incompreensível a interação do surfactante com poluentes orgânicos, 
+organismos e componentes do solo, o que manifesta carência de pesquisas sobre 
+biodegradabilidade e toxicidade de surfactantes (HAIGH, 1996; DI GIOIA et al., 2004; OU, 
+2000; LIMA, 2008).  
+Ao serem comparados aos surfactantes sintéticos, os tensoativos biológicos, em sua 
+grande maioria, apresentam alta compatibilidade com as membranas biológicas, logo 
+toxicidade inferior, principalmente ao citarmos as bactérias e outros organismos unicelulares, 
+o que estimula a decomposição bacteriana de substâncias orgânicas hidrofóbicas 
+(POREMBA et al., 1991; MORAN et al., 2000; HUA et al., 2003; MAKKAR e ROCKNE, 
+2003; MULLIGAN, 2005; LIMA, 2008).  
+Ao realizar testes de toxicidade espera-se estabelecer o impacto das substâncias 
+químicas em estudo sobre a biota do ambiente e, com a informação adquirida determinar o 
+tipo de tratamento e forma de aplicação (LIMA, 2008).  
+Os testes de ecotoxicidade são bastante úteis, pois podem ser avaliados em um 
+curto tempo (VAN BEELEN e DOELMAN, 1997). Dentre os bioensaios, tem-se o teste 
+com Artemia salina (microcrustáceo de água salgada) e o de fitotoxicidade sobre Lactuca 
+sativa (semente de alface), chamado de Teste de alongamento das raízes, ambos os testes 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+30 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+são simples e rápidos na resposta, além de apresentarem baixo custo de execução 
+(LUNA et al., 2005). Os ensaios de letalidade e os que levam em consideração a 
+germinação são muito utilizados em análises preliminares de toxicidade geral (LUNA et al., 
+2005; ANDRADE, 2009; SILVA et al., 2010). 
+ 
+ 
+2.7 Recuperação e elucidação estrutural da surfactina 
+ 
+ 
+Para a produção em larga escala, primeiramente, deve-se avaliar a quantidade de 
+biossurfactante produzida aliada à sua recuperação, sabendo que este processo depende de 
+fatores intrínsecos às moléculas biossurfactantes como, carga iônica, solubilidade e 
+localização (intracelular, extracelular ou ligadas à parede celular) (DESAI  e  BANAT,   
+1997; LIMA, 2008).  
+Diversos mecanismos são aplicados nos processos de extração, como a precipitação 
+com sal, extração por solvente, ultra-centrifugação, cromatografia de troca iônica, ultra-
+filtração, precipitação ácida e separação de espuma, sendo os dois últimos, os mais usados 
+para a recuperação de biossurfactantes (REILING et al, 1986; SHABTAI e GUTNICK, 
+1986; SEN e SWAMINATHAN, 2004; SEN e SWAMINATHAN, 2005; DUBEY,  2005; 
+MUKHERJEE et al., 2006; CHEN e JUAN, 2008; LIMA, 2008).   
+Embora muitos solventes sejam usados em processos de extração, o mais eficaz é a 
+mistura de clorofórmio e metanol, em diferentes proporções, facilitando assim o ajuste da 
+polaridade ao material a ser extraído, tornando o extrator mais específico (KUYUKINA et al., 
+2001; MESQUITA, 2004; LIMA, 2008).  
+Ao ajustar o pH do meio  ao  ponto  isoelétrico  do composto desejado, é possível 
+extrair, por  precipitação  ácida, a  surfactina  e  outros  biossurfactantes  produzidos  por  
+Bacillus (MULLIGAN e GIBBS, 1990). Em estudo realizado por CHEN e JUAN (2008), a 
+recuperação da surfactina produzida se deu por precipitação ácida seguida de 
+extração líquido-líquido, no entanto, no sistema de ELL a purificação foi mais efetiva, 
+provavelmente devido a uma pré-purificação com a adição do ácido ao meio. 
+A elucidação estrutural de biossurfactantes baseia-se em processos que acontecem 
+em curtos intervalos de tempo e com pequenas quantidades de amostra, são eles: ressonância 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+31 
+ 
+Capítulo 2 – Revisão Bibliográfica                                                                                                    Felix, A. K. N. 
+magnética nuclear (RMN), espectroscopia de infravermelho (IV) e espectrometria de massa 
+(EM), cromatografia líquida de alta eficiência (HPLC) com fase reversa, RMN e EM com  
+Bombardeamento de Átomos Rápidos (FAB-MS) e, Ionização/Dessorção  a Laser  Assistida 
+Tempo de Voo (MALDI-TOF) (BODOUR et al., 2004; LIMA, 2008). 
+por Matriz com 
+CHEN et al., 2006 determinaram a estrutura da surfactina de Bacillus subtilis 
+ATCC 21332 por meio de técnicas unidimensionais de RMN 1H e de EM-FAB, já 
+JAIN et 
+ recuperaram o biossurfactante de Klebsiella sp. por diálise e determinou sua 
+al., 2012, 
+estrutura por espectroscopia de RMN (1H e  13C) e espectros de absorção na região do 
+infravermelho. 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+32 
+ 
+Capítulo 3 – Materiais e Métodos                                                                                                      Felix, A. K. N. 
+3 – MATERIAIS E MÉTODOS 
+ 
+ 
+No presente capítulo, apresentam-se os materiais utilizados para o desenvolvimento 
+deste trabalho, assim como a metodologia empregada para a elucidação da estrutura molecular 
+do biossurfactante produzido, para a caracterização físico-química, para o estudo das 
+propriedades tensoativas e emulsionantes, e para a realização de testes toxicológicos do 
+biossurfactante produzido. Os experimentos foram realizados nos laboratórios do Grupo de 
+Pesquisa em Processos Biotecnológicos – GPBio/DEQ/UFC, no Centro Nordestino de 
+Aplicação e Uso de Ressonância Magnética Nuclear – CENAUREMN, no Laboratório de 
+Espectrometria de Massas do Nordeste – LEMANOR e na EMBRAPA Agroindústria 
+Tropical. 
+ 
+ 
+3.1 Produção do biossurfactante 
+ 
+ 
+3.1.1 Substrato e meios de cultura 
+ 
+ 
+Foi utilizado suco de caju clarificado como meio de cultivo, obtido a partir de caju da 
+espécie Anacardium occidentale L., fornecido pela Embrapa Agroindústria Tropical da 
+Universidade Federal do Ceará.   
+A cepa Bacillus sp., nomeada LAMI005, proveniente da coleção de culturas do 
+Laboratório de Embriologia e Biotecnologia (LEMBIOTECH) do Departamento de Biologia 
+-1
+da Universidade Federal do Ceará, foi mantida em meio APGE (peptona 5,0 g.L, glicose 5,0 
+-1-1-1
+g.L, extrato de levedura 2,5 g.L e ágar 15,0 g.L) e incubada em estufa bacteriológica a 
+30ºC por 24 horas e após, mantida sob refrigeração a 4ºC, sendo repicada a cada 60 dias. 
+Para a propagação do inoculo, o micro-organismo mantido sob refrigeração, foi 
+reativado em placas contendo meio APGE e incubado em estufa bacteriológica a 30ºC por 24 
+horas. Após este período, tempo em que a bactéria encontra-se na sua fase exponencial de 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+33 
+ 
+Capítulo 3 – Materiais e Métodos                                                                                                      Felix, A. K. N. 
+crescimento conforme OLIVEIRA (2010), três alçadas da cultura foram transferidas para 
+Erlenmeyer de 250 mL contendo 50 mL de meio estéril para o inoculo.  
+Os meios de cultura utilizados para a propagação do inoculo do micro-organismo 
+Bacillus subtilis LAMI005 e para a produção de biossurfactante, foram elaborados de acordo 
+com OLIVEIRA et al., (2013), aonde usou-se suco de caju clarificado com concentração de 
+-1
+ART (Açúcares Redutores Totais) de 22,92 g.L e sulfato de amônio ((NH)SO) na 
+424
+-1
+concentração de 1,0 g.L como suplementação defonte de nitrogênio. O pH do meio foi 
+ 
+-1-1
+ajustado para 7,0 com NaOH (3 mol.L) ou HCl (3 mol.L) e esterilizado em autoclave a 
+110ºC por 10 minutos. 
+ 
+ 
+3.1.2 Produção do biossurfactante 
+ 
+ 
+A densidade óptica do inoculo foi medida a 600 nm em espectrofotômetro 
+(Spectronic® 20 Genesys) e ajustada a uma faixa entre 0,10 – 0,20 a partir de diluições com o 
+meio de cultivo, para a padronização do número de células iniciais utilizadas em cada 
+experimento. A produção do biossurfactante foi realizada de acordo com OLIVEIRA et al., 
+(2013) com modificações, onde em frascos de Erlenmeyer de 500 mL foram adicionados 10% 
+de inoculo ao meio de cultivo para um volume final de 200 mL. Logo após, os frascos 
+inoculados foram incubados em agitador orbital a 180 rpm, 30ºC por 48 horas em condições 
+isotérmicas. 
+ 
+ 
+3.2 Extração e purificação do biossurfactante 
+ 
+ 
+3.2.1 Extração líquido-líquido 
+ 
+ 
+A extração do biossurfactante produzido foi realizada após a remoção das células do 
+meio por centrifugação a 10.000 g por 15 minutos a 4°C. A extração primária do 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+34 
+ 
+Capítulo 3 – Materiais e Métodos                                                                                                      Felix, A. K. N. 
+biossurfactante foi realizada por precipitação ácida, ajustando-se o pH do meio para 2,0 com 
+-1
+HCl 3 mol.L de acordo com COSTA (2005), seguido de incubação a 4°C “overnight”. O 
+biossurfactante precipitado, chamado de biossurfactante bruto, foi recuperado por 
+centrifugação a 10.000 g por 15 minutos a 4°C. 
+Após, o biossurfactante bruto foi submetido a um processo de extração líquido-
+líquido de acordo com YEH et al. (2005). Uma solução de biossurfactante em água 
+deionizada pH 8,0 e, cloreto de metileno, na proporção 1:1, foram colocados em funis de 
+separação, agitados por 5 minutos para homogeneização e deixados em repouso por uma hora 
+para a separação das fases. A fase contendo surfactina e solvente foi coletada em um béquer. 
+Estas operações foram repetidas três vezes.  
+Após evaporação do solvente, o extrato foi ressuspendido em álcool metílico e 
+filtrado em membrana (0,45 μm, Millipore, USA) e após evaporação do solvente, obteve-se o 
+biossurfactante semi-purificado.  
+ 
+ 
+3.2.2 Cromatografia em coluna de fase reversa C18 
+ 
+ 
+Para a obtenção do biossurfactante purificado, 300 mg do biossurfactante semi-
+purificado foram diluídos em 8 mL de metanol P.A., filtrado em membrana (0,45 μm, 
+Millipore, USA) e submetido à cromatografia de fase reversa utilizando cartucho de octadecil-
+sílica (HyperSep C18, 10 g/75 mL) como mostra a Figura 4.  
+ 
+Figura 4 – Coluna cromatográfica de fase reversa utilizada para a purificação do biossurfactante produzido por 
+Bacillus subtilis LAMI005 utilizando suco de caju. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+35 
+ 
+Capítulo 3 – Materiais e Métodos                                                                                                      Felix, A. K. N. 
+A eluição foi realizada com a mistura de solventes CHOH/HO (8:2), CHOH/HO 
+3232
+(9:1) e finalmente CHOH. Foram coletadas 41 frações em frascos de vidro, no volume de 5 
+3
+mL cada. Todas as frações foram analisadas visualmente e as que apresentaram precipitado 
+branco foram analisadas por Cromatografia Líquida de Alta Eficiência (CLAE). 
+Após análise por CLAE, com metodologia descrita por SOUSA (2011), as frações 29 
+a 35 foram reunidas e denominadas de F:29-35. O biossurfactante purificado foi devidamente 
+quantificado e submetido às análises espectroscópicas, tais como: espectroscopia na região do 
+113
+infravermelho (IV), Ressonância Magnética Nuclear (RMN H e C) e Espectrometria de 
+Massa de Alta Resolução (EMAR). Os espectros foram comparados com os dados de IV e 
+113
+RMN (H e C) da literatura de uma surfactina. 
+ 
+ 
+3.3 Análise estrutural do biossurfactante 
+ 
+ 
+3.3.1 Espectroscopia de Infravermelho (FTIR) 
+ 
+ 
+Os espectros de absorção na região do infravermelho (IV) foram obtidos em 
+espectrômetro Perkin-Elmer, modelo Spectrum 1000, utilizando-se pastilhas de KBr. 
+ 
+ 
+3.3.2 Ressonância Magnética Nuclear (RMN) 
+ 
+ 
+1
+Os espectros de ressonância magnética nuclear de próton (RMN H) e de carbono 13 
+13
+(RMN C), unidimensionais, foram obtidos em espectrômetros de marca Bruker modelo 
+Avance DPX300, operando na freqüência de hidrogênio a 300 MHz e na freqüência do 
+carbono 75 MHz, localizado no Centro Nordestino de Aplicação e Uso da Ressonância 
+Magnética Nuclear (CENAUREMN), da Universidade Federal do Ceará. O solvente 
+deuterado utilizado na dissolução das substâncias foi piridina (CDN), comercializado pela 
+55
+companhia Cambridge Isotope Laboratories. Os deslocamentos químicos (δ) expressos em 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+36 
+ 
+Capítulo 3 – Materiais e Métodos                                                                                                      Felix, A. K. N. 
+1
+ppm e referenciados para RMN H pelos picos dos hidrogênios pertencentes às moléculas 
+residuais não-deuteradas do solvente piridina (7,22; 7,58 e 8,73 ppm). Nos espectros de 
+carbono-13, os deslocamentos químicos foram referenciados pelos picos centrais dos 
+carbonos-13 do solvente piridina (δ150,35; 135,91; 123,87). 
+ 
+ 
+3.3.3 Espectrometria de Massa de Alta Resolução (EMAR) 
+ 
+  
+Os espectros de massa de alta resolução foram obtidos em espectrômetro de massa 
+modelo LCMS-IT-TOF (Liquid Chromatograph – Mass Spectrometry –  Ion Trap – Time of 
+Flight) (225-07100-34) - SHIMADZU, equipado com fonte de ionização por electrospray. 
+ 
+  
+3.4 Caracterização físico-química do biossurfactante 
+ 
+ 
+3.4.1 Tensão superficial e determinação da Concentração Micelar Crítica (CMC) 
+ 
+ 
+A concentração micelar crítica do biossurfactante bruto foi determinada pelo ponto 
+central de inflexão da curva do gráfico dado pela variação da tensão superficial em função da 
+concentração do biossurfactante semi-purificado. A tensão superficial foi medida segundo o 
+método de anel de Du Noüy, onde foi utilizado um tensiômetro Krüss modelo K6 (COSTA et 
+al., 2006). Baseando-se em SANTA ANNA et al. (2002), diluições sucessivas de solução na 
+-1
+concentração inicial de 250 mg.L de biossurfactante em água deionizada pH 8,0, tiveram a 
+tensão superficial medida em triplicata, até alcançar um valor constante e este se aproximar da 
+-1
+tensão superficial da água (72 mN.m), sendo os resultados representados por média e desvio. 
+ 
+  
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+37 
+ 
+Capítulo 3 – Materiais e Métodos                                                                                                      Felix, A. K. N. 
+3.4.2 Índice de emulsificação e estabilidade da emulsão  
+ 
+ 
+A capacidade de emulsificação do biossurfactante foi avaliada segundo a 
+metodologia descrita por COOPER e GOLDENBERG (1987), na qual 2 mL de 
+hidrocarboneto líquido, puro ou em mistura (querosene, n-hexadecano, heptano, tolueno, óleo 
+diesel e gasolina) e 2 mL de uma solução de biossurfactante semi-purificado na concentração 
+-1
+de 0,5 mg.mL, foram misturados em tubos de ensaio e agitados por dois minutos em vortex, 
+permanecendo em repouso por 24 horas. Em seguida mediu-se a altura da emulsão formada. 
+A estabilidade da emulsão foi avaliada em intervalos de tempo até 96 horas após o início do 
+ensaio. O índice de emulsificação (IE%) foi determinado de acordo com a Equação 1, 
+24
+proposta por WEI et al. (2005). 
+ 
+                                                             (1) 
+ 
+sendo H a altura da fase emulsionada após 24 horas e H a altura total da solução. 
+FETOTAL
+A emulsão foi considerada estável se seu volume, 24 horas após a sua formação, 
+correspondesse a 50 % ou mais de seu volume original (WILLUMSEM e KARLSON, 1997). 
+Os efeitos significantes do tempo de estabilização das emulsões formadas com o 
+biossurfactante e diferentes fontes hidrofóbicas foram determinados através de recursos 
+estatísticos, análise de variância (ANOVA) e teste de Bonferroni, com nível de significância 
+de 95%, usando o programa Microcal Origin 8.0 (Microcal Software Inc., Northampton, MA, 
+USA).  
+ 
+ 
+3.4.3 Avaliação da estabilidade do biossurfactante (efeito do pH, da salinidade e da 
+temperatura) 
+ 
+ 
+A avaliação da estabilidade do biossurfactante semi-purificado foi realizada de 
+acordo com as metodologias propostas por APARNA et al. (2012) e BARROS et al. (2008) 
+com modificações.  
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+38 
+ 
+Capítulo 3 – Materiais e Métodos                                                                                                      Felix, A. K. N. 
+Os efeitos de diferentes valores de pH (2, 4, 6, 7, 8, 10 e 12), concentrações salinas 
+(0; 2,5; 5; 10; 15 e 20%) e temperaturas (4, 25, 50, 75, 100 e 121°C por 30 minutos) foram 
+avaliados quanto à tensão superficial e índice de emulsificação de acordo com o descrito no 
+itens 3.4.1 e 3.4.2, respectivamente. O estudo realizado a partir de uma solução aquosa de 0,5 
+-1
+mg.mL do biossurfactante, teve seus resultados obtidos em triplicata. 
+Os efeitos significantes das diferentes condições as quais o biossurfactante foi 
+submetido foram determinados através de recursos estatísticos, análise de variância 
+(ANOVA) e teste de Bonferroni, com nível de significância de 95%, usando o programa 
+Microcal Origin 8.0 (Microcal Software Inc., Northampton, MA, USA).  
+ 
+ 
+3.5 Diagramas de fases  
+ 
+ 
+A construção do diagrama de fases foi baseada em SOUSA (2011). A solução de 
+-1
+surfactina na concentração de 1 mg.mL foi misturada, em tubos de ensaio fechados, a 
+compostos hidrofóbicos (diesel ou querosene), nas proporções de 20 a 90% de solução de 
+biossurfactante. Foram homogeneizados, sob agitação máxima, em vortex por 2 minutos. Os 
+tubos foram submetidos às temperaturas de 30 a 90ºC, variando-se em 5ºC, em banho 
+termostatizado, com um tempo de estabilização de 10 minutos para cada alteração na 
+temperatura. As fases existentes (emulsão, água, óleo e outra) foram verificadas e suas 
+determinações se deram de forma visual, utilizando uma lanterna de luz branca, para melhor 
+verificação da mudança de fase. A partir da fase existente em determinada proporção e 
+temperatura, os diagramas de fases foram construídos. 
+ 
+ 
+3.6 Testes de toxicidade 
+ 
+ 
+Como os surfactantes biológicos podem ser usados como agentes remediadores ao 
+solo e à água contaminados com petróleo, na indústria de alimentos, na agricultura, em 
+indústria farmacêutica e de cosméticos (BARROS et al., 2007), foram realizados testes de 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+39 
+ 
+Capítulo 3 – Materiais e Métodos                                                                                                      Felix, A. K. N. 
+toxicidade devido à necessidade de medir os riscos toxicológicos do biossurfactante. Foram 
+utilizados dois organismos diferentes: semente de alface (Lactuca sativa) e microcrustáceo 
+Artemia salina, por serem organismos fáceis de ser cultivados e muito utilizados em testes de 
+toxicidade, com vasta disponibilidade de dados para comparação. Os dois testes realizados 
+estão descritos a seguir. 
+ 
+ 
+3.6.1 Teste de germinação com Lactuca sativa 
+ 
+ 
+Os experimentos foram realizados de acordo com SILVA et al. (2010) com 
+modificações. O método, denominado teste de alongamento das raízes, leva em consideração 
+o comprimento das raízes após 5 dias de exposição ao agente tóxico e o número de sementes 
+que germinaram durante este período. 
+ 
+ 
+3.6.1.1 Procedimento de teste 
+ 
+ 
+Soluções testes foram preparadas com água destilada pH 8,0 nas concentrações de 
+-1
+500, 350, 200, 100, 50, 25 e 12,5 mg.L do biossurfactante semi-purificado, como controle 
+foi utilizada água destilada. 
+Em placas de petri foram colocados papel de filtro, estes foram umedecidos com 5 
+mL da solução teste e foram distribuídas dez sementes, conforme mostra a Figura 5. Para cada 
+concentração foram preparadas 5 placas. As placas foram colocadas em câmara de 
+germinação, na ausência de luz e com temperatura controlada na faixa de 24 ± 1ºC. No 
+terceiro dia de incubação foi adicionado mais 1 mL da solução teste em cada placa para a 
+manutenção da umidade do papel. O tempo total de duração do teste foi de 120 horas.  
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+40 
+ 
+Capítulo 3 – Materiais e Métodos                                                                                                      Felix, A. K. N. 
+Figura 5 – Esquema de distribuição das sementes para a realização do teste de toxicidade aguda por meio do 
+índice de germinação e alongamento das raízes de alface Lactuca sativa.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Após o período de incubação, as sementes que germinaram foram contadas e o 
+comprimento das raízes foi medido. As medidas foram realizadas do ponto de transição entre 
+o hipocólito e a extremidade da raiz. 
+Relacionando-se o percentual de sementes germinadas com as medidas do 
+alongamento das raízes, calculou-se o Índice de Germinação (IG) conforme Equações 2, 3 e 4 
+(SILVA et al., 2010). Considerando que valores de IG de 80% são utilizados como 
+indicadores de não fitotoxicidade (TIQUIA et al., 1996). 
+ 
+                                                                                                                           
+                                                                                                                         
+                                                       
+                                                              
+ 
+Sendo: 
+%GS = Porcentagem de germinação de sementes, adimensional; 
+%GE = Porcentagem de germinação no extrato, adimensional; 
+%GC = Porcentagem de germinação no controle, adimensional; 
+%CR = Porcentagem de crescimento da raiz, em mm; 
+MCE = Crescimento no extrato (média), em mm; 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+41 
+ 
+Capítulo 3 – Materiais e Métodos                                                                                                      Felix, A. K. N. 
+MCC = Crescimento no controle (média), em mm. 
+ 
+ 
+3.6.2 Bioensaio toxicológico frente a larvas de Artemia salina 
+ 
+ 
+O ensaio de citoxicidade sobre Artemia salina, um microcrustáceo de água salgada 
+usada como alimento para organismos aquáticos, foi realizado com base em MEYER et al. 
+(1982) com modificações.  
+-1
+Preparou-se uma solução com sal marinho na concentração de 3 g.L e pH entre 8 e 
+9, para a eclosão dos ovos de Artemia salina e no preparo das demais diluições. Os ovos 
+foram colocados para eclodir na solução salina por 24 horas, com aeração constante a 25ºC. 
+Cerca de 10 larvas foram transferidas para frascos de vidro contendo 5 mL de 
+solução nas seguintes concentrações do biossurfactante semi-purificado: 750, 500, 350, 200, 
+-1
+100, 50, 25 e 12,5 mg.L. O ensaio foi realizado em triplicata de amostras, sendo a contagem 
+dos animais mortos e vivos realizada após 24 horas. 
+Ajustou-se uma equação linear simples aos dados de porcentagem das larvas de 
+Artemia salina mortas em relação ao aumento da concentração da solução de surfactina. Com 
+esse ajuste foi possível calcular em que concentração de extrato 50% das artêmias morriam 
+(CL). O teste foi acompanhado de um controle negativo, onde as larvas foram incubadas 
+50
+somente em água salina. 
+ 
+ 
+3.7 Aplicação do biossurfactante na remoção de hidrocarbonetos contaminantes de areia 
+ 
+ 
+A aptidão do biossurfactante semi-purificado para remoção de hidrocarbonetos 
+contaminantes de areia foi estudada frente a dois hidrocarbonetos (petróleo e diesel). Porções 
+de areia foram artificialmente contaminadas com 10% de um dos hidrocarbonetos, petróleo ou 
+diesel, de acordo com o método descrito por SILVA et al. (2010). Porções de 20 mg de areia 
+contaminada foram transferidas para Erlenmeyer de 250 mL e acrescidos de 40 mL de 
+-1-1
+solução de surfactante em diferentes concentrações (12,5 mg.L (CMC), 37,5 mg.L (3CMC) 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+42 
+ 
+Capítulo 3 – Materiais e Métodos                                                                                                      Felix, A. K. N. 
+e um controle com água destilada). Os Erlenmeyer foram incubados em agitador orbital a 150 
+rpm, por 24 horas a 27ºC. Após esse período, as amostras foram centrifugadas a 9000 g, por 
+20 minutos para separação da solução de lavagem e da areia. O óleo que não conseguiu ser 
+extraído da areia por ação do biossurfactante, foi removido com hexano e sua determinação se 
+deu gravimetricamente (NISTCHKE e PASTORE, 2002).  
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+43 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+4 – RESULTADOS E DISCUSSÕES 
+ 
+ 
+Neste capítulo, apresentar-se-ão os resultados e as discussões referentes aos 
+experimentos realizados. 
+Inicialmente serão apresentados os resultados quanto à caracterização estrutural do 
+biossurfactante obtida a partir de ressonância magnética nuclear e espectroscopia de 
+infravermelho, a fim de elucidar e equiparar a estrutura do surfactante produzido com a 
+surfactina padrão (Sigma). Em seguida, expõem-se os estudos das propriedades tensoativas, 
+estabilidade quanto às emulsões formadas e quanto às diferentes condições ambientais como, 
+temperatura, salinidade e pH. Após, apresentam-se os resultados obtidos em bioensaios com 
+Artemia salina, com o intuito de se estabelecer a CL,e Lactuca sativa. E, por último, são 
+50 
+demonstrados os resultados obtidos do poder do biossurfactante em remover contaminantes 
+hidrofóbicos de areia contaminada. 
+ 
+ 
+4.1 Caracterização estrutural do biossurfactante purificado  
+ 
+ 
+Para dar início ao processo de caracterização, diversas etapas foram realizadas a fim 
+de se alcançar um produto maximamente livre de qualquer impureza ou interferente. Partindo-
+se de uma massa inicial de 300 mg do biossurfactante semi-purificado para a realização da 
+cromatografia em coluna fase reversa C18, foram obtidos 33,5 mg de surfactina purificada. A 
+partir dessa massa foi possível a caracterização do biossurfactante produzido.  
+O espectro de absorção na região do infravermelho da fração 29-35 (Figura 6) 
+-1
+apresentou uma absorção em 3.296 cm, característico de deformação axial de ligação N-H 
+-1
+presente em peptídeos; absorção em 2.956 cm correspondente a estiramento assimétrico da 
+-1
+ligação C–H de grupamento CH; banda em 2.926 cm característica de estiramento 
+3
+-1
+assimétrico da ligação C–H de grupamento CH; absorção em 2.857 cm correspondente a 
+2
+deformação axial simétrica de ligação C–H de grupamento CH. Banda de deformação axial 
+2
+-1
+C=O em 1.730 cm de ácido carboxílico. Duas absorções intensas uma em 1.641 que 
+-1
+caracteriza uma amida I e outra em 1.527 cm característica de amida II . Todas as bandas de 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+44 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+absorção são condizentes com as obtidas por OLIVEIRA et al. (2013), que também produziu 
+surfactina a partir do suco de caju clarificado.  
+ 
+Figura 6 – Espectro de infravermelho da fração F:29-35 (biossurfactante purificado).  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+45 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+1
+O espectro de RMN H (300 MHz, piridina-d) (Figura 7) das frações 29-35 
+5
+apresentaram sinais entre δ 8,31 e 9,6 ppm (N-H), referente a hidrogênio ligado a átomo de 
+H
+nitrogênio de função amida monossubstituída, além de sinais entre δ 5,6 a 3,4 ppm de 
+H
+hidrogênios ligados ao carbono  da carbonila, típicos de aminoácidos. Sinais sobrepostos 
+entre δ 1,8 a 1,2 ppm indicam grupos metilênicos de hidrocarbonetos condizente com a 
+H
+cadeia alifática presente na estrutura de surfactinas, bem como sinais em 1,1-0,8 ppm 
+referente a hidrogênios de grupos metilas. Os sinais em δ 7,22; 7,58 e 8,73 ppm, pertencem 
+H
+às moléculas residuais não-deuteradas do solvente piridina.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+46 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+1
+Figura 7 – Espectro de RMN H da fração F:29-35 (300 MHz, piridina-d5). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+47 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+13
+O espectro de RMN C (75 MHz, piridina-d5) (Figura 8) mostrou dez linhas 
+espectrais entre δc 176,0 – 172,1 ppm, característicos de grupo carbonila (C=O) de função 
+amida, éster e ácido carboxílico presente nos aminoácidos. Um sinal em δ 72,8 ppm de 
+C
+carbono carbinólico (C-O), sete sinais entre δ61,6 a 52,0 condizentes com carbonos ligados 
+C 
+a nitrogênio (C-N) de aminoácidos, sinais entre 43,3 a 25,8 compatíveis com grupos 
+metilênicos (CH), dentre outros na região de 25,5 a 11,8 ppm para grupos metínicos (CH) e 
+2
+metilas (CH). Os deslocamentos químicos foram referenciados pelos picos centrais dos 
+3
+carbonos-13 do solvente piridina (δ150,35; 135,91 e 123,87).  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+48 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+13
+Figura 8 – Espectro de RMN C da fração F:29-35 (75 MHz, piridina-d5). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+49 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+O espectro de massa de alta resolução (EMAR), obtido com ionização por 
+-
+eletrospray e no modo negativo, mostrou picos em m/z 1034,6840 e 1020,6700 [M - H], 
+como mostra a Figura 9. 
+ 
+Figura 9 – Espectro de massa de alta resolução. (1) fração 29-35; (2) surfactina padrão (Sigma). 
+ 
+ 
+ 
+(1) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (2) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A presença dos picos nos espectros mostrados na Figura 9 indicam as fórmulas 
+moleculares CHNO e CHNO para o biossurfactante produzido e para a surfactina 
+53937135291713
+padrão da Sigma, respectivamente, onde o lipopeptídeo produzido neste trabalho difere da 
+amostra padrão (Sigma) quanto ao número de grupos metilênicos (-CH-) presente na cadeia 
+2
+alifática, apresentando um a mais. 
+113
+As fórmulas moleculares encontradas após a obtenção dos espectros de RMN H, C 
+e EMAR com posterior comparação com os espectros da surfactina obtida comercialmente, 
+são as mesmas encontradas por Itokawa et al. (1994), Figura 10. 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+50 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+Figura 10 – Estruturas de [Ile]Surfactina (1) e [Leu] Surfactina (2).  
+ 
+CHNO 
+5393713
+2 
+1 3 
+CO
+L-LeuD-Leu
+  L-Glu
+ 
+ 
+CH
+2 
+ 
+HC 4 
+3
+L-Val
+ 
+CH (CH)CH 
+29 
+ 
+HC 
+3
+5 
+7 6 
+O
+L-IleD-LeuL-Asp
+  
+(1) 
+ 
+CHNO 
+ 
+5291713
+2 
+1 3 
+ 
+CO
+L-GluL-LeuD-Leu
+ 
+ 
+ 
+CH
+2 
+ HC 4 
+3
+L-Val
+ 
+CH (CH)CH 
+28 
+ 
+HC 
+3
+5 
+ 7 6 
+O
+L-LeuD-LeuL-Asp
+ 
+ 
+(2) 
+ 
+ Fonte: Itokawa et al. (1994). 
+ 
+ 
+4.2 Tensão superficial e determinação da Concentração Micelar Crítica (CMC) 
+ 
+ 
+Ao caracterizar um tensoativo, a propriedade mais relevante é a sua eficiência na  
+redução da tensão superficial ou interfacial, e a concentração micelar crítica (CMC) é o 
+parâmetro mais utilizado na avaliação dessa atividade surfactante (MEDEIROS, 2007).  
+A CMC foi determinada pelo ponto central de inflexão da curva do gráfico dado pela 
+relação entre a variação da tensão superficial e a concentração da solução do biossurfactante 
+semi-purificado, os resultados são apresentados na Figura 11. 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+51 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+Figura 11 – Concentração Micelar Crítica (CMC) da surfactina produzida por B. subtilis LAMI005 a partir do 
+suco de caju clarificado. Barras de erro representam o desvio padrão.  
+-1
+CMC = 12,5 mg.L 
+ 
+ 
+O biossurfactante produzido por Bacillus subtilis LAMI005 exibiu excelente 
+capacidade de redução da tensão superficial, já que este foi capaz de reduzir a tensão 
+-1
+superficial da água de 72 para 31,8 mN.m e a tensão interfacial do n-hexadecano de 27 para 
+-1
+2 mN.m, reduções de 55,8 e 92,6%, respectivamente.  
+Observa-se na Figura 11 que o aumento da concentração do biossurfactante 
+produzido provocou uma diminuição gradativa da tensão superficial até o ponto na qual a 
+-1
+CMC foi atingida, 12,5 mg.L, a partir deste, mesmo com o aumento da concentração de 
+surfactina, não há redução adicional da tensão superficial. Indicando a eficiência do 
+biossurfactante produzido, pois segundo MULLIGAN e GIBBS (1993), a CMC dos 
+-1
+biossurfactantes mais eficazes varia entre 1 e 200 mg.L. 
+O biossurfactante produzido neste trabalho demonstrou maior capacidade de redução 
+da tensão superficial do que os surfactantes produzidos por Bacillus subtilis em estudos 
+realizados por KIM et al. (1997) e por COOPER et al. (1981), obtendo concentrações 
+-1
+micelares críticas de 40 e 25 mg.L.  Porém, os dados reportados por COSTA (2005) onde o 
+-1
+valor da CMC foi igual a 10 mg.L e por NITSCHKE (2004) onde a CMC alcançou o valor 
+-1
+de 11 mg.L, apresentam valores próximos ao encontrado. O valor da redução da tensão 
+interfacial foi superior ao encontrado por AL-BAHRY et al. (2012), onde o biossurfactante 
+produzido por Bacillus subtilis B20 foi capaz de reduzir a tensão interfacial do sistema 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+52 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+-1
+água/n-hexadecano para 5,02 mN.m. A CMC encontrada também mostrou-se inferior a 
+CMC de outros surfactantes produzidos pela mesma espécie de bactéria, Bacillus subtilis, 
+-1
+descritos na literatura, considerando o valor encontrado de 40 mg.L em trabalho 
+desenvolvido por VAZ e colaboradores (2012), enquanto que a CMC do biossurfactante 
+-1
+produzido em trabalho desenvolvido por BARROS et al. (2008) foi igual 12 mg.L, 
+semelhante à obtida no presente trabalho.  
+A partir dos dados relacionados é possível afirmar que o biossurfactante produzido a 
+partir do suco de caju clarificado apresenta grande atividade superficial e interfacial e baixa 
+CMC, propriedades estas que o caracterizam como um efetivo agente tensoativo. Vale 
+salientar que o valor da CMC depende do grau de pureza da surfactina utilizada e da natureza 
+do solvente utilizado em sua solubilização (CARILLO et al., 2003; FOX E BALA, 2000).  
+ 
+ 
+4.3 Índice de emulsificação e estabilidade da emulsão 
+ 
+ 
+Apesar da capacidade de uma molécula na formação de uma emulsão estável nem 
+sempre estar associada à sua aptidão em reduzir a tensão superficial, a estabilização de uma 
+emulsão óleo/água é normalmente utilizada como um indicador da atividade de superfície 
+(YOUSSELF et al., 2004). 
+A partir de uma análise inicial da Figura 12 observa-se que o biossurfactante 
+produzido foi capaz de formar emulsões estáveis com hidrocarbonetos líquidos, pois após 24 
+horas da formação da emulsão, seus volumes ainda correspondiam a 50% ou mais da emulsão 
+original (WILLUMSEN e KARLSON, 1997). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+53 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+Figura 12 – Índice de Emulsificação (IE) de diferentes emulsões de hidrocarbonetos com biossurfactante de 
+24
+Bacillus subtilis LAMI005. Barras de erro representam o desvio padrão.  
+ 
+ 
+O biossurfactante apresentou alta capacidade para estabilizar emulsões com diesel e 
+querosene ao longo de 24 horas, comprovada pelos altos índices de emulsificação obtidos 
+(67,5 e 66,1%), com gasolina o índice de emulsificação embora superior a 50%, apresentou o 
+menor valor obtido, igual a 55,2% (Figura 11). De acordo com BARROS et al. (2008), a 
+diferença entre os comportamentos da emulsão com diesel e com gasolina pode ser explicada 
+pela diferença de massa molecular, o diesel apresenta massa molecular maior que a gasolina, 
+o que sugere uma emulsão mais estável quando da mistura de biossurfactante com 
+hidrocarbonetos de cadeia longa. 
+O biossurfactante também foi capaz de emulsionar eficientemente n-hexadecano, 
+tolueno e heptano. A formação de emulsões estáveis do biossurfactante com os 
+hidrocarbonetos puros é refletida pelos altos valores de IE obtidos (Figura 12). A emulsão 
+24
+formada com tolueno apresentou IE igual a 65,1%, já com o n-hexadecano o IE alcançou o 
+2424
+valor de 68,6% e com o heptano o valor foi de 62,6%. 
+No que diz respeito à estabilidade, demonstrada na Figura 13, não se observou  
+redução percentual significativa, na qual todas as emulsões formadas apresentaram redução 
+percentual no índice de emulsificação menor que 10% no período de 24 a 96 horas, exceto a 
+emulsão formada com tolueno e n-hexadecano que apresentaram redução de 14,25 e 12,22%, 
+respectivamente. A gasolina apresentou redução de 6,88%, já o diesel teve uma redução de 
+1,77%, o querosene reduziu 3,47% e o heptano 9,1%. 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+54 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+A emulsão formada com n-hexadecano não apresentou redução percentual 
+significativa em nenhum dos intervalos de tempo estudados. Já as emulsões formadas com 
+querosene, gasolina e diesel, apresentaram redução percentual significativa nos intervalos de 
+tempo de 1 a 24, 1 a 48, 1 a 72 e 1 a 96 horas, fato que deve ser desconsiderado uma vez que 
+1 hora não é tempo suficiente para a estabilização de uma emulsão No estudo realizado, a 
+emulsão formada com tolueno foi a única que apresentou diferença significativa no intervalo 
+de 24 a 96 horas (ANEXO B). 
+ 
+Figura 13 – Estabilidade da emulsão, até 96 horas, com diferentes hidrocarbonetos. (■) gasolina, (●) diesel, (▲) 
+querosene, (▼) n-hexadecano, (◄) tolueno e (►) heptano. Barras de erro representam o desvio padrão.  
+ 
+Esses resultados são relevantes para várias aplicações dos biossurfactantes, visto que 
+a capacidade de emulsificação é importante na solubilização de compostos hidrofóbicos em 
+processos de biorremediação (MIHELCIC et al., 1993, VOLKERING et al., 1995), na 
+recuperação avançada de petróleo (BANAT, 1995a), na remoção do óleo retido em borras 
+oleosas (BANAT et al., 1991), entre outros.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+55 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+4.4 Efeito do pH, da força iônica e da temperatura na atividade do biossurfactante 
+ 
+ 
+A estabilidade e a efetividade do biossurfactante foram avaliadas frente a variações 
+de pH, temperatura e força iônica, por meio da análise da estabilidade da emulsão formada 
+com diesel e da variação da atividade superficial.  
+Diversos fatores podem afetar a estabilidade de uma emulsão, e essa instabilidade 
+conduz à quebra da emulsão ou inversão de fases (ROSEN, 2004; ILORI et al., 2005). Ser 
+capaz de preservar a estabilidade sob condições não ideais é importante para os surfactantes, 
+uma vez que sua aplicação requer um comportamento constante (MORAIS, 2012).  
+ 
+ 
+4.4.1 Efeito do pH 
+ 
+ 
+A estabilidade do biossurfactante produzido em relação à variação do pH, é mostrada 
+na Figura 14. 
+ 
+Figura 14 – Efeito da variação do pH no Índice de Emulsificação de emulsão formada com diesel (■) e na 
+atividade superficial (■) do biossurfactante produzido por Bacillus subtilis LAMI005. Barras de erro 
+representam o desvio padrão.  
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+56 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+A atividade tensoativa do biossurfactante foi mantida na faixa de pH 6 a 8 com 
+pequenas variações nos valores de tensão superficial e nos índices de emulsificação (IE), 
+24
+embora apresentem diferença significativa, conforme mostrado em ANEXO C, os resultados 
+obtidos encontram-se entre valores que ainda apresentam uma boa atividade emulsificante. 
+-1
+Em pH 6, o biossurfactante foi capaz de reduzir a tensão superficial da água de 72 mN.m 
+-1-1
+para 31,5 mN.m, já em  pH 7 esta redução foi para 30,6 mN.m e em pH 8 a redução atingiu 
+-1
+o valor de 31,6 mN.m. Quanto ao índice de emulsificação os valores foram de 63; 65 e 
+63,5%, para os pH iguais a 6, 7 e 8, respectivamente, apresentando diferença significativa ao 
+nível de significância de 95% (ANEXO C). 
+Em condições ácidas mais drásticas, ou seja, valores de pH igual a 2,0 e 4,0, o 
+biossurfactante apresentou redução na estabilidade da emulsão, sendo estes valores iguais a 22 
+e 35,9%, respectivamente, apresentando diferença significativa ao nível de significância de 
+95% (ANEXO C). ANTUNES (2007) observou que baixos valores de pH alteram as forças 
+eletrostáticas envolvidas na formação de emulsões causando instabilidade. Quanto à tensão 
+superficial, esta aumentou significativamente com a redução do pH a valores iguais a 2,0 e 
+4,0,  fato que pode ser explicado pela precipitação da surfactina em meio ácido (BARROS et 
+al., 2008). 
+Em condições alcalinas mais drásticas, ou seja, valores de pH igual a 10 e 12, 
+também houve aumento na tensão superficial e redução na capacidade de emulsificação do 
+biossurfactante, apresentando também diferença significativa ao nível de significância de 95% 
+-1
+(ANEXO C). Em pH 10, o biossurfactante reduziu a tensão superficial para 34 mN.m e 
+obteve um índice de emulsificação igual a 59,5%, já em pH 12 a tensão superficial foi 
+reduzida para 34,8 e o índice de emulsificação foi igual a 58%. 
+BARROS et al. (2008) relataram que tanto as amostras ácidas como as básicas, 
+quando neutralizadas novamente, apresentaram uma redução da tensão superficial para 
+valores semelhantes aos encontrados antes da redução ou do aumento do pH, demostrando 
+que ocorre apenas uma precipitação e que o biossurfactante volta a se solubilizar com a 
+neutralização da amostra, reduzindo assim a tensão superficial.  
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+57 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+4.4.2 Efeito da força iônica 
+ 
+ 
+O efeito da adição de NaCl, em concentrações variando de 0 a 20%, na estabilidade 
+da emulsão e na tensão superficial também foi estudado (Figura 15). 
+ 
+Figura 15 – Efeito da variação da força iônica no Índice de Emulsificação de emulsão formada com diesel (■) e 
+na atividade superficial (■) do biossurfactante produzido por Bacillus subtilis LAMI005. Barras de erro 
+representam o desvio padrão.  
+ 
+ 
+O índice de emulsificação do biossurfactante permaneceu estável em soluções de 2,5 
+a 10% (m/v) de NaCl, onde alcançou IE de 65%, e apresentou diferença significativa em 
+24
+soluções de 15 e 20% (m/v) de NaCl, ao nível de significância de 95% (ANEXO D). O 
+-1
+mesmo aconteceu com a tensão superficial, que variou de 28,9 a 31,6 mN.m, entretanto, nas 
+concentrações de 2,5; 5 e 10% não houve diferença significativa ao nível de significância de 
+95% (ANEXO D).  
+Concentrações de NaCl superiores a 10% (m/v) promoveram melhor estabilidade das 
+emulsões formadas, sem apresentar diferença significativa entre as concentrações de 15 e 20%  
+(m/v) de NaCl (ANEXO D). Pela teoria da difusão do íon, a energia interna do sistema 
+aumenta quando a concentração de sal aumenta, através da fusão entre gotas de agua para 
+produzir gotas maiores e, como as emulsões não são termodinamicamente estáveis, a taxa de 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+58 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+coalescência aumenta causando a dispersão e, consequentemente a destruição das emulsões    
+(CALDERON E POULIN, 1999; MOHAMED et al., 2003).  
+Os valores da tensão superficial também se modificaram com o aumento da 
+concentração de NaCl, em concentração igual a 15% (m/v) a tensão encontrada foi igual a 
+-1-1
+36,5 mN.m e em concentração igual a 20% (m/v) de NaCl, o valor foi de 37 mN.m, porém 
+não houve diferença significativa (ANEXO D). Segundo SHAW (1970) os sais iônicos 
+formam interações íon-dipolo com a água, sendo essas interações mais fortes que as 
+interações sal-fase gasosa, assim as moléculas desse soluto evitam a interface e aumentam a 
+tensão superficial. 
+A estabilidade do biossurfactante em ambientes alcalinos e com alta salinidade, até 
+10% (m/v) de NaCl, confere a utilização deste em biorremediações de ambientes marinhos 
+(KHOPADE et al., 2011).  
+ 
+ 
+4.4.3 Efeito da temperatura 
+ 
+ 
+A fim de verificar o efeito da temperatura na estabilidade das emulsões e na tensão 
+superficial, estudou-se o efeito da submissão da solução de biossurfactante a diferentes 
+temperaturas por 30 minutos. As temperaturas avaliadas foram 4, 25, 50, 75, 100 e 121ºC, 
+temperaturas que vão desde a refrigeração a esterilização, conforme mostra a Figura 16. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+59 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+Figura 16 – Efeito da variação da temperatura no Índice de Emulsificação de emulsão formada com diesel (■) e 
+na atividade superficial (■) do biossurfactante produzido por Bacillus subtilis LAMI005 em suco de caju. Barras 
+de erro representam o desvio padrão.  
+ 
+Apesar da larga escala de temperatura usada neste trabalho, o efeito do tratamento 
+térmico não demonstrou mudanças significativas na atividade tensoativa do biossurfactante 
+nas variações de 4 a 100ºC, o mesmo observado por estudos desenvolvidos por BARROS et 
+al. (2008), que avaliou a exposição do biossurfactante a 100ºC em diferentes períodos de 
+tempo, e VAZ et al. (2012) que estudou o efeito da temperatura sobre o biossurfactante 
+variando a temperatura de 20 a 46ºC.  
+A tensão superficial foi alterada quando a solução do biossufactante foi submetido à 
+temperatura de 121ºC, apresentando redução significativa (ANEXO E), onde seu valor 
+-1
+diminuiu de 32,1 a 30,9 mN.m. 
+Quanto à estabilidade das emulsões, observou-se que mesmo havendo diferença 
+significativa (ANEXO E), os valores de IE apresentaram uma pequena variação média de 
+24
+3% em todas as temperaturas testadas. 
+A partir dos dados obtidos indica-se a utilização do biossurfactante na indústria de 
+alimentos, farmacêutica e cosmética, já que o aquecimento para se atingir a esterilidade em 
+produtos desses setores é de primordial importância (KHOPADE et al., 2011).  
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+60 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+4.5 Diagramas de fases 
+ 
+ 
+A construção de diagramas de fases é uma ferramenta fundamental na caracterização 
+das condições experimentais para que as microemulsões existam e em quais proporções dos 
+componentes outras estruturas podem estar presentes, onde a partir desses dados é possível a 
+seleção da região do diagrama de fases que represente a condição desejável de aplicação 
+(FORMARIZ, 2004; SOUSA, 2011). Assim, o comportamento de fases de sistemas 
+emulsionados foi estudado. 
+A partir de resultados obtidos no índice de emulsificação, descrito no tópico 4.3, 
+duas fontes hidrofóbicas que apresentaram emulsões bastante estáveis, foram selecionadas 
+para a construção dos diagramas de fases, foram elas, querosene e diesel. 
+Em ambos os diagramas, a condição inicial foi a mesma, como mostrado na Figura 
+17 (a e b), apresentando fase aquosa em todas as composições A/O, exceto na concentração de 
+20% (v/v) de solução surfactante no diagrama com diesel, que apresentou-se em três fases 
+(água, emulsão e óleo). Nas concentrações superiores a 50% (v/v) de solução de 
+biossurfactante, observou-se excesso de fase aquosa. 
+A Figura 17 (c e d) mostra o resultado final da análise dos diagramas, onde observa-
+se que o comportamento da fase oleosa no diagrama com diesel foi mais expressivo que no 
+diagrama com querosene, o que ocorreu devido o aumento da temperatura, pois o complexo 
+da emulsão formada pelo biossurfactante e óleo foi quebrado, surgindo uma fase oleosa, o 
+mesmo observado por SOUSA (2011), que produziu surfactina tendo como fonte de carbono 
+a glicerina. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+61 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+Figura 17 – Ilustração da obtenção de dados para a construção dos diagramas de fases, com composições de 20 
+a 90% (v/v) de solução de biossurfactante. a. Condição inicial (surfactina – querosene); b. Condição inicial 
+(surfactina – diesel); c. Condição final após ser submetido a 90ºC (surfactina – querosene); d. Condição final 
+após ser submetido a 90ºC (surfactina – diesel). 
+b 
+c 
+ 
+c 
+b 
+d 
+ 
+Na Figura 18, os diagramas binários apresentam os sistemas estudados, expondo as 
+regiões de alteração de fases em função das diferentes estruturações de surfactina analisadas, 
+observadas com o aumento gradual da temperatura. Segundo SOUSA (2011), como o 
+aumento da temperatura ocorre de 5 em 5 ºC, isso pode acarretar a transição de fase em 
+temperatura intermediária, não sendo possível a visualização, devendo considerar a 
+sensibilidade limitada do método. As áreas delimitadas pelas curvas denotam a região onde 
+ocorre separação de fases.  
+No diagrama do sistema surfactina – querosene observou-se que quanto maior for a 
+concentração de surfactante, maior deve ser a temperatura a qual este deve ser submetido para 
+que haja a separação de fases. A mudança de fases, na concentração de 20% (v/v) de 
+surfactina ocorreu a 60ºC, já para que essa mudança fosse visualizada na solução de 30% 
+(v/v) do biossurfactante, foram necessários 70ºC. Nas concentrações de 40 e 50% (v/v), a 
+temperatura teve que ser elevada à 80ºC, já em 60 e 70% (v/v) de surfactina, a visualização da 
+separação de fases foi possível a 85ºC e, finalmente, nas concentrações iguais a 80 e 90% 
+(v/v), a temperatura chegou a 90ºC para que ocorresse a separação de fases. 
+No diagrama do sistema surfactina – diesel, na concentração de 20% (v/v) de 
+surfactina, foi possível visualizar a quebra total da emulsão formada, voltando à condição 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+62 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+inicial antes da agitação, óleo + solução de biossurfactante. Nas concentrações posteriores, a 
+cada 10% (v/v) que eram aumentados na relação da concentração de surfactina, eram 
+necessários 5ºC a mais para que fosse possível a visualização da separação de fases. 
+Entretanto, a concentração de 90% (v/v), apresentou comportamento similar ao sistema 
+surfactina – querosene, não ocorrendo a separação de fases.  
+ 
+Figura 18 – Diagramas de fases para o sistema de composição A/O em função da temperatura. (1) Querosene; 
+(2) Diesel. E - fase emulsionada; A - fase aquosa; O - fase óleo. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(1) 
+(2) 
+Com a construção dos diagramas observou-se a possibilidade de utilização do 
+biossurfactante produzido em diversos setores industriais, já que o produto de interesse foi 
+capaz de formar emulsões estáveis em variadas e elevadas temperaturas (SOUSA, 2011).  
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+63 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+O sistema surfactina – querosene pode ser aplicado em fluidos de corte, essenciais na 
+produção de peças metálicas, trazendo vantagens a esse processo como, biodegradação do 
+efluente gerado e redução no custo, já que os fluidos de corte são responsáveis por grande 
+parte do custo final do processo (SOUSA, 2011). 
+O sistema surfactina – diesel evidencia a utilização do biossurfactante produzido no 
+setor de tratamento de resíduos e na biorremediação, já que, segundo Rocha (2007), a 
+aplicação do biossurfactante aumenta a degradação destes compostos no ambiente, pois 
+possui a capacidade de emulsificar e dispersar hidrocarbonetos em água.  
+ 
+ 
+4.6 Bioensaios toxicológicos 
+ 
+ 
+4.6.1 Teste de germinação com Lactuca sativa 
+ 
+ 
+Os problemas de toxicidade em uma planta surgem quando íons tóxicos, em altas 
+concentrações, são absorvidos e acumulados em suas células provocando danos irreversíveis 
+(AYERS e WESTCOT, 1999). 
+No presente trabalho, explorou-se a toxicidade do biossurfactante produzido frente à 
+sementes de Lactuca sativa (alface), já que poucos estudos foram realizados a fim de 
+determinar a que concentração limite pode se dá o uso desses compostos em aplicações 
+ambientais (FARIA, 2010). 
+A Figura 19 demonstra o ensaio com sementes de Lactuca sativa (alface), no qual se 
+leva em consideração não só o crescimento das raízes como o número de sementes 
+germinadas. 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+64 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+Figura 19 – Índice de Germinação (■) e crescimento das raízes (■) da espécie Lactuca sativa em diferentes 
+concentrações do biossurfactante produzido por LAMI005 em suco de caju. Barras de erro representam o desvio 
+padrão.  
+ 
+Considerando que um IG de 80% tem sido utilizado como um indicador de 
+desaparecimento de fitotoxicidade (TIQUIA et al., 1996), os resultados obtidos indicam que 
+-1
+as soluções testadas até a concentração de 350 mg.L, não mostraram efeitos inibitórios sobre 
+a germinação das sementes e alongamento da raiz da alface, uma vez que IG de 112,3; 99,8; 
+98,7; 90,7; 90,3 e 81,3% foram encontrados para as soluções de biossurfactante de 12,5; 25; 
+-1-1
+50; 100 e 350 mg.L, respectivamente. Apenas a solução na concentração de 500 mg.L 
+apresentou valor de germinação inferior a 80%, igual a 78,6%. Assim, pode-se afirmar que o 
+biossurfactante produzido não apresentou influência no alongamento das raízes e no índice de 
+germinação das sementes de alface Lactuca sativa. 
+ 
+ 
+4.6.2 Teste de mortalidade do microcrustáceo da espécie Artemia salina 
+ 
+ 
+A utilização de biossurfactantes em recuperação melhorada do petróleo e 
+biorremediação vêm crescendo mundialmente, isso se deve ao fato estes serem altamente 
+biodegradáveis e com baixa toxicidade (DESAI e BANAT, 1997; RAHMAN e GAKPE , 
+2008; MUTHUSAMY et al., 2008). Assim, o teste de ecotoxicidade sob o microcrustáceo 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+65 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+Artemia salina foi realizado visando um maior entendimento sobre a toxicidade desses 
+compostos em organismos aquáticos, no caso de possíveis aplicações ambientais. O extrato 
+-1
+purificado foi avaliado nas concentrações de 12,5; 25; 50; 100; 350 e 500 mg.L. A Artemia 
+salina é um organismo-padrão em testes de ecotoxicologia, fácil de ser comprado em lojas 
+para aquários, fácil de ser mantido em laboratório pois possui um ciclo de vida curto, requer 
+baixos volumes de amostra, além de serem organismos bem relatados na literatura para testes 
+de toxicologia ambiental (NUNES et al., 2006; LIMA et al., 2009).  
+Para explicitar os resultados encontrados neste ecoensaio, faz-se necessário o cálculo 
+da CL pela regressão não linear entre o aumento da concentração do extrato aquoso de 
+50
+surfactina versus a porcentagem de larvas de Artemia salina mortas (Figura 20).  
+ 
+Figura 20 – Taxa de mortalidade da espécie Artemia salina em diferentes concentrações do biossurfactante 
+produzido por LAMI005.  
+ 
+A partir da regressão não linear foram obtidas a Equação 5 e o coeficiente de 
+2
+determinação (R) igual a 0,95, a partir dos quais a CLfoi calculada. 
+50 
+             
+                                                      (5) 
+ 
+De acordo com PEREIRA e CASTRO (2007), uma substância é considerada tóxica 
+-1
+quando a CL for menor que 80 μg.mL, moderadamente tóxica, quando os valores são entre 
+50
+-1
+80 e 250 μg.mL. A CL, calculada a partir da Equação 5, foi encontrada na concentração de 
+50
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+66 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+-1
+612,27 μg.mL, não apresentando efeitos tóxicos sob o organismo estudado. Observou-se que 
+-1
+nas concentrações de 12,5 e 25 μg.mL, a porcentagem de imobilidade apresentou aumentos 
+-1
+significativos, porém em concentrações igual e/ou superiores a 50 μg.mL a porcentagem de 
+imobilização aumentou gradativamente. Contudo, a toxicidade de uma substância depende de 
+sua natureza, pH, temperatura, salinidade, organismo-teste, concentração e condições 
+impostas para o teste (KOZLOVA et al., 2004). 
+A baixa toxicidade dos biossurfactantes é explicada por suas propriedades 
+tensoativas suaves com elevada compatibilidade com as membranas biológicas, devido sua 
+estrutura polimérica e seu conteúdo de grupos polifuncionais, que dão origem a micelas com 
+menor carga eletrostática (AL-TAHHAN et al., 2000; NITSCHKE e PASTORE, 2002; HUA 
+et al., 2003).  
+ 
+ 
+4.7 Aplicação do biossurfactante na remoção de hidrocarbonetos contaminantes de areia 
+ 
+ 
+Os acidentes com derramamento de óleo se tornam cada vez mais comuns e isso tem 
+causado muitos problemas ao meio ambiente e à sociedade e, como técnica promissora na 
+remoção e recuperação de uma significativa quantidade do óleo residual tem-se a aplicação de 
+biossurfactantes (NITSCHKE e PASTORE, 2002; APARNA, et al., 2012). 
+A formação de micelas aumenta a solubilidade do contaminante a partir da formação 
+de uma emulsão estável, o que promove a remoção do óleo das partículas do solo (BANAT, 
+1995; HAIGH, 1996; CONTE et al. 2005), sabendo que a formação de micelas só ocorre em 
+-1
+valores iguais ou superiores a CMC, foram utilizadas concentrações de 12,5 mg.L (igual a 
+-1
+CMC) e 37,5 mg.L (3 vezes superior a CMC). Dessa forma, observou-se que com o aumento 
+na concentração de surfactina ocorreu uma maior remoção do óleo do solo, como 
+demonstrado na Tabela 1, o biossurfactante semi-purificado apresentou potencial 
+aplicabilidade na biorremediação, demostrado pela remoção de 78,5 e 81,8% do diesel 
+adsorvido na areia quando foram utilizadas concentrações de solução de surfactina iguais a 
+-1
+12,5 e 37,5 mg.L, respectivamente, enquanto que o controle, com água destilada, removeu 
+37,9% do óleo contaminante. O potencial também foi evidenciado ao promover a dessorção 
+de 65,4 e 77,8% do petróleo adsorvido na areia ao utilizar solução de biossurfactante nas 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+67 
+ 
+Capítulo 4 – Resultados e Discussões                                                                                                Felix, A. K. N. 
+-1-1
+concentrações de 12,5 mg.L (CMC) e 37,5 mg.L (3CMC), respectivamente, e o controle, 
+com água destilada, foi capaz de remover 45,6% da fonte hidrofóbica.  
+ 
+Tabela 1 – Remoção de hidrocarbonetos de areia contaminada. 
+Tratamento Diesel removido (%) Petróleo removido (%) 
+-1
+Solução surfactina 12,5 mg.L (CMC) 78,5 ± 0,5 65,4 ± 0,8 
+-1
+Solução surfactina 37,5 mg.L (3CMC) 81,8 ± 0,2  77,8 ± 0,7  
+Água destilada (controle) 37,9 ± 0,5 45,6 ± 0,4 
+ 
+Em estudos realizados por APARNA et al. (2012), o biossurfactante produzido por 
+Pseudomonas sp. reduziu o petróleo residual na areia em 89,7% na concentração de 0,01% 
+(m/v) e por LAI et al. (2009) reduziram em 62% o TPH (Total Petroleum Hydrocarbon) do 
+solo contaminado ao utilizar surfactina 0,2% (m/v). Estudos de CONTE et al., (2005) 
+utilizando os surfactantes químicos dodecilsulfato de sódio (SDS) e Triton X-100 
+apresentaram uma eficiência de remoção de hidrocarbonetos aromáticos do solo em um 
+sistema de lavagem do solo, quando comparados com a remoção pela água, de 
+aproximadamente 80%. Entretanto, a vantagem na utilização de biossurfactantes se dá pelo 
+fato destes serem biodegradáveis e de baixa toxicidade quando comparados aos surfactantes 
+químicos (COSTA et al., 2006). 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+68 
+ 
+Capítulo 5 – Conclusões                                                                                                                    Felix, A. K. N. 
+5 – CONCLUSÕES 
+ 
+ 
+Neste estudo foram aplicadas metodologias para a caracterização e estudo da 
+aplicabilidade do biossurfactante produzido a partir de um co-produto da indústria de caju, 
+suco de caju, agregando-se valor ao processo, uma vez que a fonte utilizada é disponível e de 
+baixo custo. Estudaram-se as melhores condições de aplicação, sendo os resultados obtidos 
+bem satisfatórios, como os citados a seguir. 
+A partir dos espectros obtidos, bandas características da molécula de surfactina 
+foram observadas, indicando que o biossurfactante produzido pelo Bacillus subtilis é um 
+lipopeptídeo cíclico compatível com a surfactina padrão (Sigma) apresentando um 
+grupamento metilênico a mais na cadeia alifática. 
+Observou-se que o lipopeptídeo produzido pela bactéria Bacillus subtilis LAMI005 
+representa um tipo de biossurfactante com atividade superficial altamente estável 
+-1
+apresentando CMC igual a 12,5 mg.L e reduzindo a tensão superficial da água de 72 para 
+-1-1
+31,8 mN.m e a tensão interfacial do sistema água/n-hexadecano de 27 para 2 mN.m. 
+A habilidade de emulsificação a altas temperaturas, pHs ácidos e básicos e diferentes 
+concentrações de NaCl também foi demonstrada ao apresentar-se estável em valores de pH 
+entre 6 e 8, em concentrações de NaCl de até 10% (m/v) e em temperaturas de até 121°C.  
+A construção dos dois diagramas de fases mostrou a possibilidade de aplicações do 
+biossurfactante analisado em diversos setores industriais, como biorremediação, tratamento de 
+resíduos e fluidos de corte, simulando os comportamentos dinâmicos da produção de 
+biossurfactantes. 
+Quanto à toxicidade, o estudo realizado confirmou o relatado por diversos autores na 
+literatura, baixa toxicidade da surfactina. O biossurfactante apresentou-se atóxico para a 
+-1
+Artemia salina, apresentando na CL valor de 612,27 μg.mL e baixa toxicidade para o 
+50
+alface da espécie Lactuca sativa, com IG superior a 80% em concentrações inferiores ou igual 
+-1
+a 350 mg.L. 
+O biossurfactante produzido mostrou-se ecoeficiente frente à remoção de 
+hidrocarbonetos adsorvidos em areia, evidenciando a aplicação do presente biossurfactante 
+em biorremediação. 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+69 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+REFERÊNCIAS 
+ 
+ 
+ABALOS, A., PINAZO, A., INFANTE, M.R., CASALS, M., GARCIA, F. & MANRESA, A. 
+Physicochemical and antimicrobial properties of new rhamnolipids produced by 
+Pseudomonas aeruginosa AT10 from soybean oil refinery wastes. Langmuir, v. 17, p. 1367– 
+1371, 2001. 
+ 
+ 
+AL-BAHRY Y. M.; AL-WAHAIBI, A. E.; ELSHAFIE, A. S.;AL-BEMANI, S. J.; JOSHI, H. 
+S.; AL-MAKHMARI, H. S.; AL-SULAIMANI. Biosurfactant production by Bacillus 
+subtilis B20 using date molasses and its possible application in enhanced oil recovery. 
+International Biodeterioration & Biodegradation, p. 1-6, 2012. 
+ 
+ 
+AL-TAHHAN, R. A.; SANDRIN, T. R.; BODOUR, A. A.; MAIER, R. M. Rhamnolipid- 
+induced removal of lipopolysaccharide from Pseudomonas aeruginosa: Effect on cell surface 
+properties  and  interaction  with   hydrophobic  substrates.  Applied  and  Environmental 
+Microbiology, v. 66, n. 8, p. 3262–3268, 2000. 
+ 
+ 
+ANTUNES,  M.  S.  Estudo  à  microscopia  eletrônica  da  estabilidade  física  de  emulsões 
+lipídicas utilizadas em misturas 3 em 1. Revista Brasileira de Nutrição Clínica, v. 22, n. 
+1, p. 45-53, 2007. 
+ 
+ 
+ARIMA, K.; KAKINUMA, A.; TAMURA, G. Surfactin, a crystalline peptide lipid surfactant 
+produced  by  Bacillus  subtilis:  isolation,  characterization  and  its  inhibition  of  fibrin  clot 
+formation. Biochemistry and Biophysics Research Communication, v. 31, n. 3, p. 488-
+494, 1968. 
+ 
+ 
+ASSELINEAU,  C.;  ASSELINEAU,  J.  Trehalose-containing  glycolipids.  Progress in  the 
+Chemistry of Fats and other Lipids, v. 16, p. 59-99, 1978. 
+ 
+ 
+AYERS, R. S.; WESTCOT, D. W. A qualidade da água na agricultura. Campina 
+Grande: UFPB, Estudos FAO Irrigação e Drenagem, n. 29 revisado, p. 218, 1999. 
+ 
+ 
+APARNA,  A.;  SRINIKETHAN,  G.;  SMITHA,  H.  Production  and  characterization  of 
+biosurfactant   produced  by  a  novel  Pseudomonas  sp.  2B.  Colloids  and  Surfaces  B: 
+Biointerfaces, v. 95, p. 23-29, 2012. 
+ 
+ 
+BANAT, I. M. Biosurfactants, more in demand than ever. Biofutur, v. 198, n. 20, p. 44-47, 
+2000. 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+70 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+BANAT, I.  M.  The  isolation  of  a  thermophilic  biosurfactant  producing  Bacillus  sp. 
+Biotechnology Letters, v. 15, n. 6, p. 591-594, 1993. 
+ 
+ 
+BANAT, I. M. Biosurfactant Production and possible uses in microbial enhanced oil recovery 
+and oil pollution  remediation: A Review. Bioresource Technology, v. 51, n. 1, p. 1–12, 
+1995a. 
+ 
+ 
+BANAT, I. M. Characterization of biosurfactants and their use in pollution removal: state of 
+the art (review). Acta Biotecnologica, v. 15, n. 3, p. 251-267, 1995b. 
+ 
+ 
+BANAT, I. M.; FRANZETTI, A.; GANDOLFI, I.; BESTETTI, G.; MARTINOTTI, M. 
+G.; FRACCHIA,  L.;  SMYTH,  T.  J.; MARCHANT,  R.  Microbial  biosurfactants:  
+production, applications and future potential. Applied Microbiology and Biotechnology, v. 
+87, p. 427-444, 2010. 
+ 
+ 
+BANAT, I. M.; MAKKAR, R. S.; CAMEOTRA, S. Potential comercial applications of 
+microbial surfactants. Applied Microbiology and Biotechnology, v. 53, p. 495-508, 2000. 
+ 
+ 
+BANAT,  I.;  SAMARAH,  N.;  MURAD,  M.;  HORNE,  R.;  BANERJEE  S.  Biosurfactant 
+production   and use in   oil   tank clean-up. World Journal   of   Microbiology and 
+Biotechnology, v. 7, p. 80–88, 1991. 
+ 
+ 
+BARRETO, R. V. G. Prospecção ambiental de micro-organismos e genes envolvidos com 
+a produção de  biossurfactantes. 2011. Tese (Doutorado em Biotecnologia - RENORBIO) 
+- Universidade Estadual do Ceará, Fortaleza, 2011. 
+ 
+ 
+BARROS, F. F. C.; QUADROS, C. P.; MARÓSTICA, M. R.; PASTORE, M. G. Surfactina: 
+propriedades  químicas, tecnológicas e funcionais para aplicações em alimentos.  Química 
+Nova, v. 30, n. 2, p. 409-414, 2007. 
+ 
+ 
+BARROS, F. F. C; QUADROS, C. P.; PASTORE, G. M. t.  Ciência e Tecnologia de 
+Alimentos, v. 28, n. 4, p. 979-985, 2008. 
+ 
+ 
+BODOUR,  A.A.,  GUERRERO-BARAJAS,  C.,  JIORLE,  B.V.,  MALCOMSON,  M.E., 
+PAULL, A.K., SOMOGYI, A., TRINH, L.N., BATES, R.B. & MAIER, R.M. Structure and 
+characterization of flavolipids, a novel class of biosurfactants produced by Flavobacterium sp. 
+Strain MTN11. Applied and Environmental Microbiology, v. 70, p. 114-120, 2004. 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+71 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+BOGNOLO, G.  Biosurfactants  as  emulsifyng  agents  for  hydrocarbons.  Colloids  and 
+Surfaces A: Physicochemical and Engineering Aspects, v. 152, p. 41-52, 1999. 
+ 
+ 
+BOSCH, M.  P.  Surface  active  compounds  on  microbial  cultures.  Tenside  Surfactants 
+Detergents, v. 25, p. 208-211, 1988. 
+ 
+ 
+BROWN, M. J. Biossurfactans for cosmetic applications. International Journal of Cosmetic 
+Science, v. 13, p. 61-64,1991.     
+ 
+ 
+BUENO, S. M.; SILVA, A. N.; GARCIA-CRUZ, C. H. Estudo da produção de 
+biossurfactante em caldo de fermentação. Química Nova, v. 33, n. 7, p. 1572-1577, 2010. 
+ 
+ 
+CALDERON, F.; POULIN, P. Progress in understanding emulsion metastability and surface 
+forces. Current Opinion in Colloid & Interface Science, v. 4, p. 223-230, 1999. 
+ 
+ 
+CAMEOTRA, S. S.; MAKKAR, R. S. Synthesis of biosurfactants in extreme conditions. 
+Applied Microbial Biotecnology, v. 50, p. 520-529, 1998. 
+ 
+ 
+CAMEOTRA, S. S.; MAKKAR, R. S. Recent applications of biosurfactants as biological and 
+immunological molecules. Current Opinion in Microbiology, v. 7, p. 262-266, 2004. 
+ 
+ 
+CAMERON,  D.  R.;  COOPER,  D.  G.;  NEUFELD,  R.  J.  The  Mannoprotein  of  the 
+Saccharomyces cerevisiae is a effective bioemulsifier. Applied Environmental 
+Microbiology, v. 54, p. 1420-1425, 1988. 
+ 
+ 
+CANET, R.; BIRNSTINGL, J. G.; MALCOLM, D. G.; LOPEZ-REAL, J. M.; BECK, A. J. 
+Biodegradation  of  polycyclic  aromatic  hydrocarbons  (PAHs)  by  native  microflora  and 
+combinations of white-rot fungi in a coal-tar contaminated soil. Bioresource Technology, 
+v. 76, p. 113-117, 2002. 
+ 
+ 
+CARRILLO,  C.;  TERUEL,  J.;  ARANDA,  F.;  ORTIZ,  A.  Molecular  Mechanism  of 
+Membrane Permeabilization by the Peptide Antibiotic Surfactin. Biochemica et Biophysica 
+Acta, v. 1611, p. 91-97, 2003. 
+ 
+ 
+CHEN, H.; JUANG, R. Recovery and separation of surfactin from pretreated fermentation 
+broths by physical and chemical extraction. Biochemical Engineering Journal, v. 38, n. 1, 
+p. 39-46, 2008. 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+72 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+CHEN, J.; SONG, X.; ZHANG, H.; QU, Y. Production, structure elucidation and anticancer 
+properties of sophorolipid from Wickerhamiella domercqiae. Enzyme Microbial 
+Technology, v. 39, p. 501-506, 2006. 
+ 
+ 
+CHRISTOFI, N.; IVSHINA, I.B. Microbial surfactants and their use in field tudies of soil 
+remediation. Journal of Applied Microbiology, v. 93, p. 915-929, 2002. 
+ 
+ 
+CIRIGLIANO, M. C.; CARMAN, G. M. Isolation of a bioemulsifier from Candida lipolytica. 
+Applied and Environmental Microbiology, v. 48, n. 4, p. 747-750, 1984. 
+ 
+ 
+CIRIGLIANO, M. C.; CARMAN, G. M. Purification and chacacterization of liposan, a 
+bioemulsifier from Candida lipolytica. Applied Environmental Microbiology, v. 50, n. 4, p. 
+846-850, 1985. 
+ 
+ 
+CONTE, P.; AGRETTO, A.; SPACCINI, R.; PICCOLO, A. Soil remediation: humic acids 
+as natural surfactants in the washings of highly contaminated soils. Environmental 
+Pollution, v. 135, n. 3, p. 515-522, 2005. 
+ 
+ 
+COOPER, D. G.; GOLDENBERG, B. G. Surface-active agents from two Bacillus species. 
+Applied and Environmental Microbiology, v. 53, p. 224-229, 1987. 
+ 
+ 
+COOPER, D. G.; MacDONALD, C. R.; DUFF, S. J. B.; KOSARIC, N. Enhanced 
+production of surfactin from Bacillus subtilis by continuous   product removal and metal 
+cation additions. Applied and Environmental Microbiology, v. 42, n. 3, p. 408-412, 1981. 
+ 
+ 
+COOPER,  D.  G.;  PADDOCK,  D.  A.  Production  of  a  biosurfactant  from  Torulopsis 
+bombicola. Applied and Environmental Microbiology, v. 47, n. 1, p. 173-176, 1984. 
+ 
+ 
+COOPER, D.G.; ZAJIC, J.E. Surface active compounds from microorganisms. Advances in 
+Applied Microbiology, v.26, p.229-253, 1980. 
+ 
+ 
+CORRER,  C.  J.;  MAZZOCHIN,  L.  F.;  LOBO,  I.;  SAAB,  O.J.G.A.;  GUEDES,  C.L.B. 
+Aplicação “in situ” de surfactantes em solo contaminado com petróleo e tratamento da água 
+residual com agente oxidante. Anais do 4º PDPETRO, Campinas, SP, 21-24 de Outubro 
+de 2007. 
+ 
+ 
+COSTA, G. A. N. Produção biotecnológica de surfactante de Bacillus subtilis em 
+resíduo agroindustrial, caracterização e aplicações. 2005. 87 p. Dissertação (Mestrado 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+73 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+em Ciência de Alimentos) – Faculdade de Engenharia de Alimentos, Universidade Estadual 
+de Campinas, Campinas, 2005. 
+ 
+ 
+COSTA, S. G. V. A. O.; NITSCHKE, M.; HADDAD, R.; EBERLIN, M. N.; CONTIERO, J. 
+Production of  Pseudomonas aeruginosa  LB1 rhamnolipids following growth on brazilian 
+native oils. Process Biochemistry, v. 41, p. 4830–488, 2006. 
+ 
+ 
+DAS, K.; MUKHERJEE, A. K. Characterization of biochemical properties and biological 
+activities of  biosurfactants produced by Pseudomonas aeruginosa mucoid and non-mucoid 
+strains isolated from hydrocarbon-contaminated soil sample. Applied Microbial 
+Biotechnology, v.69, p. 192-199, 2005. 
+ 
+ 
+DECESARO, A. RIGON, M. R.; THOMÈ, A.; COLLA, L. M. Produção de biossurfactantes 
+por microrganismos isolados de solo contaminado com óleo diesel. Química Nova, v. 36, n. 
+7, p. 947-954, 2013.  
+ 
+ 
+DESAI, J. D.; BANAT, I. M. Microbial production of surfactants and their commercial 
+potencial. Microbiology and Molecular Biology Reviews, v. 61, n. 1, p. 47-64, 1997. 
+ 
+ 
+DI GIOIA, D.; FAMBRINI, L.; COPPINI, E.; FAVA, F.; BARBERIO, C. Aggregation-based 
+cooperation during bacterial aerobic degradation of polyethoxylated nonylphenols. 
+Research in Microbiology, v. 155, n. 9, p. 761–769, 2004. 
+ 
+ 
+EDWARDS, K. R.; LEPO, J. E.; LEWIS, M. A. Toxicity comparison of biosurfactants and 
+synthetic surfactants used in oil spill remediation to two estuarine species. Marine Pollution 
+Bulletin, v. 46, p. 1309-1316, 2003. 
+ 
+ 
+FARIA, A. F. Produção, purificação e caracterização química de biossurfactantes 
+produzidos por Bacillus subtilis em glicerina residual. 2010. 173 p. Tese (Doutorado em 
+Ciências de Alimentos) – Faculdade de Engenharia de Alimentos, Universidade Estadual de 
+Campinas, Campinas, 2010.  
+ 
+ 
+FERNANDES,  P.  V.;  ARRUDA,  I.  R.;  SANTOS,  A.;  ARAÚJO,  A.;  MAIOR,  A.; 
+XIMENES,  E.  Antimicrobial  Activity  of  Surfactants  Produced  by  Bacillus  subtilis  
+R14 Against Multidrug-Resistant Bacteria. Brazilian Journal of Microbiology, v. 38, p. 
+704-709, 2007. 
+ 
+ 
+FERRAREZZO,  E.  M.  1998.  Isolamento  e  seleção  de  micro-organismos  produtores  
+de bioemulsificantes  a  partir de efluentes de indústria de margarina e sabão. Dissertação 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+74 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+de mestrado.   Faculdade  de   Engenharia   de   Alimentos  (FEA),   Universidade  Estadual  
+de Campinas. Campinas-SP. 
+ 
+ 
+FORMARIZ, T. P.; URBAN, M. C. C.; SILVA JÙNIOR, A. A.; GREMIÃO, M. P. D.; 
+OLIVEIRA, A. G. Microemulsões e fases líquidas cristalinas como sistemas de liberação de 
+fármacos. Revista Brasileira de Ciências Farmacêuticas, v. 41, n. 3, p. 301-313, 2005. 
+ 
+ 
+FORMARIZ,  T.  P.;  WANCZINSKI,  B.  J.;  JÚNIOR-SILVA,  A.  A.;  SCARPA,  M.  V.; 
+OLIVEIRA, A.  G. Biotecnologia de sistemas coloidais aplicável na otimização do efeito 
+terapêutico de fármacos usados no tratamento do câncer. Infarma, Brasília, v. 16, n. 1, p. 
+44-57, 2004. 
+ 
+ 
+FOX, S. L.; BALA, G. A. Production of surfactant from Bacillus subtilis ATCC 21332 using 
+potato substrates. Bioresource Technology, v. 75, n. 3, p. 235–240, 2000. 
+ 
+ 
+FRACCHIA, L.; CAVALLO, M.; GIOVANNA MARTINOTTI; M., BANAT, I.M. 
+Biosurfactants and bioemulsifiers biomedical and related applications – present status and 
+future potentials, biomedical Science. Engineering and Technology, p. 325-370, 2012. 
+ 
+ 
+GAUTAM, K. K.; TYAGI, V. K. Microbial Surfactants: A Review. Journal of Oleo Science, 
+v. 55, n. 4, p. 155-166, 2006. 
+ 
+ 
+GOBBERT, U.; LANG, S.; WAGNER, F. Sophorose lipid formation by resting cells of 
+ 
+Torulopsis bombicola. Biotechnology Letters, v. 6, n. 4, p. 225-230, 1984.
+ 
+ 
+GORIN, P. A. J.; SPENCER, J. F. T.; TULLOCH, A. P. Hydroxy fatty acid glycosides of 
+sophorose from Torulopsis magnoliae. Canadian Society for Chemistry, v. 39, p. 846-
+855, 1961. 
+ 
+HAIGH, S. D. A review of the interaction of surfactants with organic contaminants in soil. 
+Science Total Environmental, v. 185, p. 161-170, 1996. 
+ 
+ 
+HOLMBERG, K. Natural surfactants. Current Opinion in Colloid & Interface Science, v. 
+6, p. 148-159, 2001. 
+ 
+ 
+HOMME,  R.  K.;  HUSE,  K.  Regulation  of  sophorose  lipid  production  by  Candida 
+(Torulopsis) apicola. Biotechnology Letters, v. 15, n. 8, p. 853-858, 1993. 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+75 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+HOMMEL,  R.  K.;  STUWER,  O.;  STUBER,  W.;  HAFERBURG,  D.;  KLEBER,  H.  P. 
+Production  of  water  soluble  surface-active  exolipids  by  Torulopsis  bombicola.  
+Applied Microbiology and Biotechnology, v. 26, p. 199-205, 1987. 
+ 
+ 
+HSIEH, F. C.; LI, M. C.; LIN, T. C.; KAO, S. S. Rapid detection and characterization of 
+surfactin-producing  Bacillus subtilis  and  closely  related  species based  on  PCR.  Current 
+Microbiology, v. 49, p. 186-191, 2004. 
+ 
+ 
+HUA, Z.; CHEN, J.; LUN, S.; WANG, X. Influence of biosurfactants produced by Candida 
+antarctica on surface properties of microorganism and biodegradation of n-alkanes. Water 
+Research, v. 37, n. 17, p. 4143-4150, 2003. 
+ 
+ 
+HUSSAIN, A.; ARNOLD, J.; KHAN, M.; AHSAN, F. Absorption Enhancers in 
+Pulmonary Peptide Delivery. Journal of Controlled Release, v. 94, n. 1, p. 15-24, 2004. 
+ 
+ 
+ITOKAWA,H.; MIYASHITA, T.; MORITA, H.; TAKEYA, K.; HIRANO, T.; HOMMA, 
+77
+M.; OKA, K. Structural and conformational studies of [Ile] and [Leu]Surfactins from 
+Bacillus subtilis natto. Chemical and Pharmaceutical Bulletin, v. 42, n. 3, p. 604-607, 
+1994. 
+ 
+ 
+ILORI, M. O.;  AMOBI, C. J.; ODOCHA, A. C. Factors affecting biosurfactant production 
+by oil degrading Aeromonas spp. isolated from a tropical environment. Chemosphere, v. 
+61, p. 985-992, 2005. 
+ 
+ 
+IYER, A.; MODY, K.; JHA, B. Emulsifying Properties of a Marine Bacterial 
+Exopolysacchride. Enzime and Microbial Technology, v. 38, p. 220-222, 2006. 
+ 
+ 
+JAIN,  R.  M.;  MODY,  K.;  MISHRA,  A.;  JHA,  B.  Physicochemical  characterization  
+of biosurfactant  and  its  potential  to  remove  oil  from soil  and  cotton  cloth.  
+Carbohydrate Polymers, v. 89, n. 4, p. 1110-1116, 2012. 
+ 
+ 
+KACHHOL,  T.;  SCHLINGMANN,  M.  Possible  food  and  Agricultural  Applications  of 
+Microbial  Surfactants: An Assessment. In N. Kosaric, W.L. Carns, & N.C.C Gray (Eds). 
+Biosurfactants and Biotechnology, New York: Marcel Dekker, p. 183-210, 1987. 
+KAPPELI, O. & FINNERTY, W.R. Partition of alkane by an extracelular vesicle derived 
+from  hexadecane-grown Acinetobacter. Journal of Bacteriology, v. 140, n. 2, p. 707-712, 
+1979. 
+ 
+ 
+KHOPADE, A.; REN, B.; LIU, X.; MAHADIK, K.; ZHANG, L.; KOKARE, C. 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+76 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+Production and  characterization  of  biosurfactant  from  marine  Streptomyces  species  B3.  
+Journal  of Colloid and Interface Science, v. 367, n. 1, p. 311-318,  2011. 
+ 
+ 
+KIM, K.; JUNG, S.; LEE, D.; JUNG, J.-K.; PARK, J.; KIM, D.; LEE, C.-H. Suppression 
+of Inflammatory Responses by Surfactin, a Selective Inhibitor of Platelet Cytosolic 
+Phospholipase A2. Biochemical Pharmacology, v. 55, p. 975-985, 1998. 
+ 
+ 
+KIM, H.; YOON, B.; LEE, C.; SUH, H.; OH, H.; KATSURAGI, T.; TANI, Y. Production 
+and  properties   of   a  lipopeptide  biosurfactant  from  Bacillus  subtilis  C9.  Journal  of 
+Fermentation Bioengineering, v. 84, n. 1, p. 41-46, 1997. 
+ 
+ 
+KLUGE, B.; VATER, J.; SALNIKOW, J.; ECKART, K. Studies on the biosynthesis of 
+surfactin, a lipopeptide antibiotic from Bacillus subtilis ATCC 21332. FEBS Letters, v. 
+231, n. 1, p. 107–110, 1988. 
+ 
+ 
+KOZLOVA, E. V.; PUNTUS, I. F.; SLEPENKIN, A. V; BORONIN, A. M. Naphthalene 
+degradation by  Pseudomonas putida strains in soil model systems with arsenite.  Process 
+Biochemistry, v. 39, p. 1305–1308, 2004. 
+ 
+ 
+KUYUKINA, M. S.; IVSHINA, I. B.; PHILP, J. C.; NICK CHRISTOFI; DUNBAR, S. A.; 
+RITCHKOVA,  M. I. Recovery of Rhodococcus biosurfactants using methyl tertiary-butyl 
+ether extraction. Journal of Microbiological Methods, v. 46, n. 2, p. 149-156, 2001. 
+ 
+ 
+LAI,  C.;  HUANG,  Y.;  WEI,  Y.;  CHANG,  J.  Biosurfactant-enhanced  removal  of  
+total petroleum hydrocarbons from contaminated soil. Journal of Hazardous Materials, v. 
+167, n. 1–3, p. 609-614, 2009. 
+ 
+ 
+LANG, S. Biological amphiphiles (microbial biosurfactants). Current Opinion in Colloid 
+and Interface Science, v. 7, p. 12–20, 2002. 
+ 
+ 
+LEE, S.C.; LEE,  S.J.; KIM,  S.H.; PARK,  I.H.; LEE, Y.S.; CHUNG,  S.Y.; CHOI,  Y.L. 
+Characterization of new biosurfactant produced by Klebsiella sp. Y6-1 isolated from waste 
+soybean oil. Bioresource Technology, v.99, n. 7, p.2288-2292, 2008. 
+ 
+ 
+LIMA, C. J. B. Produção de biossurfactantes por Pseudomonas auruginosa empregando 
+óleo de soja residual. 2007. 168 p. Tese (Doutorado em Engenharia Química) – Faculdade de 
+Engenharia Química, Universidade Federal de Uberlândia, Uberlândia, 2007. 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+77 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+LIMA, T. M. S. Determinação estrutural, toxicidade, biodegradabilidade e eficácia de 
+biossurfactantes na remoção de fenentreno e cádmio de solo. 2008. 170 p. Tese 
+(Doutorado em Microbiologia Agrícola) – Universidade Federal de Viçosa, Viçosa, 2008. 
+ 
+ 
+LIN, S. Biosurfactants: Recents Advances. Journal of Chemical Technology & 
+Biotechnology, v. 66, p. 109-120, 1996. 
+ 
+ 
+LIM, J.-H.; PARK, B.-K.; KIM, M.-S.; HWANG, M.-H.; RHEE, M.-H.; PARK, S.-C.; 
+YUN, H.-I. The  Anti-Thrombotic Activity of Surfactins. Journal of Veterinary Science, 
+v. 6, p. 353-355, 2005. 
+ 
+ 
+LUNA, J. S.; SANTOS, A. F.; LIMA, M. R. F.; OMENA, M. C.; MENDONÇA, F. A. C.; 
+BIEBER, L. W.; SANT’ANA, A. E. G. A study of the larvicidal and molluscicidal activities 
+of some medicinal plants from northeast Brazil. Journal of Ethnopharmacol, v. 97, n. 2, p. 
+199-206, 2005. 
+ 
+ 
+MAKKAR, S. R.; CAMEOTRA, S. S. Utilization of Molasses for Biosurfactant Production 
+by  Two   Bacillus   Strains  at  the  Thermophilic  Conditions.  Journal  of  American  Oil 
+Chemist's Society, v. 74, p. 887-889, 1997. 
+ 
+ 
+MAKKAR,  R.  S.;  CAMEOTRA,  S.  S.  Production  of  biosurfactant  at  mesophilic  and 
+thermophilic conditions by a strain of Bacillus subtilis. Journal of Industrial Microbiology 
+& Biotechnology, v. 20, p. 48-52, 1998. 
+ 
+ 
+MAKKAR,  R.  S.;  CAMEOTRA,  S.  S.  Biosurfactant  production  by  microorganisms  on 
+unconventional carbon sources. Journal of Surfactants and Detergents, v. 2, n. 2, p. 
+237-241, 1999. 
+ 
+ 
+MAKKAR, R. S.; CAMEOTRA, S. S. An update on the use of unconventional substrates for 
+biosurfactant production and their new applications. Applied Microbiology and 
+Biotechnology, v. 58, p. 428-434, 2002. 
+ 
+ 
+MAKKAR, R. S.; ROCKNE, K. J. Comparison of synthetic surfactants and biosurfactants in 
+enhancing biodegradation of polycyclic aromatic hydrocarbons. Environmental Toxicology 
+and Chemistry, v. 22, n. 10, p. 2280-2292, 2003. 
+ 
+ 
+MANEERAT, S. Production of biosurfactants using  substrates from renewable-resources. 
+Songklanakarin Journal of Science and Technology, v. 27, n. 3, p. 675-683, 2005. 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+78 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+MANEERAT, S.; PHETRONG, K. Isolation of biosurfactant-producing marine bacteria and 
+characteristics of selected biosurfanct. Songklanakarin Journal of Science and 
+Technology. v. 29, n. 3, p.781-791, 2007. 
+ 
+ 
+MANIASSO, N. Ambientes micelares em química analítica. Química Nova, v.24, n. 1, 
+p.87-93, 2001. 
+ 
+ 
+MATSUURA, A. B. J. Produção e caracterização de biossurfactantes visando a aplicação 
+industrial e em processos de biorremediação. 2004. 82 p. Tese (Doutorado em Ciências de 
+Alimentos) – Faculdade de Engenharia de Alimentos, Universidade Estadual de Campinas, 
+Campinas, 2004. 
+ 
+ 
+MEDEIROS,  S.  I.  G.  Síntese  enzimática  de  biossurfactante  e  sua  aplicabilidade  na 
+indústria  do  petróleo.  2007.  138  p.  Dissertação  (Mestrado  em  Química)  –  Centro  
+de Ciências Exatas da Terra,  Universidade Federal do Rio Grande do Norte, Rio Grande 
+do Norte, 2007. 
+ 
+ 
+MIRELES, J.; TOGUCHI, A.; HARSHEY, R. Salmonella enterica Serovar Typhimurium 
+Swarming   Mutants   with  Altered  Biofilm-Forming  Abilites:  Surfactin  Inhibits  Biofilm 
+Formation. Journal of Bacteriology, v. 183, n. 20, p. 5848-5854, 2001. 
+ 
+ 
+MESQUITA, A.C. Uso das técnicas de oxidação química e biodegradação na remoção de 
+alguns compostos recalcitrantes. 2004. 158 p. Tese (Doutorado em Ciências em Engenharia 
+Civil). – Programa de Engenharia Civil, COPPE – Universidade Federal do Rio de Janeiro. 
+Rio de Janeiro, 2004. 
+ 
+ 
+MEYER, B. N.; FERRIGNI, N. R.; PUTNAM, L. B.; JACOBSEN, L. B.; NICHOLS,  D. E.; 
+McLAUGHLIN,   J.  L.  Brine  shrimp:  a  convenient  general  bioassay  for  active  plant 
+constituents. Journal of Medicinal Plants Research,v. 45, n. 1, p. 31-34, 1982. 
+ 
+ 
+MIHELCIC, J. R.; LUEKING, D. R.; MITZELL, R. J.; STAPLETON, J. M. Bioavailability 
+of sorbed- and separate-phase chemicals. Biodegradation, v. 4, p. 141–153, 1993. 
+ 
+ 
+MOHAMED, A. M. O.; EL GAMAL, M.; ZEKRI, A. Y. Effect of salinity and temperature on 
+water cut determination in oil reservoirs. Journal of Petroleum Science and Engineering, v. 
+40, p. 177-188, 2003. 
+ 
+ 
+MORAES, S.L.; REZENDE, M.O.O. Determinação da concentração micelar crítica de ácidos 
+húmicos por medidas de condutividade e espectroscopia. Química Nova, v.27, n. 5, p.701- 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+79 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+705, 2004. 
+ 
+ 
+MORAIS, R. K. S. Produção de biossurfactante a partir de substratos de baixo custo. 
+2012.  130 p. Dissertação (Mestrado em Engenharia Química) – Universidade Federal de 
+Alagoas, Centro de Tecnologia, Maceió, 2012.  
+ 
+ 
+MORÁN, A. C.; OLIVERA, N.; COMMENDATORE, M.; ESTEVES, J. L.; SIÑERIZ, F. 
+Enhancement  of  hydrocarbon  waste  biodegradation  by  addition  of  a  biosurfactant  from 
+Bacillus subtilis O9. Biodegradation, v. 11, v. 1, p. 65–71, 2000. 
+ 
+ 
+MRESTANI,  Y.; NEUBERT,  R.; RÜTTINGER,  H. H.  Determination of critical  micelle 
+concentration and  interactioins between cephalosporins and charged surfactants. Journal of 
+Cromatography A, v. 868, n. 2, p. 317-319, 2000. 
+ 
+ 
+MUKHERJEE,  S.;  DAS,  P.;  SEN,  R.  Towards  commercial  production  of  microbial 
+surfactants. Trends in Biotechnology, v. 24, n. 11, p. 509-515, 2006. 
+ 
+ 
+MULLIGAN, C. N. Environmental   applications for biosurfactants. Environmental 
+Pollution, v. 133, n. 2, p. 183-198, 2005. 
+ 
+ 
+MULLIGAN, C. N.; GIBBS, B. F. Correlation of nitrogen metabolism with biosurfactant 
+production by Pseudomonas aeruginosa. Applied and Environmental Microbiology, v. 55, 
+n. 11, p. 3016-3019, 1989. 
+ 
+ 
+MULLIGAN, C. N.; GIBBS, B. F. Factors influencing the economics of biosurfactants. In 
+Biosurfactants, Production, Properties and Applications. New York. Editora: N. Kosaric, 
+1993. cap.13, p. 329-372. 
+ 
+ 
+MULLIGAN,  C.N.;  GIBBS,  B.F.  Recovery  of  biosurfactants  by  ultrafiltration.  
+Journal Chemical Technology Biotechnology, v. 47, n. 1, p. 23–29, 1990. 
+ 
+ 
+MUTHUSAMY,  K.;  GOPALAKRISHNAN,  S.;  RAVI,  T.;  SIVACHIDAMBARAM,  P. 
+Biosurfactants: properties, commercial production and application. Current Science, v. 94, p. 
+736-747, 2008. 
+ 
+ 
+NASSIF, S. M. L.; VIEIRA, I. G.; FERNANDES, G. D. Fatores externos ambientais que 
+influenciam  na   germinação  de  sementes.  In:  Informativo  Sementes  do  Instituto  de 
+Pesquisas e Estudos Florestais, São Paulo, São Paulo, 1998. 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+80 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+NITSCHKE,  M.  Produção  e  caracterização  de  biossurfatante  de  Bacillus  subtilis 
+utilizando  manipueira  como  substrato.  2004.  88  p.  Tese  (Doutorado  em  Ciência  de 
+Alimentos) – Faculdade de  Engenharia de Alimentos, Universidade Estadual de Campinas, 
+Campinas, 2004. 
+ 
+ 
+NITSCHKE, M.; HADDAD, R.; COSTA, G.N.; GILIOLI, R.; MEURER, E.C.; GATTI, 
+M.S.V.; EBERLIN, M.N.; HÖEHR, N.F.; PASTORE, G.M. Structural characterization and 
+biological properties of a  lipopeptide surfactant produced by Bacillus subtilis on cassava 
+wastewater medium. Food Science Biotechnology, v. 13, n. 5, p. 591-596, 2004. 
+ 
+ 
+NITSCHKE, M.;  PASTORE, G. M.; Biossurfactantes: propriedades e aplicações. 
+Química. Nova, v. 25, p. 772-776, 2002. 
+ 
+ 
+NITSCHKE, M.; PASTORE, G. M. Production and properties of a surfactant obtained from 
+Bacillus subtilis grown on cassava wastewater. Bioresource Technology, v. 97, n. 2, p. 
+336-341, 2006. 
+ 
+ 
+OLIVEIRA,  D.  W.  F.  Produção  de  biossurfactantes  por  Bacillus  subtilis  LAMI005 
+utilizando suco  de caju clarificado. 2010. 104 p. Dissertação (Mestrado em Engenharia 
+Química) – Centro de Tecnologia, Universidade Federal do Ceará, 2010. 
+ 
+ 
+OLIVEIRA, D. W. F.; FRANÇA, I. W. L.; FÉLIX, A. K. N.; MARTINS, J. J. L.;  GIRO, M. 
+E. A.; MELO, V. M. M.; GONÇALVES, L. R. B. Kinetic study of biosurfactant production 
+by Bacillus subtilis LAMI005 grown in clarified cashew apple juice.  Colloids and 
+Surfaces B: Biointerfaces, v. 101, p. 34-43, 2013. 
+ 
+ 
+OU, Z. Separate and combined environmental behaviour of surfactants and polycyclic 
+aromatic  hydrocarbons (PAH’s).  2000.  256  f.Tese de Doutorado  (Doutor  em Ciências 
+Naturais) – Institute of Ecological Chemistry, Technical University of Munich, Neuherberg, 
+Germany, 2000. 
+ 
+ 
+PANDEY,  A.;  SOCCOL,  C.  R.;  NIGAM,  P.;  BRAND,  D.;  MOHAN,  R.;  RUSSOS,  S. 
+Biotechnological  potential  of  coffee  pulp  and  coffee  husk  for  bioprocess.  
+Biochemical Engineering Journal, v. 6, n. 2, p. 153-162, 2000. 
+ 
+ 
+PELIZZETTI, E.; PRAMAURO, E. Analytical applications of organized molecular 
+assemblies. Analytica Chimica Acta, v. 169, p. 1-29, 1985.  
+ 
+PEREIRA, A. C.; CASTRO, D. L. Prospecção fitoquímica e potencial citotóxico de Unxia 
+kubitzkii H. Rob.(Asteraceae-Heliantheae). Revista Brasileira de Biociências, v. 5, n. 2, p. 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+81 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+231-233, 2007. 
+ 
+ 
+PEYPOUX, F.; MICHEL, G.; DELCAMBE, L. Structure de la mycosubtiline, antibiotique 
+isolé de Bacillus subtilis. European Journal of Biochemistry, v. 63, p. 391-398, 1976. 
+ 
+ 
+PEYPOUX, F.; BONMATIN, J. M.; WALLACH, J. Recent trends in the biochemistry of 
+surfactin. Applied Microbiology and Biotechnology, v. 51, p. 553-563, 1999. 
+ 
+ 
+PEYPOUX, F.; POMMIER, M. T.; DAS, B. C.; BESSON, F.; DELCAMBE, L.; MICHEL, 
+G. Structures of Bacillomycin D and Bacillomycin L peptidolipid antibiotics from Bacillus 
+subtilis. Journal of Antibiotics, v. 77, n. 12, p. 1600-1604, 1984. 
+ 
+ 
+PILJAC, T. E PILJAC, G. Use of Rhamnolipids in Wound Healing, Treating Burn Shock, 
+Atherosclerosis, Organ Transplants, Depression, Schizophrenia, and Cosmetics. 
+European Patent, n. 1889623. New York, 1999. 
+ 
+ 
+POREMBA,  K.;  GUNKEL,  W.;  LANG,  S.;  WAGNER,  F.  Marine  biosurfactants,  III. 
+Toxicity testing  with  marine  microorganisms  and  comparison  with  synthetic  surfactants. 
+Zeitschrift für Naturforschung, p. 46, p. 210–216, 1991. 
+ 
+ 
+RAHMAN, P.; GAKPE, E. Production, characterization and applications of biosurfactants - 
+Review. Biotechnology, v. 7, p. 360-370, 2008. 
+ 
+ 
+REILING, H.E., THANEI-WYSS, U., GUERRA-SANTOS, L.H., HIRT, R. KÄPPELI, O. & 
+FIECHTER,  A.   Pilot  plant  production  of  rhamnolipid  biosurfactant  by  Pseudomonas 
+aeruginosa. Applied Environmental and Microbiology, v. 51, p. 985-989, 1986. 
+ 
+ 
+REISER, J.; KOCH, A. K.; JENNY, K.; KAPPELI, O. Advances in Applied Biotechnology 
+Series, 1989.   
+ 
+ 
+RIZZATTI, I. M.; ZANETTE, D. R.; MELLO, L. C. Determinação potenciométrica da 
+concentração micelar crítica de surfactantes: uma nova aplicação metodológica no ensino de 
+Química. Química Nova, v. 32, n. 2, p. 518-521, 2009. 
+ 
+ 
+ROCHA,  M.  V.  R.  Produção  de biossurfactantes por fermentação  submersa  usando 
+substrato não convencional. 2007, 144 p. Dissertação (Mestrado em Engenharia Química) 
+– Centro de Tecnologia, Universidade Federal do Ceará, 2007. 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+82 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+ROCHA, M. V. P.; MENDES, J. S.; GIRO, M. E. A.; GONÇALVES, L. R. B. Estudo da 
+estabilidade do biossurfactante produzido por Pseudomonas aeruginosa em suco de caju. In: 
+4º Congresso Brasileiro de P&D em Petróleo e Gás, Campinas, São Paulo. 2007. 
+ 
+ 
+RODRIGUES,  L.;  BANAT,  I.;  TEIXEIRA,  J.;  OLIVEIRA,  R.  Biosurfactants:  
+Potential Aplications in Medicine. Journal of Antimicrobial Chemotherapy, v. 57, p. 609-
+618, 2006. 
+ 
+ 
+RON, E. Z.; ROSENBERG, E. Biosurfactants and oil bioremediation. Current Opinion in 
+Biotechnology, v. 13, p. 249-252, 2002. 
+ 
+ 
+RON, E. Z.; ROSENBERG, E. Natural roles of biosurfactants. Zeitschrift für 
+Naturforschung, v. 3, p. 229-236, 2001. 
+ 
+ 
+ROSEN, M. J. Surfactants and interface phenomena. New Jersey, Ed. John Wiley & Sons, 
+2ª Edição, 2004. 
+ 
+ 
+ROSENBERG, E.; RON, E. Z. High- and low-molecular-mass microbial surfactants. Applied 
+Microbiology and Biotechnology, v. 52, p. 154-162, 1999. 
+ 
+ 
+RUFINO,  R.  D.  Produção  de  biossurfactante  por  Candida  lipolytica.  2006.  95  f. 
+Dissertação (Mestrado em Micologia) – Centro de Ciências Biológicas, Universidade 
+Federal de Pernambuco, Recife, 2006. 
+ 
+ 
+SANTA  ANNA,  L.  M.;  SEBASTIAN,  G.  V.;  PEREIRA  JR.  N.;  ALVES,  T.  L.  M.; 
+MENEZES, E. P.; FREIRE, D. M. G. Production of biosurfactant from a new and promissing 
+strain of Pseudomonas aeruginosa PA1. Applied Biochemistry and Biotechnology, v. 91, p. 
+459-467, 2002. 
+ 
+ 
+ 
+SCHIPPERS,  C.;  GEBNER,  K.;  MÜLLER,  T.;  SCHEPER,  T.  Microbial  degradation  of 
+phenanthrene by addition of a sophorolipid mixture. Journal of Biotechnology, v. 83, p. 
+189-198, 2000. 
+ 
+ 
+SCHOLZ, C.; MEHTA, S.; BISHT, K.; GUILMANOV, V.; KAPLAN, D.; NICOLOSI, R.; 
+GROSS,  R.  Bioactivity  of extracellular  glycolpids:  Investigation  of potential  anti-cancer 
+activity  of  sophorolipids  and  sophorolipid  derivatives.  Proc.  Am.  Chem.  Soc.  Polym. 
+Preprints, v. 39, p.168-169, 1998. 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+83 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+SEN,  R.  &  SWAMINATHAN,  T.  Characterization  of  concentration  and  purification 
+parameters  and  operating  conditions  for  the  small-scale  recovery  of  surfactin.  
+Process Biochemistry, v. 40, p. 2953-2958, 2005. 
+ 
+ 
+SEN, R. & SWAMINATHAN, T. Response surface modeling and opitimization to elucidate 
+the effects of  inocullum age and size on surfactin production.  Biochemical Engineering 
+Journal, v. 21, p. 141-148, 2004. 
+ 
+ 
+SEPAHY.,  A.  A.;  ASSADI,  M.  M.;  SAGGADIAN,  V.;  NOOHI,  A.  Production  of 
+biosurfactant   from   Iranian   oil   fields   by   isolated   Bacilli.   International  Journal  of 
+Environmental Sciencie & Technology, v. 1, n. 4, p. 287-293, 2005. 
+ 
+ 
+SEYDLOVÁ,  G.;  SVOBODOVÁ,  J.  Review  of  Surfactin  Chemical  Properties  and  the 
+Potential Biomedical Applications. Cent. Eur. J. Med, v. 3, p. 123-133, 2008. 
+ 
+ 
+SHABTAI, Y. & GUTNIK, D.L. Enhanced emulsan production in mutants of 
+Acinetobacter calcoaceticus  RAG-1 selected for resistence to cetyltrimethylammonium 
+bromide. Applied and Environmental Microbiology, v. 52, p. 146-151, 1986. 
+ 
+ 
+SHAH, V.; DONCEL, G. F.; SEYOUM, T.; EATON, K. M.; ZALENSKAYA, I.; HAGVER, 
+R.; AZIM, A.; GROSS,  R. Sophorolipids, microbial glycolipids with anti-human 
+immunodeficiency  virus and sperm-immobilizing  activities. Antimicrobial Agents 
+Chemotherapy, v. 49, n. 10, p. 4093-4100, 2005. 
+ 
+ 
+SHAH, V.; JURJEVIC, M.; BADIA, D. Utilization of Restaurant Waste Oil as a Precursor for 
+Sophorolipid Production. Biotechnology Progress, v. 23, n. 2, p. 512-515, 2007. 
+ 
+ 
+SHEPHERD, R.; ROCKEY, J.; SUTHERLAND, I. W.; ROLLER, S. Novel Bioemulsifiers 
+from Microorganisms for Use in Foods. Journal of Biotechnology, v. 40, p. 207-217, 1995. 
+SHAW, D. J. Introduction to colloid and surface chemistry. Editora Edgard Blucher Ltda. 
+181p, 1970. 
+ 
+ 
+SILVA, S. N. R. L.; FARIAS, C. B. B.; RUFINO, R. D.; LUNA, J. M.; SARUBBO, L. A. 
+Glycerol  as  substrate  for  the  production  of  biosurfactant  by  Pseudomonas  aeruginosa 
+UCP0992. Colloids and Surfaces B: Biointerfaces, v. 79, n. 1, p. 174-183, 2010. 
+SIQUEIRA, M. J.; BOMM, D. M.; PEREIRA, G. F. N.; GARCEZ S. W.; BOAVENTURA, 
+M. A. D. Estudo  fitoquímico de Unonopsis lindmanii - Annonaceae, biomonitorado pelo 
+ensaio de toxicidade sobre a Artemia salina leach. Química Nova, v. 21, p. 557-559, 1998. 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+84 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+SOUSA, J. R.; CORREIA, J. A. C.; ALMEIDA, J. G. L.; RODRIGUES, S.; PESSOA, O. D. 
+L.; MELO, V.  M.  M.; GONÇALVES, L. R. B.  Evaluation of a co-product of biodiesel 
+production as carbon source in  the  production of biosurfactant by P. aeruginosa MSIC02. 
+Process Biochemistry, v. 46, n. 9, p. 1831-1839, 2011. 
+ 
+ 
+SOUSA, M. Bioconversão do glicerol para produção de biossurfactantes: aplicação no 
+preparo de emulsões. 2011. 121 p. Dissertação (Mestrado em Engenharia Química) – 
+Centro de Tecnologia, Universidade Federal do Ceará, 2011. 
+ 
+ 
+SOUSA, M.; MELO V. M. M.; RODRIGUES, S.; SANT’ANA, H. B.; GONÇALVES, L. R. 
+B. Screening of biosurfactant – producing Bacillus strains using glycerol from the 
+biodiesel synthesis as main carbon source.  Bioprocess and Biosystems Engineering, v. 
+35, n. 6, p.897-906, 2012. 
+ 
+ 
+TENDULKAR, S. R.; SAIKUMARI, Y.; PATEL, V.; RAGHOTAMA, S.; BALARAM, P.; 
+CHATTOO,  B.  Isolation,  Purification  and  Characterization  of  an  Antifungal  Molecule 
+Produced by Bacillus  licheniformmis BC98, and its Effect on Phytopathogen Magnaporthe 
+grisea. Journal of Applied Microbiology, v. 103, p. 2331-2339, 2007. 
+ 
+ 
+TIQUIA, S.M.; TAM, N.F.Y.; HODGKISS, I. J. Microbial activities during composting of 
+spent pig manure sawdust litter at different moisture contents. Bioresource Technology, v. 
+ 
+55, p. 201-206, 1996.
+ 
+ 
+TULOCH, A. P.; HILL, A.; SPENCER, J. F. T. Structure and relations of lactonic and 
+acidic sophorosides of  17-hydroxyoctadecanoic acid. Canadian Journal of Chemistry, v. 
+46, p. 3337-3351, 1968. 
+ 
+ 
+VATER, J.; KABLITZ, B.; WILDE, C.; FRANKE, P.; MEHTA, N.; CAMEOTRA, S. S. 
+Matrixassisted  laser  desortion  ionization-time  of  flight  mass  spectrometry  of  
+lipopeptide biosurfactants  in  whole  cells  and  culture  filtrates  of  Bacillus  subtilis  C-1  
+isolated  from petroleum sludge. Applied and Environmental  Microbiology, v. 68, n. 12, 
+p. 6210-6219, 2002. 
+ 
+ 
+VAN BEELEN, P.; DOELMAN, P. Significance and application of microbial toxicity tests 
+in assessing ecotoxicological risks of contaminants in soil and sediments. Chemosphere, v. 
+34, n. 3, p. 455-499, 1997. 
+VAN HAMME, J. D.; SINGH, A.; WARD, O. P. Physiological aspects: Part 1 in a series of 
+papers devoted to surfactants in microbiology and biotechnology. Biotechnology Advances, 
+v. 24, p. 604-620, 2006. 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+85 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+VAN HAMME, J.D.; URBAN J. Biosurfactants in bioremediation. Advances in Applied 
+Bioremediation, Soil Biology, v.17, p.73-89, 2009. 
+ 
+ 
+VAZ, D. A.; GUDIÑA, E. J.; ALAMEDA, E. J.; TEIXEIRA, J. A.; RODRIGUES, L. R. 
+Performance of a biosurfactant produced by a Bacillus subtilis strain isolated from crude 
+oil samples  as  compared  to   commercial  chemical  surfactants.  Colloids  and  Surfaces  
+B: Biointerfaces, v. 89, p. 167– 174, 2012. 
+ 
+ 
+VELIKONJA,   N.;  KOSARIC,   N.   Biosurfactants:  production,   properties,   applications; 
+Kosaric, N., Ed.; Marcel Decker: New York, 1993, cap. 16. 
+ 
+ 
+VIRAMONTES-RAMOS, S.; PORTILLO-RUIZ, M. C.; BALLINAS-CASARRUBIAS, M. 
+L.; TORRES-MUÑOZ, J. V.; RIVERA-CHAVIRA, B. E; NEVÁREZ-MOORILLÓN, G. 
+V. Selection of  biosurfactant/bioemulsifier-producing bacteria from hydrocarbon 
+contaminated soil. Brazilian Journal of Microbiology, v. 41, p. 668-675, 2010. 
+ 
+ 
+VOLLENBROICH, D.; PAULI, G.; OZEL, M. Antimycoplasma Properties and 
+Applications in  Cell  Cultura  of  Surfactin,  a  Lipopeptide  Antibiotic  from  Bacillus  
+subtilis.  Applied Environmental Microbiology, v. 63 p. 44-49, 1997. 
+ 
+ 
+ 
+VOLKERING, F.; BREURE, A. M.; VAN ANDEL, J. G.; RULKENS, W. H. Influence of 
+nonionic surfactants on bioavailability and biodegradation of polycyclic aromatic 
+hydrocarbons. Applied and Environmental Microbiology, v. 16, p. 1699-1705, 1995. 
+ 
+ 
+WEI,  Y.;  CHOU,  C.;  CHANG,  J.  Rhamnolipid  production  by  indigenous  
+Pseudomonas aeruginosa originating from petrochemical wastewater. Biochemical 
+Engineering Journal, v. 27, p. 146-154, 2005. 
+ 
+ 
+WILLUMSEN,  P.  A.;  KARLSON,  U.  Screening  of  bacteria,  isolated  from  PAH   – 
+contaminated soils, for production of biosurfactant and bioemulsifiers. Biodegradation, v. 
+7, p. 415 – 423, 1997. 
+ 
+ 
+YEH,  M.S.;  WEI,  Y.H.;  CHANG,  J.S.  Enhanced  production  of  surfactin  from  
+Bacillus subtilis by addition of solid carriers. Biotechnology Progress, v.21, n. 4, p.1329-
+1334, 2005. 
+ 
+ 
+YILMAZ, M.; SORAN, H.; BEYATLI, Y. Antimicrobial Activities of Some Bacillus spp. 
+Strains Isolated from the Soil. Microbiological Research, v. 161, p. 127-131, 2006. 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+86 
+ 
+Referências                                                                                                                                          Felix, A. K. N. 
+YOUSSELF, N.H.; DUNCAN, K.E.; NAGLE, D. P.; SAVAGE, K.N.; KNAPP, R.M.; 
+MCINERNEY, M.J. Comparison of methods to detected biosurfactant production by diverse 
+microorganisms. Journal of Microbiological Methods, v. 56, p. 339-347, 2004. 
+ 
+ 
+ZHANG, Y.; MAIER, R. M. Enhanced Octadecane Dispersion and  Biodegradation by a 
+Pseudomonas Rhamnolipid Surfactant (Biosurfactant). Applied and Environmental 
+Microbiology, v. 58, p. 3276-3282, 1992. 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+87 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ANEXO A 
+Dados Comparativos 
+ 
+ 
+11
+Espectro de RMN H da fração F:29-35 (---)  e espectro de RMN H da surfactina padrão 
+da  
+Sigma  (---) (300 MHz, piridina-d5)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+88 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+1313
+Espectro de RMN C da fração F:29-35 (---) e espectro de RMN C da surfactina padrão da 
+ 
+Sigma (---) (75 MHz, piridina-d5). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+89 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ANEXO B  
+Análises Estatísticas 
+ 
+Análise  estatística  para  avaliação  da  estabilidade  de  emulsão  formada  com  diferentes 
+hidrocarbonetos 
+ 
+ Gasolina 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+90 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ Diesel 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+91 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ Querosene 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+92 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ N-Hexadecano 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+93 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ Tolueno 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+94 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ Heptano 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+95 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ANEXO C  
+Análises Estatísticas 
+ 
+Análise estatística  para  avaliação  do  efeito  do  pH  nas  propriedades  do  biossurfactante 
+produzido por Bacillus subtilis LAMI005 a partir do suco de caju clarificado 
+ 
+ Tensão Superficial 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+96 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ Índice de Emulsifcação 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+97 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ANEXO D  
+Análises Estatísticas 
+ 
+Análise estatística para avaliação do efeito da força iônica nas propriedades do 
+biossurfactante produzido por Bacillus subtilis LAMI005 a partir do suco de caju clarificado 
+ 
+ Tensão Superficial 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+98 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ Índice de Emulsificação 
+ 
+ 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+99 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ANEXO E  
+Análises Estatísticas 
+ 
+Análise estatística para avaliação do efeito da temperatura nas propriedades do 
+biossurfactante produzido por Bacillus subtilis LAMI005 a partir do suco de caju clarificado 
+ 
+ Tensão Superficial 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 
+100 
+ 
+ANEXOS                                                                                                                                            Felix, A. K. N. 
+ 
+ Índice de Emulsificação 
+ 
+ 
+ 
+Caracterização e Estudo da Aplicabilidade do Biossurfactante Produzido por Bacillus Subtilis a partir do 
+Suco de Caju 
+ 

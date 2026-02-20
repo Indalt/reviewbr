@@ -1,0 +1,2886 @@
+ 
+ 
+ 
+ 
+ UNIVERSIDADE FEDERAL DO CEARÁ
+CENTRO DE TECNOLOGIA 
+DEPARTAMENTO DE ENGENHARIA QUÍMICA 
+ 
+PROGRAMA DE PÓS-GRADUAÇÃO EM ENGENHARIA QUÍMICA
+ 
+ 
+ 
+ 
+ 
+ANA KAROLINE FERREIRA LEITE 
+ 
+ 
+ 
+ 
+ 
+ 
+EFEITO PREBIÓTICO DE SUCO DE CAJU (Anacardium occidentale) CONTENDO 
+GLICO-OLIGOSSACARÍDEOS, DEXTRANA E TAGATOSE  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2020 
+ 
+ 
+ 
+ANA KAROLINE FERREIRA LEITE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EFEITO PREBIÓTICO DE SUCO DE CAJU (Anacardium occidentale) CONTENDO 
+GLICO-OLIGOSSACARÍDEOS, DEXTRANA E TAGATOSE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Dissertação apresentada ao Programa de 
+Pós-Graduação em Engenharia Química da 
+Universidade Federal do Ceará, como 
+requisito parcial para à obtenção do título de 
+Mestre em Engenharia Química. Área de 
+concentração: Processos Químicos e 
+Bioquímicos.  
+ 
+a
+Orientadora: Prof. Dr Sueli Rodrigues. 
+a
+Coorientadora: Dr Thatyane Vidal Fonteles 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2020 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ANA KAROLINE FERREIRA LEITE 
+ 
+ 
+ 
+ 
+ 
+ 
+EFEITO PREBIÓTICO DE SUCO DE CAJU (Anacardium occidentale) CONTENDO 
+GLICO-OLIGOSSACARÍDEOS, DEXTRANA E TAGATOSE 
+ 
+ 
+ 
+ 
+ 
+Dissertação apresentada à Coordenação do 
+Programa de Pós-Graduação em Engenharia 
+Química da Universidade Federal do Ceará, 
+como requisito parcial para a obtenção do 
+título de Mestre em Engenharia Química. 
+Área de concentração: Processos Químicos 
+e Bioquímicos.  
+ 
+Aprovada em: 27/02/2020. 
+ 
+ 
+BANCA EXAMINADORA 
+ 
+ 
+________________________________________________ 
+Prof. Dra. Sueli Rodrigues (Orientadora) 
+Universidade Federal do Ceará (UFC) 
+ 
+ 
+________________________________________________ 
+Prof. Dra. Luciana Rocha Barros Gonçalves 
+Universidade Federal do Ceará (UFC) 
+ 
+ 
+________________________________________________ 
+Dra. Maria Cristiane Rabelo 
+Universidade Federal do Ceará (UFC) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A Deus. 
+Aos meus queridos pais. 
+A vós devo tudo o que sou. 
+ 
+ 
+ 
+AGRADECIMENTOS 
+A Deus, pelo dom da sabedoria, pela paciência e coragem que me foram 
+concebidos. 
+Aos meus pais, Ana e José Leite, pelo apoio, educação, paciência quando tive 
+que ficar distante e amor imensurável. Ao meu irmão, que mesmo tão jovem sempre me 
+incentivou da sua forma e aos outros membros da minha família que ofereceram apoio e 
+confiaram em mim. 
+A Professora Sueli Rodrigues, pela excelente orientação, incentivo, confiança e 
+conhecimento compartilhado durante a realização do mestrado.  
+A Dra. Thatyane Vidal, pelos conselhos, sugestões, orientação, ótimas palavras 
+em momentos difíceis e amizade. 
+Sou imensamente grata a equipe do Labiotec, a Rhony, por toda ajuda 
+principalmente nessa reta final, o Rony, Day, Cristiano, Alana, Andressa. Obrigada por 
+todos os momentos de descontração, pelo apoio, conselhos e ajuda nos momentos mais 
+complicados. Agradeço também aos professores Elenilson e Ítalo. 
+Nada teria dado tão certo sem a ajuda e amizade do melhor grupo: Elaine, 
+Priscila, Fátima e Brenda, muito obrigada tanto pela vivência no laboratório, como pelo 
+laço que temos aqui fora. Um agradecimento especial a Brenda, sem sua amizade tão 
+rápida, companheirismo, presença, eficiência e amor pelo que faz, teria sido difícil concluir 
+esse mestrado no tempo certo.  
+Aos amigos que fiz no início do mestrado e guardo no coração até hoje, mesmo 
+na distância. Em especial, Eddie, Angélica e Dani, sem vocês teria sido bem difícil superar 
+o primeiro semestre. Além disso, obrigada pela amizade e todos os momentos bons 
+compartilhados, que tenham mais! 
+O presente trabalho foi realizado com o apoio da Coordenação de 
+Aperfeiçoamento do Pessoal de Nível Superior (CAPES) – Código de financiamento 001. 
+Agradeço ao Conselho Nacional de Desenvolvimento Cientifico e Tecnológico (CNPq), a 
+Fundação Cearense de Apoio ao Desenvolvimento Cientifico e Tecnológico (FUNCAP) e 
+ao Instituto Nacional de Frutos Tropicais (INCT-FT) pelo apoio financeiro.  
+Agradeço também a Universidade Federal do Ceará pela formação durante 
+esses anos. 
+E por fim, agradeço a mim mesmo, por ter conseguido chegar até aqui, por ter 
+superado as barreiras que surgiram e não ter desanimado. Que venha o Doutorado!  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+“O saber a gente aprende com os mestres e 
+os livros. A sabedoria se aprende é com a 
+vida e com os humildes.” 
+(Cora Coralina) 
+ 
+ 
+ 
+RESUMO 
+ 
+A microbiota intestinal exerce um papel importante para a saúde do hospedeiro e a 
+suplementação da dieta com prebióticos pode melhorar o equilíbrio dessa microbiota. Sucos 
+de frutas podem ser considerados veículos ideais para o consumo dos prebióticos, pois são 
+ricos em compostos bioativos e apresentam boa aceitabilidade pelos consumidores. No caso 
+específico da produção de sucos prebióticos através da síntese de oligossacarídeos, faz-se 
+necessário recompor a doçura das bebidas uma vez que os açúcares são consumidos durante 
+a síntese. Assim, o objetivo do presente trabalho foi avaliar o efeito prebiótico de sucos de 
+caju prebióticos, adoçado ou não com tagatose. Os oligossacarídeos prebióticos foram 
+sintetizados no suco, com e sem agitação pela ação da enzima dextrana-sacarase (30 °C/17 
+h). Uma simulação de digestão in vitro foi conduzida a 37 °C/6 h. Durante a passagem pelo 
+trato gastrointestinal foram avaliadas a concentração de glico-oligossacarídeos, dextrana e 
+tagatose, e a bioacessibilidade da vitamina C. Para avaliar o efeito prebiótico dos sucos 
+funcionais, os micro-organismos probióticos Lactobacillus casei, Bifidobacterium breve e 
+Bifidobacterium infantis foram utilizados. Os resultados mostraram que os 
+oligossacarídeos, a tagatose e parte da dextrana produzida (70 - 90 %) foram resistentes as 
+condições gastrointestinais e atingiram a parte final do sistema digestivo onde ocorre o 
+consumo dos carboidratos prebióticos pelos microrganismos probióticos. Além disso, os 
+sucos prebióticos melhoraram a bioacessibilidade da vitamina C, isso sugere um efeito 
+protetor oferecido por esses ingredientes. Os ingredientes com propriedades prebióticas 
+atuaram como substratos e estimularam o crescimento de bifidobactérias e lactobacilos. No 
+entanto, cada micro-organismo apresentou suas particularidades e consumiu 
+preferencialmente alguns desses componentes. A tagatose se mostrou um bom substrato 
+para a multiplicação de B. infantis. Por outro lado, o L. casei e B. breve merecem destaque 
+por metabolizarem preferencialmente a dextrana e os oligossacarídeos, respectivamente. As 
+concentrações de componentes com propriedades prebióticas dos sucos variaram entre 2,68 
+e 10,23 g/250 mL de suco. Por fim, os sucos de caju elaborados nesse trabalho atendem ao 
+apelo funcional sugerido, tendo em vista que apresentaram efeito prebiótico ao estimularem 
+o crescimento de micro-organismos benéficos.  
+ 
+Palavras-chave: Digestão in vitro, Bioacessibilidade, Vitamina C, Probióticos, Tagatose. 
+ 
+ 
+ 
+ 
+ 
+ABSTRACT 
+ 
+The intestinal microbiota plays an important role in the health of the host and dietary 
+supplementation with prebiotics can improve their balance. Fruit juices can be considered 
+ideal vehicles for the consumption of prebiotics, because they are rich in bioactive 
+compounds and have good acceptability by consumers. In the specific case of the 
+production of prebiotic juices through the synthesis of oligosaccharides, it is necessary to 
+restore the sweetness of the drinks because the sugars are consumed during the synthesis. 
+Thus, the objective of the present work was to evaluate the prebiotic effect of prebiotic 
+cashew juices, sweetened or not with tagatose. The prebiotic oligosaccharides were 
+synthesized in the juice, with or without agitation, by the enzyme dextransucrase (30 ° C / 
+17 h). An in vitro simulated digestion was carried out at 37 ° C/6 h. During the passage 
+through the gastrointestinal tract, the concentration of glyco-oligosaccharides, dextran and 
+tagatose, and the bioaccessibility of vitamin C were evaluated. To evaluate the prebiotic 
+effect of the functional juices, the following probiotic microorganisms were used: 
+Lactobacillus casei, Bifidobacterium breve and Bifidobacterium infantis. The results 
+showed that oligosaccharides, tagatose and part of the dextran (70 - 90 %) were resistant to 
+gastrointestinal conditions and reached the final part of the digestive system where the 
+consumption of prebiotic carbohydrates by probiotic microorganisms occurs. In addition, 
+juices containing these prebiotics have improved the bioaccessibility of vitamin C, which 
+suggests a protective effect offered by these ingredients. The ingredients with prebiotic 
+properties acted as substrates and stimulated the growth of bifidobacteria and lactobacilli. 
+However, each microorganism presented its particularities and consumed some of these 
+components preferentially. Tagatose proved to be a good substrate for the multiplication of 
+B. infantis. Conversely, L. casei and B. breve deserve to be highlighted for preferentially 
+metabolizing dextran and oligosaccharides, respectively. The concentrations of components 
+with prebiotic properties of the juices varied between 2.68 and 10.23 g / 250 mL of juice. 
+Finally, the cashew juices produced in this work meet the claimed of functional appeal, 
+given that they had a prebiotic effect by stimulating the growth of beneficial 
+microorganisms.  
+ 
+Keywords: In vitro digestion, Bioaccessibility, Vitamin C, Probiotics, Tagatose. 
+ 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+ 
+1 INTRODUÇÃO ......................................................................................................... 12 
+2 REVISÃO BIBLIOGRÁFICA ................................................................................. 14 
+2.1 Alimentos funcionais ................................................................................................................... 14 
+2.2 Oligossacarídeos prebióticos .................................................................................................... 15 
+2.2.1 Síntese enzimática de oligossacarídeos prebióticos e dextrana ................................ 16 
+2.2.2 Efeitos benéficos atribuídos ao uso de oligossacarídeos prebióticos ....................... 17 
+2.3 Suco de caju .................................................................................................................................... 18 
+2.4 Adoçante tagatose ........................................................................................................................ 20 
+2.5 Digestão simulada in vitro e bioacessibilidade ................................................................. 22 
+3 OBJETIVOS .............................................................................................................. 27 
+3.1 Objetivo geral ................................................................................................................................ 27 
+3.2 Objetivos específicos ................................................................................................................... 27 
+  
+4MATERIAIS E MÉTODOS ..................................................................................... 28
+4.1 Preparo do suco de caju ............................................................................................................. 28 
+4.2 Caracterização físico-química do suco de caju................................................................. 28 
+4.3 Produção da enzima dextrana-sacarase .............................................................................. 28 
+4.4 Síntese enzimática de oligossacarídeos prebióticos ........................................................ 28 
+4.5 Formulação do suco de caju prebiótico utilizando tagatose como adoçante ........ 30 
+4.6 Quantificação de glico-oligossacarídeos .............................................................................. 30 
+4.7 Sistema contínuo de digestão in vitro .................................................................................... 31 
+4.8 Efeito dos prebióticos no crescimento de micro-organismos intestinais ................ 32 
+4.8.1 Ativação dos micro-organismos ................................................................................. 32 
+4.8.2 Cultivo dos micro-organismos ................................................................................... 33 
+4.9 Métodos analíticos ........................................................................................................................ 33 
+4.9.1 Determinação de açúcares ......................................................................................... 33 
+4.9.2 Determinação de ácidos orgânicos ............................................................................ 33 
+4.9.3 Determinação da atividade enzimática ...................................................................... 34 
+4.9.4 Determinação de dextrana ......................................................................................... 35 
+4.9.5 Avaliação do crescimento microbiano nos sucos após digestão in vitro .................. 35 
+4.10 Análises estatísticas ..................................................................................................................... 35 
+5 RESULTADOS E DISCUSSÕES ............................................................................. 35 
+5.1 Caracterização do suco de caju .............................................................................................. 36 
+ 
+ 
+ 
+5.2 Síntese enzimática dos oligossacarídeos .............................................................................. 36 
+5.2.1 Scale-up ...................................................................................................................... 37 
+5.3 Efeito da digestão in vitro nos ingredientes com propriedades prebióticas .......... 39 
+5.3.1 Glico-oligossacarídeos e dextrana ............................................................................. 39 
+5.3.2 Tagatose ...................................................................................................................... 42 
+5.4 Efeito da digestão in vitro na bioacessibilidade vitamina c .......................................... 42 
+5.5 Avaliação do efeito prebiótico dos sucos de caju ............................................................. 44 
+5.5.1 Crescimento de probióticos na ‘Formulação 1’ ........................................................ 45 
+5.5.2 Crescimento de probióticos na ‘Formulação 2’ ........................................................ 49 
+5.5.3 Crescimento de probióticos na ‘Formulação 3’ ........................................................ 54 
+5.5.4 Crescimento de probióticos na ‘Formulação 4’ ........................................................ 58 
+5.5.5 Crescimento de probióticos na ‘Formulação 5’ ........................................................ 61 
+  
+6CONCLUSÕES ......................................................................................................... 65
+  REFERÊNCIAS ........................................................................................................ 66 
+ 
+ 
+12 
+ 
+1 INTRODUÇÃO 
+ 
+ Nos últimos anos, além de serem vistos como fonte de nutrientes básicos, os 
+alimentos passaram a ser reconhecidos como promovedores de bem estar físico e mental e 
+podendo inclusive prevenir doenças relacionadas à nutrição.  O crescimento do mercado de 
+alimentos funcionais pode ser observado pela variedade de novos produtos encontrados nos 
+seus diversos segmentos, isso pode ser justificado pelo comportamento dos consumidores, 
+que estão mais atentos à qualidade de vida, aliados ao bem estar e saúde (KAUR; SINGH, 
+2017). Assim, as indústrias e pesquisadores visam atender os anseios dessa parcela da 
+população, desenvolvendo alimentos saudáveis. 
+Na área de alimentos funcionais a microbiota intestinal tem recebido destaque, 
+devido aos efeitos benéficos que promovem à saúde. Dessa forma, torna-se importante 
+estimular o crescimento seletivo de bactérias probióticas reduzindo assim, o número de 
+patógenos (ALQURASHI et al., 2017; LI et al., 2019). Uma das estratégias mais adotadas  
+para o estabelecimento de uma microbiota saudável é a ingestão de prebióticos, visto que 
+estudos evidenciam a fermentação desses ingredientes por micro-organismos probióticos no 
+trato gastrointestinal, levam a produção de metabólitos desejáveis, tais como ácidos graxos 
+de cadeia curta (FONTELES; RODRIGUES, 2018).  
+A fortificação de alimentos com ingredientes prebióticos é uma categoria que 
+vem sendo desenvolvida para promover a funcionalidade de matrizes alimentícias. Os 
+produtos lácteos geralmente são os produtos mais estudados para a elaboração de bebidas 
+com propriedades probióticas (SANTOS et al., 2018), porém a fortificação de sucos de 
+frutas com ingredientes funcionais, como prebióticos, é uma opção viável de diversificação 
+do mercado (ARAÚJO et al., 2015), pois possuem uma boa aceitação sensorial e atendem o 
+apelo nutricional dos consumidores (ANNUNZIATA; VECCHIO, 2011). 
+Prebióticos são definidos como ingredientes alimentares não digeríveis com 
+estruturas quimicamente estáveis ao trato gastrointestinal superior que modulam a 
+microbiota intestinal e a saúde do hospedeiro (SINGH et al., 2017). Os sucos de frutas 
+podem ser considerados veículos ideais para o consumo de prebióticos, devido a sua 
+composição, visto que são ricos em compostos bioativos, nutrientes, vitaminas e açúcares. 
+Existem dois métodos para elaborar sucos de frutas prebióticos: adicionando 
+oligossacarídeo prebiótico à matriz alimentar ou sintetizando o carboidrato prebiótico 
+diretamente no suco de fruta, por via enzimática.  
+ 
+13 
+ 
+A enzima dextrana-sacarase é uma glicosiltransferase produzida pela bactéria 
+Leuconostoc mesenteroides em meio de cultura contendo sacarose. Essa enzima catalisa a 
+síntese de oligossacarídeos prebióticos em meios contendo sacarose e aceptores (glicose, 
+maltose e frutose), produzindo também dextrana. Estes oligossacarídeos, por não serem 
+hidrolisados pelo trato gastrointestinal, chegam até o colón promovendo o crescimento 
+seletivo de bactérias probióticas (RASTALL; GIBSON, 2015). Estudos mostraram que a 
+dextrana-sacarase pode ser usada de modo satisfatório para a síntese enzimática de 
+oligossacarídeos prebióticos em sucos de frutas (DA SILVA; RABELO; RODRIGUES, 
+2014; VERGARA et al., 2010). 
+Após a síntese de oligossacarídeos, faz-se necessário recompor a doçura das 
+bebidas uma vez que os açúcares (naturais do suco e/ou adicionados) são consumidos 
+durante a síntese. Na busca de uma alimentação saudável e que atenda aos anseios dos 
+consumidores que buscam alimentos sem sacarose, a tagatose é considerada uma alternativa 
+potencial, pois se assemelha à sacarose com relação ao dulçor, apresenta baixo valor 
+calórico e pode se comportar como um ingrediente prebiótico, conferindo benefícios à 
+saúde (JAYAMUTHUNAGAI et al., 2017a).   
+Existem diferentes critérios para avaliar o efeito prebiótico de um ingrediente 
+alimentar, dentre eles estão: sua capacidade de não sofrer alterações pelas enzimas e 
+condições do trato gastrointestinal e ser substrato para crescimento da microbiota intestinal, 
+favorecendo a multiplicação de probióticos (SUBIN et al., 2017).  
+Diante do exposto, esse trabalho visou avaliar o efeito do suco de caju contendo 
+glico-oligossacarídeos, dextrana e tagatose no crescimento de microrganismos probióticos, 
+bem como avaliar a bioacessibilidade da vitamina C e seu comportamento durante a 
+fermentação dos micro-organismos probióticos em estudo. Com o intuito de avaliar a 
+resistência desses ingredientes e a bioacessibilidade de compostos bioativos durante a 
+digestão, realizou-se um modelo de simulação in vitro do sistema digestivo humano, o qual 
+permitiu analisar o produto digerido nas etapas gástrica e entérica. Além disso, fez-se 
+necessário simular as condições do cólon, onde ocorrem os processos fermentativos.   
+ 
+ 
+ 
+ 
+14 
+ 
+2  REVISÃO BIBLIOGRÁFICA 
+ 
+2.1 Alimentos funcionais 
+ 
+Nas últimas décadas, tornou-se crescente o interesse por alimentos com efeitos 
+benéficos à saúde. Isso se deve a preocupação das indústrias em atender os anseios dos 
+consumidores, que estão mais conscientes e acreditam que os alimentos podem oferecer 
+saúde e bem estar. Nesse contexto surgiram os alimentos funcionais que apresentam valores 
+nutricionais e terapêuticos melhorados (MOUMITA et al., 2018). O conceito de alimentos 
+funcionais surgiu na década de 80 no Japão, e pode ser definido como, alimentos que além 
+das funções nutricionais básicas, têm um efeito potencialmente positivo sobre a saúde, bem 
+como efeitos metabólicos e/ou fisiológicos, auxiliando na redução de riscos de doenças não 
+transmissíveis (GRANATO; NUNES; BARBA, 2017). 
+Os alimentos funcionais fazem parte de um novo nicho de mercado que busca 
+aumentar o reconhecimento e aceitação do consumidor. A indústria alimentícia se mostra 
+interessada nesse segmento devido as atividades de pesquisa e desenvolvimento que 
+evidenciam os benefícios que esses alimentos proporcionam ao nosso organismo 
+(BALTHAZAR et al., 2017a). Estes produtos apresentam um impacto positivo ao corpo 
+humano, pois atuam na biorregulação do apetite, modulam as funções imunológicas e 
+podem atuar na prevenção de alergias, hipertensão arterial, diabetes, câncer, colesterol alto 
+e anemia (DA SILVA; BARREIRA; OLIVEIRA, 2016; MITSUOKA, 2014). 
+Uma das estratégias para a produção de alimentos funcionais é a adição de 
+probióticos, prebióticos ou sua combinação (simbiótico), além da incorporação de 
+compostos bioativos em um alimento convencional para melhorar os valores nutricionais, 
+perfil sensorial, características físico-químicas e reológicas (FAZILAH et al., 2018). 
+Devem-se levar em conta algumas variáveis, como: a interação do ingrediente funcional 
+com a matriz alimentar, a estabilidade ao processamento e a sua biodisponibilidade 
+(ALMEIDA et al., 2015; AMIGO-BENAVENT et al., 2013; FONTELES; RODRIGUES, 
+2018).  
+Atualmente, existe um grande interesse na modulação da microbiota intestinal 
+humana, pois a mesma desempenha um papel fundamental na saúde do hospedeiro. Os 
+alimentos probióticos atendem esse apelo funcional, contudo, uma alternativa bastante 
+eficaz e que vêm se destacando nos últimos tempos, é o consumo de ingredientes 
+ 
+15 
+ 
+funcionais denominados prebióticos (FONTELES; RODRIGUES, 2018; TAKO et al., 
+2014). Esse conceito será melhor explanado no tópico posterior.  
+ 
+2.2 Oligossacarídeos prebióticos 
+ 
+Os prebióticos foram definidos pela primeira vez em 1995, como ingredientes 
+alimentares não digeríveis, que conferem efeitos benéficos à saúde do hospedeiro ao serem 
+consumidos pelas bactérias benéficas do cólon, estimulando seletivamente o crescimento 
+e/ou atividade de um número limitado desses microrganismos (GIBSON; ROBERFROID, 
+1995). Os oligossacarídeos prebióticos, uma classe de destaque dos prebióticos, são 
+metabolizados seletivamente por cepas probióticas, como os gêneros bifidobactérias e 
+lactobacilos, e não são metabolizados pelas outras bactérias da flora intestinal (RASTALL; 
+GIBSON, 2015). Dessa forma, esses ingredientes alimentares se comportam como uma 
+fonte específica para o crescimento de probióticos. 
+Um novo conceito de prebióticos foi proposto pelo painel de consenso da 
+Associação Científica Internacional para Probióticos e Prebióticos, sendo definido como 
+um substrato que é usado seletivamente por microrganismos hospedeiros, conferindo um 
+benefício à saúde (GIBSON et al., 2017). De acordo com a Global Market Insights, Inc. 
+(Delaware, EUA), o mercado mundial de prebióticos está aumentando, e espera-se que este 
+ingrediente alimentar ultrapasse US $ 8,5 bilhões até 2024 (FONTELES; RODRIGUES, 
+2018). 
+A maioria dos prebióticos são oligossacarídeos não digeríveis, que consistem de 
+3-10 monômeros de carboidratos. A inulina é uma exceção, composta por uma mistura de 
+fruto-oligossacarídeos e polissacarídeos (SAAD et al., 2013). Dentre os oligossacarídeos 
+funcionais, destacam-se os fruto-oligossacarídeos, glico-oligossacarídeos, isomalto-
+oligossacarídeos, galacto-oligossacarídeos e os oligossacarídeos de soja (PATEL; GOYAL, 
+2011). Os oligossacarídeos devem seguir alguns critérios para serem classificados como 
+prebióticos, tais como: serem resistentes à ação de enzimas salivares e intestinais; estimular 
+o crescimento de bactérias probióticas; ser fermentado pela microbiota intestinal; conferir 
+efeitos benéficos à saúde do hospedeiro; e ser quimicamente estável ao processamento de 
+alimentos (LAMSAL, 2012; WANG, 2009). 
+Os oligossacarídeos podem ser encontrados naturalmente em alimentos, como 
+leite, mel, cana de açúcar, soja, alho e beterraba (MUSSATTO; MANCILHA, 2007) ou 
+ 
+16 
+ 
+produzidos por síntese enzimática ou química a partir de dissacarídeos ou outros substratos, 
+bem como por hidrólise de polissacarídeos (MORENO et al., 2017). No caso dos 
+oligossacarídeos sintetizados via enzimática, a enzima dextrana-sacarase vem sendo 
+empregada pelo nosso grupo de pesquisa. DA SILVA; RABELO; RODRIGUES (2014) 
+produziram oligossacarídeos prebióticos pela ação da enzima dextrana-sacarase em suco de 
+caju clarificado. 
+ 
+2.2.1 Síntese enzimática de oligossacarídeos prebióticos e dextrana 
+ 
+A enzima dextrana-sacarase (E.C.2.4.1.5) é uma glicosiltransferase bacteriana 
+extracelular que catalisa a síntese de dextrana e oligossacarídeos prebióticos, de acordo 
+com a composição do meio. Essa enzima produzida pelo Leuconostoc mesenteroides, uma 
+bactéria ácido lática presente naturalmente em alimentos fermentados e reconhecida como 
+GRAS (Generally Recognized As Safe) (AMAN; SIDDIQUI; QADER, 2012).  
+Em meios contendo apenas sacarose como substrato, a enzima catalisa a 
+formação de dextrana, um polissacarídeo formado por monômeros de glicose ligados 95% 
+por ligações glicosídicas lineares do tipo α-(1-6) na cadeia principal e ligações α-(1-2), α-
+(1-3) e α-(1-4) nas ramificações (BARUAH; DEKA; GOYAL, 2017; BOUNAIX et al., 
+2009; VANDAMME; SOETAERT, 1995). Autores relataram que esse exopolissacarídeo 
+pode apresentar propriedades prebióticas e ser fermentados pela microbiota intestinal 
+(KOTHARI; DAS; PATEL, 2014; OLANO-MARTIN et al., 2000). 
+Além da formação de dextrana, a enzima dextrana-sacarase sintetiza outros 
+produtos. Dessa forma, quando um carboidrato aceptor (glicose, frutose e maltose) é 
+adicionado ao meio reacional contendo sacarose, as unidades de glicose são desviadas da 
+cadeia de dextrana, sendo incorporadas na molécula aceptora, formando os 
+oligossacarídeos, essa reação é conhecida como reação do aceptor (Figura 1) (DA SILVA; 
+RABELO; RODRIGUES, 2014; VERGARA et al., 2010). As unidades de glicose são 
+incorporadas na cadeia de oligossacarídeos, levando ao aumento do grau de polimerização 
+dos mesmos. Contudo, a proporção sacarose: aceptor apresenta efeito sobre o grau de 
+polimerização dos oligossacarídeos, bem como sobre o rendimento destes e da dextrana 
+(DA SILVA; RABELO; RODRIGUES, 2014).  
+A enzima dextrana-sacarase apresenta atividade ótima em torno de 30 °C e na 
+faixa de pH de 5,0 a 5,5 (DA SILVA; RABELO; RODRIGUES, 2014; FONTES et al., 
+ 
+17 
+ 
+2015; RABELO; FONTES; RODRIGUES, 2009). No entanto, a sua estabilidade a longo 
+prazo é maior em temperaturas mais baixas (HEINCKE et al., 1999). 
+Figura 1. Reação do aceptor para a síntese de oligossacarídeos prebióticos 
+ 
+Fonte: VERGARA et al. (2010) com adaptações.
+ 
+ 
+2.2.2 Efeitos benéficos atribuídos ao uso de oligossacarídeos prebióticos 
+ 
+O interesse por alimentos contendo prebióticos vem crescendo continuamente. 
+Isso se deve aos efeitos benéficos que esses ingredientes conferem à saúde dos 
+consumidores. A principal função dos prebióticos é a capacidade de modular a microbiota 
+gastrointestinal (LIN et al., 2014; VANDEPUTTE et al., 2017). As bifidobactérias  
+intestinais, bem como as bactérias do gênero Lactobacillus, são os principais 
+microrganismos que metabolizam os prebióticos, logo, existem alguns estudos in vitro e in 
+vivo que demonstraram esses efeitos bifidogênicos dos oligossacarídeos (ENDO et al., 
+2016; PAINEAU et al., 2014; SCOTT et al., 2014). 
+Estudos reportam que esses carboidratos funcionais podem melhorar o 
+funcionamento do sistema imunológico (VIEIRA; TEIXEIRA; MARTINS, 2013), diminuir 
+o risco de câncer e de obesidade (JOHNSON et al., 2013), prevenir doenças 
+cardiovasculares e diabetes (JOHANSSON et al., 2016). Além disso, esses ingredientes 
+podem ter efeitos sobre alguns fatores regulatórios do corpo, por exemplo favorecer a 
+absorção de minerais, como cálcio, magnésio e ferro (MAAWIA et al., 2016). 
+É importante ressaltar que, esses ingredientes funcionais, quando ingeridos em 
+quantidades elevadas, podem apresentar efeitos colaterais, tais como: desconforto intestinal, 
+flatulências e diarreia (BARUAH; DEKA; GOYAL, 2017). Segundo a Agência Nacional de 
+Vigilância Sanitária (ANVISA), o valor de referência dietética para fibras alimentares, 
+inulina e fruto-oligossacarídeos (FOS) deve ser no mínimo 3 g/dia se o alimento for sólido 
+ou 1,5 g/dia se o alimento for líquido, para que o mesmo apresente alegações com 
+propriedades funcionais, de acordo com o item 3.3 da Resolução no 18/1999. É 
+recomendada, ainda, uma ingestão máxima de 30 g/ dia (ANVISA, 2014). No entanto, 
+ 
+18 
+ 
+alguns autores indicam uma ingestão diária de 10 g/L para fruto-oligossacarídeos 
+(BOUHNIK et al., 1999) e 7 g/L para galacto-oligossacarídeos (SILK et al., 2009). 
+Do ponto de vista tecnológico, a adição de oligossacarídeos prebióticos aos 
+alimentos melhora o aspecto sensorial, como sabor e textura, e confere benefícios 
+nutricionais quando usados como substituto de gorduras em formulações de alimentos 
+(BALTHAZAR et al., 2017b). Outros estudos mostram que os prebióticos melhoram a 
+sensação dos alimentos na boca (mastigabilidade) em uma ampla gama de aplicações 
+alimentícias, como laticínios e produtos de panificação, bem como podem causar 
+escurecimento de produtos, como pães (SALINAS et al., 2016). 
+Um novo segmento do mercado de alimentos prebióticos vem ganhando 
+destaque, os sucos de frutas. Alguns estudiosos vêm avaliando a funcionalidade de suco de 
+laranja adicionados de oligossacarídeos (COSTABILE et al., 2015; VEGA; ZUNIGA-
+HANSEN, 2015). Os sucos de frutas tem se apresentado como substratos ideais para a 
+elaboração de bebidas prebióticas de baixo teor calórico, obtidas por processo enzimático, 
+pela ação da enzima dextrana-sacarase, sendo eles: Suco de melão, laranja e abacaxi 
+(FONTES et al., 2015), suco de acerola (ARAÚJO et al., 2015) suco de cranberry (GOMES 
+et al., 2017) e suco de caju prebiótico (TINGIRIK; GOMES; RODRIGUES, 2017). 
+ 
+2.3 Suco de caju 
+ 
+O Brasil é um país tropical, conhecido pela sua grande variedade de frutas. 
+Destaca-se por ser um importante exportador de frutas tropicais e subtropicais, 
+principalmente para países da Europa e Estados Unidos. Esses alimentos são reconhecidos 
+como produtos saudáveis, e frequentemente consumidos por uma parcela significativa da 
+população. As frutas e vegetais não são vistos apenas como uma forma de nutrir, mas 
+também são utilizados para fins terapêuticos e na prevenção de doenças crônicas como: 
+câncer, diabetes, ataques cardíacos entre outras (AGUILERA; MARTIN-CABREJAS; 
+GONZÁLEZ DE MEJIA, 2016). 
+O caju é o pseudofruto do cajueiro (Anacardium Occidentale L.), e pertence à 
+família Anacardiaceae. Para cada tonelada de castanha de caju produzida, obtém-se 
+aproximadamente de 10 a 15 toneladas de caju como subproduto (TALASILA; SHAIK, 
+2015). O pedúnculo do caju é rico em componentes funcionais como vitamina C, minerais, 
+ácidos orgânicos, compostos fenólicos, carboidratos e açúcares redutores como a frutose e a 
+ 
+19 
+ 
+glicose (QUEIROZ et al., 2011; RABELO; FONTES; RODRIGUES, 2009; 
+SCHWEIGGERT et al., 2016). Essa parte do fruto é suculenta, apresenta sabor agradável e 
+pode ser consumido in natura ou industrializado. O suco é o principal produto oriundo do 
+pedúnculo, o qual pode ser obtido por meio de um processo mecânico, em uma prensa 
+extratora (FONTELES et al., 2017; QUEIROZ et al., 2011).  
+A comercialização de sucos, bem como a aceitabilidade dos consumidores com 
+relação a esses produtos, tem apresentado um considerável crescimento, pois a população 
+anseia por alimentos práticos e naturais, com qualidade nutricional e sensorial 
+(RODRÍGUEZ et al., 2017). O suco de caju é uma alternativa conveniente a esta demanda. 
+Segundo regulamento técnico para fixação dos padrões de identidade e qualidade para suco 
+de caju, o suco de caju integral é definido como a bebida não fermentada e não diluída, 
+obtida da parte comestível do pedúnculo do caju (Anacardium ocidentale, L.), através de 
+processo tecnológico adequado. Além disso, o suco deve obedecer determinadas 
+características como: cor variando do branco ao amarelado; sabor próprio, levemente ácido 
+e adstringente; e aroma próprio (BRASIL, 2000). 
+ Estudos evidenciam que os sucos de frutas representam um forte segmento no 
+mercado de alimentos funcionais. A composição do suco de caju o torna um substrato ideal 
+para fermentação com culturas probióticas, pois são produtos ricos em componentes 
+funcionais, o que possibilita o desenvolvimento de bebidas funcionais à base de frutas, 
+como o suco probiótico de caju (ALVES FILHO et al., 2017; PEREIRA et al., 2013, 2014).  
+Os sucos de frutas se apresentam como veículos promissores para a elaboração 
+de outros alimentos com propriedades funcionais, como suco de caju prebiótico, obtido pela 
+síntese de oligossacarídeos prebióticos no próprio suco, pela ação da enzima dextrana-
+sacarase (DA SILVA; RABELO; RODRIGUES, 2014; FONTELES; RODRIGUES, 2018). 
+No entanto, após a síntese de oligossacarídeos, a doçura final do produto pode ser afetada, 
+pois os açúcares do suco são consumidos durante o processo. Diante do exposto, faz-se 
+necessário recompor esse atributo sensorial e uma alternativa saudável é a busca por 
+adoçantes que atendam essa demanda e não alterem a qualidade e aceitabilidade do 
+produto. 
+ 
+ 
+ 
+ 
+20 
+ 
+2.4 Adoçante tagatose 
+ 
+A busca por uma alimentação saudável vem sendo um dos maiores objetivos 
+dos consumidores, que estão cada vez mais preocupados com a saúde e com a qualidade 
+dos produtos que adquirem. A Organização Mundial de Saúde (OMS) divulgou uma nova 
+diretriz em março de 2015, orientando a redução do consumo de açúcar para menos de 25 g 
+/ dia (WORLD HEALTH ORGANISATION, 2015).  
+Nesse contexto, estudos foram realizados avaliando a substituição desses 
+açúcares por adoçantes. Porém, alguns estudiosos relataram que o uso de adoçantes 
+artificiais, como a sucralose, pode alterar a microbiota intestinal e causar inflamações 
+(BIAN et al., 2017). Dessa forma, o estudo sobre adoçantes naturais com baixo teor 
+calórico está continuamente ganhando espaço no mercado e nas pesquisas, devido as suas 
+funcionalidades. 
+A tagatose é um adoçante tipo cetohexose, que vem sendo estudado como 
+substituto da sacarose e de outros açúcares (JAYAMUTHUNAGAI et al., 2017a; KIM, 
+2004). A tagatose é um monossacarídeo com estrutura similar a frutose, a diferença entre 
+essas moléculas deve-se a posição do grupo hidroxila no quarto carbono. Sua estrutura 
+permite uma absorção mínima no trato gastrointestinal superior, sendo considerado um 
+açúcar de baixo valor calórico, apresentando menos de 1,5 kcal /g (JAYAMUTHUNAGAI 
+et al., 2017a; KIM, 2004). Apresenta-se na forma de pó branco cristalino e inodoro, como 
+se trata de um açúcar redutor, participa da reação de Maillard, causando o escurecimento 
+dos alimentos durante tratamentos térmicos (ROY et al., 2018). Essa característica se 
+assemelha aos efeitos da sacarose quando adicionada em formulações submetidas ao 
+aquecimento, por exemplo, na elaboração de pães. O que torna viável a substituição do 
+açúcar tradicional pela tagatose, pois apresentam o mesmo comportamento quando 
+submetidos à condições de calor.  
+Em 2001, esse adoçante natural recebeu o status de geralmente reconhecido 
+como seguro (GRAS), pela Food and Drug Administration (FDA), devido a vários 
+benefícios para a saúde e várias aplicações nas indústrias de alimentos (LEVIN, 2002). A 
+tagatose é encontrada naturalmente em pequenas quantidades nos produtos lácteos e 
+algumas frutas, apresenta aproximadamente 92% da doçura da sacarose (LEVIN, 2002; 
+MENDOZA; OLANO; VILLAMIEL, 2005; OH, 2007) e sabor mais similar ao açúcar que 
+os outros adoçantes existentes. Contudo, contém apenas 30% do conteúdo energético da 
+sacarose (FUJIMARU; PARK; LIM, 2012; MEN et al., 2014). A tagatose apresenta alta 
+ 
+21 
+ 
+solubilidade, o que a torna ideal como intensificador de sabor (SHOURIDEH et al., 2012), 
+podendo ser usada também como texturizante e estabilizante. Esse adoçante natural é 
+menos higroscópico que a frutose, e levemente mais viscoso que a frutose e sorbitol, porém 
+possui menor viscosidade que a sacarose. Além disso, suas propriedades umectantes são 
+semelhantes às do sorbitol (OH, 2007).  
+A tagatose é pouco absorvida no intestino delgado, cerca de 20 a 25%. Esse 
+monossacarídeo não absorvido atinge o intestino grosso, onde é metabolizado pela 
+microflora presente no cólon, acarretando em modificações nas proporções dos ácidos 
+graxos de cadeia curta (TAYLOR; FASINA; BELL, 2008), incluindo propionato e butirato 
+(BERTELSEN; JENSEN; BUEMANN, 1999; VENEMA; VERMUNT; BRINK, 2005). O 
+butirato atua como um agente anti-inflamatório e na prevenção do câncer de cólon 
+(CANANI et al., 2011). Dessa forma, a tagatose é considerada um ingrediente prebiótico, o 
+que contribuiu para a realização de estudos para avaliar seus efeitos potenciais em 
+formulações de alimentos (ROUHI et al., 2014). 
+Alguns estudos mostram que a tagatose apresenta efeitos prebióticos. Quando 
+aplicada como substrato simbiótico, favorece o crescimento e as funções probióticas de 
+Lactobacillus casei e Lactobacillus rhamnosus, e promove a redução do colesterol. Com 
+isso, pode contribuir para a melhoria funcional dos alimentos (KOH et al., 2013). Ensaios 
+confirmaram o uso desses monossacarídeos para tratar diabetes tipo 2, mostrando um 
+importante potencial para a perda de peso e aumento do colesterol das lipoproteínas de alta 
+densidade (GUERRERO-WYSS; DURÁN AGÜERO; ANGARITA DÁVILA, 2018). 
+Esse adoçante vem sendo aplicado como substituto ao açúcar tradicional e tem 
+tido destaque por melhorar características nos produtos reformulados, tornando assim 
+viável sua utilização. RUBIO-ARRAEZ et al. (2016) avaliaram as características de geléias 
+cítricas e observaram uma melhoria na textura e nos atributos sensoriais dos alimentos 
+elaborados com tagatose e em combinação com isomaltulose, além disso, a tagatose 
+favoreceu inicialmente a capacidade antioxidante da geléia cítrica. Estudos evidenciam o 
+impacto positivo da adição de tagatose na formulação de chocolates ao leite simbiótico, 
+mostrando que esse prebiótico melhora a aceitabilidade dos produtos, e não interferem na 
+viabilidade dos microrganismos probióticos incorporados no chocolate (RAD et al., 2018).   
+Adoçantes saudáveis vêm sendo aplicados na formulação de doces, como a 
+marmelada de laranja, visando substituir o açúcar tradicional. Foi observado que a 
+incorporação de tagatose e oligofrutose, na mesma proporção, melhorou a consistência e a 
+elasticidade dos produtos, bem como obtiveram boa aceitabilidade e intenção de compra 
+ 
+22 
+ 
+pelos degustadores (RUBIO-ARRAEZ et al., 2015). Do mesmo modo, os resultados 
+obtidos por RUBIO-ARRAEZ et al. (2017) mostram que doces de limão elaborados com 
+tagatose apresentam maior pontuação nos atributos sensoriais, com ênfase na doçura. 
+Diante do exposto, pode-se notar que esse açúcar raro apresenta várias aplicações na 
+indústria alimentícia, pois suas propriedades dulçor e sabor mascaram sabores 
+desagradáveis em produtos. Portanto, esse ingrediente potencial apresenta importantes 
+aplicações na formulação de biscoitos, bolos, refrigerantes, produtos de confeitaria, 
+iogurtes, sorvetes, pães, muffins e chocolates (ROY et al., 2018). 
+Dessa forma, espera-se que a Tagatose mostre um efeito positivo nas 
+propriedades funcionais do suco prebiótico de caju, devido às suas propriedades, como alta 
+doçura, baixo teor calórico, baixo índice glicêmico, potencial prebiótico e propriedades 
+físico-químicas desejáveis para a formulação de produtos alimentícios e sua capacidade de 
+competir com os mercados de poliálcool que substituem o açúcar (JAYAMUTHUNAGAI 
+et al., 2017b).  
+ 
+2.5 Digestão simulada in vitro e bioacessibilidade 
+ 
+O atual pensamento e comportamento dos consumidores em relação à saúde 
+levaram a um maior interesse dos pesquisadores em avançar os estudos dos mecanismos de 
+digestão e absorção de nutrientes pelo organismo. Os ensaios in vivo são os que apresentam 
+resultados mais precisos e relevantes para avaliar o funcionamento do sistema 
+gastrointestinal, porém apresentam algumas dificuldades devido a questões éticas, 
+constrangimentos técnicos, custo e tempo (HUR et al., 2011; MÉNARD et al., 2014). 
+Diante disso, houve a necessidade de buscar maiores informações sobre novas 
+metodologias que solucionassem esses problemas, uma alternativa foi o desenvolvimento 
+dos modelos in vitro.  
+Os modelos de digestão in vitro permitem a simulação de condições 
+gastrointestinais, que fornecem informações sobre alterações estruturais, digestibilidade e 
+liberação de compostos presentes na matriz alimentícia. Além disso, tem como objetivo 
+elucidar as etapas que envolvem a biodisponibilidade e bioacessibilidade de compostos, 
+principalmente as fases oral, gástrica e entérica, e ocasionalmente os processos 
+fermentativos que ocorrem no intestino grosso. Vale ressaltar que, esses métodos levam em 
+consideração a presença e concentração de enzimas digestivas, pH, temperatura, tempo de 
+ 
+23 
+ 
+digestão e concentrações de sal, entre outros fatores (MINEKUS et al., 2014). Geralmente, 
+esses modelos são aplicados em temperaturas de 37°C, temperatura do trato 
+gastrointestinal; na fase gástrica o pH é ajustado entre 1 e 5 e são adicionadas as enzimas 
+pepsina e lipase; na fase entérica o pH é ajustado primeiramente entre 4,5 e 5,5, em seguida 
+o ajuste é realizado entre 6 e 7,5, nessa etapa são adicionadas a pancreatina e bile 
+(BEDANI; ROSSI; SAAD, 2013; COSTA et al., 2017; GUERRA et al., 2012; PADILHA et 
+al., 2016). 
+Para concluir que um alimento possui algum efeito benéfico à saúde é 
+necessário avaliar o processo digestivo, analisando se as condições afetam os compostos de 
+interesse e sua estabilidade, ou seja, se afetará sua bioacessibilidade e seus possíveis efeitos 
+benéficos ao hospedeiro (CARBONELL-CAPELLA et al., 2014). A biocessibilidade refere-
+se à fração do nutriente ou composto bioativo ingerido que está disponível para uso em 
+funções fisiológicas normais ou para ser armazenado e exercer seus efeitos potenciais ao 
+corpo humano (FERNÁNDEZ-GARCÍA; CARVAJAL-LÉRIDA; PÉREZ-GÁLVEZ, 
+2009). A bioacessibilidade desses componentes depende da matriz alimentícia, dos 
+processamentos aplicados no alimento e dos parâmetros gastrointestinais (GUERRA et al., 
+2012). A quantidade de compostos liberados da matriz alimentícia que passam pelo sistema 
+de digestivo e se encontram disponíveis para serem absorvidos ou metabolizados no cólon é 
+chamado de fração bioacessível (CARBONELL-CAPELLA et al., 2014). 
+Geralmente os termos “biodisponibilidade” e “bioacessibilidade” são usados 
+indistivamente, porém a biodisponibilidade pode ser definida como a soma da 
+bioacessibilidade e da bioatividade. A bioacessibilidade é definida como a fração do 
+componente bioativo liberado da matriz alimentícia, que não sofre modificações pelas 
+reações bioquímicas do trato gastrointestinal e, torna-se disponível para a absorção 
+intestinal (MANZINI et al., 2015). Nesse conceito, levam-se em consideração as 
+transformações digestivas do alimento, tornando o um componente pronto para assimilação 
+pelo corpo; a absorção e assimilação nas células do epitélio intestinal; e por fim, o 
+metabolismo pré-sistêmico (intestinal e hepático). Por outro lado, a bioatividade oferece 
+informações de como o composto bioativo é transportado e atinge o tecido-alvo, sua 
+interação com as biomoléculas, o metabolismo ou biotransformação que pode sofrer. Essa 
+interação com as biomoléculas dá origem a um metabólito, um sinal ou uma resposta 
+fisiológica sistêmica, que confere benefícios para a saúde do hospedeiro. Uma aplicação 
+para o termo “bioatividade” baseia-se no comportamento de polissacarídeos e 
+oligossacarídeos, que são ingredientes não digeríveis, que possuem efeitos potenciais à 
+ 
+24 
+ 
+saúde, porém não são absorvidos. Com isso, a biodisponibilidade envolve processos de 
+digestão, absorção, metabolismo, distribuição tecidual e bioatividade (CARBONELL-
+CAPELLA et al., 2014; FERNÁNDEZ-GARCÍA; CARVAJAL-LÉRIDA; PÉREZ-
+GÁLVEZ, 2009).  
+Para a obtenção de resultados rápidos e menos dispendiosos sobre a 
+digestibilidade dos alimentos, surgiram os modelos in vitro que simulam o sistema 
+digestivo e determinam o comportamento e a biodisponibilidade dos nutrientes durante a 
+digestão. Estudos estão sendo realizados buscando modelos que cada vez se assemelhem ao 
+funcionamento real do corpo humano. Contudo, existem atualmente diferentes 
+metodologias para a realização desses experimentos, o que dificulta no momento de 
+comparar resultados dos estudos (MINEKUS et al., 2014). Os modelos in vitro podem ser 
+classificados em estáticos e dinâmicos. Os modelos estáticos simulam as diferentes regiões 
+do trato gastrointestinal: boca, estomago e intestino delgado, por meio da utilização de 
+enzimas, tensoativos e reguladores de pH, além do controle de temperatura. Porém não 
+reproduzem alguns processos físicos e fisiológicos, como os movimentos peristálticos, 
+corte, mistura, hidratação e a existência da microbiota intestinal (FERNÁNDEZ-GARCÍA; 
+CARVAJAL-LÉRIDA; PÉREZ-GÁLVEZ, 2009; WICKHAM; FAULKS; MILLS, 2009).  
+Os modelos dinâmicos de digestão in vitro são os mais realistas e que conferem 
+resultados mais fiáveis. Isso se deve ao fato de incluírem os processos físicos e mecânicos 
+que permitem uma maior semelhança com as condições in vivo (GUERRA et al., 2012). 
+Esses modelos possuem mecanismos que podem reproduzir os movimentos peristálticos, as 
+forças de cisalhamento e de mistura que ocorrem nas etapas da digestão (KONG; SINGH, 
+2010; WANG et al., 2018). Assim, podem representar as mudanças na viscosidade do 
+alimento digerido, reduzir o tamanho das partículas, avaliar a difusão e distribuição de 
+nutrientes (FERNÁNDEZ-GARCÍA; CARVAJAL-LÉRIDA; PÉREZ-GÁLVEZ, 2009). Por 
+fim, todas essas vantagens pode tornar o custo desse modelo mais elevado.  
+Alguns autores optam por usarem modelos semi-dinâmicos, que possuem 
+menos critérios que os modelos dinâmicos, porém são mais promissores que os estáticos. 
+DE CARVALHO et al. (2009) realizaram estudos com um simples modelo in vitro semi-
+dinâmico, que simulou a sobrevivência de microrganismos probióticos do gênero 
+Lactobacillus através do trato gastrointestinal, levando em considerações as condições 
+ambientais do sistema digestivo humano, como pH, enzimas digestivas, resíduos alimentos 
+e medicamentos terapêuticos. As simulações foram realizadas com a adição de sucos 
+gástricos e intestinais, sob agitação rotativa.   
+ 
+25 
+ 
+Os modelos dinâmicos são aplicados em estudos sobre a resistência de 
+microrganismos e sua capacidade de reduzir a biodispobilidade de toxinas no organismo 
+humano (RIVAS-JIMENEZ et al., 2016). Alguns autores destacam a importância dos 
+modelos dinâmicos e consideram aspectos geralmente desconsiderados na simulação do 
+sistema digestivo. JAIME-FONSECA et al. (2016) estudaram a digestão do amido, levando 
+em consideração além dos parâmetros bioquímicos, as características de engenharia, como 
+a motilidade intestinal. Além disso, considerou a taxa de fluxo enzimática e viscosidade do 
+quimo na digestibilidade do amido e bioacessibilidade simulada da glicose.  
+As simulações in vitro também são executadas para avaliar o efeito prebiótico 
+de produtos. Estudos foram conduzidos por meio de um modelo gastrointestinal contendo a 
+digestão gástrica e duodenal. Verificou-se a resistência de cascas de amêndoas as condições 
+do trato gastrointestinal e em seguida, foi realizada a fermentação no cólon com culturas 
+bacterianas. Contudo, observou-se que a fibra alimentar das cascas de amêndoa alterou a 
+composição das bactérias intestinais, apresentado efeitos potenciais prebióticos, bem como 
+foram resistentes ao processo digestivo, pois não houve alteração significativa em sua 
+composição. Além disso, foi avaliada a biodisponibilidade de compostos fenólicos após a 
+digestão (MANDALARI et al., 2010). MANZINI et al. (2015) realizaram experimentos in 
+vitro com o objetivo de avaliarem a digestão de pães elaborados com inulina e 
+frutooligossacarídeos, e observaram que esses prebióticos reduziram a bioacessibilidade de 
+micotoxinas produzidas durante a fermentação do pão. Portanto, a adição de ingredientes 
+teve um efeito potencial à saúde humana, pois reduz a exposição do organismo a estas 
+micotoxinas e isso pode ser observado pelas simulações do sistema digestivo. 
+Os modelos in vitro possibilitam estudos relacionados à sobrevivência de 
+microrganismos no trato gastrointestinal e confirmam o efeito positivo da matriz 
+alimentícia na proteção do probiótico, levando a menos alterações morfológicas (BEDANI; 
+ROSSI; SAAD, 2013; COSTA et al., 2017). Além disso, alguns ingredientes prebióticos, 
+como frutooligossacarídeos e inulina, podem promover um efeito protetor as bactérias 
+probióticas, melhorando a sobrevivência e atividade durante o armazenamento, bem como 
+durante a passagem pelo sistema digestivo (COSTA et al., 2017; HERNANDEZ-
+HERNANDEZ et al., 2011; PADILHA et al., 2016). 
+Com o intuito de avaliar o efeito do adoçante natural (extraído de folhas de 
+estévia) na formulação de bebidas exóticas de aveia, desenvolveu-se um modelo de 
+digestão gastrointestinal in vitro, que possibilitasse avaliar a biodisponibilidade de 
+compostos bioativos, bem como a bioacessibilidade dos glicosídeos de esteviol 
+ 
+26 
+ 
+(CARBONELL-CAPELLA et al., 2015). A simulação foi realizada com diferentes etapas: 
+salivar, gástrica e duodenal, com o auxilio de uma membrana de diálise. A adição de stevia 
+contribuiu para a biodisponibilidade de compostos fenólicos, antocianinas, capacidade 
+antioxidante total e dos glicosídeos de esteviol na bebida funcional a base de frutas e aveia.  
+BUNIOWSKA et al. (2017) estudaram a biodisponibilidade de compostos 
+bioativos e atividade antioxidante de sucos formulados com o adoçante stevia e processados 
+por tecnologias não térmicas. Os experimentos foram realizados por meio de modelos in 
+vitro de digestão e os resultados obtidos mostraram a eficiência das tecnologias elétricas 
+pulsadas e ultrassom na liberação da compostos bioativos da matriz alimentícia e aumento 
+da atividade antioxidante total após uma digestão gastrointestinal simulada in vitro. 
+HODONICZKY; MORRIS; RAE (2012) avaliaram a resistência de oligossacarídeos por 
+microrganismos orais e enzimas intestinais usando modelos in vitro de digestibilidade, com 
+o objetivo de testar suas propriedades funcionais como um potencial substituto da sacarose. 
+Alguns oligossacarídeos se mostraram resistentes às condições estabelecidas e considerados 
+como adoçantes alternativos.  
+Na região inferior do sistema digestivo ocorrem processos fermentativos, os 
+quais são provenientes do metabolismo de micro-organismo probióticos naturalmente 
+encontrados no cólon. A microbiota intestinal é composta principalmente por micro-
+organismos dos gêneros Lactobacillus e Bifidobacterium, com destaque para Lactobacillus 
+casei, Bifidobacterium breve, Bifidobacterium animalis, Bifidobaterium bifidum e 
+Bifidobacterium infantis (ARBOLEYA et al., 2016; FERREIRA et al., 2019; TERPOU et 
+al., 2019). 
+Além dos efeitos que a microbiota colônica e compostos bioacessíveis 
+desempenham na saúde do hospedeiro, estudiosos apontam a existência de uma interação 
+positiva entre a fração bioacessível desses compostos com os micro-organismos intestinais. 
+Segundo OZDAL et al. (2016) compostos fenólicos podem ser biotransformado pela 
+microbiota intestinal, assim como podem modular a composição da microbiota por meio da 
+inibição de bactérias patogênicas e estimulação do crescimento de bactérias benéficas 
+(probióticos). 
+Dessa forma, pode-se observar a relevância de se avaliar a bioacessibilidade de 
+compostos e a integridade de ingredientes alimentares por meio de modelos de simulação in 
+vitro do trato gastrointestinal, pois permitem a obtenção de resultados confiáveis sobre a 
+quantidade de um composto bioativo ou ingrediente alimentar que estão disponíveis para 
+gerar uma resposta fisiológica positiva ao organismo humano. Vale ressaltar a importância 
+ 
+27 
+ 
+dessas metodologias para o controle de qualidade de alimentos funcionais, uma vez que 
+permitem a avaliação de bebidas prebióticas, probióticas e simbióticos, pois auxiliam nas 
+análises de sobrevivência de microrganismos vivos, assim como na resistência de 
+ingredientes ao sistema digestivo. 
+3 OBJETIVOS 
+3.1 Objetivo geral 
+ 
+ 
+Estudar o efeito prebiótico dos sucos de caju contendo glico-oligossacarídeos e 
+dextrana, sintetizados pela dextrana-sacarase, e adicionados ou não de tagatose, no 
+crescimento dos micro-organismos probióticos, Lactobacillus casei, Bifidobacterium breve 
+e Bifidobacterium infantis, que compõem a microbiota intestinal.  
+3.2 Objetivos específicos 
+ 
+• Sintetizar os oligossacarídeos prebióticos e dextrana no suco de caju em condições 
+estáticas e com agitação magnética; 
+• Avaliar o efeito prebiótico do adoçante tagatose;  
+• Avaliar a digestibilidade dos oligossacarídeos, dextrana e tagatose nas etapas de digestão 
+gastrointestinal simulada in vitro; 
+• Avaliar o efeito dos glico-oligossacarídeos, dextrana e tagatose presentes nos sucos, no 
+crescimento dos micro-organismos probióticos: Lactobacillus casei, Bifidobacterium breve 
+e Bifidobacterium infantis; 
+• Avaliar a bioacessibilidade da vitamina C e sua concentração ao longo do processo 
+fermentativo dos probióticos. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+28 
+ 
+4 MATERIAIS E MÉTODOS  
+4.1  Preparo do suco de caju 
+ 
+Para a elaboração do suco de caju (Anacardium occidentale L.), foram 
+utilizadas polpas não pasteurizadas da fruta adquiridas em mercado local, na cidade de 
+®
+Fortaleza (Brasil) (Ki Polpa). As polpas foram armazenadas sob temperatura de 
+congelamento (-20 °C) até o uso.  O suco de caju foi obtido pela diluição das polpas em 
+água potável (1:3), para cada 100 mL de polpa foram adicionados 200 mL de água, 
+conforme descrito pelo fabricante.  
+ 
+4.2 Caracterização físico-química do suco de caju  
+ 
+Foram analisados dois tipos de sucos: não prebiótico “in natura” (Formulação 
+1) e prebiótico (contendo oligossacarídeos e dextrana sintetizados pela enzima dextrana-
+sacarase). Ambos foram caracterizados quanto ao teor de açúcares e vitamina C (ácido 
+ascórbico) por cromatografia líquida de alta eficiência (CLAE), segundo metodologia 
+descrita por FONTELES et al. (2011), com adaptações. A metodologia das análises é 
+descrita nos itens 4.9.1 e 4.9.2, respectivamente. 
+4.3 Produção da enzima dextrana-sacarase 
+ 
+A enzima dextrana-sacarase (E.C.2.4.1.5) foi produzida pela bactéria 
+Leuconostoc mesenteroides B512 F, por meio de processo fermentativo em batelada, 
+segundo metodologia descrita por RODRIGUES (2003). A enzima obtida foi estocada a -
+20 °C. Para determinação da atividade enzimática tomou-se como referência a metodologia 
+descrita no item 4.9.3. 
+4.4 Síntese enzimática de oligossacarídeos prebióticos 
+ 
+A síntese de oligossacarídeos prebióticos foi conduzida pela ação da enzima 
+dextrana-sacarase, de acordo com a metodologia previamente estabelecida por DA SILVA; 
+RABELO; RODRIGUES, (2014). 
+A concentração dos açúcares do suco de caju integral foi ajustada pela adição 
+dos açúcares redutores glicose e frutose, ou diluição do suco até atingir a concentração 
+ 
+29 
+ 
+estabelecida. Como o suco de caju não contém sacarose, esse carboidrato foi adicionado ao 
+meio para promover a síntese de oligossacarídeos e atingir a concentração desejada de 
+açúcares. 
+Primeiramente, meios reacionais com volume final de 10 mL foram elaborados, 
+variando a concentração de sacarose (25 a 75 g/L), açúcar redutor (25 a 75 g/L, 
+concentração equimolar de frutose e glicose) com e sem adição de cloreto de cálcio (0 a 
+0,05 g/L) – Tabela 1. O cálcio é fundamental para a estabilização da enzima. Sendo assim, a 
+2+
+adição de Ca pode melhorar a estabilidade da enzima e aumentar a atividade enzimática, 
+uma vez que esse mineral pode variar no suco. 
+Para a realização da síntese, o pH foi ajustado para 5,2 com NaOH. A síntese foi 
+realizada em tubo cônico tipo Falcon a 30 °C durante 17 h sem agitação, adicionando-se 1 
+UI/mL de enzima dextrana sacarase no suco (RABELO; FONTES; RODRIGUES, 2009). 
+Após a síntese o pH foi ajustado para 4,2 com ácido cítrico para inativação da enzima e 
+reestabelecimento do pH inicial do produto.  
+ 
+Tabela 1. Ensaios para a síntese enzimática de oligossacarídeos prebióticos e dextrana em 
+suco de caju pela ação da enzima dextrana-sacarase 
+Açúcar�Cloreto de�
+Sacarose�
+���
+EnsaiosRedutorCálcio
+(g/L)�
+(g/L)�(g/L)�
+1�25�25�0,00�
+2�25�25�0,05�
+3�50�50�0,00�
+4�50�50�0,05�
+5�75�75�0,00�
+�75�75�0,05�
+6
+�
+O ponto com maior produção de oligossacarídeos prebióticos foi selecionado. 
+Os experimentos foram prosseguidos em uma escala maior, a síntese foi conduzida em 
+®
+frasco reagente Schott com um volume total de 1 L de suco. No entanto, foram estudadas 
+duas condições do sistema, sendo um suco sintetizado sem agitação (Formulações 2) e 
+outro sintetizado com agitação magnética constante (Formulações 3).  
+Decorrido o tempo de síntese (17 h), uma alíquota de 1 mL foi retirada e a 
+dextrana foi precipitada pela adição de três volumes de etanol a 96% (v/v). O sobrenadante 
+ 
+30 
+ 
+etanólico recuperado, contendo os glico-oligossacarídeos, foi utilizado para análises 
+posteriores. As respostas foram a produção de oligossacarídeos e dextrana e açucares 
+consumidos.  
+4.5 Formulação do suco de caju prebiótico utilizando tagatose como adoçante 
+ 
+Foi realizada uma mistura de suco de caju contendo oligossacarídeos 
+prebióticos (1/3), suco de caju não prebiótico “in natura” (2/3) e tagatose (1% m/v), para se 
+avaliar o efeito da adição desse adoçante nas propriedades prebióticas do produto em 
+estudo. As formulações foram realizadas seguindo os limites de ingestão diária de fibras 
+alimentares e FOS, indicados pela ANVISA, e de tagatose. Se ingerida em grandes 
+quantidades, a tagatose pode ter efeito laxativo, dessa forma a ingestão desse adoçante não 
+deve exceder 30 g por dose por porção (GUERRERO-WYSS; DURÁN AGÜERO; 
+ANGARITA DÁVILA, 2018).  
+Além disso, a concentração de tagatose foi baseada na quantidade de açúcar que 
+foi consumido durante a síntese enzimática, visando recompor a doçura do suco. As 
+concentrações finais de açúcares redutores e tagatose foram determinadas por CLAE, 
+segundo metodologia descrita no item 4.9.1.  
+4.6 Quantificação de glico-oligossacarídeos 
+ 
+Os açúcares redutores totais, açúcares totais, açúcares redutores totais 
+consumidos, açúcares totais consumidos, oligossacarídeos prebióticos foram calculados por 
+balanço de massa, de acordo com as Equações 2 a 6 a seguir:  
+ 
+AR (g/L) = AR + AR                                                                                               (2) 
+TSAD 
+AT (g/L) = AR+ Sac                                                                                                     (3) 
+T 
+AR (g/L) = AR- AR                                                                                             (4)   
+CONST F 
+AT (g/L) = Sac + AR                                                                                        (5) 
+CONSCONS 
+OLIGO (g/L) = AT– DEXT                                                                                    (6) 
+CONS 
+ 
+Onde, 
+ 
+AR�Açúcares redutores totais�
+T
+ 
+31 
+ 
+AR�Açúcares redutores do suco�
+S
+AR�Açúcares redutores adicionados ao suco�
+AD
+AT�Açúcares totais�
+Sac�Sacarose�
+AR�Açúcares redutores consumidos�
+CONS
+AR�Açúcares redutores no final do ensaio�
+F
+AT�Açúcares redutores totais consumidos no ensaio�
+CONS
+OLIGO�Oligossacarídeos�
+DEXT�Dextrana�
+in vitro
+4.7 Sistema contínuo de digestão  
+ 
+O sistema de digestão simulada consistiu em 3 biorreatores de vidro sequenciais 
+acoplados a um controlador (BIO-TEC-PRO) composto por bombas peristálticas que 
+auxiliaram nas transferências de meio e soluções de ajuste de pH, placa agitadora (TE-
+2003-0,36-E1) e banho termostático (TEC-BIO-T) para controle de temperatura.  
+Foram simuladas três fases do trato gastrintestinal: gástrica, entérica I 
+(duodenal) e entérica II (jejunal). As amostras foram mantidas nos biodigestores a 
+temperatura de 37 °C sob agitação constante de 250 rpm, com transferências entre fases que 
+simulam o movimento peristáltico in vivo do trato gastrointestinal (TGI). 
+Em cada biorreator foram adicionadas as soluções gástricas e entéricas, 
+referente às diferentes fases. Estas foram preparadas de acordo com LO CURTO et al. 
+(2011); MARTINEZ et al. (2011); MINEKUS et al. (2014) com adaptações. A solução 
+gástrica foi formulada com cloreto de sódio (47,2 mmol/L), cloreto de potássio (6,9 
+mmol/L), fosfato de potássio monobásico (0,9 mmol/L), cloreto de magnésio hexahidratado 
+(0,1 mmol/L), bicarbonato de sódio (25 mmol/L), cloreto de cálcio (0,3 g/L), pepsina 2,4 
+g/L - 600 U/mL - (Sigma Aldrich). As soluções duodenal e jejunal possuem a mesma 
+composição, cloreto de sódio (38,4 mmol/L), cloreto de potássio (6,8 mmol/L), fosfato de 
+potássio monobásico (0,64 mmol/L), cloreto de magnésio hexa-hidratado (0,33 mmol/L), 
+bicarbonato de sódio (85 mmol/L), cloreto de cálcio (0,37 g/L), pancreatina 0,9 g/L (Sigma 
+Aldrich) e bile 6 g/L (Sigma Aldrich). 
+O primeiro biodigestor é alimentado com 150 mL do suco durante 10 min. Cada 
+reator foi preenchido com 100, 60 e 35 mL de solução gástrica, duodenal e jejunal, 
+respectivamente. As fases da digestão tiveram duração de 2 h cada, sendo 60 min o tempo 
+ 
+32 
+ 
+de residência nos biorreatores e 60 min de transferência, realizada pelo funcionamento das 
+bombas peristálticas. Após o tempo de residência da primeira etapa, a fase seguinte foi 
+alimentada com 180 mL da fase I. Ao fim da fase II, a última fase recebeu 210 mL da fase 
+anterior.  
+O valores de pH foram adequados para cada fase da digestão, os ajustes foram 
+feitos automaticamente seguindo a programação previamente estabelecida no sistema com 
+soluções de NaOH 1M e HCl 1M. Na fase gástrica, o pH foi ajustado para 2,3 ± 0,2. Na 
+fase entérica I, para 5,0 ± 0,2 e na fase entérica II, os valores foram corrigidos para 7,0 ± 
+0,2. O ensaio completo teve duração de 6 h. Amostras foram coletadas das três fases (a cada 
+2h) da digestão in vitro para avaliar a bioacessibilidade da vitamina C por HPLC (detector 
+UV), bem como a integridade dos glico-oligossacarídeos e dextrana. Ao final da digestão, o 
+suco digerido foi recuperado e microrganismos probióticos foram cultivados nesse meio.  
+ 
+4.8 Efeito dos prebióticos no crescimento de micro-organismos intestinais 
+ 
+ 
+Para avaliar o efeito prebiótico dos oligossacarídeos, dextrana e tagatose 
+presentes no suco de caju, a última fase da digestão de cada formulação foi recuperada. Foi 
+7 
+inoculado uma concentração de células da ordem de 10UFC/mL de cada micro-organismo. 
+As cepas probióticas cultivadas foram: Lactobacillus casei B-442, Bifidobacterium breve 
+B-41408 e Bifidobacterium infantis B-41661. 
+4.8.1 Ativação dos micro-organismos 
+ 
+Inicialmente, as cepas foram cultivadas em caldo MRS (Man Rogosa e Sharpe, 
+®
+Himedia), exceto a cepa de Bifidobacterium infantis, cujo meio utilizado foi caldo 
+bifidobacterium, específico para esse microrganismo. O L. casei foi ativado inoculando-se 
+1,5 mL da cultura estoque em 100 mL de caldo adicionado de 10 mL de tampão fosfato de 
+potássio bibásico 200 mM pH 6,5. A ativação foi conduzida a 37 °C (aproximadamente 16 
+9 
+h), e em seguida fez-se o repique para atingir uma concentração de células da ordem de 10
+UFC/mL (aproximadamente 4,5 h), equivalente a 0,600 de absorbância a 590 nm. A 
+ativação e o repique das bifidobactérias foram realizados durante 24 h à 37 °C em 
+anaerobiose. 
+ 
+33 
+ 
+4.8.2 Cultivo dos micro-organismos 
+ 
+ 
+Após ativação das linhagens, um volume adequado do caldo fermentado foi 
+centrifugado (6000 g, 10 min, 20 °C). A biomassa precipitada foi ressuspensa em 40 mL do 
+suco digerido, para atingir uma contagem inicial de 7,0 log UFC/mL no suco. Os sucos 
+foram incubados a 37 °C estaticamente para o L. casei e em anaerobiose para as 
+bifidobactérias. As amostras foram coletadas nos tempos 0, 24, 48, 72 e 96 h. Foram 
+realizadas análises de crescimento microbiano (item 4.9.5), bem como análises para a 
+quantificação de açúcares, oligossacarídeos prebióticos, dextrana, ácido cítrico e lático a 
+fim de avaliar o crescimento de cada espécie frente aos substratos disponíveis para o 
+crescimento. As metodologias estão descritas no item 4.9.  
+4.9 Métodos analíticos  
+ 
+4.9.1  Determinação de açúcares 
+ 
+Os açúcares glicose, frutose e tagatose foram quantificados mediante um 
+®
+sistema integrado por um cromatógrafo modelo Infinity 1260 (Agilent) e um detector de 
+índice de refração (IR) Prostar 345. A separação dos constituintes foi conseguida através de 
+uma coluna BIORAD HPX-87H (300×7,8 mm) à 60 °C. Uma solução de ácido sulfúrico 
+(HSO) 5mM foi utilizada como fase móvel, com um fluxo de 0,6 mL/min. A temperatura 
+24
+o
+do detector foi de 35 C.  
+As amostras de suco sem oligossacarídeos foram diluídas em água Milli-Q 
+(Millipore) e filtradas com uma membrana de acetato de celulose (Millipore) com poros de 
+0,45 μm, a fim de remover partículas em suspensão que pudessem interferir na análise. Para 
+as amostras de suco prebiótico, uma etapa foi realizada antes de proceder com a filtração do 
+analito, a dextrana foi precipitada com etanol e a diluição foi feita a partir do sobrenadante 
+etanólico. Uma curva de calibração foi elaborada com uma mistura de soluções puras dos 
+açúcares de interesse: glicose, frutose e tagatose. As concentrações desses componentes 
+encontravam-se na faixa de 0,5 a 10g/L, exceto a tagatose, onde foi usada uma faixa de 
+0,25 a 5 g/L.  
+4.9.2 Determinação de ácidos orgânicos  
+ 
+Para a determinação dos ácidos orgânicos, ascórbico e lático, tomou-se como 
+ 
+34 
+ 
+base o procedimento descrito no item anterior. Contudo, a temperatura da coluna foi de 
+50 °C e o detector utilizado foi UV 210 nm. Os valores de concentração dos ácidos nas 
+curvas de calibração variaram de 10-200, 40-800 e 80-1600 mg/L para ácido ascórbico, 
+cítrico e lático, respectivamente.  
+4.9.3  Determinação da atividade enzimática  
+ 
+A atividade da enzima dextrana-sacarase foi determinada através da 
+quantificação da frutose liberada em meio reacional contendo sacarose como substrato 
+(HEINCKE et al., 1999). É expressa em unidade internacional de dextrana-sacarase (UI), 
+que corresponde a quantidade de enzima que produz 1 μmol de frutose a partir da sacarose 
+por minuto (TANRISEVEN; DOǦAN, 2002). 
+Para a determinação da atividade enzimática obtida, foram preparados 100 mL 
+de uma solução de atividade contendo 18,2 mL de uma solução estoque de sacarose (600 
+g/L) em tampão acetato de sódio 20 mM com 0,05 g/L de CaCl e 4,5 mL de tampão de 
+2
+acetato de sódio 20 mM com 1,2 g/L de CaCl. O pH da solução foi ajustado para 5,2. Uma 
+2
+alíquota de 450 μL desta solução de atividade foi adicionada a dois tubos de ensaio e em 
+seguida, foi acrescentado uma alíquota de 50 μL da enzima livre em cada tubo de ensaio 
+identificados como tempo 0 e tempo 10. No tubo de tempo 0 foram adicionados 500 μL do 
+reagente de DNS, ambos os tubos foram incubados a 30 °C durante 10 min. Transcorrido o 
+tempo de reação, foram adicionados 500 μL do reagente de DNS no tubo de tempo 10. Os 
+tubos foram aquecidos por 5 min a 100 °C, e resfriados em banho de gelo até atingirem a 
+temperatura ambiente. Em seguida, foram adicionados 9,0 mL de HO destilada em cada 
+2
+tubo, e a densidade ótica foi obtida em espectrofotômetro UV-visível (Global Trade 
+Technology), no comprimento de onda de 540 nm. Nesse método, o branco foi feito 
+substituindo o volume de enzima por água. Para calcular a atividade enzimática utilizou-se 
+a Equação 1: 
+                                   (1) 
+Sendo: 
+ 
+α�coeficiente angular da curva de calibração de DNS (mg/ABS.ml)�
+ABS10�valor médio das leituras de absorbância no tempo 10 minutos�
+ABS0�valor médio das leituras de absorbância no tempo zero�
+ 
+35 
+ 
+d�diluição da amostra�
+t�tempo de reação�
+4.9.4  Determinação de dextrana 
+ 
+A dextrana precipitada pela adição de etanol (como descrito anteriormente) foi 
+ressuspensa em água destilada e determinada segundo o método fenol ácido sulfúrico para 
+determinação de carboidratos totais (DUBOIS et al., 1956).  
+4.9.5 Avaliação do crescimento microbiano nos sucos após digestão in vitro 
+ 
+O crescimento foi monitorado pela medida de densidade ótica a 590 nm e 620 
+nm para o L.casei e bifidobactérias, respectivamente. As leituras foram conduzidas em 
+espectrofotômetro UV-visível (Global Trade Technology). Para isso, diluiu-se uma alíquota 
+do suco contendo o inóculo em água destilada (1:10) e utilizou-se água como branco. Os 
+resultados foram expressos em absorbância relativa (ABS/ABS0). Foram feitas medidas do 
+®
+pH por meio de leitura direta, em potenciômetro Marconi, modelo PA200, calibrado com 
+soluções tampão de pH 4,0 e 7,0. 
+4.10  Análises estatísticas 
+ 
+As análises foram realizadas em triplicata. Os dados obtidos foram submetidos 
+a analise de variância ao nível de confiança de 95 % utilizando o programa Statistica versão 
+10, quando necessário. Os resultados foram expressos como média ± desvio padrão.  
+5  RESULTADOS E DISCUSSÕES 
+ 
+As formulações estudadas estão descritas na Tabela 2. 
+ 
+Tabela 2. Formulações elaboradas para o estudo. 
+Formulações Descrição 
+1 Suco de caju não prebiótico (in natura)�
+Suco de caju prebiótico sintetizado sem agitação�
+2 
+3 Suco de caju prebiótico sintetizado com agitação�
+4 Suco elaborado pela diluição da Formulação 3 na Formulação 1 (1:3)�
+ 
+36 
+ 
+5 Formulação 4 adicionada de tagatose (1% p/v)�
+ 
+5.1 Caracterização do suco de caju 
+ 
+O suco de caju utilizado como matéria-prima para a produção dos sucos 
+prebióticos continha 18,73 g/L de glicose, 18,43 g/L de frutose e 637,98 mg/L de ácido 
+ascórbico (Formulação 1). As concentrações elevadas de glicose e frutose no suco de caju 
+favorecem a formação de oligossacarídeos prebióticos por síntese enzimática, uma vez que 
+são açúcares aceptores da reação (DA SILVA; RABELO; RODRIGUES, 2014).  
+5.2 Síntese enzimática dos oligossacarídeos 
+ 
+Foram realizados ensaios preliminares variando as condições de síntese 
+enzimática. Os ensaios foram realizados com 10 mL de meio reacional, durante 17 h pela 
+ação da enzima dextrana-sacarase. As condições experimentais dos ensaios e os valores de 
+açúcares totais consumidos, oligossacarídeos e dextrana estão dispostos na Tabela 3.  
+ 
+Tabela 3. Condições experimentais e resultados de produção de glico-oligossacarídeos e 
+dextrana no suco de caju in natura utilizando a enzima dextrana-sacarase.  
+CONDIÇÕES EXPERIMENTAIS RESPOSTAS 
+SAC* AR* CaCl* OLIGO* DEXT* 
+2
+ 
+Ensaios
+(g/L) (g/L) (g/L) (g/L) (g/L) 
+c
+1 25 25 0,00 17,65 4,32 ± 0,14 
+c
+ 25 25 0,05 31,74 3,23 ± 0,22 
+2
+b
+ 50 50 0,00 44,74 8,23 ± 0,90 
+3
+4 50 50 0,05 49,29 11,57 ± 0,60ª 
+ab
+ 75 75 0,00 91,43 10,24 ± 0,46 
+5
+b
+ 75 75 0,05 94,49 8,80 ± 0,10  
+6
+Médias seguidas de mesma letra não diferem estatisticamente entre si de acordo com o teste de Tukey 
+ 
+(p < 0,05)
+*Significado das siglas: SAC-Sacarose; AR-Açúcares Redutores; CaCl-Cloreto de Cálcio;  
+2
+OLIGO-Oligossacarídeos prebióticos e DEXT-Dextrana. 
+ 
+Pode-se observar que, as formulações que propiciaram uma maior produção de 
+oligossacarídeos prebióticos foram as com maiores valores de AR e SAC (75 g/L de cada). 
+ 
+37 
+ 
+Mesmo com maiores concentrações de açúcares, os pontos 5 e 6 não obtiveram valores de 
+dextrana superiores às preparações contendo 50 g/L de AR e SAC. Resultados semelhantes 
+foram obtidos por DA SILVA; RABELO; RODRIGUES, (2014) que sintetizaram 
+oligossacarídeos em suco de caju clarificado e atingiram maior produção desses 
+ingredientes prebióticos com 75 g/L de sacarose em combinação com 75 g/L de açúcares 
+redutores. 
+A adição de cálcio nos meios pode melhorar a atividade e estabilidade da 
+enzima, permitindo uma maior síntese enzimática de oligossacarídeos. Nesse estudo foi 
+possível observar esse efeito, pois todos os pontos acrescidos de cloreto de cálcio 
+apresentaram maior produção de oligossacarídeos.  
+5.2.1Scale-up 
+ 
+ 
+Após avaliar os resultados obtidos nos ensaios preliminares, realizados com 
+volume de 10 mL, tomou-se a melhor condição (ponto 6) e a síntese foi conduzida numa 
+escala maior, com um volume de 1L de meio reacional. A Tabela 4 mostra os resultados 
+obtidos a partir da síntese enzimática em 1 L de suco de caju não prebiótico (in natura), 
+com ênfase na quantidade de oligossacarídeos prebióticos, dextrana e vitamina C. 
+ 
+Tabela 4. Caracterização dos sucos sintetizados com e sem agitação, quanto à concentração 
+de glico-oligossacarídeos, dextrana e vitamina C. 
+OLIGO�DEXT�VITAMINA C�
+�
+Formulações 
+(g/L)�(g/L)�(mg/L)�
+aa
+2 20,91�20,00 ± 0,48�581,77 ± 11,63�
+ba
+3�23,50�8,99 ± 0,20�578,84 ± 17,36�
+Médias seguidas de mesma letra não diferem estatisticamente entre si de 
+ 
+acordo com o teste de Tukey (p < 0,05) 
+ 
+As formulações apresentam condições diferentes, um suco foi produzido sem 
+agitação (Formulação 2) e o outro suco com agitação magnética constante (Formulação 3). 
+A escolha de executar ensaios estáticos ou com agitação visou reduzir os impactos dos 
+efeitos difusionais sobre a matriz alimentícia, evitando as limitações externas de 
+transferência de massa (GONÇALVES; GIORDANO; GIORDANO, 1997). Ao aumentar o 
+volume de reação, se torna mais difícil o acesso do substrato ao sitio da enzima devido ao 
+ 
+38 
+ 
+impedimento estérico causado pela cadeia de dextrana e isso pode ocasionar uma menor 
+taxa de reação, ou direcionar a reação para a síntese de outro produto.  
+A Formulação 3 produziu 12,39 % mais oligossacarídeos em comparação a 
+Formulação 2. Enquanto nessa houve uma produção de dextrana 55,05 % maior que na 
+Formulação 3. Os resultados obtidos apontaram que a síntese estática propiciou uma maior 
+produção de dextrana que oligossacarídeos prebióticos. A falta de agitação permitiu que as 
+moléculas de glicose fossem mais fortemente atraídas para a cadeia de dextrana, produto 
+principal da enzima dextrana-sacarase, em vez de serem desviadas e se ligarem aos 
+aceptores encontrados no meio, dando origem aos oligossacarídeos. 
+O resultado obtido sugere que a agitação pode ter ocasionado mudanças 
+conformacionais na estrutura tridimensional da enzima, facilitando o acesso do aceptor ao 
+sitio ativo da dextrana-sacarase e favorecendo a produção de glico-oligossacarídeos. Além 
+disso, com a agitação as unidades de glicose, provenientes da molécula de sacarose, se 
+ligaram mais facilmente ao aceptor, desviando a cadeia de dextrana (GUTTERIDGE; 
+THORNTON, 2004; RABELO; FONTES; RODRIGUES, 2011) .  
+Além dessas formulações, duas outras foram feitas a fim de manter as 
+quantidades de prebióticos recomendadas de ingestão diária. A Tabela 5 mostra a 
+caracterização dessas bebidas. Essas preparações, uma sem tagatose (Formulação 4) e outra 
+com a adição de 1 % (p/v) de tagatose (Formulação 5) foram avaliadas quanto o efeito 
+prebiótico desse adoçante. Esse adoçante apresenta propriedades prebióticas e pode ser uma 
+alternativa saudável ao uso de açúcares convencionais, como a sacarose 
+(JAYAMUTHUNAGAI et al., 2017b).  
+ 
+Tabela 5. Caracterização dos sucos quanto a concentração de glico-oligossacarídeos, 
+dextrana, tagatose e vitamina C. 
+OLIGO�DEXT�TAGATOSE�VITAMINA C�
+Formulações* �
+(g/L)�(g/L)�(g/L)�(mg/L)�
+4�7,83�2,87 ± 0,08ª���380,47ª�
+a
+�7,83�2,99 ± 0,17ª�10,40 ± 0,48�376,64�
+5
+Médias seguidas de mesma letra não diferem estatisticamente entre si de acordo com o teste de Tukey  
+ 
+(p < 0,05)
+* Sucos elaborados pela diluição da Formulação 3 em suco de caju não prebiótico (Formulação 1). 
+ 
+ 
+ 
+39 
+ 
+Atualmente, não existe uma legislação referente ao consumo especifico de 
+glico-oligossacarídeos e dextrana, para promover o efeito prebiótico. No entanto, tendo 
+como base os valores sugeridos pela legislação para compostos com propriedades similares, 
+como fibras alimentares e fruto-oligossacarídeos (FOS), sugere-se que os compostos desse 
+estudo podem conferir efeitos benéficos nas mesmas concentrações e todas as formulações 
+apresentam as concentrações indicadas pela legislação para fibras.   
+As formulações 2, 3, 4 e 5 elaboradas nesse estudo apresentaram concentrações 
+de 10,22; 8,12; 2,68 e 5,30 g/250 mL de componentes conhecidos por suas propriedades 
+prebióticas. Contudo, faz-se necessário confirmar se esses valores promovem o efeito 
+prebiótico favorecendo o crescimento de micro-organismos probióticos.   
+ 
+5.3 Efeito da digestão in vitro nos ingredientes com propriedades prebióticas  
+ 
+A simulação da digestão in vitro permite uma melhor abordagem sobre a 
+concentração de compostos que alcançam a região inferior do trato digestivo, e ficam 
+disponíveis para serem absorvidos ou participarem de reações metabólicas (AGUDELO et 
+al., 2018).  
+No presente trabalho, foi estudada a integridade dos glico-oligossacarídeos e 
+dextrana sintetizados nos sucos de caju, e da tagatose adicionada.  
+5.3.1 Glico-oligossacarídeos e dextrana 
+ 
+Os prebióticos são definidos como substratos usados seletivamente por micro-
+organismos do trato gastrointestinal (TGI) do hospedeiro, conferindo efeitos benéficos a 
+sua saúde (GIBSON et al., 2017). Para tanto, precisam atravessar o TGI e atingirem o 
+intestino grosso intactos. Amostras dos sucos prebióticos e as formulações com e sem 
+tagatose passaram pelo sistema de digestão dinâmico e os resultados da concentração de 
+oligossacarídeos e dextrana a cada fase estão expostos na Figura 2. 
+ 
+ 
+ 
+ 
+ 
+ 
+40 
+ 
+Figura 2. Comportamento dos glico-oligossacarídeos e dextrana do suco de caju prebiótico 
+durante a simulação dinâmica da digestão in vitro  
+ 
+ 
+Pode-se observar que, durante as fases da digestão não houve hidrólise dos 
+oligossacarídeos, ou seja, isso confirma que esses ingredientes funcionais produzidos no 
+suco de caju, por via enzimática, são resistentes ao TGI. Os prebióticos são quimicamente 
+estáveis a ampla faixa de temperatura e pH, além disso são resistentes às ações hidrolíticas 
+das enzimas intestinais (SINGH et al., 2017). 
+É importante lembrar que, o controle refere-se a cada formulação antes de 
+passar pela digestão simulada in vitro. Além disso, os valores de oligossacarídeos presentes 
+nas formulações 4 e 5 estão sobrepostos pois estas foram preparadas a partir da diluição da 
+formulação 3 e apresentam a mesma composição com relação a concentração de glico-
+oligossacarídeos. 
+Durante a síntese, parte da glicose liberada pela quebra da molécula de sacarose 
+se liga, dando origem a dextrana (DA SILVA; RABELO; RODRIGUES, 2014; FONTES et 
+al., 2015). No decorrer da digestão in vitro, a dextrana pode sofrer hidrólise ácida e dar 
+origem aos glico-oligossacarídeos, aumentando a concentração desses prebióticos nas fases 
+da digestão. Na Figura 2A, pode-se observar que as amostras apresentaram um aumento da 
+concentração de glico-oligossacarídeos, nas fases entéricas (duodenal e/ou jejunal). Esse 
+aumento pode estar associado a redução da concentração de dextrana, mostrada na Fugira 
+2B.  
+A integridade dos oligossacarídeos pode ser justificada por suas ligações 
+glicosídicas. Durante a digestão, o suco entra em contato com as soluções gástrica e 
+entérica, onde se encontram enzimas como: pepsina, bile e pancreatina. Apesar da presença 
+dessas enzimas digestivas, os oligossacarídeos prebióticos permanecem intactos, pois as 
+ 
+41 
+ 
+ligações glicosídicas características desses componentes não são clivadas pela ação dessas 
+enzimas.  
+Alguns autores associam o efeito prebiótico de glico-oligossacarídeos, 
+produzidos via glicosilação, às ligações glicosídicas dessas moléculas, destacando a 
+presença de ligações α-1,6 e β-1,6 bem como α/β-1,1, α-1,2 e α-1,3 (LI et al., 2019). É 
+importante ressaltar que os oligossacarídeos sintetizados no presente estudo apresentam 
+ligações glicosídicas α-1,6. Isso se deve ao fato da enzima dextrana-sacarase sintetizar 
+carboidratros complexos com ligações α-1,6 na cadeia principal e essas ligações são menos 
+susceptíveis a ação de enzimas digestivas humanas (HUANG et al., 2020; KOTHARI; 
+TINGIRIKARI; GOYAL, 2015).  
+Avaliando a Figura 2B, na formulação 2, a concentração de dextrana não sofreu 
+alteração significativa durante a digestão. Por outro lado, o conteúdo de dextrana da 
+Formulação 3 apresentou uma redução de 10,82 % com relação ao controle. Ao verificar a 
+Figura 2, nota-se que, a medida que houve uma redução da concentração de dextrana na 
+Formulação 3, a quantidade de oligossacarídeos da amostra aumentou, isso infere que parte 
+dos oligossacarídeos pode ter sido obtido pela hidrolise ácida e/ou enzimática da dextrana 
+(IQBAL et al., 2017; LEEMHUIS et al., 2013).  
+As formulações 4 e 5 apresentaram uma redução no conteúdo de dextrana de 
+27,25 % e 31,00 %, respectivamente, em relação ao suco não digerido. Pode-se notar que, a 
+maior redução nos teores de dextrana ocorreu nas amostras com um menor conteúdo desse 
+carboidrato. Esse resultado sugere que, a formulação sintetizada com agitação (Formulação 
+3) e as formulações 4 e 5 obtidas a partir desta, tenham em sua composição dextrana de 
+menor peso molecular e menor tamanho, favorecendo o efeito da acidez e da ação de 
+enzimas digestivas na hidrólise da molécula. Pode-se considerar que, quanto menor a 
+cadeia de dextrana, mais acessível à degradação, devido a melhor difusividade da molécula 
+(OLANO-MARTIN et al., 2000).  
+Assim, as formulações 2 e 3 atingiram a parte final do trato digestivo, para 
+colonização bactérias intestinais em concentrações de dextrana superiores a 80 % do 
+conteúdo inicial. Por outro lado, as formulações 4 e 5 mantiveram intactos 
+aproximadamente 70% do seu conteúdo inicial.  
+Contudo, a formulação 2 apresentou maior resistência durante a passagem pelo 
+sistema simulado do trato gastrointestinal, isso pode ser justificado pela presença 
+predominante de ligações glicosídicas α-1,6, que não são clivadas pelas enzimas do lúmen, 
+ 
+42 
+ 
+e também pelo alto peso molecular que dificulta sua digestão por dissacaridases presentes 
+no intestino delgado (KOTHARI; DAS; PATEL, 2014; OLANO-MARTIN et al., 2000).  
+5.3.2 Tagatose 
+ 
+Nesse estudo, foi avaliada a aplicação da tagatose, um adoçante com potencial 
+efeito prebiótico. Os resultados obtidos mostraram que a concentração de tagatose não 
+reduziu durante as fases da simulação da digestão gastrointestinal, atingindo a última fase 
+da digestão simulada in vitro numa concentração de 10,59 ± 0,52 g/L. Lembrando que o 
+valor inicial de tagatose na formulação foi de 10,40 ± 0,48 g/L. Logo, esse adoçante 
+apresenta um dos critérios para ser considerado como prebiótico: não foi degradado mesmo 
+em condições ácidas e exposição às enzimas digestivas encontradas em cada fase da 
+digestão (GIBSON et al., 2017).  
+A estrutura da tagatose é responsável pela sua difícil absorção ao logo do trato 
+gastrointestinal, isso acontece devido à diferença na configuração espacial da molécula na 
+posição C-4. Com isso, a maior parte da tagatose ingerida alcança o intestino grosso e serve 
+como substrato para microflora intestinal (ROY et al., 2018).  
+ 
+5.4 Efeito da digestão in vitro na bioacessibilidade vitamina c 
+ 
+A bioacessibilidade é um conceito de grande importância quando avaliamos 
+compostos bioativos. Geralmente, mensura-se a concentração dos constituintes no alimento 
+propriamente dito, porém, a fração disponível para absorção no colón é que reflete os 
+efeitos benéficos à saúde. Contudo, a bioacessibilidade pode ser definida como a 
+quantidade de nutriente ingerido que é liberado da matriz alimentícia e se encontra 
+disponível para absorção no instestino após a digestão (GALANAKIS, 2017). A Figura 4 
+mostra o efeito da digestão na concentração de vitamina C, expressa em mg/L, das amostras 
+de suco de caju não prebiótico, prebiótico e prebiótico adoçado com tagatose.  
+A vitamina C é um poderoso antioxidante (KALLIO et al., 2012). Durante a 
+digestão, o teor de vitamina C das amostras apresentou comportamento diferente. O suco 
+não prebiótico mostrou uma elevada redução no conteúdo de vitamina C, perdendo cerca de 
+30 % desse componente em comparação a amostra não digerida. 
+ 
+ 
+ 
+43 
+ 
+Figura 4. Concentração de vitamina C dos sucos de caju não prebiótico (in natura) e 
+prebióticos durante a simulação dinâmica da digestão in vitro  
+ 
+A degradação da vitamina C pode ser atribuída principalmente à influência do 
+oxigênio (ALVES FILHO et al., 2018). A oxidação desse composto no trato gastrointestinal 
+pode ocorrer devido à sua ação como doador de elétrons, onde mantem os íons no estado 
+reduzido, regenerando a forma ativa de outros constituintes da alimentação (FONTELES et 
+al., 2016).  
+Os resultados indicam que, os sucos contendo oligossacarídeos prebióticos 
+mantém o conteúdo de vitamina C preservado ao longo da digestão in vitro. Pode-se 
+observar que durante a digestão também ocorre um aumento na concentração de Vitamina 
+C. Alguns componentes dos sucos podem sofrer hidrólise ácida ou enzimática liberando o 
+conteúdo intracelular para o meio, como por exemplo, as fibras do caju. Vários fatores 
+podem influenciar a bioacessibilidade de compostos, dentre eles se destacam: a matriz 
+alimentícia, a forma química do nutriente e a interação com outras moléculas presentes no 
+alimento (GALANAKIS, 2017). Uma atenção especial deve ser dada as bebidas, pois são 
+meios complexos que permitem interações entre compostos bioativos, nutrientes e / ou 
+outros constituintes dos alimentos (RODRÍGUEZ-ROQUE et al., 2015).  
+Esses ingredientes funcionais diminuem o efeito do processo digestivo na 
+composição no suco. Isso pode ser atribuído ao efeito protetor contra a oxidação do 
+composto bioativo em estudo. Segundo CORONA-HERNANDEZ et al. (2013), alguns 
+prebióticos, tais como, inulina e oligossacarídeos são usados para microencapsulação como 
+o objetivo de proteger certos compostos ou micro-organismos de condições adversas. 
+ 
+44 
+ 
+Diante disso, sugere-se que o efeito protetor ocorra devido à capacidade dos prebióticos 
+revestir outras moléculas do suco.  
+Alguns estudiosos explicam o efeito de carboidratos complexos, como a fibra 
+dietética, na digestão de moléculas antioxidantes. As fibras podem retardar as taxas de 
+liberação de nutrientes ou antioxidantes no intestino delgado, diminuindo a absorção desses 
+compostos ao longo da digestão. Esse efeito pode ser explicado pelo aprisionamento físico 
+dessas moléculas em conjuntos estruturados, como o tecido do alimento. Esse fator pode 
+ser aplicado ao efeito dos glico-oligossacarídeos na digestão da vitamina C presentes no 
+suco de caju prebiótico. Porém, pode haver também a liberação de compostos, dependendo 
+do tempo de exposição ao ambiente digestivo, o tamanho e estrutura das partículas durante 
+a simulação da digestão in vitro (PALAFOX-CARLOS; AYALA-ZAVALA; GONZÁLEZ-
+AGUILAR, 2011).  
+Para tanto, os antioxidantes não absorvíveis atingem o intestino grosso e 
+permanecem no lúmen do cólon, onde podem contribuir para a saúde do hospedeiro. 
+5.5 Avaliação do efeito prebiótico dos sucos de caju 
+ 
+Para um ingrediente alimentício ser classificado como prebiótico, 
+necessariamente ele deve atender alguns atributos, como ser fermentado pela microbiota 
+intestinal e estimular o crescimento de microrganismos probióticos. Após a digestão in 
+vitro, os sucos digeridos foram incubados na presença de microrganismos probióticos, a 
+37 °C durante 96 h. Algumas espécies de Lactobacillus e Bifidobacterium são 
+caracterizadas como potencialmente probióticas e são as mais comumente estudadas. 
+Ambos os gêneros foram caracterizados como “geralmente reconhecidos como seguros” 
+(GRAS) e compõem a microbiota do intestino humano (TERPOU et al., 2019). 
+Os resultados a seguir, mostram o comportamento das bactérias: Lactobacillus 
+casei, Bifidobacterium breve e Bifidobacterium infantis, frente aos constituintes que 
+alcançaram a parte inferior do intestino. Segundo ENDO et al. (2016), o potencial 
+prebiótico de cada oligossacarídeo é diferente, portanto cada ingrediente prebiótico pode 
+ser metabolizado de modo distinto pelos vários micro-organismos que compõem a 
+microbiota intestinal.  
+ 
+ 
+ 
+45 
+ 
+5.5.1Crescimento de probióticos na ‘Formulação 1’  
+ 
+ 
+A medida de crescimento dos micro-organismos nas amostras de suco de caju 
+não prebiótico (Formulação 1) foi verificada pela densidade ótica e os resultados expressos 
+em crescimento relativo (ABS/ABS0). A Figura 5 mostra os resultados do crescimento dos 
+probióticos Lactobacillus casei, Bifidobacterium breve e Bifidobacterium infantis, 
+relacionando com as medidas de pH, produção de ácido lático, concentração de vitamina C 
+e consumo de açúcares simples no processo fermentativo.  
+Observando os gráficos da primeira coluna da Figura 5 (A,C e D), é possível 
+notar que o crescimento microbiano modifica as condições do meio pelo decaimento do pH, 
+resultante da produção de ácido lático. A fase lag do L. casei apresenta uma curta duração 
+se comparada a B. breve. No tempo de 24 h, o L. casei apresentou absorbância relativa de 
+1,21, que corresponde a 20 % do crescimento, enquanto a B. breve apresentou 
+aproximadamente 10 % no mesmo tempo. O crescimento da população microbiana de L. 
+casei atingiu maiores valores de absorbância relativa (1,54) com 72 h. Após determinado 
+momento, a população entrou na fase de declínio. Isso pode ocorrer devido a escassez de 
+nutrientes ou pelo pH ácido proveniente dos metabólitos secundários do processo 
+fermentativo, como o ácido lático.  
+O pH é um dos fatores que pode influenciar o crescimento de micro-
+organismos. Diante disso, a faixa de crescimento adequada para esse gênero se compreende 
+no pH neutro, sendo pH 6,5, o valor ótimo para manutenção da viabilidade e crescimento 
+dos lactobacilos (TERPOU et al., 2019). O ácido lático é o principal produto do processo 
+fermentativo de bactérias ácido-láticas (NOVIK; MEEROVSKAYA; SAVICH, 2017), por 
+isso torna-se importante conhecer a concentração desse composto na parte inferior do 
+sistema digestivo. 
+Na Figura 5A, é possível observar o decaimento do pH com 24 h de 
+fermentação (pH inicial 7,38 e pH com 24h 4,19), aliado a isso houve uma produção de 
+4,80 g/L de ácido lático nesse tempo, atingindo uma concentração de 5,15 g/L com 72 h de 
+processo.  
+Em concordância com os resultados do crescimento, na Figura 5B pode-se 
+observar as concentrações relativas da glicose, frutose e vitamina C ao logo do processo 
+fermentativo. A multiplicação celular pode estar relacionada ao consumo dos açúcares 
+simples e a morte celular pode também ser justificada pela ausência desses nutrientes após 
+algumas horas de incubação.  
+ 
+46 
+ 
+Figura 5. Crescimento relativo de Lactobacillus casei, Bifidobacterium breve e 
+Bifidobacterium infantis em suco de caju não prebiótico (Formulação 1), medidas de pH, 
+produção de ácido lático (g/L) e concentração relativa (C/C) de glicose, frutose, vitamina 
+0
+C durante o processo fermentativo. 
+ 
+Os açúcares simples, glicose e frutose, apresentam comportamento semelhante 
+durante o processo fermentativo do L. casei. O consumo desses açúcares está relacionado 
+diretamente com a multiplicação celular, pois à medida que a concentração desses 
+ 
+47 
+ 
+nutrientes reduz durante a fermentação, ocorre o aumento do crescimento microbiano. 
+Percebe-se que, em 24 h de incubação o L. casei utiliza a glicose e a frutose como 
+substrato, consumindo aproximadamente 13 % do conteúdo inicial dessas moléculas. Com 
+72 h houve um consumo acentuado desses açúcares redutores, onde o conteúdo total de 
+glicose foi consumido e a concentração relativa de frutose foi de 0,04, que corresponde ao 
+consumo de 95,88 % desse carboidrato. Diante disso, com 96 h de fermentação não havia 
+mais açúcares simples disponíveis para o consumo. 
+Neste estudo foi avaliada a interação da fração bioacessível da vitamina C com 
+o L. casei, B. breve e B. infantis. A composição do ambiente intestinal e os micro-
+organismos nele presentes exercem funções relevantes na saúde do hospedeiro (CHEN et 
+al., 2019; SABATER et al., 2019). Logo, compreender a interação dos probióticos com a 
+fração bioacessível desse composto é de grande importância tanto para a comunidade 
+científica, quanto para os consumidores. 
+A Figura 5B, mostra o perfil da vitamina C durante o processo fermentativo. É 
+possível observar que a concentração desse composto foi reduzida durante o tempo de 
+incubação com o L. casei. O conteúdo de vitamina C reduziu 40 % durante 24 h de 
+fermentação, e no tempo de 72 h esse composto estava ausente no suco fermentado.  
+Essa redução pode ser ocasionada por reações de degradação térmica, devido ao 
+tempo de exposição à temperatura de 37 °C. Outra possibilidade é o consumo da vitamina 
+C pelo probiótico, dado que, esse composto bioativo pode ser usado como substrato e 
+melhorar a viabilidade de Lactobacillus (OLIVARES et al., 2019). Alguns autores reforçam 
+que, vitaminas são componentes que atuam promovendo o crescimento de micro-
+organismos probióticos (TERPOU et al., 2019). 
+Além do crescimento do Lactobacillus casei, foram avaliados duas 
+bifidobactérias. Conforme ilustrado na Figura 5C, é possível observar que a B. breve 
+apresenta um fase de adaptação maior ao meio, onde o crescimento relativo se intensificou 
+com 72 h de incubação, com um aumento de 21 % da população microbiana inicial. Os 
+valores máximos de crescimento foram alcançados com 96 h de fermentação, mostrando 
+um aumento de 42 %.  
+Os resultados de crescimento relativo mostraram que a B. breve apresentou uma 
+menor multiplicação celular no tempo de incubação estudado, quando comparado ao L. 
+casei. Pode-se observar também que a produção de ácido lático pela bifidobactéria é menor 
+durante a fermentação e os valores de pH reduzem, porém não atingem números baixos  
+conseguidos pelo L. casei. Entretanto, as bifidobactérias são classificadas como 
+ 
+48 
+ 
+heterofermentativas e produzem além do ácido lático, outros produtos secundários, como o 
+acetato. Para cada mol de glicose fermentada essas bactérias heterofermentativas produzem 
+1 mol de ácido lático e 1,5 mols de acetado. Por outro lado, o L.casei, um micro-organismo 
+homofermentativo, produz 2 mols de ácido lático a partir de 1 mol de glicose pela via 
+metabólica Embden-Meyerhof-Parnas (NOVIK; MEEROVSKAYA; SAVICH, 2017; 
+POKUSAEVA; FITZGERALD; VAN SINDEREN, 2011). Isso justifica os menores valores 
+de concentração de ácido lático durante a incubação de B. Breve nos sucos de caju 
+digeridos.  
+O crescimento dos probióticos reflete na produção de acido lático e pH, bem 
+como está relacionado com os substratos disponíveis no meio para serem consumidos 
+durante o período de incubação. Na Figura 5D, é possível verificar que durante os tempos 
+de 24 e 48 h, a B. breve consumiu pequenas quantidades de glicose (7,64 %) e frutose 
+(16,33%), isso justifica o crescimento reduzido nesses tempos de fermentação. Como dito 
+anteriormente a multiplicação celular desse micro-organismo ocorreu entre 72 e 96 h e isso 
+pode ser explicado pelo aumento do consumo de açúcares simples nesse período, onde a 
+concentração relativa em 72 h correspondia a 0,23 para a glicose e 0,39 para a frutose. No 
+final do processo (96 h), a frutose residual foi 3 % e a glicose foi totalmente consumida. 
+O crescimento da B. infantis também foi avaliado, as medidas de absorbância 
+relativa encontram-se na Figura 5E. Comparando os resultados obtidos no crescimento 
+dessa bactéria com os micro-organismos anteriormente citados, é possível observar que a B. 
+infantis apresentou um maior crescimento que a B. breve e a fase lag não foi extensa, 
+semelhante ao comportamento do L. casei. Os maiores valores de densidade ótica foram 
+obtidos com 72 h de incubação, onde o número de células aumentou 63 %. As medidas de 
+pH indicaram uma redução de valor para 5,54 com 24 h de processo, confirmando que a 
+multiplicação celular ocorria nesse momento. É possível observar uma maior produção de 
+ácido lático no tempo de 24 h (0,9 g/L), após esse período a concentração de acido lático 
+apresenta uma redução. Esse fato pode ser justificado pela escassez de nutrientes no meio e 
+possivelmente a B. infantis utilizou o ácido lático como substrato. 
+Na Figura 5F, pode-se verificar que houve redução nas quantidades de glicose e 
+vitamina C nas primeiras 24 h de fermentação, com isso acredita-se que o crescimento 
+bacteriano esteja relacionado ao uso desses componentes. No tempo de 48 h, os sucos 
+fermentados não apresentavam glicose e vitamina C em sua composição, porém havia 4,8 g 
+de frutose que foram totalmente consumidas com 72 h de incubação. Portanto, pode-se 
+ 
+49 
+ 
+assumir que a redução rápida das concentrações dessas moléculas, favoreceu o consumo de 
+ácido lático pelo micro-organismo.  
+De maneira geral, observa-se que a B. infantis assimila melhor os açúcares 
+simples glicose e frutose, ocasionando uma maior multiplicação celular que pode ser notada 
+pelos valores de absorbância obtidos. 
+5.5.2 Crescimento de probióticos na ‘Formulação 2’  
+ 
+Além do cultivo de micro-organismos no suco de caju não prebiótico, foi 
+avaliado também a fermentação de sucos prebióticos (Formulação 2) por L. casei, B. breve 
+e B. infantis. Os resultados de crescimento celular, pH, açúcares simples, oligossacarídeos 
+prebióticos, dextrana, vitamina C e produção de ácido lático estão dispostos na Figura 6.  
+É possível observar um crescimento mais acentuado do L. casei e B. breve nos 
+sucos que contêm oligossacarídeos prebióticos e dextrana, comparados com o Formulação 
+1. Esse resultado implica que, os ingredientes funcionais presentes nos sucos atendem a 
+outro critério necessário para serem classificados como prebióticos: estimular o 
+crescimento de micro-organismos probióticos.  
+Na Figura 6A, pode-se notar que o L. casei apresenta um alto crescimento com 
+24 h de fermentação, alcançando um aumento de 42 % do numero de células iniciais, isso 
+corresponde ao dobro do valor obtido quando o meio a ser fermentado era a Formulação 1. 
+O maior crescimento celular se deu no tempo de 72 h, onde o crescimento relativo foi de 
+1,76 (76 %).  
+Os resultados de pH e produção de ácido lático seguem a mesma discussão do 
+item anterior, onde quanto maior o crescimento microbiano, maior a produção de ácido 
+lático e menores os valores de pH do suco digerido. No inicio do processo o pH era 7,17, 
+apresentando um decaimento para 3,84. Com relação à concentração de ácido lático, houve 
+uma produção máxima de 5,15g/L. Vale salientar que, o crescimento microbiano reduziu 
+com 96 h de fermentação, porém o suco digerido ainda apresentava 19,76 % de glico-
+oligossacarídeos e 13,74 % de dextrana. Dessa forma, pode-se concluir que a elevada 
+acidez do meio tornou as condições adversas ao crescimento do L.casei.  
+Nas primeiras horas de fermentação, podemos observar na Figura 6B que o L. 
+casei não consumiu os ingredientes prebióticos, o micro-organismo utilizou apenas os 
+açúcares simples e houve uma redução no conteúdo de vitamina C.  
+ 
+ 
+50 
+ 
+Figura 6. Crescimento relativo de Lactobacillus casei, Bifidobacterium breve e 
+Bifidobacterium infantis em suco de caju prebiótico sintetizado sem agitação (Formulação 
+2), medidas de pH, produção de ácido lático (g/L) e concentração relativa (C/C0) de 
+glicose, frutose, glico-oligossacarídeos, dextrana e vitamina C durante o processo 
+fermentativo. 
+ 
+ 
+ 
+51 
+ 
+Alguns autores relataram que, espécies do gênero Lactobacillus consomem 
+preferencialmente os resíduos de frutose, em seguida começam a utilizar os prebióticos 
+como substrato (ENDO et al., 2016). LI et al. (2019) também verificou o consumo parcial 
+de glico-oligossacarídeos após 24 h de incubação, indicando que os microrganismos usaram 
+esses ingredientes para seu crescimento. Os autores afirmam que inicialmente o 
+crescimento não se deu pelo consumo de oligossacarídeos, visto que nos tempos iniciais 
+não houve redução da concentração desses carboidratos. Diante disso, sugeriram que nas 
+primeiras horas a glicose residual pode ter sido consumida. 
+Por outro lado, com 48 h de incubação o L. casei havia consumido 16 % do 
+conteúdo inicial de glico-oligossacarídeos e 23 % da dextrana encontrada na formulação 2 
+após digestão. No tempo de 72 h, houve consumo de todos os ingredientes presentes no 
+suco, com destaque para os açúcares simples, havia apenas 23 e 31% do conteúdo de 
+glicose e frutose, respectivamente.  
+Observando a Figura 6B, é possível notar que o L. casei utilizou a dextrana 
+como potencial substrato para seu crescimento, quando comparada ao consumo de 
+oligossacarídeos prebióticos. Ao final do processo, foram consumidos 34,23 % do conteúdo 
+inicial de dextrana, enquanto o L. casei utilizou 25,57 % do glico-oligossacarídeos 
+presentes no suco digerido. Esse resultado confirma a capacidade da dextrana ser 
+fermentada por bactérias intestinais humanas (OLANO-MARTIN et al., 2000). A glicose e 
+frutose do meio foram quase totalmente consumidas pelo micro-organismo durante a 
+fermentação.  
+Com relação a vitamina C, vale ressaltar que ao final do processo esse 
+composto estava ausente na formulação, uma parte do conteúdo de vitamina C pode ter sido 
+degradada, mas acredita-se que esse composto tenha alguma interação com o L. casei, 
+utilizando esse ácido como fonte de energia para a reprodução microbiana. Vale ressaltar 
+que, comparando as formulações 1 e 2, a formulação 1 apresentou maiores perdas de 
+vitamina C nas primeiras horas do processo. Isso pode ser explicado pelo efeito protetor 
+que os prebióticos conferem aos compostos presentes na matriz alimentícia (ALVES 
+FILHO et al., 2018).  
+Na Figura 6C, pode-se verificar que a B. breve apresentou maior síntese celular 
+em 72 h de incubação, quando aumentou 50 % o número total de células. Podemos notar 
+que o L. casei mostrou um crescimento relativo maior que a B. breve nos sucos de caju 
+digerido. Isso pode ser justificado com base nos resultados de concentração relativa dos 
+constituintes ilustrados na Figura 6D. A frutose havia sido consumida 100 % pelo L. casei, 
+ 
+52 
+ 
+mas apenas 16,35 % da frutose foi metabolizada pela B. breve. Entretanto, a glicose 
+começou a ser consumida com 24 h de fermentação, onde a concentração residual nesse 
+momento era 76 % do conteúdo inicial. No tempo de 72 h a glicose estava ausente no meio. 
+Com relação a acidez do meio e a redução do pH, a acidez pode ser justificada 
+pela produção de ácidos orgânicos durante o processo fermentativo, pois ao metabolizar 
+ingredientes prebióticos, as bifidobactérias produzem ácidos graxos de cadeia curta, como: 
+acetato, butirato e propionato (EHARA et al., 2016; MORENO et al., 2017). Dessa forma, a 
+síntese desses produtos metabólicos levam a redução do pH. Os baixos valores de pH 
+induzem a produção de mucina pelos colonócitos, de citocinas imunomoduladoras e 
+promove amônia e excreção de amina (KRUMBECK et al., 2016). Sabendo-se que, as 
+mucinas são glicoproteínas que atuam protegendo as mucosas e potenciais moléculas de 
+adesão para microrganismos. 
+A B. breve apresentou a capacidade de consumir tanto oligossacarídeos 
+prebióticos, quanto a dextrana, contudo, os resultados mostram que os glico-
+oligossacarídeos são metabolizados preferencialmente pela B. breve. Foi possível observar 
+que as bactérias usaram a dextrana como fonte de carbono apenas com 48 h de incubação, 
+consumindo 17,56 % do conteúdo inicial desse carboidrato, por outro lado, em 24 h de 
+incubação havia consumido 8 % dos glico-oligossacarídeos.  
+A concentração de vitamina C reduziu no decorrer do processo fermentativo, 
+entretanto 37 % do conteúdo total de vitamina C se encontravam no suco digerido e 
+fermentado durante 96 h.  
+A multiplicação celular de Bifidibacterium infantis apresentou um 
+comportamento diferente dos outros micro-organismos estudados, pois o suco de caju não 
+prebiótico promoveu maior crescimento relativo (1,63). Diante dos resultados obtidos, é 
+possível observar que essa espécie assimila melhor os açúcares simples disponíveis no 
+suco, glicose e frutose, do que os demais ingredientes, glico-oligossacarídeos e dextrana.  
+No entanto, a formulação 2 também estimulou a multiplicação das células de B. 
+infantis, com destaque para 96 h de fermentação. Nesse tempo a população bacteriana 
+aumentou em 50 %. De maneira geral, quando comparados ao outros probióticos em 
+estudo, a B. infantis apresentou crescimento menor frente a presença de ingredientes 
+prebióticos sintetizados nos sucos, implicando que os oligossacarídeos prebióticos e a 
+dextrana não são considerados os substratos ideais a serem metabolizados por essa espécie 
+de bifidobactéria. Entretanto, são consumidos mesmo em pequena concentração.  
+ 
+53 
+ 
+Contudo, apesar dos oligossacarídeos não serem consumidos durante todo o 
+processo fermentativo, esses ingredientes podem melhorar o ambiente intestinal e 
+influenciar na manutenção da viabilidade dos microrganismos benéficos. Autores 
+confirmam que, o uso de ingredientes prebióticos como protetores de probióticos tem 
+recebido considerável interesse (TERPOU et al., 2019).  
+De maneira geral, é possível observar que a dextrana apresenta efeitos 
+prebióticos (KOTHARI; DAS; PATEL, 2014), pois além de serem resistentes às condições 
+adversas do TGI, modulam a microbiota intestinal. Isso se deve possivelmente a estrutura 
+da dextrana, que é caracterizada por uma estrutura linear formada por resíduos de glicose 
+ligados por α-1,6 com ramificações ligadas a α-1,2, α-1,3 ou α-1,4. Portanto, as ligações α-
+1,2 são representativas das propriedades prebióticas (BOUNAIX et al., 2009). Estudiosos 
+também reportaram que a dextrana favoreceu o crescimento de espécies de bifidobactérias e 
+lactobacilos em modelo de fermentação in vitro, confirmando seu efeito como potencial 
+prebiótico (KOTHARI; DAS; PATEL, 2014). 
+Os resultados obtidos nesse estudo estão em conformidade com o descrito por 
+(LI et al., 2019). Esses autores relataram que glico-oligossacarídeos produzidos por 
+glicosilação apresentaram características prebióticas, pois estimularam o crescimento de 
+microrganismos probióticos do gênero Lactobacillus e Bifidobacterium, dentre eles o L. 
+casei. LEE et al. (2019) também relatou o crescimento de L. casei e bifidobactérias em 
+meios contendo glico-oligossacarídeos produzidos por Leuconostoc lactis CCK940.  
+Os micro-organismo do gênero Bifidobacterium degradam açúcares (hexoses) 
+através de uma via metabólica específica, chamada de ‘‘bifid shunt’’, onde a enzima 
+frutose-6-fosfocetolase exerce um papel importante e é considerada um marcador 
+taxonômico desse gênero (POKUSAEVA; FITZGERALD; VAN SINDEREN, 2011). 
+Diante disso, é interessante destacar que a B. breve e B. infantis podem metabolizar uma 
+ampla gama de açúcares formados por α / β-glicose (MILANI et al., 2015), monômeros que 
+compõem a estrutura dos oligossacarídeos e dextrana.    
+Diante do exposto, foi possível observar que a proliferação microbiana está 
+ligada diretamente a composição do meio onde o micro-organismo foi inoculado e cada 
+probiótico tem preferência por consumir determinado composto. Nesse estudo, o L. casei 
+usou preferencialmente dextrana como fonte de energia, a B. breve apresentou maior 
+afinidade e consumiu maiores porcentagens de oligossacarídeos prebióticos e a B. infantis 
+consumiu pequenas quantidades desses prebióticos, dando preferência ao consumo de 
+açúcares simples, como glicose e frutose.  
+ 
+54 
+ 
+5.5.3Crescimento de probióticos na ‘Formulação 3’ 
+ 
+ 
+Os micro-organismos probióticos em estudo foram inoculados em outra 
+amostra, a formulação 3, a fim de simular e conhecer os processos fermentativos que 
+ocorrem no colón. A diferença principal entre a formulação 2 e 3 foi a quantidade de 
+dextrana sintetizada e trata-se também de um suco prebiótico. Os resultados obtidos para o 
+crescimento celular do L. casei, B. breve e B. infantis na Formulação 2, os valores de pH, 
+produção de acido lático e concentração de glicose, frutose, glico-oligossacarídeos, 
+dextrana e vitamina C estão disponíveis na Figura 7.  
+Ao avaliar o crescimento relativo do L. casei, pode-se observar que esse micro-
+organismo apresentou menor multiplicação celular na Formulação 3, em comparação a 
+Formulação anteriormente discutida. Similar aos dados obtidos para o L. casei, o 
+crescimento da B. breve foi mais acentuado para a Formulação 2.  Na Figura 7A, podemos 
+notar que houve um crescimento constante do L. casei, o mesmo atingiu o crescimento 
+máximo com 72 h de fermentação e se encontrou na fase estacionaria com 96 h, quando em 
+ambos os tempos apresentou crescimento celular referente a 62 %. Vale ressaltar que, os 
+valores de pH reduzem intensamente logo após as primeiras 24 h de incubação e a 
+produção de ácido lático é mais intensa nesse momento, onde foram produzidos 6,78 g/L 
+desse ácido.  
+Na Figura 7B, ao passo que o L. casei consome glicose e frutose, essa bactéria 
+utiliza também os prebióticos como substrato. Nas primeiras 24 h houve consumo de todos 
+os constituintes estudados do suco digerido, e a partir de 48 h de fermentação o consumo 
+dos substratos e a redução do conteúdo de vitamina C foram mais intensos que nas 
+primeiras horas do processo, exceto para os oligossacarídeos que tiveram sua concentração 
+reduzida principalmente no tempo de 96 h, quando foram consumidos aproximadamente 
+22 % do conteúdo inicial. Os resultados inferem que o L. casei utiliza maiores quantidades 
+de dextrana para seu metabolismo celular, visto que, no final do processo 39,07 % da 
+dextrana foram consumidas.  
+ 
+ 
+ 
+ 
+ 
+ 
+55 
+ 
+Figura 7. Crescimento relativo de Lactobacillus casei, Bifidobacterium breve e 
+Bifidobacterium infantis em suco de caju prebiótico sintetizado com agitação (Formulação 
+3), medidas de pH, produção de ácido lático (g/L) e concentração relativa (C/C0) de 
+glicose, frutose, glico-oligossacarídeos, dextrana e vitamina C durante o processo 
+fermentativo. 
+ 
+ 
+ 
+56 
+ 
+Os micro-organismos entéricos são capazes de produzir enzimas, como forma 
+de defesa às condições adversas e o ambiente rico em bile. Essas enzimas hidrolisam os sais 
+biliares em ácidos biliares. O metabolismo desses ácidos no intestino é realizado por 
+algumas espécies, dentre elas as do gênero Lactobacillus e podem promover efeitos 
+benéficos ao hospedeiro (GIBSON et al., 2017). Estudos conduzidos em camundongos 
+demonstraram que a atividade da hidrolase do sal biliar pode reduzir o ganho de peso dos 
+animais, atua sobre o metabolismo lipídico, ritmo cardíaco periférico, sistema imunológico 
+e função de barreira intestinal (JOYCE; GAHAN, 2016).  
+Portanto, como os lactobacilos tem efeito no metabolismo dos ácidos biliares, 
+isso confirma sua importância na manutenção do estado de saúde do hospedeiro e o 
+possível efeito dos prebióticos no metabolismo humano. Haja vista que, os prebióticos 
+favorecem o crescimento L. casei e consequentemente influenciam na composição do 
+ambiente intestinal por meio da produção de metabólitos.  
+Analisando os resultados ilustrados na Figura 7C, nota-se que o maior 
+crescimento da B. breve se deu em 72 h de fermentação, porém a proliferação bacteriana 
+não foi muito elevada, atingindo um valor máximo de 1,32, que corresponde ao aumento de 
+32 % das células dessa bifidobactéria. Os resultados da Figura 7D, refletem nos valores 
+obtidos na Figura 7C, o crescimento celular não atinge níveis elevados, porque o consumo 
+de substratos disponíveis não são altos o suficiente. Diferente do L. casei, a B. breve não 
+assimila o conteúdo total de frutose disponível (cerca de 10 %) no suco digerido e a 
+concentração de vitamina  se mantém em 76 %. Com esse resultado de vitamina C residual, 
+pode-se inferir que a redução desse composto na incubação dos outros micro-organismos 
+pode ser explicada pelo consumo desse substrato como fonte de energia. Visto que, essas 
+amostras inoculadas com B. breve foram submetidas às mesmas condições de temperatura e 
+tempo e não tiveram o conteúdo de vitamina C totalmente degradado. Alguns autores 
+afirmam que essa vitamina pode ser usada como substrato e melhorar a viabilidade de 
+Lactobacillus (OLIVARES et al., 2019).  
+Figura 7D, podemos concluir que o conteúdo total de glicose foi consumido 
+pela bactéria. A concentração de glico-oligossacarídeos e dextrana ao final do processo são 
+altos, foram consumidos um total de 14,50 g/L de oligossacarídeos e 12,06 g/L de dextrana 
+durante as primeiras horas do processo fermentativo.  
+O crescimento da B. infantis pode ser observado na Figura 7E, nas primeira 24 
+h as células se multiplicam e aumentam em 20 %. Ao longo da fermentação a bactéria 
+continua a crescer, porém em níveis baixos, atingindo crescimento máximo de 31 % em 96 
+ 
+57 
+ 
+h de fermentação. Esse resultado reflete na produção de acido lático, que se torna mais 
+intensa nas primeiras horas de incubação, levando a produção de 3,80 g/L desse metabólito.  
+Os baixos valores de crescimento da B. infantis está relacionado ao baixo 
+consumo dos substratos disponíveis. A Figura 7F mostra o consumo mais acentuado dos 
+componentes presentes na formulação durante as primeiras 24 h de incubação, exceto para 
+a frutose, que não teve seu conteúdo total reduzido ao longo da fermentação. O consumo de 
+glicose e oligossacarídeos prebióticos apresentaram perfis similares, a B. infantis consumiu 
+14,01 e 15,36 % dos componentes, respectivamente. Houve também uma redução de 
+14,72 % do conteúdo total de vitamina C, ou seja, resultado semelhante ao encontrado nos 
+sucos incubados com B. breve, onde a concentração de vitamina C não reduziu em níveis 
+altos.  
+Observando as formulações contendo prebióticos, é possível observar que a B. 
+infantis consumiu uma concentração maior de dextrana da formulação 3, se destacando 
+também dentre os outros componentes encontrados na composição do suco. O micro-
+organismo consumiu cerca de 50 % do conteúdo inicial de dextrana disponível no suco 
+digerido. Vale ressaltar, que mesmo em concentrações baixas a B. infantis consumiu mais 
+oligossacarídeos da formulação 3 em comparação a formulação 2. Os glico-
+oligossacarídeos e dextrana presentes na Formulação 3 foram sintetizados sob agitação, 
+esse procedimento pode ter conduzido a formação de prebióticos de cadeia curta, que 
+facilitou a assimilação dos componentes pelo micro-organismo. 
+É importante salientar que, esse consumo de oligossacarídeos durante a 
+fermentação pode se dar devido a presença de proteínas enzimáticas na membrana ou 
+parede celular dessas bactérias acido-láticas. Essas proteínas desempenham um papel 
+importante na adesão desses micro-organismos ao trato intestinal e são responsáveis pelo 
+catabolismo de açúcares e pela degradação de vários carboidratos complexos (XU et al., 
+2019; ZHANG et al., 2017). Contudo, algumas enzimas metabólicas que atuam na 
+conversão de oligossacarídeos são intracelulares e podem limitar o metabolismo desses 
+carboidratos pelo transporte (GÄNZLE; FOLLADOR, 2012). 
+O conteúdo gênico do genoma de bifidobactérias pode refletir sua adaptação ao 
+trato gastrintestinal humano. Foi evidenciada a presença de genes que codificam uma 
+variedade de enzimas modificadoras de carboidratos, como glicosilhidrolases, 
+hexosiltransferases, isomerase e fosfotransferases. A sequência do genoma da B. breve 
+codificou pelo menos uma cópia de um gene que caracterizam as seguintes enzimas: 4-alfa-
+glucanotransferase, fructoquinase, galactoquinase, glicose-6-fosfato isomerase, alfa-
+ 
+58 
+ 
+glucosidase, beta-glucosidase, alfa-galactosidase, beta-galactosidase, com destaque para a 
+oligo-1,6-glucosidase e as α-glucosidases são as enzimas ativas que possivelmente atuam 
+nos glico-oligossacarídeos. Essas enzimas atuam no metabolismo de carboidratos e podem 
+estar relacionadas com o consumo de oligossacarídeos durante a incubação dos sucos na 
+presença de B. breve (POKUSAEVA; FITZGERALD; VAN SINDEREN, 2011).   
+5.5.4 Crescimento de probióticos na ‘Formulação 4’ 
+ 
+A formulação 4 foi elaborada visando atender os critérios para ser classificada 
+como uma bebida prebiótica, bem como para auxiliar na comparação de resultados obtidos 
+com a formulação 5, acrescida de Tagatose. O suco prebiótico foi diluído em suco não 
+prebiótico, com isso a concentração dos compostos com propriedades funcionais se 
+encontram em quantidades reduzidas na formulação. A Figura 8 fornece informações sobre 
+o crescimento dos probióticos em estudo, a produção de ácido lático, acompanhado das 
+medidas de pH e das concentrações relativas dos compostos de interesse da formulação 
+durante o processo fermentativo. 
+A densidade ótica no suco fermentado aumenta com 24 h de incubação, 
+mostrando que a fase de adaptação do L. casei ao meio não foi muito extensa. No primeiro 
+tempo analisado, as células microbianas aumentaram em 28 %, entre 24 e 48 h o 
+crescimento foi menos acentuado, possivelmente devido a um consumo menor de nutrientes 
+nesse tempo. O maior valor de crescimento relativo (1,50) se deu com 72 h de fermentação, 
+o que corresponde a um aumento de 50 % da população bacteriana. No entanto, com 96 h 
+cessou o crescimento celular.  O pH do meio apresentava característica ácida, com medida 
+valores de pH igual a 3,89. Essas condições adversas do meio são decorrentes da produção 
+de metabólitos provenientes do crescimento, como o ácido lático, que ao final do processo 
+encontrava-se no suco numa concentração de 6,24 g/L.   
+No inicio do processo fermentativo o L. casei consumiu preferencialmente os 
+açúcares simples, glicose e frutose, conforme indicado na Figura 8B. A partir de 48 h esse 
+micro-organismo reduziu o consumo de frutose e os resultados evidenciaram a preferência 
+desse microrganismo por dextrana, pois a degradação desse carboidrato foi observada com 
+48h de reação (3,76 %), ou seja, antes do consumo de oligossacarídeos prebióticos que 
+ocorreu com 96 h (6,99 %). O consumo final de dextrana da Formulação 4 foi cerca de 20% 
+ao final do processo fermentativo. Os resultados de concentração relativa estão condizentes 
+com o exposto na Figura 8A, dado que com 72 h de incubação houve maior crescimento 
+ 
+59 
+ 
+microbiano e aliado a isso observa-se que houve maior consumo dos substratos disponíveis 
+no suco digerido.  
+ 
+Figura 8. Crescimento relativo de Lactobacillus casei, Bifidobacterium breve e 
+Bifidobacterium infantis em suco de caju elaborado com 1/3 de suco prebiótico e 2/3 de 
+suco não prebiótico (Formulação 4), medidas de pH, produção de ácido lático (g/L) e 
+concentração relativa (C/C0) de glicose, frutose, glico-oligossacarídeos, dextrana e 
+vitamina C durante o processo fermentativo. 
+ 
+ 
+60 
+ 
+Além disso, o conteúdo de vitamina C reduziu com 24 h de experimento, 
+encontrando-se disponível 69 % do conteúdo inicial e com 72 h esse composto estava 
+ausente na formulação. Alguns autores reforçam que, vitaminas são componentes que 
+atuam promovendo o crescimento de micro-organismos probióticos (TERPOU et al., 2019). 
+Assim, os resultados obtidos nesse estudo sugerem que, existe uma interação positiva entre 
+a microbiota intestinal e a vitamina C bioacessível.  
+Para avaliar o efeito bifidogênico dos prebióticos presentes no suco, o 
+crescimento da B. breve também foi avaliado, os resultados estão ilustrados na Figura 8C. 
+O resultado de crescimento sugere que essa bactéria apresentou uma maior fase lag, onde 
+não houve multiplicação celular, mas houve consumo de ingredientes disponíveis no meio, 
+mesmo em baixas concentrações. Semelhante a maioria dos casos estudados, o crescimento 
+microbiano se destacou com 72 h de fermentação, quando a B. breve cresceu 16 %. 
+De acordo com a Figura 8D, a glicose foi totalmente consumida em 48 h de 
+processo. É possível observar que esse micro-organismo consome todos os ingredientes 
+simultaneamente. Diferente das formulações anteriormente descritas, Na formulação 4, a B. 
+breve a concentração relativa dos oligossacarídeos ao longo da fermentação foram maiores 
+que a concentração de dextrana, ou seja, nesse meio a B. breve consumiu preferencialmente 
+a dextrana. Esses carboidratos com função prebiótica foram utilizados como substrato até 
+72 h de fermentação, sendo consumidos 26,99 e 51,92 g/L de oligossacarídeos prebióticos e 
+dextrana, respectivamente. A vitamina C foi totalmente degradada ou consumida em 72 h 
+de incubação, nesse mesmo tempo houve maior consumo de todos os constituintes do suco. 
+Essa redução também pode ser explicada pelo fato da formulação 4 ter sido preparada com 
+2/3 de suco não prebiótico, dessa forma a quantidade de dextrana e oligossacarídeos no 
+suco era reduzida, podendo afetar o possível efeito protetor oferecido por esses ingredientes 
+e permitindo o uso da vitamina C no metabolismo e atividade da B. breve. 
+Ao avaliar a Figura 8E, de forma geral, pode-se verificar que a B. infantis não 
+obteve uma boa adaptação ao meio, pois seu crescimento ocorreu após 72  h de incubação e 
+aumentou 28 % do número inicial de células. Os valores de pH reduziram lentamente ao 
+longo do tempo, bem como a produção de ácido lático foi aumentando gradativamente, até 
+atingir 2,35 g/L no final do processo.  
+Na Figura 8F, conseguimos verificar que o consumo dos substratos nas 
+primeiras 24 h é reduzido, confirmando a ausência de crescimento microbiano nesse tempo 
+de incubação. A glicose é consumida lentamente ao longo do processo e tem 85 % do seu 
+conteúdo consumido com 96 h de fermentação, contudo a redução mais acentuada se deu a 
+ 
+61 
+ 
+partir de 72 h. A concentração de frutose reduziu pela metade no final do processo 
+fermentativo. Com relação aos prebióticos, os glico-oligossacarídeos foram consumidos 
+pela B. infantis no tempo 48h, onde foram metabolizados 10 % do conteúdo inicial desses 
+ingredientes alimentares. Para a dextrana, os resultados mostraram um maior destaque, pois 
+com 48 e 72 h apresentaram menor concentração relativa dentre os componentes estudados, 
+mostrando um consumo de 15,84 e 24,53 %, respectivamente. Assim, no final do processo 
+41,56 % da dextrana foram utilizados como substrato pela B. infantis. Por outro lado, a 
+concentração de vitamina C na formulação teve uma lenta redução no inicio do processo e 
+com 72 h não havia mais a presença desse composto na formulação.  
+5.5.5  Crescimento de probióticos na ‘Formulação 5’ 
+ 
+A tagatose é um adoçante, conhecido por suas propriedades prebióticas. A 
+presença desse açúcar raro desempenha um papel importante na microbiota humana. Diante 
+disso, a Tagatose se encontra presente nessa formulação e os resultados de crescimento dos 
+micro-organismos probióticos, produção de ácido lático, pH e concentração de substratos e 
+da vitamina C estão expostos na Figura 9.  
+Analisando a Figura 9A, pode-se notar que a tagatose possibilitou um ambiente 
+mais propício ao crescimento do L. casei, em comparação aos resultados obtidos com a 
+formulação 4. Os maiores valores de crescimento relativo se deram com 72 h de 
+fermentação (65 %), sendo que, em todos os tempos a formulação 5 favoreceu um 
+crescimento igual ou maior que os sucos elaborados sem a tagatose. É importante salientar 
+que, em 24 h de incubação o L. casei apresentou um crescimento acentuado, onde a 
+multiplicação celular foi de 50 %.  
+O perfil de crescimento desse micro-organismo na formulação 5 é característico 
+da presença de vários substratos no meio, primeiramente o L. casei consumiu um tipo de 
+composto, se multiplicou, em seguida apresentou um crescimento retardado e começou a 
+utilizar outra fonte de energia para seu metabolismo, como por exemplo a Tagatose. 
+Autores relatam que, no intestino grosso, a d-tagatose é catabolizada pelo Lactobacillus 
+casei, por meio da via tagatose-6-fosfato, uma via do metabolismo da galactose (ROY et 
+al., 2018).  
+ 
+ 
+ 
+62 
+ 
+Figura 9. Crescimento relativo de Lactobacillus casei, Bifidobacterium breve e 
+Bifidobacterium infantis em suco de caju elaborado com 1/3 de suco prebiótico e 2/3 de 
+suco não prebiótico (Formulação 4) e adicionado de tagatose (1 % p/v), medidas de pH, 
+produção de ácido lático (g/L) e concentração relativa (C/C0) de glicose, frutose, glico-
+oligossacarídeos, dextrana e vitamina C durante o processo fermentativo. 
+ 
+Nas primeiras horas de fermentação, a glicose, frutose e dextrana apresentaram 
+concentrações relativas similares, entre 86 e 89 %. Por outro lado, houve consumo mínimo 
+de glico-oligossacarídeos e tagatose. O consumo relativo da dextrana foi similar ao da 
+ 
+63 
+ 
+glicose até 48 h de reação, após isso a glicose foi totalmente consumida, enquanto 
+aproximadamente 30% do conteúdo de dextrana foi consumido. Em vista do exposto, é 
+sugerido que essa bactéria apresenta maior afinidade pela dextrana, pois seu consumo 
+recebeu destaque na maioria das amostras. 
+No tempo de 72h, houve um maior consumo de frutose e o L. casei metabolizou 
+quantidades maiores de Tagatose (aproximadamente 15%). É importante enfatizar que, o 
+crescimento da L. casei na formulação 5, pode ter sido influenciado pela adição desse 
+adoçante no suco. Isso pode ser confirmado pelo menor consumo de oligossacarídeos 
+prebióticos e dextrana, quando comparada à formulação 4. Além disso, nesse tempo de 
+fermentação o crescimento microbiano foi favorecido pelo consumo da tagatose, tendo em 
+vista que não houve hidrólise dos oligossacarídeos prebióticos nesse período e a quantidade 
+de dextrana consumida entre 48 e 72 h foi mínima, aproximadamente 2,5 % da 
+concentração inicial. 
+Com relação a vitamina C, esse composto teve seu conteúdo reduzido nas 
+primeiras 24 h (concentração relativa 77%) e depois foi totalmente degradado após 72 h de 
+incubação.  
+A avaliação do crescimento de B. breve na formulação 5 indicou que a adição 
+de tagatose apresenta um efeito pronunciado na proliferação desse probiótico. Foram 
+verificados maiores valores de crescimento em 72 h de processo, alcançando valores de 
+1,42, enquanto a formulação 4 apresentou valor de 1,16. O perfil de crescimento do L. casei 
+e da B. breve se assemelha, devido ao crescimento acentuado em 24h, inibição da síntese 
+celular e em 72 h ocorre novamente a proliferação dos micro-organismos. A produção de 
+ácido lático e os valores de pH seguem a mesma discussão dos itens anteriores.  
+Para entender o perfil de crescimento da B. breve deve-se observar a Figura 9D, 
+onde estão dispostos as concentrações relativas dos ingredientes presentes no suco digerido. 
+É possível observar que o conteúdo de vitamina C foi totalmente consumido ou degradado 
+durante as primeiras 24 h de fermentação e a glicose com 48h. Por outro lado, a frutose 
+começou a ser consideravelmente consumida a partir de 24 h. Com relação aos compostos 
+com propriedades prebióticas, 8,33 % dos oligossacarídeos foram consumidos em 24h, 
+depois somente com 72 h foram consumidos novamente (consumo total de 9,85 %). 
+Entretanto, a dextrana foi metabolizada pela B. breve somente a partir de 72 h, quando foi 
+consumido 10,53 % do conteúdo inicial, atingindo um consumo máximo no final do 
+processo de 13,16%. Diante do exposto, é importante ressaltar a importância da Tagatose 
+nas formulações, pois ao comparar as formulações 4 e 5, é notório o consumo de mais 
+ 
+64 
+ 
+ingredientes no suco sem adição da Tagatose. Dessa forma, a presença de outro carboidrato 
+no meio, como a tagatose, favoreceu maior crescimento microbiano, mesmo com um 
+consumo reduzido dos outros ingredientes pelos probióticos.   
+O consumo desse adoçante se deu até 72 h de incubação, concluindo o processo 
+com 86 % do conteúdo inicial de tagatose. Esse resultado é consistente com os dados de 
+crescimento relativo e consumo dos outros componentes presentes na amostra, 
+evidenciando a capacidade da B. breve metabolizar a tagatose (aproximadamente 14 %), 
+estimulando a multiplicação celular.  
+Avaliando a Figura 9E, podemos observar que o crescimento da B. infantis tem 
+inicio em 72h de fermentação (19 %), continuando o crescimento no tempo de 96h (28 %), 
+quando o consumo de tagatose foi intenso. Em contrapartida o crescimento da formulação 4 
+teve inicio após 72 h. As 2 formulações apresentavam a mesma composição, exceto pela 
+adição de tagatose na última. Contudo, esse crescimento antecipado pode ter ocorrido 
+devido ao consumo de tagatose pelo micro-organismo e favorecimento da multiplicação 
+celular.  
+Com base nos resultados de concentração relativa dispostos na Figura 9F, 
+podemos observar que a B. infantis não utilizou os oligossacarídeos como substrato para 
+sua reprodução. O consumo de açúcares simples se deu principalmente com 72 e 96 h de 
+fermentação. A dextrana foi consumida nas primeiras 24 h, aproximadamente 13% do 
+conteúdo inicial, em seguida foi utilizada pelo micro-organismo apenas em 72 h de 
+incubação, apresentando um consumo máximo de 27,26 %.  
+É possível observar que a B. infantis se destacou frente aos outros micro-
+organismos em relação à utilização da tagatose como substrato, esse açúcar foi consumido 
+lentamente durante o processo e no final do processo apresentou uma redução de 27,05 % 
+do conteúdo inicial, inferindo que este açúcar raro é um bom ingrediente prebiótico para 
+essa bactéria.  
+LIANG et al. (2019) relataram que o consumo da tagatose permite restaurar a 
+diversidade da microbiota intestinal e melhora a composição da microbiota. Afirmam 
+também que esse adoçante pode ser utilizado pela microflora intestinal para aumentar a 
+concentração de ácidos graxos de cadeia curta (SCFAs), reduzindo o pH intestinal e 
+tornando o ambiente intestinal mais harmonioso. 
+A tagatose, como ingrediente prebióticos, promove a sobrevivência de 
+probióticos do grupo Lactobacillus casei (RAD et al., 2018). Estudiosos afirmam o efeito 
+benéficos oferecidos pela ingestão desse adoçante, além disso, descrevem a habilidade da 
+ 
+65 
+ 
+tagatose afetar positivamente a microbiota intestinal dos consumidores (GUERRERO-
+WYSS; DURÁN AGÜERO; ANGARITA DÁVILA, 2018). Assim, os resultados 
+evidenciaram o potencial desse açúcar raro de ocasionar mudanças benéficas no 
+crescimento dos probióticos em estudo. 
+6 CONCLUSÕES 
+ 
+O presente estudo confirmou as propriedades prebióticas dos sucos contendo 
+glico-oligossacarídeos, dextrana e tagatose.  Esses ingredientes se mostraram resistentes às 
+condições do TGI e atingiram a parte final do processo digestivo, onde cada micro-
+organismo em estudo apresentou um perfil de crescimento diferente, frente aos substratos 
+com propriedades prebióticas estudados.  
+Foi demonstrado que todos os probióticos avaliados consumiram a tagatose, 
+com destaque para a Bifidobacterium infantis. Tanto o Lactobacillus casei quanto a 
+Bifidobacterium breve, consumiram concentrações satisfatórias de oligossacarídeos 
+prebióticos e dextrana. No entanto, o L. casei mostrou uma preferência pela dextrana e a B. 
+breve apresentou maior afinidade pelos glico-oligossacarídeos. É importante ressaltar que 
+os dados obtidos nesse estudo, permitem concluir que a Formulação 2 estimulou maior 
+crescimento dos probióticos, exceto para a B. infantis. 
+Os sucos prebióticos melhoraram a bioacessibilidade da vitamina C, devido ao 
+efeito protetor observado dos ingredientes prebióticos sobre esse composto bioativo. É 
+válido ressaltar a interação positiva da vitamina C com a microbiota intestinal, esse estudo 
+sugere que essa vitamina pode se apresentar como substrato favorecendo o crescimento das 
+bactérias probióticas estudadas.  
+Por fim, os sucos de caju prebióticos sintetizados nesse trabalho apresentaram-
+se como potenciais alimentos funcionais, visto que a variedade e as concentrações dos 
+componentes prebióticos presentes nos sucos estimularam o crescimento dos micro-
+organismos intestinais avaliados.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+66 
+ 
+REFERÊNCIAS 
+ 
+AGUDELO, C. D. et al. Bioaccessibility during in Vitro Digestion and Antiproliferative 
+Effect of Bioactive Compounds from Andean Berry (Vaccinium meridionale Swartz) Juice. 
+Journal of Agricultural and Food Chemistry, v. 66, n. 28, p. 7358–7366, 2018.  
+ 
+AGUILERA, Y.; MARTIN-CABREJAS, M. A.; GONZÁLEZ DE MEJIA, E. Phenolic 
+compounds in fruits and beverages consumed as part of the mediterranean diet: their role in 
+prevention of chronic diseases. Phytochemistry Reviews, v. 15, n. 3, p. 405–423, 2016.  
+ 
+ALMEIDA, F. D. L. et al. Effects of atmospheric cold plasma and ozone on prebiotic 
+orange juice. Innovative Food Science and Emerging Technologies, v. 32, p. 127–135, 
+2015. 
+  
+ALQURASHI, R. M. et al. In vitro approaches to assess the effects of açai (Euterpe 
+oleracea) digestion on polyphenol availability and the subsequent impact on the faecal 
+microbiota. Food Chemistry, v. 234, p. 190–198, 2017.  
+ 
+ALVES FILHO, E. G. et al. Chemometric evaluation of the volatile profile of probiotic 
+melon and probiotic cashew juice. Food Research International, v. 99, p. 461–468, 2017.  
+ 
+ALVES FILHO, E. G. et al. Evaluation of thermal and non-thermal processing effect on 
+non-prebiotic and prebiotic acerola juices using 1 H q NMR and GC – MS coupled to 
+chemometrics. , v. 265, p. 23–31, 2018.  
+Food Chemistry
+ 
+AMAN, A.; SIDDIQUI, N. N.; QADER, S. A. U. Characterization and potential 
+applications of high molecular weight dextran produced by Leuconostoc mesenteroides 
+AA1. , v. 87, n. 1, p. 910–915, 2012.  
+Carbohydrate Polymers
+ 
+AMIGO-BENAVENT, M. et al. Stability and bioactivity of a Bowman-Birk inhibitor in 
+orange juice during processing and storage. Food and Function, v. 4, p. 1051–1060, 2013.  
+ 
+ANNUNZIATA, A.; VECCHIO, R. Functional foods development in the European market: 
+A consumer perspective. Journal of Functional Foods, v. 3, n. 3, p. 223–228, 2011.  
+ 
+ANVISA. Alegações de propriedade funcional aprovadas. v. 3, p. 1–9, 2014.  
+ 
+ARAÚJO, A. D. A. et al. Production and spouted bed drying of acerola juice containing 
+oligosaccharides. Food and Bioproducts Processing, v. 94, p. 565–571, 2015.  
+ 
+ARBOLEYA, S. et al. Gut bifidobacteria populations in human health and aging. Frontiers 
+in Microbiology, v. 7, n. AUG, p. 1–9, 2016.  
+ 
+BALTHAZAR, C. F. et al. Sheep Milk: Physicochemical Characteristics and Relevance for 
+Functional Food Development. Comprehensive Reviews in Food Science and Food 
+Safety, v. 16, p. 247–262, 2017a.  
+ 
+BALTHAZAR, C. F. et al. Assessing the effects of different prebiotic dietary 
+oligosaccharides in sheep milk ice cream. Food Research International, v. 91, p. 38–46, 
+ 
+67 
+ 
+2017b.  
+ 
+BARUAH, R.; DEKA, B.; GOYAL, A. Purification and characterization of dextransucrase 
+from Weissella cibaria RBA12 and its application in in vitro synthesis of prebiotic 
+oligosaccharides in mango and pineapple juices. LWT - Food Science and Technology, v. 
+84, p. 449–456, 2017.  
+ 
+BEDANI, R.; ROSSI, E. A.; SAAD, S. M. I. Impact of inulin and okara on Lactobacillus 
+acidophilus La-5 and Bifidobacterium animalis Bb-12 viability in a fermented soy product 
+and probiotic survival under in vitro simulated gastrointestinal conditions. Food 
+Microbiology, v. 34, n. 2, p. 382–389, 2013.  
+ 
+BERTELSEN, H.; JENSEN, B. B.; BUEMANN, B. D-Tagatose - A Novel Low-Calorie 
+Bulk Sweetener with Prebiotic Properties. 
+Low-Calories Sweeteners: Present and 
+Future, v. 85, p. 98–109, 1999.  
+ 
+BIAN, X. et al. Gut microbiome response to sucralose and its potential role in inducing 
+liver inflammation in mice. , v. 8, n. JUL, p. 1–13, 2017.  
+Frontiers in Physiology
+ 
+BOUHNIK, Y. et al. Increases Fecal Bifidobacteria in Healthy Humans 1. Pain, n. February 
+1998, p. 113–116, 1999.  
+ 
+BOUNAIX, M. S. et al. Biodiversity of exopolysaccharides produced from sucrose by 
+sourdough lactic acid bacteria. , v. 57, n. 22, 
+Journal of Agricultural and Food Chemistry
+p. 10889–10897, 2009.  
+ 
+BRASIL. Instrução normativa nº 1 de 7 de janeiro de 2000. Aprova o regulamento técnico 
+para fixação dos padrões de identidade e qualidade para suco de caju com alto teor de 
+polpa. Diário Oficial da República Federativa do Brasil, Brasília, 2000.  
+ 
+BUNIOWSKA, M. et al. Bioaccessibility of bioactive compounds after non-thermal 
+processing of an exotic fruit juice blend sweetened with Stevia rebaudiana. Food 
+, v. 221, p. 1834–1842, 2017.  
+Chemistry
+ 
+CANANI, R. B. et al. Potential beneficial effects of butyrate in intestinal and extraintestinal 
+diseases. World Journal of Gastroenterology, v. 17, n. 12, p. 1519–1528, 2011.  
+ 
+CARBONELL-CAPELLA, J. M. et al. Analytical methods for determining bioavailability 
+and bioaccessibility of bioactive compounds from fruits and vegetables: A review. 
+Comprehensive Reviews in Food Science and Food Safety, v. 13, n. 2, p. 155–171, 2014.  
+ 
+CARBONELL-CAPELLA, J. M. et al. Effect of Stevia rebaudiana addition on 
+bioaccessibility of bioactive compounds and antioxidant activity of beverages based on 
+exotic fruits mixed with oat following simulated human digestion. Food Chemistry, v. 184, 
+p. 122–130, 2015.  
+ 
+CHEN, M. X. et al. Metabolome analysis for investigating host-gut microbiota interactions. 
+, v. 118, p. S10–S22, 2019.  
+Journal of the Formosan Medical Association
+ 
+CORONA-HERNANDEZ, R. I. et al. Structural stability and viability of 
+ 
+68 
+ 
+microencapsulated probiotic bacteria: A review. Comprehensive Reviews in Food Science 
+and Food Safety, v. 12, n. 6, p. 614–628, 2013.  
+ 
+COSTA, M. G. M. et al. Synbiotic Amazonian palm berry (açai, Euterpe oleracea Mart.) ice 
+cream improved Lactobacillus rhamnosus GG survival to simulated gastrointestinal stress. 
+Food and Function, v. 8, n. 2, p. 731–740, 2017.  
+ 
+COSTABILE, A. et al. Effects of orange juice formulation on prebiotic functionality using 
+an in vitro colonic model system. PLoS ONE, v. 10, n. 3, p. 1–12, 2015.  
+ 
+DA SILVA, B. V.; BARREIRA, J. C. M.; OLIVEIRA, M. B. P. P. Natural phytochemicals 
+and probiotics as bioactive ingredients for functional foods: Extraction, biochemistry and 
+protected-delivery technologies. , v. 50, p. 144–
+Trends in Food Science and Technology
+158, 2016.  
+ 
+DA SILVA, I. M.; RABELO, M. C.; RODRIGUES, S. Cashew juice containing prebiotic 
+oligosaccharides. Journal of Food Science and Technology, v. 51, n. 9, p. 2078–2084, 
+2014.  
+ 
+DE CARVALHO, K. G. et al. Evaluation of the role of environmental factors in the human 
+gastrointestinal tract on the behaviour of probiotic cultures of Lactobacillus casei Shirota 
+and Lactobacillus casei LC01 by the use of a semi-dynamic in vitro model. Annals of 
+, v. 59, n. 3, p. 439–445, 2009.  
+Microbiology
+ 
+DUBOIS, M. et al. Colorimetric Method for Determination of Sugars and Related 
+Substances. Analytical Chemistry, v. 28, n. 3, p. 350–356, 1956.  
+ 
+EHARA, T. et al. Combinational effects of prebiotic oligosaccharides on bifidobacterial 
+growth and host gene expression in a simplified mixed culture model and neonatal mice. 
+British Journal of Nutrition, v. 116, n. 2, p. 270–278, 2016.  
+ 
+ENDO, A. et al. Variations in prebiotic oligosaccharide fermentation by intestinal lactic 
+acid bacteria. , v. 67, n. 2, p. 125–
+International Journal of Food Sciences and Nutrition
+132, 2016.  
+ 
+FAZILAH, N. F. et al. Influence of probiotics, prebiotics, synbiotics and bioactive 
+phytochemicals on the formulation of functional yogurt. Journal of Functional Foods, v. 
+48, p. 387–399, 2018.  
+ 
+FERNÁNDEZ-GARCÍA, E.; CARVAJAL-LÉRIDA, I.; PÉREZ-GÁLVEZ, A. In vitro 
+bioaccessibility assessment as a prediction tool of nutritional efficiency. Nutrition 
+Research, v. 29, n. 11, p. 751–760, 2009.  
+ 
+FERREIRA, R. et al. Orange juice added with L . casei : is there an impact of the probiotic 
+addition methodology on the quality parameters ? LWT - Food Science and Technology, 
+v. 106, n. February, p. 186–193, 2019.  
+ 
+FONTELES, T. V. et al. Optimization of the Fermentation of Cantaloupe Juice by 
+Lactobacillus casei NRRL B-442. Food Bioprocess Technology, 2011.  
+ 
+ 
+69 
+ 
+FONTELES, T. V. et al. Ultrasound processing to enhance drying of cashew apple bagasse 
+puree: Influence on antioxidant properties and in vitro bioaccessibility of bioactive 
+compounds. , v. 31, p. 237–249, 2016.  
+Ultrasonics Sonochemistry
+ 
+FONTELES, T. V. et al. Sonication Effect on Bioactive Compounds of Cashew Apple 
+Bagasse. Food and Bioprocess Technology, v. 10, n. 10, p. 1854–1864, 2017.  
+ 
+FONTELES, T. V.; RODRIGUES, S. Prebiotic in fruit juice: processing challenges, 
+advances, and perspectives. Current Opinion in Food Science, v. 22, p. 55–61, 2018.  
+ 
+FONTES, C. P. M. L. et al. Development of low caloric prebiotic fruit juices by 
+dexransucrase acceptor reaction. Journal of Food Science and Technology, v. 52, n. 11, p. 
+7272–7280, 2015.  
+ 
+FUJIMARU, T.; PARK, J. H.; LIM, J. Sensory Characteristics and Relative Sweetness of 
+Tagatose and Other Sweeteners. Journal of Food Science, v. 77, n. 9, 2012.  
+ 
+GALANAKIS, C. M. 
+Nutraceutical and Functional Food Components: Effects of 
+. London, United Kingdom: Elsevier Inc., 2017.  
+Innovative Processing Techniques
+ 
+GÄNZLE, M. G.; FOLLADOR, R. Metabolism of oligosaccharides and starch in 
+lactobacilli: A review. Frontiers in Microbiology, v. 3, n. SEP, p. 1–15, 2012.  
+ 
+GIBSON, G. R. et al. Expert consensus document: The International Scientific Association 
+for Probiotics and Prebiotics (ISAPP) consensus statement on the definition and scope of 
+prebiotics. Nature Reviews Gastroenterology and Hepatology, v. 14, n. 8, p. 491–502, 
+2017.  
+ 
+GIBSON, G. R.; ROBERFROID, M. B. Dietary Modulation of the Human Colonie 
+Microbiota: Introducing the Concept of Prebiotics. Journal of Nutrition, v. 125, p. 1401–
+1412, 1995.  
+ 
+GOMES, W. F. et al. Effect of ultrasound followed by high pressure processing on prebiotic 
+cranberry juice. Food Chemistry, v. 218, p. 261–268, 2017.  
+ 
+GONÇALVES, L. R. B.; GIORDANO, R. L. C.; GIORDANO, R. C. Effects of diffusion 
+on the kinetics of maltose hydrolysis using glucoamylase immobilized on macroporous 
+silica. , v. 14, n. 4, p. 341–346, dez. 1997.  
+Brazilian Journal of Chemical Engineering
+ 
+GRANATO, D.; NUNES, D. S.; BARBA, F. J. An integrated strategy between food 
+chemistry, biology, nutrition, pharmacology, and statistics in the development of functional 
+foods: A proposal. Trends in Food Science and Technology, v. 62, p. 13–22, 2017.  
+ 
+GUERRA, A. et al. Relevance and challenges in modeling human gastric and small 
+intestinal digestion. Trends in Biotechnology, v. 30, n. 11, p. 591–600, 2012.  
+ 
+GUERRERO-WYSS, M.; DURÁN AGÜERO, S.; ANGARITA DÁVILA, L. D-Tagatose Is 
+a Promising Sweetener to Control Glycaemia: A New Functional Food. 
+BioMed Research 
+International, v. 2018, p. 1–7, 2018.  
+ 
+ 
+70 
+ 
+GUTTERIDGE, A.; THORNTON, J. Conformational change in substrate binding, catalysis 
+and product release: An open and shut case? FEBS Letters, v. 567, n. 1, p. 67–73, 2004.  
+ 
+HEINCKE, K. et al. Kinetics of the dextransucrase acceptor reaction with maltose - 
+Experimental results and modeling. Enzyme and Microbial Technology, v. 24, p. 523–
+534, 1999.  
+ 
+HERNANDEZ-HERNANDEZ, O. et al. In vitro fermentation by human gut bacteria of 
+proteolytically digested caseinomacropeptide nonenzymatically glycosylated with prebiotic 
+carbohydrates. Journal of Agricultural and Food Chemistry, v. 59, n. 22, p. 11949–
+11955, 2011.  
+ 
+HODONICZKY, J.; MORRIS, C. A.; RAE, A. L. Oral and intestinal digestion of 
+oligosaccharides as potential sweeteners: A systematic evaluation. , v. 132, 
+Food Chemistry
+n. 4, p. 1951–1958, 2012.  
+ 
+HUANG, S. X. et al. Enzymatic synthesis of non-digestible oligosaccharide catalyzed by 
+dextransucrase and dextranase from maltose acceptor reaction. 
+Biochemical and 
+, v. 523, n. 3, p. 651–657, 2020.  
+Biophysical Research Communications
+ 
+HUR, S. J. et al. In vitro human digestion models for food applications. Food Chemistry, 
+v. 125, n. 1, p. 1–12, 2011.  
+ 
+IQBAL, S. et al. Enzymatic and acidic degradation of high molecular weight dextran into 
+low molecular weight and its characterizations using novel Diffusion-ordered NMR 
+spectroscopy. International Journal of Biological Macromolecules, v. 103, p. 744–750, 
+2017.  
+ 
+JAIME-FONSECA, M. R. et al. Digestion of starch in a dynamic small intestinal model. 
+European Journal of Nutrition, v. 55, n. 8, p. 2377–2388, 2016.  
+ 
+JAYAMUTHUNAGAI, J. et al. D-Tagatose production by permeabilized and immobilized 
+Lactobacillus plantarum using whey permeate. , v. 235, p. 250–
+Bioresource Technology
+255, 2017a.  
+ 
+JAYAMUTHUNAGAI, J. et al. Biocatalytic production of D-tagatose: A potential rare 
+sugar with versatile applications. Critical Reviews in Food Science and Nutrition, v. 57, 
+n. 16, p. 3430–3437, 2017b.  
+ 
+JOHANSSON, S. et al. Oligosaccharide Synthesis in Fruit Juice Concentrates Using a 
+Glucansucrase from Lactobacillus reuteri 180. Food and Bioproducts Processing, v. 98, p. 
+201–209, 2016.  
+ 
+JOHNSON, C. R. et al. Lentil (Lens culinaris L.): A prebiotic-rich whole food legume. 
+Food Research International, v. 51, p. 107–113, 2013.  
+ 
+JOYCE, S. A.; GAHAN, C. G. M. Bile Acid Modifications at the Microbe-Host Interface: 
+Potential for Nutraceutical and Pharmaceutical Interventions in Host Health. 
+Annual 
+Review of Food Science and Technology, v. 7, n. 1, p. 313–333, 2016.  
+ 
+ 
+71 
+ 
+KALLIO, J. et al. Vitamin C inhibits staphylococcus aureus growth and enhances the 
+inhibitory effect of quercetin on growth of escherichia coli in vitro. Planta Medica, v. 78, 
+n. 17, p. 1824–1830, 2012.  
+ 
+KAUR, N.; SINGH, D. P. Deciphering the consumer behaviour facets of functional foods: 
+A literature review. Appetite, v. 112, p. 167–187, 2017.  
+ 
+KIM, P. Current studies on biological tagatose production using L-arabinose isomerase: A 
+review and future perspective. Applied Microbiology and Biotechnology, v. 65, n. 3, p. 
+243–249, 2004.  
+ 
+KOH, J. H. et al. Synbiotic impact of tagatose on viability of Lactobacillus rhamnosus 
+strain GG mediated by the phosphotransferase system (PTS). , v. 36, n. 
+Food Microbiology
+1, p. 7–13, 2013.  
+ 
+KONG, F.; SINGH, R. P. A Human Gastric Simulator (HGS) to Study Food Digestion in 
+Human Stomach. Journal of Food Science, v. 75, n. 9, 2010.  
+ 
+KOTHARI, D.; DAS, D.; PATEL, S. Dextran and Food Application. In: RAMAWAT, K. 
+G.; MÉRILLON, J.-M. (Eds.). . Polysaccharides. [s.l.] Springer, 2014. p. 1–16.  
+ 
+KOTHARI, D.; TINGIRIKARI, J. M. R.; GOYAL, A. In vitro analysis of dextran from 
+Leuconostoc mesenteroides NRRL B-1426 for functional food application. 
+Bioactive 
+, v. 6, n. 2, p. 55–61, 2015.  
+Carbohydrates and Dietary Fibre
+ 
+KRUMBECK, J. A. et al. Prebiotics and synbiotics: Dietary strategies for improving gut 
+health. Current Opinion in Gastroenterology, v. 32, n. 2, p. 110–119, 2016.  
+ 
+LAMSAL, B. P. Production, health aspects and potential food uses of dairy prebiotic 
+galactooligosaccharides. Journal of the Science of Food and Agriculture, v. 92, n. 10, p. 
+2020–2028, 2012.  
+ 
+LEE, S. et al. Structural Analysis of Gluco-Oligosaccharides Produced by Leuconostoc 
+lactis and Their Prebiotic Effect. Molecules (Basel, Switzerland), v. 24, n. 21, p. 1–11, 
+2019.  
+ 
+LEEMHUIS, H. et al. Glucansucrases: Three-dimensional structures, reactions, mechanism, 
+α-glucan analysis and their implications in biotechnology and food applications. 
+Journal of 
+Biotechnology, v. 163, n. 2, p. 250–272, 2013.  
+ 
+LEVIN, G. V. Tagatose, the New GRAS Sweetener and Health Product. Journal of 
+Medicinal Food, v. 5, n. 1, p. 23–36, 2002.  
+ 
+LI, N. et al. High-yield synthesis of glucooligosaccharides (GlOS) as potential prebiotics 
+from glucose: Via non-enzymatic glycosylation. Green Chemistry, v. 21, n. 10, p. 2686–
+2698, 2019.  
+ 
+LIANG, Y. X. et al. The Constipation-Relieving Property of d-Tagatose by Modulating the 
+Composition of Gut Microbiota. International journal of molecular sciences, v. 20, n. 22, 
+2019.  
+ 
+72 
+ 
+ 
+LIN, C.-S. et al. Impact of the gut microbiota, prebiotics, and probiotics on human health 
+and disease. , v. 37, n. 5, p. 259–268, 2014.  
+Biomedical Journal
+ 
+LO CURTO, A. et al. Survival of probiotic lactobacilli in the upper gastrointestinal tract 
+using an in vitro gastric model of digestion. Food Microbiology, v. 28, n. 7, p. 1359–1366, 
+2011.  
+ 
+MAAWIA, K. et al. Production of impure prebiotic galacto-oligosaccharides and their 
+effect on calcium, magnesium, iron and zinc absorption in Sprague-Dawley rats. 
+PharmaNutrition, v. 4, p. 154–160, 2016.  
+ 
+MANDALARI, G. et al. In vitro evaluation of the prebiotic properties of almond skins 
+(Amygdalus communis L.). , v. 304, n. 2, p. 116–122, 2010.  
+FEMS Microbiology Letters
+ 
+MANZINI, M. et al. Reduction of beauvericin and enniatins bioaccessibility by prebiotic 
+compounds, evaluated in static and dynamic simulated gastrointestinal digestion. Food 
+, v. 47, p. 203–211, 2015.  
+Control
+ 
+MARTINEZ, R. C. R. et al. International Journal of Food Microbiology In vitro evaluation 
+of gastrointestinal survival of Lactobacillus amylovorus DSM 16698 alone and combined 
+with galactooligosaccharides , milk and/or Bifidobacterium animalis subsp . lactis Bb-12. 
+, v. 149, n. 2, p. 152–158, 2011.  
+International Journal of Food Microbiology
+ 
+MEN, Y. et al. Enzymatic conversion of d -galactose to d -tagatose : Cloning , 
+overexpression and characterization of l -arabinose isomerase from Pediococcus 
+pentosaceus PC-5. Microbiological Research, v. 169, n. 2–3, p. 171–178, 2014.  
+ 
+MÉNARD, O. et al. Validation of a new in vitro dynamic system to simulate infant 
+digestion. Food Chemistry, v. 145, p. 1039–1045, 2014.  
+ 
+MENDOZA, M. R.; OLANO, A.; VILLAMIEL, M. Chemical indicators of heat treatment 
+in fortified and special milks. , v. 53, n. 8, p. 
+Journal of Agricultural and Food Chemistry
+2995–2999, 2005.  
+ 
+MILANI, C. et al. Bifidobacteria exhibit social behavior through carbohydrate resource 
+sharing in the gut. Scientific Reports, v. 5, p. 1–14, 2015.  
+ 
+MINEKUS, M. et al. A standardised static in vitro digestion method suitable for food-an 
+international consensus. Food and Function, v. 5, n. 6, p. 1113–1124, 2014.  
+ 
+MITSUOKA, T. Development of Functional Foods. Bioscience of Microbiota, Food and 
+, v. 33, n. 3, p. 117–128, 2014.  
+Health
+ 
+MORENO, F. J. et al. Current state and latest advances in the concept, production and 
+functionality of prebiotic oligosaccharides. Current Opinion in Food Science, v. 13, p. 
+50–55, 2017.  
+ 
+MOUMITA, S. et al. Effect of long-term storage on viability and acceptability of 
+lyophilized and spray-dried synbiotic microcapsules in dry functional food formulations. 
+ 
+73 
+ 
+LWT - Food Science and Technology, v. 96, p. 127–132, 2018.  
+ 
+MUSSATTO, S. I.; MANCILHA, I. M. Non-digestible oligosaccharides: A review. 
+Carbohydrate Polymers, v. 68, p. 587–597, 2007.  
+ 
+NOVIK, G.; MEEROVSKAYA, O.; SAVICH, V. Waste Degradation and Utilization by 
+Lactic Acid Bacteria: Use of Lactic Acid Bacteria in Production of Food Additives, 
+Bioenergy and Biogas. In: . [s.l: s.n.]. v. 5p. 105–145.  
+Intechopen
+ 
+OH, D.-K. Tagatose : properties , applications , and biotechnological processes. Applied 
+Microbiology and Biotechnology, v. 76, p. 1–8, 2007.  
+ 
+OLANO-MARTIN, E. et al. In vitro fermentability of dextran, oligodextran and 
+maltodextrin by human gut bacteria. , v. 83, n. 3, p. 247–255, 
+British Journal of Nutrition
+2000.  
+ 
+OLIVARES, A. et al. Survival of microencapsulated Lactobacillus casei (prepared by 
+vibration technology) in fruit juice during cold storage. 
+Electronic Journal of 
+, 2019.  
+Biotechnology
+ 
+OZDAL, T. et al. The reciprocal interactions between polyphenols and gut microbiota and 
+effects on bioaccessibility. Nutrients, v. 8, n. 2, p. 1–36, 2016.  
+ 
+PADILHA, M. et al. A prebiotic mixture improved: Lactobacillus acidophilus and 
+Bifidobacterium animalis gastrointestinal in vitro resistance in petit-suisse. Food and 
+Function, v. 7, n. 5, p. 2312–2319, 2016.  
+ 
+PAINEAU, D. et al. Effects of Short-Chain Fructooligosaccharides on Faecal 
+Bifidobacteria and Specific Immune Response in Formula-Fed Term Infants: A 
+Randomized, Double-Blind, Placebo-Controlled Trial. Journal of Nutritional Science and 
+Vitaminology, v. 60, p. 167–175, 2014.  
+ 
+PALAFOX-CARLOS, H.; AYALA-ZAVALA, J. F.; GONZÁLEZ-AGUILAR, G. A. The 
+Role of Dietary Fiber in the Bioaccessibility and Bioavailability of Fruit and Vegetable 
+Antioxidants. Journal of Food Science, v. 76, n. 1, p. 6–15, 2011.  
+ 
+PATEL, S.; GOYAL, A. Functional oligosaccharides: Production, properties and 
+applications. , v. 27, p. 1119–1128, 
+World Journal of Microbiology and Biotechnology
+2011.  
+ 
+PEREIRA, A. L. F. et al. Storage Stability and Acceptance of Probiotic Beverage from 
+Cashew Apple Juice. Food and Bioprocess Technology, v. 6, n. 11, p. 3155–3165, 2013.  
+ 
+PEREIRA, A. L. F. et al. Spray-Drying of Probiotic Cashew Apple Juice. Food and 
+Bioprocess Technology, v. 7, n. 9, p. 2492–2499, 2014.  
+ 
+POKUSAEVA, K.; FITZGERALD, G. F.; VAN SINDEREN, D. Carbohydrate metabolism 
+in Bifidobacteria. , v. 6, n. 3, p. 285–306, 2011.  
+Genes and Nutrition
+ 
+QUEIROZ, C. et al. Changes in bioactive compounds and antioxidant capacity of fresh-cut 
+ 
+74 
+ 
+cashew apple. Food Research International, v. 44, n. 5, p. 1459–1462, 2011.  
+ 
+RABELO, M. C.; FONTES, C. M. L.; RODRIGUES, S. Stability Study of Crude 
+Dextransucrase from Leuconostoc citreum NRRL B-742. Indian Journal of 
+Microbiology, v. 51, n. 2, p. 164–170, 2011.  
+ 
+RABELO, M. C.; FONTES, C. P. M. L.; RODRIGUES, S. Bioresource Technology 
+Enzyme synthesis of oligosaccharides using cashew apple juice as substrate. 
+Bioresource 
+Technology, v. 100, n. 23, p. 5574–5580, 2009.  
+ 
+RAD, A. H. et al. Development of Synbiotic Milk Chocolate Enriched with Lactobacillus. 
+Applied Food Biotechnology, v. 5, n. 2, p. 59–68, 2018.  
+ 
+RASTALL, R. A.; GIBSON, G. R. Recent developments in prebiotics to selectively impact 
+beneficial microbes and promote intestinal health. Current Opinion in Biotechnology, v. 
+32, p. 42–46, 2015.  
+ 
+RIVAS-JIMENEZ, L. et al. Evaluation of acrylamide-removing properties of two 
+Lactobacillus strains under simulated gastrointestinal conditions using a dynamic system. 
+Microbiological Research, v. 190, p. 19–26, 2016.  
+ 
+RODRIGUES, S. Estudo da síntese enzimática de dextrana na presença de maltose 
+. 2003. Tese  (Doutorado em Engenharia Química)-Faculdade de Engenharia 
+como aceptor
+Química, Universidade Estadual de Campinas, 2003. 
+ 
+RODRÍGUEZ-ROQUE, M. J. et al. Impact of food matrix and processing on the in vitro 
+bioaccessibility of vitamin C , phenolic compounds , and hydrophilic antioxidant activity 
+from fruit juice-based beverages. , v. 14, p. 33–43, 2015.  
+Journal of Functional Foods
+ 
+RODRÍGUEZ, Ó. et al. Effect of indirect cold plasma treatment on cashew apple juice 
+(Anacardium occidentale L.). LWT - Food Science and Technology, v. 84, p. 457–463, 
+2017.  
+ 
+ROUHI, M. et al. Combined effects of replacement of sucrose with d-tagatose and addition 
+of different probiotic strains on quality characteristics of chocolate milk. Dairy Science 
+and Technology, v. 95, n. 2, p. 115–133, 2014.  
+ 
+ROY, S. et al. Tagatose as a Potential Nutraceutical: Production, Properties, Biological 
+Roles, and Applications. Journal of Food Science, v. 83, n. 11, p. 2699–2709, 2018.  
+ 
+RUBIO-ARRAEZ, S. et al. Influence of Healthy Sweeteners (Tagatose and Oligofructose) 
+on the Physicochemical Characteristics of Orange Marmalade. Journal of Texture Studies, 
+v. 46, n. 4, p. 272–280, 2015.  
+ 
+RUBIO-ARRAEZ, S. et al. Physicochemical characteristics of citrus jelly with non 
+cariogenic and functional sweeteners. Journal of Food Science and Technology, v. 53, n. 
+10, p. 3642–3650, 2016.  
+ 
+RUBIO-ARRAEZ, S. et al. Development of Lemon Marmalade Formulated with New 
+Sweeteners (Isomaltulose and Tagatose): Effect on Antioxidant, Rheological and Optical 
+ 
+75 
+ 
+Properties. Journal of Food Process Engineering, v. 40, n. 2, 2017.  
+ 
+SAAD, N. et al. An overview of the last advances in probiotic and prebiotic field. 
+LWT - 
+Food Science and Technology, v. 50, n. 1, p. 1–16, 2013.  
+ 
+SABATER, C. et al. Synthesis of prebiotic galactooligosaccharides from lactose and 
+lactulose by dairy propionibacteria. Food Microbiology, v. 77, n. March 2018, p. 93–105, 
+2019.  
+ 
+SALINAS, M. V. et al. Wheat bread enriched with organic calcium salts and inulin. A bread 
+quality study. Journal of Food Science and Technology, v. 53, n. 1, p. 491–500, 2016.  
+ 
+SANTOS, R. O. et al. Prebiotic flours in dairy food processing: Technological and sensory 
+implications. , v. 71, p. 1–10, 2018.  
+International Journal of Dairy Technology
+ 
+SCHWEIGGERT, R. M. et al. Carotenoids, carotenoid esters, and anthocyanins of yellow-, 
+orange-, and red-peeled cashew apples (Anacardium occidentale L.). Food Chemistry, v. 
+200, p. 274–282, 2016.  
+ 
+SCOTT, K. P. et al. Prebiotic stimulation of human colonic butyrate-producing bacteria and 
+bifidobacteria, in vitro. FEMS Microbiology Ecology, v. 87, p. 30–40, 2014.  
+ 
+SHOURIDEH, M. et al. Effects of D-Tagatose and Inulin as Sugar Substitutes on the 
+Chemical , Rheological and Sensory Properties of Prebiotic Dark Chocolate. 
+International 
+journal of bioscience, biochemistry and bioinformatics, v. 39, n. 5, p. 249–254, 2012.  
+ 
+SILK, D. B. A. et al. Clinical trial: The effects of a trans-galactooligosaccharide prebiotic 
+on faecal microbiota and symptoms in irritable bowel syndrome. 
+Alimentary 
+Pharmacology and Therapeutics, v. 29, n. 5, p. 508–518, 2009.  
+ 
+SINGH, S. P. et al. Prebiotic Oligosaccharides: Special Focus on Fructooligosaccharides, 
+Its Biosynthesis and Bioactivity. Applied Biochemistry and Biotechnology, v. 183, n. 2, 
+p. 613–635, 2017.  
+ 
+SUBIN, S. R. et al. Structural features underlying prebiotic activity of conventional and 
+potential prebiotic oligosaccharides in food and health. Journal of Food Biochemistry, v. 
+41, n. 5, p. 1–19, 2017.  
+ 
+TAKO, E. et al. The effect of wheat prebiotics on the gut bacterial population and iron 
+sta...: “Start Your Research”. Nutrition Journal, v. 13, n. 1, p. 58, 2014.  
+ 
+TALASILA, U.; SHAIK, K. B. Quality, spoilage and preservation of cashew apple juice: A 
+review. , v. 52, n. 1, p. 54–62, 2015.  
+Journal of Food Science and Technology
+ 
+TANRISEVEN, A.; DOǦAN, Ş. Production of isomalto-oligosaccharides using 
+dextransucrase immobilized in alginate fibres. Process Biochemistry, v. 37, p. 1111–1115, 
+2002.  
+ 
+TAYLOR, T. P.; FASINA, O.; BELL, L. N. Physical Properties and Consumer Liking of 
+Cookies Prepared by Replacing Sucrose with Tagatose. Journal of Food Science, v. 73, n. 
+ 
+76 
+ 
+3, p. 145–151, 2008.  
+ 
+TERPOU, A. et al. Probiotics in Food Systems : Significance and Emerging Strategies 
+Towards Improved Viability and Delivery of Enhanced Beneficial Value. Nutrients, v. 11, 
+p. 32, 2019.  
+ 
+TINGIRIK, J. M. R.; GOMES, W. F.; RODRIGUES, S. Efficient Production of Prebiotic 
+Gluco-oligosaccharides in Orange Juice Using Immobilized and Co-immobilized 
+Dextransucrase. Applied Biochemistry and Biotechnology, v. 183, n. 4, p. 1265–1281, 
+2017.  
+ 
+VANDAMME, E. J.; SOETAERT, W. Biotechnical modification of carbohydrates. FEMS 
+, v. 16, n. 2–3, p. 163–186, 1995.  
+Microbiology Reviews
+ 
+VANDEPUTTE, D. et al. Prebiotic inulin-type fructans induce specific changes in the 
+human gut microbiota. Gut, v. 66, n. 11, p. 1968–1974, 2017.  
+ 
+VEGA, R.; ZUNIGA-HANSEN, M. E. The effect of processing conditions on the stability 
+of fructooligosaccharides in acidic food products. , v. 173, p. 784–789, 
+Food Chemistry
+2015.  
+ 
+VENEMA, K.; VERMUNT, S. H. F.; BRINK, E. J. D-Tagatose increases butyrate 
+production by the colonic microbiota in healthy men and women. 
+Microbial Ecology in 
+, v. 17, n. 1, p. 47–57, 2005.  
+Health and Disease
+ 
+VERGARA, C. M. DE A. C. et al. Prebiotic effect of fermented cashew apple (Anacardium 
+occidentale L) juice. LWT - Food Science and Technology, v. 43, p. 141–145, 1 jan. 2010.  
+ 
+VIEIRA, A. T.; TEIXEIRA, M. M.; MARTINS, F. S. The role of probiotics and prebiotics 
+in inducing gut immunity. Frontiers in Immunology, v. 4, p. 445, 2013.  
+ 
+WANG, X. et al. Gastric digestion of milk protein ingredients: Study using an in vitro 
+dynamic model. , v. 101, n. 8, p. 6842–6852, 2018.  
+Journal of Dairy Science
+ 
+WANG, Y. Prebiotics: Present and future in food science and technology. Food Research 
+International, v. 42, n. 1, p. 8–12, 2009.  
+ 
+WICKHAM, M.; FAULKS, R.; MILLS, C. In vitro digestion methods for assessing the 
+effect of food structure on allergen breakdown. Molecular Nutrition and Food Research, 
+v. 53, n. 8, p. 952–958, 2009.  
+ 
+WORLD HEALTH ORGANISATION. Sugars intake for adults and children. p. 49, 
+2015.  
+ 
+XU, Y. et al. Probiotic properties of Lactobacillus paracasei subsp. Paracasei L1 and its 
+growth performance-promotion in chicken by improving the intestinal microflora. 
+Frontiers in Physiology, v. 10, 2019.  
+ 
+ZHANG, L. et al. Starch flocculation by the sweet potato sour liquid is mediated by the 
+adhesion of lactic acid bacteria to starch. Frontiers in Microbiology, v. 8, p. 1–11, 2017.  
+ 

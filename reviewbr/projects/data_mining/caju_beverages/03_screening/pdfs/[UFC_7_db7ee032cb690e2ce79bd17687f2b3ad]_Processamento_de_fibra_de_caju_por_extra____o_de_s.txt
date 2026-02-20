@@ -1,0 +1,2849 @@
+ 
+ 
+ 
+ 
+UNIVERSIDADE FEDERAL DO CEARÁ – UFC 
+CENTRO DE CIÊNCIAS AGRÁRIAS 
+DEPARTAMENTO DE ENGENHARIA DE ALIMENTOS 
+PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIA E TECNOLOGIA DE 
+ALIMENTOS 
+ 
+ 
+ 
+ 
+GECYENE RODRIGUES DO NASCIMENTO SALDANHA  
+ 
+ 
+PROCESSAMENTO DE FIBRA DE CAJU POR EXTRAÇÃO DE SUBSTÂNCIAS 
+SOLÚVEIS SEGUIDA DE SECAGEM PARA APLICAÇÃO COMO INGREDIENTE 
+EM PRODUTO PLANT-BASED 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2022 
+ 
+ 
+ 
+GECYENE RODRIGUES DO NASCIMENTO SALDANHA  
+ 
+ 
+ 
+ 
+PROCESSAMENTO DE FIBRA DE CAJU POR EXTRAÇÃO DE SUBSTÂNCIAS 
+SOLÚVEIS SEGUIDA DE SECAGEM PARA APLICAÇÃO COMO INGREDIENTE EM 
+PRODUTO PLANT-BASED 
+ 
+ 
+ 
+  
+Dissertação apresentada ao Programa de Pós-
+Graduação em Ciência e Tecnologia de 
+Alimentos, Centro de Ciências Agrárias da 
+Universidade Federal do Ceará, como 
+requisito para obtenção do título de Mestre em 
+Ciência e Tecnologia de Alimentos.  
+Orientador: Prof. Dr. Nédio Jair Wurlitzer  
+Coorientadora: Prof.ª Dr.ª Ingrid Vieira 
+Machado de Moraes 
+ 
+  
+ 
+ 
+ 
+FORTALEZA 
+2022 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+GECYENE RODRIGUES DO NASCIMENTO SALDANHA 
+ 
+ 
+ 
+PROCESSAMENTO DE FIBRA DE CAJU POR EXTRAÇÃO DE SUBSTÂNCIAS 
+SOLÚVEIS SEGUIDA DE SECAGEM PARA APLICAÇÃO COMO INGREDIENTE EM 
+PRODUTO PLANT-BASED 
+ 
+ 
+ 
+Dissertação apresentada ao Programa de Pós-
+Graduação em Ciência e Tecnologia de 
+Alimentos, Centro de Ciências Agrárias da 
+Universidade Federal do Ceará, como 
+requisito para obtenção do título de Mestre em 
+Ciência e Tecnologia de Alimentos. 
+ 
+ 
+ 
+ 
+Aprovada em: _____ / ______ / ______  
+ 
+BANCA EXAMINADORA 
+_____________________________________________ 
+Prof. Dr. Nédio Jair Wurlitzer (Orientador) 
+Embrapa Agroindústria Tropical 
+ 
+ 
+______________________________________________ 
+Dr.ª Selene Daiha Benevides 
+Embrapa Agroindústria Tropical 
+ 
+_____________________________________________________ 
+Prof. Dr. Paulo Henrique Machado de Sousa 
+Universidade Federal do Ceará (UFC) 
+ 
+ 
+ 
+ 
+ 
+AGRADECIMENTOS 
+ 
+"O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento de Pessoal 
+de Nível Superior - Brasil (CAPES) - Código de Financiamento 001.” 
+Agradeço à Deus pelas bênçãos que me concedeu ao longo dessa caminhada e por permitir a 
+realização desse sonho. 
+À minha família pelo incentivo e apoio em todos os momentos, em especial meus pais, Ana 
+Cleide e Francisco, minha irmã Jessyane que me ajudaram muito, em especial ao marido que 
+sempre esteve comigo, Bruno Saldanha, obrigado por ajudar na concretização desse sonho, sem 
+vocês isso não seria possível. 
+Aos professores responsáveis por minha orientação Dr. Nédio Jair Wurlitzer (Orientador), Dr.ª 
+Ingrid Vieira Machado de Moraes (Coorientadora) pela valiosa orientação e por terem 
+contribuído para o desenvolvimento deste trabalho, agradeço pelos conselhos, orientações e 
+pela disponibilidade em ajudar sempre. 
+A todos os amigos que a Universidade Federal do Ceará me presenteou, em especial Gilleno, 
+Karol, Diogo, Karlyhellen, Arlene, Tiago, Neilane, Poliana, pela ajuda e companheirismo. 
+À Analista Dra. Idila Maria e à Pesquisadora Dra. Deborah Garruti, responsáveis pelos 
+Laboratórios de Físico-Química e Sensorial da Embrapa Agroindústria Tropical, aos alunos 
+Yago, Celly, Sophia, Jessica, que contribuíram diretamente na realização das análises do 
+experimento nesses laboratórios, por terem dedicado seu tempo em me auxiliar, minha eterna 
+gratidão! 
+Responsáveis pelo laboratório de Processamento Agroindustrial Arthur e Ana Paula. Ao 
+laboratório de Controle de Qualidade da UFC, que me permitiu realizar a secagem do meu 
+material. 
+À Universidade Federal do Ceará por intermédio do Programa de Pós-graduação em Ciência e 
+Tecnologia de Alimentos, pela oportunidade da realização do Mestrado. 
+A todos aqueles que contribuíram direta ou indiretamente para a realização deste trabalho e que 
+eu não tenha citado, meus sinceros agradecimentos.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+“Se vocês permanecerem em mim, e as minhas 
+palavras permanecerem em vocês, pedirão o 
+que quiserem, e lhes será concedido”. (João 
+15:7). 
+ 
+ 
+ 
+ 
+RESUMO 
+ 
+A fibra do caju é o subproduto obtido após a remoção da castanha e extração do suco do 
+pedúnculo. Para seu uso como ingrediente é recomendado o pré-tratamento de extração de 
+substâncias solúveis com ciclos sequenciais de hidratação com água, para reduzir a acidez, 
+açúcares e sabor de caju, considerado um gargalo do processo. Os objetivos deste trabalho foi 
+avaliar as etapas de pré-tratamento na percepção sensorial da fibra de caju, comparar os 
+processos de secagem utilizando estufa com circulação de ar forçado e liofilização e aplicação 
+da fibra pré-tratada em um produto plant-based tipo croquete. O processamento da fibra de caju 
+foi efetuado e avaliado sensorialmente em cada cinco ciclos de hidratação e prensagem, na 
+proporção (fibra: água de 1:1, 1:1,5 e 1:2). As amostras úmidas foram avaliadas sensorialmente 
+por provadores treinados, e efetuadas análises físicas e físico-químicas, rendimento, acidez, pH, 
+polifenóis extraíveis totais, sólidos solúveis e umidade. As fibras desidratadas, foram avaliadas 
+em relação à capacidade de absorção de água e óleo, cor, polifenóis extraíveis totais e atividade 
+antioxidante. As formulações foram preparadas com 30, 40 e 50% de fibra de caju liofilizada, 
+e avaliadas sensorialmente quanto à aceitação, intenção de compra, análises físico-químicas e 
+composição centesimal. Os resultados obtidos na sensorial fibra úmidas durante cada ciclo 
+indicam que a percepção do sabor do caju é fraca após o segundo ciclo, e que o número de 
+ciclos pode ser reduzido. Além disso, a proporção de água utilizada não apresentou uma 
+diferença significativa entre o segundo e o quinto ciclo. Os resultados das análises físico-
+químicas também evidenciam não ser necessário ir até o quinto ciclo de hidratação e prensagem 
+para a redução das características do caju, pois não foi percebido diferença significativa entre 
+os tratamentos. Equipamento de liofilização obteve os melhores resultados de secagem. Na 
+avaliação sensorial dos croquetes houve aceitação média de 7,0 a 8,0 para os três tratamentos, 
+ocorrendo apenas percepção significativa (p < 0,05) para sabor característico de caju na 
+formulação com 50% de fibra. O pré-tratamento da fibra de caju pode ser otimizado para dois 
+ciclos de hidratação seguida de prensagem. Os diferentes métodos de secagem dão origem a 
+fibras com características distintas, entretanto, todas podem ser empregadas. A aplicação em 
+produto plant-based tipo croquete pode ser utilizado em teores de até 40% de fibra de caju. 
+Palavras-chave: desidratação; subproduto; pedúnculo; Anacardium occidentale L. 
+ 
+ 
+ 
+ 
+ 
+ 
+ABSTRACT 
+ 
+Cashew fiber is the byproduct obtained after removing the nut and extracting the juice from the 
+stalk. For its use as an ingredient is recommended the pre-treatment of extraction of soluble 
+substances with sequential cycles of hydration with water, to reduce acidity, sugars and cashew 
+flavor, considered a bottleneck of the process. The objectives of this work was to evaluate the 
+pre-treatment steps on the sensory perception of cashew fiber, compare the drying processes 
+using forced air circulation oven and freeze-drying and application of the pre-treated fiber in a 
+plant-based croquette type product. The cashew fiber processing was carried out and sensorially 
+evaluated in every five cycles of hydration and pressing, in the ratio (fiber: water of 1:1, 1:1.5 
+and 1:2). The wet samples were sensorially evaluated by trained tasters, and physical and 
+physicochemical analyses were performed, yield, acidity, pH, total extractable polyphenols, 
+soluble solids, and humidity. The dehydrated fibers were evaluated for water and oil absorption 
+capacity, color, total extractable polyphenols and antioxidant activity. The formulations were 
+prepared with 30, 40 and 50% of freeze-dried cashew fiber, and sensorially evaluated regarding 
+acceptance, purchase intention, physical-chemical analysis and centesimal composition. The 
+results obtained in the wet fiber sensory during each cycle indicate that the cashew flavor 
+perception is poor after the second cycle, and that the number of cycles can be reduced. In 
+addition, the proportion of water used did not show a significant difference between the second 
+and the fifth cycle. The results of the physicochemical analyses also show that it is not necessary 
+to go until the fifth cycle of hydration and pressing for the reduction of the cashew 
+characteristics, because no significant difference was perceived between the treatments. Freeze-
+drying equipment obtained the best drying results. In the sensory evaluation of the croquettes 
+there was an average acceptance of 7.0 to 8.0 for the three treatments, occurring only significant 
+perception (p < 0.05) for characteristic cashew flavor in the formulation with 50% fiber. The 
+pretreatment of cashew fiber can be optimized for two cycles of hydration followed by pressing. 
+The different drying methods give origin to fibers with different characteristics, however, all 
+can be employed. The application in a croquette type plant-based product can be used at 
+contents of up to 40% cashew fiber. 
+Keywords: dehydration; byproduct; cashew-apple peduncle; Anacardium occidentale L. 
+ 
+ 
+ 
+ 
+ 
+LISTA DE ILUSTRAÇÕES 
+ 
+Figura 1  
+− Curva de Secagem...................................................................................... 22 
+Figura 2  
+− Etapas do planejamento do experimento.................................................... 30 
+Figura 3 
+− Fibra de caju antes do início da hidratação (A) e sendo hidratada (B)......... 31 
+Figura 4 
+− Caju/fibra de caju processada em prensa Expeller (A); saída da fibra da 
+prensa Expeller (B)..................................................................................... 31 
+Figura 5 
+− Ficha da sensorial da fibra de caju.............................................................. 34 
+Figura 6 
+− Equipamentos utilizados para a secagem da fibra de caju........................... 35 
+Figura 7 
+− Etapas do processo de elaboração dos croquetes com fibra de caju............ 39 
+Figura 8 
+− Bandeja sensorial dos croquetes entregue aos provadores.......................... 41 
+Figura 9 
+− Avaliação sensorial da fibra de caju em relação ao processo de hidratação 
+e prensagem do TR1................................................................................... 49 
+Figura 10 
+− Avaliação sensorial da fibra de caju em relação ao processo de hidratação 
+e prensagem do TR2 (1:1,5)....................................................................... 51 
+Figura 11 
+− Avaliação sensorial da fibra de caju em relação ao processo de   
+hidratação e prensagem do TR3 (1:2)......................................................... 53 
+Figura 12 
+− Cor da fibra de caju úmida e em diferentes processos de desidratação: 
+fibra úmida (A) e após a secagem em liofilizador (B), secador de bandeja 
+(C) e estufa (D)........................................................................................... 58 
+Figura 13 
+− Croquetes de fibras de caju com proteína de soja........................................ 62 
+Figura 14 
+− Perfil dos provadores da análise sensorial do croquete de fibra de caju 
+com proteína de soja................................................................................... 63 
+Figura 15 
+− Percentual para o teste de textura ideal para os croquetes de fibra de caju 
+com proteína de soja................................................................................... 67 
+Figura 16 
+− Intenção de compra para os croquetes de fibra de caju com proteína de 
+soja............................................................................................................. 68 
+ 
+ 
+ 
+ 
+LISTA DE TABELAS 
+ 
+Tabela 1  
+− Resíduos gerados pela agroindústria de sucos de 
+frutas............................................................................................................. 15 
+Tabela 2  
+− Caracterização da farinha de bagaço de caju desidratado.............................. 18 
+Tabela 3  
+− Fibras alimentares presentes na fibra de caju................................................. 19 
+Tabela 4 
+− Aplicações da fibra de caju na indústria alimentícia...................................... 19 
+Tabela 5 
+− Formulações de croquete de fibra de caju enriquecido com proteína de soja. 38 
+Tabela 6 
+− Rendimento da fibra de caju após cada prensagem (base seca)...................... 43 
+Tabela 7 
+− Teor de sólidos solúveis totais para cada ciclo de prensagem dos 
+tratamentos da                  fibra de caju.............................................................. 44 
+Tabela 8 
+− Comparação do efeito dos tratamentos (proporção de água e número de 
+ciclos de hidratação + prensagem), na acidez e pH da fibra de caju............... 45 
+Tabela 9 
+− Umidade da fibra de caju antes e após cada ciclo de hidratação e prensagem 46 
+Tabela 10 
+− Efeito dos tratamentos de hidratação e prensagem no teor de polifenóis 
+extraíveis total na fibra de caju...................................................................... 47 
+Tabela 11 
+− Avaliação de percepção dos atributos para fibra de caju em relação a 
+proporção de água e número de ciclos........................................................... 54 
+Tabela 12 − Rendimento e umidade em diferentes processos de secagem de fibra de 
+caju................................................................................................................ 55 
+Tabela 13 
+− Capacidade de absorção de água e óleo das fibras secas................................ 56 
+Tabela 14 
+− Cor das fibras secas por diferentes métodos de secagem............................... 58 
+Tabela 15 
+− Teores de polifenóis extraíveis totais da fibra de caju por diferentes 
+métodos de secagem...................................................................................... 59 
+Tabela 16 
+− Atividade antioxidante pela captura do radical DPPH das fibras secas pelos 
+diferentes métodos de secagem..................................................................... 60 
+Tabela 17 
+− Capacidade antioxidante das fibras secas obtida pelo método ABTS, sendo 
+por diferentes métodos de secagem............................................................... 60 
+ 
+ 
+ 
+Tabela 18 61 
+− Composição centesimal dos croquetes com fibra de caju e proteína de soja.. 
+Tabela 19 64 
+− Conhecimento sobre produtos plant-based e fibra de caju............................. 
+Tabela 20 
+− Aceitação das formulações de croquetes de fibra de caju enriquecidos com 
+proteína de soja (PTS)................................................................................... 65 
+Tabela 21 
+− Intensidade dos atributos percebidos pelos provadores nas formulações de             
+croquete de fibra de caju enriquecida com proteína de soja........................... 66 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  SUMÁRIO 
+1 INTRODUÇÃO.............................................................................................. 13 
+2 OBJETIVOS .................................................................................................. 14 
+2.1 Objetivo geral ................................................................................................. 14 
+2.2 Objetivos específicos....................................................................................... 14 
+3 REVISÃO DE LITERATURA......................................................................  15 
+3.1 Reaproveitamento de subprodutos agroindustriais..................................... 15 
+3.2 Caju (Anarcadium occidentale L.).................................................................. 16 
+3.2.1 Subprodutos gerados na produção do suco de caju......................................... 17 
+3.2.2 Composição da fibra de caju............................................................................ 17 
+3.3 Fibras Alimentares......................................................................................... 20 
+3.4 Desidratação................................................................................................... 21 
+3.4.1 Desidratação por estufa em ar forçado (estufa).............................................. 23 
+3.4.2 Desidratação por liofilização........................................................................... 24 
+3.5 Compostos fenólicos....................................................................................... 26 
+3.6 Produtos plant-based...................................................................................... 27 
+3.6.1 Produto de fibra de caju enriquecido com proteína de soja texturizada......... 28 
+4 MATERIAL E MÉTODOS............................................................................ 29 
+4.1 Obtenção do bagaço de caju ou fibra de caju................................................ 29 
+4.2 Planejamento experimental........................................................................... 29 
+4.3 Processamento e análises da fibra do caju..................................................... 30 
+4.3.1 Rendimento de processo.................................................................................. 32 
+4.3.2 Umidade, sólidos solúveis, acidez e pH............................................................ 32 
+4.3.3 Polifenóis extraíveis totais............................................................................... 32 
+4.3.4 Análise sensorial da fibra de caju.................................................................... 33 
+4.4 Métodos de secagem para a fibra do caju...................................................... 34 
+4.5 Rendimento dos métodos de secagem para fibra de caju............................. 35 
+4.6 Determinação da umidade das fibras de caju secas...................................... 36 
+4.7 Capacidade de absorção de água (CAA) e capacidade de absorção de 
+óleo (CAO) das fibras de caju secas............................................................... 36 
+4.8 Análises de cor das fibras de caju secas......................................................... 36 
+ 
+ 
+ 
+4.9 Obtenções dos extratos das fibras secas para determinação de fenólicos 
+totais................................................................................................................. 36 
+4.10 Atividades antioxidantes pelos métodos ABTS e DPPH.............................. 37 
+4.10.1 Determinação da atividade antioxidante pelo método ABTS.......................... 37 
+4.10.2 Determinação da atividade antioxidante pelo método DPPH......................... 37 
+4.11 Desenvolvimento dos croquetes com fibra de caju desidratada.................. 38 
+4.11.1 Composição centesimal dos croquetes............................................................. 40 
+4.11.2 Análise sensorial de croquete de fibra de caju................................................. 40 
+4.12 Análise estatística............................................................................................ 42 
+5 RESULTADOS E DISCUSSÃO.................................................................... 42 
+5.1 Rendimento da etapa de pré-processamento................................................ 42 
+5.2 Parâmetros físico-químicos da fibra de caju................................................. 43 
+5.2.1 Avaliação da redução do teor de sólidos solúveis, por ciclo de tratamento..... 43 
+5.2.2 Avaliação da redução da acidez /pH, por ciclo de tratamento......................... 44 
+5.3 Teor de umidade da fibra úmida.................................................................... 46 
+5.4 Polifenóis extraíveis totais das fibras do caju úmidas.................................. 47 
+5.5 Análise sensorial da fibra de caju úmida....................................................... 48 
+5.6 Avaliação da secagem da fibra tratada em estufa, secador e liofilizador.... 55 
+5.6.1 Rendimento do processo de secagem e umidade............................................. 55 
+5.7 Capacidade de absorção de água (CAA) e óleo (CAO) das fibras 
+desidratadas.................................................................................................... 56 
+5.8 Cor das fibras secas......................................................................................... 57 
+5.9 Teor de fenólicos totais.................................................................................... 59 
+5.10 Atividade antioxidante................................................................................... 59 
+5.10.1 Capacidade antioxidante pela captura do radical DPPH............................... 59 
+5.10.2 Capacidade antioxidante pelo método ABTS.................................................. 60 
+5.11 Aplicação da fibra de caju em croquete plant-based.................................... 61 
+5.11.1 Composição centesimal................................................................................... 61 
+5.12 Análise sensorial............................................................................................. 62 
+5.12.1 Perfil dos provadores (consumidores)............................................................. 62 
+5.12.2 Aceitabilidade.................................................................................................. 65 
+5.12.3 Avaliação da intensidade dos termos descritores (Diagnóstico de atributos). 65 
+5.12.4 Escala do ideal para textura e intenção de compra......................................... 66 
+ 
+ 
+ 
+6 CONCLUSÃO................................................................................................ 69 
+ REFERÊNCIAS............................................................................................. 70 
+ ANEXO A - TERMO DE CONSENTIMENTO LIVRE E 
+ESCLARECIDO............................................................................................. 80 
+ ANEXO B - FICHA DA SENSORIAL DA FIBRA DO PEDÚNCULO DE 
+CAJU............................................................................................................... 81 
+ ANEXO C - FICHA DA SENSORIAL DO CROQUETE............................ 82 
+13 
+ 
+ 
+1 INTRODUÇÃO 
+O cajueiro (Anarcadium occidentale L.) pertence à família Anacardiaceae. O caju 
+é nativo da América do Sul composto pela castanha (fruto verdadeiro) o pedúnculo ou 
+pseudofruto. Da castanha é extraído a amêndoa de maior valor comercial e pedúnculo é 
+destinado à produção de sucos, polpas, cajuína, entre outros produtos alimentícios (LIMA et 
+al., 2014; SANCHO, 2007). 
+Após a extração do suco do pedúnculo obtém-se a fibra constituída de uma parte 
+sólida e fibrosa que geralmente é destinada ao descarte ou utilizada como ração animal O 
+pedúnculo do caju compõe cerca de 90% do peso total do fruto fresco, possui alta atividade de 
+água e açúcares fermentescíveis. Quando descartado incorretamente apresenta um alto risco de 
+contaminação ao meio ambiente, tanto ao solo como para os lençóis freáticos (LOPES et al., 
+2011).  
+Dessa forma, o aproveitamento da fibra do caju é extremamente importante, visto 
+que constitui uma fonte de compostos de alto valor agregado, atendendo as necessidades 
+nutricionais pela riqueza em fibras, vitaminas, minerais e outros componentes bioativos, como 
+os compostos fenólicos. Pode ser usado como substituto parcial ou total de ingredientes, como 
+farinha e outros, para agregar valor nutricional em produtos alimentícios (PINHO, 2012).  
+Estudos vêm sendo realizados na Embrapa Agroindústria Tropical utilizando a fibra 
+de caju na elaboração de produtos alimentícios de base vegetal. Os resultados obtidos indicam 
+que para utilizar a fibra de caju é necessário um pré-tratamento com água e prensagem para 
+reduzir o teor de açúcares, a acidez e o sabor residual de caju, além de influenciar na redução 
+do tamanho das fibras. Após esse tratamento, a fibra apresenta características que permitem sua 
+incorporação em produtos alimentícios como hambúrgueres, por exemplo (LIMA et al., 2008; 
+LIMA et al., 2011; LIMA et al., 2013). 
+Contudo, a aplicabilidade da fibra de caju possui algumas limitações devido seu 
+alto teor de umidade que aumenta a possibilidade de degradação microbiológicas, exigindo 
+dessa forma um processo de conservação para armazenamento e transporte (LIMA et al. 2014). 
+A secagem é uma operação a ser empregada no processamento da fibra para a redução da 
+umidade e o método escolhido deve levar em consideração a preservação dos componentes 
+nutricionais e modificações mínimas na estrutura do alimento, uma vez que a secagem 
+influencia diretamente esses dois aspectos. Dessa forma, os métodos avaliados devem ser 
+ponderados por sua eficácia em reduzir a água presente na fibra, possibilitando sua estocagem 
+14 
+ 
+ 
+a temperatura ambiente e sem gerar grandes perdas de compostos sensíveis a temperatura 
+elevada (SIQUEIRA; BRITO, 2013).  
+Portanto, este trabalho teve como objetivo avaliar o pré-tratamento da fibra de 
+caju obtida do processamento do pedúnculo, por meio de lavagens e prensagens sequenciais, e 
+emprego de processo de desidratação para a redução do teor de umidade e manutenção da 
+qualidade da fibra, de forma a obter um produto estável a temperatura ambiente para aplicação 
+em produtos alimentícios do tipo plant-based. 
+2 OBJETIVOS 
+2.1 Objetivo geral 
+ 
+Obter fibra de caju de qualidade e estável a temperatura ambiente para uso como 
+ingrediente para aplicação em produtos alimentícios do tipo plant-based. 
+2.2 Objetivos específicos 
+❖ Otimizar o processo de pré-tratamento da fibra de caju por hidratação e prensagens 
+sequenciais, avaliando diferentes proporções de água:fibra e número de ciclos de 
+prensagens; 
+❖ Avaliar três diferentes métodos de desidratação da fibra (secagem por liofilização, 
+secador de bandejas e em estufa com circulação forçada de ar) para conservação em 
+temperatura ambiente; 
+❖ Determinar as características físico-químicas, propriedades tecnológicas e compostos 
+bioativos da fibra de caju obtida pelos diferentes métodos de desidratação em comparação 
+com a fibra úmida; 
+❖ Desenvolver um produto plant-based tipo croquete elaborado com a fibra de caju pré-
+tratada e desidratada; 
+❖ Avaliar a aceitação sensorial do produto plant-based tipo croquete elaborado com fibra 
+de caju pré-tratada e desidratada. 
+ 
+ 
+  
+15 
+ 
+ 
+3 REVISÃO DE LITERATURA 
+3.1 Reaproveitamento de subprodutos agroindustriais 
+O Brasil é o terceiro maior produtor mundial de frutas, com geração anual de mais 
+de 40 milhões de toneladas, ficando atrás apenas da China e Índia. Do total de frutas produzidas 
+53% destinam-se à comercialização como frutas frescas e os 47% restantes vão para o setor 
+agroindustrial (SIDALC, 2020).  
+Os alimentos de origem vegetal são os mais desperdiçados e em relação as frutas 
+esse problema se agrava pela alta perecibilidade e sazonalidade das safras no processo 
+produtivo. Estima-se que na colheita ocorra 10% de perda enquanto nas etapas seguintes, como 
+transporte e industrialização, aproxima-se de 50% (ZARO et al.,2018). 
+Uma solução para evitar os desperdícios das frutas in natura é seu emprego para 
+fabricação de polpas e sua conservação pode ser feita por meio do congelamento, método que 
+prolonga sua conservação e possibilita o consumo em qualquer época do ano, (AMORIM, 
+2016). Contudo, as indústrias de produção de polpa e suco de frutas são responsáveis pela 
+geração de toneladas de subprodutos agroindustriais como casca, caroços e sementes com seus 
+percentuais variando de acordo com o tipo de suco produzido, conforme Tabela 1. 
+Tabela 1- Resíduos gerados pela agroindústria de sucos de frutas. 
+Suco produzido Subprodutos gerados (%) 
+Manga 69 - 40 
+Tamarindo 50 - 60 
+Maracujá 65 - 70 
+Acerola 41 – 27 
+Caju 40 
+Abacaxi 40 – 30 
+Goiaba 40 
+Fonte: Amorim, 2016. 
+Dos resíduos gerados nos processos agroindustriais, somente uma pequena parte é 
+recuperada como subproduto para o reaproveitamento. A grande maioria é considerada inviável 
+para seu uso, sendo descartada diretamente no meio ambiente ou em indústrias responsáveis 
+pela dispensa de resíduos. Porém, esses resíduos podem conter substâncias importantes como 
+pigmentos, açúcares, ácidos orgânicos, aromas, compostos bioativos, enzimas, compostos 
+antimicrobianos e fibras que poderiam ser aplicados em alimentos como substitutos de 
+16 
+ 
+ 
+ingredientes total ou parcial originando produtos com maior valor nutricional agregado, como 
+os alimentos funcionais (OKINO et al., 2016).Agregando valor aos subprodutos antes 
+descartados torna-se uma excelente alternativa para melhorar as propriedades físicas, 
+nutricionais, estruturais e reológicas dos produtos, além de reduzir os impactos causados ao 
+meio ambiente, uma vez que os utiliza para desenvolvimento de novos produtos ao invés de 
+descartá-los (LIMA et al., 2014). 
+ 
+3.2 Caju (Anarcadium occidentale L.) 
+O cajueiro (Anarcadium occidentale L.) pertence à família Anacardiaceae, nativa 
+da região Nordeste do Brasil. Possui características de adaptação em regiões com solo pouco 
+férteis e semiáridas, o que torna a produção de caju uma atividade rentável, sendo uma das 
+principais fontes de renda do Nordeste pela possibilidade de se desenvolver em plena seca 
+(SERRANO; PESSOA, 2016).   
+Das inúmeras espécies de cajueiro, apenas a Anarcadium occidentale é cultivada 
+comercialmente, sendo dois tipos de cajueiros: o anão-precoce e comum. O cajueiro anão-
+precoce é caracterizado por possuir baixa ramificação e porte variado, entre 5 e 10 metros, 
+embora em condições especificas possa chegar a 20 metros. Possui maior produtividade em 
+comparação ao cajueiro comum devido seu porte menor, permitindo um plantio maior de 
+árvores por hectare além de possibilitar um maior aproveitamento do pedúnculo para consumo 
+no mercado. Já o cajueiro comum (porte alto) tem sua produção iniciada mais tardiamente com 
+sua capacidade produtiva individual maior e menor dependendo do período da safra em relação 
+ao cajueiro anão-precoce (ARAÚJO et al., 2015). 
+O fruto do cajueiro é denominado de caju e é composto por duas partes: a castanha 
+que corresponde a 10% do peso total e é o verdadeiro fruto do caju, e o pedúnculo (pseudofruto) 
+que corresponde a 90% do peso total, e que possui o menor aproveitamento industrial (PAIVA 
+et al., 2000; LIMA et al., 2008).  
+O pedúnculo é comumente chamado de maçã do cajueiro e apresenta estrutura 
+carnosa, suculenta, com agradável sabor e ligeira adstringência resultante da presença dos 
+taninos que também são responsáveis pelo seu aroma adstringente. Os taninos também 
+contribuem para sua atividade antioxidante, sendo capaz de auxiliar na prevenção de doenças 
+cardiovasculares e câncer (ARAÚJO, 2013; PINHO, 2012).  
+Rico em compostos bioativos como carotenoides, o pedúnculo possui maior 
+quantidade de em vitamina C, com cerca de 257mg/100g, sendo de 4 a 5 vezes mais rico que a 
+17 
+ 
+ 
+laranja, composta por cerca de 32,8mg/100g (TBCA, 2021). Possui também em sua 
+composição, cálcio, fósforo, compostos fenólicos, como taninos e antocianinas, e pigmentos 
+naturais responsáveis por sua coloração (COSTA et al., 2009; RUFINO et al., 2010; PAIVA et 
+al., 2000; ASSUNÇÃO; MERCADANTE, 2003). 
+O pedúnculo pode ser utilizado para produção de suco, polpa, doces, bebidas 
+destiladas e obtenção da fibra de caju. É a parte com maior teor de água, tornando-se um produto 
+bastante perecível. A falta da aplicação de processamentos e tecnologias para a sua conservação 
+dificulta a sua comercialização (PAIVA et al., 2000). 
+ 
+3.2.1 Subprodutos gerados na produção do suco de caju 
+O subproduto gerado a partir da utilização do pedúnculo de caju nas indústrias de 
+sucos e polpas, denominado fibra de caju, possui um potencial para aproveitamento, 
+apresentando vitaminas, sais minerais, fibras solúveis e insolúveis e compostos com 
+propriedades funcionais, além de polifenóis e carotenoides (SIQUEIRA; BRITO, 2013). 
+Devido à alta perecibilidade, problemas com logística e armazenamento, 75% da 
+produção de pedúnculo é desperdiçada anualmente na região Nordeste do país, e apenas 10 - 
+20% de sua produção anual é empregada na produção de suco integral (SIQUEIRA; BIRTO 
+2013; GOMES et al., 2014). 
+3.2.2 Composição da fibra de caju 
+A fibra de caju possui em sua composição (Tabela 2) macronutrientes como 
+carboidratos, lipídeos, fibras e proteínas, e micronutrientes como a vitamina C, e minerais 
+necessários ao bom funcionamento e desenvolvimento do organismo humano sendo de suma 
+importância a sua presença na alimentação (PINHO, 2012).  
+De acordo com Kouassi et al. (2018) e Dos Santos (2012) as fibras alimentares 
+presentes na fibra do caju (Tabela 3) são em sua maior proporção a hemicelulose, e 
+conjuntamente a celulose, pectina e lignina que formam a parede celular. A pectina é rica em 
+ramnose, arabinose, galactose e ácidos galacturônicos e possui ligações covalentes ligadas a 
+fenóis, proteínas e celulose na parede celular. As ligninas são polifenóis altamente insolúveis, 
+formados através da polimerização de três álcoois: álcool trans-p-cumaril, álcool-coniferil e 
+álcool trans-sinapil, mantendo redes de ligações cruzadas na parede celular, conferindo 
+resistência. A hemicelulose corresponde a um grupo heterogêneo de polissacarídeos 
+18 
+ 
+ 
+ramificados formando ligações de hidrogênio entre si e a celulose. A celulose é constituída de 
+monômeros de glicose que forma cadeias por ligações β 1-4 e por ligações de hidrogênio entre 
+as cadeias. 
+Tabela 2- Caracterização da farinha de bagaço de caju desidratado. 
+Parâmetros PINHO PINHO SANTOS KOUASSI SANTOS et AMARAL 
+(2012) (2012) e MOTA (2018) al. (2019) et al., 
+liofilizada (2010) (2020) 
+Umidade (%) 6,80 4,04 9,56 9,07 6,13 12,15 
+Carboidratos totais (%) - - 61,19 - 89,12 54,12 
+Proteínas (%) 10,56 9,80 9,22 18,20 1,55 4,79 
+Lipídeos (%) 1,07 2,81 18,35 12,06 1,53 0,85 
+Fibra bruta (%) 53,71 40,35 16,51 - - 26,29 
+Fibras solúveis 5,02 7,33 - - -- - 
+Fibras insolúveis 48,70 33,03 - - - - 
+Cinzas (%) 1,90 1,20 1,68 3,20 1,63 1,76 
+Vitamina C (mg/100g) 9,32 6,61 240,03 - - 78,32 
+Acidez (% de ácido 2,61 3,10 1,79 - - 1,53 
+cítrico) 
+pH 3,48 3,39 4,21 4,40 - 4,4 
+Fonte: Adaptado de Pinho (2012); Dos Santos e Da Mota, (2010); Kouassi et al., (2018), Santos et al., (2019); 
+Amaral et al., (2020). 
+ 
+A composição da fibra de caju é de 12% glicose, 37% xilose e 51 % arabinose, 
+evidenciando o seu potencial de utilização em produtos alimentícios, com finalidade de 
+enriquecer o alimento com fibras alimentares gerando grandes benefícios a saúde (SEIBEL; 
+BELÉIA,2008; DOS SANTOS LIMA, 2012). 
+A fibra de caju também possui em sua composição compostos fenólicos que estão 
+associados à fibra dietética, com predominância da fibra insolúvel (88%). De acordo com 
+Rufino et al. (2010) pode conter 28 g/kg em base seca de polifenóis extratáveis e 52 g/kg em 
+base seca de taninos condensados não extraíveis.  
+ 
+ 
+ 
+ 
+ 
+ 
+19 
+ 
+ 
+Tabela 3- Fibras alimentares presentes na fibra de caju. 
+Fibras alimentares * Kouassi et. al (2018) **Dos Santos, Lima (2012) 
+Pectina (%) 8,56 - 
+Celulose (%) 19,92 18,31 
+Hemicelulose (%) 51,10 27,18 
+Lignina (%) 3,56 23,91 
+Legenda: * Utilizou a fibra do caju. **Fibra do caju obtida da indústria de polpa. 
+De acordo com estudo de Barreto et al. (2008) foi constatado que além de possuir 
+quantidade elevada de polifenóis, a fibra de caju possui também quantidades elevadas de 
+carotenoides e de ácido ascórbico que permanece na fibra mesmo após cinco ciclos de 
+maceramento, prensagem e filtragem e são os responsáveis por sua atividade antioxidante. Ao 
+comparar seus teores de compostos fenólicos e atividade antioxidante com os de outras frutas, 
+é observado que a fibra do caju apresenta maior teor (INFANTE et al., 2013). Siqueira e Brito 
+(2013), avaliaram a influência da extração de compostos fenólicos no bagaço de caju e 
+verificaram que a extração com metanol, tornou as matrizes insolúveis das fibras mais 
+disponíveis para interação sólido-líquido ao extrair fenólicos e flavonol, aumentando assim sua 
+capacidade antioxidante. 
+Devido sua composição química a fibra de caju possui potencial para incorporação 
+em formulações de produtos alimentícios e outros usos biotecnológicos (Tabela 4), permitindo 
+a obtenção de novos produtos que atendam a públicos diversos, o que auxilia na diminuição do 
+descarte da fibra de caju no meio ambiente. 
+ 
+Tabela 4- Aplicações da fibra de caju na indústria alimentícia. 
+PRODUTOS FONTE 
+Produção biotecnológica de xilitol Albuquerque et al. (2015) 
+Barra de cereais Oliveira et al. (2013) 
+Hambúrguer Pinho (2011); Lima (2008); 
+Lima et al. (2011); Lima (2014). 
+Biscoitos Santana& Silva (2008); Lima et al. (2002) 
+Biscoitos tipo cookie Matias et al. (2005) 
+Massa fresca tipo talharim Brito (2016) 
+Trufas Medeiros et al. (2012) 
+Cupcake Morais et al. (2018) 
+20 
+ 
+ 
+ 
+É importante ressaltar que ao utilizar a fibra de caju no desenvolvimento de novos 
+alimentos é necessário analisar quais métodos de conservação são mais adequados para 
+aumentar sua vida útil e manter suas características nutricionais. A desidratação é um dos 
+métodos de conservação que pode ser empregado, resultando na obtenção de uma fibra seca 
+que pode ser utilizada na produção de alimentos (ALVES et al., 2011). 
+3.3 Fibras Alimentares 
+De acordo com a Resolução de Diretoria Colegiada (RDC) n°360, 23 de dezembro 
+de 2003, a fibra alimentar é definida como “qualquer material comestível, que não seja 
+hidrolisado pelas enzimas endógenas do trato digestivo humano” (BRASIL, 2003). São 
+encontradas nos alimentos de origem vegetal, embora não sejam absorvidas como nutrientes 
+pelo organismo. A falta de fibras alimentares acarreta danos à saúde, pois possuem capacidade 
+de absorver líquidos e aumentar a matéria do bolo fecal, sendo indispensável no tratamento de 
+doenças do trato gastrointestinal (BODINSKICH, 2006). 
+As fibras alimentares são consideradas carboidratos de origem vegetal, sendo 
+grandes fragmentos da parede celular formados por polissacarídeos, oligossacarídeos, lignina, 
+entre outras substâncias. Estão presentes em vegetais comestíveis como cereais, frutas, 
+hortaliças, tubérculos e leguminosas. A inclusão da fibra na dieta promove efeitos fisiológicos 
+benéficos à saúde humana como auxiliar no bom funcionamento do intestino grosso, reduzir o 
+colesterol e glicose no sangue; e pode ser classificada como um não nutriente com propriedade 
+funcional (OLIVEIRA, 2008; REYNALDO et al., 2019).  
+As fibras alimentares são classificadas a partir da sua solubilidade em água em 
+solúveis e insolúveis. As fibras insolúveis atuam melhorando o trânsito intestinal e as fibras 
+solúveis produzem impacto sobre a velocidade do trânsito intestinal, reduzem os picos das 
+curvas de glicose além de modificar a secreção de insulina e colesterol (PAULA et al., 2009; 
+MIRA et al., 2009).As fibras solúveis são mais viscosas e/ou facilmente fermentáveis no cólon, 
+possuem a capacidade de se dissolver na água formando um gel, que é responsável pela redução 
+do colesterol sanguíneo .Estão ligadas diretamente ao esvaziamento gástrico, ao retardo da 
+absorção de glicose, proporcionando maior saciedade e auxiliam na proteção do intestino conta 
+o câncer do intestino. São exemplos de fibras solúveis, a pectina, gomas, inulina e algumas 
+hemiceluloses. As fibras insolúveis, são responsáveis pelo aumento de volume do bolo fecal, 
+com limitada fermentação no cólon e aceleram o trânsito intestinal além de reduzir o tempo de 
+21 
+ 
+ 
+contato das fezes com a mucosa intestinal, diminuindo o risco de câncer de cólon. Em uma dieta 
+composta por alimentos de origem vegetal, as fibras insolúveis são mais abundantes 
+correspondendo por 2/3 a 3/4 das fibras alimentares. São fibras insolúveis a lignina, celulose e 
+algumas hemiceluloses (CATALANI, et al., 2003).  
+Uma alimentação rica em fibras pode reduzir o risco de doenças como as 
+cardiovasculares, câncer do cólon, obesidade, previne e melhora problemas de constipação, 
+diminui o risco de hemorroidas e diverticulite. Adicionalmente, aumenta a sensação de 
+saciedade e consequentemente a redução do consumo de alimentos durante as refeições (FOOD 
+INGREDIENTS, 2008). 
+3.4 Desidratação 
+A água apresenta-se de duas formas: molécula livre ou ligada em/a substratos. A 
+atividade água (A) é um dos parâmetros intrínsecos dos alimentos que indica a água disponível 
+w
+para viabilizar o crescimento microbiológico ou reações. Já o teor de umidade é uma medida 
+quantitativa dada em percentual de massa de toda água presente no alimento, tanto livre com 
+ligada. A água livre não está ligada com as moléculas constituintes do produto, assim propicia 
+as reações químicas, físicas e biológicas. Já a água ligada, está ligada com sustâncias 
+constituintes do alimento, dificultando a sua retirada (SILVA, 2017). 
+A secagem é umas das técnicas de conservação de alimentos mais antiga, e 
+apresenta grandes vantagens quando comparada a outros métodos de conservação por ser mais 
+simples, podendo ser realizada por métodos tradicionais, como a secagem em estufa 
+convencional, ou por meio de técnicas mais sofisticadas como a liofilização (DIAS, 2018). 
+Ao submeter um sólido úmido à secagem térmica, dois processos ocorrem 
+respectivamente: a transferência de energia e a de massa. A transferência de energia na forma 
+de calor ocorre a partir do ambiente dependendo de condições externas, como temperatura, 
+umidade do ar, fluxo e direção de ar, área de exposição do sólido (forma física) e pressão. Já a 
+transferência de massa (água) pode ocorrer na superfície, bem como do interior para a superfície 
+do material, com subsequente evaporação devido ao primeiro processo. O movimento interno 
+da água no material é função da natureza física do sólido, sua temperatura e do teor de umidade 
+(MUJUMDAR, 2007).  
+Durante o processo de secagem, a transferência de calor em alimentos sólidos 
+ocorre por condução, envolvendo a retirada de água de um sistema sólido ou semissólido 
+mecanicamente por vaporização térmica. Desse modo, o produto é aquecido promovendo uma 
+transferência de vapor de água para o ar que, ao sair do secador, apresenta menor temperatura 
+22 
+ 
+ 
+e maior umidade relativa quando comparada às condições de entrada (MELONI, 2003; SILVA, 
+2006, 2010). 
+As características específicas de cada produto, associadas às propriedades do ar de 
+secagem e ao meio de transferência de calor adotado, determinam diversas condições de 
+secagem. Entretanto, a transferência de calor e de massa entre o ar de secagem e o produto é 
+fenômeno comum a qualquer condição de secagem (CORNEJO et al., 2003).  
+O processo de secagem, baseado na transferência de calor e de massa, pode ser 
+dividido em três períodos (Figura 1). 
+ 
+Figura 1- Curva de Secagem. 
+ 
+Fonte: Park et al., 2014. 
+Analisando os períodos da Figura 1: 
+I. O primeiro período representa o início da secagem. Nesse período ocorre 
+uma elevação gradual da temperatura do produto e da pressão de vapor de 
+água. Essas elevações têm prosseguimento até o ponto em que a 
+transferência de calor seja equivalente à transferência de massa (água). 
+II. O segundo período caracteriza-se pela taxa constante de secagem. A água 
+evaporada é a água livre. A transferência de massa e de calor é equivalente 
+e, portanto, a velocidade de secagem é constante. Enquanto houver 
+quantidade de água na superfície do produto suficiente para acompanhar a 
+evaporação, a taxa de secagem será constante. 
+23 
+ 
+ 
+III. No terceiro período, a taxa de secagem é decrescente. A quantidade de água 
+presente na superfície do produto é menor, reduzindo-se, portanto, a 
+transferência de massa. A transferência de calor não é compensada pela 
+transferência de massa; o fator limitante nessa fase é a redução da migração 
+de umidade do interior para a superfície do produto. A temperatura do 
+produto aumenta, atingindo a temperatura do ar de secagem. Quando o 
+produto atinge o ponto de umidade de equilíbrio em relação ao ar de 
+secagem, o processo é encerrado (PARK et al., 2014). 
+ 
+Essa evolução de transferência de calor e massa no decorrer da secagem pode ser 
+divididas em três períodos, demonstrados pelas curvas de secagem ilustrada na (Figura 1). Com 
+a evolução do teor de água de um produto (X) em uma determinada temperatura (T) e na 
+velocidade de secagem (dX/dt), ao longo do tempo, com a velocidade do ar constante. A curva 
+da evolução do teor de água (a) representa a diminuição do teor de água do produto durante a 
+secagem, já a curva de evolução da temperatura do produto (b) representa a velocidade da taxa 
+de secagem do produto (variação de conteúdo de umidade por tempo) diferente da curva (a), na 
+curva de cinética de secagem (c) é a variação de temperatura do produto durante a secagem em 
+relação a evolução do tempo (t) (BROD et al. 1999)  
+A secagem é talvez o método de conservação mais antigo na indústria alimentar 
+(MAISNAM et al., 2015). Impede a deterioração microbiana e atividade enzimática, e 
+consequentemente aumenta o prazo de validade dos produtos alimentares (DE BRUIJN et al., 
+2016). Os produtos secos são mais adequados para manipulação, uma vez que o seu volume 
+reduzido ajuda a reduzir os custos de embalagem, transporte e armazenamento (PROSAPIO e 
+NORTON, 2018).  
+ 
+3.4.1 Desidratação por estufa em ar forçado (estufa) 
+A desidratação por estufa em ar forçado consiste na exposição do material a ser 
+seco a um fluxo contínuo de ar aquecido que permite que a água evapore, reduzindo a umidade 
+do material. A desidratação por ar quente pode estender a vida útil de um produto em até um 
+ano, mas a qualidade do produto é fortemente dependente das condições operacionais (RATTI, 
+2001). 
+24 
+ 
+ 
+Algumas características podem afetar a taxa e o tempo total de secagem como 
+tamanho e geometria das partículas, as propriedades físicas do produto, o material em relação 
+ao ar que o atravessa em tubos, camadas, bandejas; propriedades físicas do ar (temperatura, 
+umidade e velocidade) e o tipo do secador. O método influência nas características do produto 
+que se deseja obter (SILVA et al., 2017). 
+Há uma grande variedade de configurações de equipamentos e processos para 
+aplicação na secagem de um determinado material, por essa razão os critérios de classificação 
+e seleção de um sistema também são diversos. Existem equipamentos específicos para diversos 
+tipos de materiais como, por exemplo: equipamentos para processar sólidos, pastas e líquidos 
+podendo esse ser em batelada ou contínuos, para produção em escala industrial ou não. 
+Portanto, para selecionar uma configuração de secador é fundamental avaliar as características 
+que deseja obter do produto (SILVA, 2020). 
+A desidratação em bandejas consiste em um sistema de grelhas ou bandejas 
+retangulares ou quadradas com fundo em tela. As bandejas são colocadas sequencialmente ao 
+longo da cabine e no fundo da cabine está o ventilador e depois o sistema de aquecimento. O ar 
+pode ser aquecido eletricamente ou por um trocador de calor com a circulação de ar sendo feita 
+por um ventilador atrás da resistência elétrica usada para o aquecimento do ar de entrada. Esse 
+-
+ar é soprado a 0,5 a 5 ms¹ através do sistema de dutos ou chicanos para promover a circulação 
+uniforme do ar através das bandejas. Para garantir a uniformidade da secagem, o produto deve 
+ser colocado de forma ordenada no sistema de bandejas e as camadas não devem ser superiores 
+a 3 cm. O sistema de ar deve ser ligado antes da introdução do produto para que seja atingida a 
+temperatura de secagem antes de começar o processo. (CELESTINO, 2010). 
+Esse tipo de secagem é mais utilizado para frutas, legumes e hortaliças em pequena 
+escala. Podem ser desidratados rapidamente por este processo devido ao contato íntimo do ar 
+quente com o produto. Alguns estudos utilizando secador de bandeja têm sido realizados com 
+maçã, carambola, por exemplo (SANTOS et al., 2013, SANTOS et al., 2010). 
+3.4.2 Desidratação por liofilização 
+A desidratação por liofilização fundamenta-se na retirada da água contida no 
+material por meio do congelamento da parte líquida e posterior sublimação do gelo. Por 
+trabalhar com baixas temperaturas e sob vácuo, esse processo é recomendado para materiais 
+muito sensíveis, como materiais biológicos, farmacêuticos, alimentos e produtos químicos, 
+gerando produtos de qualidade superior quando comparados às outras técnicas de desidratação 
+(VIEIRA, 2012).  
+25 
+ 
+ 
+De acordo com Souza et al., (2011) os estágios principais da liofilização são: 
+Estágio 1 - Congelamento, o produto a ser liofilizado é congelado a baixas temperaturas, 
+geralmente menores que -18 °C; Estágio 2 - Secagem primária consiste na fase em que a água 
+congelada é removida por sublimação e para que isto ocorra o material congelado deve 
+permanecer a uma pressão absoluta de 2 mmHg (alto vácuo) ou menor e fornecer energia (sob 
+forma de aquecimento) para sublimação; nesta etapa são removidos cerca de 90% do teor de 
+água inicial do produto; Estágio 3 - Secagem secundária consiste na retirada da água que está 
+ligada à estrutura do material quando não existe mais água na forma de gelo. Nesse caso, ocorre 
+em menor velocidade que a sublimação, uma vez que o teor de água é menor e não está livre (5 
+a 10% do total de água do material). 
+No congelamento, ocorre a formação de cristais de gelo, sendo determinantes sobre 
+a eficiência de transferência de massa e retirada de umidade. A depender do tamanho, formato 
+e homogeneidade, os cristais de gelo pequenos e descontínuos fazem com que a transferência 
+se torne limitada enquanto cristais grandes e homogêneos tornam as taxas de transferência 
+maiores e o material pode ser liofilizado mais rapidamente (SOUZA et al., 2011, LIAPIS et al., 
+1996).  
+ Quando as moléculas de água sublimam, o vapor de água formado carrega uma 
+quantidade significativa de calor latente de sublimação (cerca de 2840 kJ/kg de gelo) e assim, 
+a temperatura do produto sendo liofilizado se mantém reduzida. A sublimação ocorre no sentido 
+da superfície para o interior do material, formando uma camada desidratada por onde o vapor 
+de água é removido. Cerca de 65-90% da água presente no material é removida nesta etapa 
+(LIAPIS et al., 1996; LIAPIS; BRUTTINI, 2007). 
+No segundo estágio de secagem tem-se a dessorção, que consiste na retirada da água 
+remanescente não congelada que ainda está adsorvida física ou quimicamente à estrutura interna 
+do material. Como essa água não está livre, ocorre em velocidade menor que a sublimação, esta 
+etapa deve acontecer até que a umidade residual seja tão pequena quanto a que o material 
+necessite para manter sua estabilidade e qualidade por longo tempo (TATTINI, 2006).  
+As vantagens da liofilização sobre os processos convencionais são a preservação 
+das propriedades químicas e físicas do material após a desidratação, não propiciam a 
+degradação oxidativa, a desnaturação proteica, a perda de compostos voláteis (sabor e aroma), 
+a degradação de compostos termossensíveis, como as vitaminas, além de ocorrer um 
+encolhimento mínimo do material e a ausência de migração de sólidos solúveis para sua 
+superfície (VIEIRA, 2012). 
+26 
+ 
+ 
+ A partir dessas vantagens, a liofilização é utilizada no mercado de alimentos 
+processados, como frutas e polpas desidratadas, retendo as características naturais dos produtos. 
+E a principal limitação para a aplicação da liofilização em larga escala são os altos custos 
+envolvidos na produção e o alto consumo de energia no processo (MARQUES et al, 2006; HSU 
+et al., 2003). 
+3.5 Compostos fenólicos 
+Os compostos fenólicos ou polifenóis são um vasto grupo de fitoquímicos que 
+possuem, pelo menos, um anel aromático ao qual se encontra ligado a um ou mais grupos 
+hidroxila. A sua estrutura pode variar entre uma simples molécula fenólica a polímeros 
+complexos de elevado peso molecular (BALANGE; BENJAKUL, 2009).  
+Nos últimos anos, muita atenção tem sido dada aos compostos fenólicos devido ao 
+grande número de pesquisas que afirmam que o consumo regular e em quantidades adequadas 
+de vegetais, frutas e bebidas ricos nestas substâncias está associado à prevenção de doenças 
+crônicas não transmissíveis (TOMAS-BARBERAN; ESPIN, 2001). 
+São produzidos pela maioria das plantas como parte integrante da sua estrutura, os 
+quais desempenham funções diversas, tais como: estrutura dos tecidos, defesa contra-ataques 
+de agentes patogênicos, agentes protetores contra condições externas como temperatura 
+extrema, estresse, radiação ultravioleta (UV) e oxidação das biomoléculas. Estas funções 
+devem-se essencialmente por sua capacidade antioxidante, ou seja, à sua capacidade de agir 
+como agentes redutores, sequestradores de radicais livres (BOUDET, 2007; CHUNGLONG et 
+al., 2008). 
+Mais de 8.000 compostos fenólicos já foram identificados, sendo os principais 
+encontrados em alimentos pertencentes à classe dos flavonoides, ácidos fenólicos, estilbenos e 
+taninos. Desempenham papel importante sobre as características sensoriais dos alimentos, 
+principalmente em relação ao sabor, promovendo amargor, doçura e adstringência. Alguns 
+compostos fenólicos são intensamente amargos, como a flavanona hesperidina presente em 
+frutas cítricas. Porém, após a transformação químicada flavonapara as di-hidrochalconas 
+correspondentes se tornam intensamente doces (2.000 vezes mais doce que a sacarose) e são 
+utilizadas como adoçantes e realçadores de sabor pela indústria (TOMAS-BARBERAN; 
+ESPIN, 2001). 
+Estudos comprovam o potencial da alimentação rica em compostos fenólicos, em 
+razão de suas possíveis alegações de propriedades funcionais, dentre as quais destacam-se 
+atividade antioxidante na prevenção de reações oxidativas, na proteção de glóbulos vermelhos 
+27 
+ 
+ 
+contra os radicais livres (YOUDIM et al., 2000), antitrombóticas, antimicrobianas (OU; 
+KWOK, 2004), prevenção de doença pulmonar obstrutiva crônica, doenças cardiovasculares, 
+acidente vascular cerebral (WU et al., 2013), na manutenção da saúde intestinal (BOUDJOU et 
+al., 2013; CARDONA et al., 2013), na redução da incidência de câncer de próstata (GAWLIK-
+DZIK et al., 2012), previne o estresse oxidativo (YOUDIM et al., 2000; ASADI et al.,2010;  
+FERRERES et al., 2013).  
+Em virtude do notável número de resultados demonstrando a importância de 
+compostos fenólicos para saúde humana, é clara a necessidade do consumo de alimentos fonte 
+desses compostos para obtenção de uma dieta saudável (OBOH et al., 2012; NORATTO et al., 
+2014). 
+3.6 Produtos plant-based 
+Produtos à base de plantas (plant-based) é um nicho que tem crescido bastante 
+devido à busca dos consumidores por novos hábitos a fim de melhorar a própria saúde ao reduzir 
+os impactos ambientais causados por suas escolhas. A produção atual de alimentos de origem 
+animal vem sendo criticada pelos impactos negativos na qualidade ambiental, saúde pública e 
+bem-estar animal (PEW COMMISSION, 2008).   
+Em busca de respostas para tais questionamentos, inovações estão sendo produzidas 
+como formas para apoiar a criação e comercialização alternativa de produtos de origem animal. 
+Esse setor inclui análogos à base de plantas que combinam insumos vegetais com a ciência dos 
+alimentos que permitem obter sabores, texturas próximas dos produtos animais existentes 
+(MOUAT et al., 2019).    
+Atualmente tem sido usados materiais a base de plantas como soja, trigo, ervilha e 
+nozes para produção de produtos animais alternativos que podem incluir também o leite 
+alternativo. Ao longo das últimas décadas, esses produtos foram produzidos em massa e 
+comercializados principalmente para consumidores vegetarianos (JACOBSEN,  2016).  
+Os defensores dos produtos a base de plantas argumentam que a sociedade deve 
+consumir menos produtos de origem animal,  a fim de se alimentar de forma sustentável. Pelo 
+risco amplamente discutido aos consumidoresreferente as doenças crônicas relacionadas à dieta 
+como doenças cardiovasculares, diabetes, obesidade, alguns cânceres, estudos indicam que uma 
+dieta predominante a base de vegetais está associada a prevenção dessas doenças e promoção 
+da saúde (KATZ; MELLER, 2014). 
+Portanto, os produtos a base de plantas são uma alternativa para pessoas 
+preocupadas com alimentação, redução do sofrimento animal, pessoas com dieta restritiva e 
+28 
+ 
+ 
+pessoas que não gostam de carne. Esses produtos devem fornecer proteínas necessárias para o 
+bom funcionamento do corpo. Buscando novas possibilidades de texturização de alimentos com 
+proteínas em estruturas fibrosas distintas para imitar o músculo, algumas plantas têm em sua 
+estrutura, músculos fibrosos e com nível de umidade semelhante a carne e imita a sensação de 
+mordida á boca. Essa tendência é recente e promovida por um número cada vez mais sofisticado 
+de novos produtos alimentares a partir de várias matérias-primas vegetais, simultaneamente, 
+alternativas a carne que estão se tornando amplamente disponíveis nas lojas e restaurantes. 
+3.6.1 Produto de fibra de caju enriquecido com proteína de soja texturizada 
+Com o passar do tempo, o consumidor passou a se preocupar com a sua alimentação 
+e quais nutrientes deve consumir para a manutenção da saúde. Nesse grupo de consumidores 
+preocupados com alimentação encontram-se os vegetarianos, veganos além de outros grupos. 
+Segundo a Sociedade Vegetariana Brasileira (2017), o vegetarianismo consiste em um regime 
+alimentar que exclui todos os tipos de carne e em algumas classificações pode incluir ou não o 
+consumo de ovos, leite e laticínios. Os veganos, por exemplo, excluem o consumo de todos os 
+produtos de origem animal, incluindo leite e seus derivados. 
+Comumente pessoas com esse estilo de vida tem maior preocupação com problemas 
+ambientais decorrentes do mercado da carne, defendem o respeito aos animais que sofrem com 
+as más condições de criação e com os maus tratos. A busca pela qualidade de vida e por hábitos 
+alimentares mais saudáveis são outros fatores que vem atraindo pessoas para o veganismo 
+(SCHMIDT, 2013). 
+Com o crescente número de pessoas em busca de alimentação alternativa e as 
+limitadas ofertas que atendem a esses consumidores, a elaboração de produtos a partir da fibra 
+do pedúnculo de caju proporcionaria o aproveitamento da fibra e a possibilidade de 
+diversificação da dieta da população, agregando valor nutricional ao produto, e proporcionando 
+benefícios à saúde do consumidor (LIMA et al., 2008). 
+A fibra do caju se mostra promissora na substituição de carne para produzir 
+produtos de base vegetal que mimetizam produtos cárneos como hambúrgueres, bolinhos e 
+croquete. Pesquisas que utilizam essa matéria-prima para a elaboração de produtos tipo 
+hambúrguer, demonstram um resultado positivo na análise sensorial, indicando a viabilidade 
+do aproveitamento da fibra do caju para elaboração de alimentos (PINHO et al., 2012; 
+BARROS et al., 2012; LIMA et al., 2018). 
+Dessa forma, observa-se que a utilização de fibra de caju em substituição a 
+matérias-primas cárneas tem grande potencialidade. Contudo, como não é rica em proteína, é 
+29 
+ 
+ 
+necessário o uso de uma fonte proteica vegetal para a formulação de produtos. Um produto com 
+potencial para aplicação da fibra de caju é o croquete, que é um empanado obtido a partir de 
+carnes de diferentes espécies de animais acrescido de ingredientes, moldado ou não, e revestido 
+de cobertura apropriada que o caracterize, podendo ser cru, pré-cozido, cozido, pré-frito ou 
+frito, podendo conter recheios (MAPA, 1998). 
+ 
+4 MATERIAL E MÉTODOS 
+4.1 Obtenção do bagaço de caju ou fibra de caju 
+A matéria-prima, fibra de caju, foi obtida de uma indústria beneficiadora de caju 
+localizada em Beberibe, CE, e armazenado em saco plástico a -18ºC até o dia o processamento. 
+O projeto de pesquisa e equipe foram registrados na plataforma de “Acesso ao Patrimônio 
+Genético”, devido o caju ser uma fruta nativa brasileira. 
+4.2 Planejamento experimental 
+Para otimização do processo de obtenção da fibra de caju e aplicação em produtos 
+alimentícios, foi realizado um planejamento experimental (Figura 2) dividido em três partes 
+que compreendem a avaliação do efeito das etapas de processamento sobre a qualidade da fibra 
+de caju obtida. A primeira etapa buscou identificar a proporção de água e número de ciclos de 
+hidratação e prensagem da fibra de caju para obtenção de uma fibra de caju com pouco ou 
+ausência do sabor residual de caju, adstringência e acidez. 
+A segunda etapa compreendeu o emprego de liofilização, secagem em estufa e 
+secador de bandejada fibra oriunda da primeira etapa para avaliação de qual métodos é o mais 
+adequado na conservação da integridade química, física e tecnológica da fibra. Com os 
+resultados obtidos nessa etapa sendo aplicados na elaboração de croquete de fibra de caju na 
+terceira etapa. 
+30 
+ 
+ 
+Figura 2- Etapas do planejamento do experimento. 
+  
+Fonte: Autora, 2022. 
+ 
+4.3 Processamento e análises da fibra do caju 
+Os cajus (variedades anão e comum) passaram primeiramente por uma seleção para 
+eliminação dos pedúnculos verdes, machucados, excessivamente maduros e estragados. Após 
+esse processo, os pedúnculos foram sanitizados por imersão em água clorada (50 mg de cloro/L) 
+por 15 minutos. Posteriormente foi feita a extração do suco por meio de prensa e refinadora, as 
+fibras foram coletadas em sacos plásticos e armazenados a -18ºC até seu processamento (etapas 
+realizadas na indústria). 
+Para obtenção da fibra de caju tratada foram realizadas etapas de hidratação e 
+prensagem sequenciais (Figura 3). Foram avaliados três tratamentos com diferentes proporções 
+de fibra:água, sendo: tratamento 01 (TR1) – 1:1 (m/m), tratamento 02 (TR2) – 1:1,5 (m/m) e 
+tratamento 03 (TR3) – 1:2 (m/m). Cada tratamento passou por cinco ciclos de hidratação. 
+  
+31 
+ 
+ 
+Figura 3- Fibra de caju antes do início da hidratação (A) e sendo hidratada (B). 
+A B 
+  
+Fonte: Autora, 2022. 
+Para cada etapa do processo de hidratação foram efetuadas pesagens do conteúdo 
+de entrada, teor de líquido obtido e quantidade de fibra resultante (Figura 4) para cálculo de 
+rendimento.  
+Foram retiradas amostras de fibra em cada ciclo nos 3 tratamentos, guardados em 
+embalagem plásticas e armazenadas a -18°C até a data de realização das análises de umidade, 
+sólidos solúveis, acidez, pH, fenólicos totais e a sensorial da fibra. 
+Figura 4- Caju/fibra de caju processada em prensa Expeller (A); saída da fibra da prensa 
+Expeller (B). 
+B 
+A 
+ 
+ 
+Fonte: Autora, 2022. 
+ 
+ 
+ 
+32 
+ 
+ 
+4.3.1 Rendimento de processo 
+O rendimento do processo de tratamento/obtenção das fibras foi obtido pela 
+diferença entre as amostras inicial e final após o processo de hidratação e prensagem. O 
+rendimento da secagem foi calculado a partir da diferença entre peso inicial (amostra úmida) e 
+o peso final (amostras secas), com os valores de ambos os rendimentos dados em porcentagem. 
+4.3.2 Umidade, sólidos solúveis, acidez e pH 
+O teor de umidade foi determinado em estufa com circulação de ar forçado (marca 
+Quimis, modelo Q314M), a 105 ºC, utilizando 3g de cada amostra pesados em cápsula de 
+porcelana, até obtenção de peso constante. Os resultados foram expressos em g/100 g de 
+amostra (AOAC, 2016). 
+A quantificação dos sólidos solúveis da fibra in natura foi realizada utilizando o 
+líquido intumescido ainda presente nas fibras. Retirou-se aproximadamente 50g após 
+homogeneizar a fibra, assim foi extraído o suco, e realizado a aferição em refratômetro digital 
+portátil (marca ATAGO, modelo PAL-3). 
+Para as fibras após os ciclos de tratamento, as amostras úmidas foram 
+homogeneizadas com água destilada na proporção 1:1 (m/m) e filtradas por papel de filtragem 
+rápida. Então, os sólidos solúveis foram determinados por leitura direta do líquido obtido em 
+refratômetro digital, expressos em ºBrix (IAL, 2008). 
+A acidez foi determinada de acordo com o método titulométrico da AOAC em 
+titulador automático (HI 901/HI 902 – Hanna Instruments), utilizando solução padronizada de 
+NaOH a 0,1 N, com ponto de viragem determinado em pH 8,1, com acidez expressa em gramas 
+(g) de ácido cítrico por 100 g de amostra. 
+O pH das amostras foi determinado a partir de leitura em um pHmetro digital 
+(Mettler Toledo, modelo F20, Ohio, EUA) (AOAC, 2016). 
+ 
+4.3.3 Polifenóis extraíveis totais 
+A determinação do teor de compostos fenólicos totais foi realizada de acordo com a 
+metodologia descrita por Singleton et al. (1999). Uma alíquota de 1,0 mL do extrato aquoso da 
+fibra de caju foi transferida para tubos de ensaio com a adição de 1 mL de solução de etanol 
+95%, 5,0 mL de água destilada e 0,5 mL de regente Folin-Ciocalteau 1,0 N. Após 
+33 
+ 
+ 
+homogeneização e descanso de cinco minutos, foi adicionado 1,0 mL de solução de carbonato 
+de sódio 5% (p/v) com os tubos mantidos em câmara escura por 60 minutos, posteriormente 
+tiveram sua absorbância medida a 760 nm contra o branco (etanol 95%). Os resultados foram 
+expressos em mg de equivalente de ácido gálico (EAG por 100 g de amostra (mg EAG/100 g). 
+4.3.4 Análise sensorial da fibra de caju 
+A análise sensorial da fibra de caju foi realizada com uma equipe de provadores 
+treinados de acordo com os critérios propostos pela ABNT (2016), Meilgaard et al. (2006) e 
+Damásio e Costell (1991) na intensidade de descritores sensoriais de caju. Protocolo de Garruti 
+et al. (2019) para avaliação de pedúnculo de caju, composta por funcionários da Embrapa 
+Agroindústria Tropical, na faixa etária de 35 a 55 anos. Devido ao período de isolamento social 
+vivido durante a pandemia da COVID 19, apenas sete pessoas concordaram em participar dos 
+testes. 
+As amostras foram entregues codificadas com números aleatórios de três dígitos 
+acompanhados de um copo descartável com água (100 mL). Cada amostra (5 g) de fibra 
+envasada em uma embalagem plástica individual, selada e congelada até o dia da sensorial. 
+Cada provador recebeu 4 amostras em cada sessão, sendo ao todo 12 sessões para cada provador 
+subentende-se. Foi instruído aos provadores que bebessem água no intervalo de uma amostra a 
+outra com o intuito de limpar os resíduos do palato que pudessem causar interferências. 
+Foi avaliada a intensidade percebida dos seguintes termos descritores: aroma 
+característico de caju, sabor característico de caju, gosto doce, gosto ácido e adstringência, por 
+meio de uma escala não estruturada de 9 cm, ancorada nos extremos com termos de intensidade 
+variando de (0 = nenhum a 9 = forte). Sendo o padrão forte, a fibra de caju úmida, e sem 
+hidratação, ainda embebida no suco do caju (Figura 5). 
+  
+34 
+ 
+ 
+Figura 5- Ficha da sensorial da fibra de caju. 
+ 
+Fonte: Autora, 2022. 
+4.4 Métodos de secagem para a fibra do caju 
+As fibras úmidas que seguiram para o estudo de secagem foram as que obtiveram os 
+melhores resultados nas etapas anteriores que definiram a proporção de água e os ciclos de 
+hidratação e prensagem. As fibras pré-tratadas foram acondicionadas em sacos plásticos de 
+polietileno que forma selados e congelados a -18ºC até sua utilização. 
+Os processos de secagem em secador de bandejas foram realizados em equipamento 
+constituído de aço inox AISI 304 de dimensões 60 x 63 x 225 cm (Metalúrgica Lisboa Ltda) 
+com circulação forçada de ar por meio de um exaustor localizado na parte superior do 
+equipamento (topo) e entrada de ar e fonte de aquecimento na parte inferior, dispondo de 
+prateleiras-bandejas com superfície perfurada medindo 51,3 cm x 51,3 cm e 0,5 cm de altura. 
+Foi utilizada carga de 5,04 Kg de fibra de caju úmida pré-tratada (0,840 Kg por bandeja) por 
+batelada. Os processos foram conduzidos em duplicata. Os processos foram realizados a 50 
+ºC/24h, sendo necessário efetuar troca de posição das bandejas durante os processos, para 
+melhor homogeneidade de temperatura. 
+Para a liofilização as fibras pré-tratadas foram acondicionadas em bandejas de aço 
+inoxidável e colocadas no liofilizador piloto (Liobrás LP510) com vácuo < 3000 um Hg, 
+temperatura inicial de 0ºC e aquecimento até 45ºC para desidratação por 19 h e 20 min. 
+Para a secagem em estufa, foi usado uma estufa com circulação de ar forçado (Marca 
+MARCONI, modelo X) por 24 h a 50ºC, mesmo binômio tempo e temperatura utilizado para o 
+secador de bandeja. 
+35 
+ 
+ 
+ 
+Figura 6- Equipamentos utilizados para a secagem da fibra de caju. 
+C 
+B 
+A 
+Liofilizador 
+Secador de bandeja Estufa 
+ 
+Fonte: Autora, 2022. 
+ 
+O cálculo de rendimento foi realizado no final de cada secagem e em seguida as 
+amostras foram armazenadas por 24 horas em saco plástico de polietileno para estabilizar a 
+umidade do lote. Em seguida foram retiradas 100 g de fibra de caju seca para análises de 
+umidade, capacidade de absorção de água e óleo, cor, polifenóis extraíveis totais e atividade 
+antioxidante. 
+4.5 Rendimento dos métodos de secagem para fibra de caju 
+Para o rendimento, as pesagens das amostras foram realizadas utilizando uma 
+balança analítica. A Equação 1 descreve como foi realizado o cálculo para a variável resposta 
+rendimento do processo: 
+(1−Uproduto).mproduto
+𝑅=.100                                     (Equação 01) 
+(1−Ufibra).mfibra
+Onde,  
+R = rendimento do processo, %; 
+U = umidade do produto obtido após secagem, g/g; 
+produto
+U= umidade da fibra úmida submetida a secagem, g/g. 
+fibra
+m = massa total do produto desidratado obtido após secagem, g; 
+produto
+m = massa total de fibra úmida submetida à secagem, g. 
+fibra
+4.6 Determinação da umidade das fibras de caju secas 
+36 
+ 
+ 
+Para a determinação da umidade das fibras secas seguiu-se a mesma Metodologia 
+igual do item (4.3.2).  
+4.7 Capacidade de absorção de água (CAA) e capacidade de absorção de óleo (CAO) das 
+fibras de caju secas 
+A capacidade de absorção de água das fibras foi determinada conforme método 
+descrito por Sosulski (1962) com modificações. Foi pesado 0,5 g de fibra e 10 mL de água 
+destilada em um tubo de 12 mL para centrifuga, e agitados por um minuto a temperatura 
+ambiente (28ºC). Após repouso de 20 minutos, o material foi centrifugado (Excelsa II 206 BL) 
+a 3.500 rpm por 10 minutos com o sobrenadante descartado ao final. A diferença de massa entre 
+a quantidade inicial e final foi tomada como medida da absorção de água, e expressa como a 
+quantidade de água absorvida por 100 g de amostra dada pela Equação 2. 
+()()
+𝐴𝐴 %=30−𝑣𝐿 𝑥 100(Equação 02) 
+Onde:  
+AA = Absorção de água 
+vL = volume (mL) de água não absorvidos  
+Para determinação da capacidade de absorção de óleo (CAO) das fibras foi utilizado 
+o mesmo procedimento empregado para absorção de água, substituindo a água por óleo de 
+milho comercial. Os valores obtidos foram expressos como a quantidade de óleo absorvido por 
+100 g de amostra (LIN et al., 1974). 
+4.8 Análises de cor das fibras de caju secas 
+Para a análise de cor, as amostras foram avaliadas a 25°C por meio de colorímetro 
+(Konica Minolta®, modelo CR 400, Osaka, Japão) pela escala CIELAB, com os resultados 
+expressos nos termos de luminosidade (L*), a* e b*. 
+4.9 Obtenções dos extratos das fibras secas para determinação de fenólicos totais 
+Foi preparado um extrato das fibras secas para as determinações de fenólicos totais, no 
+qual 10,0 g da fibra seca foram colocadas em contato com uma solução de água em etanol 20 
+% (m/m), sendo o volume de 50 mL para as fibras secas em estufa e secador de bandeja e 100 
+mL para as fibras liofilizadas. Posteriormente, o extrato foi homogeneizado em agitador 
+magnético a 9 RPM por 30 minutos, seguido de ultrassom durante 30 minutos. Por fim, o extrato 
+37 
+ 
+ 
+foi filtrado a vácuo e acondicionado em recipiente escuro e armazenado sob refrigeração a 4ºC 
+até o momento das análises. A determinação dos fenólicos totais foi realizada de acordo ao 
+descrito no item 4.3.5. 
+4.10 Atividades antioxidantes pelos métodos ABTS e DPPH 
+4.10.1 Determinação da atividade antioxidante pelo método ABTS 
+Para determinação da atividade antioxidante pelo método ABTS+[2,2’-azino-bis 
+(3-etilbenzotiazolin) 6-ácido sulfônico], utilizou-se a metodologia descrita por RE et al. (1999) 
+adaptada por Lima (2008). O radical ABTS foi gerado a partir da reação de 7 mM de ABTS+ 
+com 2,45 mM de persulfato de potássio, sendo reservados à temperatura ambiente e na ausência 
+de luz, por 12-16 h. Transcorrido esse período, a solução foi diluída em etanol P.A. até obter-
+se uma solução com absorbância de 0,70 (± 0,01). Adicionou-se 40 μL das amostras diluídas 
+(em etanol) a 1960 μL da solução contendo o radical, determinando-se a absorbância em 
+espectrofotômetro a 734 nm, após 30 minutos de reação. Como solução padrão, usou-se o 
+antioxidante sintético Trolox® análogo da vitamina E, para construção de uma curva de 
+calibração (y=0,4214x-0,0103 
+R² = 0,9993). Todas as leituras foram realizadas em triplicata, e os resultados foram expressos 
+em Capacidade Antioxidante Equivalente ao Trolox® (µM de Trolox® por mg de amostra) e 
+CE50 (concentração da amostra eficaz para inibir 50% do radical ABTS+). 
+ 
+4.10.2 Determinação da atividade antioxidante pelo método DPPH  
+Para realização das análises, adicionou-se 1,5 mL da solução etanólica do radical 
+–5
+DPPH•(2,2-difenil-1-picrilhidrazilo) (6x10M) em uma alíquota de 0,5 mL das amostras, 
+contendo diferentes concentrações de cada extrato. As leituras foram realizadas em 
+espectrofotômetro a 517 nm, após 30 minutos do início da reação. As determinações foram 
+feitas em triplicata, acompanhada de um controle negativo (sem antioxidante) e dois controles 
+positivos (padrões: ácido ascórbico e Trolox®, natural e sintético, respectivamente). A queda 
+na leitura da densidade ótica das amostras foi correlacionada com o controle (somente o 
+radical), estabelecendo-se a porcentagem de descoloração do radical DPPH conforme a 
+Equação 03 (BRAND-WILLIAMS et al., 1995; VIEIRA et al., 2011). 
+ 
+38 
+ 
+ 
+[(𝐴𝑏𝑠𝑐𝑜𝑛𝑡𝑟𝑜𝑙𝑒 – 𝐴𝑏𝑠𝑎𝑚𝑜𝑠𝑡𝑟𝑎
+% 𝑑𝑒 𝑖𝑛𝑖𝑏𝑖çã𝑜 𝑑𝑜 𝑟𝑎𝑑𝑖𝑐𝑎𝑙 𝐷𝑃𝑃𝐻 = 𝑥 100 (Equação 
+𝐴𝑏𝑠𝑐𝑜𝑛𝑡𝑟𝑜𝑙𝑒
+03) 
+Onde: 
+ABS - absorbância 
+Além do porcentual de inibição, também foi calculada a concentração eficaz para 
+inibir 50% do radical DPPH (CE50).  
+4.11 Desenvolvimento dos croquetes com fibra de caju desidratada 
+Foram elaboradas três formulações (Tabela 5) de croquete enriquecidas com 
+proteína de soja e fibra de caju (TR3 hidratada e prensada três vezes, liofilizada). Os croquetes 
+foram desenvolvidos com base em formulações já existentes com outros vegetais, até obter-se 
+uma formulação adequada, utilizando-se matérias-primas selecionadas para o presente estudo. 
+Devido pandemia de COVID-19, realizamos os pré-testes das formulações com um grupo de 
+10 pessoas a fim de obtermos formulação final. 
+Foi utilizada uma tabela nutricional que continha os dados da Tabela Brasileira de 
+Composição dos Alimentos (TBCA), para obtermos características próximas dos produtos já 
+existentes (TBCA, 2020). 
+Tabela 5- Formulações de croquete de fibra de caju enriquecido com proteína de soja. 
+ Formulações 
+INGREDIENTES 1 2 3 
+Fibra de caju úmida 30,0% 40,0% 50,0% 
+Proteína texturizada de soja hidratada 30,0% 20,0% 10,0% 
+Farinha de Trigo 14,4% 14,4% 14,4% 
+Água 8,6% 8,6% 8,6% 
+Óleo de Soja 8,6% 8,6% 8,6% 
+Molho Barbecue 5,8% 5,8% 5,8% 
+Alho em pó 0,9% 0,9% 0,9% 
+Cebola em pó 0,7% 0,7% 0,7% 
+Sal 0,6% 0,6% 0,6% 
+Salsa 0,3% 0,3% 0,3% 
+Pimenta do Reino 0,2% 0,2% 0,2% 
+Fonte: A autora, 2022 
+ 
+39 
+ 
+ 
+ Os croquetes foram produzidos no Laboratório de Processos Agroindustriais da 
+Embrapa Agroindústria Tropical (Fortaleza - CE) a partir da incorporação da fibra do caju à 
+massa base do croquete e em seguida foram moldados e empanados. Após o preparo, foram 
+armazenados em câmara de congelamento a -18°C até data da avaliação sensorial. As etapas de 
+produção dos croquetes podem ser visualizadas na Figura 7, a seguir. 
+Figura 7- Etapas do processo de elaboração dos croquetes com fibra de caju. 
+A B C 
+Formulação do croquete 
+Croquete moldado 
+Molho para empanar 
+D 
+F 
+E 
+Não empanado x empanado 
+Croquetes prontos 
+Empanamento 
+ 
+Fonte: Autora, 2022. 
+ 
+ 
+ 
+40 
+ 
+ 
+4.11.1 Composição centesimal dos croquetes 
+Umidade: seguiu a mesma metodologia descrita no item (4.3.2.) 
+Lipídeos: Teor de lipídeos avaliado de acordo com a quantificação de gorduras 
+brutas sob sistema de alta pressão e alta temperatura em equipamento XT-15 Ankom (Ankom, 
+2009) conforme metodologia (Am 5-04) da American Oil Chemists Society (AOCS, 2005). 
+Proteínas: Teor de proteínas avaliado por combustão segundo o método de 
+DUMAS em equipamento Analisador de Nitrogênio/Proteína NDA 701 Dumas (VELP, 2019), 
+utilizando EDTA como padrão com base no método da AOAC 999.23 (AOAC, 2016). 
+Cinzas: conforme metodologia indicada pela AOAC (2016), na qual os teores são 
+obtidos pela diferença de peso da matéria orgânica das amostras conforme método 923.03 da 
+AOAC. 
+Carboidratos: determinados por diferença, subtraindo de 100 somatória das 
+porcentagens dos teores de umidade, cinza, proteína e lipídeos, sendo o resultado expresso em 
+porcentagem (IAL, 2008). 
+4.11.2 Análise sensorial de croquete de fibra de caju 
+Os testes sensoriais foram realizados no Laboratório de Análise Sensorial da 
+Embrapa Agroindústria Tropical (Fortaleza – CE). Antes de cada sessão foi solicitado que os 
+participantes assinassem um Termo de Consentimento Livre e Esclarecido (TCLE) (Anexo A). 
+Os protocolos dos testes sensoriais foram previamente aprovados pelo Comitê Nacional de 
+Ética em Pesquisa – CONEP, sob parecer nº 3.117.036. 
+A avaliação sensorial das amostras de fibra de caju e de croquete de fibra de caju 
+foi realizada em cabines individuais climatizadas (24 ± 2°C). 
+Os croquetes foram fritos em óleo de soja a 150 °C, por 5 min de cada lado, 
+utilizando uma fritadeira industrial Modelo CROYDON.  O excesso de óleo foi retirado com 
+papel toalha. 
+As amostras foram servidas a 60 ± 2 °C em pequenos copos descartáveis de 
+tonalidade branca, codificados com números aleatórios de três dígitos (Figura 8), acompanhadas 
+de copo descartável com água (100 mL) e pão branco, com instruções de que bebessem e 
+comessem no intervalo de uma amostra para outra no intuito de limpar os resíduos do palato 
+que pudessem causar interferências na análise. As amostras foram apresentadas em ordem 
+balanceada, de forma a evitar vícios nos resultados (MACFIE et al.,1993). 
+41 
+ 
+ 
+Figura 8- Bandeja sensorial dos croquetes entregue aos provadores. 
+ 
+Fonte: Autora, 2022. 
+Em uma mesma sessão, foram realizados testes afetivos (MEILGAARD et al., 
+2015) com 60 indivíduos não treinados, consumidores reais ou potenciais de alimentos plant-
+based, recrutados entre os funcionários e estagiários da instituição. Para caracterizar estes 
+participantes, foram efetuadas perguntas sobre gênero, idade, se gostam de caju, hábitos 
+alimentares e frequência de consumo de produtos plant-based e se consomem produtos à base 
+de fibra de caju. 
+A avaliação da aceitação global e dos atributos aparência externa e interna, sabor e 
+textura foi realizada por meio da escala hedônica mista de nove pontos (1 =desgostei muitíssimo 
+a 9 =gostei muitíssimo). Na mesma ficha (Anexo C) foi incluído um teste de Diagnóstico de 
+Atributos, para avaliar a intensidade dos descritores: sabor característico de caju, gosto ácido e 
+fibrosidade, utilizando uma escala de 9 pontos, variando de nenhum/pouco (1) a forte/muito 
+(9). 
+Também foi solicitado ao provador indicar o quanto a firmeza estava ideal, de 
+acordo com seu padrão mental de qualidade para um produto tipo croquete, utilizando uma 
+escala de 5 pontos (1 =firmeza muito abaixo do ideal, 3 = ideal, 5 =firmeza muito acima do 
+ideal). Ainda na mesma ficha, os provadores foram questionados quanto à sua intenção de 
+compra, caso encontrassem os produtos à venda, por meio de uma escala estruturada de cinco 
+pontos (5 = certamente compraria, 3 =talvez compraria/talvez não compraria, 1 =certamente 
+não compraria). 
+ 
+42 
+ 
+ 
+4.12 Análise estatística 
+Todos os dados deste trabalho foram submetidos à análise de variância (ANOVA) 
+e ao teste de Tukey entre as médias, estabelecendo-se diferença significativa (p < 0,05), 
+utilizando-se o programa MiniTab (v19.1.1) e o programa XLSTAT. 
+ 
+5 RESULTADOS E DISCUSSÃO 
+Na sequência serão apresentados os resultados obtidos no pré-processamento de fibra 
+de caju, nos processos de conservação por secagem e na aplicação em produto plant-based 
+análogo à croquete de carne. Dessa forma, como indicado na metodologia, os resultados são 
+divididos em: 
+1ª parte: resultados referentes ao tratamento da fibra de caju, para reduzir o sabor de 
+caju, e permitir seu uso em formulações de alimentos; 
+2ª parte: resultados referentes à avaliação do processo de secagem da fibra de caju como 
+forma de reduzir o volume e permitir a conservação, sem a necessidade da cadeia de 
+frio; 
+3ª parte: avaliação da aplicação da fibra de caju em formulação de croquete. 
+5.1 Rendimento da etapa de pré-processamento  
+Os resultados de rendimento da etapa de pré-processamento obtidos nas pesagens 
+ao final de cada ciclo de hidratação + prensagem está apresentados na (Tabela 6). É possível 
+observar que os resultados não apresentaram diferença significativa entre si comparando cada 
+ciclo de hidratação, com o rendimento do processo variando entre 50% e 80%. 
+Ao comparar o rendimento em relação aos tratamentos houve diferença 
+significativa nos tratamentos 1:1 e 1:1,5, observa-se uma diminuição do rendimento de acordo 
+com a quantidade de ciclos de hidratação e prensagens, para o tratamento com hidratação 1:2 
+não houve diferença significativa entre os seus ciclos. 
+  
+43 
+ 
+ 
+Tabela 6- Rendimento da fibra de caju após cada prensagem (base seca). 
+Rendimento (%) em base seca da fibra:água  
+Tratamentos 1:1  1:1,5  1:2  
+aAaAaA
+1°ciclo 77,7 ± 4,7 80,0 ± 5,2 72,0 ± 17,8 
+abAabAaA
+2°ciclo 69,9 ± 4,6 68,8 ± 6,1 67,9± 6,2 
+abcAabAaA
+3°ciclo 64,1± 4,5 60,4 ±13,3  62,1± 8,4 
+bcAbAaA
+4°ciclo 54,1 ± 9,1 54,2 ± 6,6 54,8± 2,4 
+cAbAaA
+5°ciclo 50,7± 3,9 53,9 ±10,6  50,4 ± 3,5 
+**Médias com letras diferentes (letras maiúsculas para linhas e letras minúsculas para colunas), indicam diferença 
+significativa em teste de Tukey (p < 0,05). 
+ 
+Em estudo realizado por Lima et al. (2014) foi obtido um rendimento 75,7% ao 
+realizara mesma quantidade ciclos na proporção de água 1:1, valor maior do que obtido o neste 
+trabalho. Siqueira (2013) realizou o mesmo tratamento de 1:1 com a mesma quantidade ciclos 
+e obteve rendimento de 71,7%. Essa diferença de rendimento pode ser justificada pelo teor de 
+umidade inicial da fibra e a regulagem da prensa. 
+A variação obtida no rendimento, entre os tratamentos com diferentes proporções 
+de fibra: água, pode ser explicada pelo fato deque durante os ciclos de hidratação e prensagem, 
+ocorre perda de massa devido ao arraste e/ou lixiviação de compostos pela água adicionada, 
+resultando na remoção dos pigmentos, pequenos fragmentos de fibra, compostos solúveis, e 
+outros (SIQUEIRA, 2013). Os processos foram realizados em três repetições e com 
+processamento de 12 kg de fibra de caju em cada lote. 
+ 
+5.2 Parâmetros físico-químicos da fibra de caju 
+O bagaço recebido da indústria ainda apresentava resíduos de caju como líquido 
+não extraído rico em açúcares, taninos e outras substâncias solúveis em água. Assim, o objetivo 
+das hidratações e prensagens era reduzir o teor desses compostos na fibra. 
+5.2.1 Avaliação da redução do teor de sólidos solúveis, por ciclo de tratamento 
+Para o teor de sólidos solúveis totais (SST) (Tabela 7), a fibra de caju da indústria 
+apresentou teor entre 10,3 e 10,9 ºBrix. Esse valor é próximo ao encontrado por Matias et al 
+(2005), que obtiveram 12 ºBrix em estudo com bagaço de caju in natura. 
+ 
+ 
+44 
+ 
+ 
+Tabela 7- Teor de sólidos solúveis totais para cada ciclo de prensagem dos tratamentos da 
+fibra de caju. 
+Sólidos solúveis 
+Ciclos TR1 Redução TR2 Redução TR3 Redução 
+(%)* (%)* (%)* 
+   
+aAaAaA
+Fibra da 10,5 ± 0,4 10,9 ± 0,1 10,3 ± 0,2 
+indústria 
+bAbABbB
+1° ciclo 3,8 ± 0,2 63,4 3,5 ± 0,3 68,3 3,1 ± 0,2 69,4 
+cAcBcC
+2° ciclo 1,7 ± 0,4 83,5 1,1 ± 0,1 89,6 0,7 ± 0,4 91,8 
+dAdAcA
+3° ciclo 0,8 ± 0,2 92,2 0,6 ± 0,1 94,5 0,5 ± 0,4 97,2 
+dAdABcB
+4° ciclo 0,4 ± 0,1 95,8 0,3 ± 0,3 97,2 0,2 ± 0,1 98,1 
+dAdAcA
+5° ciclo 0,2 ± 0,1 97,7 0,2 ± 0,0 98,6 0,2 ± 0,1 98,1 
+Legenda: TR1: proporção de fibra: água de 1:1 (m/m), TR2: proporção de fibra: água de 1:1,5 (m/m), TR3: 
+proporção de fibra: água de 1:2 (m/m). Médias com letras diferentes (letras maiúsculas nas linhas e letras 
+minúsculas nas colunas) indicam diferença significativa em análise de variância e teste de Tukey (p < 0,05). 
+*percentual médio de redução do teor de SS, em comparação ao teor presente na fibra da indústria (inicial). 
+ 
+Em relação à redução de SST a cada ciclo de hidratação e prensagem nos 
+tratamentos, observa-se que houve uma redução significativa no teor após o primeiro e segundo 
+ciclos, estabilizando-se no terceiro ciclo em diante. 
+Ao comparar os resultados de SST entre os ciclos de hidratação e prensagem, nota-
+se que a proporção de água utilizada em cada TR está diretamente proporcional à redução do 
+teor de SST. Redução esta que acontece no 2º e 3º ciclos dos TR, com o teor de SST 
+estabilizando em 0,2 ºBrix no 4º e 5º ciclos para todos os tratamentos. 
+O TR3 no terceiro ciclo apresentou uma redução de 97,2% de SS em relação ao teor 
+inicial, sendo o que obteve maior redução entre os tratamentos, e uma redução de 98,1% para 
+o
+o 4 e 5º ciclos. O TR1 apresentou redução de 97,7%e o TR2 de 98,6% ao final dos cinco ciclos 
+de prensagens, não havendo diferença significativa entre os tratamentos ao final do 
+processamento. 
+A redução no teor de SST é importante para conservação da fibra, diminuindo a 
+possibilidade de crescimento de leveduras e da atividade de enzimas, sendo necessários os 
+ciclos de hidratação + prensagem para melhor conservação da fibra. 
+ 
+ 
+5.2.2 Avaliação da redução da acidez /pH, por ciclo de tratamento 
+Em relação à acidez (Tabela 8), no TR1houve diferença significativa (p<0,05) entre 
+os ciclos do início ao 3° ciclo, já o TR2 diferiu significativamente entre cada ciclo podendo ser 
+45 
+ 
+ 
+justificado pela quantidade de água adicionada. Já no TR3só houve diferença entre a fibra da 
+úmida obtida da indústria e o 1º ciclo, para os demais ciclos não teve diferença significativa. 
+Em estudo realizado por Pinho et al. (2012), obtiveram acidez de 0,50 (g de ácido cítrico/100g), 
+próximo ao encontrado nesse trabalho para fibra úmida. 
+Para pH, apenas o TR2 apresentou diferença significativa (p < 0,05) entre os ciclos 
+de hidratação + prensagem, com pH final de 5,6. Para o TR1, o pH final foi de 5.0 e o TR3 
+apresentou pH final igual ao do TR2, 5,6. Esses valores de pH são compatíveis com a acidez 
+apresentada anteriormente e observa-se um aumento gradativo da remoção dos ácidos orgânicos 
+presentes do suco a cada ciclo de hidratação independentemente do tratamento. 
+Ao se comparar com os resultados obtidos por Pinho et al. (2012) que obtiveram 
+pH 3,31 e Matias et al. (2005) pH 4,01para fibra in natura, os valores obtidos neste trabalho 
+estão próximos dos presentes na literatura. 
+Tabela 8- Comparação do efeito dos tratamentos (proporção de água e número de ciclos de 
+hidratação + prensagem), na acidez e pH da fibra de caju 
+Acidez(g/100mL) 
+ 
+TR1 TR2 TR3 
+aAaAaB
+Fibra da indústria 0,7 ± 0,2 0,7 ± 0,1 0,6 ± 0,1 
+abAbABbB
+1°ciclo 0,6 ± 0,1 0,5 ± 0,1 0,4 ± 0,2 
+bcAcAcA
+2°ciclo 0,4± 0,4 0,3 ± 0,2 0,2 ±0,1 
+cAdAdA
+3°ciclo 0,3 ± 0,1 0,2 ± 0,1 0,2 ± 0,2 
+pH 
+ 
+TR1 TR2 TR3 
+aAdAbA
+Fibra da indústria 3,4 ± 0,1 3,4 ± 0,1 3,3 ± 0,0 
+aBcABaA
+1°ciclo 4,0 ± 0,6 4,3± 0,1 5,2 ± 0,1 
+aAbAaA
+2°ciclo 4,7 ± 0,9 5,1 ± 0,2 5,4 ± 0,3 
+aAaAaA
+3°ciclo 5,0 ± 0,8 5,6 ± 0,1 5,6 ± 0,1 
+Legenda: TR1: proporção de fibra: água de 1:1 (m/m), TR2: proporção de fibra: água de 1:1,5 (m/m), TR3: 
+proporção de fibra: água de 1:2 (m/m). Médias com letras diferentes (letras maiúsculas nas linhas e letras 
+minúsculas nas colunas), indicam diferença significativa em análise de variância e teste de Tukey (p < 0,05). 
+ 
+Comparando os tratamentos, tanto para acidez quanto pH, é possível observar que 
+todos apresentaram acidez (menor que 0,3 g de ácido cítrico/100 mL) e pH entre (5,0 e 5,6) 
+reduzidos após os ciclos de prensagem e hidratação. É importante destacar que como o objetivo 
+era reduzir o sabor de caju na fibra, assim como acidez também, os tratamentos TR2 e TR3 
+foram indicados como os mais adequados. 
+46 
+ 
+ 
+5.3 Teor de umidade da fibra úmida 
+A determinação do teor de umidade é uma informação importante no que diz 
+respeito a conservação dos alimentos. Na Tabela 9 são mostrados os valores encontrados para 
+a fibra de caju recebida da indústria e após os ciclos de hidratação e prensagens. 
+Os teores de umidade aumentaram gradativamente até a última prensagem, 
+apresentando diferença significativa para o TR1e TR2, que apresentaram uma redução no 
+primeiro ciclo e aumentaram em seguida, até não haver mais diferença no 4° e 5° ciclos. No 
+tratamento TR3, não houve diferença significativa entre os ciclos. 
+Ao comparar os ciclos entre os diferentes tratamentos, apenas no 2° ciclo houve 
+diferença significativa, sendo que a TR3 se diferiu do TR1 ao apresentar uma umidade maior 
+que os outros tratamentos. O que pode ser explicado devido à maior quantidade de água 
+adicionada nesse tratamento.  
+Lima et al. (2017), em sua pesquisa, encontrou valor médio de 88,77% para 
+umidade da fibra in natura, valor superior ao encontrado nesse trabalho. 
+Tabela 9- Umidade da fibra de caju antes e após cada ciclo de hidratação e prensagem. 
+Umidade (%) 
+Prensagem TR1 TR2 TR3 
+aaa
+Fibra da 72,06 ± 0,06 72,06 ± 0,06 72,06 ± 0,06 
+indústria 
+cAbAaA
+1° ciclo 66,4 ± 0,6 65,1 ± 1,4 69,1 ± 6,1 
+cBabABaA
+2° ciclo 67,8 ± 0,3b 68,3 ± 0,4 70,0 ± 1,3 
+bAabAaA
+3° ciclo 68,6 ± 1,0 70,7 ± 6,4 69,4 ± 1,7 
+aAaAaA
+4° ciclo 72,4± 1,2 73,3 ± 0,7 73,9 ± 1,4 
+aAaAaA
+5° ciclo 73,4 ± 0,5 73,5 ± 2,5 76,7 ± 1,5 
+Legenda: TR1: proporção de fibra: água de 1:1 (m/m), TR2: proporção de fibra: água de 1:1,5 (m/m), TR3: 
+proporção de fibra: água de 1:2 (m/m). Médias com letras diferentes (letras maiúsculas nas linhas e letras 
+minúsculas nas colunas), indicam diferença significativa em análise de variância e teste de Tukey (p < 0,05). 
+A hidratação reduziu a umidade no 1° ciclo nos três tratamentos, e em seguida, 
+ocorreu um aumento nos valores em decorrência do aumento da área de superfície causada pela 
+força de cisalhamento da prensa Expeller ao quebrar a estrutura da fibra, deixando as superfícies 
+mais abertas para a hidratação. 
+Os cinco ciclos de hidratação + prensagens inicialmente utilizadas foram 
+determinadas para a extração de pigmentos carotenoides da fibra.  Visualizando a Tabela 9 
+percebe-se que a hidratação reduziu a umidade no 1° ciclo nos três tratamentos (o bagaço de 
+47 
+ 
+ 
+caju oriundo da indústria absorve bastante água no início), e a partir do 3° ciclo ocorreu um 
+aumento nos valores de umidade em decorrência do aumento da área de superfície de contato 
+com a água causada pela força de cisalhamento da prensa Expeller ao quebrar a estrutura da 
+fibra, deixando as superfícies mais abertas para a hidratação. 
+Apesar dos tratamentos terem apresentado valores elevados de umidade, ou seja, 
+maior capacidade de hidratação, o alto teor de umidade não é desejado devido à necessidade de 
+maiores gastos com energia empregados no processo de prensagem, assim como na secagem 
+posterior, o que pode tornar o processo muito oneroso.  
+5.4 Polifenóis extraíveis totais das fibras do caju úmidas 
+Os resultados da determinação do teor de polifenóis extraíveis totais estão 
+apresentados na Tabela 10. Observa-se que o teor de fenólicos totais ficou entre 350 e 647 mg 
+GAE/ 100g, não sendo observada diferença significativa (p>0,05) entre a fibras da indústria e 
+as fibras tratadas.  
+Tabela 10- Efeito dos tratamentos de hidratação e prensagem no teor de polifenóis extraíveis 
+total na fibra de caju. 
+Fenólicos em bases seca (mg GAE/100g) 
+Ciclos  TR1 TR2 TR3 
+aaa
+Fibra da indústria 522± 0,0 522± 0,0 522± 0,0 
+aAaAaA
+1°ciclo 445,4± 22,3 507,4 ± 126,3 412,7 ± 122,9 
+aAaAaA
+2°ciclo 350,7 ± 25,3 381,5 ± 166,3 370,7± 171,6 
+aAaAaA
+3°ciclo 463,9± 37,4 413,0 ± 145,6 387,6± 166,6 
+aAaAaA
+4°ciclo 469,8± 37,7 554,6± 60,8 416,8 ± 113,5 
+aAaAaA
+5°ciclo 489 ± 181,1 637,2± 76,7 401,0 ± 98,0 
+Legenda: TR1: proporção de fibra: água de 1:1 (m/m), TR2: proporção de fibra: água de 1:1,5 (m/m), TR3: 
+proporção de fibra: água de 1:2 (m/m). Médias com letras diferentes (letras maiúsculas nas linhas e letras 
+minúsculas nas colunas), indicam diferença significativa em análise de variância e teste de Tukey (p < 0,05). 
+Os resultados também indicam que o teor de polifenóis extraíveis totais não foi 
+afetado pela proporção de água utilizada e nem pelo número de ciclos de hidratação + 
+prensagens. Se não houve diferença significativa esse comentário não é pertinente. 
+Comparando com dados da literatura, Barreto et al. (2007) realizaram estudo com 
+duas fibras de safras diferentes, prensadas cinco vezes e obtiveram valores inferiores a 118 e 
+97,7 mg/100g. 
+ 
+ 
+48 
+ 
+ 
+5.5 Análise sensorial da fibra de caju úmida 
+Para a avaliação sensorial da fibra de caju, a equipe de provadores treinados recebeu 
+amostras codificadas da fibra de caju recebida da indústria, sem tratamento, e amostras de cada 
+um dos ciclos de hidratação + prensagem de cada um dos tratamentos (TR).  
+A evolução das médias de intensidade para cada descritor durante o decorrer dos 
+ciclos do processo para o tratamento TR1 (1:1), conforme a Figura9.Para o aroma característico 
+de caju (Gráfico 1A), houve uma redução de quase 50% na intensidade percebida com o 
+primeiro ciclo de hidratação. E a partir do segundo ciclo de hidratação e prensagem, a 
+intensidade do aroma se torna constante, mostrando que os sucessivos ciclos de hidratação e 
+prensagens não conseguiram retirar totalmente os compostos voláteis responsáveis pelo aroma 
+característico do caju. 
+Esse resultado está de acordo com o estudo de Nobre et al. (2015), no qual as fibras 
+resultantes do processamento do suco de caju obtidas no mesmo sistema de prensagem, 
+apresentaram uma rica fração de compostos voláteis, mesmo após sucessivas lavagens. De 
+acordo com os autores, os ésteres odoríferos foram substancialmente reduzidos, mas muitos 
+compostos foram liberados da fibra pela força utilizada na prensa Expeller e estiveram presentes 
+até a última hidratação. Entre eles estão compostos odoríferos como octanoato de etila, γ-
+dodecalactona, (E)-2-decenal, copaeno e cariofileno, os quais podem contribuir para o aroma 
+de caju mais suave, mas ainda perceptível nas fibras que foram prensadas e lavadas cinco vezes. 
+  
+49 
+ 
+ 
+Figura 9- Avaliação sensorial da fibra de caju em relação ao processo de hidratação e 
+prensagem do TR1(1:1). 
+ 
+Legenda: Escores 1 - ausente a 9 – forte. Valores seguidos de letras diferentes indicam diferença significativa de 
+acordo com o teste de Tukey (p < 0,05). 
+ 
+Para o sabor característico (Figura 9B), observa-se um comportamento semelhante 
+ao apresentado pelo aroma, porém, com valores obtidos nos dois últimos ciclos inferiores à 
+média obtida no 1º ciclo de hidratação e prensagem. O sabor característico de um alimento 
+também é formado pelos compostos voláteis odoríferos. Quando mastigamos o alimento, seu 
+aroma característico é liberado na boca e passa às narinas pela cavidade retronasal (nasofaringe) 
+até atingir o epitélio olfatório (DUTCOSKY, 2015). No entanto, colocamos uma pequena 
+porção de alimento na boca e os compostos voláteis são ainda diluídos na saliva, o que pode 
+causar uma percepção menos intensa na boca do que o aroma percebido no nariz. 
+Quanto à intensidade do gosto doce (Figura 9C), houve uma redução significativa 
+até o 3° ciclo de hidratação, chegando próximo ao valor zero da escala utilizada, correspondente 
+à total ausência da percepção sensorial. Esse resultado está de acordo com resultados obtidos 
+50 
+ 
+ 
+na análise de sólidos solúveis totais (Tabela 7) que mostrou redução de açúcares ao longo dos 
+ciclos de hidratação, resultado esperado, visto que os açúcares são solúveis em água. 
+Em relação ao gosto ácido (Figura 9D), não houve diferença significativa entre o 
+controle e primeira hidratação, apesar dessa intensidade ter sido reduzida em 23%. Houve uma 
+redução significativa da percepção da acidez (aproximadamente70%), do primeiro para o 
+segundo ciclo, permanecendo estável em torno de 1,0 até o final do processo.  
+Nos resultados de acidez titulável (Tabela 8) foram observadas reduções 
+significativas entre os ciclos de hidratação e prensagem, desde a primeira hidratação (redução 
+mais significativa). Entretanto, as reduções quantitativas observadas a partir do 3º ciclo não 
+foram suficientes para gerar uma diminuição na sensação sensorial percebida no paladar dos 
+provadores. 
+Para o atributo adstringência (Figura 9E), a média da intensidade percebida foi 
+muito baixa desde a amostra controle (sem hidratação), não apresentando diferença 
+significativa durante todo o processo. Esse resultado está de acordo com aqueles encontrados 
+na análise de polifenóis extraíveis totais, os quais também não apresentaram diferença 
+significativa entre os ciclos de hidratação e prensagem. 
+Assim, observou-se que, com a utilização de 1 parte de água para 1 parte de fibra 
+(TR1) e uma única hidratação foi suficiente para reduzir a percepção sensorial dos descritores 
+aroma e sabor característicos, enquanto duas lavagens foram necessárias para reduzir ao 
+máximo a percepção do gosto ácido e três lavagens a do gosto doce. 
+Para o tratamento TR2 (1;1,5) conforme Figura 10, o sabor característico, gosto 
+doce e adstringência apresentaram o mesmo comportamento de redução observado no 
+tratamento TR1. O aroma característico (Figura 10A) apresentou uma redução significativa em 
+relação ao controle somente com a 2ª hidratação, diferente do observado no TR1, onde a 
+redução ocorreu já na primeira hidratação. 
+ Quanto ao gosto ácido (Figura 10D), de modo diferente do TR1, foi observada 
+redução significativa em relação ao controle já na primeira hidratação (34%), e outra redução 
+significativa entre o 1º e o 2º ciclo (35%). A partir do 2º ciclo não houve mais diferença 
+significativa. 
+ 
+ 
+ 
+51 
+ 
+ 
+Figura 10- Avaliação sensorial da fibra de caju em relação ao processo de hidratação e 
+prensagem do TR2(1:1,5). 
+ 
+Legenda:  Escores 1 - ausente a 9 – forte. Valores seguidos de letras diferentes, indicam diferença significativa de 
+acordo com o teste de Tukey (p < 0,05). 
+Também não houve diferença significativa para a adstringência (Figura 10E), que 
+se mostrou-se ausente em sua intensidade percebida independentemente dos ciclos de lavagem 
+e prensagem empregados. Para TR2 (1,5 partes de água para 1 parte de fibra), uma única 
+hidratação foi suficiente para reduzir a percepção sensorial do sabor característico, enquanto 
+duas lavagens foram necessárias para reduzir ao máximo a percepção dos descritores aroma 
+característico, gostos doce e ácido. 
+ 
+52 
+ 
+ 
+Na Figura 11 encontram-se discriminados os resultados para a intensidade dos 
+descritores sensoriais relacionados ao tratamento TR3 (1:2). O aroma característico (Figura 
+11A) apresentou comportamento semelhante ao observado no tratamento TR1, com redução de 
+41% de sua intensidade já no primeiro ciclo de hidratação, permanecendo constante até quase 
+o final do processo. No entanto no 5° ciclo houve uma redução significativa em relação ao valor 
+observado no 4º ciclo, porém esse valor (2,3) não diferiu significativamente dos demais ciclos. 
+Diferente do apresentado nos tratamentos anteriores (TR1 e TR2), a utilização de 
+mais água, neste tratamento, permitiu uma redução do sabor característico (Figura 11B) de 
+quase 75% no 2º ciclo em relação ao controle. Houve uma leve oscilação nos demais ciclos, 
+porém pode-se considerar que a intensidade percebida para o sabor característico de caju 
+permaneceu constante até o último ciclo. 
+Para o gosto doce (Figura 11C) houve uma redução significativa já no 1° ciclo de 
+hidratação, com valores muito próximos de zero, indicando quase ausência, esse resultado está 
+de acordo com aqueles obtidos para sólidos solúveis totais (Tabela 7), que mostrou redução de 
+69% a 98% ao longo dos ciclos de hidratação. 
+O gosto ácido (Figura 11D) apresentou comportamento semelhante ao observado 
+para os tratamentos anteriores, porém, a adstringência (Figura 11E) apresentou uma maior 
+redução no 2º ciclo em relação ao controle. 
+A utilização de 2 partes de água para 1 parte de fibra (TR3) permitiu que com uma 
+única hidratação fosse possível reduzir a percepção sensorial dos descritores aroma 
+característico e gosto doce, enquanto duas lavagens são necessárias para reduzir ao máximo a 
+intensidade dos descritores sabor característico, gosto ácido e adstringência. 
+Para avaliar a influência da proporção de água foi realizada a comparação entre os 
+tratamentos, dentro de cada ciclo (Tabela 11). O aroma característico de caju não foi 
+influenciado pela quantidade de água nas lavagens, por não haver diferença significativa entre 
+os tratamentos em nenhum dos ciclos, apesar de apresentar uma variação da intensidade de 2,6 
+a 4,2, colocando o aroma presente nos tratamentos com intensidade entre fraca a média. 
+  
+53 
+ 
+ 
+Figura 11- Avaliação sensorial da fibra de caju em relação ao processo de hidratação e 
+prensagem do TR3 (1:2). 
+ 
+Legenda:  Escores 1 - ausente a 9 – forte. Valores seguidos de letras diferentes, indicam diferença significativa de 
+acordo com o teste de Tukey (p < 0,05). 
+O sabor característico do caju apresentou médias variando de 1,5 a 3,1 com diferença 
+significativa entre os tratamentos apenas nos 2° e 5° ciclos, sendo o menor valor apresentado 
+pelo TR3 devido à maior quantidade de água presente nesse tratamento.  
+Quanto ao gosto doce, no 1º ciclo, o TR1apresentoumaior intensidade (1,7) que (± 
+1,40 TR3 (0,6). No entanto, com a sequência de ciclos de hidratação + prensagem, ocorreu uma 
+redução da sua percepção, com valores médios entre 0,6 a 0,2, indicando que nenhum gosto 
+doce foi percebido nos tratamentos após o 1º ciclo. 
+ 
+54 
+ 
+ 
+Tabela 11- Avaliação de percepção dos atributos para fibra de caju em relação a proporção de 
+água e número de ciclos. 
+Aroma Sabor 
+Gosto 
+Tratamentos característico característico Gosto doce Adstringência 
+ácido 
+de caju de caju 
+1° ciclo 
+aaaaa
+Trat. 1:1 3,2 3,1 1,7 2,6 1,5 
+aa abaab
+Trat. 1:1,5 4,2 2,91,2 2,3 1,1 
+aabbb
+Trat. 1:2 3,5 2,6 0,6 1,5 0,9 
+2° ciclo 
+aababab
+Trat. 1:1 3,6 2,2 0,6 1,1 1,0 
+aaaaa
+Trat. 1:1,5 3,7 2,5 0,6 1,5 1,3 
+abacb
+Trat. 1:2 3,9 1,5 0,4 0,6 0,7 
+3° ciclo 
+aaaaba
+Trat. 1:1 3,5 2,3 0,3 1,1 1,0 
+aaaaa
+Trat. 1:1,5 3,0 2,2 0,5 1,3 0,9 
+aaaba
+Trat. 1:2 3,0 2,0 0,4 0,7 0,7 
+4° ciclo 
+aaaaab
+Trat. 1:1 3,7 2,0 0,5 1,0 0,9 
+aabaa
+Trat. 1:1,5 3,5 1,7 0,2 1,0 1,3 
+aaaab
+Trat. 1:2 3,8 1,9 0,5 0,9 0,7 
+5° ciclo 
+ aababb
+Trat. 1:1 3,4 1,9 0,6 0,8  0,6 
+aabaa
+Trat. 1:1,5 3,2 2,3 0,5 1,0  1,0 
+abc cb
+Trat. 1:2 2,6 1,5 0,2 0,4 0,5 
+*Valores seguidos de letras diferentes, nas colunas, indicam diferença significativa de acordo com o teste de Tukey 
+(p < 0,05). 
+O gosto ácido foi o descritor que apresentou a maior variação na intensidade média, 
+apresentando valores de 2,6 (TR1, 1º ciclo) a 0,4 (TR3, 5º ciclo) ao longo do processo. É 
+possível observar que houve diferença entres os tratamentos na maioria dos ciclos, com o TR3 
+destacando-se com as menores médias de intensidade para o descritor.  
+Apesar de apresentar intensidade muito baixa (< 1,5) nos tratamentos, a 
+adstringência sofreu influência da quantidade de água nas lavagens, na maioria dos ciclos. O 
+TR3 apresentou as menores médias (0,9 a 0,5) em comparação aos demais tratamentos.  
+Com resultados obtidos, conclui-se que não há necessidade da realização de cinco 
+ciclos de hidratação e prensagem no tratamento das fibras para reduzir o sabor e aroma de caju 
+podendo utilizar a fibra de caju em formulações de alimentos. É possível, portanto, realizar dois 
+ou três ciclos de hidratação + prensagem da fibra, com qualquer das proporções de água 
+utilizadas, uma vez que não se observou diferença significativa dos descritores entre os 
+tratamentos. Além disso, os valores de umidade, sólidos solúveis totais, acidez, fenólicos e pH 
+corroboram com os resultados sensoriais. 
+55 
+ 
+ 
+5.6 Avaliação da secagem da fibra tratada em estufa, secador de bandeja e liofilizador 
+Embora os resultados da etapa de pré-tratamento da fibra demonstraram que o 
+tratamento TR1 com dois ciclos ou três ciclos de hidratação + prensagem são suficientes para 
+a remoção de forma significativa do sabor residual de caju e da acidez e do teor de açúcares, os 
+experimentos de secagem da fibra tiveram que ser conduzidos antes da conclusão desta 
+pesquisa, por consequência da pandemia. Na ocasião, decidiu-se empregar o tratamento TR3 
+com 3 ciclos de lavagem para avaliação dos diferentes métodos de secagem. 
+5.6.1 Rendimento do processo de secagem e umidade 
+O rendimento dos processos de secagem é relacionado ao teor inicial e final de 
+umidade das fibras (Tabela 12). Para o mesmo teor de umidade inicial, processos com maior 
+rendimento, consequentemente, originam produtos com um valor final menor de umidade. 
+Entre os métodos empregados e processos testados, a liofilização apresentou fibras com menor 
+teor de umidade final e, portanto, menor rendimento (27,8%), enquanto os processos com 
+secador de bandeja e estufa apresentaram rendimento levemente superior, com umidade final 
+dos produtos maiores do que os obtidos por liofilização. 
+Tabela 12- Rendimento e umidade em diferentes processos de secagem de fibra de caju. 
+Tipo de secagem Rendimento (%) Umidade inicial Umidade final 
+(%) (%) 
+aa
+Secador de bandeja 30,0 ± 0,70 72,5 7,13± 0,15 
+aba
+Estufa de ar forçado 29,0 ± 0,91 72,5 6,8± 0,07 
+bb
+Liofilização 27,8 ± 0,1 70,6 3,6± 0,03 
+*Valores seguidos das mesmas letras, nas colunas, não diferem entre si pelo teste de Tukey (p < 0,05). 
+Média de 3 repetições de processo. 
+O teor de umidade da fibra liofilizada foi de 3,6%, enquanto a fibra seca no secador 
+de bandeja apresentou teor de 7,13% e a da estufa de 6,8%. O teor de umidade da fibra obtido 
+pelos três processos de secagem apresentou valores diferenciados, uma vez que cada método 
+de secagem e tipo de equipamento retida a água do produto de forma diferente, mesmo muitas 
+vezes empregando-se a mesma relação tempo temperatura. Lima et al. (2014) apresentaram 
+resultados menores para amostras secas em estufa (4,91%) e semelhantes para a amostra 
+liofilizada (3,5%). utilizando o processo de secagem de 30 h com temperatura máxima de 30 
+ºC. %). Entretanto a quantidade de produto que entra no processo de secagem é um dado de 
+processo igualmente importante, ou seja, a capacidade de produção de cada equipamento. Pinho 
+56 
+ 
+ 
+(2012) obteve teor de umidade aproximado de 4,04% ao submeter a fibra de caju ao processo 
+de liofilização, valor superior ao encontrado no presente estudo. 
+5.7 Capacidade de absorção de água (CAA) e de óleo (CAO) das fibras desidratadas 
+A capacidade de retenção ou absorção de água CAA (Tabela 13) das fibras obtidas 
+nos três equipamentos não apresentou diferença significativa (p > 0,05). A fibra C (liofilizador) 
+demonstrou maior valor de CAA com percentual de 767,1% (quantidade de água absorvida por 
+100g de amostra), possivelmente devido à maior remoção de água nesse tipo de processo. 
+Tabela 13- Capacidade de absorção de água e óleo das fibras secas. 
+Amostras Capacidade de absorção de água Capacidade de absorção de óleo 
+(g/100g) (g/100g) 
+ab
+Fibra A 634,8 ± 38,9 361,5 ± 41,8 
+ab
+Fibra B 690,2 ± 85,0 353,3 ± 22,3 
+aa
+Fibra C 767,1 ± 23,3 450,4 ± 11,9 
+Legenda: Fibra A - seca em secador de bandeja (50°C por 24 horas); Fibra B- seca em estufa de ar forçado 
+(50°C por 24 horas) e Fibra C - seca em liofilizador (19 horas e 20 minutos).*Valores seguidos das mesmas 
+letras, nas colunas, não diferem entre si (Tukey, p < 0,05). 
+LIMA et al. (2014) realizaram secagem da fibra de caju na proporção de água 1:1 
+em estufa e liofilizador usando temperaturas próximas as empregadas no presente estudo, e 
+obtiveram valores de 451,78% (estufa) e 597,02% (liofilizador), percentuais inferiores aos 
+encontrados para as fibras B e C. 
+A capacidade de retenção ou absorção de água e óleo são propriedades importantes 
+quando se fala em aplicação em alimentos. Uma alta CAA é indicativo do potencial de 
+hidratação desejável na aplicação de farinhas para produtos cárneos, de preparo rápido e 
+panificação por permitir uma maior adição de água na massa, ajudando o manuseio e deixando 
+a massa menos propícia ao ressecamento durante o armazenamento (CLERICI; EL-DASH, 
+2008).  
+A CAO tem grande importância na formulação de alimentos, pois influenciar na 
+ordenação dos ingredientes na hora do preparo, ou seja, o tempo que a mistura vai demorar para 
+absorver o óleo além de influenciar nos sabores e textura do produto final, sendo uma 
+característica importante para indústria de alimentos cárneos emulsionados (CHAUD; 
+SGARBIERI, 2006; KHATTAB; ARNTFIELD, 2009).  
+57 
+ 
+ 
+A CAO da fibra liofilizada (fibra C) se destacou com maior capacidade de absorção 
+(450,4%) e diferindo se significativamente (p < 0,05) das demais fibras que possuíram CAO de 
+361,5% (fibra A) e 353,3% (fibra B).  
+Em estudo realizado por Lima et al. (2014), foi encontrada para a amostra 
+liofilizada 476,27% de CAO, valor superior ao encontrado no presente trabalho, enquanto, para 
+a fibra seca em estufa (183,43%), o valor foi menor. 
+A temperatura e forma que ocorre a retirada de umidade da amostra, pode modificar 
+a estrutura da fibra, favorecendo positivamente ou não a hidratação e absorção de óleo. Essa 
+capacidade de absorção de água da fibra está diretamente ligada em como ela irá se comportar 
+nos em diferentes produtos, influenciando na textura dos alimentos, assim os altos valores 
+apresentados na Tabela 13 são bastante promissores. 
+5.8 Cor das fibras secas 
+A análise de cor instrumental das fibras (Tabela 14) foi efetuada para identificar a 
+influência dos processos de secagem na cor da fibra. Os parâmetros de cor avaliados foram a 
+luminosidade (L*), podendo variar de 0 (preta) a 100 (branca). A coordenada a* varia do 
+vermelho (+ 60) ao verde (– 60) e a coordenada b* do amarelo (+ 60) ao azul (– 60) 
+(BONACITA et al., 2017). 
+As fibras A e B apresentaram coloração mais escura, com valores de L* menores 
+(41,4% e 40,1%, respectivamente), diferindo significativamente da fibra C (62,0%), que 
+apresentou aspecto mais claro. As fibras desidratadas obtidas nos processos A e B 
+apresentaram-se mais avermelhadas, coordenada a*, em comparação à fibra C. Além disso, o 
+processo de liofilização (fibra C) manteve mais a cor amarela (b*) da fibra úmida do que as 
+fibras obtidas pelos outros processos. 
+Valores próximos foram encontrados por Lima et al. (2014), onde a fibra de caju 
+seca em estufa apresentou valores de L* (38,39), a* (7,72) e b* (18,62), enquanto a fibra 
+liofilizada apresentou valores de L*(48,07), a* (5,44) e b*(17,26). 
+ 
+ 
+ 
+ 
+ 
+58 
+ 
+ 
+Tabela 14- Cor das fibras secas por diferentes métodos de secagem. 
+Amostras Cor 
+L* a* b* 
+bab
+Fibra A 41,4 ± 0,19 6,6 ± 0,17 20,4 ± 0,34 
+bbb
+Fibra B 40,1 ± 0,69 7,1 ± 0,23 20,2 ± 0,50 
+aca
+Fibra C 62,0 ± 0,19 5,5 ± 0,09 22,8 ± 0,18 
+Legenda: Fibra A - seca em secador de bandeja (50°C por 23 horas); Fibra B - seca em estufa de ar forçado 
+(50°C por 24 horas) e Fibra C - seca em liofilizador (19 horas e 20 minutos). *Valores seguidos de letras 
+diferentes, nas colunas, indicam diferença significativa em teste de Tukey, (p < 0,05). 
+É perceptível essa diferença de coloração ao visualizar a Figura 12 (A-D) que 
+mostra a coloração da fibra inicial (Figura 12A), sem secagem e as amostras liofilizada (Figura 
+12B), seca em secador de bandejas (Figura 12C) e em estufa (Figura 12D). 
+Figura 12- Cor da fibra de caju úmida e em diferentes processos de desidratação: fibra úmida 
+(A) e após a secagem em liofilizador (B), secador de bandeja (C) e estufa (D). 
+A B 
+C D 
+ 
+Fonte: Autora, 2022. 
+ 
+59 
+ 
+ 
+5.9 Teor de fenólicos totais 
+As fibras secas apresentaram quantidade relevante de fenólicos (Tabela 15), 
+ocorrendo uma variação para cada tipo de processo, indicado pela diferença significativa entre 
+os tratamentos. A fibra C (secador de bandeja) se destacou com a maior quantidade de fenólicos, 
+98,42 mg GAE eq/100g, evidenciando a conservação desses constituintes pelo processo de 
+liofilização. 
+As demais fibras tiveram uma redução no teor de compostos fenólicos em 
+decorrência das temperaturas de secagem ou mesmo pela forma que a secagem ocorre nos 
+diferentes equipamentos utilizados, evidenciando que a liofilização foi o método que mais 
+preservou os compostos fenólicos presentes na fibra de caju.  
+Tabela 15- Teores de polifenóis extraíveis totais da fibra de caju por diferentes métodos de 
+secagem. 
+AMOSTRAS mg GAE eq/100 g de amostra 
+c
+Fibra A 72,04 ± 5,62 
+b
+Fibra B 89,01 ± 2,03 
+a
+Fibra C 98,42 ± 1,40 
+Legenda: Fibra A - seca em secador de bandeja (50°C por 23 horas); Fibra B - seca em estufa de ar forçado 
+(50°C por 24 horas) e Fibra C - seca em liofilizador (19 horas e 20 minutos). *Valores seguidos das mesmas 
+letras, nas colunas, não diferem entre si (Tukey, p < 0,05). 
+ 
+5.10 Atividade antioxidante 
+5.10.1 Capacidade antioxidante pela captura do radical DPPH 
+A capacidade antioxidante da fibra de caju desidratada (Tabela 16) foi influenciada 
+pelo método de secagem. A fibra C apresentou a maior capacidade antioxidante (CE 0,026 
+50
+mg/mL), seguida da fibra B (0,033 mg/mL),e a A (0,097 mg/mL).A fibra C apresentou valores 
+próximos do ácido ascórbico (0,023 mg/mL), destacando-se que a fibra quando desidratada por 
+liofilização mantém a atividade antioxidante elevada. Tendência também vista pela fibra B que 
+possui uma atividade antioxidante próxima a apresentada pela fibra C e o ácido ascórbico. 
+ 
+ 
+ 
+60 
+ 
+ 
+Tabela 16- Atividade antioxidante pela captura do radical DPPH das fibras secas pelos 
+diferentes métodos de secagem. 
+AMOSTRAS CE mg/mL 
+50
+Fibra A  0,097 ± 0,01 
+Fibra B  0,033 ± 0,01 
+Fibra C  0,026 ± 0,01 
+Ácido Ascórbico 0,023 ± 0,01 
+Trolox® 0,015 ± 0,01 
+Legenda: Fibra A - seca em secador de bandeja (50°C por 23 horas); Fibra B - seca em estufa de ar forçado 
+(50°C por 24 horas) e Fibra C - seca em liofilizador (19 horas e 20 minutos). CE – Concentração eficaz 
+50
+.
+para inibir 50% do radical DPPHCE
+50. 
+5.10.2 Capacidade antioxidante pelo método ABTS 
+Os resultados de atividade antioxidante obtidos pelo método ABTS (Tabela 17) 
+demonstram que a secagem também influenciou na capacidade antioxidante presente na fibra 
+de caju. A fibra A apresentou a menor atividade antioxidante de 1,425 µM Trolox/mg diferindo 
+estatisticamente diferente das demais. 
+As fibras B e C não possuíram diferença significativa entre si indicando que a 
+secagem por liofilização ou por estufa de ar forçado podem ser empregadas sem que ocorra 
+perdas na atividade antioxidante da fibra de caju. 
+Tabela 17- Capacidade antioxidante das fibras secas obtida pelo método ABTS, sendo por 
+diferentes métodos de secagem. 
+AMOSTRAS µM Trolox/mg de amostra 
+b
+Fibra A 1,4 ± 0,1 
+a
+Fibra B 1,9 ± 0,4 
+a
+Fibra C 1,9 ± 0,1 
+Legenda: Fibra A - seca em secador de bandeja (50°C por 23 horas); Fibra B - seca em estufa de ar forçado 
+(50°C por 24 horas) e Fibra C - seca em liofilizador (19 horas e 20 minutos). *Letras diferentes seguindo as 
+médias indicam diferença significativa em teste de ANOVA e comparação múltipla de Tukey (p < 0,05). 
+A fibra de caju é um ingrediente com uma capacidade antioxidante sendo possível 
+relacioná-la com os compostos fenólicos. As fibras com maiores quantidades de compostos 
+fenólicos, foram também as que apresentaram maior atividade antioxidante tanto ao capturar o 
+radical DPPH como o radical ABTS. 
+ 
+61 
+ 
+ 
+5.11 Aplicação da fibra de caju em croquete plant-based 
+5.11.1 Composição centesimal 
+A composição centesimal (Tabela 18) das formulações utilizadas na preparação dos 
+croquetes mostra que o teor de umidade apresentou pequena diferença em relação ao percentual 
+utilizado de fibras de caju (FC), sendo a formulação com 50% a que apresentou menor umidade. 
+Os teores de cinzas apresentaram diferença significativa entre si. 
+Tabela 18- Composição centesimal dos croquetes com fibra de caju e proteína de soja. 
+Composição (%) 30% FC* 40% FC** 50% FC*** 
+aab
+Umidade 55,2 ± 0,8 55,5± 0,3 53,6 ± 0,5 
+abc
+Cinzas 1,5 ± 0,1 1,4 ± 0,01 1,4 ± 0,1 
+aab
+Lipídeos 1,8 ± 0,1 1,9± 0,1 1,2± 0,2 
+aab
+Proteína 9,61 ± 0,4 8,8± 0,9 7,2 ± 0,1 
+bba
+Carboidratos 31,6 ± 0,8 32,4± 0,9 36,5± 0,6 
+Legenda: *Croquete com 30% de fibra de caju e 30% de proteína de soja, **Croquete com 40% de fibra de caju 
+e 20% de proteína de soja e ***Croquete com 50% de fibra de caju e 10% de proteína de soja. FC – fibra de caju. 
+*Médias seguidas de letras diferentes indicam diferença significativa, em Anova e teste de Tukey (p < 0,05). 
+O teor de lipídeos do croquete com 50% FC diferiu das demais formulações, ao 
+possuir o menor valor (1,20%). Como foi adicionada proteína de soja aos croquetes para 
+aumentar o teor proteico, uma vez que a fibra do caju é pobre em proteína, a formulação com 
+menor quantidade de soja (50% FC) adicionada consequentemente apresentou menor 
+quantidade de proteína (7,2%). 
+Em relação ao teor de carboidratos, a formulação com maior quantidade de fibra 
+(50%) apresentou maior quantidade de carboidratos, pois a fibras de caju é rica em fibra 
+alimentar. A Figura 13 (A-B) mostra os croquetes preparados nas diferentes proporções da fibra 
+de caju. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+62 
+ 
+ 
+ 
+ 
+ 
+Figura 13- Croquetes de fibras de caju com proteína de soja. 
+A B 40% Fibra de caju (FC) 
+30% Fibra de caju (FC) 
+C 30% Fibra de caju (FC) 
+50% Fibra de caju (FC) D 
+ 
+Fonte: Autora, 2022. 
+ 
+5.12  Análise sensorial 
+5.12.1 Perfil dos provadores (consumidores) 
+O grupo de consumidores que participou do teste sensorial compôs-se 
+majoritariamente de pessoas do sexo feminino (63%) (Figura 14A). Tratou-se de um público 
+jovem (33% inferior a 25anos e 28% entre 25 e 35 anos) (Figura 14B), com elevada escolaridade 
+(Figura 14C), com a maioria (45%) possuindo curso superior incompleto ou completo, seguido 
+daqueles com pós-graduação (40%). 
+ 
+ 
+ 
+ 
+63 
+ 
+ 
+ 
+ 
+Figura 14- Perfil dos provadores da análise sensorial do croquete de fibra de caju com proteína 
+de soja. 
+A 
+B 
+ 
+C 
+ 
+Fonte: Autora, 2022. 
+Quanto aos resultados obtidos com relação ao consumo de produtos plant-based 
+(tabela 19), 82% dos provadores afirmaram já ter consumido esse tipo de produto, já em relação 
+a frequência de consumo, a maioria (53%) afirmou consumir mensalmente produtos. As 
+motivações para consumo esse tipo de produto foram principalmente a busca por produtos com 
+apelo funcional (77%) e a diminuição do consumo de produtos de origem animal (42%), 
+mostrando serem consumidores conscientes em relação aos produtos que consomem.  
+64 
+ 
+ 
+Quando questionados sobre já terem consumido produtos com fibra de caju em sua 
+formulação, a maioria afirmou que sim (83%), e os produtos citados foram hambúrguer de fibra 
+de caju (53%), carne de caju (12%) e salgados (10%). 
+Tabela 19- Conhecimento sobre produtos plant-based e fibra de caju. 
+Você gosta de caju? 
+ 
+Sim 90 % 
+Não 10 % 
+Você já ouviu falar em produtos com fibra de caju? 
+ 
+Sim 95 % 
+Não 5 % 
+Você já consumiu ou consome produtos plant-based (à base 
+de plantas), como exemplo: produtos à base de carne de jaca, 
+fibra de caju, pancs, proteínas de soja, etc..? 
+ 
+Sim 82 % 
+Não 18 % 
+Qual a sua frequência de consumo dos produtos plant-based 
+(à base de plantas)? 
+ 
+2 a 3 vezes por semana 7 % 
+Quinzenalmente 13 % 
+Mensalmente 53 % 
+Prefiro não informar 27 % 
+O que leva/levaria você a consumir produtos plant-based? 
+(Pode marcar mais de uma opção) 
+ 
+A busca por alimentos com apelo 
+77 % 
+funcional 
+O sabor deles é mais gostoso. 15 % 
+Diminuir o consumo de produtos de 
+42 % 
+origem animal 
+São produtos mais baratos que os de 
+3 % 
+origem animal. 
+Você já consumiu ou consumiria algum produto que continha 
+ou contém fibra de caju na formulação? 
+ 
+Sim 83 % 
+Não 17 % 
+Carne de caju 12 % 
+Hambúrguer de caju 53 % 
+Salgados 10 % 
+Prefiro não informar 8% 
+Fonte: Autora, 2022. 
+  
+65 
+ 
+ 
+5.12.2 Aceitabilidade 
+Na avaliação sensorial de croquetes, os resultados das médias de aceitação global 
+(AG) e aceitação por atributos (aparência externa, aparência interna, sabor e textura) dos 
+croquetes é apresentada na Tabela 20. Todas as formulações apresentaram ótima aceitabilidade, 
+com médias variando entre 7,5 e 8,0, muito próximas à categoria “gostei muito” da escala 
+hedônica, tanto para a aceitação global, quanto para os atributos avaliados, evidenciando que 
+os croquetes foram bem aceitos pelos provadores. 
+ 
+Tabela 20- Aceitação das formulações de croquetes de fibra de caju enriquecidos com proteína 
+de soja (PTS). 
+Atributos Formulações 
+ 
+30% FC* 40% FC**50% FC*** 
+aaa
+Aceitação Global (AG) 7,7 ± 1,2 8,0 ± 0,9 7,7 ± 1,2 
+aaa
+Aparência Externa 8,0 ± 1,0 7,9 ± 1,0 7,9 ± 1,0 
+aaa
+Aparência Interna 7,6 ± 1,2 7,6 ± 1,2 7,6 ± 1,0 
+aaa
+Sabor 7,6 ± 1,3 7,8 ± 1,2 7,5 ± 1,5 
+aaa
+Textura 7,7 ± 1,2 7,6 ± 1,1 7,7 ± 1,3 
+*Croquete com 30% de fibra de caju e 30% de proteína de soja, **Croquete com 40% de fibra de caju e 20% de 
+proteína de soja e ***Croquete com 50% de fibra de caju e 10% de proteína de soja. FC – fibra de caju. Valores 
+seguidos de letras diferentes, nas colunas, indicam diferença significativa em Anova e teste de Tukey (p <0,05). 
+Observa-se ainda que não houve diferença significativa entre as formulações para 
+nenhum dos atributos analisados, mesmo no croquete com maior quantidade de fibra de caju 
+(50%) em sua formulação, indicando que o aumento do teor de fibra de caju na formulação, de 
+30 para 50%, não prejudicou a sua aceitabilidade. 
+Os resultados obtidos para o croquete de fibra de caju e proteína de soja foram 
+próximos da aceitabilidade apresentada pelo hambúrguer vegetal de fibra de caju e feijão-caupi 
+avaliados no estudo de LIMA et al. (2018), em que a média de aceitação global foi 7,8. Também 
+foram superiores aos valores alcançados pelo hambúrguer de caju em outros estudos (LIMA et 
+al., 2014; LIMA et al., 2017), nos quais foram obtidas médias entre 7,0 e 7,2.  
+ 
+5.12.3 Avaliação da intensidade dos termos descritores (Diagnóstico de atributos) 
+Para a intensidade dos termos descritos (Tabela 21), a formulação com 50% de FC 
+foi a que apresentou maior intensidade (3,9) do sabor de caju, em decorrência da maior 
+quantidade de fibra presente em sua composição, diferindo-se das demais formulações que 
+apresentaram intensidade de 2,8 (30% de FC) e 2,7 (40% de FC).  
+66 
+ 
+ 
+A formulação com 50% de FC também apresentou maior intensidade de acidez 
+(2,2) em relação à formulação com 40% (1,7) e com 30% (1,9). Para os descritores firmeza e 
+fibrosidade, observou-se uma leve tendência de aumento na intensidade com o aumento do teor 
+de fibras, acrescentando características de consistência ao produto na qual ela é aplicada, ou 
+seja, tornado o produto mais firme. 
+E embora não tenha ocorrido diferença significativa entre as formulações para esses 
+dois atributos, nota-se que a formulação com 50% de fibra de caju obteve os maiores scores de 
+intensidade e a percepção da intensidade para fibrosidade e firmeza ficou entre leve e média na 
+escala utilizada. 
+Tabela 21- Intensidade dos atributos percebidos pelos provadores nas formulações de croquete 
+de fibra de caju enriquecida com proteína de soja. 
+Atributos Formulações 
+30% FC* 40% FC** 50% FC*** 
+bba
+Sabor de Caju 2,8 ± 2,1 2,7 ± 2,1 3,9 ± 2,5 
+abba
+Acidez 1,9 ± 1,4 1,7 ± 1,1 2,2 ± 1,7 
+aaa
+Firmeza 4,8 ±2,0 4,6 ± 2,1 5,2 ± 2,0 
+aaa
+Fibrosidade 3,3 ± 2,2 3,6 ± 2,0 3,8 ± 2,3 
+*Croquete com 30% de fibra de caju e 30% de proteína de soja, **Croquete com 40% de fibra de caju e 20% de 
+proteína de soja e ***Croquete com 50% de fibra de caju e 10% de proteína de soja. FC – fibra de caju. Valores 
+seguidos de letras diferentes, nas colunas, indicam diferença significativa em Anova e teste de Tukey (p < 0,05).  
+ 
+5.12.4 Escala do ideal para textura e intenção de compra 
+Por meio da Figura 15, observa-se que os croquetes com as diferentes quantidades 
+de fibra de caju possuíram percentuais distintos quanto a serem considerados tendo a firmeza 
+ideal para este tipo de produto. A formulação com 30% de FC foi considerada por 70% dos 
+entrevistados como possuindo a firmeza ideal. A formulação com 40% de FC obteve percentual 
+de 62% e a formulação com 50% de FC obteve percentual de 67%. Isso indica que a firmeza 
+ideal foi daquele com a menor quantidade de fibra de caju (30%) e maior proporção de proteína 
+de soja texturizada (30%). 
+ 
+ 
+67 
+ 
+ 
+ 
+Figura 15- Percentual para o teste de textura ideal para os croquetes de fibra de caju com 
+proteína de soja. 
+Textura ideal
+80
+70%
+67%
+70
+62%
+60
+50
+40
+30%
+30
+23%
+22%
+20
+8%
+5%5%
+10
+2%
+1%
+0%
+0
+Firmeza muito acimaFirmeza acima doFirmeza IdealFirmeza um pouco
+do idealidealabaixo do ideal
+30% FC*40% FC**50% FC***
+ 
+Legenda: *Croquete com 30% de fibra de caju e 30% de proteína de soja, **Croquete com 40% de fibra de caju 
+e 20% de proteína de soja e ***Croquete com 50% de fibra de caju e 10% de proteína de soja. 
+Em relação à intenção de compra dos croquetes (Figura16), a formulação com 
+adição de 40% de FC apresentou a melhor intenção de compra, com 90% das respostas nas 
+categorias de intenção de compra positiva (provavelmente e certamente compraria). As 
+formulações com 30 e 50% de FC também apresentaram um desempenho satisfatório, com mais 
+de 75% das respostas nas categorias de intenção de compra positiva, o que destaca que os 
+croquetes elaborados indicam potencial como alternativa viável para emprego da fibra de caju. 
+  
+68 
+ 
+ 
+Figura 16- Intenção de compra para os croquetes de fibra de caju com proteína de soja. 
+Intenção de compra
+60
+55%
+53%
+47%
+50
+37%
+40
+30%
+30
+23%
+17%
+20
+15%
+8%8%
+10
+3%
+2%
+0
+Certamente ComprariaProvavelmenteTalvezProvavelmente não
+ComprariaComprasse/Talvez nãocompraria
+Comprasse
+30% FC*40% FC**50% FC***
+ 
+Legenda: *Croquete com 30% de fibra de caju e 30% de proteína de soja, **Croquete com 40% de 
+fibra de caju e 20% de proteína de soja e ***Croquete com 50% de fibra de caju e 10% de proteína 
+de soja 
+  
+69 
+ 
+ 
+6 CONCLUSÃO 
+Os resultados obtidos proporcionaram um conhecimento acerca do melhor 
+tratamento a ser utilizado no processamento do bagaço de pedúnculo de caju, resíduo 
+agroindustrial, para possibilitar seu uso como ingrediente em formulações de alimentos, de 
+forma a torná-lo menos perecível, aumentando a sua vida útil por meio da redução do teor de 
+umidade, reduzindo consequentemente peso e volume, facilitando seu armazenamento e 
+transporte. 
+Na extração de compostos solúveis e característicos de caju, conclui-se que pode 
+ser usado processamento com a extração aquosa em três ciclos sequenciais de hidratação e 
+prensagem, com proporção de água igual (1:1) ou 50% maior (1:1,5) que a quantidade de 
+bagaço de caju que está sendo tratado. Desta forma, reduz-se o sabor e aroma característico de 
+caju, evidenciado pela análise sensorial, e teores de sólidos solúveis e acidez, além do pH.  
+Na avaliação de diferentes métodos de secagem, o processo de liofilização 
+apresentou os melhores resultados em relação à propriedade tecnológica de capacidade de 
+absorção de água e manutenção da cor, seguido de secagem em bandejas e estufa. Porém, os 
+três processos podem ser empregados, considerando-se o custo oneroso da liofilização frente a 
+secagem em estufa e bandejas, sem ocasionar grandes perdas. 
+A aplicação da fibra de caju em formulação de croquete, indicou que pode ser 
+utilizada proporção de 30 a 40% de fibra para obtenção de um produto com boa aceitabilidade 
+e intenção de compra. Maiores teores de fibra de caju podem levar a maior percepção de sabor 
+de caju, podendo ser um fator de rejeição por parte dos provadores.      
+  
+70 
+ 
+ 
+REFERÊNCIAS 
+ABNT, ABNT NBR ISO 8586; Análise sensorial — Guia geral para a seleção, treinamento e 
+monitoramento de avaliadores selecionados e de especialistas ou experts. [S. l.;s. n.] 33 p, 
+ABNT,  2016 
+ALBUQUERQUE, T. L.; GOMES, S. D. L.; JUNIOR, J. E. M.; JUNIOR, I. J. S.; ROCHA, 
+M. V. P. Xylitol production from cashew apple bagasse by Kluyveromyces marxianus 
+CCA510. Catalysis Today,  v. 255, p. 33–40, 2015.    
+ALVES, F. M. S.; MACHADO, A. V.; QUEIROGA, K. H. Alimentos produzidos a partir de 
+farinhas de caju, obtida por secagem. Revista Verde de Agroecologia e desenvolvimento 
+Sustentável. v.6, n.3, p.131-138, 2011.  
+AMARAL, S. M. B.; NASCIMENTO, C. P.; OLIVEIRA, B. F.; ALMEIDA, M. J. O.; 
+SANTOS, S. M. L.; DAMACENO, M. N. Pó de resíduo de polpa de caju: processamento e 
+caracterização. Prática e Pesquisa em Ciência e Tecnologia de Alimentos 3: Atena, p. 140-
+152, 2020. 
+AMORIM, Q. S.; BARROS, H. E. A.; SILVA, S. L. C.; GUALBERTO, S. A.; SILVA, M. V. 
+Resíduos da indústria processadora de polpas de frutas: capacidade antioxidante e fatores 
+antinutricionais. Revista em Agronegócio e Meio Ambiente, v. 12, n. 2, p. 591-608, 2019.  
+ANGELO, P. M.; JORGE, N. Compostos fenólicos em alimentos – Uma breve revisão. 
+Anuário Brasileiro de Fruticultura. Santa Cruz do Sul: Editora Gazeta, p.104, [s.l.], 2015 
+ANKOM. Rapid determination of oil/fat utilizing high temperature solvent extraction, 
+Technology Method, 12-12-05 Macedon, [S. l.;s. n.], p.2, 2009,  
+AOAC - Association of Official Analytical Chemists. Official Methods 991.43. Total, 
+Soluble, and Insoluble Dietary Fiber in Foods, Enzymatic-gravimetric method, ed. 20, [s .l], 
+2016. 
+AOCS - American Oil Chemists’ Society. Official Method Am 5-04. Rapid determination 
+of oil/fat utilizing high temperature solvent extraction. Urbana: Official Methods and 
+Recommended Practices of the American Oil Chemists Society, [S. l.;s. n.], 2005.  
+ARAÚJO, J. P. P. Agronegócio caju: práticas e inovações. Brasília, DF: Embrapa 
+Informação Tecnológica, [S. l.;s. n.], 2013, 532 p.  
+ARAÚJO, J. P. P. Caju: o produtor pergunta, a Embrapa responde. Coleção 500 
+perguntas, 500 respostas. 2ed. Brasília-DF: Embrapa Informação Tecnológica, [S. l.;s. n.], 
+2015. p. 18-172.  
+ASADI, S.; AHMADIANI, A.; ESMAEILI, M. A.; SONBOLI, A.; ANSARI, N.; 
+KHODAGHOLI, F. In vitro antioxidant activities and an investigation of neuroprotection by 
+six Salvia species from Iran: A comparative study. Food and Chemical Toxicology, v. 48, n. 
+5, p. 1341-1349, 2010. 
+ASCHERI, J. L. R.; OLIVEIRA, A.; AZEVEDO, T. L.; CARVALHO, C. W. P. Elaboração 
+de farinha pré-gelatinizada de bagaço de caju e quirera de arroz através do processo de 
+extrusão termoplástica. In: Congresso de Pesquisa Científica, 2. Anais. Seropédica: 
+Universidade Federal Rural do Rio de Janeiro, 2004.  
+71 
+ 
+ 
+ASSUNÇÃO, R. B.; MERCADANTE, A. Z. Carotenoids and ascorbic acid composition from 
+commercial products of cashew apple (Anacardium occidentale L.). Journal of Food 
+Composition and Analysis, v. 16, n. 6, p. 647–657, 2003.  
+BALANGE, A. K.; BENJAKUL, S.  Effect of oxidised phenolic compounds on the gel 
+property of mackerel (Rastrelliger kanagurta) surimi. Food Science and Technology, v. 42, 
+p.1059-1064, 2009. 
+BARRETO, G. P. M.; SOUZA, A. C. R.; AZEREDO, H. M. C.; MERCADANTE, A. Z. 
+Compostos bioativos em sub-produtos da castanha de caju. Alimentos e Nutrição 
+Araraquara, v. 18, n. 2, p. 207-213, 2008.  
+BODINSKI, L. H. Dietoterapia: princípios e práticas. São Paulo: Editora Ateneu, 1999, 
+p.397. 
+BONACINA, M. S.; BACCIN, M. A.; ROSA, L. S. Características Sensoriais e Instrumentais 
+do Leite Pasteurizado Integral. Revista do Instituto de Laticínios Cândido Tostes, v. 72, n. 
+3, p. 139-151, 2017. 
+BOUDET, A. M. Evolution and current status of research of in phenolic compounds. 
+Phytochemistry, v. 68, p.2722-2735, 2007. 
+BOUDJOU, S.; OOMAH, B. D.; ZAIDI, F.; HOSSEINIAN, F. Phenolics content and 
+antioxidant and anti-inflammatory activities of legume fractions. Food Chemistry, v. 138, p. 
+1543-1550, 2013. 
+BRAND-WILLIANS, W.; CUVELIER, M. E.; BERSET, C. Use of a free radical method to 
+evaluate antioxidant activity. Lebensmittel-Wissenschatt und-Technologia, v. 28, n. 1, 
+p.25-30, 1995. 
+BRASIL, Instituto Brasileiro de Fruticultura – IBRAF. Panorama da cadeia produtiva das 
+frutas em 2012 e projeções para 2013, [S. l.;s. n.], 2013. 
+BRASIL, MINISTÉRIO DA SAÚDE AGÊNCIA NACIONAL DE VIGILÂNCIA 
+SANITÁRIA. Resolução - RDC nº 360, de 23 de dezembro de 2003, publicada no Diário 
+Oficial da União nº 251, Seção 1, página 33, 2003.  
+BRITO, E. C. C. Efeito da adição da fibra de caju nas propriedades tecnológicas da 
+farinha de trigo para a produção de macarrão massa fresca tipo talharim. Orientador: 
+Renato Souza Cruz. 2016. 68f. Dissertação (Mestrado em Ciência e Tecnologia de Alimentos) 
+- Universidade Federal da Bahia, Salvador, 2016. 
+CARDONA, F.; ANDRÉS-LACUEVA, C.; TULIPANI, S.; TINAHONES, F. J.; QUEIPO-
+ORTUÑO, M. I. Benefits of polyphenols on gut microbiota and implications in human health. 
+Journal of Nutritional Biochemistry, v. 24, p. 1415-1422, 2013. 
+CATALANI, L. A. et al. Fibras alimentares. Revista Brasileira de Nutrição Clínica, v. 18, 
+n.4, p.178-182, [S. l.;s. n.], 2003.  
+CELESTINO, S. M. C. Princípios de Secagem de Alimentos. Planaltina, DF: Embrapa 
+Cerrados, Documentos 276, [S. l.;s. n.], 2010. 
+72 
+ 
+ 
+CHUNGLONG, C.; SONG, L.; RONGSU, L.; FENGPING, W.; JUNQPIN, L. I. 
+Concentration of phenolic compounds of Populus euphratica and soil water contents in Ejina 
+oasis, Inner Mongolia, China. Acta Ecologica Sinica, v. 28, n. 1, p. 69-75. 2008. 
+CORNEJO, F. E. P.; NOGUEIRA, R. I.; WILBERG, V. C. Secagem como método de 
+conservação de frutas. Embrapa Agroindústria de Alimentos-Documentos (INFOTECA-E), 
+2003. 
+COSTA, J. M. C.; FELIPE, E. M. F.; MAIA, G. A.; HERNANDEZ, F. F. F.; BRASIL, I. M. 
+Production and Characterization of the cashew apple (Anacardium Occidentale L.) and Guava 
+(Psidium Guajava L.) fruit powders. Journal of Food Processing and Preservation, v. 33, n. 
+s1, p. 299–312, 2009.  
+DA MOTA, M. L. S..; MORI, E. Caracterização físico-química do subproduto da 
+indústria de suco de caju. In: IV Encontro Universitário da UFC no Cariri-2012. [S. l.;s. n.], 
+2012. 
+DAMASIO, M.H.; COSTELL, E. Analisis sensorial Descriptivo: Generación de Descriptores 
+y seleción de catadores. Revista de Agroquimica y Tecnología de Alimentos. 31(2):165-178, 
+1991. 
+DE BRUIJN, J., et al. Effect of vacuum microwave drying on the quality and storage stability 
+of strawberries. J. Food Process. Preserv. v. 40, n.5, p.1104–1115, 2016. 
+DELGADO, C. H. O.; FLEURI, L. F. Orange and mango by-products: agro-industrial waste 
+as source of bioactive compounds and botanical versus commercial description—a review. 
+Food Reviews International, v. 32, n. 1, p. 1–14, 2016.  
+DIAS, T. G. N. Alimento liofilizado temperado do tipo Snack obtido a partir do 
+pedúnculo de Caju. Orientador:  Roberta Targino Hoskin. 2018. 55f. Trabalho de Conclusão 
+de Curso (Engenharia de Alimentos). Universidade Federal do Rio Grande do Norte. 2018. 
+DOS SANTOS LIMA, Flávia Cristina et al. Chemical composition of the cashew apple 
+bagasse and potential use for ethanol production. Advances in Chemical Engineering and 
+Science, v. 2, n. 04, p. 519, 2012. 
+DUTCOSKY, S. D. Análise Sensorial de alimentos. Curitiba: Champagnat, 4ª ed., [s.l.], 
+2013. 540 p. 
+FAO - Organização das Nações Unidas para Alimentação e Agricultura. Corporate Document 
+Repository. Crop Prospects and Food Situation – Nº. 4, [S. l.;s. n.], 2008. 
+FERRERES, F.; GROSSO, C; GIL-IZQUIERDO, A.; VALENTÃO, P.; ANDRADE, P. B. 
+Phenolic compounds from Jacaranda caroba (Vell.) A. DC.: Approaches to neurodegenerative 
+disorders. Food and Chemical Toxicology, v. 57, p. 91-98, 2013. 
+FOOD INGREDIENTS BRAZIL. Dossiê: Fibras Alimentares. n. 46, 2019. Disponível em: 
+https://revista-fi.com/upload_arquivos/201606/2016060604378001465822086.pdf. Acesso 
+em: 14 maio 2022. 
+GAWLIK-DZIKI, U.; JEŻYNA, M.; ŚWIECA, M.; DZIKI, D.; BARANIAK, B.; CZYŻ, J. 
+Effect of bioaccessibility of phenolic compounds on in vitro anticancer activity of broccoli 
+sprouts. Food Research International, v. 49, n. 1, 469-476, 2012. 
+73 
+ 
+ 
+GARRUTI, D. S. et al Protocolo para avaliação da qualidade sensorial de pedúnculos de 
+clones de cajueiro. Fortaleza: Embrapa Agroindústria Tropical, 2019. (Embrapa Agroindústria 
+Tropical. Comunicado Técnico, 256). 
+GAVA, A. J.; SILVA, C. A. B.; FRIAS, J. R. G. Tecnologia de alimentos: princípios e 
+aplicações. São Paulo: Nobel, [S. l.;s. n.], 2009. 301 p 
+GOMES, S. D. L; ALBUQUERQUE, T. L; JUNIOR, J. E. M; GONÇALVES, L. R. B; 
+ROCHA, M. V. P. Produção de xilitol e etanol a partir de hidrolisado enzimático de bagaço 
+de caju. Blucher Chemical Engineering Proceedings. v.1, p. 683-688. 2014. 
+HSU, C. L.; CHEN, W.; WENG, Y. M.; TSENG C. Y. Chemical composition, physical 
+Industrial Drying, 3ª Ed. p. 257-281, [S. l.], 2007. 
+IAL - INSTITUTO ADOLFO LUTZ. Normas analíticas do Instituto Adolfo Lutz: métodos 
+químicos e físicos para análise de alimentos. 4 ed. Brasília: Ministério da Saúde, Agência 
+Nacional de Vigilância Sanitária-(Série A – Normas e Manuais Técnicas), p. 97-140, 2008.  
+INFANTE, J.; SELANI, M.; TOLEDO, N.; FERNANDA, M.; ALENCAR, S.; HELENA, M. 
+Atividade antioxidante de resíduos agroindustriais de frutas tropicais. Alimentos e Nutrição 
+Araraquara, v. 24, n. 1, p. 92, 2013.    
+JACOBSEN, R. The biography of a plant-based burger. Pacific Standard. 2016. Disponível 
+em:https://psmag.com/news/the-biography-of-a-plant-based-burger. Acesso em: 17 fev 2022. 
+KATZ, D. L., MELLER, S. Can we say what diet is best for health? Annu Rev Public 
+Health, v.35, p.83-103, 2014. 
+KHATTAB, R.Y.; ARNTFIELD, S. D. Nutritional quality of legume seeds as affected by 
+some physical treatments 2. Antinutritional factors. LWT-Food Science and Technology, 
+v,42, p.1113-1118, 2009 
+KOUASSI, E. K. A.; SORO, Y.; VACA-GARCIA, C.; YAO, K. B. Chemical composition 
+and specific lipids profile of the cashew apple bagasse. Rasayan Journal, v. 11, n. 1, p. 386–
+391, 2018.    
+LERICI, M.T. P. S.; EL-DASH, A. A. Características tecnológicas de farinhas de arroz pré-
+gelatinizadas obtidas por extrusão termoplástica. Ciência e Agrotecnologia, v.32, n.5, 
+p.1543-1550, 2008. 
+LIAPIS, A. I.; BRUTTINI, R. Freeze Drying. Handbook of Industrial Drying. 3ª Ed. p. 257-
+281, [S. l.], 2007. 
+LIAPIS, A. I.; PIKAL, M. J.; BRUTTINI, R. Research and development needs and 
+opportunities in freeze drying. Drying Technology, v. 14, n. 6, p. 1265-1300, 1996. 
+LIMA, A. C. S.; SOARES, D. J.; SILVA, L. M. R.; FIGUEIREDO, R. W.; SOUSA, P. H. M.; 
+MENEZES, E. A. In vitro bioaccessibility of copper, iron, zinc and antioxidant compounds of 
+whole cashew apple juice and cashew apple fiber (Anacardium occidentale L.) following 
+simulated gastro-intestinal digestion. Food chemistry, v.161, n 14, p. 142–7, 2014.  
+LIMA, A. Caracterização química, avaliação da atividade in vitro e in vivo, e 
+identificação dos compostos fenólicos presentes no Pequi (Caryocar brasiliense, Camb.). 
+74 
+ 
+ 
+(Tese Doutorado), Faculdade de Ciências Farmacêuticas, Universidade de São Paulo, 2008, 
+219p. 
+LIMA, F. C. S.; SILVA, F. L. H.; GOMES, J. P.; NETO, J. M. S.  Chemical composition of 
+the cashew apple bagasse and potential use for ethanol production. Advances in Chemical 
+Engineering and Science, v. 2, n. 04, p. 519, 2012. 
+LIMA, J.  R. Caracterização físico-química e sensorial de hambúrguer vegetal elaborado à 
+base de caju. Ciência e Agrotecnologia, Lavras, v. 32, n. 1, p. 191-195, 2008.   
+LIMA, J. R.; BRUNO, L. M.; SOUZA NETO, M. A. Estabilidade durante armazenamento 
+de hambúrguer vegetal elaborado à base de caju. Embrapa Agroindústria Tropical, 
+Boletim de pesquisa e desenvolvimento, 43, 2011. 20 p.  
+LIMA, J. R.; GIRAO, A. L.; FIRMINO, D. S.; PINTO, G. A. S.; LIMA, L. V.; OLIVEIRA, 
+L. M. V.; WURLITZER, N. J.; PESSOA, P. F. A. P. Hambúguer vegetal de fibra de caju e 
+proteína texturizada de soja: obtenção e avaliação da viabilidade econômica e 
+financeira. Embrapa Agroindústria Tropical. Comunicado técnico, 208, 2013a. 11p. 
+LIMA, J. R.; MODESTO, A. L. G.; COSTA, A. N.; GARRUTI, D. S.; PINTO, G. A. S.; 
+MAGALHAES, H. C. R.; ARAUJO, I. M. S.; OLIVEIRA, L. M. V.; VASCONCELOS, N. 
+M.; MESQUITA, W. S. Desidratação da fibra de caju para utilização em produtos 
+alimentícios, Embrapa Agroindústria Tropical. Boletim de Pesquisa e Desenvolvimento, 91. 
+2014. 23 p.  
+LIMA, J. R.; MODESTO, A. L. G.; GARRUTI, D. S.; FIRMINO, D. S.; ARAÚJO, I. M. S.; 
+MORAES, I. V. M. Elaboração de hambúrguer vegetal de fibra de caju e feijão-caupi. 
+Fortaleza: Embrapa Agroindústria Tropical, Comunicado técnico, 203. 2013b. 6p. 
+LIN, M. J. Y.; HUMBERT, E. S.; SOSULSKI, F. W. Certain functional properties of 
+sunflower meal products. Journal of Food Science, v. 39, n. 2, p. 368-370, 1974.  
+LOPES, M. M. A. et al. Caracterização física de pedúnculos de clones de cajueiro anão 
+precoce em diferentes estádios de maturação. Revista Ciência Agronômica, v. 42, p. 914-
+920, 2011. 
+MAISNAM, D., et al. Recent advances in conventional drying of foods. J. Food Technol. 
+Preserv. v. 1, n. 1, p.25–34, 2015. 
+MAPA-Ministério da Agricultura, Pecuária e Abastecimento. Portaria nº 574, de 8/12/98. 
+Brasília: Secretaria de Defesa Agropecuária, [S. l.;s. n.],1998. 
+MARQUES, L. G.; SILVEIRA, A. M.; FREIRE, J. T.; Freeze-drying characteristics of 
+tropical fruits. Drying Technology, v. 24, n.1-7, p. 457-463, 2006. 
+MACFIE, Halliday JH; HEDDERLEY, Duncan. Current practice in relating sensory 
+perception to instrumental measurements. Food quality and preference, v. 4, n. 1-2, p. 41-
+49, 1993. 
+MATIAS, M. F. O.; OLIVEIRA, E. L.; GERTRUDES, E.; MAGALHÃES, M. M. A. Use of 
+fibers obtained from cashew (Anacardium occidentale, L) and guava (Psidium guayava) fruits 
+for enrichment of food products. Brazilian Archives of Biology and Technology, Curitiba, 
+v. 48, p. 143-150, 2005. 
+75 
+ 
+ 
+MEDEIROS, M. J. M.; SILVA, J. F.; FAUSTINO, M. V. S.; SANTOS, M. F. G.; ROCHA, 
+L. C. S.; CARNEIRO, L. C. Aceitação sensorial e qualidade microbiológica de trufas de caju 
+obtidas artesanalmente. Holos, v. 2, p. 77-86, 2012.  
+MELONI, P. L. S. Desidratação de frutas e hortaliças. Fortaleza: Instituto Frutal, [S. l.;s. 
+n.], 2003, 87p. 
+MEILGAARD, M.; CIVILLE, G. V.; CARR, B. T. Sensory evaluation techniques (4th 
+Edition). Boca Raton: CRC Press, 464 p. 2006. 
+MIRA, G. S.; GRAF, H.; CÂNDIDO, L. M. B. Visão retrospectiva em fibras alimentares com 
+ênfase em beta-glucanas no tratamento do diabetes. Brazilian Journal of Pharmaceutical 
+Sciences, v. 45, n. 1, p. 12-20, 2009. 
+MORAES, I. V. M. Aproveitamento industrial do pedúnculo de caju. In: ARAÚJO, J. P. 
+P. (Ed.). Agronegócio caju: práticas e inovações. Brasília, DF: Embrapa, 2013. Parte 5, cap. 2, 
+p. 291-348.  
+MOUAT, M. J., PRINCE, R, M. M. Marking value out of ethics: The emerging economic 
+geography of lab-grown meat and other animal-free food products. Econ. Geography, v. 95, 
+n. 2, p.136-158, 2019. 
+MUJUMDAR, A. S. Handbook of Industrial Drying, 3a Ed., 2007, p. 4-31.  
+NORATTO, G. PORTER, W.; BYRNE, D.; CISNEROS-ZEVALLOS, L; Polyphenolics from 
+peach (Prunus persica var. Rich Lady) inhibit tumor growth and metastasis of MDA-MB-435 
+breast cancer cells in vivo. The Journal of Nutritional Biochemistry, v. 7, p. 796-800, 2014. 
+OBOH, G.; ODEMILUYI, A. O.; AKINVEMI, A. J.; HENLE, T.; SALIU, J. A.; 
+SCHWARZENBOLZ, U. Inhibitory effect of polyphenol-rich extracts of jute leaf (Corchorus 
+olitorius) on key enzyme linked to type 2 diabetes (α-amylase and αglucosidase) and 
+hypertension (angiotensin I converting) in vitro. Journal of Functional Foods, v. 4, n. 2, p. 
+450-45, 2012. 
+OKINO et al. Orange and mango by-products: agro-industrial waste as source of bioactive 
+compounds and botanical versus commercial description - a review. Food Reviews 
+International, v. 32, n. 1, p. 1–14, 2016.  
+OLIVEIRA, C. F. P.; MALTA, H. L.; JESUS, M. A. C. L.; CRUZ, R. S.; CARDOSO, F. S. 
+N. Desenvolvimento, avaliação sensorial e físico-química de barra de cereal de caju. Revista 
+Brasileira de Tecnologia Agroindustrial, v. 7, n. 1, 2013. 
+OLIVEIRA, J.  E.  D.; MARCHINI, J. S. Ciências nutricionais. São Paulo:  Sarvier, 2ª ed.  
+2008. p.107-21.  
+OU, S.; KWOK, K. Ferulic acid: pharmaceutical functions, preparation and applications in 
+foods. Journal of the Science of Food and Agriculture, v. 84, n. 11, p. 1261-1269, 2004. 
+PAIVA, F. F. A.; GARRUTTI, D. S.; SILVA NETO, R. M. Aproveitamento industrial do 
+caju. Embrapa Agroindústria Tropical-Documentos (INFOTECA-E), 2000.  
+76 
+ 
+ 
+PARK, K. J. B.;  PARK, K. J.;  ALONSO, L. F. T.;  CORNEJO, F. E. P. Secagem: 
+fundamentos e equações. Revista Brasileira de Produtos Agroindustriais, v. 16, n. 1, p. 93-
+127, 2014. 
+PAULA, L. D.; MARQUES, C. F.; CHAULD, S. G. Efeitos produzidos pela ingestão de 
+fibras alimentares: solúveis e insolúveis em camundongos. Rev. Ciência et Praxis, v. 2, n. 3, 
+p.55-60, 2009. 
+PEREIRA, L. G. R.; AZEVEDO, J. A. G.; PINA, D. S.; BRANDÃO, L. G. N.; ARAUHO, G. 
+L..; VOLTOLINI, T. V. Aproveitamento dos Coprodutos da Agroindústria Processadora 
+de Suco e Polpa de Frutas para Alimentação de Ruminantes. Petrolina: Embrapa Semi-
+Arido, 2009. (Documentos, 220). 
+Pew Commission on Industrial Farm Animal Production. Putting Meat on the Table: 
+Industrial Farm Animal Production in America. 2008. Disponível em 
+:https://www.pcifapia.org/_images/PCIFAPSmry.pdf. acesso 15 jun 2021. 
+PINHO, L. X. Desidratação e aproveitamento de resíduo de pedúnculo de caju como adição 
+de fibra na elaboração de hambúrguer. Alimentos e Nutrição, v. 22, n. 4, p. 571-576, 2012. 
+PROSAPIO, V.; NORTON, I. Simultaneous application of ultrasounds and firming 
+agents to improve the quality properties of osmotic of freeze-dried foods. LWT, 96, 
+p.402–410, 2018. 
+RAMOS, E. D.; GOMIDE, L. A. M. Avaliação da qualidade de carnes: fundamentos e 
+metodologia. Minas Gerais: Ed. UFV, [S. l.;s. n.], 2007. 599 p. 
+RATTI, C.; Hot air and freeze-drying of high-value foods: a review. Journal of Food 
+Engineering, v. 49, p.311-319, 2001. 
+RE, R.; PELLEGRINI, N.; PROTEGGENTE, A.; PANNALA, A.; YANG, M.; 
+RICEEVANS, C. Antioxidant activity applying an improved ABTS radical cation 
+decolorization assay. Free Radical Biology & Medicine, New York, v. 26, n. 9-10, p. 1231-
+1237, 1999.  
+REYNALDO, D. S.; DA PENHA, M. P. Análise de produtos integrais de panificação com 
+alegação de fonte de fibras. Brazilian Journal of Health Review, v. 2, n. 2, p. 1483-1494, 
+2019. 
+ROCHA, M. V. P.; RODRIGUES, T. H. S.; MELO, V. M. M.; GONÇASLVES, L. R. B.; 
+MACEDO, G. R. Cashew apple bagasse as a source of sugars for ethanol production by 
+Kluyveromyces marxianus CE025. Journal of Industrial Microbiology & Biotechnology, 
+v. 38, n. 8, p. 1099–1107, 2011.  
+RUFINO, M. DO S. M.; PÉREZ-LIMÉNEZ, J.; TABERNO, M.; ALVES, R. E.; BRITO, E. 
+S.; SAURA-CALIXTO, F. Acerola and cashew apple as sources of antioxidants and dietary 
+fiber. International Journal of Food Science & Technology, v. 45, n. 11, p. 2227–2233, 
+2010.  
+SANCHO, S. O.; MAIA, G. A.; FIGUEIREDO, R. W.; RODRIGUES, S.; SOUSA, P. H. M. 
+Alterações químicas e físico-químicas no processamento de suco de caju (Anacardium 
+occidentale L.). Ciênc. Tecnol. Aliment., Campinas, v.27, n.4, p. 878-882, 2007.  
+77 
+ 
+ 
+SIDALC, BDAGBAMB. Performance do Departamento de Economia Rural/DERAL e 
+aspectos para o seu aperfeiçoamento [Brasil]. P. imprenta: Curitiba, PR (Brazil).2020. 37 p. 
+SANTANA, M.; SILVA, E. Elaboração de biscoitos com resíduo da extração de suco de 
+caju. Embrapa Amazônia Oriental-Comunicado Técnico (INFOTECA-E), [S. l.;s. n.], 2008.    
+SANTOS, C. T.; BONOMO, R. F.; CHAVES, M. A.; FONTAN, R. C. I.; BONOMO, P. 
+Cinética e modelagem da secagem de carambola (Averrhoa carambola L.) em secador de 
+bandeja. Acta Scientiarum. Technol., v. 32, n. 3, p. 309-313, 2010. 
+SANTOS, E. Tecnologia de aproveitamento do bagaço do caju. Embrapa Agroindústria de 
+Alimentos. 2004. Disponível em: https://www.embrapa.br/busca-de-noticias/-
+/noticia/17917696/tecnologia-aproveita-bagaco-do-caju. Acesso em: 17 abr. 2022 
+SANTOS, M. L.; MACHADO, A. V.; ALVES, F. M. S.; COSTA, A. P. L. M. Estudo físico-
+químico de maçã desidratada em secador convectivo. Rev. Verde, v. 8, n. 1, p. 30 – 37, 2013. 
+SANTOS, N. C.; BARROS, S. L.; MELO, M. O. P.; ALMEIDA, R. L. J.; GOMES, J. P. 
+Elaboração e caracterização físico-química de farinha proveniente dos resíduos de 
+abacaxi e de pedúnculo de caju. In: IV congresso internacional das ciências agrárias, 4., 
+2019.  
+SCHMIDT, C. A. Análise bioquímica e qualidade da alimentação dos vegetarianos. In: III 
+Seminário de Práticas em Educação e Saúde e II Simpósio da Clínica Universitária Regional 
+de Educação e Saúde, Lajeado. Anais. Lajeado: Univates, 2013. 48p. 
+SEIBEL, N. F.; BELÉIA, A. D. P. Carboidratos das fibras de cotilédones e proteínas de 
+produtos derivados de soja (Glycine max (L.) Merril). Ciência e Tecnologia de Alimentos, 
+v. 28, n. 3, p. 607-613, 2008. 
+SERRANO, L. A. L.; PESSOA, P. F. A. P. Aspectos econômicos da cultura do cajueiro. In: 
+Luiz Augusto Lopes Serrano. (Org.). Sistema de Produção do CAJU. 2ed. Brasília-DF: 
+Embrapa Informação Tecnológica, 2016. 
+SILVA, A. P. F.; SOUSA, A. P. M.; MACEDO, A. D. B.; DANTAS, D. L.; COSTA, J. D.; 
+ALMEIDA, A. F.; SANTANA, R. A. C.; CAMPOS, A. R. N. Obtenção de produto farináceo 
+a partir de resíduos agroindustriais por diferentes métodos de Secagem. Research, Society 
+and Development, v. 9, n. 9, e405997334, 2020. 
+SILVA, J. M. Secagem de pedaços cúbicos de goiaba em Leito de Jorro. Orientador: 
+Odelsia Leonor Sánchez de Alsina. 2011. 110f. (Tese de Doutorado em Engenharia de 
+Processos), Programa de Pós-graduação em Engenharia de Processos, Centro de Ciências e 
+Tecnologia, Universidade Federal de Campina Grande - Paraíba - Brasil, 2011.  
+SILVA, L.C. Processamento de Alimentos. Boletim Técnico. Universidade Federal do 
+Espírito Santo. Alegre, [S. l.;s. n.], 2006. 
+SILVA, N. C.; DUARTE, C. R.; BARROZO, M. A. Effects of dehydration methods on 
+quality characteristics of yellow passion fruit co-products. Journal of the Science of Food 
+and Agriculture, v. 97, n.14, p. 4750–4759, 2017.  
+78 
+ 
+ 
+SINGLETON, V. L.; ORTHOFER, R.; LAMUELA-RAVENTÓS, R. M. Analysis of total 
+phenols and other oxidation substrates and antioxidants by means of  Folin-Ciocalteu reagent. 
+Methods Enzymology, v.299, p.152 -178, 1999. 
+SIQUEIRA, A. M. de A.; BRITO, E. de S. Aproveitamento do bagaço do caju para 
+alimentação humana e utilização em outras indústrias de alimentos.  In: ARAÚJO, J. P. 
+P. de. (Ed.). Agronegócio caju: práticas e inovações.  Brasília, DF:  Embrapa, parte 5, cap. 3, 
+p. 349-362, 2013. 
+SOCIEDADE VEGETARIANA BRASILEIRA. Fome e Dignidade Humana. 2017. 
+Disponível em: https://www.svb.org.br/vegetarianismo1/dignidade-humana. Acesso em: 10 
+jun. 2022. 
+SOSULSKI, F. W. The centrifuge method for determining flour absorption in hard red 
+spring wheats. Cereal Chemistry, v. 39, p. 344‐350, 1962.  
+SOUSA, K. A.; RESENDE, O.; CHAVES, T. H.; COSTA, L. M. Cinética de secagem do 
+nabo forrageiro (Raphanus sativus L.). Revista Ciência Agronômica, v. 42, n. 4, p. 883-892, 
+2011. 
+SWAIN, T.; HILLS, W. E. The phenolic constituints of Punnus domestica. I- quantitative 
+analysis of phenolics constituints. Journal of the Science of Food and Agriculture, v. 19, 
+p.63-68, 1959.  
+Tabela Brasileira de Composição de Alimentos (TBCA). Universidade de São Paulo (USP). 
+Food Research Center (FoRC). Versão 7.1. São Paulo, 2020. Disponível em: 
+http://www.fcf.usp.br/tbca. Acesso em: 05 maio. 2021. 
+TATTINI JR, V.; PARRA, D. F.; DE MORAES PITOMBO, R. N. Influência da taxa de 
+congelamento no comportamento físico-químico e estrutural durante a liofilização da 
+albumina bovina. Revista Brasileira de Ciências Farmacêuticas, v. 42, n. 1, p. 127-136, 
+2006. 
+TOMAS-BARBERAN, F. A.; ESPIN, J. C. Phenolic compounds and related enzymes as 
+determinants of quality in fruits and vegetables. Journal of the Science of Food and 
+Agriculture, London, v. 81, n. 9, p. 853-876, 2001. 
+VIEIRA, A. P.; NICOLETI, J. F.; TELIS, V. R. N. Liofilização de fatias de abacaxi: 
+avaliação da cinética de secagem e da qualidade do produto. Braz. J. Food Technol., 
+Campinas, v. 15, n. 1, p. 50-58, 2012. 
+VIEIRA, L. M.; SOUSA, M. S. B.; MANCINI-FILHO, J.; LIMA, A. Fenólicos totais e 
+capacidade antioxidante in vitro de polpas de frutos tropicais. Revista Brasileira de 
+Fruticultura. Jaboticabal – SP, v. 33, n. 3, p. 888-897, 2011. 
+WU, SHI-BIAO; LONG, C.; KENNELLY, E. J. Phytochemistry and health benefits of 
+jaboticaba, an emerging fruit crop from Brazil. Food Research International, v. 54, p. 148-
+159, 2013. 
+YOUDIM, KA.; SHUKITT-HALE, B.; MACKINNON, S.; KALT, W.; JOSEPH, JA. 
+Polyphenolics enhance red blood cell resistance to oxidative stress: in vitro and in vivo. 
+Biochimica et Biophysica Acta (BBA) - General Subjects, v.1523, n.1, p. 117-122, 2000. 
+79 
+ 
+ 
+ZARO, Marcelo et al. Desperdício de alimentos: velhos hábitos, novos desafios. Caxias do 
+Sul, RS: Educs, v. 417, [S. l.;s. n.], 2018. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+80 
+ 
+ 
+ANEXO A - TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO 
+O Sr.(a) está sendo convidado(a) a participar como voluntário(a) em uma atividade do 
+projeto de pesquisa “Rotas tecnológicas aplicadas à produção de fibra de pedúnculo de caju 
+para aplicação como “carne vegetal” em produtos alimentícios plant-based”, sob a 
+coordenação dos pesquisadores.................................................. 
+O propósito do teste sensorial é avaliar a aceitação sensorial de produtos (croquetes) que 
+foram elaborados com fibras provenientes de um dos processos industriais de tratamento e 
+conservação da fibra de caju (FC) do estudo. Assim, lhe será solicitado comparecer ao 
+Laboratório de Análise Sensorial, onde em cerca de 15 minutos realizará os testes sensoriais.  
+Você não será remunerado por esta atividade, porém contribuirá para a definição de 
+processo para obtenção da fibra de caju. Sua participação não é obrigatória, e, a qualquer 
+momento, você poderá desistir de participar e retirar seu consentimento. Sua recusa não trará 
+nenhum prejuízo em sua relação com o pesquisador ou com a instituição. Ainda lhe será 
+garantido o sigilo que assegure a privacidade da sua identidade, como também a 
+confidencialidade de todos os resultados obtidos, os quais somente serão divulgados em 
+relatórios e/ou artigos diretamente relacionados aos objetivos da pesquisa e pelos pesquisadores 
+desse projeto. 
+O consumo deste produto não oferece riscos à saúde, contudo se ocorrer algum 
+desconforto durante ou até 12 h após a análise você será encaminhado ao serviço público de 
+saúde.  
+Após ter sido esclarecido(a) sobre as informações acima, no caso de concordar em fazer 
+parte do estudo, por favor assinar ao final do documento. Você receberá uma cópia deste termo 
+onde consta o telefone e endereço do pesquisador principal, podendo tirar dúvidas do projeto e 
+de sua participação. 
+ 
+ (Pesquisadora) 
+Eu, ______________________________________, declaro que li as informações contidas 
+nesse documento, fui devidamente informados (a) pela pesquisadora -----------------sobre a 
+pesquisa, os procedimentos nela envolvidos, assim como os possíveis riscos e benefícios 
+decorrentes de minha participação. Foi-me garantido que posso retirar o consentimento a 
+qualquer momento, sem que isso leve a qualquer penalidade. Declaro ainda que recebi uma 
+cópia desse Termo de Consentimento. Desse modo, concordo em participar, como voluntário, 
+do projeto de pesquisa acima descrito. 
+Fortaleza/CE, _____ de ____________ de _______,    
+_____________________________________________ 
+Participante                                                                   (Responsável pelo teste)                                                           
+  
+81 
+ 
+ 
+ANEXO B – FICHA DA SENSORIAL DA FIBRA DO PEDÚNCULO DE CAJU 
+ 
+ 
+ 
+82 
+ 
+ 
+ANEXO C- FICHA DA SENSORIAL DO CROQUETE 
+ 

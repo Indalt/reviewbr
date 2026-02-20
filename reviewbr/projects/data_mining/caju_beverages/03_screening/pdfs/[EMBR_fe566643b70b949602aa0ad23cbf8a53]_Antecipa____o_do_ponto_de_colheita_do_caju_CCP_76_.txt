@@ -1,0 +1,610 @@
+ 
+ 
+ 
+UNIVERSIDADE FEDERAL DO CEARÁ 
+CENTRO DE CIÊNCIAS AGRÁRIAS 
+DEPARTAMENTO DE ENGENHARIA DE ALIMENTOS 
+PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIA E TECNOLOGIA DE 
+ALIMENTOS 
+ 
+ 
+ 
+ 
+ 
+PAOLO GERMANNO LIMA DE ARAUJO 
+ 
+ 
+ 
+ 
+ 
+ANTECIPAÇÃO DO PONTO DE COLHEITA DO CAJU CCP 76 VISANDO AO 
+BENEFICIAMENTO DA AMÊNDOA E PEDÚNCULO IMATURO. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2018 
+ 
+ 
+PAOLO GERMANNO LIMA DE ARAUJO 
+ 
+ 
+ 
+ 
+ 
+ANTECIPAÇÃO DO PONTO DE COLHEITA DO CAJU CCP 76 VISANDO AO 
+BENEFICIAMENTO DA AMÊNDOA E PEDÚNCULO IMATURO. 
+ 
+ 
+ 
+ 
+ 
+ 
+Tese apresentada ao Programa de Pós-
+Graduação em Ciência e Tecnologia de 
+Alimentos da Universidade Federal do 
+Ceará, como requisito parcial à obtenção 
+do título de Doutor em Ciência e 
+Tecnologia de Alimentos. Área de 
+concentração: Tecnologia de Produtos de 
+Origem Vegetal. 
+ 
+Orientador: Prof. Dr. Paulo Henrique 
+Machado de Sousa. 
+Coorientador: Pesquisador. Dr. Carlos 
+Farley Herbster Moura. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2018 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+PAOLO GERMANNO LIMA DE ARAUJO 
+ 
+ANTECIPAÇÃO DO PONTO DE COLHEITA DO CAJU CCP 76 VISANDO AO 
+BENEFICIAMENTO DA AMÊNDOA E PEDÚNCULO IMATURO. 
+ 
+Tese apresentada ao Programa de Pós-
+Graduação em Ciência e Tecnologia de 
+Alimentos da Universidade Federal do 
+Ceará, como requisito parcial à obtenção 
+do título de Doutor em Ciência e 
+Tecnologia de Alimentos. Área de 
+concentração: Tecnologia de Produtos de 
+Origem Vegetal. 
+Aprovada em: ___/___/______. 
+BANCA EXAMINADORA 
+ 
+_______________________________________________ 
+Prof. Dr. Paulo Henrique Machado de Sousa (Orientador) 
+Universidade Federal do Ceará (UFC) 
+ 
+ 
+________________________________________________________________
+_ _ 
+Pesquisador. Dr. Carlos Farley Herbster Pesquisador. Dr. Antônio Calixto Lima 
+Moura (Coorientador) Embrapa Agroindústria Tropical 
+Embrapa Agroindústria Tropical  
+  
+ 
+________________________________________________________________
+_ _ 
+Profa. Dra. Joelia Marques de Carvalho Profa. Dra. Maria Raquel Alcântara de 
+Instituto Federal do Ceará (IFCE) Miranda 
+ Universidade Federal do Cea5rá (UFC) 
+  
+ 
+________________________________________________________________
+_ _ 
+Pesquisadora Dra. Janice Ribeiro Lima Pesquisadora Dra. Ana Paula Dionísio 
+Embrapa Agroindústria Tropical Embrapa Agroindústria Tropical 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Ao meu filho Caio. 
+ 
+ 
+ 
+ 
+ 
+ 
+AGRADECIMENTOS 
+ 
+Ao Prof. Dr. Paulo Henrique Machado de Sousa pela sempre experiente 
+orientação e disponibilidade. 
+Ao Pesquisador Dr. Carlos Farley Herbster Moura pelo apoio e paciência 
+durante os experimentos e escrita. 
+Aos demais participantes da banca examinadora na pessoa da Profa. Dra. 
+Joélia Marques de Carvalho pelas considerações durante a avaliação da tese. 
+Ao grupo do Laboratório de Fisiologia e Tecnologia Pós-colheita da 
+Embrapa Agroindústria Tropical representada pela Analista de Laboratório Márcia 
+Régia Souza da Silveira, sempre disponível para sanar dúvidas. 
+Aos técnicos administrativos do Departamento de Engenharia de Alimentos 
+pela dedicação. 
+Aos familiares e amigos que não perguntaram “e o doutorado?” e aos que 
+não atrapalhando ajudaram bastante. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+“Ninguém está com você, nem você está 
+com você.” 
+(Caio Silveira Araujo) 
+ 
+ 
+ 
+ 
+ 
+RESUMO 
+ 
+A cultura do cajueiro tem grande importância econômica na região Nordeste do Brasil, 
+enquanto a amêndoa beneficiada madura tem grande participação na indústria, o 
+pedúnculo é subutilizado, apesar de possuir características nutricionais importantes, 
+devido sua alta perecibilidade. Novos métodos de beneficiamento da castanha, com 
+manutenção da qualidade, e desenvolvimentos de novos produtos a partir do 
+pedúnculo, como sucos mistos, podem favorecer o rendimento econômico dessa 
+cultura. Os objetivos deste estudo foram estabelecer a curva de crescimento do 
+pedúnculo, castanha e amêndoa do CCP 76 para determinar novo ponto inicial de 
+colheita ideal visando ao beneficiamento da castanha além de avaliar a qualidade do 
+pedúnculo durante o desenvolvimento. Avaliar a composição e qualidade sensorial 
+das amêndoas da castanha de caju colhidas em diferentes estádios de maturação e 
+beneficiadas pelo método convencional e de congelamento prévio e desenvolver 
+bebidas mistas a partir da polpa do pedúnculo do cajueiro imaturo com polpas do 
+pedúnculo do cajueiro maduro, cajá e manga, com características sensoriais 
+satisfatórias. O experimento sobre curvas de crescimento foi desenvolvido com o CCP 
+76. Flores foram marcadas no dia da abertura e os frutos colhidos com 20, 28, 33, 36, 
+40, 42, 44 e 47 dias após a marcação para realização das curvas de crescimento. 
+Para o experimento de beneficiamento da castanha foram testados seis tratamentos, 
+1, 2 e 3 - castanhas colhidas diretamente da planta com, aproximadamente, 40, 45 e 
+47 dias, respectivamente, e beneficiadas pelo método convencional; 4, 5 e 6 - 
+castanhas colhidas diretamente da planta com aproximadamente 40, 45 e 47 dias, 
+respectivamente, e beneficiadas com congelamento prévio. Realizou-se o perfil 
+tecnológico, composição centesimal e análise sensorial, com teste de aceitação com 
+52 consumidores potenciais indicando o quanto gostaram das amêndoas com relação 
+às características de aparência, sabor, aceitação global e o método Check-All-That-
+Apply para avaliar os descritores do aroma com uma lista de termos pré-selecionados 
+através de Análise Descritiva Quantitativa. O desenvolvimento dos sucos mistos foi 
+realizado com o pedúnculo do CCP 76, mangas ‘Tommy Atkins’ e cajás colhidos em 
+outubro, dezembro de 2014 e março de 2015, respectivamente. Foram higienizados, 
+despolpados e bebidas formuladas em seis tratamentos de cada polpa (caju, manga 
+e cajá) e elaboradas como descrito a seguir, totalizando 18 tratamentos, F1 - Controle: 
+ 
+ 
+0% de pedúnculo 40d e 50% de polpa de fruta, F2: 3% / 47%, F3: 6% / 44%, F4: 9% / 
+41%, F5: 12% / 38%, F6: 15% / 35%, todas as formulações foram adicionadas de 50% 
+de água e os sólidos solúveis corrigidos com sacarose até 12 °Brix. Após formulação, 
+as amostras foram submetidas ao tratamento térmico de 90 ºC por 60 segundos, 
+envasadas em garrafa de vidro de 200 mL, previamente higienizadas com água 
+quente (90ºC por 10 min), sendo mantidas sob refrigeração (±6 ºC) até o momento 
+das análises sensoriais e físico-químicas. Os sucos mistos foram analisados quanto a 
+pH, sólidos solúveis (°Brix), acidez titulável (% de ácido málico), relação SS/AT, 
+açúcares solúveis (%), vitamina C (mg/100g), polifenóis extraíveis totais (mg/100g de 
+ácido gálico), além de análise sensorial, com teste de aceitação com 52 consumidores 
+potenciais indicando o quanto gostaram dos sucos mistos com relação às 
+características de aparência, sabor, aceitação global e o método Check-All-That-Apply 
+para avaliar os descritores do aroma com uma lista de termos pré-selecionados 
+através de Análise Descritiva Quantitativa. A amêndoa pode ser considerada formada 
+e apta para colheita após 40 dias da abertura da flor, devido à estabilidade das suas 
+características após esse período. As amêndoas beneficiadas com 40 e 45 dias de 
+colheita após a floração tem qualidade similar às maduras quando beneficiadas pelo 
+método convencional enquanto amêndoas beneficiadas pelo método de 
+congelamento não apresentaram qualidade satisfatória para comercialização. 
+Conclui-se que a adição de polpa de caju imaturo na formulação dos sucos mistos 
+favoreceu positivamente, as características nutricionais, elevando a presença de 
+compostos bioativos, além de não ter diminuído a qualidade sensorial dos sucos 
+mistos de caju, cajá e manga. 
+ 
+Palavras-chave: Anacardium ocidentale. beneficiamento da castanha. bebidas 
+mistas. 
+ 
+ 
+ABSTRACT 
+ 
+Cashew cultivation has great economic importance in the northeastern region of Brazil, 
+while the mature benefited kernel has great participation in the industry, the peduncle 
+is subtilized, despite having important nutritional characteristics, due to its high 
+perishability. New methods of improving the quality of the nut and developing new 
+products from the peduncle, such as mixed juices, can favor the economic yield of this 
+crop. The objectives of this study were to establish the growth curve of the peduncle, 
+cashew nut and kernel of CCP 76 to determine the ideal starting point for the cashew 
+nut processing, besides evaluating the peduncle quality during development. To 
+evaluate the composition and sensorial quality of cashew nut’s kernel harvested at 
+different stages of maturation and benefited by the conventional and freezing method, 
+and to develop beverages from the blend of the juice of the peduncle of the immature 
+cashew with the juices of the peduncle of the mature cashew, mango and yellow 
+mombin, with satisfactory sensorial characteristics. The growth curve experiment was 
+developed with CCP 76, early dwarf, flowers were marked on opening day, fruits were 
+harvested at 20, 28, 33, 36, 40, 42, 44 and 47 days after the first day of the experiment, 
+marking for the realization of growth curves. The cashew nut processing experiment 
+was carried out with CCP 76 cashew nuts. Six treatments, 1, 2 and 3 - cashew nuts 
+harvested directly from the plant with approximately 40, 45 and 47 days, respectively, 
+were tested and benefited by the conventional method; 3, 4 and 5 - cashew nuts 
+harvested directly from the plant with approximately 40, 45 and 47 days, respectively, 
+and benefited from previous freezing. The technological profile, centesimal 
+composition and sensory analysis were performed, with acceptance test with 52 
+potential consumers indicating how much they liked about the characteristics of 
+appearance, taste, global acceptance and the Check-All-That-Apply method to 
+evaluate the descriptors with a list of preselected terms through Quantitative 
+Descriptive Analysis. The development of the mixed juices was carried out with CCP 
+76 peduncle, 'Tommy Atkins' mangoes and yellow mombin, harvested in October, 
+December 2014 and March 2015, respectively, were hygienized, pulped and 
+beverages formulated in six treatments of each fruit pulp (control): 0% of peduncle 40d 
+and 50% of fruit pulp, F2: 3% / 47%, F3: 6% / 44% , F4: 9% / 41%, F5: 12% / 38%, F6: 
+15% / 35%, all formulations were added with 50% water and the soluble solids 
+corrected with sucrose to 12 °Brix. After formulation, the samples were submitted to 
+ 
+ 
+the thermal treatment of 90 °C for 60 seconds, packed in a 200 mL glass bottle, 
+previously sanitized with hot water (90 °C for 10 min) and kept under refrigeration (± 6 
+°C) until the sensory and physicochemical analyzes. The blend was analyzed for pH, 
+soluble solids (° Brix), titratable acidity (% malic acid), SS / AT ratio, total soluble sugars 
+(mg / 100g), vitamin C (mg / 100g), extractable polyphenols (mg / 100g gallic acid), as 
+well as sensory analysis, with acceptance test with 52 potential consumers indicating 
+how much they liked about the characteristics of appearance, taste, overall acceptance 
+and the Check-All-That-Apply method for evaluate the aroma descriptors with a list of 
+preselected terms through Quantitative Descriptive Analysis. The kernel can be 
+considered formed and suitable for harvesting after 40 days of flower opening due to 
+the stability of its characteristics after this period. The kernels benefited with 40 and 45 
+days of harvest after flowering have similar quality to the mature ones when benefited 
+by the conventional method while kernels benefited by the freezing method did not 
+present satisfactory quality for commercialization. It was concluded that the addition of 
+immature cashew pulp in mixed juice formulation positively favored nutritional 
+characteristics, increasing the presence of bioactive compounds, besides not reducing 
+the sensory quality of mixed cashew, cajá and mango juices. 
+ 
+Keywords: Anacardium ocidentale. processing of nuts. mixed drinks. 
+ 
+ 
+LISTA DE FIGURAS 
+ 
+Figura 1 - Flores hermafrodita e masculina do CCP 76  ................................  30 
+Figura 2 - Marcação de flores do CCP 76  .....................................................  30 
+Figura 3 - Cajus do CCP 76 colhidos em diferentes estádios de 
+desenvolvimento  ...........................................................................  31 
+Figura 4 - Medidas de diâmetro basal, apical e comprimento de pedúnculo 
+do CCP 76  .....................................................................................  31 
+Figura 5 - Medidas de comprimento, largura e espessura de castanha de 
+CCP 76  ..........................................................................................  32 
+Figura 6 - Tamanho do pedúnculo (mm) do CCP 76 em diferentes estádios 
+de maturação  ................................................................................  37 
+Figura 7 - Tamanho da castanha (mm) do CCP 76 em diferentes estádios 
+de maturação  ................................................................................  38 
+Figura 8 - Massa Fresca (g) do CCP 76 em diferentes estádios de 
+maturação  .....................................................................................  40 
+Figura 9 - Massa fresca (%) da casca da castanha do CCP 76 em 
+diferentes estádios de maturação  .................................................  41 
+Figura 10 - Sólidos solúveis (ºBrix) de pedúnculos do CCP 76 em diferentes 
+estádios de maturação  ..................................................................  42 
+Figura 11 - Acidez Titulável (% de ácido málico) de pedúnculos do CCP 76 
+em diferentes estádios de maturação  ...........................................  43 
+Figura 12 - Relação SS/AT de pedúnculos do CCP 76 em diferentes estádios 
+de maturação  ................................................................................  43 
+Figura 13 - Vitamina C (mg/100g) de pedúnculos do CCP 76 em diferentes 
+estádios de maturação  ..................................................................  44 
+Figura 14 - Polifenóis Extraíveis Totais (PET mg/100g) de pedúnculos do 
+CCP 76 em diferentes estádios de maturação  ..............................  45 
+Figura 15 - Atividade antioxidante total por ABTS (ABTS µmol/Trolox.g) de 
+pedúnculos do CCP 76 em diferentes estádios de maturação  .....  46 
+Figura 16 - Referência de ponto de colheita do CCP 76 para o experimento 
+de beneficiamento da castanha de caju em diferentes estádios de 
+maturação  .....................................................................................  57 
+ 
+ 
+Figura 17 - Amêndoas de diferentes tamanhos de acordo com a classificação 
+da AFI (2016) e BRASIL (2017)  ....................................................  59 
+Figura 18 - Características morfológicas de castanhas do CCP 76 em 
+diferentes estádios de maturação  .................................................  62 
+Figura 19 - Composição centesimal de amêndoas do CCP 76 colhidas em 
+diferentes estádios de maturação e beneficiadas em autoclave ou 
+congeladas com posterior decorticação manual  ...........................  66 
+Figura 20 - Valor energético total de amêndoas do CCP 76 colhidas em 
+diferentes estádios de maturação e beneficiadas em autoclave ou 
+congeladas com posterior decorticação manual  ...........................  67 
+Figura 21 - Avaliação sensorial de amêndoas do CCP 76 colhidas em 
+diferentes estádios de maturação e beneficiadas em autoclave ou 
+congeladas com posterior decorticação manual  ...........................  68 
+Figura 22 - Representação da avaliação sensorial de amêndoas do CCP 76 
+colhidas em diferentes estádios de maturação e beneficiadas em 
+autoclave ou congeladas com posterior decorticação manual e 
+termos descritivos em análise pelo método CATA  ........................  71 
+Figura 23 - Características químicas e físico-químicas de sucos mistos com 
+diferentes concentrações de polpa de caju e caju imaturo  ...........  85 
+Figura 24 - Características químicas e físico-químicas de sucos mistos com 
+diferentes concentrações de polpa de manga e caju imaturo  .......  87 
+Figura 25 - Características químicas e físico-químicas de sucos mistos com 
+diferentes concentrações de polpa de cajá e caju imaturo  ...........  88 
+Figura 26 - Compostos bioativos de sucos mistos com diferentes 
+concentrações de polpa de caju e caju imaturo  ............................  90 
+Figura 27 - Compostos bioativos de sucos mistos com diferentes 
+concentrações de polpa de manga e caju imaturo  .......................  91 
+Figura 28 - Compostos bioativos de sucos mistos com diferentes 
+concentrações de polpa de cajá e caju imaturo  ............................  92 
+Figura 29 - Avaliação sensorial de sucos mistos com diferentes 
+concentrações de polpa de caju e caju imaturo  ............................  94 
+Figura 30 - Avaliação sensorial de sucos mistos com diferentes 
+concentrações de polpa de manga e caju imaturo  .......................  95 
+ 
+ 
+Figura 31 - Avaliação sensorial de sucos mistos com diferentes 
+concentrações de polpa de cajá e caju imaturo  ............................  96 
+Figura 32 - Representação da avaliação sensorial de sucos mistos com 
+diferentes concentrações de polpa de caju maduro e de caju 
+imaturo e termos descritivos em análise pelo método CATA  ........  98 
+Figura 33 - Representação da avaliação sensorial de sucos mistos com 
+diferentes concentrações de polpa de manga madura e de caju 
+imaturo e termos descritivos em análise pelo método CATA  ........  100 
+Figura 34 - Representação da avaliação sensorial de sucos mistos com 
+diferentes concentrações de polpa de cajá maduro e de caju 
+imaturo e termos descritivos em análise pelo método CATA  ........  102 
+ 
+ 
+ 
+LISTA DE TABELAS 
+ 
+Tabela 1 - Composição centesimal de amêndoas de castanha de caju 
+processadas  ..................................................................................  20 
+Tabela 3 - Tratamentos utilizados no experimento de beneficiamento da 
+castanha com caju maduro e imaturo do CCP 76  .........................  56 
+Tabela 4 - Designação de tamanho de amêndoas de caju  ............................  58 
+Tabela 5 - Indicadores tecnológicos de amêndoas do CCP 76 colhidas em 
+diferentes estádios de maturação e beneficiadas em autoclave ou 
+congeladas com posterior decorticação manual  ...........................  63 
+Tabela 6 - Indicadores tecnológicos de amêndoas do CCP 76 colhidas em 
+diferentes estádios de maturação e beneficiadas em autoclave ou 
+congeladas com posterior decorticação manual  ...........................  65 
+Tabela 7 - Teste de Cochran para cada atributo na avaliação sensorial de 
+amêndoas do CCP 76 colhidas em diferentes estádios de 
+maturação e beneficiadas em autoclave ou congeladas com 
+posterior decorticação manual  ......................................................  70 
+Tabela 8 - Formulação dos sucos mistos de caju, manga e cajá  ..................  81 
+Tabela 9 - Teste de Cochran para cada atributo na avaliação sensorial de 
+sucos mistos com diferentes concentrações de polpa de caju 
+maduro e de caju 40 dias  ..............................................................  97 
+Tabela 10 - Teste de Cochran para cada atributo na avaliação sensorial de 
+sucos mistos com diferentes concentrações de polpa de manga 
+madura e de caju 40 dias  ..............................................................  99 
+Tabela 11 - Teste de Cochran para cada atributo na avaliação sensorial de 
+sucos mistos com diferentes concentrações de polpa de cajá 
+maduro e de caju 40 dias  ..............................................................  101 
+Tabela 12 - Resumo das análises de variância para as características 
+morfológicas de caju do CCP 76 (pedúnculo, castanha e 
+amêndoa) em diferentes estádios de maturação  ..........................  116 
+Tabela 13 - Resumo das análises de variância para as características 
+químicas, físico químicas e compostos bioativos do pedúnculo do 
+CCP 76 em diferentes estádios de maturação  ..............................  116 
+ 
+ 
+Tabela 14 - Resumo das análises de variância para a composição centesimal 
+e valor energético total de amêndoas do CCP 76 colhidas em 
+diferentes estádios de maturação e beneficiadas em autoclave ou 
+congeladas com posterior decorticação manual  ...........................  117 
+Tabela 15 - Resumo das análises de variância para os resultados de 
+avaliação sensorial de amêndoas do CCP 76 colhidas em 
+diferentes estádios de maturação e beneficiadas em autoclave ou 
+congeldas com posterior decorticação manual  .............................  117 
+Tabela 16 - Resumo das análises de variância para as características 
+químicas, físico químicas e compostos bioativos de suco misto de 
+caju maduro e caju 40 dias  ...........................................................  118 
+Tabela 17 - Resumo das análises de variância para as características 
+químicas, físico químicas e compostos bioativos de suco misto de 
+manga madura e caju 40 dias  .......................................................  118 
+Tabela 18 - Resumo das análises de variância para as características 
+químicas, físico químicas e compostos bioativos de suco misto de 
+cajá maduro e caju 40 dias  ...........................................................  119 
+Tabela 19 - Resumo das análises de variância para os resultados de 
+avaliação sensorial suco misto de caju maduro e caju imaturo  ....  119 
+Tabela 20 - Resumo das análises de variância para os resultados de 
+avaliação sensorial suco misto de manga madura e caju 40 dias   120 
+Tabela 21 - Resumo das análises de variância para os resultados de 
+avaliação sensorial suco misto de cajá maduro e caju 40 dias  ....  120 
+Tabela 22 - Classificação da amêndoa da castanha de caju, em função da 
+forma como se apresenta, tamanho e granulometria  ...................  126 
+Tabela 23 - Classificação em subclasses da amêndoa da castanha de caju 
+inteira e/ou pedaço, em função do número de amêndoas contidas 
+em 453,59g  ...................................................................................  127 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+ 
+1 CAPÍTULO 1  .........................................................................................  13 
+1.1 Introdução geral  ...................................................................................  13 
+1.2 Objetivos  ..............................................................................................  15 
+1.2.1 Objetivo geral  .........................................................................................  15 
+1.2.2 Objetivos específicos  .............................................................................  15 
+1.3 Revisão de literatura  ...........................................................................  16 
+1.3.1 Aspectos gerais da cultura do cajueiro  ..................................................  16 
+1.3.2 Importância socioeconômica  .................................................................  16 
+1.3.3 Clone do Cajueiro de Pacajus Nº 76 (CCP 76)  .....................................  16 
+1.3.4 Desenvolvimento e maturação do caju  ..................................................  17 
+1.3.5 Características da amêndoa da castanha do caju  .................................  18 
+1.3.6 Características do pedúnculo do cajueiro  ..............................................  20 
+1.3.7 Sucos mistos  .........................................................................................  21 
+2 CAPÍTULO 2  .........................................................................................  26 
+2.1 Introdução  ............................................................................................  27 
+2.2 Material e métodos  ..............................................................................  29 
+2.2.1 Obtenção de frutos e manuseio  .............................................................  29 
+2.2.2 Morfologia  ..............................................................................................  31 
+2.2.3 Características físico-químicas do pedúnculo  .......................................  34 
+2.2.4 Compostos bioativos e atividade antioxidante  .......................................  34 
+2.2.5 Delineamento experimental  ...................................................................  36 
+2.3 Resultados e discussão  ......................................................................  37 
+2.3.1 Morfologia  ..............................................................................................  37 
+2.3.2 Análises Físico-químicas  .......................................................................  41 
+2.3.3 Compostos Bioativos e Atividade Antioxidante Total  .............................  44 
+2.4 Conclusões  ..........................................................................................  48 
+3 CAPÍTULO 3  .........................................................................................  52 
+3.1 Introdução  ............................................................................................  54 
+3.2 Material e métodos  ..............................................................................  56 
+3.2.1 Obtenção de frutos e manuseio  .............................................................  56 
+3.2.2 Morfologia e Perfil Tecnológico  ..............................................................  57 
+ 
+ 
+3.2.3 Análises físico-químicas das amêndoas  ................................................  59 
+3.2.4 Análise sensorial das amêndoas  ...........................................................  59 
+3.2.5 Delineamento experimental  ...................................................................  60 
+3.3 Resultados e discussão  ......................................................................  62 
+3.3.1 Morfologia e Perfil Tecnológico  ..............................................................  62 
+3.3.2 Análises físico-químicas das amêndoas  ................................................  65 
+3.3.3 Análise sensorial das amêndoas  ...........................................................  68 
+3.3.4 Check-All-That-Apply (CATA)  ................................................................  69 
+3.4 Conclusões  ..........................................................................................  72 
+4 CAPÍTULO 4  .........................................................................................  76 
+4.1. Introdução  ............................................................................................  78 
+4.2 Material e métodos  ..............................................................................  80 
+4.2.1 Obtenção de frutos e manuseio  .............................................................  80 
+4.2.2 Obtenção de polpas de caju, manga e cajá  ..........................................  80 
+4.2.3 Formulação e pasteurização das “bebidas funcionais”  .........................  80 
+4.2.4 Caracterização dos sucos mistos  ..........................................................  81 
+4.2.5 Análise Sensorial dos sucos mistos  ......................................................  83 
+4.2.6 Delineamento experimental  ...................................................................  84 
+4.3 Resultados e discussão  ......................................................................  85 
+4.3.1 Análises químicas e físico-químicas dos sucos mistos  .........................  85 
+4.3.2 Compostos bioativos dos sucos mistos  .................................................  89 
+4.3.3 Análise sensorial dos sucos mistos  .......................................................  93 
+4.3.4 Check-All-That-Apply (CATA)  ................................................................  97 
+4.4 Conclusões  ..........................................................................................  104 
+5 CONSIDERAÇÕES GERAIS  ................................................................  105 
+ REFERÊNCIAS  .....................................................................................  106 
+ APÊNDICE A - CARACTERÍSTICAS MORFOLÓGICAS DE CAJU 
+DO CCP 76 (PEDÚNCULO, CASTANHA E AMÊNDOA) EM 
+DIFERENTES ESTÁDIOS DE MATURAÇÃO  ......................................  109 
+ APÊNDICE B - CARACTERÍSTICAS QUÍMICAS, FÍSICO QUÍMICAS 
+E COMPOSTOS BIOATIVOS DO PEDÚNCULO DO CCP 76 EM 
+DIFERENTES ESTÁDIOS DE MATURAÇÃO  ......................................  109 
+ 
+ 
+ APÊNDICE C - FICHA PARA AVALIAÇÃO SENSORIAL DE 
+AMÊNDOAS DE CASTANHA DE CAJU EM DIFERENTES 
+ESTÁDIOS DE MATURAÇÃO  ..............................................................  110 
+ APÊNDICE D - AMÊNDOAS DO CCP 76 COLHIDAS EM 
+DIFERENTES ESTÁDIOS DE MATURAÇÃO E BENEFICIADAS EM 
+AUTOCLAVE OU CONGELADAS COM POSTERIOR 
+DECORTICAÇÃO MANUAL  .................................................................  110 
+ APÊNDICE E - COMPOSIÇÃO CENTESIMAL E VALOR 
+ENERGÉTICO TOTAL DE AMÊNDOAS DO CCP 76 COLHIDAS EM 
+DIFERENTES ESTÁDIOS DE MATURAÇÃO E BENEFICIADAS EM 
+AUTOCLAVE OU CONGELADAS COM POSTERIOR 
+DECORTICAÇÃO MANUAL  .................................................................  111 
+ APÊNDICE F - RESULTADOS DE AVALIAÇÃO SENSORIAL DE 
+AMÊNDOAS DO CCP 76 COLHIDAS EM DIFERENTES ESTÁDIOS 
+DE MATURAÇÃO E BENEFICIADAS EM AUTOCLAVE OU 
+CONGELADAS COM POSTERIOR DECORTICAÇÃO MANUAL  .......  112 
+ APÊNDICE G - FICHA PARA AVALIAÇÃO SENSORIAL DE SUCOS 
+MISTOS DE CAJU IMATURO COM CAJU MADURO, MANGA E 
+CAJÁ  .....................................................................................................  112 
+ APÊNDICE H - CARACTERÍSTICAS QUÍMICAS, FÍSICO QUÍMICAS 
+E COMPOSTOS BIOATIVOS DE SUCO MISTO DE CAJU MADURO 
+E CAJU 40 DIAS  ...................................................................................  113 
+ APÊNDICE I - CARACTERÍSTICAS QUÍMICAS, FÍSICO QUÍMICAS 
+E COMPOSTOS BIOATIVOS DE SUCO MISTO DE MANGA 
+MADURA E CAJU 40 DIAS  ..................................................................  114 
+ APÊNDICE J - CARACTERÍSTICAS QUÍMICAS, FÍSICO QUÍMICAS 
+E COMPOSTOS BIOATIVOS DE SUCO MISTO DE CAJÁ MADURO 
+E CAJU 40 DIAS  ...................................................................................  114 
+ APÊNDICE K - RESULTADOS DE AVALIAÇÃO SENSORIAL SUCO 
+MISTO DE CAJU MADURO E CAJU 40 DIAS  .....................................  115 
+ APÊNDICE L - RESULTADOS DE AVALIAÇÃO SENSORIAL DE 
+SUCO MISTO DE MANGA MADURA E CAJU 40 DIAS  ......................  115 
+ 
+ 
+ APÊNDICE M - RESULTADOS DE AVALIAÇÃO SENSORIAL SUCO 
+MISTO DE CAJÁ MADURO E CAJU 40 DIAS  .....................................  115 
+ APÊNDICE N - RESUMO DAS ANOVAS OBTIDAS PARA AS 
+CARACTERÍSTICAS AVALIADAS  .......................................................  116 
+ APÊNDICE O - CORRELAÇÃO DAS CARACTERÍSTICAS 
+MORFOLÓGICAS DE CAJU DO CCP 76 (PEDÚNCULO, 
+CASTANHA E AMÊNDOA) EM DIFERENTES ESTÁDIOS DE 
+MATURAÇÃO  .......................................................................................  121 
+ APÉNDICE P – CORRELAÇÃO DOS COMPOSTOS BIOATIVOS DE 
+CAJU DO CCP 76 (PEDÚNCULO, CASTANHA E AMÊNDOA) EM 
+DIFERENTES ESTÁDIOS DE MATURAÇÃO  ......................................  122 
+ 
+ 
+ 

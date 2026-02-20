@@ -1,0 +1,2829 @@
+ 
+ 
+ 
+UNIVERSIDADE FEDERAL DO CEARÁ 
+CENTRO DE CIÊNCIAS AGRÁRIAS 
+DEPARTAMENTO DE ENGENHARIA DE ALIMENTOS 
+PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIA E TECNOLOGIA DE 
+ALIMENTOS 
+ 
+ 
+ 
+ 
+ 
+  
+RITA SANNARA BANDEIRA DO NASCIMENTO 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+DESENVOLVIMENTO DE UMA BEBIDA FERMENTADA À BASE DE XERÉM DE 
+CASTANHA DE CAJU (Anacardium occidentale L.) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2024 
+ 
+   
+ 
+ 
+ 
+RITA SANNARA BANDEIRA DO NASCIMENTO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DESENVOLVIMENTO DE UMA BEBIDA FERMENTADA À BASE DE XERÉM DE 
+CASTANHA DE CAJU (Anacardium occidentale L.) 
+ 
+ 
+ 
+ 
+ 
+ 
+Dissertação apresentada ao Programa de Pós-
+Graduação em Ciência e Tecnologia de 
+Alimentos da Universidade Federal do Ceará 
+(UFC) como requisito à obtenção do título de 
+Mestre em Ciência e Tecnologia de Alimentos. 
+Área de concentração: Ciência e Tecnologia de 
+Produtos de Origem Microbiana e Enzimática. 
+  
+Orientadora: Profa. Dra. Sueli Rodrigues. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2024 
+  
+   
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+RITA SANNARA BANDEIRA DO NASCIMENTO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DESENVOLVIMENTO DE UMA BEBIDA FERMENTADA À BASE DE XERÉM DE 
+CASTANHA DE CAJU (Anacardium occidentale L.) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Dissertação apresentada ao Programa de Pós-
+Graduação em Ciência e Tecnologia de 
+Alimentos da Universidade Federal do Ceará 
+(UFC) como requisito à obtenção do título de 
+Mestre em Ciência e Tecnologia de Alimentos. 
+Área de concentração: Ciência e Tecnologia de 
+Produtos de Origem Microbiana e Enzimática. 
+  
+Aprovada em:  16/02/2024. 
+ 
+BANCA EXAMINADORA 
+ 
+ 
+________________________________________________________ 
+Profa. Dra. Sueli Rodrigues (Orientadora)  
+Universidade Federal do Ceará (UFC) 
+ 
+  
+________________________________________________________ 
+Dra. Rhonyele Maciel da Silva 
+Universidade Federal do Ceará (UFC) 
+ 
+  
+________________________________________________________ 
+Dra. Mayra Garcia Maia Costa 
+Núcleo de Tecnologia e Qualidade Industrial do Ceará (NUTEC) 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A Deus. 
+À minha mãe, irmã e sobrinha. 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+AGRADECIMENTOS 
+  
+A Deus, por ser meu guia e me dar forças para sempre seguir em frente. 
+À minha família, por todo amor e apoio incondicional. À minha mãe, Rita, por ser 
+meu porto seguro, por toda dedicação, por nunca medir esforços para nos proporcionar o 
+melhor. À minha irmã, Saara, por todo incentivo e por celebrar genuinamente todas as minhas 
+conquistas. À minha sobrinha, Ana Lívia, por sempre acreditar em mim e em minha capacidade. 
+À minha orientadora, Profa. Dra. Sueli Rodrigues, cuja excelente orientação foi 
+fundamental para a realização deste trabalho. Agradeço por toda paciência, dedicação, 
+conhecimentos e acolhida durante o período de mestrado.  
+Aos membros participantes da banca examinadora, pelo tempo, valiosas 
+colaborações e sugestões. 
+À Profa. Dra. Ana Lúcia Fernandes Pereira por toda contribuição no 
+desenvolvimento deste trabalho. Assim como, pela parceria na realização das análises 
+sensoriais relatadas nesta pesquisa. 
+À Dra. Thatyane Vidal Fonteles pela disponibilidade em ajudar sempre que 
+precisei. Agradeço por todos os conselhos, sugestões e ensinamentos. 
+À toda equipe do Labiotec que me acolheu de braços abertos. Em especial Betina, 
+Brenda, Cristiano, Elaine, Fátima e Karol pela convivência diária, almoços, conselhos, 
+perrengues, risadas, dificuldades e alegrias. Os dias foram mais leves ao compartilhar essa 
+montanha russa que é a pós-graduação com vocês. 
+Aos amigos e colegas de turma do mestrado que contribuíram de alguma forma para 
+a realização deste trabalho 
+Ao PPGCTA, assim como, todo corpo docente e técnico-administrativo pelo 
+empenho ao programa. 
+À UFC pela oportunidade de formação acadêmica em um ambiente propício ao 
+aprendizado. 
+À CAPES, pela manutenção da bolsa. O presente trabalho foi realizado com apoio 
+da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior – Brasil (CAPES) - Código 
+de Financiamento 001. Assim como, ao INCT- FT e às agências de fomento FUNCAP e CNPQ 
+pelo suporte financeiro. 
+  
+  
+   
+ 
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+ “Por vezes sentimos que aquilo que fazemos 
+não é senão uma gota de água no mar. Mas o 
+mar seria menor se lhe faltasse uma gota.” 
+(Madre Teresa de Calcutá) 
+  
+   
+ 
+ 
+ 
+RESUMO 
+  
+O interesse dos consumidores em alimentos funcionais, tem crescido nos últimos anos. Os 
+produtos de origem vegetal também se encontram em evidente demanda, influenciados por 
+fatores com intolerância à lactose e alergias, veganismo e outras questões éticas. Diante da 
+relevância da amêndoa de castanha de caju (ACC) no comércio brasileiro e o desperdício gerado 
+durante a sua produção devido às quebras e irregularidades propõe-se o uso do xerém da 
+castanha de caju na elaboração de uma bebida vegetal fermentada com bactéria potencialmente 
+probiótica. Dessa maneira, este trabalho teve como objetivo desenvolver e avaliar o potencial 
+funcional de uma bebida à base de extrato de xerém de castanha de caju fermentada pela cepa 
+Lacticaseibacillus casei NRRL B-442. A bebida fermentada foi preparada e a sua estabilidade 
+foi avaliada ao longo de 42 dias de armazenamento refrigerado (4 °C), monitorando pH, 
+viabilidade e concentração de ácido lático e açúcares. Além disso, a taxa de sobrevivência das 
+células após a simulação da digestão gastrointestinal foi quantificada. Uma nova fermentação 
+foi preparada e a bebida fermentada foi dividida em duas partes, as quais foram adicionadas de 
+sacarose (7%, m/v) ou sucralose (0,2%, v/v) e foram submetidas a análise sensorial, com testes 
+de associação de palavras, escala hedônica e CATA. Durante a fermentação, o microrganismo 
+potencialmente probiótico demonstrou uma preferência pelo consumo da glicose, resultando na 
+produção de ácido lático. A bebida fermentada se mostrou estável ao longo do armazenamento, 
+com contagens finais de células viáveis superiores a 12 log UFC/mL em todas as amostras 
+analisadas. Durante esse período, a bebida fermentada sofreu pós-acidificação, apresentando 
+valores de ácido lático acima de 9 g/L no final desse período. Após a digestão in vitro nos 1°, 
+21° e 42° dias de armazenamento, foram observadas taxas de sobrevivência do microrganismo 
+de 73,18% (9,55 log UFC/mL), 76,39% (10,68 log UFC/mL) e 75,06% (9,18 log UFC/mL), 
+respectivamente. Os produtos elaborados foram bem aceitos sensorialmente, não havendo 
+diferença significativa entre as amostras adoçadas com sacarose e com sucralose, de acordo 
+com os testes aplicados. Portanto, os resultados indicam que a matriz à base de xerém de 
+castanha de caju é uma boa alternativa na elaboração de produtos vegetais probióticos. O 
+desenvolvimento deste projeto possibilitou a elaboração de um extrato vegetal fermentado com 
+um bom potencial funcional, oferecendo uma nova opção de produto ao público interessado. 
+  
+Palavras-chave: extrato vegetal; amêndoa de castanha de caju; alimentos funcionais; bebidas 
+fermentadas; digestão in vitro; Lacticaseibacillus casei. 
+   
+ 
+ 
+ 
+ABSTRACT 
+  
+Consumer interest in functional foods has grown in recent years. Plant-based milk alternatives 
+(PBMA) are also in clear demand, influenced by factors such as lactose intolerance, allergies, 
+veganism, and ethical considerations. Recognizing the relevance of cashew nut kernels in 
+Brazilian commerce and the by-products generated during its production due to breakages and 
+irregularities, this study proposed utilizing cashew nut by-product in the preparation of a plant-
+based beverage fermented with potentially probiotic bacteria. Therefore, this work aimed to 
+develop and evaluate the functional potential of a cashew nut-based beverage fermented by the 
+Lacticaseibacillus casei NRRL B-442 strain. The fermented beverage was prepared and its 
+stability was evaluated over 42 days of refrigerated storage (4 °C), monitoring parameters such 
+as pH, viability and concentration of lactic acid and sugars. Additionally, the survival rate of 
+viable cells after simulated gastrointestinal digestion was quantified. A new fermentation was 
+prepared and the fermented beverage was divided into two parts, which were added with 
+sucrose (7%, w/v) or sucralose (0.2%, v/v) and were subjected to sensory analysis, including 
+word association, hedonic scale, and CATA tests. During fermentation, the potentially probiotic 
+microorganism demonstrated a preference for consuming glucose, resulting in the production 
+of lactic acid. The fermented beverage was stable throughout refrigerated storage, with final 
+viable cell counts greater than 12 log CFU/mL in all samples analyzed. During this period, the 
+samples underwent post-acidification during storage, with lactic acid values above 9 g/L at the 
+end of this period. After in vitro digestion on the 1st, 21st and 42nd days of storage, 
+microorganism survival rates of 73.18% (9.55 log CFU/mL), 76.39% (10.68 log CFU/mL) and 
+75.06% (9.18 log CFU/mL) were observed, respectively. The products prepared were well 
+accepted sensorially, with no significant difference between the samples sweetened with 
+sucrose and sucralose, according to the tests applied. Overall, the results suggest that the cashew 
+nut-based matrix is a promising alternative for the development of probiotic plant-based 
+products. The development of this project made it possible to elaborate a fermented plant-based 
+beverage with strong functional potential, providing a new product option for interested 
+consumers. 
+  
+Keywords: plant-based products; cashew nut kernel; functional foods; fermented beverages; 
+in vitro digestion; Lacticaseibacillus casei. 
+ 
+   
+ 
+ 
+ 
+LISTA DE FIGURAS 
+  
+Figura 1  
+− Caju (Anacardium occidentale L.) ............................................................... 26 
+Figura 2  
+− Etapas do processamento da castanha de caju ............................................ 28 
+Figura 3 
+− Classificação do tamanho dos grãos fragmentados de ACC ....................... 28 
+Figura 4 
+− Extrato de xerém de castanha de caju (ECC) .............................................. 34 
+Figura 5 
+− Fluxograma de obtenção do ECC ............................................................... 35 
+Figura 6 
+− Biomassa úmida de L. casei NRRL B-442 ................................................. 36 
+Figura 7 
+− Biorreator BIO-TEC-PRO. a) Sistema de biorreatores, controlador e banho 
+termostático; b) Biorreator acoplado aos sensores de pH e temperatura ....... 37 
+Figura 8 
+− Digestão gastrointestinal simulada de acordo com método INFOGEST 2.0  39 
+Figura 9 
+− Acidificação e viabilidade das células de L. casei NRRL B-442 durante a 
+fermentação do ECC .................................................................................... 44 
+Figura 10 
+− Perfil de consumo de açúcares e produção de ácido lático durante a 
+fermentação do ECC pelo L. casei NRRL B-442 ......................................... 45 
+Figura 11 
+− Comportamento do pH e viabilidade das células durante os 42 dias de 
+armazenamento refrigerado (4 °C) do ECC fermentado pelo L. casei 
+NRRL B-442 ............................................................................................... 49 
+Figura 12 
+− Perfil de consumo de açúcares e produção de ácido lático durante os 42 
+dias de armazenamento refrigerado (4 °C) do ECC fermentado L. casei 
+NRRL B-442 ............................................................................................... 50 
+Figura 13 
+− Taxa de sobrevivência do microrganismo nos dias 1, 21 e 42 de 
+armazenamento refrigerado (4 °C) do ECC fermentado após digestão 
+simulada ...................................................................................................... 52 
+Figura 14 
+− Viabilidade após as fases da digestão in vitro nos dias 1, 21 e 42 de 
+armazenamento refrigerado (4 °C) do ECC fermentado L. casei NRRL B-
+442 ............................................................................................................... 54 
+   
+ 
+ 
+ 
+Figura 15 
+− Categorias mais frequentemente citadas no teste de associação de palavras 
+relacionadas à bebida de castanha de caju fermentada ................................. 56 
+Figura 16 
+− Aceitação sensorial dos atributos cor, aparência, aroma, sabor e impressão 
+global medidos usando escala hedônica das bebidas estudadas ................... 59 
+Figura 17 
+− Percentuais de frequência dos descritores que apresentaram diferença 
+significativa na avaliação CATA das bebidas fermentadas à base de ECC 
+adicionadas de sacarose (ECC-SAC) e sucralose (ECC-SUC) em 
+comparação com o leite fermentado comercial ............................................ 61 
+  
+   
+ 
+ 
+ 
+LISTA DE QUADROS 
+  
+Quadro 1 25 
+− Fermentação de bebidas vegetais por microrganismos probióticos ........... 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+ 
+ 
+ 
+LISTA DE TABELAS 
+  
+Tabela 1 
+− Composição nutricional de bebida vegetal à base de amêndoa de castanha 
+de caju .......................................................................................................... 29 
+Tabela 2  
+− Composição dos fluidos simulados de acordo com protocolo INFOGEST 
+2.0 para o preparo de 400 mL de solução ..................................................... 38 
+Tabela 3 
+− Valores de pH, viabilidade, glicose, sacarose e ácido lático obtidos durante 
+o processo de fermentação do ECC pelo L. casei NRRL B-442 ................... 46 
+Tabela 4 
+− Valores de pH, viabilidade, glicose, sacarose e ácido lático obtidos durante 
+os 42 dias de armazenamento refrigerado (4 °C) do ECC fermentado pelo 
+L. casei NRRL B-442 ................................................................................... 48 
+Tabela 5 
+− Viabilidade após as fases da digestão in vitro nos dias 1, 21 e 42 de 
+armazenamento refrigerado (4 °C) do ECC fermentado pelo L. casei 
+NRRL B-442 ............................................................................................... 53 
+Tabela 6 
+− Resultado da associação de palavras da bebida de castanha de caju 
+fermentada, exemplos de associações individuais e frequência de menção 
+das categorias ............................................................................................... 57 
+Tabela 7 
+− Aceitação sensorial dos atributos medidos das amostras usando escala 
+hedônica ...................................................................................................... 59 
+Tabela 8 
+− Percentuais de frequência dos descritores mais utilizadas pelos avaliadores 
+na metodologia do CATA, para descrever as bebidas de ECC fermentado 
+adicionadas de sacarose (ECC-SAC) e sucralose (ECC-SUC) em 
+comparação com o leite fermentado comercial ............................................ 60 
+  
+  
+  
+   
+ 
+ 
+ 
+SUMÁRIO 
+  
+1 INTRODUÇÃO ............................................................................................ 14 
+2 REFERENCIAL TEÓRICO ...................................................................... 17 
+2.1 Alimentos funcionais .................................................................................... 17 
+2.2 Probióticos .................................................................................................... 18 
+2.3 Bactérias ácido láticas .................................................................................. 19 
+2.3.1 Lacticaseibacillus casei ................................................................................. 21 
+2.4 Extratos vegetais hidrossolúveis ................................................................. 22 
+2.4.1 Processo fermentativo de extratos vegetais ................................................... 23 
+2.5 Amêndoas de castanha de caju ................................................................... 26 
+2.6 Digestão simulada de alimentos probióticos ............................................... 30 
+3 OBJETIVOS ................................................................................................. 33 
+3.1 Objetivo geral ............................................................................................... 33 
+3.2 Objetivos específicos .................................................................................... 33 
+4 MATERIAIS E MÉTODOS ....................................................................... 34 
+4.1 Preparo e processamento do extrato vegetal de xerém de castanha de 
+caju ................................................................................................................. 34 
+4.2 Microrganismo e preparo do inóculo ......................................................... 35 
+4.2.1 Preparo da cultura estoque do L. casei NRRL B-442 ..................................... 35 
+4.2.2 Ativação e preparo do inóculo do L. casei NRRL B-442 ................................ 36 
+4.3 Fermentação da bebida vegetal e estudo da cinética ................................ 37 
+4.4 Estabilidade durante o armazenamento da bebida fermentada ................ 37 
+4.5 Digestão gastrointestinal simulada ............................................................. 38 
+4.6 Métodos analíticos ........................................................................................ 39 
+4.6.1 pH .................................................................................................................. 39 
+4.6.2 Contagem de células viáveis ......................................................................... 40 
+   
+ 
+ 
+ 
+4.6.3 Determinação de ácido lático e açúcares ..................................................... 40 
+4.7 Análise sensorial ........................................................................................... 41 
+4.8 Análise estatística ......................................................................................... 42 
+5 RESULTADOS E DISCUSSÃO ................................................................. 43 
+5.1 Cinética da fermentação .............................................................................. 43 
+5.2 Estabilidade durante o armazenamento refrigerado da bebida 
+fermentada ..................................................................................................... 47 
+5.3 Sobrevivência do microrganismo após digestão simulada ........................ 51 
+5.4 Análise sensorial ........................................................................................... 55 
+5.4.1 Associação de palavras ................................................................................. 55 
+5.4.2 Aceitação sensorial por escala hedônica ...................................................... 58 
+5.4.3 Teste Check-All-That-Apply (CATA) ........................................................... 60 
+6 CONCLUSÃO ............................................................................................... 64 
+  REFERÊNCIAS ........................................................................................... 65 
+  APÊNDICE A – TESTE CHECK-ALL-THAT-APPLY (CATA) .......... 76 
+  APÊNDICE B – TERMO DE CONSENTIMENTO ................................ 77 
+   
+ 
+14 
+ 
+1 INTRODUÇÃO 
+  
+Ao longo dos últimos anos, a população tem manifestado um interesse crescente 
+por um estilo de vida mais saudável e consciente. É evidente a preocupação com uma 
+alimentação mais equilibrada, que forneça benefícios à saúde além dos aspectos nutricionais 
+(Collier et al., 2023; Lillo-Pérez et al., 2021). De tal forma, o mercado mundial de alimentos 
+funcionais foi fortemente impulsionado nos anos recentes (Küçükgöz; Trząskowska, 2022). 
+Aproximadamente 65% do mercado global dos produtos funcionais alimentícios 
+são representados por produtos probióticos (Kouamé et al., 2023). Esses alimentos possuem em 
+sua composição microrganismos vivos que, ao serem ingeridos em quantidade apropriada, 
+contribuem para a promoção da saúde do indivíduo (Hill et al., 2014; FAO/WHO, 2002). Esses 
+organismos microscópicos favorecem o fortalecimento da microbiota intestinal, contribuem 
+para a diminuição dos níveis de colesterol e aumentam o estímulo do sistema imunológico 
+(Bernat et al., 2014a).  
+Uma parte significativa dos microrganismos empregados na produção de alimentos 
+probióticos pertence ao grupo das bactérias ácido láticas (BAL), sendo os Lactobacillus e 
+Bifidobacterium os gêneros mais relevantes (Szutowska, 2020). Todavia, a sobrevivência 
+dessas bactérias é influenciada pelo tipo de matéria-prima utilizada como substrato na 
+elaboração de tais produtos (Freitas et al., 2021). O microrganismo probiótico deve manter uma 
+concentração mínima de células viáveis na ordem de 6-7 log UFC/mL durante toda a vida útil 
+do alimento (Leeuwendaal et al., 2022). Além disso, é essencial que sobreviva às condições 
+gastrointestinais e fixe-se ao epitélio para exercer seus efeitos benéficos (Valero-Cases et al., 
+2020). 
+Tradicionalmente, os alimentos probióticos são desenvolvidos a partir de matrizes 
+lácteas como iogurtes, queijos, leite fermentado, kefir, entre outros (Valero-Cases et al., 2020). 
+Contudo, devido a fatores como intolerância à lactose, alergias, veganismo, impactos ao meio 
+ambiente e outras questões éticas, a busca por alternativas capazes de substituir essas fontes 
+tem se intensificado (Brooker et al., 2023; Kokwar; Arya; Bhat, 2022). Em resposta a essa 
+demanda, surgem alternativas de origem vegetal, que buscam reproduzir as características de 
+aparência e consistência do leite de vaca. Essas opções são extratos hidrossolúveis obtidos pela 
+trituração e homogeneização de matérias-primas vegetais, tais como legumes, cereais, sementes 
+e nozes (Huang et al., 2023; Tangyu et al., 2019). 
+Nesse cenário, o uso de oleaginosas na produção de extratos vegetais e produtos 
+probióticos não foi completamente elucidado, tornando essencial o desenvolvimento de novos 
+15 
+ 
+produtos a partir dessa matéria-prima (Comak Gocer; Koptagel, 2023). Tendo em vista que, a 
+amêndoa da castanha de caju (Anacardium occidentale L.) representa uma das oleaginosas mais 
+relevantes no mercado internacional e que durante o seu processamento até 40% da produção 
+pode sofrer danos por quebras, podem-se utilizar os grãos quebrados para a produção de bebidas 
+vegetais, valorizando-se este subproduto (Lima et al., 2021). Em 2021, a produção mundial de 
+amêndoas de castanha de caju atingiu cerca de 1,1 milhão de toneladas, sendo o Brasil o quarto 
+maior produtor, com 30 mil toneladas (FAOSTAT, 2023). 
+A amêndoa de castanha de caju (ACC) se destaca pelo seu alto valor nutricional, 
+com elevados teores de gorduras (46%), proteínas (21,2%) e carboidratos (22,3%), além de 
+apresentar grandes quantidades de aminoácidos essenciais para o ser humano (Chen et al., 2022; 
+Amorim et al., 2018). O seu consumo está associado a propriedades anti-inflamatórias 
+(D’Amico et al., 2022), diminuição da pressão arterial sistólica e ao aumento das concentrações 
+do colesterol HDL (Mohan et al., 2018). De tal forma, propõe-se o desenvolvimento de um 
+extrato hidrossolúvel à base de xerém de castanha de caju como uma alternativa de substrato 
+viável para a produção de bebidas probióticas.  
+Além da matéria-prima, o processamento do alimento também afeta a viabilidade e 
+a estabilidade do microrganismo probiótico (Jeske; Zannini; Arendt, 2018). A adoção do 
+processo fermentativo para a incorporação de bactérias probióticas é considerada uma valiosa 
+ferramenta biotecnológica para a promoção da qualidade nutricional, sensorial e microbiológica 
+de produtos alimentícios (Kaprasob et al., 2018). As bactérias ácido láticas (BAL) são 
+comumente empregadas na produção de uma variedade de alimentos fermentados, contribuindo 
+para a otimização do sabor, textura e conservação (Hasan et al., 2023).  
+A utilização da espécie Lacticaseibacillus casei é fortemente difundida na indústria 
+de alimentos em decorrência do seu potencial industrial, comercial e funcional (Valero-Cases 
+et al., 2020). Contudo, é digno de nota que as propriedades probióticas são intrinsecamente 
+vinculadas à cepa do microrganismo utilizada (Bernal-Castro et al., 2023). Alguns estudos 
+indicaram que a cepa L. casei NRRL B-442 demonstrou uma boa adaptação em matérias-primas 
+vegetais, com elevadas taxas de sobrevivência ao longo do armazenamento (Costa et al., 2013; 
+Fonteles et al., 2012; Freitas et al., 2021; Santos Filho et al., 2019) e após a digestão simulada 
+(Silva; Campelo; Rodrigues, 2022). Embora diversos autores tenham obtido êxito na promoção 
+de probióticos a partir de matrizes não lácteas, a avaliação sensorial e aceitação pelos 
+consumidores ainda são escassas (Vivek et al., 2023; Subhashree; Kavita, 2019). 
+   
+ 
+16 
+ 
+Neste contexto, o objetivo deste estudo foi desenvolver uma bebida vegetal à base 
+de xerém de castanha de caju fermentada pela cepa potencialmente probiótica 
+L. casei NRRL B-442. Em sequência, buscou-se caracterizar as variações de pH, viabilidade, 
+açúcares e ácidos orgânicos ao longo do período de 42 dias de armazenamento refrigerado a 
+4 °C, além de avaliar a sobrevivência do microrganismo após a digestão simulada. 
+Adicionalmente, o produto elaborado foi submetido a análise sensorial com participantes não 
+treinados. 
+  
+  
+   
+ 
+17 
+ 
+2 REFERENCIAL TEÓRICO 
+  
+2.1 Alimentos funcionais 
+  
+Admite-se que o termo alimento funcional surgiu em 1991, no Japão, se referindo 
+ao alimento suplementado por vitaminas, fibras, proteínas ou outros aditivos (Min et al., 2019). 
+Atualmente, um alimento é considerado funcional quando, simultaneamente, fornece nutrientes 
+e proporciona efeitos benéficos ao organismo, promovendo saúde e bem-estar ao consumidor 
+(Doyon; Labrecque, 2008). Este tipo de alimento, ao fazer parte da dieta normal, possui funções 
+específicas capazes de promover melhoras à saúde ou reduzir a probabilidade da ocorrência de 
+determinadas doenças (Kouamé et al., 2023). 
+Estes alimentos podem apresentar uma diversidade de componentes adicionados ou 
+inerentes, como antioxidantes, minerais, peptídeos bioativos, prebióticos e probióticos (Lillo-
+Pérez et al., 2021). Segundo Kouamé et al. (2023), os alimentos funcionais podem ser divididos 
+em 5 grupos, sendo estes, naturais, enriquecidos, modificados, fortificados e melhorados. É 
+importante salientar que, a manutenção da aparência do alimento após a adição do componente 
+funcional é uma característica relevante na elaboração destes produtos (Shori et al., 2022).  
+Nas últimas décadas, os consumidores mostraram mudanças em sua percepção 
+acerca dos alimentos que ingerem. Cada vez mais conscientes, buscam por alimentos que, além 
+de satisfazer as suas necessidades energéticas, também, forneçam benefícios à saúde. Com isso, 
+a indústria alimentícia é encorajada a dar maior importância ao desenvolvimento de alimentos 
+funcionais (Küçükgöz; Trząskowska, 2022). Dessa maneira, mais de 500 novos produtos 
+funcionais adentraram o mercado de 2011 a 2021 (Souza et al., 2021). 
+Shori et al. (2022) destacam que o interesse nesses produtos tem se tornado mais 
+evidente devido a fatores como o aumento no estilo de vida saudável da população, o aumento 
+na expectativa de vida dos indivíduos, assim como, o aumento nos custos dos tratamentos e 
+planos de saúde atuais. Recentemente, a pandemia de COVID-19 intensificou a demanda de 
+alimentos com propriedades funcionais, impulsionando ainda mais o crescimento do mercado 
+desses itens alimentícios (Paredes; Escudero-Gilete; Vicario, 2022). 
+Somente entre os anos de 2000 e 2013, o mercado mundial de alimentos e bebidas 
+funcionais multiplicou o seu faturamento em mais de 5 vezes, logrando o montante de 
+US$176,7 bilhões, representando cerca de 5% do setor de alimentos (Tripathi; Giri, 2014). Uma 
+pesquisa realizada pela Precedence Research (2023) relata que, em 2022, o mercado global 
+   
+ 
+18 
+ 
+atingiu a marca de US$305,4 bilhões. Ainda de acordo com esta organização, as previsões 
+mercadológicas indicam que ocorra um crescimento até o patamar de 597,1 bilhões de dólares, 
+até o ano de 2032. Dentre os alimentos funcionais, os probióticos representam a maior 
+quantidade, correspondendo a porção de 60% a 70% do mercado mundial 
+(Naseem et al., 2023). 
+  
+2.2 Probióticos 
+  
+O conceito de probióticos foi idealizado em torno de 1900, pelo cientista russo Elie 
+Metchnikoff, ao observar que a boa saúde e longevidade dos camponeses búlgaros se dava pelo 
+consumo de produtos preparados com leite fermentado (Tripathi; Giri, 2014). 
+No início dos anos 2000, a Organização Mundial de Saúde (OMS/WHO) e a 
+Organização das Nações Unidas para Alimentação e Agricultura (FAO) definiram o termo 
+“probiótico” na publicação das Diretrizes para a Avaliação de Probióticos em Alimentos como: 
+“microrganismos vivos que quando administrados em quantidade adequada conferem um 
+benefício à saúde do hospedeiro” (FAO/WHO, 2002).  
+Em 2013, uma conferência realizada por especialistas da Associação Científica 
+Internacional de Probióticos e Prebióticos (ISAPP) considerou uma pequena alteração 
+gramatical nesta definição, reiterando probióticos como: “microrganismos vivos, que quando 
+administrados em quantidade adequada, conferem um benefício à saúde do hospedeiro”, 
+tornando-se a definição mais aceita mundialmente (Hill et al., 2014). 
+Diversas organizações relacionadas com as regulamentações alimentícias, admitem 
+que a quantidade mínima de células viáveis presentes no alimento no momento do seu consumo 
+6
+deve ser de 10 UFC/mL (Leeuwendaal et al., 2022). Contudo, a viabilidade do probiótico 
+depende de uma variedade de fatores dentre os quais podem ser citados, a espécie e cepa do 
+microrganismo, a matriz utilizada como substrato, a presença de oxigênio, o pH do meio e o 
+tempo de fermentação do alimento (Cerdá-Bernad et al., 2022; Costa et al., 2013).  
+As condições do armazenamento também influenciam diretamente na viabilidade 
+do microrganismo. A temperatura empregada na estocagem é inversamente proporcional à 
+manutenção das células viáveis. Dessa forma, é proposto que os alimentos probióticos sejam 
+acondicionados em temperaturas na faixa de 4 a 5 °C, de maneira a preservar a viabilidade do 
+produto (Tripathi; Giri, 2014). 
+   
+ 
+19 
+ 
+Para ser apontada como probiótica, a cepa do microrganismo deve atender alguns 
+requisitos. Sobretudo, todas as cepas devem ser reconhecidas como seguras (Generally 
+Recognized As Safe - GRAS), garantindo que não ofereçam riscos à saúde do consumidor. 
+Ademais, devem ter seus efeitos benéficos confirmados, não devem apresentar resistência aos 
+antibióticos, suas características organolépticas devem ser agradáveis e, ainda, devem oferecer 
+uma boa adesão e colonização à superfície da mucosa intestinal (Szutowska, 2020).  
+Quando no hospedeiro, os microrganismos probióticos devem apresentar 
+resistência à saliva, ao ácido gástrico e à bile, assim como, a todo o trânsito pelo trato 
+gastrointestinal, e colonizar o intestino em quantidade suficiente para a promoção de benefícios 
+à saúde (Lillo-Pérez et al., 2021).  
+O consumo regular de probióticos contribui para a manutenção do equilíbrio da 
+microbiota intestinal e da saúde do intestino. Também está associado a melhora na 
+digestibilidade da lactose, a inibição de patógenos no trato gastrointestinal (TGI), além de 
+contribuir com o controle da síndrome do intestino irritável (Costa et al., 2013; Szutowska, 
+2020). Diversos estudos clínicos indicam a observação de efeitos benéficos como a redução nos 
+marcadores de doença cardiovascular (Cavallini et al., 2016), a redução nos níveis de colesterol 
+no sangue (Larkin; Astheimer; Price, 2009) e melhoria no índice glicêmico (Singh et al., 2023). 
+El Dib et al. (2021) relatam que existe uma relação entre a microbiota intestinal e o 
+sistema nervoso central e entérico, denominado por eixo microbiota-intestino-cérebro. A 
+desregulação da microbiota intestinal pode acarretar desordens mentais e do sistema nervoso 
+central. Alli et al. (2022) ressaltam que quadros clínicos de depressão e ansiedade reduzem a 
+diversidade de espécies do gênero Lactobacillus presentes na microbiota intestinal, assim, o 
+uso de probióticos pode contribuir para a melhora dos sintomas causados por esses transtornos. 
+Na literatura são relatados ainda diversos outros benefícios do consumo de produtos 
+adicionados de probióticos, dentre os quais pode-se destacar as propriedades 
+anticarcinogênicas, supressão da infecção por Helicobacter pylori e a melhoria no bem-estar de 
+modo geral (Pereira; Maciel; Rodrigues, 2011; Pimentel et al., 2021b). 
+  
+2.3 Bactérias ácido láticas 
+  
+Grande parte dos microrganismos probióticos fazem parte do grupo das bactérias 
+ácido láticas (BAL), as quais possuem importante relevância industrial (Bernal-Castro et al., 
+2023). Em geral, as BAL são bactérias Gram-positivas e não apresentam a capacidade de 
+   
+ 
+20 
+ 
+formação de esporos. Habitualmente, são isoladas da microbiota intestinal, boca e leite 
+(James; Wang, 2019; Mattison et al., 2020). Comumente, apresentam preferência por 
+ambientes que sejam abundantes em carboidratos, aminoácidos, vitaminas e ácidos graxos. 
+Contudo, são capazes de se desenvolverem em ambientes adversos, como em um processo 
+fermentativo (Szutowska, 2020). 
+De acordo com os produtos obtidos da sua fermentação, as BAL podem ser 
+classificadas em homofermentativas e heterofermentativas. As bactérias homofermentativas 
+produzem ácido lático em quase exclusividade, enquanto as heterofermentativas produzem uma 
+diversidade de metabólitos, como ácido lático, etanol, ácido acético e dióxido de carbono 
+(Bernal-Castro et al., 2023; Chen et al., 2017). 
+As BAL possuem uma variedade de propriedades funcionais, dentre as quais podem 
+ser enfatizadas as funções probióticas, aumento da bioacessibilidade de nutrientes, efeito 
+antimicrobiano, degradação de compostos antinutricionais, melhora nas características 
+sensoriais, dentre outros (Hati; Patel; Mandal, 2018; Szutowska, 2020). 
+Dentre as BAL, os Lacticaseibacillus são amplamente empregados no processo 
+industrial de alimentos, sendo utilizados como um ingrediente com propriedades funcionais de 
+grande importância, devido às suas características relacionadas à segurança, eficácia e interesse 
+comercial (Padilha et al., 2016). Esses microrganismos são capazes de promover a fermentação, 
+modificar a textura, sabor e odor do alimento, além de contribuir para a preservação do produto 
+(Pimentel et al., 2021a).  
+Diferentes fatores influenciam o crescimento das cepas do gênero 
+Lacticaseibacillus como, o pH, temperatura e composição do meio. Tais microrganismos 
+apresentam capacidade de crescimento em valores de pH pouco ácido a neutro, com faixa de 
+pH ótimo entre 5,5 e 6,2. Quanto às condições de temperatura, possuem capacidade de 
+crescimento de 2 a 53 °C, com faixa ótima de 30 a 40 °C (Costa et al., 2013). 
+Recentemente, Zheng et al. (2020) sugeriram diversas mudanças taxonômicas no 
+grupo dos Lactobacillus baseadas nas características fenotípicas, ecológicas e genotípicas. A 
+partir do sequenciamento completo do genoma, os autores recomendaram a reclassificação do 
+gênero Lactobacillus em 25 novos gêneros, que incluem: Acetilactobacillus, Agrilactobacillus, 
+Amylolactobacillus, Apilactobacillus, Bombilactobacillus, Companilactobacillus, Dellaglioa, 
+Fructilactobacillus, Furfurilactobacillus, Holzapfelia, Lacticaseibacillus, Lactiplantibacillus, 
+Lapidilactobacillus, Latilactobacillus, Lentilactobacillus, Levilactobacillus, Ligilactobacillus, 
+   
+ 
+21 
+ 
+Limosilactobacillus, Liquorilactobacillus, Loigolactobacilus, Paucilactobacillus, 
+Schleiferilactobacillus e Secundilactobacillus (Zheng et al., 2020). 
+ 
+2.3.1 Lacticaseibacillus casei 
+  
+A espécie Lacticaseibacillus casei, anteriormente chamada Lactobacillus casei, foi 
+isolada a partir de diferentes ambientes, incluindo laticínios e seus produtos fermentados, 
+matérias-primas vegetais e TGI humano e animal (Wang et al., 2012). Esta espécie é bastante 
+aplicada na indústria de alimentos como bactéria potencialmente probiótica 
+(Pimentel et al., 2021a) e está associada a efeitos benéficos na saúde do hospedeiro, como 
+melhorias nas funções imunológicas, manutenção do equilíbrio da microbiota e redução dos 
+riscos relacionados a diarreias (Sultana et al., 2023).  
+Em geral, as cepas pertencentes ao gênero Lacticaseibacillus são 
+homofermentativas e metabolizam pentoses pela via da fosfocetolase (Zheng et al., 2020). 
+Esses microrganismos são exigentes quanto aos componentes nutricionais do meio, quando 
+adicionados em um substrato pobre em nutrientes o seu desenvolvimento é prejudicado 
+(Costa et al., 2013). 
+A sobrevivência do L. casei no alimento é influenciada por inúmeros fatores dentre 
+os quais destacam-se as etapas de processamento, a composição da matriz alimentar, os 
+ingredientes adicionados, o preparo e a concentração do inóculo, a temperatura e a embalagem 
+utilizada no armazenamento (Pimentel et al., 2021a). 
+Esse microrganismo possui características vantajosas quando usado na fermentação 
+de alimentos de origem vegetal como: o aumento da vida de prateleira do produto, a produção 
+de compostos bioativos e a manutenção da viabilidade mesmo em condições de pH ácido (Silva; 
+Campelo; Rodrigues, 2022). Durante o processo de fermentação, o meio é rapidamente 
+acidificado pela produção de ácido lático e outros compostos como, bacteriocinas, vitaminas, 
+compostos aromáticos e enzimas (AL Zahrani; Shori, 2023). 
+Na literatura podem ser encontrados diversos estudos que relataram bons resultados 
+com a aplicação de L. casei em produtos de origem vegetal. Cunha Júnior et al. (2021) 
+produziram um extrato simbiótico à base de castanha-do-Brasil (Bertholletia excelsa H.B.K) 
+adicionado de inulina. Os autores relataram que o microrganismo L. casei manteve boa 
+viabilidade durante todo o período de armazenamento, apresentando 8,58 log UFC/mL ao final 
+dos 28 dias. Santos Filho et al. (2019) ao desenvolverem uma bebida de polpa de cacau 
+   
+ 
+22 
+ 
+(Theobroma cacao L.) observaram que a viabilidade do L. casei após a fermentação atingiu 
+valores de até 9,25 log UFC/mL. Pereira et al. (2017) avaliaram as condições de fermentação 
+de uma bebida de cupuaçu (Theobroma grandiﬂorum) com a cepa L. casei NRRL B-442. Os 
+resultados obtidos se mantiveram acima de 8 log UFC/mL em todas as condições testadas.  
+ 
+2.4 Extratos vegetais hidrossolúveis 
+  
+O leite é uma das matrizes mais utilizadas na produção de alimentos probióticos. 
+No entanto, o uso dessa matéria-prima pode causar prejuízos a uma parcela da população que 
+apresenta sensibilidade ao seu consumo, como alergia às proteínas e intolerância à lactose. Na 
+composição do leite de vaca podem ser encontradas mais de 20 proteínas capazes de provocar 
+reações alérgicas no consumidor. Entre as mais frequentes, são citadas a caseína, β-
+lactoglobulina e α-lactoalbumina (Silva; Silva; Ribeiro, 2020). Da população mundial, estima-
+se que um terço possui algum nível de dificuldade na digestão da lactose (Paredes; Escudero-
+Gilete; Vicario, 2022).  
+Somados a esses fatores, outros elementos como estilo de vida, veganismo e 
+sustentabilidade ambiental geram uma demanda crescente para o desenvolvimento de alimentos 
+livres de componentes lácteos, impulsionando o mercado de produtos vegetais (Pimentel et al., 
+2021b). Como resultado, as indústrias produtoras de itens veganos apresentam uma expansão 
+anual em torno de 10% (Paredes; Escudero-Gilete; Vicario, 2022). O faturamento mundial de 
+bebidas vegetais dobrou entre os anos de 2009 e 2015, alcançando a marca de 21 bilhões de 
+dólares (Silva; Silva; Ribeiro, 2020). Projeta-se que até o ano de 2028, as vendas mundiais 
+atinjam o patamar de US$46 bilhões (Markets and Markets, 2023). 
+Um alimento substituto é um produto desenvolvido com o fim de ser utilizado como 
+substituto total ou parcial do alimento ao qual se assemelha, sendo observadas as suas 
+características quanto à aparência, textura, sabor e odor (Silva; Silva; Ribeiro, 2020). Os 
+extratos vegetais são comumente reconhecidos como substitutos do leite bovino, devido às suas 
+semelhanças quanto ao aspecto e consistência. Essas bebidas vegetais, popularmente 
+conhecidas como “leites vegetais”, são emulsões obtidas da homogeneização de compostos 
+vegetais e água (Jeske; Zannini; Arendt, 2017). De acordo com a sua matéria-prima, podem ser 
+classificados em cinco categorias, sendo estas, cereais, legumes, amêndoas, sementes e 
+pseudocereais (Silva; Smetana, 2022).  
+   
+ 
+23 
+ 
+Quanto ao aspecto nutricional, os extratos vegetais não são equivalentes ao leite. 
+Assim, a sua completa substituição pode acarretar perdas nutricionais ao consumidor, sendo 
+recomendada a fortificação com outros nutrientes essenciais (Silva; Silva; Ribeiro, 2020). Por 
+outro lado, estudos indicam que o consumo de vegetais está associado à redução de doenças 
+crônicas, câncer e doenças cardiovasculares, assim como, ao fortalecimento do sistema 
+imunológico. Esses efeitos são observados em virtude da presença de compostos como fibras, 
+vitaminas, carotenóides, polifenóis e outros fitoquímicos nesses alimentos 
+(Bernat et al., 2014a; Paredes; Escudero-Gilete; Vicario, 2022). 
+Contudo, os extratos vegetais possuem antinutrientes, como fitatos e inibidores de 
+tripsina, que podem interferir na absorção de compostos essenciais ao organismo, como as 
+vitaminas e os minerais. De maneira a amenizar essa desvantagem, podem ser aplicadas 
+estratégias como a fermentação, adição de enzimas ou a fortificação desses nutrientes 
+(Jeske; Zannini; Arendt, 2018).  
+Os extratos vegetais são matrizes convenientes para a incorporação de 
+microrganismos probióticos devido às suas características nutricionais (Pimentel et al., 2021b). 
+Podem ser encontradas na literatura, a utilização de diferentes matérias-primas no 
+desenvolvimento de extratos vegetais probióticos como, por exemplo, avelã (Bernat et al., 
+2014b), soja e arroz (Costa et al., 2017), grão de bico e água de coco (Mesquita et al., 2020), 
+quinoa (Cerdá-Bernad et al., 2022) e amêndoas de baru (Rocha et al., 2023). 
+  
+2.4.1 Processo fermentativo de extratos vegetais 
+  
+A fermentação é uma das técnicas mais antigas empregadas na conservação dos 
+alimentos. A sua aplicação age sobre diversas propriedades do produto, tais como as 
+características nutricionais, sensoriais e a qualidade microbiológica (Szutowska, 2020). Esta 
+técnica pode ser empregada como uma estratégia na elaboração de produtos vegetais inovadores 
+e de maior valor nutricional (Araújo Filho et al., 2023). 
+Durante o processo fermentativo, os aspectos organolépticos do alimento são 
+modificados pelo metabolismo das bactérias ácido láticas. Isto ocorre devido à produção de 
+compostos voláteis, incluindo ácidos orgânicos, álcoois, aldeídos e cetonas. Esses compostos 
+influenciam no sabor e odor do alimento, que podem conferir uma melhoria nesses atributos, 
+tornando-os mais desejáveis (Kokwar; Arya; Bhat, 2022). 
+   
+ 
+24 
+ 
+A produção de ácidos orgânicos durante a fermentação provoca a redução do pH e 
+o aumento da acidez do meio. Em consequência, o crescimento de microrganismos patogênicos 
+e deteriorantes é inibido e a vida de prateleira do produto é prolongada (Paredes; Escudero-
+Gilete; Vicario, 2022). O ácido lático produzido pelas BAL presentes no processo possui grande 
+importância no efeito inibitório desses microrganismos concorrentes (Szutowska, 2020).  
+Outra vantagem da fermentação é a contribuição para a redução da utilização de 
+estabilizantes e espessantes no alimento (Ludena Urquizo et al., 2017). As BAL apresentam a 
+capacidade de metabolizar exopolissacarídeos (EPS), os quais são polissacarídeos 
+extracelulares. Esses metabólitos atuam nas propriedades reológicas do alimento, sendo 
+desejáveis pela indústria alimentícia (Szutowska, 2020). As modificações provocadas pelo EPS 
+podem ser observadas na melhora da textura, limitação da sinérese e aumento da firmeza do gel 
+(Jeske; Zannini; Arendt, 2018). O processo também contribui para a diminuição dos 
+componentes antinutricionais, possibilitando uma melhor disposição dos minerais e 
+digestibilidade de nutrientes (Rasika et al., 2021).  
+A técnica de fermentação pode viabilizar o crescimento de cepas probióticas no 
+extrato vegetal (Pimentel et al., 2021). Em decorrência da alta concentração de carboidratos, 
+polifenóis, vitaminas e minerais, os extratos vegetais são considerados excelentes matrizes para 
+a fermentação ácido lática (Szutowska, 2020). 
+Os açúcares disponíveis no meio são consumidos pelos microrganismos probióticos 
+que, consequentemente, causam uma redução nos níveis de sólidos solúveis totais (SST) do 
+substrato. Em geral, essa ação é percebida em sucos fermentados. Quando em outras matrizes 
+vegetais, essa atividade será dependente da cepa do probiótico, assim como, da matéria-prima. 
+Dessa forma, a doçura do alimento pode ser influenciada pelo consumo dos açúcares pelas 
+bactérias envolvidas no processo (Pimentel et al., 2021). 
+A presença de compostos fenólicos pode inibir ou estimular o desenvolvimento das 
+bactérias probióticas dados diversos fatores, tais como a estrutura química e concentração 
+desses compostos e a cepa do microrganismo utilizada no processo (Szutowska, 2020). Durante 
+a fermentação, os compostos fenólicos podem ser metabolizados pelos microrganismos 
+probióticos e ter seu conteúdo reduzido. Esse comportamento indica a ocorrência de um 
+possível efeito prebiótico dos compostos fenólicos sobre o crescimento das cepas probióticas, 
+potencializando a sua viabilidade (Cerdá-Bernad et al., 2022).  
+A escolha adequada da matéria-prima é fundamental para a produção de uma bebida 
+vegetal probiótica, podendo afetar diretamente a sobrevivência do microrganismo durante o 
+   
+ 
+25 
+ 
+processamento e armazenamento (Naseem et al., 2023). As condições ideais de fermentação 
+favorecem um rápido crescimento do probiótico, inibindo o desenvolvimento de outros 
+microrganismos deteriorantes e patogênicos (Szutowska, 2020). O Quadro 1 apresenta diversos 
+estudos que empregaram o processo fermentativo na produção de bebidas vegetais probióticas. 
+ 
+Quadro 1 – Fermentação de bebidas vegetais por microrganismos probióticos. 
+Matéria-Armaze-
+Probiótico Fermentação Viabilidade Referência 
+prima namento 
+Soja e Lactobacillus 3,5 – 6,9 log (AL Zahrani; 
+40 °C/9 h 21 dias/4 °C 
+amêndoas spp. UFC/mL Shori, 2023) 
+(Canaviri 
+L. plantarum 10,6 – 6,9 log 
+Quinoa 30 °C/48 h 28 dias/4 °C Paz et al., 
+DSM 9843 UFC/mL 
+2020) 
+(Cerdá-
+Quinoa L. plantarum 9,82 – 10,20 
+37 °C/6 h - Bernad et al., 
+vermelha e B. longum log UFC/mL 
+2022) 
+86
+Soja e L. 10 – 10 (Costa et al., 
+42 °C 28 dias/5 °C 
+arroz acidophilus UFC/g 2017) 
+Grão de 
+L. paracasei > 8 log (Mesquita 
+bico e 37 °C 10 dias/4 °C 
+LBC 81 UFC/mL et al., 2020) 
+coco 
+Amêndoas 8 – 10 log (Fernandes 
+L. casei 01 42 °C/5 h 28 dias/7 °C 
+de baru UFC/mL et al., 2021) 
+(Cunha 
+Castanha-9,48 – 8,59 
+L. casei 01 37 °C/12 h 28 dias/4 °C Júnior et al., 
+do-Brasil log UFC/mL 
+2021) 
+L. rhamnosus > 7,9 log (Bernat 
+Avelã 40 °C/3,5 h 28 dias/4 °C 
+GG UFC/mL et al., 2014a) 
+Fonte: Elaborado pela autora. 
+ 
+Ainda que a adição de probióticos promova a melhoria das características 
+nutricionais e sensoriais do alimento, poucas informações estão disponíveis quanto o processo 
+   
+ 
+26 
+ 
+fermentativo e a viabilidade desses microrganismos em produtos de origem vegetal 
+(Illikoud et al., 2023).  
+  
+2.5 Amêndoas de castanha de caju 
+  
+O cajueiro (Anacardium occidentale L.) é uma espécie de árvore, que pertence à 
+família Anacardiaceae, amplamente encontrada no Nordeste brasileiro. Esta variedade possui 
+capacidade de crescimento em solo pobre e sob diversas condições climáticas, especialmente 
+em climas tropicais e subtropicais. O seu fruto é caracterizado pela castanha, o qual se mantem 
+preso a polpa, que é considerada um pseudofruto (Figura 1). A castanha corresponde a 
+aproximadamente 10% do peso total do caju colhido e possui características sensoriais e 
+nutricionais de grande interesse comercial (Lima; Garruti; Bruno, 2012; Sruthi; Naidu, 2023).  
+ 
+Figura 1 – Caju (Anacardium occidentale L.) 
+ 
+Fonte: Wikimedia Commons contributors (2023). 
+  
+A produção deste fruto se concentra em países subdesenvolvidos, como a Índia, 
+Brasil, Vietnã e outros localizados no leste da África (Oliveira et al., 2020). No Brasil, esta 
+atividade é uma fonte econômica e social de grande importância para o Nordeste brasileiro, 
+onde está concentrada mais de 99% da plantação nacional (Sousa et al., 2022). 
+No ano de 2021, a produção mundial de castanha de caju com casca foi de 
+aproximadamente 3,8 milhões de toneladas, onde o Brasil representou a 12ª posição do ranking 
+   
+ 
+27 
+ 
+de maiores produtores, contribuindo com mais de 111 mil toneladas. No mesmo ano, a produção 
+global do fruto sem casca atingiu cerca de 1,1 milhão de toneladas e o Brasil registrou a marca 
+de 30 mil toneladas, ocupando o 4° lugar entre os maiores produtores (FAOSTAT, 2023). 
+A castanha de caju é composta por casca, película e amêndoa. A amêndoa é a parte 
+comestível da castanha e representa aproximadamente 30% do peso total do fruto, enquanto a 
+casca equivale em torno de 70% (Oliveira et al., 2020).  
+As amêndoas de castanha de caju (ACC) são uma ótima fonte de proteínas, 
+carboidratos, fibras e lipídios. Dentre esses últimos, grande quantidade é representada por 
+ácidos graxos mono e poli-insaturados, com destaque para os ácidos oleico (ômega 9) e 
+linoleico (ômega 6). Assim, o consumo desse alimento é recomendado para o controle do 
+colesterol no sangue, contribuindo para a sua redução (Silva; Silva; Ribeiro, 2020). 
+Em sua composição, também são encontrados todos os aminoácidos essenciais para 
+o organismo (Bisinotto et al., 2021), uma diversidade de compostos bioativos e diversos 
+minerais como fósforo, cálcio e ferro (Oliveira et al., 2020). Deste modo, sua ingestão oferece 
+vantagens para a saúde, sendo associada ao combate às doenças cardiovasculares, obesidade e 
+diabetes (Lima; Garruti; Bruno, 2012). 
+O processamento da ACC envolve diversas etapas (Figura 2) e, como consequência, 
+uma grande quantidade de grãos quebrados de baixo valor comercial é obtida ao final do 
+processo. Esses grãos são classificados de acordo com a sua cor e tamanho (Bisinotto et al., 
+2021; Lima; Garruti; Bruno, 2012).  
+ De maneira simplificada, a ACC é classificada quanto a qualidade de sua coloração 
+em quatro diferentes categorias, variando desde as cores mais claras, como branco e marfim, 
+até as mais escuras, como marrom e âmbar (Lima; Garruti; Bruno, 2012). Referente ao tamanho 
+dos grãos fragmentados (Figura 3), em geral, as amêndoas podem ser classificadas em inteiras 
+(W), bandas (S), batoques (B), pedaços (P) e outras partículas menores, sendo pedaço pequeno 
+(SP), pedaço especial pequeno (SSP), xerém (X) e farinha (F) (Carvalho et al., 2018; 
+ONVIT, 2022). 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+28 
+ 
+Figura 2 – Etapas do processamento da castanha de caju 
+ 
+Fonte: Adaptado de Sruthi e Naidu (2023). 
+ 
+Figura 3 – Classificação do tamanho dos grãos fragmentados de ACC 
+ 
+Fonte: Adaptado de ONVIT (2022). 
+Nota: a) W; b) S; c) B; d) P; e) SP; f) SSP; g) X e h) F. 
+  
+   
+ 
+29 
+ 
+Com o objetivo de valorizar este subproduto, pode-se utilizar os farelos dos grãos 
+na confecção de outros produtos como doces, sorvetes, bolos e bebidas vegetais 
+(Bisinotto et al., 2021). Dessa forma, a produção de um extrato de amêndoa de castanha de caju 
+(ECC) é uma ótima alternativa para a utilização destes fragmentos. De acordo com a Tabela 
+Brasileira de Composição de Alimentos (TBCA, 2022), a composição nutricional de bebida 
+vegetal à base de castanha de caju apresenta os valores dispostos na Tabela 1. 
+ 
+Tabela 1 – Composição nutricional de bebida vegetal à base de amêndoa de castanha de caju 
+Componente Valor por 100g 
+Energia 511 kJ / 123 kcal 
+Carboidrato total 4,81 g 
+Proteína 4,14 g 
+Lipídios 9,91 g 
+Ácidos graxos saturados 1,65 g 
+Ácidos graxos monoinsaturados 5,67 g 
+Ácidos graxos poli-insaturados 1,73 g 
+Fibras 0,82 g 
+Minerais  
+Cálcio 5,68 mg 
+Ferro 1,15 mg 
+Sódio 0,08 mg 
+Magnésio 51,6 mg 
+Fósforo 109 mg 
+Potássio 140 mg 
+Zinco 1,01 mg 
+Cobre 0,25 mg 
+Fonte: Tabela Brasileira de Composição de Alimentos – TBCA (2022). 
+  
+O ECC pode ser usado como meio para melhorar o crescimento e a atividade 
+metabólica de BAL e cepas probióticas (Shori et al., 2022). Componentes como compostos 
+fenólicos, oligossacarídeos e ácidos graxos poli-insaturados encontrados nas amêndoas podem 
+ser considerados prebióticos e, assim, estimulam o desenvolvimento dos microrganismos 
+(Bisinotto et al., 2021). Vale ressaltar que, os lipídios presentes na matéria-prima contribuem 
+   
+ 
+30 
+ 
+para a proteção dos probióticos frente a diferentes tipos de condições de estresse, contribuindo 
+para a manutenção da viabilidade (Lillo-Pérez et al., 2021).  
+ 
+2.6 Digestão simulada de alimentos probióticos 
+  
+A viabilidade do probiótico é influenciada não somente pelo processamento e 
+armazenamento do produto, mas também pela sobrevivência da bactéria no organismo do 
+consumidor. A seleção apropriada da matriz alimentar é determinante para a elaboração de 
+produtos probióticos eficazes. Os componentes e o pH da mesma podem impactar no 
+desenvolvimento e sobrevivência dos microrganismos no ambiente gastrointestinal. 
+Determinados alimentos possuem capacidade de atuar como tampão regulando a colonização 
+probiótica. Além disso, podem conter compostos bioativos, que ao interagir com a cepa 
+modificam sua funcionalidade e eficácia (Mantovani et al., 2020). 
+O microrganismo deve ser capaz de resistir às condições de estresse encontradas 
+durante o trânsito gastrointestinal, como as provocadas pelo ácido gástrico e bile. Assim, muitos 
+probióticos comerciais apresentam dificuldade em entregar boas quantidades de células viáveis 
+ao cólon do hospedeiro (Rasika et al., 2021). O microrganismo probiótico deve sobreviver as 
+67
+condições gastrointestinais, em concentrações entre 10 e 10 UFC/mL, para que seja capaz de 
+colonizar o intestino e, assim, desenvolver as suas características benfeitoras à saúde do 
+25
+hospedeiro (Szutowska, 2020). No entanto, quantidades na ordem de 10 a 10 UFC/mL são 
+consideradas satisfatórias (Mantovani et al., 2020).  
+Embora não haja um consenso em relação a quantidade ideal de microrganismos 
+viáveis que devem chegar ao cólon, acredita-se que esta concentração está associada com os 
+efeitos desejados na saúde. Portanto, torna-se crucial a avaliação da sobrevivência do 
+microrganismo ao longo das diferentes fases gastrointestinais (Padilha et al., 2016). 
+As situações adversas provocadas pelo processo digestivo podem afetar a 
+integridade da membrana celular, o pH intracelular e as enzimas funcionais das células 
+probióticas. Como resultado, as células podem se encontrar viáveis, adormecidas, ativas ou 
+mortas. Células que sofreram grande nível de estresse podem possuir atividade metabólica, 
+porém, não apresentar mais capacidade de cultivo (Rodrigues et al., 2019). A exposição das 
+células a um pH ácido, inferior a 4,5, gera uma alta necessidade por energia para regular o pH 
+intracelular. Desse modo, ocorre uma escassez de ATP para atender às outras funções vitais, 
+que por consequência, ocasiona a morte celular (Costa et al., 2017). 
+   
+ 
+31 
+ 
+Usualmente, durante as fases iniciais da digestão é percebida uma perda na 
+viabilidade em decorrência ao choque sofrido pelas células dadas as condições gástricas. 
+Quando na fase entérica, a redução das células viáveis ocorre devido a presença dos sais 
+biliares, que atuam como detergentes e podem ser tóxicos e danosos 
+(Silva; Campelo; Rodrigues, 2022). A tolerância da cepa probiótica em relação ao estresse 
+causado pelos ácidos gástricos e sais biliares é um indicador importante para o seu emprego 
+tecnológico (Tripathi; Giri, 2014). 
+A técnica de digestão in vitro possibilita a investigação do comportamento do 
+alimento no trato gastrointestinal simulado. Dentre as vantagens desse método, podem ser 
+ressaltadas o custo baixo, a rapidez das análises e o não envolvimento de questões éticas para a 
+realização do procedimento, por não utilizar testes in vivo (Bisinotto et al., 2021). Em essência, 
+essa técnica replica com precisão as condições físico-químicas ocorridas na digestão humana, 
+abrangendo as fases oral, gástrica e intestinal. O método inclui aspectos como 
+temperatura (37 °C), pH e variações enzimáticas conforme o ambiente. Adicionalmente, alguns 
+sistemas apresentam o compartimento do cólon, permitindo simular a interação da microbiota 
+(Padilha et al., 2016). 
+Os modelos de digestão gastrointestinal in vitro podem ser de dois tipos, sendo eles, 
+estático ou dinâmico. Para a digestão in vitro estática são utilizados biorreatores, que 
+reproduzem as condições enzimáticas, físicas e químicas do processo digestivo. No entanto, 
+não é possível a alteração do alimento entre as fases do processo e as condições ambientais 
+permanecem estáveis (Küçükgöz; Trząskowska, 2022). Os sistemas dinâmicos possibilitam 
+uma simulação mais fidedigna, representando todos os segmentos do TGI, incluindo variações 
+biológicas e químicas. Entretanto, esses sistemas apresentam relativa complexidade e 
+demandam manutenção e configuração de elevado custo, o que dificulta a sua disponibilidade 
+para grande parte da comunidade científica (Almada-Érix et al., 2021). 
+Dessa forma, uma variedade de modelos estáticos tem sido vastamente aplicada no 
+estudo da digestibilidade e bioacessibilidade de diversos produtos (Minekus et al., 2014). 
+Visando obter um consenso para o modelo, a rede INFOGEST, composta por especialistas de 
+mais de 35 países, publicou um protocolo que define os parâmetros para a simulação estática 
+da digestão de um adulto. Os autores ressaltam que as condições descritas podem não ser 
+aplicáveis a todas as demandas de pesquisas. No entanto, a metodologia detalha 
+minuciosamente os procedimentos, visando alcançar um conjunto de condições práticas que se 
+   
+ 
+32 
+ 
+aproximam do cenário fisiológico, sendo ponderadas como sugestão básica para abordar 
+inúmeras questões de investigação (Brodkorb et al., 2019). 
+  
+  
+   
+ 
+33 
+ 
+3 OBJETIVOS 
+  
+3.1 Objetivo geral 
+ 
+Desenvolver e avaliar o potencial funcional de uma bebida à base de extrato de 
+xerém de castanha de caju fermentada pela cepa Lacticaseibacillus casei NRRL B-442. 
+  
+3.2 Objetivos específicos 
+  
+• Preparar o extrato de xerém de castanha de caju (ECC); 
+• Realizar estudo da cinética da fermentação da bebida preparada; 
+• Realizar estudo da estabilidade da bebida fermentada durante o período de 
+armazenamento refrigerado por 42 dias a 4 °C; 
+• Determinar e quantificar os açúcares e ácidos orgânicos presentes nas amostras; 
+• Quantificar a taxa de sobrevivência do microrganismo potencialmente probiótico após 
+a digestão in vitro; 
+• Analisar as características sensoriais da bebida através de testes de aceitação com painel 
+não treinado; 
+• Analisar estatisticamente os dados encontrados no desenvolvimento do trabalho. 
+  
+  
+  
+  
+  
+   
+ 
+34 
+ 
+4 MATERIAIS E MÉTODOS 
+  
+Este projeto trata-se de uma pesquisa aplicada, exploratória, experimental e 
+quantitativa. O estudo foi desenvolvido no Laboratório de Biotecnologia (Labiotec), situado no 
+Campus do Pici da Universidade Federal do Ceará (UFC), em Fortaleza – CE em parceria com 
+a Universidade Federal do Maranhão (UFMA). 
+  
+4.1 Preparo e processamento do extrato vegetal de xerém de castanha de caju 
+  
+O xerém de castanha de caju (Anacardium occidentale L.) utilizado neste estudo 
+foi adquirido no comércio local de Fortaleza - CE. O preparo do extrato do xerém de castanha 
+de caju (ECC) foi realizado conforme metodologia adaptada a partir do comunicado técnico 
+232 emitido pela EMBRAPA Agroindústria Tropical (Lima et al., 2017). 
+Inicialmente, o xerém foi hidratado com água, na proporção de 100 g para 200 mL 
+de água e, em seguida, foi mantido em repouso por 4 horas à temperatura ambiente (em torno 
+de 26 °C). 
+Após o período de hidratação, a mistura foi triturada em um liquidificador 
+doméstico (FAET) em potência máxima por 4 minutos. O volume foi completado para 1 litro 
+com água destilada e a bebida foi homogeneizada. Após este processo, o extrato foi filtrado em 
+tecido voal para a remoção de resíduos e, em seguida, distribuído em garrafas de vidro com 
+tampas rosqueáveis (Figura 4). 
+  
+Figura 4 – Extrato de xerém de castanha de caju (ECC) 
+ 
+Fonte: elaborado pela autora. 
+   
+ 
+35 
+ 
+A bebida obtida foi submetida a processamento térmico em autoclave sob 
+temperatura de 110 °C por 10 minutos, para desinfecção de possíveis microrganismos 
+contaminantes presentes no extrato. Por fim, após o resfriamento, o líquido foi embalado à 
+vácuo em sacos plásticos apropriados e armazenado sob congelamento a aproximadamente 
+– 20 °C, para posterior utilização. A Figura 5 ilustra o processo de obtenção do ECC. 
+  
+Figura 5 - Fluxograma de obtenção do ECC 
+Trituração 
+Xerém de 
+Hidratação 
+castanha de caju
+(1:10, m/v)
+Tratamento 
+térmico 
+HomogeneizaçãoFiltração
+(110 °C/10 min)
+Congelamento
+(-20°C)
+ 
+Fonte: elaborado pela autora. 
+  
+4.2 Microrganismo e preparo do inóculo 
+  
+4.2.1 Preparo da cultura estoque do L. casei NRRL B-442  
+  
+Uma cepa de Lacticaseibacillus casei NRRL B-442 obtida da coleção de cultura do 
+Departamento de Agricultura dos EUA (NRRL Culture collection, United States Department 
+of Agriculture, Peoria, IL, USA) foi utilizada para a fermentação do ECC. 
+Em um tubo de ensaio contendo 10 ml de meio caldo De Man, Rogosa e Sharpe 
+(MRS) estéril, de pH 6,5, foi adicionado o microrganismo L. casei NRRL B-442 liofilizado. A 
+cepa foi ativada estaticamente por um período de 16 horas sob temperatura de 37 °C em 
+incubadora BOD da marca Marconi (Piracicaba, BR). Em sequência, a suspensão de ativação 
+foi inoculada em 100 mL de caldo MRS, contendo 10 mL de solução tampão fosfato de potássio 
+dibásico 200 mM (pH 6,7), e foi submetida à incubação estática em BOD à 37 °C por 6 horas. 
+Após este período, transferiu-se 1mL desta suspensão para 100 mL de caldo MRS adicionado 
+   
+ 
+36 
+ 
+de 10 mL de solução tampão fosfato de potássio dibásico 200 mM (pH 6,7). Novamente, 
+incubou-se estaticamente em estufa BOD sob temperatura de 37 °C por 16 horas. 
+Em seguida, adicionou-se glicerol estéril (50% v/v) à suspensão para a proteção das 
+células durante o seu armazenamento. A cultura estoque obtida foi armazenada em tubos 
+criogênicos estéreis (2 mL) e acondicionada sob congelamento a -20 °C 
+(Pereira; Maciel; Rodrigues, 2011). 
+  
+4.2.2 Ativação e preparo do inóculo do L. casei NRRL B-442 
+ 
+A cepa de cultura estoque foi ativada para o posterior preparo do inóculo. A 
+ativação foi realizada em um biorreator Tecnal® (Piracicaba, Brasil), modelo BIO-TEC-PRO, 
+onde foram adicionados 300 mL de caldo MRS e 3 mL da cepa estoque. O processo ocorreu 
+sob condições constantes de temperatura (37 °C) e agitação (150 rpm). O pH foi controlado em 
+5,50 ± 0,20 com o auxílio de solução NaOH 3M, contendo sacarose 300 g/L. O processo foi 
+realizado pelo período necessário (aproximadamente 16 horas) até atingir a absorbância de 
+0,600 em espectrofotômetro a 590 nm, sendo equivalente a 9 log UFC/mL, na escala de 
+McFarland (Pereira; Maciel; Rodrigues, 2011; Mariano, 2000). 
+Para o preparo do inóculo, a suspensão de ativação foi centrifugada a 10000 g por 
+10 minutos. O sobrenadante foi descartado e a biomassa obtida foi ressuspendida em solução 
+salina 0,9% estéril e novamente centrifugada a 10000 g por 10 minutos. O sobrenadante, mais 
+uma vez, foi descartado e a biomassa úmida foi coletada (Figura 6).  
+  
+Figura 6 – Biomassa úmida de L. casei NRRL B-442 
+ 
+Fonte: elaborado pela autora. 
+ 
+  
+   
+ 
+37 
+ 
+4.3 Fermentação da bebida vegetal e estudo da cinética 
+  
+Antes da fermentação, adicionou-se glicose (10 g/L) à bebida vegetal anteriormente 
+preparada. Em um biorreator BIO-TEC-PRO (Tecnal®, Piracicaba, Brasil), retratado na Figura 
+7, foram adicionados 300 mL do ECC incorporado de glicose. Em seguida, o extrato foi 
+inoculado na concentração de 0,4 g/L da biomassa de L. casei NRRL B-442 (correspondendo 
+à 8 log UFC/mL). A fermentação foi realizada sob temperatura de 37 ºC e agitação de 150 rpm. 
+Ao atingir pH 4,5 (aproximadamente 7 horas), o processo foi finalizado e a bebida fermentada 
+foi armazenada em refrigerador (4 ºC). A cada 2 horas de fermentação, uma alíquota foi 
+coletada para as análises de pH, viabilidade, ácidos orgânicos e açúcares.  
+  
+Figura 7 – Biorreator BIO-TEC-PRO. a) Sistema de biorreatores, controlador e banho 
+termostático; b) Biorreator acoplado aos sensores de pH e temperatura 
+ 
+Fonte: elaborado pela autora. 
+  
+4.4 Estabilidade durante o armazenamento da bebida fermentada 
+  
+Após a fermentação, 150 mL da bebida foram armazenados em frasco SCHOTT 
+(250 mL), o qual foi armazenado sob refrigeração a 4 °C por 42 dias. A cada 7 dias foram 
+coletadas amostras para a realização das análises do pH e viabilidade do microrganismo. 
+Amostras também foram centrifugadas e armazenadas para análises de açúcares e ácidos 
+orgânicos (Santos Filho et al., 2019). 
+ 
+   
+ 
+38 
+ 
+4.5 Digestão gastrointestinal simulada  
+  
+A bebida fermentada foi submetida à digestão gastrointestinal in vitro, de acordo 
+com o método INFOGEST 2.0 (Brodkorb et al., 2019). A metodologia consiste na simulação 
+estática das fases salivar, gástrica e intestinal do aparelho digestivo do organismo humano. 
+Os fluidos salivar, gástrico e intestinal simulados foram preparados de acordo com 
+o descrito na Tabela 2. 
+  
+Tabela 2 – Composição dos fluidos simulados de acordo com protocolo INFOGEST 2.0 para o 
+preparo de 400 mL de solução 
+Fluido Salivar Fluido Gástrico Fluido Intestinal 
+Simulado (FSS) pH 7 Simulado (FGS) pH 3 Simulado (FIS) pH 7 
+Componente 
+Concentração em mM Concentração em mM Concentração em mM 
+KCl 15,1 6,9 6,8 
+KH2PO4 3,7 0,9 0,8 
+NaHCO3 6,8 12,5 85 
+NaCl - 11,8 38,4 
+MgCl2(H2O)6 0,5 0,4 0,33 
+(NH4)2CO3 0,06 0,5 - 
+HCl 0,09 1,3 8,4 
+CaCl2(H2O)2 0,025 0,005 0,6 
+Fonte: Adaptado de Brodkorb (2019). 
+  
+Inicialmente na fase salivar, 5 mL da bebida fermentada foram diluídos em 4 mL 
+do FSS, adicionou-se 0,75 mL de solução α-amilase (75 U/mL, Sigma-Aldrich, San Luis, 
+Missouri, EUA), 25 µL de CaCl 0,3 M e 0,225 mL de HO. O pH da mistura foi ajustado para 
+22
+7 com NaOH 5M e a mesma foi incubada por 2 minutos a 37 °C e 90 rpm. Em seguida, a fase 
+salivar (10 mL) foi diluída em 8 mL do FGS. Foram adicionados 0,67 mL de solução de pepsina 
+(2000 U/mL, P7000, Sigma-Aldrich, San Luis, Missouri, EUA), 5 µL de CaCl 0,3M e 0,45 mL 
+2
+de H2O. O pH da fase gástrica foi ajustado para 3 com a adição de HCl 5M. A mistura foi 
+incubada por 2 horas a 37 °C e 90 rpm. Por fim, a mistura gástrica (20 mL) foi diluída em 8 mL 
+de FIS e adicionou-se 5 mL de solução de pancreatina (100 U/mL, P3292, Sigma-Aldrich, San 
+Luis, Missouri, EUA), 3 mL de solução de sais biliares (10 mM, B8756, Sigma-Aldrich, San 
+Luis, Missouri, EUA), 40 µL de CaCl 0,3M e 3,16 mL de HO. O pH da fase intestinal foi 
+22
+ajustado para 7 com NaOH 5M e incubou-se por 2 horas a 37 °C e 90 rpm. O procedimento 
+descrito pode ser observado na Figura 8. 
+  
+   
+ 
+39 
+ 
+Figura 8 – Digestão gastrointestinal simulada de acordo com método 
+INFOGEST 2.0 
+ 
+Fonte: Elaborado pela autora. 
+  
+Após cada fase, uma amostra foi coletada para a determinação da viabilidade do 
+microrganismo e, ao final do processo, para a quantificação da taxa de sobrevivência das células 
+(Eq. 1). Neste processo, foram analisadas amostras do 1°, 21° e 42° dias do período de 
+armazenamento. 
+  
+Taxa de sobrevivência (%) = (log final/log inicial) * 100                                                       (1) 
+ 
+4.6 Métodos analíticos 
+  
+4.6.1 pH 
+  
+Os valores de pH foram obtidos através de medida direta em potenciômetro (MS 
+Tecnopon®, Piracicaba, São Paulo, BR) calibrado com tampões de pH 4,0 e 7,0 (IAL, 2008). 
+  
+   
+ 
+40 
+ 
+4.6.2 Contagem de células viáveis 
+  
+O número de células viáveis foi quantificado por diluição seriada do extrato 
+fermentado em água peptonada estéril. Alíquotas de 10 µL das diluições do extrato foram 
+inoculadas em placas de Petri contendo ágar MRS através do método da gota 
+(Herigstad; Hamilton; Heersink, 2001). Em seguida, as placas foram incubadas em estufa BOD 
+a 37 °C por 48 horas. Após o período de incubação, o número de colônias foi contabilizado e o 
+resultado expresso em logaritmo de unidades formadoras de colônias por mililitros 
+(log UFC/mL). Segundo Vinderola e Reinheimer (2000), as colônias de L. casei são 
+caracteristicamente redondas, de cor branco cremoso e variam entre 0,9 e 1,3 mm de diâmetro. 
+  
+4.6.3 Determinação de ácido lático e açúcares 
+  
+Alíquotas de 10 mL do extrato fermentado foram centrifugadas a 10000 g e 26 °C 
+por 10 minutos. O sobrenadante foi coletado e diluído em água ultrapura (UHQ) na proporção 
+de 1:5. As amostras diluídas foram filtradas em filtro seringa de membrana de nylon (0,45 µm) 
+antes das análises.  
+Para as análises de ácido lático e açúcares foi utilizada a técnica de cromatografia 
+líquida de alta eficiência (HPLC - High performance liquid chromatography). Para tal, foi 
+utilizado um sistema LC quaternário 1260 Infinity (Agilent technologies, EUA) acoplado a um 
+detector de índice de refração por infravermelho (IR) e um detector UV-VIS. Foram injetados 
+40 µL de cada amostra no equipamento.  
+Para análise dos ácidos orgânicos, utilizou-se solução de ácido sulfúrico (5 mM) 
+como eluente, a uma vazão de 0,4 mL/min. A separação dos compostos ocorreu em coluna 
+Aminex HPX 87H (300 ~ 7,8 mm), da marca Bio-Rad (Hercules, Califórnia, EUA), 
+termostatizada a 50°C. Os ácidos foram detectados a 210 nm por detector UV-Vis 
+(Costa et al., 2013). 
+Os perfis de açúcares das amostras foram analisados através do detector de IR em 
+uma temperatura de 35 ºC. A separação dos compostos ocorreu em coluna de gel de cálcio 
+(Supelco), a qual teve a temperatura controlada em 80°C. Como fase móvel, utilizou-se água 
+UHQ, em um fluxo de 0,5 mL/min (Costa et al., 2013). 
+Curvas padrões foram construídas para a correta identificação e quantificação dos 
+compostos analisados. Os padrões utilizados foram ácido lático, glicose e sacarose. 
+   
+ 
+41 
+ 
+ 4.7 Análise sensorial 
+  
+O estudo foi aprovado pelo Comitê de Ética em Pesquisa da Universidade Federal 
+do Maranhão (CEP/UFMA; CAAE 70904717.0.0000.5087), respeitando a Resolução nº 466 
+do Ministério da Saúde sobre pesquisas com seres humanos (Brasil, 2012). Todos os 
+participantes assinaram o Termo de Consentimento Livre e Esclarecido (TCLE) e afirmaram 
+não possuir aversão ou alergias aos ingredientes utilizados na elaboração dos produtos. 
+A análise sensorial foi realizada com 100 julgadores não-treinados, de ambos os 
+sexos (70% do sexo feminino e 30% do sexo masculino). Seguindo metodologia descrita por 
+Vidal, Ares e Giménez (2013), solicitou-se aos participantes que escrevessem quatro palavras, 
+descrições, associações, pensamentos ou sentimentos que viessem à mente ao imaginarem o 
+produto “bebida de castanha de caju fermentada”. Foram consideradas para análise as palavras 
+registradas por no mínimo 5% dos participantes. 
+Em seguida, foram entregues a cada julgador três amostras, sendo estas: leite 
+fermentado comercial (13,5% de açúcares totais), ECC fermentado adicionado de sacarose 
+(ECC-SAC;7% m/v) e ECC fermentado adicionado de sucralose (ECC-SUC; 0,2% v/v). Por 
+ser um adoçante não-nutritivo, a sucralose é considerada uma opção adequada para a 
+substituição de açúcares, provocando mínimas alterações sensoriais no alimento 
+(Freitas et al., 2021). A quantidade de sucralose foi adicionada de acordo com as 
+recomendações determinadas pelo fabricante, visando alcançar um nível de doçura semelhante 
+ao da formulação adoçada com sacarose. As bebidas de xerém de castanha de caju foram 
+submetidas aos testes sensoriais com um tempo de 10 dias de armazenamento 
+refrigerado (4 °C). 
+As amostras foram servidas em copos descartáveis, contendo 40 mL das bebidas a 
+7 °C, codificadas com números de três dígitos. Um copo descartável com água (200 mL) 
+também foi oferecido para que os participantes pudessem limpar o paladar entre as degustações. 
+A avaliação foi realizada em cabines individuais, sob temperatura ambiente e iluminação 
+branca. A escala hedônica estruturada mista de nove pontos ancorada nos extremos por “(1 = 
+desgostei muitíssimo)”, “(5 = nem gostei e nem desgostei)” e “(9 = gostei muitíssimo)” foi 
+utilizada para avaliar os atributos cor, aparência, aroma, sabor e impressão global (Lawless; 
+Heymann, 2010). 
+Para a análise descritiva quantitativa das amostras, uma ficha para o teste Check-
+All-That-Apply (CATA) foi elaborada baseada em descritores apresentados em outros estudos 
+   
+ 
+42 
+ 
+com bebidas probióticas (Freitas et al., 2021; Pereira et al., 2017), totalizando 21 termos 
+descritivos (Lado et al., 2010). Os julgadores foram instruídos a preencher a ficha do CATA 
+assinalando os termos descritivos que considerassem estar relacionados às bebidas. Os termos 
+considerados foram os seguintes: brilhoso, cor esbranquiçada, cor escura, cor amarronzada, cor 
+de caramelo, aroma característico de leite fermentado, aroma de castanha de caju, aroma de 
+baunilha, sabor característico de leite fermentado, sabor de castanha de caju, gosto doce ideal, 
+pouco doce, muito doce, gosto amargo, sabor residual, gosto salgado, gosto ácido, textura ideal, 
+concentrado, leitoso e gostoso. 
+  
+4.8 Análise estatística 
+  
+Os resultados encontrados neste estudo foram submetidos à análise de variância 
+(ANOVA) e teste de Tukey (p < 0,05) através do software Statistica® versão 10. Os resultados 
+foram descritos como média ± desvio padrão. Os gráficos foram elaborados com auxílio do 
+software Origin 8.5. 
+A análise dos dados sensoriais foi conduzida por meio do software XLSTAT 
+(Addinsoft Paris, France), considerando o nível de 5% de significância. Em relação aos dados 
+avaliados mediante escala hedônica, os tratamentos foram ponderados como fonte fixa de 
+variação e o consumidor como efeito aleatório. Os atributos foram analisados pelo teste não 
+paramétrico de Friedman, no nível de confiança de 95%. Quanto à análise dos dados do teste 
+CATA, a frequência da menção de cada termo foi determinada através da contagem do número 
+de consumidores que o utilizaram para descrever cada amostra das bebidas fermentadas, 
+utilizando-se o teste Q de Cochran para comparar os tratamentos entre si.  
+ 
+  
+   
+ 
+43 
+ 
+5 RESULTADOS E DISCUSSÃO 
+  
+5.1 Cinética da fermentação 
+  
+Os parâmetros empregados durante o processo de fermentação, como a 
+temperatura, possuem capacidade de influenciar o desenvolvimento do microrganismo. Em um 
+estudo realizado por Pereira et al. (2017) foram avaliadas as condições de crescimento da cepa 
+Lacticaseibacillus casei B-442 na fermentação de um suco de cupuaçu 
+(Theobroma grandiflorum). Os autores reportaram que a faixa de temperatura entre 26 °C e 
+37 °C proporcionou as melhores condições para o crescimento das bactérias, indicando o seu 
+comportamento mesófilo. Esses achados concordam com o descrito por Costa et al. (2013), ao 
+estudarem o comportamento da mesma cepa na fermentação de um suco de abacaxi (Ananas 
+comosus L.). Os autores ressaltaram que o microrganismo se desenvolveu adequadamente na 
+faixa de temperatura entre 30 °C e 40 °C, com temperatura ideal a 34,5 °C. Assim, a temperatura 
+(37 °C) aplicada no presente estudo se adequou otimamente na fermentação da matriz à base 
+de ECC com a cepa de L. casei empregada. 
+Após 7 horas de processo fermentativo, foi observado um aumento das células 
+viáveis na bebida produzida neste estudo, variando de 8,18 ± 0,01 para 
+10,46 ± 0,43 log UFC/mL (Figura 9). Para ser considerado um produto potencialmente 
+probiótico, este deve conter no mínimo 6-7 log UFC/mL de células viáveis (Hill et al., 2014). 
+Dessa forma, a bebida elaborada neste estudo apresentou valores superiores ao recomendado 
+na literatura. 
+O desenvolvimento adequado do microrganismo é dependente da matriz utilizada 
+na elaboração do produto (Naseem et al., 2023). A utilização da cepa L. casei NRRL B-442 foi 
+bem reportada na fermentação de diferentes matérias-primas, como suco de melão 
+(Fonteles et al., 2012), suco de abacaxi (Costa et al., 2013), suco de cupuaçu 
+(Pereira et al., 2017) e suco de açaí (Freitas et al., 2021). De forma semelhante, este estudo 
+revelou que o microrganismo se adaptou satisfatoriamente na matriz à base de xerém de 
+castanha de caju utilizada.  
+ 
+ 
+ 
+ 
+   
+ 
+44 
+ 
+Figura 9 – Acidificação e viabilidade das células de L. casei NRRL 
+B-442 durante a fermentação do ECC  
+ 
+Fonte: elaborado pela autora. 
+ 
+O uso de extratos vegetais como substrato para o crescimento de microrganismos 
+probióticos também foi relatado por outros autores. Hati, Patel e Mandal (2018) avaliaram o 
+crescimento de diversas espécies de Lactobacillus durante a fermentação de um extrato vegetal 
+à base de soja. Os autores descreveram que a viabilidade das amostras permaneceu acima do 
+recomendado, variando entre 6 e 9 log UFC/mL. Szparaga et al. (2019) também encontraram 
+bons resultados ao fermentarem extratos de coco e de sementes de cânhamo 
+(Cannabis sativa L.) por 6 horas. O estudo mostrou que a cepa de L. casei subsp. rhamnosus 
+utilizada apresentou um crescimento de 11,72 para 13,26 log UFC/mL e de 8,41 para 
+10,92 log UFC/mL nas bebidas de coco e sementes de cânhamo, respectivamente.  
+De todo modo, a viabilidade também é afetada pela cepa do microrganismo 
+empregada na elaboração do produto (Bernal-Castro et al., 2023). Pereira, Maciel e 
+Rodrigues (2011) ao utilizarem a mesma cepa de L. casei NRRL B-442 aplicada no presente 
+trabalho relataram resultados satisfatórios. Os autores produziram um suco de caju probiótico 
+e observaram um aumento das células viáveis de 7,48 para 8,41 log UFC/mL ao final de 
+16 horas de fermentação. Em contramão, uma pesquisa desenvolvida por Kaprasob et al. (2017) 
+apresentou uma redução de 8,18 para 6,2 log UFC/mL das células viáveis da cepa 
+L. casei TISTR 390 após a fermentação de um suco de caju por 24 horas. 
+   
+ 
+45 
+ 
+O pH do meio também é um fator de influência no crescimento do microrganismo. 
+Comumente, as espécies de Lacticaseibacillus apresentam crescimento ótimo em pH em torno 
+de 6,5 (Costa et al., 2013). O pH inicial do ECC se mostrou próximo ao de crescimento ideal 
+(6,27 ± 0,03), favorecendo uma maior sobrevivência da bactéria potencialmente probiótica, em 
+relação a meios inicialmente ácidos, que causam estresse nas células (Fonteles et al., 2012; 
+Pimentel et al., 2021a).  
+Ao longo do processo fermentativo do ECC, o pH do meio declinou gradualmente, 
+partindo de 6,27 ± 0,03 e chegando a 4,41 ± 0,02 (Figura 9). A fermentação foi encerrada após 
+7 horas, momento em que o pH atingiu um valor abaixo de 4,5. Valores inferiores a esta faixa 
+garantem a segurança microbiológica do produto, impedindo a proliferação de microrganismos 
+indesejados (Pereira et al., 2017). À medida que a quantidade de células viáveis aumenta, o pH 
+diminui. Este comportamento pode ser explicado pelo metabolismo das bactérias ácido láticas. 
+Ao se multiplicarem, as células de L. casei produzem ácido lático, que acidifica o meio e reduz 
+o seu pH, tornando o ambiente desfavorável para o desenvolvimento de outros microrganismos 
+patogênicos e deteriorantes (Naseem et al., 2023). 
+Durante a fermentação, os microrganismos probióticos utilizam os carboidratos 
+disponíveis no meio como fonte de carbono e convertem esses compostos em produtos como 
+ácidos orgânicos, etanol e gás carbônico (Kaprasob et al., 2018). A Figura 10 mostra o perfil 
+de consumo dos açúcares e a produção de ácido lático da bebida fermentada.  
+  
+Figura 10 – Perfil de consumo de açúcares e produção de 
+ácido lático durante a fermentação do ECC pelo L. casei 
+NRRL B-442 
+ 
+Fonte: elaborado pela autora. 
+   
+ 
+46 
+ 
+ Ao serem analisados os perfis de açúcares ao longo da fermentação, os resultados 
+demonstraram que, apesar de a sacarose estar naturalmente presente na composição do ECC, a 
+cepa de L. casei empregada demonstrou uma preferência pelo consumo da glicose adicionada 
+durante a produção da bebida. Ao final do processo, o microrganismo consumiu em torno de 
+16% da glicose presente, variando de 6,80 ± 0,42 para 5,70 ± 0,06 g/L, enquanto a sacarose não 
+apresentou uma variação significativa, no intervalo de confiança de 95% (Tabela 3).  
+  
+Tabela 3 – Valores de pH, viabilidade, glicose, sacarose e ácido lático obtidos durante o 
+processo de fermentação do ECC pelo L. casei NRRL B-442 
+Tempo Viabilidade Sacarose Ácido lático 
+pH Glicose (g/L) 
+(h) (log UFC/mL) (g/L) (g/L) 
+0 6,27 ± 0,03 a 8,18 ± 0,01 a 6,80 ± 0,42 a 4,98 ± 0,18 a 0,27 ± 0,02 a 
+2 6,01 ± 0,06 b 8,58 ± 0,32 ab 6,58 ± 0,04 ab 5,00 ± 0,10 a 0,44 ± 0,10 a 
+4 5,39 ± 0,13 c 9,35 ± 0,40 b 6,23 ± 0,07 bc 5,17 ± 0,10 a 1,34 ± 0,02 b 
+7 4,41 ± 0,02 d 10,46 ± 0,43 c 5,70 ± 0,06 c 5,27 ± 0,14 a 2,56 ± 0,13 c 
+Fonte: elaborado pela autora. 
+a-d 
+Médias seguidas de letras diferentes nas colunas indicam diferença significativa entre os resultados pelo Teste 
+de Tukey (p<0,05). 
+  
+Esses resultados corroboram com o descrito por Santos Filho et al. (2019) ao 
+quantificarem o consumo de açúcares após 12 horas de fermentação de uma bebida de cacau 
+(Theobroma cacao L.). Os autores revelaram que a cepa de L. casei NRRL B-442 consumiu 
+cerca de 23% da glicose presente no meio e não houve consumo da frutose, ocorrendo um 
+aumento de 3% desse açúcar. O consumo de glicose também foi descrito por 
+Szparaga et al. (2019), que observaram uma redução desse açúcar em 33% e 34% após 6 horas 
+de fermentação pela cepa L. casei subsp. rhamnosus LCR 3013, em bebidas de coco e de 
+sementes de cânhamo (Cannabis sativa L.), respectivamente.  
+A quantificação de açúcares em alimentos fermentados é um fator importante para 
+a elucidação do comportamento metabólico do microrganismo durante o processo fermentativo, 
+assim como, da sua atividade ao longo do período de armazenamento (Bernat et al., 2014). Ao 
+metabolizar os açúcares, o microrganismo produz ATP que é biossintetizada em ácido lático 
+(Freitas et al., 2021). Essa transformação é mediada pela enzima d-lactato ou l-lactato 
+desidrogenase, que converte uma molécula de glicose em duas moléculas de ácido lático 
+(Manoj et al., 2023). 
+A concentração de ácido lático da bebida de xerém de castanha de caju aumentou 
+de 0,27 ± 0,02 para 2,56 ± 0,13 g/L, após 7 horas de fermentação. Esse resultado foi menor que 
+o observado por Kokwar et al. (2022) que obteve uma concentração de 3,6 g/L de ácido lático 
+   
+ 
+47 
+ 
+ao final de 6 horas de fermentação de uma bebida multigrãos (aveia, cevada, trigo sarraceno e 
+arroz vermelho) com a espécie Lactiplantibacillus plantarum. No entanto, o valor de ácido 
+lático encontrado nesse trabalho foi maior que o descrito por Fernandes et al. (2021). Os autores 
+obtiveram uma concentração de 0,8 g/L de ácido lático após 5 horas de fermentação de uma 
+bebida probiótica de extrato de amêndoas de Baru (Dipteryx alata Vog.) com a cepa L. casei 01.  
+A presença deste ácido proporciona um sabor ácido que, juntamente com 
+compostos aromáticos voláteis, caracterizam um leite fermentado. Contudo, a cepa da bactéria 
+probiótica e a matéria-prima utilizadas impactam diretamente na quantidade de ácido lático 
+produzido na fermentação (Comak Gocer; Koptagel, 2023).  
+  
+5.2 Estabilidade durante o armazenamento refrigerado da bebida fermentada 
+  
+Após a fermentação, a bebida produzida foi armazenada sob refrigeração (4°C) por 
+42 dias. A aplicação de baixas temperaturas auxilia na manutenção da viabilidade do 
+microrganismo, contribuindo para o prolongamento da vida de prateleira do produto. Além da 
+temperatura, a sobrevivência do probiótico ao longo do armazenamento é também influenciada 
+por outros fatores, como a exposição ao oxigênio, o tipo de material da embalagem e as 
+características intrínsecas do alimento (Naseem et al., 2023).  
+A cepa de L. casei NRRL B-442 permaneceu viável durante todo o período de 
+armazenamento refrigerado (4 °C) da bebida fermentada, variando de 10,46 ± 0,43 para 
+12,23 ± 0,03 log UFC/mL (Tabela 4). Após a primeira semana, observou-se um aumento na 
+viabilidade em torno de 3,4 ciclos log, mantendo-se estável nas duas semanas seguintes. No 28° 
+dia, houve uma perda significativa das células viáveis, seguida por uma recuperação completa 
+aos 35 dias de armazenamento. Entretanto, ao fim da vida de prateleira houve uma redução de 
+aproximadamente 1,7 ciclos log na viabilidade microbiana, comparada a semana anterior. 
+Todavia, o microrganismo apresentou valores de células viáveis superiores ao recomendado 
+6
+(10 log UFC/mL) ao longo de toda a estocagem do alimento. Essa variação pode estar 
+relacionada à capacidade das células se recuperarem em um meio nutritivo e ao 
+desenvolvimento de estados fisiológicos latentes como reação ao estresse ambiental 
+(Silva; Campelo; Rodrigues, 2022). 
+Outros estudos foram realizados explorando o uso de extratos vegetais na 
+veiculação de probióticos. AL Zahrani e Shori (2023) fermentaram uma bebida à base de soja 
+e amêndoas com diferentes espécies de Lactobacillus spp. e relataram que a viabilidade em 
+   
+ 
+48 
+ 
+todas as amostras foi mantida acima de 6 log UFC/mL ao longo do armazenamento de 21 dias. 
+Kokwar, Arya e Bhat (2022) fermentaram uma bebida multigrãos (aveia, cevada, trigo 
+sarraceno e arroz vermelho) com a espécie Lactiplantibacillus plantarum e obtiveram 
+contagens acima de 7 log UFC/mL ao fim do período de 20 dias de armazenamento. A 
+existência de componentes categorizados como prebióticos nas matérias-primas vegetais 
+favorece o desenvolvimento adequado dos microrganismos. As fibras e o amido contidos nesses 
+alimentos promovem a estabilidade do extrato vegetal após o processo de fermentação, atuando 
+como barreiras protetoras no sistema digestivo em virtude da resistência das fibras à acidez 
+estomacal (Comak Gocer; Koptagel, 2023b). 
+  
+Tabela 4 – Valores de pH, viabilidade, glicose, sacarose e ácido lático obtidos durante os 42 
+dias de armazenamento refrigerado (4 °C) do ECC fermentado pelo L. casei NRRL B-442 
+Tempo Viabilidade Glicose  Sacarose Ácido lático 
+pH 
+(dias) (log UFC/mL) (g/L) (g/L) (g/L) 
+0 4,41 ± 0,02 a 10,46 ± 0,43 a 5,70 ± 0,06 a 5,27 ± 0,14 a 2,68 ± 0,28 a 
+7 3,82 ± 0,16 b 13,92 ± 0,08 b 1,98 ± 0,03 b 5,91 ± 0,05 bc 4,92 ± 0,08 b 
+14 3,51 ± 0,04 c 13,86 ± 0,17 b 0,60 ± 0,16 c 6,24 ± 0,35 c 7,20 ± 0,23 c 
+21 3,39 ± 0,05 d 13,98 ± 0,07 b 0,00 ± 0,00 d 5,89 ± 0,02 bc 8,51 ± 0,06 d 
+28 3,36 ± 0,01 e 13,39 ± 0,02 c 0,00 ± 0,00 d 5,35 ± 0,52 b 8,48 ± 0,33 d 
+35 3,35 ± 0,02 e 13,97 ± 0,12 b 0,00 ± 0,00 d 6,14 ± 0,04 bc 9,23 ± 0,11 e 
+42 3,34 ± 0,01 e 12,23 ± 0,03 d 0,00 ± 0,00 d 6,53 ± 0,20 c 9,34 ± 0,01 e 
+Fonte: elaborado pela autora. 
+a-e 
+Médias seguidas de letras diferentes nas colunas indicam diferença significativa entre os resultados pelo Teste 
+de Tukey (p<0,05). 
+  
+Os nutrientes presentes no meio podem favorecer a multiplicação do 
+microrganismo, ocasionando um acúmulo de ácidos e resultando na pós-acidificação do meio 
+(AL Zahrani; Shori, 2023). Ao longo do intervalo de 42 dias de armazenamento, observou-se 
+uma redução do pH inicial de 4,41 ± 0,02 para o final de 3,34 ± 0,01 (Figura 11), com uma 
+queda significativa (p < 0,05) nos primeiros 21 dias (Tabela 4). Esse resultado indica que houve 
+uma pós-acidificação do meio, relacionada ao metabolismo das BAL, que mesmo em baixas 
+temperaturas continuaram produzindo ácido lático durante esse período 
+(Mantovani et al., 2020).  
+Um baixo pH pode desempenhar um papel protetor no alimento ao inibir a 
+proliferação de microrganismos deteriorantes, estendendo sua validade (Costa et al., 2017). No 
+entanto, em condições de acidez mais elevada, o microrganismo probiótico requer uma maior 
+quantidade de energia para a manutenção do pH intracelular, resultando em uma deficiência de 
+   
+ 
+49 
+ 
+ATP e levando à morte celular (Manoj et al., 2023). Esse fenômeno pode explicar a redução na 
+viabilidade das células de L. casei observada na última semana do armazenamento do ECC. 
+ 
+Figura 11 – Comportamento do pH e viabilidade das células 
+durante os 42 dias de armazenamento refrigerado (4 °C) do ECC 
+fermentado pelo L. casei NRRL B-442 
+ 
+Fonte: elaborado pela autora. 
+ 
+A pós-acidificação também foi reportada por Sultana et al. (2023), ao investigar 
+uma amostra de suco de laranja durante 30 dias de armazenamento sob 4 °C. Os pesquisadores 
+relataram que o fato pode ser atribuído à produção de ácido lático pelo microrganismo 
+probiótico. No entanto, foi ressaltado que a redução observada na viabilidade do microrganismo 
+pode ter contribuído para a diminuição do pH, dada a liberação de enzimas e hidrólise dos 
+açúcares pelas células mortas. 
+Em contraste, Comak Gocer e Koptagel (2023) observaram que durante o 
+armazenamento de 30 dias de amostras de kefir ocorreu um aumento nos valores de pH. Os 
+autores sugerem que as bactérias e leveduras consumiram os ácidos presentes como fonte de 
+energia, indicando tal comportamento como um mecanismo de defesa para a sobrevivência ao 
+ambiente ácido. Especificamente, as BAL demonstram a habilidade de metabolizar ácidos 
+orgânicos. 
+Os perfis de açúcares também foram analisados no decorrer do período do 
+armazenamento refrigerado (Figura 12). A linhagem de L. casei NRRL B-442 exibiu um 
+comportamento semelhante ao observado durante a fermentação em termos de consumo dos 
+   
+ 
+50 
+ 
+açúcares disponíveis no meio. A glicose foi completamente consumida, enquanto a sacarose 
+sofreu uma variação discreta. Considerando que a glicose é a principal fonte de substrato para 
+a cepa de L. casei empregada, o seu esgotamento pode ter influenciado a viabilidade do 
+microrganismo, resultando em perdas nas células viáveis. Um estudo conduzido por 
+Bernat et al. (2014a) descreveu que a cepa de L. rhamnosus utilizada na elaboração de uma 
+bebida probiótica de avelã (Corylus avellana L. cv. comuna), também consumiu totalmente a 
+glicose disponível na matriz após os primeiros 14 dias de armazenamento, enquanto a sacarose 
+permaneceu estável durante todo o período de 28 dias. 
+  
+Figura 12 – Perfil de consumo de açúcares e produção de ácido 
+lático durante os 42 dias de armazenamento refrigerado (4 °C) 
+do ECC fermentado L. casei NRRL B-442 
+ 
+Fonte: elaborado pela autora. 
+  
+O ácido lático é o principal produto do metabolismo do L. casei e proporciona uma 
+maior resistência ao estresse ácido, contribuindo para a sobrevivência da bactéria até o final do 
+período de armazenamento (Silva; Campelo; Rodrigues, 2022). No presente estudo, foi 
+observado um aumento na concentração de ácido lático durante o armazenamento, variando de 
+2,68 ± 0,28 g/L para 9,34 ± 0,01 g/L (Figura 12).  
+Em consonância, Cunha Júnior et al. (2021) também identificaram uma elevação 
+dos valores de ácido lático ao longo dos 28 dias de armazenamento de uma bebida simbiótica 
+de castanha-do-Brasil (Bertholletia excelsa H.B.K). Resultados semelhantes foram relatados 
+por Bernat et al. (2014a) ao estudarem a estabilidade de uma bebida probiótica de avelã 
+   
+ 
+51 
+ 
+(Corylus avellana L. cv. comuna) durante o intervalo de 28 dias. Os autores reforçaram que 
+esse comportamento era previsível devido à atividade do microrganismo, no entanto o aumento 
+da acidez pode impactar negativamente na aceitação sensorial do produto. 
+No presente trabalho, não foram identificados indícios de contaminação durante o 
+armazenamento refrigerado. A alta concentração de ácido lático leva a acidificação do 
+ambiente, inibindo o desenvolvimento de microrganismos deteriorantes e patógenos no produto 
+(Pereira; Maciel; Rodrigues, 2011). Além da produção de ácidos orgânicos, as cepas de 
+Lacticaseibacillus sintetizam bacteriocinas e peptídeos antifúngicos, substâncias 
+antimicrobianas que desempenham papel importante na preservação do alimento 
+(Fonteles et al., 2012).  
+  
+5.3 Sobrevivência do microrganismo após digestão simulada 
+  
+Para resistir às condições gastrointestinais é importante que o microrganismo 
+mantenha a sua viabilidade mínima recomendada (6-7 log UFC/mL) durante todo o período do 
+armazenamento (Naseem et al., 2023). Essa recomendação é baseada nas adversidades intensas 
+que os microrganismos enfrentam no TGI, relacionadas à presença de enzimas na boca, pH 
+ácido do estômago e à presença de bile no intestino, que causam grande estresse nas células 
+(Emiliano et al., 2022). Dentre outros fatores, a cepa não poderá ser classificada como 
+probiótica se, durante as condições gastrointestinais, sofrer perdas que comprometam a sua 
+capacidade funcional (Almada-Érix et al., 2021). 
+A maior taxa de sobrevivência após a digestão in vitro do ECC fermentado foi 
+observada no 21° dia de armazenamento refrigerado, com 76,39 ± 0,32% (Figura 13). Este valor 
+foi aproximadamente 3% e 1% maior do que os encontrados no 1° e 42° dia, respectivamente. 
+No primeiro dia de armazenamento, as células potencialmente probióticas submetidas a 
+digestão simulada sofreram uma perda de 3,5 ciclos log, apresentando taxa de sobrevivência de 
+73,18 ± 1,13%. Enquanto no último dia, apresentou uma perda de cerca de 3 ciclos log, com 
+75,06 ± 0,15% de células sobreviventes. 
+Costa et al. (2017) avaliaram a resistência probiótica de amostras de um extrato 
+misto de soja e arroz sob a simulação das condições gastrointestinais. Os pesquisadores 
+revelaram que as taxas de sobrevivência dos microrganismos Lactobacillus acidophilus e 
+Bifidobacterium sp. foram 41% e 29%, respectivamente. Semelhantemente, em um trabalho 
+publicado por Silva, Campelo e Rodrigues (2022), o microrganismo L. casei B-442 apresentou 
+   
+ 
+52 
+ 
+cerca de 40% de sobrevivência após a digestão simulada de um suco probiótico de sapota-do-
+solimões (Quararibea cordata), ao final dos 30 dias de armazenamento refrigerado (4 °C).  
+ 
+Figura 13 –Taxa de sobrevivência do microrganismo nos dias 1, 
+21 e 42 de armazenamento refrigerado (4 °C) do ECC fermentado 
+após digestão simulada 
+ 
+Fonte: elaborado pela autora. 
+ 
+Em comparação com os estudos citados, a cepa de L. casei presente na bebida 
+fermentada de ECC mostrou uma maior resistência às condições gastrointestinais. A presença 
+de lipídeos na castanha de caju pode ter contribuído para a preservação das células devido ao 
+seu efeito protetor diante das condições de estresse do ambiente (Lillo-Pérez et al., 2021). 
+O comportamento dos microrganismos Lactiplantibacillus plantarum e 
+Bifidobacterium longum durante a digestão simulada de bebidas fermentadas à base quinoa 
+vermelha (Chenopodium quinoa, L.) foi investigado por Cerdá-Bernad et al. (2022). O grupo 
+informou que as cepas mantiveram uma viabilidade maior que 6 log UFC/mL ao final da 
+digestão in vitro, enfatizando que bebidas de quinoa vermelha são matrizes adequadas para a 
+veiculação de probióticos. De forma semelhante, a bebida fermentada de castanha de caju 
+proporcionou ao microrganismo estudado uma viabilidade superior a 9 log UFC/mL após a 
+digestão simulada em todo o período de armazenamento. O processo de fermentação confere 
+   
+ 
+53 
+ 
+ao microrganismo uma melhor adaptação à matriz alimentar, resultando em um aumento na 
+resistência gastrointestinal (Silva; Campelo; Rodrigues, 2022). 
+A tabela 5 apresenta os resultados da viabilidade da cepa L. casei NRRL B-442 nas 
+amostras de ECC fermentado, após cada fase da digestão in vitro, em diferentes dias do 
+armazenamento. No primeiro dia, foi notada uma maior perda das células viáveis após as fases 
+salivar e gástrica, enquanto não houve uma redução significativa (p>0,05) após a fase intestinal. 
+No entanto, nos dias 21 e 42, a queda na viabilidade foi significativa após todas as etapas da 
+digestão simulada.  
+  
+Tabela 5 – Viabilidade após as fases da digestão in vitro nos dias 1, 21 e 42 de armazenamento 
+refrigerado (4 °C) do ECC fermentado pelo L. casei NRRL B-442 
+Viabilidade (log UFC/mL) 
+Fase da digestão in vitro 
+Dia 1 Dia 21 Dia 42 
+Não digerido 13,05 ± 0,05 a 13,98 ± 0,07 a 12,23 ± 0,03 a 
+Salivar 11,09 ± 0,16 b 13,10 ± 0,03 b 10,99 ± 0,07 b 
+Gástrica 9,66 ± 0,06 c 12,08 ± 0,01 c 9,75 ± 0,05 c 
+Intestinal 9,55 ± 0,13 c 10,68 ± 0,01 d 9,18 ± 0,02 d 
+Fonte: elaborado pela autora. 
+a-d 
+Médias seguidas de letras diferentes nas colunas indicam diferença significativa entre os resultados pelo Teste 
+de Tukey (p<0,05). 
+  
+A exposição das células a um ambiente de baixo pH compromete a sua viabilidade, 
+demandando uma maior quantidade de energia para a manutenção do pH intracelular. Isso 
+resulta na escassez de ATP para o desenvolvimento de outras funções vitais, ocasionando a 
+morte celular. Em adição, a presença dos ácidos biliares causa perturbação na homeostase da 
+célula, levando a separação da camada lipídica e da proteína integral da membrana celular. 
+Fato que resulta no vazamento do conteúdo bacteriano e, na consequente, morte do 
+microrganismo (Costa et al., 2017; Pimentel et al., 2021b).  
+Entretanto, quando as células são expostas previamente a níveis sub letais de um 
+agente estressante, possibilita-se uma melhor adaptação a posteriores exposições a níveis mais 
+altos do mesmo agente ou outros fatores de estresse. Esse fenômeno é caracterizado por 
+adaptação cruzada e auxilia na compreensão da resistência microbiana observada nas amostras 
+de ECC que apresentaram um baixo pH durante o armazenamento refrigerado 
+(Céspedes et al., 2013). 
+Mantovani et al. (2020) avaliaram a sobrevivência probiótica da cepa 
+L. casei Lc - 1 em um leite fermentado com chocolate, observando uma redução de 
+aproximadamente 5 ciclos log ao submeter a amostra à digestão simulada. A queda na 
+   
+ 
+54 
+ 
+viabilidade foi atribuída à exposição do microrganismo a um baixo pH, que sensibiliza as 
+células, tornando-as mais frágeis. Além disso, a baixa concentração de gorduras contribui para 
+uma menor resistência das bactérias. A maior redução ocorreu após a fase gástrica sob pH 2, 
+enquanto na fase intestinal (pH 7) não foi registrada variação da população microbiana. No 
+entanto, o pH mais elevado na fase intestinal não foi suficiente para a recuperação das células 
+perdidas na fase gástrica.  
+Em contramão, Silva, Campelo e Rodrigues (2022) relataram uma recuperação das 
+células após a fase intestinal em um suco simbiótico de sapota-do-solimões 
+(Quararibea cordata). O grupo de autores observou que houve uma redução em torno de 
+4 ciclos log após a fase gástrica, que foi totalmente recuperada após a fase intestinal. Esse 
+aumento foi atribuído à capacidade das células de retornarem a um estado cultivável quando 
+expostas a condições intestinais mais permissivas e favoráveis, como um pH 7. Como pode ser 
+visto na Figura 14, não foi verificado um aumento na viabilidade após a fase intestinal das 
+6
+amostras de ECC. Contudo, a mesma se manteve acima de 10 log UFC/mL, valor comumente 
+recomendado (Szutowska, 2020).  
+  
+Figura 14 – Viabilidade após as fases da digestão in vitro nos dias 1, 21 e 42 de 
+armazenamento refrigerado (4 °C) do ECC fermentado L. casei NRRL B-442 
+ 
+Fonte: elaborado pela autora.  
+  
+   
+ 
+55 
+ 
+Os Lacticaseibacillus são residentes naturais do trato intestinal superior e inferior, 
+ambiente com uma alta concentração de bile, fator que pode contribuir para uma maior 
+resistência microbiana após essa etapa (Costa et al., 2017). Vale ressaltar que, os sais biliares 
+atuam como detergentes e causam danos às células por toxicidade. Contudo, o conteúdo lipídico 
+da matriz à base de ECC pode agir como emulsificante e, assim, proteger a célula contra a ação 
+da bile (Silva; Campelo; Rodrigues, 2022). Assim, os resultados obtidos neste trabalho indicam 
+que a matriz à base de extrato de xerém de castanha de caju utilizada se mostrou uma boa 
+alternativa na veiculação de microrganismos potencialmente probióticos, permitindo a chegada 
+de uma elevada concentração de células viáveis após a fase intestinal sem grandes perdas na 
+viabilidade ao longo do processo digestivo. 
+ 
+5.4 Análise sensorial 
+  
+5.4.1 Associação de palavras 
+  
+Entender a concepção dos consumidores em relação aos alimentos é fundamental 
+no desenvolvimento de novas formulações. A técnica de associação de palavras permite 
+identificar os motivos que influenciam as decisões dos compradores ao adquirir um produto 
+(Moss et al., 2022). No ensaio realizado neste estudo, um total de 129 diferentes palavras foram 
+mencionadas pelos participantes ao serem questionados quais as primeiras quatro palavras 
+vinham a sua mente com relação ao produto “Bebida de castanha de caju fermentada”. Ao todo, 
+400 palavras foram contabilizadas a partir dos dados obtidos dos 100 participantes. 
+As palavras mencionadas pelos consumidores foram agrupadas em categorias, 
+considerando-se para análise aquelas que foram mencionadas por 5% dos consumidores. A 
+Figura 15 ilustra as categorias definidas, evidenciando, que as classificações relacionadas às 
+características sensoriais, ao caju e à saudabilidade foram as mais relevantes, refletindo as 
+expectativas dos consumidores nesses aspectos. 
+A Tabela 6 apresenta as 14 categorias identificadas, bem como exemplos de 
+associações individuais e os percentuais de frequência de menção. A categoria mais 
+mencionada foi “Características sensoriais” (19,58%), sendo os atributos sabor e textura, os 
+mais citados. Esse resultado reforça a importância das características sensoriais para a aceitação 
+da bebida. No atributo sabor, o termo mais mencionado foi acidez, evidenciando o 
+conhecimento dos participantes dessa característica sensorial típica das bebidas fermentadas. 
+   
+ 
+56 
+ 
+Outro termo mencionado foi sabor de leite fermentado, indicando que os julgadores esperam 
+que a bebida de castanha de caju tenha característica similar. Além disso, os consumidores 
+esperam que a bebida tenha uma textura encorpada e cremosa. Segundo Moss et al. (2022), as 
+bebidas vegetais à base de amêndoas/nozes são frequentemente associadas a uma textura mais 
+espessa. 
+ 
+Figura 15 – Categorias mais frequentemente citadas no teste de associação de 
+palavras relacionadas à bebida de castanha de caju fermentada 
+ 
+Fonte: elaborado pela autora. 
+  
+A bebida foi bastante associada com o caju, tendo a categoria “Características 
+relacionadas ao caju” apresentado 14,88% das menções. Indicando, que os participantes 
+conhecem a matéria-prima para elaboração desta bebida, associando com maior frequência os 
+termos castanha de caju assada e farelo da castanha de caju.  
+A terceira categoria mais mencionada foi “Saudabilidade” (14,36%), sendo essa 
+associada ao valor nutricional e a saúde intestinal, que são características relacionadas ao 
+consumo de alimentos contendo probióticos. Desta forma, pode-se afirmar que os participantes 
+do presente estudo têm uma ideia clara de que o produto apresentado tem a característica 
+saudável. A associação de aspectos saudáveis com o consumo de alimentos de origem vegetal 
+também é recorrente na literatura (Lee; Leong; Oey, 2023). 
+A categoria “Características do produto” recebeu 7,05% das menções. Com isto, 
+percebeu-se que os consumidores esperam que a bebida seja servida gelada e tenha 
+característica refrescante. Nessa categoria, os participantes também mencionaram o termo 
+bebida gordurosa, relacionado ao teor lipídico da castanha de caju. Adicionalmente, os 
+   
+ 
+57 
+ 
+integrantes atribuíram ao produto atitudes hedônicas (6,27%) principalmente características 
+positivas (saborosa, gostosa, bom aroma, cor bonita, gosto agradável). Essas características 
+positivas podem ser confirmadas pelos sentimentos proporcionados pela bebida (leveza, 
+infância e agradável). 
+ 
+Tabela 6 – Resultado da associação de palavras da bebida de castanha de caju fermentada, 
+exemplos de associações individuais e frequência de menção das categorias 
+Percentual 
+Categoria Associações individuais 
+das menções 
+Aparência (cor âmbar, marrom), aroma (aroma 
+Características de fruta), sabor (ácido, doce, salgado, amargo, 
+19,58% 
+sensoriais sabor de leite fermentado) e textura 
+(concentrada, encorpada, cremosa) 
+Características Castanha de caju assada, fruto, farelo de 
+14,88% 
+relacionadas ao caju castanha, picolé de castanha 
+Saúde intestinal, saudável, benéfico, valor 
+Saudabilidade 14,36% 
+nutricional 
+Características do Bebida gordurosa, gelado, refrescante, bebida 
+7,05% 
+produto em caixinha, bebida em garrafa 
+Positivas (saborosa, gostosa, bom aroma, cor 
+Atitudes hedônicas bonita, gosto agradável), negativas (ranço, 6,27% 
+pouco sabor, sabor desagradável) 
+Alimentos Leites fermentados, iogurte, leite coalhado, 
+5,48% 
+relacionados leite 
+Alternativa a produtos Alternativa vegetal, bebida vegetal, leite de 
+4,96% 
+de origem láctea castanha 
+Relacionados aos 
+Microrganismos benéficos, bactérias boas 4,70% 
+probióticos 
+Desconfiança/ dúvida Diferente, estranho, exótico, porque não? 4,69% 
+Público a que se 
+Intolerantes a lactose, veganos, bebida infantil 4,18% 
+destina 
+Relacionado a 
+Fermentação, alimento fermentado 4,18% 
+fermentação 
+Relativo à inovação Inovador, novidade, produto novo 3,66% 
+Sentimentos Leveza, infância, agradável 3,13% 
+Interesse/ curiosidade Curiosidade, interessante, vontade de 
+2,60% 
+em experimentar experimentar 
+Fonte: elaborado pela autora. 
+ 
+   
+ 
+58 
+ 
+Os consumidores também demonstraram ter conhecimento sobre os alimentos 
+probióticos visto que mencionaram termos como microrganismos benéficos e bactérias boas, 
+na categoria “Relacionados aos probióticos” (4,70%). Além disso, através da categoria 
+“Alternativa a produtos de origem láctea”, os participantes evidenciaram compreender que esse 
+produto é uma alternativa de consumo de alimentos potencialmente probióticos de origem não 
+láctea visto que relataram termos como alternativa vegetal, bebida vegetal e leite de castanha. 
+Esse entendimento também é evidenciado pela categoria “Público a que se destina”, em que a 
+maioria dos termos foram para intolerantes à lactose e veganos. Nessa categoria, parte dos 
+consumidores também citaram que essa bebida deve ser direcionada ao público infantil. Esse 
+direcionamento ao público infantil pode estar relacionado ao fato de considerarem essa bebida 
+mais saudável.  
+A categoria “Desconfiança/ dúvida” teve 4,69% de menções, tendo como principais 
+palavras “diferente, estranho, exótico e porque não?”. Por ser um produto novo justifica-se a 
+dúvida por parte dos consumidores. O fato de ser um produto novo foi mencionado pelos 
+participantes na categoria inovação (3,66%). Apesar da desconfiança, parte dos consumidores 
+demonstraram interesse em conhecer o produto com menções na categoria “Interesse/ 
+curiosidade em experimentar”.  
+ 
+5.4.2 Aceitação sensorial por escala hedônica 
+  
+Para os atributos sensoriais avaliados pela escala hedônica, o leite fermentado 
+comercial teve médias variando de 8,31 a 8,52, permanecendo entre os termos “gostei muito” 
+e “gostei muitíssimo” da escala hedônica. Já as médias das bebidas fermentadas de ECC 
+apresentaram valores entre 7,00 e 7,35, se encaixando entre os termos “gostei moderadamente” 
+e “gostei muito”. Desta forma, observa-se que todas as bebidas tiveram boa aceitação por terem 
+médias na região de aceitação da escala hedônica (Tabela 7). Esse resultado é positivo visto que 
+a maioria dos consumidores (58%), nunca tinha consumido bebida de castanha de caju. 
+Enquanto para o leite fermentado, quando questionados, a maioria dos julgadores (62%) 
+respondeu gostar e consumir. Esses achados sugerem que as expectativas geradas antes do 
+consumo do alimento foram correspondidas, contribuindo para a satisfação dos consumidores 
+(Lee; Leong; Oey, 2023). 
+O teste de médias mostrou que para todos os atributos foi observada uma maior 
+aceitação (p<0,05) para o leite fermentado (Figura 16). No entanto, as bebidas fermentadas de 
+   
+ 
+59 
+ 
+ECC não se diferenciam entre si (p>0,05) (Tabela 7). Portanto, o tipo de substância adoçante 
+não alterou a aceitação das bebidas fermentadas de castanha de caju. Esse resultado evidencia 
+a semelhança sensorial entre a sacarose e a sucralose, indicando que o uso do edulcorante não- 
+nutritivo não influenciou negativamente as características do produto. Tal fato é pertinente 
+diante da crescente preocupação com o consumo excessivo de açúcares 
+(Pimentel; Madrona; Prudêncio, 2015).  
+ 
+Tabela 7 – Aceitação sensorial dos atributos medidos das amostras usando escala hedônica 
+Atributo Leite fermentado ECC-SAC ECC-SUC 
+Cor 8,50 ± 1,00 a 7,20 ± 1,01 b 7,15 ± 1,10 b 
+Aparência 8,52 ± 1,00 a 7,31 ± 1,11 b 7,22 ± 1,40 b 
+Aroma 8,31 ± 1,05 a 7,17 ± 1,08 b 7,04 ± 1,10 b 
+Sabor 8,33 ± 1,03 a 7,05 ± 1,20 b 7,00 ± 1,17 b 
+Impressão global 8,45 ± 1,09 a 7,35 ± 1,00 b 7,20 ± 1,15 b 
+Fonte: elaborado pela autora. 
+a-b 
+Médias seguidas de letras diferentes, nas linhas, indicam diferença significativa entre os tratamentos pelo Teste 
+de Friedman (p<0,05). 
+ 
+Figura 16 – Aceitação sensorial dos atributos cor, aparência, aroma, 
+sabor e impressão global medidos usando escala hedônica das 
+bebidas estudadas 
+ 
+Fonte: elaborado pela autora. 
+  
+   
+ 
+60 
+ 
+5.4.3 Teste Check-All-That-Apply (CATA) 
+  
+A utilização do método CATA permitiu a coleta de informações sobre a aceitação 
+dos consumidores quanto às características sensoriais das bebidas fermentadas 
+(Moss et al., 2022). A Tabela 8 apresenta os percentuais de frequência dos descritores mais 
+utilizados pelos avaliadores. O teste Q de Cochran revelou que houve diferença significativa 
+na frequência de 14 dos 21 termos apresentados na ficha CATA, sugerindo que os consumidores 
+notaram diferenças nas características sensoriais entre as bebidas. Esses termos podem ser 
+considerados os mais apropriados na descrição das amostras pelos consumidores (Figura 17).  
+ 
+Tabela 8 – Percentuais de frequência dos descritores mais utilizadas pelos avaliadores na 
+metodologia do CATA, para descrever as bebidas de ECC fermentado adicionadas de sacarose 
+(ECC-SAC) e sucralose (ECC-SUC) em comparação com o leite fermentado comercial 
+Leite 
+Atributos p-valores ECC-SAC ECC-SUC 
+fermentado 
+Brilhoso <0,0001 44 a 27 b 15 b 
+Cor esbranquiçada <0,0001 13 b 77 a 79 a 
+Cor escura 0,282 6 a 3 a 8 a 
+Cor amarronzada 0,350 11 a 6 a 7 a 
+Cor caramelo <0,0001 51 a 8 b 4 b 
+Aroma característico de leite 
+0,133 53 a 40 a 48 a 
+fermentado 
+Aroma de castanha de caju 0,247 18 a 27 a 24 a 
+Aroma de baunilha 0,000 21 a 6 b 6 b 
+Sabor característico de leite 
+0,046 43 a 34 a 29 b 
+fermentado 
+Sabor de castanha de caju 0,014 12 b 25 a 27 a 
+Gosto doce ideal <0,0001 67 a 18 b 17 b 
+Pouco doce <0,0001 12 b 38 a 33 a 
+Muito doce 0,028 12 a 2 b 3 b 
+Gosto amargo <0,0001 3 b 33 a 31 a 
+Sabor residual 0,000 12 b 30 a 34 a 
+Gosto salgado 0,001 1 b 11 a 13 a 
+Gosto ácido 0,027 32 b 35 b 48 a 
+Textura ideal <0,0001 52 a 17 b 8 c 
+Concentrado 0,049 26 a 14 a 24 a 
+Leitoso 0,623 41 a 38 a 44 a 
+Gostoso 0,550 52 a 45 a 50 a 
+Fonte: elaborado pela autora. 
+a-c 
+Médias seguidas de letras diferentes, nas linhas, indicam diferença significativa entre as bebidas fermentadas 
+pelo Teste de Cochran (p<0,05). 
+ 
+   
+ 
+61 
+ 
+ Para a aparência, os termos “brilhoso” e “cor de caramelo” tiveram maior 
+frequência (p<0,05) para bebida comercial enquanto o termo “cor esbranquiçada” apresentou 
+maior frequência (p<0,05) para as bebidas fermentadas de ECC. Portanto, observa-se que as 
+bebidas de castanha de caju possuem uma aparência mais esbranquiçada e opaca. A brancura é 
+um parâmetro importante na caracterização da qualidade de bebidas vegetais, visto que as 
+mesmas buscam se assemelhar com a aparência do leite de vaca (Tobolková; Durec, 2023). 
+ 
+Figura 17 – Percentuais de frequência dos descritores que apresentaram 
+diferença significativa na avaliação CATA das bebidas fermentadas à base 
+de ECC adicionadas de sacarose (ECC-SAC) e sucralose (ECC-SUC) em 
+comparação com o leite fermentado comercial 
+ 
+Fonte: elaborado pela autora. 
+  
+Com relação ao aroma, o termo “aroma de baunilha” teve maior frequência 
+(p<0,05) no leite fermentado comercial. Esse resultado era esperado visto que na bebida 
+comercial é adicionado o aroma de baunilha. O termo “aroma de castanha de caju”, também 
+não se diferenciou entre as amostras, mostrando que este não foi percebido pelos consumidores 
+nas amostras contendo castanha de caju. O atributo “aroma característico de leite fermentado” 
+apresentou uma elevada frequência. Porém, as amostras não foram significativamente 
+diferentes (Tabela 8), indicando que as bebidas fermentadas de castanha de caju apresentaram 
+   
+ 
+62 
+ 
+aroma fermentado similar ao produto comercial. Isto pode ser atribuído ao metabolismo das 
+bactérias ácido láticas, que durante a fermentação produzem compostos aromáticos e outros 
+metabólitos que contribuem para o aroma abundante (Sousa et al., 2022). 
+No entanto, o termo “sabor de castanha de caju” teve maior frequência (p<0,05) 
+para as bebidas fermentadas à base de ECC, evidenciando a percepção dos julgadores. Quanto 
+ao termo “sabor característico de leite fermentado”, este teve maior frequência (p<0,05) no leite 
+fermentado comercial e na bebida fermentada de castanha de caju adicionada de sacarose. Essa 
+observação pode estar relacionada ao metabolismo dos microrganismos, os quais convertem os 
+açúcares presentes nas bebidas em ácidos orgânicos e outros compostos que caracterizam o 
+sabor fermentado. Isso pode resultar em uma concentração mais elevada desses compostos 
+nessas bebidas em relação à bebida adicionada de sucralose, refletindo na baixa percepção dessa 
+característica na bebida sem adição de sacarose. 
+Para a doçura, os termos “gosto doce ideal” e “muito doce” tiveram maiores 
+(p<0,05) frequências no leite fermentado. O gosto muito doce da amostra comercial era 
+esperado visto que esta apresentava conteúdo de açúcares bem maior (135 g/ L) quando 
+comparada a amostra de bebida vegetal adicionada de sacarose (70 g/L). Portanto, observa-se 
+que os julgadores estão acostumados a consumir bebidas mais doces e esperavam característica 
+similar nas amostras de castanha de caju. Com relação ao termo “gosto ácido”, este teve maior 
+frequência (p<0,05) para a bebida fermentada de ECC adicionada de sucralose. Como 
+presumido, esse resultado pode indicar que a adição de sacarose auxiliou na redução da 
+percepção de acidez nas demais bebidas.  
+Os termos “gosto amargo” e “sabor residual” tiveram maiores frequências (p<0,05) 
+nas bebidas fermentadas de ECC. Em geral, o amargor presente em bebidas vegetais é atribuído 
+a presença de compostos fenólicos e glucosinolatos (Moss et al., 2022). Os julgadores 
+afirmaram que o sabor residual presente nas bebidas de castanha de caju estava relacionado a 
+um “gosto salgado” (p<0,05). Cardello et al. (2022) destacaram que um sabor salgado e notas 
+umami são comumente relatados em bebidas à base de castanha de caju e castanha-do-Brasil. 
+Tamuno (2019) reportou que a adição de açúcar e do aroma de baunilha pode ser aplicado como 
+um artifício para reduzir o gosto residual e elevar a aceitação de uma bebida de castanha de 
+caju. 
+Para o termo “textura ideal”, as maiores frequências (p<0,05) foram para o leite 
+fermentado comercial, seguido da bebida fermentada de castanha de caju adicionada de 
+sacarose e por fim daquela adicionada de sucralose. Os julgadores mencionaram que esperavam 
+   
+ 
+63 
+ 
+uma maior consistência das bebidas fermentadas à base de ECC, principalmente daquela 
+adicionada de sucralose. A incorporação de emulsificantes e estabilizantes pode ser uma 
+ferramenta utilizada para melhorar a textura e evitar a separação de fases da bebida vegetal. 
+Todavia, a inclusão desses aditivos pode entrar em conflito com as expectativas dos 
+consumidores por alimentos mais naturais e lista reduzida de ingredientes 
+(Lee; Leong; Oey, 2023). 
+Os termos “concentrado”, “leitoso” e “gostoso” não apresentaram diferenças 
+significativas (p>0,05) entre as bebidas. Portanto, os consumidores associaram esses termos de 
+modo equivalente em todas as amostras, reforçando a boa aceitação das bebidas preparadas 
+neste estudo. 
+  
+ 
+  
+   
+ 
+64 
+ 
+6 CONCLUSÃO 
+  
+Diante do crescente interesse por produtos funcionais de origem vegetal, a produção 
+de extratos vegetais probióticos emerge como uma alternativa promissora para atender essa 
+demanda no mercado. O desenvolvimento desse trabalho possibilitou a obtenção de uma bebida 
+à base de extrato de xerém de castanha de caju fermentada pela cepa potencialmente probiótica 
+L. casei NRRL B-442.  
+A bebida apresentou uma contagem elevada de células viáveis do microrganismo 
+após a fermentação, mantendo a sua viabilidade acima do recomendado ao longo do período de 
+42 dias de armazenamento refrigerado, variando de 10,46 a 12,23 log UFC/mL. Durante a 
+fermentação, o microrganismo metabolizou parte da glicose disponível, produzindo ácido 
+lático. Esse comportamento também foi observado no decorrer do armazenamento, com o 
+esgotamento gradual desse açúcar, resultando na pós-acidificação do meio devido ao acúmulo 
+de ácido lático. Ao ser submetida a digestão simulada, a cepa potencialmente probiótica se 
+mostrou resistente às condições gastrointestinais em diferentes estágios do período de 
+armazenamento, com valores acima de 9,18 log UFC/mL. As formulações adicionadas de 
+adoçantes foram bem avaliadas pelos consumidores, sem distinção significativa na aceitação 
+sensorial entre as amostras adoçadas com sacarose ou sucralose. Isso destaca o potencial da 
+sucralose no preparo de uma bebida vegetal fermentada com menor teor calórico.  
+Dessa forma, a matriz à base de xerém de castanha de caju se mostrou uma opção 
+viável para a elaboração de um extrato vegetal fermentado com um notável potencial funcional. 
+Para uma compreensão mais aprofundada da funcionalidade do produto, sugere-se a realização 
+de estudos futuros que investiguem os impactos da bebida potencialmente probiótica na 
+microbiota intestinal, assim como, estudos clínicos que possam comprovar a sua eficácia. 
+  
+  
+ 
+  
+  
+   
+ 
+65 
+ 
+REFERÊNCIAS 
+  
+AL ZAHRANI, Ashwag Jaman; SHORI, Amal Bakr. Viability of probiotics and antioxidant 
+activity of soy and almond milk fermented with selected strains of probiotic Lactobacillus 
+spp. LWT, [s.l.], v. 176, p. 114531, 2023.  
+  
+ALLI, Sauliha R. et al. The Gut Microbiome in Depression and Potential Benefit of 
+Prebiotics, Probiotics and Synbiotics: A Systematic Review of Clinical Trials and 
+Observational Studies. International Journal of Molecular Sciences, [s.l.], v. 23, n. 9, p. 
+4494, 2022. Disponível em: https://www.mdpi.com/1422-0067/23/9/4494. Acesso em: 01 jul. 
+2022. 
+  
+ALMADA-ÉRIX, Carine N. et al. Development of a semi-dynamic in vitro model and its 
+testing using probiotic Bacillus coagulans GBI-30, 6086 in orange juice and yogurt. Journal 
+of Microbiological Methods, [s.l.], v. 183, p. 106187, 2021.  
+  
+AMORIM, Manuela. et al. Use of whey peptide fraction in coated cashew nut as functional 
+ingredient and salt replacer. LWT, [s.l.], v. 92, n. January, p. 204–211, 2018. Disponível em: 
+https://doi.org/10.1016/j.lwt.2017.12.075. Acesso em: 13 set. 2022. 
+  
+ARAUJO FILHO, Antonio Augusto Lima et al. Kombucha and kefir fermentation dynamics 
+on cashew nut beverage (Anacardium occidentale L.). International Journal of Gastronomy 
+and Food Science, [s.l.], v. 33, p. 100778, 2023. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S1878450X23001208. Acesso em: 27 set. 2023. 
+  
+BRASIL. Resolução do Ministério da Saúde: nº 466, de 12 de dezembro de 2012. Dispõe 
+sobre diretrizes e normas regulamentadoras de pesquisas envolvendo seres humanos. Brasília, 
+DF: Presidencia da República. 2012. 
+  
+BERNAL-CASTRO, Camila et al. Vegetable substrates as an alternative for the inclusion of 
+lactic acid bacteria with probiotic potential in food matrices. Journal of Food Science and 
+Technology, [s.l.], v. 61, n. 5, p. 833–846, 2023.  
+  
+BERNAT, Neus et al. Hazelnut milk fermentation using probiotic Lactobacillus rhamnosus 
+GG and inulin. International Journal of Food Science & Technology, [s.l.], v. 49, n. 12, p. 
+2553–2562, 2014a. Disponível em: https://onlinelibrary.wiley.com/doi/10.1111/ijfs.12585. 
+Acesso em: 01 jul. 2022. 
+  
+BERNAT, Neus et al. Vegetable milks and their fermented derivative products. International 
+Journal of Food Studies, [s.l.], v. 3, n. 1, p. 93–124, 2014b.  
+  
+BISINOTTO, Mariana Sisconeto et al. Bioaccessibility of cashew nut kernel flour compounds 
+released after simulated in vitro human gastrointestinal digestion. Food Research 
+International, [s.l.], v. 139, p. 109906, 2021. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S0963996920309315. Acesso em: 05 set. 2022. 
+   
+ 
+66 
+ 
+  
+BRODKORB, André et al. INFOGEST static in vitro simulation of gastrointestinal food 
+digestion. Nature Protocols, [s.l.], v. 14, n. 4, p. 991–1014, 2019.  
+  
+BROOKER, Paige G. et al. Nutrient composition of milk and plant-based milk alternatives: A 
+cross-sectional study of products sold in Australia and Singapore. Food Research 
+International, [s.l.], v. 173, p. 113475, 2023. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S0963996923010232. Acesso em: 18 set. 2023. 
+  
+CANAVIRI PAZ, Pamela; JANNY, Rownoke Jannat; HÅKANSSON, Åsa. Safeguarding of 
+quinoa beverage production by fermentation with Lactobacillus plantarum DSM 9843. 
+International Journal of Food Microbiology, [s.l.], v. 324, p. 108630, 2020. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S0168160520301240. Acesso em: 17 nov. 2023. 
+  
+CARDELLO, Armand V. et al. Plant-based alternatives vs dairy milk: Consumer segments 
+and their sensory, emotional, cognitive and situational use responses to tasted products. Food 
+Quality and Preference, [s.l.], v. 100, p. 104599, 2022. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S095032932200074X. Acesso em: 22 nov. 2023. 
+  
+CARVALHO, Joelia Marques et al. Cashew nut oil: effect of kernel grade and a microwave 
+preheating extraction step on chemical composition, oxidative stability and bioactivity. 
+International Journal of Food Science & Technology, [s.l.], v. 53, n. 4, p. 930–937, 2018. 
+Disponível em: https://onlinelibrary.wiley.com/doi/10.1111/ijfs.13665. Acesso em: 24 set. 
+2022. 
+  
+CAVALLINI, Daniela Cardoso Umbelino et al. Probiotic Soy Product Supplemented with 
+Isoflavones Improves the Lipid Profile of Moderately Hypercholesterolemic Men: A 
+Randomized Controlled Trial. Nutrients, [s.l.], v. 8, n. 1, p. 52, 2016. Disponível em: 
+http://www.mdpi.com/2072-6643/8/1/52. Acesso em: 16 nov. 2023. 
+  
+CERDÁ-BERNAD, Débora et al. Probiotic red quinoa drinks for celiacs and lactose 
+intolerant people: study of functional, physicochemical and probiotic properties during 
+fermentation and gastrointestinal digestion. International Journal of Food Sciences and 
+Nutrition, [s.l.], v. 73, n. 1, p. 49–59, 2022. Disponível em: 
+https://doi.org/10.1080/09637486.2021.1921707. Acesso em: 17 jun. 2022. 
+  
+CÉSPEDES, Mario et al. Performance in nondairy drinks of Probiotic L. Casei strains usually 
+employed in dairy products. Journal of Food Science, [s.l.], v. 78, n. 5, 2013.  
+  
+CHEN, Nan et al. Characterization of the physicochemical, thermal and rheological properties 
+of cashew kernel starch. Food Chemistry: X, [s.l.], v. 15, p. 100432, 2022.  
+  
+CHEN, Chen et al. Role of lactic acid bacteria on the yogurt flavour: A review. International 
+Journal of Food Properties, [s.l.], v. 20, n. sup1, p. S316–S330, 2017. Disponível em: 
+https://doi.org/10.1080/10942912.2017.1295988. Acesso em: 26 jun. 2022. 
+  
+   
+ 
+67 
+ 
+COLLIER, Elizabeth S. et al. Just a matter of taste? Understanding rationalizations for dairy 
+consumption and their associations with sensory expectations of plant-based milk alternatives. 
+Food Quality and Preference, [s.l.], v. 104, n. October 2022, p. 104745, 2023. Disponível 
+em: https://doi.org/10.1016/j.foodqual.2022.104745. Acesso em: 03 nov. 2022. 
+  
+COMAK GOCER, Emine Mine; KOPTAGEL, Ebru. Production of milks and kefir beverages 
+from nuts and certain physicochemical analysis. Food Chemistry, [s.l.], v. 402, n. August 
+2022, p. 134252, 2023. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S0308814622022142. Acesso em: 17 fev. 2023. 
+  
+COSTA, Kassia Kiss Firmino Dourado et al. Changes of probiotic fermented drink obtained 
+from soy and rice byproducts during cold storage. LWT, [s.l.], v. 78, p. 23–30, 2017.  
+  
+COSTA, Mayra Garcia Maia et al. Sonicated pineapple juice as substrate for L. casei 
+cultivation for probiotic beverage development: Process optimisation and product stability. 
+Food Chemistry, [s.l.], v. 139, n. 1–4, p. 261–266, 2013. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S0308814613000836. Acesso em: 16 jun. 2022. 
+  
+CUNHA JÚNIOR, Paulo Cezar da et al. Symbiotic drink based on Brazil nuts (Bertholletia 
+excelsa H.B.K): production, characterization, probiotic viability and sensory acceptance. 
+Ciência Rural, [s.l.], v. 51, n. 2, p. 1–14, 2021. Disponível em: 
+http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0103-
+84782021000200751&tlng=en. Acesso em: 06 jun. 2022. 
+  
+D’AMICO, Ramona et al. Consumption of Cashew (Anacardium occidentale L.) Nuts 
+Counteracts Oxidative Stress and Tissue Inflammation in Mild Hyperhomocysteinemia in 
+Rats. Nutrients, [s.l.], v. 14, n. 7, p. 1474, 2022. Disponível em: 
+https://www.mdpi.com/2072-6643/14/7/1474. Acesso em: 28 set. 2023. 
+  
+DOYON, Maurice; LABRECQUE, JoAnne. Functional foods: a conceptual definition. 
+British Food Journal, [s.l.], v. 110, n. 11, p. 1133–1149, 2008.  
+  
+EL DIB, Regina et al. Probiotics for the treatment of depression and anxiety: A systematic 
+review and meta-analysis of randomized controlled trials. Clinical Nutrition ESPEN, [s.l.], 
+v. 45, p. 75–90, 2021. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S2405457721002825. Acesso em: 06 jun. 2022. 
+  
+EMILIANO, Gustavo dos Santos et al. Resistência gastrointestinal in vitro de 
+Lacticaseibacillus rhamnosus GG em bebidas de maracujá adicionadas de soro. Research, 
+Society and Development, [s.l.], v. 11, n. 16, p. e105111637763, 2022.  
+  
+FAOSTAT (2023). Food and agriculture organization of the United Nations. Food and 
+Agriculture Organization of the United Nations (FAO). Disponível em: 
+https://www.fao.org/faostat/en/#home. Accesso em: 18 nov. 2023. 
+  
+   
+ 
+68 
+ 
+FAO/WHO. Food and Agricultural Organization/World Health Organization. (2002). 
+Guidelines for the evaluation of probiotics in food. Londres: FAO/WHO. 
+  
+FERNANDES, Ana Beatriz Costa et al. Potentially synbiotic fermented beverages processed 
+with water-soluble extract of Baru almond. Food Bioscience, [s.l.], v. 42, n. March, p. 
+101200, 2021. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S2212429221003254. Acesso em: 10 out. 2022. 
+  
+FONTELES, Thatyane Vidal et al. Optimization of the Fermentation of Cantaloupe Juice by 
+Lactobacillus casei NRRL B-442. Food and Bioprocess Technology, [s.l.], v. 5, n. 7, p. 
+2819–2826, 2012.  
+  
+FREITAS, Hildeane Veloso et al. Synbiotic açaí juice (Euterpe oleracea) containing sucralose 
+as noncaloric sweetener: Processing optimization, bioactive compounds, and acceptance 
+during storage. Journal of Food Science, [s.l.], v. 86, n. 3, p. 730–739, 2021. Disponível em: 
+https://ift.onlinelibrary.wiley.com/doi/10.1111/1750-3841.15617. Acesso em: 11 abr. 2022. 
+  
+HASAN, Muzaffar et al. Research trends and approaches for the nutritional and bio-
+functionality enhancement of fermented soymilk. Journal of Functional Foods, [s.l.], v. 107, 
+p. 105698, 2023.  
+  
+HATI, Subrota; PATEL, Nikita; MANDAL, Surajit. Comparative Growth Behaviour and 
+Biofunctionality of Lactic Acid Bacteria During Fermentation of Soy Milk and Bovine Milk. 
+Probiotics and Antimicrobial Proteins, [s.l.], v. 10, n. 2, p. 277–283, 2018.  
+  
+HERIGSTAD, Becky; HAMILTON, Martin; HEERSINK, Joanna. How to optimize the drop 
+plate method for enumerating bacteria Journal of Microbiological Methods. Journal of 
+Microbiological Methods, [s.l.], v. 44, n. 2, p. 121-129, 2001.  
+  
+HILL, Colin et al. Expert consensus document: The international scientific association for 
+probiotics and prebiotics consensus statement on the scope and appropriate use of the term 
+probiotic. Nature Reviews Gastroenterology and Hepatology, [s.l.], v. 11, n. 8, p. 506–514, 
+2014.  
+  
+HUANG, Wenkang et al. Evaluation of the fermentation potential of lactic acid bacteria 
+isolated from herbs, fruits and vegetables as starter cultures in nut-based milk alternatives. 
+Food Microbiology, [s.l.], v. 112, p. 104243, 2023.  
+  
+IAL - INSTITUTO ADOLFO LUTZ. Métodos físico-químicos para análise de alimentos. 
+ZENEBON, Odair; PASCUET, Neus Sadocco; TIGLEA, Paulo. (Coord). São Paulo: Instituto 
+Adolfo Lutz, p.1020, 2008. 
+  
+ILLIKOUD, Nassima et al. Development of innovative fermented products by exploiting the 
+diversity of immunomodulatory properties and fermentative activity of lactic and propionic 
+acid bacteria. Food Research International, [s.l.], v. 166, p. 112557, 2023.  
+  
+   
+ 
+69 
+ 
+JAMES, Armachius; WANG, Yousheng. Characterization, health benefits and applications of 
+fruits and vegetable probiotics. CyTA - Journal of Food, [s.l.], v. 17, n. 1, p. 770–780, 2019. 
+Disponível em: https://doi.org/10.1080/19476337.2019.1652693. Acesso em: 01 jul. 2022. 
+  
+JESKE, Stephanie; ZANNINI, Emanuele; ARENDT, Elke K. Evaluation of Physicochemical 
+and Glycaemic Properties of Commercial Plant-Based Milk Substitutes. Plant Foods for 
+Human Nutrition, [s.l.], v. 72, n. 1, p. 26–33, 2017. Disponível em: 
+http://link.springer.com/10.1007/s11130-016-0583-0. Acesso em: 06 jun. 2022. 
+  
+JESKE, Stephanie; ZANNINI, Emanuele; ARENDT, Elke K. Past, present and future: The 
+strength of plant-based dairy substitutes based on gluten-free raw materials. Food Research 
+International, [s.l.], v. 110, p. 42–51, 2018. Disponível em: 
+http://dx.doi.org/10.1016/j.foodres.2017.03.045. Acesso em: 06 jun. 2022. 
+  
+KAPRASOB, Ratchadaporn et al. B vitamins and prebiotic fructooligosaccharides of cashew 
+apple fermented with probiotic strains Lactobacillus spp., Leuconostoc mesenteroides and 
+Bifidobacterium longum. Process Biochemistry, [s.l.], v. 70, p. 9–19, 2018. Disponível em: 
+https://doi.org/10.1016/j.procbio.2018.04.009. Acesso em: 01 jul. 2022. 
+  
+KAPRASOB, Ratchadaporn et al. Fermentation-based biotransformation of bioactive 
+phenolics and volatile compounds from cashew apple juice by select lactic acid bacteria. 
+Process Biochemistry, [s.l.], v. 59, n. April, p. 141–149, 2017. Disponível em: 
+http://dx.doi.org/10.1016/j.procbio.2017.05.019. Acesso em: 11 jun. 2022. 
+  
+KOKWAR, Mona Arun; ARYA, Shalini Subhash; BHAT, Mohmad Sayeed. A cereal‐based 
+nondairy probiotic functional beverage: An insight into the improvement in quality 
+characteristics, sensory profile, and shelf‐life. Journal of Food Processing and 
+Preservation, [s.l.], v. 46, n. 1, 2022. Disponível em: 
+https://onlinelibrary.wiley.com/doi/10.1111/jfpp.16147. Acesso em: 04 out. 2022. 
+  
+KOUAMÉ, Kouadio Jean Eric-Parfait et al. New insights into functional cereal foods as an 
+alternative for dairy products: A review. Food Bioscience, [s.l.], v. 55, p. 102840, 2023. 
+Disponível em: https://linkinghub.elsevier.com/retrieve/pii/S2212429223004911. Acesso em: 
+27 jun. 2022. 
+  
+KÜÇÜKGÖZ, Kübra; TRZĄSKOWSKA, Monika. Nondairy Probiotic Products: Functional 
+Foods That Require More Attention. Nutrients, [s.l.], v. 14, n. 4, p. 753, 2022.  
+  
+LADO, Joanna et al. Application of a check-all-that-apply question for the evaluation of 
+strawberry cultivars from a breeding program. Journal of the Science of Food and 
+Agriculture, [s.l.], v. 90, n. 13, p. 2268–2275, 2010.  
+  
+LARKIN, Theresa A.; ASTHEIMER, Lee B.; PRICE, William E. Dietary combination of soy 
+with a probiotic or prebiotic food significantly reduces total and LDL cholesterol in mildly 
+hypercholesterolaemic subjects. European Journal of Clinical Nutrition, [s.l.], v. 63, n. 2, 
+   
+ 
+70 
+ 
+p. 238–245, 2009. Disponível em: https://www.nature.com/articles/1602910. Acesso em: 06 
+ago. 2022. 
+  
+LAWLESS, Harry T.; HEYMANN, Hildegarde. Sensory evaluation of food: principles of 
+good practice. 2. ed. 2010.  
+  
+LEE, Pui Yee; LEONG, Sze Ying; OEY, Indrawati. The role of protein blends in plant-based 
+milk alternative: A review through the consumer lens. Trends in Food Science & 
+Technology, p. 104268, 2023. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S0924224423003837. Acesso em: 22 nov. 2023. 
+  
+LEEUWENDAAL, N.K. et al. Protection of candidate probiotic lactobacilli by Cheddar 
+cheese matrix during simulated gastrointestinal digestion. Journal of Functional Foods, 
+[s.l.], v. 92, p. 105042, 2022. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S1756464622001128. Acesso em: 15 ago. 2023. 
+  
+LILLO-PÉREZ, Siegried et al. Probiotics in fruit and vegetable matrices: Opportunities for 
+nondairy consumers. LWT, [s.l.], v. 151, n. April, p. 112106, 2021.  
+  
+LIMA, Janice Ribeiro et al. Cashew nut-based beverage: development, characteristics and 
+stability during refrigerated storage. Food Science and Technology, [s.l.], v. 41, n. suppl 1, p. 
+60–64, 2021. Disponível em: http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0101-
+20612021000500060&tlng=en. Acesso em: 05 mai. 2022. 
+  
+LIMA, Janice Ribeiro et al. Comunicado Técnico 232. Obtenção de Extrato Hidrossolúvel 
+de Amêndoa de Castanha-de-caju. Fortaleza, 2017.  
+  
+LIMA, Janice R.; GARRUTI, Deborah S.; BRUNO, Laura M. Physicochemical, 
+microbiological and sensory characteristics of cashew nut butter made from different kernel 
+grades-quality. LWT - Food Science and Technology, [s.l.], v. 45, n. 2, p. 180–185, 2012.  
+  
+LUDENA URQUIZO, Fanny Emma et al. Development of a fermented quinoa-based 
+beverage. Food Science and Nutrition, [s.l.], v. 5, n. 3, p. 602–608, 2017. Disponível em: 
+www.foodscience-nutrition.com. Acesso em: 09 set. 2022. 
+  
+MANOJ, Pawade Mohit et al. Fruit based probiotic functional beverages: A review. Journal 
+of Agriculture and Food Research, [s.l.], v. 14, p. 100729, 2023. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S2666154323002363. Acesso em: 03 nov. 2023. 
+  
+MANTOVANI, Fernanda D et al. Is there an impact of the dairy matrix on the survival of 
+Lactobacillus casei Lc‐1 during shelf life and simulated gastrointestinal conditions?. Journal 
+of the Science of Food and Agriculture, [s.l.], v. 100, n. 1, p. 32–37, 2020. Disponível em: 
+https://onlinelibrary.wiley.com/doi/10.1002/jsfa.9988. Acesso em: 29 out. 2023. 
+  
+MARIANO, R. L. R. Manual de práticas em fitobacteriologia. Recife: Editora 
+Universitária UFPE 171 pp, 2000. 
+   
+ 
+71 
+ 
+  
+MARKETS AND MARKETS. Dairy Alternatives Market by Source (Soy, Almond, 
+Coconut, Oats, Hemp), Application (Milk, Cheese, Yogurt, Ice Creams, Creamers), 
+Distribution Channel (Retail, Online Stores, Foodservice), Formulation and Region – 
+Global Forecast to 2028. 2023. Disponível em: https://www.marketsandmarkets.com/Market-
+Reports/dairy-alternatives-market-677.html. Acesso em: 17 nov. 2023. 
+  
+MATTISON, Christopher P. et al. Microbiological, Physicochemical, and Immunological 
+Analysis of a Commercial Cashew Nut-Based Yogurt. International Journal of Molecular 
+Sciences, [s.l.], v. 21, n. 21, p. 8267, 2020. Disponível em: https://www.mdpi.com/1422-
+0067/21/21/8267. Acesso em: 07 jul. 2022. 
+  
+MESQUITA, Maria Carolina et al. Fermentation of chickpea (Cicer arietinum L.) and 
+coconut (Coccus nucifera L.) beverages by Lactobacillus paracasei subsp paracasei LBC 81: 
+The influence of sugar content on growth and stability during storage. LWT, [s.l.], v. 132, n. 
+Jun, p. 109834, 2020. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S0023643820308239. Acesso em: 10 out. 2022. 
+  
+MIN, Min et al. Non-dairy probiotic food products: An emerging group of functional foods. 
+Critical Reviews in Food Science and Nutrition, [s.l.], v. 59, n. 16, p. 2626–2641, 2019.  
+  
+MINEKUS, Mans. et al. A standardised static in vitro digestion method suitable for food – an 
+international consensus. Food Funct., [s.l.], v. 5, n. 6, p. 1113–1124, 2014. Disponível em: 
+http://xlink.rsc.org/?DOI=C3FO60702J. Acesso em: 03 nov. 2022. 
+  
+MOHAN, Viswanathan et al. Cashew Nut Consumption Increases HDL Cholesterol and 
+Reduces Systolic Blood Pressure in Asian Indians with Type 2 Diabetes: A 12-Week 
+Randomized Controlled Trial. The Journal of Nutrition, [s.l.], v. 148, n. 1, p. 63–69, 2018.  
+  
+MOSS, Rachael et al. An investigation into consumer perception and attitudes towards plant-
+based alternatives to milk. Food Research International, [s.l.], v. 159, n. July, p. 111648, 
+2022. Disponível em: https://doi.org/10.1016/j.foodres.2022.111648. Acesso em: 17 fev. 
+2023. 
+  
+NASEEM, Zahida et al. Probiotic-fortified fruit juices: Health benefits, challenges, and future 
+perspective. Nutrition, [s.l.], v. 115, p. 112154, 2023.  
+ 
+OLIVEIRA, Nathalia Nogueira et al. Cashew nut and cashew apple: a scientific and 
+technological monitoring worldwide review. Journal of Food Science and Technology, 
+[s.l.], v. 57, n. 1, p. 12–21, 2020.  
+  
+ONVIT. Castanha de caju: nossos produtos. Nossos produtos. Disponível em: 
+https://www.onvit.com.br/castanha-de-caju. Acesso em: 02 out. 2023. 
+  
+   
+ 
+72 
+ 
+PADILHA, Marina et al. A prebiotic mixture improved Lactobacillus acidophilus and 
+Bifidobacterium animalis gastrointestinal in vitro resistance in petit-suisse. Food & Function, 
+[s.l.], v. 7, n. 5, p. 2312–2319, 2016.  
+  
+PAREDES, Jorge Luís; ESCUDERO-GILETE, María Luisa; VICARIO, Isabel María. A new 
+functional kefir fermented beverage obtained from fruit and vegetable juice: Development and 
+characterization. LWT, [s.l.], v. 154, p. 112728, 2022. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S0023643821018818. Acesso em: 03 abr. 2022. 
+  
+PEREIRA, Ana Lúcia Fernandes et al. Impact of fermentation conditions on the quality and 
+sensory properties of a probiotic cupuassu (Theobroma grandiflorum) beverage. Food 
+Research International, [s.l.], v. 100, n. May, p. 603–611, 2017. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S0963996917303952. Acesso em: 06 jun. 2022. 
+  
+PEREIRA, Ana Lúcia F.; MACIEL, Tatiane C.; RODRIGUES, Sueli. Probiotic beverage 
+from cashew apple juice fermented with Lactobacillus casei. Food Research International, 
+[s.l.], v. 44, n. 5, p. 1276–1283, 2011. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S0963996910004680. Acesso em: 12 mai. 2022. 
+  
+PIMENTEL, Tatiana Colombo et al. Health benefits and technological effects of 
+Lacticaseibacillus casei-01: An overview of the scientific literature. Trends in Food Science 
+& Technology, [s.l.], v. 114, p. 722–737, 2021. 
+ 
+PIMENTEL, Tatiana Colombo et al. Vegan probiotic products: A modern tendency or the 
+newest challenge in functional foods. Food Research International, [s.l.], v. 140, p. 110033, 
+2021b.  
+  
+PIMENTEL, Tatiana Colombo; MADRONA, Grasiele Scaramal; PRUDENCIO, Sandra 
+Helena. Probiotic clarified apple juice with oligofructose or sucralose as sugar substitutes: 
+Sensory profile and acceptability. Lwt, [s.l.], v. 62, n. 1, p. 838–846, 2015. Disponível em: 
+http://dx.doi.org/10.1016/j.lwt.2014.08.001. Acesso em: 26 out. 2023. 
+  
+PRECEDENCE RESEARCH. Functional Food Market (By Product: Dairy Products, 
+Bakery & Cereals, Meat, Fish & Eggs, Fats & Oils, Soy Products, and Others; By 
+Ingredient: Dietary Fibers, Carotenoids, Minerals, Fatty Acids, Vitamins, Prebiotics & 
+Probiotics, and Others; By Application: Weight Management, Sports Nutrition, 
+Digestive Health, Immunity, Cardio Health, Clinical Nutrition, and Others) - Global 
+Market Size, Trends Analysis, Segment Forecasts, Regional Outlook 2023 - 2032. 2023. 
+Disponível em: https://www.precedenceresearch.com/functional-food-market. Acesso em: 08 
+ago. 2023. 
+  
+RASIKA, Dissanayake. M. D. et al. Plant-based milk substitutes as emerging probiotic 
+carriers. Current Opinion in Food Science, [s.l.], v. 38, p. 8-20, abr. 2021.  
+  
+ROCHA, Caique dos Santos et al. High-intensity ultrasound influences the probiotic 
+fermentation of Baru almond beverages and impacts the bioaccessibility of phenolics and 
+   
+ 
+73 
+ 
+fatty acids, sensory properties, and in vitro biological activity. Food Research International, 
+[s.l.], v. 173, p. 113372, 2023. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S0963996923009171. Acesso em: 18 set. 2023. 
+  
+RODRIGUES, Vivian Cristina da Cruz et al. Survival, metabolic status and cellular 
+morphology of probiotics in dairy products and dietary supplement after simulated digestion. 
+Journal of Functional Foods, [s.l.], v. 55, p. 126–134, 2019. 
+  
+SANTOS FILHO, Antonio Luiz dos et al. Production and stability of probiotic cocoa juice 
+with sucralose as sugar substitute during refrigerated storage. LWT, [s.l.], v. 99, n. September 
+2018, p. 371–378, 2019.  
+  
+SHORI, Amal Bakr et al. Viability of probiotics and antioxidant activity of cashew milk-
+based yogurt fermented with selected strains of probiotic Lactobacillus spp. LWT, [s.l.], v. 
+153, n. September 2021, p. 112482, 2022.  
+  
+SILVA, Rhonyele Maciel da; CAMPELO, Pedro Henrique; RODRIGUES, Sueli. In vitro 
+viability of L. Casei B-442 and fructooligosaccharides integrity in Amazonian sapota-do-
+solimões functional juice. Food Research International, [s.l.], v. 154, n. February, p. 
+111036, 2022. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S096399692200093X. Acesso em: 19 set. 2023. 
+  
+SILVA, Aline R. A.; SILVA, Marselle M. N.; RIBEIRO, Bernardo D. Health issues and 
+technological aspects of plant-based alternative milk. Food Research International, [s.l.], v. 
+131, n. December 2019, p. 108972, 2020.  
+ 
+SILVA, Beatriz Queiroz; SMETANA, Sergiy. Review on milk substitutes from an 
+environmental and nutritional point of view. Applied Food Research, [s.l.], v. 2, n. 1, p. 
+100105, 2022. Disponível em: https://doi.org/10.1016/j.afres.2022.100105. Acesso em: 21 
+ago. 2022. 
+  
+SINGH, Jaswinder et al. Impact of probiotics in alleviating type 2 diabetes risk in clinical 
+trials: A meta-analysis study. Human Gene, [s.l.], v. 35, p. 201149, 2023. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S2773044123000086. Acesso em: 16 nov. 2023. 
+  
+SOUSA, Thaynna Leocádio Trajano Lacerda et al. Drink with probiotic potential based on 
+water-soluble extract from cashew nuts. Ciência Rural, [s.l.], v. 52, n. 11, 2022.  
+  
+SOUZA, Michelle et al. New functional non-dairy mixed tropical fruit juice 
+microencapsulated by spray drying: Physicochemical characterization, bioaccessibility, 
+genetic identification and stability. LWT, [s.l.], v. 152, n. August, p. 112271, 2021.  
+  
+SRUTHI, Puzhakkal; NAIDU, Madeneni Madahava. Cashew nut (Anacardium occidentale 
+L.) testa as a potential source of bioactive compounds: A review on its functional properties 
+and valorization. Food Chemistry Advances, [s.l.], v. 3, p. 100390, 2023. Disponível em: 
+https://linkinghub.elsevier.com/retrieve/pii/S2772753X23002113. Acesso em: 28 set. 2023. 
+   
+ 
+74 
+ 
+  
+SUBHASHREE, Sridharan; KAVITA, Muthunayakam Sudersana. A study on suitable non 
+dairy food matrix for probiotic bacteria - A systematic review. Enviro Research 
+Publishers, 2019.  
+  
+SULTANA, Marjia et al. Functional orange juice with Lactobacillus casei and tocotrienol-
+enriched flaxseed oil co-encapsulation: Physicochemical properties, probiotic viability, 
+oxidative stability, and sensorial acceptability. LWT, [s.l.], v. 188, p. 115388, 2023.  
+  
+SZPARAGA, Agnieszka et al. Survivability of Probiotic Bacteria in Model Systems of Non-
+Fermented and Fermented Coconut and Hemp Milks. Sustainability, [s.l.], v. 11, n. 21, p. 
+6093, 2019.  
+  
+SZUTOWSKA, Julia. Functional properties of lactic acid bacteria in fermented fruit and 
+vegetable juices: a systematic literature review. European Food Research and Technology, 
+[s.l.], v. 246, n. 3, p. 357–372, 2020.  
+  
+Tabela Brasileira de Composição de Alimentos (TBCA). Universidade de São Paulo (USP). 
+Food Research Center (FoRC). Versão 7.2. São Paulo, 2022. Disponível em: 
+http://www.fcf.usp.br/tbca. Acesso em: 01 out. 2023. 
+  
+TAMUNO, Emelike Nkechi Juliet. Physicochemical, Mineral and Sensory Characteristics of 
+Cashew Nut Milk. International Journal of Food Science and Biotechnology, [s.l.], v. 4, n. 
+1, p. 1, 2019. Disponível em: 
+http://www.sciencepublishinggroup.com/journal/paperinfo?journalid=614&doi=10.11648/j.ijf
+sb.20190401.11. Acesso em: 21 out. 2022. 
+  
+TANGYU, Muzi et al. Fermentation of plant-based milk alternatives for improved flavour 
+and nutritional value. Applied Microbiology and Biotechnology, [s.l.], v. 103, n. 23–24, p. 
+9263–9275, 2019.  
+  
+TOBOLKOVÁ, Blanka; DUREC, Ján. Colour descriptors for plant-based milk alternatives 
+discrimination. Journal of Food Science and Technology, [s.l.], v. 60, n. 9, p. 2497–2501, 
+2023. Disponível em: https://link.springer.com/10.1007/s13197-023-05773-5. Acesso em: 01 
+out. 2023. 
+  
+TRIPATHI, Manoj Kumar; GIRI, Saroj Kumar. Probiotic functional foods: Survival of 
+probiotics during processing and storage. Journal of Functional Foods, [s.l.], v. 9, n. 1, p. 
+225–241, 2014. Disponível em: http://dx.doi.org/10.1016/j.jff.2014.04.030. Acesso em: 23 
+jun. 2022. 
+  
+VALERO-CASES, Estefanía et al. Non-Dairy Fermented Beverages as Potential Carriers to 
+Ensure Probiotics, Prebiotics, and Bioactive Compounds Arrival to the Gut and Their Health 
+Benefits. Nutrients, [s.l.], v. 12, n. 6, p. 1666, 2020.  
+  
+   
+ 
+75 
+ 
+VIDAL, Leticia; ARES, Gastón; GIMÉNEZ, Ana. Projective techniques to uncover consumer 
+perception: Application of three methodologies to ready-to-eat salads. Food Quality and 
+Preference, [s.l.], v. 28, n. 1, p. 1–7, 2013. 
+  
+VINDEROLA, Celso Gabriel; REINHEIMER, Jorge Alberto. Enumeration of Lactobacillus 
+casei in the presence of L. acidophilus, bifidobacteria and lactic starter bacteria in fermented 
+dairy products. International Dairy Journal, [s.l.], v. 10, n. 4, p. 271–275, 2000. Disponível 
+em: https://linkinghub.elsevier.com/retrieve/pii/S0958694600000455. Acesso em: 15 jul. 
+2022. 
+  
+VIVEK, Kambhampati et al. A comprehensive review on microencapsulation of probiotics: 
+technology, carriers and current trends. Applied Food Research, [s.l.], v. 3, n. 1, p. 100248, 
+2023.  
+  
+WANG, Jicheng et al. Gene expression profile of probiotic Lactobacillus casei Zhang during 
+the late stage of milk fermentation. Food Control, [s.l.], v. 25, n. 1, p. 321–327, 2012. 
+Disponível em: https://linkinghub.elsevier.com/retrieve/pii/S0956713511004403. Acesso em: 
+16 nov. 2023. 
+  
+Wikimedia Commons contributors, File: CAJÚ Valdison A Gil DSC0017.jpg, 2023. 
+Licenciado sob CC BY-SA 4.0, via Wikimedia Commons. Disponível em: 
+https://commons.wikimedia.org/w/index.php?title=File:CAJ%C3%9A_Valdison_A_Gil_DSC
+0017.jpg&oldid=763295959. Acesso em: 18 nov. 2023. 
+  
+ZHENG, Jinshui et al. A taxonomic note on the genus Lactobacillus: Description of 23 novel 
+genera, emended description of the genus Lactobacillus beijerinck 1901, and union of 
+Lactobacillaceae and Leuconostocaceae. International Journal of Systematic and 
+Evolutionary Microbiology, [s.l.], v. 70, n. 4, p. 2782–2858, 2020.  
+  
+  
+  
+  
+ 
+  
+  
+   
+ 
+76 
+ 
+APÊNDICE A – TESTE CHECK-ALL-THAT-APPLY (CATA) 
+  
+Abaixo estão listados vários termos que podem caracterizar as amostras de bebida de castanha 
+de caju fermentada. Marque TODOS os termos que CARACTERIZAM essa amostra. Caso 
+não existam opções, favor indicar no espaço abaixo. 
+  
+N° da amostra: ______ 
+  
+(   ). Brilhosa 
+(   ). Cor esbranquiçada 
+(   ). Cor escura 
+(   ). Cor amarronzada 
+(   ). Cor caramelo 
+(   ). Cor escura 
+(   ). Aroma característico de leite fermentado 
+(   ). Aroma de castanha de caju 
+(   ). Aroma de baunilha 
+(   ). Sabor característico de leite fermentado 
+(   ). Sabor de castanha de caju 
+(   ). Gosto doce ideal 
+(   ). Pouco doce 
+(   ). Muito doce 
+(   ). Gosto amargo 
+(   ). Sabor residual 
+(   ). Gosto salgado 
+(   ). Gosto ácido 
+(   ). Textura ideal 
+(   ). Concentrado 
+(   ). Leitoso 
+(   ). Gostoso 
+(   ). 
+  
+ 
+  
+  
+   
+ 
+77 
+ 
+APÊNDICE B – TERMO DE CONSENTIMENTO 
+  
+TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO (TCLE) 
+  
+O Sr. (a) está sendo convidado (a) a participar como voluntário (a) em uma atividade do 
+projeto de pesquisa “BEBIDA FERMENTADA DE EXTRATO DO XERÉM DE 
+CASTANHA DE CAJU”. 
+O propósito desta pesquisa será avaliar a aceitação sensorial de bebidas fermentadas à 
+base de extrato de xerém de castanha de caju. Para obtenção dos dados, lhe será solicitado 
+comparecer ao Laboratório de Análise Sensorial da Universidade Federal do Maranhão, onde 
+em cerca de 15 minutos realizará o teste sensorial. Leia atentamente as informações abaixo que 
+explicam sobre o procedimento da pesquisa. Sua participação na pesquisa será avaliar 
+sensorialmente bebidas fermentadas à base de extrato de xerém de castanha de caju. Portanto, 
+se você tiver alguma alergia com relação à ingestão de castanha de caju, microrganismos 
+probióticos como L. casei, açúcar e sucralose, for gestante ou portador de doença crônica 
+NÃO poderá participar dos testes. Salvo esses casos, o consumo deste produto não oferece 
+riscos à saúde, contudo se ocorrer algum desconforto durante ou até 12 h após a análise, você 
+será encaminhado ao serviço público de saúde. 
+Se mesmo assim houver qualquer risco ou dano significativo ao Sr. (a), esse fato será 
+comunicado imediatamente ao Sistema CEP/CONEP, e será avaliado, em caráter emergencial, 
+a necessidade de adequar ou suspender o estudo. 
+O Sr.(a) não será remunerado por esta atividade, porém possibilitará no futuro próximo, 
+o desenvolvimento de um novo produto e sua comercialização. Sua participação não é 
+obrigatória e, a qualquer momento, o Sr. (a) poderá desistir de participar e retirar seu 
+consentimento. Sua recusa não trará nenhum prejuízo em sua relação com a professora ou com 
+a instituição. Ainda lhe será garantido o sigilo que assegure a privacidade da sua identidade, 
+como também a confidencialidade de todos os resultados obtidos, os quais somente serão 
+divulgados dados diretamente relacionados aos objetivos da pesquisa pelos pesquisadores desse 
+projeto. 
+Entre os benefícios, está opções de alimentos aos intolerantes à lactose, os quais não 
+podem consumir alimentos contendo lactose. 
+Após ter sido esclarecido (a) sobre as informações acima, no caso de concordar em fazer 
+parte do estudo, por favor assinar ao final do documento. O termo encontra-se em duas vias, 
+   
+ 
+78 
+ 
+onde uma ficará com o pesquisador e a outra ficará com o Sr. (a). Neste termo consta o telefone 
+e endereço da pesquisadora principal, podendo tirar dúvidas do projeto e de sua participação. 
+O abaixo-assinado, _____________________________________, ____ anos, RG nº 
+___________ declara que é de livre e espontânea vontade que está participando como 
+voluntário da pesquisa. Eu declaro que li cuidadosamente este Termo de Consentimento Livre 
+e Esclarecido e que, após sua leitura tive oportunidade de fazer perguntas sobre o conteúdo do 
+mesmo, como também sobre a pesquisa e recebi explicações que responderam por completo 
+minhas dúvidas. Sei que poderei retirar meu consentimento a qualquer momento, sem nenhum 
+prejuízo. Declaro ainda estar recebendo uma cópia assinada deste Termo.  
+Imperatriz, ____/____/____ 
+  
+_____________________________           _____________________________ 
+Assinatura do Voluntário                                Assinatura do Pesquisador 
+  
+____________________________ 
+Assinatura do profissional que aplicou o T.C.L.E 
+ 
+ 
+   
+ 

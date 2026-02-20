@@ -1,0 +1,3316 @@
+ 
+ UNIVERSIDADE FEDERAL DO CEARÁ 
+CENTRO DE TECNOLOGIA 
+ 
+DEPARTAMENTO DE ENGENHARIA QUÍMICA 
+PROGRAMA DE PÓS-GRADUAÇÃO EM ENGENHARIA QUÍMICA 
+ 
+  
+ 
+ 
+ 
+MARIA KAROLINA DE ARAÚJO BARROSO 
+ 
+ 
+ 
+ 
+ 
+ 
+PROCESSAMENTO DE SUCO DE CAJU (Anacardium occidentale) POR 
+TECNOLOGIAS NÃO TÉRMICAS: EFEITOS NAS CARACTERÍSTICAS FÍSICO-
+QUÍMICAS E COMPOSTOS BIOATIVOS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2019 
+MARIA KAROLINA DE ARAÚJO BARROSO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PROCESSAMENTO DE SUCO DE CAJU (Anacardium occidentale) POR TECNOLOGIAS 
+NÃO TÉRMICAS: EFEITOS NAS CARACTERÍSTICAS FÍSICO-QUÍMICAS E 
+COMPOSTOS BIOATIVOS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Dissertação apresentada ao Programa de Pós-
+Graduação em Engenharia Química da 
+Universidade Federal do Ceará, como requisito 
+parcial à obtenção do título de Mestre em 
+Engenharia Química.  
+ 
+Orientador(a): Prof. Dra. Sueli Rodriques 
+Coorientador(a):Dra. Thatyane Vidal Fonteles 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA  
+2019 
+Dados Internacionais de Catalogação na Publicação Universidade Federal do CearáBiblioteca UniversitáriaGerada automaticamente pelo módulo Catalog, mediante os dados fornecidos pelo(a) autor(a)B285pBarroso, Maria Karolina de Araújo.    Processamento de suco de caju (Anacardium occidentale) por tecnologias não térmicas: efeitos nascaracterísticas físico-químicas e compostos bioativos / Maria Karolina de Araújo Barroso. – 2019.    83 f. : il.      Dissertação (mestrado) – Universidade Federal do Ceará, Centro de Tecnologia, Programa de Pós-Graduação em Engenharia Química, Fortaleza, 2019.     Orientação: Profa. Dra. Sueli Rodrigues.     Coorientação: Prof. Dr. Thatyane Vidal Fonteles.    1. Ultrassom. 2. Ozônio. 3. Luz pulsada. 4. Compostos bioativos. 5. Peroxidase. I. Título.                                                                                                                                                  CDD 660
+ 
+MARIA KAROLINA DE ARAÚJO BARROSO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PROCESSAMENTO DE SUCO DE CAJU (Anacardium occidentale) POR TECNOLOGIAS 
+NÃO TÉRMICAS: EFEITOS NAS CARACTERÍSTICAS FÍSICO-QUÍMICAS E 
+COMPOSTOS BIOATIVOS 
+ 
+ 
+ 
+ 
+ 
+ 
+Dissertação apresentada ao Programa de Pós-
+Graduação em Engenharia Química da 
+Universidade Federal do Ceará, como requisito 
+parcial à obtenção do título de Mestre em 
+Engenharia Química.  
+ 
+Aprovada em: 29/04/2019. 
+ 
+ 
+BANCA EXAMINADORA 
+ 
+ 
+________________________________________ 
+Prof. Dr. Sueli Rodrigues (Orientadora) 
+Universidade Federal do Ceará (UFC) 
+ 
+ 
+_________________________________________ 
+Prof. Dr. José Maria Correia da Costa 
+Universidade Federal do Ceará (UFC) 
+ 
+ 
+_________________________________________ 
+Dr. Edy Sousa de Brito 
+Empresa Brasileira de Pesquisa Agropecuária (Embrapa) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A Deus. 
+A minha mãe, Maria Ivoneide. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AGRADECIMENTOS 
+ 
+Por todo esse tempo de muito aprendizado quero expressar meus sinceros 
+agradecimentos:  
+À Deus, meu Senhor, meu salvador e meu porto seguro, por me ter concedido o 
+dom da vida e todas as graças que eu precisei para viver o mestrado. 
+A Nossa Senhora, agradeço pela sua intercessão fiel e intercessão de mãe. 
+Aos meus pais, Maria Ivoneide de Araújo e Francisco Barroso Moreira, por todo 
+amor, apoio, cuidado, dedicação que me fizeram chegar até aqui.  
+À Prof. Dra. Sueli Rodrigues pela paciência comigo, por todo aprendizado que me 
+proporcionou e pela acolhida no Labiotec. 
+À Dra. Thatyane Vidal, que tanto me ajudou, compartilhando seus conhecimentos 
+comigo e com quem eu sempre pude contar nos momentos que eu mais precisei. 
+Ao pesquisador Dr. Edy de Sousa Brito, pelas criticas construtivas que me fizeram 
+crescer profissionalmente e pela sua contribuição na qualificação e defesa. 
+Ao Prof. Dr. José Maria, que foi meu professor na graduação e aceitou o convite 
+para fazer parte da minha banca de qualificação e defesa, agradeço por toda sua colaboração 
+para a minha dissertação.  
+Ao meu namorado, Davi Lacerda, por todo seu amor, cuidado e atenção que tanto 
+me ajudam a caminhar. 
+À minha amiga e irmã de comunidade, Dayana Meneses, pelo seu testemunho de 
+vida, que tanto me edificou, pela sua amizade, sua escuta e sua ajuda nos momentos dificéis. 
+À minha amiga, Ronyele Maciel, pela sua amizade, por sempre estar disposta a 
+me ajudar, a tirar minhas dúvidas e pelas boas risadas. 
+À toda a equipe Labiotec, à Priscila Maria, à Fátima, à Karoline Leite, à Iane, ao 
+Ronnyele Braz, à Andressa, à Elaine por toda ajuda, pelo companheirismo no trabalho e pelos 
+bons momentos que passamos juntos.  
+A todos meus amigos, companheiros de mestrado, Darlysson, Raquel, Liana, 
+Ravena, Jorge, Renata Kelly, Renato, pelos difíceis e bons momentos que passamos juntos, 
+dos quais nunca vou esquecer. 
+A toda minha família, agradeço por todo amor e carinho. Em especial ao meu 
+Padrinho Alisson Vinicius, com quem eu sempre pude contar. 
+À Universidade Federal do Ceará pela formação acadêmica. 
+ 
+ 
+O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento 
+do Pessoal de Nível Superior (CAPES) – Código de financiamento 001. Agradeço ao 
+Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), ao Instituto 
+Nacional de Frutos Tropicais (INCT-FT) e à Fundação Cearense de Apoio ao 
+Desenvolvimento Científico e Tecnológico (FUNCAP), pelo apoio financeiro e bolsa 
+recebida. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+“Tudo gira ao Teu redor, tudo fala de Ti.  
+E não importa o como, o quando e o porquê.” 
+                                                        Focolares 
+ 
+ 
+RESUMO 
+ 
+Os consumidores estão cada vez mais preocupados com uma dieta mais saudável e prática. 
+Assim, a indústria de alimentos está investindo em novas tecnologias que proporcionem 
+alimentos menos processados e livres de conservantes químicos. A principal tecnologia de 
+conservação utilizada pela indústria de suco de frutas é o tratamento térmico que afeta as 
+características nutricionais e organolépticas dos alimentos devido ao calor aplicado. Por isso, 
+tecnologias não-térmicas que usam outros métodos de conservação estão sendo estudadas. O 
+objetivo deste trabalho foi estudar os efeitos da aplicação de ultrassom, ozônio e luz pulsada 
+nos compostos bioativos e nas características físico-químicas do suco de caju e compará-los 
+2
+aos efeitos do tratamento térmico. Os resultados mostraram que o ultrassom (372,93 W/cm; 
+20 °C; 10 min) aumentou significativamente (p < 0,05) a capacidade antioxidante do suco de 
+caju em 28% (3043 eq. de M de ácido ascórbico), enquanto que o tratamento térmico 
+diminuiu essa capacidade na mesma porcentagem (1685 eq. de M de ácido ascórbico). O 
+conteúdo de flavonoides amarelos aumentou em 24% (0,46 mg/100mL) e a vitamina C foi 
+preservada em todos os ensaios ultrassônicos. A atividade da peroxidase, enzima responsável 
+pelo escurecimento em sucos de frutas, diminuiu 90%. O ozônio aplicado na concentração de 
+0,24 mgO/mL conservou a atividade antioxidante (2263 eq. de M de ácido ascórbico) e a 
+3
+atividade enzimática da peroxidase foi reduzida em 90%. No entanto, essa tecnologia 
+diminuiu (p < 0,05) os flavonoides e a vitamina C do suco de caju. Já a tecnologia de luz 
+2
+pulsada aplicada na intensidade de 1 J/cm aumentou (p < 0,05) a atividade antioxidante em 
+40% (2280,2 eq. de M de ácido ascórbico). Os resultados para os flavonoides e vitamina C 
+demonstraram que o processamento conservou as concentrações iniciais desses compostos. A 
+atividade enzimática da peroxidase diminuiu 32%. Portanto, pode-se concluir que essas 
+tecnologias podem ser utilizadas sozinhas ou combinadas com outros tratamentos no 
+processamento de suco de caju para conservar melhor suas características naturais. 
+ 
+Palavras-chave: Ultrassom. Ozônio. Luz pulsada. Compostos bioativos. Peroxidase. 
+ 
+ABSTRACT 
+ 
+Consumers are increasingly concerned about a healthier and more practical diet. Thus, the 
+food industry is investing in new technologies that provide food less processed and free of 
+chemical preservatives. The main conservation technology used by the fruit juice industry is 
+the heat treatment that affects the nutritional and organoleptic characteristics of foods due to 
+the heat applied. Therefore, non-thermal technologies that use other conservation methods are 
+being studied. The objective of this work was to study the effects of the application of 
+ultrasound, ozone and pulsed light on the bioactive compounds of cashew juice and compare 
+them to the effects of the heat treatment. The results showed that the antioxidant capacity of 
+cashew juice increased by 28% (3043 µM ascorbic acid equivalent), whereas the antioxidant 
+2
+capacity of cashew juice increased significantly (p <0,05) by 372,93 W/cm, 20 °C, 10 min, 
+while the heat treatment reduced that capacity by the same percentage (1685 µM ascorbic acid 
+equivalent). The content of yellow flavonoids increased by 24% (0,46 mg/100 mL) and 
+vitamin C was preserved in all ultrasonic assays. The activity of peroxidase, the enzyme 
+responsible for darkening in fruit juices, decreased by 90%. Ozone applied at the 
+concentration of 0,24 mgO/mL retained the antioxidant activity (2263 µM ascorbic acid 
+3
+equivalent). The enzymatic activity of peroxidase was reduced by 90%. However, this 
+technology decreased (p <0,05) the flavonoids and vitamin C of cashew juice. However, the 
+2
+pulsed light technology applied at the intensity of 1 J/cm increased (p <0,05) the antioxidant 
+activity by 40% (2280,2 µM ascorbic acid equivalent). The results for flavonoids and vitamin 
+C demonstrated that the processing retained the initial concentrations of these compounds. 
+The enzymatic activity of peroxidase decreased by 32%. Therefore, it can be concluded that 
+these technologies can be used alone or in combination with other treatments in the 
+processing of cashew juice to improve the preservation of its natural characteristics. 
+ 
+Keywords: Ultrasound. Ozone. Pulsed light. Bioactive compounds. Peroxidase. 
+. 
+ 
+LISTA DE FIGURAS 
+ 
+Figura 1 
+− Fenômeno da Cavitação ultrassônica e exemplo de como a microbolha de 
+cavitação age no tecido celular ........................................................................  22 
+Figura 2 
+− Produção de ozônio por efeito Corona ............................................................ 25 
+Figura 3 
+− Desruptor ultrassônico de macro ponta de titânio ............................................ 38 
+Figura 4 
+− Gerador de ozônio ............................................................................................ 40 
+Figura 5 
+− Emissor de Luz pulsada .................................................................................... 41 
+ 
+LISTA DE GRÁFICOS 
+ 
+Gráfico 1  
+− Resultados do tratamento térmico e dos melhores ensaios das tecnologias 
+não-térmicas para a atividade antioxidante ................................................... 70 
+Gráfico 2  
+− Resultados do tratamento térmico e dos melhores ensaios das tecnologias 
+não-térmicas para os flavonoides amarelos.................................................... 70 
+Gráfico 3  − Resultados do tratamento térmico e dos melhores ensaios das tecnologias 
+não-térmicas para a Vitamina C .................................................................... 71 
+Gráfico 4 
+− Resultados do tratamento térmico e dos melhores ensaios das tecnologias 
+não-térmicas para a atividade residual da peroxidase ................................... 71 
+Gráfico 5 
+− Resultados do tratamento térmico e dos melhores ensaios das tecnologias 
+não-térmicas para o índice de saturação (ΔC) ............................................... 
+72 
+Gráfico 6 
+− Resultados do tratamento térmico e dos melhores ensaios das tecnologias 
+ 
+72 
+não-térmicas para a diferença total de cor (ΔE) ............................................ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE TABELAS 
+ 
+3
+Tabela 1  
+− Planejamento experimental fatorial (2) aplicado ao processamento 
+ultrassônico ................................................................................................... 39 
+Tabela 2  
+− Resultados dos efeitos do Ultrassom na atividade antioxidante (ABTS) do 
+suco de caju ................................................................................................... 46 
+Tabela 3 − Resultados dos efeitos do Ultrassom na atividade antioxidante (DPPH) do 
+suco de caju ................................................................................................... 48 
+Tabela 4 
+− Resultados dos efeitos do Ultrassom na atividade antioxidante (FRAP) do 
+suco de caju ................................................................................................... 49 
+Tabela 5 
+− Resultados dos efeitos do Ultrassom sobre os flavonoides amarelos do 
+suco de caju ................................................................................................... 50 
+Tabela 6 
+− Resultados dos efeitos do Ultrassom sobre a vitamina C do suco de caju .... 51 
+Tabela 7 
+− Resultados do efeito do ultrassom na atividade peroxidásica do suco de 
+caju ................................................................................................................ 53 
+Tabela 8 55 
+− Resultados do efeito do ultrassom na Cor do suco de caju ........................... 
+Tabela 9 
+− Resultados do efeito do ozônio sobre a atividade antioxidante (ABTS) do 
+suco de caju ................................................................................................... 57 
+Tabela 10 
+− Resultados do efeito do ozônio sobre a atividade antioxidante (DPPH) do 
+suco de caju ................................................................................................... 57 
+Tabela 11 
+− Resultados do efeito do ozônio sobre a atividade antioxidante (FRAP) do 
+suco de caju ................................................................................................... 57 
+Tabela 12 
+− Resultados do efeito do ozônio sobre os flavonoides amarelos do suco de 
+caju ................................................................................................................ 58 
+Tabela 13 
+− Resultados do efeito do ozônio sobre os Vitamina C do suco de caju .......... 59 
+Tabela 14 
+− Resultados do efeito do ozônio na atividade peroxidásica do suco de caju .. 60 
+Tabela 15 
+− Resultados do efeito do ozônio sobre a cor do suco de caju ......................... 61 
+Tabela 16 
+− Resultados do efeito da Luz Pulsada sobre a atividade antioxidante  
+ 
+(ABTS) do suco de caju ................................................................................ 63 
+Tabela 17 
+− Resultados do efeito da Luz Pulsada sobre a atividade antioxidante 
+(DPPH) do suco de caju ................................................................................ 64 
+Tabela 18 − Resultados do efeito da Luz Pulsada sobre a atividade antioxidante 
+(FRAP) do suco de caju ................................................................................ 64 
+Tabela 19 
+− Resultados do efeito da Luz Pulsada sobre os flavonoides amarelos do 
+suco de caju ................................................................................................... 66 
+Tabela 20 
+− Resultados do efeito da Luz Pulsada sobre a Vitamina C do suco de caju  66 
+Tabela 21 
+− Resultados do efeito da luz pulsada na atividade peroxidásica do suco de 
+caju ................................................................................................................ 67 
+Tabela 22 
+− Resultados do efeito da luz pulsada na Cor do suco de caju ........................ 68 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+ 
+1 INTRODUÇÃO ................................................................................................. 17 
+2 REVISÃO BIBLIOGRÁFICA ......................................................................... 19 
+2.1 Processamento térmico ..................................................................................... 19 
+2.2 Ultrassom ........................................................................................................... 21 
+2.3 Ozônio ................................................................................................................. 24 
+2.4 Luz Pulsada ........................................................................................................ 27 
+2.5 Caju .................................................................................................................... 29 
+2.6 Suco de caju ....................................................................................................... 31 
+2.7 Compostos bioativos ......................................................................................... 33 
+2.8 Enzimas .............................................................................................................. 35 
+3 OBJETIVO ........................................................................................................ 37 
+3.1 Objetivo Geral ................................................................................................... 37 
+3.2 Objetivos específicos ......................................................................................... 37 
+4 MATERIAL E MÉTODOS .............................................................................. 38 
+4.1 Preparo do Suco ................................................................................................ 38 
+4.2 Processamentos .................................................................................................. 38 
+4.2.1 Ultrassom ............................................................................................................ 38 
+4.2.1.1 Cálculo de Intensidade de energia ultrassônica ................................................. 39 
+4.2.1.2 Planejamento Experimental ................................................................................ 39 
+4.2.2 Ozônio ................................................................................................................. 40 
+4.2.3 Luz Pulsada ........................................................................................................ 40 
+4.2.4 Processamento Térmico ..................................................................................... 41 
+4.3 Análise Estatística ............................................................................................. 41 
+4.4 Métodos Analíticos ............................................................................................ 41 
+4.4.1 Determinação da Atividade Antioxidante Total ................................................. 41 
+4.4.1.1 Extração .............................................................................................................. 42 
+4.4.1.2 Método ABTS ...................................................................................................... 42 
+4.4.1.3 Método DPPH ..................................................................................................... 42 
+4.4.1.4 Método FRAP ..................................................................................................... 43 
+4.4.2 Determinação de Compostos Antioxidantes ...................................................... 43 
+4.4.2.1 Flavonoides Amarelos ......................................................................................... 43 
+ 
+4.4.2.2 Vitamina C .......................................................................................................... 44 
+4.4.3 Atividades Enzimáticas ...................................................................................... 44 
+4.4.3.1 Extração ............................................................................................................. 44 
+4.4.3.2 Atividade de Polifenoloxidase ............................................................................ 44 
+4.4.3.3 Atividade de Peroxidase ..................................................................................... 45 
+4.4.4 Cor ..................................................................................................................... 45 
+5 RESULTADO E DISCUSSÃO ....................................................................... 46 
+5.1 Ultrassom .......................................................................................................... 46 
+5.1.1 Atividade Antioxidante (ABTS, DPPH e FRAP) .............................................. 46 
+5.1.2 Flavonoides Amarelos ………………………………………………………....   49 
+5.1.3 Vitamina C .......................................................................................................... 51 
+5.1.4 Enzimas ............................................................................................................... 53 
+5.1.5 Cor ...................................................................................................................... 55 
+5.2 Ozônio ................................................................................................................ 56 
+5.2.1 Atividade Antioxidante (ABTS, DPPH e FRAP) .............................................. 56 
+5.2.2 Flavonoides Amarelos e Vitamina C ................................................................ 58 
+5.2.3 Enzimas .............................................................................................................. 59 
+5.2.4 Cor ...................................................................................................................... 61 
+5.3 Luz Pulsada ....................................................................................................... 63 
+5.3.1 Atividade Antioxidante e Compostos bioativos ................................................. 63 
+5.3.2 Enzimas .............................................................................................................. 67 
+5.3.3 Cor ...................................................................................................................... 68 
+6 TRATAMENTO TÉRMICO ........................................................................... 69 
+7 RESUMO COMPARATIVO ........................................................................... 69 
+8 CONCLUSÃO ................................................................................................... 73 
+9 PERSPECTIVAS FUTURAS ........................................................................... 74 
+ REFERÊNCIAS ................................................................................................ 75 
+ 
+17 
+1 INTRODUÇÃO 
+ 
+Atualmente os consumidores estão cada vez mais determinados a terem uma 
+alimentação mais saudável e devido a rotina intensa do dia-a-dia também exigem praticidade. 
+As frutas e seus produtos, como o suco, é uma das principais escolhas desses consumidores. 
+Os sucos de frutas prontos para beber encontrados nos supermercados passam por um 
+tratamento térmico que utiliza o calor para inativar enzimas e microrganismos, garantindo a 
+segurança alimentar e melhorando a vida útil do produto, porém resulta na degradação da 
+qualidade nutricional, especialmente dos antioxidantes (ABID et al., 2014; RAWSON et al., 
+2011). 
+Devido a isso novas tecnologias que utilizam outras formas de conservação, como 
+uso de alta pressão, pulsos luminosos, irradiação, campos elétricos de alta intensidade, 
+ultrassom, ozônio e campos magnéticos, estão sendo estudadas para aplicação em várias 
+matrizes alimentares. A indústria de sucos é uma das mais interessadas na aplicação dessas 
+tecnologias devido a sensibilidade desses produtos ao calor. 
+O ultrassom têm sido uma tecnologia promissora na área de ciência e tecnologia 
+de alimentos. Esse processo faz uso de fenômenos físicos (colapsos altamente energéticos de 
+microbolhas e ondas de choque) e químicos (produtos de oxidação formados devido a 
+condições de mudanças de temperatura e pressão) capazes de substituir totalmente ou em 
+parte as técnicas convencionais de extração, processamento ou preservação de alimentos. As 
+principais vantagens estão na produtividade, menor tempo de processamento, economia de 
+energia, homogeneidade e melhor qualidade dos produtos tratados quando comparados à 
+pasteurização (PUTNIK et al., 2019). 
+O ozônio é um forte oxidante que se decompõe rapidamente em oxigênio, não 
+deixando resíduos tóxicos nos alimentos (TIWARI et al. 2008). Tem um amplo espectro 
+antimicrobiano que o torna uma opção atraente para a indústria alimentícia. Em 2001, foi 
+aprovado pela Food and Drug Administration para aplicação como um aditivo alimentar 
+direto para o tratamento, armazenamento e processamento de alimentos (FDA, 2001). Têm 
+sido utilizado no processamento de vários sucos de frutas, incluindo; suco de melão 
+Cantaloupe (FUNDO et al.,2018) e suco de laranja (TIWARI et al., 2008). 
+A tecnologia de luz pulsada age como um descontaminante e utiliza luz intensa de 
+amplo espectro por curtos períodos de tempo, onde a porção de luz ultravioleta é identificada 
+como a principal responsável pelo efeito antimicrobiano do tratamento, porém a grande 
+vantagem da luz pulsada sobre o uso da luz UV é a necessidade de menor tempo para inativar 
+ 
+18 
+os microrganismo. Os mecanismos de inativação microbiana utilizados pela luz pulsada têm 
+sido associados aos danos causados por alterações fotoquímicas no material genético e por 
+aquecimento localizado (AVALOS-LLANO; MARTÍN-BELLOSO; SOLIVA-FORTUNY, 
+2018). Em 2015, a tecnologia de luz pulsada, foi aprovada pela Food and Drug 
+2 
+Administration dos EUA para o tratamento de alimentos com uma dose máxima de 12 J/cm
+(FDA, 2015). 
+No Brasil, essas três tecnologias são pauta em debate e estudadas por 
+pesquisadores, mas ainda não são regulamentadas pela Agência Nacional de Vigilância 
+Sanitária (ANVISA), responsável nacional por legalizar o uso de teconologias aplicadas em 
+alimentos. 
+Na região nordeste do Brasil, o caju (Anacardium occidentale L.) é uma fruta que 
+possui grande importância socioeconômica. É nativo da América Tropical, constituído pelo 
+pedúnculo desenvolvido (pseudofruto) que é ligado a castanha (fruta real composta de casca e 
+miolo). O pedúnculo do caju é considerado uma boa fonte de vitamina C e compostos 
+fenólicos, usado para preparar sucos, polpa e conservas (RUFINO et al., 2010; RUFINO et 
+al., 2009; DE BRITO et al., 2007).  
+Desse modo, visando contribuir com o desafio das indútrias de oferecer produtos 
+cada vez mais frescos, agregar valor ao produto, gerar renda no mercado interno e externo e 
+satisfazer os consumidores, o objetivo do atual trabalho foi estudar as tecnologias não-
+térmicas: ultrassom, ozônio e luz pulsada, verificando seus efeitos nos compostos bioativos e 
+características físico-químicas do suco de caju. Sendo uma pesquisa relevante como ponto de 
+partida para a aplicação dessas tecnologias em indústrias de sucos de frutas.  
+ 
+ 
+19 
+2 REVISÃO BIBLIOGRÁFICA 
+ 
+2.1 Processamento Térmico  
+ 
+O suco de caju possui alta umidade e alto teor de açúcar, por isso, são propensos à 
+rápida deterioração microbiana e por isso passam por tratamento térmico com o objetivo de 
+alcançar inativação microbiológica e enzimática para aumentar a vida de prateleira desses 
+produtos. 
+A Administração de Alimentos e Medicamentos dos Estados Unidos (FDA) para 
+classificar um processo como apto a esterilização comercial exige que ele alcance uma 
+redução de ≥ 5-log (99,9%) de patógenos em sucos de frutas e vegetais processados (FDA, 
+2001).  
+As enzimas que participam da defesa das células vegetais, acabam gerando 
+sabores e cores indesejáveis nas frutas e consequentemente nos seus sucos após o 
+processamento, por isso exige-se uma maior preocupação com elas. As peroxidase e 
+polifenoloxidase, são as principais enzimas envolvidas no escurecimento dos produtos de 
+frutas.  
+A aplicação do calor no processamento de alimentos acontece pelos métodos de 
+pasteurização ou esterilização comercial. A pasteurização ocorre a temperaturas abaixo de 
+100ºC, obtendo inativação parcial dos microrganismos, enquanto que a esterilização utiliza 
+temperatura suficientemente elevada, durante minutos ou segundos com o objetivo de 
+alcançar total inativação microbiológica e enzimática. A pasteurização pode ser conduzida de 
+duas maneiras: pasteurização lenta (62-65°C/30min) e rápida (72-75°C/15-20s), considerando 
+o binômio tempo e temperatura (EVANGELISTA, 2001). 
+Na indústria de sucos, o envase pode ocorrer a quente (hot fill), no qual o suco 
+após pasteurizado a 90ºC por 60 segundos é envasado imediatamente na embalagem para 
+esteriliza-la ou por envase asséptico, onde o suco é pasteurizado e após resfriado é colocado 
+assepticamente em embalagens estéreis (DAS; ARORA, 2017).  
+A principal vantagem do tratamento térmico é o alcance de uma maior vida de 
+prateleira dos produtos, o que gera menor perda e maior lucro para as empresas. Porém essa 
+tecnologia resulta na perda de características sensoriais e nutricionais desses alimentos, como, 
+reações de escurecimento não enzimático (reações de Maillard, que incluem a condensação 
+entre açúcares redutores e aminoácidos), alteração de cor, sedimentação de partículas da 
+polpa, perdas de açúcar, de compostos antioxidantes, pigmentos e de vitamina C, além de 
+ 
+20 
+formação de 5-hidroximetil-2-furaldeído (5-HMF), resultante do aquecimento 
+(DAMASCENO et al., 2008).  
+SANCHO et al. (2008) avaliaram as principais alterações físico-químicas durante 
+todas as etapas do processamento do suco de caju com alto teor de polpa, desde a formulação 
+do produto até a pasteurização, e constatou que houveram alterações significativas em alguns 
+parâmetros tais como sólidos solúveis totais, acidez, atividade de água, vitaminas e pigmentos 
+durante todas as etapas do processamento, enquanto que outros parâmetros não sofreram 
+alterações significativos tais como o pH, açúcares redutores, não redutores e totais. Quanto 
+aos parâmetros nutricionais foi concluído que durante a etapa de pasteurização houve maior 
+perda de ácido ascórbico, carotenoides e antocianinas. 
+COSTA et al. (2003) analisaram sucos de caju, os quais primeiramente foram 
+homogeneizados, desarejados e em seguida pasteurizados (90ºC por 60 s) pelos métodos hot 
+fill (garrafas de vidro) e envase asséptico (embalagem cartonada), e posteriormente 
+armazenados a temperatura ambiente por 12 meses. Foi verificado que o pH, os sólidos 
+solúveis, a acidez total titulável, o teor de açúcar total e a cor (pigmentos hidrossolúveis) não 
+se alteraram significativamente nos dois processos de enchimento e em relção ao tempo inicil 
+e final. Mas houve perda de 25,65 % e 26,74 % de vitamina C para o envase a quente e 
+engarrafamento asséptico, respectivamente. O suco envasado pelo processo asséptico 
+apresentou menor viscosidade que o processo de enchimento a quente (hot fill), durante todo o 
+tempo de armazenamento. 
+DAMASCENO et al. (2008) prensou o pedúnculo de caju para obtenção do suco 
+que foi clarificado, engarrafado e posteriormente pasteurizado em 4 temperaturas: 88ºC, 
+100ºC, 111ºC e 121 ºC. Os experimentos a 90 e 100 ºC foram realizados em banho maria, e os 
+experimentos a 111 e 121 ºC foram realizados em autoclave. As amostras foram colhidas em 
+diferentes tempos do tratamento para análise. Os autores verificaram correlação entre a perda 
+de ácido ascórbico e a formação de 5-HMF (responsável pelo escurecimento) após o 
+tratamento térmico, para todos os processamentos. O escurecimento encontrado não está 
+realcionado com a degradação de açucar, pois não houve redução desse composto. Com isso, 
+concluiram que a otimização do processo baseado em alto teor de vitamina C deve ser 
+realizado a 120 ºC e baixa residência em trocadores de calor de placas ou equipamentos 
+similares. Mas se o equipamento utilizado for um banho de água para a aplicação de calor, o 
+processo deve ser realizado a 90 ºC, temperatura na qual a degradação do ácido ascórbico foi 
+menor, mas ainda com formação de 5-HMF. 
+Outros métodos de conservação também são utilizados na conservação de sucos 
+ 
+21 
+de frutas como: baixas temperaturas; adição de compostos químicos; microfiltração. Têm-se 
+utilizado temperatura de refrigeração a 4 ºC e congelamento a -16 ºC para o armazenamento 
+de suco de caju. Foi verificado que a qualidade do suco refrigerado (pH, vitamina C, sólidos 
+solúveis totais e ácidos totais tituláveis) foi considerada melhor quando comparada ao suco 
+mantido em condições de congelamento. Porém a grande desvantagem desse processo é a 
+intensa utilização de energia e a dificuldade de manter a cadeia do frio desde os pequenos 
+produtores até o consumidor. Já a microfiltração utiliza-se de membranas com poros de 
+diferentes diâmetros, de acordo com os pesos moleculares que se quer reter (por exemplo, 
+células de microrganismos), porém a maior dificuldade desse processo é evitar que moléculas 
+desejadas no filtrado seja retida no filtro, como é o caso de alguns compostos fenólicos (DAS; 
+ARORA, 2017). A adição de compostos químicos como o ácido benzoico, ácido sórbico e o 
+dióxido de enxofre, possui um grande efeito sobre os microrganismos e consequentemente 
+prolongam a vida de prateleira do suco, porém podem ser tóxicos e responsáveis pela 
+ocorrência de alergias nos consumidores (DE SOUSA GUEDES et al., 2016). 
+Portanto, dimimuir perdas na qualidade dos sucos, conservar esse alimento sem o 
+uso de conservantes químicos e aplicação de um processamento térmico é o grande desafio 
+para as indústrias, o que motiva novas pesquisas que impulsionem a utilização de novas 
+tecnologias não-térmicas como ultrassom, ozônio e luz pulsada capazes de conservarem as 
+características físico-químicas e nutricionais desses produtos.   
+ 
+2.2 Ultrassom 
+ 
+As ondas ultrassônicas são ondas mecânicas que exigem um meio para se 
+10
+propagarem, e utilizam frequências entre 19 kHz até 1,2 x 10 kHz, imperceptíveis a audição 
+humana. O efeito da aplicação das ondas ultrassônicas varia de acordo com o material em que 
+estão sendo propagadas (RESNICK, HALLIDAY e KRANE, 1996). 
+Em um líquido, o ultrassom causa o fenômeno da cavitação, onde ocorrem ciclos 
+de compressão e expansão, onde as bolhas de gás expandem-se e se contraem. Quando a 
+pressão negativa criada no líquido pelo ciclo de expansão é baixa, pequenas bolhas são 
+formadas (Figura 1). Essas microbolhas resultantes colapsam e induzem um aumento local de 
+temperatura e pressão causando na maioria das vezes um rompimento nas células e expondo o 
+material intracelular tornando-o mais acessível (JIMÉNEZ-SÁNCHEZ et al., 2017). 
+ 
+22 
+ 
+ 
+Figura 1 - Fenômeno da Cavitação ultrassônica e exemplo de como a microbolha de 
+cavitação age no tecido celular. 
+Fonte: SORIA; VILLAMIEL,2010 e CHEMAT, HUMA, KHAN, 2011. 
+Na indústria de alimentos essas ondas são utilizadas de duas maneiras: ultrassom 
+2
+de baixa intensidade (menor que 1 W/cm) em alta frequência (maior que 100 kHz) utilizado 
+2
+em métodos não-destrutivos, e ultrassom de alta intensidade (maior que 1 W/cm) em baixa 
+frequência (20 – 500 kHz) utilizado no processamento de alimentos (BEVILACQUA et al., 
+2018). 
+O ultrassom de alta intensidade gera efeitos nos alimentos que podem ser 
+considerados positivos ou negativos. Dois principais efeitos do ultrassom são identificados: os 
+efeitos físicos e químicos. O efeito físico ocorre através do colapso altamente energético das 
+microbolhas e das ondas de choque que causam quebra de cadeias poliméricas e paredes 
+celulares. Os efeitos químicos são mais dominantes nas frequências intermediárias (200-500 
+kHz), onde o número de bolhas ativas geradas é maior e consequentemente aumenta a 
+produção de radicais hidroxil com a molécula da água, e este radical pode reagir com outras 
+substâncias químicas presentes no meio (PUTNIK et al., 2019; SCHUINA, 2014). 
+Segundo CAMPOLI et al.(2018) o processo ultrassônico (1000W; 20kHz; 
+2
+15W/cm) reduziu o teor de licopeno no suco de goiaba, que variou de 29,4 μg/g no tempo 0 
+para 15,2 μg/g, depois de 9 minutos de processamento, isso ocorreu devido ao rompimento 
+das células e a exposição desse composto a oxidação. Por outro lado, aumentou a 
+acessibilidade in vitro desse composto em 20 % após esse período de exposição ao ultrassom. 
+ 
+23 
+SAEEDUDDIN et al. (2015) encontraram um aumento significativo no conteúdo 
+de ácido ascórbico, fenóis totais e flavonoides nas amostras de suco de pêra tratadas com 
+ultrassom (750W; 20kHz; 10 min) a 25ºC e uma redução desses compostos a medida que a 
+temperatura aumenta para 65°C. Porém em comparação com a pasteurização convencional, 
+foi constatado uma maior retenção desses nutrientes. A sonicação também aumentou a 
+disponibilidade de carotenóides e fenóis totais no suco de tomate-de-capucho (Physalis 
+peruviana) (ORDÓÑEZ-SANTOS et al., 2017) e teve impacto positivo sobre os compostos 
+bioativos e a atividade antioxidante do blend de cenoura com uva em comparação com o 
+método de preservação química meta-bissulfito de potássio que não gerou nenhum efeito 
+positivo sobre os nutrientes do suco (NADEEM et al., 2018). 
+O aumento desses compostos pode ser atribuído à ruptura mecânica das paredes 
+celulares como resultado de uma súbita mudança na pressão exercida pelas implosões de 
+bolhas durante a cavitação e assim, é liberada a forma ligada destes compostos no líquido. Já 
+o efeito favorável do ultrassom sobre o ácido ascórbico pode ser explicado pela remoção de 
+oxigênio dissolvido do suco (KNORR, et al., 2004).  
+O efeito do processamento nas características físicas do suco também foi 
+estudado. SAEEDUDDIN et al. (2015) não observaram alterações significativas nos 
+parâmetros Brix, pH e acidez titulável no suco de pêra, após o processamento. Resultado 
+Similar foi encontrado por ORDÓÑEZ-SANTOS et al., (2017). BELLARY et al. (2016) 
+indicaram que a diferença na cor visível pode ser classificada pela diferença total de cor 
+(DTC), classificadas em: muito distintas (ΔE > 3), distintas (1,5 < ΔE < 3) e ligeiramente 
+distintas (ΔE < 1,5). ORDÓÑEZ-SANTOS et al. (2017) detectou que a sonicação alterou 
+significativamente todos os parâmetros de cor, exceto valores de luminosidade no suco de 
+tomate-de-capucho (Physalis peruviana), modificando a cor do suco de amarelo para 
+amerelo-vermelho (DTC > 2), isso aconteceu devido a isomerização, reações dos carotenóides 
+e presença de radicais livres produzidos durante o tratamento. 
+CAMPOLI et al. (2018) observaram que o tamanho das partículas suspensas no 
+suco de goiaba reduziu, aumentando a interação entre elas e formando assim um sistema 
+colóide estabilizado por 14 dias após o processamento de 9 min, possibilitando a aplicação 
+desse processo para fornecer a estabilidade física do suco e melhorar suas características 
+sensoriais. Isso comprova que as características físicas do suco também são afetadas pelo 
+efeito mecânico da cavitação. 
+Outro efeito da cavitação sobre os alimentos é o efeito antimicrobiano atribuído à 
+cavitação acústica intracelular que causa um aumento na permeabilidade das membranas 
+ 
+24 
+celulares, aquecimento localizado e produção de radicais livres (NADEEM et al., 2018). O 
+efeito letal desse processo é relatado como dependente do tipo de microorganismo,  sendo 
+mais eficaz em bactérias gram-positivas (BEVILACQUA et al., 2018). A contagem de S. 
+cerevisiae KE 162 em suco de maçã foi reduzida a 1,2 e 2,6 ciclos log após exposição a 10 
+min ou 30 min de tratamento, respectivamente (FERRARIO;GUERRERO, 2017).  
+SAEEDUDDIN et al. (2015) comparou uma completa inativação de mesófilos e 
+bolores e leveduras na pasteurização a 95°C e na sonicação a 65ºC. Uma redução significativa 
+para 43,2%, 37,83% e 40,22% também foi encontrada nas atividades residuais das enzimas 
+POD, PPO e PME no suco de pêra, respectivamente, com a aplicação de ultrassom à 45 ºC. 
+Assim, os autores concluíram que o calor e as forças mecânicas no processamento 
+ultrassônico tem um efeito sinérgico sobre a inativação enzimática e a inativação 
+microbiológica foi alcançada em temperatura mais baixa comparada a pasteurização, 
+constatando que o processamento ultrassônico pode ser uma boa alternativa em substituição a 
+pasteurização (95°C), visto que também conservou os compostos sensíveis ao calor. 
+Por outro lado, FONTELES et al. (2012) verificaram que em menor tempo de 
+2
+tratamento ultrassônico (372W/cm; 2 min), a taxa de liberação de enzimas de dentro das 
+células vegetais é maior do que a destruição, podendo causar aumento da atividade enzimática 
+em sucos de frutas, isso pode ser explicado pelo rompimento das células que proporciona um 
+maior contato da enzima com o substrato. 
+ 
+2.3 Ozônio 
+ 
+O ozônio é um alótropo tri-atômico do oxigênio que possui um alto poder 
+oxidante com capacidade desinfetante dez vezes superior a do cloro. A desinfecção com 
+ozônio destaca-se pelos seguintes aspectos: rapidez da ação de desinfecção; elevada eficiência 
+na inativação de microrganismos e baixa toxicidade encontrada nos efluentes ozonizados por 
+possuir curto período de meia vida (DA SILVA et al., 2011). Na forma gasosa apresenta tempo 
+de meia vida menor que 20 min a 20 ºC (NOVAK e YUAN, 2007). As reações de oxidação 
+são causadas pelo ozônio molecular (O) dissolvido ou pelas espécies de radicais livres (•OH) 
+3
+formadas durante a decomposição do ozônio. O O pode reagir diretamente com um 
+3
+composto-alvo em solução (reação direta) ou pode se decompor em radicais •OH os quais irão 
+reagir com o composto-alvo (reação indireta) (FONSECA et al., 2017). 
+ 
+25 
+O Ozônio pode ser produzido através de dois processos: por uso de radiação 
+ultravioleta (188 nm) - método fotoquímico – e por descarga elétrica (processo Corona). O 
+efeito Corona (Figura 2) é o método de produção mais utilizado comercialmente por ser o 
+mais eficiente. Nesse processo, dois eletrodos submetidos à elevada diferença de potencial de 
+aproximadamente 100 V são separados por uma estreita lacuna, por onde passa ar ou oxigênio 
+puro. Isso causa a dissociação do oxigênio e a consequente formação do ozônio (DA SILVA et 
+al., 2011).  
+ 
+Figura 2 - Produção de ozônio por efeito Corona. Fonte: DEZOTTI, 2008. 
+ 
+A Food and Drug Administration (FDA), dos Estados Unidos, declarou na década 
+de 90 o ozônio como um ingrediente “Geralmente Reconhecido como Seguro” (GRAS) para o 
+uso em processamento de alimentos. Depois disso, em 2001, o ozônio foi aprovado para ser 
+usado como um aditivo em alimentos, o que provocou um grande interesse em estudá-lo 
+como uma tecnologia não térmica capaz de substituir as tecnologias que utilizam o calor. 
+Desde então faz-se necessário estudar os efeitos da ozonização sobre os parâmetros físico-
+químicos e compostos bioativos em diversas matrizes alimentares (FDA, 2001). 
+Nas frutas e em seus produtos, como o suco, as enzimas peroxidase e 
+polifenoloxidase são as principais responsáveis pelo escurecimento e deterioração. Essas 
+enzimas estão envolvidas com reações oxidativas e consequentemente com o escurecimento 
+dos produtos e oxidação de nutrientes. O ozônio é uma molécula hiper-reativa que pode 
+contribuir para a inibição de várias enzimas devido seu potencial oxidante. OLIVEIRA et al. 
+(2018) verificaram após ozonização em suco de açaí uma redução significativa da atividade 
+peroxidásica em relação ao suco controle. Este fato foi explicado por JARAMILLO 
+SÁNCHEZ et al. (2018) como resultado da oxidação de proteínas envolvendo modificações 
+covalentes em uma reação direta com o gás, ou por reações com os derivados da 
+decomposição. Já para a polifenoloxidase o ozônio não foi eficiente na inativação 
+significativa dessa enzima.  
+ 
+26 
+CHOI et al. (2012) verificaram que o gás ozônio é eficiente contra os 
+microrganismos patogênicos E. coli O157: H7, S. typhimurium e L. monocytogenes no suco 
+de maçã, sem diferença significativa entre as taxas de mortalidade. Foi observado também que 
+o efeito foi significativamente influenciado pelo conteúdo de sólidos em um suco de 72° Brix, 
+onde o ozônio não foi eficaz. A eficácia dessa tecnologia contra microrganismos depende da 
+quantidade dos sólidos presentes, da concentração aplicada, do ozônio residual no ambiente, 
+de vários fatores ambientais, como pH e temperatura, quantidade de matéria orgânica que 
+envolve as células, compostos antioxidantes e outros. 
+Segundo FUNDO et al. (2018), o conteúdo total de fenólicos no suco de melão 
+Cantaloupe aumentou significativamente após a exposição ao ozônio (7,0 ± 2.4 g/L). O total 
+de fenólicos no suco de melão fresco foi de 164,70 μg/ mL, aumentando para 198,63 μg/mL e 
+266,71 μg/mL nos sucos ozonizados por 30 e 60 min, respectivamente. Porém, OLIVEIRA et 
+al. (2018) verificaram que a ozonização (1,5 ppm/ 5 ou 10 min) diminuiu significativamente 
+(p < 0,05) os compostos fenólicos do suco de açaí, esse efeito pode ser explicado pelas 
+diversas reações químicas diretas (diretamente no composto alvo) ou indiretas (através dos 
+radicais intermediários ou hidroxilas) que ocorrem durante o processo. 
+A vitamina C é encontrada de duas maneiras nos sucos de frutas, como ácido 
+ascórbico (AA) e sua forma oxidada, ácido dehidroascórbico (ADH). Os tratamentos com 
+ozônio afetaram significativamente o conteúdo total de vitamina C no suco de melão pois  
+reduziu a concentração do ADH. Esse fato pode ser explicado pela maior oxidação do ADH 
+que se converte em ácido 2,3-dicetogulônico (DKA) desprovido de atividade biológica 
+(FUNDO et al., 2018). 
+FUNDO et al. (2018) observaram após um tempo de exposição ao ozônio (7,0 
+g/L) de 30 minutos que os carotenóides totais do suco de melão foram reduzidos em 76%, 
+enquanto que durante 60 minutos foi observado um decaimento de 83%. Segundo ALI et 
+al.(2014), a redução de β-caroteno em frutos submetidos a alta concentração e exposição ao 
+ozônio pode ser causada por clivagem oxidativa de carotenóides que levam à produção de 
+ácido abscísico. 
+OLIVEIRA et al. (2018) aplicaram a ozonização (1,5 ppm/ 5 ou 10 min.) em suco 
+de açaí e verificaram que diminuiu significativamente a atividade antioxidante após o 
+processamento, obtendo um maior decréscimo quando comparado ao processamento 
+ultrassônico. A concentração do ozônio foi um parâmetro que influenciou significativamente a 
+capacidade antioxidante. Também foi encontrado redução significativa (p < 0,05) de valores 
+de nuvem em suco de açaí. Os valores de nuvem estão relacionados com a sedimentação de 
+ 
+27 
+partículas finas (o que os consumidores associam à deterioração do produto) como pectina, 
+celulose e proteínas. Valores baixos significam maior sedimentação do suco e 
+consequentemente menor homogenização (FONTELES et al., 2012).  
+Desse modo observou-se na literatura que o ozônio é eficiente sobre a inativação 
+microbiológica, porém pode causar efeitos negativos nos compostos bioativos do sucos de 
+frutas. Necessitando de mais estudos para sua potencial aplicação nesses produtos. 
+ 
+2.4 Luz Pulsada 
+ 
+ Luz pulsada (LP) é a denominação dada a pulsos intensos e curtos (100 e 400 
+ms) de luz de amplo espectro. O espectro de luz pulsada inclui um comprimento de onda que 
+varia de ultravioleta próximo à região do infravermelho entre 100 e 1100 nm, com 54% de 
+energia emitida no intervalo UV. Para emitir luz pulsada são utilizadas lâmpadas de xenônio, 
+que são fontes comerciais ecologicamente corretas, pois não usam mercúrio em sua 
+composição. A luz UV pulsada oferece vantagens em relação à luz UV contínua porque é rica 
+em luz germicida UV-C, inclui faixa UV-B (faixa de 200 a 400 nm), utiliza intensidades mais 
+altas e tempos de tratamentos mais curtos. A intensidade da luz pulsada é 20.000 vezes maior 
+que a intensidade da luz UV (GÓMEZ-LÓPEZ et al., 2007; KOUTCHMA, 2018). 
+ Os efeitos dessa tecnologia sobre diversas matrizes alimentares têm sido 
+estudados devido seu potencial antimicrobiano, o qual pode ser explicado por um mecanismo 
+fototérmico e/ou um mecanismo fotoquímico. É possível que ambos aconteçam 
+sinergicamente e a importância relativa de cada um depende do meio e do microorganismo 
+alvo (GÓMEZ-LÓPEZ et al., 2007). 
+O efeito fotoquímico da luz pulsada pode ser explicado pelo mecanismo do UV-C 
+contínuo. Em bactérias, a luz UV-C induz a formação de dímeros de pirimidinas que inibem a 
+formação de um novo DNA no processo de replicação das células, impossibilitando que o 
+microrganismo se reproduza. O efeito fototérmico aquece a camada superficial do alimento de 
+forma que o calor produzido na superfície será conduzido para o interior do produto. No 
+entanto, são necessários pulsos com altas doses para que esse efeito ocorra (SOUZA, 2014). 
+FERRARIO; GUERRERO (2017) observaram a inativação de S. cerevisiae KE 
+2
+162 no suco de maçã com aplicação de uma dose de 71,6 J/cm de energia total em 60 seg 
+2
+(1,27 J/cm × pulso), variando entre reduções de 1,0 e 2,0 log, no suco prensado, enquanto 
+que no suco clarificado foi observado redução de 3,9 log. HWANG et al. (2015) também 
+obtiveram redução de 1,9 e 7 log de Pseudomonas aeruginosa em sucos de uva e ameixa, 
+ 
+28 
+respectivamente. Os autores verificaram que o acúmulo de calor gerado melhorou a eficácia 
+da inativação por luz pulsada apoiando a hipótese fototérmica como um dos possíveis 
+mecanismos de inativação produzido por essa tecnologia (GÓMEZ-LÓPEZ et al., 2007). 
+Uma maior inativação foi obtida no suco clarificado em comparação com o prensado, devido 
+à sua menor turbidez e partículas suspensas (FERRARIO; GUERRERO, 2017). 
+2
+HWANG et al. (2015) ao aplicar a luz pulsada (0,97 a 29,21 J/cm) em várias 
+bebidas comerciais verificaram que o alto valor de transmitância e o baixo valor do 
+coeficiente de extinção (absorbância) da amostra têm um efeito decisivo na inativação 
+microbiana, pois permite que a intensidade da luz pulsada penetre sem obstáculos na amostra. 
+PATARO et al. (2011) encontraram similar resultado ao estudarem a aplicação dessa 
+tecnologia em suco de maçã e de laranja. Desse modo os líquidos mais transparentes e 
+translucidos apresentaram um alto nível de redução microbiana após o tratamento em um 
+curto espaço de tempo. FERRARIO; GUERRERO (2017) também concluiu que para alcançar 
+alta redução microbiana em líquidos com baixo valor de transmitância, é necessária uma alta 
+dose de energia luminosa por um longo tempo de processamento, pois a turbidez do meio e as 
+partículas suspensas inibem a penetração da luz pulsada. 
+Com a necessidade de uma maior compreensão acerca dos efeitos dessa 
+tecnologia em microrganismos, FERRARIO & GUERRERO (2017) analisaram o suco de 
+maçã fermentado por S. cerevisiae KE 162 (pós-tratamento) através de citometria de fluxo, 
+técnica que explora mudanças no estado fisiológico dos microrganismos para observar melhor 
+a membrana da levedura e observaram a permeabilização completa da membrana e perda de 
+viabilidade. A amostra também foi analisada por microscopia eletrônica de transmissão onde 
+foram reveladas outras mudanças estruturais como a forma celular alterada, vacuolização, 
+coagulação do conteúdo interno e perda da parede celular que, juntamente com a 
+permeabilização da membrana, seriam envolvidos no processo de inativação. 
+KWAW et al. (2018) verificaram o efeito da luz pulsada no suco de amora 
+fermentado. Os resultados demonstram que a concentração de compostos fenólicos das 
+amostras aumentou significativamente, o que consequentemente aumentou a capacidade 
+antioxidante do suco. Foi detectada uma correlação positiva significativa entre compostos 
+fenólicos e DPPH • -SA e entre flavonoides e antocianinas e ABTS • + -SA. Estudos também 
+mostraram que a concentração de vitamina D2 em cogumelos pode ser aumentada em até 
+467% pela aplicação de luz pulsada pós colheita. Por outro lado, o conteúdo fenólico total e a 
+atividade antioxidante na sidra de maçã não foram significantemente afetados pela LP com 
+alterações inferiores a 5% (KOUTCHMA, 2018).  
+ 
+29 
+ORLOWSKA et al. (2013) estudaram três tipos de lâmpadas UV, HIP-1 (8 Hz, 31 
+J/pulso), HIP-2 (0,75 Hz, 344 J/pulso) e HIP-3 (0,5 Hz, 644 J/pulso) em suco de maçã. A 
+lâmpada HIP-2 (0,75 Hz, 344 J/pulso) causou a fotólise da vitamina C. Já as HIP-1 (8 Hz, 31 
+J/pulso) e HIP-3 (0,5 Hz, 644 J/pulso) não afetaram significativamente o conteúdo de 
+vitamina C (p > 0,05), concluindo que os efeitos distintos das fontes de UV no conteúdo desse 
+composto podem estar relacionados às propriedades absortivas do suco tratado e às 
+características de emissão de lâmpadas usadas. Pode-se verificar que a energia transportada 
+pelo pulso de luz e sua taxa de frequência podem ser parâmetros importantes que afetam a 
+qualidade do suco.  
+          Os tratamentos com as lâmpadas UV também podem afetar de forma 
+positiva a aparência dos sucos. ORLOWSKA et al. (2013) constataram que a luminosidade do 
+suco de maçã (L *) permaneceu inalterada após o processamento com todas as lâmpadas UV 
+testadas. A diferença total de cores (ΔE) indica que apenas uma alteração ligeiramente 
+perceptível (0,5 < ΔE * <1,5) ocorreu. O efeito da irradiação UV sobre os atributos de cor dos 
+sucos de frutas pode ser considerado positivo uma vez que são retardados os processos de 
+escurecimento. 
+Atualmente, não há dados suficientes que expliquem os efeitos da tecnologia luz 
+pulsada sobre os compostos bioativos dos alimentos. Isso ocorre, principalmente, devido a 
+falta de informações e incertezas a respeito da absorção óptica e da dispersão característica 
+dos principais componentes alimentares e suas interações com os fótons de luz. Contudo, um 
+terceiro mecanismo da luz pulsada, chamado fotofísico, que relata a constante perturbação 
+causada pelos pulsos de alta energia, têm sido explorado por pesquisadores para explicar a 
+inativação microbilógica. Essas perturbações geram danos estruturais nas células e inativam 
+microrganismos. Esses danos consistem em vazamento celular, ausência de parede celular, 
+encolhimento de membrana citoplasmática e colapso de estruturas internas. Desse modo, os 
+efeitos fotofísicos (perturbações de alta energia) podem estar relacionados com os resultados 
+da luz pulsada sobre os compostos bioativos nas matrizes alimentares, necessitando assim de 
+maiores estudos para melhor explicá-los (KOUTCHMA, 2018). 
+ 
+2.5 Caju  
+ 
+O caju (Anacardium occidentale L.) é um fruto tropical, fonte de vitamina C, 
+compostos fenólicos, carotenóides e fibras insolúveis, nativo da América Latina, onde é 
+amplamente cultivado e comercializado, principalmente no Brasil, na região nordeste (DE 
+ 
+30 
+ABREU et al., 2013). A respeito da produção de caju, dados do IBGE de 2018 informam que 
+a área plantada no Brasil é de 473.879 mil hectares, onde 471.294 mil hectares correspondem 
+ao nordeste (IBGE, 2018), possuindo assim grande importância econômica na região. 
+O principal produto do caju é a castanha-de-caju, de onde é aproveitado a 
+amêndoa, a película que a envolve (rica em tanino e utilizada na indústria química de tintas e 
+vernizes), e a casca da castanha (de onde se extrai o líquido da casca de castanha-de-caju, o 
+LCC), usado na indústria química e de lubrificantes. Já o pedúnculo do caju é comercializado 
+in natura e processado por indústrias ou minifábricas para a obtenção do suco ou da polpa 
+congelada, de cajuínas e doces, além de seus subprodutos serem aproveitados na alimentação 
+animal. Cerca de 10 a 15 toneladas de pedúnculos de caju são obtidos como subprodutos para 
+cada tonelada de castanha produzida (AUGUSTO et al., 2017; DAS; ARORA, 2017). 
+O Brasil ocupava o posto de terceiro maior produtor mundial de castanha-de-caju, 
+no ano 2000, ficando atrás da Índia (440 mil toneladas) e Nigéria (176 mil toneladas). 
+Segundo os dados da FAO (2014), nas safras de 2011 e 2012, as produções mundiais de 
+castanha-de-caju foram de 4,40 milhões e 4,15 milhões de toneladas, respectivamente. O 
+Brasil com sua produção cíclica, foi o quinto maior produtor em 2011 e o décimo maior em 
+2012, perdendo seu terceiro lugar para a Índia (16% da produção) que ficou atrás da Nigéria 
+(20%) e do Vietnã (28,7%), os quais se consolidaram como os maiores produtores mundiais 
+(AUGUSTO et al., 2017).  
+A nível nacional, 50% do total produzido de castanha-de-caju no Brasil se 
+concentra no estado do Ceará, seguido pelos estados do Rio Grande do Norte (≈22%) e Piauí 
+(≈18%) (AUGUSTO et al., 2017). 
+Os Estados Unidos, os Países Baixos e o Canadá são os maiores importadores da 
+castanha de caju produzida no Brasil. O Estado do Ceará é o maior exportador rendendo US$ 
+182 milhões, US$ 176 milhões, US$ 149 milhões e US$ 110 milhões, em 2010, 2011, 2012 e 
+2013, respectivamente, passando de primeiro para o terceiro produto da pauta de exportações 
+(AUGUSTO et al., 2017).  
+Na cadeia produtiva do caju, estima-se a geração anual de cerca de 250 mil 
+empregos diretos e indiretos no beneficiamento de 300 mil toneladas de castanhas e em 
+fábricas processadoras do pedúnculo do caju. Porém, apesar de toda a tecnologia disponível, 
+75% dos pedúnculos do caju não são aproveitados e apenas 350 mil toneladas são 
+aproveitados por pequenas empresas que produzem suco de caju, cajuína e doces. Desse 
+modo, o aproveitamento do pedúnculo do caju tem sido visto como a resolução para o 
+desperdício e a falta de investimentos nos pomares, assim como pesquisa em novas formas de 
+ 
+31 
+processamento do pedúnculo do caju e seus produtos, é uma alternativa promissora para a 
+produção de sucos tropicais prontos para beber e com isso novas oportunidades surgem para 
+as indústrias de suco e a criação de emprego cresce (AUGUSTO et al., 2017). 
+ 
+2.6 Suco de Caju 
+ 
+O Ministério da Agricultura Pecuária e Abastecimento (MAPA) define Suco de 
+frutas como, uma bebida não fermentada, não concentrada, e não diluída, destinada ao 
+consumo, obtida da fruta madura e sã, ou parte do vegetal de origem, por processamento 
+tecnológico adequado, submetida a tratamento que assegure a sua apresentação e conservação 
+até o momento do consumo (BRASIL, 2000). A partir dessa definição surgiram novas 
+formulações de bebidas de frutas como néctar, refresco, suco concentrado e desidratado, suco 
+integral, e suco tropical, que diferem em sua composição e são reconhecidas legalmente no 
+Brasil. 
+A decisão do consumidor por uma alimentação saudável tem crescido a cada dia e 
+as frutas e seus produtos, como o suco, são uma das principais fontes de vitaminas, minerais, 
+compostos antioxidantes e carboidratos solúveis procurados por eles. Com o crescimento e 
+diversificação do mercado a fruticultura aumenta sua produção a fim de atender a demanda 
+dos consumidores. Com isso novas formas de processamento de frutas são incentivadas para 
+agregar valor aos produtos oferecidos e novas oportunidades surgem para as indústrias de 
+sucos de frutas. 
+Os sucos de frutas estão dentre os produtos com as maiores médias de consumo 
+diário per capita no país, com 145 g/dia (IBGE, 2011). Em 2017, o volume de produção do 
+mercado brasileiro de néctar e sucos prontos para beber foi de 1.101.985 litros, com 5,31 
+litros/habitante anualmente, tendo um aumento positivo no consumo per capita de 4,1% em 
+relação ao ano de 2016. Esse é um dado positivo comparado a queda de consumo de 
+refrigerantes que caiu 11,68% em relação ao ano de 2016. Isso indica que a população tem se 
+preocupado mais com a saúde e bebido mais suco (ABIR, 2017).  
+No pedúnculo do caju cerca de 65 a 80% da polpa é transformada em suco, 
+dependendo da maturidade, variedade e processo de extração (DAS; ARORA, 2017). 
+Portanto, investir em novas tecnologias para o melhor aproveitamento do pedúnculo do caju e 
+maior agregação de valor ao produto é de grande importância econômica para o mercado 
+interno e externo, podendo assim, gerar novas oportunidades de emprego, além de atender as 
+exigências dos consumidores. 
+ 
+32 
+MOO-HUCHIN et al. (2014) analisou o suco do pedúnculo de caju não diluído e 
+encontraram: 92,06 mg/100g de Vitamina C; 1,17 mg/100g de antocianinas totais; 186,29 mg 
+de EAG/100g de compostos fenólicos; 59,27 mg em quercetina/100g de flavonoides; 13,99 
+mg de β-caroteno/100g de carotenoides totais. Quanto a atividade antioxidante os resultados 
+•+
+encontrados foram 642,06 µmol/100g pelo método ABTS e 345,15 µmol/100g pelo método 
+-
+DPPH.  
+RUFINO et al. (2010) também processaram o pedúnculo do caju para a obtenção 
+da polpa e após análise observaram os seguintes resultados: 190 mg/100g de Vitamina C; 9,5 
+mg/100g de antocianinas totais; 63,8 mg/100g de flavonoides amarelos; 0,4 mg/100g de 
+carotenoides totais; 118 mg de EAG /100g de compostos fenólicos; atividade antioxidante 
+•+-
+segundo os métodos ABTS, DPPH• EC e FRAP, 11,2 µmol de trolox/g, 7142 g/g DPPH e 
+50
+22,9 µmol de Fe2SO4/g, respectivamente. 
+Pode-se perceber diferenças nas caracterizações das polpas dos pedúnculos de 
+caju, mas isto é justificado pelo fato dos frutos serem influenciados pelo clima, tipo de solo, 
+condições de cultivo, tempo de colheita, incidência da luz, entre outros aspectos. 
+DA SILVA et al. (2014) estudaram os compostos bioativos da polpa e os 
+subprodutos de sua produção (casca e sobras de polpa) afim de saber a concentração dos 
+compostos bioativos em cada parte do pedúnculo do caju. Verificaram na polpa as seguintes 
+concentrações: 7,62 mg/100g de antocianinas totais; 0,45 mg de β-caroteno/100g; 5286,49 mg 
+de EAG/100g de compostos fenólicos, enquanto que nos subprodutos encontraram o dobro de 
+antocianinas (14,74 mg/100g) e flavonoides amarelos (44,91 mg/100g), que não foram 
+detectados na polpa, concluindo que a maior parte dos flavonoides amarelos estão na casca do 
+pedúnculo do caju. Além disso, encontraram 0,18 mg de β-caroteno/100g e 6588,41 mg de 
+EAG/100g de compostos fenólicos.  
+MOO-HUCHIN et al. (2015) estudaram a diferença entre o caju amarelo e o caju 
+vermelho, analisando suas cascas e observaram os seguintes resultados, respectivamente: 
+172,6 e 1583,3 mg/100g de vitamina C; 1,83 e 9,29 mg/100g de antocianinas totais; 633,2 e 
+1316,8 mg de EAG/100g de fenólicos totais; 628,1 e 833,7 mg de quercetina/100g de 
+flavonoides; 172,3 e 256,9 mg de β-caroteno/100g; e atividade antioxidante mensurada por 
+•+
+ABTS e DPPH•  3322,3 e 3050,9 µmol equivalente de trolox/100g; 1579,0 e 1593,6 µmol 
+equivalente de trolox/ 100g. Concluindo que o caju vermelho detêm de maiores quantidades 
+de compostos bioativos em comparação ao caju amarelo. 
+Como visto acima, o pedúnculo do caju é rico em micronutrientes, considerado 
+fonte de antioxidantes como, flavonoides amarelos (59,27 mg de quercetina/100g) e vitamina 
+ 
+33 
+C (92,06 mg/100g ), possuindo cerca de três a seis vezes mais vitamina C que suco de laranja, 
+além de vitaminas do Complexo B e Ferro, o que faz da exploração desse fruto entre outras 
+espécies de frutos tropicais uma alternativa promissora para produção de sucos tropicais 
+prontos para beber (DAS; ARORA, 2017; MOO-HUCHIN et al., 2014). 
+ 
+2.7 Compostos bioativos 
+ 
+Os compostos bioativos são encontrados em frutas, vegetais, cereais, leguminosas, 
+raízes e outras fontes vegetais. Dentre esses, as frutas estão entre os mais consumidos. Desse 
+modo, o consumo de frutas e seus produtos atualmente não é apenas um resultado da 
+preferência do consumidor pelo melhor sabor, mas é uma preocupação com a saúde devido a 
+grande quantidade de minerais, vitaminas, fibras e compostos fitoquímicos secundários 
+(antioxidantes naturais, por exemplo) na sua composição (DA SILVA et al., 2014).  
+O metabolismo humano produz espécies reativas de oxigênio (ERO) oriundas de 
+muitos sistemas enzimáticos através do consumo de oxigênio. Os radicais ânion superóxido, 
+radicais hidroxila e os peróxidos de hidrogênio, são os principais dessas espécies e em 
+pequenas quantidades são utilizados como transdutores de sinais e reguladores de 
+crescimento. Porém, durante o estresse oxidativo, as grandes quantidades desses ERO podem 
+causar doenças como câncer, doenças degenerativas e ocasionar o envelhecimento precoce. 
+Desse modo, para equilibrar as ERO, é necessário a ingestão de antioxidantes não produzidos 
+pelo corpo humano para manter um nível adequado dessas espécies (MOO-HUCHIN et al., 
+2015). 
+ Pesquisas comprovam que dietas ricas em compostos fitoquímicos (antioxidantes 
+naturais), como compostos fenólicos e carotenóides, reduzem o risco de doenças como câncer, 
+úlceras estomacais, inflamação, doenças cardiovasculares, metabólicas, coronárias, 
+degenerativas e infecções do trato urinário (DA SILVA et al., 2014; SHISHIR et al., 2018). 
+Além de suas funções biológicas, os antioxidantes são utilizados nas indústrias de cosméticos, 
+farmacêutica, e alimentícia, já que também podem ser usados como substitutos de 
+antioxidantes sintéticos (MOO-HUCHIN et al., 2015). 
+Os polifenóis (compostos fenólicos) são os fitoquímicos com ação antioxidante 
+que mais se destacam nos vegetais. Constituem um amplo e complexo grupo de fitoquímicos, 
+divididos em flavonoides e não-flavonoides. Os denominados flavonoides são os que 
+apresentam estrutura química descrita como C6-C3-C6. Já os denominados não-flavonoides 
+possuem estrutura química C6-C1(ácido gálico), C6-C3(ácido caféico) ou C6-C2-C6 
+ 
+34 
+(resveratrol) (COSTA; JORGE, 2011).  
+Os compostos fenólicos possuem anel aromático contendo um ou mais grupos 
+hidroxila, incluindo seus grupos funcionais tais como ésteres, ésteres metílicos e glicosídios. 
+Existem cerca de 5.000 polifenóis, dentre eles, destacam-se os flavonoides, os ácidos 
+fenólicos, cumarinas e taninos. Sua capacidade antioxidante está na atividade de sequestrar 
+radicais livres, doar átomos de hidrogênios ou elétrons ou quelar cátions de metais, cuja 
+intensidade da ação depende do número e posição de hidroxilas presentes nas moléculas 
+(COSTA; JORGE, 2011). 
+Os flavonoides são localizados principalmente nas folhas, nas flores e nas frutas, 
+em suas partes externas, pele ou casca. A sua concentração é dependente do grau de incidência 
+de luz, quanto maior a exposição à luz maior a formação de flavonoides no meio 
+(HOFFMANN-RIBANNI et al., 2009).  
+Esses compostos são divididos em subclasses, que podem ser divididas por grupos 
+de colorações especificas: flavonas, flavonóis, flavanonas (coloração amarela); isoflavonoides 
+e flavanas (incolores); antocianinas (vermelho e violeta) (FONSECA et al., 2016). A 
+quercetina é um flavonol (coloração amarela) que possui maior poder sequestrador de 
+espécies reativas de oxigênio. DE BRITO et al. (2007) detectou 13 tipos de flavonoides em 
+pedúnculo de caju, quantificando 0,28 mg/g de flavonoides glicosilados totais, onde 6 eram 
+do tipo quercetina (0,11 mg/g) e 6 miricetina (0,15 mg/g). HOFFMANN-RIBANNI et al. 
+(2009) encontrou uma menor quantidade de miricetina no caju fresco (0,02 mg/g) ressaltando 
+que as diferentes formas de cultivo influenciam no conteúdo de compostos bioativos das 
+frutas. Não existe uma recomendação para ingestão diária de flavonoides, mas estima-se que o 
+valor médio diário de ingestão seja de 79 mg para mulheres e 28 mg para homens (FONSECA 
+et al., 2016). 
+A vitamina C (ácido L-ascórbico) também é um antioxidante natural, que possui 
+sabor ácido e é solúvel em água e insolúvel em solventes orgânicos. Uma vez dissolvida, fica 
+muito sensível ao oxigênio e é facilmente oxidada pelo calor e em meio alcalino. Não é 
+sintetizada pelo organismo humano, por isso é indispensável a sua ingestão. Entre as 
+principais funções da vitamina C está a potencialização do sistema imune com o aumento da 
+produção de linfócitos, sua alta concentração no sistema inibidor da hialuronidase evita a 
+metástase de tumores carcinogênicos, é um excelente redutor, pois facilmente perde átomos 
+de H, transformando-se em ácido dehidroascórbico (com a mesma atividade do ácido 
+ascórbico) e se comporta como o maior captador de elementos oxidantes na fase aquosa do 
+organismo. Além de sequestrar hidrogênio singleto e quelante de metais (VALDÉS, 2006).  
+ 
+35 
+De acordo com a legislação brasileira e a Food and Agriculture Organization, a 
+ingestão diária recomendada (IDR) para o ácido ascórbico em um adulto é de 60 e 45 mg, 
+respectivamente. Entre as principais frutas fontes de Vitamina C estão a acerola, laranja, 
+limão, manga, goiaba e o pedúnculo do cajueiro (SCHERER; RYBKA; GODOY, 2008).  
+ 
+2.8 Enzimas 
+ 
+Mudanças nas condições ambientais (injúrias mecânicas, umidade, variações de 
+temperatura) podem causar danos oxidativos nas células vegetais dos frutos e, 
+consequentemente, em seus derivados. Esses danos são geralmente observados durante a 
+extração de suco de frutas (RABELO, 2012).  
+O desequilíbrio entre a capacidade oxidativa e antioxidativa nas células vegetais 
+gera o estresse oxidativo (ARORA et al., 2002). Nessas células a ação antioxidativa acontece 
+por antioxidantes enzimáticos e não enzimáticos que atuam na eliminação de espécies reativas 
+de oxigênio (EROs). Os principais antioxidantes enzimáticos são as enzimas: dismutase do 
+superóxido, peroxidase, polifenoloxidase e catalase (RABELO, 2012).  
+As peroxidases são enzimas antioxidantes que regulam os níveis internos de 
+peróxido de hidrogênio, reduzindo estes através da catalise de reações de compostos 
+antioxidantes como, os compostos fenólicos e ácido ascórbico (agentes redutores). As 
+peroxidases são encontradas na forma de várias isoenzimas, variando no tipo de substrato 
+doador de elétrons utilizado, estabilidade térmica e peso molecular (RABELO, 2012). 
+As polifenoloxidases são enzimas capazes de catalisar dois diferentes tipos de 
+reações: a hidroxilação de monofenóis a o-difenóis e a de hidrogenação de o-difenóis a o- 
+quinonas. As quinonas produzidas conduzem subsequentemente a uma série de reações não 
+enzimáticas que produzem pigmentos e melanina de cor marrom escura, o que causa 
+escurecimento no suco (YORUK; MARSHALL, 2003). 
+•−
+A dismutase de superóxido catalisa a dismutação do radical superóxido (O) a 
+2
+peróxido de hidrogênio (HO) e em desequilíbrio podem induzir disfunções e morte celular. 
+22
+Já a Catalase converte o peróxido de hidrogênio (HO) em água (HO) e oxigênio molecular 
+222
+(O), ou seja, funciona como um canal de limpeza do HO celular. Essas enzimas exercem 
+222
+funções de defesa nas células vegetais, mas causam consequentemente sabor e cor 
+indesejáveis nos frutos e em seus subprodutos como, os sucos (RABELO, 2012). 
+-1
+QUEIROZ et al. (2011) encontraram polifenoloxidase (0.62 UAE.min.mg de 
+proteína) em polpa de caju, mas RABELO (2012) não detectou atividade dessa enzima em 
+ 
+36 
+-1
+suco de caju prensado, encontrando atividade da peroxidase (0,02 µmol HO.min.mg 
+22
+proteína), da   dismutase de superóxido (7,14 UA.mg proteína-1) e da catalase (74 µmol 
+-1
+HO.min.mg proteína).   
+22
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+37 
+3 OBJETIVO 
+ 
+3.1 Objetivo geral 
+ 
+Avaliar os efeitos da aplicação do ultrassom, do ozônio e da luz pulsada sobre as 
+características nutricionais e de qualidade do suco de caju e compará-los ao suco processado 
+por tratamento térmico. 
+3.2 Objetivos específicos 
+ 
+• Determinar a atividade antioxidante das amostras de suco de caju pós-tratamentos; 
+• Avaliar os efeitos causados pelas tecnologias estudadas sobre os constituintes 
+bioativos do suco de caju (flavonoides e Vitamina C); 
+• Verificar a eficiência do processamento na inativação das enzimas peroxidase e 
+polifenoloxidase; 
+• Avaliar os parâmetros de Cor do suco de caju pós-tratamentos. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+38 
+4 MATERIAL E MÉTODOS 
+ 
+ 
+4.1 Preparo do suco 
+ 
+O suco foi preparado a partir da polpa de caju congelada e não pasteurizada (Ki 
+polpa ®), sem adição de conservantes, sem açúcar (2,7 º Brix) na proporção 1:2 (100g de 
+polpa: 200 mL de água).   
+ 
+4.2 Processamentos 
+ 
+4.2.1 Ultrassom 
+ 
+O suco de caju foi processado em um desruptor ultrassônico de 500W, Unique® 
+modelo DES500 (Figura 3) com frequência constante de 19kHz e macro ponta de titânio com 
+diâmetro de 13 mm. Amostras de 150 mL do suco foram processadas em reator de vidro 
+encamisado de 250 mL com controle de temperatura. A macro ponta de titânio foi submersa 
+no suco em uma profundidade de 1,5 cm. Foram utilizados como controle dos experimentos, 
+amostras de suco não-processado in natura. 
+ 
+Figura 3 - Desruptor ultrassônico de macro ponta de titânio  
+Fonte: Laboratório de Biotecnologia, Universidade Federal do Ceará. 
+ 
+ 
+ 
+39 
+4.2.1.1 Cálculo de intensidade de energia ultrassônica 
+ 
+Calculou-se a intensidade de energia ultrassônica dissipada pela ponta de titânio 
+através da Equação 1 (LI, PORDESIMO, WEISS, 2004). 
+2                                                                                                                                                                                                      
+I=P/π*r(1) 
+Onde P (Watt) é a potência aplicada, r é o raio (cm) da macro ponta de titânio. No 
+presente  estudo  os  níveis  de  potência  aplicada  foram  ajustados  para  20%  e 99% da 
+potência total (500 W) que equivale a 100 e 495 W, respectivamente. As intensidades 
+2
+ultrasônicas correspondentes foram 75,34 e 372,93 W/cm, respectivamente. 
+ 
+4.2.1.2  Planejamento Experimental 
+ 
+3
+Foi realizado um planejamento fatorial (2), observado na tabela 1, variando-se a 
+2
+intensidade de potência na faixa de 75,34 a 372,93 W/cm, tempo de processamento de 2 a 10 
+minutos e temperatura de 20 a 40 ºC. As análises foram realizadas em triplicata (BARROS 
+NETO; SCARMINIO; BRUNS, 2002).  
+ 
+3
+Tabela 1 – Planejamento experimental fatorial (2) aplicado ao processamento ultrassônico. 
+Processamento Intensidade Tempo Temperatura 
+2
+(W/cm) (Min.) (ºC) 
+US 1 75,34 2 20 
+US 2 75,34 2 40 
+US 3 75,34 10 20 
+US 4 75,34 10 40 
+US 5 372,93 2 20 
+US 6 372,93 2 40 
+US 7 372,93 10 20 
+US 8 372,93 10 40 
+ 
+ 
+ 
+ 
+ 
+40 
+4.2.2 Ozônio 
+ 
+O suco de caju foi submetido ao ozônio produzido através de descarga Corona no 
+gerador de ozônio (OZONE & LIFE ®; modelo O&L3.ORM; frequência 60 Hz). O oxigênio 
+puro foi fornecido por meio de um cilindro de oxigênio e a vazão foi controlada usando um 
+regulador de fluxo de gás. O tratamento das amostras foi realizado na posição 1 do dosador, 
+vazão 0,125 L/ min usando a carga de ozônio de 0,037 mg O/mL.min. Variou-se o tempo de 
+3
+exposição ao ozônio de 2, 4 e 6 minutos, gerando as respectivas concentrações 0,08 mg 
+O/mL, 0,16 mg O/mL, 0,24 mg O/mL. Essas cargas de ozônio foram baseadas na carga 
+333
+mínima aplicada (0,075 mg O/mL) para 5 log UFC/mL de inativação de E. coli em suco de 
+3
+laranja (PATIL, BOURKE, et al., 2009). Valores superiores foram aplicados considerando a 
+existência de microrganismos mais resistentes. Os tratamentos foram realizados em duplicata 
+e as análises foram realizadas em triplicata. 
+ 
+ 
+Figura 4 - Gerador de ozônio  
+Fonte: Laboratório de Biotecnologia, Universidade Federal do Ceará. 
+ 
+ 
+4.2.3 Luz Pulsada 
+ 
+O suco de caju foi submetido à luz pulsada no equipamento da SteriBeam Systems 
+®, Modelo:Intense Pulsed UV R&D System XeMaticA-2L-AS (Figura 4). Foram utilizadas 
+placas de petri de Polipropileno descartáveis 90 x 15 mm (OLEN ®, China) e estéreis 
+2
+contendo 15 mL de amostra. Os tratamentos variaram a intensidade em 2 V (0,075 J/cm), 6 V 
+22
+(0,700J/cm) e 10 V (1 J/cm) os quais foram realizados em duplicata e as análises em 
+ 
+41 
+triplicata.  
+ 
+Figura 5 – Emissor de Luz pulsada 
+Fonte: Laboratório de Biotecnologia, Universidade Federal do Ceará. 
+ 
+4.2.4 Processamento Térmico 
+ 
+Amostras do suco (150 mL) foram colocadas em bécker (250 mL) e submetidas 
+®
+ao tratamento térmico em banho-maria, sem agitação (SOLAB) ajustado a 90°C por 1 min, 
+com controle de temperatura através de termômetro. 
+ 
+4.3 Análise Estatística 
+ 
+3
+O planejamento experimental fatorial (2) realizado no processamento 
+ultrassônico foi avaliado com o auxílio do software Statistica v. 10 (Statsoft), em que a análise 
+de variância (ANOVA) e o Teste de Fisher determinaram a significância do modelo 
+matemático com intervalo de confiança de 95%. Quando o modelo matemático não foi 
+significativo, os resultados foram analisados pelo teste de Tukey ao nível de significância de 
+5%. Os resultados foram expressos em média ± desvio padrão. As respostas das análises dos 
+processamentos de ozonização e de luz pulsada, que não foram submetimedos a planejamento 
+experimental, foram analisados apenas por teste de Tukey. 
+ 
+4.4 Métodos Analíticos 
+ 
+4.4.1 Determinação da Atividade Antioxidante Total 
+ 
+ 
+42 
+4.4.1.1  Extração 
+ 
+A extração dos compostos antioxidantes foi realizada de acordo com 
+(LARRAURI; RUPÉREZ; SAURA-CALIXTO, 1997) adaptado. Onde 500 μL de amostra foi 
+homogeneizado com 1 mL de etanol 50% (v/v) e a mistura foi deixada em repouso por 1 hora. 
+Após esse período, a amostra foi centrifugada a 25155 x g por 15 min., 6 ºC na centrifuga 
+6k15 (SIGMA Laboratory Centrifuges ®). O sobrenadante foi coletado e o precipitado foi 
+resuspenso em 1mL de Acetona 70%, homogeneizado, deixado em repouso por 1 hora e foi 
+centrifugado novamente. Em seguida juntou-se os dois sobrenadantes e o extrato resultante foi 
+utilizado para determinação da atividade antioxidante total pelos métodos ABTS e DPPH.  
+ 
+•+ 
+4.4.1.2  Método ABTS
+ 
+A análise da atividade antioxidante total pelo método ABTS foi baseada na 
+•+
+captura do radical 3-etilbenzotiazolina-6-ácidosulfônico (ABTS) pelos antioxidantes 
+•+ 
+presentes no suco de caju. O radical ABTSfoi preparado pela reação de 5 mL da solução 
+ABTS (7 mM, em água destilada) com 88 μ L de persulfato de potássio (140 mM, em água 
+destilada). O radical foi armazenado em frasco âmbar e deixado em repouso por 16 horas 
+antes da realização do experimento. O radical foi então diluído em álcool etílico a uma 
+absorbância de 0,7 ±0,02 a 734 nm. O experimento foi conduzido em tubos de ensaio, onde 
+ocorreu a reação entre 15 μ L de amostra (diluída 1:5 pela extração) com 1500 μL do radical 
+•+
+ABTS. Após 6 minutos, realizou-se a leitura em espectrofotômetro Evolution 220 
+(THERMO scientific ®). O álcool etílico foi utilizado como o branco. Uma curva de 
+calibração foi construída com o Trolox (100 - 2000 μM) e o resultado expresso em μM 
+equivalente de Trolox (MILLER et al., 1993; RUFINO et al., 2010, modificada). 
+ 
+4.4.1.3  Método DPPH• 
+ 
+A análise da atividade antioxidante total pelo método DPPH foi baseada na 
+captura do radical 2, 2-difenil- 1-picril-hidrazil (DPPH•) pelos antioxidantes presentes no 
+suco de caju através da metodologia de BRAND-WILLIAMS et al. (1995) com modificações. 
+O radical DPPH• (0,06 mM, em álcool etílico) foi preparado no momento da análise. O 
+experimento foi realizado em tubos de ensaio, 30 μL de amostra (diluída 1:5 pela extração) 
+com 1300 μL do radical DPPH. A leitura (515 nm) foi realizada em cubetas de vidro, em 
+ 
+43 
+espectrofotômetro Evolution 220 (THERMO scientific ®) após 30 minutos de reação. Uma 
+curva de calibração foi construída com o Trolox (50 - 1000 μM) e o resultado expresso em 
+μM equivalente de Trolox. O álcool etílico foi utilizado como o branco. 
+ 
+4.4.1.4  Método FRAP 
+ 
+O ensaio FRAP (Ferric Reducing Antioxidant Power) (BENZIE, et. al, 1996) é 
+3+
+baseado na capacidade dos teores de ácido ascórbico e grupos fenólicos em reduzir o Feem 
+2+
+Fe. Quando isto ocorre, na presença de 2,4,6-tripiridil-s-triazina (TPTZ), a redução é 
+2+
+acompanhada pela formação de um complexo corado com o Fe. Uma curva padrão foi 
+construída utilizando ácido ascórbico (concentração 100 a 2000 µM) e o resultado expresso 
+em µM equivalente de ácido ascórbico. As leituras de absorbância foram realizadas a 393 nm 
+após 30 minutos de reação no espectrofotômetro Evolution 220 (THERMO scientific ®), 
+utilizando microplaca de 96 poços, onde 15 μ L da amostra foi misturada com 285 μ L da 
+solução Frap.  
+ 
+4.4.2. Determinação de compostos antioxidantes 
+ 
+4.4.2.1  Flavonoides Amarelos 
+ 
+A concentração de flavonoides amarelos foi determinada segundo (DA SILVA et 
+al., 2014). Uma alíquota de 1 mL de amostra foi homogeneizada com 3 mL de solução 
+extratora  (HCl 1,5 M e etanol 85% v/v) por 1 minuto e depois o volume foi completado para 
+5 mL. Em seguida foram centrifugadas a 2683 x g por 5 min a 4°C onde o sobrenadante foi 
+considerado como fonte de flavonoides amarelos. A análise foi feita em microplaca e a leitura 
+das absorbâncias (200 μL da amostra) realizada em espectrofotômetro ELISA EpochTM 
+(Biotek, Estados Unidos) a 374 nm. O conteúdo de flavonoides amarelos foi calculado usando 
+a equação abaixo e seu respectivo coeficiente de absorção foi 510 g/100 mL.cm, pois o raio 
+ótico utilizado foi da microplaca (0,67 cm). O resultado foi expresso em mg/100mL. 
+ 
+                                                            (2) 
+ 
+ 
+ 
+44 
+4.4.2.2 Vitamina C  
+ 
+Para determinar a concentração de vitamina C foi utilizada a metodologia 
+proposta por SELIMOVIĆ et al. (2011), adaptada por FERNANDES (2015). A uma alíquota 
+de 150 µL do suco adicionou-se 1350 µL de tampão contendo fosfato de Potássio monobásico 
+-4
+anidro 0,03 M e fosfato de sódio dibásico anidro 8,99.10 M, ph 5,4 contendo 0,075% (m/v) 
+de oxalato de sódio. A mistura foi homogeneizada em Vortex (Kasvi), em seguida 
+centrifugou-se a 10000 g, por 5 min. a 4°C. O sobrenadante foi retirado e lido em 
+espectrofotômetro (Evolution 220) em 266nm, em cubetas de quartzo. Os valores foram 
+expressos em mg/L a partir de uma curva de calibração preparada com solução padrão de 
+ácido ascórbico (0 a 50 mg/L) (FERNANDES et al. 2015). 
+ 
+4.4.3 Atividades Enzimáticas 
+ 
+4.4.3.1  Extração 
+ 
+A extração das enzimas peroxidase (POD EC 1.11.1.7) e polifenoloxidase (PPO 
+EC 1.14.18.1) foi realizada conforme método de WISSEMANN & LEE (1980) e FONTELES 
+et al. (2012), com modificações. Alíquotas de 1mL de suco foram homogeneizadas em vortex 
+com 0,5 mL de solução tampão contendo fosfato de potássio monobásico 0,05 M e 1% (m/v) 
+de polivinilpirrolidona (PVP), pH 7,0. Em seguida, o homogeneizado foi centrifugado a 11118 
+x g, a 4 ºC por 20 min. O material precipitado foi descartado e o sobrenadante foi recolhido e 
+congelado a –18 ºC para posterior utilização como extrato para a análise de ambas enzimas. 
+ 
+4.4.3.2  Atividade de Polifenoloxidase 
+ 
+Para essa análise, uma mistura de reação contendo 100 μL de extrato e 600 µL de 
+solução tampão fosfato de potássio, pH 6,0, contendo 0,1 M de KCl e 0,1 M de catecol 
+(preparada no momento da análise), foi acondicionada em microtubo eppendorf ® em banho 
+maria a 30 °C por 30 min. Ao término do tempo de incubação, 266 μL de solução de ácido 
+perclórico 0,2 N foram adicionados à mistura para que a reação da PPO fosse paralisada. Essa 
+mistura final foi centrifugada a 2795 x g por 5 min e o sobrenadante (200µl) submetido à 
+leitura em espectrofotômetro ELISA EpochTM (Biotek, Estados Unidos), a 395nm 
+(FONTELES et al., 2012; WISSEMANN; LEE, 1980). 
+ 
+45 
+4.4.3.3  Atividade de Peroxidase 
+ 
+Em uma microplaca, 110 μL de solução tampão de fosfato-citrato 0,1M pH 5 
+contendo 1% (m/v) de guaiacol (adicionado na hora da análise), foram mantidos a 30 °C e, em 
+seguida, foram adicionados 60 μL do extrato enzimático e 10 μL de solução de HO 3 % 
+22
+(v/v) para dar início a reação. Após a adição da solução de peróxido contou-se 5 minutos de 
+reação e adicionou-se 20 μL de bissulfito de Sódio 30 % (m/v) para parar a reação. Logo 
+depois a mistura foi lida em espectrofotômetro ELISA EpochTM (Biotek, Estados Unidos), a 
+470nm (FONTELES et al., 2012; WISSEMANN; LEE, 1980). Após as leituras de 
+absorbâncias considerou-se uma unidade de atividade enzimática (UAE) de peroxidase e 
+polifenoloxidase como a quantidade de atividade enzimática que produz uma mudança de 
+0,001 unidade de absorbância. Os resultados foram expressos em UAE/min/mL de suco.  
+ 
+4.4.4 Cor  
+ 
+A determinação dos parâmetros instrumentais de cor foi realizada utilizando 
+colorímetro CR300 (Konica Minolta, Japão) segundo a metodologia adaptada de YONG et al. 
+(2015). Para calibrar o equipamento foi utilizada um iluminante padrão D65. A leitura das 
+amostras de suco foi realizada através de uma área de visualização de 8 mm. Os parâmetros 
+colorimétricos foram avaliados de acordo com o sistema de cores CIE L*, a* e b*. Os valores 
+**
+de luminosidade (L), parâmetro de croma vermelho-verde (a) e parâmetro de croma 
+**
+amarelo-azul (b) foram determinados através de leitura direta. Os valores numéricos de L, 
+**
+ae b foram convertidos em diferença total da cor (ΔE), índice de saturação (ΔC) e ângulo de 
+tonalidade (hº) de acordo com as Equações 1-3, respectivamente: 
+ 
+                                                                                       (3) 
+                                                                                    (4) 
+                                                                                                                     (5) 
+Os subíndices a e a representam a amostra padrão (antes do processamento) e a 
+0s
+amostra processada, respectivamente. As leituras foram realizadas em quintuplicata.
+ 
+46 
+ 
+5 RESULTADO E DISCUSSÃO 
+ 
+5.1 Ultrassom  
+ 
+A análise de variância (ANOVA) indicou que nenhum dos parâmetros analisados 
+obtiveram significância estatística do modelo matemático a 95% de confiança. O diagrama de 
+pareto mostrou que as variáveis independentes estudadas não mostraram efeito significativo 
+sobre os parâmetros estudados. Desse modo os resultados foram avaliados segundo o teste 
+Tukey ao nível de significância de 5% e os resultados foram expressos em média ± desvio 
+padrão.  
+ 
+5.1.1 Atividade Antioxidante ABTS, DPPH e FRAP 
+ 
+Observa-se na Tabela 2 os resultados obtidos na análise de atividade antioxidante 
+pelo método ABTS. Verificou-se que todos os tratamentos diminuíram a capacidade 
+antioxidante em relação ao controle, mas se conservaram superiores ao tratamento térmico. 
+Os processamentos US7 e US8 obtiveram os melhores resultados dessa característica no suco. 
+Mostrando que altas intensidades ultrassônicas conservam melhor a capacidade antioxidante 
+do que as baixas (US1, US2, US3 e US4), independente do tempo e temperatura. Os ensaios 
+22
+US1 (75,34 W/cm; 2 min; 20ºC) e US4 (75,34 W/cm; 10 min; 40ºC) não diferiram entre si, 
+mostrando que não é necessário tempos superiores a 2 minutos e temperaturas elevadas para 
+alcançar os efeitos do ultrassom nessa intensidade. 
+ 
+Tabela 2 - Resultados dos efeitos do Ultrassom na atividade antioxidante (ABTS) do suco de 
+caju. 
+  
+Processamento Intensidade TempoTemperatura ABTS
+2
+W/cm (min.) (ºC) % 
+(M eq. de 
+Trolox) 
+e 
+Controle - - - 1552 ± 70100% 
+b 
+ Trat.Térmico - 1 90 887,7 ± 5557% 
+abc 
+US 1 75,34 2 20 1027 ± 12966% 
+bc 
+US 2 75,34 2 40 1012 ± 4365% 
+ac 
+US 3 75,34 10 20 1096 ± 9970% 
+abc 
+US 4 75,34 10 40 1057 ± 5468% 
+ad 
+US 5 372,93 2 20 1221 ± 5779% 
+ad 
+US 6 372,93 2 40 1216 ± 5078% 
+e 
+US 7 372,93 10 20 1424 ± 1692% 
+de 
+US 8 372,93 10 40 1390 ± 2090% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+ 
+47 
+ 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+Na tabela 7, pode-se observar que os ensaios US6, US7 e US8 alcançaram as 
+maiores inativações da enzima peroxidase. Desse modo, a conservação da atividade 
+antioxidante no suco de caju encontrada pelo método ABTS pode estar relacionada à 
+capacidade da cavitação de inativar algumas enzimas relacionadas à oxidação, como a 
+peroxidase, responsável pelo escurecimento enzimático, o que dá um saldo positivo de 
+capacidade antioxidante na matriz alimentar (CAO et al., 2018).  
+WANG et al. (2019) constatou no suco de morango um aumento significativo (p 
+<0,05) da atividade antioxidante nas amostras tratadas com ultrassom (200 W; 10 kHz) por 12 
+min, com aumento de 51,6% (289,95 μmol Trolox/100 mL), em relação ao seu conteúdo 
+original (191,30 μmol Trolox /100 mL). 
+Os resultados acima mostram que a atividade antioxidante sofreu maior influência 
+da potência e do tempo. A combinação da maior potência e do maior tempo apresentou as 
+melhores capacidades antioxidantes, independentemente do tempo e da temperatura. 
+O’DONNELL et al. (2010) também afirmaram que a intensidade do ultrassom influência de 
+maneira importante no efeito da sonicação, ou seja, há um incremento na capacidade de 
+extração quando a intensidade aplicada do ultrassom aumenta. 
+A adição de radicais hidroxilas (OH˙), gerados quimicamente pela sonicação, ao 
+anel aromático dos compostos fenólicos também pode ser razão da conservação dessa 
+atividade. Pois tem sido relatado que a adição de um segundo grupo hidroxila nas posições 
+orto ou para pode aumentar a atividade antioxidante das moléculas fenólicas (WANG et al., 
+2019).     
+Foi visto que o fenômeno da cavitação ultrassônica possui maior poder oxidante a 
+2
+baixas intensidades (75,34 W/cm) e maior poder de extração à maiores intensidades (372,93 
+2
+W/cm). A redução da capacidade antioxidante do suco de caju encontrada nos ensaios que 
+utilizaram a menor potência, independente do tempo e temperatura, pode ser atribuído à 
+oxidação gerada pelo vapor d’água ou outros gases que estão dissolvidos no suco, como Oe 
+2 
+N, que preenchem as bolhas cavitacionais formadas pela sonicação (DUBROVIĆ et al., 
+2
+2011).  
+WANG et al. (2019) ao analisarem amostras de suco de morango tratadas com 
+ultrassom a 200 W,10 kHz por 12 minutos observaram que os compostos fenólicos 
+aumentaram de 57,60 mg GAE/100 mL (controle) para 95,76 mg GAE/100 mL nas amostras 
+pós-tratamento. Reforçando o alto poder de extração de altas intensidades ultrassônicas sobre 
+os compostos bioativos.
+ 
+ 
+48 
+ 
+Na Tabela 3 os resultados do DPPH foram coerentes aos encontrados pelo ABTS, 
+2
+mostrando que todos os processamentos que utilizaram a maior potência (372,93 W/cm), 
+independente do tempo e da temperatura, a atividade antioxidante foi significativamente 
+maior (p < 0,05) em relação ao tratamento térmico e os pontos US5, US6, US7 e US8 
+aumentaram em 26%, 14%, 19% e 22%, respectivamente, em relação ao controle. 
+ 
+Tabela 3 - Resultados dos efeitos do Ultrassom na atividade antioxidante (DPPH) do suco de 
+caju. 
+DPPH  
+ 
+Intensidade TempoTemperatura 
+Processamento % 
+(M eq. de 
+2
+W/cm (min.) (ºC) 
+Trolox) 
+ab 
+Controle - - - 1324 ± 86100% 
+abd 
+Trat. Térmico - 1 90 1301 ± 9198% 
+ab 
+US 1 75,34 2 20 1358 ± 46103% 
+bd 
+US 2 75,34 2 40 1208 ± 10891% 
+d 
+US 3 75,34 10 20 1066 ± 13381% 
+ac 
+US 4 75,34 10 40 1380 ± 70104% 
+e 
+US 5 372,93 2 20 1668 ± 66126% 
+ace 
+US 6 372,93 2 40 1510 ± 129114% 
+ac 
+US 7 372,93 10 20 1586 ± 82119% 
+ce 
+US 8 372,93 10 40 1612 ± 43122% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+Na literatura, WANG et al. (2019) também observaram maior inibição do DPPH 
+(43,50%) após processamento ultrassônico (200 W; 10 kHz; 12 min.), em comparação às 
+amostras controle (21,50%) de suco de morango. Resultado semelhante foi relatado em suco 
+de laranja tratado com ultrassom (KHANDPUR; GOGATE, 2015). Esses resultados reforçam 
+o poder de extração da cavitação ultrassônica em altas intensidades, que ao extrair os 
+compostos bioativos (por exemplo, ácido ascórbico e compostos fenólicos) aumentam a 
+2
+capacidade antioxidante do suco de caju. Contudo, foi observado que o US7 (372,93 W/cm; 
+2
+10 min; 20ºC) não obteve diferença significativa do ensaio US4 (75,34 W/cm; 10 min; 40ºC), 
+segundo o método DPPH (Tabela 3) e FRAP (Tabela 4). Isto mostra que para potencializar a 
+capacidade antioxidante do suco de caju a baixas intensidades o processo ultrassônico 
+2
+necessita de temperatura maior, como foi o caso do US4 (75,34 W/cm; 10 min; 40ºC), 
+enquanto a altas intensidades não precisa. 
+Observa-se na Tabela 4 que todos os tratamentos ultrassônicos conservaram acima 
+de 80% a atividade antioxidante do suco de caju, segundo o FRAP, e foram coerentes com o 
+ABTS e o DPPH, pois apresentaram atividades antioxidantes maiores que o tratamento 
+térmico. As amostras submetidas aos tratamentos US4, US7 e US8 aumentaram (p < 0,05) a 
+ 
+49 
+ 
+atividade em 27%, 28% e 13%, respectivamente, em relação ao controle. Os pontos US4 e 
+US7 foram considerados iguais entre si e obtiveram as melhores atividades antioxidantes. Em 
+comparação ao tratamento térmico, os ensaios US4 e US7 apresentaram um incremento de 57 
+% da capacidade antioxidante do suco.  
+ 
+Tabela 4 - Resultados dos efeitos do Ultrassom na atividade antioxidante (FRAP) do suco de 
+caju. 
+ 
+FRAP
+ 
+Intensidade TempoTemperatura 
+Processamento (M eq. de ácido % 
+2
+W/cm (min.) (ºC) 
+ascórbico) 
+abc 
+Controle - - - 2374 ± 33100% 
+b 
+Trat. Térmico - 1 90 1685 ± 2271% 
+abc 
+US 1 75,34 2 20 2353 ± 3099% 
+bc 
+US 2 75,34 2 40 2078 ± 1488% 
+abc 
+US 3 75,34 10 20 2599 ± 9109% 
+a 
+US 4 75,34 10 40 3016 ± 58127% 
+abc 
+US 5 372,93 2 20 2199 ± 4893% 
+abc 
+US 6 372,93 2 40 2356 ± 2899% 
+a 
+US 7 372,93 10 20 3043 ± 18128% 
+ac 
+US 8 372,93 10 40 2689 ± 30113% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+2
+O ensaio US8 (372,93 W/cm; 10 min; 40 ºC), aumentou (p < 0,05) a atividade 
+antioxidante do suco de caju em relação ao controle. Porém, observou-se que a temperatura 
+utilizada (40ºC) por ele influenciou no resultado obtido, com uma diminuição de 15% da 
+atividade quando comparado ao mesmo tratamento (US7) em menor temperatura (20ºC).  
+QUEIROZ et al. (2011) também verificaram a influência da temperatura na 
+atividade antioxidante após analisar cortes de caju que foram armazenados a 2 °C 
+(temperatura de refrigeração), 27 °C (temperatura ambiente) e 40 °C (temperatura extrema no 
+verão) por 24 horas. Após o armazenamento a temperaturas diferentes os sucos foram 
+produzidos sem adição de água e foi observado que o aumento da temperatura (40ºC) 
+diminuiu o conteúdo fenólico (ácido gálico e do conjugado de ácido cinâmico). Concluindo 
+que a temperatura é um fator importante na alteração dos compostos fenólicos e 
+consequentemente na atividade antioxidante. 
+ 
+5.1.2 Flavonoides Amarelos 
+ 
+Pode-se observar primeiramente na Tabela 5, que foi encontrado um baixo 
+conteúdo de flavonoides amarelos na amostra controle quando comparado a literatura, onde 
+ 
+50 
+ 
+DE BRITO et al. (2007) detectou 13 tipos de flavonoides em pedúnculo de caju, 
+quantificando 28 mg/100g de flavonoides glicosilados totais, onde 6 eram do tipo quercetina 
+(11 mg/100 g) e 6 miricetina (15 mg/100 g), que são flavonóis de coloração amarela.  
+Contudo, DA SILVA et al. (2014) ao analisar o pedúnculo de caju em partes, casca 
+e polpa separadas, verificaram que os flavonoides amarelos estão concentrados na casca 
+(44,91 mg/100 g), pois estes não foram detectados na polpa. Isso pode explicar a baixa 
+concentração desse composto encontrada no suco de caju usado nessa pesquisa (amostra 
+controle: 0,37 mg/ 100mL), que foi produzido a partir de polpa de caju diluída (1:3). O 
+processo de extração da polpa de caju também influencia no conteúdo final desses compostos 
+encontrado no suco. Pois a maioria das polpas de caju são produzidas por prensagem, cuja 
+técnica não extrai os compostos da casca e da fibra da fruta. 
+ 
+Tabela 5 - Resultados dos efeitos do Ultrassom sobre os flavonoides amarelos do suco de 
+caju. 
+ 
+Processamento Intensidade TempoTemperatura Flavonoides 
+2
+W/cm (min.) (ºC) Amarelos % 
+(mg/100mL) 
+bc 
+Controle - - - 0,37 ± 0,01100% 
+a 
+Trat. Térmico - 1 90 0,33 ± 0,0189% 
+ab 
+US 1 75,34 2 20 0,35 ± 0,0194% 
+a 
+US 2 75,34 2 40 0,33 ± 0,0189% 
+bc 
+US 3 75,34 10 20 0,38 ± 0,01102% 
+ab 
+US 4 75,34 10 40 0,37 ± 0,01100% 
+ab 
+US 5 372,93 2 20 0,36 ± 0,0297% 
+de 
+US 6 372,93 2 40 0,44 ± 0,01118% 
+cd 
+US 7 372,93 10 20 0,41 ± 0,03111% 
+e 
+US 8 372,93 10 40 0,46 ± 0,00124% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+Também é encontrado grande variabilidade no conteúdo de polifenóis dos frutos 
+devido a forma de cultivo, diferenças no solo, condições climáticas, estação de crescimento, 
+armazenamento pós-colheita e métodos de extração. A ativação da síntese de polifenóis nas 
+plantas podem ocorrer em resposta a uma situação de estresse, como cortes, lesão, 
+contaminação por patógenos ou baixos nutrientes (DIXON & PAIVA, 1995).  
+Ainda que se tenha encontrado um baixo conteúdo de flavonoides amarelos, foi 
+visto um efeito positivo do ultrassom sobre esses compostos. A Tabela 5 mostra que os 
+flavonoides amarelos aumentaram significativamente após os tratamentos US6, US7 e US8 
+em relação ao controle. Os tratamentos ultrassônicos incrementaram em até 24% (US8) esses 
+compostos, ao contrário do tratamento térmico que diminuiu a concentração destes em 11%. 
+ 
+51 
+ 
+WANG et al. (2019) ao aplicar ultrassom (200 W; 10 kHz; 12 min.) em suco de 
+morango, o teor de flavonoides totais (32,74 mg/100 mL) aumentou 80 % em comparação ao 
+controle (18,20 mg/100 mL). Isso pode ser explicado pela descamação superficial, erosão e 
+quebra de partículas decorrentes do processo de cavitação, que pode ser benéfico na liberação 
+de compostos bioativos e no aumento do teor de flavonoides totais (VILKHU et al., 2008). 
+Esse aumento verificado nos processos com maiores intensidades pode ter sido influenciado 
+pela alta intensidade do processo que potencializa a capacidade de extração da sonicação. 
+ 
+5.1.3 Vitamina C 
+ 
+Pode-se observar na Tabela 6 que os tratamentos ultrassônicos e o tratamento 
+térmico, exceto o US5, obtiveram uma conservação considerável (acima de 90%) da vitamina 
+C em relação à amostra controle. Esse resultado mostra que os parâmetros ultrassônicos 
+utilizados no atual trabalho não obtiveram efeito negativo sobre a vitamina C do suco de caju. 
+  
+Tabela 6 - Resultados dos efeitos do Ultrassom sobre a vitamina C do suco de caju. 
+ 
+Processamento Intensidade TempoTemperatura Vitamina C % 
+2
+W/cm (min.) (ºC) (mg/L) 
+ab 
+Controle - - - 47,4 ± 0,5100% 
+ab 
+Trat. Térmico - 1 90 47,5 ± 0,499% 
+abcd 
+US 1 75,34 2 20 46,3 ± 0,598% 
+c 
+US 2 75,34 2 40 44,4 ± 0,394% 
+cd 
+US 3 75,34 10 20 44,9 ± 0,195% 
+abcd 
+US 4 75,34 10 40 45,9 ± 0,197% 
+e 
+US 5 372,93 2 20 38,1 ± 0,281% 
+abd 
+US 6 372,93 2 40 47,1 ± 0,299% 
+b 
+US 7 372,93 10 20 47,6 ± 0,3101% 
+acd
+US 8 372,93 10 40 45,9 ± 0,7 96% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+ABID et al. (2013) processaram suco de maçã com ultrassom por 30, 60 e 90 
+minutos e também verificaram que até 30 minutos o processamento não gerou efeito sobre a 
+vitamina C, mas aumentou o conteúdo para 5,49 e 5,63 mg/100mL depois de 60 e 90 minutos, 
+respectivamente, em relação ao controle (4,20 mg/100 mL).  
+Os dados encontrados na literatura não são claros a respeito do efeito do ultrassom 
+sobre o ácido ascórbico. Há estudos que relatam degradação significativa do ácido ascórbico 
+em sucos de tomate-de-capucho (Physalis peruviana) e de manga tratados com ultrassom 
+(ORDÓÑEZ-SANTOS et al., 2017; SANTHIRASEGARAM et al., 2013), enquanto que 
+ 
+52 
+ 
+outros relatam aumento (p < 0,05) desse ácido para: 20,62; 21,80; 26,55 e 22,84 mg/100 mL, 
+quando comparados ao controle (16,30 mg/100 mL) após processamento ultrassônico (400W; 
+20Hz) em suco de morango por 4 min (US4), 8 min (US8), 12 min (US12) e 16 min (US16), 
+respectivamente (WANG et al., 2019).  
+O aumento do ácido ascórbico no suco processado por ultrassom pode ser 
+explicado pela ação da cavitação sobre a parede celular, que resulta na ruptura mecânica da 
+célula, liberando ácido ascórbico no suco, apesar de parte ser oxidada. Além disso, pode 
+remover oxigênio evitando a oxidação da vitamina C. Já a degradação desse composto pode 
+ser atribuída à reação com radicais livres (principalmente hidroxila), comumente produzidos 
+em frequências intermediárias (200 – 500 kHz) e cuja produção é influenciada por uma série 
+de fatores, como a presença de gases dissolvidos (principalmente O), a potência acústica e a 
+2
+temperatura (AGUILAR et al., 2017; PUTNIK et al., 2019; WANG et al., 2019). Com isso, a 
+conservação da vitamina C obtida pelos parâmetros utilizados no presente trabalho pode ser 
+atribuída a remoção de oxigênio do meio e a baixa frequência utilizada (19 kHz). 
+AGUILAR et al. (2017), com o objetivo de analisar a estabilidade do ácido 
+ascórbico estudaram a termossonicação por 60 min (700W; 25 kHz; 0,016 W/mL) em 
+produtos alimentares líquidos, utilizando soluções modelos de ácido ascórbico (250 mg/mL) 
+que foram desgaseificadas e processadas: ultrassom a 25 °C (sonicação); ultrassom a 55 °C; 
+processamento sem ultrassom a 55 °C (tratamento térmico) e processamento sem ultrassom a 
+25 °C (controle). Verificaram que o teor de ácido ascórbico foi estável durante todos os 
+tratamentos, inclusive o tratamento térmico não foi suficiente para degradar um número 
+representativo de moléculas de ácido ascórbico nos sistemas aquosos desgaseificados. 
+Concluindo que a concentração de oxigênio no suco influencia mais o conteúdo de ácido 
+ascórbico do que a temperatura, e sugere que a desgaseificação prévia das amostras pode 
+limitar a reação de oxidação, mesmo em altas temperaturas. 
+O processo ultrassônico primeiramente rompe as estruturas intracelulares 
+(plastídios) resultando na liberação dos compostos do interior das células. Dessa forma, as 
+moléculas de ácido ascórbico entram em contato com o oxigênio dispersos no citoplasma. 
+Assim, é possível haver o início da degradação desse composto que continua quando as 
+paredes das células se quebram, permitindo a dispersão de compostos bioativos no soro do 
+suco, onde acontece o contato com maior concentração de oxigênio. Portanto desgaseificar 
+previamente o suco antes do processamento reduz a possibilidade de oxidação da vitamina C 
+(AGUILAR et al., 2017).  
+Para validar os processos anteriormente citados AGUILAR et al. (2017) 
+ 
+53 
+ 
+processou sucos de laranja e de tangerina a 55 ° C (desgaseificados), com e sem ultrassom 
+(700W;25Hz). Os dois tratamentos também não obtiveram efeito significativo (p < 0,05) no 
+teor de ácido ascórbico para nenhum suco tratado. Concluindo que o ultrassom pode vir a ser 
+usado de forma simples ou em conjunto com outras tecnologias não-térmicas para conservar 
+os compostos bioativos dos sucos de frutas. 
+ 
+5.1.4 Enzimas 
+ 
+ Na tabela abaixo (Tabela 7) verifica-se que todos os tratamentos ultrassônicos 
+diminuíram (p < 0,05) a atividade enzimática em relação ao suco controle. A maior inativação 
+foi obtida pelos tratamentos US6, US7 e US8, diminuindo até 89% (US7) em relação ao 
+2
+controle. Resultado próximo foi encontrado com aplicação ultrassônica de 373,93 W/cm por 
+10 min em suco de melão Cantaloupe, com redução de 77% da atividade enzimática 
+(FONTELES, 2011). 
+ 
+Tabela 7 - Resultados do efeito do ultrassom na atividade da peroxidase e da polifenoloxidase 
+do suco de caju. 
+Peroxidase Atividade 
+Polifenoloxidase 
+Processamento Tempo Temperatura 
+(UAE/min/mL) 
+Residual (UAE/min/mL) 
+2  
+(W/cm) (min.)(ºC)
+ 
+ 
+% 
+c 
+Controle - - 4,22 ± 0,58100% nd 
+d 
+Trat. Térmico 
+1 90 0,22 ± 0,005% nd 
+a 
+US 1 75,34 2 20 3,22 ± 0,5876% nd 
+ac 
+US 2 75,34 2 40 3,44 ± 0,1981% nd 
+a 
+US 3 75,34 10 20 3,11 ± 0,2073% nd 
+a 
+US 4 75,34 10 40 2,78 ± 0,1966% nd 
+ac 
+US 5 372,93 2 20 3,44 ± 0,1981% nd 
+b 
+US 6 372,93 2 40 1,11 ± 0,1926% nd 
+bd 
+US 7 372,93 10 20 0,44 ± 0,1911% nd 
+b 
+US 8 372,93 10 40 1,11 ± 0,2026% nd 
+nd: Não detectado. Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna 
+indicam que as amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+O ultrassom (US7) alcançou uma atividade residual de 11% (0,44 UAE/min./mL), 
+muito próxima a alcançada pelo tratamento térmico convencional (5%; 0,22 UAE/min./mL). 
+A mesma inativação (89%) da peroxidase encontrada nesse trabalho foi verificada por 
+LAMIKANRA & WATSON (2000) que observaram redução de 90% na atividade dessa 
+enzima em melões Cantaloupe com a aplicação de tratamento térmico a 80°C por 5 minutos. 
+Isso mostra que a sonicação é uma tecnologia emergente capaz de inativar enzimas que são 
+ 
+54 
+ 
+indesejadas nos produtos frutíferos, e pode substituir o calor na inativação enzimática. 
+O que pode explicar a inativação da peroxidase do suco de caju por ultrassom é o 
+efeito da cavitação e da oscilação mecânica que pode promover ou causar danos às enzimas, 
+aos substratos, às reações entre enzimas e substratos e seus arredores. Esses efeitos podem 
+ser: alteração na conformação da enzima (acelerar o contato entre ela e o substrato), alteração 
+de suas características, desnaturação, efeitos nos substratos, alteração nas características das 
+reações (enzima + substrato), aumento da atividade, fornecimento de um ambiente ideal para 
+que as reações ocorram (HUANG et al., 2017). 
+A desnaturação proteica de enzimas após a aplicação de ultrassom foi constatada 
+por KAPTUROWSKA et al. (2012), que verificaram o impacto das ondas ultrassônicas 
+geradas por um sonicador do tipo trompa sobre a atividade lipolítica da lipase produzida pela 
+levedura Yarrowia lipolytica KKP 379. Ao avaliarem a eficiência da sonicação na liberação da 
+enzima pela Y. Lipolytica, verificaram que os parâmetros ideais do processo de liberação da 
+enzima (150W/15 min e 9 semanas de tempo de armazenamento da biomassa congelada) não 
+foram os mais eficazes para a obtenção de alta atividade lipolítica devido à desnaturação 
+proteica sofrida pela lipase como efeito da cavitação. 
+Quanto a enzima polifenoloxidase, não foi detectada atividade enzimática no suco 
+de caju quando analisado por este método. Resultado similar foi encontrado por RABELO 
+(2012) que também não detectou atividade da polifenoloxidase, apenas atividade peroxidásica 
+em suco de caju.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+55 
+ 
+5.1.5 Cor 
+ 
+ Os parâmetros de cor como ângulo de tonalidade (h°), índice de saturação (ΔC) e 
+variação total de cor (ΔE) foram analisados e os resultados podem ser observados na tabela 8. 
+ 
+Tabela 8 - Resultados do efeito do ultrassom na Cor do suco de caju. 
+Processamento 
+Tempo Temperatura 
+   
+h° ΔCΔE
+2
+  
+(W/cm) 
+(min.)(ºC)
+d
+Controle - - 101,84 ± 0,08 - - 
+fdd 
+Trat. Térmico 1 90 105,08 ± 0,05 17,8 ± 2,9 7,47 ± 0,70
+ceab 
+US 1 75,34 2 20 102,83 ± 0,11 28,7 ± 0,62 1,32 ± 0,14
+ababc 
+US 2 75,34 2 40 103,52 ± 0,19 29,6 ± 0,83 3,49 ± 0,61
+caba 
+US 3 75,34 10 20 102,92 ± 0,16 29,7 ± 0,41 6,43 ± 0,37
+baa 
+US 4 75,34 10 40 103,76 ± 0,08 29,3 ± 0,38 5,34 ± 0,11
+deca 
+US 5 372,93 2 20 102,35 ± 0,19 31,5 ± 0,55 5,31 ± 0,91
+acbca 
+US 6 372,93 2 40 103,10 ± 0,50 31,2 ± 1,46 5,58 ± 0,37
+ababcd 
+US 7 372,93 10 20 103,54 ± 0,30 29,9 ± 0,79 8,33 ± 0,23
+ababc a 
+US 8 372,93 10 40 103,47 ± 0,36 30,0 ± 1,04 5,40 ± 0,73
+h° (ângulo de tonalidade); ΔC (índice de saturação); ΔE (variação total da cor). Os Valores são média ± desvio. 
+Valores com letras minúsculas iguais na mesma coluna indicam que as amostras não diferem entre si pelo Teste 
+de Tukey (p < 0,05). 
+ 
+ Para o ângulo de tonalidade (h°) foi observado que todos os tratamentos diferiram 
+(p < 0,05) da amostra controle e do tratamento térmico. Houve um aumento nos valores desse 
+parâmetro, mas os ensaios continuaram próximos ao ângulo de 100° como o controle. 
+Contudo não houve modificação na coloração do suco de caju, pois o hº continuou na faixa do 
+amarelo. 
+O índice de saturação (ΔC) e o ângulo de tonalidade (h°) podem melhorar o 
+entendimento das variações da cor encontradas nas amostras. O ΔC indica a variação do grau 
+de intensidade do croma (a* e b*) da amostra tratada com relação à fresca. Quanto maior o 
+valor, menor a saturação da amostra, ou seja, mais intensa e vívida ela é.  
+Foi observado que a maior potência aumentou a vivacidade (ΔC) da cor do suco 
+tratado em relação ao controle e ao tratamento térmico. Tendência semelhante também foi 
+observada no croma da amostra de suco de morango com um ligeiro aumento no tratamento 
+com ultrassom de 12 min (WANG et al., 2019). Isso pode ser resultado de reações que 
+acontecem durante o tratamento ultrassônico, como o aumento da hidroxilação do anel 
+aromático dos fenóis, o que aumenta a atividade antioxidante e leva a uma diminuição na 
+oxidação dos pigmentos, aumentando assim a intensidade e vivacidade da cor do suco 
+(ORDÓÑEZ-SANTOS et al., 2017). 
+ 
+56 
+ 
+ O ΔE é a variação total de cor entre a amostra tratada e a controle. Um ΔE > 2 
+corresponde a diferenças visualmente perceptíveis em diversos produtos (CHOI et al., 2002). 
+Assim, verificou-se que todas as amostras tratadas exceto a submetida ao tratamento US1 
+2
+(75.34 W/cm; 2 minutos; 20°C) são consideradas visualmente distintas, apresentando ΔE 
+maior que 2. WANG et al. (2019) verificaram que o ΔE das amostras de suco de morango 
+tratadas com ultrassom apresentou uma tendência crescente com o aumento do tempo de 
+processo. As amostras tratadas por ultrassom (200 W; 10 kHz; 12 min.) e (200 W; 10 kHz; 16 
+min.) variaram 0,42 e 1,01, respectivamente, mas não foram consideradas distintas 
+visualmente. Essa diferença visual pode ter sido consequência do aumento da intensidade da 
+cor (ΔC), um efeito considerado positivo no suco de caju, pois a vivacidade dos sucos para os 
+consumidores é sinônimo de produto fresco e favorece a escolha do produto na hora da 
+compra.    
+ 
+5.2 Ozônio 
+ 
+5.2.1 Atividade Antioxidante (ABTS, DPPH e FRAP) 
+ 
+Segundo o ABTS (Tabela 9), todos os tratamentos de ozonização diminuíram (p 
+< 0,05) em relação ao controle, mas não diferiram entre si. Quando comparados ao tratamento 
+térmico, todos tratamentos apresentaram maiores atividades antioxidantes, conservando até 
+20% mais essa característica no suco. 
+Para o método de análise DPPH (Tabela 10), todos os processamentos de 
+ozonização também diminuíram (p < 0,05) a capacidade antioxidante em relação ao controle. 
+Mas não diferiram entre si e do tratamento térmico. Já os resultados encontrados segundo o 
+FRAP (Tabela 11), o processamento OZ1 obteve o melhor resultado de atividade antioxidante 
+em relação ao controle e ao tratamento térmico, os outros ensaios não obtiveram diferença 
+significativa entre si e o controle. 
+As mudanças observadas na atividade antioxidante do suco de caju podem estar 
+associadas às alterações no conteúdo total de compostos bioativos (compostos fenólicos) 
+devido ao estresse oxidativo. 
+ 
+ 
+ 
+ 
+ 
+57 
+ 
+Tabela 9 - Resultados do efeito do ozônio sobre a atividade antioxidante (ABTS) do suco de 
+caju. 
+ABTS 
+Concentração 
+Processamento % 
+(mgO/mL) 
+3(M eq. de Trolox) 
+c 
+Controle - 1340,0 ± 26,0100% 
+b 
+Trat. Térmico - 887,7 ± 55,566% 
+a 
+OZ1 0,08 1087,7 ± 68,481% 
+a 
+OZ2 0,16 1041,1 ± 38,378% 
+a 
+OZ3 0,24 1155,5 ± 21,486% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+Tabela 10 - Resultados do efeito do ozônio sobre a atividade antioxidante (DPPH) do suco de 
+caju. 
+DPPH  
+Concentração 
+Processamento % 
+(mgO/mL) (M eq. de Trolox) 
+3
+b 
+Controle - 1537,3 ± 56,0100% 
+a 
+Trat. Térmico - 1301,7 ± 91,084% 
+a 
+1264,0 ± 72,3
+OZ1 0,08 82% 
+a 
+1088,4 ± 36,7
+OZ2 0,16 71% 
+a
+OZ3 0,24 1292,9 ± 36,9 84% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+Tabela 11 - Resultados do efeito do ozônio sobre a atividade antioxidante (FRAP) do suco de 
+caju. 
+Concentração FRAP 
+Processamento % 
+(mgO/mL) (µM eq. de ácido ascórbico) 
+3
+a
+Controle - 2226,5 ±100,7 100% 
+b 
+Trat. Térmico - 1685,0 ± 22,075% 
+c 
+OZ1 0,08 2478,2 ± 146,0111% 
+a
+OZ2 0,16 2215,4 ± 215,5 99% 
+a
+OZ3 0,24 2263,5 ± 65,7 101% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+Segundo ALMEIDA et al. (2015), a degradação de compostos fenólicos e 
+consequentemente a diminuição da atividade antioxidante após a ozonização é explicado pelo 
+rompimento do anel aromático e consequentemente a formação de compostos hidroxilados e 
+quinônicos. 
+FONSECA et al. (2017) também encontraram degradação de compostos 
+fenólicos (precursores da cor do caldo) após aplicação de ozônio na clarificação do caldo de 
+cana-de-açúcar. Segundo FUNDO et al. (2018) a atividade antioxidante total do suco de 
+ 
+58 
+ 
+melão também sofreu uma queda de 45% e 52% após 30 min e 60 min de exposição ao 
+ozônio (7,0 ± 2,4 g/L), respectivamente. A degradação considerável da atividade antioxidante 
+neste trabalho difere do atual devido ao tempo de exposição usado pelo autor que foi 
+consideravelmente maior que o utilizado no atual trabalho (6 min). As cargas de ozônio 
+aplicadas no suco de caju foram baseadas na carga mínima (0,075 mg O/mL) aplicada para 
+3
+inativação de 5 log UFC/mL de E. coli em suco de laranja (PATIL, BOURKE, et al., 2009). 
+Os resultados encontrados para a atividade antioxidante do suco de caju foram 
+comparados com os de ALMEIDA et al. (2015) que utilizaram uma concentração de 0,23 
+mgO/mL, próxima a do atual trabalho e verificaram que a concentração dos compostos 
+3
+fenólicos das amostras de suco de laranja prebiótico foram estatisticamente a mesma do 
+controle, um resultado igual ao encontrado para a atividade antioxidante do suco de caju nos 
+processamentos OZ2 e OZ3, segundo o FRAP (Tabela 11). Esses resultados podem estar 
+relacionados com a concentração de ozônio aplicada, a concentração de carga orgânica e o 
+Brixº dos sucos avaliados, pois CHOI et al. (2012) observaram que a quantidade dos sólidos 
+presentes no suco, o ozônio residual no ambiente, fatores ambientais, como pH e temperatura 
+e a quantidade de matéria orgânica que envolve as células influenciam nos efeitos da 
+ozonização. 
+Embora os compostos fenólicos sejam suscetíveis ao ataque de ozônio, as 
+amostras tratadas por essa tecnologia obtiveram maior conservação da atividade antioxidante 
+quando comparada as que foram tratadas pelo tratamento térmico segundo o ABTS e o FRAP. 
+ 
+5.2.2 flavonoides amarelos e Vitamina C 
+ 
+Nos resultados abaixo (Tabela 12) observou-se que a ozonização diminuiu 
+significativamente (p < 0,05) a concentração de flavonoides amarelos e de vitamina C no suco 
+de caju. Porém, todos os tratamentos conservaram melhor os flavonoides quando comparado 
+ao tratamento térmico. 
+Tabela 12 - Resultados do efeito do ozônio sobre os flavonoides amarelos do suco de caju. 
+Concentração Flavonoides Amarelos 
+Processamento % 
+(mgO/mL) (mg/100mL) 
+3
+c  
+Controle - 0,44 ± 0,00100%
+a  
+Trat. Térmico - 0,33 ± 0,0175%
+ab
+OZ1 0,08 0,36 ± 0,01 81% 
+ab  
+OZ2 0,16 0,36 ± 0,0281%
+b  
+OZ3 0,24 0,37 ± 0,0084%
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+ 
+59 
+ 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+Tabela 13 - Resultados do efeito do ozônio sobre os Vitamina C do suco de caju. 
+Concentração Vitamina C 
+Processamento % 
+(mgO/mL) (mg/L) 
+3
+ab 
+Controle - 45,5 ± 2,1 100%
+b 
+Trat. Térmico - 47,5 ± 0,4 104%
+ab
+OZ1 0,08 47,1 ± 0,2 103% 
+ac 
+OZ2 0,16 44,6 ± 0,5 98%
+c 
+OZ3 0,24 42,6 ± 0,4 93%
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+FUNDO et al. (2018) também verificaram que o ozônio (30 min de ozonização) 
+reduziu significativamente o conteúdo total de carotenoides e da vitamina C no suco de melão 
+como aconteceu no presente trabalho com os flavonoides amarelos e o ácido ascórbico. Os 
+autores relacionaram a degradação desses compostos a clivagens oxidativas nas suas 
+moléculas. 
+Essas degradações podem ser explicadas pelo efeito da ozonização nos 
+compostos orgânicos presentes nos alimentos, que envolve muitas reações químicas e 
+transferência de massa. Diferentes grupos funcionais (alcenos, compostos carbonílicos, 
+álcoois e ácidos carboxílicos) são atacados pela molécula de ozônio e esse ataque pode ser 
+direto ou indireto. Quando o ataque é indireto, ocorre através do subproduto da oxidação, o 
+radical hidroxila. Quando o ataque é direto as reações ocorrem pela ação direta do ozônio e 
+são consideradas seletivas (GOTTSCHALK, LIBRA e SAUPE, 2000). As duplas ligações são 
+atacadas formando ozoneto primário instável que é clivado para formar aldeídos, cetonas e 
+peróxido de hidrogênio (CATALDO, 2001). 
+ 
+5.2.3 Enzimas 
+ 
+Na tabela 14 observou-se que todos os tratamentos de ozônio obtiveram grande 
+efeito sobre a atividade enzimática da peroxidase do suco de caju. A redução observada é 
+diretamente proporcional ao aumento da concentração do ozônio. O ensaio OZ3 diminuiu 
+90% da atividade, redução igual a alcançada pelo tratamento térmico. 
+JARAMILLO SÁNCHEZ et al. (2018) estudaram a aplicação de ozônio no suco 
+de pêssego tratado por 3, 4 e 5 min (0,11 mg O/min/mL) que apresentou atividade residual de 
+3
+POD de 52,1%, 33,0% e 19,0%, respectivamente. Ao aumentar a concentração para 0,22 
+mgO/ min/mL e aplicar por 1 minuto verificaram que a atividade residual foi 20,4% do POD 
+3
+ 
+60 
+ 
+inicial, o que revela a forte influência da concentração do ozônio sobre a atividade enzimática. 
+Essa concentração de ozõnio foi muito próxima a aplicada no atual trabalho (OZ3) que 
+reduziu a 10% a atividade residual do suco de caju, confirmando a inativação da enzima por 
+ozonização. 
+ 
+Tabela 14 - Resultados do efeito do ozônio na atividade da peroxidase e polifenoloxidase do 
+suco de caju. 
+ 
+Atividade 
+Polifenoloxidase 
+Concentração Peroxidase 
+(UAE/min/mL) 
+Processamento Residual 
+(mg O/mL) (UAE/min/mL) 
+3
+ 
+% 
+ 
+ab
+nd 
+Controle - 100% 
+     2,11 ± 0,19 
+b
+ 
+nd 
+Trat. Térmico - 10% 
+0,22 ± 0,00
+d
+nd 
+OZ1 0,08 100% 
+2,11 ± 0,19 
+c
+nd 
+OZ2 0,16 57% 
+1,22 ± 0,00 
+a
+nd 
+OZ3 0,24 10% 
+0,22 ± 0,00 
+nd: Não detectado. Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna 
+indicam que as amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+A oxidação de enzimas (proteínas) por ozônio pode ser explicado pela 
+modificação covalente da macromolécula, induzida seja por reação direta com ozônio ou por 
+reações indiretas (JARAMILLO SÁNCHEZ et al., 2018). As espécies reativas de oxigênio 
+produzidas na decomposição do ozônio variam em sua reatividade e os danos resultantes são 
+altamente variáveis e complexos. Em alguns casos, os danos estão limitados a resíduos 
+específicos, enquanto em outros, é difundido e não específico. O Oxigênio de espécies 
+altamente reativas podem interagir com o lado de ambos os aminoácidos das cadeias e 
+esqueletos de proteínas resultando na fragmentação ou reticulações proteína-proteína. Em 
+geral, espécies menos reativas apresentam maior seletividade no que diz respeito aos resíduos 
+visados e a sua localização espacial. Assim, propriedades físicas e químicas de proteínas, 
+incluindo conformação, estrutura e solubilidade, bem como atividades enzimáticas, pode 
+mudar por oxidação (DAVIES, 2016). 
+ Não foi encontrada atividade da enzima polifenoloxidase no suco de caju pelo 
+método utilizado. 
+ 
+ 
+ 
+ 
+ 
+61 
+ 
+5.2.4 Cor 
+ 
+Os resultados da tabela abaixo (Tabela 15) mostram o efeito do ozônio sobre os 
+parâmetros de cor do suco de caju. 
+ 
+Tabela 15 - Resultados do efeito do ozônio sobre a cor do suco de caju. 
+Concentração 
+    
+Processamento h° ΔCΔE 
+(mgO/mL) 
+3
+ab
+Controle - 104,0 ± 0,2 - - 
+b db 
+Trat. Térmico - 105,08 ± 0,0517,8 ± 2,9 7,47 ± 0,70
+aaa
+OZ 1 0,08 103,4 ± 0,7 23,00 ± 2,58 5,88 ± 0,11 
+bcb
+OZ 2 0,16 104,7 ± 0,3 20,39 ± 1,24 8,78 ± 0,90 
+aaba
+OZ 3 0,24 103,9 ± 0,4 24,18 ± 1,82 4,76 ± 0,09 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+Para o ângulo de tonalidade (h°) foi observado que todos os tratamentos de 
+ozonização diminuíram (p < 0,05) em relação a amostra controle. O OZ2 não obteve diferença 
+significativa do tratamento térmico. Houve uma diminuição nos valores desse parâmetro para 
+os tratamentos de OZ1 e OZ3, em relação ao controle e ao tratamento térmico, mas os ensaios 
+mostraram proximidade ao ângulo de 100°C, o que revela que a cor, apesar da diferença 
+estatisticamente, continua na faixa do amarelo. Diferenças significativas também foram 
+obtidas entre todas as amostras de suco de melão Cantaloupe, sofrendo decaimento quando o 
+ozônio foi aplicado. O suco fresco tinha o tom mais amarelado e vívido (FUNDO et al., 
+2018). 
+Observou-se que o parâmetro Chroma mostrou uma diminuição significativa, o 
+que revela uma diminuição na intensidade e vivacidade da cor do suco, porém todos os 
+tratamentos obtiveram valores de chroma maiores que o tratamento térmico. Isso também 
+aconteceu com os sucos de melão Cantaloupe ozonizados (FUNDO et al., 2018) e pode ser 
+explicado pela formação de compostos hidroxilados e quinônicos oriundos da degradação de 
+compostos fenólicos (ALMEIDA et al., 2015). 
+ O ΔE é a variação total de cor entre a amostra tratada e a fresca. O ΔE > 2 
+corresponde a diferenças visualmente perceptíveis em diversos produtos (CHOI et al., 2002) e 
+é analiticamente classificado em muito distinto (ΔE > 3,0) distinto (1,5 < ΔE < 3,0) ou pouco 
+distinto (ΔE < 1,5) (TIWARI et al., 2008). Todas as amostras obtiveram ΔE maior que 3, 
+ 
+62 
+ 
+sendo classificadas como diferente da amostra controle segundo CHOI et al. (2002) e muito 
+distinta segundo TIWARI et al. (2008). O processamento OZ2 não obteve diferença (p < 0,05) 
+do tratamento térmico, e isso pode estar relacionado aos valores obtidos no ângulo de 
+tonalidade (hº). Essa mudança na cor do suco de caju pode ser devido a diminuição dos 
+flavonoides amarelos como ocorreu com os carotenoides no suco de melão, onde FUNDO et 
+al. (2018) verificaram ΔE igual a 12. 
+Portanto, o ozônio não obteve um efeito positivo no suco de caju em relação a cor, 
+pois diminuiu a intensidade das amostras tratadas, que foram consideradas diferentes 
+visualmente em relação a amostra controle e isso pode afetar a escolha do cliente na compra 
+do produto. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+63 
+ 
+5.3 Luz Pulsada 
+ 
+5.3.1 Atividade Antioxidante e Compostos Bioativos 
+ 
+ Podemos verificar nas Tabelas 16, 17 e 18 os resultados da atividade antioxidante 
+segundo os métodos ABTS, DPPH e FRAP após o processamento com luz pulsada: 0,075; 
+2
+0,700 e 1 J/cm. 
+Segundo o ABTS (Tabela 16), os tratamentos LP1 e LP2 aumentaram 
+significativamente a atividade antioxidante do suco de caju em relação ao controle, mas 
+2
+quando a energia do processo aumentou para 1 J/cm a atividade decaiu para 79%. A 
+2 
+intensidade de 0.700 J/cmfoi a que obteve o melhor resultado segundo esse método. 
+ Ao ser comparado com os resultados encontrados pelo método DPPH (Tabela 17) 
+todos os tratamentos mantiveram a tendência numérica, mas não apresentaram diferença 
+significativa entre si e o controle. Já para o FRAP (Tabela 18) os ensaios também não se 
+diferenciaram, mas aumentaram (p < 0,05) em relação ao controle. 
+Todos tratamentos de luz pulsada alcançaram capacidade antioxidante superior (p 
+< 0,05) ao tratamento térmico, segundo o ABTS, o DPPH e o FRAP, com exceção do LP3 
+para o método ABTS. A menor intensidade de luz pulsada aplicada foi suficiente para obter 
+uma atividade antioxidante maior do que o tratamento térmico, o qual diminuiu 
+significativamente em relação ao controle segundo os três métodos de análise.  
+ 
+Tabela 16 - Resultados do efeito da Luz Pulsada sobre a atividade antioxidante (ABTS) do 
+suco de caju. 
+Energia ABTS 
+Processamento % 
+2
+J/cm 
+(M eq. de Trolox) 
+b
+Controle - 1261,1 ± 48,5 100% 
+a 
+Trat. Térmico - 887,7 ± 55,5 70%
+bc
+LP1 0,075 1335,5 ± 46,7 106% 
+c
+LP2 0,700 1443,3 ± 41,6 114% 
+a
+LP3 1 991,1 ± 50,1 79% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+64 
+ 
+Tabela 17 - Resultados do efeito da Luz Pulsada sobre a atividade antioxidante (DPPH) do 
+suco de caju. 
+Energia DPPH 
+Processamento % 
+2
+J/cm 
+(M eq. de Trolox) 
+a
+Controle - 1536,2 ± 27,1 100% 
+b 
+Trat. Térmico - 1301,7 ± 91,0 84%
+a
+LP1 0,075 1622,9 ± 34,0 106% 
+a
+LP2 0,700 1626,2 ± 28,3 106% 
+a
+LP3 1 1581,8 ± 18,9 103% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+Tabela 18 - Resultados do efeito da Luz Pulsada sobre a atividade antioxidante (FRAP) do 
+suco de caju. 
+Energia FRAP 
+Processamento % 
+2
+J/cm (µM eq. de ácido ascórbico) 
+a
+Controle - 2055,7 ± 146,2 100% 
+ab 
+Trat. Térmico - 1685,0 ± 22,0 81%
+b
+LP1 0,075 2680,2 ± 298,2 130% 
+b
+LP2 0,700 2748,8 ± 176,8 133% 
+b
+LP3 1 2880,2 ± 181,9 140% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+KWAW et al. (2018) aplicaram a combinação de luz pulsada + ultrassom (LPU) e 
+ultrassom + luz pulsada (ULP) em suco de amora fermentado com ácido lático e verificaram 
+que a combinação que obteve a maior concentração total de compostos fenólicos foi a que 
+aplicou luz pulsada antes do ultrassom (LPU). Isso aconteceu devido a luz pulsada promover 
+a degradação de alguns fitonutrientes pelo efeito fotoquímico e consequentemente aumentar 
+os ácidos fenólicos no meio, contribuindo também para um aumento significativo da atividade 
+antioxidante do suco. Isto pode explicar o aumento da atividade antioxidante no presente 
+trabalho, segundo o método ABTS e FRAP. 
+ROCK et al. (2015) encontraram o mesmo efeito da luz pulsada sobre a atividade 
+antioxidante de blueberries frescas, ou seja, obteve a mesma tendência da atividade 
+encontrada no suco de caju segundo o método ABTS , que aumentou nos primeiros ensaios 
+22
+(0,075 e 0,700 J/cm) e diminuiu quando aplicada a maior intensidade (1 J/cm). Verificaram 
+que os compostos fenólicos aumentaram significativamente quando aplicado 60 e 90 
+segundos de luz pulsada (3 pulsos/s), onde o maior aumento relativo ao controle foi de 48% 
+quando aplicado LP 90s. No entanto, uma diminuição numérica no total de fenólicos foi 
+observada em LP 120 s, mas não se diferenciou do controle.  
+ 
+65 
+ 
+A diminuição de compostos fenólicos e consequentemente a diminuição da 
+atividade antioxidante em experimentos que envolveram altas intensidades de luz pulsada, foi 
+atribuída ao aumento da atividade da polifenoloxidase (PPO). No presente trabalho não foi 
+encontrado atividade enzimática dessa enzima, mas foi encontrada atividade peroxidásica, 
+enzima do mesmo grupo, que realiza as mesmas funções na matriz alimentar. A atividade da 
+peroxidase (Tabela 21) não foi afetada (não houve inativação da enzima) quando aplicado 1 
+2
+J/cm no suco de caju. Portanto essa pode ser a explicação para a diminuição da atividade 
+2
+antioxidante quando foi aplicada a maior intensidade de luz pulsada (1 J/cm) (ROCK et al., 
+2015).    
+Na tabela abaixo (Tabela 19) observamos os resultados do efeito da luz pulsada 
+sobre os flavonoides amarelos do suco de caju e verificamos que os tratamentos LP1 e LP2 
+aumentaram (p > 0,05) 42% e 14% em relação ao controle. Mas o LP3, o tratamento térmico e 
+o controle não obtiveram diferença (p > 0,05) entre si.  
+A falta de informações e incertezas a respeito da absorção óptica e da dispersão 
+característica dos principais componentes alimentares e suas interações com os fótons de luz 
+pulsada é a principal dificuldade para explicar os efeitos dessa tecnologia sobre os compostos 
+bioativos. Atualmente todos os métodos de ação utilizados pela luz pulsada estão voltados 
+para a explicação da inativação microbiológica. Mas não explicam os resultados encontrados 
+sobres os micronutrientes dos alimentos. Porém o método fotofísico, recentemente relatado 
+por pesquisadores para a inativação de microrganismos, pode ser uma alternativa que explique 
+os resultados obtidos sobre os micronutrientes dos alimentos. 
+O método fotofísico utiliza perturbações de alta energia para gerar rompimento da 
+parede celular, permeabilidade da membrana citoplasmática e colapso de estruturas internas, o 
+que pode gerar um aumento de micronutrientes e uma maior disponibilidade desses, devido a 
+exposição dos componentes intracelulares (KOUTCHMA, 2018). 
+KWAW et al., (2018) ao verificar o efeito da luz pulsada no suco de amora 
+fermentado, detectaram uma correlação positiva (p < 0,05) entre compostos fenólicos totais e 
+DPPH• e entre ABTS •+ e flavonoides. Com isso, os resultados do atual trabalho demonstram 
+que a concentração dos flavonoides amarelos após a aplicação de luz pulsada (LP1) pode ter 
+relação com o aumentou da capacidade antioxidante do suco de caju, segundo o ABTS.  
+ 
+ 
+ 
+66 
+ 
+Tabela 19 – Resultados do efeito da Luz Pulsada sobre os flavonoides amarelos do suco de 
+caju. 
+Energia flavonoides amarelos 
+Processamento % 
+2
+J/cm (mg/100mL) 
+a  
+Controle - 0,35 ± 0,01100%
+a  
+Trat. Térmico - 0,33 ± 0,0194%
+b  
+LP1 0,075 0,50 ± 0,05142%
+ab  
+LP2 0,700 0,40 ± 0,05114%
+a
+LP3 1 0,37 ± 0,01 105% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+ Na tabela 20 pode-se observar que todos os tratamentos de luz pulsada não 
+obtiveram efeito sobre a vitamina C do suco de caju, todos os ensaios não diferiram 
+significativamente em relação ao controle.  
+ 
+Tabela 20 - Resultados do efeito da Luz Pulsada sobre a Vitamina C do suco de caju. 
+ 
+Energia Vitamina C 
+Processamento % 
+2
+J/cm  (mg/L) 
+a  
+Controle - 47,5 ± 0,1100%
+a  
+Trat. Térmico - 47,5 ± 0,4100%
+a  
+LP1 0,075 47,1 ± 0,599%
+a  
+LP2 0,700 47,2 ± 0,599%
+a
+LP3 1 47,2 ± 0,2 99% 
+Os Valores são média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as 
+amostras não diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+ORLOWSKA et al. (2013) observaram que os efeitos distintos das fontes de UV 
+no conteúdo da vitamina C podem estar relacionados às propriedades absortivas do suco 
+tratado e às características de emissão de lâmpadas usadas. A lâmpada HIP-2 (0,75 Hz, 344 
+J/pulso) utilizada pelos autores ocasionou a fotólise da vitamina C no suco de maçã analisado, 
+mas as lâmpadas HIP-1 (8 Hz, 31 J/pulso) e HIP-3 (0,5 Hz, 644 J/pulso) não afetaram 
+significativamente o conteúdo de vitamina C (p > 0,05). Concluindo que a energia 
+transportada pelo pulso de luz e sua taxa de frequência podem ser parâmetros importantes que 
+afetam a qualidade do suco e ao utilizar uma alta energia é necessário uma baixa frequência 
+para evitar a fotólise da vitamna C. 
+FERRARIO & GUERRERO (2017) verificaram que as características do suco 
+como, baixo valor de transmitância, turbidez do meio e partículas suspensas também 
+ 
+67 
+ 
+influenciam nos efeitos da luz pulsada, pois inibem a penetração da luz no líquido.  
+O conteúdo de vitamina C também foi conservado durante um armazenamento de 
+2
+14 dias em fatias de morango tratadas com 4 J/cm, porém quando as fatias foram tratadas 
+2
+com uma intensidade maior (8 J/cm) a vitamina C conservou-se apenas por 6 dias (AVALOS-
+LLANO et al., 2018). No presente estudo pode-se concluir que todas as energias de luz 
+pulsada utilizadas não alteram o conteúdo de vitamina C do suco de caju. 
+ 
+5.3.2 Enzimas 
+ 
+Na Tabela 21 pode ser observado que apenas o tratamento LP2 apresentou efeito 
+positivo sobre a atividade da peroxidase, diminuindo em 32% a atividade inicial. Já o 
+tratamento LP3, que utilizou maior potência, não inativou a peroxidase, mantendo a atividade 
+enzimática igual (p < 0,05) a amostra controle. ROCK et al. (2015) também encontraram um 
+aumento na atividade enzimática de amostras de blueberries que foram tratadas com as 
+maiores intensidades de luz pulsada (LP). Em um estudo comparativo, WANG et al. (2017) 
+verificaram que tratamentos com UV convencional pode inativar ou conformar o sítio ativo da 
+enzima, levando a um aumento da atividade enzimática. Já a luz pulsada pode levar a 
+mudanças estruturais não reversíveis que resultam em inativação enzimática como ocorreu 
+quando foi aplicado o tratamento LP2. 
+ 
+Tabela 21 - Resultados do efeito da luz pulsada na atividade da peroxidase e da 
+polifenoloxiddase do suco de caju. 
+Atividade Polifenoloxidase 
+Potência Peroxidase 
+Processamento Residual (UAE/min/mL) 
+2
+J/cm UAE/min.mL 
+%  
+a 
+Controle - 2,11 ± 0,19100% 
+b 
+Trat. Térmico - 0,22 ± 0,0010% 
+a nd 
+LP1 0,075 2,11 ± 0,38100% 
+c 
+LP2 0,700 1,44 ± 0,1968% 
+a 
+LP3 1 2,67 ± 0,19126% 
+nd: Não detectado. Os Valores com letras minúsculas iguais na mesma coluna indicam que as amostras não 
+diferem entre si pelo teste de tukey (p < 0,05). 
+ 
+Nos espectros de luz pulsada, a UV é a principal faixa de onda efetiva para 
+desempenhar a inativação enzimática. Segundo WANG et al. (2017) a atividade biológica das 
+proteínas depende de suas estruturas, que são alteradas pela fotooxidação causada pela 
+exposição à luz UV que produz fenômenos de agregação. Porém os pulsos de LP de alta 
+intensidade fornecem mais energia do que o tratamento UV convencional durante o mesmo 
+ 
+68 
+ 
+tempo de tratamento, o que torna a luz pulsada mais efetiva em comparação a UV.  
+WANG et al. (2017) analisaram o efeito da luz pulsada (100 a 500 J/pulso) em 
+peroxidase de rábano e concluíram através de Análises morfológicas (Microscopia de força 
+atômica, MFA) e estruturais de proteínas (espectroscopia Raman e espectroscopia de 
+fluorescência) que a inativação dessa enzima foi devida à alta intensidade de irradiação de LP 
+que levou à agregação de moléculas proteicas, diminuição da rugosidade superficial, ruptura 
+de ligações dissulfeto e sulfidrilo, alteração do conteúdo da estrutura secundária e destruição 
+da estrutura terciária da enzima, mostrando uma potencial aplicação dessa tecnologia sobre a 
+inativação da peroxidase. 
+5.3.3 Cor 
+ Na tabela abaixo (Tabela 22) pode-se verificar os efeitos da luz pulsada sobre os 
+parâmetros de cor do suco de caju. 
+ 
+Tabela 22 - Resultados do efeito da luz pulsada na Cor do suco de caju. 
+Potência 
+Processamento h° ΔC ΔE 
+2
+J/cm 
+ab
+Controle - 103,46 ± 0,05 - - 
+d cc 
+Trat. Térmico - 105,08 ± 0,0517,8 ± 2,9 7,47 ± 0,70
+bab 
+LP1 0,075 103,46 ± 0,13 28,13 ± 1,87 4,76 ± 0,24
+aba 
+LP2 0,700 102,95 ± 0,44 31,41 ± 2,27 11,41 ± 0,23
+cba 
+LP3 1 101,77 ± 0,23 33,32 ± 0,76 11,07 ± 0,96
+1: Potência (V); h° (ângulo de tonalidade); ΔC (índice de saturação); ΔE (variação total da cor). Valores são 
+média ± desvio. Os Valores com letras minúsculas iguais na mesma coluna indicam que as amostras não diferem 
+entre si pelo teste de tukey (p < 0,05). 
+ 
+ Para o ângulo de tonalidade (h°) foi observado que todos os tratamentos diferiram 
+(p < 0.05) da amostra controle e do tratamento térmico que obteve o maior valor para esse 
+parâmetro. Houve uma diminuição nos valores à medida que os tratamentos foram 
+aumentando a intensidade de luz pulsada aplicada. Mas todos os tratamentos continuaram na 
+faixa da tonalidade amarelo (100º). 
+ O índice de saturação (ΔC) que indica a variação do croma (a* e b*), grau de 
+vivacidade ou intensidade da amostra tratada com relação à fresca aumentou à medida que a 
+intensidade do tratamento foi superior, isso significa que a cor da amostra tratada com LP3 
+(33,32) obteve coloração mais vívida em relação aos outros tratamentos e ao controle. 
+ Todas as amostras obtiveram ΔE maior que 2, sendo classificadas como diferentes 
+visualmente da amostra controle, segundo CHOI et al. (2002). Essa diferença significativa foi 
+ 
+69 
+ 
+influenciada pelos valores do índice de saturação que indicaram maior vivacidade da cor do 
+suco após o tratamento. Essa diferença pós-tratamento pode ser considerada positiva partindo 
+da perspectiva que os consumidores têm preferência por sucos com cores vívidas, que 
+demostram o frescor do produto. Com esses parâmetros de cor obtidos pelas amostras 
+tratadas, conclui-se que a luz pulsada pode ser utilizada para dar vivacidade a cor de suco de 
+caju e ser uma potencial tecnologia a ser aplicada pelas indústrias de sucos. 
+ 
+6 TRATAMENTO TÉRMICO 
+ 
+Foi observado que o tratamento térmico (90 ºC/1 min) reduziu significativamente 
+(p < 0,05) a atividade antioxidante e o conteúdo de flavonoides amarelos do suco de caju, 
+quando comparado aos efeitos das tecnologias não-térmicas estudadas. Mas conseguiu 
+conservar a vitamina C e alcançou inativação enzimática da peroxidase (10% de atividade 
+residual). 
+SANCHO et al. (2008) ao avaliarem as principais alterações físico-químicas de 
+suco de caju com alto teor de polpa durante todas as etapas do processamento, desde a 
+formulação do produto até a pasteurização. Verificaram que durante a etapa de pasteurização 
+houve maior perda de ácido ascórbico, carotenoides e antocianinas.  
+DAMASCENO et al. (2008) ao estudarem suco clarificado a 4 temperaturas 
+diferentes, onde os experimentos a 90 e 100 ºC foram realizados em banho maria, e os 
+experimentos a 111 e 121 ºC foram realizados em autoclave. Concluiram que o processamento 
+térmico conduzido em um banho de água para a aplicação do calor, deve ser realizado a 90 ºC, 
+temperatura na qual a degradação do ácido ascórbico foi menor, quando comparado a maior 
+temperatura (100ºC), mas ainda houve formação de 5-HMF (responsável pelo escurecimento).  
+Isso pode explicar o que ocorreu no presente trabalho, pois o suco de caju foi 
+processado em banho-maria (90 ºC/1 min), e não obteve degradação da vitamina C, mas 
+obteve efeito negativo sobre a cor, que pode estar relacionado a diminuição de flavonoides 
+amarelos e a formação de 5-HMF. 
+ 
+7 RESUMO COMPARATIVO 
+ 
+Observa-se abaixo um gráfico comparativo com o melhor ensaio de cada 
+tecnologia estudada para cada análise realizada. 
+2
+Para a atividade antioxidante (Gráfico 1) o ensaio LP2 (0,700 J/cm) apresentou o 
+ 
+70 
+ 
+2
+melhor resultado seguido do ultrassom, US7 (372,93 W/cm; 10 min; 20ºC), apresentando a 
+mesma tendência para o resultado da Vitamina C (Gráfico 3).  O ensaio LP1 apresentou a 
+melhor resposta para o conteúdo de flavonoides amarelos (Gráfico 2) seguido do US8. 
+A melhor inativação da enzima peroxidase foi alcançada pelo ensaio OZ3 (0,24 
+2
+mgO/mL) seguido do US7 (372,93 W/cm; 10 min; 20ºC). A tecnologia não-térmica que 
+3
+2
+apresentou o melhor efeito sobre a cor do suco de caju foi o ensaio LP2 (0,700 J/cm) seguido 
+2
+do US7 (372,93 W/cm; 10 min; 20ºC). 
+ 
+Gráfico 1 – Resultados do tratamento térmico e dos melhores ensaios das tecnologias não-
+térmicas para a atividade antioxidante. 
+ 
+ 
+ 
+Gráfico 2 - Resultados do tratamento térmico e dos melhores ensaios das tecnologias não-
+térmicas para os flavonoides amarelos. 
+ 
+ 
+ 
+71 
+ 
+Gráfico 3 - Resultados do tratamento térmico e dos melhores ensaios das tecnologias não-
+térmicas para a Vitamina C. 
+ 
+ 
+ 
+Gráfico 4- Resultados do tratamento térmico e dos melhores ensaios das tecnologias não-
+térmicas para a atividade residual da peroxidase. 
+ 
+ 
+ 
+ 
+72 
+ 
+Gráfico 5 - Resultados do tratamento térmico e dos melhores ensaios das tecnologias não-
+térmicas para o índice de saturação (ΔC). 
+ 
+ 
+Gráfico 6- Resultados do tratamento térmico e dos melhores ensaios das tecnologias não-
+térmicas para a diferença total de cor (ΔE). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+73 
+ 
+8 CONCLUSÃO 
+ 
+Concluiu-se que a aplicação de ultrassom aumentou a capacidade antioxidante do 
+suco de caju em relação ao controle e ao tratamento térmico; apresentou efeito positivo sobre 
+os flavonoides amarelos e conservou a vitamina C no suco. Foi verificado que a baixa 
+2 
+intensidade 75,34 W/cmo ultrassom possui maior poder oxidante, enquanto que a maiores 
+intensidades possui maior poder de extração dos compostos bioativos e inativação da 
+2 
+peroxidase (89%), onde o melhor processamento foi a 372,93 W/cmpor 10 min a 20ºC 
+(US7).  
+As três concentrações de ozônio utilizadas nesse trabalho, não apresentaram 
+diferença significativa entre si para a atividade antioxidante. O tratamento com ozônio 
+diminuiu a atividade antioxidante e os flavonoides amarelos do suco de caju em relação ao 
+controle, mas obteve maior conservação desses parâmetros em relação ao tratamento térmico. 
+A vitamina C do suco de caju foi afetada pela ozonização, com maior redução desse composto 
+em relação ao tratamento térmico. O processamento OZ3 conseguiu diminuir 90% da 
+atividade da peroxidase.  
+Todos os tratamentos de luz pulsada não diferiram (p < 0,05) entre si, segundo o 
+DPPH e o FRAP. A luz pulsada aumentou a capacidade antioxidante em relação ao controle e 
+ao tratamento térmico, onde o ensaio LP2 alcançou o maior saldo positivo e a maior 
+inativação da peroxidase (32%). O LP1 foi o processamento que apresentou melhor resultado 
+sobre os flavonoides amarelos. Todos os tratamentos conseguiram conservar a vitamina C no 
+suco de caju.  
+O ultrassom, o ozônio e a luz pulsada apresentaram um efeito positivo sobre os 
+parâmetros de cor do suco de caju, em comparação ao tratamento térmico. Mas os 
+processamentos ultrassônicos e de luz pulsada apresentaram os melhores resultados, 
+conseguindo aumentar significativamente a intensidade da cor nas amostras, podendo assim, 
+torná-las mais atrativas ao consumidor.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+74 
+ 
+9 PERSPECTIVAS FUTURAS 
+ 
+O ultrassom, o ozônio e a luz pulsada são processamentos potenciais de 
+conservação a serem aplicados individualmente ou em combinação com outras tecnologias 
+para o aumento da qualidade nutricional e sensorial dos sucos de frutas.  
+Os efeitos dessas três tecnologias não-térmicas ainda necessitam de mais estudos 
+a respeito da sua ação sobre a inativação microbiológica e a qualidade sensorial dos produtos.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+75 
+ 
+REFERÊNCIA 
+ 
+ABID, M. et al. Effect of ultrasound on different quality parameters of apple juice. 
+Ultrasonics Sonochemistry v.20, n. 5, p. 1182–1187, 2013. Disponível em: 
+<http://dx.doi.org/10.1016/j.ultsonch.2013.02.010>.  Acesso em: 18 ago. 2018. 
+ 
+ABID, M. et al. Thermoso- nication as a potential quality enhancement technique of apple 
+juice. Ultrasonics Sonochemistry v. 21, p. 984-990, 2014. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 15 ago. 2018. 
+ABREU, F. P. De et al. Cashew apple (Anacardium occidentale L.) extract from by-product 
+of juice processing: A focus on carotenoids. Food Chemistry v. 138, n. 1, p. 25–31, 2013. 
+Disponível em: <http://dx.doi.org/10.1016/j.foodchem.2012.10.028>. Acesso em: 30 ago. 
+2018. 
+AGUILAR, K. et al. Ascorbic acid stability in fruit juices during thermosonication. 
+Ultrasonics Sonochemistry v. 37, p. 375–381, 2017. Disponível em: 
+<http://dx.doi.org/10.1016/j.ultsonch.2017.01.029>. Acesso em: 01 set. 2018. 
+ 
+ALI, A.; ONG, M. K.; FORNEY, C. F. Effect of ozone pre-conditioning on quality and 
+antioxidant capacity of papaya fruit during ambient storage. Food Chemistry v.142, p. 19-26, 
+2014. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 15 set. 2018. 
+ 
+ALMEIDA, F. D. L. Emprego de Tecnologias Emergentes no processamento de suco de 
+laranja adicionado de fruto- oligossacarídeo e suco prebiótico de Laranja Produzido Via 
+Síntese Enzimática. Universidade Federal Do Ceará. Antioxidant capacity of papaya fruit 
+during ambient storage. Food Chemistry v.142, p. 19-26, 2015. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 15 set. 2018. 
+ALVES FILHO, E. G. et al. Evaluation of thermal and non-thermal processing effect on non-
+prebiotic and prebiotic acerola juices using1H qNMR and GC–MS coupled to chemometrics. 
+Food Chemistry v. 265, n. May, p. 23–31, 2018. Disponível em: 
+<https://doi.org/10.1016/j.foodchem.2018.05.038>. Acesso em: 10 out. 2018 
+ARORA, A.; SAIRAM, R.K.; SRIVASTAVA, G.C. Oxidative stress and antioxidative system 
+in plants. Current Science, v.82, p.1221-1235, 2002. 
+ 
+Associação brasileira das indústrias de refrigerantes e de bebidas não alcoólicas (ABIR). 
+O setor. Dados. Disponível em: < https://abir.org.br/o-setor/dados/nectares/>. Acesso em: 25 
+jan. 2019. 
+ 
+AUGUSTO, Luiz et al. Sistema de Produção do Caju Aspectos econômicos da cultura do 
+cajueiro. p. 1-193, 2017. Disponível em: <https://www.spo.cnptia.embrapa.br/>. Acesso em: 
+11 nov. 2018. 
+ 
+AVALOS-LLANO, K. R.; MARTÍN-BELLOSO, O.; SOLIVA-FORTUNY, R. Effect of 
+pulsed light treatments on quality and antioxidant properties of fresh-cut strawberries. Food 
+Chemistry v. 264, n. May, p. 393-400 , 2018. Disponível em: 
+<https://doi.org/10.1016/j.foodchem.2018.05.028>.0925-5214. Acesso em: 25 out. 2018. 
+ 
+76 
+ 
+BARROS NETO, B.; SCARMINIO, I. S.; BRUNS, R. E. Planejamento e otimização de 
+Experimentos, Campinas: Editora da UNICAMP, Brasil, 2002. 
+ 
+BELLARY, A. N. et al. Anthocyanin infused watermelon rind and its stability during storage. 
+Innovative Food Science & Emerging Technologies v. 33, p. 554-562, 2016. 
+ 
+BENZIE, I.; STRAIN, J. The Ferric Reducing Ability of Plasma (FRAP) as a measure of 
+‘‘antioxidant power’’: the FRAP assay. Analytical Biochemistry v. 239, p. 70-76, 1996. 
+BEVILACQUA, A. et al. Nonthermal Technologies for Fruit and Vegetable Juices and 
+Beverages: Overview and Advances. Comprehensive Reviews in Food Science and Food 
+Safety v. 17, n. 1, p. 2–62, 2018. Disponível em: <https://www.sciencedirect.com/>. Acesso 
+em: 21 set. 2018. 
+BRAND-WILLIAMS, W.; CUVELIER, M. E.; BERSET, C. Use of a free radical method to 
+evaluate antioxidant activity. LWT -Food Science and Technology v. 28, n.1, p.  25-30, 
+1995. 
+ 
+BRASIL. Leis, Decretos, etc. Instrução Normativa nº 1, de 7 jan. 2000, do Ministério da 
+Agricultura [Aprova os Regulamentos Técnicos para fixação dos padrões de identidade e 
+qualidade para polpas e sucos de frutas]. Diário Oficial da União, Brasília, n. 6, Seção I, p. 
+54-58, 2000.  
+BRITO, E. S. De et al. Determination of the flavonoid components of cashew apple 
+(Anacardium occidentale) by LC-DAD-ESI/MS. Food Chemistry v. 105, n. 3, p. 1112-1118 , 
+2007. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 15 nov. 2018. 
+CAMPOLI, S. S. et al. Ultrasound processing of guava juice: Effect on structure, physical 
+properties and lycopene in vitro accessibility. Food Chemistry v. 268, n. April, p. 594 601, 
+2018. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 20 out. 2018. 
+CAO, X. et al. The inactivation kinetics of polyphenol oxidase and peroxidase in bayberry 
+juice during thermal and ultrasound treatments. Innovative Food Science and Emerging 
+Technologies v. 45, n. June, p. 169–178, 2018. Disponível em: 
+<https://doi.org/10.1016/j.ifset.2017.09.018>. Acesso em: 20 out. 2018. 
+CATALDO, F. The action of ozone on polymers having conjugated and cross- or linearly 
+conjugated unsaturation: chemistry and technological aspect. Polymer Degradation and 
+Stability, v. 73, p. 511-520, 2001. Disponível em: <https://www.sciencedirect.com/>. Acesso 
+em: 20 out. 2018. 
+CECÍLIA, M. et al. Storage stability of cashew aple juice v. 23, p. 106–109, 2003. 
+Disponível em: <http://www.scielo.br/pdf/%0D/cta/v23s0/19480.pdf>. Acesso: 20 out. 2018. 
+CHEMAT, F.; ZILL-E-HUMA; KHAN, M. K. Applications of ultrasound in food technology: 
+Processing, preservation and extraction. Ultrasonics Sonochemistry v. 18, n. 4, p. 813–835, 
+2011. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 18 out. 2018. 
+ 
+CHOI, M. H.; KIM, G. H.; LEE, H. S. Effects of ascorbic acid retention on juice colour and 
+pigment stability in blood orange (Citrus sinensis) juice during refrigerated storage. Food 
+ 
+77 
+ 
+Research International v.35, p.753-759, 2002. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 18 nov. 2018. 
+CHOI, M. R. et al. Inactivation of Escherichia coli O157:H7, Salmonella typhimurium and 
+Listeria monocytogenes in apple juice with gaseous ozone. Food Microbiology v.32, p. 191-
+195, 2012. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 05 ago. 2018. 
+COSTA, M. C. O.; MAIA, G. A.; DE FIGUEIREDO, R. W. Storage stability of cashew aple 
+juice. Ciência e Tecnologia de Alimentos v.23, p. 106-109, 2003. Disponível em: 
+<http://www.scielo.br/pdf/%0D/cta/v23s0/19480.pdf >. Acesso em: 07 ago. 2018. 
+ 
+COSTA, T.; JORGE, N. Compostos Bioativos Benéficos Presentes em Castanhas e Nozes. 
+Ciência Biológica e da Saúde v. 13, n. 3, p. 195-203, 2011. 
+DAMASCENO, L. F. et al. “Non- Enzymatic Browning in Clarified Cashew Apple Juice 
+during Thermal Treatment: Kinetics and Process Control.” Food Chemistry v. 106, n.1, p. 
+172-79, 2008. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 12 ago. 2018. 
+DAS, I.; ARORA, A. Post-harvest processing technology for cashew apple – A review. 
+Journal of Food Engineering v. 194, p. 87-98, 2017. Disponível em: 
+<http://dx.doi.org/10.1016/j.jfoodeng.2016.09.011>. Acesso em: 15 set. 2018. 
+DAVIES, M.J. Protein oxidation and peroxidation. Review article. Biochemical Journal v. 
+473, p. 805–825, 2016. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 15 set. 
+2018. 
+ 
+DIXON, R. A.; PAIVA, N. L. Stress-induced phenylpropanoid metabolism. The Plant Cell 
+v. 7, p. 1085-1097, 1995. 
+ 
+DUBROVIĆ, I. et al. Effect of high intensity ultrasound and pasteurization on anthocyanin 
+content in strawberry juice. Food Technology and Biotechnology v. 49, p. 196-204, 2011. 
+Disponível em: <https://www.sciencedirect.com/>. Acesso em: 15 ago. 2018. 
+ 
+EVANGELISTA, J. Tecnologia de alimentos. São Paulo: Atheneu, 2001. 
+ 
+FDA (2001). Secondary direct food additives permitted in food for human consumption. 
+Rules and regulations, Federal Register (Vol. 66, no 123 Sec. 173.368 Ozone). Disponível 
+em: <http:// www.accessdata.fda.gov/>  Acesso em: 25 nov. 2018. 
+ 
+FDA. (2015). U.S. Food and Drug Administration. CFR. Code of Federal Regulations Title 
+21. Disponível em: <http:// www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/CFRSearch. 
+cfm?fr=179.41>. Acesso em 25 nov. 2018. 
+ 
+FERNANDES, F. A. N. et al. Ultrasound-Assisted Air-Drying of Apple (Malus domestica L.) 
+and Its Effects on the Vitamin of the Dried Product. Food Bioprocess Technol v. 7, p. 1519, 
+2015. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 25 nov. 2018. 
+ 
+FERRARIO, M.; GUERRERO, S. Impact of a combined processing technology involving 
+ultrasound and pulsed light on structural and physiological changes of Saccharomyces 
+ 
+78 
+ 
+cerevisiae KE 162 in apple juice. Food Microbiology v. 65, p. 83-94, 2017. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 12 dez. 2018. 
+FIGUEIREDO, R. W.  De et al. Alterações químicas e físico-químicas no processamento de 
+suco de caju (Anacardium occidentale L.). Ciência e Tecnologia de Alimentos v. 27, n. 4, p. 
+878-882, 2008. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 15 ago. 2018. 
+FONSECA, C. R. et al. Degradation of Phenolic Compounds in Aqueous Sucrose Solutions 
+by Ozonation. Ozone: Science and Engineering v. 39, n. 4, p. 255–263, 2017. Disponível 
+em: <https://doi.org/10.1080/01919512.2017.1322486>. Acesso em: 13 ago. 2018. 
+ 
+FONSECA, K. Z. et al. Perguntas mais frequentes sobre flavonoides. Bahia: [s.n.], v. 25, 
+p. .978, 2016. Disponível em: <https://ufrb.edu.br/>. Acesso em: 15 nov. 2018. 
+FONTELES, T. V. Desenvolvimento De Uma Nova Bebida Funcional Probiótica À Base De 
+Suco De Melão Cantaloupe Sonificado. Dissertação (Mestrado em Ciência e Tecnologia de 
+Alimentos) – Pró-Reitoria de Pesquisa e Pós-Graduação, Universidade Federal do Ceará, 
+Fortaleza, 2011.  
+ 
+FONTELES, T. V. et al. Optimization of the Fermentation of Cantaloupe Juice by 
+Lactobacillus casei NRRL B-442. Food and Bioprocess Technology v. 5, n. 7, p. 2819-2826, 
+2012. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 10 out. 2018. 
+ 
+FUNDO, J. F. et al. Quality assessment of Cantaloupe melon juice under ozone processing. 
+Innovative Food Science and Emerging Technologies v. 47, n. April, p. 461-466 , 2018. 
+Disponível em: <https://doi.org/10.1016/j.ifset.2018.04.016>. Acesso em: 10 out. 2018. 
+ 
+GÓMEZ-LÓPEZ, V. M. et al. Pulsed light for food decontamination: a review. Trends in 
+Food Science and Technology v. 18, n. 9, p. 464–473, 2007. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 11 out. 2018. 
+ 
+GOTTSCHALK, C.; LIBRA, J.A.; SAUPE, A. Ozonation of Water and Wastewater, 1st, 
+Germany: Ed. Wiley-VCH, 2000.  
+ 
+HOFFMANN-RIBANI, R.; HUBER, L. S.; RODRIGUEZ-AMAYA, D. B. Flavonols in fresh 
+and processed Brazilian fruits. Journal of Food Composition and Analysis v. 22, n. 4, p. 
+263–268, 2009. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 22 out. 2018. 
+ 
+HUANG, G. et al. Effects of ultrasound on microbial growth and enzyme activity. 
+Ultrasonics Sonochemistry v. 37, p. 144–149, 2017. Disponível em: 
+<http://dx.doi.org/10.1016/j.ultsonch.2016.12.018>. Acesso em: 12 jun. 2018. 
+HWANG, H. J.; CHEIGH, C. I.; CHUNG, M. S. Relationship between optical properties of 
+beverages and microbial inactivation by intense pulsed light. Innovative Food Science and 
+Emerging Technologies v.31, p.91-96, 2015. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 15 jun. 2018. 
+ 
+INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE). Levantamento 
+Sistemático da produção agrícola. Rio de Janeiro, 2018. Disponível em: 
+<https://sidra.ibge.gov.br/tabela/1618>. Acesso em: 30 ago. 2018. 
+ 
+79 
+ 
+INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE). Pesquisa de 
+orçamentos familiares 2008-2009: Análise do Consumo Alimentar Pessoal no Brasil. Rio 
+de Janeiro, p. 150, 2011.  
+ 
+JARAMILLO SÁNCHEZ, G. M. et al. Inactivation kinetics of peroxidase and polyphenol 
+oxidase in peach juice treated with gaseous ozone. International Journal of Food Science 
+and Technology v.53, n. 2, p. 347-355, 2018. Disponível em: 
+<http://dx.doi.org/10.1111/ijfs.13591>. Acesso em: 01 jun. 2018. 
+ 
+JIMÉNEZ-SÁNCHEZ C. et al. Review: alternatives to conventional thermal treatments in 
+fruit-juice processing. part 1: techniques and applications. critical reviews in food science and 
+nutrition. Crit Rev Food Sci Nutr v. 57, p. 501, 2017. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 16 jun. 2018. 
+ 
+KAPTUROWSKA, A. U. et al. Studies on the lipolytic activity of sonicated enzymes from 
+Yarrowia lipolytica. Ultrasonics Sonochemistry v. 19, n. 1, p. 186-191, 2012. Disponível 
+em: <https://www.sciencedirect.com/>. Acesso em: 19 set. 2018. 
+ 
+KHANDPUR, P.; GOGATE, P. R. Understanding the effect of novel approaches based on 
+ultrasound on sensory profile of orange juice. Ultrasonics Sonochemistry v. 27, p. 87-95 , 
+2015. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 25 ago. 2018. 
+ 
+KNORR, D. et al. Applications and potential of ultrasonics in food processing. Trends in 
+Food Science and Technology v.15, p. 261-266, 2004. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 13 mai. 2018. 
+KOUTCHMA, T. Pulsed Light for Food and Beverages Preservation, Quality and 
+Functionality. Innovative Food Science and Emerging Technologies v.1, p.1-8, 2018. 
+Disponível em: <http://dx.doi.org/10.1016/B978-0-08-100596-5.22454-2>. Acesso em: 13 
+mai. 2018. 
+KWAW, E. et al. Impact of ultrasonication and pulsed light treatments on phenolics 
+concentration and antioxidant activities of lactic-acid-fermented mulberry juice. LWT - Food 
+Science and Technology v. 92, n. October, p. 61-66, 2018. Disponível em: 
+<https://doi.org/10.1016/j.lwt.2018.02.016>. Acesso em: 25 ago. 2018. 
+ 
+LAMIKANRA, O. et al. Biochemical and microbial changes during the storage of minimally 
+processed Cantaloupe. Journal Agriculture Food Chemical, v.48, p.5955-5961, 2000. 
+Disponível em: <https://www.sciencedirect.com/>. Acesso em: 14 out. 2018. 
+ 
+LARRAURI, J. A.; RUPÉREZ, P.; SAURA-CALIXTO, F. Effect of Drying Temperature on 
+the Stability of Polyphenols and Antioxidant Activity of Red Grape Pomace Peels. Journal of 
+Agricultural and Food Chemistry v. 45, n. 4, p. 1390-1393, 1997. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 04 set. 2018.  
+ 
+LI, H. Z.; PORDESIMO, L.; WEISS, J. High Intensity Ultrasound – assisted extraction of oil 
+from soybeans. Food Research International, v. 37, p. 731-738, 2004.  Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 14 out. 2018. 
+ 
+ 
+80 
+ 
+MELO, E. de A. et al. Capacidade antioxidante de frutas. Revista Brasileira de Ciências 
+Farmacêuticas v. 44, n. 2, p. 193-201, 2008. Disponível em: 
+<http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1516-
+93322008000200005&lng=pt&nrm=iso&tlng=pt>. Acesso em: 07 ago. 2018. 
+ 
+MILLER, N. J.  et al. A novel method for measuring antioxidant capacity and its application 
+to monitoring the antioxidante status in premature neonates. Clinical Science v.84, n. 4, p. 
+407–412, 1993. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 04 out. 2018. 
+MOO-HUCHIN, V. M. et al. Antioxidant compounds, antioxidant activity and phenolic 
+content in peel from three tropical fruits from Yucatan, Mexico. Food Chemistry v. 166, p. 
+17-22, 2015. Disponível em: <https://www.sciencedirect.com/>. Acesso em: 04 ago. 2018. 
+ 
+MOO-HUCHIN, V. M. et al. Determination of some physicochemical characteristics, 
+bioactive compounds and antioxidant activity of tropical fruits from Yucatan, Mexico. Food 
+Chemistry v. 152, p. 508-515 , 2014.  Disponível em: <https://www.sciencedirect.com/>. 
+Acesso em: 04 ago. 2018. 
+NADEEM, M. et al. Effect of ultrasound and chemical treatment on total phenol, flavonoids 
+and antioxidant properties on carrot-grape juice blend during storage. Ultrasonics 
+Sonochemistry v. 45, n. December, p. 1-6, 2018. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 15 set. 2018. 
+ 
+NOVAK, J.S.; YUAN, J.T.C. The ozonation concept: advantages of ozone treatment and 
+commercial developments. In: TEWARI, G.; JUNEJA, V.K. Advances in thermal and non-
+thermal food preservation. Ames: Blackwell Publishing, p.185-193, 2007. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 26 nov. 2018. 
+ 
+O’DONNELL, C. P. et al. Effect of ultrasonic processing on food enzymes of industrial 
+importance. Trends in Food Science & amp; Technology v. 21, n.7, p. 358-367, 2010. 
+Disponível em: <https://www.sciencedirect.com/>. Acesso em: 14 nov. 2018. 
+ 
+OLIVEIRA, A. F. A. et al. Non-thermal combined treatments in the processing of açai 
+(Euterpe oleracea) juice. Food Chemistry v. 265, n. April, p. 57-63, 2018. Disponível em: 
+<https://doi.org/10.1016/j.foodchem.2018.05.081>. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 18 set. 2018. 
+ 
+ORDÓÑEZ-SANTOS, L. E.; MARTÍNEZ-GIRÓN, J.; ARIAS-JARAMILLO, M. E. Effect 
+of ultrasound treatment on visual color, vitamin C, total phenols, and carotenoids content in 
+Cape gooseberry juice. Food Chemistry v. 233, p. 96-100 , 2017. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 06 out. 2018. 
+ 
+ORLOWSKA, M. et al. Continuous and Pulsed Ultraviolet Light for Nonthermal Treatment 
+of Liquid Foods. Part 1: Effects on Quality of Fructose Solution, Apple Juice, and Milk. Food 
+and Bioprocess Technology, v. 6, n. 6, p. 1580-1592, 2013. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 08 ago. 2018. 
+ 
+PATARO, G. et al. Bacterial inactiva- tion in fruit juices using a continuous flow pulsed 
+Light (PL) system. Food Research International v. 44, n.6, p. 1642–1648, 2011. Disponível 
+em: <https://www.sciencedirect.com/>. Acesso em: 05 ago. 2018. 
+ 
+81 
+ 
+PATIL, S. et al. Inactivation of Escherichia coli in orange juice using ozone. Innovative 
+Food Science & Emerging Technologies v.10, n.4, p. 551–557, 2009. Disponivel em: 
+<http://dx.doi.org/10.1016/j.ifset.2009.05.011>. Acesso em: 25 nov. 2018. 
+PUTNIK, P. et al. Comparing the effects of thermal and non-thermal technologies on 
+pomegranate juice quality: A review. Food Chemistry v. 279, n. November, p. 150-161, 2019. 
+Disponível em: <https://doi.org/10.1016/j.foodchem.2018.11.131>. Acesso em: 16 jun. 2018. 
+QUEIROZ, C. et al. Changes in bioactive compounds and antioxidant capacity of fresh-cut 
+cashew apple. Food Research International v. 44, n. 5, p. 1459-1462 , 2011. Disponível em: 
+<http://dx.doi.org/10.1016/j.foodres.2011.03.021>. Acesso em: 12 ago. 2018. 
+ 
+RABELO, M.C. Termoestabilidade De Enzimas Dos Sucos De Graviola E Caju, 
+Dissertação (Mestrado em Bioquímica e Biologia Molecular) – Centro de Ciências, 
+Universidade Federal do Ceará, Fortaleza, 2012. 
+ 
+RAWSON, A. et al. Effect of thermosonication on bioactive compounds in watermelon juice. 
+Food Research International v. 44, n. 5, p. 1168-1173, 2011. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 15 set. 2018. 
+RAWSON, A. et al. Effect of thermosonication on bioactive compounds in watermelon juice, 
+Food Research International v. 44, p. 1168-1173, 2011. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 15 jun. 2018. 
+RESNICK, R.; HALLIDAY, D.; KRANE, K. S. Física 2. Rio de Janeiro: LTC – Livros 
+Técnicos e Científicos Editora S.A., 1996. 
+ 
+ROCK C, G. S. et al. Enhanced antioxidant capacity of fresh blueberries by pulsed light 
+treatment. Food Research International v.4, p. 89-97, 2015. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 08 ago. 2018. 
+ 
+RUFINO, M. do S. M. et al. Bioactive compounds and antioxidant capacities of 18 non-
+traditional tropical fruits from Brazil. Food Chemistry v. 121, n. 4, p. 996-1002, 2010. 
+Disponível em: <http://dx.doi.org/10.1016/j.foodchem.2010.01.037>.  Acesso em: 25 ago. 
+2018. 
+ 
+RUFINO, M. S.M. et al. Free radical-scavenging behaviour of some north-east Brazilian 
+fruits in a DPPH{radical dot}system. Food Chemistry v. 114, n. 2, p. 693-695, 2009. 
+Disponível em: <https://www.sciencedirect.com/>. Acesso em: 14 ago. 2018. 
+ 
+SAEEDUDDIN, M. et al. Quality assessment of pear juice under ultrasound and commercial 
+pasteurization processing conditions. LWT - Food Science and Technology v. 64, n. 1, p. 
+452-458, 2015. Disponível em: <http://dx.doi.org/10.1016/j.lwt.2015.05.005>. Acesso em: 12 
+jun. 2018. 
+ 
+SANCHO, De O.; MAIA, A.; FIGUEIREDO, W. De. Alterações químicas e físico-químicas 
+no processamento de suco de caju (Anacardium occidentale L.). Ciência e Tecnologia de 
+Alimentos v. 27, n. 4, p. 878-882 , 2008. Disponível em: <https://www.sciencedirect.com/>. 
+Acesso em: 12 jun. 2018. 
+ 
+82 
+ 
+SANTHIRASEGARAM, V.; RAZALI, Z.; SOMASUNDRAM, C. Effects of thermal 
+treatment and sonication on quality attributes of Chokanan mango (Mangifera indica L.) juice. 
+Ultrasonics Sonochemistry v.20, n. 5, p. 1276-1282, 2013. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 25 ago. 2018. 
+ 
+SCHERER, R.; RYBKA, A. C. P.; GODOY, H. T. Determinação simultânea dos ácidos 
+orgânicos tartárico, málico, ascórbico e cítrico em polpas de acerola, açaí e caju e avaliação da 
+estabilidade em sucos de caju. Quimica Nova v. 31, n. 5, p. 1137-1140, 2008. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 08 set. 2018. 
+ 
+SCHUINA, G. L. Efeito da sonicação e da termossonicação sobre mesófilos totais e 
+bolores e leveduras em suco de laranja. Dissertação (Mestrado em Ciência e Tecnologia de 
+Alimentos) - Universidade Federal do Espírito Santo, Alegre – ES, 2014. 
+ 
+SELIMOVIĆ, A.; SALKIĆ M. Direct Spectrophotometric Determination of L-Ascorbic acid 
+in Pharmaceutical Preparations using Sodium Oxalate as a Stabilizer. International Journal 
+of Basic & Applied Sciences, v. 11, n. 02, p. 106, 2011. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 10 jun. 2018. 
+ 
+SHISHIR, M. R. I. et al. Advances in micro and nano-encapsulation of bioactive compounds 
+using biopolymer and lipid-based transporters. Trends in Food Science and Technology v. 
+78, n. December 2017, p. 34-60, 2018. Disponível em: 
+<https://doi.org/10.1016/j.tifs.2018.05.018>. Acesso em: 17 set. 2018.  
+ 
+SILVA, L. M. R. Da et al. Quantification of bioactive compounds in pulps and by-products of 
+tropical fruits from Brazil. Food Chemistry v. 143, p. 398-404, 2014. Disponível em: 
+<http://dx.doi.org/10.1016/j.foodchem.2013.08.001>. Acesso em: 22 set. 2018. 
+ 
+SILVA, S. B. Da et al. Potencialidades do uso do ozônio no processamento de alimentos. 
+Semina:Ciencias Agrarias v. 32, n. 2, p. 659-682, 2011. 
+SILVA, S. B. et al. Potencialidades do uso do ozônio no processamento de alimentos. 
+Semina: Ciências Agrárias, v. 32, n. 2, p. 659-682, Londrina, 2011. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 27 mai. 2018. 
+ 
+SORIA, A. C.; VILLAMIEL, M. Effect of ultrasound on the technological properties and 
+bioactivity of food: A review. Trends in Food Science and Technology v. 21, n. 7, p. 323–
+331, 2010. Disponível em: <http://dx.doi.org/10.1016/j.tifs.2010.04.003>. Acesso em: 13 ago. 
+2018. 
+SOUSA GUEDES, J. P. De et al. The efficacy of Mentha arvensis L. and M. piperita L. 
+essential oils in reducing pathogenic bacteria and maintaining quality characteristics in 
+cashew, guava, mango, and pineapple juices. International Journal of Food Microbiology v. 
+238, p. 183–192, 2016. Disponível em: 
+<http://dx.doi.org/10.1016/j.ijfoodmicro.2016.09.005>. Acesso em: 25 set. 2018. 
+ 
+SOUZA, J. F. Utilização de Luz Ultravioleta Contínua (Uv-C) e Luz Pulsada para 
+conservação de mangas Cv. Tommy Atkins minimamente processadas. Tese (Doutorado 
+Agronomia, Produção Vegetal) - Faculdade de Ciências Agrárias e Veterinárias, Universidade 
+Estadual Paulista, p. 116, 2014.  
+ 
+83 
+ 
+ 
+TIWARI, B. K. et al. Anthocyanin and colour degradation in ozone treated blackberry juice. 
+Innovative Food Science and Emerging Technologies v. 10, n. 1, p. 70-75, 2009. 
+Disponível em: <http://dx.doi.org/10.1016/j.ifset.2008.08.002>. Acesso em: 21 out. 2018. 
+TIWARI, B. K. et al. Modelling colour degradation of orange juice by ozone treatment using 
+response surface methodology. Journal of Food Engineering v. 88, p. 553-560, 2008. 
+Disponível em: <https://www.sciencedirect.com/>. Acesso em: 15 nov. 2018. 
+VALDÉS, F. Vitamina C. Actas Dermo-Sifiliograficas v. 97, n. 9, p. 557-568, 2006.  
+VILKHU, K. et al.  Applications and opportunities for ultrasound assisted extraction in the 
+food industry—A review. Technologies v. 9, n. 2, p. 161-169, 2008. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 12 mai. 2018. 
+ 
+WANG, B. et al. Effect of pulsed light on activity and structural changes of horseradish 
+peroxidase. Food Chemistry v. 234, p. 20–25, 2017. Disponível em: 
+<http://dx.doi.org/10.1016/j.foodchem.2017.04.149>. Acesso em: 12 set. 2018. 
+WANG, J. et al. Influence of high-intensity ultrasound on bioactive compounds of strawberry 
+juice: Profiles of ascorbic acid, phenolics, antioxidant activity and microstructure. Food 
+Control v. 96, n. September 2018, p. 128-136, 2019. Disponível em: 
+<https://www.sciencedirect.com/>. Acesso em: 15 set. 2018. 
+WISSEMANN, K. W.; LEE, C. Y. Polyphenoloxidase activity during grape maturation and 
+wine production. American Journal of Enology and Viticulture, v.31, p. 206- 211, 1980. 
+ 
+YONG, H. et al. Pathogen inactivation and quality changes in sliced cheddar cheese treated 
+using flexible thin-layer dielectric barrier discharge plasma. Food Research International v. 
+69, p. 57-63, 2015. Disponível em: <http://dx.doi.org/10.1016/j.foodres.2014.12.008>. 
+Acesso em: 23 jun. 2018. 
+ 
+YORUK, R.; MARSHALL, M. R. Physicochemical properties and function of plant 
+polyphenol oxidase: A review. Journal of Food Biochemistry, v. 27, p. 361–422, 2003. 
+Disponível em: <https://www.sciencedirect.com/>. Acesso em: 05 set. 2018. 

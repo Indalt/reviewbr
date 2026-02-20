@@ -1,0 +1,2859 @@
+ 
+ 
+ 
+UNIVERSIDADE ESTADUAL DO CEARÁ 
+CENTRO DE CIÊNCIAS E TECNOLOGIA 
+PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIAS NATURAIS 
+MESTRADO ACADÊMICO EM CIÊNCIAS NATURAIS 
+ 
+DAYANA CALIXTO BRAGA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+COMPOSTOS FENÓLICOS EM PEDÚNCULOS DE CLONES DE CAJUEIRO 
+E A RELAÇÃO COM A ADSTRINGÊNCIA E SUAS SUBQUALIDADES 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA – CEARÁ 
+2019
+DAYANA CALIXTO BRAGA 
+ 
+ 
+ 
+ 
+ 
+ 
+COMPOSTOS FENÓLICOS EM PEDÚNCULOS DE CLONES DE CAJUEIRO E A 
+RELAÇÃO COM A ADSTRINGÊNCIA E SUAS SUBQUALIDADES 
+ 
+ 
+Dissertação apresentada ao Curso de 
+Mestrado Acadêmico em Ciências 
+Naturais do Programa de Pós-Graduação 
+em Ciências Naturais do Centro de 
+Ciências e Tecnologia da Universidade 
+Estadual do Ceará, como requisito parcial 
+à obtenção do título de mestre em 
+Ciências Naturais. Área de Concentração: 
+Ciências Naturais. 
+ 
+Orientadora: Profª. Drª. Deborah dos 
+Santos Garruti. 
+Coorientador: Prof. Dr. Edy Sousa de 
+Brito. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA – CEARÁ 
+2019  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AGRADECIMENTOS 
+ 
+A Deus por ser o Criador de tudo e pelas bênçãos já realizadas em minha vida. 
+Aos meus pais, Paulo Braga e Aldenice Calixto, aos meus irmãos, cunhados e aos meus 
+sobrinhos, pelo amor, carinho, esforço e dedicação que sempre me foram oferecidos. 
+Aos meus avós, João, Luiza, Braulita e Luiz, pelo exemplo de vida. 
+Às minhas amigas, Luiza Calixto, Francine Leal pela amizade e cumplicidade. 
+Aos amigos, Wivian de Sousa, José Amilcar, Victor Luís, Luana Carvalho, Karla Larissa 
+e João Neto pela amizade, fraternidade e dedicação. 
+Aos novos amigos que conquistei, no tempo que estive na Embrapa Agroindústria 
+Tropical e no Mestrado, pelo companheirismo e auxílio. 
+À Prof.ª Drª Deborah dos Santos Garruti pela orientação e apoio a mim dispensados. 
+Ao Profº Dr. Edy de Sousa Brito pela coorientação e ensinamentos. 
+Aos membros da banca examinadora desta dissertação Prof. Dr. Paulo Henrique e a Drª. 
+Lorena Mara pela disponibilidade, paciência e pelas atentas contribuições na correção 
+deste trabalho. 
+Aos colaboradores Drª. Ídila Araújo do Laboratório de Análise de Alimentos, Dr. Paulo 
+Riceli e Dr. Elenilson de Godoy do Laboratório Multiusuário de Química e Produtos 
+Naturais (LMQPN) que contribuíram para execução das análises. 
+Aos provadores que abdicaram seu tempo para cooperar com a pesquisa.  
+Aos professores do curso, pelos ensinamentos e oportunidades de crescimento 
+profissional. 
+Registro meus agradecimentos a todos que, direta ou indiretamente, compartilharam deste 
+caminho percorrido e contribuíram para essa concretização. 
+ 
+A todos, o meu sincero muito obrigado!
+RESUMO 
+ 
+A adstringência é uma sensação tátil, gerada pela redução da lubrificação na 
+cavidade oral, comumente causada pela interação de compostos fenólicos com as 
+proteínas salivares. No pedúnculo do cajueiro, a adstringência é o principal problema que 
+limita a sua aceitabilidade, sendo um dos maiores obstáculos para a expansão do mercado. 
+Este trabalho buscou caracterizar o perfil sensorial e o perfil de compostos fenólicos de 
+pedúnculos de cajueiro, e por meio de quimiometria, correlaciona-los buscando os 
+possíveis marcadores químicos da adstringência do caju. Foram analisados pedúnculos 
+de nove clones da safra 2017. A análise sensorial foi baseada em uma análise descritiva 
+de provadores previamente selecionados e treinados, registrando a intensidade dos 
+descritores gosto doce, gosto ácido, adstringência e suas subqualidades (aspereza na boca 
+residual e irritação na garganta residual). Os compostos fenólicos foram extraídos com 
+etanol e analisados por UPLC-QToF-MS. Foram ainda realizadas análises físico-
+químicas de pH, acidez, sólidos solúveis e fenólicos totais. Os resultados foram 
+submetidos a ANOVA, teste de Tukey (α=0,05), análise de componentes principais 
+(PCA) e análise de regressão por mínimos quadrados parciais (PLS), utilizando a 
+intensidade dos picos dos cromatogramas e correlacionando com os dados sensoriais. Os 
+clones CCP 76 e o BRS 189 possuem características sensoriais mais atrativas para 
+consumo in natura (de mesa), devido seu sabor agradável e os clones BRS 274, CCP 09 
+e Embrapa 50 para o aproveitamento industrial, como na produção de suco, pois são 
+sensorialmente mais adstringentes. Apesar da doçura e da acidez do pseudofruto 
+apresentarem influência na percepção da adstringência, a análise quimiométrica 
+demonstrou uma forte correlação do ácido anacárdico (15:1) e cinamoil glicosídeo, 
+positiva e negativa respectivamente, com a sensação de adstringência e suas 
+subqualidades (aspereza na boca e irritação na garganta), associando-os como prováveis 
+marcadores químicos da adstringência em pedúnculos de cajueiros.  
+ 
+Palavras-chave: Anacardium occidentale L. UPLC. Análise sensorial. Quimiometria. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ABSTRACT 
+ 
+Astringency is a tactile sensation generated by the reduction of lubrication in the oral 
+cavity, commonly caused by the interaction of phenolic compounds with salivary 
+proteins. In the peduncle of the cashew tree (cashew apple), astringency is the main 
+problem that limits its acceptability, being one of the major obstacles for the expansion 
+of the market. This work aimed to characterize the sensory profile and the phenolic 
+compounds profile of cashew apples, and by means of chemometrics, correlates them 
+looking for the possible chemical markers of cashew astringency. Peduncles of nine 
+clones were analyzed of the 2017 harvest. Sensory analysis was based on a descriptive 
+analysis of previously selected and trained judges, which rated the intensity of the 
+descriptors sweet taste, acid taste, astringency and its subqualities (residual mouth 
+roughness and residual throat irritation). The phenolic compounds were extracted with 
+ethanol and analyzed by UPLC-QToF-MS. Physicochemical analyzes of pH, acidity, 
+soluble solids and total phenolics were also performed. The results were submitted to 
+ANOVA, Tukey test (α = 0.05), principal component analysis (PCA) and partial least 
+squares regression analysis (PLS), using the peak intensity of the chromatograms and 
+correlating with the sensorial data. The clones CCP 76 and BRS 189 have more attractive 
+sensory characteristics for in natura, due to its pleasant taste and clones BRS 274, CCP 
+09 and Embrapa 50 for industrial use, as in the production of juice, because they are 
+sensorially more astringent. Although the sweetness and acidity of the peduncles 
+presented an influence on the perception of astringency, the chemometric analysis showed 
+a strong correlation of anacardic acid (15:1) and cinnamoyl glycoside, positive and 
+negative respectively, with the sensation of astringency and its subqualities (roughness in 
+the mouth and irritation in the throat), associating them as probable chemical markers of 
+astringency in peduncles of cashew trees. 
+ 
+keywords: Anacardium occidentale L., cashew apple. UPLC. Sensory analysis. 
+Chemometrics. 
+ 
+ 
+ 
+LISTA DE ILUSTRAÇÕES 
+ 
+Figura 1 –������������������������������������������������������20 
+��������������������������������������������������21 
+Figura 2 –�
+Figura 3 –��������������������������������������������������
+���������������������������������������������������������25 
+Figura 4 –��������������������������������������������������
+�����������������������������������������������26 
+�������������������������������������������
+Figura 5 –�
+���������������������������������������������������������26 
+Figura 6 –����������������������� ligação direta entre os taninos e as 
+proteínas da membrana de células da cavidade 
+oral..............................................................................................................27 
+���������������������������������������������
+Figura 7 –�
+������������������������������������������������������������28 
+Figura 8 –����������������������������������������������������30 
+Figura 9 –����������������������������������������������
+������������������������������������������������������30 
+�����������������������������������������������������32 
+Figura 10 –�
+Figura 11 –�������������������������������������������������������33 
+Figura 12 –�������������������������������������������������������34 
+������������������������������������������������������35 
+Figura 13 –�
+Figura 14 –������������������������������������������������������45 
+Figura 15 –���������������������������������������������������45 
+���������������������������������������������������46 
+Figura 16 –�
+Figura 17 –��������������������������������������������������������50 
+Figura 18 –��������������������������������������������������
+�����–��������������������������������������������������53 
+Figura 19 –��������������������������������������������
+��������������������������������������–�
+���������������������������������������������������������55 
+Figura 20 –����������������������������������������������������
+��������–���������������������������������������������57 
+Figura 21 –�������������������������������������������������
+��������������������–���������������������������������58 
+Figura 22 –���������������������������������������������������
+������������–�����������������������������������������59 
+Figura 23 –��������������������������������������������������
+������������–������������������������������������������59 
+Figura 24 –������������������������������������������������������
+������������–�����������������������������������������60 
+Figura 25 –�������������������������������������������������������
+��������–�������������������������������������
+������������������������������������������������������������62 
+Estudo de fragmentação do composto ácido hidroxibutanóico etil ester 
+Figura 26 – 
+hexosídeo: a) análise dos fragmentos do composto. b) espectro de 
+massas.........................................................................................................65 
+Figura 27 – Resultados do PCA dos diferentes pedúnculos de clones de cajueiro, 
+safra 2017, Pacajus – CE: a) sistema de coordenadas dos escores PC1 × 
+PC2 × PC3; b) Compostos relevantes (PC1 e PC2) projetados em 
+linhas...........................................................................................................66 
+ Sistema de coordenadas dos escores PC1 × PC2 e em linha de PC1: para 
+investigação detalhada das regiões dos compostos fenólicos (a e b) e 
+Figura 28 – 
+ácidos anacárdicos (c e d) dos clones de pedúnculos de 
+cajueiro.......................................................................................................68 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE TABELAS 
+ 
+Tabela 1 –�����������������������������������������������
+���������������������������������������������������������23 
+Tabela 2 –������������������������������������������������39 
+Tabela 3 –����������������������������������������������������
+�������������������������������������������������������48 
+Tabela 4 –������������������������������������������������
+�����������������������������������������������������
+–���������������������������������������������������������53 
+Tabela 5 –���������������������������������������������������
+��������������������������������������������������������61 
+ -
+Tabela 6 –������������������������������������� íon observado e 
+calculado), perfil de fragmentação (MS/MS) e erro relativo (ppm) 
+presentes em pedúnculos de clones de cajueiro, safra 2017, Pacajus –�
+����������������������������������������������������������64 
+Tabela 7 –�������������������������������������������
+�����������������������������������������������
+�����������������������������������������������
+������������������������������������������
+��������������������������������������–�
+���������������������������������������������������������70 
+ 
+ 
+ 
+  
+LISTA DE ABREVIATURAS E SÍMBOLOS 
+ 
+[M-H]- Ionização negativa  
+ACC Amêndoa da castanha do caju  
+ANOVA Análise de Variância  
+aPRP Prolina ácida 
+ASCII Código Padrão Americano para o Intercâmbio de Informação 
+AT Acidez titulável 
+bPRP Prolina básica  
+ESI- Espectros de massa em o modo negativo  
+FE Fases estacionárias 
+FET fenólicos totais extraíveis  
+FM Fase móvel 
+gPRP Prolina glicosilada 
+HLPC ou CLAE Cromatografia líquida de alta eficiência 
+IBGE Instituto brasileiro de Geografia e estatística 
+LAA Laboratório de Análise de Alimentos  
+LCC  Líquido da casca da castanha 
+LC-MS Cromatografia líquida acoplada à espectrometria de massas 
+LMQPN Laboratório Multiusuário de Química e Produtos Naturais  
+LV Variáveis latentes  
+-NH Amina 
+NIPALS Mínimos quadrados parciais iterativos não-lineares 
+OH Hidroxila 
+PAC Proantocianidinas 
+PAM Pesquisa Agrícola Municipal  
+PC1 Primeiro componente principal  
+PC2 Eixo das ordenadas/ segundo componente principal 
+PCA Análise de Componentes Principais  
+PCs Componentes principais  
+PLS Regressão por Mínimos Quadrados parciais 
+PRPs Prolina  
+PTFE Politetrafluoretileno 
+2
+R Coeficientes de determinação  
+SEC Erro quadrático médio de calibração  
+SEV Erro Padrão de Validação 
+SS Sólidos solúveis 
+SVD Decomposição em valores singulares 
+T Toneladas 
+TCLE Termo de Consentimento Livre e Esclarecido  
+TR Tempos de retenção 
+UPLC-QToF-MS Cromatografia Líquida de Ultra Eficiência acoplado a espectrometria de 
+massa  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+ 
+1              INTRODUÇÃO ............................................................................................ 16 
+2              OBJETIVOS ................................................................................................. 19 
+2.1           OBJETIVO GERAL ....................................................................................... 19 
+2.2             OBJETIVOS ESPECÍFICOS ......................................................................... 19 
+3              REVISÃO BIBLIOGRÁFICA .................................................................... 20 
+3.1           CAJUEIRO (Anacardium occidentale L.)...................................................... 20 
+3.1.1        Aspectos gerais do cajueiro e seus produtos .............................................. 20 
+3.1.2        Aspectos de produção e mercado do caju ................................................... 22 
+3.1.3        Melhoramento genético do cajueiro e principais clones ........................... 22 
+3.2           ADSTRINGÊNCIA ........................................................................................ 24 
+3.3           COMPOSTOS FENÓLICOS ......................................................................... 27 
+3.3.1        Compostos fenólicos e suas funções ............................................................ 27 
+3.3.2        Estrutura química e classificação dos compostos fenólicos ...................... 29 
+3.3.2.1     Ácidos fenólicos ............................................................................................. 30 
+3.3.2.2     Flavonoides ..................................................................................................... 31 
+3.3.2.3     Taninos ........................................................................................................... 33 
+3.3.2.3.1  Taninos Hidrolisáveis ..................................................................................... 34 
+3.3.1.3.2  Taninos Condensados ..................................................................................... 35 
+3.4           COMPOSTOS FENÓLICOS EM PEDÚNCULOS DE CAJU ..................... 36 
+3.5          RELAÇÃO ENTRE COMPOSTOS FENÓLICOS E ADSTRINGÊNCIA EM 
+FRUTAS ........................................................................................................ 37 
+3.6     FERRAMENTAS PARA IDENTIFICAÇÃO DOS COMPOSTOS MAR- 
+CADORES DA ADSTRINGÊNCIA ............................................................. 40 
+3.6.1         Análise sensorial .......................................................................................... 40 
+3.6.1.1      Testes discriminativos ................................................................................... 40 
+3.6.1.1.1   Testes de diferença global ............................................................................. 41 
+3.6.1.1.2  Testes de diferença direcional ........................................................................ 41 
+3.6.1.2     Testes descritivos ............................................................................................ 41 
+3.6.1.3      Testes afetivos ............................................................................................... 42 
+3.6.2         Cromatografia líquida acoplada a espectrometria de massa (LC-MS) .. 42 
+3.6.3         Análises Quimiométricas ............................................................................ 43 
+4               METODOLOGIA ........................................................................................ 44 
+4.1            AS AMOSTRAS ........................................................................................... 44 
+4.2            ANÁLISE SENSORIAL ............................................................................... 46 
+4.3            ANÁLISES FÍSICO-QUÍMICAS ................................................................. 48 
+4.3.1         pH .................................................................................................................. 48 
+4.3.2         Acidez titulável (AT) ................................................................................... 48 
+4.3.3         Sólidos solúveis (SS) .................................................................................... 49 
+4.3.4         Relação entre SS/AT .................................................................................... 49 
+4.3.5         Fenóis Extraíveis Totais (FET) ................................................................... 49 
+4.4            ANÁLISE DOS COMPOSTOS FENÓLICOS ............................................. 50 
+4.4.1         Preparo dos extratos .................................................................................... 50 
+4.4.2        Cromatografia Líquida de Ultra Eficiência acoplado a espectrometria de 
+mas-sas UPLC-QToF-MS ........................................................................... 51 
+4.5            ANÁLISE ESTATÍSTICA ............................................................................ 51 
+5               RESULTADOS E DISCUSSÃO .................................................................. 52 
+5.1            ANÁLISE SENSORIAL ............................................................................... 52 
+5.2            ANÁLISES FÍSICO-QUÍMICAS ................................................................. 56 
+5.2.1         pH .................................................................................................................. 57 
+5.2.2         Acidez titulável (AT) ................................................................................... 57 
+5.2.3         Sólidos solúveis (SS) .................................................................................... 58 
+5.2.4         Relação entre SS/AT .................................................................................... 59 
+5.2.5         Fenólicos Extraíveis Totais (FET) .............................................................. 60 
+5.3            CORRELAÇÃO ENTRE DADOS SENSORIAIS E FÍSICO-QUÍMICOS . 61 
+5.4            ANÁLISE DE COMPOSTOS FENÓLICOS ................................................ 62 
+5.5            ANÁLISE QUIMIOMÉTRICA .................................................................... 66 
+5.5.1         Análise exploratória dos pedúnculos de diferentes genótipos ................. 66 
+5.5.2         Regressão multivariada ............................................................................... 69 
+                  CONCLUSÃO ............................................................................................. 72 
+                  REFERÊNCIAS ......................................................................................... 73 
+                  ANEXOS...................................................................................................... 86 
+                  ANEXO A – TERMO DE LIVRE CONSENTIMENTO E ESCLARECIDO   
+– TCLE ........................................................................................................ 87 
+                  ANEXO B – PARECER DO COMITÊ DE ÉTICA EM PESQUISA DA 
+UNIVERSIDADE ESTADUAL DO CEARÁ, PROTOCOLO Nº 147.279 88 
+                  ANEXO C – FICHA DE AVALIAÇÃO DO TREINAMENTO E 
+AVALIAÇÃO DOS PEDÚNCULOS IN NATURA DE CLONES DE 
+CAJUEIRO. ................................................................................................. 92 
+ 
+ 
+16 
+1 INTRODUÇÃO 
+ 
+O pedúnculo do cajueiro, também conhecido como pseudofruto ou 
+simplesmente caju, apresenta elevada função antioxidante devido ao seu alto teor de ácido 
+ascórbico, carotenoides e compostos fenólicos (QUEIROZ et al., 2011; LIMA et al., 
+2014).  Contudo seu aproveitamento tem sido muito limitado, por ser um produto com 
+alta perecibilidade e ao seu sabor adstringente (DAS; ARORA, 2017).  
+Mundialmente são produzidos em torno de 1.404 mil toneladas anualmente 
+do pedúnculo do caju como subproduto do processo de produção da castanha (FAO, 
+2017). Apesar do seu potencial nutricional, sua elevada adstringência restringe seu 
+processo de exportação (MICHODJEHOUN-MESTRES et al., 2009b). Vale destacar que 
+a sua ampliação no mercado exportador, dependerá de melhorias tecnológicas dos 
+processos industriais e também políticas mercadológicas apropriadas (SANCHO et al., 
+2007).  
+No entanto, apesar da sua riqueza nutricional e elevada atividade funcional, o 
+pedúnculo do cajueiro ainda apresenta baixo consumo. Principalmente no mercado 
+externo, a aceitação do suco integral é comprometida em função da elevada adstringência, 
+sendo um dos maiores obstáculos contra a expansão do mercado (TALASILA; SHAIK, 
+2005). O aproveitamento do pedúnculo gera uma boa fonte de renda, já que o pseudofruto 
+é processado industrialmente e utilizado na composição de sucos, doces, polpas, 
+refrigerantes e vinhos (SANCHO et al., 2007). 
+A adstringência é um dos atributos mais importantes para a qualidade 
+sensorial em produtos como chás, vinhos e algumas frutas subtropicais (uva, framboesas, 
+caqui, entre outras). Contudo, quando presente em alta intensidade, a adstringência torna 
+o alimento desagradável (BENDER et al., 2016). 
+Apenas o Brasil possui experiência, tecnologia e hábito de consumo de 
+pedúnculo de caju in natura e/ou transformado em bebidas e alimentos. Assim, o suco de 
+caju é um dos mais populares no Brasil. Contudo, o aproveitamento dos pedúnculos de 
+caju é insignificante em relação ao volume perdido na safra a cada ano (SILVA et al., 
+2008). 
+A origem do termo adstringência vem do latim ad stringere, que significa 
+amarrar ou ligar, o que pode estar relacionado com a sensação de secura ou enrugamento 
+do epitélio oral. Seu principal mecanismo é a complexação de compostos fenólicos com 
+proteínas da saliva e mucosas da boca, reduzindo a ação lubrificante da saliva e 
+17 
+aumentando a fricção entre as superfícies bucais (FRANK et al., 2001; OTTINGER et 
+al., 2001).   
+Lesschaeve e Noble (2005), ao estudar a influência de polifenóis nas 
+propriedades sensoriais e na preferência de alimentos e bebidas, observaram que os 
+consumidores aceitavam um produto sensorialmente ruim devido a seu alegado valor 
+nutritivo e funcional. Essa situação vem se modificando, pois as pessoas hoje buscam 
+alimentos que possuam ingredientes ou compostos bioativos, mas que também tenham 
+um sabor agradável (IFT, 2018).  
+O governo brasileiro tem buscado solucionar os problemas da produção do 
+cajueiro, patrocinando programas de melhoramento genético com a finalidade de obter 
+variedades de alta produtividade de amêndoas, maior resistência a pragas e doenças e 
+produção de pedúnculos de elevado interesse comercial. O que está relacionado com 
+cajueiros de porte baixo (variedades anãs que permitem a colheita manual) e pseudofrutos 
+mais doces, com baixo nível de adstringência e com qualidades nutricionais e industriais. 
+Contribuindo para o maior aproveitamento da amêndoa e do pedúnculo (LUZ et al., 2008; 
+VIDAL NETO et al., 2013).  
+Jayalekshmy e John (2004) atribuíram a adstringência do caju a seu elevado 
+teor de taninos (35%), enquanto Michodjehoun-Mestres et al. (2009b) acreditam que os 
+fenóis da camada de cera da película que envolve o pseudofruto são os principais 
+responsáveis. Agostini-Costa et al. (2000) e Agostini-Costa, Lima e Lima (2003) citam a 
+presença de taninos condensados nos pedúnculos. Cunha et al. (2017) identificaram 
+ácidos fenólicos em pedúnculos de clones de cajueiro, como cinamoil glicosídeo (éster 
+do ácido cinâmico), marcador químico para cajus maduros, monogaloil diglicosídeo e 
+digaloil glicosídeo (ésteres de ácido gálico) como compostos que contribuem para o sabor 
+amargo e adstringente no caju. Contudo, não existem estudos aprofundados sobre o tema, 
+principalmente trabalhos que determinem a relação de compostos químicos com a 
+percepção sensorial de adstringência. Portanto, torna-se necessário identificar os 
+compostos responsáveis pela adstringência do pedúnculo do cajueiro, de forma a 
+subsidiar o programa de melhoramento genético com marcadores químicos, bem como 
+orientar o desenvolvimento de processos tecnológicos para reduzir a adstringência em 
+produtos como o suco integral, por exemplo, sem alterar suas propriedades funcionais. 
+Quando resolvido o problema da adstringência e a consequente melhoria do 
+sabor, o caju e seus produtos derivados apresentarão ampliação de aceitabilidade e grande 
+potencial para conquistar novos mercados, internos e externos, visto que o caju atende a 
+18 
+diversas tendências mundiais na área da alimentação (IFT, 2016). O crescimento do 
+consumo e das exportações favorecerá o aumento da produção e uma utilização mais 
+racional do caju, com reflexos na redução das elevadas perdas de pedúnculo in natura, 
+com elevado impacto positivo na cadeia produtiva do caju, aumentando a sua 
+rentabilidade. O aumento da demanda e a valorização da matéria-prima e seus produtos 
+contribuirão para o incremento da produção e o aproveitamento integral do caju, dando 
+maior sustentabilidade à área produtiva e impulsionando o setor industrial. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+19 
+ 
+2 OBJETIVOS 
+ 
+2.1 OBJETIVO GERAL 
+ 
+Determinar a relação entre a composição de compostos fenólicos e a 
+percepção sensorial de adstringência  em pedúnculos de clones de cajueiro. 
+ 
+2.2 OBJETIVOS ESPECÍFICOS 
+ 
+a) Caracterizar o sabor de pedúnculos de diferentes clones de cajueiro, 
+incluindo a adstringência e suas subqualidades; 
+ 
+b) Determinar as características físico-químicas de pedúnculos de diferentes 
+clones de cajueiro, através dos testes de pH, acidez, sólidos solúveis e teor de 
+fenóis totais; 
+ 
+c) Identificar, por cromatografia líquida de ultra eficiência acoplada à 
+espectrometria de massas, os compostos fenólicos presentes nos pedúnculos 
+dos clones de cajueiro em estudo; 
+  
+d) Correlacionar, através de análises quimiométricas, as características 
+sensoriais com o teor dos compostos fenólicos, identificando prováveis 
+marcadores responsáveis pela adstringência em pedúnculos de clones de 
+cajueiro. 
+ 
+20 
+3 REVISÃO BIBLIOGRÁFICA  
+ 
+3.1 CAJUEIRO (Anacardium occidentale L.) 
+ 
+3.1.1 Aspectos gerais do cajueiro e seus produtos  
+ 
+O cajueiro (Anacardium occidentale L.) pertence à família Anacardiaceae e ao 
+gênero Anacardium, que abrange outras 20 espécies. É uma planta nativa da região Nordeste 
+do Brasil, adaptada às condições edafoclimáticas do semiárido, mas espalhou-se pelo mundo 
+devido à ação dos colonizadores. Hoje o cajueiro encontra-se distribuído em pelo menos 55 
+países de todos os continentes, com exceção da Europa, entre as latitudes 27°N (sul da Flórida) 
+até 28°S (África do Sul), nas áreas tropicais e subtropicais (ARAÚJO, 2015; SUASSUNA et 
+al., 2016). No entanto, apenas 28 países apresentam produção significativa (FAO, 2017). 
+Do cajueiro obtém-se o caju, composto por uma castanha e um pedúnculo 
+hipertrofiado (Figura 1). A castanha, o verdadeiro fruto, é composta por uma casca de 
+consistência firme que é constituída por um epicarpo coriáceo, mesocarpo espesso, cujo os 
+alvéolos contêm um líquido inflamável e cáustico, chamado de LCC (líquido da casca da 
+castanha). A castanha também apresenta a película ou tegumento da amêndoa e a amêndoa 
+comestível, conhecida mundialmente, é muito apreciada. A amêndoa da castanha do caju 
+(ACC) representa cerca de 10% do peso do caju e apresenta elevado valor nutricional, por ser 
+rica em ácidos graxos insaturados, proteínas, fósforo, lipídios, ferro, fibras e outros minerais 
+(PAIVA; GARRUTI; SILVA NETO, 2000; SOARES et al., 2012; MUIANGA et al., 2016).  
+ 
+Figura 1 – Cajueiro e seus principais produtos 
+ 
+ 
+Fonte: Adaptada de http://cidadesnanet.com. 
+21 
+O pedúnculo, o pseudofruto, apresenta elevada atividade antioxidante (LOPES et 
+al., 2012b), sendo classificado como um alimento funcional devido a seu alto conteúdo de ácido 
+ascórbico (126 a 372 mg/100 mL) (DAMASCENO et al., 2008), compostos fenólicos (ADOU 
+et al., 2012; QUEIROZ et al., 2011) como o ácido anacárdico (TREVISAN et al., 2006) e 
+flavonoides (BRITO et al., 2007) e carotenoides (ASSUNÇÃO; MERCADANTE, 2003). A 
+polpa do caju é também considerada como boa fonte de açúcares redutores (6 a 10 %) 
+(AZOUBEL et al., 2005; AZEVEDO; RODRIGUES, 2000), ácidos orgânicos como o málico, 
+cítrico e láctico (0,1% a 0,4%) (SILVA et al., 2000; JOSEPH, 2010), minerais (OLIVEIRA et 
+al., 2002) e aminoácidos (alanina, fenilalanina, serina, leucina, glutamato, aspartato, prolina, 
+tirosina) (OLIVEIRA et al., 2002).  
+O pedúnculo pode ser consumido in natura, porém possui boas características para 
+ser processado e originar sucos, bebidas e doces devido à sua polpa suculenta, ausência de casca 
+e sementes, alto teor de açúcar e sabor exótico (SOARES et al., 2012; MUIANGA et al., 2016). 
+Como ilustrado na Figura 2, o aproveitamento do pedúnculo tem em grande parte, um processo 
+bem definido de fabricação industrial, mas alguns de seus produtos ainda são obtidos de forma 
+artesanal (MORAES et al., 2013).  
+ 
+Figura 2 – Principais produtos obtidos do pedúnculo do cajueiro 
+ 
+ 
+Fonte: Adaptada de Moraes et al. (2013). 
+22 
+3.1.2 Aspectos de produção e mercado do caju 
+ 
+Os principais produtores de castanha de caju estão na Ásia e África, sendo o Vietnã, 
+Índia e Costa do Marfim os 3 primeiros colocados em 2017, com aproximadamente 863 mil 
+toneladas (t), 745 mil t e 711 mil t, respectivamente. Nas Américas, apenas o Brasil é um grande 
+produtor, com cerca de 133 mil t de castanha, ocupando a 9ª posição mundial. No entanto, o 
+país está entre os poucos do mundo a produzir pedúnculos do cajueiro comercialmente, com 
+cerca de 1232 mil t (FAO, 2017), valor ainda considerado insignificante em comparação com 
+dados referentes a castanha de caju, já que de acordo com Vidal (2017) e Silva, Araújo e Alves 
+(2010), estima-se que cerca de 85% a 90% da produção do pedúnculo ainda são desperdiçados. 
+ A cajucultura no Brasil concentra-se no Nordeste, principalmente nos estados do 
+Ceará, Rio Grande do Norte e Piauí, onde possui grande importância socioeconômica, gerando 
+postos de trabalho e renda em épocas de seca. A produção comercial do cajueiro (A. occidentale 
+L.) foi incentivada na década de 1970 através de programas governamentais, com a finalidade 
+de favorecer a indústria de processamento da castanha-de-caju na região (GUANZIROLI et al., 
+2009; SOUZA FILHO et al., 2010; VIDAL, 2017). 
+De acordo com a Tabela 1, os dados da Pesquisa Agrícola Municipal (PAM) do 
+IBGE (2016) mostram que a área correspondente à ocupação de cajueiro no Brasil em 2016 foi 
+cerca de 586,5 mil ha, onde 99,6% concentra-se no Nordeste. O Ceará possui a maior área 
+plantada do país, abrangendo 64% de área cultivada na região. O Piauí e Rio Grande do Norte 
+foram os estados que obtiveram uma maior redução de área plantada entre 2012 e 2016, por 
+decorrências do longo período de chuvas abaixo da média e secas e pela ocorrência de pragas 
+e doenças enfrentadas (VIDAL, 2017). 
+ 
+3.1.3 Melhoramento genético do cajueiro e principais clones 
+ 
+Os objetivos gerais do programa de melhoramento genético do cajueiro têm sido a 
+seleção de plantas com alto potencial produtivo, características agronômicas superiores 
+(precocidade, resistência às principais pragas e doenças), maior qualidade da castanha e do 
+pedúnculo, adaptabilidade a diferentes ambientes e estabilidade de produção (VIDAL NETO 
+et al., 2013). Atualmente, esse programa tem focado no aproveitamento da amêndoa e do 
+pedúnculo, tanto para consumo in natura quanto para o processamento do suco, visando atender 
+às demandas atuais da cajucultura (ARAÚJO, 2015). 
+23 
+Tabela 1 – Área plantada de cajueiro no Brasil, por região e por estados do Nordeste 
+entre 2012 e 2016 em hectares 
+Período 
+ 
+2012 2013 2014 2015 2016 
+Brasil 765.030 708.808 638.515 623.586 586.528 
+Regiões      
+Nordeste 760.465 704.467 634.667 619.878 583.917 
+Norte 3.845 3.629 3.030 2.945 2.329 
+Centro-Oeste 720 712 818 763 282 
+     
+Estados do Nordeste 
+Ceará 403.373 405.466 378.146 389.358 376.295 
+Piauí 170.296 133.328 92.674 87.474 79.344 
+Rio Grande do Norte 129.507 116.898 114.812 96.120 80.432 
+Bahia 27.180 22.964 25.690 25.824 25.749 
+Maranhão 16.999 16.091 14.438 11.968 13.379 
+Pernambuco 6.305 3.817 3.611 3.821 3.586 
+Paraíba 5.432 4.734 4.127 4.139 3.958 
+Alagoas 1.373 1.169 1.169 1.174 1.174 
+ 
+Fonte: IBGE (2016). 
+ 
+Nesse contexto, a seleção de clones tem sido guiada pelas seguintes metas: (a) 
+-1
+produtividade superior a 1300 kg ha, com porte baixo para facilitar a colheita manual; (b) 
+castanhas com mais de 10 g, com facilidade de despeliculagem e rendimento maior que 25%; 
+(c) pedúnculos com características de cor, sabor, textura e teor de taninos adequados à 
+preferência do consumidor (VIDAL NETO et al., 2013). Segundo os autores, resultados 
+promissores já foram obtidos, com o lançamento de diversos clones que já estão disponíveis 
+comercialmente (BARROS et al., 2000; CRISÓSTOMO et al., 2002; PAIVA et al., 2007; 
+PAIVA et al., 2008a; PAIVA et al., 2008b). 
+ Clone (variedade ou cultivar) é uma planta originada de outra através de 
+propagação assexuada e possuindo patrimônio genético idêntico. A escolha do clone dependerá 
+do mercado no qual o produtor pretende atuar. Para a comercialização das amêndoas são mais 
+indicados os BRS 226, BRS 274, BRS 275, Embrapa 50 e Embrapa 51, embora não tenha 
+limitações no comércio da castanha. Como frutos de mesa, o ideal é o clone CCP 76, pois possui 
+24 
+maior doçura, menor teor de tanino e melhor aparência geral. Porém, os clones CCP 09, BRS 
+189, BRS 226 e Embrapa 51 também são alternativas para esse mercado, especialmente o BRS 
+198, bastante semelhante CCP 76, com vantagens na firmeza e coloração avermelhada. Os 
+clones BRS 226, BRS 275 e CCP 1001 têm apresentado, em estudos preliminares, resistência 
+ao oídio. Para a formação de jardim de semente os mais indicados são denominados Clone do 
+Cajueiro de Pacajus (CCP): CCP 1001 e CCP 76. Áreas com ocorrência de resinose, é ideal o 
+plantio do BRS 226, seguido do Embrapa 51. Dentre os clones citados o BRS 274 é o único de 
+cajueiro-comum, os demais são variedade anão-precoce (ARAÚJO, 2015). 
+ 
+3.2 ADSTRINGÊNCIA 
+ 
+Adstringência é definida como um conjunto de sensações táteis na boca de longa 
+duração percebidas como aspereza, secura e enrugamento do epitélio oral, irritação na garganta, 
+entre outras, além de poder ser acompanhada por gosto amargo, ácido ou ambos. Essas 
+sensações, também conhecidas como subqualidades da adstringência, são resultantes da perda 
+do poder lubrificante da saliva devido à exposição da mucosa a determinadas substâncias 
+(BAJEC; PICKERING, 2008; MELIS et al., 2017; BENDER et al., 2016; ASTM, 2004).  
+Segundo Lesschaeve e Noble (2005), as pessoas sentem a adstringência de maneira 
+diferente, devido a variações nas taxas de fluxo salivar. A percepção dessa sensação também 
+pode ser influenciada pela concentração de etanol, pH, doçura e viscosidade. Nos estudos de 
+Noble (2002) e Lesschaeve e Noble (2005), que avaliaram a influência do fluxo salivar na 
+percepção da adstringência, foi observado que provadores que possuíam um fluxo salivar mais 
+baixo identificaram a adstringência com intensidade mais alta, o que pode ser causado pela 
+incapacidade de restauração da saliva para a lubrificação oral no decorrer da ingestão. 
+Apesar de não possuir um mecanismo exato, relata-se principalmente a ligação das 
+proteínas salivares nas células da mucosa oral com taninos e outros polifenóis, ocorrendo a 
+formação do precipitado polifenol-proteína em forma de uma camada (Figura 3). Tal fato 
+ocasiona perda da lubrificação na cavidade oral e consequente aumento da fricção entre as 
+superfícies bucais, a qual é uma sensação tátil percebida pelos receptores do nervo trigeminal 
+(FRANK et al., 2001; OTTINGER et al., 2001). Segundo Edagi; Kluge (2009), em caquis, a 
+adstringência é proveniente dos altos teores de taninos solúveis que precipitam as proteínas 
+presentes na saliva, principalmente a amilase, que uma vez ligada aos receptores de sabor, causa 
+uma sensação de secura no palato, característica de alimentos adstringentes.   
+ 
+25 
+Figura 3 – Mecanismos da adstringência pela formação do precipitado polifenol-
+proteína 
+ 
+ 
+Interação dos compostos fenólicos, principalmente os taninos, com as proteínas salivaries percebida pelos 
+receptores do nervo trigeminal. 
+ 
+Fonte: Adaptada de Ma et al. (2014).  
+ 
+No entanto, diversos estudos no entendimento do mecanismo da adstringência 
+demonstram que as proteínas ricas em prolina (PRPs), abundantes na saliva humana (até 70% 
+do teor de proteínas), estão relacionadas com a percepção da adstringência. As PRPs são 
+classificadas em PRP ácida (aPRP), básica (bPRP) e glicosilada (gPRP).  A aPRP tem função 
+de ligar-se ao cálcio, a gPRP atua na lubrificação oral e a bPRP atua principalmente como 
+mecanismo de defesa do organismo na proteção de efeitos prejudiciais de polifenois e taninos, 
+de forma a dificultar que enzimas digestivas e proteínas alimentares sejam complexadas, 
+restringindo assim sua biodisponibilidade (PLOYON et al., 2018; MELIS et al., 2017; MA et 
+al., 2014; CHARLTON et al., 2002). Scollary et al. (2012) elucidou o mecanismo das 
+substâncias relacionadas com a adstringência e as proteínas salivares. A Figura 4 demonstra as 
+interações de hidrogênio e hidrofóbicas entre o tanino condensado (proantocianidina), formado 
+por catequina e epicatequinas, com as proteínas salivares.   
+A sensação da adstringência pode ser provocada por uma ampla gama de compostos 
+fenólicos e por compostos não fenólicos, como sais de cátions metálicos (sais de alumínio), 
+agentes desidratantes (como etanol e acetona), ácidos orgânicos (LAWLESS; HORNE; GIASI, 
+1996) e minerais (BAJEC; PICKERING, 2008). A adstringência foi estudada por Schöbel et 
+al. (2014), que demonstraram que fenóis adstringentes hidrofílicos promovem respostas 
+diretamente nos neurônios sensitivos do trigêmeo, provocando assim a percepção da 
+adstringência (Figura 5). Muitos elagintaninos ou compostos de cadeia ainda menores 
+contribuem para as propriedades adstringentes, apesar de não interagirem com proteínas 
+26 
+salivares e poderem ser percebidos diretamente por receptores específicos (BENNICK, 2002; 
+GLABASNIA; HOFMAN, 2006; GLABASNIA; HOFFMAN, 2007).  Furlan et al. (2014) 
+estudaram um terceiro mecanismo, encontrando forte correlação entre os taninos e lipossomas 
+lipídicos, sugerindo que a sensação adstringente também pode ser decorrente da ligação entre 
+os taninos diretamente com as proteínas da membrana de células que cobrem a cavidade oral 
+(Figura 6).  
+ 
+Figura 4 – Interações de ponte de hidrogênio e hidrofóbicas entre as proteínas salivares 
+e exemplos de substâncias relacionadas com a adstringência 
+ 
+ 
+ 
+Fonte: Adaptada de Scollary et al. (2012). 
+ 
+Figura 5 – Mecanismos da Adstringência através dos neurônios sensitivos do trigêmeo 
+ 
+Compostos fenólicos percebido diretamente pelo neurônio sensitivo do trigêmeo. 
+ 
+Fonte: Adaptada de Ma et al. (2014). 
+27 
+Figura 6 – Mecanismos da Adstringência pela ligação direta entre os taninos e as 
+proteínas da membrana de células da cavidade oral 
+ 
+ 
+ 
+ 
+ 
+ 
+Interação direta entre os compostos fenólicos, principalmente os taninos, com as proteínas da membrana de células 
+da cavidade oral.  
+Fonte: Adaptada de Ma et al. (2014). 
+ 
+3.3 COMPOSTOS FENÓLICOS 
+ 
+3.3.1 Compostos fenólicos e suas funções 
+Compostos fenólicos são substâncias que possuem um anel aromático (grupo 
+fenila) com um ou mais substituintes hidroxílicos e outros grupos funcionais (LEE et al., 2005). 
+Possuem estrutura variável, e por isso, são multifuncionais. Existem cerca de 10.000 compostos 
+fenólicos, englobando desde moléculas simples até moléculas com alto grau de polimerização. 
+Estão presentes nos vegetais na forma livre ou ligados a açúcares (glicosídeos) e proteínas. 
+Alguns são solúveis em solventes orgânicos, outros em ácidos carboxílicos. Os glicosilados são 
+solúveis em água enquanto que os grandes polímeros são insolúveis (FERRO; MOURA; 
+GERON, 2014). 
+Apenas as plantas e microrganismos são capazes de sintetizar compostos fenólicos. 
+As duas rotas metabólicas mais conhecidas são as rotas do ácido chiquímico (60% dos 
+compostos) e a do ácido malônico. A maioria dos fenólicos em vegetais são provenientes da 
+conversão de precursores de carboidratos derivados de glicólise e da rota da pentose fosfato em 
+aminoácidos aromáticos, sendo o ácido chiquímico um dos intermediários dessa rota (FERRO; 
+MOURA; GERON, 2014).  
+Os compostos fenólicos estão entre as mais importantes classes de metabólitos 
+secundários, sendo conhecidos pela sua grande importância no sistema solo-planta. Nas plantas 
+estão relacionados principalmente a estresse metabólico, parede celular e exsudatos de raízes e 
+sementes (CASTRO; FERREIRA; SILVA, 2004). Agem na sua proteção, fornecendo uma alta 
+resistência contra raios ultravioleta, pragas, fungos, insetos, bactérias e vírus. Funcionam como 
+28 
+moléculas sinalizadoras e atuam como compostos alelopáticos, impedindo o crescimento e 
+desenvolvimento de outras plantas competidoras, sendo componentes funcionais e estruturais 
+da matéria orgânica do solo (FUMAGALI et al., 2008; NUNES et al., 2014). Eles servem 
+também como pigmentos de flores e alimentos, mas além da cor, influenciam em outros 
+atributos da qualidade sensorial dos alimentos, como sabor, odor, amargor, adstringência e 
+textura (NACZK; SHAHIDI, 2004; ROCHA et al., 2011).  
+Atividades antioxidantes, antimicrobianas, incluindo efeitos antifúngicos, antivirais 
+e antibacterianos são relatados em estudos epidemiológicos e estudos clínicos dos polifenois 
+(YIGIT; YIGIT; MAVI, 2009). Entre as classes de compostos antioxidantes naturais, os 
+fenólicos têm sido bastante estudados por impedir a peroxidação lipídica e a ação da lipo-
+oxigenase in vitro. A atividade antioxidante presente nesses compostos está relacionada à sua 
+propriedade redutora, devida à sua estrutura química, que permite a neutralização ou o sequestro 
+dos radicais livres e quelação de metais de transição, atuando tanto no início, como na etapa de 
+propagação do processo oxidativo. Os compostos intermediários resultantes da reação se 
+estabilizam (Figura 7), devido a ressonância do anel aromático presente na sua estrutura 
+(SOUSA et al., 2007; SOETHE et al., 2016). 
+ 
+Figura 7 – Esquema da estabilização de um radical livre por um composto fenólico 
+ 
+ 
+Fonte: Adaptada de http://qnint.sbq.org.br. 
+ 
+A ação antioxidante na saúde humana dependerá da capacidade de absorção e 
+metabolismo do composto fenólico, determinada pela sua estrutura e conjugação com outros 
+compostos fenólicos, o grau de glicosilação/acilação, tamanho da molécula e também sua 
+solubilidade (BALASUNDRAM, SUNDRAM; SAMMAN, 2006). 
+Os polifenóis estimulam a ativação de enzimas desintoxicantes do fígado e atuam 
+fortemente na eliminação de radicais livres. Como consequência, promovem a prevenção de 
+doenças associadas ao estresse oxidativo, como diminuição de risco de doenças 
+29 
+cardiovasculares, como também para alguns tipos de câncer, Alzheimer e Parkinson. No 
+entanto, apesar de serem antioxidantes, os taninos são compostos fenólicos considerados 
+antinutricionais, pois apresentam efeito adverso na digestibilidade de proteínas. Os taninos 
+ligam-se fortemente aos grupos (-NH) presentes nas proteínas e peptídeos, dificultando a 
+hidrólise e sua digestão no estômago. Os efeitos adversos dos compostos fenólicos podem estar 
+relacionados com a carcinogenicidade, genotoxicidade, toxicidade da tireóide, entre outros. A 
+ingestão dessas substâncias em grandes quantidades requer essencial atenção, mas normalmente 
+não há complicações no consumo de alimentos processados que contém esses compostos, pois 
+elas podem ser eliminadas parcial ou totalmente no próprio processamentos, como na 
+maceração (SHAHIDI; NACZK, 2004; BALASUNDRAM; SUNDRAM; SAMMAN, 2006; 
+CORDÃO et al., 2010; BENEVIDES et al., 2011; MELIS et al., 2017). 
+O conteúdo dos compostos fenólicos, como todos metabólitos secundários, pode 
+ser influenciado por fatores climáticos (temperatura, efeito sazonal, intensidade da luz, entre 
+outros), aspectos genéticos e pelas condições relacionadas ao solo. Esses fatores não agem 
+isoladamente, proporcionam uma ação conjunta sobre o metabolismo secundário. Entender os 
+efeitos que as condições ambientais exercem sob os metabólitos secundários são essenciais para 
+aumentar a produção de constituintes ativos de espécies medicinais e aromáticas, com o intuito 
+de obter maior rendimento dos compostos de interesses.  Existe uma interface química entre as 
+plantas e o meio ambiente. O estímulo ocasionado pelo meio pode redirecionar a rota 
+metabólica, proporcionando a biossíntese de diferentes substâncias (MORAIS, 2009).  
+ 
+3.3.2 Estrutura química e classificação dos compostos fenólicos 
+ 
+A estrutura básica dos compostos fenólicos é constituída de um grupamento fenol 
+(grupo fenila ligado a um OH, Figura 8). Quando uma substância apresenta mais de um anel 
+aromático e um grupo OH (hidroxila) ligado em cada anel, é conhecida como polifenol. A 
+diversidade estrutural dos compostos fenólicos deve-se à grande variedade de combinações que 
+acontece na natureza, as quais podem ser categorizadas em várias classes: fenóis simples, ácidos 
+fenólicos (derivados de ácidos benzóico e cinâmico), estilbenos, taninos condensados e 
+hidrolisáveis, cumarinas, flavonoides, lignanas e ligninas (NACZK; SHAHIDI, 2004; 
+OLIVEIRA, 2005; SOUSA et al., 2007; FERRO; MOURA; GERON, 2014). A seguir será 
+apresenta a estrutura básica dos principais compostos fenólicos relacionados à adstringência. 
+ 
+30 
+Figura 8 – Estrutura básica dos Compostos fenólicos 
+ 
+ 
+Fonte: Adaptada de Vrsaljko; Haramija; Hadži-Skerlev (2012). 
+ 
+3.3.2.1 Ácidos fenólicos 
+ 
+Os ácidos fenólicos são compostos que apresentam 1 anel aromático (grupo fenila) 
+e um grupo funcional carboxila e são divididos em dois subgrupos: ácidos hidroxibenzóicos e 
+hidroxicinâmicos (Figura 9). Os ácidos hidroxibenzóicos possuem sete átomos de carbono 
+(C6C1) em sua estrutura e são as moléculas mais simples dessa classe de compostos. Essas 
+substâncias fazem parte das complexas estruturas dos taninos hidrolisáveis, e são pouco 
+abundantes em vegetais consumidos pelos humanos. Incluem o ácido gálico, p-
+hidroxibenzóico, vanílico, protocatequínico e siríngico. Os ácidos hidroxicinâmicos são 
+compostos aromáticos que possuem nove átomos de carbono (C6C3), como o caféico, p-
+cumárico, ferrúlico e sinápico. Fazem parte de diversos alimentos e bebidas de origem vegetal, 
+como erva mate, café, maçã, ameixa e outras frutas, crucíferas, cereais, dentre outros. O ácido 
+cinâmico da origem à cumarina por ciclização da cadeia lateral do ácido o-cumárico (SOARES, 
+2002; BALASUNDRAM, SUNDRAM e SAMMAN, 2006; OLIVEIRA; BASTOS, 2011).  
+ 
+Figura 9 – Estrutura dos ácidos fenólicos: a) ácidos hidroxibenzóicos b) ácidos 
+hidroxicinâmicos  
+a) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+31 
+b) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fonte: Adaptada de Soares (2002); Heleno et al. (2015). 
+ 
+3.3.2.2 Flavonoides 
+ 
+Os flavonoides são formados por dois anéis aromáticos (A e B) ligados através de 
+um heterociclo oxigenado de três carbonos, conhecido como anel pirano (anel C), apresentando 
+carbonos dispostos (CCC) (Figura 10). O anel A é derivado do ciclo do acetato/malonato, 
+636
+e o B derivado da fenilalanina. Variações do anel C especificam as subclasses de flavonoide, 
+como flavonóis, flavanóis (ou catequinas), flavanonas, flavonas, isoflavonas, antocianidinas, 
+proantocianidinas (taninos condensados), flavanonols e chalconas, podendo diferenciá-las pelo 
+número de substituintes e sua localização. Alguns flavonoides formam cadeias, conhecidas 
+também por oligômeros. Substituições em anéis A e B, como oxigenação, alquilação, 
+glicosilação, acilação e sulfação resultam em diferentes substâncias dentro de cada subclasse 
+de flavonoides (RICE-EVANS, 2004; CAMPOS, 2010; SELEEM; PARDI; MURATA, 2017; 
+OTEIZA et al., 2018). 
+Flavonoides, com exceção das catequinas, são basicamente encontrados em plantas 
+na sua forma glicosilada com uma molécula de açúcar (normalmente o-glicosídeos), ligada ao 
+grupo hidroxila na posição C3 ou C7. D-glicose e L-ramnose são os mais comuns, porém outros 
+oito monossacarídeos ou combinações destes podem ligar-se aos diferentes grupos hidroxilas 
+do flavonoide, contribuindo para o grande número de glicosídeos conhecidos (HUBER; 
+RODRIGUEZ-AMAYA, 2008). 
+ 
+ 
+ 
+ 
+32 
+Figura 10 – Estrutura básica dos flavonoides 
+ 
+ 
+Fonte: Adaptada de Balasundram; Sundram; Samman (2006); Coutinho; Muzitano; Costa (2009). 
+ 
+Os flavonoides realizam a função de defesa da planta contra predadores e agentes 
+oxidantes (radicais livres, radiação solar e outros) e são encontrados abundantemente 
+distribuídos nas sementes, folhas, cascas e flores. Na indústria cosmética, essa classe de 
+compostos é utilizada com o propósito de atuar como anti-envelhecimento e fotoprotetor, a fim 
+de intensificar a proteção final do produto (HARBORNE; WILLIAMS, 2000). Como fonte 
+natural de flavonoides existem, por exemplo o caju e a pitanga, que possuem em sua 
+composição kaempferol, quercetina e miricetina; acerola, contendo quercetina e kaempferol, e 
+cajá e maçã possuindo altos conteúdos de quercetina (HUBER; RODRIGUEZ-AMAYA, 
+2008).  
+As catequinas (Figura 11) e demais flavonoides estão relacionados com uma série 
+de atividades biológicas, como antioxidante, quimioprotetora, anti-inflamatória, e 
+anticarcinogênica (SCHMITZ et al., 2005). Além, de influenciarem na adstringência, com 
+estudos comprovando a correlação existente desses compostos nessa percepção (ROSSETTI et 
+al., 2009).   
+ 
+ 
+ 
+ 
+ 
+ 
+33 
+Figura 11 – Estrutura das (Epi) Catequinas e (Epi) Afzequina 
+ 
+ 
+Fonte: Adaptada de Matsubara; Rodriguez-Amaya (2006); Pascual-Teresa; Santos-Buelga; Rivas-Gonzalo (2000). 
+ 
+3.3.2.3 Taninos 
+ 
+Os taninos caracterizam-se por serem polímeros fenólicos de grande peso molecular 
+solúveis em água que precipitam proteínas, por conterem grupos hidroxilafenílicos, 
+responsáveis pelas ligações cruzadas com proteínas. Sua concentração varia de acordo com o 
+clima e com as condições geográficas. No reino vegetal são amplamente distribuídos tanto em 
+espécies de gimnospermas como angiospermas, sendo que seu conteúdo varia de espécie para 
+espécie, como também em suas partes (caule, folha, raízes e frutos) (BATTESTIN; 
+MATSUDA; MACEDO, 2004). Os frutos, quando verdes, possuem uma alta concentração 
+desses compostos, causando uma maior adstringência, a qual decresce com o amadurecimento. 
+Atuam no mecanismo de defesa e proteção, pois essas substâncias evitam o ataque de 
+herbívoros antes da maturação, reduzindo assim sua biodisponibilidade (AZEVÊDO et al., 
+2015; MELIS et al., 2017). 
+No organismo, os taninos possuem mecanismos de ação relacionados a três 
+propriedades: formam complexos com íons metálicos; formam complexos com proteínas e 
+alcaloides e possuem atividade antioxidante (MONTEIRO; ALBUQUERQUE; ARAÚJO, 
+34 
+2005).  A formação do complexo com proteínas e alcaloides ocorre porque os taninos possuem, 
+em sua estrutura, anéis aromáticos e grupos hidroxila hidrofílicos permitindo a ligação 
+simultânea de sítios receptores de ligações peptídicas, possibilitando uma ligação forte e 
+estável. Essa estabilidade dependerá da concentração de taninos, da sua dimensão e do número 
+de grupos fenólicos livres, como também de suas características estruturais (RINALDI et al., 
+2015).  
+A classe dos taninos apresenta uma grande diversidade química de compostos 
+fenólicos, dividindo-se em dois grupos de acordo com seu tipo estrutural: hidrolisáveis e 
+condensados ou proantocianidinas (ROCHA et al., 2011). 
+ 
+3.3.2.3.1 Taninos Hidrolisáveis 
+ 
+Os taninos hidrolisáveis são encontrados nas folhas, galhos, cascas e madeiras de 
+diversas plantas. São formados por misturas de fenóis simples, tais como o pirogalol e ácido 
+elágico, e ésteres do ácido gálico ou digálico com açúcares, como a glicose. Esse tipo de tanino 
+é unido por ligações éster-carboxila (Figura 12), sendo hidrolisáveis em meio ácido ou básico. 
+Sua unidade básica estrutural é um poliol, usualmente D-glucose, com seus grupos hidroxilas 
+esterificadas pelo ácido gálico (galotaninos) ou pelo hexadihidroxifênico (elagitaninos) 
+(BATTESTIN; MATSUDA; MACEDO, 2004).  
+ 
+Figura 12 – Exemplo de taninos hidrolisáveis 
+ 
+ 
+Fonte: Adaptada de PubChem 
+35 
+3.3.1.3.2 Taninos Condensados 
+ 
+Os taninos condensados ou proantocianidinas (Figura 13) são de origem flavonoide, 
+formados por unidades flavanol: flava-3-ols (catequina) ou flavan3,4-diols (leucoantocianinas), 
+podendo conter duas a cinquenta unidades de flavonoides, classificadas como diméricas, 
+triméricas, oligoméricas (até seis unidades) ou poliméricas (superior a seis unidades). Sua 
+estrutura é complexa e são resistentes à hidrólise, podendo ser solúveis em solventes orgânicos 
+aquosos, dependendo de sua estrutura (BATTESTIN; MATSUDA; MACEDO, 2004; 
+SHAHIDI; NACZK, 2004). 
+ 
+Figura 13 – Exemplo de tanino condensado  
+ 
+ 
+Fonte: Adaptada de Pianet et al. (2008). 
+ 
+A nomenclatura A, B e C das proantocianidinas são referentes às formas 
+monoméricas, diméricas e triméricas respectivamente. Seus monômeros são ligados entre si 
+principalmente por ligações nos carbonos C4C8, contudo as ligações C4C6 também podem 
+ocorrer, quando esterificadas com ácido gálico, formando a 3-O-galatos, através das unidades 
+()epicatequina. Unidades de flavan-3-ol também podem aparecer duplamente ligadas por 
+uma ligação éter nos carbonos C2C7, formando estruturas tipo A, oriundas de uma reação 
+intramolecular oxidativa (PASSOS et al., 2007; PIANET et al., 2008). As proantocianidinas 
+que possuem apenas (epi) catequina são denominadas de procianidinas, enquanto as 
+36 
+proantocianidinas que contém (epi) afzelequina ou (epi) galocatequina são conhecidas como 
+propelargonidina e prodelfinidina, respectivamente (GU et al., 2003). Dentre esses tipos de 
+taninos, as procianidinas são mais comumente encontradas em plantas. 
+ 
+3.4 COMPOSTOS FENÓLICOS EM PEDÚNCULOS DE CAJU 
+ 
+Estudo mais simples de determinação de compostos fenólicos foi realizado por 
+Agostini-Costa et al. (2000). A identificação de antocianinas e taninos foram realizadas por 
+cromatografia em papel e de lipídios fenólicos por cromatografia em camada delgada. As 
+películas de caju apresentaram três antocianidinas como delfinidina, cianidina e pelargonidina 
+e o flavonol como quercetina que estão associados com a coloração dos pedúnculos. As 
+amostras de sucos integrais indicam a presença de um tanino condensado e um lipídio fenólico 
+(ácido anacárdico) associados ao sabor residual dos mesmos. 
+O primeiro trabalho a relatar a detecção de antocianina e flavonóides no caju em 
+extrato metanol-água identificaram um total de quatorze compostos.  Uma antocianina metil-
+cianidina 3-O-hexosídeo e treze flavonóis glicosilados 3-O-galactosídeo, 3-O-glicosídeo, 3-O-
+raminosídeo, 3-O-xilopiranósideo, 3-O-arabinopiranosídeo e 3-O-arabinofuranosídeo de 
+quercetina e miricetina, bem como o kaempferol 3-O-glicosídeo. Esses compostos foram 
+identificados por cromatografia líquida com detecção por arranjo de diodos e por espectrometria 
+de massas por ionização por eletropulverização (LC-DAD-ESI/MS) em comparação direta com 
+padrões ou flavonóides positivamente identificados em cranberry. Também foram detectados 
+traços de delfinidina e ramnetina no extrato hidrolisado, indicando a presença de seus 
+glicosídeos, mas indetectáveis, no extrato original (BRITO et al., 2007).  
+Os compostos presentes em pedúnculos dos clones CCP 76 e Embrapa 50, além das 
+variedades Parakou Rouge e Parakou Jaune foram estudados por Michodjehoun-Mestres et al. 
+(2009a) por HPLC-DAD/ESI-MS. As análises demostraram que a película dos pedúnculos 
+foram 15 a 20 vezes mais ricas em compostos fenólicos totais do que a polpa dos 4 tipos de 
+cajus. Os glicosídeos de antocianidina estão presentes apenas em quantidades significativas na 
+pele da variedade Parakou Rouge e clone CCP 76. Apenas quatro ácidos fenólicos foram 
+observados na pele e polpa, o ácido gálico, dois conjugados de ácido p-leucárico, e ácido 
+elágico. Picos de flavanol não identificados foram observados, semelhantes aos picos de 
+epigalocatequina e galato epigalocatequina. Não foi observado nem flavan-3-ol monoméricos 
+conhecidos e nem proantocianidinas oligoméricas. Quatro glicosídeos de antocianidinas foram 
+detectados em películas do clone CCP 76 e variedade Parakou. Na variedade Parakou Jaune e 
+37 
+clone Embrapa 50 estavam presentes apenas traços e ausente nas polpas. Os flavonóis e 
+glicosídeos de flavonóis encontrados foram miricetina monohexosídeos: 3-O-galatosídio e 3-
+O-glicosídeo. Miricetina monopentosídeos: eles poderiam ser arabinose e xilose. Foram ainda 
+identificados miricetinas e quercetinas: miricetina 3- O-raminosídeo, quercetina hexosídeo, 
+quercetina 3-O-galactosídeo, quercetina 3-O-glicosídeo, quercetina pentosídeo, arabinosídeo 
+ou xilosídeos. Agliconas desprotonadas, quercetina 3-O-raminosídeo, flavonol hexosídeo, 
+miricetina hexosídeo monometílico (MICHODJEHOUN-MESTRES et al., 2009a).  
+A composição química de sucos e fibras de cajus maduros e verdes dos clones CCP 
+76 e BRS 189 foram analisados por Cunha et al. (2017) através do sistema UPLC-qTOF-MS. 
+As amostras de sucos apresentaram compostos como ésteres de ácido gálico, monogaloil 
+glicosídeo e monogaloil diglicosídeo e digaloil glicosídeo; composto não-fenólicos derivado do 
+ácido abscísico, ácido hexosídeo dihidro-faseico; flavonóis glicosídeos, miricetina 3-O-
+hexosídeo, miricetina 3-O-raminosídeo, quercetina 3-O-hexosídeo, quercetina 3-O-
+raminosídeo e kaempferol 7-O-glucoronideo; éster do ácido cinâmico, cinamoil glicosídeo e a 
+flavonona, naringenina-7-O-glicosídeo. Presentes nas fibras dos cajus foram os compostos 
+flavonóis glicosídeos, quercetina 3-O-pentosídeo, o éster do ácido cinâmico, cinamoil 
+glicosídeo; um éster de ácido caféico, cafeoil D-glicosídeo, lactona do ácido diidrocaféico; os 
+lipídios fenólicos derivados do ácido salicílico, ácidos anacárdico; também foram encontrados 
+compostos não fenólicos, como a vitamina ácido ascórbico e a giberelina GA(g), regulador 
+19
+de crescimento. 
+Os principais compostos fenólicos que atuam na sensação adstringente no 
+pedúnculo e em seus derivados (doces, sucos, entre outros) são os fenóis monoméricos 
+(principalmente glicosídeos flavonóis) e os taninos (MICHODJEHOUN-MESTRES et al., 
+2009b). 
+ 
+3.5 RELAÇÃO ENTRE COMPOSTOS FENÓLICOS E ADSTRINGÊNCIA EM FRUTAS 
+ 
+Trabalhos relacionando a composição de compostos fenólicos e adstringência em 
+frutas como, caqui, banana, uva, cranberry, cacau e caju foram demonstrados na Tabela 2.  No 
+entanto, esses trabalhos não acessaram a adstringência por técnicas de análise sensorial. Os 
+autores relataram substâncias correlacionadas à adstringência como, os taninos que estão 
+presentes na semente de cacau (Theobroma cacao) (WOLLGAST; ANKLAN, 2000), no caju 
+(35%) (JAYALEKSHMY; JOHN, 2004); taninos solúveis, encontrados em caqui cujas as 
+38 
+cultivares (Diospyrus kaki) são divididas em dois grupos, de acordo com sua adstringência 
+(EDAGI; KLUGE, 2009).  
+De maneira semelhante, a banana (Musa ssp.) apresenta forte adstringência, devido 
+à presença de taninos solúveis. Contudo, durante o amadurecimento a adstringência desses 
+frutos tende a diminuir, pois as formas solúveis são transformadas em insolúveis (PÉREZ-
+BURILLO et al., 2018). A polimerização desses compostos e a degradação do amido, induzem 
+o aumento da doçura e maciez e reduzem a acidez, são característicos da fruta madura (SILVA, 
+BARBOSA JÚNIO; BARBOSA, 2015; SARAWONG et al., 2014); taninos condensados nos 
+pedúnculos de caju (AGOSTINI-COSTA et al., 2000; AGOSTINI-COSTA; LIMA; LIMA, 
+2003); taninos compostos por catequinas: (epi)galocatequina, epigalocatequina-3-O-galato, 
+epicatequina-3-O-galato presentes no caqui (GU et al., 2008). 
+O conteúdo total de proantocianidinas (PAC) contribuem para a adstringência em 
+cranberry (Vaccinium macrocarponé) (WANG, 2017) e uva (Vitis vinifera L.). Possui ainda um 
+alto teor nas sementes da uva, apresentando maior precipitação de proteínas salivares 
+(RINALDI et al., 2015). Proantocianidinas de catequina e catequina 3-O-galato foram 
+associaram a adstringência do caqui (IKEGAMI et al., 2007) e três procianidinas do tipo B, 
+nomeadamente procianidinas B1, B2 e B4 na banana (REBELLO et al., 2014).  
+Catequinas e epicatequinas são relatadas no cacau (na forma de procianidinas 
+monoméricas ou taninos condensados) (WOLLGAST; ANKLAN, 2000), uva, principalmente 
+na semente (ABE et al., 2007), banana (REBELLO et al., 2014). Apenas epicatequinas foram 
+relatadas na uva (RINALDI et al., 2015) e caqui (AKAGI et al., 2010); Outras variedades de 
+catequinas e epicatequinas como: epigalocatequina-3-O-galato, epicatequina galato, 
+epigalocatequina e epicatequina são encontrados no caqui (AKAGI et al., 2010); (-)-
+galocatequina na banana (REBELLO et al., 2014); (-)-galoepicatequina e prodelfinidinas em 
+uvas in natura (RINALDI et al., 2015). 
+Compostos como monogaloil diglicosídeo e digaloil glicosídeo (ésteres de ácido 
+gálico) contribuem para o sabor amargo e adstringente em pedúnculos de clones de cajueiro 
+(CUNHA et al., 2017).  
+Já trabalhos com abordagem bioguiada, ou sensorialmente guiada, foi utilizada por 
+Scharbert, Holzmann e Hofman (2004) para determinar os compostos responsáveis pela 
+adstringência do chá preto. No estudo de thresholds, os autores verificaram que a sensação oral 
+de secagem na boca e adstringente foram identificadas com as concentrações limiares de 190 a 
+930 µmol / L para flavan-3-ols (variedades de catequinas e epicatequinas), 13 e 26 µmol / L 
+nas teoflavinas e 0,001 a 19,8 µmol / L em flavon-3-ol glicosídeos. Observado assim, que nem 
+39 
+os polifenóis como a tearubigina, de elevado peso molecular, nem as catequinas e teoflavinas 
+são os principais contribuintes para o sabor adstringente do chá preto, mas sim uma série de 14 
+flavon-3-ol glicosídeos.  
+ 
+Tabela 2 – Substâncias responsáveis pela adstringência em algumas frutas 
+Substância identificadas Frutas Autor 
+Cacau WOLLGAST.; ANKLAN, 2000 
+Taninos 
+Caju JAYALEKSHMY E JOHN (2004) 
+EDAGI; KLUGE (2009) 
+Caqui 
+Taninos solúveis SILVA, BARBOSA JÚNIO; BARBOSA, 
+Banana 
+(2015); SARAWONG et al. (2014) 
+AGOSTINI-COSTA et al. (2000) 
+Taninos condensados Caju 
+AGOSTINI-COSTA; LIMA; LIMA (2003) 
+Taninos compostos por: 
+(Epi)galocatequina, 
+Caqui GU et al. (2008) 
+Epigalocatequina-3-O-galato, 
+Epicatequina-3-O-galato. 
+Cranberry WANG et al. (2017) 
+Proantocianidinas 
+Uva RINALDI et al. (2015) 
+Proantocianidinas de: 
+Caqui IKEGAMI et al. (2007) 
+Catequina 
+Catequina 3-O-galato 
+Procianidinas: B1, B2 e B4 Banana REBELLO et al. (2014) 
+Cacau WOLLGAST.; ANKLAN, 2000 
+Catequina Uva ABE, et al. (2007) 
+Banana REBELLO et al. (2014) 
+Cacau WOLLGAST.; ANKLAN, 2000 
+Uva ABE, et al. (2007); RINALDI et al. (2015) 
+Epicatequina 
+Banana REBELLO et al. (2014) 
+Caqui AKAGI et al. (2010) 
+Epigalocatequina-3-O-galato 
+Caqui AKAGI et al. (2010) 
+Epicatequina galato 
+Epigalocatequina 
+Banana REBELLO et al. (2014) 
+(-)-galocatequina 
+(-)-galoepicatequina 
+Uva RINALDI et al. (2015) 
+Prodelfinidinas 
+Monogaloil diglicosídeo 
+Caju CUNHA et al. (2017) 
+Digaloil glicosídeo 
+ 
+Fonte: Elaborado pelo autor. 
+40 
+3.6 FERRAMENTAS PARA IDENTIFICAÇÃO DOS COMPOSTOS MARCADORES DA 
+ADSTRINGÊNCIA 
+ 
+3.6.1 Análise sensorial 
+ 
+A qualidade sensorial não é uma propriedade intrínseca de um produto, mas o 
+resultado da maneira como os humanos a percebem. O alimento tem suas propriedades 
+estruturais, físicas e químicas que determinam suas características sensoriais, enquanto as 
+percepções humanas são os resultados de processos complexos que envolvem órgãos dos 
+sentidos e o cérebro. Apenas dados sensoriais fornecem informações sobre como os 
+consumidores percebem ou reagem a produtos alimentícios na vida real. Assim, as medições 
+instrumentais são úteis somente quando mostram boa correlação com dados sensoriais 
+(SCHIFFMAN, 2001). 
+No entanto, quando o homem é utilizado como instrumento de medida, é necessário 
+um controle rigoroso das condições de aplicação dos testes e da metodologia a ser utilizada, a 
+fim de evitar erros de natureza psicológica ou fisiológica. Para tanto, foi criada a ciência 
+sensorial. A análise sensorial é definida pela Associação Brasileira de Normas Técnicas como 
+a disciplina científica empregada para evocar, medir, analisar e interpretar reações das 
+características dos alimentos e dos materiais da forma que são percebidas por todos os sentidos 
+(ABNT, 1993). Na análise sensorial, os métodos de avaliação podem ser classificados em 
+discriminativos, descritivos e afetivos (GARRUTI et al., 2012). Discussões e explicações mais 
+detalhadas sobre como conduzir, analisar e interpretar cada método são fornecidas por Amerine 
+et al. (1965); Moskowitz (1983); Lawless e Heymann (1999); Stone e Sidel (2004); Meilgaard 
+et al. (2006). 
+ 
+3.6.1.1 Testes discriminativos 
+ 
+Testes discriminativos, ou testes de diferença respondem se existe alguma diferença 
+perceptível entre os produtos. Podem ser subdivididos em testes de diferença global ou 
+direcional (MEILGAARD et al., 2006). 
+ 
+ 
+41 
+3.6.1.1.1 Testes de diferença global 
+ 
+São utilizados para verificar se existe uma diferença sensorial significativa entre 
+duas amostras e não em que ou quanto elas são diferentes: teste triangular, teste duo-trio, teste 
+de diferença simples, teste de similaridade, entre outros. 
+ 
+3.6.1.1.2 Testes de diferença direcional 
+ 
+São necessários para identificar qual amostra tem a maior intensidade de uma 
+característica sensorial particular. No entanto, a medida quantitativa dessa intensidade não é 
+determinada. Para avaliar a diferença entre duas amostras, o teste mais utilizado é o Teste de 
+comparação pareada e para avaliar diferença entre mais de duas amostras, os testes mais 
+utilizados são teste de ordenação e teste de diferença do controle. 
+ 
+3.6.1.2 Testes descritivos 
+ 
+Envolvem a detecção e a descrição de ambos os aspectos sensoriais qualitativos e 
+quantitativos de um produto. Julgadores treinados descrevem os atributos sensoriais de uma 
+amostra, frequentemente denominados descritores. Além disso, eles avaliam a intensidade de 
+cada descritor para definir até que ponto ele está presente naquela amostra. Meilgaard et al. 
+(2006) explicam como dois produtos podem conter os mesmos descritores qualitativos, mas 
+podem diferir acentuadamente na intensidade de cada um, resultando em perfis sensoriais 
+bastante distintos.  
+No teste de análise descritiva quantitativa ou ADQ, desenvolvida por Stone et al. 
+(1974), há várias sessões de treinamento. O painel sensorial previamente selecionado tem a 
+tarefa de gerar um conjunto de termos (descritores) que descrevem as diferenças entre as 
+amostras. O teste é realizado individualmente por cada julgador e os resultados são analisados 
+por técnicas estatísticas univariadas e multivariadas: ANOVA de cada descritor, análise de 
+variância multivariada, análise de componentes principais (PCA), análise fatorial, análise de 
+cluster e muitos outros.  
+ 
+ 
+42 
+3.6.1.3 Testes afetivos 
+ 
+Os testes afetivos são a classe de testes sensoriais que avaliam respostas pessoais 
+subjetivas de indivíduos em relação a um ou mais produtos, medindo aceitação e preferência. 
+São realizados com um público-alvo, ou seja, com consumidores reais ou potenciais do produto 
+a ser analisado, pois não faz sentido testar a aceitabilidade de um produto do qual as pessoas 
+não usam ou não gostam.  Testes de aceitação quantificam o grau de gostar ou não gostar por 
+meio de uma escala de categorias denominada escala hedônica (PERYAM; PILGRIM, 1957), 
+enquanto os testes de preferência determinam a preferência do consumidor de um produto sobre 
+outro. 
+ 
+3.6.2 Cromatografia líquida acoplada a espectrometria de massa (LC-MS) 
+ 
+Uma das mais relevantes técnicas de separação e análise de compostos não voláteis 
+e termicamente instáveis é a cromatografia líquida de alta eficiência (HPLC ou CLAE). No 
+entanto, é uma técnica que necessita vincular-se a outra técnica quando deseja-se realizar uma 
+análise qualitativa (identificação de compostos).  A LC-MS (cromatografia líquida acoplada à 
+espectrometria de massas) fornece informações estruturais necessárias, tornando-se uma 
+ferramenta analítica que possibilita a análise qualitativa e quantitativa (LANÇAS, 2009). 
+A cromatografia líquida de ultra eficiência (UPLC, do inglês ultra performance 
+liquid chromatography) baseia-se nos mesmos princípios de separação da cromatografia líquida 
+de alta eficiência (HPLC). Porém, atua com menor tempo de análise e maior eficiência, devido 
+utilização de fases estacionárias (FE) com partículas menores que 2 µm e altas velocidades 
+lineares da fase móvel (FM). A aplicação de colunas cromatográficas mais eficientes com 
+tamanhos menores, mais resistentes para trabalhar em altas pressões e com volumes reduzidos, 
+favoreceram para aprimorar o desempenho cromatográfico. Equipamento adequado para 
+trabalhar em altas pressões (acima de 100Mpa), contribui para o aumento da resolução e 
+detectabilidade (MALDANER; JARDIM, 2009). A redução de tempo nas separações 
+cromatográficas geradas pelo UPLC promove um maior rendimento e economia de tempo, 
+principalmente quando trabalha-se com muitas amostras. O tempo que pode ser utilizado no 
+desenvolvimento do método, por exemplo (SWARTZ, 2005). 
+Os compostos separados pelo cromatógrafo são introduzidos individualmente na 
+fonte e ionização do espectrômetro de massa, onde são ionizados, separados no analisador e são 
+43 
+direcionados para detecção e quantificação. Através de um softwere são gerados os cálculos 
+necessários e espectros de massa para serem analisados (LANÇAS, 2009). 
+ 
+3.6.3 Análises Quimiométricas 
+ 
+A análise quimiométrica consiste na aplicação de operações matemáticas e 
+estatísticas para análise de resultados químicos. Extraindo assim, o máximo de informações 
+relevantes, através de análise de dados multivariados (KUMAR; SHARMA, 2018).  
+A análise de componentes principais (PCA) é um método que delimita 
+dimensionalmente os dados, baseado em combinações lineares (compomentes principais), 
+permitindo assim, traçar, visualizar e agrupar facilmente múltiplos conjuntos de dados. Essa 
+técnica de agrupamento é mais utilizada distinguir as diferenças entre as amostras, verificar 
+quais variáveis favorecem para essas diferenças, e se essas variáveis estão correlacionadas 
+(contribuindo da mesma maneira) ou são independes (WISHART, 2008). 
+A regressão por mínimos quadrados parciais (PLS) é um método de calibração 
+multivariada. É uma ferramenta analítica que relaciona duas matrizes de dados multivariados 
+(X e Y), objetivando por meio de um conjunto de variáveis preditoras, X modelar uma ou mais 
+variáveis dependentes, Y, sem que ocorra perdas de dados. Utiliza o PCA para reduzir a 
+dimensionalidade da matriz e posteriormente correlaciona os espectros com os dados de 
+interesse da matriz Y. O modelo melhora com o crescente número de variáveis e observações 
+relevantes. São utilizados tratamentos nos dados que visam evidenciar o modelo em variáveis 
+Y mais relevantes e aumentar os pesos de variáveis X mais elucidativas. Também é utilizado o 
+algoritmo, para considerar automaticamente os valores omissos. Método de validação cruzada 
+é utilizado como padrão de análise PLS que simula a probabilidade do modelo bem ajustado 
+com os dados de resposta aleatória (WOLD; SJÖSTRÖM; ERIKSSON, 2001; SOUZA et al., 
+2013). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+44 
+4 METODOLOGIA 
+ 
+4.1 AS AMOSTRAS 
+ 
+Foram analisados pedúnculos de nove clones de cajueiro, sendo oito clones de 
+cajueiro anão (CCP 09, CCP 76, CCP 1001, BRS 189, BRS 226, BRS 275, EMBRAPA 50 e 
+EMBRAPA 51) e um clone de cajueiro comum (BRS 274) (Figura 14), da safra de 2017. 
+Cerca de 30 unidades de frutos maduros e em perfeito estado foram manualmente 
+colhidos, no horário da manhã (7 h às 9 h), na Estação Experimental de Pacajus – CE (s 
+04°10’22’’, o 38°27’39’’). Os pedúnculos foram descastanhados e colocados cuidadosamente, 
+sem sobreposição, em caixas plásticas, forradas com lâmina de espuma de 1 cm de espessura 
+para proteção contra lesões mecânicas e encaminhados para o Laboratório de Análise de 
+Alimentos (LAA) da Embrapa Agroindústria Tropical, em Fortaleza. Os frutos foram coletados 
+em 3 lotes, sendo um lote a cada semana, considerado como uma repetição experimental a ser 
+estudada. 
+No laboratório, os pedúnculos dos cajueiros foram lavados em água corrente para 
+remoção de sujidades aderidas à película, selecionados, separando os que estavam fora do ponto 
+de maturação desejável ou com injúrias, e então higienizados em solução de hipoclorito de 
+-3
+sódio 200 ppm (2,7 x 10 M) por 15 min, seguida de água corrente para retirar o excesso de 
+cloro. Cinco unidades de pedúnculos foram cortados em rodelas com espessura de 1 cm, as 
+quais foram congeladas a -18 °C e liofilizadas para posterior análise cromatográfica para 
+obtenção do perfil de compostos fenólicos (Figura 15). O restante foi separado em duas partes: 
+uma parte foi prensada à mão para extração do suco, o qual foi congelado para as análises físico 
+químicas; a outra parte foi acondicionada em câmera fria (4 °C) por no máximo 24 h até a 
+realização dos testes sensoriais. O fluxograma do preparo da amostra está apresentado na Figura 
+16. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+45 
+ 
+Figura 14 – Pedúnculos dos clones de cajueiro da Embrapa 
+ 
+ 
+Fonte: Elaborado pelo autor. 
+ 
+ 
+Figura 15 – Pedúnculo do clone de Cajueiro para liofilização 
+ 
+ 
+Fonte: Elaborado pelo autor. 
+ 
+46 
+Figura 16 – Fluxograma do preparo das amostras 
+ 
+ 
+Fonte: Elaborado pelo autor. 
+ 
+4.2 ANÁLISE SENSORIAL 
+ 
+Os pedúnculos in natura dos clones de cajueiro foram submetidos a um teste 
+sensorial descritivo utilizando equipe de oito julgadores treinados, segundo Meilgaard et al. 
+(2006). O recrutamento, seleção e treinamento dos candidatos foram realizados segundo as 
+normas ABNT NBR ISO 8586:2016 (Análise sensorial - Guia geral para a seleção, treinamento 
+e monitoramento de avaliadores selecionados e de especialistas ou experts) e ABNT NBR ISO 
+13299:2017 (Análise sensorial - Orientação geral para o estabelecimento de um perfil 
+sensorial). 
+Foram recrutados funcionários da Embrapa, no mínimo, 3 vezes mais candidatos 
+do que o número realmente necessário para compor a equipe. Os candidatos preencheram um 
+questionário avaliando fatores como: afinidade com o produto, interesse em participar dos 
+testes, disponibilidade de tempo para participar de pelo menos 80% dos testes, habilidade de 
+verbalizar as sensações sensoriais, habilidade de usar escalas, e outros parâmetros ligados à 
+47 
+saúde e hábitos alimentares. Em seguida foi realizado uma entrevista pessoal com os demais 
+candidatos, esclarecendo dúvidas do questionário e sentindo a motivação do indivíduo. 
+Esses indivíduos foram selecionados de acordo com teste de reconhecimento de 
+odor (ISO 8586:2016), teste de reconhecimento de gostos e sensações (ISO 8586:2016) e teste 
+discriminativo (triangular) e treinados na terminologia e referências para fazer um diagnóstico 
+dos atributos dos pseudofrutos in natura do cajueiro. A Tabela 3 apresenta uma lista dos termos 
+descritivos de gosto e das sensações orais, suas definições e referências que foram tirados de 
+um estudo prévio de análise descritiva quantitativa (ADQ) em pedúnculos de caju (GARRUTI 
+et al., 1999) e adaptados para corresponder às variações observadas nas amostras do presente 
+estudo. Antes da realização dos testes sensoriais foi solicitado aos julgadores que assinassem 
+um termo de consentimento livre e esclarecido (TCLE) (ANEXO A). Os protocolos dos testes 
+sensoriais foram previamente aprovados pelo Comitê de Ética em Pesquisa da Universidade 
+Estadual do Ceará sob parecer nº 147.279 (ANEXO B). 
+Na seleção final dos julgadores foi validado a equipe treinada. Para tanto foi 
+necessário fazer um teste piloto da análise descritiva, avaliando segundo metodologia proposta 
+por Damásio e Costell (1991): poder discriminativo (p < 0,30); repetibilidade nos 
+amostra
+julgamentos (p > 0,05) e consenso com os demais membros do grupo.  
+repetição
+A degustação dos frutos foi realizada com a equipa de julgadores definitiva, em 
+cabines individuais climatizadas (24 °C), sob iluminação controlada (luz branca, fluorescente) 
+e equipada com terminais de computadores para registro/coleta de dados de maneira automática 
+por meio do software FIZZ (Biosystemes). Um pedúnculo in natura de caju, cortado de forma 
+longitudinal, foi servido, em um prato descartável codificado com números aleatórios de 3 
+dígitos, acompanhado de talheres descartáveis e um copo de água mineral. Foi utilizado o 
+delineamento em blocos completos casualizados, em que os julgadores avaliaram todas as 
+amostras, em três repetições para cada fruto, sendo uma amostra em cada sessão, totalizando 
+27 sessões. A ordem de apresentação das amostras foi balanceada, de forma a evitar vícios nos 
+resultados.  
+Os julgadores foram solicitados a avaliar a intensidade do gosto doce, gosto ácido, 
+adstringência, aspereza na boca e irritação na garganta, utilizando uma escala de intensidade 
+não-estruturada de 9 cm, ancoradas em seus extremos com termos referentes à sua intensidade 
+e amostras-referência. Na avaliação dos gostos doce e ácido, utilizou-se nos extremos da escala: 
+0 = fraco e 9 = forte; adstringência e suas subqualidades, 0 = nenhum/ausência e 9 = forte 
+(ANEXO C). Os julgadores respeitaram o intervalo de mínimo de 20 min entre as amostras. 
+ 
+48 
+Tabela 3 – Lista de termos descritores do pedúnculo do caju com as respectivas 
+definições e amostras-referência 
+Descritor Definição Amostra-referência 
+Gosto doce característico 
+Fraco: solução de sacarose a 12 g/L 
+Gosto Doce de uma solução aquosa de 
+Forte: solução de sacarose a 40 g/L 
+sacarose. 
+Fraco: solução de ácido cítrico em água 
+Gosto ácido característico 
+(0,25 g/L) 
+Gosto Ácido de uma solução aquosa de 
+Forte: solução de ácido cítrico em água (3 
+ácido cítrico 
+g/L) 
+Sensação de amarração ou 
+Fraco: suco de caju in natura do clone CCP 
+secura na língua e mucosas 
+1001 
+Adstringência da boca que é percebida 
+Forte: ác. tânico 0,5 g/L em suco in natura 
+plenamente após 15 s da 
+do clone de CCP 09 
+ingestão 
+Sensação de secura nas Fraco: suco de caju in natura do clone CCP 
+Aspereza na boca mucosas da boca que 1001 
+residual permanece por muito Forte: ác. tânico 0,5 g/L em suco in natura 
+tempo após a ingestão do clone de CCP 09 
+Sensação de ardor ou 
+Nenhum: ausência 
+Irritação na coceira na garganta que é 
+Forte: ác. tânico 0,5 g/L em suco in natura 
+garganta residual percebida após 30 s da 
+do clone CCP 09 
+ingestão 
+  
+Fonte: Elaborado por Embrapa Agroindústria Tropical baseado no trabalho de Garruti et al. (1999). 
+ 
+4.3 ANÁLISES FÍSICO-QUÍMICAS 
+ 
+Os sucos dos pedúnculos foram analisados para determinação de pH, acidez, sólidos 
+solúveis e fenóis totais. Todas as análises foram feitas em quintuplicata. 
+ 
+4.3.1 pH 
+ 
+O pH foi obtido diretamente do suco com o auxílio de um pHmetro digital 
++
+(FiveEasy™ – F20, METTLER TOLEDO). A concentração dos íons H do suco foi medida 
+após a devida calibração do aparelho com soluções tampões pH 4,0 e pH 7,0 (AOAC, 2005). 
+ 
+4.3.2 Acidez titulável (AT)  
+ 
+Pesou-se 1 g de suco em erlenmeyer de 125 mL adicionando-se 50 mL de água 
+destilada e 3 gotas de solução de fenoltaleína 1%. Após homogeneização, foi realizada titulação 
+49 
+com NaOH 0,1 M, previamente padronizado, até a visualização da coloração róseo-claro 
+permanente, no ponto de viragem. Os resultados foram expressos em percentagem de ácido 
+málico (AOAC, 2005).  
+ 
+4.3.3 Sólidos solúveis (SS) 
+ 
+O teor de sólidos solúveis (SS) foi obtido gotejando-se suco filtrado em algodão 
+sobre o prisma do refratômetro (Atago PAL-1), previamente calibrado. O valor encontrado 
+representa a % (p/p) de sacarose solúvel presente em uma solução a 20 °C, é expresso em °Brix, 
+segundo a metodologia da AOAC (2005).  
+ 
+4.3.4 Relação entre SS/AT 
+ 
+A relação sólidos solúveis/acidez titulável (relação Brix/acidez) foi determinada 
+calculando-se o quociente entre os valores obtidos para ambas as variáveis. 
+.   
+ 
+4.3.5 Fenóis Extraíveis Totais (FET) 
+ 
+Os fenóis totais foram determinados utilizando o reagente reagente Folin-Ciocalteu 
+e a curva padrão de ácido gálico, de acordo com a metodologia de Larrauri, Ruperez e Saura-
+Calixto (1997) para o preparo do extrato e Obanda e Owuor (1997), para a leitura dos compostos 
+fenólicos.  
+O extrato foi obtido a partir de 1 g de suco dos pedúnculos pesado em tubos Falcon 
+e adicionado de 4 mL de metanol P.A. 50%. O conteúdo foi homogeneizado em vortex e 
+deixado em repouso por 60 minutos no escuro e em temperatura ambiente (26 ºC). Após esse 
+período o tubo foi centrifugado a 25.200 × g durante 15 min. O sobrenadante foi recolhido e 
+filtrado em um balão volumétrico de 10 mL. Ao resíduo da centrifugação, adicionou-se 4 mL 
+de acetona P.A. 70%, sendo novamente homogeneizado em vortex e deixado em repouso por 
+60 minutos no escuro à temperatura ambiente antes de nova centrifugação (25.200 × g / 15 
+min). O novo sobrenadante foi recolhido e filtrado no mesmo balão volumétrico de 10 mL, 
+completando-se o volume com água destilada, e em seguida transferido para um frasco plástico 
+escuro.  
+50 
+Para realização da leitura utilizou-se 50 µL do extrato, 200 µL de água destilada, 
+250 µL da solução Folin-Ciocalteu (1:3), 500 µL NaCO 20% e 500 µL de água destilada em 
+3
+eppendorf, homogeneizados e deixado em repouso por 30 minutos. A leitura da absorbância foi 
+então realizada com 300 µL do extrato em microplaca, em espectrofotômetro (Varian Cary 50 
+Bio UV-Visible Spectrophotometer) a 700 nm.   
+ 
+4.4 ANÁLISE DOS COMPOSTOS FENÓLICOS 
+ 
+4.4.1 Preparo dos extratos 
+ 
+Para análise dos compostos fenólicos utilizou-se um método baseado na técnica de 
+micro-extração com partição líquido-líquido. As amostras liofilizadas (conforme descrito no 
+item 4.1) foram trituradas e 50 mg do pó foram pesados em um tubo de ensaio e adicionados 
+de 4 mL de hexano P.A.  O conteúdo foi homogeneizado em vortex por 1 minuto e submetido 
+a banho de ultrassom por 20 minutos (potência fixa de 135 W) para a extração dos compostos 
+apolares. Posteriormente, adicionou-se à mistura 4 mL de solução etanol: água (7:3), novamente 
+homogeneizado no vortex (1 min) e ultrassom (135 W) por 20 min, para extração dos compostos 
+polares. Após a extração, as amostras foram centrifugadas a 1.008 × g por 10 minutos, com o 
+intuito de decantar a parte não dissolvida (Figura 17). Da fração polar (metanólica) foi retirado 
+1 mL, filtrado em filtro de PTFE (politetrafluoretileno) de 0,22 µm e recolhido em um vial, 
+para posterior injeção em um sistema de cromatografia líquida acoplada a espectrometria de 
+massas UPLC-QToF-MS (Xevo, Waters) (LUZ et al., 2018). 
+ 
+Figura 17 – Extrato de compostos fenólicos 
+ 
+Fonte: Elaborado pelo autor 
+51 
+4.4.2 Cromatografia Líquida de Ultra Eficiência acoplado a espectrometria de massas 
+UPLC-QToF-MS 
+ 
+As análises foram realizadas com o sistema Acquity UPLC (Waters), acoplado a 
+um sistema de quadrupolo/tempo de voo (QtoF, Waters). As fases móveis foram água com 
+0,1% de ácido fórmico (A) e acetonitrila com 0,1% de ácido fórmico (B), variando o gradiente 
+-1
+de 2% a 95% B (0-15 min), fluxo de 0,4 mL.min. Utilizou-se a coluna Waters Acquity UPLC 
+BEH C 18 (150 x 2,1 milímetros, 1,7 µm; Waters Corporation) com a temperatura ajustada a 
+40 °C e volume de injeção de 5 µL.  
+Os espectros de massas foram obtidos no modo negativo (ESI-), em uma faixa de 
+massas entre 110 e 1180 Da, com temperatura da fonte a 120 °C e dessolvatação a 350 °C. O 
+-1
+fluxo do gás de dessolvatação foi de 500 L.h, cone de extração de 0,5 V e voltagem capilar de 
+2,6 kV. A identificação dos compostos foi realizada com o software Masslynx 4.1 (Waters 
+Corporation), auxiliada pela comparação com outros trabalhos da literatura. 
+ 
+4.5 ANÁLISE ESTATÍSTICA 
+ 
+Os dados da análise sensorial e análises físico-químicas foram submetidos à Análise 
+de Variância (ANOVA), teste de Tukey (α=0.05) e teste de correlação de Pearson. Os dados 
+sensoriais também foram submetidos à análise de componentes principais (PCA). Todas as 
+essas análises estatísticas foram realizadas por meio do programa estatístico XLSTAT 18.01 
+(Addinsoft). O perfil sensorial de cada uma das amostras ainda foi mostrado em gráfico tipo 
+radar, onde o valor médio atribuído pelos provadores a cada descritor é marcado no eixo 
+correspondente. Os resultados das análises físico-químicas foram também apresentados em 
+gráficos de barras. 
+Os dados cromatográficos foram submetidos a uma avaliação quimiométrica por 
+PCA e PLS. A partir dos 54 cromatogramas (triplicata biológica de nove pseudofrutos e 
+duplicada de injeção) obtidos na análise cromatográfica, foi selecionada a região entre 2,7 a 
+19,0 min e convertidos em arquivos ASCII (código padrão americano para o intercâmbio de 
+informação), inseridos no software Origin™ 9.4 para construção da matriz numérica. A matriz 
+de 67.716 pontos de dados (54 cromatogramas × 1.254 variáveis), foi exportada para análise 
+quimiométrica não supervisionada por análise de componentes principais (PCA) e análise de 
+regressão (supervisionada) por mínimos quadrados parciais (PLS), usando o programa The 
+Unscrambler X ™ 10.4 (Software CAMO, Woodbridge, NJ, EUA). O algoritmo SVD 
+52 
+(decomposição em valores singulares) foi aplicado para decompor a matriz e o método foi 
+realizado após a aplicação dos algoritmos de correção e normalização da linha de base sobre os 
+cromatogramas, e centrada na média das variáveis (composição) (ALVES FILHO et al., 2017). 
+Informações relevantes foram obtidas pelos três primeiros componentes principais (PCs) com 
+64% de nível de confiança.  
+Para auxiliar na identificação da variabilidade química baseada em descritores 
+sensoriais de acordo com o genótipo de caju, uma modelagem de regressão por PLS foi 
+realizada utilizando as características sensoriais previamente determinadas como variáveis 
+categóricas (coluna Y). O algoritmo NIPALS (mínimos quadrados parciais iterativos não-
+lineares) foi aplicado na construção de um modelo para cada característica sensorial. As 
+variáveis latentes (LV) foram selecionadas de acordo com parâmetros estatísticos, como SEC 
+(erro quadrático médio de calibração), SEV (erro padrão de validação) e coeficientes de 
+2
+determinação (R). Foi aplicado o método de validação cruzada completa para avaliar o 
+desempenho dos modelos PCA e PLS. 
+ 
+5 RESULTADOS E DISCUSSÃO 
+ 
+5.1 ANÁLISE SENSORIAL 
+ 
+A Tabela 4 e a Figura 18 apresentam as médias de intensidade obtidas para os 
+descritores sensoriais gosto ácido e gosto doce, adstringência, aspereza na boca e irritação na 
+garganta dos pedúnculos de 9 clones de cajueiro. Foi observada diferença significativa (p<0,05) 
+entre os clones para todos os descritores analisados. Os clones de maiores médias de 
+adstringência foram BRS 274, EMBRAPA 51, EMBRAPA 50 e CCP 09, que não diferem 
+estatisticamente. O clone BRS 274 também apresentou elevados aspereza na boca, irritação na 
+garganta e gosto ácido e, juntamente com o EMBRAPA 50, foi o menos doce. O clone 
+EMBRAPA 51, apesar de sua elevada aspereza na boca, apresentou acidez e doçura 
+intermediárias. O pedúnculo do clone BRS 189 apresentou um perfil sensorial semelhante ao 
+CCP 76 que possui elevado gosto doce, baixo gosto ácido, adstringência e suas subqualidades. 
+O CCP 1001 também assemelhou-se ao CCP 76, porém apresentou maior irritação na garganta. 
+Observa-se na Figura 18 que os clones mais adstringentes são menos adocicados, contudo 
+apenas o clone Embrapa 51 não seguiu esse padrão.  
+ 
+53 
+Tabela 4 – Intensidade sensorial dos descritores do sabor, adstringência e suas 
+subqualidades dos pedúnculos de clones de cajueiro, safra 2017, Pacajus – CE 
+1,2
+Descritores Sensoriais 
+Clones 
+Aspereza na Irritação na 
+Gosto doce Gosto ácido Adstringência 
+Boca Garganta 
+CCP 09  3,45 bcd  3,15 bcd  4,36 ab  4,14 ab  3,95 a  
+CCP 76  5,01 ab  2,01 de  2,19 c  2,54 bc  1,98 c  
+CCP 1001  5,34 a  2,14 cde  3,15 bc  2,77 bc  3,37 ab  
+BRS 189  5,61 a  1,53 e  2,17 c  2,05 c  2,20 bc  
+BRS 226  4,77 abc  3,82 bc  3,70 bc  4,09 ab  3,00 ab  
+BRS 274  3,00 d  5,40 a  5,40 a  5,09 a  4,73 a  
+BRS 275  5,79 a  3,25 bcd  3,64 bc  3,70 abc  3,06 ab  
+EMBRAPA 50  2,81 d  4,38 ab  4,70 ab  4,75 a  3,60 ab  
+EMBRAPA 51  4,54 bc  3,55 bcd  5,20 a  5,46 a  3,80 ab  
+ 
+1 
+Valores médios 
+2 
+Letras diferentes, na coluna, diferem signiﬁcativamente pelo teste de Tukey (p < 0,05). 
+Fonte: Elaborado pelo autor. 
+ 
+Figura 18 – Perfil sensorial dos pedúnculos de clones de cajueiro, safra 2017, Pacajus – 
+CE  
+ 
+ 
+Fonte: Elaborado pelo Autor.  
+ 
+54 
+Resultados semelhantes foram obtidos por Garruti et al. (1999) ao estudar o perfil 
+sensorial do suco de caju de quatro clones de cajueiro anão-prococe: CCP 76, CCP 06, CCP 09 
+e CCP 1001. O clone CCP 76 apresentou os pedúnculos de sensorialmente mais agradável aos 
+julgadores, recebendo menores valores para aspereza na língua e irritação na garganta. Por outro 
+lado, o suco do clone CCP 09 apresentou as piores características sensoriais, como elevado 
+gosto ácido, adstringência e seus efeitos na língua e garganta. Nesse mesmo estudo, o suco do 
+CCP 06, apesar de ter um teor de tanino não estatisticamente diferente do CCP 76, causou uma 
+alta irritação na garganta, provavelmente devido ao baixo teor de açúcar. O CCP 1001 ficou em 
+segundo lugar na impressão geral, mostrando ser menos doce que o CCP 76, mas não diferindo 
+dele na maioria dos descritores avaliados. Porém nesse estudo o clone CCP 1001 motrou-se 
+mais doce que o CCP 76, mas presentou médias maiores para todos os outros descritores. 
+Mudança que pode está atrelada às mudanças sazionais de safras distintas. 
+Segundo Vidal Neto et al. (2013), os clones de cajueiro-anão-precoce Embrapa 51, 
+BRS 189, BRS 226 e o híbrido anão x comum BRS 275 são ideais para o plantio comercial em 
+região litorânea do Nordeste, possuem alta produtividade e boa qualidade do pedúnculo e da 
+amêndoa. Os clones CCP 76 e o BRS 189 são os mais recomendados para exploração de caju 
+in natura (de mesa), pois são mais atrativos sensorialmente, proporcionando melhor sabor para 
+os consumidores. Clone 09 é ideal para o plantio irrigado ou sequeiro e para o mercado da 
+amêndoa e caju de mesa. Clone BRS 274, de cajueiro comum, é sugerido para produção de 
+castanha e pedúnculo para a produção de suco e para o cultivo sequeiro, como o clone Embrapa 
+50. Para regiões semiáridas e do cerrado, onde há incidência de doenças é ideal o plantio do 
+clone BRS 226 (Planalto), pois é resistente à resinose, podridão-preta-da-haste (PPH), doenças 
+causadas por fungo (Lasiodiplodia theobromae). 
+Os clones CCP 76, CCP 09 e CCP 1001 foram lançados nos anos 80 e Embrapa 50, 
+Embrapa 51, BRS 189 e BRS 226, foram lançados em 1990, todos de cajueiro-anão-precoce; 
+BRS 274, primeiro clone de cajueiro-comum; e BRS 275, primeiro clone de híbrido anão x 
+comum. O desenvolvimento dos clones proporcionou aos produtores alternativas para o plantio 
+da cultura do caju em outros ecossistemas e incremento no peso da amêndoa. Comparando os 
+clones mais antigos, nota-se que os novos possuem amêndoas maiores, com ganhos superiores 
+a 22%, valores mais expressivos são obtidos pelos clones BRS 274 (comum) e BRS 275 
+(híbrido), lançados em 2007. Todos os novos clones, excedem o peso mínimo da amêndoa 
+(2,54), com características interessantes para cotação no mercado internacional, com exceção 
+do BRS 189 (primeiro material desenvolvido para exploração do pedúnculo, como principal 
+produto) (CAVALCATI; VIDAL NJETO; BARROS, 2013). 
+55 
+A PCA (Figura 19) confirmou o resultado da ANOVA. Nesse gráfico, os atributos 
+são representados por vetores que indicam a direção de sua maior intensidade, e as amostras 
+são localizadas próximas aos atributos que as caracterizam. Observa-se que as amostras foram 
+separadas quanto à intensidade de adstringência (lado direito de PC1) e de doçura (lado 
+esquerdo de PC2). Assim, nos quadrantes positivos do primeiro componente principal (PC1) 
+permaneceram as amostras que apresentaram percepção mais elevada para os atributos 
+adstringência, aspereza na boca, irritação na garganta e gosto ácido e menor percepção de 
+doçura, sendo o inverso verdadeiro. Observa-se, então, que adstringência foi sentida com maior 
+intensidade no clone BRS 274 e menor no BRS 189. O eixo das ordenadas (PC2) também sofreu 
+influência do gosto doce, confirmando que o clone mais doce é o BRS 275 e o menos é o 
+Embrapa 50.  O clone Embrapa 51 ficou localizado nos eixos positivos de PC1 e PC2, indicando 
+que, apesar da sua elevada adstringência e subqualidades, é bastante adocidado, diferenciando-
+se dos demais. 
+   
+Figura 19 – Análise de componentes principais dos descritores avaliados nos pedúnculos 
+de clones de cajueiro, safra 2017, Pacajus – CE 
+ 
+  
+ 
+Fonte: Elaborado pelo autor.  
+ 
+Os vetores adstringência, aspereza na boca, irritação na garganta e ácido ficaram 
+muito próximos entre si, sugerindo alta correlação positiva. O vetor referente ao atributo gosto 
+doce aponta para lado contrário, indicando correlação negativa com os demais atributos. Essas 
+56 
+correlações foram testadas e confirmadas (Tabela 5), obtendo-se coeficientes de correlação de 
+Pearson significativos. Assim, observa-se que a doçura presente nos pseudofrutos de cajueiro 
+pode mascarar a intensidade da adstringência e das sensações de aspereza na boca e irritação 
+na garganta a ela associadas, enquanto o gosto ácido pode contribuir para intensificar essas 
+sensações. 
+Segundo Bajec e Pickering (2008), ácidos orgânicos não fenólicos podem provocar 
+sensações adstringentes em adição a um gosto azedo. Lawless; Horne; Giasi (1996) concluíram 
+que a adstringência não é devida à ligação de hidrogênio entre o ácido e as proteínas orais, mas 
+à própria acidez. Sowalsky e Noble (1998) relataram que a adstringência dos ácidos depende 
+do pH em vez da concentração. A redução do pH afeta significativamente a acidez e a 
++
+adstringência dos ácidos, enquanto que o aumento da concentração de H resulta apenas no 
+aumento da acidez, mas não na adstringência. Uma vez que o aumento de intensidade de 
+adstringência é percebida em resposta ao compostos fenólico ou pela diminuições do pH que 
+podem resultar diretamente da diminuição da eficácia da lubrificação e aumento correspondente 
+da fricção oral ou da adstringência. Portanto, a adstringência dos ácidos, podem ser devido a 
+interações com o tecido epitelial vivo ou uma desnaturação dependente do pH das proteínas 
+salivares lubrificantes.  
+De acordo com Ares et al. (2009), os açúcares podem ser um eficiente agente de 
+mascaramento da adstringência e do amargor conferidos pelos compostos fenólicos. A adição 
+de sacarose ao vinho tinto suprimiu a intensidade máxima da adstringência (VALENTOVA et 
+al., 2002), mas a adição do adoçante artificial aspartame não afetou as propriedades 
+adstringentes dos taninos de semente de uva (SMITH et al., 1996), indicando que não é apenas 
+uma questão de sensação de doçura. Em um modelo reconstruído de vinho tinto (HUFNAGEL; 
+HOFMANN, 2008), a omissão de aldoses e cetoses resultou em perdas de doçura e ligeiro 
+aumento nas propriedades adstringentes, bem como no gosto amargo e gosto ácido. 
+Simultaneamente, a omissão dos principais compostos fenólicos adstringentes do vinho 
+resultou num aumento da doçura. 
+ 
+5.2 ANÁLISES FÍSICO-QUÍMICAS 
+ 
+As médias obtidas para os parâmetros físico-químicos (pH, acidez titulável (TA), 
+sólidos solúveis (SS), relação SS / TA e fenólicos totais extraíveis (FET) e o resultado do teste 
+de Tukey são apresentados nas Figuras 20 a 24. Foram detectadas diferenças significativas entre 
+os clones (p <0,05) para todos os parâmetros, entretanto, sabe-se que a composição química 
+57 
+pode variar com a época de colheita, solo, clima, estado de estresse da planta, armazenamento 
+pós-colheita, dentre outros fatores. Essas determinações foram realizadas para verificar se 
+existe correlação entre atributos químicos e sensoriais, e não para uma caracterização físico-
+química definitiva do pedúnculo de caju dos diversos genótipos estudados. 
+ 
+ 5.2.1 pH 
+ 
+Os valores de pH (Figura 20) variaram entre o mínimo de 3,88 (BRS275) e o 
+máximo de 4,41 (CCP09). As médias encontradas apresentam valores acima de 3,8 (Figura 20), 
+como exigido na legislação para suco integral de caju (BRASIL, 2016). Os materiais CCP e 
+BRS já foram estudados anteriormente, apresentando valores de pH entre 4,0 a 4,7 em 
+diferentes estádios de desenvolvimento (MOURA et al., 2011). No fruto, o aumento do pH está 
+diretamente relacionado com a redução do valor da acidez e com o maior estado de maturação, 
+pois ocorre a oxidação no metabolismo respiratório durante a senescência (NOGUEIRA et al., 
+2002; DAMODARAN; PARKIN; FENNEMA, 2010).  
+ 
+Figura 20 – Resultado do teste de pH dos pedúnculos de clones de cajueiro, safra 2017, 
+Pacajus – CE  
+ 
+ 
+1 
+Letras diferentes, na coluna, diferem signiﬁcativamente pelo teste de Tukey (p < 0,05). 
+ 
+Valores de pH entre 4,15 e 4,34 foram obtidos em um estudo de caracterização de 
+pedúnculos dos clones CCP 06, CCP 09, CCP 76 e CCP 1001 (MAIA et al., 2004), enquanto 
+valores médios de 4,4 foram encontrados em pedúnculos de clones de cajueiro anão submetidos 
+58 
+a diferentes sistemas de condução e espaçamento (DAMASCENO JÚNIOR; BEZERRA, 
+2002). A maioria das frutas é suscetível à esporulação de microrganismos, mas grupos de 
+alimentos ácidos (4,0 > pH < 4,5) ou muito ácidos (pH < 4,0) restringem o crescimento de 
+patógenos (BASTOS, 2007).  
+ 
+5.2.2 Acidez titulável (AT)  
+ 
+As médias para acidez total titulável (Figura 21) variaram entre o mínimo de 0,23 
+(CCP 1001) e máximo de 0,44 % de ácido málico (BRS 275).  
+ 
+Figura 21 – Resultado do teste de acidez titulável dos pedúnculos de clones de cajueiro, 
+safra 2017, Pacajus – CE 
+ 
+ 
+1 
+Letras diferentes, na coluna, diferem signiﬁcativamente pelo teste de Tukey (p < 0,05). 
+Ao avaliar vários estados de maturação, Moura et al. (2011) verificaram valores 
+baixos de acidez (0,20% a 0,29%), como encontrado nos clones CCP09, CCP 1001 e Embrapa 
+50, enquanto valores um pouco maiores que o máximo deste trabalho (0,47 a 0,49) foram 
+encontrados por Maia et al. (2004). 
+ 
+5.2.3 Sólidos solúveis (SS) 
+ 
+Os teores de sólidos solúveis (Figura 22) variaram de 11,4 °Brix (BRS 198) a 14,0 
+°Brix (BRS 275), semelhantes aos valores encontrados por Damasceno Júnior e Bezerra (2002) 
+e Crisóstomo et al. (2002) para clones de cajueiro anão estudados em tratamentos de fitotecnia 
+59 
+e melhoramento genético (11,5 a 13,8 ºBrix). Já valores de 11,71, 12,08 e 11,25, para os clones 
+CCP 09, CCP76 e CCP 1001 respectivamente foram obtidos por Garruti et al. (1999).  
+ 
+Figura 22 – Resultado do teste sólidos solúveis dos pedúnculos de clones de cajueiro, 
+safra 2017, Pacajus – CE 
+ 
+ 
+1 
+Letras diferentes, na coluna, diferem signiﬁcativamente pelo teste de Tukey (p < 0,05). 
+ 
+5.2.4 Relação entre SS/AT 
+ 
+A relação entre os sólidos solúveis e acidez titulável (Figura 23) variou entre 31,2 
+(BRS 274) e 59,2 (CCP 1001).  
+ 
+Figura 23 – Resultado da razão SS/Acidez dos pedúnculos de clones de cajueiro, safra 
+2017, Pacajus – CE 
+ 
+1 
+Letras diferentes, na coluna, diferem signiﬁcativamente pelo teste de Tukey (p < 0,05). 
+60 
+Em trabalhos anteriores (MAIA et al., 2004; MOURA et al., 2013), os pedúnculos 
+apresentaram menor acidez (0,20% a 0,29%) e resultados similares para sólidos solúveis, o que 
+levou a valores mais altos de relação Brix/acidez (até 74) para alguns dos mesmos genótipos 
+aqui estudados. A relação Brix/acidez é um parâmetro relevante de qualidade, pois está 
+diretamente relacionado com sabor, sendo utilizado para avaliar o grau de doçura. À medida 
+que o estádio de maturação do fruto evolui, o valor da relação SS/AT aumenta, podendo 
+determinar um ponto ótimo de colheita (MUSSER et al., 2004; CHITARRA; CHITARRA, 
+2005). Maiores médias de SS/AT representam que a quantidade de sólidos na forma de açúcar 
+é superior em relação à quantidade de ácidos orgânicos. 
+ 
+5.2.5 Fenólicos Extraíveis Totais (FET) 
+ 
+Os pedúnculos dos clones avaliados demostram médias para o teor de fenólicos 
+extraíveis totais (Figura 24) de 102,91 mgEAG/100g (CCP 1001) a 284,21 mgEAG/100g 
+(Embrapa 51).  O que está de acordo com Lopes et al., (2012a) mostrando que em diferentes 
+estádios de maturação dos pedúnculos, diferentes clones de cajueiro apresentaram médias 
+variando de 375,79 mgEAG/100g (CCP 09 no primeiro estádio de maturação) a 54,85 
+mgEAG/100g (BRS 189, no último estádio estudado).  
+ 
+Figura 24 – Resultado do teste de fenóis totais dos pedúnculos de clones de cajueiro, 
+safra 2017, Pacajus – CE 
+ 
+ 
+1 
+Letras diferentes, na coluna, diferem signiﬁcativamente pelo teste de Tukey (p < 0,05). 
+ 
+61 
+Assim, o conteúdo total dos compostos fenólicos diminui gradualmente com a 
+maturação. Ocorre uma grande variação desse conteúdo, devido a diferenças relacionadas ao 
+solo, clima, estação de crescimento, armazenamento pós-colheita e extração, como também em 
+da resposta de defesa da planta. 
+ 
+5.3 CORRELAÇÃO ENTRE DADOS SENSORIAIS E FÍSICO-QUÍMICOS 
+ 
+Na comparação dos resultados sensoriais (Tabela 4, Figuras 18 e 19) com os 
+parâmetros físico-químicos, pode-se observar que os clones sensorialmente mais adstringentes 
+como BRS 274, Embrapa 51, Embrapa 50 e CCP 09 também apresentaram maior teor de 
+fenólicos totais. No entanto, o clone BRS 226 e BRS 275, que não difere estatisticamente dos 
+clones CCP 09, BRS 274, Embrapa 50, apresentou menor adstringência. Estes clones também 
+apresentam a maior média de sabor adocicado, o que pode evidenciar a influência da doçura 
+para mascarar a percepção da adstringência. 
+Interações entre descritores sensoriais como doçura, acidez e adstringência podem 
+ser responsáveis pela falta de correlações significativas entre os conjuntos de dados físico-
+químicos e sensoriais (Tabela 5). No presente estudo, apenas o descritor sensorial aspereza na 
+boca apresentou correlação significativa com algum parâmetro físico-químico, no caso o 
+conteúdo de fenólicos totais (α = 0,05).  
+ 
+Tabela 5 – Correlação entre parâmetros físico-químicos e sensoriais dos pedúnculos de 
+clones de cajueiro 
+Aspereza na Irritação na 
+Variáveis pH ATT SS FET SS/ATT Doce Ácido Adstringência 
+Boca Garganta 
+pH 1 -0,905 -0,178 -0,513 0,837 -0,284 -0,277 -0,133 -0,195 0,009 
+Acidez (ATT)  1 0,319 0,657 -0,879 0,085 0,488 0,381 0,468 0,207 
+Solidos 
+  1 0,086 0,165 0,094 0,331 0,434 0,350 0,575 
+solúveis (SS) 
+Fenois totais 
+   -0,637 -0,275 0,549 0,644 0,368 
+1 0,767 
+(FET) 
+SS/ATT     1 0,002 -0,375 -0,203 -0,333 0,046 
+Gosto doce      1 -0,754 -0,733 -0,686 -0,716 
+Gosto ácido       1 0,880 0,876 0,803 
+Adstringência        1 0,971 0,924 
+Aspereza na 
+        1 0,814 
+Boca 
+Irritação na 
+         1 
+Garganta 
+ 
+Valores em negrito são significativos (α=0,05) 
+ 
+62 
+De fato, a adstringência mostrou ser mais afetada pela presença de alguns fenólicos 
+do que pela concentração total de compostos fenólicos. A partir dos resultados da análise 
+sensorial (Tabela 4) verifica-se que a maioria dos juízes não perceberam sensorialmente as 
+variações físico-químicas (pH, acidez, sólidos solúveis) entre as amostras. Por não 
+apresentarem correlação com a análise sensorial, as análises físico-químicas não foram 
+relevantes para serem incluídas na análise quimiométrica. 
+ 
+5.4 ANÁLISE DE COMPOSTOS FENÓLICOS  
+ 
+A Figura 25 ilustra os cromatogramas dos compostos fenólicos dos pseudofrutos de 
+cada genótipo de cajueiro, adquiridos usando o modo de ionização negativa ([M-H]-). De 
+acordo com relatos anteriores, alguns dos principais compostos foram identificados, os quais 
+estão resumidos na Tabela 6, com os respectivos tempos de retenção (TR em min), valores m / 
+z e perfil de fragmentação. Foram identificados quinze compostos, dois dos quais foram 
+caracterizados como éster e treze pertencentes à classe de compostos fenólicos (cinco 
+flavonoides, um derivado de ácido gálico e sete ácidos fenólicos).  
+ 
+Figura 25 – Cromatogramas de diferentes pedúnculos de clones de cajueiro, safra 2017, 
+Pacajus – CE, no modo de ionização negativa de acordo com a Tabela 6  
+ 
+Fonte: Elaborado pelo Autor 
+63 
+Cunha et al. (2017), ao avaliar o perfil de compostos fenólicos durante a maturação 
+dos pedúnculos dos clones CCP 76 e BRS 189, obtiveram resultados muito semelhantes aos 
+observados nesse estudo. Dentre os compostos identificados, possuem maior relevância para 
+este trabalho cinamoil glicosídeo, precursor dos voláteis de sabor; digaloil glicosídeo, pois eles 
+contribuem para o sabor adstringente amargo; ácidos anacárdico que tem a capacidade de atuar 
+na proteção como antibiótico. 
+ 
+ 
+ 
+64 
+ -
+Tabela 6 – Identificação dos picos de compostos orgânicos ([M-H] íon observado e calculado), perfil de fragmentação (MS/MS) e erro 
+relativo (ppm) presentes em pedúnculos de clones de cajueiro, safra 2017, Pacajus – CE  
+Ionização Ionização 
+Tempo de 
+N° do Prod. íon Fórmula Erro 
+negativa  negativa 
+Retenção  Compostos Referências 
+Pico (MS/MS) Empirica (ppm) 
+Observada Calculada 
+(min) 
+--
+[M-H] [M-H] 
+CUNHA et al., 2017 
+1 2.86 483.0775 483.0775 313; 271; 169 C20H20O14 0.0 Digaloil glicosídeo 
+381; 189; 161; Ácido dihidrofaseico 
+2 2.95 443.1903 443.1917 CHO -3.2 CUNHA et al., 2017 
+213210
+143; 119 hexosideo 
+Ácido hidroxibutanóico etil 
+RODRÍGUEZ-PÉREZ et al., 2013; 
+3 3.34 293.1230 293.1236 131 CHO -2.0 
+12228
+BAO et al., 2018 
+ester hexosídeo isômero 
+317; 316; 287; 
+CUNHA et al., 2017 
+4 3.77 479.0846 479.0826 CHO 4.2 Miricetina-O-hexosídeo 
+212013
+271; 179; 151 
+317; 316; 287; 
+BRITO et al., 2007; CUNHA et al., 2017; 
+5 4.17 463.0871 463.0877 CHO -1.3 Miricetina-O-raminosídeo 
+212012
+MICHODJEHOUN-MESTRES et al., 2009a 
+271; 151 
+BRITO et al., 2007; CUNHA et al., 2017; 
+6 4.20 463.0874 463.0877 301; 300; 271 CHO -0.6 Quercetina-O-hexosídeo 
+212012
+MICHODJEHOUN-MESTRES et al., 2009a 
+301; 300; 271; 
+CUNHA et al., 2017 
+7 4.65 447.0940 447.0927 CHO 2.9 Quercetina-O-raminosídeo 
+212011
+255; 151 
+8 4.82 309.0977 309.0974 355; 207; 147 CHO 1.0 Cinamoil glicosídeo CUNHA et al., 2017 
+15187
+ABU-REIDAH et al., 2014; FARAG et al., 
+9 5.62 477.1031 477.1033 315; 314 CHO -0.4 Isoramnetina-O-hexosídeo 
+222212
+2015 
+10 14.48 341.2119 341.2117 297; 295 CHO 0.6 (15:3) -Ácido Anacárdico CUNHA et al., 2017; JERZ et al., 2012 
+22303
+11 15.20 343.2281 343.2273 299 CHO 2.3 (15:2) -Ácido Anacárdico CUNHA et al., 2017; JERZ et al., 2012 
+22323
+12 15.44 369.2438 369.2430 325; 119 CHO 2.2 (17:3) -Ácido Anacárdico JERZ et al., 2012;  SIHERI et al., 2016 
+24343
+CUNHA et al., 2017; JERZ et al., 2012 
+13 15.96 345.2423 345.2430 301 C22H34O3 -2.0 (15:1) -Ácido Anacárdico 
+ERŞAN et al., 2017; JERZ et al., 2012 
+14 16.17 371.2578 371.2586 327 CHO -2.2 (17:2) -Ácido Anacárdico 
+24363
+15 16.82 373.2751 373.2743 329 CHO 2.1 (17:1) -Ácido Anacárdico ERŞAN et al., 2017, JERZ et al., 2012 
+24383
+ 
+Fonte: Elaborado pelo Autor 
+ 
+ 
+65 
+Devido ao composto ácido hidroxibutanóico etil ester hexosídeo nunca ter sido 
+detectado na família Anacardiaceae foi realizado um estudo de fragmentação, que constatou a 
+presença do mesmo nas amostras dos clones de pedúnculo de cajueiro (Figura 26). Nos frutos, 
+esse composto atua como precursores dos compostos voláteis (ALVES FILHO et al., 2017).   
+ 
+Figura 26 – Estudo de fragmentação do composto ácido hidroxibutanóico etil ester 
+hexosídeo: a) análise dos fragmentos do composto. b) espectro de massas 
+a) 
+ 
+b) 
+ 
+ 
+Fonte: Elaborado pelo Autor 
+ 
+ 
+66 
+5.5 ANÁLISE QUIMIOMÉTRICA 
+ 
+5.5.1 Análise exploratória dos pedúnculos de diferentes genótipos 
+ 
+A abordagem multivariada não supervisionada denominada de análise de 
+componentes principais (PCA) foi utilizada devido à similaridade inerente entre a composição 
+dos pedúnculos de cajueiro e o número elevado de compostos detectados explorando assim, a 
+variabilidade entre os genótipos. Três PCA foram desenvolvidos a fim de obter uma visão 
+completa da variabilidade de acordo com os genótipos: um usando os dados cromatográficos 
+totais de 2,7 a 17,0 min; outro para análise detalhada da região dos compostos fenólicos (2,7 a 
+5,7 min); e o terceiro para análise detalhada da região dos ácidos anacárdicos (14,0 a 17,0 min). 
+A Figura 27a apresenta a plotagem dos dados no espaço 3D, de três componentes principais 
+(PC1 × PC2 × PC3) e a Figura 27b representa as variáveis relevantes (PC1 e PC2) plotadas na 
+forma de linhas. As variáveis do PC3 foram importantes apenas para destacar resultados 
+relevantes.  
+ 
+Figura 27 – Resultados do PCA dos diferentes pedúnculos de clones de cajueiro, safra 
+2017, Pacajus – CE: a) sistema de coordenadas dos escores PC1 × PC2 × PC3; b) 
+Compostos relevantes (PC1 e PC2) projetados em linhas  
+ 
+ 
+67 
+  
+Fonte: Elaborado pelo Autor 
+ 
+O gráfico dos escores do PCA (Figura 27a) mostra que os pedúnculos do clone BRS 
+274 e Embrapa 51estão localizados no escore negativo do eixo PC1, por outro lado, no eixo 
+positivos apresentam-se os clones BRS 189 e CCP76. A avaliação dos gráficos de linha (Figura 
+27b) revelou que diferentes variáveis (compostos) foram responsáveis pelas distinção das 
+amostras. As variáveis negativas de PC1 apresentaram maior quantidade de ácido anacárdico 
+(15: 1) seguido de cinamoil glicosídeo na maioria dos cajueiros adstringentes, o que pode 
+mostrar a correlação positiva entre estes compostos e a adstringência.  
+Nos escores mais positivos do eixo PC2 encontra-se localizado o pedúnculo do 
+clone BRS 275, que apresentou maior quantidade de todos os demais ácidos anacárdicos, 
+principalmente o 15:2, que podem apresentar influência do sabor oposto entre os ácidos 
+anacárdicos 15: 1 e 15: 2. Devido ao genótipo BRS 275 ser classificado com o sabor mais doce, 
+segundo os resultados da análise sensorial (Tabela 4). 
+Para detalhar a variabilidade dos compostos orgânicos de acordo com o genótipo 
+do caju, foram realizadas duas PCA, cada uma utilizando uma região específica do 
+cromatograma para avaliação da composição fenólica (2,7-5,7 min) e da região dos ácidos 
+68 
+anacárdicos (14,0 a 17,0 min). Os resultados de PCA a partir de compostos fenólicos são 
+ilustrados nas Figuras 28a e 28b, e os da região de ácidos anacárdicos nas Figuras 28c e 28d. 
+ 
+Figura 28 – Sistema de coordenadas dos escores PC1 × PC2 e em linha de PC1: para 
+investigação detalhada das regiões dos compostos fenólicos (a e b) e ácidos anacárdicos 
+(c e d) dos clones de pedúnculos de cajueiro  
+ 
+ 
+Fonte: Elaborado pelo Autor 
+ 
+De acordo com o gráfico de escores da composição fenólica (Figura 28a), a 
+principal característica foi o agrupamento entre os genótipos CCP 09 e BRS226 em escores 
+negativos de PC1 pela influência do ácido hidroxibutanóico etil éster hexosídeo (em 3,34 min). 
+Por outro lado, os pedúnculos de caju plotados em escores positivos de PC1 apresentaram maior 
+intensidade do composto de cinamoil glicosídeo (4,82 min), principalmente o clone BRS 275. 
+Em paralelo, a avaliação da região do ácido anacárdico confirmou em correlação negativa, a 
+maior quantidade de ácido anacárdico 15:1 nos genótipos com maior adstringência e aspereza 
+na boca (BRS 274 e Embrapa 51), segundo os atributos sensoriais.  
+Trabalhos com ácidos anacárdicos na área de alimentos são escassos.  Seus efeitos 
+no sabor como, doçura ou adstringência dos alimentos não são relatados, relacionando-os 
+apenas às suas propriedades antioxidantes, conservação de alimentos e na prevenção de doenças 
+69 
+crônico-degenerativas (ABREU et al., 2014). Já estudos relacionando o composto cinamoil 
+glicosídeo com sabor nos alimentos não foram citados na literatura, obtivemos apenas trabalhos 
+de identificação ou que o associem como inibidor do crescimento das plantas (MORITA et al., 
+2005). 
+ 
+5.5.2 Regressão multivariada 
+ 
+A relação entre a análise de PCA e os atributos sensoriais (Tabela 4) através da PLS 
+foi importante para entender a variabilidade das amostras. As características sensoriais descritas 
+na Tabela 4 (gosto doce, gosto ácido, adstringência, aspereza na boca e irritação na garganta) 
+foram usadas como variáveis categóricas (coluna Y) para desenvolver três análises de regressão 
+por mínimos quadrados parciais (PLS): dados cromatográficos totais (2,7 a 17,0 min); análise 
+detalhada da região dos primeiros compostos fenólicos (2,7 a 5,7 min); e análise detalhada da 
+região dos ácidos anacárdicos (14,0 a 17,0 min) (Tabela 7).  
+A Tabela 7 descreve cinco modelos de calibração, um para cada atributo analisado 
+na sensorial, criados para cada região do cromatograma para melhorar a associação entre a 
+variabilidade química de diferentes genótipos de caju e os atributos sensoriais, portanto, 
+corroborando assim, com a presença de compostos marcadores de adstringência. Em geral, 
+considerando a combinação entre os parâmetros estatísticos utilizados para avaliar a qualidade 
+dos modelos de calibração como variância explicada, baixos erros de calibração (RMSEC) e 
+validação (RMSEV), proximidade entre eles, e maiores valores do coeficiente de determinação 
+2
+(R). O modelo de aspereza na boca apresentou-se melhor ajustado que os demais utilizando os 
+dados cromatográficos completos (2,7 a 17,0 min) e apenas a região dos fenólicos (14,0 a 17,0 
+min) (FREITAS et al., 2018). 
+Além disso, todos estes modelos, exceto o construído para o sabor doce, 
+corroboraram a forte relação entre o ácido anacárdico 15:1 com sabor desagradável do caju, 
+principalmente de aspereza na boca. Já o modelo da adstringência se destacou na região dos 
+2
+primeiros compostos fenólicos (2,7 a 5,7 min) apresentando R de 0,89, RMSEV 0,39 e 
+RMSEC/RMSEV de 0,78. Essa relação entre SEC-SEV acima de 0,75 é indicativa de um 
+modelo bem ajustado (ALVES FILHO; SILVA; FERREIRA, 2017; FREITAS et al., 2018). 
+ 
+ 
+ 
+70 
+Tabela 7 – Parâmetros estatísticos obtidos pela modelagem de regressão multivariada 
+por PLS:  dados cromatográficos totais (2,7 a 17,0 min), região dos compostos fenólicos 
+(2,7 a 5,7 min) e região de ácidos anacárdicos (14,0 a 17,0 min), para cada atributo 
+sensorial dos pedúnculos de clones de cajueiro, safra 2017, Pacajus – CE 
+Modelo para o cromatograma completo (2,7 a 17,0 min) 
+a
+Descritor 3LV RMSEC / 
+2bc2de
+R cal RMSEC R val RMSEV 
+f
+sensorial (%) RMSEV 
+Gosto Doce 67,5 0,67 0,60 0,43 0,82 0,73 
+Gosto Ácido 84,2 0,84 0,47 0,72 0,64 0,73 
+Adstringência 86,1 0,86 0,43 0,76 0,58 0,74 
+Aspereza na 
+88,1 0,88 0,39 0,80 0,52 0,75 
+boca 
+Irritação na 
+78,3 0,78 0,39 0,63 0,53 0,74 
+garganta 
+Modelo detalhado para região dos primeiros compostos fenólicos (2,7 a 5,7 min) 
+a
+Descritor 3LV RMSEC / 
+2bc2de
+R cal RMSEC R val RMSEV 
+f
+sensorial (%) RMSEV 
+Gosto Doce 87,7 0,88 0,37 0,80 0,48 0,77 
+Gosto Ácido 84,9 0,85 0,46 0,76 0,59 0,78 
+Adstringência 88,8 0,89 0,39 0,82 0,50 0,78 
+Aspereza na 
+92,1 0,92 0,32 0,86 0,43 0,74 
+boca 
+Irritação na 
+87,3 0,87 0,30 0,80 0,39 0,77 
+garganta 
+Modelo detalhado para a região dos ácidos anacárdicos (14,0 a 17,0 min) 
+a
+Descritor 3LV RMSEC / 
+2bc2de
+R cal RMSEC R val RMSEV 
+f
+sensorial (%) RMSEV 
+Gosto Doce 65,3 0,65 0,62 0,41 0,83 0,75 
+Gosto Ácido 75,9 0,84 0,47 0,72 0,64 0,73 
+Adstringência 86,1 0,86 0,43 0,76 0,58 0,74 
+Aspereza na 
+88,3 0,88 0,39 0,80 0,52 0,75 
+boca 
+Irritação na 
+77,6 0,78 0,40 0,62 0,53 0,75 
+garganta 
+ 
+ab
+ Percentual de variância total na matriz X referente a 3 LV.  Coeficiente de determinação entre o valor real e 
+cd
+o valor previsto durante a calibração.  raiz quadrada do erro médio quadrático de calibração.  Coeficiente de 
+e
+determinação entre o valor real e o valor previsto durante a validação.  Raiz quadrada do erro quadrático médio 
+f
+de validação.  Critério de similaridade. 
+ 
+71 
+O modelo de regressão para a região dos primeiros compostos fenólicos destacou a 
+maior intensidade de ácido hidroxibutanóico etil éster hexosídeo (3,34 min) nos clones CCP 09 
+e BRS 226. Para a mesma região o composto cinamoil glicosídeo (4,82 min) obteve um 
+comportamento oposto, apresentando maior intensidade no clone BRS 275. Um estudo anterior 
+mostrou que alguns ésteres glicosídicos, como o ácido hidroxibutanóico etil éster hexosídeo, 
+são importantes para o metabolismo e são considerados precursores dos compostos voláteis 
+presentes nos frutos (ALVES FILHO et al., 2017).  
+Os pedúnculos do BRS 189 avaliados por Agostini-Costa et al. (2004), 
+apresentaram o maior teor de ácido anacárdico total entre todos os genótipos avaliados, mas 
+apresentaram boa aceitação sensorial, não diferindo da amostra controle (clone CCP 76). 
+Também foi relatado que sólidos solúveis totais (SST) e acidez dos pedúnculos do BRS 189 
+não diferiram em relação ao controle. Inversamente, os pedúnculos do clone CCP 1001 
+apresentaram os menores teores de ácido total anacárdico, que diferiram significativamente do 
+clone controle CCP 76. Esses pedúnculos apresentam baixo teor de açúcar e apresentam menor 
+semelhança global com o controle. Segundo os autores, o teor de açúcar justificaria as variações 
+de aceitação.  
+De fato, a doçura nos frutos está relacionada ao teor de sólidos solúveis totais, 
+especialmente açúcares e acidez titulável, parâmetros que são utilizados como medida indireta 
+da doçura (CHITARRA; CHITARRA, 2005). No entanto, os atributos sensoriais, no estudo de 
+Agostini-Costa et al. (2004), como sabores doces e ácidos e adstringência, não foram avaliados 
+diretamente. Outra questão é que os autores trabalharam apenas com o teor total de ácido 
+anacárdico, não possibilitando a associação de compostos específicos com as características 
+sensoriais do pedúnculo de diferentes clones. Assim, o maior teor de ácidos anacárdicos 
+encontrado no BRS 189, por exemplo, pode ser devido a compostos não relacionados à 
+adstringência de pedúnculo de cajueiro. Visto que o pedúnculo do clone BRS 189 não 
+diferenciou do controle, que é sensorialmente pouco adstringente,  
+Em comparação com o presente estudo os clones CCP 76 e BRS 189 também não 
+diferenciaram-se estatisticamente em relação as análises físico químicas de sólidos solúveis e 
+acidez. Já o clone CCP 1001 apresentou maior teor de sólidos solúveis e menor acidez. Contudo, 
+não foi realizado um paralelo com o teor total de ácidos anacárdicos presentes nesses clones.  
+ 
+ 
+ 
+72 
+CONCLUSÃO 
+ 
+Pedúnculos de diferentes clones de cajueiro apresentam composição físico-
+química, perfil de compostos fenólicos e características sensoriais de sabor (gosto doce, gosto 
+ácido e adstringência) excepcionalmente diferenciados. 
+A grande variabilidade química entre os clones de cajueiro ocorre devido à 
+diversidade de genótipos oriundos do melhoramento genético, no qual estão relacionados com 
+sua composição e também com as características físico químicas e sensoriais.  
+Os clones CCP 76 e o BRS 189 possuem características sensoriais mais atrativas 
+para consumo in natura (de mesa), devido seu sabor agradável e os clones BRS 274, CCP 09 e 
+Embrapa 50 para o aproveitamento industrial, como na produção de suco, pois são 
+sensorialmente mais adstringentes.  
+Apesar da doçura e da acidez do pseudofruto apresentarem influência na percepção 
+da adstringência, a análise quimiométrica demonstrou uma forte correlação do ácido anacárdico 
+(15:1) e cinamoil glicosídeo, positiva e negativa respectivamente, com a sensação de 
+adstringência e suas subqualidades (aspereza na boca e irritação na garganta), associando-os 
+como prováveis marcadores químicos da adstringência em pedúnculos de cajueiros.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+73 
+REFERÊNCIAS 
+ 
+ABE, L. T.; MOTA, R. V.; LAJOLO, F. M.; GENOVESE, M. I. Compostos fenólicos e 
+capacidade antioxidante de cultivares de uvas Vitis labrusca L. e Vitis vinífera L. Ciência e 
+Tecnologia de Alimentos, v. 27, n. 2, p. 394-400, 2007.  
+ABREU, V. K. G.; PEREIRA, A. L. F.; FREITAS, E. R.; TREVISAN, M. T. S.; COSTA, J. 
+M. C. Effect of anacardic acid on oxidative and color stability of spray dried egg yolk. LWT 
+Food Science and Technology, v. 55, p. 466-471, 2014. 
+ABU-REIDAH, I. M.; ALI-SHTAYEH, M. S.; JAMOUS, R. M.; ARRÁEZ-ROMÁN, D.; 
+SEGURA-CARRETERO, A. HPLC–DAD–ESI-MS/MS screening of bioactive components 
+from Rhus coriaria L. (Sumac) fruits. Food Chemistry, v. 166, p. 179–191, 2014. 
+ADOU, M.; KOUASSI, D. A.; TETCHI, F. A.; AMANI, N. G. Phenolic profile of Cashew 
+(Anacardium ocidentale L.) of Yamoussoukro and Korhogo, Côte d'Ivoire. Journal of 
+Applied Biosciences, v. 49, p. 3331–3338, 2012. 
+AGOSTINI-COSTA, T. S.; JALES, K. A.; GARRUTI, D. S.; PADILHA, V. A.; LIMA, J. B.; 
+AGUIAR, M. J.; PAIVA, J. R. Teores de ácido anacárdico em pedúnculos de cajueiro 
+Anacardium microcarpum e em oito clones de Anacardium occidentale var. nanum 
+disponíveis no Nordeste do Brasil. Ciência Rural, v. 34, p. 1075-1080, 2004. 
+AGOSTINI-COSTA, T. S.; LIMA, A.; LIMA, M. V. Determinação de tanino em pedúnculo 
+de caju: método da vanilina versus método do butanol ácido. Química Nova, v. 26, n. 5, p. 
+763-765, 2003. 
+AGOSTINI-COSTA, T. S.; SANTOS, J. R.; GARRUTI, D. S.; FEITOSA, T. Caracterização, 
+por cromatografia em camada delgada, dos compostos fenólicos presentes em pedúnculos de 
+Caju (Anacardium ocidentale L.). Boletim do Centro de Pesquisa de Processamento de 
+Alimentos, v. 18, n. 1, p. 129-137, 2000. 
+AKAGI, T.; SUZUKI, Y; IKEGAMI, A.; KAMITAKAHARA, H.; TAKANO, T.; 
+NAKATSUBO, F.; YONEMORI, K. Condensed Tannin Composition Analysis in Persimmon 
+(Diospyros kaki Thunb.) Fruit by Acid Catalysis in the Presence of Excess Phloroglucinol. 
+Journal of the Japanese Society for Horticultural Science, v. 79, n. 3, p. 275–281, 2010. 
+ALVES FILHO, E. G.; RODRIGUES, T. H. S.; FERNANDES, F. A. N.; PEREIRA, A. L. F.; 
+NARAIN, N.; BRITO, E. S.; RODRIGUES, S. Chemometric evaluation of the volatile profile 
+of probiotic melon and probiotic cashew juice. Food Research International, v. 99, p. 461-
+468, 2017. 
+ALVES FILHO, E. G.; SILVA, L. M. A.; FERREIRA, A. G. Screening organic compounds 
+in urban wastewater using a hyphenated system and NMR pattern recognition. Journal of 
+Magnetic Resonance, v. 6, p. 173-186, 2017. 
+AMERICAN SOCIETY FOR TESTING AND MATERIALS. Standard definitions of terms 
+relating to sensory evaluation of materials and products. In: ______. Annual book of ASTM 
+standards. Philadelphia: ASTM, 2004. 
+AMERINE, M.A.; PANGBORN. R.M.; ROESSLER, E.B. Principles of Sensory Evaluation 
+of Food. New York: Academic Press, 1965. 602 p. 
+74 
+ARAÚJO, J. P. P. Caju: o produtor pergunta, a Embrapa responde. 2. ed. Brasília: Embrapa, 
+2015. 250 p.  
+ARES, G.; BARREIRO, C.; DELIZA, R.; GÁMBARO, A. Alternatives to reduce the 
+bitterness, astringency and characteristic flavour of antioxidant extracts. Food Research 
+International, v. 42, n. 7, p. 871-878, 2009. 
+ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR ISO 13299: Análise 
+sensorial - Metodologia - Orientação geral para o estabelecimento de um perfil sensorial. 
+2017. 50 p. 
+______. NBR ISO 8586: Análise sensorial - Guia geral para a seleção, treinamento e 
+monitoramento de avaliadores selecionados e de especialistas ou experts. 2016. 33 p. 
+______. NBR 12806: Análise sensorial de alimentos e bebidas. Rio de Janeiro: ABNT, 1993. 
+8 p. 
+ASSOCIATION OF OFFICIAL ANALYTICAL CHEMISTS. Official methods of analysis. 
+18. ed. Gaithersburg: AOAC international, 2005. Cap 1, p. 2-4. 
+ASSUNÇÃO, R. B.; MERCADANTE, A. Z. Carotenoids and ascorbic acid composition from 
+commercial products of cashew apple (Anacardium occidentale L.). Journal of Food 
+Composition and Analysis, v.16, p. 647-657, 2003. 
+AZEVEDO, D. C. S.; RODRIGUES, A. Obtainment of high-fructose solutions from cashew 
+(Anacardium occidentale) apple juice by simulated moving-bed chromatography. Separation 
+Science and Technology, v. 35, p. 2561-2581, 2000. 
+AZEVÊDO, T. K. B.; PAES, J. B.; CALEGARI, L.; NASCIMENTO, J. W. B. Qualidade dos 
+taninos de Jurema-preta (Mimosa tenuiflora) para a produção de adesivo tanino formaldeído. 
+Ciência Florestal, v. 25, n. 2, p. 507-514, 2015.    
+AZOUBEL, P. M.; CIPRIANI, D. C.; EL-AOUAR, A. A.; ANTONIO, G. C.; MURR, F. E. 
+X. Effect of concentration on the physical properties of cashew juice. Journal of Food 
+Engineering, v. 66, p. 413-417, 2005. 
+BAJEC, M. R.; PICKERING, G. J. Astringency: mechanisms and perception. Critical 
+Reviews in Food Science and Nutrition, v. 48, p. 858-875, 2008. 
+BALASUNDRAM, N.; SUNDRAM, K.; SAMMAN, S. Phenoliccompounds in plants and 
+agri-industrial by-products: antioxidant activity, occurrence, and potential uses. Food 
+Chemistry, v. 99, n. 1, p. 191-203, 2006. 
+BAO, T.; LI, Y.; XIE, J.; SUN, C.; LI, X.; PU, Y.; CHEN, W. Systematic evaluation of 
+bioactive components and antioxidant capacity of some new and common bayberry cultivars 
+using an in vitro gastrointestinal digestion method. Food Research International, v. 103, p. 
+326-334, 2018. 
+BARROS, L. M.; CAVALCANTI, J. J. V.; PAIVA, J. R.; CRISÓSTOMO, J. R.; CORREA, 
+M. P. F.; LIMA, A. C.  Seleção de clones de cajueiro anão para o plantio comercial no Estado 
+de Ceará. Pesquisa Agropecuária Brasileira, v. 35, n. 11, p. 2197-2204, 2000. 
+BASTOS, M. S. R. Frutas minimamente processadas: aspectos de qualidade e segurança. 
+Fortaleza: Embrapa Agroindustria Tropical, 2007. 59 p. 
+75 
+BATTESTIN, V.; MATSUDA, L. K.; MACEDO, G. A. Fontes e aplicações de taninos e 
+tanases em alimentos. Alimentos e Nutrição, v.15, n.1, p.63-72, 2004. 
+BENDER, A; COSTA, V. B.; RODRIGUES, C. M.; MALGARIM, M. B. Características 
+sensoriais de sucos de uva elaborados com diferentes variedades e espécies. Revista da 
+Jornada de Pós-Graduação e Pesquisa, v. 1, p. 1-11, 2016.  
+BENEVIDES, C. M. J.; SOUZA, M. V.; SOUZA, R. D. B.; LOPES, M. V. Fatores 
+antinutricionais em alimentos: revisão. Segurança Alimentar e Nutricional, v. 18, n. 2, p. 
+67-79, 2011. 
+BENNICK, A. Interaction of plant polyphenols with salivary proteins. Critical Reviews in 
+Oral Biology & Medicine, v. 13, n. 2, p. 184–196, 2002. 
+BRASIL. Ministério da Agricultura e do Abastecimento. Portaria nº 86, de 23 de agosto de 
+2016. Regulamento técnico para fixação dos padrões de identidade e qualidade para suco de 
+caju. Diário oficial [da] República Federativa do Brasil, Brasília, DF, 01 set. 2016. Seção 1, 
+p. 8. 
+BRITO, E. S.; ARAÚJO, M. C. P.; LIN, L.; HARNLY, J. Determination of the flavonoid 
+components of cashew apple (Anacardium occidentale) by LC-DAD-ESI/MS. Food 
+Chemistry, v. 105, n. 3, p. 1112-1118, 2007. 
+CAMPOS, M. G. Flavonoides. In: Farmacognosia e Fitoquímica. 3. ed. Lisboa: Editora 
+Fundação Calouste Gulbenkian, 2010. v.13, p. 238-287. 
+CASTRO, H. G; FERREIRA, F. A; SILVA, D. J. H. Contribuição ao estudo das plantas 
+medicinais: Metabólitos Secundários. 2. ed. Visconde do Rio Branco: [s.n.], 2004, 113 p.  
+CAVALCANTI, J. J. V.; VIDAL NETO, F. C. BARROS, L. M. Avanços, desafios e novas 
+estratégias do melhoramento genético do cajueiro do Brasil. In: VIDAL NETO, F. C.; 
+CAVALVANTI, J. J. V. Melhoramento Genético de plantas do Nordeste. Brasília: 
+Embrapa, 2013. v.1, p. 151-174.  
+CHARLTON, A. J.; BAXTER, N. J.; KHAN, M. L.; MOIR, A. J. G.; HASLAM, E.; 
+DAVIES, A. P.; WILLIAMSON, M. P.  Polyphenol/peptide binding and precipitation. 
+Australian Journal of Grape and Wine Research, v. 50, p. 1593-1601, 2002. 
+CHITARRA, M. I. F.; CHITARRA, A. B. Pós-colheita de frutas e hortaliças: fisiologia e 
+manuseio. 2. ed. Lavras: Ufla, 2005. 785 p. 
+CORDÃO, M. A.; PEREIRA FILHO, J. M.; BAKKE, O. A.; BAKKE, I. A. Taninos e seus 
+efeitos na alimentação animal: Revisão bibliográfica. PUBVET, v. 4, n. 32, p. 1-31, 2010. 
+COUTINHO, M. A. S.; MUZITANO, M. F.; COSTA, S. S. Flavonoides: Potenciais Agentes 
+Terapêuticos para o Processo Inflamatório. Revista Virtual Química. v. 1, n. 3, p. 241-256, 
+2009. 
+CRISÓSTOMO, J. R.; CAVALCANTI, J. J. V.; BARROS, L. M.; ALVES, R. E.; FREITAS, 
+J. G.; OLIVEIRA, J. N. Melhoramento do cajueiro-anão-precoce: avaliação da qualidade do 
+pedúnculo e a heterose dos seus híbridos. Revista Brasileira de Fruticultura, v. 24, n. 2, p. 
+477-480, 2002. 
+76 
+CUNHA, A. G.; BRITO, E. S. ; MOURA, C. F. H.; RIBEIRO, P. R. V.; MIRANDA, M. R. 
+A. UPLC–qTOF-MS/MS-based phenolic profile and their biosynthetic enzyme activity used 
+to discriminate between cashew apple (Anacardium occidentale L.) maturation stages. 
+Journal of Chromatography B, v. 1051, p. 24-32, 2017.  
+DAMASCENO JÚNIOR, J. A.; BEZERRA, F. C. Qualidade de pedúnculo de cajueiro-anão 
+precoce cultivado sob irrigação e submetido a diferentes sistemas de condução e espaçamento. 
+Revista Brasileira de Fruticultura, v. 24, n. 1, p. 258-262, 2002. 
+DAMASCENO, L. F.; FERNANDES, F. A. N.; MAGALHAES, M. M. A.; BRITO, E. S. 
+Evaluation and optimization of non enzymatic browning of “cajuina” during thermal 
+treatment. Brazilian Journal of Chemical Engineering, v.25, p.313-320, 2008. 
+DAMÁSIO, M.H.; COSTELL, E. Analisis sensorial Descriptivo: Generación de Descriptores 
+y seleción de catadores. Revista de Agroquímica y Tecnologia de Alimentos, v. 31, n. 2, p. 
+165-178, 1991. 
+DAMODARAN, S.; PARKIN, K. L; FENNEMA, O. R. Química de alimentos de Fennema. 
+4. ed. Porto Alegre: Artmed, 2010. 900 p. 
+DAS, I.; ARORA, A. Post-harvest processing technology for cashew apple - A review. 
+Journal of Food Engineering, v. 194, p. 87-98, 2017. 
+EDAGI, F. K.; KLUGE, R. A. Remoção de adstringência de caqui: um enfoque bioquímico, 
+fisiológico e tecnológico. Ciência Rural, v.39, n.2, p.585-594, 2009. 
+ERŞAN, S.; ÜSTÜNDAĞ, Ö. G.; CARLE, R.; SCHWEIGGERT, R. M. Determination of 
+n
+pistachio (Pistacia veraL.) hull (exo- and mesocarp) phenolics by HPLC-DAD-ESI/MS and 
+UHPLC-DAD-ELSD after ultrasoundassisted extraction. Journal of Food Composition and 
+Analysis, v.62, p. 103–114, 2017. 
+FARAG, M. A.; SAKNA, S. T.; EL-FIKY, N. M.; SHABANA, M. M.; WESSJOHANN, L. 
+A. Phytochemical, antioxidant and antidiabetic evaluation of eight Bauhinia L. species from 
+Egypt using UHPLC-PDA-qTOF-MS and chemometrics. Phytochemistry, v.119, p. 41–50, 
+2015. 
+FERRO, M. M.; MOURA, D. C.; GERON, L. J. V. Compostos secundários em co-produtos 
+agroindustriais. Revista de Ciências Agroambientais, v.12, n.1, p.87-100, 2014. 
+FOOD AND AGRICULTURE ORGANIZATION OF THE UNITED NATIONS. 
+FAOSTAT Online data base, 2017. Disponível em: 
+<http://faostat.fao.org/site/567/DesktopDefault.aspx?PageID=567#ancor>. Acesso em: 23 
+fev. 2019. 
+FRANK, O.; OTTINGER, H.; HOFMANN, T. Characterization of an intense bitter-tasting 
+1H,4H-quinolizinium-7-olate by application of the taste dilution analysis, a novel bioassay for 
+the screening and identification of taste-active compounds in foods. Journal of Agricultural 
+and Food Chemistry, v.49, p.231-238, 2001. 
+FREITAS, J. V. B.; ALVES FILHO, E. G.; SILVA, L. M. A.; ZOCOLO, G. J.; BRITO, E. S.; 
+GRAMOSA, N. V. Chemometric analysis of NMR and GC datasets for chemotype 
+characterization of essential oils from different species of Ocimum. Talanta, v. 180, p. 329-
+336, 2018. 
+77 
+FUMAGALI, E.; GONÇALVES, R. A. C.; MACHADO, M. F. P. S.; VIDOTI, G. J.; 
+OLIVEIRA, A. J. B. Produção de metabólitos secundários em cultura de células e tecidos de 
+plantas: O exemplo dos gêneros Tabernaemontana e Aspidosperma. Revista Brasileira de 
+Farmacognosia, v.18, n. 4, p. 627-641, 2008. 
+FURLAN, A. L.; CASTETS, A.; NALLET, F.; PIANET, I.; GRELARD, A.; DUFOURC, E. 
+J.; GÉAN, J. Red wine tannins fluidify and precipitate lipid liposomes and bicelles. A role for 
+lipids in wine tasting? Langmuir, v. 30, p. 5518-5526, 2014. 
+GARRUTI, D. S.; FACUNDO, H. V. V.; LIMA, J. R.; AQUINO, A. C. Sensory evaluation in 
+fruit product development. In: RODRIGUES, S.; FERNANDES, F. A. N. (eds) Advances in 
+fruit processing technologies. Boca Raton: CRC, 2012. p. 415-439.  
+GARRUTI, D. S.; ROSSETTI, A. G.; LIMA, R. C. Análise Descritiva Quantitativa de suco 
+de pseudofrutos de cajueiro anão precoce (Anacardium occidentale L.). In: ALMEIDA, T. C. 
+A.; HOUGH, G.; DAMÁSIO, M. H.; SILVA. M. A. A. P. (Org.). Avanços em Análise 
+Sensorial. São Paulo: Livraria Varela, 1999. 227-242 p. 
+GLABASNIA, A.; HOFMANN, T. Identification and sensory evaluation of dehydro- and 
+deoxyellagitannins formed upon toasting of oak wood (Quercus alba L.). Journal of 
+Agricultural and Food Chemistry, v.55, p.4109–4118, 2007. 
+GLABASNIA, A.; HOFMANN, T. Sensory-Directed Identification of Taste-Active 
+Ellagitannins in American (Quercus alba L.) and European Oak Wood (Quercus robur L.) 
+and Quantitative Analysis in Bourbon Whiskey and Oak-Matured Red Wines. Journal of 
+Agricultural and Food Chemistry, v.54, p. 3380−3390, 2006. 
+GU, H.F.; LI, C.M.; XU, Y. J.; HU, W. F.; CHEN, M. H.; WAN, Q. H. Structural features 
+and antioxidant activity of tannin from persimmon pulp. Food Research International, v. 41, 
+n. 2, p. 208-217, 2008. 
+GU, L.; KELM, M. A.; HAMMERSTONE, J. F.; BEECHER, G.; HOLDEN, J.; 
+HAYTOWITZ, D.; PRIOR, R. L. Screening of foods containing proanthocyanidins and their 
+structural characterization using LC–MS/MS and thiolytic degradation. Journal of 
+Agricultural and Food Chemistry, v. 51, p. 7513-7521, 2003. 
+GUANZIROLI, C. E.; SOUZA, H. M.; VALENTE JÚNIOR, A.; BASCO, C. A. Entraves ao 
+desenvolvimento da cajucultura no nordeste: margens de comercialização ou aumentos de 
+produtividade e de escala? Revista Extensão Rural, v. 16, n. 18, p. 96-122, 2009. 
+HARBORNE, J. B.; WILLIAMS, C. A. Advances in flavonoid research since 1992. 
+Phytochemistry, v. 55, p. 481–504, 2000. 
+HELENO, S. A.; MARTINS, A.; QUEIROZ, M. J. R.P.; FERREIRA, I. C. F. R. Bioactivity 
+of phenolic acids: Metabolites versus parent compounds: A review. Food Chemistry, v. 173, 
+p. 501-513, 2015. 
+HUBER, L. S.; RODRIGUEZ-AMAYA, D. B. Flavonóis e flavonas: fontes brasileiras e 
+fatores que influenciam a composição em alimentos. Alimentos e Nutrição Araraquara, v. 
+19, n. 1, p. 97-108, 2008. 
+HUFNAGEL, J. C.; HOFMANN, T. Quantitative Reconstruction of the Nonvolatile 
+Sensometabolome of a Red Wine. Journal of Agricultural and Food Chemistry, v. 56, p. 
+9190–9199, 2008. 
+78 
+IKEGAMI, A,; EGUCHI, S.; KITAJIMA, A.; INOUE, K.; YONEMORI, K. Identification of 
+genes involved in proanthocyanidin biosynthesis of persimmon (Diospyros kaki) fruit. Plant 
+Science, v. 172, p. 1037–1047, 2007. 
+INSTITUTE OF FOOD TECHNOLOGISTIS. Top 10 Food Trends for 2018. Disponível 
+em: <https://www.linkedin.com/pulse/ift-top-10-food-trends-2018-mote-chan>. Acesso em: 
+24 mar. 2018. 
+______. Innova’s top 10 food, beverage trends for 2016. Disponível em: 
+<http://www.ift.org/food-technology/daily-news/2015/november/17/innovas-top-10-food-
+beverage-trends-for-2016.aspx>. Acesso em: 01 jun. 2017. 
+INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Pesquisa Agrícola 
+Municipal (PAM). Online data base, 2016. Disponível em: 
+<https://sidra.ibge.gov.br/tabela/1613#resultado>. Acesso em: 15 abr. 2018. 
+JAYALEKSHMY, V. G.; JOHN, P. S. ‘Sago’- a natural product for cashew apple juice 
+clarification. Journal of Tropical Agriculture, v. 42, n. 1-2, p. 67-68, 2004.  
+JERZ, G.; MURILLO-VELÁSQUEZ, J. A.; SKRJABIN, I.; GÖK, R.; WINTERHALTER, P. 
+Anacardic Acid Profiling in Cashew Nuts by Direct Coupling of Preparative High-Speed 
+Countercurrent Chromatography and Mass Spectrometry (prepHSCCC-ESI-/APCI-MS/MS). 
+In: TOTH, S. et al. Recent Advances in the Analysis of Food and Flavors. ACS 
+Symposium Series; Washington: American Chemical Society. 2012. v. 1098, Chapter 11, p. 
+145-165. 
+JOSEPH, A. D. O. Comparative studies of wine produced by spontaneous and controlled 
+fermentation of preserved cashew (Anacardium occidentale) juice. Research Journal of 
+Biological Sciences, v. 5, p. 460–464, 2010. 
+KUMAR, R.; SHARMA, V. Chemometrics in forensic science. TrAC Trends in Analytical 
+Chemistry. v. 105, p. 191-201, 2018. 
+LANÇAS, F. M. A Cromatografia Líquida Moderna e a Espectrometria de Massas: 
+finalmente “compatíveis”? Scientia Chromatographica, v. 1, n. 2, p.35-61, 2009. 
+LARRAURI, J. A.; RUPÉREZ, P.; SAURA-CALIXTO,F. Effect of drying temperature on 
+the stability of polyphenols and antioxidant activity of red grape pomace peels. Journal of 
+the Agricultural and Food Chemistry. v. 45, p. 1390-1393, 1997. 
+LAWLESS, H. T.; HORNE, J.; GIASI, P. Astringency of organic acids is related to pH. 
+Chemical Senses, v.21, n.4, p.397-340, 1996. 
+LAWLESS, T. L.; HEYMANN, H. Sensory evaluation of food: Principles and practices. 2. 
+ed. New York: Springer, 1999. 827 p. 
+LEE, S. J.; UMANO, K.; SHIBAMOTO, T.; LEE, K. G. Identification of volatile components 
+in basil (Ocimum basilicum L.) and thyme leaves (Thymus vulgaris L.) and their antioxidant 
+properties. Food Chemistry, v.91, n.1, p.131-137, 2005. 
+LESSCHAEVE, I.; NOBLE, A. C. Polyphenols: factors influencing their sensory properties 
+and their effects on food and beverage preferences. American Journal of Clinical Nutrition, 
+v. 81, p. 330-335, 2005. 
+79 
+LIMA, A. C. S.; SOARES, D. J.; SILVA, L. M. R.; FIGUEIREDO, R. W.; SOUSA, P. H. M.; 
+MENEZES, E. A. In vitro bioaccessibility of copper, iron, zinc and antioxidant compounds of 
+whole cashew apple juice and cashew apple fibre (Anacardium occidentale L.) following 
+simulated gastro-intestinal digestion. Food Chemistry. v. 161, p. 142-147, 2014. 
+LOPES, M. A.; FALEIRO, F. G.; FERREIRA, M. E.; LOPES, D. B.; VIVIAN, R.; 
+BOITEUX, L. S. Contribuição da Embrapa na produção de novas cultivares de plantas e seu 
+impacto na agricultura. Crop Breeding and Applied Biotechnology, v.12, p. 31-46, 2012a. 
+LOPES, M. M. A.; MIRANDA, M. R. A.; MOURA, C. F. H.; ENÉAS FILHO, J. Bioactive 
+compounds and total antioxidant capacity of cashew apples (Anacardium occidentale L.) 
+during the ripening of early dwarf cashew clones. Ciência e Agrotecnologia, v. 36, n. 3, p. 
+325-332, 2012b. 
+LUZ, D. A.; RODRIGUES, A. K. O.; SILVA, F. R. C.; TORRES, A. E. B.; CAVALCANTE 
+JÚNIOR, C. L.; BRITO, E. S.; AZEVEDO, D. C. S. Adsorptive separation of fructose and 
+glucose from na agroindustrial waste of cashew industry. Bioresource Technology, v. 99, p. 
+2455–2465, 2008. 
+LUZ, L. R.; PORTO, D. D.; CASTRO, C. B.; SILVA, M. F. S.; ALVES FILHO, E. G.; 
+CANUTO, K. M.; BRITO, E. S.; BECKER, H.; PESSOA, C. Ó.; ZOCOLO, G. J. 
+Metabolomic profile of Schinopsis brasiliensis via UPLC-QTOF-MS for identification of 
+biomarkers and evaluation of its cytotoxic potential. Journal of Chromatography B, v. 
+1099, p. 97-109, 2018. 
+MA, W.; GUO, A.; ZHANG, Y.; WANG, H.; LIU, Y.; LI, H. A review on astringency and 
+bitterness perception of tannins in wine. Trends in Food Science & Technology, v. 40, p. 6-
+19, 2014. 
+MAIA, G. A.; SOUSA FILHO, M. S. M.; FIGUEIREDO, R. W.; BRASIL, I. M. 
+Caracterização química de pedúnculos de diferentes clones de cajueiro anão precoce 
+(Anacardium occidentale, L.). Revista Ciência Agronômica, v. 35, p. 272 – 278, 2004. 
+MALDANER, L.; JARDIM, I. C. S. F. O estado da arte da cromatografia líquida de ultra 
+eficiência. Química Nova, v. 32, n. 1, p. 214-222, 2009. 
+MATSUBARA, S.; RODRIGUEZ-AMAYA, D. B. Teores de catequinas e teaflavinas em 
+chás comercializados no Brasil. Ciência e Tecnologia de Alimentos, v. 26, n. 2, p. 401-407, 
+2006. 
+MEILGAARD, M.; CIVILLE, G. V.; CARR, B. T. Sensory evaluation techniques. 4. ed. 
+Boca Raton: CRC Press, 2006. 448 p. 
+MELIS, M.; YOUSAF, N. Y.; MATTES, M. Z.; CABRAS, T.; MESSANA, I.; CRNJAR, R.;  
+BARBAROSSA, I. T.; TEPPER, B. J. Sensory perception of and salivary protein response to 
+astringency as a function of the 6-n-propylthioural (PROP) bitter-taste phenotype. Physiology 
+& Behavior, v. 173, p. 163-173, 2017. 
+MICHODJEHOUN-MESTRES, L.; SOUQUET J. M.; FULCRAND, H.; BOUCHUT, C.; 
+REYNES, M.; BRILLOUET, J. M. Monomeric phenols of cashew apple (Anacardium 
+occidentale L.). Food Chemistry, v. 112, n.4, p. 851-857, 2009a. 
+MICHODJEHOUN-MESTRES, L.; SOUQUET, J. M.; FULCRAND, H.; MEUDEC, E.; 
+REYNES, M.; BRILLOUET, J. M. Characterisation of highly polymerised prodelphinidins 
+80 
+from skin and flesh of four cashew apple (Anacardium occidentale L.) genotypes. Food 
+Chemistry, v. 114, p. 989–995, 2009b. 
+MONTEIRO, J. M.; ALBUQUERQUE, U. P.; ARAÚJO, E. L. Taninos: uma abordagem da 
+química à ecologia. Química. Nova, v. 28, n. 5, p. 892-896, 2005. 
+MORAES, I. V. M.; FILGUEIRAS, H. A. C.; SILVA NETO, R. M.; PAIVA, F. F. A.; 
+GARRUTI, D. S.; CASEMIRO, A. R. S. Agronegócio caju: práticas e inovações. Brasília: 
+Embrapa, 2013. p. 291-348. 
+MORAIS, L. A. S. Influência dos fatores abióticos na composição química dos óleos 
+essenciais. Horticultura Brasileira, v. 27, n. 2, 2009. 
+MORITA, S.; HIRADADE, S.; FUJII, Y.; HARADA, J. cis-Cinnamoyl glucoside as a major 
+plant growth inhibitor contained in spiraea prunifolia. Plant Growth Regulation, v. 46, n. 2, 
+p. 125-131, 2005. 
+MOSKOWITZ, H. R. Product testing and sensory evaluation of foods. Westport: Food and 
+Nutrition Press, 1983. 605 p. 
+MOURA, C. F. H.; ALVES, R. E.; SILVA, E. O.; LOPES, M. M. A. Fisiologia e tecnologia 
+pós-colheita do pedúnculo do cajueiro. 2. ed. Fortaleza: Embrapa Agroindústria Tropical, 
+2013. 31 p. 
+MOURA, C. F. H.; LOPES, M. M. A.; ARAGÃO, F. A. S.; ALVES, R. E.; SILVA, E. O.; 
+SILVEIRA, M. R. S.; FILHO, J. E. Qualidade Pós-colheita de Pedúnculos de Clones de 
+Cajueiro-anão Precoce em Sete Estádios de Desenvolvimento. Fortaleza: Embrapa 
+Agroindústria Tropical, 2011. 15 p. (EMBRAPA - Boletim de pesquisa e desenvolvimento, 
+49). 
+MUIANGA, C. A.; MUNIZ, J. A.; NASCIMENTO, M. S.; FERNANDES, T. J.; SAVIAN, T. 
+V. Descrição da curva de crescimento de frutos do cajueiro por modelos não lineares. Revista 
+Brasileira de Fruticultura, v.38, n. 1, p. 22-32, 2016. 
+MUSSER, R. S.; LEMOS, M. A.; LIMA, V. L. A. G.; MÉLO, E. A.; LEDERMAN, I. E.; 
+SANTOS, V. F. Características físico-químicas de acerola do banco ativo de germoplasma em 
+Pernambuco. Ciências e Tecnologia de Alimentos, v. 24, n.4, p. 556-561, 2004. 
+NACZK, M.; SHAHIDI, F. Extraction and analysis of phenolics in food. Journal of 
+Chromatography A, v.1054, n.1-2, p. 95-111, 2004. 
+NOBLE, A. C. Astringency and Bitterness of Flavonoid Phenols. ACS Symposium Series, v. 
+825, n. 15, p. 192–201, 2002. 
+NOGUEIRA, R. J. M. C.; MORAES, J. A. P. V.; BURITY, H. A.; SILVA JUNIOR, J. F. 
+Efeito do estádio de maturação dos frutos nas características físico-químicas de acerola. 
+Pesquisa Agropecuária Brasileira Brasília, v. 37, n. 4, p. 463-470, 2002. 
+NUNES, E. N.; SOUSA, A. S. B.; LUCENA, C. M.; SILVA, S. M.; LUCENA, R. F. P.; 
+ALVES, C. A. B.; Alves, R. E. Pitaia (Hylocereus sp.): Uma revisão para o Brasil. Gaia 
+Scientia, v. 8, n. 1, p. 90-98, 2014. 
+81 
+OBANDA, M.; OWUOR, P. O. Flavonol composition and caffeine content of Green Leaf as 
+quality potential indicators of Kenyan black teas. Journal of the Science of Food and 
+Agriculture, v. 74, n. 2, p. 209-215, 1997.  
+OLIVEIRA, D. M.; BASTOS, D. H. M. Biodisponibilidade de ácidos fenólicos. Química 
+Nova, v. 34, n. 6, p. 1051-1056, 2011. 
+OLIVEIRA, M. A. Extração de polifenóis da semente de cacau (Theobroma cação). 2005, 
+72 f. Dissertação (Mestrado em Engenharia Química) - Centro Tecnológico, Universidade 
+Federal de Santa Catarina, Santa Catarina, 2005. 
+OLIVEIRA, M. E. B.; OLIVEIRA, G. S. F.; MAIA, G. A.; MOREIRA, R. A. Major free 
+amino acids in cashew apple juice: behaviour during the harvest season. Revista Brasileira 
+de Fruticultura, v. 24, p. 133–137, 2002. 
+OTEIZA, P. I.; FRAGA, C. G.; MILLS, D. A.; TAFT, D. H. Flavonoids and the 
+gastrointestinal tract: Local and systemic effects. Molecular Aspects of Medicine, v. 61, p. 
+41-49, 2018. 
+OTTINGER, H.; BARETH, A.; HOFMANN, T. Characterization of natural “cooling” 
+compounds formed from glucose and L-proline in dark malt by application of taste dilution 
+analysis. Journal of Agricultural and Food Chemistry, v. 49, p. 1336-1344, 2001. 
+PAIVA, F. F. A.; GARRUTI, D. S.; SILVA NETO, R. M. Aproveitamento Industrial do 
+caju. Fortaleza: Embrapa-CNPAT/SEBRAE/CE, 2000. 88 p. (Embrapa-CNPAT. 
+Documentos, 38). 
+PAIVA, J. R.; CAVALCANTEI, J. J. V.; CORREA, M. C. M.; MAIA, M. C. C.; COSTA 
+FILHO, A. B. Seleção de clones de cajueiro comum pelo método Tandem e índice de 
+classificação. Ciência e Agrotecnologia, v. 31, p. 765-772, 2007. 
+PAIVA, J. R.; CAVALCANTI, J. J. V.; BARROS, L. M.; CRISÓSTOMO, J. R.; LIMA, A. 
+C.; CARDOSO, J. E.; MESQUITA, A. L. M.; MOSCA, J. L. BRS 275 (BRS Dão): Hybrid 
+clone of dwarf x common or giant cashew. Crop Breeding and Applied Biotechnology, v. 8, 
+p. 248-250, 2008a. 
+PAIVA, J. R.; CAVALCANTI, J. J. V.; BARROS, L. M.; CRISÓSTOMO, J. R.; LIMA, A. 
+C.; CARDOSO, J. E.; MESQUITA, A. L. M.; MOSCA, J. L. BRS 274 (BRS Jacaju): 
+common or giant cashew clone. Crop Breeding and Applied Biotechnology, v. 8, p. 239-
+241, 2008b. 
+PASCUAL-TERESA, S.; SANTOS-BUELGA, C.; RIVAS-GONZALO, J. C. Quantitative 
+Analysis of Flavan-3-ols in Spanish Foodstuffs and Beverages. Journal of Agricultural and 
+Food Chemistry, v. 48, p. 5331−5337, 2000. 
+PASSOS, C. P.; CARDOSO, S. M.; DOMINGUES, M. R. M.; DOMINGUES, P.; SILVA, C. 
+M.; COIMBRA, M. A. Evidence for galloylated type-A procyanidins in grape seeds. Food 
+Chemistry, v. 105, p. 1457-1467, 2007. 
+PÉREZ-BURILLO, S.; OLIVERAS, M. J.; QUESADA, J.; RUFIÁN-HENARES, J. A.; 
+PASTORIZA, S. Relationship between composition and bioactivity of persimmon and 
+kiwifruit. Food Research International, v. 105, p. 461-472, 2018. 
+82 
+PIANET, I.; ANDRÉ, Y.; DUCASSE, M.; TARASCOU, I.; LARTIGUE, J; PINAUD, N.; 
+FOUQUET,E.; DUFOURC, E. J.; LAGUERRE, M. Modeling Procyanidin Self-Association 
+Processes and Understanding Their Micellar Organization: A Study by Diffusion NMR and 
+Molecular Mechanics. Langmuir, v. 24, p. 11027-11035, 2008. 
+PLOYON, S.; MORZEL, M.; BELLOIR, C.; BONNOTTE, A.; BOURILLOT, E.; BRIAND, 
+L.; LESNIEWSKA, E.; LHERMINIER, J.; AYBEKE, E.; CANON, F. Mechanisms of 
+astringency: Structural alteration of the oral mucosal pellicle by dietary tannins and protective 
+effect of bPRPs. Food Chemistry, v. 253, p. 79-87, 2018. 
+QUEIROZ, C.; SILVA, A. J. R.; LOPES, M. L. M.; FIALHO, E.; VALENTE-MESQUITA, 
+V. L. Polyphenol oxidase activity, phenolic acid composition and browning in cashew apple 
+(Anacardium occidentale, L.) after processing. Food Chemistry, v. 125, n 1, p. 128-132, 
+2011. 
+REBELLO, L. P. G.; RAMOS, A. M.; PERTUZATTI, P. B.; BARCIA, M. T.; CASTILLO-
+MUÑOZ, N; HERMOSÍN-GUTIÉRREZ, I. Flour of banana (Musa AAA) peel as a source of 
+antioxidante phenolic compounds. Food Research International, v. 55, p.397–403, 2014. 
+RICE-EVANS, C. Flavonoids and isoflavones: absorption, metabolism, and bioactivity. Free 
+radical biology & medicine, v. 36, p. 827–828, 2004. 
+RINALDI, A.; ITURMENDI, N.; JOURDES, M.; TEISSEDRE, P.; MOIO, L. Transfer of 
+tannin characteristics from grape skins or seeds to wine-like solutions and their impact on 
+potential astringency. Food Science and Technology, v 63, n. 1, p. 667-676, 2015. 
+ROCHA, W. S.; LOPES, R. M.; SILVA, D. B.; VIEIRA, R. F.; SILVA, J. P.; AGOSTINI-
+COSTA, T. S. Compostos fenólicos totais e taninos condensados em frutas nativas do 
+cerrado.  Revista Brasileira Fruticultura, v. 33, n. 4, p. 1215-1221, 2011. 
+RODRÍGUEZ-PÉREZ, C.; QUIRANTES-PINÉ, R.; FERNÁNDEZ-GUTIÉRREZ, A.; 
+SEGURA-CARRETERO, A. Comparative characterization of phenolic and other polar 
+compounds in Spanish melon cultivars by using high-performance liquid 
+chromatographycoupled to electrospray ionization quadrupole-time offlight mass 
+spectrometry. Food Research International, v.54, n. 2, p. 1519–1527, 2013. 
+ROSSETTI, D.; BONGAERTS, J. H. H.; WANTLING, E.; STOKESAC, J. R.; 
+WILLIAMSON, A. M. Astringency of tea catechins: More than an oral lubrication tactile 
+percept. Food Hydrocolloids, v. 23, n. 7, p. 1984-1992, 2009. 
+SANCHO, S. O.; MAIA, G. A.; FIGUEIREDO, R. W.; RODRIGUES, S.; SOUSA, P. H. M. 
+Alterações químicas e físico-químicas no processamento de suco de caju (Anacardium 
+occidentale L.). Ciência e Tecnologia de Alimentos, v.27, n.4, p. 878-882, 2007. 
+SARAWONG, C.; SCHOENLECHNER, R.; SEKIGUCHI, K.; BERGHOFER, E.; NG, P. K. 
+W. Effect of extrusion cooking on the physicochemical properties, resistant starch, phenolic 
+content and antioxidant capacities of green banana flour. Food Chemistry, v.143, p.33-39, 
+2014. 
+SCHARBERT, S.; HOLZMANN, N.; HOFMANN, T. Identification of the astringent taste 
+compounds in black tea infusions by combining instrumental analysis and human 
+bioresponse. Journal of Agricultural and Food Chemistry, v. 52, n. 11, p. 3498-3508, 
+2004. 
+83 
+SCHIFFMAN, H. R. Sensation and perception: an integrated approach. 5. ed. New York: 
+Jonh Wiley &amp; Sons, 2001. 591 p.  
+SCHMITZ, W.; SAITO, Y. A.; ESTEVÃO, D.; SARIDAKS, O. H. Gren tea as a 
+chemoprotector. Semina: Ciências Biológicas e da Saúde, v. 26, n. 2, p.119-130, 2005. 
+SCHÖBEL, N.; RADTKE, D.; KYEREME, J.; WOLLMANN, N.; CICHY, A.; OBST, K.; 
+KALLWEIT, K.; KLETKE, O.; MINOVI, A.; DAZERT, S.; WETZEL, C. H.; VOGT-
+EISELE, A.; GISSELMANN, G.; LEY, J. P.; BARTOSHUK, L. M.; SPEHR, J.; 
+HOFMANN, T.; HATT, H. Astringency Is a Trigeminal Sensation That Involves the 
+Activation of G Protein–Coupled Signaling by Phenolic Compounds. Chemical Senses, v. 
+39, n. 6, p. 471–487, 2014. 
+SCOLLARY, G. R.; PASTI, G.; KÁLLAY, M.; BLACKMAN, J.; CLARK, A. C. 
+Astringency response of red wines: Potential role of molecular assembly. Trends in Food 
+Science & Technology, v. 27, p. 25-36, 2012. 
+SELEEM, D.; PARDIA, V.; MURATA, R. M. Review of flavonoids: A diverse group of 
+natural compounds with anti-Candida albicans activity in vitro. Archives of Oral Biology, v. 
+76, p. 76-83, 2017. 
+SHAHIDI, F.; NACZK, M. Phenolics in Food and Nutraceuticals. Boca Raton: CRC Press, 
+USA. 2004. 558 p. 
+SIHERI, W.; ZHANG, T.; EBILOMA, G. U.; BIDDAU, M.; WOODS, N.; HUSSAIN, M. 
+Y.; CLEMENTS, CAROL J.; FEARNLEY, J.; EBEL, R. E.; PAGET, T.; MULLER, S.; 
+CARTER, K. C.; FERRO, V. A.; KONING, H. P.; WATSON, D. G. Chemical and 
+antimicrobial profiling of propolis from different regions within Lybia. Plos One, v. 11, n. 5, 
+p 1-16, 2016. 
+SILVA, A. A.; BARBOSA JUNIOR, J. L.; BARBOSA, M. I. M. J. Farinha de banana verde 
+como ingrediente funcional em produtos alimentícios. Ciência Rural, v.45, n.12, p.2252-
+2258, 2015. 
+SILVA, K. D. P.; COLLARES, F. P.; FINZER, J. R. D. A simple and rapid method for 
+estimating the content of solids in industrialized cashew juice. Food Chemistry, v. 70, p. 
+247-250, 2000. 
+SILVA, M. E; ARAÚJO, G. T; ALVES, J. J. N. Avaliação das Caracteristicas físico-
+químicas da polpa do Pseudofruto do Caju (Anacardium occidentale L) visando obter 
+um fermentado para obtenção de Etanol Hidratado. Campina grande: UFCG. 2010. 11 p. 
+SILVA, R. A.; MAIA, G. A.; COSTA, J. M. C.; RODRIGUES, M. C. P.; FONSECA, A. V. 
+V.; SOUSA, P. H. M.; CARVALHO, J. M. Néctar de caju adoçado com mel de abelha: 
+desenvolvimento e estabilidade. Ciência e Tecnologia de Alimentos, v. 28, n. 2, p.348-354, 
+2008. 
+SMITH, A. K.; JUNE, H.; NOBLE, A. C. Effects of viscosity on the bitterness and 
+astringency of grape seed tannin.  Food Quality and Preference, v.7, n. 3-4, p. 161-166, 
+1996. 
+SOARES, D. J.; CAVALCANTE, C. E. B.; CARDOSO, T. G.; FIGUEIREDO, E. A. T.; 
+MAIA, G. A.; SOUSA, P. H. M.; FIGUEIREDO, R. W. Estudo da estabilidade de amêndoas 
+84 
+de castanha de caju obtidas dos cultivos convencional e orgânico. Semina: Ciências 
+Agrárias, Londrina, v. 33, n. 5, p. 1855-1868, 2012. 
+SOARES, S. E. Ácidos fenólicos como antioxidantes. Revista de Nutrição, v. 15, n. 1, p. 71-
+81, 2002. 
+SOETHE, C.; STEFFENS, C. A.; AMARANTE, C. V. T.; MARTIN, M. S.; BORTOLINI, A. 
+J. Qualidade, compostos fenólicos e atividade antioxidante de amoras-pretas 'Tupy' e 'Guarani' 
+armazenadas a diferentes temperaturas. Pesquisa Agropecuária Brasileira, v.51, n.8, p. 950-
+957, 2016. 
+SOUSA, C. M. M.; SILVA, H. R.; VIEIRA-JR, G. M.; AYRES, M. C. C.; COSTA, C. L. S.; 
+ARAÚJO, D. S.; CAVALCANTE, L. C. D.; BARROS, E. D. S.; ARAÚJO, P. B. M.; 
+BRANDÃO, M. S.; CHAVES, M. H. Fenóis totais e atividade antioxidante de cinco plantas 
+medicinais. Química Nova, v. 30, n. 2, p. 351-355, 2007.  
+SOUZA FILHO, H. M.; GUANZIROLI, C. E.; FIGUEIREDO, A. M.; VALENTE JÚNIOR, 
+A. S. Barreiras às novas formas de coordenação no agrossistema do caju na região nordeste, 
+Brasil. Gestão & Produção, v. 17, n. 2, p. 229-244, 2010. 
+SOUZA, A. M.; BREITKREITZ, M. C.; FILGUEIRAS, P. R.; ROHWEDDER, J. J. R.; 
+POPPI, R. J. Experimento didático de quimiometria para calibração multivariada na 
+determinação de paracetamol em comprimidos comerciais utilizando espectroscopia no 
+infravermelho próximo: um tutorial, parte II. Química Nova, v. 36, n. 7, p. 1057-1065, 2013. 
+SOWALSKY, R.A.; NOBLE, A.C. Comparison of the effects of concentration, pH and anion 
+species on astringency and sourness of organic acids. Chemical Senses, v. 23, p. 343-349, 
+1998. 
+STONE, H.; SIDEL, J. L. Sensory evaluation practices. 3. ed. London: Elsevier, 2004. 377 
+p. 
+STONE, H.; SIDEL, J.; OLIVER, S.; WOOLSEY, A.; SINGLETON, R.C.  Sensory 
+evaluation by Quantitative Descriptive Analysis. Food Tecnology, v. 28, n.11, p. 24-34, 
+1974. 
+SUASSUNA, C. F.; FERREIRA, N. M.; SÁ, F. V. S.; BERTINO, A. M. P.; MESQUITA, E. 
+F.; PAIVA, E. P.; JESUS, P. L. M.; BERTINO, A. M. P. Produção de mudas de cajueiro anão 
+precoce cultivado em diferentes substratos e ambientes. Revista Agrarian, v. 9, n. 33, p. 197-
+209, 2016. 
+TM
+SWARTZ, M. E. UPLC: An Introduction and Review. Journal of Liquid 
+Chromatography & Related Technologiesw, v. 28, p. 1253–1263, 2005.  
+TALASILA, U.; SHAIK, K.B. Quality, spoilage and preservation of cashew apple juice: A 
+review. Journal of Food Science and Technology, v. 52, n. 1, p. 54–62, 2005. 
+TREVISAN, M. T. S.; PFUNDSTEIN, B.; HAUBNER, R.; WURTELE, G.; 
+SPIEGELHALDER, B.; BARTSCH, H.; OWEN, R. W. Characterization of alkyl phenols in 
+cashew (Anacardium occidentale) products and assay of their antioxidant capacity. Food 
+Chemistry and Toxicology, v.44, p.188-197, 2006. 
+VALENTOVA´, H.; SKROVA´NKOVA´, S.; PANOVSKA´, Z.; POKORNY´, J. Time–
+intensity studies of astringent taste. Food Chemistry, v. 78, p. 29–37, 2002. 
+85 
+VIDAL NETO, F. C.; BARROS, L. M.; CAVALCANTI, J. J. V.; MELO, D. S. 
+Melhoramento genético e cultivares de cajueiro. In: ARAÚJO, J. P. P. (Ed.). Agronegócio 
+caju: práticas e inovações. Brasília: Embrapa, 2013. cap. 2, p. 481-508.  
+VIDAL, M. F. Cajucultura nordestina continua em declínio. Caderno Setorial ETENE, v.2, 
+n. 22, p.11, 2017. 
+VRSALJKO, D.; HARAMIJA, V.; HADŽI-SKERLEV, A. Determination of phenol, m-cresol 
+and o-cresol in transformer oil by HPLC method. Electric Power Systems Research, v. 93, 
+p. 24-31, 2012.  
+WANG, Y.; JOHNSON-CICALESEB, J.; SINGHA, A. P.; VORSA, N. Characterization and 
+quantification of flavonoids and organic acids over fruit development in American cranberry 
+(Vaccinium macrocarpon) cultivars using HPLC and APCI-MS/MS. Plant Science, v. 262, p. 
+91–102, 2017. 
+WISHART, D. S. Metabolomics: applications to food science and nutrition research. Trends 
+in Food Science & Technology, v. 19, n. 9, p. 482-493, 2008. 
+WOLD, S.; SJÖSTRÖM, M.; ERIKSSON, L. PLS-regression: a basic tool of chemometrics. 
+Chemometrics and Intelligent Laboratory Systems, v. 58, n. 2, p.  109-130, 2001.   
+WOLLGAST, J.; ANKLAN, E. Polyphenols in chocolate: is there a contribution to human 
+health? Food Research International, v. 33, n. 6, p. 449-459, 2000. 
+YIGIT, D.; YIGIT, N.; MAVI, A. Antioxidant and antimicrobial activities of bitter and sweet 
+apricot (Prunus armeniaca L.) kernels. Brazilian Journal of Medical and Biological 
+Research, v. 42, n. 4, p. 346-352, 2009. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+86 
+ANEXOS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+87 
+ANEXO A – Termo de Livre Consentimento e Esclarecido – TCLE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+88 
+ANEXO B – Parecer do Comitê de Ética em Pesquisa da Universidade Estadual do Ceará, 
+Protocolo nº 147.279 
+ 
+ 
+89 
+ 
+ 
+ 
+ 
+90 
+ 
+ 
+ 
+91 
+ 
+ 
+92 
+ANEXO C – Ficha de avaliação do treinamento e avaliação dos pedúnculos in natura de clones 
+de cajueiro. 
+ 
+ 
+Fonte: Elaborado por Embrapa Agroindústria Tropical 

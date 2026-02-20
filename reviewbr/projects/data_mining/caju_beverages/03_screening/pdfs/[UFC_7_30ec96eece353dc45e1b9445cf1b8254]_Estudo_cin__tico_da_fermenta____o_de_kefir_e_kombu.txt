@@ -1,0 +1,2515 @@
+ 
+ 
+UNIVERSIDADE FEDERAL DO CEARÁ 
+CENTRO DE CIÊNCIAS AGRÁRIAS 
+DEPARTAMENTO DE TECNOLOGIA DE ALIMENTOS 
+PÓS-GRADUAÇÃO EM CIÊNCIA E TECNOLOGIA DE ALIMENTOS 
+ 
+ 
+ 
+ 
+ 
+ANTONIO AUGUSTO LIMA ARAUJO FILHO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ESTUDO CINÉTICO DA FERMENTAÇÃO DE KEFIR E KOMBUCHA EM 
+EXTRATO HIDROSSOLÚVEL DE AMÊNDOA DE CASTANHA DE CAJU 
+(Anacardium Occidentale L.) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2022 
+ANTONIO AUGUSTO LIMA ARAUJO FILHO 
+ 
+ 
+ 
+ 
+ 
+ 
+ESTUDO CINÉTICO DA FERMENTAÇÃO DE KEFIR E KOMBUCHA EM EXTRATO 
+HIDROSSOLÚVEL DE AMÊNDOA DE CASTANHA DE CAJU (Anacardium Occidentale 
+L.) 
+ 
+ 
+ 
+ 
+ 
+Dissertação apresentada ao Programa de Pós-
+Graduação em Ciência e Tecnologia de 
+Alimentos, Centro de Ciências Agrárias da 
+Universidade Federal do Ceará, como requisito 
+para obtenção do título de Mestre em Ciência e 
+Tecnologia de Alimentos.  
+ 
+Orientadora: Profa. Dra. Larissa Morais Ribeiro 
+da Silva. 
+Coorientador: Prof. Dr. Paulo Henrique 
+Machado de Sousa. 
+ 
+                                                             
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2022 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ANTONIO AUGUSTO LIMA ARAUJO FILHO 
+ 
+ 
+ESTUDO CINÉTICO DA FERMENTAÇÃO DE KEFIR E KOMBUCHA EM EXTRATO 
+HIDROSSOLÚVEL DE AMÊNDOA DE CASTANHA DE CAJU (Anacardium Occidentale 
+L.) 
+ 
+ 
+Dissertação apresentada ao Programa de Pós-
+Graduação em Ciência e Tecnologia de 
+Alimentos, Centro de Ciências Agrárias da 
+Universidade Federal do Ceará, como requisito 
+para obtenção do título de Mestre em Ciência e 
+Tecnologia de Alimentos.  
+ 
+ 
+ 
+ 
+Aprovada em 03/03/2022. 
+ 
+BANCA EXAMINADORA 
+ 
+ 
+___________________________________ 
+Profa. Drª. Larissa Morais Ribeiro da Silva (Orientadora) 
+Universidade Federal do Ceará 
+ 
+ 
+_________________________________ 
+Drª. Giovana Matias do Prado 
+Universidade Federal do Ceará 
+ 
+ 
+_________________________________ 
+Drª. Claisa Andrea Freitas Rabelo 
+Universidade Estadual do Ceará 
+RESUMO 
+ 
+Cresce ao redor do mundo inteiro a quantidade de adeptos à refeições com menor quantidade 
+de produtos de origem animal, sob a justificativa de uma vida mais saudável e contribuição com 
+a preservação do meio ambiente. Surgem, então, as dietas plant-based que giram em torno de 
+alimentos vegetais, menos processados, com insumos familiares ao consumidor e produzidos 
+com maior responsabilidade ambiental. A fermentação de alimentos apresenta-se como aliada 
+desse padrão de consumo por ser um processo aceito em diferentes culturas, além de conseguir 
+enriquecer nutricionalmente o produto. O presente trabalho se propôs a estudar a cinética de 
+fermentação de dois consórcios de fungos e bactérias, o kefir e a kombucha, investigando seu 
+potencial simbiótico em bebida de amêndoas de castanha de caju, um insumo consolidado no 
+mercado nacional. A bebida foi formulada com 10% de castanhas secas e cruas, pasteurizada 
+pelo método HTLT, a partir disso, foram formuladas três amostras: LC-F que recebeu inóculo 
+composto 100% de kefir, LC-B inoculada com 100% de kombucha e LC-FB com 50% kefir e 
+50% kombucha. As amostras foram analisadas com 0, 4, 8, 12, 24, 36, 48 e 72 horas de 
+fermentação a 28 ºC. Foram monitoradas suas mudanças no pH, sólidos solúveis, acidez 
+titulável, açúcares e ácidos orgânicos, bem como seus níveis de toxicidade aguda e alterações 
+na atividade locomotora de zebrafish. Em todas as análises in vitro, LC-B apresentou alterações 
+mais lentas com o tempo enquanto LC-F e LC-FB não apenas mostraram maior velocidade em 
+suas reações como apresentaram curvas semelhantes em suas dinâmicas. Em todas as amostras, 
+o pH e os sólidos solúveis reduziram enquanto a acidez titulável aumentou. LC-F e LC-FB 
+esgotaram as reservas de carboidratos em até 48 horas, mas LC-FB foi mais eficiente no 
+consumo de oligossacarídeos. Não foi observada ação simbiótica entre kefir e kombucha 
+associada à otimização da produção de ácidos orgânicos funcionais. LC-FB e LC-B reduziram 
+a capacidade natatória dos peixes, mas a rápida hidrólise de açúcares em LC-FB pode estar 
+associada à maior mobilidade dos animais com 72 horas. Nenhuma amostra em nenhum tempo 
+apresentou toxicidade aguda. Por fim, constatou-se que a mistura de kefir e kombucha apresenta 
+uma dinâmica de hidrólise de açúcares mais eficiente, inclusive para moléculas maiores, mas 
+necessita de outras investigações para confirmação de potencial probiótico. 
+ 
+ 
+Palavras-chave: leite vegetal; bactérias ácido láticas; bactérias ácido acéticas; ácido 
+glucurônico; rafinose. 
+ 
+ABSTRACT 
+ 
+Around the world, there is an increasing number of adepts for diets with fewer animal products, 
+justified in the search for a healthier life and to contribute to the preservation of the 
+environment. Thus, plant-based diets are a global trend that revolves around vegetable foods, 
+with fewer food additives, with products known to the consumer and produced with greater 
+environmental responsibility. Food fermentation is an ally of this consumption pattern because 
+it is a widespread food transformation process that is capable of improving the nutritional 
+quality of the product. The present work aimed to study the fermentation kinetics of two 
+consortia of fungi and bacteria, kefir and kombucha, investigating its symbiotic potential in 
+cashew nut beverage, a known Brazilian feedstock consolidated in the market. The beverage 
+was formulated with water and 10% of dried raw cashew nuts, pasteurized by HTLT method 
+and, after this, three samples were formulated: LC-F that received inoculum composed 100% 
+of kefir, LC-B inoculated with 100% kombucha, and LC-FB with 50% kefir and 50% 
+kombucha. The samples were analyzed with 0, 4, 8, 12, 24, 36, 48 and 72 hours of fermentation 
+at 28 ºC. In vitro experiments were conducted for pH, soluble solids, titratable acidity and 
+determination of sugars and organic acids, while in vivo experiments tested acute toxicity and 
+changes in the locomotor activity of zebrafish. In all in vitro assays, LC-B showed slower 
+changes over time while LC-F and LC-FB not only showed higher speed in their reactions but 
+also showed similar curves in their dynamics. In all samples, pH and soluble solids reduced 
+while titratable acidity increased. LC-F and LC-FB exhausted their carbohydrate reserves 
+within 48 hours, but LC-FB was more efficient in the consumption of oligosaccharides. No 
+symbiotic action was observed between kefir and kombucha associated with optimization of 
+the functional organic acids production. LC-FB and LC-B reduced the animal’s natatory 
+capacity, suggesting probiotic action, but the faster hydrolysis of sugars in LC-FB might be 
+associated with the animal’s higher mobility at 72 hours. No sample at any time presented acute 
+toxicity. Finally, it was found that the mixture of kefir and kombucha presents more efficient 
+sugar hydrolysis dynamic, including larger molecules, but requires further investigation to 
+confirm probiotic activity. 
+ 
+  
+Keywords: nut milk; lactic acid bacteria; acetic acid bacteria; glucuronic acid; raffinose. 
+  
+ 
+ 
+ 
+ 
+ 
+LISTA DE FIGURAS 
+ 
+Figura 01 - Variação dos valores de pH para bebidas de castanha de caju  
+                   fermentadas com kefir e kombucha durante 72 horas a 28 ºC ........... 32 
+Figura 02 - Variação dos valores de ATT para bebidas de castanha de caju  
+                   fermentadas com kefir e kombucha durante 72 horas a 28 ºC ........... 34 
+Figura 03 - Variação dos valores de SST para bebidas de castanha de caju  
+                   fermentadas com kefir e kombucha durante 72 horas a 28 ºC ........... 35 
+Figura 04 – Cromatograma dos padrões de açúcares pesquisados por CLAE ...... 37 
+Figura 05 - Variação das concentrações de glicose, frutose, sacarose e rafinose  
+                   (g/100 mL) para bebidas de castanha de caju fermentadas com kefir  
+                   e kombucha durante 72 horas a 28 ºC ................................................ 40 
+Figura 06 – Variação das concentrações de açúcares dentro de cada amostra  
+                    analisada (LC-F, LC-FB e LC-B) ...................................................... 41 
+Figura 07 – Cromatograma dos padrões de ácidos orgânicos pesquisados por  
+                   CLAE .................................................................................................. 42 
+Figura 08 – Variação das concentrações dos ácidos glucurônico, lático, acético            
+                    e cítrico (mg/mL) para bebidas de castanha de caju fermentadas   
+                    com kefir e kombucha durante 72 horas a 28 ºC ............................... 45 
+Figura 09 – Variação das concentrações de ácidos orgânicos dentro de cada  
+                    amostra analisada (LC-F, LC-FB e LC-B) ........................................ 46 
+Figura 10 – Cruzamento de linhas referente à amostra LC-F nos tempos 0, 24,  
+                    48 e 72 horas ...................................................................................... 48 
+Figura 11 – Cruzamento de linhas referente à amostra LC-FB nos tempos 0, 24,  
+                    48 e 72 horas ...................................................................................... 48 
+Figura 12 – Cruzamento de linhas referente à amostra LC-B nos tempos 0, 24,  
+                    48 e 72 horas ...................................................................................... 49 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE TABELAS 
+ 
+Tabela 01 – Caracterização físico-química dos produtos fermentados, quanto à   
+                    pH, sólidos solúveis totais (SST) e acidez titulável total (ATT) ....... 31 
+Tabela 02 – Limites de detecção e quantificação do equipamento de CLAE para  
+                    as substâncias padrões utilizadas ....................................................... 36 
+Tabela 03 – Quantificações dos açúcares presentes em cada tempo de  
+                    fermentação das bebidas fermentadas de ACC ................................. 38 
+Tabela 04 – Quantificações dos ácidos orgânicos presentes em cada tempo de  
+                    fermentação das bebidas fermentadas de ACC ................................. 43 
+Tabela 05 – Mortalidade de zebrafish por tempo de fermentação nas amostras  
+                    LC-F, LC-FB e LC-B ........................................................................ 50 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE ABREVIATURAS E SIGLAS 
+ 
+ACC Amêndoa de castanha de caju 
+ACE Ácido acético 
+ATT Acidez titulável total 
+BAA Bactérias ácido acéticas 
+BAL Bactérias ácido láticas 
+CIT Ácido cítrico 
+CLAE Cromatografia líquida de alta eficiência 
+FRU Frutose 
+GLI Glicose 
+GLU Ácido glucurônico 
+LAT Ácido lático 
+LC Leite de castanha 
+PB Plant-based 
+RAF Rafinose 
+SAC Sacarose 
+Symbiotic culture of bacteria and yeasts (“cultura simbiótica de leveduras e 
+SCOBY 
+bactérias”) 
+SST Sólidos solúveis totais 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+ 
+1 INTRODUÇÃO ..................................................................................... 10 
+2 OBJETIVO GERAL ............................................................................. 12 
+Objetivos específicos .............................................................................. 12 
+2.1 
+3 FUNDAMENTAÇÃO TEÓRICA ........................................................ 13 
+3.1 Dieta à base de plantas .......................................................................... 13 
+Processos fermentativos em alimentos ................................................ 17 
+3.2 
+3.3 Kefir ........................................................................................................ 19 
+3.4 Kombucha .............................................................................................. 21 
+3.5 Bebida de amêndoas de castanha de caju ........................................... 23 
+MATERIAIS E MÉTODOS ................................................................. 24 
+4 
+4.1 Matéria prima e reagentes .................................................................... 24 
+4.2 Delineamento experimental .................................................................. 25 
+Preparo do extrato hidrossolúvel pasteurizado de amêndoas de 
+4.3 
+castanha de caju ..................................................................................... 25 
+4.4 Preparo e aplicação dos inóculos ......................................................... 26 
+Análises físico-químicas ........................................................................ 27 
+4.5 
+4.6 Cromatografia líquida de alta eficiência (CLAE) .............................. 27 
+4.6.1 Determinação de açúcares ..................................................................... 27 
+4.6.2 Determinação de ácidos orgânicos ........................................................ 28 
+Análises toxicológicas ............................................................................ 28 
+4.7 
+4.7.1 Atividade locomotora .............................................................................. 28 
+4.7.2 Toxicidade aguda .................................................................................... 29 
+Análises estatísticas ............................................................................... 29 
+4.8 
+5 RESULTADOS E DISCUSSÕES ........................................................ 29 
+5.1 Análises físico-químicas ........................................................................ 30 
+5.2 Análises cromatográficas ...................................................................... 35 
+5.2.1 Determinação de açúcares ..................................................................... 36 
+5.2.2 Determinação de ácidos orgânicos ........................................................ 39 
+5.3 Análises toxicológicas ............................................................................ 47 
+Atividade locomotora .............................................................................. 47 
+5.3.1 
+5.3.2 Toxicidade aguda .................................................................................... 50 
+6 CONCLUSÕES ..................................................................................... 51 
+ REFERÊNCIAS .................................................................................... 53 
+APÊNDICE A – RESUMO DA TABELA DE ANÁLISE DE 
+ VARIÂNCIA E REGRESSÃO PARA PH, SÓLIDOS SOLÚVEIS 
+TOTAIS (SST) E ACIDEZ TITULÁVEL TOTAL (ATT) ................. 64 
+APÊNDICE B - RESUMO DA TABELA DE ANÁLISE DE 
+ VARIÂNCIA E REGRESSÃO PARA OS AÇÚCARES GLICOSE 
+65 
+(GLI), FRUTOSE (FRU), SACAROSE (SAC) E RAFINOSE (RAF)  
+APÊNDICE C - RESUMO DA TABELA DE ANÁLISE DE 
+VARIÂNCIA E REGRESSÃO PARA OS ÁCIDOS 
+ 
+GLUCURÔNICO (GLU), LÁTICO (LAT), ACÉTICO (ACE) E 
+CÍTRICO (CIT) ....................................................................................... 66 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+10 
+ 
+1 INTRODUÇÃO 
+ 
+Há alguns anos que a mídia e a esfera acadêmica já relatam em todo o planeta uma busca 
+das pessoas por hábitos mais saudáveis e sustentáveis. A alimentação é um dos fatores mais 
+incorporados nessa mudança justamente por influenciar diretamente a saúde do consumidor, 
+como também pelo fato de que as cadeias de produção da indústria alimentícia costumam ter 
+impactos negativos no meio ambiente (GODFRAY et al., 2018; HEMLER; HU, 2019). 
+Dentro desse contexto, vem ganhando muita força um padrão de alimentação à base de 
+plantas, chamado de “plant-based”. Esta dieta é um tipo de vegetarianismo cujos pilares 
+principais são: consumir alimentos considerados saudáveis, que vem de fontes com baixo 
+impacto ambiental e que tem o “rótulo limpo”, ou seja, com menor processamento e maior 
+quantidades de ingredientes conhecidos e naturais (ASCHEMANN-WITZEL et al., 2020). 
+Muitas pesquisas já apontam indícios de que a dieta plant-based pode atuar prevenindo 
+ou melhorando alguns quadros de saúde, entre eles: quadros de obesidade, inflamações 
+sistêmicas, doenças cardiovasculares e renais, diabetes, artrite, alergias, câncer e ansiedade 
+(IARC, 2015; MEDAWAR et al., 2019; FEHÉR et al., 2020). 
+Segundo pesquisa conduzida pelo Good Food Institute (GFI, 2018), três a cada 10 
+brasileiros já buscam reduzir a quantidade consumida de alimentos de origem animal e 59% 
+destes afirmam o fazer por questões de saúde. Em paralelo, levantamento feito pela 
+Euromonitor Internacional (2019) diz que o mercado de bebidas vegetais no Brasil cresceu 
+51,5% em 2018 e as indústrias utilizam principalmente a aveia, o arroz, o coco e as amêndoas 
+como matérias primas, reduzindo o uso de soja nos processamentos. 
+No intuito de agregar maior qualidade nutricional aos alimentos vegetais, é possível 
+fazer uso dos processos fermentativos para gerar produtos inovadores. As fermentações são 
+capazes de quebrar moléculas complexas em partículas menores e mais digestíveis, além de 
+produzir metabólitos que aumentam o valor nutritivo e alteram aroma, sabor e textura, podendo 
+tornar o produto mais atrativo (HASAN, SULTAN & MAR-E-UM, 2014; SANLIER, 
+GOKCEN & SEZGIN, 2019).  
+Coelho et al. (2020) e Fiorda et al. (2017) revisaram dados acerca de kombucha e kefir, 
+considerados “fermentos naturais”, e destacaram seus potenciais na prevenção e tratamento de 
+uma série de enfermidades. Os ditos “fermentos” são, na verdade, conglomerados de fungos e 
+bactérias que vivem em simbiose e que podem ter funções biológicas interessantes aos 
+humanos. Já foram registradas ações probióticas, antioxidantes, anti-inflamatórias, 
+antidepressivas e antivirais, além de melhoras em quadros de disbiose intestinal, cicatrizações 
+11 
+ 
+e alta pressão arterial. Embora se saiba que o kefir e a kombucha sejam ricos em tipos 
+específicos de bactérias (ácido láticas e ácido acéticas, respectivamente) que podem se 
+beneficiar mutuamente (NGUYEN et al., 2015), a maioria dos estudos científicos ao redor do 
+mundo focam em estudá-los separadamente e deixam de investigar seus potenciais simbióticos 
+e/ou sinergéticos. 
+ Relembrando a ideia do alimento plant-based como sendo “rótulo limpo”, as amêndoas 
+de castanha de caju apresentam-se como fortes candidatas à comporem alimentos deste tipo, 
+uma vez que são muito conhecidas e consumidas nacionalmente (ALENCAR; ESPÍNDOLA; 
+CARNEIRO, 2018; OLIVEIRA et al., 2020). As amêndoas também estão muito associadas às 
+“boas gorduras” e podem ter efeitos positivos no controle de colesterol e da pressão arterial 
+(MATTISON et al., 2020). 
+Dadas todas as referências discutidas, este trabalho propõe avaliar o potencial 
+simbiótico de uma bebida inovadora que una os potenciais do kefir, da kombucha e da amêndoa 
+da castanha de caju. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+12 
+ 
+2 OBJETIVO GERAL 
+ 
+ O objetivo geral deste trabalho foi avaliar o potencial simbiótico de bebida fermentada 
+com kefir e kombucha à base de amêndoas de castanha de caju (Anacardium occidentale L.). 
+ 
+2.1 Objetivos específicos 
+ 
+a. Elaborar extrato hidrossolúvel de amêndoa de castanha de caju pasteurizado; 
+b. Fermentar o extrato com kefir e/ou kombucha durante 72 horas; 
+c. Avaliar os perfis cinéticos das fermentações de kefir e de kombucha, separadamente 
+e simultaneamente, quanto à pH, acidez titulável, sólidos solúveis, açúcares e ácidos 
+orgânicos; 
+d. Investigar o potencial simbiótico entre kefir e kombucha para otimizar a produção 
+de compostos funcionais; 
+e. Aplicar as bebidas fermentadas em modelo animal (Danio rerio) para avaliação de 
+toxicidade aguda e possíveis alterações na atividade locomotora. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+13 
+ 
+3 FUNDAMENTAÇÃO TEÓRICA 
+ 
+Nesta sessão, serão apresentados e discutidos os principais tópicos que embasam a 
+pesquisa realizada: dietas à base de plantas, alimentos fermentados, kefir, kombucha e 
+amêndoas de castanha de caju. 
+ 
+3.1 Dietas à base de plantas 
+ 
+A literatura científica relata de maneira extensiva o quanto inúmeros problemas de 
+saúde, crônicos ou não, estão relacionados àquilo que o indivíduo ingere e como isso se torna 
+uma questão de saúde pública (MALIK; WILLET; HU, 2012; DERBYSHIRE, 2017; 
+MEDAWAR et al., 2019). Ainda, a qualidade da dieta de uma população está intrinsecamente 
+ligada à oferta desses alimentos no comércio e ao poder aquisitivo dos grupos em questão, 
+sendo possível identificar um maior consumo de produtos ultraprocessados em parcelas da 
+sociedade que sofrem algum tipo de marginalização étnico-social (BHUPATHIRAJU; HU, 
+2016). 
+Em artigo publicado na revista Nature, os autores Malik, Willet e Hu (2012) apontam 
+que o aumento de casos de doenças crônicas relacionadas à alimentação foi diretamente 
+influenciado pela rápida urbanização e pela corrida econômica dos países, o que aumentou o 
+consumo de proteína animal processada, açúcares adicionados e grãos refinados. Mais 
+recentemente, Godfray et al. (2018) publicaram na Science que o escalonamento da produção 
+de carne é um dos maiores vilões para o meio ambiente: a abertura de pastos implica em 
+desmatamento de grandes áreas, o alto nível trófico desses animais demanda maior volume de 
+água na sua criação e a prática pecuária é uma das maiores responsáveis pela emissão de gases 
+estufa atualmente. 
+Dado o exposto, percebe-se como as saúdes pessoal, coletiva e planetária estão 
+fortemente entrelaçadas e que estão todas ameaçadas por dietas de baixa qualidade e pela 
+degradação ambiental (HEMLER; HU, 2019). Consumidores em todos os continentes já tem 
+entrado em contato com esse acúmulo de evidências e, como resposta, muitos buscam mudar 
+os seus hábitos alimentares em uma tentativa de contribuir para a sustentabilidade dos sistemas 
+de produção de alimentos. A redução parcial ou total do consumo de produtos de origem animal 
+entra como uma das principais estratégias dos consumidores que estão preocupados com o seu 
+bem-estar e com o da Terra (DERBYSHIRE, 2017; GRAÇA. GODINHO; TRUNINGER, 
+2019; CURTAIN; GRAFENAUER, 2019; DELIENS; MULLIE; CLARYS, 2021). 
+14 
+ 
+Em revisão conduzida por Graça, Godinho e Truninger (2019), os autores organizaram 
+as motivações que levam as pessoas a basear suas dietas em produtos vegetais e encontraram 
+diversas categorias, dentre elas: preocupação ecológica, proximidade com animais domésticos, 
+redução de sofrimento animal, desagrado com o gosto do produto animal, interesse em novos 
+alimentos, exposição repetida à produtos vegetais e busca por melhor saúde.  
+Visto que cada consumidor tem motivações em uma ou mais categorias, vão se 
+delineando diferentes padrões de alimentação baseados no quão estrita é a dieta seguida. Os 
+consumidores que se identificam como “veganos” são aqueles que se posicionam contra toda e 
+qualquer fonte de sofrimento e exploração animal, não apenas na esfera da alimentação como 
+também na têxtil, cosmética, farmacêutica, etc. Os ditos “vegetarianos” mantém uma relação 
+exclusivamente dietética com os produtos de origem vegetal, abolindo sempre o consumo de 
+carnes mas podendo dividir-se em subgrupos que consomem ou ovo ou leite ou ambos (PAIVA; 
+LUIZ, 2020). O terceiro grupo, mais recentemente nominado, é formado pelos “flexitarianos”, 
+também chamados de “semi-vegetarianos”, “redutores de carne” ou “onívoros conscientes” 
+(DERBYSHIRE, 2017; KEMPER; WHITE, 2021), que são aqueles que reduzem ou evitam o 
+consumo de carne em alguns dias da semana ou apenas a ingerem em ocasiões especiais 
+(ROSENFELD, 2018). 
+Até 8% da população brasileira já se considerava vegetariana em 2018, segundo o 
+IBOPE (2018), e o Brasil foi o quinto país com maior crescimento no número de vegetarianos 
+entre 2016 e 2017 (EUROMONITOR, 2019b). Uma investigação feita pelo Good Food Institute 
+(GFI, 2018) traz números semelhantes à pesquisa do IBOPE, apontando 6% da população como 
+vegetariana. O GFI ainda informa que 3 a cada 10 brasileiros já buscam reduzir a quantidade 
+consumida de alimentos de origem animal e 59% destes afirmam o fazer por questões de saúde, 
+elevando a indústria nacional de alimentos saudáveis à 5ª posição de maior relevância ao redor 
+do mundo nesse segmento. É importante considerar que o Brasil tem dimensões continentais, 
+logo, 6 a 8% da população representa pelo menos 13 milhões de pessoas (IBGE, 2021), número 
+este que pode ser equivalente à metade da população australiana ou mesmo maior do que o de 
+países inteiros, como Suécia, Portugal, Bélgica, Dinamarca ou Grécia (WPP, 2019).  
+Em comunhão com todos os padrões de dieta citados, a alimentação hoje difundida 
+como plant-based (PB, do inglês “à base de plantas”) é aquela que prioriza sempre produtos 
+vegetais alternativos aos animais, além de zelar por itens mais frescos, integrais e com menos 
+aditivos químicos. Aschemann-Witzel et al. (2020) apontam dois termos centrais na descrição 
+do alimento plant-based: é o alimento da liberdade (“freedom food”) e de rótulo limpo (“clean 
+label”). O primeiro epíteto justifica-se na ideia de que o alimento PB pode ser consumido com 
+15 
+ 
+menor preocupação acerca dos seus impactos ambientais e na saúde do consumidor, quando em 
+comparação com o produto animal. Já o segundo termo dá-se pela associação desse tipo de 
+alimento com a baixa presença, ou mesmo ausência, de aditivos alimentares, além do uso de 
+técnicas mais tradicionais de processamento, lista de ingredientes curta e fácil de entender e 
+produção com insumos familiares ao consumidor. 
+Fehér et al. (2020) levantaram artigos, dos anos 1970 a 2010, que discutissem os 
+benefícios e barreiras percebidas pelo consumidor na adoção de hábitos alimentares à base de 
+plantas, a fim de tentar entender melhor como tem se dado essa transição internacionalmente. 
+O primeiro fator que chama a atenção é a quantidade de publicações nesse escopo, passando de 
+5 a 48 da primeira à última década. A seguir, os autores também informam que a dieta à base 
+de plantas não é uniforme entre os praticantes, mas que sempre se baseia em pilares 
+vegetarianos. No que diz respeito às barreiras, a dificuldade de abandonar o consumo de carne 
+e produtos animais é a maior barreira para a adoção de mais hábitos plant-based. Ainda assim, 
+os autores apontam que essa prática é adequada a todas as idades e padrões de vida, sendo a 
+busca por saudabilidade a principal justificativa em até 47% dos casos de transição.  
+Desde que planejada e assistida por profissionais, uma dieta mais focada em produtos 
+vegetais pode ajudar em quadros de obesidade, doenças cardiovasculares e renais, diabetes, 
+artrite, alergias (FEHÉR et al., 2020) e até câncer, uma vez que carnes processadas foram 
+classificadas como “carcinogênicas para humanos” pela Agência Internacional para Pesquisa 
+em Câncer, um órgão da Organização Mundial da Saúde (IARC, 2015).  Alguns estudos 
+apontam que a microbiota intestinal também pode se beneficiar desse padrão de alimentação, 
+modulando uma cascata de reações benéficas ao organismo que vão desde uma menor 
+inflamação sistêmica do corpo até a maior liberação de precursores de neurotransmissores, 
+atuando em prol de várias funções neurológicas e psiquiátricas (MEDAWAR et al., 2019). 
+Medawar et al. (2019) pesquisaram pela influência do termo “plant-based” na 
+plataforma PubMed, especializada em artigos científicos voltados para a biomedicina. A 
+revisão sistemática procurou por “plant-based” ou “vegetariano” ou “vegano” e “dieta” e 
+“intervenção”, sempre fazendo uso dos filtros para “testes clínicos” e “humanos”, entre 2000 e 
+2018. Também no âmbito da biomedicina nota-se a crescente disseminação dos conceitos da 
+alimentação PB, uma vez que desde 2011 esse termo é mais publicado do que “vegetariano” ou 
+“vegano”. No ano 2000, o termo “vegetariano” era 2x mais presente nas publicações que “plant-
+based”, fato este que se inverteu a partir de 2017. 
+Os hábitos alimentares com base em produtos vegetais estão sendo tão associados à 
+melhora da saúde do indivíduo que essa correlação é um dos principais fatores para a sua 
+16 
+ 
+popularidade, inclusive contando com a ajuda de redes sociais na divulgação dos benefícios. 
+Pesquisadores brasileiros utilizaram a rede social Twitter para analisar os nichos de mercado 
+vegano e plant-based entre 2018 e 2019 e perceberam que as postagens relacionadas ao 
+veganismo recebiam aproximadamente 3,5 vezes mais criticismo e comentários negativos do 
+que os “tweets” associados à alimentação PB (ALEIXO et al., 2020). A mesma pesquisa 
+revelou que os termos ligados à dieta PB apareciam quase 4 vezes mais na categoria “nutrição, 
+atividade física, saúde e qualidade de vida” do que aqueles ligados ao veganismo, 
+representando, inclusive, 45% de todos os posts coletados para o nicho PB. 
+Essa popularidade dos produtos vegetais já começa a ter repercussões econômicas. Em 
+estudo de revisão mercadológico, Aschemann-Witzel et al. (2020) afirmam que os produtos PB 
+no mercado dinamarquês dobraram sua oferta entre 2011 e 2015, já sendo exportados para toda 
+a Europa, para alguns países da Oceania e para Singapura. Adicionalmente, a Alemanha 
+desponta como produtora de substitutos vegetais de carne, indo de 14 toneladas vendidas em 
+2014 a 20 toneladas em 2018. Por fim, esse estudo revela que 39% dos produtos plant-based 
+vendidos mundialmente eram provenientes de empreendimentos europeus em 2016. 
+Nas Américas, os pesquisadores Wolf, Malone e McFadden (2020) demonstram que o 
+mercado de leite bovino nos EUA teve uma redução significante nas vendas em um período de 
+5 anos, entre 2013 e 2018, deixando de movimentar aproximadamente $US 5 bilhões. Os 
+autores afirmam que parte deste decréscimo pode se justificar pelo aumento do consumo de 
+substitutos vegetais do leite, uma vez que a oferta destes produtos aumentou 61% no mesmo 
+período, movimentando $2,3 bilhões apenas em 2018. 
+Em levantamento feito pela Euromonitor Internacional (2019a), o mercado de bebidas 
+vegetais no Brasil cresceu 35% ao ano de 2013 a 2018 e as indústrias utilizam principalmente 
+a aveia, o arroz, o coco e as amêndoas como matérias primas, enquanto o uso de soja decaiu 
+19% em relação a 2017. A mesma pesquisa revelou que marcas consolidadas no segmento e 
+consideradas “gigantes”, tais como Coca-Cola e Nestlé, entraram com novos produtos para 
+atender a demanda, difundindo ainda mais os alimentos vegetais. Em paralelo 60% dos 
+brasileiros onívoros estão dispostos a aumentar o consumo de produtos vegetarianos se estes 
+estiverem em uma faixa de preço próxima aos produtos de origem animal que já estão 
+acostumados a comprar (IBOPE, 2018). 
+Bebidas vegetais alternativas ao leite são desenvolvidas no intuito de assemelharem-se 
+visualmente ao leite bovino, mas frequentemente possuem menor qualidade nutricional e mais 
+retrogostos indesejados. Ainda assim, seguindo a tendência do “clean label”, é interessante 
+evitar suplementar esses produtos com elementos extrínsecos e/ou sintéticos (ASIOLI et al., 
+17 
+ 
+2017). Uma possível estratégia para atingir os perfis nutricionais e sensoriais desejados é uma 
+técnica muito antiga e amplamente difundida: a fermentação. Além de poder contribuir para 
+uma melhor aceitação do público (HASAN, SULTAN; MAR-E-UM, 2014; SANLIER, 
+GOKCEN; SEZGIN, 2019), é possível fazer uso de culturas de fermentação mistas, com mais 
+de um microrganismo, aproveitando o potencial de sinergia entre esses fermentadores para o 
+aumento da qualidade do produto com o mínimo esforço (TANGYU et al., 2019) 
+ 
+3.2 Processos fermentativos em alimentos 
+ 
+Alimentos fermentados são aqueles que foram submetidos à ação de microrganismos 
+para atingir modificações bioquímicas desejáveis e consequentes alterações na estrutura do 
+próprio alimento (CAMPBELL-PATT, 1994).  
+A humanidade faz uso desse tipo de processo há muitos milhares de anos, 
+provavelmente desde o Neolítico (10 a 5 mil anos A.C.), e a sua manutenção sempre esteve 
+intimamente ligada com a cultura e as matérias primas disponíveis de cada região. Na Europa 
+e no Oriente Médio, onde o pastoreio era mais presente, os queijos e os iogurtes se consolidaram 
+cedo; no sudeste asiático, com mais terreno montanhoso e litorâneo, prevaleceram os produtos 
+fermentados de soja, arroz e peixes; na África fermentaram-se as espécies endêmicas de cereais 
+e raízes, principalmente a mandioca, enquanto nas Américas o milho e o cacau foram exemplos 
+de vegetais que assumiram essa posição (KATZ, 2012; TAMANG et al., 2019). 
+A fermentação sempre andou lado a lado com a cultura dos povos, moldando-se às 
+particularidades de cada etnia e, naturalmente, alterando a maneira como essa técnica era 
+manipulada. Inicialmente, o processo mais comum de fermentação era por vias espontâneas, 
+onde os microorganismos do próprio alimento e do ambiente iniciariam as transformações 
+bioquímicas, sem controle rigoroso do processo e com uma complexidade microbiológica 
+enorme (TAMANG et al., 2019; WU et al., 2021). Curiosamente, o termo “fermentar” vem do 
+latim “fervere”, onde o alimento “fervia sem calor”, ou seja, apresentava bolhas como resultado 
+da produção de gases do processo (WHITTINGTON. DAGHER; BRUNO-BÁRCENA, 2019). 
+Durante séculos os povos foram se familiarizando com a técnica e, após muita tentativa 
+e erro, a técnica de backslopping foi desenvolvida para dar início às primeiras “culturas” de 
+microorganismos, ou seja, as primeiras misturas com complexidade microbiológica 
+minimamente estável e que poderia gerar um produto final com algumas características já 
+conhecidas. Essa técnica consiste em iniciar uma nova fermentação, em substrato fresco, a partir 
+de uma alíquota de material previamente fermentado com sucesso (KIM et al., 2018). Essa 
+18 
+ 
+prática começou a perder força após o desenvolvimento da pasteurização no século XIX, o que 
+aumentou a expectativa de vida humana mas também criou uma interpretação “germofóbica” 
+do universo microbiano, nutrindo uma “fascinação social por esterilização de alimentos” que 
+sobrevive até hoje, como apontam Whittington, Dagher & Bruno-Bárcena (2019). 
+Os pesquisadores do último século esforçaram-se em isolar as bactérias, fungos e 
+leveduras, chamando os isolados de “starters” (do inglês, “iniciadores”), sob as justificativas 
+de maior segurança alimentar e otimização dos escalonamentos industriais, uma vez que se 
+estaria lidando com apenas pouquíssimas cepas de microrganismos, com funcionamento mais 
+conhecido do que uma mistura complexa desses (LARANJO; POTES; ELIAS, 2019; 
+GARCIA-DIEZ; SARAIVA, 2021). 
+De fato, o uso de culturas starters traz benefícios à produção de alimentos, mas também 
+deixa de aproveitar os potenciais simbióticos e/ou sinergéticos entre diferentes gêneros 
+microbianos. As relações positivas entre seres vivos são documentadas há muito tempo e as 
+relações cooperativas também estão presentes nos ecossistemas do universo microbiológico 
+(FURUKAWA et al., 2013; TANGYU et al., 2019; TAMANG et al., 2020). 
+Uma das relações simbióticas que vem chamando atenção na esfera da fermentação de 
+alimentos, é a cooperação entre leveduras, bactérias ácido láticas (BAL) e bactérias ácido 
+acéticas (BAA) em culturas mistas. As primeiras usam a fermentação alcoólica para produzir 
+etanol e gás carbônico, sendo utilizadas na produção de pães e cervejas (HUTKINS, 2019); as 
+segundas usam a fermentação lática para produzir o ácido lático que é capaz de trazer mudanças 
+sensoriais desejadas em leites e carnes (GRUJOVIC et al., 2021); e as terceiras dão início à 
+fermentação acética, oxidando etanol e produzindo ácido acético, sendo útil na produção de 
+chocolates e de vinagre (LYNCH et al., 2019).  
+De-Vuyst & Leroy (2020) apresentam uma extensa visão global do estado da arte para 
+a fermentação de grãos de cacau desde os anos 2000 a 2020 e apontam que as fermentações 
+sucessivas de leveduras, BAL e BAA são cruciais para a cura correta dos grãos. Sintetizando, 
+as leveduras e as BAL inicialmente fermentam a glicose presente nas polpas e produzem, 
+respectivamente, etanol e lactato que, por sua vez, são indispensáveis para o funcionamento das 
+BAA e sua produção de ácido acético. Tudo isso acontece de maneira simultânea com reações 
+de quebra de pectina e produção de açúcares e outros ácidos orgânicos que culminam em um 
+perfil específico de sabor e aroma necessários para o processamento de chocolate. 
+De maneira semelhante, alguns trabalhos já apontam essas cooperações acontecendo em 
+bebidas fermentadas por associados de fungos e bactérias, chamados de kefir e kombucha, 
+19 
+ 
+adicionados de cepas de BAA ou BAL, ainda que os mecanismos bioquímicos não estejam 
+completamente elucidados.  
+Yang et al. (2008) isolaram a cepa Gluconacetobacter spp A4 a partir de kombucha e 
+suplementaram sua cultura com cepas de BAL (Lactobacillus spp, Lactococcus latis e 
+Leuconostoc spp.) para investigar alterações nas produções de ácidos orgânicos. Os autores 
+concluíram que há simbiose entre as cepas investigadas, uma vez que a suplementação 
+aumentou a produção do ácido funcional DSL (ácido D-sacárico-1,4-lactona), provavelmente 
+por que as BAL, ao consumir glicose, produziram xilose e ácido acético que servem de substrato 
+para as BAA.  
+Leite et al. (2013), em revisão, discorrem sobre as interações entre os microrganismos 
+do kefir e levantam indícios de que o crescimento das bactérias e leveduras associadas não 
+ocorre de maneira eficiente quando separadas, além de que a secreção de vitaminas do 
+complexo B por parte das Acetobacter spp. (BAA) colabora com o desenvolvimento das BAL. 
+Ozdemir et al. (2015) suplementaram grãos de kefir de leite com cepas de BAA 
+(Gluconacetobacter spp.) e perceberam que o crescimento da biomassa dos grãos foi maior 
+quando comparado aos grãos não suplementados, além de produzir uma bebida com melhor 
+aceitação sensorial quanto à sabor e textura, sem perdas nas pontuações para aroma.  
+Nguyen et al. (2015a) suplementaram kombucha com cepas de BAL (Lactobacillus 
+spp.) isoladas de conserva de picles, de kombucha e de kefir de leite e descobriram que as 
+bebidas que receberam as cepas provenientes de kefir produziram quase 40% mais de ácido 
+glucurônico, um ácido funcional, após 5 dias de fermentação. 
+ 
+3.3 Kefir 
+ 
+ O kefir é uma bebida fermentada originada provavelmente na região do Cáucaso, no 
+limite entre o sudeste europeu e a Ásia, e o seu nome vem do turco “keyif” que é o equivalente 
+a “sentir-se bem” em português. Essa associação do nome ao bem-estar dá-se pelas 
+características sensoriais da bebida, sendo levemente ácida e gaseificada, podendo ser percebida 
+como refrescante (LEITE et al., 2013). Por vezes sendo chamada até de “champagne de leite”, 
+a bebida era considerada medicinal pelos povos originários da região (ROSELL, 1932). 
+ A bebida é tradicionalmente feita a partir de leite animal e se utilizam grãos de kefir 
+como cultura starter mista. Os grãos, que vão de 0,5 a 3,5 cm, são compostos de inúmeras 
+espécies de leveduras e bactérias, podendo chegar a mais de 50, unidos por uma matriz de 
+polissacarídeos produzida pela própria associação de microrganismos (EGEA et al., 2020). 
+20 
+ 
+Essa associação, ou consórcio, também pode ser chamada pela sigla em inglês, SCOBY, que 
+significa “cultura simbiótica de leveduras e bactérias” (“symbiotic culture of bacteria and 
+yeasts”).  
+A maior parte das cepas do SCOBY de kefir são bactérias ácido láticas, mas também há 
+uma porcentagem de bactérias ácido acéticas e de leveduras. É difícil mensurar com exatidão o 
+quanto há de cada gênero no consórcio, uma vez que as condições geográficas e de cultivo 
+(temperatura, tipo de leite, proporções e tempos de fermentação) podem alterar muito as 
+dinâmicas do ecossistema microbiológico dos grãos (NEJATI; JUNNE; NEUBAUER, 2020). 
+A produção da bebida é bastante simples e, também por isso, tem ganhado popularidade 
+em cenários domésticos. O processo tradicional consiste em adicionar 10% dos grãos ao meio 
+de fermentação (p/v), agitar e deixar em repouso durante 24 horas em temperatura ambiente (ou 
+25 ºC). Após esse tempo, a bebida é filtrada para a retirada dos grãos e está pronta para o 
+consumo (EGEA et al., 2020).  
+Tradicionalmente, se utiliza leite animal como meio de fermentação, contudo, já existem 
+muitos trabalhos científicos que aplicam o SCOBY de kefir em diversos substratos. Água com 
+açúcar é o substrato mais utilizado além do leite e os grãos facilmente se adaptam nesse meio, 
+sendo conhecidos como “kefir de água” (FIORDA et al., 2017). Substratos vegetais tem 
+ganhado muita atenção nos últimos anos, especialmente com o crescimento da dieta plant-
+based, e muitos resultam em produtos com boas funcionalidade e aceitação, como é o caso de 
+trabalhos com extratos de manga e umbu (TAVARES et al., 2021), soja e amêndoa (ATIK et 
+al., 2021), coco e inulina (ALVES et al., 2021), oliva russa (DARVISHZADEH; ORSAT; 
+MARTINEZ, 2021), entre outros. 
+Há também registros de benefícios à saúde associados ao consumo de kefir, 
+principalmente pela alta concentração de bactérias ácido láticas. Em revisão, Fiorda et al. 
+(2017) levantam uma série de artigos científicos que sugerem atividades antiedematogênicas, 
+anti-inflamatórias, antiulcerogênicas, antioxidantes, cicatrizantes e antimicrobianas para 
+bebidas feitas com kefir de água. Os autores comentam também que muitas espécies de BAL 
+isoladas a partir de grãos de kefir exibiram ausência de patogenicidade, resistência às condições 
+gastrointestinais, capacidade de aderir e colonizar a mucosa intestinal e capacidade de eliminar 
+competitivamente patógenos, portanto, tornando-se altamente adequadas para atuação 
+probiótica. 
+Castellone et al. (2021), em um estudo direcionado à saudabilidade de alimentos 
+fermentados por bactérias ácido láticas, apontam mais efeitos benéficos do consumo de kefir, 
+inclusive salientando a sua influência no eixo intestino-cérebro. Os pesquisadores relatam que 
+21 
+ 
+ao substituir e reduzir a microflora intestinal prejudicial, as BALs modulam o sistema imune e 
+amenizam sintomas de depressão, ansiedade, estresse e transtornos do sono. Valcarce et al. 
+(2020) ao tratar zebrafish com Lactobacillus ramnosus, uma espécie de BAL já descrita em 
+grãos de kefir, encontrou alterações de comportamento do animal, sugerindo ação ansiolítica 
+influenciada pela ação probiótica. 
+No Brasil, a regulamentação de bebidas fermentadas com kefir fica sob legislação da 
+Instrução Normativa nº 46, de 23 de outubro de 2007 (BRASIL, 2007). Nessa IN, ficam 
+definidos valores de lipídios, acidez, etanol e contagem de bactérias para as bebidas da 
+categoria, contudo, a norma apenas abrange bebidas lácteas fermentadas, sendo inexistente uma 
+legislação que abarque bebidas vegetais fermentadas por kefir. 
+ 
+3.4 Kombucha 
+ 
+ A kombucha é uma bebida fermentada a partir do chá de Camellia sinensis. Sua 
+provável origem remonta ao século 200 A.C., no leste asiático, mais especificamente na região 
+da Manchúria (China). A história conta que seu nome tem relação com um médico da época, 
+chamado Kombu, que teria tratado um imperador chinês com o chá fermentado e, a partir daí a 
+bebida se popularizou e foi difundida para os países vizinhos (COELHO et al., 2020). 
+ A bebida é tradicionalmente feita de chá verde ou chá preto (C. sinensis) adoçados e a 
+cultura starter apresenta-se na forma de um biofilme que é produzido durante as fermentações 
+por bactérias sintetizadoras de celulose. Esse biofilme também é um tipo consórcio de bactérias 
+e leveduras, um SCOBY, mas as predominâncias dos microorganismos acontece de maneira 
+diferente em comparação com os grãos de kefir. Na kombucha, a majoritariedade do 
+ecossistema microbiológico é representada pelas bactérias ácido acéticas, chegando a 85% 
+unicamente do gênero Gluconacetobacter, seguidas pelas leveduras e, por fim, pelas bactérias 
+ácido láticas (WATAWANA et al., 2016; VILLARREAL-SOTO et al., 2018). 
+ Para a produção da bebida, adiciona-se de 1 a 20% de açúcar em chá verde ou preto, 
+além de 0,25 a 10% de SCOBY e 3 a 30% de bebida fermentada previamente, como na técnica 
+de backslopping. A fermentação deve acontecer durante 7 a 14 dias, em uma temperatura 
+próxima dos 25 ºC. Após essa primeira fermentação, é possível adicionar um líquido 
+saborizante e conduzir mais uma fermentação de 24 horas, em recipiente fechado, para maior 
+gaseificação. Assim, a bebida pode tornar-se bastante efervescente e usufruir de uma vasta 
+gama de sabores, atraindo os consumidores (COELHO et al., 2020; MIRANDA et al., 2021). 
+22 
+ 
+ A oportunidade de adicionar outros produtos em uma segunda etapa fermentativa, abre 
+espaço para um aprimoramento das qualidades nutricionais, funcionais e sensoriais da bebida. 
+Miranda et al. (2021) relatam trabalhos que adicionaram infusões de outras ervas, flores, café, 
+eucalipto, sucos de fruta, produtos de soja e até leite bovino na segunda etapa de fermentação. 
+Ainda, outros trabalhos substituíram parte do chá da primeira etapa por sucos de uva (AYED; 
+BEN-ABID; HAMDI, 2016) e de palma-forrageira (AYED & HAMDI, 2015) e conseguiram 
+altos níveis de aceitação e atividade antioxidante nas bebidas. Leonarski et al. (2021) também 
+trabalharam com substratos alternativos para a kombucha, dessa vez suplementando a 
+fermentação tradicional com extratos de co-produtos de acerola para aumentar a concentração 
+de vitamina C na bebida final. 
+ Segundo Vargas, Fabricio e Ayub (2021), os benefícios à saúde associados ao consumo 
+de kombucha são vários, verificados por metodologias in vitro (ação anti-inflamatória, 
+antioxidante, antifúngica, antibacteriana e anticarcinogênica) e in vivo (ação anti-
+hiperglicêmica, neuroprotetora, imunomoduladora, antiviral, hepatoprotetora, anti-inflamatória 
+e radioprotetora). Os pesquisadores informam que, diferentemente das ações probióticas bem 
+documentadas das BAL, os efeitos biológicos da kombucha estão mais associados aos 
+metabólitos secretados pelas BAA do que pela sua ação probiótica em si.  
+Os três principais ácidos funcionais associados à kombucha são o ácido glucônico, o 
+DSL (ácido D-sacárico-1,4-lactona) e o ácido glucurônico (YANG et al., 2008; COELHO et 
+al. 2020). Este último é produzido pelo fígado humano e é conhecido como uma das substâncias 
+naturais com maior poder desintoxicante, uma vez que é capaz de se ligar às toxinas, tornando-
+as mais hidrossolúveis e mais fáceis de eliminar pela urina (MARTINEZ-LEAL; PONCE-
+GARCIA; ESCALANTE-ABURTO, 2020). 
+No Brasil, a produção de bebidas fermentadas de kombucha é regulamentada pela 
+Instrução Normativa nº 41, de 17 de setembro de 2019 (BRASIL, 2019). A legislação define a 
+bebida como uma infusão de C. sinensis fermentada por SCOBYs, aeróbica e anaerobicamente. 
+O documento ainda prevê a gaseificação, até 0,05% de teor alcoólico e saborização da bebida. 
+Nesse último item, dado como “ingredientes opcionais”, estão previstas infusões extras com 
+outras espécies vegetais, frutas, especiarias, mel, melado e quaisquer novos ingredientes 
+aprovados pela ANVISA. 
+ 
+ 
+ 
+ 
+23 
+ 
+3.5 Bebida de amêndoas de castanha de caju 
+ 
+O gênero botânico Anacardium tem mais de 400 espécies descritas, todas endêmicas no 
+Brasil, mas o cajueiro (Anacardium occidentale L.) é a única espécie com importância 
+comercial, inclusive com relevância mundial. Embora nativa da América do Sul, a espécie foi 
+levada a países da África e Ásia por exploradores europeus no século XVI, onde se adaptaram 
+bem e hoje chegam a ter protagonismo econômico (OLIVEIRA et al., 2020). 
+A cajucultura é uma das atividades socioeconômicas mais importantes para a região 
+Nordeste do Brasil. Em 2015, 99,4% da área ocupada por cajueiros no Brasil concentrava-se 
+no Nordeste e, desse montante, 62,9% ficava no Ceará (VIDAL, 2016). Os principais produtos 
+extraídos dessa espécie são o pedúnculo da fruta, a amêndoa da castanha de caju (ACC) e o 
+líquido da castanha de caju (LCC). A amêndoa, em especial, tem boa parte da sua produção 
+voltada para consumo interno. Embora o Brasil esteja a entre as nações que tem maior área de 
+cultivo e que mais produzem a ACC no mundo, aproximadamente 85% desse volume é 
+destinado à importação (ALENCAR; ESPÍNDOLA; CARNEIRO, 2018; OLIVEIRA et al., 
+2020).  
+Trabalhos científicos descrevem a ACC como uma boa fonte de nutrientes. Já foram 
+relatadas composições de até 23% de proteínas, com quantidades significantes de todos os 
+aminoácidos essenciais, 44% de ácidos graxos essenciais, 82% de gorduras insaturadas e boas 
+concentrações de cálcio, potássio e ferro (SHORI et al., 2022). Devido ao seu perfil de lipídios, 
+a ACC é considerada como “saudável ao coração” por ter efeitos positivos na pressão arterial e 
+por ajudar a controlar os níveis de colesterol sanguíneo (MATTISON et al., 2020). 
+Relembrando dos conceitos propostos por Aschemann-Witzel et al. (2020) e Asioli et 
+al. (2017) para alimentos clean label, nota-se que a ACC tem um enorme potencial de atuação 
+no mercado plant-based: se a matéria prima provém de uma fonte natural e familiar ao 
+consumidor, a aquisição do produto se torna mais provável. 
+Os produtos vegetais à base de ACC tem se tornado populares e já ganham 
+competitividade no mercado (OYEYINKA; ODUKOYA; ADEBAYO, 2019; AYDAR; 
+TUTUNCU; OZCELIK, 2020; SHORT; KINCHLA; NOLDEN, 2021). Os produtos 
+desenvolvidos também já começam a abranger a esfera da fermentação, especialmente no ramo 
+dos iogurtes, e alguns trabalhos sugerem a ACC como boa matriz para manutenção de 
+probióticos (TANGYU et al., 2019; AYDAR; TUTUNCU; OZCELIK, 2020; SHORI et al., 
+2022). 
+24 
+ 
+Bruno et al. (2019), pesquisadores da EMBRAPA Agroindústria Tropical, submeteram 
+uma bebida de castanha de caju a testes com probióticos e descobriram que o produto foi capaz 
+de manter a atividade funcional dos microorganismos durante 30 dias sob refrigeração, 
+indicando esse insumo como boa matriz de manutenção microbiológica. Os autores ainda 
+apontam que é possível obter uma bebida probiótica de castanha de caju sem perda significativa 
+na cor e com boa aceitação sensorial. 
+A base de dados virtual do Instituto Nacional da Propriedade Intelectual (INPI) 
+disponibiliza a listagem de patentes reconhecidas no Brasil. Quando se pesquisa por “castanha 
+de caju” nos títulos das patentes registradas no INPI, encontram-se 82 resultados. Destes, quatro 
+pedidos são referentes a bebidas feitas com essa matéria prima (BR 10 2013 001906 2 A2, BR 
+10 2013 003267 0 A2, BR 10 2014 023573 6 A2, BR 10 2018 007898 4 A2), mas todos são 
+apenas extratos hidrossolúveis deste insumo adicionados ou não de outros ingredientes, ou seja, 
+sem fazer uso da fermentação como etapa de processamento. Existe ainda a patente de número 
+BR 10 2020 004172 0 A2 que descreve um produto tipo “iogurte”, onde a fermentação é etapa 
+inerente desse tipo de alimento, mas o processo descrito aponta para uma fermentação em leite 
+bovino e apenas uma suplementação posterior do produto com extrato em pó de castanha de 
+caju.  
+Ao pesquisar por patentes com “kefir” no título, encontram-se 21 delas das quais apenas 
+uma propõe desenvolver uma bebida vegetal fermentada (pedido número BR 10 2020 014285 
+2 A2), mas utiliza inhame como insumo-base. Em relação às patentes com “kombucha” no 
+título, são encontrados apenas dois registros que não intentam desenvolver bebidas ou sequer 
+envolvem amêndoas de castanha de caju. 
+ 
+4 MATERIAIS E MÉTODOS 
+ 
+ No presente tópico, serão descritos todos os métodos utilizados durante a pesquisa para 
+o estudo cinético desde o preparo da bebida às análises toxicológicas. 
+ 
+4.1 Matéria prima e reagentes químicos 
+ 
+ As amêndoas de castanha de caju secas e cruas foram doadas pela unidade Agroindústria 
+Tropical da Empresa Brasileira de Pesquisa Agropecuária (EMBRAPA), sediada em Fortaleza, 
+Ceará, em setembro de 2021. As culturas de microrganismos utilizadas neste trabalho (kefir de 
+25 
+ 
+água e kombucha) também foram adquiridas por meio de doações de usuários locais que as 
+mantinham para uso doméstico e pessoal (Fortaleza, Ceará). 
+ Todos os reagentes sólidos de grau P.A. utilizados foram da marca Dinâmica©. Todos 
+padrões de HPLC utilizados foram da marca Sigma-Aldrich©. O metanol utilizado foi da marca 
+Merck© e a acetonitrila da marca JT Baker ©. 
+ As amostras foram cadastradas no Sistema Nacional de Gestão do Patrimônio Genético 
+e do Conhecimento Tradicional Associado (SISGEN), sob número de acesso AA72205, por 
+meio da Universidade Federal do Ceará. Todos os procedimentos experimentais foram 
+aprovados pelo Comitê de Ética do Uso de Animais da Universidade Federal do Ceará (CEUA-
+UFC), sob protocolo nº 1806202101. 
+ 
+4.2 Delineamento experimental 
+ 
+ O experimento foi conduzido em delineamento inteiramente casualizado (DIC) com 
+parcelas subdivididas (“split plot”), compreendendo dois lotes de extrato hidrossolúvel 
+pasteurizado de amêndoas de castanha de caju (apenas “extrato”, “bebida de castanha de caju” 
+ou “leite de castanha”, “LC”) e três replicatas de cada amostra. O estudo cinético de cada 
+amostra foi feito em 8 tempos de análise em intervalos crescentes (0, 4, 8, 12, 24, 36, 48, 72 
+horas). 
+ As amostras produzidas foram diferenciadas e identificadas de acordo com o inóculo 
+que receberam, sendo produzidos três tipos de amostras: a primeira amostra que recebeu apenas 
+kefir (amostra LC-F), a segunda que recebeu apenas kombucha (LC-B) e a terceira que recebeu 
+50% de kefir e 50% de kombucha (amostra LC-FB). 
+ Assim, para cada lote foram produzidas e analisadas 72 repetições, considerando 3 
+amostras em triplicata para cada tempo de fermentação. 
+ 
+4.3 Preparo do extrato hidrossolúvel pasteurizado de amêndoas de castanha de caju 
+ 
+ As castanhas de caju secas e cruas foram selecionadas manualmente para remoção de 
+possíveis cascas aderidas e, em seguida, foram lavadas exaustivamente em água corrente para 
+remoção de impurezas. 
+ Para a produção do extrato hidrossolúvel pasteurizado (LC) utilizou-se uma 
+metodologia adaptada a partir do comunicado técnico número 232 de 2017 da EMBRAPA 
+Agroindústria Tropical (LIMA et al., 2017). As amêndoas lavadas e selecionadas foram 
+26 
+ 
+trituradas com água potável na proporção de 1:10 (p/v) em processador Philco PMP 1600 na 
+potência máxima durante 3 minutos. O líquido foi pasteurizado pelo método de longo tempo e 
+baixa temperatura (HTLT) em fogão e panela de fundo triplo, sob agitação e utilizando 
+termômetro culinário de imersão para garantir que o centro geométrico deste permanecesse a 
+63 ºC durante 30 minutos.  
+ Por fim, frascos de vidro esterilizados por fervura durante 15 minutos receberam 100 
+mL do extrato finalizado (LC) e foram acondicionados em refrigerador por no máximo 12h 
+antes de receber os inóculos para fermentação. 
+ 
+4.4 Preparo e aplicação dos inóculos 
+ 
+Os SCOBYs doados foram submetidos a repetidos ciclos de fermentação para 
+aclimatação das colônias. Para o kefir, foram feitos 5 ciclos fermentativos em água potável com 
+10% de açúcar mascavo e 10% de grãos de kefir de água, conduzindo cada ciclo em temperatura 
+ambiente durante 24 horas. Para a kombucha, a fermentação aconteceu em chá verde preparado 
+com água potável fervente e 7g de Camellia sinensis infusionada durante 2 minutos e, após 
+filtrado e em temperatura ambiente, o chá recebeu 10% de açúcar mascavo, 15% de kombucha 
+do líquido-matriz. Na kombucha, foram conduzidos três ciclos de 7 dias em temperatura 
+ambiente. No início de cada ciclo, foram utilizados grãos ou líquido-matriz do ciclo anterior, 
+semelhante à técnica de blackslopping (LAUREYS & de VUYST, 2014; KIM et al., 2018). 
+Para a inoculação dos microorganismos na bebida de amêndoas de castanha de caju, 
+conduziu-se um novo ciclo para cada fermentação, com a diferença de que na kombucha o ciclo 
+foi de apenas 72 horas. Antes da inoculação, cada meio fermentado foi agitado mecanicamente 
+durante 30 segundos para remoção de parte do gás dissolvido e para ressuspensão dos teores 
+decantados, além de também terem sido filtrados para remoção dos SCOBYs.  
+Cada frasco com 100 mL de LC recebeu 10% de inóculo: 24 replicatas da amostra LC-
+F receberam 10 mL de kefir cada, as outras 24 replicatas de LC-B receberam a mesma 
+quantidade de kombucha e, por fim, cada replicata de LC-FB recebeu 5 mL de kefir e 5 mL de 
+kombucha. Cada grupo de 24 replicatas foi dividido em 8 tempos, deixando 3 replicatas para 
+análise em cada tempo. Cada frasco foi fechado com um tecido respirável a fim de permitir as 
+trocas gasosas durante a fermentação e impedir a contaminação com material exterior. Todas 
+as amostras foram incubadas em BOD (Tecnal, TE371) 28 ºC. 
+ 
+ 
+27 
+ 
+4.5 Análises físico-químicas 
+ 
+Todas as amostras em todos os tempos de fermentação foram submetidas a análises de 
+pH, acidez titulável e sólidos solúveis. Todas as metodologias foram realizadas segundo os 
+métodos físico-químicos para análise de alimentos do Instituto Adolfo Lutz (2008). 
+O pH foi quantificado por método eletrométrico em pHmetro digital (Kasvi, K39), 
+calibrado com soluções tampão de pH 4,0 e 7,0, onde os valores foram expressos em unidade 
+de pH. A acidez titulável total (ATT) foi medida por neutralização da amostra com solução de 
+NaOH 0,1M padronizado com biftalato de potássio e titulado em bureta de vidro, expressando 
+o resultado em solução molar por cento. Para a medição dos sólidos solúveis totais (SST), as 
+amostras foram centrifugadas a 10.000 rpm durante 10 minutos a 25 ºC (Hettich Zentrifugen, 
+Rotina 420) e três gotas do sobrenadante foram diretamente postas sob o prisma de refratômetro 
+eletrônico (Milwaukee, MA871) para leitura do teor de sólidos solúveis. 
+ 
+4.6 Cromatografia líquida de alta eficiência (CLAE) 
+ 
+ Foram injetadas em equipamento de CLAE (Shimadzu) alíquotas de 100 μL dos tempos 
+0, 24, 48 e 72h de todas as três amostras para a determinação de açúcares e ácidos orgânicos 
+dissolvidos. Todas as amostras foram filtradas em filtros de PVDF nos poros de 0,45 e 0,22 μm 
+antes da injeção. Todas as fases móveis passaram por filtro de acetato de celulose de 0,22 μm. 
+Todas as quantificações foram feitas baseadas em curvas-padrão delineadas previamente para 
+cada substância. Em todas as análises, o forno da coluna permaneceu a 40 ºC e o loop de injeção 
+era de 20 μL. Todos os padrões foram avaliados quanto aos limites de detecção e de 
+quantificação do equipamento. Demais especificidades de cada procedimento serão descritas a 
+seguir. 
+ 
+4.6.1 Determinação de açúcares 
+ 
+ Foi acoplado ao cromatógrafo um detector de índice de refração por infravermelho 
+(RID-10A) e coluna Kromasil® NH2 4,6 x 150 mm, com partícula de 5 µm. A coluna foi 
+equilibrada com uma solução de 85% de acetonitrila e 15% de água ultra pura (MilliQ®), que 
+também atuou como fase móvel da análise. Cada análise foi realizada com tempo de corrida de 
+20 minutos e a vazão de 1 mL/min. Foram determinados os perfis de sacarose, glicose, frutose 
+e rafinose em todas as amostras. 
+28 
+ 
+ 
+4.6.2 Determinação de ácidos orgânicos 
+ 
+ Foi acoplado ao cromatógrafo um detector UV-Vis a 214nm (SPD-M10AVP) e coluna 
+LiChrospher® 100 RP-18 4,6 x 250mm, com partículas de 5µm. A solução de equilíbrio da 
+coluna e de corrida da análise foi o tampão de fosfato de potássio (KHPO) 0,2 M com pH 
+24
+corrigido para 2,4. O tempo de análise foi de 15 minutos e a vazão foi de 0,8 mL/min. Foram 
+determinados os perfis de ácido acético, ácido lático, ácido cítrico e ácido D-glucurônico. 
+ 
+4.7 Análises toxicológicas 
+ 
+ Para as análises de toxicidade, foram utilizados peixes da espécie Danio rerio, 
+chamados de “zebrafish” ou “paulistinha”. Todos os animais eram selvagens, de ambos os 
+sexos, com idade entre 60 e 90 dias, tamanhos de 3,5 ± 0,5 centímetros e peso 0,4 ± 0,1 gramas, 
+fornecidos pela Agroquímica Comércio de Produtos Veterinários LTDA (Fortaleza, Ceará). 
+ Todos os animais foram aclimatados por 24 horas em aquários de vidro (40x20x25 cm), 
+com água desclorada (anticloro ProtecPlus®) e bombas de ar com filtros submersos, a 25 ºC e 
+pH 7,0, com ciclo circadiano de 14:10 horas de claro/escuro. Os peixes receberam ração 
+(Spirulina®) ad libitum 24 horas antes dos experimentos. Após as análises, os animais foram 
+eutanasiados por imersão em água gelada (2-4 ºC), até perda de mobilidade opercular 
+(CONCEA, 2018).  
+ As três amostras (LC-F, LC-B e LC-FB) nos tempos 0, 24, 48 e 72 horas foram 
+submetidas aso testes toxicológicos, estas sendo aplicadas de maneira integral. Para o 
+tratamento dos peixes, os indivíduos foram selecionados aleatoriamente, imobilizados em 
+esponja úmida e receberam, via oral, 20 μL de cada formulação ou veículo (água destilada) com 
+o auxílio de uma pipeta automática regulável equipada de ponteira estéril. As etapas seguintes 
+das análises variaram de acordo com as descrições a seguir. 
+ 
+4.7.1 Atividade locomotora 
+ 
+ As amostras foram submetidas ao teste de atividade locomotora, ou teste de campo 
+aberto, para verificar a alteração da coordenação motora dos animais (AHMAD & 
+RICHARDSON, 2013), utilizando grupos de 06 animais. Após a administração oral das 
+alíquotas, cada indivíduo foi posto separadamente em béquer de vidro com água do aquário e 
+29 
+ 
+aguardou-se 1 hora. Dado o tempo de espera, os animais e a água em que estavam foram 
+transferidos para placas de Petri de vidro (100 x 20 mm) marcadas em quatro quadrantes. 
+Durante 5 minutos, contou-se quantas vezes cada peixe efetuava um cruzamento de linha (CL), 
+avaliando, assim, a atividade locomotora destes. Um grupo de animais não recebeu tratamento 
+e funcionou como grupo-controle (naive) do campo aberto, tomando-se valor de CL desse grupo 
+como referência a 100% de atividade locomotora. 
+ 
+4.7.2 Toxicidade aguda 
+ 
+ As mesmas amostras analisadas no campo aberto foram submetidas à análise de 
+toxicidade aguda para verificar a taxa de morte dos animais ao ingerir as bebidas fermentadas 
+(MAGALHÃES et al., 2017). Grupos de 06 indivíduos receberam as amostras via oral e foram 
+mantidos juntos em aquário exclusivo durante 96 horas. A cada 24 horas, a água do aquário foi 
+parcialmente trocada e os animais receberam ração ad libitum. Um grupo recebeu apenas água 
+destilada e foi considerado como grupo-controle. Ao final do tempo previsto, foi contabilizado 
+o número de animais mortos em cada grupo e determinadas as amostras letais, com capacidade 
+de matar pelo menos 50% dos animais (CL50), por meio do método matemático Trimmed 
+Spearman-Karber com intervalo de confiança de 95% (ARELLANO-AGUILAR et al., 2015). 
+ 
+4.8 Análises estatísticas 
+ 
+ Todas as análises estatísticas foram realizadas no programa R (versão 3.6.1) utilizando 
+recursos próprios do software e do pacote estatístico ExpDes.pt (versão 1.2.0). Os dados 
+coletados foram submetidos a Análise de Interação entre tratamentos e tempos e, quando 
+convenientes, foram realizados Teste de Tukey (P < 0,05) e análise de regressão. 
+ 
+5 RESULTADOS E DISCUSSÕES 
+ 
+ Nesta sessão serão apresentados os resultados do estudo cinético da fermentação da 
+bebida de amêndoas de castanha de caju, sempre em discussão com literaturas internacionais. 
+ 
+ 
+ 
+ 
+30 
+ 
+5.1 Análises físico-químicas 
+ 
+Nas legislações brasileiras para kefir (BRASIL, 2007) e para kombucha (BRASIL, 
+2019), alguns parâmetros físico-químicos são exigidos e, desses, apenas pH e acidez foram 
+abordados no estudo cinético. Somente a legislação de kombucha define um intervalo para pH, 
+sendo de 2,5 a 4,2. Em relação a acidez, a Instrução Normativa para kombucha se limita a 
+valores de acidez volátil, que não foi objeto de estudo neste trabalho, enquanto a Instrução para 
+kefir exige valores em gramas de ácido lático para cada 100 gramas de amostra.  
+Para o cálculo da acidez durante a condução do estudo cinético, optou-se pelo uso de 
+metodologia do Instituto Adolfo Lutz (2008) que gera valores na unidade “acidez em solução 
+molar por cento”, ou seja, sem cálculo baseado na molaridade de ácidos específicos. Essa 
+fórmula foi mais adequada ao trabalho por dois motivos: primeiro, para centralizar os resultados 
+em uma única unidade, sabendo que kombucha e kefir apresentam diferentes majoritariedades 
+de ácidos orgânicos como reflexo das suas dinâmicas microbiológicas distintas; segundo, 
+notou-se que as concentrações de ácidos mudam de predominância com o tempo de 
+fermentação, aumentando a complexidade das misturas de ácidos orgânicos nas bebidas (este 
+tópico será melhor abordado no item 5.2.2.2). Assim, apenas os valores de pH obtidos neste 
+trabalho poderiam ser discutidos à luz da legislação nacional. 
+A Tabela 01 apresenta todos os valores obtidos para pH, sólidos solúveis totais e acidez 
+titulável total das três amostras (LC-F, LC-FB, LC-B) nos oito tempos de análise (0, 4, 8, 12, 
+24, 26, 48, 72 horas). Houve interação significativa (p ≤ 0,05) entre as formulações e os tempos 
+de fermentação para todas as análises conduzidas, portanto, esses parâmetros também foram 
+submetidos a análises de regressão (APÊNDICE A). Todos os valores de pH foram dispersos 
+na Figura 01 para melhor visualização das diferenças entre cada amostra.  
+Os valores de pH durante as 72 horas de experimento variaram entre 6,20 a 3,90 para a 
+amostra LC-F, 6,26 a 3,96 para a amostra LC-FB e 6,33 a 4,75 para a amostra LC-B.  O pH do 
+alimento é considerado um indicador de segurança alimentar. Um pH dentro da faixa de acidez, 
+menor que 4,5, inibe o crescimento dos principais microrganismos responsáveis por doenças 
+transmitidas por alimentos (SILVA et al., 2018). Por isso, ainda que não seja análise obrigatória 
+em todas as legislações, ele é uma variável importante para a qualidade do produto. 
+ 
+ 
+ 
+31 
+ 
+Tabela 01 – Caracterização físico-química dos produtos fermentados, quanto à pH, sólidos 
+solúveis totais (SST) e acidez titulável total (ATT). 
+AVALIAÇÕES 
+TEMPO 
+AMOSTRA SST  ATT  
+(horas) pH* 
+(ºBRIX)* (g/100 mL)* 
+bba
+LC-F 6,20  2,13  0,12  
+abba
+6,26  2,15  0,09  
+0 LC-FB 
+aaa
+LC-B 6,33  2,38  0,10  
+bba
+LC-F 6,11  1,93  0,13  
+abba
+4 LC-FB 6,16  2,08  0,12  
+aaa
+6,22  2,31  0,10  
+LC-B 
+cca
+LC-F 5,89  1,98  0,19  
+bba
+8 LC-FB 6,00  2,26  0,18  
+aaa
+6,20  2,43  0,13  
+LC-B 
+cca
+LC-F 5,58  1,63  0,29  
+bba
+12 LC-FB 5,75  1,95  0,24  
+aaa
+6,19  2,16  0,14  
+LC-B 
+cca
+LC-F 4,91  1,18   4,45  
+bba
+24 LC-FB 5,06   1,38  4,41  
+aab
+5,92  2,43  1,69  
+LC-B 
+bba
+LC-F 4,15  1,08  7,03  
+bbb
+36 LC-FB 4,23  1,13  6,37  
+aac
+LC-B 5,65  1,98  2,96  
+bba
+LC-F 4,01  1,01  9,23  
+bbb
+48 LC-FB 4,01  1,08  9,76  
+aac
+LC-B 5,41  1,93  4,28  
+bba
+3,90  0,96  12,61  
+LC-F 
+bbb
+72 LC-FB 3,96   0,91  11,71  
+a ac
+LC-B 4,75 1,56  5,27  
+As médias seguidas por letras iguais na mesma coluna não diferem entre si pelo teste de Tukey (P > 0,05), para as 
+diferentes amostras de um mesmo tempo. Coluna indicada por asterisco (*) apresenta interação entre amostra e 
+tempo, sendo submetida ao teste de regressão: os efeitos simples das médias são significativamente diferentes 
+entre si a 5% de significância entre amostras iguais em diferentes tempos.  
+  
+Assim, tanto a amostra LC-F quanto a amostra LC-FB estariam dentro da faixa segura 
+de acidez para alimentos a partir das 36 horas de fermentação, com pH de 4,15 e 4,23 
+respectivamente. Já a amostra LC-B teve seu menor pH no tempo máximo do experimento, 
+atingindo 4,75 na escala de acidez, sendo um valor ainda alto e apontando a necessidade de 
+maior tempo para atingir a faixa de segurança contra patógenos. De maneira análoga, apenas a 
+amostra LC-FB, dentre as formulações com kombucha, estariam de acordo com os limites 
+exigidos na Instrução Normativa para bebidas fermentadas com o referido SCOBY (BRASIL, 
+2019). 
+32 
+ 
+Os pHs dos últimos dois tempos de LC-F e LC-FB, entre 4,01 e 3,90, estão próximos 
+dos valores encontrados por Shori et al. (2022) na produção de iogurte de ACC. Os autores 
+fermentaram extrato hidrossolúvel da amêndoa (“leite de castanha”) com cepas isoladas de 
+BALs a 42 ºC durante 3h e atingiram um produto com pH na faixa de 4,06, mantendo-se com 
+pouca variação após refrigeração e armazenamento por 21 dias. 
+Ao analisar a Figura 01, é possível perceber um comportamento semelhante entre os 
+decréscimos de pH para as amostras com kefir, LC-F e LC-FB. O teste de médias de Tukey 
+indica também que essas mesmas amostras não diferiram nos valores de acidez entre 0 e 8h de 
+fermentação, sendo que o pH de LC-F caiu mais velozmente entre 12 e 24 horas, mas foi 
+equiparado novamente por LC-FB das 36 horas em diante. 
+ 
+Figura 01 - Variação dos valores de pH para bebidas de castanha de caju fermentadas com kefir 
+e kombucha durante 72 horas a 28 ºC.  
+ 
+LC-F: amostra inoculada com 100% de kefir. LC-FB: amostra inoculada com 50% kefir e 50% kombucha. LC-B: 
+amostra inoculada com 100% kombucha. 
+ 
+A acidificação mais veloz do kefir em relação à kombucha é algo facilmente verificável 
+na literatura científica. Os processos tradicionais de fermentação já evidenciam a velocidade 
+com que as reações acontecem, sendo um tempo médio de 24 horas para o kefir e até 15 dias 
+para a kombucha (VILLARREAL-SOTO, et al. 2018; EGEA et al., 2020; COELHO et al., 
+2020). Estudos como o de Costa et al. (2018) também ilustram esse processo ao demonstrar 
+33 
+ 
+que uma bebida vegetal fermentada com kefir pode ter redução de mais de 1,8 pontos de pH 
+rapidamente, reduzindo de 6 para abaixo de 4,5 em 24 horas, a depender do substrato utilizado. 
+Em paralelo, Amarasinghe, Weerakkody e Waisundara (2017) apontam um decréscimo de 
+apenas 0,5 no pH de bebidas fermentadas com kombucha nas primeiras 24 horas, podendo 
+variar de acordo com o chá utilizado. 
+A Figura 02 aponta graficamente as variações nos valores de acidez titulável total. 
+Novamente, é possível perceber um comportamento semelhante entre LC-F e LC-FB, 
+destoando nitidamente da curva de LC-B. Esse desempenho dá suporte aos valores encontrados 
+de pH, uma vez que o aumento da concentração de ácidos orgânicos no meio é consequência 
+inerente do processo fermentativo, aumentando os valores de ATT ao mesmo tempo que reduz 
+o pH das formulações (PAREDES; ESCUDERO-GILETE; VICARIO, 2022). 
+Enquanto o pH tem maior influência no desenvolvimento de microrganismos, a acidez 
+titulável tem maior impacto no sabor e no aroma dos alimentos. Contudo, a titulação de ácidos 
+de um alimento não é capaz de diferenciar entre os compostos acidificantes e, por isso, o cálculo 
+costuma ser feito em cima de um ácido conhecidamente predominante. Ainda assim, a mistura 
+desses compostos costuma ser bastante complexa, podendo contar com múltiplos ácidos em 
+larga quantidade ou, ainda, contar com mudança de protagonismo desses com o tempo (TYL & 
+SADLER, 2017).  
+Li et al. (2022) conduziram pesquisa correlacionando ácido glucônico e sua percepção 
+sensorial em kombucha. Primeiro, os autores concluem que a maior concentração do referido 
+ácido está diretamente ligada à melhor pontuação para “sabor” entre os provadores. Depois, 
+eles reconstroem a comunidade microbiológica de um SCOBY de kombucha com a 
+suplementação de duas cepas específicas, uma de BAA e outra de levedura, isoladas do próprio 
+consórcio original. A técnica fez com que a produção de ácido glucônico aumentasse em mais 
+de 4 vezes em relação à fermentação tradicional, impactando muito positivamente na aceitação 
+da bebida fermentada.  
+A Figura 03 traz o gráfico da variação de sólidos solúveis durante as 72 horas de 
+fermentação para todas as amostras. O teor de sólidos solúveis no tempo 0 foi baixo para as três 
+amostras, variando entre 2,13 e 2,38 ºBrix. Isso provavelmente foi influenciado pela 
+metodologia de obtenção do extrato de ACC, já que foi utilizado um processador de grau 
+doméstico ao invés de um equipamento mais eficiente, como um moinho coloidal. 
+ 
+ 
+34 
+ 
+Figura 02 - Variação dos valores de ATT para bebidas de castanha de caju fermentadas com 
+kefir e kombucha durante 72 horas a 28 ºC. 
+ 
+LC-F: amostra inoculada com 100% de kefir. LC-FB: amostra inoculada com 50% kefir e 50% kombucha. LC-B: 
+amostra inoculada com 100% kombucha.  
+ 
+A redução dos SST também está associada ao aumento de ATT e consequente redução 
+de pH, pois os microrganismos fermentadores precisam consumir açúcares para dar 
+continuidade ao seu metabolismo. De acordo com De-Vuyst & Leroy (2020), as leveduras 
+consomem glicose para secretar etanol, enquanto as LABs preferem frutose e produzem 
+principalmente ácido lático. As BAAs além de metabolizarem o etanol provido pelas leveduras, 
+também consomem glicose, especialmente as bactérias do gênero Gluconacetobacter, para 
+produzir ácido glucônico e glucurônico (LI et al., 2022). O balanço final entre sólidos solúveis 
+e acidez é um dos melhores parâmetros para predição do flavor final de uma bebida, melhor do 
+que analisar isoladamente cada parâmetro (TYL & SADLER, 2017). 
+Notam-se, mais uma vez, curvas de redução de SST semelhantes entre LC-F e LC-FB, 
+reforçando as diferentes velocidades de fermentação entre kefir e kombucha. Considerando os 
+padrões cinéticos nas análises de pH, ATT e SST, é possível inferir que o uso de kefir é o maior 
+responsável pelo consumo de açúcares e acidificação das bebidas dentro das misturas 
+analisadas. Ao mesmo tempo que as amostras com kefir (LC-F e LC-FB) apresentam 
+comportamentos semelhantes nos testes descritos, especialmente para pH e SST onde terminam 
+as 72 horas sem diferença estatística, elas igualmente se afastam das curvas delineadas pela 
+35 
+ 
+amostra inoculada apenas com kombucha (LC-B).É interessante salientar também que a 
+amostra LC-FB recebeu apenas metade do volume de kefir que a amostra LC-F recebeu e, 
+mesmo assim, ela foi capaz de se equiparar à essa última formulação dentro dos parâmetros 
+discutidos. A semelhança entre essas eficiências sugere uma evidência de potencial simbiótico 
+entre culturas mistas de kefir e kombucha, onde as interações entre BAL, BAA e leveduras 
+pode ter compensado o metabolismo de açúcares e ácidos orgânicos apesar das menores 
+concentrações iniciais dos inóculos de LC-FB. 
+ 
+Figura 03 - Variação dos valores de SST para bebidas de castanha de caju fermentadas com 
+kefir e kombucha durante 72 horas a 28 ºC. 
+ 
+LC-F: amostra inoculada com 100% de kefir. LC-FB: amostra inoculada com 50% kefir e 50% kombucha. LC-B: 
+amostra inoculada com 100% kombucha.  
+ 
+5.2 Análises cromatográficas 
+ 
+ Nessa seção serão apresentados os dados obtidos de açúcares e ácidos orgânicos para as 
+três amostras nos tempos 0, 24, 48 e 72 horas de fermentação. Todos os parâmetros 
+apresentaram interação significativa entre formulações e tempo, portanto, foram submetidos a 
+análises de regressão (APÊNDICES B e C). A Tabela 02 informa os limites e detecção e 
+quantificação para glicose (GLI), frutose (FRU), sacarose (SAC), rafinose (RAF), ácido 
+glucurônico (GLU), ácido lático (LAT), ácido acético (ACE) e ácido cítrico (CIT).  
+36 
+ 
+Tabela 02 – Limites de detecção e quantificação do equipamento de CLAE para as substâncias 
+padrões utilizadas. 
+Açúcares Ácidos orgânicos 
+Limites 
+(mg/mL) 
+GLI FRU SAC RAF GLU LAT ACE CIT 
+Detecção 0,1 0,1 0,1 0,07 0,001 0,001 0,01 0,01 
+0,3 0,5 0,25 0,1 0,005 0,001 0,03 0,05 
+Quantificação 
+GLI: glicose. FRU: frutose. SAC: sacarose. RAF: rafinose. GLU: ácido glucurônico. LAT: ácido lático. ACE: 
+ácido acético. CIT: ácido cítrico. 
+ 
+Os limites de detecção e quantificação são características fundamentais da performance 
+de um equipamento analítico. Esses limites estimam os valores mínimos que o equipamento é 
+capaz de detectar e quantificar, levando em consideração todos os possíveis ruídos e 
+interferências do processo. Esses dados são considerados críticos e, por isso, reais. Por outro 
+lado, os dados encontrados para uma amostra durante a experimentação são obtidos 
+comparando os valores experimentais com os valores críticos, estimando o valor mínimo 
+significativo para o composto de interesse. Dessa maneira, entendemos que nem todo composto 
+detectado é quantificável, bem como a não detecção deste não significa sua completa ausência 
+no meio, mas sim uma incapacidade de identificação por parte da máquina (CURRIE, 1999). 
+ 
+5.2.1 Determinação de açúcares 
+ 
+ A Figura 04 apresenta o cromatograma dos padrões de açúcares. A ordem de eluição e 
+os respectivos tempos de retenção deram-se da seguinte maneira: frutose (4,82 minutos), glicose 
+(5,87 minutos), sacarose (10,05 minutos) e rafinose (20,68 minutos). 
+A Tabela 03 apresenta todos os valores encontrados para glicose (GLI), frutose (FRU), 
+sacarose (SAC) e rafinose (RAF) nos tempos analisados das três amostras. Os mono, di e 
+trissacarídeos encontrados no tempo 0 também foram relatados por Griffin e Dean (2017) ao 
+caracterizarem os açúcares de ACC in natura, mas as autoras ainda descreveram a presença de 
+inositol e estaquiose. Os valores aqui encontrados naturalmente diferem dos relatados por 
+Griffin e Dean (2017), uma vez que elas trabalharam com o produto integral e aqui pesquisou-
+se em cima do extrato hidrossolúvel. Contudo, foi comum aos dois trabalhos a predominância 
+de sacarose seguida por rafinose. 
+ 
+37 
+ 
+Figura 04 – Cromatograma dos padrões de açúcares pesquisados por CLAE. 
+ 
+Ordem de eluição de picos: frutose (4,82), glicose (5,87), sacarose (10,05) e rafinose (20,68). 
+ 
+De acordo com a Tabela 03 e com a Figura 05, notam-se valores iniciais baixos para os 
+monossacarídeos (glicose e frutose) e valores mais altos para o dissacarídeo (sacarose) e para o 
+trissacarídeo (rafinose) encontrados. Durante as primeiras 24 horas, existe um aumento de 
+glicose e frutose em paralelo ao decaimento de sacarose e rafinose. Sabendo que a molécula de 
+sacarose é composta por glicose e frutose e a rafinose, por sua vez, é a junção de galactose, 
+frutose e glicose, esse aumento de monossacarídeos possivelmente se justifica pela quebra dos 
+açúcares maiores sob ação dos microrganismos fermentadores. 
+A metabolização de sacarose durante processos fermentativos é bem discutida na 
+literatura, especialmente em relação às BALs e kefir, e a sua disponibilidade no meio costuma 
+influenciar positivamente a produção de ácido lático (DE-ROOS; DE-VUYST, 2018; 
+LAUREYS et al, 2018; PATO et al, 2019). Leveduras do gênero Saccharomyces, presentes em 
+kefir e em kombucha, também hidrolisam sacarose em glicose e frutose com o uso da enzima 
+invertase (PAREDES; ESCUDERO-GILETE; VICARIO, 2022). 
+Grãos e legumes costumam ter conteúdos relevantes de oligossacarídeos que não são 
+digeridos pelos humanos e chegam intactos no trato intestinal, onde são metabolizados pela 
+microbiota do indivíduo, podendo gerar gases e desconfortos. No entanto, a comunidade 
+científica tem levantado seu potencial como moléculas prebióticas, uma vez que diversas cepas 
+de probióticos, especialmente dos gêneros Lactobacillus e Lactococcus, são capazes de 
+consumir rafinose, estaquiose e outros oligossacarídeos (ABRIOUEL et al, 2012; ZARTL et 
+al., 2018). 
+ 
+38 
+ 
+Tabela 03 – Quantificações dos açúcares presentes em cada tempo de fermentação das bebidas 
+fermentadas de ACC. 
+QUANTIFICAÇÕES (mg/100 mL) 
+TEMPO 
+AMOSTRA 
+(horas) GLI* FRU* SAC* RAF* 
+aaaa
+LC-F 0,0222  0,0597  0,2466  0,1311  
+bbaa
+0,0592  0,0461  0,2454  0,1407  
+0 LC-FB 
+ccba
+LC-B 0,0300  0,0096  1,0675  0,1377  
+aaaa
+LC-F 0,0496  0,0718  0  0,1107  
+bbbb
+24 LC-FB 0,1870  0,1692  0,0332  0,0795  
+bccc
+0,1881  0,1318  0,7655  0,0277  
+LC-B 
+aaaa
+LC-F 0  0  0  0,0437  
+aaab
+48 LC-FB 0  0  0  0  
+bbbc
+0,2664  0,2250  0,2303  0,0905  
+LC-B 
+aaaa
+LC-F 0  0  0  0  
+aaaa
+72 LC-FB 0  0  0  0  
+bbbb
+0,2589  0,1963  0,1010  0,0602  
+LC-B 
+GLI: glicose. FRU: frutose. SAC: sacarose. RAF: rafinose. As médias seguidas por letras iguais na mesma coluna 
+não diferem entre si pelo teste de Tukey (P > 0,05), para as diferentes amostras de um mesmo tempo. Coluna 
+indicada por asterisco (*) apresenta interação entre amostra e tempo, sendo submetida ao teste de regressão: os 
+efeitos simples das médias são significativamente diferentes entre si a 5% de significância pelo teste de F entre 
+amostras iguais em diferentes tempos.  
+  
+Zartl et al. (2018) testaram o consumo de açúcares da família da rafinose por parte de 
+20 cepas isoladas de bactérias probióticas, sendo a maioria bactérias ácido láticas, e 
+descobriram que 15 dessas fermentavam rafinose e 14 fermentavam estaquiose. Entendendo a 
+kombucha e, principalmente, o kefir como consórcios ricos em BALs, fica evidente que a 
+redução de rafinose nas amostras LC-F, LC-FB e LC-B está relacionada ao metabolismo das 
+suas misturas complexas de bactérias. 
+Ainda discutindo a Figura 05, no ponto de 24 horas, observa-se a maior concentração 
+de monossacarídeos em LC-FB em comparação com LC-F, bem como seu consumo mais rápido 
+de rafinose. Essa diferença sugere que a mistura de kefir e kombucha é mais eficiente do que 
+apenas o kefir isolado para a metabolização do trissacarídeo e a consequente liberação dos 
+açúcares menores no meio. O consumo de açúcares por LC-FB equipara-se, ou até supera, ao 
+de LC-F, apontando novamente uma cooperação entre kefir e kombucha, compensando os 
+menores volumes inoculados. 
+Analisando a Figura 06, pode-se avaliar melhor o consumo de açúcares por cada 
+formulação individualmente. É notável o veloz consumo de sacarose nas três amostras, embora 
+nas formulações com kefir (LC-F e LC-FB) isso aconteça mais rápido, logo nas primeiras 24 
+39 
+ 
+horas. Com dois dias de fermentação, as amostras com kefir já haviam esgotado todo o estoque 
+de glicose, frutose e sacarose, restando apenas resíduos de rafinose na amostra LC-F. Já na 
+amostra LC-B, mesmo ao final das 72 horas de experimentação, ainda havia presença dos 
+açúcares maiores e um conteúdo relevante de monossacarídeos. 
+As curvas de consumo de açúcares estão em concordância com as curvas de pH, SST e 
+ATT. Nota-se que os valores de SST para LC-F e LC-FB tem maior queda entre 12 e 24 horas 
+de fermentação, momento este em que os resultados cromatográficos apontam para o 
+decaimento parcial ou total do açúcar em maior concentração inicial, a sacarose. Das 24 horas 
+em diante, os valores de sólidos solúveis começam a estabilizar em paralelo com o esgotamento 
+do estoque de açúcares das amostras com kefir. Uma estabilização análoga acontece com os 
+valores de pH, podendo também ser relacionado ao fim da digestão de açúcares e a redução da 
+produção ácidos. Em contrapartida, os valores de ATT permaneceram em ascensão, 
+possivelmente por influência das BAAs que não metabolizam exclusivamente açúcares, mas 
+também etanol e lactato, para produzir ácido acético (DE-VUYST & LEROY, 2020). A 
+contínua produção de ácido acético pode ter menor interferência no pH devido ao fato de este 
+ser um ácido fraco, com baixa taxa de ionização no meio (TYL & SADLER, 2017). 
+Por fim, a demora em consumir os açúcares percebida na amostra LC-B reafirma a 
+menor velocidade de fermentação inerente ao consorcio de microrganismos provenientes do 
+scoby de kombucha, possivelmente pela menor proporção de BALs e leveduras, que são as 
+principais responsáveis por hidrólise de carboidratos do meio, enquanto as BAAs tem 
+preferência por etanol, lactato e outros metabólitos secundários. 
+ 
+5.2.2 Determinação de ácidos orgânicos 
+ 
+A Figura 07 apresenta o cromatograma dos padrões de ácidos orgânicos. A ordem de 
+eluição e os respectivos tempos de retenção deram-se da seguinte maneira: ácido glucurônico 
+(2,67 minutos), ácido lático (5,05 minutos), ácido acético (5,69 minutos) e ácido cítrico (6,34 
+minutos). 
+A Tabela 04 traz todos os valores quantificados para as concentrações de ácido 
+glucurônico (GLU), ácido lático (LAT), ácido acético (ACE) e ácido cítrico (CIT). No tempo 
+0, o ácido de maior presença foi o glucurônico, proveniente das alíquotas de inóculos 
+previamente fermentadas. O ácido cítrico, que tem presença registrada em vários tipos de 
+amêndoas (YUKSEL et al., 2017), vem em segunda maior concentração, proveniente do extrato 
+hidrossolúvel de ACC. 
+40 
+ 
+Figura 05 - Variação das concentrações de glicose, frutose, sacarose e rafinose (g/100 mL) para 
+bebidas de castanha de caju fermentadas com kefir e kombucha durante 72 horas a 28 ºC. 
+ 
+ 
+ 
+LC-F: amostra inoculada com 100% de kefir. LC-FB: amostra inoculada com 50% kefir e 50% kombucha. LC-B: 
+amostra inoculada com 100% kombucha.  
+ 
+ 
+ 
+41 
+ 
+Figura 06 – Variação das concentrações de açúcares dentro de cada amostra analisada (LC-F, 
+LC-FB e LC-B). 
+ 
+ 
+GLI: glicose. FRU: frutose. SAC: sacarose. RAF: rafinose. LC-F: amostra inoculada com 100% de kefir. LC-FB: 
+amostra inoculada com 50% kefir e 50% kombucha. LC-B: amostra inoculada com 100% kombucha.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+42 
+ 
+Figura 07 – Cromatograma dos padrões de ácidos orgânicos pesquisados por CLAE. 
+ 
+Ordem de eluição dos picos: ácido glucurônico (2,67), ácido lático (5,05), ácido acético (5,69) e ácido cítrico 
+(6,34). 
+ 
+Embora a produção de ácido glucurônico por SCOBYs de kefir não seja comumente 
+relatada na literatura científica, a amostra LC-F apresentou uma concentração desse ácido 
+próxima à encontrada em LC-B. A maioria dos estudos metagenômicos de kefir costumam 
+encontrar apenas cepas de Acetobacter representando o grupo das BAA nesses consórcios 
+(FIORDA et al., 2017), contudo, alguns esforços pontuais já catalogaram Gluconacetobacter 
+em kefir brasileiro (MIGUEL et al. 2010) e tailandês (SARIKKHA et al., 2015). As espécies 
+desse último gênero são as responsáveis por maior parte da colonização dos SCOBYs de 
+kombucha, bem como pela produção de ácido glucurônico (NGUYEN et al, 2015b). Dessa 
+maneira, a quantificação de GLU em LC-F é um indício da presença de Gluconacetobacter em 
+consórcios de kefir brasileiro. 
+Ao observar a Tabela 04 e a Figura 08, podemos notar que todas as amostras têm uma 
+diminuição da concentração de GLU no tempo de 24 horas. No tempo seguinte, 48 horas, LC-
+F continua em baixa, LC-FB tem um sutil aumento enquanto LC-B tem uma produção mais 
+expressiva do ácido. No último tempo, nota-se uma mudança muito sensível nos valores para 
+LC-FB e LC-B, enquanto LC-F já tem uma recuperação mais efetiva. Dado o exposto, não é 
+possível afirmar que a mistura de kefir e kombucha foi responsável por um aumento 
+significativo da produção de ácido glucurônico dentro dos parâmetros de fermentação 
+pesquisados. 
+  
+43 
+ 
+Tabela 04 – Quantificações dos ácidos orgânicos presentes em cada tempo de fermentação das 
+bebidas fermentadas de ACC. 
+ AVALIAÇÕES 
+TEMPO 
+AMOSTRA 
+(horas) GLU* LAT* ACE* CIT* 
+LCF 3,3519 a 0,3068 a 0,4847 a 0,8113 a 
+3,3497 a 0,1792 b 0,4955 a 0,7304 b 
+0 LCFB 
+LCB 3,5728 b 0 c 0,6068 a 0,7821 a 
+LCF 2,2966 a 2,4012 a 1,5584 a 0,8676 a 
+24 LCFB 1,9359 b 1,8742 b 1,3764 b 0,7069 b 
+2,7779 c 0,1949 c 1,0684 c 0,7119 b 
+LCB 
+LCF 1,7234 a 2,0340 a 5,6478 a 0 a 
+48 LCFB 2,0352 b 2,1498 b 5,2137 b 0 a 
+3,0310 c 0,1785 c 2,6938 c 0,6305 b 
+LCB 
+LCF 1,9533 a 1,4578 a 6,4612 a 0 a  
+72 LCFB 2,0528 a 2,2050 b 4,9468 b 0 a 
+2,9788 b 0,1740 c 2,9902 c 0,7026 b 
+LCB 
+GLU: ácido glucurônico. LAT: ácido lático. ACE: ácido acético. CIT: ácido cítrico. As médias seguidas por letras 
+iguais na mesma coluna não diferem entre si pelo teste de Tukey (P > 0,05), para as diferentes amostras de um 
+mesmo tempo. Coluna indicada por asterisco (*) apresenta interação entre amostra e tempo, sendo submetida ao 
+teste de regressão: os efeitos simples das médias são significativamente diferentes entre si a 5% de significância 
+pelo teste de F entre amostras iguais em diferentes tempos.  
+ 
+Neffe-Skocinska et al. (2017) avaliam os impactos das temperaturas de fermentação nos 
+conteúdos de ácidos orgânicos em kombucha tradicional adoçada com 10% de açúcar. Para 
+GLU, as autoras descrevem 0,3 mg/mL no tempo 0 de fermentação, valor próximo do 
+encontrado no presente trabalho para LC-F ou LC-FB no mesmo tempo. Contudo, até o terceiro 
+dia de fermentação esses valores encontrados pelos autores saltaram para 17 mg/mL na amostra 
+fermentada a 30 ºC e 18 mg/mL na amostra de 25 ºC, muito maiores do que os quantificados 
+no presente trabalho. As diferenças nas concentrações de ácido glucurônico entre os trabalhos 
+pode apontar uma dificuldade de adaptação das BAA produtoras desse ácido no extrato 
+hidrossolúvel de ACC. 
+Em relação ao ácido cítrico, nota-se uma queda drástica da sua concentração entre 24 e 
+48 horas nas amostras com kefir. De Vuyst & Leroy (2020), ao discorrerem sobre as sucessões 
+de leveduras, BALs e BAAs em processos fermentativos de frutos, afirmam que as BAL são 
+capazes de metabolizar glicose, frutose e ácido cítrico para a produção de ácido lático, acético 
+e outros metabólitos que irão criar um ambiente favorável para o desenvolvimento de BAA. O 
+ácido cítrico, especificamente, é convertido em ácido acético pelas BAL. Assim, é interessante 
+notar que o salto na concentração de ACE nas amostras com kefir acontece no mesmo período 
+44 
+ 
+de maior redução do CIT, de glicose e de frutose, sugerindo a conversão desses três últimos em 
+ácido acético. Em contrapartida, na amostra LC-B há pouca alteração nas taxas de CIT, o que 
+reforça a baixa presença de BAL na kombucha e sugere que o aumento de ACE acontece apenas 
+pela metabolização de açúcares. 
+Analisando a Figura 09, temos que as concentrações de ácido lático nas três formulações 
+começam a se estabilizar após 24 horas de fermentação, enquanto o ácido acético tem um salto 
+de produção depois desse período. Nas amostras com kefir, LAT predomina até as 24 horas e 
+depois perde espaço para ACE. Esses últimos dados servem para contextualizar os valores 
+obtidos nas análises físico-químicas e no consumo de açúcares. Sabendo que leveduras e BALs 
+utilizam açúcares como substrato de fermentação, o predomínio da concentração de LAT faz 
+sentido enquanto ainda há açúcar disponível no meio e este é o caso das amostras de kefir até o 
+ponto de 24 horas. 
+A principal característica metabólica das bactérias ácido láticas é conhecida como 
+“processo de acidificação primária”, que é justamente o consumo de carboidrato para a 
+produção de ácido. Essa atuação é muito importante para diminuição rápida do pH, preservando 
+o alimento contra microrganismos deteriorantes e patogênicos (GRUJOVIC et al., 2021). 
+Analisando os valores de sólidos solúveis e pH, Figuras 01 e 03, esses parâmetros 
+começam a se estabilizar com 36 horas em LC-F e LC-FB, provavelmente pelo fim de açúcar 
+livre. Após o esgotamento de carboidratos, espera-se que as leveduras e BALs diminuam 
+gradativamente sua atuação enquanto as BAA entram na sucessão consumindo principalmente 
+etanol e lactato secretados pelos primeiros microrganismos. Conforme a atividade de BAA 
+aumenta, é natural que cresça a concentração de ácido acético no meio como foi observado em 
+todas as amostras no ponto de 48 horas. 
+O perfil cinético de ácidos orgânicos de LC-FB ilustrado na Figura 09, quando em 
+comparação com os perfis das outras duas amostras, nos sugere uma maior estabilidade nas 
+concentrações de ácido lático. Enquanto LC-F segue com perda gradual de LAT após 24 horas 
+de fermentação, os dados de LC-B permanecem inexpressivos. Essa investigação sugere uma 
+melhor manutenção da BALs em LC-FB com o tempo, mas não nos fornece informações 
+suficientes para maiores inferências sobre a simbiose entre kefir e kombucha. 
+ 
+ 
+ 
+45 
+ 
+Figura 08 - Variação das concentrações dos ácidos glucurônico, lático, acético e cítrico 
+(mg/mL) para bebidas de castanha de caju fermentadas com kefir e kombucha durante 72 horas 
+a 28 ºC. 
+ 
+LC-F: amostra inoculada com 100% de kefir. LC-FB: amostra inoculada com 50% kefir e 50% kombucha. LC-B: 
+amostra inoculada com 100% kombucha. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+46 
+ 
+Figura 09 – Variação das concentrações de ácidos orgânicos dentro de cada amostra analisada 
+(LC-F, LC-FB e LC-B). 
+ 
+GLU: ácido glucurônico. LAT: ácido lático. ACE: ácido acético. CIT: ácido cítrico. LC-F: amostra inoculada com 
+100% de kefir. LC-FB: amostra inoculada com 50% kefir e 50% kombucha. LC-B: amostra inoculada com 100% 
+kombucha. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+47 
+ 
+5.3 Análises toxicológicas 
+ 
+ A seguir serão apresentados os dados encontrados para as análises de atividade 
+locomotora e toxicidade aguda, conduzidas com zebrafish (D. rerio). Essa espécie tem se 
+tornado um modelo animal muito popular em pesquisas acadêmicas por dois motivos 
+principais: seu tamanho na fase adulta facilita sua manutenção, reprodução e economiza 
+reagentes; também, os padrões de colonização da microbiota intestinal e algumas das vias 
+neurológicas do animal de assemelham às dos mamíferos (OLIVEIRA, 2013; GIOACCHINI 
+et al., 2014; MAXIMINO et al, 2015). 
+ 
+5.3.1 Atividade locomotora 
+ 
+O teste da atividade locomotora, ou campo aberto, avalia o comprometimento da 
+capacidade natatória do animal após administração de uma substância. O efeito dessa substância 
+no sistema nervoso central do zebrafish vai influenciar sua resposta à estresses, estimulando ou 
+não seu comportamento de fuga e, portanto, oferecendo indícios de ação ansiolítica ou 
+ansiogênica por parte da solução administrada (SIREENI et al., 2020). As Figuras 10, 11 e 12 
+apontam como se deu a movimentação desses animais após administração das formulações, por 
+meio da contagem de cruzamento de linhas. 
+Todos os grupos apresentação redução da capacidade natatória em relação ao grupo 
+Naive. Em LC-F, apenas a amostra com 48 horas de fermentação apresentou diferença 
+estatística entre os grupos que receberam bebida fermentada. Já em LC-FB, a atividade 
+locomotora foi gradativamente reduzida entre os tempos 0 e 48, sendo os valores desse último 
+tempo estatisticamente iguais ao tratamento com diazepam. Para LC-B, as amostras com 24, 48 
+e 72 horas de fermentação refletiram em redução da atividade natatória dos animais igualmente 
+ao controle com fármaco ansiolítico, o Diazepam. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+48 
+ 
+Figura 10 – Cruzamento de linhas referente à amostra LC-F nos tempos 0, 24, 48 e 72 horas. 
+ 
+Os resultados são expressos como valores médios com erro padrão da média (n=6/grupo). Naive: animais não 
+tratados. DZP: Diazepam (5 mg/mL). Veículo: água destilada. V.O.: via oral. As diferenças foram analisadas com 
+análise de variância (ANOVA), seguido pelo teste de Tukey [* p < 0.05; ** p < 0.01; *** p < 0.001 em relação ao 
+grupo Naive (controle); # p <  0.05;  ## p < 0.01;  ### p < 0.001 em relação ao grupo tratado com DZP]. 
+ 
+Figura 11 – Cruzamento de linhas referente à amostra LC-FB nos tempos 0, 24, 48 e 72 horas. 
+ 
+Os resultados são expressos como valores médios com erro padrão da média (n=6/grupo). Naive: animais não 
+tratados. DZP: Diazepam (5 mg/mL). Veículo: água destilada. V.O.: via oral. As diferenças foram analisadas com 
+análise de variância (ANOVA), seguido pelo teste de Tukey [* p < 0.05; ** p < 0.01; *** p < 0.001 em relação ao 
+grupo Naive (controle); # p <  0.05;  ## p < 0.01;  ### p < 0.001 em relação ao grupo tratado com DZP]. 
+ 
+ 
+49 
+ 
+Figura 12 – Cruzamento de linhas referente à amostra LC-B nos tempos 0, 24, 48 e 72 horas. 
+ 
+Os resultados são expressos como valores médios com erro padrão da média (n=6/grupo). Naive: animais não 
+tratados. DZP: Diazepam (5 mg/mL). Veículo: água destilada. V.O.: via oral. As diferenças foram analisadas com 
+análise de variância (ANOVA), seguido pelo teste de Tukey [* p < 0.05; ** p < 0.01; *** p < 0.001 em relação ao 
+grupo Naive (controle); # p <  0.05;  ## p < 0.01;  ### p < 0.001 em relação ao grupo tratado com DZP]. 
+ 
+A redução da atividade locomotora dos animais após administração das bebidas 
+fermentadas sugere atividade probiótica. Esse efeito já tem sido relatado em zebrafish após a 
+aplicação de probióticos com diferentes matérias primas. Valcarce et al. (2020) demonstraram 
+que a exposição prolongada dos peixes à soluções probióticas de bactérias ácido láticas afetava 
+diretamente o eixo intestino-cérebro, conferindo menores padrões de ansiedade. De Melo et al. 
+(2020) também apontam efeito ansiolítico e antidepressivo em zebrafish após exposição 
+prolongada com fermentados de kefir de água e de bebida de soja.  
+A alta atividade locomotora remanescente em LC-F pode representar perda na contagem 
+de probióticos do grupo das bactérias ácido láticas, provavelmente pelo rápido esgotamento dos 
+seus substratos metabolizáveis. A amostra LC-FB teve uma melhor manutenção dos seus níveis 
+de ácido lático do que LC-F (Figura 09), podendo estar relacionado à sobrevivência de BALs 
+probióticas. Contudo, a não disponibilidade de carboidratos com 72 horas de fermentação afeta 
+diretamente a viabilidade dessas bactérias, voltando a aumentar a atividade locomotora de D. 
+rerio. Por fim, em LC-B foi percebida uma redução da motricidade dos peixes igual ao efeito 
+de Diazepam em todos os tempos a partir de 24 horas. Essa última amostra, como já discutido, 
+apresenta uma cinética fermentativa mais lenta e manteve reservas de açúcares até o final do 
+experimento. A constância de carboidratos associada à menor concentração de BALs em 
+50 
+ 
+kombucha, pode influenciar positivamente uma possível ação probiótica prolongada em bebida 
+de ACC fermentada com kombucha. 
+Complementando as discussões, Bruno et al. (2020) demonstraram que o extrato 
+hidrossolúvel de amêndoas de castanha de caju é uma matriz adequada para a manutenção de 
+bactérias ácido láticas probióticas. Os pesquisadores inocularam os extratos com Lactobacillus 
+acidophilus e L. plantarum e, mesmo após 30 dias de armazenamento refrigerado, não 
+observaram perdas significativas na contagem de bactérias viáveis. Esses resultados podem 
+reforçar o suposto potencial probiótico encontrado para LC-FB e LC-B em modelo de D. rerio, 
+mas fica clara a necessidade do controle de temperatura e da maior disponibilidade de açúcares 
+para a sobrevivência das bactérias nas bebidas. 
+ 
+5.3.2 Toxicidade aguda 
+ 
+ A avaliação da toxicidade da dose de uma substância pode ser acessada pelos seus 
+efeitos crônicos, quando cumulativos após exposição prolongada, ou agudos, quando letais após 
+um único contato (FERNANDES; FELIX; NOBRE, 2016). A Tabela 05 demonstra que 
+nenhuma das amostras estudadas (LC-F, LC-FB e LC-B, em qualquer tempo) foi responsável 
+pela morte de animais após administração única, indicando baixa toxicidade aguda. 
+ Não foram encontrados relatos em literatura para a avaliação de toxicidade aguda em 
+zebrafish para fermentados de kefir ou kombucha. 
+ 
+Tabela 05 – Mortalidade de zebrafish por tempo de fermentação nas amostras LC-F, LC-FB e 
+LC-B. 
+Mortalidade de Zebrafish adulto CL96 
+50
+Amostras (mg/mL) 
+CN 0 H 24 H 48 H 72 H 
+/IV 
+LC-F 0 0 0 0 0 > 0,25 
+LC-FB 0 0 0 0 0 > 0,25 
+LC-B 0 0 0 0 0 > 0,25 
+CN: grupo controle negativo recebeu água destilada estéril. CL50: concentração letal para matar 50% dos animais 
+adultos. IV: intervalo de confiança. 
+ 
+ 
+ 
+51 
+ 
+6 CONCLUSÕES 
+ 
+ Para todos os perfis cinéticos pesquisados, as amostras com kefir sempre mantiveram 
+maiores ritmos de consumo de açúcar, produção de ácidos orgânicos e consequentes alterações 
+de parâmetros físico-químicos. Em relação à amostra com mistura de SCOBYs, LC-FB, foi 
+possível perceber que o menor volume de inóculo de kefir não diminuiu o consumo de açúcares, 
+mas que o seu contato com o ecossistema microbiológico da kombucha permitiu manter as taxas 
+de hidrólise de carboidratos comparáveis às da amostra que só recebeu kefir, além de ter sido 
+mais eficiente na quebra de rafinose que LC-F. 
+ As quantificações de açúcares e ácidos orgânicos permitiram confirmar muitas das 
+dinâmicas envolvendo as sucessões fermentativas entre leveduras, bactérias ácido láticas e 
+bactéricas ácido acéticas propostas em literatura acadêmica. O perfil de consumo de açúcares 
+de LC-FB pode sugerir atividade simbiótica entre kefir e kombucha, mas os dados coletados 
+não ofereceram informações suficientes acerca da cooperação entre microrganismos 
+otimizando a produção de ácidos orgânicos funcionais em extrato hidrossolúvel de amêndoa de 
+castanha de caju. 
+É possível, também, que o extrato de ACC tenha influenciado o desenvolvimento dos 
+microrganismos e sua consequente secreção de compostos funcionais. Os baixos níveis de 
+sólidos solúveis podem ter sido responsáveis pelos resultados pouco expressivos da produção 
+de ácido glucurônico, sendo recomendável o uso de moinhos coloidais no processamento da 
+bebida para maior dissolução de açúcares das amêndoas, especialmente sacarose e gliose. Em 
+trabalhos futuros, também se faz interessante o uso de amostras-controle fermentadas em 
+solução de água e sacarose para avaliação da influência dos meios de fermentação e seus 
+possíveis antinutrientes. 
+ As análises de toxicidade deram indícios de que bebidas de ACC fermentadas com kefir 
+e kombucha podem trazer benefícios à saúde de consumidor. Além da ausência de letalidade 
+aguda em todas as formulações, as amostras LC-FB e LC-B apresentaram potencial probiótico, 
+que provavelmente pode ser otimizado com disponibilidade de carboidratos no meio. É 
+importante conduzir análises microbiológicas de contagem de colônias para confirmar esse 
+efeito. 
+ Dadas as literaturas bastante escassas, este trabalho foi pioneiro no estudo das cinéticas 
+e toxicidades de produtos fermentados por kefir e kombucha à base de extrato hidrossolúvel de 
+amêndoas de castanha de caju. Essa esfera da pesquisa acadêmica ainda não se faz tão robusta 
+quanto outras temáticas da Microbiologia, mas os esforços trazidos nessa pesquisa oferecem 
+52 
+ 
+novos insights quanto à simbiose de BALs e BAAs em alimentos ou, mais especificamente, em 
+kefir e kombucha. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+53 
+ 
+REFERÊNCIAS 
+ 
+ABRIOUEL, H.; N. Benomar, A. Cobo, N. Caballero, M. Á. Fernández Fuentes, R. Pérez-
+Pulido and A. Gálvez, Characterization of lactic acid bacteria from naturally fermented 
+Manzanilla Aloreña green table olives, Food Microbiol., 2012, 32, 308–316. 
+ 
+AHMAD, F.; RICHARDSON, M. K. Exploratory behaviour in the open field test adapted for 
+larval zebrafish: impact of environmental complexity. Behavioural processes, v. 92, p. 88-
+98, 2013. 
+ 
+ALEIXO, Marina G.B.; SASS, Carla A.B.; LEAL, Rafael M.; DANTAS, Tiago M.; 
+PAGANI, Mônica M.; PIMENTEL, Tatiana C.; FREITAS, Mônica Q.; CRUZ, Adriano G.; 
+AZEREDO, Denise R.P.; ESMERINO, Erick A.. Using Twitter®as source of information for 
+dietary market research: a study on veganism and plant⠰based diets. International Journal 
+Of Food Science & Technology, [S.L.], v. 56, n. 1, p. 61-68, set. 2020. Wiley. 
+http://dx.doi.org/10.1111/ijfs.14743. 
+ 
+ALENCAR, Paulo Gustavo de; ESPINDOLA, Giovana Mira de; CARNEIRO, Eduilson Lívio 
+Neves da Costa. Dwarf cashew crop expansion in the Brazilian semiarid region: assessing 
+policy alternatives in pio ix, piauí. Land Use Policy, [S.L.], v. 79, p. 1-9, dez. 2018. Elsevier 
+BV. http://dx.doi.org/10.1016/j.landusepol.2018.07.042. 
+ 
+ALVES, Vanessa; SCAPINI, Thamarys; CAMARGO, Aline Frumi; BONATTO, Charline; 
+STEFANSKI, Fábio Spitza; JESUS, Eliane Pompeu de; DINIZ, Luan Gabriel Techi; 
+BERTAN, Larissa Canhadas; MALDONADO, Rafael Resende; TREICHEL, Helen. 
+Development of fermented beverage with water kefir in water-soluble coconut extract (Cocos 
+nucifera L.) with inulin addition. Lwt, [S.L.], v. 145, p. 111364, jun. 2021. Elsevier BV. 
+http://dx.doi.org/10.1016/j.lwt.2021.111364. 
+ 
+AMARASINGHE, Hashani; WEERAKKODY, Nimsha S.; WAISUNDARA, Viduranga Y.. 
+Evaluation of physicochemical properties and antioxidant activities of kombucha “Tea 
+Fungus” during extended periods of fermentation. Food Science & Nutrition, [S.L.], v. 6, n. 
+3, p. 659-665, 20 fev. 2018. Wiley. http://dx.doi.org/10.1002/fsn3.605. 
+ 
+ARELLANO-AGUILAR, O. et al. Uso do teste de toxicidade embrionário do peixe-zebra 
+para fins de avaliação de risco: estudo de caso. Revista de Ciências da Pesca, v. 9, n. 4, pág. 
+52, 2015. 
+ 
+ASCHEMANN-WITZEL, Jessica; GANTRIIS, Rebecca Futtrup; FRAGA, Paola; PEREZ-
+CUETO, Federico J. A.. Plant-based food and protein trend from a business perspective: 
+markets, consumers, and the challenges and opportunities in the future. Critical Reviews In 
+Food Science And Nutrition, [S.L.], v. 61, n. 18, p. 3119-3128, 13 jul. 2020. Informa UK 
+Limited. http://dx.doi.org/10.1080/10408398.2020.1793730. 
+ 
+ASIOLI, Daniele; ASCHEMANN-WITZEL, Jessica; CAPUTO, Vincenzina; VECCHIO, 
+Riccardo; ANNUNZIATA, Azzurra; NÆS, Tormod; VARELA, Paula. Making sense of the 
+“clean label” trends: a review of consumer food choice behavior and discussion of industry 
+implications. Food Research International, [S.L.], v. 99, p. 58-71, set. 2017. Elsevier BV. 
+http://dx.doi.org/10.1016/j.foodres.2017.07.022. 
+54 
+ 
+ 
+ATIK, Didem Sözeri; GÜRBÜZ, Başak; BÖLÜK, Esra; PALABđYđK, İbrahim. 
+Development of vegan kefir fortified with Spirulina platensis. Food Bioscience, [S.L.], v. 42, 
+p. 101050, ago. 2021. Elsevier BV. http://dx.doi.org/10.1016/j.fbio.2021.101050. 
+ 
+AYDAR, Elif Feyza; TUTUNCU, Sena; OZCELIK, Beraat. Plant-based milk substitutes: 
+bioactive compounds, conventional and novel processes, bioavailability studies, and health 
+effects. Journal Of Functional Foods, [S.L.], v. 70, p. 1-15, jul. 2020. Elsevier BV. 
+http://dx.doi.org/10.1016/j.jff.2020.103975. 
+ 
+AYED, L., HAMDI, M. Manufacture of a beverage from cactus 
+pear juice using “tea fungus” fermentation. Annals of Microbiol- 
+ogy, 65(4), 2293–2299. 2015 https://doi.org/10.1007/s13213-015-1071-8 
+ 
+AYED, L.; BEN ABID, S.; HAMDI, M. Development of a bev- 
+erage from red grape juice fermented with the kombucha con- 
+sortium. Annals of Microbiology, 67(1), 111–121. 2016 https://doi.org/10. 
+1007/s13213-016-1242-2 
+ 
+BHUPATHIRAJU, Shilpa N.; HU, Frank B.. Epidemiology of Obesity and Diabetes and 
+Their Cardiovascular Complications. Circulation Research, [S.L.], v. 118, n. 11, p. 1723-
+1735, 27 maio 2016. Ovid Technologies (Wolters Kluwer Health). 
+http://dx.doi.org/10.1161/circresaha.115.306825 
+ 
+BRASIL. Instrução Normativa nº 41, de 17 de setembro de 2019. Ministério da Agricultura, 
+Pecuária e Abastecimento. Diário Oficial da União. 2019 
+ 
+BRASIL. Instrução Normativa nº 46, de 23 de outubro de 2007. Ministério da Agricultura, 
+Pecuária e Abastecimento. Diário Oficial da União. 2007. 
+ 
+BRUNO, Laura Maria; LIMA, Janice Ribeiro; WURLITZER, Nédio Jair; RODRIGUES, 
+Thalita Cavalcante. Non-dairy cashew nut milk as a matrix to deliver probiotic bacteria. Food 
+Science And Technology, [S.L.], v. 40, n. 3, p. 604-607, set. 2020. FapUNIFESP (SciELO). 
+http://dx.doi.org/10.1590/fst.14219. 
+ 
+CAMPBELL-PLATT, G. Fermented Foods: a world perspective. Food Research 
+International. V 27, p 253 – 257. 1994 
+ 
+CASTELLONE, Vincenzo; BANCALARI, Elena; RUBERT, Josep; GATTI, Monica; 
+NEVIANI, Erasmo; BOTTARI, Benedetta. Eating Fermented: health benefits of lab-
+fermented foods. Foods, [S.L.], v. 10, n. 11, p. 2639, 31 out. 2021. MDPI AG. 
+http://dx.doi.org/10.3390/foods10112639. 
+ 
+COELHO, Raquel Macedo Dantas; ALMEIDA, Aryelle Leite de; AMARAL, Rafael Queiroz 
+Gurgel do; MOTA, Robson Nascimento da; SOUSA, Paulo Henrique M. de. Kombucha: 
+review. International Journal Of Gastronomy And Food Science, [S.L.], v. 22, p. 1-1, dez. 
+2020. Elsevier BV. http://dx.doi.org/10.1016/j.ijgfs.2020.100272. 
+ 
+55 
+ 
+CONCEA - CONSELHO NACIONAL DE CONTROLE DE EXPERIMENTAÇÃO 
+ANIMAL. Resolução Normativa n. 37 de 15 de fevereiro de 2018. Diretrizes da prática de 
+eutanásia. 2018. 
+ 
+COSTA, Marina Rolim da; ALENCAR, Ernandes Rodrigues de; LEANDRO, Eliana dos 
+Santos; MENDONÇA, Marcio Antonio; FERREIRA, Wallas Felippe de Souza. 
+Characterization of the kefir beverage produced from yam (Colocasia esculenta L.), sesame 
+seed (Sesamum indicum L.) and bean (Phaseolus vulgaris L.) extracts. Journal Of Food 
+Science And Technology, [S.L.], v. 55, n. 12, p. 4851-4858, 14 set. 2018. Springer Science 
+and Business Media LLC. http://dx.doi.org/10.1007/s13197-018-3419-0. 
+ 
+CURRIE, Lloyd A.. Detection and quantification limits: origins and historical 
+overview1adapted from the proceedings of the 1996 joint statistical meetings (American 
+statistical association, 1997). original title. Analytica Chimica Acta, [S.L.], v. 391, n. 2, p. 
+127-134, maio 1999. Elsevier BV. http://dx.doi.org/10.1016/s0003-2670(99)00105-1. 
+ 
+CURTAIN, Felicity; GRAFENAUER, Sara. Plant-Based Meat Substitutes in the Flexitarian 
+Age: an audit of products on supermarket shelves. Nutrients, [S.L.], v. 11, n. 11, p. 1-14, 30 
+out. 2019. MDPI AG. http://dx.doi.org/10.3390/nu11112603. 
+ 
+DARVISHZADEH, Pariya; ORSAT, Valérie; MARTINEZ, José Luis. Process Optimization 
+for Development of a Novel Water Kefir Drink with High Antioxidant Activity and Potential 
+Probiotic Properties from Russian Olive Fruit (Elaeagnus angustifolia). Food And 
+Bioprocess Technology, [S.L.], v. 14, n. 2, p. 248-260, 6 jan. 2021. Springer Science and 
+Business Media LLC. http://dx.doi.org/10.1007/s11947-020-02563-1. 
+ 
+DELIENS, Tom; MULLIE, Patrick; CLARYS, Peter. Plant-based dietary patterns in Flemish 
+adults: a 10-year trend analysis. European Journal Of Nutrition, [S.L.], v. 61, n. 1, p. 561-
+565, 2 jul. 2021. Springer Science and Business Media LLC. 
+http://dx.doi.org/10.1007/s00394-021-02630-z. 
+ 
+DERBYSHIRE, Emma J.. Flexitarian Diets and Health: a review of the evidence-based 
+literature. Frontiers In Nutrition, [S.L.], v. 3, p. 1-8, 6 jan. 2017. Frontiers Media SA. 
+http://dx.doi.org/10.3389/fnut.2016.00055 
+ 
+DE-VUYST, Luc; LEROY, Frédéric. Functional role of yeasts, lactic acid bacteria and acetic 
+acid bacteria in cocoa fermentation processes. Fems Microbiology Reviews, [S.L.], v. 44, n. 
+4, p. 432-453, 18 maio 2020. Oxford University Press (OUP). 
+http://dx.doi.org/10.1093/femsre/fuaa014 
+ 
+EGEA, Mariana Buranelo; SANTOS, Daiane Costa dos; OLIVEIRA FILHO, Josemar 
+Gonçalves de; ORES, Joana da Costa; TAKEUCHI, Katiuchia Pereira; LEMES, Ailton Cesar. 
+A review of nondairy kefir products: their characteristics and potential human health benefits. 
+Critical Reviews In Food Science And Nutrition, [S.L.], p. 1-17, 5 nov. 2020. Informa UK 
+Limited. http://dx.doi.org/10.1080/10408398.2020.1844140 
+ 
+EUROMONITOR. 10 Tendências Globais de Consumo 2019. 2019b. Disponível em: 
+https://go.euromonitor.com/white-paper-ec-2019-10-Tendencias-Globais-de-Consumo-
+2019.html?utm_campaign=Content%20Distribution&utm_medium=PR&utm_source=Event
+&utm_content=AnuFood%20Brazil. Acesso em: 17 jan. 2022. 
+56 
+ 
+ 
+EUROMONITOR. Consumidores Conscientes impulsionam vendas de produtos veganos. 
+2019a. Disponível em: https://www.euromonitor.com/article/consumidores-conscientes-
+impulsionam-vendas-de-produtos-veganos. Acesso em: 17 jan. 2022 
+ 
+FEHÉR, András; GAZDECKI, Michał; VÉHA, Miklós; SZAKÁLY, Márk; SZAKÁLY, 
+Zoltán. A Comprehensive Review of the Benefits of and the Barriers to the Switch to a Plant-
+Based Diet. Sustainability, [S.L.], v. 12, n. 10, p. 4136, 19 maio 2020. MDPI AG. 
+http://dx.doi.org/10.3390/su12104136 
+ 
+FERNANDES, Ciciane Pereira Marten; FÉLIX, Samuel Rodrigues; NOBRE, Márcia de 
+Oliveira. Toxicidade dos fitoterápicos de interesse do SUS: uma revisão. Semina: Ciências 
+Biológicas e da Saúde, [S.L.], v. 37, n. 1, p. 1-14, 24 nov. 2016. Universidade Estadual de 
+Londrina. http://dx.doi.org/10.5433/1679-0367.2016v37n1p91 
+ 
+FIORDA, Fernanda Assumpção; PEREIRA, Gilberto Vinicius de Melo; THOMAZ-
+SOCCOL, Vanete; RAKSHIT, Sudip Kumar; PAGNONCELLI, Maria Giovana Binder; 
+VANDENBERGHE, Luciana Porto de Souza; SOCCOL, Carlos Ricardo. Microbiological, 
+biochemical, and functional aspects of sugary kefir fermentation - A review. Food 
+Microbiology, [S.L.], v. 66, p. 86-95, set. 2017. Elsevier BV. 
+http://dx.doi.org/10.1016/j.fm.2017.04.004 
+ 
+FURUKAWA, Soichi; WATANABE, Taisuke; TOYAMA, Hirohide; MORINAGA, Yasushi. 
+Significance of microbial symbiotic coexistence in traditional fermentation. Journal Of 
+Bioscience And Bioengineering, [S.L.], v. 116, n. 5, p. 533-539, nov. 2013. Elsevier BV. 
+http://dx.doi.org/10.1016/j.jbiosc.2013.05.017 
+ 
+GARCÍA-DÍEZ, Juan; SARAIVA, Cristina. Use of Starter Cultures in Foods from Animal 
+Origin to Improve Their Safety. International Journal Of Environmental Research And 
+Public Health, [S.L.], v. 18, n. 5, p. 2544-2569, 4 mar. 2021. MDPI AG. 
+http://dx.doi.org/10.3390/ijerph18052544 
+ 
+GFI. Consumer Research: plant-based market - brazil. Plant-based market - Brazil. 2018. 
+Disponível em: https://gfi.org/images/uploads/2018/10/GFI-Brazil-Plant-Based-Market-
+Consumer-Research-2018.pdf. Acesso em: 16 jan. 2022. 
+ 
+Gioacchini, G., Giorgini, E., Olivotto, I., Maradonna, F., Merrifield, D.L., Carnevali, O., 
+2014. The influence of probiotics on zebrafish Danio rerio innate immunity and hepatic stress. 
+Zebrafish 11 (2), 98–106. 
+ 
+GODFRAY, H. Charles J.; AVEYARD, Paul; GARNETT, Tara; HALL, Jim W.; KEY, 
+Timothy J.; LORIMER, Jamie; PIERREHUMBERT, Ray T.; SCARBOROUGH, Peter; 
+SPRINGMANN, Marco; JEBB, Susan A.. Meat consumption, health, and the 
+environment. Science, [S.L.], v. 361, n. 6399, p. 1-9, 20 jul. 2018. American Association for 
+the Advancement of Science (AAAS). http://dx.doi.org/10.1126/science.aam5324 
+ 
+GRAÇA, João; GODINHO, Cristina A.; TRUNINGER, Monica. Reducing meat consumption 
+and following plant-based diets: current evidence and future directions to inform integrated 
+transitions. Trends In Food Science & Technology, [S.L.], v. 91, p. 380-390, set. 2019. 
+Elsevier BV. http://dx.doi.org/10.1016/j.tifs.2019.07.046 
+57 
+ 
+ 
+GRIFFIN, Laura Elizabeth; DEAN, Lisa Louise. Nutrient Composition of Raw, Dry-Roasted, 
+and Skin-On Cashew Nuts. Journal Of Food Research, [S.L.], v. 6, n. 6, p. 1-16, 26 set. 
+2017. Canadian Center of Science and Education. http://dx.doi.org/10.5539/jfr.v6n6p13 
+ 
+GRUJOVIć, Mirjana Ž.; MLADENOVIć, Katarina G.; SEMEDO‐LEMSADDEK, Teresa; 
+LARANJO, Marta; STEFANOVIć, Olgica D.; KOCIć‐TANACKOV, Sunčica D.. 
+Advantages and disadvantages of non‐starter lactic acid bacteria from traditional fermented 
+foods: potential use as starters or probiotics. Comprehensive Reviews In Food Science And 
+Food Safety, [S.L.], v. 1, n. 1, p. 1-21, 13 jan. 2022. Wiley. http://dx.doi.org/10.1111/1541-
+4337.12897 
+ 
+HASAN, M. N.; SULTAN, M. Z.; MAR-E-UM, M.. Significance of Fermented Food in 
+Nutrition and Food Science. Journal Of Scientific Research, [S.L.], v. 6, n. 2, p. 373-386, 25 
+abr. 2014. Bangladesh Journals Online (JOL). http://dx.doi.org/10.3329/jsr.v6i2.16530 
+ 
+HEMLER, Elena C; HU, Frank B. Plant-Based Diets for Personal, Population, and Planetary 
+Health. Advances In Nutrition, [S.L.], v. 10, n. 4, p. 275-283, 1 nov. 2019. Oxford 
+University Press (OUP). http://dx.doi.org/10.1093/advances/nmy117 
+ 
+Hutkins RW. Microbiology and Technology of Fermented Foods. Hobo- 
+ken: Wiley Blackwell, 2019. 
+ 
+IARC. Monographs Evaluate Consumption of Red Meat and Processed Meat; IARC: Lyon, 
+France, 2015. Disponível online em: https://www.iarc.fr/en/media-
+centre/pr/2015/pdfs/pr240_E.pdf. Acesso em: 22/12/2021. 
+ 
+IBGE (Brasil). Estimativas da população residente com data de referência 1o de julho de 
+2021. Diretoria de Pesquisas, Coordenação de População e Indicadores Sociais, 2021. 
+Disponível em: https://cidades.ibge.gov.br/brasil/ce/panorama. Acesso em: 22 jan. 2022. 
+ 
+IBOPE. Pesquisa de opinião pública sobre vegetarianismo. IBOPE Inteligência, 
+JOB0416/2018. Brasil, 2018. 
+ 
+INSTITUTO ADOLFO LUTZ. Métodos físico-químicos para análise de alimentos. ODAIR 
+ZENEBON, O.; PASCUET, N. S.; TIGLEA, P. (Coord). São Paulo: Instituto Adolfo Lutz, 
+p.1020, 2008. 
+ 
+KATZ, S. A arte da Fermentação. SESI-SP Editora. 2012. 
+ 
+KEMPER, Joya A.; WHITE, Samantha K.. Young adults' experiences with flexitarianism: the 
+4cs. Appetite, [S.L.], v. 160, p. 105073, maio 2021. Elsevier BV. 
+http://dx.doi.org/10.1016/j.appet.2020.105073 
+ 
+KIM, D. et al. Comparison of traditional and backslopping methods for kefir fermentation 
+based on physicochemical and microbiological characteristics. Lwt, [S.L.], v. 97, p. 503-507, 
+nov. 2018.  
+ 
+58 
+ 
+LARANJO, Marta; POTES, Maria Eduarda; ELIAS, Miguel. Role of Starter Cultures on the 
+Safety of Fermented Meat Products. Frontiers In Microbiology, [S.L.], v. 10, p. 1-11, 26 
+abr. 2019. Frontiers Media SA. http://dx.doi.org/10.3389/fmicb.2019.00853 
+ 
+LAUREYS, D.; de-VUYST, LUC. Microbial species diversity, community dynamics, and 
+metabolite kinetics of water kefir fermentation. Applied and Environmental Microbiology, 
+v. 80, n. 8. Belgium, 2014. 
+ 
+LAUREYS, David; AERTS, Maarten; VANDAMME, Peter; VUYST, Luc de. Oxygen and 
+diverse nutrients influence the water kefir fermentation process. Food Microbiology, [S.L.], 
+v. 73, p. 351-361, ago. 2018. Elsevier BV. http://dx.doi.org/10.1016/j.fm.2018.02.007 
+ 
+LEITE, Analy Machado de Oliveira; MIGUEL, Marco Antonio Lemos; PEIXOTO, Raquel 
+Silva; ROSADO, Alexandre Soares; SILVA, Joab Trajano; PASCHOALIN, Vania Margaret 
+Flosi. Microbiological, technological and therapeutic properties of kefir: a natural probiotic 
+beverage. Brazilian Journal Of Microbiology, [S.L.], v. 44, n. 2, p. 341-349, 2013. 
+FapUNIFESP (SciELO). http://dx.doi.org/10.1590/s1517-83822013000200001 
+ 
+LEONARSKI, Eduardo; CESCA, Karina; ZANELLA, Eduardo; STAMBUK, Boris U.; 
+OLIVEIRA, Débora de; POLETTO, Patrícia. Production of kombucha-like beverage and 
+bacterial cellulose by acerola byproduct as raw material. Lwt, [S.L.], v. 135, p. 1-8, jan. 2021. 
+Elsevier BV. http://dx.doi.org/10.1016/j.lwt.2020.110075 
+ 
+LI, Ruyi; XU, Yongquan; CHEN, Jianxin; WANG, Fang; ZOU, Chun; YIN, Junfeng. 
+Enhancing the proportion of gluconic acid with a microbial community reconstruction method 
+to improve the taste quality of Kombucha. Lwt, [S.L.], v. 155, p. 1-8, fev. 2022. Elsevier BV. 
+http://dx.doi.org/10.1016/j.lwt.2021.112937 
+ 
+LIMA, J. R. et al. Obtenção de extrato hidrossolúvel de amêndoa de castanha de caju. 
+EMBRAPA Agroindústria Tropical, Comunicado técnico 232. Brasil, 2017. 
+ 
+LYNCH, Kieran M.; ZANNINI, Emanuele; WILKINSON, Stuart; DAENEN, Luk; 
+ARENDT, Elke K.. Physiology of Acetic Acid Bacteria and Their Role in Vinegar and 
+Fermented Beverages. Comprehensive Reviews In Food Science And Food Safety, [S.L.], 
+v. 18, n. 3, p. 587-625, 2 abr. 2019. Wiley. http://dx.doi.org/10.1111/1541-4337.12440 
+ 
+MAGALHÃES, F. E. A. et al. Peixe-zebra adulto (Danio rerio): um modelo comportamental 
+alternativo de nocicepção induzida por formalina. Peixe- zebra , v. 14, n. 5, p. 422-429, 2017. 
+ 
+MALIK, Vasanti S.; WILLETT, Walter C.; HU, Frank B.. Global obesity: trends, risk factors 
+and policy implications. Nature Reviews Endocrinology, [S.L.], v. 9, n. 1, p. 13-27, 20 nov. 
+2012. Springer Science and Business Media LLC. http://dx.doi.org/10.1038/nrendo.2012.199 
+ 
+MARTÍNEZ-LEAL, Jessica; PONCE-GARCÍA, Nestor; ESCALANTE-ABURTO, 
+Anayansi. Recent Evidence of the Beneficial Effects Associated with Glucuronic Acid 
+Contained in Kombucha Beverages. Current Nutrition Reports, [S.L.], v. 9, n. 3, p. 163-
+170, 15 maio 2020. Springer Science and Business Media LLC. 
+http://dx.doi.org/10.1007/s13668-020-00312-6 
+ 
+59 
+ 
+MATTISON, Christopher P.; ARYANA, Kayanush J.; CLERMONT, Kristen; 
+PRESTENBURG, Eric; LLOYD, Steven W.; GRIMM, Casey C.; WASSERMAN, Richard 
+L.. Microbiological, Physicochemical, and Immunological Analysis of a Commercial Cashew 
+Nut-Based Yogurt. International Journal Of Molecular Sciences, [S.L.], v. 21, n. 21, p. 1-
+14, 4 nov. 2020. MDPI AG. http://dx.doi.org/10.3390/ijms21218267 
+ 
+Maximino, C., Silva, R.X. do C., da Silva, S. de N.S., do Rodrigues, L.S.D.S., Barbosa, H., de 
+Carvalho, T.S., Le~ao, L.K.D.R., Lima, M.G., Oliveira, K.R.M., Herculano, A.M., 2015. 
+Non-mammalian models in behavioral neuroscience: consequences for biological psychiatry. 
+Front. Behav. Neurosci. 9, 233. 
+ 
+MEDAWAR, Evelyn; HUHN, Sebastian; VILLRINGER, Arno; WITTE, A. Veronica. The 
+effects of plant-based diets on the body and the brain: a systematic review. Translational 
+Psychiatry, [S.L.], v. 9, n. 1, p. 1-17, 12 set. 2019. Springer Science and Business Media 
+LLC. http://dx.doi.org/10.1038/s41398-019-0552-0 
+ 
+MELO, Ester Lopes de; PINTO, Aline Moreira; BAIMA, Camila Lins Bilby; SILVA, Heitor 
+Ribeiro da; SENA, Iracirema da Silva; SANCHEZ-ORTIZ, Brenda Lorena; TEIXEIRA, 
+Abrahão Victor Tavares de Lima; PEREIRA, Arlindo César Matias; BARBOSA, Raimundo 
+da Silva; CARVALHO, Helison Oliveira. Evaluation of the in vitro release of isoflavones 
+from soybean germ associated with kefir culture in the gastrointestinal tract and anxiolytic 
+and antidepressant actions in zebrafish (Danio rerio). Journal Of Functional Foods, [S.L.], 
+v. 70, p. 1-1, jul. 2020. Elsevier BV. http://dx.doi.org/10.1016/j.jff.2020.103986 
+ 
+MIGUEL, Maria Gabriela da Cruz Pedrozo; CARDOSO, Patrícia Gomes; LAGO, Lilian de 
+Assis; SCHWAN, Rosane Freitas. Diversity of bacteria present in milk kefir grains using 
+culture-dependent and culture-independent methods. Food Research International, [S.L.], v. 
+43, n. 5, p. 1523-1528, jun. 2010. Elsevier BV. 
+http://dx.doi.org/10.1016/j.foodres.2010.04.031 
+ 
+MIRANDA, Jeniffer Ferreira; RUIZ, Larissa Fernandes; SILVA, Cíntia Borges; UEKANE, 
+Thais Matsue; SILVA, Kelly Alencar; GONZALEZ, Alice Gonçalves Martins; 
+FERNANDES, Fabrício Freitas; LIMA, Adriene Ribeiro. Kombucha: a review of substrates, 
+regulations, composition, and biological properties. Journal Of Food Science, [S.L.], v. 87, 
+n. 2, p. 503-527, 14 jan. 2022. Wiley. http://dx.doi.org/10.1111/1750-3841.16029 
+ 
+NEFFE-SKOCIńSKA, Katarzyna; SIONEK, Barbara; ŚCIBISZ, Iwona; KOłOŜYN-
+KRAJEWSKA, Danuta. Acid contents and the effect of fermentation condition of Kombucha 
+tea beverages on physicochemical, microbiological and sensory properties. Cyta - Journal Of 
+Food, [S.L.], v. 15, n. 4, p. 601-607, 18 jul. 2017. Informa UK Limited. 
+http://dx.doi.org/10.1080/19476337.2017.1321588 
+ 
+NEJATI, Fatemeh; JUNNE, Stefan; NEUBAUER, Peter. A Big World in Small Grain: a 
+review of natural milk kefir starters. Microorganisms, [S.L.], v. 8, n. 2, p. 192-202, 30 jan. 
+2020. MDPI AG. http://dx.doi.org/10.3390/microorganisms8020192 
+ 
+NGUYEN, Nguyen Khoi; DONG, Ngan Thi Ngoc; NGUYEN, Huong Thuy; LE, Phu Hong. 
+Lactic acid bacteria: promising supplements for enhancing the biological activities of 
+kombucha. Springerplus, [S.L.], v. 4, n. 1, p. 1-6, 24 fev. 2015a. Springer Science and 
+Business Media LLC. http://dx.doi.org/10.1186/s40064-015-0872-3. 
+60 
+ 
+ 
+NGUYEN, Nguyen Khoi; NGUYEN, Phuong Bang; NGUYEN, Huong Thuy; LE, Phu Hong. 
+Screening the optimal ratio of symbiosis between isolated yeast and acetic acid bacteria strain 
+from traditional kombucha for high-level production of glucuronic acid. Lwt - Food Science 
+And Technology, [S.L.], v. 64, n. 2, p. 1149-1155, dez. 2015b. Elsevier BV. 
+http://dx.doi.org/10.1016/j.lwt.2015.07.018 
+ 
+OLIVEIRA, Nathalia Nogueira; MOTHÉ, Cheila Gonçalves; MOTHÉ, Michelle Gonçalves; 
+OLIVEIRA, Leandra Guimarães de. Cashew nut and cashew apple: a scientific and 
+technological monitoring worldwide review. Journal Of Food Science And Technology, 
+[S.L.], v. 57, n. 1, p. 12-21, 27 ago. 2019. Springer Science and Business Media LLC. 
+http://dx.doi.org/10.1007/s13197-019-04051-7 
+ 
+Oliveira, R.F., 2013. Mind the fish: zebrafish as a model in cognitive social neuroscience. 
+Front. Neural Circ. 7 (August), 1–15. 
+ 
+OYEYINKA, Adewumi T.; ODUKOYA, Julianah O.; ADEBAYO, Yusuf S.. Nutritional 
+composition and consumer acceptability of cheese analog from soy and cashew nut milk. 
+Journal Of Food Processing And Preservation, [S.L.], v. 43, n. 12, p. 1-1, 3 nov. 2019. 
+Wiley. http://dx.doi.org/10.1111/jfpp.14285 
+ 
+ÖZDEMIR, Nilgün; KÖK-TAş, Tuğba; GUZEL-SEYDIM, Zeynep. Effect of 
+Gluconacetobacter spp. on kefir grains and kefir quality. Food Science And Biotechnology, 
+[S.L.], v. 24, n. 1, p. 99-106, fev. 2015. Springer Science and Business Media LLC. 
+http://dx.doi.org/10.1007/s10068-015-0015-1 
+ 
+Paiva, L. C. R., & Luiz, G. V. (2020). Comprehending Vegan Identity Construction through 
+Consumption: A qualitative meta-synthesis. Consumer Behavior Review, 4(3), 290-308. 
+ 
+PAREDES, Jorge Luís; ESCUDERO-GILETE, María Luisa; VICARIO, Isabel María. A new 
+functional kefir fermented beverage obtained from fruit and vegetable juice: development and 
+characterization. Lwt, [S.L.], v. 154, p. 1-10, jan. 2022. Elsevier BV. 
+http://dx.doi.org/10.1016/j.lwt.2021.112728 
+ 
+PATO, Usman et al. INFLUENCE OF SKIM MILK AND SUCROSE ON THE VIABILITY 
+OF LACTIC ACID BACTERIA AND QUALITY OF PROBIOTIC COCOGHURT 
+PRODUCED USING STARTERS Lactobacillus casei subsp. casei R-68 AND Streptococcus 
+thermophilus. Pakistan Journal Of Biotechnology, [S.L.], v. 16, n. 1, p. 13-20, 13 abr. 2019. 
+Pakistan Journal of Biotechnology - PJBT. http://dx.doi.org/10.34016/pjbt.2019.16.1.3 
+ 
+ROOS, Jonas de; VUYST, Luc de. Acetic acid bacteria in fermented foods and beverages. 
+Current Opinion In Biotechnology, [S.L.], v. 49, p. 115-119, fev. 2018. Elsevier BV. 
+http://dx.doi.org/10.1016/j.copbio.2017.08.007 
+ 
+ROSELL, J. M. Yoghurt and kefir and their relation to health and therapeutics. University of 
+Montreal. Quebec, 1932. 
+ 
+ROSENFELD, Daniel L.. The psychology of vegetarianism: recent advances and future 
+directions. Appetite, [S.L.], v. 131, p. 125-138, dez. 2018. Elsevier BV. 
+http://dx.doi.org/10.1016/j.appet.2018.09.011 
+61 
+ 
+ 
+ŞANLIER, Nevin; GÖKCEN, Büşra Başar; SEZGIN, Aybüke Ceyhun. Health benefits of 
+fermented foods. Critical Reviews In Food Science And Nutrition, [S.L.], v. 59, n. 3, p. 
+506-527, 20 out. 2017. Informa UK Limited. 
+http://dx.doi.org/10.1080/10408398.2017.1383355 
+ 
+Sarikkha, P., Nitisoravut, R., Poljungreed, I., Boonyarattanakalin, S., 2015. Identification of 
+bacteria and yeast communities in a Thai sugary kefir by polymerase chain reaction-
+denaturing gradient gel electrophoresis (PCR-DGGE) analyses. J. Industrial Technol. 11, 
+25e39. 
+ 
+SHORI, Amal Bakr; ALJOHANI, Ghadi Slman; AL-ZAHRANI, Ashwag Jaman; AL-SULBI, 
+Ohoud Shami; BABA, Ahmad Salihin. Viability of probiotics and antioxidant activity of 
+cashew milk-based yogurt fermented with selected strains of probiotic Lactobacillus spp. 
+Lwt, [S.L.], v. 153, p. 1-8, jan. 2022. Elsevier BV. 
+http://dx.doi.org/10.1016/j.lwt.2021.112482 
+ 
+SHORT, Erin C.; KINCHLA, Amanda J.; NOLDEN, Alissa A.. Plant-Based Cheeses: a 
+systematic review of sensory evaluation studies and strategies to increase consumer 
+acceptance. Foods, [S.L.], v. 10, n. 4, p. 725-737, 30 mar. 2021. MDPI AG. 
+http://dx.doi.org/10.3390/foods10040725 
+ 
+SILVA, Camilla Fernanda Godinho da; SANTOS, Ferlando Lima; SANTANA, Ligia Regina 
+Radomille de; SILVA, Mariangela Vieira Lopes; CONCEIÇÃO, Taiana de Araujo. 
+Development and characterization of a soymilk Kefir-based functional beverage. Food 
+Science And Technology, [S.L.], v. 38, n. 3, p. 543-550, 22 mar. 2018. FapUNIFESP 
+(SciELO). http://dx.doi.org/10.1590/1678-457x.10617 
+ 
+SIREENI, Jenni; BAKKER, Nina; JAIKUMAR, Gayathri; OBDAM, Daisy; 
+SLABBEKOORN, Hans; TUDORACHE, Christian; SCHAAF, Marcel. Profound effects of 
+glucocorticoid resistance on anxiety-related behavior in zebrafish adults but not in larvae. 
+General And Comparative Endocrinology, [S.L.], v. 292, p. 113461, jun. 2020. Elsevier 
+BV. http://dx.doi.org/10.1016/j.ygcen.2020.113461 
+ 
+TAMANG, Jyoti Prakash; COTTER, Paul D.; ENDO, Akihito; HAN, Nam Soo; KORT, 
+Remco; LIU, Shao Quan; MAYO, Baltasar; WESTERIK, Nieke; HUTKINS, Robert. 
+Fermented foods in a global age: east meets west. Comprehensive Reviews In Food Science 
+And Food Safety, [S.L.], v. 19, n. 1, p. 184-217, jan. 2020. Wiley. 
+http://dx.doi.org/10.1111/1541-4337.12520 
+ 
+TANGYU, Muzi; MULLER, Jeroen; BOLTEN, Christoph J.; WITTMANN, Christoph. 
+Fermentation of plant-based milk alternatives for improved flavour and nutritional value. 
+Applied Microbiology And Biotechnology, [S.L.], v. 103, n. 23-24, p. 9263-9275, 4 nov. 
+2019. Springer Science and Business Media LLC. http://dx.doi.org/10.1007/s00253-019-
+10175-9. 
+ 
+TAVARES, Pedro Paulo Lordelo Guimarães; ANJOS, Emanuele Araújo dos; 
+NASCIMENTO, Renata Quartieri; CRUZ, Larissa Farias da Silva; LEMOS, Paulo Vitor 
+França; DRUZIAN, Janice Izabel; OLIVEIRA, Thâmilla Thalline Batista de; ANDRADE, 
+Roberta Barreto de; SOUZA, Adriana Lúcia da Costa; MAGALHÃES-GUEDES, Karina 
+62 
+ 
+Teixeira. Chemical, microbiological and sensory viability of low-calorie, dairy-free kefir 
+beverages from tropical mixed fruit juices. Cyta - Journal Of Food, [S.L.], v. 19, n. 1, p. 
+457-464, 1 jan. 2021. Informa UK Limited. 
+http://dx.doi.org/10.1080/19476337.2021.1906753 
+ 
+Tyl C., Sadler G.D. (2017) pH and Titratable Acidity. In: Nielsen S.S. (eds) Food Analysis. 
+Food Science Text Series. Springer, Cham. https://doi.org/10.1007/978-3-319-45776-5_22 
+ 
+VALCARCE, David G.; MARTÍNEZ-VÁZQUEZ, Juan M.; RIESCO, Marta F.; ROBLES, 
+Vanesa. Probiotics reduce anxiety-related behavior in zebrafish. Heliyon, [S.L.], v. 6, n. 5, p. 
+1-4, maio 2020. Elsevier BV. http://dx.doi.org/10.1016/j.heliyon.2020.e03973 
+ 
+VARGAS, Bruna Krieger; FABRICIO, Mariana Fensterseifer; AYUB, Marco Antônio 
+Záchia. Health effects and probiotic and prebiotic potential of Kombucha: a bibliometric and 
+systematic review. Food Bioscience, [S.L.], v. 44, p. 101332, dez. 2021. Elsevier BV. 
+http://dx.doi.org/10.1016/j.fbio.2021.101332 
+ 
+VIDAL, M. F. Situação da cajucultura nordestina após a seca. Caderno setorial da ETENE. 
+Banco do Nordeste. Brasil, 2016. 
+ 
+VILLARREAL-SOTO, Silvia Alejandra; BEAUFORT, Sandra; BOUAJILA, Jalloul; 
+SOUCHARD, Jean-Pierre; TAILLANDIER, Patricia. Understanding Kombucha Tea 
+Fermentation: a review. Journal Of Food Science, [S.L.], v. 83, n. 3, p. 580-588, mar. 2018. 
+Wiley. http://dx.doi.org/10.1111/1750-3841.14068 
+ 
+Watawana, M. I., Jayawardena, N., Gunawardhana, C. B., &Waisundara, V. Y. (2016). 
+Enhancement of the antioxidant and starch hydrolase inhibitory activities of king coconut 
+water (Cocos nucifera var. aurantiaca) by fermentation with Kombucha “tea fungus.” 
+International Journal of Food Science & Technology, 51(2), 490–498. 
+https://doi.org/10.1111/ijfs.13006 
+ 
+WHITTINGTON, H. D.; DAGHER, S. F.; BRUNO-BARCENA, J. M. Production and 
+Conservation of Starter Cultures: From “Backslopping” to Controlled Fermentations. In How 
+Fermented Foods Feed a Healthy Gut 
+ 
+WOLF, Christopher A.; MALONE, Trey; MCFADDEN, Brandon R.. Beverage milk 
+consumption patterns in the United States: who is substituting from dairy to plant-based 
+beverages?. Journal Of Dairy Science, [S.L.], v. 103, n. 12, p. 11209-11217, dez. 2020. 
+American Dairy Science Association. http://dx.doi.org/10.3168/jds.2020-18741 
+ 
+WPP. United Natios - World Population Prospects. 2019. Disponível em: 
+https://population.un.org/wpp/Download/Standard/Population/. Acesso em: 17 jan. 2022. 
+ 
+WU, Qun; ZHU, Yang; FANG, Cheng; WIJFFELS, Rene H.; XU, Yan. Can we control 
+microbiota in spontaneous food fermentation? – Chinese liquor as a case example. Trends In 
+Food Science & Technology, [S.L.], v. 110, p. 321-331, abr. 2021. Elsevier BV. 
+http://dx.doi.org/10.1016/j.tifs.2021.02.011 
+ 
+YANG, Zhiwei; ZHOU, Feng; JI, Baoping; LI, Bo; LUO, Yangchao; YANG, Li; LI, Tao. 
+Symbiosis between Microorganisms from Kombucha and Kefir: potential significance to the 
+63 
+ 
+enhancement of kombucha function. Applied Biochemistry And Biotechnology, [S.L.], v. 
+160, n. 2, p. 446-455, 23 set. 2008. Springer Science and Business Media LLC. 
+http://dx.doi.org/10.1007/s12010-008-8361-6 
+ 
+YUKSEL, A. K.; SAT, I. G.; YUKSEL, M.; CAKMAKCI, S. A COMPARATIVE STUDY 
+ON THE PHYSICOCHEMICAL CHARACTERISTICS, ORGANIC ACID PROFILES, 
+MINERAL COMPOSITIONS AND SENSORY PROPERTIES OF ICE CREAMS 
+PRODUCED WITH DIFFERENT TYPES OF NUTS. Carpathian Journal of Food Science 
+and Technology 9(3):137-151. Turquia, 2017 
+ 
+ZARTL, Barbara; SILBERBAUER, Karina; LOEPPERT, Renate; VIERNSTEIN, Helmut; 
+PRAZNIK, Werner; MUELLER, Monika. Fermentation of non-digestible raffinose family 
+oligosaccharides and galactomannans by probiotics. Food & Function, [S.L.], v. 9, n. 3, p. 
+1638-1646, 2018. Royal Society of Chemistry (RSC). http://dx.doi.org/10.1039/c7fo01887h 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+64 
+ 
+APÊNDICE A – RESUMO DA TABELA DE ANÁLISE DE VARIÂNCIA E 
+REGRESSÃO PARA PH, SÓLIDOS SOLÚVEIS TOTAIS (SST) E ACIDEZ 
+TITULÁVEL TOTAL (ATT). 
+ 
+Quadrado médio 
+Fonte de variação GL 
+pH SST ATT 
+Amostra (A) 2 2,6315 * 1,9601 * 29,502 * 
+Erro (a) 3 0,0004 0,0012 * 0,066 
+Tempo (B) 7 4,0498 * 1,0827 * 91,931 * 
+Interação (A x B) 14 0,2017 * 0,0854 * 131,68 * 
+TE/LCF 7 1,8981 * 0,4661 * 48,2432 * 
+Linear 1 11,6867 * 2,5879 * 328,6741 * 
+Falta de ajuste 6 0,2667 * 0,1126 * 1,5048 * 
+Quadrática 1 1,4264 * 0,0529 * 0,8978 * 
+Falta de ajuste 5 0,0347 * 0,0225 * 1,6262 * 
+NS
+Cúbica 4 0,0633 * 0,0122  4,4803 * 
+Falta de ajuste 1 0,0267 * 0,0251 * 0,09127 * 
+TE/LCFB 7 1,9671* 0,5994 * 44,9564 * 
+Linear 1 12,1720 * 3,5977 * 301,6705 * 
+Falta de ajuste 6 0,2664 * 0,0998 * 2,1707 * 
+Quadrática 1 1,3290 * 0,3342 * 2,1877 * 
+Falta de ajuste 5 0,0538 * 0,0529 * 2,1673 * 
+Cúbica 1 0,1810 * 0,0263 * 7,8114 * 
+Falta de ajuste 4 0,0221 * 0,0596 * 0,7563 * 
+TE/LCB 7 0,5878 * 0,1880 * 8,8334 * 
+Linear 1 4,0569 * 1,0910 59,5886 * 
+Falta de ajuste 6 0,0097 * 0,0375 * 0,3743 * 
+Quadrática 1 0,0470 * 0,0426 * 0,2182 * 
+NS
+Falta de ajuste 5 0,0022  0,0365 * 0,4055 * 
+NSNS
+Cúbica 1 0,0004  0,0084  1,8097 * 
+NSNS
+Falta de ajuste 4 0,0026  0,0435 * 0,0545  
+* Significativo a 5% de probabilidade. NS – não significativo a 5% de probabilidade. TE – tempo. 
+ 
+65 
+ 
+APÊNDICE B - RESUMO DA TABELA DE ANÁLISE DE VARIÂNCIA E 
+REGRESSÃO PARA OS AÇÚCARES GLICOSE (GLI), FRUTOSE (FRU), 
+SACAROSE (SAC) E RAFINOSE (RAF). 
+ 
+Quadrado médio 
+Fonte de variação GL 
+GLI FRU SAC RAF 
+Amostra (A) 2 0,607 * 0,0261 * 0,2938 * 0,0012 * 
+Erro (a) 3 0,000001 0,000005 0,00016 0,00005 
+Tempo (B) 3 0,0109 * 0,0077 * 0,9668 * 0,0151 * 
+Interação (A x B) 6 0,0149 * 0,0131 * 0,0545 * 0,0029 * 
+TE/LCF 3 0,0011 * 0,0029 * 0,3378 * 0,0073 * 
+Linear 1 0,0014 0,0063 * 0,6082 * 0,0212 * 
+Falta de ajuste 2 0,0010 * 0,0012 * 0,2027 * 0,0004 * 
+Quadrática 1 0,0004 * 0,0001 * 0,3379 * 0,0003 * 
+Falta de ajuste 1 0,0016 * 0,0024 * 0,0676 * 0,0005 * 
+Cúbica 1 0,0016 * 0,0024 * 0,0676 * 0,0005 * 
+NSNSNSNS
+Falta de ajuste 0 0  0  0  0  
+TE/LCFB 3 0,0155 * 0,0127 * 0,3262 * 0,0093 * 
+Linear 1 0,0133 * 0,0095 * 0,6190 * 0,0252 * 
+Falta de ajuste 2 0,0167 * 0,0144 * 0,1798 * 0,0014 * 
+Quadrática 1 0,0082 * 0,0076 * 0,3080 * 0,0019 * 
+Falta de ajuste 1 0,0252 * 0,0213 * 0,0516 * 0,0010 * 
+Cúbica 1 0,0252 * 0,0213 * 0,0516 * 0,0010 * 
+NSNSNSNS
+Falta de ajuste 0 0  0  0  0  
+TE/LCB 3 0,0240 * 0,0183 * 0,4117 * 0,0043 * 
+Linear 1 0,0585 * 0,0427 * 1,1797 * 0,0029 * 
+Falta de ajuste 2 0,0069 * 0,0061 * 0,0279 * 0,0051 * 
+Quadrática 1 0,0137 * 0,0114 * 0,0149 * 0,0032 * 
+NS
+Falta de ajuste 1 0  0,0009 * 0,0408 * 0,0071 * 
+NS
+Cúbica 1 0  0,0009 * 0,0408 * 0,0071 * 
+NSNSNSNS
+Falta de ajuste 0 0  0  0  0  
+* Significativo a 5% de probabilidade. NS – não significativo a 5% de probabilidade. TE – tempo. 
+ 
+66 
+ 
+APÊNDICE C - RESUMO DA TABELA DE ANÁLISE DE VARIÂNCIA E 
+REGRESSÃO PARA OS ÁCIDOS GLUCURÔNICO (GLU), LÁTICO (LAT), 
+ACÉTICO (ACE) E CÍTRICO (CIT). 
+ 
+Quadrado médio 
+Fonte de variação GL 
+GLU LAT ACE CIT 
+Amostra (A) 2 1,5113 * 5,6757 * 6,0363 * 0,2757 * 
+Erro (a) 3 0,0034 0,0015 0,0033 0,0005 
+Tempo (B) 3 1,8725 * 2,3398 * 28,5067 * 0,5974 * 
+Interação (A x B) 6 0,1503 * 0,5954 * 1,7469 * 0,1128 * 
+TE/LCF 3 1,0368 * 1,6753 * 17,4920 * 0,4708 * 
+Linear 1 2,2743 * 0,9522 * 48,4834 * 1,0900 * 
+Falta de ajuste 2 0,4181 * 2,0368 * 1,9963 * 0,1613 * 
+Quadrática 1 0,8259 * 3,5662 * 0,0339 * 0,0016 * 
+Falta de ajuste 1 0,0103 * 0,5075 * 3,9588 * 0,3210 * 
+Cúbica 1 0,0103 * 0,5075 * 3,9588 * 0,3210 * 
+NSNSNSNS
+Falta de ajuste 0 0  0  0  0  
+TE/LCFB 3 0,9054 * 1,8414 * 11,7326 * 0,3445 * 
+Linear 1 1,4374 * 4,0361 * 29,5538 * 0,8399 * 
+Falta de ajuste 2 0,6395 * 0,7442 * 2,8220 * 0,0968 * 
+NS
+Quadrática 1 1,0246 * 1,3445 * 0,6587 * 0,0003  
+Falta de ajuste 1 0,2544 * 0,1438 * 4,9854 * 0,1933 * 
+Cúbica 1 0,2544 * 0,1438 * 4,9854 * 0,1933 * 
+NSNSNSNS
+Falta de ajuste 0 0  0  0  0  
+TE/LCB 3 0,2308 0,0138 * 2,7757 * 0,0076 * 
+Linear 1 0,2337 * 0,0339 * 7,6916 * 0,0102 * 
+NS
+Falta de ajuste 2 0,2295 * 0,0038  0,3178 * 0,0064 * 
+NS
+Quadrática 1 0,2758 * 0,0076  0,0134 * 0,0101 * 
+NS
+Falta de ajuste 1 0,1831 * 0  0,6223 * 0,0027 * 
+NS
+Cúbica 1 0,1831 * 0  0,6223 * 0,0027 * 
+NSNSNSNS
+Falta de ajuste 0 0  0  0  0  
+* Significativo a 5% de probabilidade. NS – não significativo a 5% de probabilidade. TE – tempo. 
+ 

@@ -1,0 +1,2876 @@
+1 
+ 
+ 
+ 
+FACULDADE DE ENGENHARIA 
+DEPARTAMENTO DE ENGENHARIA QUÍMICA 
+MESTRADO EM TECNOLOGIA DE ALIMENTOS 
+ 
+ 
+ 
+IRIS LEONILDE SAÚDE SABE 
+  
+ 
+ 
+ 
+ 
+AVALIAÇÃO DAS CARACTERÍSTICAS FISICO – QUÍMICAS E SENSORIAIS 
+DE DIFERENTES FORMULAÇÕES DO NÉCTAR DE CAJÚ (Anacardium 
+Occidentale, L.) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MAPUTO 
+2016 
+ 
+1 
+ 
+ 
+ 
+FACULDADE DE ENGENHARIA 
+DEPARTAMENTO DE ENGENHARIA QUÍMICA 
+MESTRADO EM TECNOLOGIA DE ALIMENTOS 
+ 
+ 
+ 
+ 
+ 
+ 
+AVALIAÇÃO DAS CARACTERÍSTICAS FISICO – QUÍMICAS E SENSORIAIS DE 
+DIFERENTES FORMULAÇÕES DO NÉCTAR DE CAJÚ (Anacardium Occidentale, 
+L.)  
+ 
+ 
+ 
+ 
+Autora: Iris Leonilde Saúde Sabe 
+Supervisor: Professor Doutor José Da Cruz Francisco 
+Co-Supervisora: Professora Doutora Simone Palma Favaro 
+ 
+ 
+ 
+ 
+ 
+MAPUTO 
+ 
+ 
+ 
+ 
+1 
+ 
+ 
+ 
+ 
+DECLARAÇÃO DE ORIGINALIDADE 
+ 
+ 
+ 
+ 
+ 
+Declaro que esta dissertação nunca foi apresentada para a obtenção de qualquer grau ou num outro 
+âmbito e que ele constitui o resultado do meu labor individual. Esta dissertação é apresentada em 
+cumprimento parcial dos requisitos para a obtenção do grau de mestre em Tecnologia de Alimentos 
+da Universidade Eduardo Mondlane. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Iris Leonilde Saúde Sabe 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+i 
+1 
+ 
+AGRADECIMENTOS 
+Em primeiro lugar agradeço a Deus meu Pai, a Jesus meu Salvador e ao Espirito Santo meu ensinador, 
+pelo dom da vida, força , ánimo, coragem, inteligência e sabedoria que me deu para estudar e 
+pesquisar esse tema relacionado com a Tecnologia de Alimentos o qual irá ajudar no 
+desenvolvimento sócio-económico do meu país. 
+Ao meu marido Eusebio Ribeiro Sabe, homem de Deus sempre presente como companheiro, amigo 
+e pai, por ter me compreendido e me dado força neste periodo de formação. 
+As meus filhos Shadday, Zoen`land, Cristell Katryn e Winner Eusébio, que foram muito fortes e 
+corajosos em todos momentos que não pude estar presente. 
+Aos meus pais António Saúde e Maria Celeste Militão Saúde pela educação e incetivo na formação 
+académica, á minha irmã Francisca Saúde e minha Cunhada Joana Cebola que sempre me 
+encorajaram e me ajudaram em momentos difíceis orando sempre por mim. 
+Ao Ministério MEA, na pessoa do Pr. Maposse, Pr. Salvador, Ir. Alfredo, Ir. Mário e Ira. Orlanda 
+que foram meus intercessores durante esse tempo de formação. 
+Á Universidade Lúrio, pela oportunidade de crescimento profissional. 
+Ao Professor Doutor Abdulcarimo Ismael, vice-Reitor da Universidade Lúrio que me encorajou a 
+continuar a minha formação para o nível de mestrado. 
+Ao Programa BHEARD – USAID pelo apoio financeiro desta pesquisa e concessão de bolsa de 
+estudo integral a qual ajudou muito em todos os momentos. 
+Ao Engenheiro Nuro do Instituo de Investigação Agrária de Moçambique- Departamento de Fruteiras 
+que me acompanhou na aquisição e transporte da matéria prima. 
+Ao pessoal do laboratório de Alimentos da Faculdade de Engenharia da Universidade Eduardo 
+Mondlane pela ajuda na realização das análises fisico-químicas. 
+Á Sumol- Compal que permitiu a realização das repetições e análises microbiológicas dos néctares 
+produzidos. 
+Ao meu Supervisor Professor Doutor José da Cruz, pela orientação, flexibilidade nas respostas de 
+qualquer questão por mim colocada, sempre presente no acompanhamento desta pesquisa, em todo 
+processo da minha formação. 
+A minha Co- Supervisora Doutora Simone Palma Favaro, pela muita paciência, dedicação, amizade 
+e confiança, desde que a conheci e durante o mestrado por aceitar me orientar e também com 
+sugestões úteis para minha formação pessoal e profissional. 
+Aos Doutores António Cumbane e Américo Uassiquete por toda disponibilidade, presteza e 
+sugestões durante o decorrer do trabalho. 
+Aos Senhores colaboradores durante a pesquisa sempre disponíveis: Engenheiro Soares Banze, Sr. 
+Catarino e Engenheiro Cuna. 
+ 
+ 
+ 
+ii 
+ 
+ 
+ 
+Aos professores do Mestrado em Tecnologia de Alimentos pelos ensinamentos e cooperação em 
+especial Dra. Custódia, Dra. Irene, Dr. Lucas, Dr. Bjorn e a Dra. Maria Eduardo. 
+A todas os meus colegas da turma e em especial: A Cândida, Alex, Suzana, Filipa, Joelma, Sunera e 
+Estela pela amizade e incentivo. 
+A Estudante estágiária da Esuder, Teresa Manhique pela ajuda, colaboração, dedicação e paciência 
+durante a realização das o experiências. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+iii 
+  
+ 
+ 
+ÍNDICE 
+1.INTRODUÇÃO……………………………………………………………….………..…1 
+2.OBJECTIVOS………………………………………………………………………...…..2 
+2.1. Objectivo geral……………………………………………………………………..…..2 
+2.2.Objectivos específicos………………………………………………………………......2 
+3. PROBLEMA……………………………………………………………………………..3 
+4.HIPÓTESE………………………………………………………………………………..3 
+5.JUSTIFICATIVA………………………………………………………………………....3 
+6. REVISÃO BIBLIOGRÁFICA……………………………………………………….......4 
+6.1.Pedúnculo de cajú…………………………………………………………………….....4 
+6.2.Características físico- químicas do pedúnculo de cajú………………………………....5 
+6.2.1.pH- Potencial hidrogeniónico………………………………………………...……....5 
+6.2.2.Sólidos solúveis totais (ºBrix).......................................................................................6 
+6.2.3.Acidez total titulável……………………………………………………………….....6 
+6.2.4. Ácido ascórbico (Vitamina C)………………………………………………...…..…7 
+6.3. Colheita, transporte e lavagem do pedúnculo de cajú……………………………….....8 
+6.4.Processamento industrial do pedúnculo de cajú……………………………….………10 
+7.DESPOLPAMENTO…………………………………………………………………….13 
+7.1. Pasteurização……………………………………………………………………….…13 
+7.2.Conservação da polpa……………………………………………………………..…..14 
+7.2.1. Conservação da polpa de cajú por congelamento…………………………………..14 
+7.2.2. Conservação da polpa de caju preservada quimicamente…………………………..15 
+8. FORMULAÇÃO DO NÉCTAR………………………………………………..………16 
+8.1.Homogeneização do néctar……………………………………………………………17 
+8.2.Néctar de cajú ………………………………………………………………………....18 
+9.TIPOS DE EMBALAGENS…………………………………………………………….19 
+9.1.Embalagem metálica………………………………...………………………………...20 
+9.2.Embalagem de plástico…………………………..…………………………………….22 
+9.3.Embalagem PET……………………………………………………………………….22 
+9.4.Embalagem de vidro…………………………………………………………………...23 
+ 
+iv   
+ 
+ 
+9.5.Embalagem tetra pak e tetra brik…………………………………………………........24 
+10.AVALIAÇÃO SENSORIAL…………………………………………………………..26 
+10.1.Escala hedônica…………………………………………………………………..…..28 
+11.PARTE EXPERIMENTAL………………………………………………………….....29 
+11.1. Produção da polpa…………………………………………………………………...29 
+11.2. Produção dos néctares…………………………………………………………….....31 
+11.3. Análises físico – químicas…………………………………………………………...32 
+11.3.1.Determinação da humidade e cinzas no pedúnculo de cajú …………………...……32 
+11.3.2.Determinação da actividade da água e cor do pedúnculo de cajú …………………33 
+11.3.3.Determinação do pH da polpa do cajú …………………………………………….34 
+11.3.4.Determinação dos sólidos solúveis totais (ºBrix) por Refratometria da Polpa do 
+caju………………………………………………………………………………………...35 
+11.3.5.Determinação da acidez titulável por volumetria com indicador………………..…36 
+11.3.6.Determinação do teor do ácido ascórbico (Vitamina C)…………………………...38 
+11.4. Análises microbiológicas……………………………………………………………39 
+11.5. Avaliação sensorial dos néctares de cajú formulados……………………………….40 
+11.6. Análise estatística dos resultados……………………………………………………40 
+12.RESULTADOS E DISCUSSÃO………………………………………………………41 
+12.1.Caracterização do pedúnculo e da polpa de cajú ……………………………………41 
+12.2.Caracterização físico- química dos néctares de cajú formulados…………………….42 
+12.2.1.PH…………………………………………………………………………………..42 
+12.2.2. Sólidos solúveis totais (ºBrix)……………………………………………………...43 
+12.2.3.Acidez total titulável………………………………………………………………..44 
+12.2.4 Àcido ascórbico (Vitamina C)……………………………………………………....45 
+12.3. Análise microbiológica……………………………………………………………...46 
+12.4. Avaliação sensorial dos néctares de cajú …………………………………………...47 
+12.4.1. Sabor……………………………………………………………………………….48 
+12.4.2.Aparência geral……………………………………………………………………..49 
+12.4.3.Aroma………………………………………………………………………….…...50 
+12.4.4.Cor………………………………………………………………………………….51 
+12.4.5. Adstringência………………………………………………………………………52 
+12.4.6. Intenção de compra………………………………………………………………...53  
+v 
+ 
+ 
+13. CONCLUSÕES……………………………………………………………………......54 
+14.RECOMENDAÇÕES……………………………………………………………….....55 
+15.REFERÊNCIAS BIBLIOGRÁFICAS..………………………………………………..56 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+vi 
+ 
+ 
+ 
+RESUMO 
+O Cajueiro (Anacardium occidentale, Linn) é originário do Nordeste do Brasil e foi introduzido na 
+África e na Índia pelos portugueses no século XVI. Durante os anos 50 e 60 do século XX, 
+Moçambique juntamente com a Índia chegaram a conquistar os títulos de maiores produtores de 
+castanha de cajú. Actualmente o parque de cajueiros está estimado em cerca de 40 milhões de árvores 
+e no final da década poderá registar um crescimento de mais de dez milhões com garantias de 
+tratamento através do sistema integrado de maneio da cultura criado pelo Instituto de Fomento do 
+Cajú de Moçambique. Os frutos do cajueiro, castanhas de cajú são suportados por uma haste ou 
+pseudofruto, carnoso e suculento, bem desenvolvido, de coloração amarela, vermelha ou alaranjada. 
+O pseudofruto (pedúnculo do cajú) é uma das melhores fontes de vitamina C, antioxidante, rico em 
+cálcio, ferro e fósforo, importante na formação de colágeno, que dá força e suporte aos ossos, dentes, 
+pele e artérias. Auxilia na cicatrização de ferimentos e na absorção de ferro. A produção de sumos é 
+considerado de maior importância na industrialização do pedúnculo de cajú, com grande potencial 
+no mercado nacional e internacional. Esta actividade agro industrial pode ser considerada como um 
+segmento que exige investimento relativamente baixo. É uma maneira prática e simples de aproveitar 
+e armazenar o excesso de frutas produzidas na colheita para sua comercialização após a colheita. Em 
+Moçambique não há tradição de industrialização do pedúnculo de cajú, apenas seu consumo local 
+fresco ou em algumas regiões como bebida fermentada. Este trabalho tem como objectivo, identificar 
+a formulação do néctar do cajú com maior preferência da população moçambicana. Foram produzidas 
+5 formulações de néctar de cajú, nomeadamente F1 (30% de polpa e 8% de açúcar), F2 (30% de 
+polpa e 16% de açúcar), F3 (60% de polpa e 8% de açúcar), F4 (60% de polpa e 16% de açúcar) e 
+F5 45% de polpa com 12% de açúcar). Após a pasteurização, as formulações foram armazenadas a 
+uma temperatura de 20°C e avaliaram-se as suas características físico-químicas de 15 em 15 dias e a 
+análise microbiológica após 45 dias de armazenamento. A formulação F2 (30% de polpa e 16% de 
+açúcar) foi a mais aceite pelos avaliadores em relação ao sabor, mantendo-se dentro da faixa de 
+aceitação com respostas na escala hedônica situadas entre “gostei muitíssimo” e “gostei muito” cuja 
+características físico-químicas no final de 45 dias de armazenamento, foram de pH igual a 3,9, sólidos 
+solúveis totais igual á 26 º Brix, o teor da acidez total titulável em percentagem de ácido cítrico foi 
+de 2,21 e o teor da vitamina C de 57,99 mg/100ml. Todas as outras formulações apresentaram 
+pontuações aceitáveis, obtendo-se respostas nas faixas situadas entre “gostei ligeiramente” e “gostei 
+moderadamente”. A intenção de compra mostrou-se mais elevada para as formulações F2 e F5. 
+Palavras Chaves: Cajú, néctar, caracteristicas fisico-quimicas e sensoriais. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+vii 
+ 
+ 
+ABSTRACT 
+The cashew tree (Anacardium occidentale Linn) is originally from northeastern Brazil and was 
+introduced into Africa and India by the Portuguese in the sixteenth century. During the 50s and 60s 
+of the twentieth century, Mozambique along with India came to conquer the titles of the largest 
+producers of cashew nuts. Currently the area planted with cashew is estimated at around 40 million 
+trees and at the end of this decade may register a growth of more than ten million, assured by an 
+integrated system of management put together by the Institute of Cashew Development of 
+Mozambique - Incaju. The fruits of the cashew tree; the cashew nuts are supported by a stem or 
+pseudo-fruit that is fleshy and juicy, well-developed, yellow, red or orange color. Cashew pseudo-
+fruit is one of the best sources of vitamin C that is an antioxidant; also is rich in calcium, iron and 
+phosphorus that are important to the formation of collagen which gives strength and support to the 
+bones, teeth, skin and arteries. It helps in the healing of wounds and iron absorption. The production 
+of fruit juices is considered very important to the processing of the cashew peduncle, with great 
+potential in the domestic and international markets. This agro industrial activity can be considered as 
+a low requiring investment. It is a practical and simple way to process and store the excess of fruit 
+produced in the season and allows sale over the year. In Mozambique there is not a tradition of 
+processing cashew pseudo-fruit, it is usually consumed freshly or as brew. This work aims, to identify 
+the preference of cashew pseudo-fruit nectar formulation by the Mozambican population. Five 
+cashew pseudo-fruit nectar formulations were prepared, namely F1 (30% pulp and 8% sugar), F2 
+(30% pulp and 16% sugar), F3 (60% pulp and 8% sugar), F4 (60% pulp and 16% sugar) and F5 (45% 
+of pulp with 12% sugar). After pasteurization the formulations were stored at 20 ° C and the physical 
+-chemical characteristics evaluated every 15 days and microbiological analysis accessed after 45 days 
+of storage. The formulation F2 (30% pulp and 16% sugar) was the most accepted by the tasters in 
+relation to taste, within the preference range in the hedonic scale between "liked very much" and 
+"liked". This formulation presented at the end of 45 days of storage pH of 3.9, total soluble solids of 
+26 ° Brix, total titratable acidity of 2.21 % and vitamin C content of 57.99 mg/100 ml. All other 
+formulations presented acceptable scores, obtaining answers in ranges located between "liked 
+slightly" and "liked moderately". The intention to purchase was shown higher for F2 and F5 
+formulations. 
+Key words: Cashew, nectar, physical-chemical and sensory analysis. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+viii   
+ 
+ 
+ 
+LISTA DE TABELAS 
+Tabela 1 – Caracterização do pedúnculo de cajú..................................................................8 
+Tabela 2 - Percentagem de deterioração do pedúnculo de cajú armazenado á várias 
+temperaturas...........................................................................................................................9 
+Tabela 3- Caracterização fisico-química do pedúnculo de cajú..........................................16 
+Tabela 4 - Formulação do néctar de cajú.............................................................................19 
+Tabela 5 - Características químicas e físico-químicas do néctar de cajú............................19 
+Tabela 7- Caracterização da polpa de cajú.........................................................................41 
+Tabela 6 - Quantidade de polpa e do açúcar para cada formulação....................................31 
+Tabela 8 - Contagem padrão de coliformes totais e bolores e leveduras para todas as 
+formulações..........................................................................................................................47 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ix 
+  
+ 
+ 
+LISTA DE FIGURAS 
+Figura 1. Exemplo de transporte do cajú em caixas apropriadas........................................10 
+Figura 2. Alternativas tecnológicas do aproveitamento de pedúnculos de cajú.................11 
+Figura 3. Etapas do processo de produção da polpa de cajú conservada por congelamento e 
+preservada quimicamente.....................................................................................................12 
+Figura 4. Exemplo de despolpadeira de aço inoxidável.....................................................13 
+Figura 5. Exemplo de pasteurizador tipo tubular................................................................14 
+Figura 6. Exemplo de conservação da polpa por congelamento.........................................15 
+Figura 7. Exemplo de homogenizador - desaereador para néctar de frutas........................17 
+Figura 8. Fluxograma de processamento do néctar de cajú............................................18 
+Figura 9. Exemplo de embalagem metálica para néctar de frutas.......................................21 
+Figura 10. Exemplo de embalagens PET para néctares de frutas.......................................23 
+Figura 11. Exemplo de embalagens de vidro para néctares de fruta...................................24 
+Figura 12. Embalagens tetra pak para néctares de frutas................................................26 
+Figura 13. Preparação de amostras para análise sensorial..................................................29 
+Figura 14. Colheita do caju no distrito da Manhiça (A); Sanitização do pedúnculo de 
+caju(B)……………………………………………………………………………………..30 
+Figura 15. Despolpamento do pedúnculo e filtração da polpa de cajú ….........................30 
+Figura 16. Pasteurização dos néctares de cajú (A); Armazenamento dos néctares de cajú (B) 
+........................................................................................................................................31 
+Figura 17. Diagrama usado na determinação da cor do pedúnculo de cajú........................34 
+Figura 18. Potenciômetro usado na determinação do pH da polpa e do néctar de cajú...35 
+Figura 19. Refratômetro usado na leitura do Brix..............................................................36 
+Figura 20. Determinação da acidez titulável.......................................................................37 
+Figura 21. Determinação do ácido ascórbico......................................................................39 
+Figura 22. Comportamento das formulações dos néctares de cajú pasteurizados em relação ao pH ao 
+longo do tempo de armazenamento. Sendo: F1-30% de polpa e 8% de açúcar; F2- 30% e 16% de 
+açúcar; F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa e 16% de açúcar; F5 – 45% de polpa 
+e 12% de açúcar.....................................................................42 
+Figura 23. Comportamento das formulações dos néctares de cajú pasteurizados em relação ao Brix 
+ao longo do tempo de armazenamento. Sendo: F1-30% de polpa e 8% de açúcar; F2- 30% e 16% de 
+açúcar; F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa e 16% de açúcar; F5 – 45% de polpa 
+e 12% de açúcar........................................................................43 
+ 
+x  
+ 
+ 
+Figura 24. Comportamento das formulações dos néctares de cajú pasteurizados em relação a acidez 
+total ao longo do tempo de armazenamento. Sendo: F1-30% de polpa e 8% de açúcar; F2- 30% e 
+16% de açúcar; F3- 60% de polpa e 8% de açúcar r; F4 – 60% de polpa e 16% de açúcar; F5 – 45% 
+de polpa e 12% de açúcar........................................................44 
+Figura 25. Variação da vitamina C nas diferentes formulações dos néctares de cajú pasteurizados ao 
+longo do tempo de armazenamento. Sendo: F1-30% de polpa e 8% de açúcar; F2- 30% e 16% de 
+açúcar; F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa e16% de açúcar; F5 – 45% de polpa e 
+12% de açúcar.......................................................45 
+Figura 26. Representação gráfica das respostas dos avaliadores em relação ao sabor dos néctares 
+formulados, sendo: F1- 30% de polpa e 8% de açúcar; F2- 30% de polpa e 16% de açúcar; F3- 60% 
+de polpa e 8% de açúcar; F4 – 60% de polpa e 16% de açúcar; F5 – 45% de polpa e 12% de 
+açúcar..................................................................................................48 
+Figura 27. Representação gráfica das respostas dos avaliadores em relação a aparência geral dos 
+néctares formulados, sendo: F1- 30% de polpa e 8% de açúcar; F2- 30% de polpa e 16% de açúcar; 
+F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa e 16% de açúcar; F5 – 45% de polpa e 12% 
+de açúcar..................................................................................................49 
+Figura 28. Representação gráfica das respostas dos avaliadores em relação ao aroma dos néctares 
+formulados, sendo: F1- 30% de polpa e 8% de açúcar; F2- 30% de polpa e 16% de açúcar; F3- 60% 
+de polpa e 8% de açúcar; F4 – 60% de polpa e 16% de açúcar; F5 – 45% de polpa e 12% de 
+açúcar..................................................................................................50 
+Figura 29. Representação gráfica das respostas dos avaliadores em relação a cor dos néctares 
+formulados, sendo: F1- 30% de polpa e 8% de açúcar; F2- 30% de polpa e 16% de açúcar; F3- 60% 
+de polpa e 8% de açúcar; F4 – 60% de polpa e 16% de açúcar; F5 – 45% de polpa e 12% de 
+açúcar..................................................................................................51 
+Figura 30. Representação gráfica das respostas dos avaliadores em relação a adstringência dos 
+néctares formulados, sendo: F1- 30% de polpa e 8% de açúcar; F2- 30% de polpa e 16% de açúcar; 
+F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa e 16% de açúcar; F5 – 45% de polpa e 12% 
+de açúcar..................................................................................................52 
+Figura 31. Representação gráfica das respostas dos avaliadores em relação a intenção de compra dos 
+néctares formulados, sendo: F1- 30% de polpa e 8% de açúcar; F2- 30% de polpa e 16% de açúcar; 
+F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa e 16% de açúcar; F5 – 45% de polpa e 12% 
+de açúcar......................................................................................53 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+xi 
+ 
+ 
+1 
+ 
+ 
+1.INTRODUÇÃO 
+ 
+O Cajueiro (Anacardium occidentale, Linn) é originário do  Nordeste do Brasil e foi 
+introduzido em África e  Índia pelos portugueses no século XVI. Actualmente o cajueiro 
+vegeta espontaneamente ou é cultivado em alguns países africanos (Gana, Angola, Nigéria, 
+Madagáscar, Quénia, Tanzânia,   e Moçambique), na América Central (México), nos Estados 
+Unidos (Florida) na América do Sul (Brasil e Peru), no Médio Oriente e Ásia.  
+ 
+Durante os séculos XIX e XX, a cultura do cajueiro foi muito difundida em Moçambique, 
+foi também durante estas décadas que registou-se a maior plantação de cajueiros. Nos anos 
+50 e 60  do século XX, Moçambique juntamente com a Índia chegaram a conquistar os títulos 
+de maiores produtores de cajú e seus derivados. Em 1972 a produção do cajú em 
+Moçambique atingiu o seu ponto mais alto com a comercialização de cerca de 200.000 
+toneladas de castanha, elevando assim  Moçambique para o maior exportador mundial 
+naquele ano.  
+ 
+Actualmente o parque de cajueiros está estimado em cerca de 40 milhões de árvores e no 
+final da década poderá registar um crescimento de mais de dez milhões com garantias de 
+tratamento através, do sistema integrado de maneio da cultura criado pelo Instituto de 
+Fomento do Cajú de Moçambique (INCAJU, 2005). 
+ 
+Os frutos do cajueiro são interessantes, pois aquilo que se acha ser o fruto, não é, e sim a 
+haste ou pseudofruto, carnoso e suculento, bem desenvolvido, de coloração amarela, 
+vermelha ou alaranjada. O verdadeiro fruto é a conhecida castanha-do-cajú, que tem o 
+formato de um pequeno rim de animal. O cajú é composto por 10% de castanha e 90% de 
+pedúnculo. Dessas duas partes, o pedúnculo apresenta o menor aproveitamento. Em 
+Moçambique não há tradição de industrialização do pedúnculo de cajú, apenas seu consumo 
+local fresco ou como bebida fermentada.  
+ 
+A produção e consumo de produtos obtidos a partir do pedúnculo de cajú proporcionam uma 
+alternativa de aproveitamento, além da possibilidade de diversificação da dieta da população, 
+sendo que o pedúnculo de cajú é uma das melhores fontes de vitamina C, antioxidante, rico 
+em cálcio, ferro e fósforo,  importante na formação de colágeno, que dá força e suporte aos 
+1 
+ 
+ossos, dentes, pele e artérias. Auxilia na cicatrização de ferimentos e absorção do ferro (Costa 
+et al. 2000). É também é rico em açúcares e contém grandes quantidades de taninos e 
+minerais, tem sido usado como fruta medicinal pois além de ser empregue no tratamento de 
+dor neurológica e reumatismo, ajuda na cura de escorbuto, diarreia e é eficaz na prevenção 
+da cólera. Embora tenha alto potencial, o cajú é  altamente adstringente, um sabor que faz 
+com que durante o consumo sinta uma irritação na língua e na garganta. 
+ 
+A Produção de sumos e néctares é considerado de maior importância na industrialização do 
+pedúnculo de cajú, com grande potencial no mercado nacional e internacional. Esta 
+actividade agro industrial pode ser considerada de baixo investimento, pois é uma maneira 
+prática e simples de aproveitar e armazenar o excesso de frutas produzidas na colheita para 
+sua comercialização no periódo de pós-colheita. 
+ 
+ 
+ 
+ 
+1.2.OBJECTIVOS 
+ 
+1.2.1. Objectivo Geral: 
+ 
+ Identificar a  formulação do néctar do cajú mais preferido pela população  moçambicana. 
+ 
+ 
+1.2.2.Objectivos Específicos: 
+ 
+ Produzir néctar de cajú com diferentes concentrações de polpa e açúcar; 
+ Avaliar as características físico-químicas da polpa do cajú e do néctar;  
+ Avaliar as características físico-químicas e microbiológicas do néctar de cajú pasteurizado 
+e armazenado ; 
+ Avaliar a preferência sensorial das formulações do néctar de cajú pasteurizado. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.3. PROBLEMA 
+ 
+O cajú (Pedúnculo de cajú), é uma fruta muito produzida no norte de Moçambique, 
+concretamente na província de Nampula, segundo dados nacionais (Incajú, 2005). A 
+produção anual é de cerca de 50 mil toneladas de castanha de cajú, que depois de ser 
+processada é exportada. Entretanto, o falso fruto de cajú (o pedúnculo de cajú), tem sido mal 
+aproveitado, isto é, somente consumido in natura ou fermentado para produção de uma 
+bebida alcoólica denominada “Mutxekele” em língua Emácua. Existe em Moçambique a 
+necessidade de se difundir o consumo do pedúnculo de cajú em suas formas processadas, 
+além da necessidade de fomentar a instalação de indústrias processadoras deste fruto para 
+oferecer polpas, néctares, compotas,  cajú-passa e sumos concentrados. Como não há hábito 
+de sumos de caju em Moçambique é necessário estabelecer as preferências do consumidor 
+para subsidiar as indústrias com interresse em iniciar a produção e a comercialização, de tal 
+modo a favorecer a aceitação e o consumo do produto. 
+ 
+ 
+1.4.HIPÓTESE 
+ 
+H1: Aceitação dos néctares  de cajú formulados. 
+ 
+H0: Rejeição dos néctares de cajú formulados. 
+ 
+ 
+ 
+1.5.JUSTIFICATIVA 
+ 
+Necessidade de se desenvolver uma pesquisa das tecnologias de processamento, 
+industrialização e conservação do néctar de cajú, com garantia de qualidade satisfatória, face 
+a manutenção dos nutrientes contidos no produto, atributos sensoriais característicos além 
+da certeza de que, os métodos usados durante o despolpamento, pasteurização, embalagem 
+e conservação, irão manter o néctar seguro, isto é, sem contaminação microbiológica. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2. REVISÃO BIBLIOGRÁFICA 
+ 
+2.1.Pedúnculo de Cajú 
+ 
+O Pedúnculo de cajú, pêra de cajú ou simplesmente Falso fruto, com 70-90 gramas de peso 
+médio  e comprimento de 6-10 cm,  apresenta uma grande variedade com relação as suas 
+características físico-químicas, sendo que o tipo de solo, o clima, o tipo de cajueiro (nativo 
+ou clone de anão precoce), estado de maturação e condições de plantio (sequeiro ou irrigado) 
+são principais factores que os influenciam (Meneses, 1995). Ele Pode ser consumido in 
+natura ou processado industrialmente em uma vasta gama de produtos. A qualidade do 
+pedúnculo de cajú relaciona-se aos seguintes aspectos: Teor do açúcar da polpa, 
+adstringência e coloração da casca (vermelha ou amarela). 
+ 
+O pedúnculo de estrutura carnosa e suculenta è muito rica em vitamina C e fibras, por 
+exemplo, um copo de sumo de cajú pode suprir a necessidade diária de vitamina C em uma 
+pessoa adulta e é cerca de 4 a 5 vezes maior em relação ao teor de vitamina C das frutas 
+cítricas. Além disso, quanto mais maduro o pedúnculo de cajú, maior é a quantidade da 
+vitamina C. O conteúdo de carotenóides pode ser considerado relativamente baixo,  isto é,  
+cerca de  37,5 - 107,5 mg/100 g. Os principais aminoácidos existentes no pedúnculo do cajú, 
+de acordo com Josivan e Ricardo, (1995) são :  
+ 
+O ácido aspártico (Asp)  - o qual aumenta a resistência, melhora a fadiga crônica e a 
+depressão, rejuvenescendo a atividade celular, a formação de células e o metabolismo.  
+ 
+Serina (Ser) - é necessário para o bom metabolismo de gorduras e ácidos graxos, o 
+crescimento muscular, a manutenção de um sistema imunológico saudável ajudando à 
+produção de imunoglobulinas e anticorpos.  
+ 
+A Glicina (Gly) -  é útil para a reparação de tecidos danificados, ajudando a curar, melhora 
+o armazenamento de glicogênio, liberando glicose para as necessidades de energia, 
+promovendo uma próstata saudável. 
+ 
+Glutamina (Glu) - ajuda a construir e manter o tecido muscular, a evitar  perdas musculares, 
+aumenta a função cerebral e a actividade mental. 
+ 
+ 
+ 
+Alanina (Ala) - desempenha um papel importante na transferência de azoto a partir de 
+tecidos periféricos para o fígado, ajuda no metabolismo da glucose, protege contra a 
+acumulação de substâncias tóxicas que são libertadas nas células musculares quando a 
+proteína muscular quebra e fortalece o sistema imunológico, produzindo anticorpos.  
+ 
+Treonina (Tre) - ajuda a manter a quantidade adequada de proteínas no corpo, é importante 
+para a formação de colagénio, elastina e do esmalte dos dentes. Previne o acúmulo de gordura 
+no fígado, ajuda o seu metabolismo e assimilação. 
+ 
+Isoleucina -  é necessário para a formação da hemoglobina, estabiliza e regula os níveis de 
+açúcar no sangue e de energia, ajuda a cicatrização e reparação da pele, músculo, tecido e 
+ossos.  
+ 
+A leucina (Leu)  - interage com aminoácidos leucina isoleucina e valina para promover a 
+cicatrização de pele, músculo, tecido e ossos, reduz os níveis de açúcar no sangue e ajuda a 
+aumentar a produção da hormona do crescimento. 
+ 
+A lisina (Lys) - assegura a absorção adequada do cálcio, na produção de anticorpos que 
+combatem o herpes labial e surtos de herpes . 
+ 
+Mesmo possuindo excelentes qualidades gustativas e nutricionais, o pedúnculo de caju tem 
+sido desvalorizado por causa do grau de pericidade que é bastante alto, associado a ausência 
+de técnicas de manuseio e preservação adequadas e devido a intensa adstringência (presença 
+de taninos) (Meneses, 1995). 
+ 
+ 
+ 
+2.2.Características físico-químicas do Pedúnculo de Cajú 
+ 
+2.2.1 pH- Potencial Hidrogeniônico  
+ 
+O pH indica a neutralidade,  alcalinidade ou acidez de uma substância. Esta medida é 
+importante para determinação da deterioração do alimento com o crescimento de 
+microrganismos, actividade das enzimas, textura de geléias e gelatinas, retenção de sabor e 
+odor de produtos de frutas, estabilidade de corantes artificiais em produtos de frutos, 
+ 
+ 
+verificação de estado de maturação de frutas e escolha de embalagem. O pH têm sido usado 
+como indicativo da variação da acidez, pois quanto maior é o pH menor é a acidez da 
+subatância (Marques, 2006). 
+ 
+ 
+ 
+2.2.2.Sólidos Solúveis Totais (ºBrix)  
+ 
+Os sólidos solúveis totais indicam a quantidade, em gramas, dos sólidos que se encontram 
+dissolvidos no sumo ou na polpa de frutas,  designados como ºBrix e a medida que o fruto 
+fica mais maduro aumenta o ºBrix. 
+ 
+O valor do ºbrix   é a correspondência entre o índice de refração e a percentagem de sacarose 
+em soluções aquosas e os sólidos solúveis totais (SST) representam todos os constituintes 
+solúveis da fruta, principalmente os açúcares, ácidos orgânicos e sais em água. Os açúcares 
+constituem a maior parte dos sólidos solúveis totais. O conhecimento desta medida é de 
+grande importância nos frutos, tanto para o consumo "in natura" como para o processamento 
+industrial, pois, quanto maior for o teor dos sólidos solúveis totais da fruta menor será a 
+adição de açúcares, visto que, a água evaporar –se –á com maior facilidade e em menos 
+tempo, promovendo menor gasto de energia e maior rendimento do produto, permitindo um 
+processamento económico da fruta (Marques, 2006). O teor de sólidos solúveis totais no 
+pedúnculo de cajú é cerca de 10ºBrix (Machado, 2009). 
+ 
+ 
+2.2.3.Ácidez Total Titulável 
+ 
+Os ácidos orgânicos presentes em alimentos influenciam o sabor, o odor, a cor, a estabilidade 
+e a manutenção da qualidade. A acidez total titulável das frutas varia de 0,2 - 0,3% em frutas 
+de baixa acidez e de 2 - 6% em frutas com acidez elevada. O teor de acidez do pedúnculo de 
+cajú é de cerca de 4% (Machado, 2009). 
+ 
+O teor de acidez total  aumenta com o crescimento da fruta até o seu completo 
+desenvolvimento fisiológico e decresce com o seu amadurecimento. 
+ 
+A determinação da acidez total em alimentos é bastante importante porque através dela pode-
+se  obter dados valiosos em relação ao estado de conservação e processamento  da fruta, 
+ 
+ 
+sendo um atributo bastante importante devido ao gosto azedo que  é o principal fator na 
+aceitabilidade de frutos cítricos e os seus sucos.  
+ 
+A concentração dos ácidos orgânicos durante o desenvolvimento da fruta difere duma fruta 
+para a outra e  contribuem não só para a acidez mas, também, para o aroma característico da 
+fruta, (Marques, 2006). 
+ 
+ 
+2.2.4. Ácido Ascórbico (Vitamina C) 
+ 
+A vitamina C é uma das vitaminas essenciais e muito importante para o  funcionamento 
+adequado do organismo humano, é a que mais se degrada de todas as vitaminas. A sua 
+estabilidade baseia-se em meio ácido e à temperaturas baixas, na ausência de luz e do 
+oxigênio. É empregue como agente antioxidante para estabilizar a cor, e o aroma. Excelente 
+antioxidante e actua nas reações redox como transportador de elétrons para a cadeia 
+respiratória, regenerando diferentes substratos, de sua forma oxidada para a forma reduzida. 
+ 
+O alto valor nutritivo do pedúnculo do cajú se revela sob a forma de vitaminas e sais 
+minerais, encontrando-se entre as principais fontes de vitamina C, com teores em torno de 
+200 a 300 mg em 100 ml de suco (Marques, 2006). 
+ 
+A composição físico - química do pedúnculo de cajú, varia muito em função da variedade, 
+pois são conhecidas cerca de vinte variedades, classificadas segundo a conscistência da 
+polpa, o formato, o paladar e a cor da fruta, isto é, amarela, vermelha ou roxo-amarelada 
+(portalsãofrancisco, 2016). De acordo com Machado (2009), a caracterização do pedúnculo 
+de cajú também é influenciada pelo estado de maturação, tamanho, tempo de colheita, 
+variações ambientais e regionais.  
+ 
+A Tabela 1 apresenta as características físico-químicas do pedúnculo de cajú vermelho e 
+amarelo.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Tabela.1 – Caracterização físico-química do pedúnculo de cajú. 
+ 
+ 
+Determinações Vermelho Amarelo 
+Humidade (%) 86,07 86,62 
+Cinza (%) 0,38 0,37 
+Sólidos Solúveis Totais (°Brix) 10,38 10,66 
+Açucares Redutores (%) 8 7,95 
+Açucares não Redutores (%) 0,38 0,38 
+pH 4,48 4,27 
+Acidez Total Titulável (% do ácido cítrico) 0,33 0,41 
+Vitamina C (mg/100g) 234,74 251 
+Taninos (%) 0,4 0,35 
+Fonte: Machado (2009) 
+ 
+ 
+ 
+ 
+2.3. Colheita, Transporte e Lavagem do Pedúnculo de Cajú 
+ 
+A colheita do cajú é realizada quando o pedúnculo está completamente desenvolvido, com 
+o tamanho máximo, textura firme e coloração característica (vermelho-amarelado). 
+ 
+A colheita e o manuseio cuidadoso são procedimentos necessários para preservar a qualidade 
+do pedúnculo devido ao seu alto teor de humidade e fragilidade do epicarpo. Os principais 
+indicadores da colheita do cajú são:  a coloração, a firmeza e a composição do pedúnculo. 
+ 
+A sua conservação pós – colheita à temperatura ambiente não ultrapassa 48 horas devido a 
+sua extrema susceptibilidade ao ataque dos microrganismos fitopatológicos (Meneses, 
+1995). 
+ 
+Apesar de apresentar conteúdo elevado de taninos e assim possuir uma barreira química 
+contra os micro-organismos, não apresenta resistência física à penetração devido ao 
+conteúdo elevado de humidade e a película de revestimento ser bastante fina. Outro aspecto 
+negativo que contribui para a degradação pós-colheita rápida o qual pode se ver na tabela 2, 
+é a elevada taxa de perda de peso fresco durante o armazenamento, o que favorece 
+decisivamente o murchamento acentuado, portanto num estudo sobre armazenamento 
+refrigerado do pedúnculo de cajú, pode-se observar a sua extrema facilidade de degradação.  
+ 
+ 
+ 
+ 
+ 
+Tabela 2 - Percentagem da deterioração do pedúnculo de cajú armazenado à diferentes temperaturas. 
+1S 2S 3S 4S 5S 6S 
+Faixa de Temperaturas em ºC 
+0 4 6 8 10 44 
+0 
+3 13 46 100 _ _ 
+4,7 
+24 100 _ _ _ _ 
+9,2 
+100 _ _ _ _ _ 
+30,6 
+S – semanas após o armazenamento     Fonte: Meneses (1995). 
+ 
+ 
+Para o processamento industrial, a colheita deve ser feita manualmente, ou com um pau 
+comprido, provido de um saco na ponta. A colheita com um pau comprido desprovido de 
+um saco ou pela agitação de galhos não è recomendada por “ferir” o pedúnculo, provocando 
+a queda de flores e frutos que não se encnontram maduros e nem sempre possibilitar o 
+alcance dos pedúnculos maduros. O correcto manuseio pós-colheita è o primeiro passo para 
+garantir a boa apresentação do produto e a qualidade da matéria-prima para a industria. A 
+exposição ao sol ou a altas temperaturas depois da colheita provoca perda de água por 
+transpiração, aumenta a taxa de respiração e diminui a vida útil, e, como resultado, perde-se 
+o brilho, firmeza e ficam menos doces (Paiva et al, 2000). 
+ 
+Enquanto espera-se pelo transporte, as caixas devem ser empilhadas na sombra. A queda do 
+cajú ao sol e a utilização de caixas inadequadas, com superfícies ásperas ou cortantes, 
+provocam ferimentos nas frutas e podem inutilizà-los para o processamento podendo 
+permitir a contaminação por microorganismos. Os pedúnculos de cajú devem ser 
+transportados nas próprias caixas de colheita (figura1), o qual devem possuir pouca altura 
+para evitar sobreposição demasiada o que acataria no amassamento deles, perdas de textura 
+e do suco. Em geral essas caixas devem ter a  capacidade para 17,6 litros ou seja 8-9kg de 
+fruta, com as seguintes dimensões: 0,5m x 0,22m x 0,16m. As caixas devem ser 
+cuidadosamente colocadas no veículo e nunca atiradas. O empilhamento deve permitir a 
+ventilação entre elas. O condutor deve ser orientado de modo a conduzir com cuidado , 
+evitando velocidades altas e buracos ou lombas durante o transporte (Paiva et al, 2000). 
+ 
+  
+ 
+ 
+ 
+ 
+Figura 1. Exemplo de transporte do cajú em caixas apropriadas. 
+ 
+ 
+A lavagem deve ser feita logo após a chegada dos pedúnculos, com objectivo de remover 
+poeira  e reduzir a temperatura “calor do campo”, colocando – os em  contacto com água fria 
+(20 ºC) aproximadamente, por imersão em um tanque de lavagem. Em seguida eles são 
+levados para um outro tanque para a sanitização por imersão em água clorada (100ml de 
+hipoclorito de sódio em 10 litros de água) deixando-se o pedúnculo imerso durante 15 
+minutos. O processo de lavagem em água limpa e sanitização, são etapas importantes para a 
+redução do número de microrganismos no produto final passando de seguida para a fase de 
+selecção com a finalidade de separar frutos verdes, apodrecidos e fermentados, 
+excessivamente machucados e dilacerados, daqueles saudáveis e maduros, visando a 
+adequação da matéria-prima ao processamento (Paiva et al, 2000). 
+ 
+ 
+2.4. Processamento Industrial do Pedúnculo de Cajú 
+ 
+O pedúnculo de cajú possui um amplo potencial de aproveitamento industrial, gerando 
+diversos produtos oriundos de sua fração líquida, tais como: suco integral, clarificado, 
+concentrado, néctares, refrigerantes, bem como, da sua fração sólida, como: doces, 
+compotas, produtos desidratados, etc. Grande parte destes produtos possuem um processo 
+de produção industrial bem definido, porém alguns ainda são obtidos de forma artesanal, 
+ 
+ 
+enquanto outros possuem um grande potencial de industrialização (figura 2), mas com 
+processos tecnológicos ainda em desenvolvimento (Filho, et al. 2000). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Pedúnculo de Cajú 
+Produtos potênciais 
+ 
+Suco integral 
+ 
+ 
+ 
+ 
+ 
+�
+Néctar
+ 
+ 
+ 
+natura”
+ 
+Fruto “in 
+ 
+ 
+ 
+Produtos 
+ 
+Artesanais 
+ 
+ 
+ 
+ 
+ 
+Produtos de culinária 
+Caju ameixa 
+ 
+ 
+ 
+ 
+Doces e 
+ 
+Cajuina 
+compotas 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 2. Alternativas tecnológicas de aproveitamento de Pedúnculos de cajú. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+As etapas do processo de produção da polpa de cajú conservada por congelamento e 
+preservada quimicamente são relacionadas no fluxograma de produção na figura 3: 
+                                               Colheita 
+ 
+ 
+Transporte 
+ 
+ 
+ 
+Recepção e Pesagem 
+ 
+ 
+ 
+ 
+Lavagem 
+(água clorada á 10ppm) 
+ 
+ 
+Refugo 
+ 
+ 
+Selecção 
+ 
+ 
+ 
+Descastanhamento 
+ 
+Castanha 
+ 
+ 
+Desintegração 
+ 
+     
+ 
+ 
+Despolpamento 
+Resíduos 
+ 
+ 
+ 
+Tratamento Térmico 
+(T=85ºC; t=10-15 min) 
+ 
+ 
+Enchimento 
+ 
+Resfriamento 
+ 
+ 
+ 
+ 
+Congelamento 
+ 
+ 
+Preservação química 
+ 
+ 
+ 
+ 
+Armazenamento 
+ 
+Enchimento 
+ 
+ 
+ 
+Figura 3. Etapas do processo de produção de polpa de cajú conservada por congelamento e preservada quimicamente. 
+ 
+ 
+ 
+ 
+ 
+3.DESPOLPAMENTO 
+ 
+É o processo utilizado para extrair a polpa do cajú do material fibroso. O despolpamento 
+deve ser procedido da trituração do material em um desintegrador ou liquidificador 
+industrial. Nesta etapa os despolpadores de aço inoxidável, providas de peneiras de diversos 
+tamanhos de furos são os equipamentos mais utilizados (Figura 4). Neste processo o 
+pedúnculo do cajú pode ou não ser usado inteiro, onde a  polpa é recolhida em baldes limpos 
+(de aço inoxidável ou PVC) por baixo do equipamento e os resíduos sólidos são retirados 
+pela parte de frente da despolpapadeira. (Paiva et al, 2010). 
+ 
+ 
+ 
+ 
+Figura 4. Exemplo de despolpadeira de aço inoxidável. 
+ 
+ 
+ 
+ 
+3.1. Pasteurização 
+ 
+A polpa obtida é bombeada para uma unidade de pasteurização através de um pasteurizador 
+tipo tubular (Figura 5), onde sofre um aquecimento a 92ºC por dois minutos seguido de 
+resfriamento à 6ºC, visando eliminar os microrganismos patogénicos e manter a estabilidade 
+microbiológica. De seguida, poderá ser enchida geralmente por uma enchedora horizontal 
+manual ou mecânica, a qual permite encher o produto na apresentação desejada, isto é, em 
+embalagem plástica com dimensões de acordo com a necessidade do mercado. Para o 
+consumo doméstico recomenda-se o enchimento em embalagens plásticas (Figura 6)  de 
+ 
+ 
+100ml a 200ml para preparar um a dois litros de sumo de cajú respectivamente. Para atender 
+demandas institucionais, recomenda-se que seja embalado em sacos plásticos com a 
+capacidade acima de um kilo. Pode-se também fornecer polpa de cajú em embalagens rígidas 
+do tipo baldes com tampa hermética, quando se destina a mercados mais abrangentes ou 
+distantes do local da origem da fábrica (Paiva et al, 2010). 
+ 
+ 
+ Figura 5. Exemplo de Pasteurizador tipo tubular. 
+ 
+ 
+ 
+ 
+3.2.Conservação da Polpa 
+ 
+3.2.1. Conservação da Polpa de Cajú por Congelamento 
+ 
+Após a pasteurização a polpa pode ser embalada inicialmente em sacos de polietileno (Figura 
+6) e congelada á -30ºC em um túnel de congelamento rápido ou em câmaras de 
+congelamento. Os sacos com polpa congelada são acondicionados em outras embalagens 
+plásticas com 4 a 5 unidades e encaminhados para a câmara de armazenagem a -20ºC para a 
+comercialização. A rapidez na execução desta etapa favorece a preservação das 
+características originais da fruta, proporcionando qualidade ao produto final. Neste caso, 
+deve-se utilizar câmaras apropriadas, com circulação de ar frio ou “freezer” sendo que o uso 
+de congeladores domésticos não têm sido  recomendado. O congelamento deve ser realizado 
+imediatamente após o enchimento da polpa. (Paiva et al, 2010). 
+ 
+ 
+ 
+3.2.2. Conservação da Polpa de Cajú Preservada Quimicamente 
+ 
+Para a polpa preservada quimicamente, o aquecimento deve ser feito em um tanque aberto á 
+temperatura de 85ºC, permanecendo nesta temperatura durante 10 a 15 minutos momento 
+em que devem ser incorporados aditivos químicos. Devem ser  empregues aditivos químicos 
+em dosagens permitidas pela legislação de forma a manter a polpa em condições adequadas 
+para a conservação por um período de cerca de 12 meses, dependendo das condições 
+empregues no seu preparo, podendo ser usados  os seguintes conservantes: ácido benzóico e 
+benzoato de sódio no limite máximo de 0,1%, ácido sórbico ou sorbatos (PIV) no limite 
+máximo de 0,2% (PV) ou derivados que forneçam dióxido de enxofre no limite máximo 
+0,02%. O dióxido de enxofre só deve ser utilizado no caso em que a polpa é pasteurizada e 
+resfriada antes da adição de produtos químicos (Paiva et al, 2010). 
+ 
+A polpa de cajú também pode ser preservada em tambores plásticos ou metálicos com 
+capacidade de 20 á 200kg. Nesse caso, após submetida ao tratamento térmico e incorporado 
+os aditivos químicos, é enchida em sacos plásticos de alta resistência, retirando-se o ar com 
+bomba de vácuo e fechando-se hermeticamente a embalagem. O armazenamento da polpa 
+preservada quimicamente deve ser em local seco e ventilado, á temperatura ambiente (Paiva 
+et al, 2010). 
+ 
+ 
+Fonte: www.raffineealimentos.com.br 
+ 
+Figura 6. Exemplo de conservação da polpa por congelamento. 
+ 
+ 
+ 
+A Tabela 3 apresenta as características físico-químicas da polpa do pedúnculo de caju nativo, 
+desenvolvidas pela Embrapa Agro-Industrial Tropical - Brazil, onde verifica-se o seu valor 
+nutricional por seu alto teor de vitamina C, o bom conteúdo de açúcares, sendo ainda uma 
+fonte regular de cálcio e fósforos .  
+ 
+ 
+Tabela 3- Caracterização fisico-química da polpa do pedúnculo de cajú. 
+ 
+Valores 
+    
+Determinações  Médios 
+    
+Açúcares redutores (%)  8 
+  
+Vitamina C (mg/100ml) 261 
+  
+Acidez Total (em ácido cítrico %) 0,35 
+  
+Sólidos solúveis (ºBrix)  10,7 
+  
+Taninos (%)  0,35 
+  
+Cálcio (mg/100g) 14,7 
+  
+Fósforo (P 2 O5) (mg/100g) 32,55 
+  
+Umidade (%)  86,33 
+  
+pH      3,9 
+Fonte: Soares (1986) citado por Sousa Filho et al.(2000). 
+    
+ 
+ 
+ 
+ 
+4. FORMULAÇÃO DO NÉCTAR 
+ 
+Néctar é uma bebida não fermentada que é obtida pela diluição do extracto de fruta com água 
+potável adicionado de açúcar. O néctar de frutas é uma mistura de polpa de fruta com açúcar 
+resultando em produto pronto para o consumo (Brasil, 2003). 
+ 
+O néctar não tem obrigatoriedade de conservar todas as características originais de um suco 
+natural de fruta, ele contém cerca de 20 á 30 % de polpa de fruta e é permitido somente 
+adição do açúcar, não sendo permitido adição de corantes e de aromatizantes. 
+ 
+Quando a fruta não tem a especificação mínima da polpa normativa, considera-se que o 
+néctar de determinada fruta deve conter no mínimo 30% da respectiva polpa, ressalvando o 
+caso de fruta com acidez ou conteúdo de polpa muito elevado ou sabor muito forte, e, neste 
+caso, o conteúdo da polpa não deve ser inferior a 20% . 
+ 
+ 
+ 
+Na formulação do néctar deve-se colocar a polpa da fruta em  um tanque que contenha  um 
+agitador onde é misturada com glicose de milho ou açúcar invertido e depois  faz-se a 
+diluição com água potável tratada mas isenta de cloro, para evitar a formação de clorofenois 
+no produto final, originando sabores desagradáveis (abgtecalim.yolasite.com). 
+ 
+ 
+ 
+4.1.Homogeneização do néctar 
+ 
+Os homogeneizadores são usados com o objectivo de  reduzir as partículas (fibras) a um 
+tamanho uniforme, tendo em vista a estabilidade física do produto final, e os mais utilizados 
+nesta operação são: Moinho coloidal e homogeneizador de pistão. Em seguida o néctar 
+homogeneizado passa ao processo de desaeração que consiste na retirada do ar incorporado 
+no produto para evitar a oxidação do mesmo (abgtecalim.yolasite.com). 
+ 
+O néctar homogeinizado e  previamente aquecido (50-55ºC) para maior eficiência do 
+processo  é bombeado para o desaereador (equipamento que funciona como vácuo) (Figura 
+7). Se a polpa sofreu inactivação enzimática, então, um tratamento térmico de 90ºC , que 
+visa a eliminação de micro-organismo por um tempo de 15 segundos é suficiente para a 
+conservação do produto, por outro lado, se a polpa não sofreu inactivação enzimática, esse 
+tratamento térmico deverá ser de 91-95ºC por um tempo de 30 Segundos, seguido de 
+enchimento pelo processo asséptico (abgtecalim.yolasite.com). 
+ 
+ 
+Figura 7. Exemplo de homogenizador - desaerador para néctar de frutas. 
+ 
+ 
+ 
+ 4.2. Néctar de cajú 
+ 
+Na unidade produtora do néctar de cajú, a polpa de cajú já preparada e sem ser pasteurizada 
+é encaminhada à unidade de formulação para a obtenção do néctar pela adição de água, ácido 
+cítrico e sacarose (Tabela 4). Após a formulação, o néctar é pré-aquecido á temperatura de 
+70ºC por 2 minutos em permutadores de calor do tipo tubular ou  placas, desaerado à vácuo 
+e homogeneizado em homogeneizadores do tipo pistão ou moinho coloidal. O néctar 
+homogeneizado é enchido a quente (HOT-FILL) em garrafas de vidro de 250 mL, sendo 
+então encaminhado para um tratamento térmico por imersão em água a 100ºC por 5 minutos 
+(Figura 8). De seguida as garrafas devem ser resfriadas por aspersão com água até a 
+temperatura de 28º a 32ºC e então rotuladas, encaixotadas e armazenadas (Souza 
+Filho,1987).                                  
+                                                        Polpa de Cajú 
+ 
+Mistura 
+ 
+açúcar, água e ácido cítrico 
+ 
+ 
+ 
+Pré-Aquecimento 
+T= 70ºC; t=2min 
+ 
+ 
+ 
+ 
+ 
+ 
+Desaeração 
+ 
+ 
+ 
+ 
+Homogeneização 
+ 
+ 
+ 
+Tratamento térmico 
+ 
+T=100; t=5min 
+ 
+ 
+Embalagem 
+ 
+ 
+ 
+Resfriamento 
+ 
+(T= 28-32ºC) 
+ 
+ 
+ 
+Rotulagem 
+ 
+ 
+ Armazenamento 
+ 
+Figura 8. Fluxograma de processamento do néctar de cajú. 
+ 
+ 
+ 
+ 
+Tabela 4 - Formulação do néctar de cajú. 
+ 
+Componente Proporção 
+Polpa (L) 1 
+Açucar (kg) 0,8 
+Água (L) 4 
+Ácido Cítrico (g) 1 
+Fonte: Souza filho (1987) 
+ 
+ 
+ 
+ 
+As  características químicas e físico-químicas do néctar de cajú obtido são descritos na 
+Tabela 5. 
+ 
+ 
+ 
+Tabela 5 - Características químicas e físico-químicas do néctar de cajú. 
+ 
+  
+Determinações  Valores médios 
+Sólidos solúveis (ºBrix)  14,65 
+Acidez Total (em ácido cítrico %)  0,22 
+pH  
+3,67 
+Açúcares redutores (%)  12,31 
+Açúcares totais (%)  
+13,8 
+Tanino (%)  
+49,3 
+Vitamina C (mg/100mL)  18,02 
+Pigmentos solúveis em água (420 nm)  95,08 
+Fonte: Souza Filho, 1987 
+ 
+ 
+ 
+ 
+5.TIPOS DE EMBALAGENS 
+ 
+As embalagens apresentam uma ampla variedade de formas, modelos e materiais e fazem 
+parte da nossa vida diária de diversas maneiras, proporcionando benefícios que justificam a 
+sua existência. As definições de embalagens para alimentos são numerosas e todas têm como 
+ponto comum a necessidade de proteger os produtos alimentícios durante o manuseio e 
+armazenamento, preservando-os, para o posterior consumo  pós-colheita, além de protegê-
+los contra danos metálicos e perda de qualidade (Maia et al, 2007). 
+ 
+ 
+ 
+A principal finalidade da embalagem é proteger os alimentos contra qualquer tipo de 
+deterioração, seja de natureza química, física ou biológica, desde do seu acondicionamento 
+até ao consumo final, assegurando a manutenção de suas próprias características por um 
+longo período de tempo (Smith et al, 2005). 
+ 
+Os vários tipos de embalagem são agrupados segundo a sua matéria-prima sendo: 
+Recipientes metálicos rígidos e flexíveis; plásticos rígidos e semi-rígidos; plásticos flexíveis; 
+vidros; papéis flexíveis laminados multi-foliado; caixas de papelão e embalagens de madeira  
+(Maia et al, 2007). 
+ 
+ 
+ 
+5.1.Embalagem metálica 
+ 
+Os materiais metálicos empregues nos sistemas de embalagens incluem basicamente os 
+derivados do aço e os de alumínio, os quais são utilizados para a fabricação de latas, tampas, 
+baldes, tambores (Figura 9). Dependendo das especificações, em função das exigências 
+específicas de cada produto, existem várias configurações com relação aos metais 
+componentes do aço e das ligas de alumínio. As embalagens metálicas, em especial as de 
+aço, apresentam muitas vantagens em relação aos outros materiais:  barreira aos gases, 
+aromas e odores; hermeticidade, resistência térmica; resistência mecânica; versatilidade de 
+formatos e tamanhos; boa apresentação visual, boa variedade de aplicações, proteção ao 
+produto, resistência aos insetos e roedores; reciclabilidade; velocidade de fabricação. As 
+desvantagens são: corrosão interna e externa, quando mal especificada, não visualização do 
+produto e a tampa é convencional com difícil abertura (Frutal, 2015). 
+As embalagens em aço de três peças representam uma interessante alternativa de embalagem 
+para néctares de frutas, desde que a proteção do material metálico, por meio de vernizes, 
+ocorra de forma adequada. A interação lata de aço/alimento, considerando-se o enlatamento 
+de produtos ácidos, é caracterizada principalmente pela dissolução dos metais que 
+constituem a embalagem, o ferro e o estanho, quando do uso de folhas-de-flandres e ferro e 
+cromo, quando do uso de folhas cromadas, o que pode levar a uma alteração das 
+características sensoriais do produto, podendo limitar a sua vida-de-prateleira (Nunes et al, 
+2007). 
+ 
+ 
+As embalagens de alumínio apresentam características semelhantes às citadas acima, 
+todavia, destacam-se a resistência à corrosão atmosférica, a condutividade eléctrica e o efeito 
+visual da superfície a qual reforça sua nobreza. Em contra partida, apresenta-se como um 
+dos materiais de maior custo em relação aos demais metálicos, plásticos, celulósicos e de 
+vidro. Também, não é viável tecnicamente, a fabricação de latas de três peças, devido à 
+dificuldade de fechamento do corpo pelos processos usados nas latas de aço; devido a menor 
+resistência à deformação, as latas de alumínio de formato cilíndrico geralmente requerem a 
+injeção do gás carbônico ou do nitrogênio ao produto, para evitar o amassamento durante a 
+comercialização (Frutal, 2015). 
+Em função da espessura, os laminados de alumínio classificam-se em: chapas e folhas. As 
+chapas apresentam espessura superior 0,15 m, disponíveis nas formas planas, bobinas e 
+discos. As folhas utilizadas no segmento de embalagens flexíveis apresentam espessura 
+variável com tipo de aplicação, geralmente acima de 0,005 m; quanto menor a espessura 
+maior é a possibilidade de formação de microfuros. Acima de 0,025 m a quantidade de 
+microfuros fica reduzida, espessura acima da qual tornam as folhas de alumínio um material 
+impermeável ou de máxima barreira aos gases e vapor de água (Frutal, 2015). 
+ 
+  Figura 9. Exemplo de embalagem metálica para néctar de frutas. 
+ 
+ 
+ 
+ 
+ 
+5.2.Embalagem de Plástico 
+ 
+O plástico é formado a partir do petróleo, que é constituído por uma mistura de compostos 
+orgânicos, principalmente hidrocarbonetos (ricos em carbono e hidrogênio). A palavra 
+“plástico” vem do grego plastikos, que significa “próprio para ser moldado ou modelado”. 
+Os plásticos são originados a partir de resinas derivadas do petróleo e pertencem ao grupo 
+dos polímeros, que são longas cadeias moleculares. Existem vários tipos de plásticos que são 
+determinados pela extensão e estrutura dos polímeros. De maneira básica, é possível dividir 
+os plásticos em dois grandes grupos: 
+Termoplásticos: essa é a categoria dos plásticos mais “moles”. Eles não sofrem alteração 
+em suas estruturas químicas após o aquecimento. Portanto, podem ser fundidos novamente 
+para constituírem um novo material.  
+O Exemplo desse tipo de plástico são: o polipropileno (embalagens de massas e biscoitos), 
+polietileno de alta densidade (embalagens de detergentes), polietileno de baixa densidade 
+(sacolas de mercado), polietileno tereftalato (garrafas PET), poliestireno (potes de iogurte), 
+policloreto de vinila (embalagens de água mineral), entre outros . 
+Termorrígidos: são plásticos que não se fundem com o aquecimento, sendo também 
+insolúveis e não recicláveis. Lentes de óculos, certos utensílios de cozinha e algumas peças 
+plásticas de aparelhos televisores são plásticos termorrígidos (Ecycle, 2015). 
+ 
+5.3.Embalagem PET 
+ 
+As garrafas PET são produzidas por um processo conhecido como injecção de pré-forma 
+seguido de sopro de molde em outra máquina para formar a garrafa final (Figura 10). PET é 
+um polímero cristalino que apresenta elevada resistência mecânica, térmica e química 
+(Negrão e Camargo, 2008), sendo uma resina muito popular como material de embalagem, 
+especialmente na produção de embalagens rígidas como as garrafas. A tecnologia impulsiona 
+a optimização da embalagem permitindo melhor resistência mecânica, aparência nobre, 
+brilho e transparência e outras funcionalidade que conduzirão a escolha de PET para muitos 
+outros produtos com destaque para água e outros líquidos alimentares (Sarantópoulos et al, 
+2002). 
+ 
+ 
+ 
+Apartir de um certo tempo, as indústrias de bebidas, passaram a utilizar o PET, pois o mesmo 
+faz muito sucesso no mercado por se adaptar melhor aos planos logísticos das empresas em 
+relação ao vidro, além de eliminar todo processo de tratamento de limpeza das garrafas, ainda 
+diminui o espaço necessário para o seu armazenamento (Perreira et al, 2006). 
+ 
+ 
+ 
+ 
+  
+Figura 10. Exemplo de embalagens de PET para néctares de frutas. 
+ 
+ 
+ 
+ 
+ 
+5.4.Embalagem de vidro 
+ 
+O vidro oferece vantagens em relação a outras embalagens principalmente com relação a 
+reciclagem que atendem as leis de controlo ambiental. Estas embalagens podem ser lavadas 
+e reutilizadas, não sofrem perda de qualidade e pureza e são 100% recicláveis (Abre, 2014). 
+ 
+A embalagem de vidro para produtos alimentícios consiste em geral, de silicatos de sódio e 
+cálcio com pequenas quantidades de óxido de alumínio, borato e silicato de bário incluindo 
+óxido de magnésio aumentando-se a dureza do vidro, possui inércia química e física (não se 
+deteriora) e torna um material adequado para acondicionar bebidas entre outros alimentos, é 
+ 
+ 
+um importante protector de gases, vapor de água, aromas e vapores orgânicos e permite 
+maior vida de prateleira aos produtos (Figura 11) (Maia et al, 2007). 
+ 
+Na indústria de alimentos sua transparência é considerada como uma vantagem de marketing 
+significante, carregando imagem de um produto de qualidade. Sua resistência ao calor 
+assegura que os recipientes não deformarão durante o enchimento a quente, porém estão 
+sujeitos a quebra quando submetidos a choque térmico brusco. Outra desvantagem da 
+embalagem de vidro é por ser muito pesada e frágil podendo causar danos mecânicos 
+(Miclellan e Padilla-Zakour, 2005). 
+ 
+ 
+ 
+ 
+Figura 11. Exemplo de embalagens de vidro para néctares de fruta. 
+ 
+ 
+ 
+ 
+5.5.Embalagem Tetra Pak e Tetra Brik 
+Tetra Brik é o nome de uma embalagem tipo longa vida produzida pela Tetra Pak, em 
+formato de tijolo  (brick, em inglês). A embalagem Tetra Brik foi introduzida em 1963, após 
+um longo processo de desenvolvimento tendo como ponto de partida a Tetra classic, uma 
+embalagem de material semelhante mas em formato Tetraédrico, de onde vem o nome 
+"Tetra" da linha de produtos.  
+ 
+ 
+A primeira embaladeira Tetra Brik passou a operar em Motala, na Suécia central. Devido ao 
+seu eficiente aproveitamento do espaço e  a melhor distribuição e armazenamento permitidos 
+pelo seu formato rectangular, a Tetra Brik se tornou em pouco tempo um campeão de vendas 
+tanto na Suécia como internacionalmente, principalmente a partir da década de 1970. 
+Embalagens denominadas longa vida, possui uma estrutura de camada que fornece a 
+protecção ideal aos alimentos nela armazenados. Ela é formada por três materiais: papel, 
+plástico e alumínio distribuídos em seis camadas (Figura 12). O papel utilizado é duplex com 
+uma camada branca que não utiliza cloro para o seu clareamento com a  função de dar o 
+suporte mecânico.  
+ 
+Possui o alumínio extraído do bauxite em uma das camadas com função de proteger contra 
+a entrada de luz, do oxigénio e impedir a troca de aromas entre o alimento e o meio externo.  
+O plástico usado é o polietileno de baixa densidade que é extraído do petróleo, o qual tem a 
+função de isolar o papel da humidade, impedir o contacto do alumínio com o alimento e 
+servir como elemento de adesão dos outros materiais presentes na estrutura.  
+Tendo sido devidamente esterilizado e estando adequadamente protegido pela embalagem, 
+o produto é totalmente seguro e saudável para o consumidor. Os produtos não precisam ser 
+armazenados na geleira antes de abertos. O tratamento pelo qual o produto é submetido na 
+indústria denominado ultra pasteurização (UHT), elimina todos os microrganismos que 
+poderiam contaminá-lo.  
+Este tipo de embalagem permite a reciclagem, sendo que após a separação das fibras do papel 
+retornam a cadeia produtiva sob a forma de vários objectos tais como placas e telhas 
+(Tetra_Brik e Oldid, 2014).  
+ 
+ 
+ 
+  
+Fonte: tecnicogestaodoambiente.blogspot.com; receitatodahora.com.br 
+Figura 12. Embalagens de tetra pak para néctares de frutas. 
+ 
+ 
+ 
+ 
+ 
+6.AVALIAÇÃO SENSORIAL 
+ 
+A análise sensorial é a ciência ou a disciplina científica usada para medir, analisar e 
+interpretar as reacções às características dos alimentos percebidas pelos cinco sentidos 
+humanos: visão, olfacto, audição, tacto e paladar. Estas características, ou atributos 
+sensoriais, tendem a ser percebidos na seguinte ordem: aparência, aroma, consistência e 
+sabor. No entanto, no processo de percepção, a maioria ou todos os atributos se sobrepõem, 
+ou seja, a pessoa recebe uma camada quase simultânea de impressões sensoriais. Todos os 
+cinco sentidos são utilizados na percepção do alimento, determinando a qualidade específica 
+da sensação gerada (Morares, 1993)..  
+ 
+O aspecto sensorial estimula à escolha do produto alimentício pelo consumidor. Um 
+alimento de boa qualidade apresenta características sensoriais agradáveis, próprias do 
+produto, tais como: coloração, consistência, aroma e sabor característicos . Quando estes 
+atributos não atendem às expectativas do consumidor, outros produtos com sabor e tempo 
+de prateleira esperados serão escolhidos. Particularmente, o paladar e o olfacto estão 
+intimamente ligados à apreciação do alimento, e consequentemente, ao seu consumo. No 
+entanto, a relação entre o alimento e o consumidor é muito mais complexa, é o resultado da 
+interacção entre alimento e o homem, com suas características próprias (tais como: 
+ 
+ 
+aparência, sabor e textura) interagindo com as condições fisiológicas, psicológicas, 
+sociológicas e culturais do individuo (Morares, 1993).  
+O desenvolvimento de sabores e odores estranhos nos alimentos perecíveis ou semi -
+perecíveis pode ser causado principalmente por:  
+(1) Reacções enzimáticas, ocasionando modificações na cor, sabor e textura dos alimentos. 
+As principais alterações são o escurecimento, aparecimento do gosto amargo, sabor de ranço 
+e perda de firmeza;  
+(2) Reacções químicas que prejudicam principalmente o sabor dos alimentos, podem ser 
+ocasionadas devido a presença da luz, oxigênio livre no interior das embalagens, vestígios 
+de metais decorrentes de defeitos nas embalagens e calor;  
+(3) Alterações por microrganismos (fungos ou mofo, leveduras e bactérias) causando não só 
+a destruição das características sensoriais do alimento, como também, a produção de toxinas 
+de alta periculosidade. Estas alterações são dependentes das características dos alimentos e 
+dos microrganismos neles actuantes. 
+ 
+A maioria das técnicas de processamento de alimentos utilizadas para evitar ou retardar estas 
+alterações não exerce sua função sem causar perdas nas características nutricionais e 
+sensoriais dos alimentos in natura. Desta maneira, o estudo da qualidade sensorial de um 
+produto faz da análise sensorial uma poderosa ferramenta para indústrias e instituições de 
+pesquisa em todas as etapas de produção de um alimento, desde a concepção e 
+desenvolvimento de um novo produto até a padronização e avaliação do nível de qualidade 
+do produto final (Morares, 1993). 
+ 
+Em programas de controle de qualidade, esta interação tem sido usada para medir a qualidade 
+do alimento, onde uma equipe pode dar respostas que indicarão a preferência do consumidor, 
+diferenças e preferências entre amostras, seleção do melhor processo e determinação do grau 
+ou nível de qualidade do produto, possibilitando aplicações diversas de metodologia 
+quantitativa. Os requisitos de aceitabilidade do produto podem ser obtidos empregando-se 
+métodos de análise dirigidos às expectativas do consumidor com avaliadores treinados ou 
+não treinados. Em provas orientadas para a preferência deste, seleciona-se uma amostra 
+aleatória que atenda aos parâmetros a serem estimados e a variabilidade das variáveis 
+ 
+ 
+inerentes à população, pré-fixados erro e nível de significância das estimativas. É necessário, 
+por vezes, um grande contingente de possíveis usuários, que manifestarão as suas 
+preferências (IFT, 1995).   
+ 
+Em provas com consumidores não se emprega avaliadores treinados, nem selecionados por 
+alguma agudeza sensorial, eles devem ser os usuários do produto. Os métodos sensoriais 
+podem ser classificados em:  
+ 
+1-Teste analítico: teste de diferença (teste de escolha forçada, teste de comparação múltipla, 
+sensibilidade, ordenação, grau de diferença);  
+ 
+2-Teste descritivo (perfil de sabor, perfil de textura, análise descritiva quantitativa), análise 
+expectrum, técnica tempo intensidade, avaliação de atributos; 
+ 
+3-Teste de aceitação e do consumidor, teste de preferência (preferência pareada, ordenação 
+de preferência, pareado múltiplo ou ordenação múltipla);  
+ 
+4-Teste de aceitação, escala hedônica, escala do ideal, escala do atributo, diagnóstico e de 
+escalas de intensidade.  
+ 
+No entanto para objectivo específico são elaborados métodos de avaliação diferenciada que 
+visam a obtenção de respostas mais adequadas no perfil pesquisado pelo produto, (Figura 
+12). O resultado que deve ser expresso de forma específica conforme o teste aplicado e 
+estudado estatisticamente concluindo assim a viabilidade do produto (IFT, 1995). 
+ 
+ 
+ 
+6.1.Escala hedônica 
+ 
+A escala hedônica é usada para medir o nível de preferência dos produtos alimentícios por 
+uma população relatando os estados agradáveis e desagradáveis no organismo. A escala 
+hedônica afetiva mede o gostar ou desgostar de um alimento. A avaliação da escala hedônica 
+é convertida em escala numérica e analisada estatisticamente para determinar a diferença no 
+grau de preferência entre amostras (IFT, 1995). 
+ 
+ 
+ 
+A qualidade sensorial do alimento e a manutenção da mesma favorece a fidelidade do 
+consumidor a um produto específico. 
+ 
+ 
+ 
+Figura 13. Preparação de amostras para análise sensorial. 
+ 
+ 
+ 
+ 
+7. PARTE  EXPERIMENTAL 
+ 
+7.1. Produção da Polpa 
+ 
+Os pedúnculos foram colhidos no distrito de Manhiça, Província de Maputo e  transportados 
+para o Laboratório de Alimentos da Faculdade de Engenharia da Universidade Eduardo 
+Mondlane, onde foram descastanhados e lavados em água corrente a 20  ºC.  Depois de 
+seleccionados  e submetidos a sanitização com hipoclorito de sódio na concentração de 200 
+ppm por 15 minutos, foram cortados em pedaços e retirada uma amostra para análise de 
+humidade, actividade da água, cinzas e a cor. Seguidamente foi feita a despolpa através de 
+um processador de alimentos de marca OTIMO, model YD-HB (SR-696062-5). A polpa 
+obtida foi filtrada com uma peneira de  0,05µ de abertura conforme se pode ver nas Figuras 
+14 e 15. Nesta fase foram tiradas amostras da polpa obtida para análises fisico-quimicas.  
+ 
+ 
+AB 
+Figura. 14. Colheita do caju no distrito da Manhiça (A); Sanitização do pedunculo de caju(B). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AB 
+ 
+Figura 15. Despolpamento  do pedúnculo e filtração da polpa de caju . 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7.2. Produção dos néctares 
+ 
+Na formulação dos néctares, utilizou-se a  polpa obtida e filtrada  tendo-se como variáveis 
+independentes a proporção de polpa (v/v) e a proporção de açúcar (m/v) com adição da água 
+perfazendo 100% da amostra.  
+ 
+2
+Foi aplicado o delineamento composto central 2, com três repetições, totalizando cinco 
+ensaios (Tabela 6).  
+ 
+ 
+Tabela 6 - Quantidade de polpa e açúcar para cada formulação. 
+   
+Ensaios % Polpa % Açúcar 
+1 30,0 8 
+2 30,0 16 
+3 60,0 8 
+4 60,0 16 
+5 45,0 12 
+ 
+Por exemplo:  
+Para 300 ml de néctar do ensaio 1: 90 ml de polpa + 24g de açúcar  + 186 ml de água. 
+ 
+ 
+Formulados os néctares, estes foram engarrafados e pasteurizados em banho maria à 70 ºC 
+por 5 minutos, seguidos de arrefecimento brusco em água corrente á temperatura ambiente 
+e armazenados a uma temperatura de ± 20 ºC (Figura 16). 
+ 
+  
+A       B 
+ 
+Figura 16. Pasteurização dos néctares de cajú (A); Armazenamento dos néctares de cajú produzidos (B). 
+ 
+ 
+ 
+ 
+7.3. Análises Físico – Químicas 
+ 
+As análises físico–químicas da polpa de cajú e das formulações dos néctares produzidos  e 
+pasteurizados, realizaram-se em intervalos de 15 em 15 dias, tendo em conta a descrição dos 
+parâmetros  seguinte: 
+ 
+ 
+7.3.1.Determinação da Humidade  e Cinzas no Pedúnculo de Cajú 
+ 
+O teor da humidade em percentagem foi determinado pelo cálculo da diferença entre a  massa 
+da amostra inicial e final dividido pela massa inicial (Instituo Adolfo Lutz, 2005).  
+ 
+Material usado: 
+ 3 cadinhos de porcelana, 
+ Espátula; 
+ Balança analítica; 
+ Estufa e, 
+ mufla 
+ 
+ 
+Procedimento: 
+Pesou-se 5 gramas da amostra em um cadinho de peso conhecido numa balança analitica de 
+marca Nahita, model 5034/120.120g/0,1 e colocou-se na estufa de marca memmert schutzart 
+DIN 40050-ip20 à temperatura de 105°C durante 4 horas. De seguida pesou-se a amostra 
+seca e fez-se os cálculos, usando a fórmula seguinte: 
+ 
+𝑚𝑖−𝑚𝑠
+𝐻𝑢𝑚𝑖𝑑𝑎𝑑𝑒= ×100% 
+𝑚𝑖
+ 
+mi = massa inicial do pedúnculo (g) 
+ms = massa seca do pedúnculo (g) 
+ 
+Obtendo-se o peso seco da amostra, os cadinhos foram colocados numa mufla de marca 
+Carbolite RHF 1600 à temperatura de 550°C durante 6 horas de tempo. No final deste tempo, 
+os cadinhos com amostra ja incenerada foram colocados em um dessecador por cerca de 1h 
+até o arrefecimento e depois pesados para o cálculo do teor de cinzas do pedúnculo de cajú 
+usando a fórmula seguinte: 
+ 
+ 
+ 
+ 
+𝑚𝑠−𝑚𝑐
+𝐶𝑖𝑛𝑧𝑎= ×100% 
+𝑚𝑠
+Onde. 
+ 
+ms = massa seca (g) 
+mc= massa da cinza (g) 
+ 
+ 
+ 
+7.3.2.Determinação da actividade da água e cor do pedúnculo de cajú 
+ 
+A atividade de água (aw) é um parâmetro inteiramente ligado à humidade do alimento o que 
+permite determinar a sua capacidade de conservação e de propagação microbiana. A 
+actividade aquosa de um alimento pode ser reduzida aumentando a concentração de solutos 
+na fase aquosa dos alimentos mediante a extração da água (liofilização) ou adição de novos 
+solutos (Carlos et al., 2003).  
+Para a determinação da actividade da água no pedúnculo de cajú foi usado um instrumento 
+de medição da actividade de água nos alimentos denominado AquaLab model series3TE 
+0,8038551B, por meio de leitura triplicata, na qual a média dos valores obtidos determinou 
+a quantidade de água contida no pedúnculo de cajú. 
+Na determinação da cor do pedúnculo de caju foi usado o sistema CIELaB (Figura 17), que 
+é actualmente o método mais usado para avaliar cores, pois, correlaciona consistentemente 
+os valores da cor com a percepção visual, para além das inconsistências ou desvios de uma 
+cor padrão (sensing.konicaminolta, 2013). 
+A observação da cor foi feita através dum aparelho denominado color reader cr-10 da 
+MINOLTA-Japan, anotando-se os valores de L, a e b para cálculo  de Croma (C) para 
+observação da pureza ou intensidade da cor no alimento, e o Ángulo (h) que é o ângulo que 
+indica a tonalidade, isto é a cor propriamente dita do alimento com base nas equações 
+seguintes:  
+ 
+2 22
+𝐶=(𝑎+𝑏 )                  
+ 
+ℎ=𝑎𝑟𝑐𝑡𝑎𝑔(𝑏⁄𝑎)    
+ 
+ 
+Sendo: 
+L = Luminosidade 
+a = coordenada vermelho/verde (+a indica vermleho e –a indica verde) 
+b = coordenada amarelo / azul (+b indica amarelo e –b indica azul) 
+ 
+ 
+Figura 17. Diagrama de cor usado na determinação da cor do pedúnculo de caju. 
+ 
+ 
+ 
+ 
+7.3.3.Determinação do pH da polpa do cajú 
+ 
+O pH foi  determinado utilizando o potenciómetro de marca JP SELECTA-2005 (Figura 18), 
+previamente calibrado (Instituto Adolfo Lutz, 2005). 
+ 
+O material usado: 
+ Béqueres de 50 ml,  
+ Proveta de 100ml e  
+ pHmetro 
+ 
+Reagentes Usados: 
+ Soluções –tampão de pH 4,7 e 10. 
+ 
+ 
+ 
+ 
+  
+Figura 18. Potenciômetro usado na determinação do pH da polpa e do néctar de cajú. 
+ 
+ 
+ 
+ 
+7.3.4.Determinação dos sólidos solúveis (º Brix) por refratometria da polpa do cajú 
+ 
+Este método é aplicável em amostras de produtos de frutas com ou sem presença de sólidos 
+insolúveis e pode ser estimada pela medida do seu indice de refração por comparação com 
+tabelas de referência (Instituto Adolfo Lutz, 2005). 
+  
+Material Usado:  
+Refratrómetro de marca OPTIC IVYMEN SISTEM ABBE REFRACTOMETER, com 
+escala graduada de °Brix; 
+ Espátula metálica; 
+ Béquer de 25 ml; 
+ Papel higiênico. 
+ 
+Reagente Usado: 
+ Água destilada. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Procedimento: 
+Ajustou-se o refratrómetro (Figura 19) para a leitura 1,3335 com água destilada a 20 º C  e 
+colocaram-se 3 – 4 gotas da amostra homogeinizada no prisma do refratrómetro, aguardou-
+se até a estabilização da temperatura e fez-se a leitura em graus Brix. 
+ 
+ 
+ 
+Figura 19. Refratômetro usado na leitura do Brix. 
+ 
+ 
+ 
+ 
+7.3.5.Determinação de acidez titulável por volumetria com indicador 
+ 
+Este método é aplicado em soluções claras ou levemente coloridas nos diversos tipos de 
+produtos de frutas e baseia-se na titulação com hidróxido de sódio até o ponto de viragem 
+com o indicador fenoftaleína (Instituto Adolfo Lutz, 2005). 
+ 
+Material Usado: 
+ Balança Analítica de marca Nahita, model 5034/120. 120g/0,1. 
+ Proveta de 100 ml 
+ Frasco elenmeyer de 250 ml 
+ Bureta de 25 ml 
+ Pipetas graduadas de 1 ml. 
+ 
+ 
+ 
+ 
+Reagentes usados: 
+ Solução de Hidróxido de Sódio 0,1M 
+ Solução de Fenolftaleína. 
+ 
+Procedimento: 
+Pesou-se 5 g  da amostra homogeinizada em frasco erlenmeyer e adicionou-se 3 gotas do 
+indicador fenolftaleiína e titulou-se com a solução de hidróxido de sódio 0,1 M sob agitação 
+constante até coloração rósea persistente por 30 segundos (Figura 20). 
+ 
+ 
+ 
+ 
+Figura 20. Determinação de acidez titulável. 
+ 
+ 
+Cálculo:  
+ 
+𝑽 𝒙 𝒇 𝒙 𝑴 𝒙 𝟏𝟎𝟎
+=𝑨𝒄𝒊𝒅𝒆𝒛 𝒆𝒎 % 𝒅𝒆 á𝒄𝒊𝒅𝒐 𝒄𝒊𝒕𝒓𝒊𝒄𝒐 
+𝑷
+Onde: 
+ 
+V = nº de ml da solução de hidróxido de sódio gasto na titulação, 
+f = factor de correcção da solução de hidróxido de sódio (0,64); 
+P = massa da amostra em g ou volume pipetado em ml. 
+M = Molaridade da solução de hidróxido de sódio (0,1M). 
+ 
+ 
+ 
+ 
+7.3.6.Determinação do teor do ácido áscórbico (Vitamina C) 
+ 
+ Para a determinação de vitamina C ou ácido ascórbico, foi usado o método de titulação com 
+iodeto de potássio, o qual é usado em alimentos “in natura” ou enriquecidos, quando a 
+quantidade da referida vitamina for maior que 5 mg e baseia-se na oxidação do ácido 
+ascórbico pelo iodato de potássio (Instituto Adolfo Lutz, 2005). 
+ 
+Material Usado: 
+ Balança analítica de marca Nahita, model5034/120. 120g/0,1. 
+ Béquer de 100 ml; 
+ Balão volumétrico de 100 ml; 
+ Proveta de 25ml; 
+ Bureta de 25ml e  
+ Frasco erlenmeyer de 250 ml. 
+ 
+Reagentes Usados: 
+ Solução do Acido Sulfúrico á 20%; 
+ Solução de iodeto de potássio á 10%; 
+ Solução de Amido á 1%; 
+ Solução de iodato de potássio. 
+ 
+ 
+Procedimento: 
+Pesou-se 5 g da amostra e adiciounou-se 20 ml de ácido sulfúrico, 1 ml de solução de iodeto 
+de potássio e 1ml de solução de amido, a  seguir titulou-se com solução de iodato de potássio 
+até a viragem de cor para cinzento preto (Figura 21). 
+ 
+ 
+ 
+ 
+ 
+Figura 21. Determinação do ácido ascórbico. 
+ 
+ 
+ 
+Cálculo: 
+𝑽 𝒙 𝟏𝟎𝟎𝒙𝒇
+=Á𝒄𝒊𝒅𝒐 𝑨𝒔𝒄ó𝒓𝒃𝒊𝒄𝒐 𝒆𝒎 𝒎𝒈/𝟏𝟎𝟎𝒎𝒍 
+𝑷
+Onde: 
+V = Volume do KI gasto na titulação; 
+f= factor da solução de KI (8,806) 
+P = Peso da amostra em g. 
+ 
+ 
+ 
+7.4. Análises microbiológicas 
+ 
+As análises microbiológicas das formulações dos néctares após 45 dias de armazenamento 
+foram: 
+ 
+11.4.1. Contagem de Bolores e leveduras -  pelo método da APHA (American Public 
+Health Association, 2001), sendo os resultados expressos UFC/g.  
+ 
+11.4.2. Coliformes Totais -  Para a determinação de coliformes a 35°C e 45°C utilizou-se a 
+metodologia descrita pela APHA (2001), sendo os resultados expressos NMP/g.  
+ 
+ 
+ 
+ 
+ 
+ 
+7.5. Avaliação sensorial dos néctares de cajú formulados 
+ 
+A avaliação sensorial foi realizada após 45 dias de armazenamento na Faculdade de 
+Engenharia, sala 214 do Departamento de Engenharia Química,  numa única sessão com 30 
+provadores não treinados de ambos os sexos de idades compreendidas entre 19 a 60 anos, 
+dentre os quais estudantes, funcionários, familiares e camponeses produtores, os quais foram 
+esclarecidos sobre os objectivos do estudo em questão e sobre os atributos de aparência, cor, 
+odor e sabor do néctar de caju. 
+ 
+Preparou-se uma única amostra de cada formulação. Cada provador recebeu 5 amostras 
+referente as formulações dos néctares preparados,  em copos descartáveis codificados com 
+letras  A,B,C,D e E contendo cerca de 30ml cada. Foram entregues também  bolachas de 
+água e sal e água mineral para limpeza do palato durante a avaliação das amostras,  indicando 
+quanto gostaram ou desgostaram das amostras em relação a cor, aparência geral, aroma, 
+sabor, adstringência e intenção de compra. O modelo de questionário aplicando-se o teste de 
+preferência para os néctares  de cajú elaborados utilizando a escala hedônica estruturada de 
+nove pontos, na qual 9 representou “gostei muitíssimo” e 1 “desgostei muitíssimo”  encontra-
+se no Anexo I.  
+ 
+ 
+ 
+7.6. Análise estatística dos resultados 
+ 
+Para todos resultados obtidos nas análises dos parâmetros físico-químicos da polpa e das 
+cinco formulações dos néctares (F1- néctar de cajú com 30% de polpa e 8% de açúcar; F2 – 
+néctar de cajú com 30% de polpa e 16% de açúcar; F3 – néctar de cajú com 60% de polpa e 
+8% de açúcar, F4- néctar de cajú com 45% de polpa e 12% de açúcar), bem como na análise 
+sensorial dos mesmos, foi utilizado como intervalo de confiança, o valor de 95%, ou seja, 
+um “p-valor” inferior a 0,05, inferindo que, a variável é estatisticamente significativa. Após 
+a eliminação dos factores não significativos, foi verificada a significância da regressão e da 
+falta de ajuste a um nível de confiança de 95%, através de análise de variância (ANOVA), 
+utilizando o teste F para o planejamento estudado. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8.RESULTADOS E DISCUSSÃO 
+ 
+8.1.Caracterização do pedúnculo e da polpa do cajú 
+ 
+Foram análisados parâmetros fisico-químicos para a polpa do cajú, e medidos a actividade 
+da água, cor, humidade e cinzas no pedúnculo de cajú, cujo a  caracterização  em termos de 
+valores médios obtidos encontram-se na Tabela 7.  
+ 
+Tabela 7- Caracterização  da polpa de cajú. 
+ 
+ 
+PARÂMETRO Valor 
+ 
+Cor (L=55,0; a+ =9,0; b+ = 3,8) Amarelo terroso 
+ 
+Actividade da água (aw)  á T= 24,3ºC 0,967 
+ 
+Humidade (%) 94,4 
+ 
+Cinzas (%) 1,56 
+ 
+pH 4,9 
+ 
+Sólidos Solúveis Totais (ºBrix) 10,2 
+ 
+Acidez Total (% de ácido cítrico) 0,24 
+ 
+Acido Ascórbico (mg/100ml) 249,8 
+  
+ 
+ 
+Os valores médios dos parâmetros fisico-químicos obtidos na caracterização da polpa de 
+cajú, pH igual a 4,9 e a acidez em percentagem do ácido cítrico igual a 0,24. Estes valores  são 
+superiores aos obtidos por Sousa Filho et al. (2000), que na caracterização da polpa de cajú 
+obteve 3,9 para o pH e 0,35 para a acidez total. 
+  
+Para os resultados médios referentes a vitamina C  (249,8 mg/100ml) e os sólidos solúveis 
+totais (10,2 ºBrix)  revelaram-se relativamente baixos quando comparados com os obtidos por 
+Sousa Filho et al. (2000) que na sua caracterização obteve para a polpa do pedúnculo de caju 
+o valor médio de sólidos solúveis totais igual á 10,7°Brix e a vitamina C igual á 261 
+mg/100ml. 
+ 
+Os valore obtidos por Silva et al, (2010) em relação aos teores de humidade e cinzas (90% e 
+0,5%) respectivamente, foram inferiores em relação aos obtidos neste trabalho, pois para 
+humidade o pedúnculo de cajú teve 96,4%, enquanto que o teor de cinzas foi de 1,56%. 
+ 
+ 
+ 
+Maia et al (2004), na caracterização de diferentes clones de anão precoçe obteve uma média 
+de 85,98% e 0,32% para humidade e cinzas respectivamente, relativamente baixos em 
+relação aos obtidos neste trabalho, para pH o valor médio obtido foi de 4,25 e 10,76 para  
+sólidos solúveis totais. O teor de  acidez total titulável (0,49%) foi relativamente elevado e 
+a quantidade de vitamina C (158,26 mg/100g) relativamente baixa. 
+ 
+ 
+  
+8.2.Caracterização Físico- Química dos Néctares do Cajú Formulados 
+ 
+8.2.1.pH 
+ 
+Os valores médios do  pH  dos néctares pasteurizados e armazenados estão na faixa de  4,0 
+a 4,6. Estes resultados apresentaram variação significativa estatisticamente (P <  0,05) para 
+a formulação 2, 3 e 5, podendo-se observar uma ligeira diminuição ao longo do 
+armazenamento, enquanto que, para as formulações 1 e 4, o resultado médio do  pH apresenta 
+diferença significativa (P>0,05), mantendo-se constante ao longo do armazenamento (Figura 
+22). 
+ 
+ 
+5
+4,5
+4
+3,5
+3
+2,5
+PH
+2
+1,5
+1
+0,5
+0
+0102030405060708090
+DIAS
+F1F2F3F4F5
+ 
+ 
+Figura 22. Comportamento das formulações dos néctares de cajúpasteurizados em relação ao pH ao longo do tempo de 
+armazenamento. Sendo: F1-30% de polpa e 8% de açúcar; F2- 30% e 16% de açúcar; F3- 60% de polpa e 8% de açúcar; 
+F4 – 60% de polpa e 16% de açúcar; F5 – 45% de polpa e 12% de açúcar. 
+ 
+ 
+ 
+No estudo realizado por Silva et al. (2008), avaliando a estabilidade do néctar de cajú 
+adoçado com mel de abelha, verificou-se que os resultados das médias para pH apresentaram 
+variação significativa estatisticamente (p < 0,05) em função do tempo de armazenamento, 
+mas os valores absolutos não apresentaram grandes variações e o néctar adoçado com mel 
+de abelha  permaneceu na faixa ácida com pH < 4,5. 
+ 
+Lowor e Agyente-Badu (2009), verificou que o pH de sumo dos pedúnculos amarelos foi 
+um pouco mais elevado (P < 0,05) do que o pH do sumo feito pelos pedúnculos vermelhos 
+da floresta Savannah e segundo eles, a localização influenciou significativamente a acidez 
+do sumo de maneira que os pedúnculos da parte costeira tendiam a ser mais ácidos do que 
+os da parte florestal do  Savannah e o valor do pH situou-se entre 4,19-4,59, isto é, valores 
+quase iguais aos obtidos neste trabalho. 
+ 
+ 
+8.2.2. Sólidos solúveis totais (ºBrix) 
+ 
+Verifica-se que as formulações dos néctares de cajú com diferentes proporções de polpa e 
+açúcar apresentaram valores médios de sólidos solúveis na faixa 15 á 30 ºBrix;  sendo que, 
+para as formulações 1,2, 3 e 4, não houve variação significativa estatisticamente (p >0,05), 
+enquanto que para a formulação 5 os resultados médios dos sólidos solúveis totais houve 
+uma variação significativa (p < 0,05) ao longo do tempo de armazenamento (Figura 23). 
+ 
+35
+30
+25
+20
+15
+(ºBRIX)
+10
+5
+0
+SÓLIDOS SOLÚVEIS TOTAIS 
+0102030405060708090
+DIAS
+F1F2F3F4F5
+ 
+ 
+Figura 23. Comportamento das formulações dos néctares de cajú pasteurizados em relação aos sólidos solúveis totais ao 
+longo do tempo de armazenamento, sendo: F1-30% de polpa e 8% de açúcar; F2- 30% e 16% de açúcar; F3- 60% de polpa 
+e 8% de açúcar; F4 – 60% de polpa e 16% de açúcar; F5 – 45% de polpa e 12% de açúcar. 
+ 
+ 
+No Estudo realizado por Silva et al. (2008), os resultados médios dos sólidos solúveis totais  
+apresentaram variação significativa em função do tempo de armazenamento (P < 0,05) mas 
+sem descaracterização do produto uma vez que, os valores situaram-se acima de 10 °Brix 
+durante o armazenamento. 
+ 
+Carvalho et al, 2007, na análise estatística que efectuou em relação á  sólidos solúveis totais 
+(° Brix) apresentou diferença significativa no nível de confiança de 95% (P <0,05), mas 
+também sem descaracterização do produto ao longo do armazenamento conforme foi 
+verificado neste trabalho para cada um dos néctares formulados. 
+ 
+ 
+ 
+8.2.3.Acidez total titulável 
+ 
+Para os valores médios dos néctares de cajú pasteurizados e armazenados em relação a acidez  
+total titulável expressa em percentagem de ácido cítrico, verificou-se uma variação não 
+significativa para todas as formulações (P > 0,05), sendo que á formulação 3 (60% de polpa 
+e 8% de açucar) foi a que teve maior teor de acidez (2,00) e com tendência a aumentar 
+acentuadamente ao longo do tempo de armazenamento enquanto que a formulação 1 (30% 
+de polpa e 8% de açúcar) obteve menor teor de acidez (0,82) e o seu comportamento ao 
+longo armazenamento foi de ligeiro aumento (Figura 24). 
+ 
+4,5
+4
+3,5
+3
+2,5
+2
+1,5
+1
+ÁCIDO CITRICO
+0,5
+0
+ACIDEZ TITULÁVEL EM % DE 
+0102030405060708090
+DIAS
+F1F2F3F4F5
+ 
+ 
+Figura 24. Comportamento das formulações dos néctares de cajú pasteurizados em relação á acidez total ao longo do tempo 
+de armazenamento, sendo: F1-30% de polpa e 8% de açúcar; F2- 30% e 16% de açúcar; F3- 60% de polpa e 8% de açúcar; 
+F4 – 60% de polpa e 16% de açúcar; F5 – 45% de polpa e 12% de açúcar. 
+ 
+ 
+Comparando com Silva et al. (2008), os resultados médios da acidez total titulável no néctar 
+de cajú adoçado com mel de Abelha apresentou variação significativa (P < 0,05) em função 
+do tempo de armazenamento, sendo que o teor de acidez durante todo o armazenamento 
+manteve se dentro dos parâmetros exigidos pela legislação, com valores superiores a 0,12 
+g/100 g . 
+ 
+Lowor e Agyente-Badu (2009), obtiveram teores de acidez titulável em percentagem de ácido cítrico 
+variável entre 0,19-0,37%, isto é valores similares aos obtidos em quase todas as formulações dos 
+néctares de cajú produzidos ao longo do tempo. 
+ 
+ 
+ 
+8.2.4 Àcido ascórbico (Vitamina C) 
+ 
+Os valores médios da vitamina C para as formulações dos néctares pasteurizados  e 
+armazenados revelaram que não houve variação significativa (P > 0,05) ao longo do 
+armazenamento, podendo - se observar que, a formulação 3 (60% de polpa e 8% de açucar), 
+que contém maior percentagem da polpa e menor percentagem do açúcar foi a que 
+apresentou maior teor da vitamina C (138,2 mg/100ml), mas com acentuada diminuição ao 
+longo do armazenamento enquanto que a formulação 2 (30% de polpa e 16% de açúcar) foi 
+a que apresentou menor teor de vitamina C (61,44 mg/100ml), podendo-se observar uma 
+ligeira diminuição ao longo do armazenamento (Figura 25). 
+ 
+160
+140
+120
+100
+80
+60
+(MG/100ML)
+40
+ÀCIDO ASCÓRBICO  
+20
+0
+0102030405060708090
+DIAS
+F1F2F3F4F5
+ 
+ 
+Figura 25. Variação da vitamine C  nas diferentes formulações dos néctares de cajú pasteurizados ao longo do tempo, 
+sendo: F1-30% de polpa e 8% de açúcar; F2- 30% e 16% de açúcar; F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa 
+e 16% de açúcar; F5 – 45% de polpa e 12% de açúcar. 
+ 
+ 
+Silva et al. (2008), verificou nos seus resultados uma redução do teor médio de vitamina C 
+de 22,4 mg/100g para 1,27 mg/100g  ao final do armazenamento que representa uma redução 
+de cerca de 90% do teor de vitamina C . Verificou também que,  desde o primeiro dia até  
+60° dia de armazenamento o produto se apresentou dentro dos padrões exigidos pela 
+legislação para um néctar de cajú, mas, após este período, o néctar de cajú adoçado com mel 
+de Abelha apresentou um teor de vitamina C inferior a quantidade mínima exigida pela 
+legislação. 
+ 
+De acordo com Annih-bonsu (2000), no seu estudo sobre diferentes formas de 
+processamento do pedúnculo de cajú para obtenção de sumo, observou que em todos os 
+tratamentos por ele usados houve uma redução da vitamina C, e que o sumo obtido pelos 
+pedúnculos descascados antes de serem cozidos teve um menor teor de vitamina C, realçou 
+que a vitamina C é também conhecido por ser solúvel em água. 
+ 
+Lowor e Agyente-Badu (2009), no seu estudo com sumos de caju vermelhos e amarelos, 
+obteve teores de vitamina C que variaram entre 206,2 e 268,6 mg /100 ml e sem diferenças 
+significativas, concluindo que a localização e a cor do pedúnculo de cajú não influenciou 
+significativamente na quantidade de vitamina C do sumo. 
+ 
+ 
+ 
+8.3. Análise Microbiológica 
+ 
+A contagem padrão de coliformes totais e bolores e leveduras indicou resultados 
+satisafatórios, isto é , após 45 dias de armazenamento não se verificou contaminação nos 
+néctares das cinco formulações produzidas (Tabela 8).  
+ 
+Todas as amostras dos néctares de cajú formulados apresentaram  contagem de bolores e 
+leveduras inferior a 10 UFC/mL e ausência de coliformes a 35ºC  em 50 ml de amostra. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Tabela 8. Contagem padrão de coliformes totais e bolores e leveduras para todas as formulações. 
+ 
+Contagem de bolores e leveduras Coliformes totais 
+FORMULAÇÕES (UFC/ml) (NMP/g) 
+ 
+ 
+F1(30% Polpa e 8% açucar)   <10   <3 
+F2(30% Polpa e 16% açucar)   <10   <3  
+F3(60% Polpa e 8% açucar)   <10   <3  
+F4(60% Polpa e 16% açucar)   <10   <3  
+F5(45% Polpa e 12% açucar)   <10   <3 
+ 
+ 
+Estes resultados evidenciam que é a possivel obter-se néctares de cajú com boa qualidade 
+sob o ponto de vista bacteriológico, se tomar-se em conta os fatores envolvidos nas boas 
+práticas de manipulação dos alimentos (condições higiênico-sanitárias relacionadas com o 
+ambiente, a água utilizada, os utensílios) e a eficiência do tratamento térmico (pasteurização) 
+com garantia de embalagem e armazenamento adequado. 
+.  
+Kabuo et al (2015), no seu estudo de extração e  conservação do sumo de cajú usando 
+benzoato de sódio, observou que a amostra A2 referente ao sumo preservado apenas por 
+pasteurização, contribuiu para controlar o crescimento de leveduras e bactérias, devido a sua  
+inactivação, e por causa disso, o resultado da contagem total de bacterias foi de 0,1 x 103 
+(UFC/ml) . 
+ 
+ 
+ 
+8.4. Avaliação sensorial dos néctares de cajú  
+ 
+Os néctares de cajú formulados e pasteurizados, foram submetidos à análise sensorial após 
+45 dias de armazenamento. Foram avaliados os atributos aparência geral, cor, sabor, aroma 
+e adstringência. Foi também colocado  em baixo do formulário um item referente a intenção 
+de compra com objectivo de saber até que ponto os resultados em termos de atributos 
+sensoriais afectariam a aquisição do produto. 
+ 
+ 
+ 
+ 
+ 
+ 
+8.4.1. Sabor 
+ 
+O atributo sabor é considerado como a característica principal na avaliação desses néctares, 
+uma vez que o estudo se concentra na caracterização do néctar de cajú mais preferido pela 
+população moçambicana. Desta maneira, verificou-se que, a formulação 2 (30% de polpa de 
+caju e 16% de açúcar), foi considerado pelos avaliadores como sendo a mais preferida, com 
+um valor médio de 7,67  representando  “gostei muito” na escala hedônica. Todas outras 
+formulações tiveram pontuações médias situadas entre as faixas 6 “gostei ligeiramente” e 7 
+“gostei moderadamente”, podendo ser considerado resultados satisfatórios,  como pode ser 
+visto na Figura 26. Verificou-se que, na avaliação dos néctares  de cajú formulados houve 
+diferença significativa para este atributo (P< 0,05). 
+ 
+ 
+7,8
+7,6
+7,4
+7,2
+7
+6,8
+6,6
+6,4
+6,2
+ATRIBUTO SABOR
+6
+VALORES MÉDIOS PARA O 
+5,8
+5,6
+F1F2F3F4F5
+FORMULAÇÕES
+ 
+ 
+Figura 26. Representação gráfica das respostas dos avaliadores em relação ao sabor dos néctares  formulados, sendo: F1- 
+30% de polpa e 8% de açúcar; F2- 30% de polpa e 16% de açúcar; F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa e 
+16% de açúcar; F5 – 45% de polpa e 12% de açúcar.       
+    
+ 
+No estudo realizado por Silva et al. (2008),  atributo sabor esteve na faixa de aceitação, com 
+respostas entre “gostei muito”, e “gostei ligeiramente”. Carvalho et al (2006), no estudo de 
+estabilidade da bebida alcoólica a base de água de coco e pedúnculo de cajú, não se verificou 
+nenhuma diferença significativa para o atributo sabor durante o período de armazenamento 
+(P> 0,05), e os valores médios foram de  5, representando na escala hedónica “não gostei e 
+nem desgostei” e 7 representando “gostei moderamente”.   
+ 
+ 
+ 
+Silva (2013), obteve as   médias de 4,77 á 7,82 das notas atribuídas ao sabor dos néctares 
+durante o tempo de armazenamento, as quais, situando-se na escala hedônica entre as 
+respostas “desgostei ligeiramente” e “gostei moderadamente”,  
+ 
+Talasila et al. (2012), obteve diferença significativa no sabor com (P ≤ 0,05) e as médias das 
+resposta situadas na faixa 8 significando “gostei muito”. Este resultado comprovou a 
+efectividade do décressimo do teor de taninos no sumo de cajú devido ao uso de preservantes 
+químicos. 
+ 
+ 
+ 
+8.4.2.Aparência Geral 
+ 
+Para o atributo aparência geral,  não houve diferença significativa (P> 0,05), vericando-se 
+que a formulação 2, obteve a maior pontuação com o valor médio de 7,53 representando  
+“gostei muito”. Todas outras formulações tiveram resultados satisfatórios com valores 
+médios nas faixas 6 a 7, signicando “gostei ligeiramente” e “gostei moderadamente” os quais 
+podem ser vistos na (Figura 27).  
+ 
+7,8
+7,6
+7,4
+7,2
+7
+6,8
+6,6
+6,4
+APARÊNCIA GERAL
+6,2
+6
+VALORES MÉDIOS PARA O ATRIBUTO 
+5,8
+F1F2F3F4F5
+FORMULAÇÕES
+ 
+ 
+Figura 27. Representação gráfica das respostas dos avaliadores em relação a Aparência Geral dos néctares formulados, 
+sendo: F1-30% de polpa e 8% de açúcar; F2- 30% e 16% de açúcar; F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa 
+e 16% de açúcar; F5 – 45% de polpa e 12% de açúcar. 
+ 
+ 
+ 
+Para Silva et al. (2008),  obteve respostas similares na avaliação do néctar de cajú adoçado 
+com mel de abelha, com pontuações dentro da faixa de aceitação pois as respostas situaram-
+se entre “gostei moderadamente” e “gostei ligeiramente” na escala hedônica. 
+ 
+ Carvalho et al.(2006), não encontrou diferenças significativas ao longo do tempo de 
+armazenamento do produto (P> 0,05) e os  valores médios para este atributo, situaram-se  
+entre 6 e 7 “gostei ligeiramente e gostei moderadamente” o que confere à bebida uma 
+pontuação aceitável. 
+ 
+ 
+ 
+8.4.3. Aroma 
+ 
+Para este atributo houve diferença significativa entre as formulações dos néctares de cajú 
+com (P< 0,05). A formulação 1 (30% de polpa e 8%) obteve maior pontuação com a média 
+de 7, representando “gostei moderamente”. Todas outras formulações tiveram pontuações 
+aceitáveis com respostas na faixa de 6 e 7 “gostei ligeiramente” e “gostei moderamente” 
+espectivamente, cujo resultados podem se ver na Figura 28. A formulação 2, que teve maior 
+aceitação em relação ao sabor a resposta na escala hedónica para este atributo foi de “gostei 
+ligeiramente” com um valor médio de 6,4. 
+ 
+7,1
+7
+6,9
+6,8
+6,7
+6,6
+6,5
+6,4
+ATRIBUTO AROMA
+6,3
+VALORES MÉDIOS PARA O 
+6,2
+6,1
+F1F2F3F4F5
+FORMULAÇÕES
+ 
+ 
+Figura 28. Representação gráfica das respostas dos avaliadores em relação ao aroma dos néctares, sendo: F1-30% de polpa 
+e 8% de açúcar; F2- 30% e 16% de açúcar; F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa e 16% de açúcar; F5 – 
+45% de polpa e 12% de açúcar. 
+ 
+ 
+ 
+Talasila et al.(2012), não encontrou diferença sigificativa para o aroma no seu estudo sobre 
+estabilidade do suco de cajú usando preservantes químicos, e os valores médios situaram-se 
+nas faixas 7 e 8, representando “gostei moderadamente” e “gostei muito” na escala hedônica, 
+o qual conferiu um resultado satisfatório. 
+ 
+ 
+ 
+8.4.4.Cor 
+ 
+Na avaliação do atributo cor, verificou-se uma diferença significativa entre as respostas 
+obtidas nos néctares formulados. A  formulação 2 (30% de polpa e 16% de açúcar), obteve 
+maior pontuação com o valor médio de 7,67, o qual representa “gostei muito” na escala 
+hédônica. Todas outras formulações obtiveram respostas na faixa de 6 á 7, representando 
+“gostei ligeiramente” e “gostei moderadamente” conforme pode se ver na Figura 29. 
+ 
+9
+8
+7
+6
+5
+COR
+4
+3
+2
+1
+VALORES MÉDIOS PARA O ATRIBUTO 
+0
+F1F2F3F4F5
+FORMULAÇÕES
+ 
+ 
+ 
+Figura 29. Representação gráfica das respostas dos avaliadores em relação a cor dos néctares formulados,: sendo F1-30% 
+de polpa e 8% de açúcar; F2- 30% e 16% de açúcar; F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa e 16% de açúcar; 
+F5 – 45% de polpa e 12% de Açúcar. 
+ 
+ 
+ 
+ 
+ 
+ 
+Carvalho et al. (2006), nos seus resultados em relação ao atributo cor, verificou que não 
+houve diferença significativa ao longo do tempo de armazenamento, com  (P> 0,05).  
+ 
+Silva et al. (2008),  ao avaliar a cor do néctar de cajú adoçado com mel de abelha, obteve 
+resultados entre “gostei moderadamente” e “gostei muito”, mantendo-se dentro da faixa de 
+aceitação,  embora tenha havido diferença significativa com (P<0,05). 
+ 
+De acordo com Talasila et al.(2012), no seu estudo de estabilidade do sumo de cajú usando 
+preservantes quimicos, verificou que não houve diferença significativa ao longo dos 30 dias 
+de armazenamento para este atributo e que as respostas obtidas foram de 7 e 8 significando 
+“gostei moderadamente” e “gostei muito”. 
+ 
+ 
+ 
+8.4.5. Adstringência 
+ 
+Para este atributo não houve diferença significativa entre as formulações do néctares 
+produzidos com (P<0,05), e a formulação 2 ( 30% de Polpa e 16% de Açucar) foi a mais 
+pontuada com valor médio de 7,53, representando na escala hedônica “gostei muito”. Todas 
+outras formulações tiveram pontuações na faixa de 6 a 7, significando “gostei ligeiramente” 
+e “gostei moderadamente” (Figura 30). 
+7,6
+7,4
+7,2
+7
+6,8
+6,6
+VALORES MÉDIOS PARA O 6,4
+ATRIBUTO ADSTRINGÊNCIA
+6,2
+F1F2F3F4F5
+FORMULAÇÕES
+ 
+ 
+Figura 30. Representação gráfica das respostas dos avaliadores em relação a adstringência dos néctares formulados, sendo:  
+F1-30% de polpa e 8% de açúcar; F2- 30% e 16% de açúcar; F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa e 16% 
+de açúcar; F5 – 45% de polpa e 12% de açúcar. 
+ 
+ 
+Kabuo et al. (2015), observou que,  embora os membros do painel não gostaram da elevada 
+adstringência, mas preferem uma pequena quantidade de adstringência no sumo, e que não 
+houve nenhuma diferença significativa com (P< 0,05). Este resuldado é semelhante ao obtido 
+neste trabalho uma vez que, formulação 2 que foi a mais preferida pelos avaliadores em 
+termos de sabor, revela-se a mais adstringente. E de acordo com Kabuo et al. (2015), o teor 
+dos taninos diminui quando os pedúnculos passam pelo processo de corte, trituração, 
+filtração e pasteurização, razão pelo qual o sumo de cajú continua sendo preferido pelos 
+avaliadores. 
+ 
+ 
+ 
+8.4.6. Intenção de compra 
+ 
+A formulação 2 (30% de polpa e 16% de açúcar) e a formulação 5 com 45% de polpa e 12% 
+de açúcar, obtiveram maiores pontuações quanto a aceitação da aquisição do produto, o que 
+corresponde aos resultados obtidos na avaliação do atributo sabor obervando-se que a 
+formulação 5 foi a segunda mais pontuada com a resposta “gostei muito” na escala hedônica. 
+ 
+7
+6
+5
+4
+3
+COMPRA 
+2
+1
+VALORES MÉDIOS DA INTENÇÃO DE 
+0
+F1F2F3F4F5
+FORMULAÇÕES
+ 
+ 
+Figura 31. Representação gráfica das respostas dos avaliadores em relação a intenção de compra dos néctares formulados, 
+sendo:  F1-30% de polpa e 8% de açúcar; F2- 30% e 16% de açúcar; F3- 60% de polpa e 8% de açúcar; F4 – 60% de polpa 
+e 16% de açúcar; F5 – 45% de polpa e 12% de açúcar. 
+ 
+ 
+ 
+Na avaliação feita num estudo realizado por Silva et al. (2008), a resposta média para 
+intenção de compra foi de 3,9 situando-se entre as categorias “talvez comprasse” ou “talvez 
+não comprasse” e “provavelmente compraria”. 
+ 
+Carvalho et al.(2006),  na sua avaliação estatística dos valores médios obtido para intenção 
+de compra encontrou valores médios  entre 3 e 4, significando talvez compraria e 
+provavelmente compraria.  
+ 
+ 
+ 
+9. CONCLUSÕES 
+ 
+Os valores médios dos sólidos solúveis totais  e do pH diminuiu ligeiramente enquanto que 
+para acidez total titulável, o valor médio aumentou consideravelmente ao longo do tempo de 
+armazenamento.  
+ 
+Verifica-se uma diminuição acentuada dos valores médios da vitamina C, principalmente 
+para as formuações 1 e 2, isto é, ambas contendo 30% de polpa de cajú enquanto que,  para 
+as formulações 3 e 4 contendo 60% da polpa de cajú, o teor de vitamina C sofreu uma 
+diminuição mas não acentuada. O teor da da vitamina C encontrado para a polpa do 
+pedúnculo de cajú analisado foi bastante aceitável.  
+ 
+Verificou-se que todas formulações do néctar de cajú produzidas e pasteurizadas 
+apresentaram características físico-químicas aceitáveis e sem contaminação microbiológica 
+após 45 dias de armazenamento.  
+ 
+A formulação mais aceite pelos avaliadores em relação ao sabor  foi a 2 (30% de polpa e 
+16% de açúcar) pois manteve-se  dentro da faixa de aceitação com respostas na escala 
+hedônica situadas entre “gostei muitíssimo” e “gostei muito”. Todas outras formulações 
+apresentaram pontuações aceitáveis, obtendo-se respostas nas faixas situadas entre gostei 
+ligeiramente e gostei moderadamente, juntamente com a formulação 5 que obteve maior 
+pontuação em relação a intenção de compra. 
+ 
+Sendo assim, as caracteristicas físico-químicas da formulação 2 no final de 45 dias de 
+armazenamento, foi de pH igual a 3,9, sólidos solúveis totais igual á 26 º Brix, o teor da 
+ 
+ 
+acidez total titulável em percentagem de ácido citrico foi de 2,21 e o teor da vitamina C 57,99 
+mg/ 100ml. 
+ 
+ 
+10.RECOMENDAÇÕES 
+ 
+Algumas recomendações podem ser oferecidas com base nos resultados obtidos, quais 
+sejam:  
+ 
+1. A uniformização da matéria prima em termos de maturação e o mesmo tipo de clone 
+para permitir eficâcia no rendimento e melhor estudo dos parâmetros físico- 
+químicos. 
+ 
+2. Pode-se fazer um estudo de controlo anual, isto é, de uma época de colheita de cajú 
+a outra, para o néctar  que obteve maior aceitabilidade,  a fim de permitir a  
+padronização do tempo de prateleira e a observação da variação dos parâmetros 
+físicos-químicos e microbilógicos. 
+ 
+3. A Adição de conservantes na formulação do néctar mais preferido e a análise de 
+compostos fenólicos, no sentido de avaliar a quantidade de taninos existentes na 
+fruta.  
+ 
+4. Produção e análise de polpas das diferentes regiões do país a fim de permitir a 
+padronização e garantir que o néctar mais preferido pela população moçambicana  
+apresenta qualidades nutricionais aceitáveis e que o produto seja de boa qualidade 
+em termos físico- químicos e sensoriais. 
+ 
+5. A  caracterização completa do pedúnculo de caju ao nível de Moçambique, tendo em 
+conta, a composição nutricional em termos de macronutrientes e micronutrientes das 
+variedades existentes. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+11.REFERÊNCIAS BIBLIOGRÁFICAS 
+ 
+ 
+Abre. Associação Brasileira de Embalagem. A embalagem. Disponível em: 
+http://www.abre.org.br/apres_setor_embalagem.php. Acesso em 14 out. 2014. 
+ 
+Annih-bonsu, F. A. M. Cashew processing and Quality indices. A thesis requirements for 
+the Award of an m.phil. Degree in food science University of Ghana. Legon. 2000.  
+ 
+APHA. American Public Health Association. DOWNES & ITO (Coord.). Compendium of 
+Methods for the Microbiological Examination of Foods. 1 ed. Washington, DC, 2001. 
+ 
+Brasil. Ministério da Agricultura. Instrução Normativa nº 12 de 04 de setembro de 2003. 
+Anexo III: Padrões de identidade e qualidade dos néctares de abacaxi, acerola, cajá, caju, 
+goiaba, graviola, mamão, manga, maracujá, pêssego e pitanga. Disponível em: <www 
+agricultura.gov.br>. Acesso: 20 nov. 2014. 
+ 
+Carvalho, J.M; Maia, G.A; Figueiredo, R.W; Brito, E.S; Rodrigues, S Storage stability of a 
+stimulant coconut water-cashew apple juice beverage. Journal of  Food Processing and 
+Preservation.Volume 31, Issue 2, pages 178–189,. Fortaleza. CE. Brazil. April 2006. 
+ 
+Costa, M.C.O. Estudo da estabilidade do suco de caju (Anacardium occidentale L.) 
+preservado pelos processos hot fill e asséptico. Fortaleza. 80 p. Dissertação de mestrado 
+(Mestrado em Tecnologia de Alimentos), Departamento de Tecnologia de Alimentos. 
+Universidade Federal do Ceará, 1999. 
+ 
+Costa, M.C.O; Maia, G. A. ; Lima, J. R.; Souza Filho, m. S. M.; Figueredo, R. W. 
+Estabilidade do suco de cajú (anarcadium occidentale L.) preservado pelos processos Hotfill 
+e asséptico. In: XVII Congresso Brasileiro de Ciência e Tecnologia de Alimentos. Fortaleza, 
+2000. Anais...Fortaleza SBCTA. v. 2.n.6.p.53.2000. 
+ 
+Ecycle. Cerri A; Oliani S; De onde vem e o que são plásticos. 
+http://www.ecycle.com.br/component/content/article/35/676- html. Acesso em 07-08-2015. 
+ 
+ 
+Filho, M.M.S, Aragão, A. O. Alves, R. E.; Filgueiras, H. A. Aspectos de colheita e pós-
+colheita e transformação industrial do pedúnculo do cajú (Anacardium occidentale L.). 
+Embrapa- Agro Industrial Tropical. Fortaleza-CE. 2000. 
+ 
+Frutal. Embalagens de alimentos: Ciência e tecnologia de laticínios – UEMG – 5° Período 
+Unidade I, 2015. 
+ 
+http://abgtecalim.yolasite.com/resources/Fabrica%C3%A7%C3%A3o%20Polpa%20e%20
+N%C3%A9ctar%20de%20Frutas.pdf acesso 30 de Março de 2016. 
+ 
+http://asproteinas.com/aminoacidos acesso em 29 de Março de 2016 . 
+ 
+http://www.ebah.com.br/content/ABAAAe5IgAF/embalagem-metalica acesso 07/08/2015. 
+ 
+http://www.mfrural.com.br/detalhe/embalagens-garrafas-em-pet.-196402.aspx. Acesso em 
+07/08/2015 
+ 
+http://portuguese.alibaba.com/product-gs/alibaba-china-supply-glass.acesso em 07 de 
+Agosto de 2015. 
+ 
+http://www.portalsaofrancisco.com.br/alfa/caju/caju.php, acesso em 13 de maio de 2016 
+ 
+http://sensing.konicaminolta.com.br/2013/11/entendendo-o-espaco-de-cor-lab/acesso em 
+18 de Maio de 2016. 
+ 
+"http://Tetra_Brik&oldid=38303351. pt.wikipedia.org/w/index.php?title=. Acesso em 22 de 
+Novembro de 2014. 
+ 
+IFT Sensory Evaluation Division, 1994. Journal of Food Science, v.60, n.1, p.210-211, 1995.  
+ 
+Instituto Adolfo Lutz. Normas analíticas do Instituto Adolfo Lutz: Métodos químicos e 
+físicos para análises de alimentos. Vol. 1. 1018p. 4ª ed. Brasília, 2005. 
+ 
+ 
+ 
+Instituto de Fomento do Caju. Historia de introdução do caju em Moçambique. 3P. INCAJU. 
+Nampula. Moçambique.  2005.  
+ 
+Kabuo, N. O; Ojukwu, M; Omeire, G. C; Ibeabuchi, J.C. Extraction and Preservation of 
+Cashew Juice Using Sorbic and Benzoic Acids. American Journal of Food Science and 
+Technology.Vol. 3. No.2. 48-54. Available online at http://pubs.sciepub.com/ajfst/3/2/4.© 
+Science and Education Publishing. DOI:10.12691/ajfst-3-2-4. 2015. 
+ 
+Lanzillotti H. S & Lanzillotti R, S. R; análise sensorial sob o enfoque da decisão fuzzy 
+sensorial. Rev. Nutr.,  12(2): 145-157. Campinas. 1999. 
+ 
+Lowor, S.T; Agyente-Badu, C.K. Mineral and Proximate Composition of Cashew Apple 
+(Anarcadium occidentale L.) Juice from Northern Savannah, Forest and Coastal Savannah 
+Regions in Ghana. American Journal of Food Tecnology 4(4): 154-161. 2009. 
+ 
+Machado, A.V.Estudo de Secagem do Pedúnculo de Caju em Sistemas Convencional e 
+Solar: Modelagem e Simulação do Processo. Tese de Doutorado. UFRN. Natal. 2009. 
+ 
+Maia, G. A.; Monteiro, J. C. S.; Guimarães, A. C. L. Estudo da Estabilidade Físico-química 
+do Suco de Caju com alto teor de Polpa. Ciência e Tecnologia de Alimentos. V. 21, n. 1. p. 
+43-46. Campinas. 2001. 
+ 
+Maia, G. A; Sousa Filho, M.S; Figueiredo, R.W; Brasil, I.M. Caracterização química de 
+pedúnculos de diferentes clones de cajueiro anão precoce (Anacardium occidentale, L.). 
+Revista Ciência Agronômica. Vol. 35. Número Especial: 272 – 278. Fortaleza, CE. 2004. 
+ 
+Maia, G. A.; Sousa, P. H. M.; Lima, A. S. Processamento de sucos de frutas tropicais. Editora 
+UFC.320p. Fortaleza. 2007. 
+ 
+Marques, L.F. Processamento do pedúnculo do caju em avançado estádio de maturação: 
+Desidratação osmótica e secagem para elaboração de passas de caju. Universidade Federal 
+De Campina Grande.Centro De Tecnologia E Recursos Hídricos . Campina Grande. PB. 
+2006. 
+ 
+ 
+ 
+Meilgaard, M.; Civille, G. V.; Carr, B. T. Sensory Evaluation Techniques. Boca Raton. CRC 
+Press. INC. V. II. 159 p. Florida: 1987.  
+ 
+Menezes, J. B; Alves, R. E. Fisiologia e tecnologia pós colheita do pedúnculo de caju. 
+Empresa Brasileira de Pesquisa Agropecuária- CNPAT. 20p. Fortaleza. 1995. 
+ 
+Miclellan, N. R. Padilla-zakour. O I. Juice processing, in: Daiane M. Barrete, Laszlo 
+Somogyi. Hosahalli Ramaswamy (eds.) Processing fruits: Science and Technology, 2. 
+Ed.CRC Press, USA. 2005. 
+ 
+Moraes, M.A.C.M. Métodos para Avaliação Sensorial dos Alimentos. 8.ed.: 93p. (série 
+manuais). Unicamp.Campinas. 1993. 
+ 
+Negrão, C.; Camargo, E. Design de Embalagem: do Marketing á Produção. novatec editora. 
+336p. São Paulo. 2008.  
+ 
+Nunes, M. F; Soares B.  M. C; Menezes H. C; Dantas S. T; Saron E. S; Estabilidade sensorial 
+de suco de maracujá pronto para beber acondicionado em latas de aço. Ciência e Tecnologia 
+de Alimentos. 27(4): 772-778. Campinas. 2007. 
+ 
+Paiva, F. F. A.; Garruti, D. S.; Silva Neto, R. M Aproveitamento Industrial do Cajú. 
+(embrapa-cnpat. Documentos, 38). 88 p. sebrae/ce. Fortaleza. 2000. 
+ 
+Paiva, F. F. A.; Garruti, D. S.; Silva Neto, R. M. Processamento do Pedúnculo de Caju: Polpa 
+de Caju Pasteurizada e Preservada Quimicamente. Embrapa – cnpat : Documentos, 
+131.sebrae/ce, 32 p. Fortaleza. 2010. 
+ 
+Pearson, D. Laboratory Tecniques in Food Analysis. London. Cox & Pearson, 1975. 
+ 
+Perreira, B. A. D.; Persigo, L. M.; Ferreira, L. F. B.; Grohman, M. Z; Correia, M. B.; 
+Kleinert, R. L.; Francest, T. R. Embalagens: Variáveis mais influentes na decisão de compra. 
+XXVI ENEGEP, 2006. Fortaleza. Anais. XXVI ENEGEP. Fortaleza: Abepro.2006 
+ 
+ 
+ 
+ 
+Sarantópolous, C. I. G. L.; Oliveira, L. M.; Padula, M.; Coutron, L.; Alves, R. M. V.; Garcia, 
+E. E. C.; Embalagens Plásticas Flexiveis: Principais Polímeros e Avaliação de Propriedades. 
+1. Ed. 2006p. Campinas: cta/  e tal. 2002. 
+ 
+Silva, M.E;  Araújo, G.T;, Alves, J.J.N. Avaliação das Caracteristicas físico-químicas da 
+polpa do Pseudofruto do Caju (Anacardium occidentale L) visando obter um fermentado 
+para obtenção de Etanol Hidratado. UAEQ/DEQ/CCT, Universidade Federal de Campina 
+Grande. 2010. 
+ 
+Silva, N.; Junqueira, V. C. A.; Silveira, N. F. A. Manual de métodos de análises 
+microbiológicas de alimentos. 2 ed.Livraria Varela.229 p. São Paulo. 2001.  
+ 
+Silva, R. A.; Maya, G. A.; Costa, j. M. C.; Rodrigues, M. C. P.; Fonseca, a. V. V.; Sousa, P. 
+H. M.; carvakho, j. M. Néctar de cajú adoçado com mel de Abelha: Desenvolvimento e 
+Estabilidade. Ciência e tecnologia de alimentos. V. 28, n. 2, p. 1-7. Campinas. 2008. 
+ 
+Silva, V.K.L. estabilidade da polpa de caju congelada obtida com o uso de conservantes, 
+pasteurizada e concentrada. Tese de Doutorado apresentada ao Programa de Pós- Graduação 
+em Ciência e Tecnologia de Alimentos, Centro de Ciências Agrárias da Universidade 
+Federal do Ceará. 2013. 
+ 
+Smith, J.P; Zagory, D. Ramaswany, H.S. Packaging of fruits and vegetables. In: Barret, D. 
+M.; Somogyi, L; Ramaswamy, h. (eds.). Processing fruits: science and tecnology. CRC 
+Press, p.355-395. Florida. USA.  2005. 
+ 
+Souza Filho, M.M.M.; aspectos da avaliação física, química, físico-química e 
+aproveitamento industrial de diferentes clones de caju (anacardium occidentale, l). 
+Universidade federal do ceará, 196 pg., (tese de mestrado).1987. 
+ 
+Souza Filho, M.S.M.; Fonseca, J.L.F.; Sarmento, M.S.G.R.; processamento de xarope de 
+caju (anacardium occidentale, l.) Boletim Ceppa. vol. 10, n.º 1, p. 53-58. 1992. 
+ 
+ 
+ 
+Souza Filho, M.S.M; Aragão, A.O; Alves, R.E, Filgueiras, H.A.C. Aspectos da 
+cacessolheita, pós-colheita e transformação industrial do pedunculo do caju (anacardium 
+occidentale l.). EMBRAPA. Fortaleza. (CE). 2000. 
+ 
+Talasila, U; Vechalapu, R.R; Shaik, K.B. Storage Stability of Cashew apple juice-Use of 
+preservatives chemical. Journal of Food Technology 10(4):117-123. India. 2012. 
+ 
+Teixeira M; Monteiro M. Degradação da vitamina c em suco de fruta rev. Alim. Nutr., v.17, 
+n.2, p.219-227, abr./jun. Araraquara. 2006. 
+ 
+Yamashita, F. Benassi, M. T.; Tonzar, C. A.; Moriya, S.; Fernandes, J.G. Produção de 
+acerola: estudo da estabilidade de vitamina C. Ciência e Tecnologia de Alimentos. V. 23, p. 
+92-94. Campinas. 2003.  
+ 
+ 
+ 
+11.1.Outras Referências Bibliograficas Consultadas 
+ 
+ 
+Alves, R.M.V.; Garcia, E. C. Embalagens para sucos de frutas. In: Colet. ITAL, Campinas, 
+SP, v. 23, n.2, p. 105-122, 1993.  
+ 
+Amaro, A. P.; Bonilha, P. R. M.; Monteiro, M. Efeito do tratamento térmico nas 
+características físico- químicas e microbiológicas da polpa de maracujá. Alim. Nutr., são 
+paulo, v. 13, p.151162, 2002.  
+ 
+Campos, D. C. P. Et al. Cashew apple juice stabilization by microfiltration. Desalination, v. 
+148, p. 61-65, 2002. 
+ 
+Carlos, H.H.R; Nuria, B.V; Giselle, L. C. Química dos Alimentos. Manual do Laboratório. 
+Costa Rica. 2003. 
+ 
+Feitosa T; Oliveira M. E. B; Bastos M. S. R; Muniz  C. R;  Oliveira S. C. A. Perfil 
+microbiológico de polpa de frutas produzidas e comercializadas nos estados do ceará e rio 
+grande do norte. B.CEPPA, v. 15, n. 1, p. 65-74. Curitiba.1997. 
+ 
+Ferreiro, J. C.; mata, e. R. M. C.; Braga, M. E. D. Análise Sensorial da polpa de umbú 
+submetida ao congelamento inicial á temperaturas criogénicas e armazenadas em câmaras 
+frigoríficas. Revista Brasileira de produtos agro-industriais. Campina Grande. V. 2, n 1. P 7-
+17. 2000. 
+ 
+ 
+ 
+Fonseca, A. V. V.Estabilidade do suco do cajú (Anacardium occidentale L.) acondicionado 
+em embalagens de vidro e de  PET .2010. Dissertação (Mestrado em Tecnologia de 
+Alimentos) Departamento de Tecnologia de Alimentos, Universidade Federal do Ceará, 
+Fortaleza, 2010. 
+ 
+Freitas.V.M. Estudo das alterações do suco de maracujá em embalagem do tipo PET e 
+vidro.2007.76 f. Dissertação (Mestrado em Tecnologia de Alimentos) – Departamento de 
+Tecnologia de Alimentos, Universidade federal do ceará, Fortaleza, 2007. 
+ 
+Lima, J. R. Caracterização físico-química e sensorial de hambúrguer de vegetal elaborado á 
+base de caju. Ciência e Agro tecnologia. Lavras.Vol. 32, n.1. 2008. 
+ 
+Matta, V. M.; Freire Júnior, M.; Cabral, L. M. C.; Furtado, A. A. L. Polpa de fruta Congelada. 
+Embrapa Informação Tecnológica. Rio de Janeiro. 2005.  
+ 
+Pinheiro, A. M.; Fernandes, a. G.; Fai, A. E. C.; Prado, G. M.; Sousa, P. H. M.; Maia, g. A. 
+Avaliação química, fisico-química e microbilógica de suco de frutas integrais: abacaxi, cajú 
+e maracujá. Ciência e Tecnologia de Alimentos. 26 (1): 98-103.Campinas. 2006. 
+ 
+Pinheiro. A. M.desenvolvimento de néctares mistos á base de cajú (anacardium occidentale 
+l.) E açaí (euterpi oleraceo mart.). Dissertação (mestrado em tecnologia de alimentos) – 
+Departamento de Tecnologia de Alimentos, Universidade Federal do Ceará, Fortaleza. 2008. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ANEXO  
+ 
+ANALISE SENSORIAL 
+Nome:            Idade 
+As amostras são do nectar de caju com diferentes proporções de polpa e açucar para avaliação quanto aos 
+atributos sensoriais contidos na tabela abaixo. Indique usando a escala seguinte o quanto gosta ou não gosta 
+da amostra. 
+9. Gostei muitíssimo 
+8. Gostei muito 
+7. Gostei moderamente 
+6. Gostei ligeiramente 
+5. não gostei nem desgostei 
+4. Desgostei ligeiramente 
+3. Desgostei moderamente 
+2. Desgoitei muito 
+1. Desgostei muitíssimo 
+ 
+CÓDIGO DA AMOSTRA:  A     CÓDIGO DAAMOSTRA: B 
+  
+ATRIBUTO 
+                                                                            
+Aparência geral  
+ATRIBUTO  
+Cor  
+Aparência geral  
+Sabor  
+Cor  
+Aroma  
+Sabor  
+Adstrigência  
+Aroma  
+Adstrigência  
+  
+CÓDIGO DA AMOSTRA: C     CÓDIGO DA AMOSTRA: D 
+ATRIBUTO   
+ATRIBUTO  
+                                                                            
+Aparência geral  
+Aparência geral  
+Cor  
+Cor  
+Sabor  
+Sabor  
+Aroma  
+Aroma  
+Adstrigência  
+Adstrigência  
+  
+CÓDIGO DA AMOSTRA:  E       
+ATOTURIB                                                                              
+Aparência geral  
+Cor  
+Sabor  
+Aroma  
+Adstrigência  
+ 
+ 
+ 
+ 
+ Intenção da Compra 
+Quais desses produtos compraria? Marque com X. 
+ 
+  A     C 
+ 
+ 
+ 
+ 
+  B                                                                              D                                                         E 
+ 
+ 
+ 

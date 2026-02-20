@@ -1,0 +1,3656 @@
+ 
+ 
+ 
+UNIVERSIDADE FEDERAL RURAL DE PERNAMBUCO 
+DEPARTAMENTO DE CIÊNCIAS DO CONSUMO 
+PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIA E TECNOLOGIA DE 
+ALIMENTOS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DESENVOLVIMENTO E CARACTERIZAÇÃO DE BEBIDA COM POTENCIAL 
+PROBIÓTICO À BASE DE EXTRATO HIDROSSOLÚVEL DE CASTANHA DE 
+CAJU (Anacardium occidentale L.) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+THAYNNA LEOCÁDIO TRAJANO LACERDA SOUSA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Recife 
+2020 
+ 
+ 
+ 
+ 
+UNIVERSIDADE FEDERAL RURAL DE PERNAMBUCO 
+DEPARTAMENTO DE CIÊNCIAS DOMÉSTICAS 
+PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIA E TECNOLOGIA DE 
+ALIMENTOS 
+ 
+ 
+ 
+THAYNNA LEOCÁDIO TRAJANO LACERDA SOUSA 
+ 
+ 
+ 
+ 
+ 
+ 
+DESENVOLVIMENTO E CARACTERIZAÇÃO DE BEBIDA COM POTENCIAL 
+PROBIÓTICO À BASE DE EXTRATO HIDROSSOLÚVEL DE CASTANHA DE 
+CAJU ( Anacardium occidentale L.) 
+ 
+ 
+ 
+ 
+ 
+ 
+Dissertação apresentada ao Programa de 
+ 
+Pós-Graduação em Ciência e Tecnologia 
+ 
+de Alimentos, da Universidade Federal 
+ 
+Rural de Pernambuco, como requisito 
+ 
+para obtenção do Grau de Mestre em 
+ 
+Ciência e Tecnologia de Alimentos. 
+ 
+ 
+ 
+ 
+ 
+ 
+ORIENTADORA: Profa. Dra. Samara Alvachian Cardoso Andrade 
+CO-ORIENTADORAS: Profa. Dra. Neide Kazue Sakugawa Shinohara 
+                                       Dra. Maria de Fátima Fonseca Marques 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Recife 
+2020
+ 
+ 
+Dados Internacionais de Catalogação na Publicação Universidade Federal Rural de PernambucoSistema Integrado de BibliotecasGerada automaticamente, mediante os dados fornecidos pelo(a) autor(a)S725dSousa, Thaynna Leocádio Trajano Lacerda        Desenvolvimento e caracterização de bebida com potencial probiótico à base de extrato hidrossolúvel de castanha decaju (Anacardium occidentale L.) / Thaynna Leocádio Trajano Lacerda Sousa. - 2020.        80 f.        Orientadora: Samara Alvachian Cardoso Andrade.        Coorientadora: Neide Kazue Sakugawa Shinohara.        Inclui referências, apêndice(s) e anexo(s).        Dissertação (Mestrado) - Universidade Federal Rural de Pernambuco, Programa de Pós-Graduação em Ciência eTecnologia de Alimentos, Recife, 2020.        1. Extrato vegetais. 2. Alimentos funcionais. 3. Lactobacillus paracasei. I. Andrade, Samara Alvachian Cardoso,orient. II. Shinohara, Neide Kazue Sakugawa, coorient. III. Título                                                                                                                                                   CDD 664
+II
+I 
+ 
+ 
+UNIVERSIDADE FEDERAL RURAL DE PERNAMBUCO 
+DEPARTAMENTO DE CIÊNCIAS DO CONSUMO 
+PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIA E TECNOLOGIA DE 
+ALIMENTOS 
+ 
+ 
+ 
+ 
+ 
+DESENVOLVIMENTO E CARACTERIZAÇÃO DE BEBIDA COM POTENCIAL 
+PROBIÓTICO À BASE DE EXTRATO HIDROSSOLÚVEL DE CASTANHA DE 
+CAJU ( Anacardium occidentale L.) 
+ 
+ 
+ 
+Por Thaynna Leocádio Trajano Lacerda Sousa 
+ 
+ 
+Esta dissertação foi julgada para obtenção do título de Mestre em Ciência e Tecnologia de 
+Alimentos e aprovada em __/__/__ pelo Programa de Pós-Graduação em Ciência e 
+Tecnologia de Alimento em sua forma final. 
+ 
+ 
+Banca Examinadora: 
+ 
+ 
+ 
+ 
+Profa Dra. Andrelina Maria Pinheiro Santos 
+Universidade Federal Rural de Pernambuco  
+ 
+ 
+ 
+Profa Dra. Silvana Magalhães Salgado 
+Universidade Federal de Pernambuco  
+ 
+ 
+ 
+Profa Dra. Erilane de Castro Lima Machado 
+Universidade Federal Rural de Pernambuco  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+I
+V 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+“A minha mãe, que sempre priorizou a 
+educação para construção do ser, e que 
+me criou sempre com muito amor e 
+paciência”.
+ 
+ 
+ 
+ 
+V 
+ 
+ 
+AGRADECIMENTOS 
+ 
+ 
+ 
+- À minha mãe por todo o apoio e força durante todo meu processo educacional; 
+ 
+- A meu companheiro Lucas Santos, pela paciência e pelo suporte nos momentos 
+difíceis; 
+ 
+- A todos meus familiares e amigos, que torceram por mim e deram algum 
+incentivo; 
+ 
+- Aos meus amigos, Gerlane Lima, Indira Macedo, Amanda Fernandes, 
+Marcos Ubiratan, pelo suporte e atenção; 
+ 
+- À minha orientadora Samara Andrade, pela confiança no meu trabalho; 
+ 
+- À minha co-orientadora, Neide Shinohara, por sempre me apoiar, ajudar, 
+puxar minha orelha e ser a pessoa que me incentiva a buscar conhecimento. 
+ 
+- À minha co-orientadora, Dra. Fátima Marques, pelo incentivo e por sempre 
+levantar questões pertinentes ao meu trabalho me mostrando outro ponto de 
+vista. 
+- À todas as professoras do Programa de Pós Graduação em Ciência e 
+Tecnologia de Alimentos da UFRPE por compartilharem seus conhecimentos 
+comigo; 
+- À funcionária Ana, pelos serviços prestados; 
+- À professora Maria Inês Sucupira Maciel no auxílio laboratorial; 
+- À Ângela Lima dos pelo auxílio nas análises físico-químicas e Amanda Mesquita 
+pelo auxílio nas análises microbiológicas; 
+- À Ayla Lima pelo auxílio na elaboração e nas análises do projeto; 
+- À todas as professoras e funcionários do Programa de Pós-Graduação em 
+Ciência e Tecnologia de Alimentos, que muito contribuíram para minha 
+formação; 
+- À CAPES, pelo financiamento do projeto; 
+- A todos que direta ou indiretamente contribuíram para a realização deste trabalho. 
+ 
+ 
+ 
+ 
+ 
+ 
+V
+I 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+“Talvez não tenha conseguido fazer o melhor,  
+mas lutei para que o melhor fosse feito.  
+Não sou o que deveria ser,  
+mas graças a Deus, não sou o que era antes”  
+Marthin Luther King 
+ 
+ 
+ 
+ 
+V
+II 
+ 
+ 
+RESUMO 
+ 
+Bebidas à base de extratos vegetais, como a soja, são difundidas desde a década de 80. 
+Outros extratos vegetais bastante nutritivos, como o de castanhas, amêndoas, arroz e aveia, 
+também podem ser base para a elaboração de bebidas análogas ao leite. A castanha de caju 
+é uma importante commodity para o Nordeste do Brasil e possui um bom aporte 
+nutricional. O presente trabalho teve como objetivo a elaboração de uma bebida probiótica 
+fermentada com Lb. paracasei ATCC 334 à base de extrato hidrossolúvel de castanha de 
+caju (EHCC) fermentada com a cepa probiótica Lb. paracasei ATCC 334. As formulações 
+2
+foram definidas pelo planejamento fatorial 2, com as variáveis independentes: 
+concentração de Lb. paracasei (1%, 1,5% e 2%) e castanha de caju (100g, 200g e 300g), e 
+as variáveis dependentes: Umidade, Lipídios, Proteínas, Cinzas e Carboidratos e Analise 
+Sensorial de aceitação com os atributos: aroma, aparência, sabor e impressão global. As 
+formulações foram submetidas ao teste de ordenação com os atributos: cor, sabor, textura e 
+odor. Foi observado que a concentração de células de Lb. paracasei no EHCC ficou na 
+faixa de 7,72 Log de UFC/g a 8,27 Log de UFC/g, em 6 horas de fermentação, 
+apresentando potencial probiotico de acordo com a FDA (acima de 6 Log/g); A 
+concentração de castanha de caju (CCC) teve influência significativa (p<0,05) em todos os 
+parâmetros físico-químicos e atributos sensoriais do EHCC fermentado demonstrando-se 
+como fator determinante para qualidade nutricional do produto; A concentração de Lb. 
+paracasei obteve influencia significativa  (p<0,05) na redução da umidade, e no aumento 
+do conteúdo de lipídios e cinzas, já para o atributo sabor a maior concentração de células 
+probióticas resultou em menores notas para esse atributo; Os ensaios E3 (300g CCC, 1% 
+Lb. paracasei) e E4 (300g CCC, 2% Lb. paracasei) que possuem a maior concentração de 
+castanha de caju obtiveram as maiores notas nos atributos aroma, sabor e impressão global 
+e foram os preferidos no teste de ordenação. O estudo aponta que o EHCC fermentado é 
+um produto potencialmente capaz de atender a demanda probiótica da população com dieta 
+restritiva ao leite.  
+ 
+Palavras-chave: Extrato vegetais, Alimentos funcionais, Lactobacillus paracasei. 
+ 
+ 
+ 
+ 
+ 
+V
+II
+I 
+ 
+ABSTRACT 
+ 
+ Drinks based on plant extracts, such as soybeans, have been spread since the 1980s. Other 
+highly nutritious plant extracts, such as nuts, almonds, rice and oats, can also be the basis 
+for the production of drinks similar to milk. The cashew nut is an important commodity for 
+the Northeast of Brazil and has a good nutritional supply. The present work had as 
+objective the elaboration of a drink based on water-soluble cashew nut extract (EHCC) 
+fermented with the probiotic strain Lb. paracasei ATCC 334. The formulations were 
+2
+defined by factorial design 2, with the independent variables: concentration of Lb. 
+paracasei (1%, 1.5% and 2%) and cashew nuts (100g, 200g and 300g), and the dependent 
+variables: Moisture, Lipids, Proteins, Ashes and Carbohydrates and Sensory Analysis of 
+acceptance with the attributes: aroma, appearance, taste and overall impression. The 
+formulations were subjected to the ordination test with the attributes: color, flavor, texture 
+and odor. It was observed that the concentration of Lb. paracasei in the EHCC was in the 
+range of 7.72 Log UFC / g to 8.27 Log UFC / g, in 6 hours of fermentation, presenting 
+probiotic potential according to the FDA (above 6 Log / g); The concentration of cashew 
+nuts (CCC) had a significant influence (p <0.05) on all physical-chemical parameters and 
+sensory attributes of the fermented EHCC, demonstrating itself as a determining factor for 
+the nutritional quality of the product; The concentration of Lb. paracasei obtained 
+significant influence (p <0.05) in the reduction of humidity, and in the increase of the 
+content of lipids and ash, for the attribute flavor, the higher concentration of probiotic cells 
+resulted in lower scores for this attribute; The tests E3 (300g CCC, 1% Lb. paracasei) and 
+E4 (300g CCC, 2% Lb. paracasei) which have the highest concentration of cashew nuts 
+obtained the highest scores in the attributes of aroma, flavor and overall impression and 
+were preferred in the ordination test. The study points out that fermented EHCC is a 
+product potentially capable of meeting the probiotic demand of the population with a milk-
+restricted diet. 
+ 
+Key-words: Vegetable Extract, Functional Foods, Lactobacillus paracasei. 
+ 
+ 
+ 
+ 
+ 
+LISTA DE FIGURAS 
+ 
+ 
+Figura 1 - Cajueiro com tronco tortuoso. 16 
+ 
+Figura2 - Fruto da castanha de caju cortado. 
+17 
+ 
+Figura 3 - Microscopia e coloração de Gram do Lb. paracasei ATCC 334. 29 
+ 
+44 
+Figura 4 - Fluxograma do processamento da castanha de caju (Anacardium 
+occidentale L.) para elaboração do extrato hidrossolúvel. 
+ 
+Figura 5 - Superfície de respostas da Umidade (A), lipídios (B) e Proteínas (C) em 59 
+função da concentração (%) da castanha e de Lb. paracasei. 
+ 
+Figura 6 - Superfície de respostas dos Carboidratos (A) e Cinzas (B) em função da 60 
+concentração (%) da castanha de caju e de Lb. paracasei. 
+ 
+Figura 7 - Superfície de respostas dos Atributos: Aroma (A), Aparência (B), Sabor 
+64 
+(C) e Impressão Global (D) em função da concentração de castanha de caju (%) e de 
+Lb. paracasei. 
+ 
+ 
+ 
+ 
+ 
+LISTA DE TABELAS 
+ 
+ 
+Tabela 1- Nomenclatura propostos para espécies probióticas de Lactobacillus. 27 
+Tabela 2 - Variação na formulação do EHCC. 46 
+Tabela 3 - Matriz de planejamento da fermentação do extrato hidrossolúvel de 
+47 
+castanha de caju. 
+Tabela 4 - Composição centesimal das castanhas de caju crua esterilizadas. 50 
+Tabela 5 - Analise microbiológica do EHCC pasteurizado das formulações F1, 
+52 
+F2 e F3. 
+Tabela 6 - Concentração de Lb. paracasei, pH e Acidez Titulável inicial e final 
+53 
+do EHCC fermentado. 
+ 
+Tabela 7 - Média dos resultados das variáveis dependentes (Umidade, Lipídeos, 
+56 
+2 
+Proteínas, Carboidratos e Cinzas) do planejamento fatorial 2do EHCC 
+Fermentado. 
+ 
+57 
+Tabela 8 - Efeitos das variáveis independentes Concentração de Lb.paracasei 
+(%) e Concentração de Castanha (%) sobre os parâmetros físicos e químicos. 
+ 
+61 
+Tabela 9 - Porcentagem das respostas obtidas a partir do questionário 
+individual. 
+ 
+62 
+Tabela 10 - Média das notas dos atributos sensoriais (Aroma, Aparência, Sabor 
+2
+e Impressão Global) obtidas através do Planejamento Fatorial 2. 
+ 
+Tabela 11 - Efeitos das variáveis independentes: Concentração de Lb.paracasei 
+63 
+(%) e Concentração de Castanha (%) sobre os atributos sensoriais (Aroma, 
+Aparência, Sabor e Impressão Global). 
+ 
+65 
+Tabela 12 - Resultado do teste de ordenação para os atributos Cor, Sabor, 
+Textura e Odor. 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+LISTAS DE ABREVIATURAS E SIGLAS 
+ 
+ACC- Amêndoa da Castanha de Caju 
+AGL- Ácidos Graxos Livres 
+ANVISA- Agência Nacional de Vigilância Sanitária 
+AOAC- Association of Official Agricultural Chemists 
+ATTI - Acidez Titulável Total Inicial 
+ATTF- Acidez Titulável Total Final  
+CCC - Concentração de Castanha de Caju 
+CDC - Center for Disease Control and Prevention 
+CL - Concentração de Lb. paracasei  
+CLI - Concentração de Lb. paracasei Inicial 
+CLF - Concentração de Lb. paracasei Final  
+CONAB - Companhia Nacional de Abastecimento 
+DNA - Ácido Desoxirribonucléico 
+EHCC - Extrato Hidrossolúvel de Castanha de Caju 
+FAO - Organização das Nações Unidas para a Alimentação e a Agricultura 
+FDA - Food and Drug Administration 
+FOSHU - Food For Specified Health Use 
+GRAS - Geralmente reconhecido como seguro 
+HDL- Lipoproteína de Alta Densidade 
+LCC - Líquido da Casca da Castanha 
+LDL- Lipoproteína de Baixa Densidade  
+MRS- Man Rogosa & Sharpe 
+MUFA- Ácidos Graxos Monoinsaturados  
+NMP- Número Mais Provável 
+PUFA- Ácidos graxos Poli-insaturados 
+OMS - Organização Mundial da Saúde 
+SUDENE- Superintendência do Desenvolvimento do Nordeste 
+SNIF- Sistema Nacional de Informações Florestais  
+UFC - Unidade Formadora de Colônia 
+UFRPE - Universidade Federal Rural de Pernambuco 
+USDA - United States Departament of Agriculture 
+ 
+ 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+1. INTRODUÇÃO ............................................................................................................................. 13 
+2. PROBLEMA DE PESQUISA ...................................................................................................... 15 
+3. HIPÓTESE ..................................................................................................................................... 15 
+4. REVISÃO DE LITERATURA ..................................................................................................... 16 
+4.1. Características do Cajueiro  ......................................................................................................... 16 
+4.2. Aspectos Nutricionais das amêndoas de castanha de caju ......................................................... 17 
+4.3.  Aspectos Econômicos das castanhas de caju .............................................................................. 20 
+4.4. Alimentos funcionais ..................................................................................................................... 23 
+4.5. Conceituação de Probióticos  ........................................................................................................ 24 
+4.6. Gênero Lactobacillus - Espécie Lacticaseibacillus paracasei ...................................................... 26 
+5. REFERÊNCIAS BIBLIOGRÁFICAS ........................................................................................ 30 
+ 
+ELABORAÇÃO DE BEBIDA COM POTENCIAL PROBIÓTICO UTILIZANDO O 
+EXTRATO HIDROSSOLÚVEL DE CASTANHA DE CAJU (Anacardium 
+occidentale L.) 
+RESUMO ........................................................................................................................................ 40 
+1. INTRODUÇÃO ............................................................................................................................. 42 
+2. MATERIAL E MÉTODOS .......................................................................................................... 43 
+2.1 Obtenção e processamento das Castanhas de Caju ....................................................................... 43 
+2.2 Preparação do inóculo (Lb. paracasei) ATCC334 ........................................................................ 45 
+2.3 Preparação do Extrato Hidrossolúvel de Castanhas de Caju- EHCC ........................................... 45 
+2.4 Adição do inóculo e Fermentação  ................................................................................................ 46 
+2.5 Delineamento Experimental da Fermentação ............................................................................... 46 
+2.6 Análises Físico-Químicas  ............................................................................................................. 47 
+2.7 Análises Microbiológicas .............................................................................................................. 48 
+2.8 Análise Sensorial ........................................................................................................................... 48 
+      2.9 Análise Estatística ......................................................................................................................... 49 
+3.    RESULTADOS E DISCUSSÃO ................................................................................................... 50 
+3.1 Determinação da composição centesimal da castanha de caju (Anacardium occidentale L.).....50 
+3.2 Analise microbiológica do extrato hidrossolúvel de castanha de caju- EHCC pasteurizado.......52 
+3.3 Contagem de Lactobacillus  paracasei ATCC 334, pH e Acidez titulável, Aa...........................53 
+3.4 Composição centesimal do extrato hidrossolúvel de castanha de caju- EHCC pasteurizado e 
+Fermentado com Lb. paracasei ATCC 334........................................................................................56 
+3.5 Analise sensorial do EHCC fermentado com Lb. paracasei ATCC 334.....................................61 
+ 
+ 
+ 
+ 
+ 
+4.    CONCLUSÃO ................................................................................................................................ 66 
+5.    REFERÊNCIAS ............................................................................................................................. 66
+ 
+ 
+ 
+ 
+13 
+ 
+1. INTRODUÇÃO 
+ 
+ 
+ O termo alimento funcional, originado no Japão em meados dos anos 80, refere-se a 
+alimentos que, além do seu valor nutritivo, apresentam componentes que auxiliam funções 
+específicas para a manutenção da saúde do organismo e não representam risco a quem os 
+consomem (MARTINS et al., 2013). Os alimentos funcionais podem ser classificados 
+quanto à sua fonte (animal e vegetal) ou referentes à sua função desempenhada no 
+organismo humano (BALDISSERA et al., 2011; CHAMPAGNE et al., 2015). 
+Entre os ingredientes dos alimentos com alegação de propriedade funcional estão os 
+probióticos, como por exemplo, o Lactobacillus paracasei. São microrganismos vivos, 
+responsáveis por melhorar ou manter o equilíbrio microbiano no intestino, auxiliar na 
+produção de vitaminas, promover resistência gastrintestinal e urogenital contra patógenos e 
+controlar os níveis de colesterol. Também desempenham ação imunomoduladora, inibição 
+da carcinogênese do colón e aumento da capacidade utilização da lactose em pessoas 
+intolerantes, conferindo assim benefícios à saúde do hospedeiro, quando administrados em 
+quantidades adequadas (BRASIL, 2018a; GROM et al., 2020; MENEZES et al., 2013; 
+PANGHAL et al., 2017; SALMINEN, KNEIFEL & OUWEHAND, 2016). 
+A utilização de probióticos para elaboração de novos produtos alimentícios está 
+atrelada à procura por uma alimentação e estilo de vida mais saudáveis. Calcula-se que, até 
+2020, cerca de US$ 48 bilhões em escala mundial sejam arrecadados no mercado para esse 
+tipo de produto (HUDSON, 2016). As dietas vegetariana e vegana são fortes aliadas do 
+estilo de vida saudável, apresentando crescente intenção de compra de novos produtos para 
+atender esse mercado consumidor. Como consequência, o aumento de adeptos ao 
+vegetarianismo e veganismo impulsiona a indústria de alimentos a se diversificar, 
+proporcionando também um aumento da variedade de produtos probióticos à base de 
+vegetais. Em uma pesquisa realizada em 2012 pela Target Group Index, do IBOPE cerca 
+de 8% da população brasileira afirma ser vegetariana, já em 2018 segundo o IBGE, esse 
+número cresceu para 14% da população brasileira (IBOPE, 2012; IBGE, 2018). 
+A substituição do consumo de alimento de origem animal, especialmente no caso 
+do leite e seus derivados, atende não apenas aos consumidores vegetarianos e veganos, mas 
+também às pessoas que apresentam intolerância à lactose e os alérgicos à proteína do leite 
+de vaca, população essa que nos últimos anos só aumentou. Estima-se que 
+aproximadamente 75% da população mundial sofram com algum grau de intolerância à 
+ 
+ 
+ 
+ 
+14 
+ 
+lactose, elevando a demanda por produtos alternativos ao leite (PANGHAL et al., 2017; 
+SILANIKOVE, LEITNER & MERIN, 2015). 
+De forma a atender a dietas que restrinjam o consumo de leite e seus derivados, a 
+indústria de laticínios vem utilizando o extrato hidrossolúvel vegetal como alternativa. Um 
+bom exemplo deste extrato vegetal é o popularmente conhecido como leite de soja, já é 
+comercializado em grande escala desde os anos 80. Além da soja, é possível também a 
+obtenção de extratos hidrossolúveis a partir de outros grãos e oleaginosas como as 
+castanhas de caju (WONG, 2013; REBOUÇAS et al, 2014).  
+A castanha de caju é uma opção para a fabricação de extratos hidrossolúveis de 
+origem vegetal, essas castanhas fornece grandes quantidades de energia, com média de 596 
+kcal a cada 100g. É um alimento rico em gordura (46%) que, em sua maioria, são ácidos 
+graxos essenciais, como os ácidos linoleico e oleico, com atuação na redução de radicais 
+livres e controle de doenças cardiovasculares. As castanhas de caju apresentam também 
+alto conteúdo de proteína (21,2%), sendo fonte de aminoácidos essenciais como a leucina, 
+que atua na produção da insulina, e aminoácidos não essenciais como a arginina, que 
+auxilia no controle da hipertensão. Estão incluídas em sua composição as vitaminas E, K, 
+B6 e C, que contribuem para a preservação do sistema imunológico, e minerais como o 
+Ferro e o Cálcio. Além disso, observa-se a presença de fitoquímicos e fitoesteróis, 
+compostos anticancerígenos e fibras (GADANI et al., 2017; MOHAN et al., 2018; 
+OGUNSINA & BAMGBOYE, 2014).  
+A produção nacional de castanha de caju ocupa lugar de destaque no país, 
+arrecadando valores na ordem de US$ 100 milhões anuais, gerando atividade econômica e 
+social na região Nordeste, área que concentra 99,7% das plantações brasileiras. O seu 
+mercado é pautado principalmente na exportação, com cerca de 90% da produção nacional 
+são destinados para esse fim (BRAINER & VIDAL, 2020).  
+No entanto, o processo de beneficiamento utilizado resulta em maior percentual de 
+amêndoas quebradas, se comparado aos demais processos existentes. Tal fato se reflete na 
+depreciação do preço das amêndoas quebradas em relação às inteiras (PINHEIRO et al., 
+2006). O processamento dessas castanhas quebradas para a formulação de extrato 
+hidrossolúvel apresenta-se como alternativa de reaproveitamento.  Sob esse ponto de vista, 
+a presente pesquisa propôs a elaboração de uma bebida a partir do extrato hidrossolúvel de 
+castanha de caju adicionada do probiótico Lactobacillus paracasei que, além de 
+potencialmente nutritivo, apresenta-se como uma proposta tecnológica viável e funcional 
+para grupos de pessoas com restrições alimentares. 
+ 
+ 
+ 
+ 
+15 
+ 
+2. PROBLEMA DE PESQUISA: 
+ 
+É possível elaborar uma bebida a partir do extrato hidrossolúvel de castanha de caju 
+adicionando probióticos que apresente-se  como um alimento funcional? 
+3. HIPÓTESE 
+ 
+H0: A elaboração de uma bebida com extrato hidrossolúvel de castanha de caju adicionada 
+de Lactobacillus paracasei apresenta potencial probiótico. 
+ 
+H1: A elaboração de uma bebida com extrato hidrossolúvel de castanha de caju adicionada 
+de Lactobacillus paracasei não apresenta potencial probiótico. 
+ 
+ 
+ 
+ 
+ 
+ 
+16 
+ 
+4. REVISÃO DE LITERATURA 
+ 
+4.1  Características do Cajueiro (Anacardium occidentale L.) 
+Pertencente à família Anacardiaceae, o cajueiro é planta xerófila e rústica, típica de 
+clima tropical e adaptada a solos pobres e arenosos. A árvore (Figura 1) apresenta porte 
+médio, atingindo de cinco a dez metros de altura, sendo caracterizada por galhos tortuosos. 
+É uma planta originada no litoral Nordestino do Brasil. É classificada em duas categorias: 
+o cajueiro comum e o anão precoce, diferenciando-se basicamente pelo tamanho de sua 
+árvore (AGYEMANG, ZHU & TIAN, 2015; GAZOLLA et al., 2006; NANDI, 2013; 
+SERRANO & PESSOA, 2016). 
+Figura 1: Cajueiro com tronco tortuoso. 
+ 
+Fonte: Autoria própria (2019). 
+ 
+A plantação ocorre em todo território nacional, embora a concentração dessa 
+cultura esteja na região Nordeste do país, com destaque para o Ceará, Piauí e Rio Grande 
+do Norte (FIGUEIRÊDO JÚNIOR, 2006). É um cultivar perene e seu período de safra é no 
+verão entre os meses de setembro a janeiro. Sua frutificação pode variar por decorrência de 
+diversos fatores como idade da planta, material genético e mudanças climáticas. Devido à 
+produção ser na época de seca e entressafra de cultivares importante como, o feijão e 
+milho, seu cultivo serve subsídio econômico, além de complemento nutricional para a 
+população (MOURA & MAGALHÃES, 2008; SERRANO & PESSOA, 2016). 
+O caju, fruto do cajueiro, é constituído pelo pedúnculo floral ou pseudofruto, que 
+representa a parte suculenta e carnosa com cores variando do amarelo ao vermelho, e a 
+castanha, o verdadeiro fruto, que contém as amêndoas dentro de cascas, estando aderida ao 
+pedúnculo (MAIA, ANDRADE & ZOGHBI, 2000; FIGUERÊDO et al., 2010). 
+ 
+ 
+ 
+ 
+17 
+ 
+4.2 Aspectos Nutricionais da amêndoa da castanha de caju  
+A parte mais valorizada economicamente é a castanha de caju, verdadeiro fruto 
+do cajueiro. Destas castanhas se obtém o líquido da casca da castanha (LCC) e as 
+amêndoas da castanha de caju (ACC). O fruto é classificado como um arquênio 
+reniforme constituída por três partes: o pericarpo (casca), tegumento (película) e dois 
+cotilédones que são as amêndoas (Figura 2) (PAIVA, GARRUTTI & SILVA NETO, 
+2000).  
+ 
+Figura 2: Fruto da castanha de caju cortado. 
+ 
+Fonte: (SERRANO & OLIVEIRA, 2013). 
+ 
+O pericarpo (65% - 70% do peso da castanha) é constituído por um epicarpo 
+coriáceo, e um mesocarpo esponjoso, no qual se encontram alvéolos repletos de um 
+líquido cáustico e inflamável. Esse líquido é impróprio para o consumo humano, sendo 
+utilizado na indústria química para a produção de plásticos, isolantes, vernizes e 
+inseticida, entre outras finalidades. A casca pode ser usada como combustível de 
+caldeiras. O tegumento ou endocarpo compõe em média 3 % do peso total da castanha e 
+dele podem ser extraídos taninos. A ACC é a parte destinada ao consumo humano e 
+contém alto valor agregado, dependendo do processo de extração apresenta cerca de 
+25% a 28% do peso total da castanha (PARREIRAS, 2007; FIGUERÊDO et al., 2010). 
+  As ACC são consideradas fonte alternativa de proteína vegetal na dieta. Segundo o 
+United States Departament of Agriculture (USDA, 2008) sua composição média é de 46% 
+de gorduras, 21 % de proteínas e 20% de carboidratos totais, fornecendo aproximadamente 
+ 
+ 
+ 
+ 
+18 
+ 
+596 Kcal a cada 100g, já para a tabela brasileira de composição de alimentos a castanha de 
+caju torrada e salgada apresenta 46,3 % de conteúdo lipídico, 18,5% de proteínas e 29,1% 
+de carboidratos (TACO, 2011). Estão presentes também em sua composição minerais 
+como Ferro, Fósforo, Magnésio, Cálcio, Potássio e Selênio, e vitaminas E, K, B6 e C, 
+contribuindo para a complementação de macro e micronutrientes. É fonte de aminoácidos 
+essenciais, como a leucina, que auxilia na produção da insulina e na redução da degradação 
+da massa muscular em idosos. Também apresenta fitoquímicos e fitoesteróis, compostos 
+anticancerígenos, fibras e gordura monoinsaturada, que auxiliam no aumento dos níveis de 
+HDL (GADANI et al., 2017; MOHAN et al., 2018; NANDI, 2013; OGUNSINA & 
+BAMGBOYE, 2014).  
+  Seu alto teor lipídico é formado de ácidos graxos essenciais como o ácido linoléico 
+(ω-6) e o ácido oléico (ω-9). A ingestão desses ácidos graxos mono e poli-insaturados 
+(MUFA/PUFA), associados a uma alimentação equilibrada e hábitos de vida saudáveis, 
+são responsáveis pela redução dos níveis de colesterol-LDL, auxiliando na prevenção de 
+doenças cardiovasculares.  Esses ácidos graxos (linoléico e oléico) também atuam na 
+redução de radicais livres, possibilitando uma diminuição dos danos oxidativos ao DNA e 
+minimizando o surgimento de mutações presentes em vários tipos de câncer (BOLLING et 
+al., 2011; KRIS-ETHERTON et al., 2008; KING et al., 2008; PHILLIPS et al., 2005).  
+  Em um estudo realizado por Mohan et al. (2018), o consumo das ACC, durante 12 
+semanas, ajudou a diminuir a pressão arterial sistólica e aumento dos níveis de colesterol – 
+HDL plasmático, sem que houvesse aumento significativo no peso corporal, apesar do seu 
+elevado teor de gordura. A elevada presença de ácidos graxos insaturados nas amêndoas 
+em geral, assim como na de caju, pode auxiliar no controle da diabetes tipo II, reduzindo o 
+índice glicêmico em jejum e a hemoglobina glicada, quando consumidas diariamente 
+(VIGUILIOUK et al., 2014).  
+  No ano de 2003, a FDA (Food and Drug Administration) destacou que o consumo 
+de aproximadamente 42g de algum tipo de amêndoa por dia, aliada a uma dieta pobre em 
+gordura saturada pode reduzir o risco de doenças cardíacas (KING et al., 2008). Os 
+fitoesteróis são estruturas presentes nas plantas que se assemelham ao colesterol e estão 
+associadas à diminuição da incidência de diversos tipos de câncer. As amêndoas de 
+castanha de caju possuem aproximadamente 150mg/100g de fitoesteróis, como o β-
+sitosterol, sendo uma quantidade considerada elevada desses compostos (BOLLING et al., 
+2011; PHILLIPS et al., 2005). 
+ 
+ 
+ 
+ 
+19 
+ 
+  A porção protéica das ACC é em torno de 21% do conteúdo total, podendo variar 
+devido a diversos fatores ambientais e nutricionais da planta. A digestibilidade de proteínas 
+de origem vegetal é baixa, se comparada a de origem animal(GADANI et al., 2017; 
+BRUFAU, BOATELLA & RAFECAS, 2006). Entretanto, com relação a outras amêndoas, 
+a castanha de caju é uma das que mais contém proteínas. Em um estudo realizado no 
+cerrado brasileiro realizada por De Oliveira et al.(2011),  no estudo  in vivo foi avaliado 
+que a cada 5 gramas de proteína de amêndoas de caju, 3,65 gramas tem a capacidade de ser 
+digeridas pelo corpo humano, mesmo que ingeridas junto a aminoácidos limitantes, que no 
+caso das maioria das nozes é a lisina  
+Os carboidratos presentes nos vegetais são em sua maioria mono e 
+oligossacarídeos, embora os polissacarídeos estejam presentes na estrutura da parede 
+celular (celulose) e na forma de reserva energética (amido) (DAMODARAN, PARKIN & 
+FENNEMA, 2010). Embora apresentem poucas quantidades de carboidratos na sua 
+composição, as ACC destacam-se em relação às outras amêndoas. Os açúcares presentes 
+são: glicose, maltose, lactose, frutose, celobiose, rafinose e estaquiose, haja vista que os 
+teores de açucares redutores, não redutores e amido podem variar dependendo do cajueiro 
+(BRUFAU, BOATELLA & RAFECAS, 2006; NAGARAJA & NAMPOOTHIRI, 1986; 
+GADANI et al., 2017).  
+No estudo realizado por Nandi (2013), a quantidade de carboidratos redutores 
+variou aproximadamente entre 1-3%, enquanto a variação dos carboidratos não redutores 
+foi de 2-8% e de amido 4-11%. Por apresentar pouca quantidade de carboidratos, o 
+consumo da castanha de caju não afeta o índice glicêmico e, em associação à quantidade 
+gorduras, proteínas, fitoquímicos e outros componentes que estão presentes nessa 
+amêndoa, podem auxiliar na redução da incidência de diabetes tipo II (VIGUILIOUK et 
+al., 2014). 
+ As ACC contêm quantidades significativas de vitaminas e minerais que auxiliam na 
+manutenção da saúde e no bom funcionamento do corpo humano. Entre as vitaminas 
+hidrossolúveis presentes estão às do complexo B, tiamina, niacina e riboflavina; e entre as 
+vitaminas lipossolúveis, a mais expressiva em sua composição é a vitamina E, atuando 
+como um potente antioxidante. Com relação à composição de minerais da amêndoa o 
+fósforo, potássio e magnésio estão presentes em maior quantidade, embora apresente 
+outros minerais relevantes como o cálcio ferro, cobre, manganês, zinco e selênio (NANDI, 
+2013; KING et al., 2008; AMORIM et al., 2018; AKINHANMI, ATASIE & 
+AKINHOTOKUN, 2008).   
+ 
+ 
+ 
+ 
+20 
+ 
+ Embora o conteúdo de minerais presentes nas ACC seja vasto, deve-se levar em 
+conta a questão da biodisponibilidade desses compostos para os seres humanos, pois os 
+vegetais apresentam alguns fatores que impedem a absorção completa desses nutrientes. 
+No caso das ACC, é a presença de fitatos e oxalatos, componentes que dificultam a 
+absorção de alguns minerais pelo organismo (NASCIMENTO, NAOZUKA & OLIVEIRA, 
+2010). A proporção dos componentes presentes nas amêndoas, assim como em toda a 
+planta,pode variar devido a uma série de fatores como variedade genética, maturidade da 
+planta, ambiente, tratos culturais, efeitos sazonais, manejo inadequado na etapa de 
+beneficiamento e armazenamento (ALASALVAR & PELVAN, 2011; ALASALVAR & 
+SHAHIDI, 2009). 
+ 
+4.3       Aspectos Econômicos da castanha de caju 
+O segmento da castanha de caju era predominante extrativista. Essa forma de 
+produção só veio a ser alterado em meados de 1970, quando ocorreu uma forte perspectiva 
+de exportação. A exemplo dessa expectativa econômica, o Ceará se destacou na produção 
+extensiva de caju, com um crescimento médio de 12% de área ao ano, entre 1974 e 1986, o 
+que consolidou o estado como um dos maiores produtores nacionais (IBGE, 2018; 
+MACEDO & SOARES, 2015).  Após o bom desempenho do Ceará com o caju, outras 
+regiões aderiram à sua produção, como é o caso do Município de Mossoró no Rio Grande 
+do Norte, onde mil famílias foram assentadas em 1979, formando uma colônia dedicada a 
+Cajucultura, após receberem auxílios governamentais da Superintendência do 
+Desenvolvimento do Nordeste - SUDENE (GAMARRA-ROJA et al., 2017; 
+FIGUEIRÊDO et al., 2010). 
+A agroindústria do caju ocupa em torno de 1 milhão de hectares plantados, área 
+equivalente a cerca de 50% do território de Sergipe, gerando 250 mil empregos com mão-
+de-obra direta e empregando indiretamente cerca  de  1,5  milhões  de  pessoas nos 
+segmentos agrícola, industrial e de  serviços. Sua produção é economicamente viável, pois 
+estima-se uma cadeia de variados subprodutos do segmento alimentício, farmacêutico e 
+químico (ALMEIDA et al., 2017; EMBRAPA, 2016; IBGE, 2018; SERRANO & 
+PESSOA, 2016). O destaque econômico desse cultivar é o processamento de castanha de 
+caju. A produção nacional dessa amêndoa é responsável pela arrecadação de valores na 
+ordem de US$ 100 milhões anuais. O seu mercado é pautado principalmente na 
+exportação, com cerca de 90% da produção nacional destinadas ao agronegócio 
+ 
+ 
+ 
+ 
+21 
+ 
+(BRAINER & VIDAL, 2020). 
+No Brasil cerca de 99% da plantação de caju estão concentrados nos estados do 
+Ceará, Piauí e Rio Grande do Norte. Segundo o IBGE, no ano de 2018, o Nordeste 
+apresentou decréscimo produtivo de aproximadamente 3,9%. A produção de castanha de 
+caju foi 129,3 mil toneladas, estando o Ceará responsável por 54,83%, Piauí 19,48% e Rio 
+Grande do Norte 14,18% (SERRANO & PESSOA, 2016). O restante dos estados 
+produtores são Pernambuco, Paraíba, Bahia, Alagoas e algumas regiões do Centro-Oeste, 
+com 1% de participação na produção nacional (VIDAL, 2016). Essa retração no mercado 
+exportador pode ser explicada por alguns fatores como doenças e pragas nas plantações, 
+processamento inadequado, gerando baixo rendimento e produtividade de amêndoas 
+inteiras, desvalorização do produtor e conflitos na cadeia agroindustrial do caju 
+relacionado a produtores, intermediários e processadores na divisão de margens de ganho 
+(ALBUQUERQUE et al., 2010; NUNES et al., 2018). 
+A produção de castanha tem declinado nos últimos anos, devido às condições 
+ambientais que propiciam doenças fúngicas da família Botryosphaeriaceae (Ascomycota, 
+Botryosphaeriales), de hábitos parasíticos, saprofíticos e endofíticos, causando duas 
+fitopatologias. Uma é a resinose, ocasionando o escurecimento, intumescência e rachadura 
+da casca, sendo observada em plantas submetidas a estresse relacionado à altitude e à 
+amplitude térmica. A outra fitomoléstia é a podridão-preta-das-hastes, caracterizada pelo 
+escurecimento longitudinal dos tecidos da haste terminal, provocando copa encoberta de 
+ramos secos, muito observados no ecossistema do serrado brasileiro, relacionados à 
+amplitude térmica e a altos índices de chuva na época do lançamento foliar (CARDOSO, 
+VIANA & MARTINZ, 2018).  
+Entre os processos que comprometem a produção e exportação da castanha está a 
+manipulação inadequada desses alimentos, podendo veicular doenças ao consumidor 
+(BRASIL, 2010). Os fungos são os principais agentes causadores de doenças veiculadas 
+por grãos, sementes e amêndoas. Esse desenvolvimento fúngico ocorre durante o 
+armazenamento e transporte sem a correção e adoção das práticas higiênicas. O 
+crescimento desses agentes leva a uma série de prejuízos no produto como, por exemplo, a 
+ocorrência de alterações na composição química e nutricional, queda da qualidade e risco 
+de intoxicação devido à produção de metabólitos secundários como as micotoxinas 
+(FERREIRA-CASTRO, 2011). 
+Em um estudo realizado por Rodrigues et al. (2012), espécies fúngicas toxigênicas 
+foram encontradas em amostras de castanhas de caju comercializadas em Teresina- PI, 
+ 
+ 
+ 
+ 
+22 
+ 
+corroborando com Lopes, Anjos e Vasconcelos (2017) que identificaram altos percentuais 
+de contaminação fúngica em amostras na mesma capital, ressaltando que essa 
+contaminação ocorreu por falhas durante o processamento e estocagem da matéria prima e 
+condições higiênico-sanitárias inadequadas. As falhas na cadeia produtiva do caju 
+interferem na sua qualidade higiênico-sanitária, colocando a população frente ao risco 
+biológico, perda da confiabilidade quanto à intenção de compra, prejudicando a castanha 
+como importante produto para economia do Nordeste. 
+A concentração produtiva do caju no mundo está relacionada a países em 
+desenvolvimento, como Brasil, Índia, países africanos e Vietnã, embora o maior consumo 
+ocorra em países que apresentam renda elevada. Entre eles estão os EUA como maior 
+importador e consumidor mundial, seguido de alguns países da comunidade europeia 
+(ANDRADE NETO, 2006). No que se refere ao mercado internacional o Brasil vem sendo 
+superado por países Africanos, cenário bem diferente ao que ocorria na década de 80, 
+quando o mercado brasileiro concorria com a Índia pela liderança na comercialização da 
+castanha de caju (MACEDO & SOARES, 2015). 
+Segundo o Sistema Nacional de Informação Florestal – SNIF, entre os produtos 
+florestais não madeireiros, a castanha de caju obtinha lugar de destaque. No 
+monitoramento da exportação de castanha de caju realizado de 2008 a 2016, os anos de 
+2008 e 2009 obtiveram um crescimento nas vendas de 35.414 toneladas e 48.245 toneladas 
+respectivamente. Nos anos seguintes, a exportação sofreu uma queda progressiva chegando 
+a 15.604 toneladas em 2016 que, comparado com o maior índice de exportação de 2009, 
+obteve queda de aproximadamente de 68%. Esse declínio nas vendas é decorrente de 
+pragas, doenças do cultivar e estiagem prolongada por consequência do fenômeno El Niño 
+(SNIF, 2018). 
+Macedo e Soares (2015) salientam que, mesmo com a baixa produtividade e queda 
+nas vendas, o índice de exportação de castanha de caju no Brasil conseguiu manter-se 
+positivo em relação a outros países produtores como Indonésia e Costa do Marfim. 
+Entretanto, segundo Lopes, Anjos e Vasconcelos (2017), as indústrias se voltaram ao 
+mercado interno brasileiro devido a problemas na produção e por causa da crise econômica 
+que retraiu o consumo mundial, desvalorizando o câmbio e prejudicando as exportações e 
+os lucros com a Cajucultura. 
+Para CONAB (2017), os auxílios governamentais são de extrema importância para 
+atenuar os danos na produtividade devido aos longos períodos de estiagem, ataque por 
+pragas e doenças do cultivar. Outras estratégias corroboram para a redução dessas 
+ 
+ 
+ 
+ 
+23 
+ 
+dificuldades enfrentadas pela Cajucultura como, por exemplo, o aumento da variabilidade 
+genética dessa cultura, permitindo maior resistência das plantas à fitomoléstias e a 
+valorização dos preços dos subprodutos. Essas medidas, mesmo que demoradas e com 
+resultados que só foram percebidos em longo prazo, apresentam-se como soluções que 
+visam à melhoria econômica. 
+4.3  Alimentos funcionais  
+O termo “alimentos funcionais” tem diferentes definições, dependendo da 
+jurisprudência do país. De maneira ampla o conceito de alimentos com caráter funcional 
+trata dos ingredientes ou componentes alimentares que promovem a prevenção ou retardo 
+de doenças aos seres humanos e animais a partir de sua ingestão (SZAKÁLY et al., 2019). 
+No Brasil, a Agência Nacional de Vigilância Sanitária – ANVISA, define alimento 
+funcional como ingrediente que, quando consumido na dieta usual, sem que necessário a 
+supervisão médica, produz efeitos benéficos à saúde além da nutrição básica. Sua definição 
+permanece assim até os dias atuais, sob regimento da resolução nº 18 de abril de 1999 
+(BRASIL, 1999). 
+O conceito de que os alimentos podem promover saúde e bem estar vem desde às 
+sociedades antigas, de modo que uma das frases mais icônicas de Hipócrates, conhecido 
+como pai da medicina, dizia: “Que o teu remédio seja o teu alimento e o teu alimento seja o 
+teu remédio”. Milênios depois, o termo alimento funcional foi usado pela primeira vez no 
+Japão, que há muito tempo já associava longevidade à boa alimentação. Assim, no ano de 
+1991, o Ministério da Saúde, Bem-Estar e Trabalho do Japão estabeleceu o FOSHU - Food 
+For Specified Health Use, sistema criado para regulamentar os alimentos funcionais 
+(IWATANI & YAMAMOTO, 2019; MARTINS et al., 2013). 
+Os alimentos funcionais podem ser classificados, dependendo da origem, como 
+animal ou vegetal ou de acordo com sua função no organismo, como por exemplo, agentes 
+antioxidantes, reguladores de pressão arterial ou probióticos. Entretanto, tais funções não 
+podem ser associadas à cura de doenças, mas sim como agentes que, junto a uma dieta 
+equilibrada e estilo de vida saudável, reduzem os riscos de determinadas doenças ou 
+colaboram na prevenção de certas patologias, não devendo ser administrados como 
+medicamentos (BALDISSERA et al., 2011;  CHAMPAGNE et al., 2015).  
+Com o entendimento de que a manutenção da saúde pode estar ligada aos 
+alimentos, o número de produtos alimentícios com alegação funcional foi tomando espaço 
+no mercado, conquistando o consumidor que tem interesse em melhorar seus hábitos 
+ 
+ 
+ 
+ 
+24 
+ 
+alimentares. Em 2018, o Japão faturou US$ 1,8 bilhões com a venda desses alimentos. Por 
+outro lado, em outras partes do mundo, o crescimento de vendas destes alimentos com 
+alegação funcional seja de forma mais lenta. Ainda assim os produtos que estão dispostos 
+no mercado apostam na apelação de produtos saudáveis, o que mostra uma tendência 
+mundial (BRASIL, 2008; IWATANI & YAMAMOTO, 2019; SZAKÁLY et al., 2019). 
+4.4 Conceituação de Probióticos 
+Os primeiros relatos de que microrganismos poderiam favorecer a saúde humana 
+foi no ano de 1907, quando Metchnikoff, um biólogo microbiologista da Ucrânia, 
+acompanhou uma população de camponeses na Bulgária e observou a relação entre 
+longevidade e baixa incidência de doenças gastrointestinais desse povo e um tipo de leite 
+fermentado muito consumido na região que estava repleto de uma bactéria do gênero 
+Lactobacillus. Seu estudo foi o ponto de partida para várias outras pesquisas relacionadas a 
+esses microrganismos benéficos à saúde (ALBUQUERQUE, 2005; DE CARVALHO et 
+al., 2017; SZAKÁLY et al., 2019). 
+O termo probiótico foi usado pela primeira vez por Lilly e Stillwell (1965), para 
+denominar substâncias secretadas por um protozoário que estimularam o crescimento de 
+outros. A palavra deriva do grego e significa “pró-vida”, sendo o antônimo de antibiótico, 
+que significa “contra a vida” (COPPOLA & TURNES, 2004). A designação do termo 
+probióticos como suplemento alimentar destinado a animais e que incluía os 
+microrganismos e substâncias que afetam o equilíbrio da microbiota intestinal foi realizado 
+por Parker (1974).  
+As definições para probióticos seguiram diversas modificações. Para Fuller (1989), 
+probiótico é definido como “um suplemento alimentar constituído de microrganismos 
+vivos capazes de beneficiar o hospedeiro através do equilíbrio da microbiota intestinal”, 
+adicionando anos mais tarde que “os microrganismos deveriam ser produzidos em larga 
+escala, permanecendo estáveis e viáveis em condições de estocagem, ser capazes de 
+sobreviver no ecossistema intestinal e possibilitar ao organismo os benefícios de sua 
+presença”. Em 1992, os pesquisadores Havenaar e Huisin’tveld propuseram mais uma 
+definição para probióticos, classificando-os como culturas únicas ou mistas de 
+microrganismos que, administrados a animais ou humanos, produzem efeitos benéficos no 
+hospedeiro por incremento das propriedades da microbiota nativa (ISAPP, 2019).  
+A definição mais aceita a respeito dos probióticos foi estabelecida há quase 20 anos 
+e se mantém até os dias atuais. Probiótico é um suplemento alimentar composto de células 
+ 
+ 
+ 
+ 
+25 
+ 
+microbianas vivas que, em determinadas concentrações, têm efeitos benéficos para o 
+hospedeiro, de forma a melhorar ou manter o equilíbrio microbiano do intestino 
+(FAO/WHO, 2002; ISAPP, 2020). Com o passar do tempo, novos termos surgiram para se 
+referenciar à microrganismos benéficos à saúde humana, tendo em vista a especificidade de 
+sua atuação como por exemplo, os psicobióticos, imunobióticos, oralbióticos entre outros 
+termos, que fazem parte do conjunto denominado probiótico (HERNÁNDEZ, 
+RODRÍGUEZ & VÁZQUEZ, 2020). 
+Para que apresente a capacidade de proliferação no intestino, os probióticos devem 
+apresentar concentração no alimento para que consiga passar pelo trato gastrointestinale 
+chegar em condições ativas no intestino (TRIPATHI & GIRI, 2014; PANGHAL et al., 
+2017; NOROUZI et al., 2019). Segundo a FAO/OMS (2007), ao consumir alimentos 
+6
+probióticos, é indicado que esses microrganismos estejam em concentrações elevadas (10-
+7
+10 UFC/g) para serem capazes de atuar na prevenção de doenças degenerativas no 
+hospedeiro.  
+Os probióticos fornecem vários benefícios à saúde, principalmente por meio da 
+manutenção da microflora intestinal normal, proteção contra patógenos gastrointestinais, 
+fortalecimento do sistema imunológico, redução do nível sérico de colesterol e pressão 
+arterial, atividade anticarcinogênica, auxiliando também na melhor absorção dos nutrientes 
+como no caso de lactose. Podem ser usados de forma terapêutica na prevenção de diarréia 
+infantil, doenças urogenitais, osteoporose, alergia alimentar e doenças atópicas, redução 
+dos sintomas de doenças induzida por anticorpos, alívio da constipação, 
+hipercolesterolemia, controle de doenças inflamatórias intestinais e proteção contra câncer 
+de cólon e bexiga (TRIPATHI & GIRI, 2014; HALLORAN & UNDERWOOD, 2019; 
+HERNÁNDEZ, RODRÍGUEZ & VÁZQUEZ, 2020). 
+O mecanismo de ação dos probióticos não foi completamente esclarecido, embora 
+tenham sido sugeridos vários processos que podem atuar de maneira independente ou 
+associada. Uma das teorias mais aceitas e difundidas é que a proliferação desses 
+microrganismos causa exclusão competitiva. O probiótico compete com os patógenos por 
+sítios de fixação e nutrientes, impedindo sua ação transitoriamente. Esse mecanismo de 
+ação explicaria a necessidade da administração continuada e a elevadas doses dos 
+probióticos, para manifestar seus efeitos. Outra teoria sugere que os probióticos afetam os 
+patógenos através da síntese de bacteriocinas, como ácidos orgânicos voláteis e de 
+peróxido de hidrogênio, assim atuando de maneira preventiva ou ativa nas patologias 
+colaborando para a homeostase (SALMINEN, KNEIFEL & OUWEHAND, 2016). 
+ 
+ 
+ 
+ 
+26 
+ 
+A classificação de probióticos e a utilização em alimentos no Brasil são amparadas 
+por três resoluções. A RDC de nº18 de 30 de abril 1999 fornece as orientações básicas para 
+a análise e comprovação de propriedades funcionais ou de saúde presente em rótulos de 
+alimentos. Nesse regulamento técnico os probióticos estão enquadrados dentro dos 
+alimentos com alegação funcionais (BRASIL, 1999). A RDC n º 243 de 26 de junho de 
+2018, que possui os requisitos sanitários e de rotulagem para suplementos alimentares. 
+Nesta resolução, os probióticos são constituintes utilizados na composição dos 
+suplementos alimentares, afim de fornecer nutrientes (BRASIL, 2018b). 
+A terceira base legal brasileira a respeito de probiótico é a RDC nº 241/2018, que 
+dispõe sobre os requisitos para comprovação da segurança e dos benefícios à saúde dos 
+probióticos para uso em alimentos. Por meio dessas resoluções, a ANVISA regulamenta a 
+fabricação e classificação de medicamentos e alimentos que possuem os microrganismos já 
+conhecidos e considerados probióticos, assim como também fornece uma lista de pré-
+requisitos que orientam pesquisas para a classificação de cepas que atuem como 
+probióticos (BRASIL, 2018a). 
+A seleção de bactérias consideradas probióticos segue os critérios a respeito do seu 
+gênero, origem, estabilidade ao trato gastrointestinal e aderência a mucosa intestinal para 
+colonização, mesmo que de forma temporária, de tal maneira que tenha a capacidade de 
+produzir compostos antimicrobianos (PANGHAL et al., 2017; NOROUZI et al., 2019). A 
+comprovação de identidade, eficácia e segurança de um probiótico e do seu uso em 
+alimentos ocorre por meio da apresentação de um dossiê técnico-cientifico em que uma 
+séries de critérios deve ser seguido de modo a não comprometer a segurança do 
+consumidor e garantir os benefícios que esse constituinte alimentar pode fornecer 
+(BRASIL, 2018a).  
+O consumo de suplementos e alimentos que contenham probióticos é uma crescente 
+em todo o mundo. Em 2018, o setor produtivo cresceu 30%, sendo o consumo de leite 
+fermentado responsável por 4 % desse crescimento, movimentando cerca de US$ 4,7 
+milhões só com esse produto. É projetado que a comercialização de probióticos arrecade 
+em média US$ 64 bilhões até 2022. Na América Latina, o Brasil é o maior consumidor de 
+suplementos e alimentos probióticos, sendo responsável por 28,1% do consumo 
+(EUROMONITOR, 2018; SALVETTI et al., 2018). 
+ 
+ 
+ 
+ 
+ 
+ 
+27 
+ 
+4.5 Gênero Lactobacillus - Espécie Lacticaseibacillus paracasei. 
+  Entre os diversos microrganismos que são considerados probióticos, as bactérias 
+dos gêneros Bifidobacterium e Lactobacillus são as mais utilizadas em produtos 
+alimentícios. O gênero das bifidobactérias tem em média 30 espécies representantes. São 
+microrganismos gram-positivos, não formadores de esporos e sua origem pode ser humana, 
+animal ou vegetal. São bactérias heterofermentativas, produtoras de ácido acético e lático, 
+com temperaturas ótimas para crescimento entre 37 e 41 ºC, e mais adaptadas a valores de 
+pH próximo a neutralidade (DE CARVALHO et al., 2017). 
+O gênero Lactobacillus foi proposto em 1901, pelo pesquisador Beijerinck. É o 
+maior entre as espécies de acidoláticas contendo ao mínimo 261 representantes 
+reconhecidos com função probiótica (ZHENG et al., 2020). Vários esquemas foram 
+propostos para a classificação dos Lactobacillus, sendo baseados na fisiologia bacteriana, 
+nas características bioquímicas e estudos fenótipos e genéticos que complementam os 
+estudos taxonômicos desses seres (ABRIOUEL et al., 2015). No trabalho realizado por 
+Salvetti et al. (2018), a análise genômica do gênero Lactobacillus sugere uma sua 
+reclassificação, permitindo agrupar os microrganismos de acordo com suas propriedades 
+ecológicas e metabólicas. Na Tabela 1, verificam-se os novos nomes para espécies de 
+Lactobacillus após a reclassificação. 
+ 
+Tabela 1: Nomenclatura propostos para espécies probióticas de Lactobacillus. 
+Nome antigo Novo Nome 
+Lactobacillus acidophilus Lactobacillus acidophilus 
+Lactobacillus delbrueckii sub sp. Lactobacillus delbrueckii subs p. 
+Bulgaricus Bulgaricus 
+Lactobacillus crispatus Lactobacillus crispatus 
+Lactobacillus gasseri Lactobacillus gasseri 
+Lactobacillus johnsonii Lactobacillus johnsonii 
+Lactobacillus helveticus Lactobacillus helveticus 
+Lactobacillus casei Lacticaseibacillus casei 
+Lactobacillus paracasei Lacticaseibacillus paracasei 
+Lactobacillus rhamnosus Lacticaseibacillus rhamnosus 
+Lactobacillus plantarum Lactiplantibacillus plantarum 
+Lactobacillus brevis Levilactobacillus brevis 
+ 
+ 
+ 
+ 
+28 
+ 
+Lactobacillus salivarius Ligilactobacillus salivarius 
+Lactobacillus fermentum Limosilactobacillus fermentum 
+Fonte: Adaptado de ZHENG et al., 2020 
+Um estudo filogenético do gênero Lactobacillus foi realizado por Zheng et al. 
+(2020), resultando em uma proposta de reclassificação, dando origem a 25 novos gêneros, 
+salientando que os microrganismos que já eram considerados probióticos permaneceram na 
+lista de alegação probiótica. A nova classificação taxonômica pode auxiliar na 
+compreensão dos mecanismos em comum de cada grupo de probióticos, servindo assim 
+para o melhor entendimento e aplicação dos efeitos benefícios a saúde dos seres humanos e 
+o emprego desses microrganismos nos alimentos.  
+ Os representantes da família Lactobacillaceae estão bem inseridos na indústria de 
+alimentos, contribuindo para a fabricação de fermentados, auxiliando no sabor, textura e na 
+preservação. Somado a isso, 12 cepas pertencentes a esse grupo são geralmente 
+reconhecidas como segura para o consumo (GRAS), de acordo com a Food and Drug 
+Administration (FDA) dos EUA. São comercializadas como probióticos, pois possuem 
+características que promovem benefícios à saúde, além do valor nutricional. Entre os 
+probióticos mais utilizados nos alimentos são os das espécies, Lacticaseibacillus casei, 
+Lacticaseibacillus rhamnosus e o Lacticaseibacillus paracasei. (SALVETTI & O’TOOLE, 
+2017; SALVETTI et al., 2018). 
+O Lacticaseibacillus paracasei (Figura 3) foi descrito a primeira vez por Collins, 
+Phillips e Zanoni (1989), essas bactérias apresentam características como, morfologia de 
+bacilos gram-positivo, não formadores de esporos nem cocobacilos. São anaeróbias 
+facultativas, catalase negativa, encontram-se principalmente no trato gastrointestinal de 
+humanos e animais, mas podem estar presente no ambiente e nas matérias primas 
+alimentares. Sua temperatura ótima de crescimento está entre 35ºC a 37ºC, porém pode 
+suportar temperaturas de 10 º C a 40 º C. São acidúricos ou acidófilos, suportando faixas de 
+pH baixas próximo 2,5. Seu metabolismo é fermentativo tendo como resultante primário o 
+ácido lático, podendo gerar subprodutos secundário como acetato, etanol, CO, entre outros 
+2
+(DE CARVALHO et al., 2017, LI et al., 2020; ZHENG et al., 2020). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+29 
+ 
+Figura 3: Microscopia e coloração de Gram do Lb. paracasei ATCC 334.
+ 
+Fonte: Autoria própria (2019). 
+ 
+Em um estudo realizado por Donkor et al. (2006), o Lb. pracasei apresentou 
+contagens constantes frente à diversos pH, indicando ser um microrganismo que apresenta 
+uma concentração de células viáveis para suportar diferentes ambientes, como por exemplo 
+o trato gastrointestinal. Por se manter em uma constante, esse probiótico pode ser 
+considerado estável para a manipulação em alimentos. Os Lb. pracasei podem conferir 
+aroma, sabor, textura aos alimentos e contribuir na sua bioconservação (BURITI & SAAD, 
+2007; ABRIOUEL et al., 2015). 
+Nos alimentos, os Lb. paracasei são utilizados para elaboração de fermentados de 
+origem vegetal devido seu caráter heterofermentativo. Já foi empregado para preparação de 
+sorvetes e iogurtes à base de soja, farinhas, purê, iogurte de nozes. O bom desempenho 
+desses microrganismos em fermentar os alimentos de origem não lática os torna uma opção 
+na fabricação de alimentos probióticos que atendam às pessoas intolerantes à lactose, 
+alérgicos à proteína do leite de vaca, vegetarianos e veganos (MANTZOURANI et al., 
+2020; OLAYINKA et al., 2018; SANTOS et al., 2020; VONG & LIU, 2019). 
+ 
+ 
+ 
+ 
+ 
+ 
+30 
+ 
+5. REFERÊNCIAS BIBLIOGRÁFICAS 
+ 
+ 
+ABRIOUEL, H. et al. Novos insights sobre a resistência a antibióticos de espécies de 
+Lactobacillus de alimentos fermentados. Food Research International, n.78, p. 465-481. 
+2015.  
+ 
+ 
+AGYEMANG, M.; ZHU, Q.; TIAN, Y. Analysis of opportunities for greenhouse emission 
+reduction in the global supply chains of cashew industry in West Africa. Journal of 
+Cleaner Producion. v.115, p. 149–161. 2015. 
+ 
+ 
+AKINHANMI, T.; ATASIE, V.; AKINTOKUN, P. Chemical composition and 
+physiochemical properties of cashew nut (Anacardium occidentale) oil and cashew nut 
+shell liquid. Journal of Agricultural, Food, and Environmental Sciences, v.2, n.1, p. 1-
+10, 2008. 
+ 
+ 
+ALBUQUERQUE, R. et al. Antimicrobianos como aditivos zootécnicos promotores de 
+crescimento. Farmacologia aplicada à avicultura. São Paulo: Roca, cap. 9, p. 149-159, 
+2005. 
+ 
+ 
+ALBUQUERQUE, D. P. L. et al. A competitividade externa da amêndoa de castanha-de-
+caju Brasileira no período de 1990 A 2007. In:VI Encontro de Economia do Ceará em 
+Debate. Anais[...], Fortaleza- Ceará, 2010. 
+ 
+ 
+ALMEIDA, L. H. F. et al. Viabilidade econômica da produção de caju (Anacardium 
+occidentale L.). Nativa, Sinop, v.5, n.1, p.9-15.  2017. 
+ 
+ 
+ALASALVAR, C.; PELVAN, E. Fat-soluble bioactives in nuts. European Journal of 
+Lipid Science and Technology, v. 113, n.8, 943-949. 2011.  
+ 
+ 
+ALASALVAR, C.; SHAHIDI, F. Natural antioxidants in tree nuts. European Journal of 
+Lipid Science and Technology, v. 111, n.11, p. 1056-1062. 2009. 
+ 
+ 
+AMORIM, M. et al. Use of whey peptide fraction in coated cashew nut as functional 
+ingredient and salt replacer. LWT, v. 92, p. 204–211. 2018. 
+ 
+ 
+ANDRADE NETO, J. C. Competitividade na pequena produção agroindustrial: 
+estudo na agroindústria da castanha de caju. Dissertação (Mestrado em Engenharia de 
+Produção). Universidade Federal do Rio Grande do Norte. UFRN Natal, 2006. 
+ 
+ 
+ 
+ 
+ 
+ 
+31 
+ 
+BALDISSERA, A. C. et al. Alimentos funcionais: uma nova fronteira para o 
+desenvolvimento de bebidas protéicas a base de soro de leite. Ciências Agrárias. v.32, n. 
+4, p.1497-1512. 2011. 
+ 
+ 
+BOLLING, B. W. et al. Tree nut phytochemicals: composition, antioxidant capacity, 
+bioactivity, impact factors. A systematic review of almonds, Brazils, cashews, hazelnuts, 
+macadamias, pecans, pine nuts, pistachios, and walnuts. Nutrition Research Reviews, v. 
+24, n.02, p. 244-275. 2011. 
+ 
+ 
+BRAINER M. S. C.P.; VIDAL M. F. Cajucultura. Escritório técnico de Estudos 
+Econômicos do nordeste – ETNENE 2020. Disponível em: 
+https://www.bnb.gov.br/documents/80223/7106244/114_Caju.pdf/b0348238-45be-b060-
+3629-488c2e70a499. Acesso em : 14,  jul. 2020. 
+ 
+ 
+BRASIL. Agência Nacional de Vigilância Sanitária. RDC nº 45, de 03 de Novembro de 
+2010. Dispõe sobre aditivos alimentares autorizados para uso segundo as Boas 
+Práticas de Fabricação (BPF). Disponível em: 
+http://portal.anvisa.gov.br/documents/33916/391619/Resolu%25C3%25ª7%25C3%25ª3o
+%2Bda%2Bdiretoria%2Bcolegiada%2B%2BRDC%2Bn%2B%2B45%2Bde%2B03%2Bde
+%2Bnovembro%2Bde%2B2010.pdf/23734ª57-21c1-4f71-9916-c6fa09edb8c5. Acesso em: 
+16, maio. 2018. 
+ 
+ 
+BRASIL. Agência Nacional de Vigilância Sanitária. RDC nº 18, de 30 de abril de 1999. 
+Regulamento Técnico que estabelece as diretrizes básicas para análise e comprovação 
+de propriedades funcionais e ou de saúde alegadas em rotulagem de alimentos. 
+Disponível em: 
+http://portal.anvisa.gov.br/documents/33916/388845/RESOLUCAO_18_1999.pdf/d2c5f6d
+0-f87f-4bb6-a65f-8e63d3dedc61. Acesso em: 23, jul. 2018. 
+ 
+ 
+BRASIL. Agência Nacional de Vigilância Sanitária. RDC nº 241, de 26 de julho de 2018ª. 
+Dispõe sobre os requisitos para comprovação da segurança e dos benefícios à saúde 
+dos probióticos para uso em alimentos. Disponível em: 
+http://portal.anvisa.gov.br/documents/10181/3898888/RDC_241_2018_.pdf/941cda52-
+0657-46dd-af4b-47b4ee4335b7. Acesso em: 03, set. 2019. 
+ 
+ 
+BRASIL. Agência Nacional de Vigilância Sanitária. RDC nº 243, de 26 de julho de 2018b. 
+Dispõe sobre os requisitos sanitários dos suplementos alimentares. Disponível em: 
+http://portal.anvisa.gov.br/documents/10181/3898888/RDC_243_2018_.pdf/0e39ed31-
+1da2-4456-8f4a-afb7a6340c15. Acesso em: 03, set. 2019. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+32 
+ 
+BRASIL. Agência Nacional de Vigilância sanitária. Comissão Tecnocientífica de 
+Assessoramento em Alimentos Funcionais e Novos Alimentos. Alimentos com 
+Alegações de Propriedades Funcionais e ou de Saúde, Novos Alimentos/ Ingredientes, 
+Substâncias Bioativas e Probióticos. Atualizado em: julho de 2008. IX- Lista de alegações 
+de propriedade funcional aprovadas. Disponível em: http:// 
+www.anvisa.gov.br/alimentos/32eguridad/tecno_lista_alega. Htm. Acesso em: 24, jul. 
+2018. 
+ 
+ 
+BRUFAU, G.; BOATELLA, J.,; RAFECAS, M. Nuts: source of energy and maconutrients. 
+British Journal of Nutrition, v. 96, n. S2, s. 24. 2006. 
+ 
+ 
+BURITI, F. C. A..; SAAD, S. M. I. Bactérias do grupo Lactobacillus casei: caracterização, 
+viabilidade como probióticos em alimentos e sua importância para a saúde humana. 
+Archivos Latino americanos de Nutricion, v. 57, p. 373- 380, 2007. 
+ 
+ 
+CARDOSO J. E.; VIANA F. M.P.; MARTINZ M. V. V. Doenças causadas por fungos 
+da família Botryosphaeriaceae em cajueiros. Fortaleza: Embrapa. 2018. 
+ 
+ 
+CHAMPAGNE,  C.  P.;  RAYMOND,  Y.;  GUERTIN,  N., ;  BÉLANGER,  G.  Effects  
+of  storage  conditions, microencapsulation and inclusion in chocolate particles on the 
+stability  of  probiotic 32egurida in ice cream.  International Dairy Journal, v. 47, p.109-
+117. 2015. 
+ 
+ 
+COLLINS M. D.; PHILLIPS B. A.; ZANONI P.  Deoxyribonucleic Acid Homology 
+Studies of Lactobacillus casei, Lactobacillus paracasei sp. nov., subsp. paracasei and sub 
+sp. tolerans, and Lactobacillusrhamnosus sp. nov., comb. nov. International Journal of 
+Systematic and Evolutionary Microbiology .  1989. 
+ 
+ 
+CONAB. Panorama da Cajucultura no Ceará, Fortaleza – CE, 2017. Disponível em: 
+http://www.conab.gov.br/OlalaCMS/uploads/arquivos/17_02_09_14_35_39_cajucultura_n
+o_ceara __-__2017.pdf. Acesso em: 06, fev. 2019. 
+ 
+ 
+COPPOLA, M. M.; TURNES, C. G. Probióticos e resposta imune. Ciência Rural, v. 34, 
+n. 4, p. 1297-1303, 2004. 
+ 
+ 
+DAMODARAN, S.; PARKIN, K.L.; FENNEMA, O.R. Química de Alimentos de 
+Fennema. 4. Ed., Porto Alegre: Artmed, p.900, 2010. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+33 
+ 
+DE CARVALHO, F. L. O. et al. Probióticos e Prebióticos: benefícios acerca da 
+literatura. Revista de Saúde Re AGES, [S.l.], v. 1, n. 1, p. 58-87, fev. 2017. ISSN 2596-
+0970. Disponível em: 
+http://npu.faculdadeages.com.br/index.php/revistadesaude/article/view/8. Acesso em: 02, 
+ago. 2019. 
+ 
+ 
+DE OLIVEIRA S. A. G. et al. . Nutritional quality and protein value of exotic almonds and 
+nuts from the Brazilian Savanna compared to peanut. Food Research International, n.44, 
+v.7, p. 2319-2325. 2011. 
+ 
+DONKOR, O. N. et al. Effect of acidification on the activity of probiotics in yoghurt 
+during cold storage. International. Dairy Journal, v. 16, p. 1181-1189, 2006. 
+ 
+ 
+EMBRAPA. Aspectos econômicos da cultura do cajueiro, Embrapa Agroindústria 
+Tropical, 2ª ed., 2016. Disponível em: 
+https://www.spo.cnptia.embrapa.br/conteudo?p_p_id=conteudoportlet_WAR_sistemasdepr
+oducaolf6_1ga1ceportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_co
+l_id=column2&p_p_col_count=1&p_r_p_76293187_sistemaProducaoId=7705&p_r_p_-
+996514994_topicoId=10308. Acesso em: 4, fev.2019. 
+ 
+ 
+EUROMONITOR INTERNATIONAL. 2018. Disponível em: 
+https://www.euromonitor.com/probiotic-supplements-theories-on-future-growth/report. 
+Acesso em: 15, maio. 2020. 
+ 
+ 
+FAO/WHO (Food and Agriculture Organization of the United Nations and World Health 
+Organization).Guidelines for the evaluation of probiotics in food. Geneva: WHO; 2002. 
+ 
+ 
+FAO/WHO (Food and Agriculture Organization of the United Nations and World Health 
+Organization). 2007. Expert consultation on evaluation of health and nutritional properties 
+in food including powder milk with live lactic acid bacteria. Available at: 
+http://www.fao.org/es/ESN/Probio/Probio.htm.  Acesso em: 27, jun. 2019. 
+ 
+ 
+FERREIRA-CASTRO, F. L. Interação entre fungos toxigênicos (Aspergillusflavus e 
+Fusarium verticillioides) e carunchos (Sitophilus zeamais) em amostras de grãos de 
+milho. 2011.  Tese (Doutorado em Microbiologia) – Instituto de Ciências Biomédicas, 
+Universidade de São Paulo, São Paulo, 2011. 
+ 
+ 
+FIGUEIRÊDO A. M. et al. Análise da Transmissão de Preços no Mercado Brasileiro de 
+Castanha de Caju. Documentos técnico-centificos. v. 41, n. 04, p. 715- 730, 2010. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+34 
+ 
+FIGUEIRÊDO JÚNIOR, H. S. Desafios para a cajucultura no Brasil: o comportamento da 
+oferta e da demanda da castanha de caju. Revista Econômica do Nordeste, Fortaleza. v. 
+37, n.4, p. 550-571, 2006. 
+ 
+ 
+FULLER, R. Probiotic in man and animals. Journal of Applied Bacteriology, v. 66, p. 
+365- 378, 1989. 
+ 
+ 
+GAZOLLA, J. et al. A amêndoa da castanha-de-caju: composição e importância dos ácidos 
+graxos – produção e comércio mundiais. In: XLIV Congresso da SOBER: questões 
+agrárias, educação no campo e desenvolvimento. Florianópolis, Anais, 2006. 
+ 
+GADANI, B. C., et al. Physical and chemical characteristics of cashew nut flour stored and 
+packaged with different packages. Food Science and Technology, v. 37, n.4, p.657–662, 
+2017. 
+ 
+ 
+GAMARRA-ROJA G. et al. Contexto, (agri)cultura e interação no agroecossistema 
+familiar do caju no semiárido brasileiro .Cadernos de Ciência;Tecnologia, Brasília, v. 34, 
+n. 3, p. 315-338, 2017. 
+ 
+ 
+GROM, L. C. et al . Probiotic dairy foods and postprandial glycemia: A mini-review, 
+Trends in Food Science; Technology. 2020.  
+ 
+ 
+HALLORAN K., UNDERWOOD M. A. Probiotic mechanisms of action. Early Human 
+Development. n.135. p.58–65.2019. 
+ 
+ 
+HERNÁNDEZ A. H.; RODRÍGUEZ C. C.;VÁZQUEZ J. J. G. Novidades em probióticos : 
+evidencias y seguridad. Pediatr Integral XXIV. V.3. p. 151-165. 2020. 
+ 
+ 
+HUDSON, E.The future of probiotics. Part 1: Evolution of digestion and immune 
+support probiotics. Part 2: Chronic disease and science versus regulation.  Global 
+Head of Health and Wellness Research. Euromonitor International. 2016. 
+ 
+ 
+IBGE, Levantamento Sistemático da Produção Agrícola Estatística da Produção 
+Agrícola. Disponível em: 
+ftp://ftp.ibge.gov.br/Producao_Agricola/Levantamento_Sistematico_da_Producao_Agricol
+a_[mensal]/Fasciculo_Indicadores_IBGE/estProdAgr_201803.pdf. Acesso em: 19, fev. 
+2019. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+35 
+ 
+IBOPE.  Dia Mundial do Vegetarianismo: 8% da população brasileira afirma ser 
+adepta do estilo.  2012. Disponível em: http://www.ibopeinteligencia.com/noticias-e-
+pesquisas/dia-mundial-do-vegetarianismo-8-da-populacao-brasileira-afirma-ser-adepta-do-
+estilo/ aspx. Acesso em: 24, jul. 2018. 
+ 
+IBOPE. Pesquisa de opinião pública sobre vegetarianismo. 2018. Disponível em: 
+https://www.svb.org.br/images/Documentos/JOB_0416_VEGETARIANISMO.pdf  
+ 
+ISAPP. International Scientific Association for Probiotics and Prebiotics. 2019. Disponível 
+em: https://isappscience.org/for-consumers/learn/prebiotics/. Acesso em 10, jul. de 2020. 
+ 
+ 
+ISAPP International Scientific Association for Probiotics and Prebiotics. 2020. Disponível 
+em: https://isappscience.org/for-consumers/learn/probiotics/.Acesso em 10, jul. de 2020. 
+ 
+ 
+IWATANI, S.; YAMAMOTO, N. Functional food products in Japan: A review. Food 
+Science and Human Wellness, v. 8, n. 2, p. 96–101, 2019. 
+ 
+ 
+KING, J. C.et al .Tree nuts and peanuts as components of a healthy diet. The Journal of 
+Nutrition, v.138, n.9, p.1736S-1740S, 2008. 
+ 
+ 
+KRIS-ETHERTON, P. M. et al. The role of tree nuts and peanuts in the prevention of 
+coronary heart disease: Multiple potential mechanisms. The Journal of Nutrition, v.138, 
+n. 9, p. 1746-1751, 2008.  
+ 
+ 
+LI, X. W. et al. Exopolysaccharides from yogurt fermented by Lactobacillus paracasei: 
+production, purification and its binding to sodium caseinate. Food Hydrocolloids, v. 102, 
+p. 105635. 2020.  
+ 
+ 
+LILLY, D. M.; STILLWELL, R. H. Probiotics: growth promoting factors produced by 
+microorganisms. Science, v. 147, n. 1, p. 747-748, 1965. 
+ 
+ 
+LOPES L. O.; ANJOS V.G. DOS.; VASCONCELOS V. M. DA S. Fungos em castanhas 
+de caju comercializadas por ambulantes em Teresina-PI: uma análise microbiológica. 
+Revista Interdiciplinar. v. 10, n. 4, p. 105-111, 2017. 
+ 
+ 
+ MAIA, J. G. S.; ANDRADE, E. H. A.; ZOGHBI, M. D. G. B.Volatile constituents of the 
+leaves, fruits, and flowers of cashew (Anacardium occidentale L.). Journal of Food 
+Composition and Analysis, v.13, n. 3, p. 227-232, 2000. 
+ 
+MACEDO R. D.; SOARES N. S. O desempenho das exportações brasileiras de amêndoas 
+de castanha-de-caju entre os anos de 2007 e 2011. Informe Gepec, Toledo, v. 19, n. 1, p. 
+148-162, 2015. 
+ 
+ 
+ 
+ 
+36 
+ 
+ 
+ 
+MANTZOURANI, I. et al. Production of a potentially synbiotic fermented Cornelian 
+cherry (Cornus mas L.) beverage using Lactobacillus paracasei K5 immobilized on wheat 
+bran. Biocatalysis and Agricultural Biotechnology.v. 17. p. 345-351. 2020. 
+ 
+ 
+MARTINS, E. M. F. et al. Products of vegetable origin: A new alternative for the 
+consumption of probiotic bacteria. Food Research International. v. 51.n.2, p.764–770. 
+2013.  
+ 
+ 
+MENEZES, C. R. et al. Microencapsulação de probióticos: avanços e perspectivas. 
+Ciência Rural, v. 3, p. 36-41, 2013. 
+ 
+ 
+MOHAN, V. et al. Cashew Nut Consumption Increases HDL Cholesterol and Reduces 
+Systolic Blood Pressure in Asian Indians with Type 2 Diabetes: A 12-Week Randomized 
+Controlled Trial. The Journal of Nutrition, v. 148, n. 1, p. 63–69, 2018. 
+ 
+ 
+MOURA, D.; MAGALHÃES, F. C. A castanha de caju no contexto do programa de 
+aquisição de alimentos (PAA). Revista de Política Agrícola. v. 17, n.1, p. 108-116, 2008. 
+ 
+ 
+NAGARAJA, K.;  NAMPOOTHIRI, V. K., Chemical characterization of high-yielding 
+varieties of cashew (Anacardium occidentale). Plant Foods for Human Nutrition, n. 36, 
+v. 3, p. 201-206. 1986. 
+ 
+ 
+NANDI, B.K. Cashew nut nutritional aspects. Retrieved from. 2013. Disponível em: 
+http://www.fao.org/docrep/005/ac451e/ac451e0b.htm. Acesso em: 9, fev. 2019. 
+ 
+ 
+NASCIMENTO, A. N.;  NAOZUKA, J.; OLIVEIRA, P. V. In vitro evaluation of Cu and 
+Fe bioavailability in cashew nuts by off-line coupled SEC-UV and SIMAAS. 
+Microchemical Journal. v. 96, n.1, p. 58-63, 2010. 
+ 
+ 
+NOROUZI, S. et al. Pesquisa de sobrevivência de Lactobacillus paracasei na sobremesa 
+de soja congelada fermentada e não fermentada. Biocatálise e Biotecnologia Agrícola, 
+101297. 2019.   
+ 
+ 
+NUNES E. M. et al. Arranjos produtivos em dinâmicas de Desenvolvimento Regional: a 
+cadeia da Cajucultura no Território Açu-Mossoró (RN) Redes - Santa Cruz do Sul. 
+Universidade de Santa Cruz do Sul. v. 23, n. 2, p. 187-209, 2018. 
+ 
+OGUNSINA, B. S.; BAMGBOYE, A. I. Pre-shelling parameters and conditions that 
+influence the whole kernel out-turn of steam-boiled cashew nuts. Journal of the Saudi 
+ 
+ 
+ 
+ 
+37 
+ 
+Society of Agricultural Sciences. v.13, 29-34. 2014. 
+ 
+OLAYINKA, J.et al. Physicochemical, microbiological and sensory characteristics of 
+cashew milk formulated yoghurt. African Journal of Food Science. v. 12 (8) , p. 204-209. 
+2018. 
+ 
+ 
+PANGHAL, A. et al. Potential non-dairy probiotic products – A healthy approach. Food 
+Bioscience. v.21, p.80–89. 2017. 
+ 
+ 
+PAIVA, F.F. de A.; GARRUTTI, D dos S; SILVA NETO, R. M. da. Aproveitamento 
+Industrial do caju. Fortaleza: Embrapa-CNPAT, SEBRAE- CE, 88p, 2000.  
+ 
+ 
+PARREIRAS, L. E. Negócios solidários em cadeias produtivas: protagonismo coletivo 
+e desenvolvimento sustentável. Rio de Janeiro: IPEA, 2007. 
+ 
+ 
+PARKER, R.B. Probiotics, the other half of the antibiotic story. Animal Nutrition Health, 
+n.29, p.4-8, 1974. 
+ 
+ 
+PINHEIRO, P. R. et al. Aplicado ao processo de industrialização da castanha de caju. 
+2006. Disponível em: http://www.abepro.org.br/biblioteca/ 
+ENEGEP2006_TR450301_7981.pdf. Acesso em: 23, jul. 2018. 
+ 
+ 
+PHILLIPS, K. M.; RUGGIO, D. M.; ASHRAF-KHORASSANI, M. Phytosterol 
+composition of nuts and seeds commonly consumed in the United States. Journal of 
+Agricultural and Food Chemistry. v.53, n.24, p. 9436-9445, 2005. 
+ 
+ 
+REBOUÇAS, M. C.; RODRIGUES, M. C. P.; AFONSO, M. R. A. Optimization of the 
+acceptance of prebiotic beverage made from cashew nut kernels and passion fruit 
+juice.Journal of Food Science. v. 79, n. 7, p. 1393-1398, 2014. 
+ 
+ 
+RODRIGUES, D. et al. Storage stability of Lactobacillus paracasei as free cells or 
+encapsulated in alginate-based microcapsules in low pH fruit juices. Food and Bioprocess 
+Technology, v.5, p. 2748-2757, 2012. 
+ 
+ 
+SALMINEN, S.;  KNEIFEL,  W.;  OUWEHAND,  A.  C.  Probiotics:  Application of  
+probiotics  in  dairy  products: established and potential benefits. Food Science. v. 24, p. 
+234 – 241; 2016. 
+ 
+ 
+SALVETTI E., et al. Comparative genomics of the genus Lactobacillus reveals robust 
+phylogroups that provide the basis for reclassification. Appl Environ Microbiol.v.84, p.1-
+ 
+ 
+ 
+ 
+38 
+ 
+15. 2018. 
+ 
+SALVETTI E.; O’TOOLE P.W. When regulation challenges innovation: the case of genus 
+Lactobacillus.Trends Food Sci Technol. n. 66, p. 187–194. 2017.  
+ 
+ 
+SANTOS, M. C. M. et al. Fermentation of chickpea (Cicer arietinum L.) and coconut 
+(Coccus nucifera L.) beverages by Lactobacillus paracasei sub sp paracasei LBC 81: The 
+influence of sugar content on growth and stability during storage. LWT . 2020.  
+ 
+ 
+SERRANO, L. A. L.; OLIVEIRA, V. H. de. Aspectos botânicos, fenologia e manejo de 
+cultura do cajueiro. In: ARAÚJO, J. P. P. de (Ed.). Agronegócio caju: práticas e 
+inovações.  Brasília, DF: Embrapa. parte 2, cap.3, p. 77-165, 2013. 
+ 
+ 
+SERRANO, L. A. L.; PESSOA, P. F. A. de P. Aspectos econômicos da cultura do 
+cajueiro. EMBRAPA, 2016. Disponível em: https://bit.ly/2JTdWIl. Acesso em: 19, fev. 
+2019. 
+ 
+ 
+SZAKÁLY, Z. et al. A modified model of the willingness to pay for functional foods. 
+Appetite. v. 138, n. September 2018, p. 94–101, 2019.  
+ 
+ 
+SILANIKOVE, N.; LEITNER, G.; MERIN, U. The interrelationships between lactose 
+intolerance and the modern dairy industry: global perspectives in evolutional and historical 
+backgrounds. Nutrients, p.7312-7331.  2015. 
+ 
+ 
+SNIF. Portal do Sistema Nacional de Informações Florestais.  Serviço Florestal 
+Brasileiro. Ministério do meio Ambiente. Disponível em: snif.florestal.gov.br . Acesso em: 
+11 mar. 2019. 
+ 
+TACO. Tabela brasileira de composição de alimentos / NEPA – UNICAMP.- 4. ed. rev. 
+e ampl.. -- Campinas: NEPA- UNICAMP, 161 p. 2011. 
+ 
+ 
+TRIPATHI, M. K.; GIRI, S. K. Probiotic functional foods: Survival of probiotics during 
+processing and storage. Journal of Functional Foods, v. 9, n. 1, p. 225–241, 2014. 
+ 
+ 
+USDA – National database for Standart Reference, 2008. Disponível em: 
+http://www.usda.ogr. Acesso em: 10, fev. 2019. 
+ 
+ 
+VIDAL M. de F. Situação da Cajucultura nordestina após a seca / Escritório técnico 
+de estudos econômicos no nordeste – ETENE. Banco do nordeste do Brasil-BNB. n. 1 p. 
+17-25, 2016. 
+ 
+ 
+ 
+ 
+ 
+39 
+ 
+VIGUILIOUK, E. et al.  Effect of Tree Nuts on Glycemic Control in Diabetes: A 
+Systematic Review and Meta-Analysis of Randomized Controlled Dietary Trials. PloS 
+ONE, v. 9,n. 7, e103376, 2014. 
+ 
+ 
+ 
+VONG, W.C.; LIU, S. Q. Effects of carbohydrase, probiotic Lactobacillus paracasei and 
+yeast Lindnera saturnus in the composition of a new okara functional drink (soybean 
+residue). LWT, n.100, p. 196–204. 2019.   
+ 
+ 
+WONG, V. Soy Milk Fades as Americans Opt for Drinkable Almonds. Business Week, 
+2013. 
+ZHENG, J., et al. A taxonomic note on the genus Lactobacillus: Description of 23 novel 
+genera, emended description of the genus Lactobacillus Beijerinck 1901, and union 
+of Lactobacillaceae and Leuconostocaceae. International Journal of Systematic and 
+Evolutionary Microbiology. v. 70. n. 4.p. 2782-2858.2020. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+40 
+ 
+ELABORAÇÃO DE BEBIDA COM POTENCIAL PROBIÓTICO À BASE DE 
+EXTRATO HIDROSSOLÚVEL DE CASTANHA DE CAJU (Anacardium 
+occidentale L.) 
+ 
+ 
+THAYNNA LEOCÁDIO TRAJANO LACERDA SOUSA 
+1
+Departamento de Ciências do Consumo,Universidade Federal Rural de 
+Pernambuco, Recife, Brasil 
+ 
+RESUMO 
+ 
+A pesquisa teve como objetivo a elaboração de uma bebida à base de extrato hidrossolúvel 
+de castanha de caju (EHCC) fermentada com a cepa probiótica Lb. paracasei ATCC 334. 
+2
+As formulações foram definidas pelo planejamento fatorial 2, com as variáveis 
+independentes: concentração de Lb. paracasei (1%, 1,5% e 2%) e castanha de caju (100g, 
+200g e 300g), e as variáveis dependentes: Umidade, Lipídios, Proteínas, Cinzas e 
+Carboidratos e Analise Sensorial de aceitação com os atributos: aroma, aparência, sabor e 
+impressão global. As formulações foram submetidas ao teste de ordenação com os 
+atributos: cor, sabor, textura e odor. Foi observado que a concentração de células de Lb. 
+paracasei no EHCC ficou na faixa de 7,72 Log de UFC/g a 8,27 Log de UFC/g, em 6 
+horas de fermentação, apresentando potencial probiotico de acordo com a FDA (acima de 6 
+Log/g); A concentração de castanha de caju (CCC) teve influência significativa (p<0,05) 
+em todos os parâmetros físico-químicos e atributos sensoriais do EHCC fermentado 
+demonstrando-se como fator determinante para qualidade nutricional do produto; A 
+concentração de Lb. paracasei obteve influencia significativa  (p<0,05) na redução da 
+umidade, e no aumento do conteúdo de lipídios e cinzas, já para o atributo sabor a maior 
+concentração de células probióticas resultou em menores notas para esse atributo; Os 
+ensaios E3 (300g CCC, 1% Lb. paracasei) e E4 (300g CCC, 2% Lb. paracasei) que 
+possuem a maior concentração de castanha de caju obtiveram as maiores notas nos 
+atributos aroma, sabor e impressão global e foram os preferidos no teste de ordenação. O 
+estudo aponta que o EHCC fermentado é um produto potencialmente capaz de atender a 
+demanda probiótica da população com dieta restritiva ao leite.  
+ 
+Palavras-chave: Extrato vegetais, Alimentos funcionais, Lactobacillus paracasei. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+41 
+ 
+ 
+ 
+ 
+ABSTRACT 
+ 
+The research had as objective the elaboration of a drink based on water soluble extract of 
+cashew nut (EHCC) fermented with the probiotic strain Lb. paracasei ATCC 334. The 
+2
+formulations were defined by factorial design 2, with the independent variables: 
+concentration of Lb. paracasei (1%, 1.5% and 2%) and cashew nuts (100g, 200g and 
+300g), and the dependent variables: Moisture, Lipids, Proteins, Ashes and Carbohydrates 
+and Sensory Analysis of acceptance with the attributes: aroma, appearance, taste and 
+overall impression. The formulations were subjected to the ordination test with the 
+attributes: color, flavor, texture and odor. It was observed that the concentration of Lb. 
+paracasei in the EHCC was in the range of 7.72 Log UFC / g to 8.27 Log UFC / g, in 6 
+hours of fermentation, presenting probiotic potential according to the FDA (above 6 Log / 
+g); The concentration of cashew nuts (CCC) had a significant influence (p <0.05) on all 
+physical-chemical parameters and sensory attributes of the fermented EHCC, 
+demonstrating itself as a determining factor for the nutritional quality of the product; The 
+concentration of Lb. paracasei obtained significant influence (p <0.05) in the reduction of 
+humidity, and in the increase of the content of lipids and ash, for the attribute flavor, the 
+higher concentration of probiotic cells resulted in lower scores for this attribute; The tests 
+E3 (300g CCC, 1% Lb. paracasei) and E4 (300g CCC, 2% Lb. paracasei) which have the 
+highest concentration of cashew nuts obtained the highest scores in the attributes of aroma, 
+flavor and overall impression and were preferred in the ordination test. The study points 
+out that fermented EHCC is a product potentially capable of meeting the probiotic demand 
+of the population with a milk-restricted diet. 
+ 
+Key-words: Vegetable Extract, Functional Foods, Lactobacillus paracasei 
+ 
+ 
+ 
+ 
+ 
+42 
+ 
+1. INTRODUÇÃO 
+ 
+  
+Entre os ingredientes dos alimentos com alegação de propriedade funcional estão os 
+probióticos, como por exemplo, o Lactobacillus paracasei. São microrganismos vivos, 
+responsáveis por melhorar ou manter o equilíbrio microbiano no intestino, auxiliar na 
+produção de vitaminas, promover resistência gastrintestinal e urogenital contra patógenos e 
+controlar os níveis de colesterol. Também desempenham ação imunomoduladora, inibição 
+da carcinogênese do colón e aumento da capacidade utilização da lactose em pessoas 
+intolerantes, conferindo assim benefícios à saúde do hospedeiro, quando administrados em 
+quantidades adequadas (BRASIL, 2018a; GROM et al., 2020; MENEZES et al., 2013; 
+PANGHAL et al., 2017; SALMINEN, KNEIFEL & OUWEHAND, 2016). 
+A utilização de probióticos para elaboração de novos produtos alimentícios está 
+atrelada à procura por uma alimentação e estilo de vida mais saudáveis. Calcula-se que, até 
+2020, cerca de US$ 48 bilhões em escala mundial sejam arrecadados no mercado para esse 
+tipo de produto (HUDSON, 2016). As dietas vegetariana e vegana são fortes aliadas do 
+estilo de vida saudável, apresentando crescente intenção de compra de novos produtos para 
+atender esse mercado consumidor. Como consequência, o aumento de adeptos ao 
+vegetarianismo e veganismo impulsiona a indústria de alimentos a se diversificar, 
+proporcionando também um aumento da variedade de produtos probióticos à base de 
+vegetais. Em uma pesquisa realizada em 2012 pela Target Group Index, do IBOPE cerca 
+de 8% da população brasileira afirma ser vegetariana, já em 2018 segundo o IBGE, esse 
+número cresceu para 14% da população brasileira (IBOPE, 2012; IBGE, 2018).  
+A substituição do consumo de alimento de origem animal, especialmente no caso 
+do leite e seus derivados, atende não apenas aos consumidores vegetarianos e veganos, mas 
+também às pessoas que apresentam intolerância à lactose e os alérgicos à proteína do leite 
+de vaca, população essa que nos últimos anos só aumentou. Estima-se que 
+aproximadamente 75% da população mundial sofram com algum grau de intolerância à 
+lactose, elevando a demanda por produtos alternativos ao leite (PANGHAL et al., 2017; 
+SILANIKOVE, LEITNER & MERIN, 2015). 
+De forma a atender a dietas que restrinjam o consumo de leite e seus derivados, a 
+indústria de laticínios vem utilizando o extrato hidrossolúvel vegetal como alternativa. Um 
+bom exemplo deste extrato vegetal é o popularmente conhecido, leite de soja, já é 
+comercializado em grande escala desde os anos 80. Além da soja, é possível também a 
+ 
+ 
+ 
+ 
+43 
+ 
+obtenção de extratos hidrossolúveis a partir de outros grãos e oleaginosas ricas em 
+nutrientes, como castanhas, amêndoas, arroz, aveia, coco, dentre outros (WONG, 2013; 
+REBOUÇAS et al, 2014).  
+A castanha de caju é uma opção para a fabricação de extratos hidrossolúveis de 
+origem vegetal, essas castanhas fornece grandes quantidades de energia, com média de 596 
+kcal a cada 100g. É um alimento rico em gordura (46%) que, em sua maioria, são ácidos 
+graxos essenciais, como os ácidos linoleico e oleico, com atuação na redução de radicais 
+livres e controle de doenças cardiovasculares. As castanhas de caju apresentam também 
+alto conteúdo de proteína (21,2%), sendo fonte de aminoácidos essenciais como a leucina, 
+que atua na produção da insulina, e aminoácidos não essenciais como a arginina, que 
+auxilia no controle da hipertensão. Estão incluídas em sua composição as vitaminas E, K, 
+B6 e C, que contribuem para a preservação do sistema imunológico, e minerais como o 
+Ferro e o Cálcio. Além disso, observa-se a presença de fitoquímicos e fitoesteróis, 
+compostos anticancerígenos e fibras (GADANI et al., 2017; MOHAN et al., 2018; 
+OGUNSINA & BAMGBOYE, 2014).  
+A produção nacional de castanha de caju ocupa lugar de destaque no país, 
+arrecadando valores na ordem de US$ 100 milhões anuais, gerando atividade econômica e 
+social na região Nordeste, área que concentra 99,7% das plantações brasileiras. O seu 
+mercado é pautado principalmente na exportação, com cerca de 90% da produção nacional 
+são destinados para esse fim (BRAINER & VIDAL, 2020). No entanto, o processo de 
+beneficiamento utilizado resulta em maior percentual de amêndoas quebradas, se 
+comparado aos demais processos existentes. Tal fato se reflete na depreciação do preço das 
+amêndoas quebradas em relação às inteiras (PINHEIRO et al., 2006). O processamento 
+dessas castanhas quebradas para a formulação de extrato hidrossolúvel apresenta-se como 
+alternativa de reaproveitamento.  Sob esse ponto de vista, a presente pesquisa propôs a 
+elaboração de uma bebida a partir do extrato hidrossolúvel de castanha de caju adicionada 
+do probiótico Lactobacillus paracasei que, além de potencialmente nutritivo, apresenta-se 
+como uma proposta tecnológica viável e funcional para grupos de pessoas com restrições 
+alimentares. 
+ 
+2. MATERIAL E MÉTODOS 
+ 
+2.1 Obtenção e Processamento da castanha de caju  
+As castanhas de caju (Anacardium occidentale L.) foram obtidas no comércio local 
+ 
+ 
+ 
+ 
+44 
+ 
+da Região Metropolitana do Recife. A cultura probiótica utilizada foi Lactobacillus 
+paracasei ATCC 334, da coleção de culturas do Laboratório de Alimentos e Ambiental do 
+Departamento de Tecnologia Rural da Universidade Federal Rural de Pernambuco- 
+UFRPE. As castanhas foram selecionadas seguindo o critério de ausência de manchas e 
+pontos escuros na superfície, com o objetivo de ter uma cor uniforme, ou seja, toda branca. 
+Em seguida, as castanhas foram lavadas com água potável e submetidas à esterilização em 
+autoclave, a 121ºC durante 15 minutos. Após essa etapa, as castanhas foram submergidas 
+em água destilada estéril para hidratação overnight, sob refrigeração (4ºC±2), seguindo a 
+proporção de 500g de castanha de caju para 1L de água destilada estéril (1:2). Após o 
+intumescimento das nozes, o excesso de água foi drenado em condições assépticas e 
+posteriormente as castanhas de caju foram processadas para produção do extrato 
+hidrossolúvel de castanha de caju. 
+ 
+As etapas de processamento da matéria prima estão descritas na Figura 4. 
+ 
+Figura 4- Fluxograma do processamento da castanha de caju (Anacardium occidentale L.) 
+para elaboração do extrato hidrossolúvel fermentado. 
+ 
+Recebimento das Castanhas de 
+caju  
+(ITEM 2.1)  
+Preparação do inoculo 
+Lactobacillus paracasei ATCC 
+334    
+(ITEM 2.2) 
+Seleção, Lavagem e Esterilização 
+das Castanhas 
+(ITEM 2.1)  
+Hidratação das castanhas 
+12horas (4ºC± 2 ) 
+(ITEM 2.1)  
+Elaboração do EHCC 
+e Pasteurização do EHCC  Adição do inóculo e Fermentação 
+(72ºC ± 2 Cº /20 min) (ITEM 2.4)  
+(ITEM 2.3)  
+ 
+2.2 Preparação do inoculo (Lactobacillus paracasei ATCC 334) 
+ 
+ 
+ 
+ 
+45 
+ 
+A obtenção do concentrado do Lb. paracasei foi realizada de acordo com a 
+metodologia da Association of Official Analytical Chemists (AOAC, 2011). A partir da 
+cultura mãe da UFRPE. Uma alçada do Lb. paracasei foi estriada em meio Ágar MRS 
+(Man Rogosa& Sharpe), utilizando a técnica de tubos inclinados e incubados em 
+anaerobiose por 48h à 35ºC ± 2. Decorrido o período de crescimento, o concentrado foi 
+lavado com 20 mL do extrato hidrossolúvel de castanha de caju (EHCC) estéril a 10%, 
+contendo 20% de glicerol e armazenado em temperatura de congelamento (-18°C ± 2). É 
+retirada uma alíquota concentrada de Lb. paracasei, para uso posterior na fermentação no 
+extrato hidrossolúvel de castanha de caju (EHCC). O teste de viabilidade do Lb.paracasei 
+na cultura mãe foi quantificada pelo método pour plate, empregando diluições seriadas até 
+13
+10, utilizando meio Ágar MRS (Man Rogosa& Sharpe), incubadas em anaerobiose 
+durante 48 h à 35ºC ± 2. Todas as análises foram realizadas em triplicata e a contagem foi 
+expressa em Unidade Formadora de Colônia por mililitro (UFC/mL). 
+ 
+2.3 Preparação do extrato hidrossolúvel de castanha de caju- EHCC 
+As castanhas de caju hidratadas foram trituradas com água destilada estéril através 
+de um liquidificador Mondial modelo Power 2i NL-26, compostos  4 lâminas disposta aos 
+pares em posição inversa, potência de 600W, durante 5 minutos, na proporção apresentada 
+na Tabela 2. 
+Em condições assépticas, o EHCC foi filtrado em tamis de 35 mesh (0,5mm), 
+envasados em frascos estéreis com tampas rosqueadas. Antes da inoculação do probiótico, 
+as formulações F1, F2 e F3 (Tabela 2), foram submetidas à pasteurização ( 72ºC ± 2 Cº /20 
+minutos), seguido de imersão em banho de gelo durante 20 minutos (CARDARELLI & 
+OLIVEIRA, 2000; FELBERG et al., 2002; MORAIS, 2010). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Tabela 2: Variação na formulação do EHCC. 
+ 
+ 
+ 
+ 
+46 
+ 
+ 
+ 
+Formulação Proporção de Água Destilada 
+ 
+castanha  Estéril 
+ 
+ 
+F1 100 g 1L 
+ 
+F2 200 g 1L 
+ 
+ 
+F3 300 g 1L 
+ 
+F: Formulação 
+ 
+2.4 Adição do inóculo e fermentação  
+ 
+As formulações das bebidas foram inoculadas com a cultura mãe de concentração 
+13 
+inicial de10UFC/mL, seguindo o delineamento experimental da fermentação (Tabela 3). 
+Desse modo, as proporções do inóculo foram de 1% v/v, 1,5% v/v e 2% v/v, ou seja, para 
+cada 1L da formulação de EHCC foram adicionados 10ml, 15ml e 20ml respectivamente 
+da cepa probiótica. 
+O tempo de fermentação foi definido através de um estudo preliminar, no qual as 
+bebidas foram incubadas em estufa à 35°C por 0, 4, 6 e 8 horas. A concentração de 
+probióticos foi avaliada seguindo a metodologia do teste de viabilidade descrita no item 
+2.2. Após a quantificação do crescimento de probióticos (Lb. paracasei), foi selecionado o 
+tempo de 6 horas por ter apresentado maior presença destes microrganismos e não ter 
+alterado a qualidade sensorial. (ABOULFAZLI & BABA, 2015; BATTISTINI et al., 2017; 
+BEDANI, ROSSI & SAAD, 2013; GALLINA, et al. 2011; RODRIGUES et al., 2012; 
+TABANELLI et al., 2018). 
+ 
+ 
+2.5 Delineamento experimental da Fermentação 
+ 
+Para elaboração das formulações do EHCC fermentado com Lb. paracasei foi 
+utilizada a metodologia de superfície de resposta com a finalidade de avaliar a influência 
+da concentração de castanha e probiótico sobre os parâmetros físico químicos: Umidade, 
+Lipídios, Proteínas, Cinzas e Carboidratos e os atributos sensoriais: Aroma, Aparência, 
+ 
+ 
+ 
+ 
+47 
+ 
+sabor e impressão global pelo teste de aceitação.O experimento foi realizado de acordo 
+2 
+com o planejamento fatorial 2com 4 pontos fatoriais (níveis -1 e + 1) com 3 repetições do 
+ponto central (nível 0) resultando no total de 7 ensaios, com parâmetros fixos de tempo de 
+fermentação (6 horas) e temperatura de fermentação (35ºC). Os dados obtidos foram 
+ajustados ao seguinte polinômio: 
+ 
+Yϕ(CL,CCC)≡ β+β1CL+ β CCC+β12CLCCC 
+02
+ 
+Onde βn são os coeficientes de regressão, Y é a resposta em questão (parâmetros 
+físico químicos e os atributos sensoriais) e CCC e CL são as variáveis codificadas 
+(Concentração de castanha e concentração de Lb.paracasei, respectivamente). Os níveis 
+codificados e decodificados estão na Tabela 3. 
+ 
+Tabela 3- Matriz de planejamento da fermentação do extrato hidrossolúvel de castanha de caju. 
+Experimento Concentração de Lb. Concentração de castanha 
+paracasei (%) (g) 
+E1 1(-1) 100 (-1) 
+E2 2(1) 100(-1) 
+E3 1(-1) 300(1) 
+E4 2(1) 300(1) 
+E5 1,5(0) 200(0) 
+E6 1,5(0) 200(0) 
+E7 1,5(0) 200(0) 
+E: Ensaio 
+ 
+2.6 Análises Físico-Químicas 
+ 
+Composição Centesimal 
+Como etapa prévia, a determinação da composição centesimal das castanhas de caju 
+esterilizadas foi realizada seguindo os métodos da AOAC (2011), a fim de definir as 
+proporções dos macronutrientes presentes nas castanhas de caju utilizadas no experimento. 
+As proteínas foram calculadas pelo método de Kjedhal, com o fator de correção de 
+nitrogênio de 5,46. Para determinação do teor de cinzas, as amostras foram incineradas em 
+uma mufla a 550Cº. O extrato etéreo foi obtido por Soxhlet, utilizando éter etílico como 
+ 
+ 
+ 
+ 
+48 
+ 
+solvente. A umidade foi determinada pelo método de secagem por infravermelho utilizando 
+balança com Infravermelho (ID50 Marconi). O valor de carboidratos totais foi calculado 
+por diferença. 
+  
+Determinação do pH e Acidez Titulável 
+O pH foi determinado pelo método eletrométrico com potenciômetro, utilizando 5 
+mL de cada amostra diluída em 10 mL de água destilada. Posteriormente, essa mesma 
+amostra foi submetida à determinação da acidez titulável total, com NaOH a 0,1N, 
+utilizando fenolftaleína (1% p/v) como indicador de viragem e resultado expresso em ácido 
+oleico (AOAC, 2011). 
+ 
+Atividade de água 
+Foi determinada, utilizando 5 mL da bebida EHCC fermentada à temperatura de 
+25ºC,  por meio do equipamento AQUA LAB ®, modelo 4TE, que mede a umidade 
+relativa do espaço livre da câmera selada de leitura após a água presente na amostra 
+equilibrar-se com o vapor de água. 
+ 
+2.7 Analise Microbiológicas  
+ 
+Para as análises microbiológicas no EHCC, foram realizados testes de detecção de 
+Coliformes totais e termotolerantes utilizando-se da técnica dos tubos múltiplos, Número 
+Mais Provável por grama (NMP/g), como preconizados pela American Public Health 
+Association (APHA, 2001) e presença/ausência de Salmonella sp., mesófilos totais e 
+®
+contagem de psicotróficos utilizando kits comerciais Compact Dry, todos aprovados pela 
+Codex Alimentarius, I.C.M.S.F., APHA, FDA, ISSO Standards, AOAC. Os ensaios 
+microbiológicos foram aplicados nas três formulações pasteurizadas (Tabela 2) antes da 
+inoculação dos probióticos. 
+ 
+2.8 Análise Sensorial  
+ 
+ A pesquisa foi submetida previamente à aprovação do Comitê de Ética da 
+Universidade de Pernambuco, gerando nº de protocolo (CAAE): 25725019.4.0000.5207. 
+As análises sensoriais ocorreram no Laboratório de Análise Sensorial de Gastronomia, 
+pertencente ao Departamento de Tecnologia Rural (DTR/UFRPE). O painel de provadores 
+ 
+ 
+ 
+ 
+49 
+ 
+foi formado por 100 indivíduos de ambos os sexos, não treinados, entre 18 e 60 anos. A 
+triagem dos possíveis provadores foi realizada através do questionário (Apêndice II), 
+utilizando como critérios o hábito de consumir extratos vegetais (arroz, soja, aveia, coco, 
+amêndoas), não estar apresentando doenças respiratórias ou fazendo a utilização de 
+medicação que dificultem à percepção do paladar e olfato, não apresentar alergia aos 
+componentes da fórmula e não ser fumante. Após preencher o questionário, cada provador 
+selecionado recebeu o Termo de Consentimento Livre e Esclarecido – TCLE (Apêndice I). 
+A elaboração da bebida foi realizada de acordo com as Boas Práticas de Fabricação 
+(BRASIL, 2002), que abrangem um conjunto de medidas adotadas na produção de 
+alimentos a fim de garantir a qualidade sanitária e a conformidade dos alimentos dos 
+regulamentos técnicos. As formulações utilizadas de EHCC fermentada com Lb. paracasei 
+foram adicionadas de adoçante à base de Stévia em pó para uso culinário da marca Forno e 
+Fogão Stevita, na proporção de 10g para cada 1 litro de bebida, padronizado para todas as 
+formulações (REBOUÇAS et al., 2014). 
+Foi realizado o teste de aceitação para os atributos: aroma, aparência, sabor e 
+impressão global, através de uma escala hedônica estruturada de nove pontos (1 = 
+desgostei extremamente; 9 = gostei extremamente). Os avaliadores neste teste receberam 
+sete amostras (DUTCOSKY, 2013). 
+Foi aplicado também o teste de ordenação para classificar as amostras em relação 
+às preferências em ordem crescente (do menor para o maior) dos atributos de cor, sabor, 
+textura e odor. Os avaliadores neste teste receberam cinco amostras (IAL, 2008). 
+ Cada avaliador em sua cabine individual recebeu água mineral à temperatura 
+ambiente para o enxágue das papilas e bolacha de água e sal, sendo reposto se necessário. 
+Os avaliadores receberam as amostras refrigeradas 5±1ºC e codificadas de maneira 
+aleatória do EHCC com Lb. paracasei, contendo 30 ml cada, um formulário para avaliação 
+do teste de aceitação e um formulário ordenação (DUTCOSKY, 2013). 
+ 
+2.9 Análise Estatística 
+Os experimentos foram realizados em triplicata e os valores foram avaliados 
+através da ANOVA (análise de variância) utilizando o teste de Duncan ao nível de 5% de 
+confiança para comparação de médias através do programa “Statistic for Windows 5.0” 
+ 
+ 
+3. RESULTADOS E DISCUSSÃO 
+ 
+ 
+ 
+ 
+50 
+ 
+ 
+3.1 Determinação da composição centesimal da castanha de caju (Anacardium 
+occidentale L.). 
+O baixo valor de umidade ajuda a reduzir o ataque de agentes deteriorantes como 
+bolores e leveduras, como também o surgimento de rancidez hidrolítica, pela ação de 
+lipases na presença de água. Gadani et al. (2017) encontraram 3,1% de umidade na farinha 
+de castanha de caju, valor inferior ao quantificado nesta pesquisa (13,85%) (Tabela 4) para 
+a castanha de caju. Esta diferença possivelmente é devido à castanha não ter passado pelo 
+processo de torrefação.  
+ 
+Tabela 4. Composição centesimal das castanhas de caju esterilizadas. 
+Parâmetro * Resultado (%) 
+Umidade 13,85± 0.29  
+Lipídeos 46,74± 0,30  
+Proteína 18,17± 0.35  
+Cinzas 2,54 ± 0,17  
+Carboidratos 18,97± 0,55  
+VCT (Kcal/100g) 569,22 
+*valores expressos em média e desvio padrão 
+ 
+Percentual de umidade reduzido durante o beneficiamento das castanhas de caju 
+pode alterar os teores de proteínas e carboidratos, visto que esses componentes são solúveis 
+em água (MORAIS, 2009). Nandi (2013) realizou a composição centesimal de castanhas 
+de caju, reportando valores para proteínas de 24 %. Estes foram superiores aos achados 
+nesta pesquisa (18,17%) (Tabela 4). O valor protéico aparenta ser variável, dependendo do 
+processo térmico no qual as castanhas foram submetidas (secagem ou autoclavagem), 
+como exemplo Gadani et al. (2017), que encontrou 16,5% de proteína na farinha de 
+castanha de caju que passaram pelo processo de secagem ao sol.  
+O método de detecção desse constituinte também deve ser levado em conta para a 
+precisão dos resultados. A determinação de proteína é realizada pelo método tradicional de 
+Kjedhal que faz a quantificação de nitrogênio, tendo em vista que as proteínas contêm 16% 
+desse elemento, comumente utiliza o valor de 6,25, como fator de correção geral. 
+Entretanto, para as nozes, o fator de correção é de 5,46. Portanto, a aplicação do primeiro 
+fator pode resultar numa supervalorização dos teores proteico das castanhas de caju 
+ 
+ 
+ 
+ 
+51 
+ 
+(OLAYINKA et al., 2018).  
+De acordo com a Resolução nº 54 de janeiro de 2012 da ANVISA (BRASIL, 2012), 
+o alimento para ser considerado como fonte de proteína deve conter 6g desse componente a 
+cada 100g; para ser um alimento com alto valor protéico, um mínimo 12g/100g. Assim, 
+perante a resolução acima, a castanha de caju pode ser considerada fonte de proteína. 
+Depois da castanha do Pará, a castanha de caju é a noz que possui maior valor protéico. É 
+importante salientar que 73% das proteínas da castanha de caju podem ser digeridas pelo 
+corpo humano, o que não ocorre com as proteínas da maioria das outras nozes, pois sua 
+digestibilidade é comprometida pela presença de aminoácidos como a lisina (GADANI et 
+al., 2017; BRUFAU, BOATELLA & RAFECAS, 2006; DE OLIVEIRA et al., 2011; 
+VENKATACHALAM & SATHE, 2006) 
+O percentual total de gordura encontrado foi de 46,74% (Tabela 4). Valores 
+próximos a esse são descritos por Olayinka et al. (2018) (47%) em castanhas de caju secas 
+para o preparo de iogurte feito à base dessa noz. O alto valor calórico de 569,22 kcal 
+(Tabela 4) que as castanhas de caju apresentam é relacionado ao seu conteúdo de lipídios. 
+É importante ressaltar que literatura refere que a maior parte dessa gordura é constituída de 
+ácidos graxos insaturados, sendo cerca de 80% representados pelos ácidos oleico e 
+linoleico, que auxiliam na regulação do colesterol, reduzindo os níveis de LDL e 
+promovendo o aumento do HDL, sem que ocorra aumento significativo do peso corporal. 
+Tais ácidos graxos insaturados, quando consumidos diariamente ajudam a reduzir o índice 
+glicêmico (MOHAN et al., 2018; VIGUILIOUK et al.,2014). 
+O valor da composição de cinzas e carboidratos da castanha de caju crua foram de 
+2,54 % e 18,97 % respectivamente. Tais valores corroboram com os resultados obtidos por 
+Freitas e Naves (2010), que obtiveram 2,40 % de cinzas e 18,64% de carboidratos totais, ao 
+avaliar a castanha de caju. Esses valores estão de acordo com os fornecidos pela base de 
+dados do United States Department of Agriculture - USDA (2008) para carboidratos 
+(18,22%) e cinzas (2,54%) de castanha de caju. As variações encontradas na composição 
+centesimal podem ocorrer por diversos fatores como variedade genética, idade da planta, 
+nutrição do solo, efeitos sazonais e falhas no processo de pós colheita em que as castanhas 
+de caju são submetidas (ALASALVAR & PELVAN, 2011; ALASALVAR & SHAHIDI, 
+2009). 
+ 
+ 
+3.2 Analise microbiológica do extrato hidrossolúvel de castanha de caju- EHCC 
+ 
+ 
+ 
+ 
+52 
+ 
+pasteurizado. 
+Foram realizadas as análises da qualidade microbiológica das formulações iniciais, 
+F1, F2 e F3 (Tabela 5) do Extrato hidrossolúvel de Castanha de Caju (EHCC), já 
+pasteurizado, antes da inoculação dos probióticos devido à possibilidade de ocorrência de 
+exclusão competitiva (SAAD, 2006).  
+Tabela 5- Analise microbiológica do EHCC pasteurizado das formulações F1, F2 e F3. 
+Analise Microbiológica  Resultado (F1) 
+Coliformes totais < 3,0NMP/mL 
+Coliformes termotolerantes < 3,0NMP/mL 
+Salmonella sp. 25g Ausente 
+Mesófilos totais 20 UFC/ mL 
+Contagem de psicotróficos <10 UFC/mL 
+ 
+Os produtos de origem vegetal vêm ganhado espaço no mercado devido a uma 
+maior preocupação do consumidor, com relação ao consumo de alimento de origem animal. 
+Alimentos análogos a leites, iogurtes e queijos fermentados são produzidos de forma a 
+atender a demanda das dietas vegetarianas e veganas (FAZILAHA et al., 2018; BERNAT 
+CHAFERA, CHIRALT & GONZALES-MARTINES, 2015). As formulações F1, F2 e F3 
+(Tabela 5) estavam ausentes de Salmonella sp. em 25 mililitros da formulação, resultados 
+estes contrários  aos relatados no ano 2014 pelo Center for Disease Control and Prevention 
+- CDC nos Estados Unidos, onde ocorreu um caso de surto por Salmonella sp. envolvendo 
+30 pessoas, das quais 20% foram hospitalizadas em estado grave. Esse surto ocorreu após a 
+ingestão de um “queijo” vegetal de castanha de caju fermentado. 
+O EHCC pasteurizado elaborado na presente pesquisa apresentou a concentração de 
+20 UFC/mL (0,30 Log de UFC/ mL) em 25 mililitros de formulação (Tabelas 5) para 
+mesófilos totais e <10 UFC/mL para psicotróficos, apresentando-se dentro do limite do 
+método. Em outros extratos vegetais como no estudo dos autores Codina-Torrella et al. 
+(2018), que fizeram a análise microbiológica em extrato hidrossolúvel pasteurizado 
+análogo a leite produzido a partir da Tiger nut (Cyperus esculentus L), tubérculo conhecido 
+no Brasil como junça,  foram encontrados 5,51 Log de UFC/mL e 5,37 Log de UFC/mL de 
+psicotróficos e mesofilos aeróbios respectivamente. Esses microrganismos são 
+responsáveis pela rápida deterioração e alteração de extratos hidrossolúveis vegetais, por 
+meio da fermentação de açúcares, produção de ácido e gás, reduzindo seu prazo de 
+validade.  
+ 
+ 
+ 
+ 
+53 
+ 
+A base legal da qual o EHCC mais se aproxima é a Instrução Normativa MAPA nº 
+19 de junho de 2013 (MAPA, 2013), que indica o padrão de identidade e qualidade de 
+bebidas prontas para consumo bebidas à base de vegetais. Esses produtos devem respeitar o 
+padrão microbiológico determinados pela ANVISA, na RDC nº 12 /2001, que estabelecem 
+para extratos hidrossolúveis a base de soja o máximo 10 NMP/mL de coliformes 
+termotolerantes. As formulações F1, F2 e F3 apresentaram contagem < 3,0NMP/mL para 
+coliformes termotolerantes, indicando que a esterilização das castanhas de caju, junto à 
+pasteurização utilizada no processo de fabricação das formulações de EHCC, foi eficaz 
+para que a bebida estivesse dentro dos padrões sanitários estabelecidos pela ANVISA, 
+agência reguladora oficial para comercialização de alimentos no Brasil.  
+ 
+3.3 Contagem de Lactobacillus  paracasei ATCC 334, pH e Acidez titulável, Aa. 
+A contagem de Lactobacillus paracasei da cultura mãe empregada na preparação 
+13 
+do EHCC obteve resultado médio na concentração inicial de 1,5. 10UFC/mL (13,18 Log 
+UFC/g). Deve-se considerar que a carga microbiana de probióticos pode reduzir sua 
+concentração inicial devido à adaptação frente a um novo substrato. Assim, demanda-se 
+tempo e temperatura de fermentação para atingir a fase logarítmica e assim aumentar a 
+quantidade de células Lb. paracasei, como também produção de metabólitos primários 
+como ácidos orgânicos, promovendo o declínio do pH. 
+Na Tabela 6 estão os valores de pH, acidez titulável e a concentração de 
+Lb.paracasei,  do EHCC no início e após 6 horas de fermentação. 
+ 
+Tabela 6: Concentração de Lb. paracasei, pH e Acidez titulável inicial e final do EHCC 
+fermentado. 
+Ensaio CLI(0 horas) CLF(6 horas) pH pH ATTI(g/100g) ATTF(g/100g) 
+(LogUFC/g) (LogUFC/g) inicial final 
+E1 7,36± 0.13 8,23± 0.12 6,94± 5,88± 0,776± 0.05 1,024± 0.08 
+0.02 0.01 
+7,51± 0.18 8,27± 0.15 6,89± 5,70± 0,769± 0.05 1,152± 0.09 
+E2 
+0.01 0.01 
+E3 7,04± 0.22 7,72± 0.31 6,22± 5,97± 0,785± 0.09 0,896± 0.06 
+0.01 0.03 
+E4 7,07 ± 0.12 8,11± 0.17 6,18± 5,95± 0,791± 0.04 0,960± 0.08 
+0.05 0.01 
+ 
+ 
+ 
+ 
+54 
+ 
+ 
+7,27± 0.20 8,16± 0.116,19± 5,93± 0,792± 0.08 1,088± 0.01 
+E5 
+0.01 0.02 
+*Valores expressos em média e desvio padrão.onde CLI= Concentração de Lb. paracasei inicial e CLF= Concentração 
+de Lb. paracasei final. E1= 100g de castanha de caju + 1% da concentração (v/v) de Lb.paracasei da cultura mãe, E2= 
+100g de castanha de caju + 2% da concentração(v/v) de Lb.paracasei da cultura mãe, E3= 300g de castanha de caju + 
+1% da concentração(v/v) de Lb.paracasei da cultura mãe, E4= 300g de castanha de caju + 2% da concentração(v/v) de 
+Lb.paracasei da cultura mãe, E5= 200g de castanha de caju + 1,5% da concentração(v/v) de Lb.paracasei da cultura 
+mãe, CCI :concentração de células inicial (0 horas) (LogUFC/g) , CCF: concentração de células final (6 horas) 
+(LogUFC/g), ATTI : acidez titulável total inicial (g/100g) e ATTF: acidez titulável total final (g/100g). 
+ 
+Após 6 horas de fermentação todos os ensaios obtiverem crescimento de probiótico,  
+o ensaio E2 apresentou o maior crescimento de Lb. paracasei, inicialmente com 
+concentração de 7,51 Log de UFC/g, passando a 8,27 Log UFC/g, tendo valores iniciais de 
+pH e ATT de 6,89/100g e 0,769g/100g respectivamente.  O aumento do número de células 
+microbianas ocorreu com diminuição do pH e, por consequência, um amento da acidez, 
+apresentando no final da fermentação pH de 5,70 e ATT de 1,152 g/100g. O Lb. paracasei 
+apresenta um bom crescimento em substratos vegetais como foi relatado por Santos et al. 
+(2020), ao produzir uma bebida à base de grão de bico e leite de coco fermentado com Lb. 
+paracasei. Ao final de 9 horas de fermentação, obtiveram a contagem de 8,6 Log de 
+UFC/g. Tabanelli et al. (2018) avaliaram o crescimento de Lactobacillus sp. em análogos à 
+queijo feitos a partir de castanha caju e os resultados obtidos no início e após 8 horas de 
+fermentação foram de 7,3 Log de UFC/g e 8,9 de UFC/g, respectivamente. 
+O pH e a acidez de produtos fermentados é um fator de qualidade importante na 
+conservação do alimento. A diminuição do pH e o aumento da acidez, apresentam-se como 
+barreiras microbiológicas frente a agentes patogênicos e deteriorantes (IAL, 2008). Os 
+valores finais do pH do EHCC ficaram entre 5,70 e 5,97. Nas bebidas fermentadas com Lb. 
+plantarum de origem vegetal à base de aveia e coco, produzidas por Dharmasena et al. 
+(2015),  o pH foi 5,12, após 10 horas de fermentação.  
+O tempo tem papel fundamental para o crecimento de probióticos, assim como o 
+processo fermentativo está associado à redução do pH. Devido às propriedades de 
+resistência em ambientes de acidez alta, a contagem de Lb. paracasei apresenta-se estável 
+em produtos que tem diminuição gradativa de pH, na fabricação de leites fermentados e 
+iogurtes tradicionais. Nesses produtos lácteos, o pH pode chegar a 4,5 e a viabilidade dessa 
+6 7
+cultura permanece entre 10UFC/g e 10UFC/g (GU et al., 2020). Entretanto, nos testes 
+ 
+ 
+ 
+ 
+55 
+ 
+preliminares com o EHCC, o pH não atingiu 4,5, em 8 horas de fermentação, entretanto 
+para o EHCC o menor pH obtido foi de 5,24 e a bebida apresentou comprometimento da 
+qualidade sensorial apresentando sabor metálico. Para Tabanelli et al. (2018) a 
+fermentação da castanha de caju por muitas horas pode levar a ocorrência de sabores 
+indesejados, aumentando a probabilidade de rejeição sensorial do produto. 
+Em produtos probióticos como extratos hidrossolúveis de soja, milho, arroz, grão 
+de bico e amêndoas, os gênero Lactobacillus como o Lb.rhamnosus, Lb. plantarum, Lb. 
+acidophilus e Lb. casei apresentaram uma boaconcentração 7 Log de UFC/g e  9 Log de 
+UFC/g em 6 e 9 horas de fermentação, respectivamente, em comparação a fermentados à 
+base do leite tradicional. Tal fato pode ser explicado pelo leite ter baixa disponibilidade de 
+aminoácidos livres, apresentando complexos protéicos longos. Já nos extratos vegetais, a 
+disponibilidade de aminoácidos livres é maior, o que pode facilitar o processo fermentativo 
+(ABOULFAZLI & BABA, 2015; NOROUZI et al., 2019; WANG, CHELIKANI & 
+SERVENTI, 2018; WU et al., 2015; FAZILAHA et al., 2018; SANTOS et al., 2020). 
+Todos os ensaios, apresentaram quantidades de probióticos superiores a 6 Log de 
+UFC/g, sendo o E2 (Tabela 6) o que apresentou o maior crescimento (8,27 Log de UFC/g), 
+em apenas 6 horas de fermentação. Para que esses microrganismos passem pelo trato 
+gastrointestinal e cheguem com capacidade de proliferação no intestino do hospedeiro, é 
+indicado que os probióticos estejam em uma concentração elevada no alimento. Embora 
+não exista um consenso universal, valores que variam de 6 Log UFC/g a 8 de UFC/g são 
+considerados aceitáveis em diversos países. A recomendação da Food and Drug 
+Administration (FDA, 2003) é de que, em alimentos com função probiótica, as 
+concentrações destes devem ser de no mínimo 6 Log UFC/g (TRIPATHI & GIRI, 2014; 
+PANGHAL et al., 2017; NOROUZI et al., 2019; SANTOS et al.,2020). 
+  A castanha de caju apresenta diversos carboidratos como, glicose, maltose, lactose, 
+frutose, celobiose, rafinose e estaquiose. Também é fonte de aminoácidos essenciais, como 
+a arginina; vitaminas E, K, B6 e C; e minerais como ferro, fósforo, magnésio, cálcio, 
+potássio e selênio (GADANI et al., 2017; MOHAN et al., 2018; NANDI, 2013; 
+OGUNSINA & BAMGBOYE, 2014). Esses nutrientes podem ser usados como substrato 
+para o crescimento Lb. paracasei, devido ao seu caráter heterofermentativo, o que 
+corrobora com outros trabalhos que usam matérias primas vegetais para fabricação de 
+bebidas probióticas (BATTISTINI et al., 2017; MANTZOURANI et al., 2020; NOUROZI 
+et al. 2019). Entretanto, há uma escassez de pesquisas que utilizam nozes para a elaboração 
+ 
+ 
+ 
+ 
+56 
+ 
+de fermentados vegetais análogos a leite, mesmo que estejam presentes à tempos na rotina 
+alimentar, pesquisas quanto a sua potencialidade fermentativa e posterior aceitação 
+sensorial, precisam ser realizadas, na busca de novas propostas de alimentação alternativa 
+(OLAYINKA et al., 2018; TABANELLI et al., 2018).  
+  A atividade de água manteve-se elevada e constante durante todo o processo 
+fermentativo, apresentando valores de 0,99. Isso se deve ao fato do EHCC ser um extrato 
+hidrossolúvel, o que corrobora com os resultados descritos por outros autores 
+(TABANELLI et al., 2018; SANTOS et al., 2020). A atividade de água (Aw) é um 
+parâmetro intrínseco determinante na avaliação da qualidade microbiológica. Valores de 
+Aw próximos a 1 podem facilitar o crescimento de microrganismos deteriorantes e 
+patogênicos (JAY, LOESSNER & GOLDEN, 2005; DAMODARAN, PARKIN & 
+FENNEMA, 2010). Olayinka et al. (2018), na análise de iogurte a base de castanha de 
+caju, destacaram que embora a Aw apresente-se elevada, a diminuição do pH,  o acúmulo 
+de ácidos produzidos pelos microrganismos e a própria fermentação, aliados à 
+pasteurização podem ser determinantes para a manutenção da qualidade microbiológica do 
+iogurte vegetal e vida útil do produto. 
+ 
+3.4 Composição centesimal do extrato hidrossolúvel de castanha de caju- EHCC pasteurizado 
+e Fermentado com Lb. paracasei ATCC 334. 
+2
+Na Tabela 7 encontram-se os resultados do planejamento fatorial 2: umidade, 
+lipídeos, proteínas, carboidrato e cinzas do EHCC após 6 horas de fermentação à 35 ºC 
+com Lb. paracasei. Na Tabela 8 estão os efeitos das variáveis independentes: Concentração 
+de Lb. paracasei (%) e Concentração de Castanha (%) sobre os parâmetros físico-
+químicos.  
+ 
+2 
+Tabela 7–Média dos resultados do planejamento fatorial 2do EHCC fermentado: 
+Umidade, Lipídeos, Proteínas, Carboidratos e Cinzas. 
+Ensaio Concentração Concentração Umidade Lipídeos Proteínas Carboidratos Cinzas 
+de de Castanha (%)* (%)* (%)* (%)* (%)* 
+Lb.paracasei (g) 
+(%) 
+bcccc
+E1 1(-1) 100(-1) 91,09 5,52 1,92 1,42 0,06 
+acdcc
+E2 2(1) 100(-1) 92,76 4,08 1,52 1,57 0,07 
+eaaab
+E3 1(-1) 300(1) 84,01 9,09 3,51 3,20 0,19 
+ 
+ 
+ 
+ 
+57 
+ 
+dbaaa
+E4 2(1) 300(1) 86,15 6,94 3,28 3,35 0,27 
+cdbbb
+E5 1,5(0) 200(0) 90,04 4,87 2,98 2,99 0,17 
+cdbbb
+E6 1,5(0) 200(0) 90,06 4,90 2,53 2,92 0,18 
+cdbbb
+E7 1,5(0) 200(0) 90,00 4,86 2,45 2,93 0,17 
+*Médias seguidas de letras iguais na vertical não diferem ao nível de 5% pelo teste de Duncan. 
+ 
+De acordo com a Tabela 8 apenas os dados para proteínas totais obtiveram um bom 
+ajuste à equação sugerida, tendo a falta de ajuste não significativa (p>0,05). As demais 
+respostas mostram apenas o comportamento diante das duas variáveis independentes 
+pesquisadas (Concentração de Lb.paracasei e Concentração de Castanha). Ainda na Tabela 
+8, pode-se observar que a concentração da castanha de caju foi a que obteve a maior 
+influência significativa (p<0,05) em todos os parâmetros físico-químicos, relacionando-se 
+diretamente na disponibilidade dos nutrientes presentes no extrato. 
+ 
+Tabela 8. Efeitos das variáveis independentes Concentração de Lb.paracasei  (%) e 
+Concentração de Castanha (%) sobre os parâmetros físicos e químicos. 
+ Umidade Lipídeos Proteínas Carboidratos 
+Cinzas 
+(%) (%) (%) (%) 
+(%)  
+ 
+Concentração de 1,90 -1,79 NS NS 0,05 
+Lb.paracasei(%) 
+Concentração de -6,84 3,21 1,67 1,78 0,16 
+Castanha (%) 
+0,23 -0,35 NS NS 0,04 
+            1 e 2 
+2
+               R 0,926 0,773 0,942 0,854 0,954 
+Falta de ajuste 0,00023(p) 0,00011(p) 0,703(p) 0,0026(p) 0,0233(p) 
+2
+R : Coeficiente de determinação; NS: não significativo. 
+ 
+Nas Figuras: 5 (B e C) e 6 (A e B), observa-se que com o aumento do percentual de 
+castanha de caju as concentrações de lipídeos, proteínas, carboidratos e cinzas foram 
+maiores e quanto maior a quantidade desses componentes mais valor nutricional é 
+agregado . Este comportamento pode ser visto na Tabela 7, através dos ensaios E3 e E4 que 
+apresentaram maiores valores destes parâmetros, salientando que estas formulações 
+possuem maiores proporções de castanha de caju. As concentrações de nutrientes em 
+ 
+ 
+ 
+ 
+58 
+ 
+extrato hidrossolúvel vegetal estão diretamente relacionadas às proporções utilizadas da 
+base vegetal em água, seja o produto fermentado ou não (KEHINDI et al., 2020).  
+Morais (2009) avaliou uma bebida à base de castanha de caju e seus resultados 
+demonstram que há influência significativa (p<0,05) do menor percentual de água 
+adicionada, em relação às concentrações mais elevadas de lipídeos, proteínas, carboidratos 
+e cinzas, resultados que corroboram com o descrito por Rebouças et al. (2014) e Holanda 
+(2017) para os mesmos componentes nutritivos, evidenciando que a maior concentração de 
+castanha de caju em extratos hidrossolúveis tem papel fundamental na qualidade dos 
+nutreintes desses produtos.  
+Os maiores valores de lipídios foram nos ensaios E3(9,09 %) e E4(6,64 %) (Tabela 
+7). Estes valores indicam que o EHCC fermentado é rico em gordura, segundo as normas 
+da RDC nº54/2012 da ANVISA (BRASIL, 2012). Resultados inferiores são descritos por 
+Holanda (2017), em cujo estudo o conteúdo de lipídeos variou de 3,20% a 4,10%, em 
+bebida vegetal à base de castanha de caju pura, com chocolate, coco e banana. Já o teor 
+lipídico encontrado no iogurte de castanha de caju produzido por Olayinka et al. (2018) 
+apresentou 40,32% de gordura total, mostrando-se muito superior aos resultados 
+encontrados na presente pesquisa. 
+A variação de gordura em EHCC vai depender principalmente do percentual de 
+extratos de castanha usados no processamento da bebida, o que explica os diferentes 
+valores presentes na literatura. A alta concentração de gordura em alimentos pode causar 
+sérios danos à saúde do consumidor, entretanto a castanha de caju é popularmente 
+conhecida por apresentar maior quantidade de gorduras insaturadas, diferente do leite 
+bovino, sendo consideradas “gorduras boas”, auxiliando na redução da incidência de 
+doenças cardiovasculares (MOHAN et al., 2018; TABANELLI et al., 2018). 
+Para Holanda (2017), as composições de proteínas das bebidas de castanha de caju 
+pura, com chocolate, coco e banana variaram de 1,69 % a 2,51%. Na presente pesquisa as 
+proteínas variaram de 1,52% a 3,51% (Tabela 7). Em relação a outros extratos vegetais 
+Battistini et al. (2017) relatam que a bebida simbiótica a base de “leite” de soja 
+concentrava 0,23% de proteína. Jaekel, Rodrigues e Silva. (2010) encontraram, para 
+extratos mistos de arroz e soja, teor de proteínas entre 1,06 % a 2,10 %. Segundo a base de 
+dados da USDA (2008), o leite integral bovino apresenta 3,22% de proteína. Em 
+comparação ao EHCC fermentado os ensaios E3 (3,51%) e E4 (3,28%) (Tabela 7) 
+apresentam um aporte proteico aproximado ao leite tradicional.  
+ 
+ 
+ 
+ 
+ 
+59 
+ 
+Figura 5.Superfície de respostas da Umidade (A), lipídios (B) e Proteínas (C) em 
+função da concentração (%) da castanha e de Lb. paracasei. 
+A 
+B 
+ 
+ 
+ 
+C 
+ 
+A concentração de carboidratos nos EHCC fermentados variou de 1,42% a 3,35% 
+(Tabela 7). Valores superiores de carboidratos são relatados por Holanda (2017) (4,79%) e 
+Morais (2009) (5,24%) em bebidas de castanha de caju sem adição de outros componentes. 
+Os carboidratos, assim como as gorduras, são uns dos maiores responsáveis pelo alto valor 
+energético de produtos à base de castanha de caju. Entretanto, o EHCC fermentado, por 
+apresentar valor inferior a 5% de carboidratos totais, pode ser considerado um produto com 
+teor de açúcar reduzido mesmo com alto valor energético (BRASIL, 2012). 
+As cinzas representam a matéria de origem mineral nas castanhas de caju, os 
+minerais em maior quantidade são fósforo, potássio e magnésio seguidos do cálcio ferro, 
+cobre, manganês, zinco e selênio (AMORIM et al., 2018).  Os EHCC fermentados 
+ 
+ 
+ 
+ 
+60 
+ 
+apresentaram concentrações de cinzas entre 0,06% a 0,27% (Tabela 7). Tais valores são 
+inferiores aos obtidos por Jaekel, Rodrigues e Silva (2010) (0,25%-0,35%) em extratos 
+mistos de soja e arroz.  Rebouças et al. (2014) obteve 0,31% de cinzas na bebida mista de 
+maracujá e castanha de caju. Deve-se levar em conta que os EHCC fermentados não 
+apresentaram adição de aditivos para seu enriquecimento. A superfície de resposta para 
+carboidratos e cinzas podem ser visto na Figura 6 A e B. 
+ 
+Figura 6. Superfície de respostas dos Carboidratos (A) e Cinzas (B) em função da 
+concentração (%) da castanha de caju e de Lb. paracasei. 
+B 
+A 
+ 
+ 
+Com relação à umidade, esta teve comportamento contrário ao obtido pelas 
+proteínas, lipídios, carboidratos e cinzas. Observou-se menor concentração de castanha de 
+caju associada a maior umidade (Figura 5A). Este fato pode ser visto através dos ensaios 
+E1 (91,09%) e E2 (92,76%) que apresentam as maiores umidades e menores concentrações 
+de castanha de caju (Tabela 7). Os demais ensaios variaram entre 84, 01% e 90,06 % 
+(Tabela 7). Estes resultados se aproximam do estudo feito por Holanda (2017), no qual 
+obteve 92,16% de umidade na bebida de caju comercial e 86,69% para formulação própria 
+da bebida de caju. A alta umidade do EHCC é esperada, tendo em vista que é uma 
+suspensão coloidal constituída principalmente por água (KEHINDI et al., 2020; 
+PANGHAL et al., 2017). 
+Com relação à concentração de Lb. paracasei, este teve influência sobre umidade, 
+lipídios e cinzas (Tabela 8), diferentemente das proteínas e carboidratos (p>0,05), como 
+pode ser observado nas Figuras 5C e 6A. 
+Ao pesquisar iogurte fermentado com Lb. paracasei, Li et al. (2020) observaram 
+ 
+ 
+ 
+ 
+61 
+ 
+que o processo fermentativo aumentou a textura do iogurte devido ao aumento exponencial 
+de exopolissacarideos, podendo ocorrer diminuição da umidade. Entretanto, segundo 
+Olmos e Garro (2020), em estudo para avaliar o perfil metabólico do Lb. paracasei em 
+fermentado de soja, quanto menor a umidade, a capacidade da hidrólise protéica do Lb. 
+paracasei é reduzida. A umidade parece se comportar como um componente auto-limitante 
+no metabolismo do Lb. paracasei (ABOULFAZLI, BABA & MISRAN, 2015). 
+Por possuir uma alta concentração de gordura, as nozes como a castanha de caju, 
+após passarem por um processo fermentativo podem apresentar um acúmulo de compostos 
+resultantes de lipólise como, por exemplo, ácidos graxos livres (AGL). Um aumento 
+significativo (p<0,05) de ácidos graxos monoinsaturados (MUFA) e da presença de ácidos 
+graxos livres (AGL) após a fermentação do creme fermentado de castanha de caju, em 
+comparação às castanhas cruas, foi observado por Tabanelli et al. (2018). O ácido oleico 
+presente nas castanhas de caju é classificado com MUFA e faz parte da família dos ômega-
+9. Esses ácidos atuam como importantes aliados na prevenção de diversos tipos de cânceres 
+e redução de radicais livres, possibilitando a diminuição dos danos oxidativos ao DNA 
+(BOLLING et al., 2011; MOHAN et al., 2018). 
+  
+3.5. Analise sensorial do EHCC fermentado com Lb. paracasei ATCC 334 
+ Na Tabela 9, estão os percentuais de respostas para idade, grau de escolaridade e 
+frequência de consumo de extratos hidrossolúveis de origem vegetal, elaborada com base 
+nas respostas dos painelistas que participaram da análise sensorial. 
+ Quando questionados sobre a frequência de consumo de extrato hidrossolúvel 
+vegetal, 49% dos provadores afirmam consumir esse tipo de produto pelo menos uma vez 
+no mês e 21 % costumam consumir semanalmente. Isso indica que o público já está 
+familiarizado com esse tipo de produto. 
+ 
+Tabela 9: Porcentagem das respostas obtidas a partir do questionário individual. 
+ 
+Faixa etária Grau de escolaridade Frequência do consumo de 
+(em anos) Extrato hidrossolúvel vegetal 
+18-35          36-50          > 50 1ºC   2ºC   GI   GC   PGI   PGC 1xM     1-3xM   1xS   2xS   D 
+ 77                20                 3   6     19    65    7       2       1   49         21        20      8     2 
+Fonte: elaborada pela autora. Legenda: 1ºC = 1º Grau completo, 2ºC= 2 ºGrau completo, GI= Graduação incompleta, 
+GC = Graduação completa, PGI= Pós Graduação incompleta, PGC= Pós graduação completa, 1xM= 1 vez no mês, 1-
+ 
+ 
+ 
+ 
+62 
+ 
+3xM  = 1 a 3 vezes no mês, 1xS= 1 vez por semana, 2xS= 2 vezes por semana e D= diariamente. 
+ 
+ Na Tabela 10, estão as médias das notas dos atributos sensoriais pelo teste de 
+2
+aceitação através do planejamento fatorial 2. Verifica-seque os ensaios E3 e E4 obtiveram 
+as maiores notas em relação a todos os atributos, exceto para o atributo aparência no E4. 
+Estes ensaios correspondem às formulações com maior concentração de castanha de caju. 
+O ensaio E3 apresenta diferença significativa (p<0,05) para as formulações com menor 
+concentração de castanha de caju (E1 e E2) em todos os atributos, exceto o aroma. De 
+acordo com Tabanelli et al. (2018) os compostos voláteis como aldeídos, álcoois e 
+aminoácidos aromáticos são metabolitos produzidos na fermentação da castanha de caju 
+por bactérias lácticas, como os lactobacillus, e proporcionam uma abundância de aroma. 
+ 
+Tabela 10. Média das notas dos atributos sensoriais (Aroma, Aparência, Sabor e Impressão 
+2
+Global) obtidas através do Planejamento Fatorial 2 pelo teste de aceitação. 
+IMPRESSÃO 
+Ensaio Concentração de Concentração AROMA* APARENCIA* SABOR* 
+GLOBAL* 
+Lb.paracasei(%) de 
+Castanha(g) 
+abbb
+E1 1(-1) 100g(-1) 5,62 5,59 4,63 4,98 
+abbb
+E2 2(1) 100g(-1) 5,71 5,72 4,40 5,02 
+aaaa
+E3 1(-1) 300g(1) 6,19 6,30 5,63 5,93 
+aabaa
+E4 2(1) 300g(1) 6,07 6,08 5,45 5,81 
+aaaab
+E5 1,5(0) 200g(0) 5,65 6,22 5,32 5,52 
+aaaab
+E6 1,5(0) 200g(0) 5,70 6,20 5,40 5,60 
+aaaab
+E7 1,5(0) 200g(0) 5,60 6,23 5,37 5,50 
+*Médias seguidas de letras iguais na vertical não diferem significativamente (p>0,05) pelo teste de Duncan. 
+  
+ Os Ensaios E1 e E2 (Tabela 10) receberam as menores notas no atributo sabor, 
+correspondendo ao termo hedônico de “desgostei ligeiramente”, apresentando diferença 
+significativa (p<0,05) com os demais ensaios demostrando que a menor proporção de 
+castanha de caju afeta diretamente a aceitação do EHCC. Foram feitas algumas 
+observações por parte dos provadores com relação ao sabor levemente ácido e pouca 
+doçura nas amostras correspondentes a esses ensaios. Morais (2009) avaliou a aceitação de 
+EHCC com diferentes concentrações de açúcar para o atributo de aparência e aroma e suas 
+médias ficaram entre “gostei ligeiramente” e “gostei moderadamente”. Ainda, segundo o 
+autor, foi observado que o grau de doçura aumenta a aceitabilidade de EHCC. O maior o 
+ 
+ 
+ 
+ 
+63 
+ 
+grau de doçura é responsável pela maior aceitação de extratos hidrossolúveis vegetais, 
+descrito por Barbosa (2007) e Jaekel, Rodrigues e Silva (2010). 
+ Blaiotta et al. (2012) detectaram na avaliação sensorial do purê preparado com 
+castanhas (Castanea sativa) fermentado por Lb.rhamnosus e Lb. casei que os produtos com 
+sabor mais pronunciado de castanha obtiveram maior aceitação. Holanda (2017) realizou a 
+análise sensorial de EHCC adoçado e não adoçado, encontrando resultados semelhantes ao 
+EHCC fermentado elaborado na presente pesquisa, na qual para o atributo aroma não 
+ocorreram diferenças significativas (p<0,05) entre os ensaios (Tabela 10), recebendo notas 
+que se qualificam na escala hedônica como “gostei ligeiramente”. 
+ Na Tabela 11, constata-se que a concentração de castanha de caju teve efeito 
+significativo (p<0,05) sobre todos os atributos, embora que só um destes, a impressão 
+global, obteve um bom ajuste à equação proposta. Quanto às superfícies de respostas 
+geradas pelos atributos aroma, aparência, sabor e impressão global, observou-se um 
+aumento de notas proporcionalmente às concentrações de castanhas de caju (Figura 7 A, B, 
+C e D). 
+ 
+Tabela 11. Efeitos das variáveis independentes Concentração de Lb. paracasei (%) e 
+Concentração de Castanha (%) sobre os atributos sensoriais (Aroma, Aparência, Sabor e 
+Impressão Global). 
+AROMA  APARENCIA SABOR IMPRESSÃO 
+ 
+GLOBAL 
+(1) Concentração de NS NS -0,20 NS 
+Lb.paracasei(%) 
+0,46 0,53 1,02 0,87 
+(2) Concentração de 
+Castanha (%) 
+            1 e 2 NS -0,17 NS NS 
+2
+0,674 0,681 0,847 0,969 
+               R 
+0,023(p) 0,0016(p) 0,008(p) 0,122(p) 
+Falta de ajuste 
+ 
+2
+R : Coeficiente de determinação; NS: não significativo 
+ 
+ Nas Figuras 7, A, B e D, observa-seque os atributos aroma, aparência e impressão 
+global não obtiveram influência significativa (P>0,05) de Lb. paracasei. Porém, para o 
+atributo sabor, a concentração desse probiótico influenciou conforme constatado na Figura 
+7C, menores concentrações de Lb. paracasei maiores notas no atributo sabor. 
+A aceitabilidade por parte dos consumidores é um dos maiores desafios para 
+produtos fermentados origem vegetal. O sabor, aroma e textura dos produtos são alterados 
+ 
+ 
+ 
+ 
+64 
+ 
+pelos probióticos devido à produção de diferentes componentes metabólicos, frente a 
+distintos substratos e tempo de fermentação (PANGHAL et al., 2017). Segundo Huang et 
+al. (2017) as alterações provenientes da fermentação de bebidas vegetais podem ser 
+disfarçadas com a adição de aromatizantes para uma melhor aceitação desses produtos por 
+parte do consumidor. 
+ 
+Figura 7. Superfície de respostas dos Atributos: Aroma (A), Aparência (B), Sabor (C) e 
+Impressão Global (D) em função da concentração de castanha de caju (%)e de Lb. paracasei. 
+ 
+A 
+B 
+ 
+ 
+C 
+D 
+ 
+ 
+Os resultados obtidos no teste de ordenação de preferência estão dispostos na 
+Tabela 12. Não foi observada diferença significativa (p>0,05) para os atributos sabor, 
+textura e odor nas amostras correspondentes aos ensaios E3, E4 e E5 de EHCC fermentado. 
+Já para o parâmetro cor, os ensaios E3 e E4 foram preferidos, apresentando diferença 
+significativa para os demais (p<0,05). No teste de ordenação é observado mais uma vez 
+ 
+ 
+ 
+ 
+65 
+ 
+que os ensaios que apresentaram maior percentual de castanha (E3 e E4)teve a preferência 
+por parte do consumidor.  
+Olayinka et al. (2018) avaliaram sensorialmente o iogurte à base de castanha de 
+caju com o iogurte tradicional, e obtiveram uma aceitação geral dos atributos sensoriais no 
+iogurte, embora este tenha apresentado sabor ligeiramente amargo. Para estes autores, mais 
+estudos que promovam a análise sensorial de produtos fermentados de castanha de caju 
+devem ser realizados pelo fato de existir uma escassez de informações sobre extrato 
+hidrossolúvel de castanha de caju na fabricação de substitutos de origem láctea.  
+ 
+Tabela 12. Resultado do teste de ordenação para os atributos Cor, Sabor, Textura e Odor. 
+Formulação Cor Sabor Textura  Odor 
+bbbb
+E1 281 252 219 243 
+bbbb
+E2 225 232 227 261 
+aaaa
+407 362 389 348 
+E3 
+aaaa
+369 333 346 339 
+E4 
+baaa
+E5 218 321 319 309 
+Médias seguidas de letras iguais na vertical não diferem significativamente à 1% pela ABNT, NBR 1317, 1994. E: 
+Ensaio onde, E1= 100g de castanha de caju + 1% da concentração (v/v) de Lb.paracasei da cultura mãe, E2= 100g de 
+castanha de caju + 2% da concentração (v/v) de Lb.paracasei da cultura mãe, E3= 300g de castanha de caju + 1% da 
+concentração(v/v) de Lb.paracasei da cultura mãe, E4= 300g de castanha de caju + 2% da concentração(v/v) de 
+Lb.paracasei da cultura mãe, E5 = 200g de castanha de caju + 1,5% da concentração(v/v) de Lb.paracasei da cultura 
+mãe. 
+ 
+ Ao se tratar de bebidas vegetais fermentadas elaboradas com outras matérias 
+primas, Aboulfazli e Baba (2015) pesquisaram a substituição do leite bovino lácteo por 
+“leites” de coco e soja para a formulação de um fermentado probiótico. Os autores 
+observaram que a fermentação não diminuiu o sabor residual de soja, o que resultou na 
+menor aceitabilidade e preferência dos extratos hidrossolúveis vegetais em relação ao leite 
+bovino. Na avaliação de bebida mista de soja e arroz realizada por Jaekel, Rodrigues e 
+Silva (2010), ocorreu preferência pela formulação que apresentou maior concentração de 
+soja que arroz.  
+Para Kehinde et al. (2020), mais estudos precisam ser feitos com os extratos 
+hidrossolúveis de vegetais fermentados com a intenção de produzir bebidas probióticas. 
+Pois, para estes produtos apresentarem maiores aceitabilidade sensorial, os conteúdos 
+ 
+ 
+ 
+ 
+66 
+ 
+organolépticos devem se limitar aos padrões de bebidas lácteas. 
+ 
+ 
+4. CONCLUSÃO  
+ 
+O EHCC foi fermentescível pelo Lactobacillus paracasei ATCC 334. A contagem 
+de Lb. paracasei no EHCC ficou na faixa de 7,72 Log de UFC/ga 8,27 Log de UFC/g, após 
+6 horas de fermentação, apresentando potencial probiotico de acordo com normatização da 
+FDA. A concentração de castanha de caju (CCC) teve influência significativa (p<0,05) em 
+todos os parâmetros físico-químicos e atributos sensoriais do EHCC fermentado, 
+aumentando o percentual de nutrientes disponíveis no extrato. O Lb. paracasei teve 
+influencia significativa (p<0,05) reduzindo a umidade e aumentando o conteúdo de lipídios 
+e cinzas, já para o atributo sabor a maior concentração de células probióticas resultou em 
+menores notas para esse atributo. Os ensaios que possuem a maior concentração de 
+castanha de caju obtiveram as maiores notas nos atributos aroma, sabor e impressão global 
+e foram os preferidos no teste de ordenação. O EHCC fermentado apresentou-se 
+potencialmente capaz de atender a demanda probiótica da população com dieta restritiva ao 
+leite. 
+ 
+ 
+5. REFERENCIAS 
+ 
+ABOULFAZLI, F.; BABA, A. S. Effect of vegetable milk on survival of probiotics in 
+fermented ice cream under gastrointestinal conditions. Food Science and Technology 
+Research, v. 21, n. 3, p. 391-397, 2015. 
+ 
+ 
+ALASALVAR, C.; PELVAN, E. Fat-soluble bioactives in nuts. European Journal of 
+Lipid Science and Technology, v. 113, n.8, 943-949. 2011.  
+ 
+ 
+ALASALVAR, C., SHAHIDI, F. Natural antioxidants in tree nuts. European Journal of 
+Lipid Science and Technology, v. 111, n.11,p. 1056-1062. 2009. 
+ 
+ 
+AMORIM, M. et al. Use of whey peptide fraction in coated cashew nut as functional 
+ingredient and salt replacer. LWT, v. 92, p. 204–211, 2018. 
+ 
+ 
+ 
+ 
+ 
+ 
+67 
+ 
+A.O.A.C. – Association of Official Analytical Chemists. Official Methods of Analysis 
+of AOAC International. 18th ed. Maryland: AOAC International; 2011. 
+ 
+ 
+APHA. Compendium of Methods for the MicrobioLogical Examination of Foods. 
+American Public Health Association. 4. ed. Washington: APHA, 2001.  
+BALDISSERA, A. C. et al. Alimentos funcionais: uma nova fronteira para o 
+desenvolvimento de bebidas protéicas a base de soro de leite. Ciências Agrárias. v.32, n. 
+4, p.1497-1512. 2011. 
+ 
+ 
+BARBOSA, E. G. Prevalência de bactéria probiótica L. acidophilus – NCFM em 
+extrato de soja fermentado e saborizado com sacarose e polpa de pêssego. Dissertação 
+(Mestrado em Ciência e Tecnologia de Agroindustrial) - Faculdade de Agronomia Eliseu 
+Maciel, Universidade Federal de Pelotas - UFPEL, Pelotas, 2007. 
+ 
+ 
+BATTISTINI, C. et al. Development and characterization of an innovative synbiotic 
+fermented beverage based on vegetable soybean. Brazilian Journal of Microbiology, v. 
+49, p. 303–309. 2017. 
+ 
+ 
+BEDANI, R.; ROSSI, E. A.; SAAD, S. M. I. Impact of inulin and okara on Lactobacillus 
+acidophilus La-5 and Bifidobacterium animalis Bb-12 viability in a fermented soy product 
+and probiotic survival under in vitro simulated gastrointestinal conditions. Food 
+Microbiology, v. 34, n. 2, p. 382–389, 2013.  
+ 
+ 
+BERNAT, N; CHAFERA, M.; CHIRALT, A.; GONZALEZ-MARTINEZ, C. Probiotic 
+fermented almond “milk” as an alternative to cow-milk yoghurt. International Journal of 
+Food Studies, v.4, p.201–211. 2015. 
+ 
+ 
+BLAIOTTA G. et al. Production of fermented cashew nut purees by lactic acid bacteria. 
+Int J Food Microbiol 158:195–202. 2012. 
+ 
+ 
+BOLLING, B. W. et al. Tree nut phytochemicals: composition, antioxidant capacity, 
+bioactivity, impact factors. A systematic review of almonds, Brazils, cashews, hazelnuts, 
+macadamias, pecans, pine nuts, pistachios, and walnuts.Nutrition Research Reviews, v. 
+24, n.02, p. 244-275, 2011. 
+ 
+ 
+BRASIL. Agência Nacional de Vigilância Sanitária. RDC nº 241, de 26 de julho de 2018a. 
+Dispõe sobre os requisitos para comprovação da segurança e dos benefícios à saúde 
+dos probióticos para uso em alimentos. Disponível em: 
+http://portal.anvisa.gov.br/documents/10181/3898888/RDC_241_2018_.pdf/941cda52-
+0657-46dd-af4b-47b4ee4335b7. Acesso em: 03, set. 2019. 
+ 
+ 
+ 
+ 
+ 
+ 
+68 
+ 
+BRASIL. Agência Nacional de Vigilância Sanitária. RDC nº 54, de 12 de Novembro de 
+2012. Dispõe sobre o Regulamento Técnico sobre Informação Nutricional 
+Complementar. Disponível em: 
+http://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2012/rdc0054_12_11_2012.html.  
+Acesso em: 05, fev. 2019. 
+ 
+BRASIL. ANVISA. Resolução RDC nº 12, de 02 de janeiro de 2001. Disponível 
+em:http://portal.anvisa.gov.br/wps/wcm/connect/a47bab8047458b909541d53fbc4c6735/R
+DC_12_2001.pdf?MOD=AJPERES. Acesso em: 02, jul. 2019. 
+ 
+ 
+BRASIL. ANVISA. Resolução RDC nº 275, de 02 de outubro de 2002. Disponível em: 
+http://portal.anvisa.gov.br/documents/10181/2718376/RDC_275_2002_COMP.pdf/fce9dac
+0-ae57-4de2-8cf9-e286a383f254. Acesso em: 02 julho 2019. 
+ 
+ 
+BRAINER M. S. C.P.;VIDAL M. F. Cajucultura. Escritório técnico de Estudos 
+Econimicos do nordeste – ETNENE. 2020. Disponível em: 
+https://www.bnb.gov.br/documents/80223/7106244/114_Caju.pdf/b0348238-45be-b060-
+3629-488c2e70a499. Acesso em : 14, jul. 2020. 
+ 
+ 
+BRUFAU, G.; BOATELLA, J.; RAFECAS, M. Nuts: source of energy and macronutrients. 
+British Journal of Nutrition, v. 96, n. S2, s. 24. 2006. 
+ 
+ 
+CARDARELLI, H. R.; OLIVEIRA, A. J. Conservação do leite de castanha-do-pará. 
+Scientia Agricola, v. 57, n. 4, p.617-622, 2000. 
+ 
+ 
+CDC - Center for Disease Control and Prevention. 2014. Multistate outbreak of 
+Salmonella stanley infections linked to raw cashew cheese (final update). Disponivel em: 
+https://www. cdc.gov/salmonella/stanley-01-14/. Acesso em: 20, jul. 2020. 
+ 
+ 
+CHAMPAGNE,  C.  P.;  RAYMOND,  Y.; GUERTIN,  N.;  BÉLANGER,  G.  Effects  of  
+storage  conditions, microencapsulation and inclusion in chocolate particles on the stability  
+of  probiotic bactéria in ice cream.  International Dairy Journal. v. 47, p.109-117; 2015. 
+ 
+ 
+CODINA-TORRELLA, I. et al. Microbiological stabilization of tiger nuts’ milk beverage 
+using ultra-high pressure homogenization. A preliminary study on microbial shelf-life 
+extension., Food Microbiology . 2017.  
+ 
+ 
+DAMODARAN, S.; PARKIN, K.L.; FENNEMA, O.R. Química de Alimentos de 
+Fennema. 4. ed., Porto Alegre: Artmed, p.900, 2010. 
+ 
+ 
+DE OLIVEIRA S. A. G. et al. . Nutritional quality and protein value of exotic almonds and 
+ 
+ 
+ 
+ 
+69 
+ 
+nuts from the Brazilian Savanna compared to peanut. Food Research International, n.44, 
+v.7, p2319-2325. 2011. 
+ 
+DHARMASENA, M., et al. Refrigerated shelf life of a coconut water-oatmeal mix and the 
+viability of Lactobacillus Plantarum L. Food, v.4, n.4, p.328–337. 2015. 
+ 
+DUTCOSKY, S. D. Analise sensorial de alimentos/ Silvia Deboni Dutcosky. 4, Ed. Ver. 
+Ampl- Curitiba: Champagnat. p.531. 2013. 
+ 
+ 
+FAZILAHA, N. F. et al. Influence of probiotics, prebiotics, synbiotics and bioactive 
+phytochemicals on the formulation of functional yogurt. Journal of Functional Foods.v. 
+48, p. 387-399. 2018. 
+ 
+ 
+FDA. Guidelines for industry. Early clinical trials with live biotherapeutic products: 
+chemistry, manufacturing, and control information. 2003 Disponível em: 
+https://www.fda.gov/downloads/Biologi.../UCM292704.pdf . Acesso em: 29, out. 2019. 
+ 
+ 
+FELBERG, I. et al. Efeito das condições de extração no rendimento e na qualidade do 
+leite de castanha-do-brasil despeliculada. Boletim do CEPPA, Curitiba, v. 20, n. 1, p. 
+75-88, jan/jun., 2002. 
+ 
+ 
+FREITAS, J. B; NAVES, M.M V. Composição química de nozes e sementes comestíveis e 
+sua relação com a nutrição e saúde. Revista de Nutrição, v. 22, n. 3, 2010. 
+ 
+ 
+GADANI, B. C. et al. Physical and chemical characteristics of cashew nut flour stored and 
+packaged with different packages. Food Science and Technology, v. 37, n.4, p.657–662, 
+2017. 
+ 
+ 
+GALLINA, D. A. et al. Characterization of Fermented Milk, and Probiotics and Prebiotics 
+Free Milk, and Viability Evaluation of Lactic Acid and Probiotic Bacteria Luring the Shelf 
+Life. Cient.Ciências Biológicas e Saúde, v.13, n.4, p. 239-44. 2011. 
+ 
+ 
+GROM, L. C. et al. Probiotic dairy foods and postprandial glycemia: A mini-review, 
+Trends in Food Science; Technology. 2020.  
+ 
+ 
+GU, Y. et al. Impact of Lactobacillus paracasei IMC502 in coculture with traditional 
+starters on volatile and non-volatile metabolite profiles in yogurt. Process Biochemistry. 
+2020. 
+ 
+ 
+HOLANDA, S. A. de M. Desenvolvimento e caracterização de bebida vegetal à base de 
+castanha de caju, adicionada de achocolatado e leite de coco ou banana. 2017. 
+ 
+ 
+ 
+ 
+70 
+ 
+Dissertação (Mestrado em Ciência e Tecnologia de Alimentos)- Universidade Federal do 
+Ceará – UFC, Ceará, 2017. 
+ 
+ 
+HUANG, S. et al. Spray drying of probiotics and other foodgrade bacteria: A review. 
+Trends in Food Science; Technology, 63, 1–17. 2017. 
+HUDSON, E.The future of probiotics. Part 1: Evolution of digestion and immune 
+support probiotics. Part 2: Chronic disease and science versus regulation.  Global 
+Head of Health and Wellness Research. Euromonitor International. 2016. 
+ 
+IAL-INSTITUTO ADOLFO LUTZ. Normas Analíticas do Instituto Adolfo Lutz: Métodos 
+químicos e físicos para análise de alimentos. 4. ed. São Paulo: IMESP, 2008. 
+ 
+ 
+IBOPE.  Dia Mundial do Vegetarianismo: 8% da população brasileira afirma ser 
+adepta do estilo.  2012. Disponível em:   http://www.ibopeinteligencia.com/noticias-e-
+pesquisas/dia-mundial-do-vegetarianismo-8-da-populacao-brasileira-afirma-ser-adepta-do-
+estilo/ aspx. Acesso em: 24, jul. 2018. 
+ 
+IBOPE. Pesquisa de opinião pública sobre vegetarianismo. 2018. Disponível em: 
+https://www.svb.org.br/images/Documentos/JOB_0416_VEGETARIANISMO.pdf  
+ 
+ 
+JAEKEL, L. Z.; RODRIGUES, R. S.; SILVA, A. P. Avaliação físico-química e sensorial 
+de bebidas à base de extratos de soja e de arroz. Ciênc.Tecnol.Aliment., Campinas, 30(2): 
+342-346, abr.-jun. 2010  
+ 
+ 
+JAY, J. M.; LOESSNER, M. J.; GOLDEN, D. A. Modern food microbiology. 7th. ed. 
+New York: Springer, p.790 . 2005. 
+ 
+ 
+KEHINDE, B. A. et al. Leite vegetal como alimentos probióticos e prebióticos. Advances 
+in Food and Nutrition Research. 2020. 
+ 
+ 
+LI, X. W. et al. Exopolysaccharides from yogurt fermented by Lactobacillus paracasei: 
+production, purification and its binding to sodium caseinate. Food Hydrocolloids. n. 102, 
+p. 105635. 2020. 
+ 
+ 
+MAPA. Ministério da Agricultura, Pecuária e Abastecimento. IN nº 19/2013. Estabelecer 
+em todo território nacional a complementação dos padrões de identidade e qualidade 
+para bebidas. Disponível em: https://alimentusconsultoria.com.br/wp-
+content/uploads/2016/07/IN-19-2013.pdf. Acesso em: 09, jun. 2020. 
+ 
+ 
+MARTINS, E. M. F. et al. Products of vegetable origin: A new alternative for the 
+consumption of probiotic bacteria. Food Research International, 51(2), p.764–770. 2013. 
+ 
+ 
+ 
+ 
+71 
+ 
+ 
+ 
+MANTZOURANI, I. et al. Production of a potentially synbiotic fermented Cornelian 
+cherry (Cornus mas L.) beverage using Lactobacillus paracasei K5 immobilized on wheat 
+bran. Biocatalysis and Agricultural Biotechnology. v. 17. p. 345-351. 2020.  
+ 
+ 
+MENEZES, C. R. et al. Microencapsulação de probióticos: avanços e perspectivas. 
+Ciência Rural, v. 3, p. 36-41, 2013. 
+MOHAN, V. et al. Cashew Nut Consumption Increases HDL Cholesterol and Reduces 
+Systolic Blood Pressure in Asian Indians with Type 2 Diabetes: A 12-Week Randomized 
+Controlled Trial. The Journal of Nutrition, v. 148, n. 1, p. 63–69, 2018. 
+ 
+ 
+MORAIS, A. C. da S. Desenvolvimento, otimização e aceitação de extrato 
+hidrossolúvel da amêndoa de castanha de caju (Anacardium occidentale L.) 
+Dissertação (Mestrado em Ciência e Tecnologia de Alimentos)- Universidade Federal do 
+Ceará – UFC, Ceará 2009.  
+ 
+MORAIS, A. C. S. et al. Seleção de julgadores e avaliação de diferença sensorial entre 
+extratos hidrossolúveis da amêndoa da castanha de caju (Anacardium occidentale L.). 
+Boletim do Centro de Pesquisa e Processamento de Alimentos, v. 28, p. 281-288, 2010. 
+ 
+ 
+NANDI, B.K. Cashew nutnutritional aspects.Retrievedfrom. 2013. Disponível em: 
+http://www.fao.org/docrep/005/ac451e/ac451e0b.htm. Acesso em: 9, fev. 2019. 
+ 
+ 
+NOROUZI, S. et al. Sobrevivência de Lactobacillus paracasei na sobremesa de soja 
+congelada fermentada e não fermentada. Biocatálise e Biotecnologia Agrícola, 101297. 
+2019.  
+  
+ 
+OGUNSINA, B. S.; BAMGBOYE, A. I. Pre-shelling parameters and conditions that 
+influence the whole kernel out-turn of steam-boiled cashew nuts. Journal of the Saudi 
+Society of Agricultural Sciences, v.13, 29-34. 2014. 
+ 
+ 
+OLAYINKA, J. et al. Physicochemical, microbiological and sensory characteristics of 
+cashew milk formulated yoghurt. African Journal of Food Science. v. 12 (8) , p. 204-209. 
+2018. 
+ 
+ 
+OLMOS, A. R.; GARRO, M. S. Metabolic profile of Lactobacillus paracasei sub sp. 
+paracasei CRL 207 in solid state fermentation using commercial soybean meal. Food 
+Bioscience. V. 35. 2020. 
+ 
+ 
+PANGHAL, A. et al. Potential non-dairy probiotic products – A healthy approach. Food 
+ 
+ 
+ 
+ 
+72 
+ 
+Bioscience, v.21, p.80–89. 2017. 
+ 
+ 
+PINHEIRO, P. R. et al. Aplicado ao processo de industrialização da castanha de caju. 
+2006.  Disponível em: http://www.abepro.org.br/biblioteca/ 
+ENEGEP2006_TR450301_7981.pdf. Acesso em: 23, jul. 2018. 
+ 
+ 
+ 
+REBOUÇAS, M. C. et al. Optimization of the acceptance of prebiotic beverage made from 
+cashew nut kernels and passion fruit juice. Journal of. Food Science. v. 79, n. 7, p. 1393-
+1398, 2014. 
+ 
+ 
+RODRIGUES, D. et al. Storage stability of Lactobacillus paracasei as free cells or 
+encapsulated in alginate-based microcapsules in low pH fruit juices. Food and Bioprocess 
+Technology. v.5, p. 2748-2757, 2012. 
+ 
+ 
+SAAD, S. M. I. Probióticos e prebióticos: o estado da arte. Brazilian Journal of 
+Pharmaceutical Sciences, v. 42, n. 1, p. 1-16, 2006. 
+ 
+ 
+SALMINEN, S.;  KNEIFEL,  W. OUWEHAND,  A.  C.  Probiotics:  Application  of  
+probiotics  in  dairy  products: established and potential benefits. Food Science, v. 24, p. 
+234 – 241; 2016. 
+ 
+ 
+SANTOS, M.C. M. et al. Fermentation of chickpea (Cicer arietinum L.) and coconut 
+(Coccus nucifera L.) beverages by Lactobacillus paracaseisub sp paracasei LBC 81: The 
+influence of sugar content on growth and stability during storage. LWT . 2020.  
+ 
+ 
+SILANIKOVE, N.; LEITNER, G.; MERIN, U. The interrelationships between lactose 
+intolerance and the modern dairy industry: global perspectives in evolutional and historical 
+backgrounds. Nutrients, p.7312-7331.  2015. 
+ 
+ 
+TABANELLI, G. et al. Fermented Nut-Based Vegan Food: Characterization of a 
+Homemade Product and Scale-Up to an Industrial Pilot-Scale Production. Journal of Food 
+Science. 2018. 
+ 
+ 
+TRIPATHI, M. K.; GIRI, S. K. Probiotic functional foods: Survival of probiotics during 
+processing and storage. Journal of Functional Foods, v. 9, n. 1, p. 225–241, 2014. 
+ 
+ 
+USDA – National database for Standart Reference, 2008. Disponível em: 
+http://www.usda.ogr.  Acesso em: 10, fev. 2019. 
+ 
+ 
+ 
+ 
+ 
+73 
+ 
+ 
+VENKATACHALAM, M.; SATHE, S. K.Chemical composition of selected edible nut 
+seeds. Journal of Agricultural and Food Chemistry.n.54, p. 4705-4714. 2006. 
+ 
+ 
+VIGUILIOUK, E. et al.  Effect of Tree Nuts on Glycemic Control in Diabetes: A 
+Systematic Review and Meta-Analysis of Randomized Controlled Dietary Trials. PloS 
+ONE, v. 9, n. 7, e103376, 2014. 
+ 
+ 
+WANG, S.; CHELIKANI, V.; SERVENTI, L. Evaluation of chickpea as alternative to soy 
+in 550 plant-based beverages, fresh and fermented. LWT. v.97, p. 570–572. 2018. 
+ 
+ 
+WONG, V. Soy Milk Fades as Americans Opt for Drinkable Almonds. Business Week, 
+2013. 
+ 
+ 
+WU, H., et al. Mung bean (Vignaradiata) as probiotic food through fermentation with 
+Lactobacillus plantarum B1-6. LWT. v. 63, n.1, p. 445–451. 2015.  
+ 
+ 
+ 
+ 
+ 
+ 
+74 
+ 
+Anexo I – Parecer de aprovação do projeto pelo Comitê de Ética 
+ 
+UNIVERSIDADE DE PERNAMBUCO - PROPEGI - UPE 
+ 
+ 
+PARECER CONSUBSTANCIADO DO CEP 
+ 
+DADOS DO PROJETO DE PESQUISA 
+ 
+Título da Pesquisa:DESENVOLVIMENTO E CARACTERIZAÇÃO DE BEBIDA COM 
+POTENCIALPROBIÓTICO A BASE DE EXTRATO HIDROSSOLÚVEL DE 
+CASTANHA DE CAJU ( Anacardium occidentale L.) 
+ 
+Pesquisador:THAYNNA LEOCADIO TRAJANO LACERDA SOUSA 
+ 
+Área Temática: 
+ 
+Versão: 1 
+ 
+CAAE: 25725019.4.0000.5207 
+ 
+Instituição Proponente: UNIVERSIDADE FEDERAL RURAL DE PERNAMBUCO 
+ 
+Patrocinador Principal:Financiamento Próprio 
+ 
+DADOS DO PARECER 
+ 
+Número do Parecer:3.748.448 
+ 
+Apresentação do Projeto: 
+ 
+Projeto de dissertação de mestrado do Programa de Pós-Graduação em Ciência e Tecnologia de Alimentos, 
+da Universidade Federal Rural de Pernambuco. Pretende defender a seguinte hipótese: A elaboração de 
+uma bebida com extrato hidrossolúvel de castanha de caju adicionada de Lactobacillus paracasei apresenta 
+potencial probiótico. O estudo será conduzido em 2 fases, sendo uma laboratorial (experimental) com a 
+preparação do inócuo (Lactobacillus paracasei) ATCC 334, processamento da castanha, Fermentação, 
+Análises físico- químicas e Analise microbiológicas; e outra com participantes para análise sensorial, teste 
+de ordenação e teste de aceitação. O recrutamento acontecerá no departamento de ciências do consumo 
+da UFRPE de forma direta além de convocação por meio de redes sociais e panfletagem. Os possíveis 
+provadores serão selecionados através de um questionário com informações pessoais e do perfil de saúde. 
+Como critérios de inclusão: seleção de provadores voluntários das amostras é de que estejam na faixa 
+etária de 18 a 50 anos, que tenham o habito de consumir extratos vegetais. O grupo de degustadores 
+devem ser composto por pessoas que não apresentem experiência profissional em degustação de 
+alimentos ou que tenham algum tipo de treinamento na área. Quanto aos de exclusão: provadores 
+voluntários que nunca tenham consumido nenhum extrato vegetal, também serão excluídos, alérgicos a 
+castanha de caju, fumantes, gestantes, lactantes, imunossuprimidos, idosos, pessoas em uso de 
+ 
+ 
+Endereço:Av. Agamenon Magalhães, s/nº  
+Bairro:Santo Amaro CEP:50.100-010 
+UF: PE Município:  
+RECIFE 
+Telefone: Fax:(81)3183-3775 E-mail:comite.etica@upe.br 
+(81)3183-3775 
+    
+ 
+ 
+Página 01 de05 
+ 
+ 
+ 
+ 
+75 
+ 
+UNIVERSIDADE DE PERNAMBUCO - PROPEGI - UPE 
+ 
+ 
+Continuação do Parecer: 3.748.448 
+ 
+ 
+medicamentos que alterem o paladar ou que estejam com alguma doença do trato respiratório, como gripes 
+e resfriados. Para a realização da análise sensorial os participantes serão orientados a respeitarem um 
+tempo aproximado de 2 horas entre as refeições principais, sendo ainda aceitos como avaliadores aqueles 
+que consomem algum tipo extrato vegetal (arroz, soja, aveia, coco, amêndoas).O teste de ordenação 
+consiste em classificar as amostras de analise em relação à intensidade de um atributo específico ou de 
+preferência de gosto, em ordem crescente do menor para o maior (IAL, 2008).Para o teste de aceitação, 
+será utilizada a escala hedônica estruturada de nove pontos (1=desgostei extremamente; 9=gostei 
+extremamente) para avaliar o Extrato hidrossolúvel de castanha de caju fermentado com L. paracasei. Após 
+o teste de ordenação e aceitação, as avaliadores receberão uma amostra, água mineral a temperatura 
+ambiente para o enxágue das papilas e bolacha. Para os teste de análise sensorial serão realizados com 
+uma média de 100 provadores. 
+ 
+ 
+ 
+Objetivo da Pesquisa: 
+ 
+Objetivo Geral: 
+ 
+Elaborar uma bebida a partir do extrato hidrossolúvel de castanha de caju adicionada do probiótico 
+Lactobacillus paracasei, avaliando a qualidade sensorial do produto elaborado com alteração no seu 
+processo fermentativo. 
+ 
+Objetivos Específicos: 
+ 
+ 
+- Estudar as características físico-químicas e qualidade microbiológica do Extrato Hidrossolúvel de castanha 
+de caju mediante a legislação da Anvisa; 
+ 
+- Avaliar a viabilidade celular durante a fermentação; 
+ 
+- Realizar a analise sensorial utilizando teste de ordenação e aceitabilidade. 
+ 
+Avaliação dos Riscos e Benefícios: 
+ 
+Quanto aos riscos: 
+ 
+A degustação da bebida poderá ocasionar um desconforto sensorial e digestivo proveniente da fermentação 
+do extrato de castanha de caju, em participantes que não possuem o habito de tomar bebida probiótica. Os 
+provadores serão orientados a informar a pesquisadora caso sintam alguma espécie de desconforto durante 
+a degustação, para que as devidas 
+ 
+providências possam ser tomadas quanto à oferta adicional de água e bolacha para aliviar o desconforto ou 
+em casos de alergia ou intolerância será encaminhado a Unidade de Pronto 
+ 
+ 
+Endereço:Av. Agamenon Magalhães, s/nº 
+Bairro:Santo Amaro CEP:50.100-010 
+UF: PE Município: RECIFE  
+Telefone: (81)3183-3775 Fax:(81)3183-3775 E-mail:comite.etica@upe.br 
+    
+ 
+ 
+Página 02 de05 
+ 
+ 
+ 
+ 
+76 
+ 
+UNIVERSIDADE DE PERNAMBUCO - PROPEGI - UPE 
+ 
+ 
+Continuação do Parecer: 3.748.448 
+ 
+ 
+Atendimento (UPA) Caxangá, que possui atendimento 24 horas, localizada na Avenida Joaquim Ribeiro, s/n 
+ 
+– Iputinga, Recife, telefone 3184-4355, sendo essa unidade a mais próxima do local onde ocorrerá a analise 
+sensorial. 
+ 
+Benefícios: 
+ 
+Serão realizados ensaios para avaliar atributos sensoriais e aceitação do novo produto vegetal com 
+potencial probiótico. Assim, os participantes estarão contribuindo para o avanço do conhecimento científico e 
+com a possibilidade de otimizar a produção de extratos vegetais fermentados. Essa participação fornecerá 
+dados que podem contribuir para implementar tecnologias de produção e caracterização de novos produtos 
+vegetais que se enquadrem em alimentos probióticos. 
+ 
+Comentários e Considerações sobre a Pesquisa: 
+ 
+Os pesquisadores descrevem a viabilidade para realizar a pesquisa, tendo em vista a estrutura do laboratório 
+que irá assegurar a produção da bebida de forma segura, contendo equipamentos e vidrarias destinados 
+para uso exclusivo na elaboração e processamento do extrato hidrossolúvel de castanha de caju, 
+minimizando uma possível contaminação cruzada no produto por qualquer tipo de agente biológico, físico e 
+químico. As etapas da pesquisa podem ser realinhadas ou suspensas caso ocorra algum risco ou dano à 
+saúde decorrente da participante na pesquisa que não estava previsto no termo de consentimento. 
+ 
+Considerações sobre os Termos de apresentação obrigatória: 
+ 
+Foram anexados e estão em conformidade: 
+ 
+- Carta de anuência (instituição) 
+ 
+- Termo de Confidencialidade 
+ 
+- Termo de Compromisso 
+ 
+- Termo de Concessão (para uso do laboratório) 
+ 
+- TCLE (com informações sobre os procedimentos de coleta, riscos, benefícios e medidas protetivas). 
+ 
+ 
+Conclusões ou Pendências e Lista de Inadequações: 
+ 
+Sem pedências 
+ 
+Considerações Finais a critério do CEP: 
+ 
+O pleno acompanha o parecer do relator. 
+ 
+ 
+ 
+ 
+Endereço:Av. Agamenon Magalhães, s/nº 
+Bairro:Santo Amaro CEP:50.100-010 
+UF: PE Município: RECIFE  
+Telefone: (81)3183-3775 Fax:(81)3183-3775 E-mail:comite.etica@upe.br 
+    
+ 
+ 
+Página 03 de05 
+ 
+ 
+ 
+ 
+77 
+ 
+UNIVERSIDADE DE PERNAMBUCO - PROPEGI - UPE 
+ 
+ 
+Continuação do Parecer: 3.748.448 
+ 
+Este parecer foi elaborado baseado nos documentos abaixo relacionados: 
+ 
+Tipo Documento Arquivo Postagem Autor Situação 
+     
+Informações Básicas PB_INFORMAÇÕES_BÁSICAS_DO_P 17/11/2019  Aceito 
+do Projeto ROJETO_1288804.pdf 21:38:14   
+Projeto Detalhado / ProjetoDetalhadoThaynna.pdf 17/11/2019 THAYNNA Aceito 
+Brochura  21:37:12 LEOCADIO  
+Investigador   TRAJANO LACERDA  
+   SOUSA  
+Outros termodeconcessao.pdf 07/11/2019 THAYNNA Aceito 
+  22:02:04 LEOCADIO  
+    
+TRAJANO LACERDA 
+   SOUSA  
+Outros termodecompromisso.pdf 07/11/2019 THAYNNA Aceito 
+  21:59:54 LEOCADIO  
+   TRAJANO LACERDA  
+   SOUSA  
+TCLE / Termos de TERMODECONSENTIMENTOLIVREEE 07/11/2019 THAYNNA Aceito 
+Assentimento / SCLARECIDO.pdf 21:59:29 LEOCADIO  
+Justificativa de   TRAJANO LACERDA  
+   
+Ausência SOUSA 
+Outros Termodeconfidencialidade.pdf 04/11/2019 THAYNNA Aceito 
+  20:48:52 LEOCADIO  
+   TRAJANO LACERDA  
+   SOUSA  
+Outros Cartadeanuencia.pdf 04/11/2019 THAYNNA Aceito 
+  20:46:25 LEOCADIO  
+   TRAJANO LACERDA  
+   SOUSA  
+Folha de Rosto folhaderosto.pdf 23/10/2019 THAYNNA Aceito 
+  21:30:38 LEOCADIO  
+   TRAJANO LACERDA  
+   SOUSA  
+ 
+ 
+Situação do Parecer: 
+ 
+Aprovado 
+ 
+Necessita Apreciação da CONEP: 
+ 
+Não 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Endereço:Av. Agamenon Magalhães, s/nº 
+Bairro:Santo Amaro CEP:50.100-010 
+UF: PE Município: RECIFE  
+Telefone: (81)3183-3775 Fax:(81)3183-3775 E-mail:comite.etica@upe.br 
+    
+ 
+ 
+Página 04 de05 
+ 
+ 
+ 
+ 
+78 
+ 
+UNIVERSIDADE DE PERNAMBUCO - PROPEGI - UPE 
+ 
+ 
+Continuação do Parecer: 3.748.448 
+ 
+RECIFE, 06 de Dezembro de 2019 
+ 
+ 
+ 
+Assinado por: 
+ 
+Jael Maria de Aquino 
+ 
+(Coordenador(a)) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Endereço:Av. Agamenon Magalhães, s/nº 
+Bairro:Santo Amaro CEP:50.100-010 
+UF: PE Município: RECIFE  
+Telefone: (81)3183-3775 Fax:(81)3183-3775 E-mail:comite.etica@upe.br 
+    
+ 
+ 
+ 
+ 
+ 
+79 
+ 
+Apêndice I – Termo de Consentimento Livre e Esclarecido 
+TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO 
+               (Elaborado de acordo com a Resolução nº 466/2012-CNS/CONEP) 
+Convidamos V.Sa. a participar da pesquisa DESENVOLVIMENTO E CARACTERIZAÇÃO DE BEBIDA 
+COM POTENCIAL PROBIÓTICO A BASE DE EXTRATO HIDROSSOLÚVEL DE CASTANHA DE CAJU 
+(Anacardiumoccidentale L.)sob responsabilidade da pesquisadora Thaynna Leocádio Trajano Lacerda Sousa, 
+orientada pela Professora Samara Alvachian Cardoso Andrade, com co-orientação da Professora Neide Kazue 
+Sakugawa Shinohara, e  da Drª  Maria de Fátima Fonseca Marques, que tem por objetivo o estudo da eficácia da 
+fermentação no extrato hidrossolúvel de castanha de caju, avaliando importantes parâmetros para a compreensão do 
+processo, como também a análise sensorial para  identificar possíveis diferenças percebidas pelo consumidor em 
+relação a aparência global do produto e a existência de possíveis alterações na qualidade da bebida proveniente da 
+fermentação. Para a realização deste trabalho será utilizado o seguinte método: cada avaliador receberá uma ficha 
+para a avaliação sensorial do produto e amostras codificadas com o extrato hidrossolúvel de castanha de caju 
+fermentada, contidas em um copo plástico, um copo com água e bolacha de água e sal, sendo reposto, se necessário, 
+a água mineral e a bolacha. Todos os testes sensoriais são realizados em local apropriado, com iluminação e 
+temperatura controlada de 26±1°𝐶, cadeira e mesa individuais, respeitando o intervalo de 2 horas antes ou depois da 
+refeição. Os participantes deverão avaliar no primeiro momento da degustação, dentre as cinco amostras que lhe serão 
+dadas, a avaliação persiste em ordenar de forma crescente os atributos percebidos na bebida. Na segunda etapa do 
+procedimento, o provador irá analisar a qualidade da bebida avaliando, com auxílio de uma escala hedônica, atributos 
+como aroma, sabor, aparência e impressão global.  Esclarecemos que manteremos em anonimato, sob sigilo absoluto, 
+durante e após o termino do estudo, todos os dados que identifiquem o Participante da pesquisa, usando apenas para 
+divulgação os dados inerentes ao desenvolvimento do estudo. Informamos ainda que após o termino da pesquisa, 
+serão destruidos todo e qualquer tipo de mídia que possa vir a identificá-lo tais como filmagem, fotos, gravações, etc., 
+não restando nada que venha a comprometer o anonimato de sua participação agora ou futuramente. Quanto aos 
+riscos e desconfortos, até o momento a metodologia utilizada para esta coleta de dados, e diante dos procedimentos 
+utilizados na inclusão dos voluntários, mostra que durante ou após o trabalho raramente surge algum desconforto 
+gastrointestinal ou sintomas relacionados a alergia ou intolerância a algum ingrediente da bebida.Com esse estudo 
+será possível fornecer dados que podem ser utilizados como critérios para justificar  o uso de probióticos inoculados no 
+extrato hidrossolúvel de castanha de caju possibilidade de aumentar a disponibilidade de produtos vegetais com 
+potencial probiótico. Como medida protetiva aos participantes, do extrato hidrossolúvel de castanha de caju fermentada 
+com Lactobacillus paracasei, são preparadas de acordo com as Boas Práticas de Fabricação (Resolução n° 275/2002), 
+que abrangem um conjunto de medidas adotadas na produção de alimentos a fim de garantir a qualidade sanitária e a 
+conformidade dos alimentos dos regulamentos técnicos. O laboratório de Alimentos e Ambiental presente no 
+Departamento de TecnoLogia Rural (DTR)/UFRPE conta com uma estrutura que permite a produção da bebida de 
+forma segura, contendo equipamentos e vidrarias destinados para  uso exclusivo na elaboração e processamento do 
+extrato hidrossolúvel de castanha de caju, minimizando uma possível contaminação cruzada no produto por qualquer 
+tipo de agente biológico, físico e químico. As bebidas são armazenadas recipientes estéreis com tampa rosqueada e 
+mantidas a temperaturas entre 2 e 5°C até a degustação. Caso ocorra desconforto ao ser ingerida a amostra, será 
+oferecido ao provador água para o alívio do desconforto e será levado a UPA da Caxangá pelo responsável da 
+pesquisa. 
+O (A) senhor(a) terá os seguintes direitos: a garantia de esclarecimento e resposta a qualquer pergunta; a liberdade de 
+abandonar a pesquisa a qualquer momento sem prejuízo para si; a garantia de privacidade à sua identidade e o sigilo 
+de suas informações; a garantia de que caso haja algum dano a sua pessoa, os prejuízos serão assumidos pelos 
+pesquisadores ou pela instituição responsável, inclusive acompanhamento médico e hospitalar (se for o caso). Os 
+gastos adicionais, quando houver, serão absorvidos pelos pesquisadores. Nos casos de dúvidas e esclarecimentos o 
+(a) senhor (a) deve procurar os pesquisadores Thaynna Leocádio Trajano Lacerda Sousa (Rua Professor Chaves 
+Batista, 23, telefone: (81) 99492-7084), Samara Alvachian Cardoso Andrade (telefone: (81) 99226-5545), Neide Kazue 
+Sakugawa Shinohara (telefone: (81) 99999-6036) Maria de Fátima Fonseca Marques(telefone: (81) 98829-4111). 
+Caso suas dúvidas não sejam resolvidas pelos pesquisadores ou seus direitos sejam negados, favor recorrer ao 
+Comitê de Ética em Pesquisa da Universidade de PernambucoCEP/PROPEGI, localizado à Av. Agamenon Magalhães, 
+S/N, Santo Amaro, Recife-PE, ou pelo telefone 81-3183.3775, ou ainda através do e-mail comite.etica@upe.br. 
+ 
+CONSENTIMENTO LIVRE E ESCLARECIDO 
+ 
+ 
+Eu, _______________________________________________________________________________, após ter 
+recebido todos os esclarecimentos e ciente dos meus direitos, concordo em participar desta pesquisa, bem como 
+autorizo a divulgação e a publicação de toda informação por mim transmitida, exceto dados pessoais, em publicações e 
+eventos de caráter científico. Desta forma, assino este termo, juntamente com a pesquisadora, em duas vias de igual 
+teor, ficando uma via sob meu poder e outra em poder do(s) pesquisador (es).  
+ 
+Recife Data: ____/____/____  
+ 
+____________________________________ 
+Assinatura do Participante 
+_______________________________ 
+ 
+Samara Alvachian Cardoso Andrade 
+___________________________________               
+ __________________________________ 
+ThaynnaLeocádio Trajano Lacerda Sousa 
+Neide KazueSakugawaShinohara 
+ 
+ 
+ 
+ ___________________________________ 
+ Maria de Fátima Fonseca Marques
+ 
+ 
+ 
+ 
+80 
+ 
+Apêndice II 
+ 
+UNIVERSIDADE FEDERAL RURAL DE PERNAMBUCODEPARTAMENTO DE 
+CIÊNCIAS DO CONSUMO PÓS-GRADUAÇÃO EM CIÊNCIA E TECNOLOGIA DE 
+ALIMENTOS 
+Questionário 
+As informações aqui prestadas serão confidenciais, não sendo repassado para pessoas que não estejam 
+envolvidas diretamente na pesquisa do referido projeto 
+Nome: ______________________________________________________________________ 
+Data: ________________  
+Endereço e/ou Telefone: ______________________________________________________ 
+ 
+Por favor, responda às seguintes perguntas:  
+1. Idade: 
+(  ) 18 a 20 anos                            (  ) 21 a 25 anos                     (  ) 26 a 35 anos                                    (  ) 36 a 
+45 anos                            (  ) 46 a 50 anos                     (  ) mais de 50 anos  
+ 
+2. Grau de escolaridade:      
+(  ) 1°Grau incompleto       
+(  ) 1°Grau completo            
+(  ) 2°Grau incompleto 
+(  ) 2°Grau completo          
+(  ) Graduação incompleto      
+(  ) Graduação completo  
+(  )Pós-graduação incompleta 
+(  )Pós graduação completa 
+ 
+3. Atividade Profissional:_____________________________________________________ 
+4. Qual sua frequência de consumo de Extrato hidrossolúvel vegetal (Leite de soja , amêndoas , arroz, coco, 
+etc..):                       
+(  )  inferior a 1 vez por mês                (  ) 1 a 3 vezes por mês                        (  ) 1 vez por semana                           
+(  ) 2 ou mais vezes por semana         (  ) diariamente 
+5. Você é alérgico a castanha de caju?    (  ) Sim  (  )Não 
+6. Você é fumante?    (  ) Sim          (  ) Não 
+7. Você é gestante ou lactante?    (  ) Sim          (  ) Não 
+8. Atualmente, você está fazendo o uso de medicamentos que alterem o seu paladar? 
+(  ) Sim          (  ) Não 
+9. Você apresenta alguma doença no trato respiratório como gripe ou resfriado? 
+(  ) Sim          (  ) Não 
+10. Você tem experiência em degustação profissional de produtos lácteos e similares ou participou de algum 
+treinamento? 
+(  ) Sim          (  ) Não 
+ 
+ 
+ 
+ 

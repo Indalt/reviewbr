@@ -1,0 +1,2088 @@
+ 
+ 
+UNIVERSIDADE FEDERAL DO CEARÁ  
+PROGRAMA DE PÓS- GRADUAÇÃO EM BIOTECNOLOGIA 
+MESTRADO EM BIOTECNOLOGIA 
+ 
+MANUELA ALMEIDA MONTENEGRO  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EFEITO DO EXTRATO DO BAGAÇO DO PEDÚNCULO DE CAJU (Anacardium 
+occidentale L.) CONTRA Streptococcus mutans 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SOBRAL – CE 
+2012
+ 
+ 
+MANUELA ALMEIDA MONTENEGRO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EFEITO DO EXTRATO DO BAGAÇO DO PEDÚNCULO DE CAJU (Anacardium 
+occidentale L.) CONTRA Streptococcus mutans 
+ 
+  
+Dissertação submetida à Coordenação de Curso 
+de Pós-Graduação em Biotecnologia da 
+Universidade Federal do Ceará, como requisito 
+parcial para a obtenção do grau de Mestre em 
+Biotecnologia. 
+ 
+Orientador: Prof. Dr. Ricardo Pires dos Santos 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SOBRAL – CE 
+2012  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Dados Internacionais de Catalogação na Publicação 
+Universidade Federal do Ceará 
+Biblioteca do Curso de Medicina – Campus de Sobral 
+ 
+ 
+F988e Furtado, Manuela Almeida Montenegro.  
+Efeito antimicrobiano do extrato do bagaço de pedúnculo de caju (anacardium 
+occidentale L.) contra streptococcus mutans.  / Manuela Almeida Montenegro Furtado. – 
+2012. 
+  66 f. : il. color., enc. ; 30 cm. 
+ 
+Dissertação (mestrado) – Universidade Federal do Ceará, Curso de Medicina, 
+Programa de Pós-Graduação em Biotecnologia, Sobral, 2015. 
+Área de Concentração: Macromoléculas. 
+Orientação: Prof. Dr. Ricardo Pires dos Santos. 
+ 
+ 
+1.  Anacardium. 2. Agentes antibacterianos I. Título. 
+ 
+          CDD 615.1 
+ 
+  
+ 
+ 
+ 
+MANUELA ALMEIDA MONTENEGRO 
+ 
+EFEITO DO EXTRATO DO BAGAÇO DO PEDÚNCULO DE CAJU (Anacardium 
+occidentale L.) CONTRA Streptococcus mutans 
+ 
+ 
+Dissertação submetida à Coordenação de 
+Curso de Pós-Graduação em 
+Biotecnologia da Universidade Federal do 
+Ceará, como requisito parcial para a 
+obtenção do grau de Mestre em 
+Biotecnologia. 
+Orientador: Prof. Dr. Ricardo Pires dos 
+Santos 
+ 
+Aprovada em ____/____/_______ 
+ 
+BANCA EXAMINADORA 
+ 
+ 
+_______________________________________________ 
+Prof. Dr. Ricardo Pires dos Santos (Orientador) 
+Universidade Federal do Ceará – UFC 
+ 
+ 
+_______________________________________________ 
+Prof. Dr. Francisco Vassiliepe Sousa Arruda (Membro) 
+Universidade Federal do Ceará – UFC 
+ 
+ 
+_______________________________________________ 
+Prof. Dr. João Batista Cajazeiras (Membro) 
+Universidade Federal do Ceará - UFC 
+ 
+  
+ 
+ 
+DEDICATÓRIA 
+ 
+ 
+Dedico este trabalho à minha família, Luís e Clara, razão do meu viver. 
+ 
+ 
+ 
+ 
+AGRADECIMENTOS 
+ 
+ 
+ A DEUS, por encorajar-me, dando-me força para vencer esta caminhada. 
+ A meu esposo, Luís, por fazer parte dos momentos mais importantes e felizes 
+da minha vida. Obrigada por sua paciência, carinho e amor. 
+ À minha filha Clara, por deixar os meus dias mais coloridos, alegres e doces.  
+Aos meus pais, Raimilson e Elcia, por apoiarem-me em todas as minhas decisões e 
+ensinarem-me a caminhar sempre pelo caminho do bem. 
+ À minha irmã Daniella, pelo companheirismo e amizade. 
+ Ao meu orientador Prof. Dr. Ricardo Pires dos Santos, por acreditar no meu 
+potencial e orientar-me de forma tão tranquila. Obrigada, também, pela enorme 
+compreensão no momento mais feliz da minha vida, o nascimento da minha filha.  
+ Ao Prof. Dr. Edson Holanda, por receber-me tão bem no Laboratório 
+Integrado de Biomoléculas (LIBS). 
+ Ao Prof. Dr. Victor Carneiro, por ajudar-me em todos os momentos em que 
+precisei, principalmente, durante os experimentos. 
+ Aos Profs. Drs. Vassiliepe (Vavá) e Theodora Thays sempre dispostos a 
+ajudar. 
+ Aos meus colegas de turma e agora amigos, Gisvane, Anderson, Nairley, 
+Ellen, Gleiciane, Luciana, Robério, Ronaldo, Julianne, Anderson, Daniel, Nágila e, 
+em especial, Danielle e Flávio. 
+ Aos amigos do Laboratório Integrado de Biomoléculas, Rafaela, Érika, 
+Humberlândia, Wandy, Mari, Bruno e Victor Aragão. 
+ À Francisca das Chagas, pela parceria durante os experimentos. 
+ À minha amiga Aline Carvalho, pela companhia neste mundo da pesquisa. 
+ Aos professores do Programa de Biotecnologia, em especial, aos Profs. Drs. 
+Vicente Pinto e Mirna, meus amigos pessoais. 
+ À Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico 
+(FUNCAP), pelo apoio financeiro. 
+ Ao Programa de Pós Graduação em Biotecnologia da Universidade Federal 
+do Ceará, campus de Sobral representado pelos docentes e funcionários pelo 
+empenho na formação científica e acadêmica de seus pós-graduandos; 
+ 
+ 
+EPÍGRAFE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+“Por vezes, sentimos que aquilo que fazemos não é senão uma gota de água no 
+mar. Mas o mar seria menor se lhe faltasse uma gota”. 
+Madre Tereza da Calcutá. 
+ 
+ 
+RESUMO 
+ 
+ 
+O Anacardium occidentale L., conhecido popularmente como cajueiro, ocupa um 
+lugar importante entre as plantas frutíferas devido à crescente comercialização dos 
+seus principais produtos. No nordeste brasileiro, seu cultivo é uma das principais 
+atividades agropecuárias da região. Concentrando-se nos estados do Ceará, Piauí e 
+Rio Grande do Norte, é utilizado na medicina tradicional para diversos fins 
+terapêuticos, inclusive, como antimicrobiano. O bagaço do caju é obtido após a 
+extração do suco, sendo uma importante fonte de resíduos da agroindústria. O 
+objetivo do presente trabalho foi avaliar o potencial antimicrobiano e antibiofilme do 
+extrato hidroalcoólico do bagaço do pedúnculo do caju (EBPC) frente a bactéria 
+Streptococcus mutans. No presente estudo, determinou-se a Concentração Inibitória 
+Mínima (CIM), Concentração Bactericida Mínima (CBM) e avaliou-se a inibição da 
+formação de biofilme através da quantificação da biomassa. Para isso, utilizou-se a 
+cepa de S. mutans. Os resultados dos ensaios antimicrobianos mostraram que o 
+EBPC teve ação bacteriostática (CIM = 250 µg.mL-1) e bactericida (CBM = 1000 
+µg.mL-1). Observou-se inibição da biomassa na concentração mínima de 250 
+µg.mL-1. Deste modo, concluiu-se que o EBPC apresentou atividade antimicrobiana 
+e antibiofilme frente ao S. mutans. Estes resultados demonstraram o potencial do 
+EBPC como um possível produto biotecnológico na área da odontologia. 
+ 
+Palavras-chave: Anacardium occidentale Lin; cajueiro; Streptococcus mutans; 
+antimicrobiano; antibiofilme. 
+ 
+ 
+ 
+ABSTRACT 
+ 
+ 
+The Anacardium occidentale L, popularly known as cashew tree, occupies an 
+important place among the fruit trees due to the increasing commercialization of its 
+main products. In northeastern Brazil, its cultivation is one of the main agricultural 
+activities in the region. Concentrating in the states of Ceará, Piauí and Rio Grande do 
+Norte, it is used in folk medicine for various therapeutic purposes, including as an 
+antimicrobial. The cashew apple bagasse is obtained after extracting the juice, being 
+a major source of waste of agribusiness. The aim of this study was to evaluate the 
+antimicrobial and antibiofilm potential of the hydroalcoholic extract of the cashew 
+apple pomace (ECAP) against the Streptococcus mutans. It was determined the 
+minimum inhibitory concentration (MIC), minimum bactericidal concentration (MBC) 
+and the preventive assay for biofilm formation through biomass quantification. The 
+Streptococcus mutans strain UA159 was used for this intention. The antimicrobial 
+assay results showed that the ECAP was considered bactericidal (250μg.mL) and 
+was considered bactericidal at the concentration of 1000μg.mL. Inhibition in the 
+biomass was observed at the minimum concentration of 250μg.mL. Thus, it was 
+concluded that the EPAC shows antimicrobial and antibiofilm activity against 
+Streptococcus mutans. These results demonstrate the potential of the ECAP as a 
+possible biotechnological product in the field of dentistry. 
+ 
+Keywords: Anacardium occidentale Lin; cashew tree; Streptococcus mutans; 
+antimicrobial; antibiofilm. 
+ 
+ 
+ 
+ 
+ 
+LISTA DE FIGURAS 
+ 
+FIGURA 1 - Anacardium occidentale L. ................................................................. 17 
+FIGURA 2 - Amostras de caju de pendúculovermelho ........................................... 19 
+FIGURA 3 - Diagrama de NewBrum ...................................................................... 23 
+FIGURA 4 - S. mutans ........................................................................................... 25 
+FIGURA 5 - Biofilme oral ........................................................................................ 27 
+FIGURA 6 - Formação do biofilme microbiano na superfície do esmalte dentário. 30 
+FIGURA 7 - Desenho esquemático do planejamento experimental para 
+preparação do extrato (EBCP) .................................................................................. 34 
+FIGURA 8 - Desenho esquemático do planejamento experimental para avaliação 
+da concentração inibitória mínima do EBPC variando sua concentração de 1000 ␣ 
+7,8μg/mL. Na placa de 96 poços fundo “U”, contém ainda o controle negativo e 
+positivo, a clorexidina. ............................................................................................... 36 
+FIGURA 9 - Desenho esquemático do planejamento experimental para avaliação 
+da prevenção da formação do biofilme variando sua concentração de 500 ␣ 
+15,62μg/mL. Na placa de 96 poços fundo “chato”, contém ainda o controle negativo 
+e positivo, a clorexidina. ............................................................................................ 38 
+FIGURA 10 - Atividade antimicrobiana da EBPC do cajueiro A.occidentale L frente 
+à bactéria S.mutans após 24h de crescimento bacteriano. CN – Controle negativo 
+(água) CP – Controle positivo (clorexidina). P < 0,01. O símbolo “+” indica existência 
+de diferença estatisticamente significativa com relação ao CP, enquanto que “-” 
+indica diferença com relação ao CN. ......................................................................... 40 
+FIGURA 11 - Fotografias de CBM obtidas pelo EBPC contra S.mutans. ............. 42 
+FIGURA 12 - Quantificação da biomassa da de biofilme de S.mutans submetido 
+ao SBPC do cajueiro A.occidentale L após 24h de crescimento bacteriano. CN – 
+Controle negativo (água) CP – Controle positivo (clorexidina). P < 0,01. O símbolo 
+“+” indica existência de diferença estatisticamente significativa com relação ao CP, 
+enquanto que “-” indica diferença com relação ao CN. ............................................. 43 
+ 
+ 
+ 
+ 
+LISTA DE ABREVIATURAS E SIGLAS 
+ 
+ 
+BHI   Brain Heart Inffusion 
+EBPC Extrato do Bagaço do Pedúnculo do Caju 
+CBM  Concentração Bactericida Mínima 
+CIM  Concentração Inibitória Mínima 
+CL  Concentração Letal Média 
+50
+CPO-D Dentes Cariados Perdidos e Obturados 
+UTI Unidade de Terapia Intensiva 
+HIV  Human Immunodeficiency Virus 
+LCC  Líquido da casca da castanha do caju 
+OMS  Organização Mundial de Saúde 
+PEC  Polissacarídeos Extracelulares 
+ 
+ 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+ 
+ 
+1 INTRODUÇÃO ....................................................................................................... 13 
+1.1 PLANTAS MEDICINAS ....................................................................................... 13 
+1.2 EXTRATOS ......................................................................................................... 15 
+1.3 Anacardium occidentale L. .................................................................................. 17 
+1.4 TOXICIDADE ...................................................................................................... 21 
+1.5 CÁRIE DENTÁRIA .............................................................................................. 22 
+1.6 STREPTOCOCCUS MUTANS ............................................................................ 24 
+1.7 BIOFILMES ......................................................................................................... 26 
+1.7.1 Formação do biofilme oral ................................................................................ 27 
+1.7.2 Controle de biofilme oral ................................................................................... 30 
+2 OBJETIVOS ........................................................................................................... 33 
+2.1 OBJETIVOS GERAIS .......................................................................................... 33 
+2.2 OBJETIVOS ESPECÍFICOS ............................................................................... 33 
+3 MATERIAIS E MÉTODOS ..................................................................................... 34 
+3.1 PREPARAÇÃO DO EXTRATO ........................................................................... 34 
+3.2 ENSAIOS DA CONCENTRAÇÃO INIBITÓRIA MÍNIMA (CIM) ........................... 35 
+3.2.1 Análise estatística ............................................................................................ 36 
+3.3 ENSAIO DA CONCENTRAÇÃO BACTERICIDA MÍNIMA ................................... 36 
+3.4 AVALIAÇÃO DA INIBIÇÃO DA FORMAÇÃO DO BIOFILME .............................. 37 
+3.5 QUANTIFICAÇÃO DA BIOMASSA ..................................................................... 38 
+3.5.1 Análise estatística ............................................................................................ 38 
+4 RESULTADOS E DISCUSSÃO ............................................................................. 40 
+4.1 CONCENTRAÇÃO INIBITÓRIA MÍNIMA (CIM) .................................................. 40 
+4.2 CONCENTRAÇÃO BACTERICIDA MÍNIMA (CBM) ............................................ 41 
+4.3 INIBIÇÃO DA FORMAÇÃO DO BIOFILME EM PLACAS DE POLIESTIRENO .. 42 
+5 CONCLUSÃO ........................................................................................................ 46 
+REFERÊNCIAS ......................................................................................................... 47 
+ANEXO ..................................................................................................................... 57 
+ 
+ 
+ 13 
+1 INTRODUÇÃO 
+ 
+ 
+1.1 PLANTAS MEDICINAS 
+ 
+ 
+ As plantas são fontes naturais de substâncias químicas biossintetizadoras 
+com inúmeras finalidades, entre elas, protegê-las contra predadores (AGRA et. al., 
+2008). As vias metabólicas secundárias das plantas dão origem a compostos como 
+taninos, cumarinas, flavanoides, isoflavanoides, alcaloides glicosídeos e terpenos 
+(FERREIRA, 2005). A grande variedade de princípios ativos em uma mesma planta 
+é uma característica importante dos compostos obtidos de produtos naturais, sendo 
+o efeito terapêutico proveniente da ação sinérgica entre eles. Os compostos 
+secundários presentes nas plantas também desempenham o papel fundamental de 
+aumentar a estabilidade da substância ativa, conferindo, assim, melhor efeito 
+farmacológico (TUROLLA, 2004). 
+ Segundo a Organização Mundial de Saúde (OMS) – World Health 
+Organization (WHO, 2000) –, medicamentos fitoterápicos são produtos medicinais 
+que contêm como princípio ativo plantas ou partes de plantas em seu estado natural 
+ou em estado processado, como extratos, óleos essenciais, tinturas, gomas, entre 
+outros (TUROLLA, 2004). A fitoterapia (do grego therapeia = tratamento e phyton = 
+vegetal) é o estudo das plantas medicinais e suas aplicações na cura de doenças, 
+surgiu na China por volta de 3.000 a.C., quando desenvolveram-se estudos sobre as 
+propriedades da cânfora.  
+ O conhecimento sobre as plantas sempre tem acompanhado a evolução do 
+homem através dos tempos. As primitivas civilizações cedo perceberam da 
+existência, ao lado das plantas comestíveis, de outras dotadas de maior ou menor 
+toxicidade que, ao serem experimentadas no combate à doença, revelaram, embora 
+empiricamente, o seu potencial curativo. Toda essa informação foi sendo, de início, 
+transmitida através da fala às gerações posteriores, para depois, com o 
+aparecimento da escrita, passar a ser compilada e guardada como um tesouro 
+precioso (AGRA et al., 2008). 
+ Foi a partir da revolução industrial no século XIX e do desenvolvimento da 
+química orgânica que as plantas passaram a representar a primeira fonte de 
+ 14 
+substâncias para o desenvolvimento de novos fármacos. A possibilidade de 
+obtenção de substâncias puras e de modificações químicas permitiu a síntese de 
+compostos mais potentes e seguros (MOURA, 2006). 
+ Após um período de desinteresse pela busca de novos fármacos, na década 
+de 80, as pesquisas foram novamente impulsionadas pelas novas técnicas de 
+isolamento de compostos ativos a partir de substâncias naturais.  O 
+desenvolvimento da química analítica, designadamente, através dos modernos 
+métodos cromatográficos, espectrométricos e radioimunológicos, apoiado em 
+aparelhos cada vez mais sofisticados, permitiu um melhor conhecimento da 
+composição química dos fármacos vegetais e da estrutura dos seus componentes 
+ativos. Consequentemente, um maior controle na qualidade, com uma intervenção 
+mais precisa nos aspectos relacionados com obtenção, cultura, colheita, preparação 
+e armazenagem dos fármacos e, também, sobre os processos industriais que 
+envolvem o isolamento dos seus compostos ativos. A identificação de substâncias 
+de amostras complexas, como os extratos, contribuiu para o fortalecimento da 
+utilização dos fitofármacos frente aos fármacos sintéticos (CALIXTO, 2003). 
+ As plantas medicinais representam uma importante fonte terapêutica para 
+várias doenças. Cerca de 20.000 espécies de diversas famílias são utilizadas para 
+este fim. Nos países desenvolvidos, até 80% da população depende dos 
+medicamentos fitoterápicos, movimentando cerca de 5 bilhões de dólares por ano 
+(AGRA et al., 2008). Nos países em desenvolvimento, 65-80% da população 
+depende do uso de fitoterápicos aos cuidados básicos de saúde; sendo, por sua vez, 
+até 80% da população da África, 71% no Chile e 40% na Colômbia, entre outros 
+(ALVES, 2011). 
+ No Brasil, com cerca de 10% de toda a flora mundial, já foram catalogadas 
+mais de 56.000 espécies diferentes de plantas, fato este que justifica a utilização 
+destas desde 1.500, como relataram os portugueses. O conhecimento popular da 
+utilização das mesmas perpetuou-se por várias gerações e ainda é bastante 
+difundido, representando uma alternativa de tratamento. Apesar de ter 
+proporcionado à humanidade produtos com propriedades extraordinárias como os 
+curares, a emetina, a pilocarpina, e outros, continua a ser um país com muitas 
+potencialidades, também neste campo, considerando-se ser menos de 1% as 
+espécies vegetais brasileiras que foram analisadas sob o ponto de vista químico e 
+farmacológico. (TUROLLA, 2004; SILVA, 2012). Um exemplo é o Melxi® (Hebron 
+ 15 
+Laboratory), um produto medicinal obtido do extrato do abacaxi (Ananas comosus), 
+indicado para o tratamento da bronquite e suas manifestações, contribuindo para a 
+fluidificação das secreções mucosas (AGRA et al., 2008).  No ano de 1995, passou 
+a existir normatização oficial sobre os medicamentos fitoterápicos no Brasil. A 
+Portaria n.º 6 da Secretaria de Vigilância Sanitária do Ministério da Saúde, de 
+31/jan./95, foi revogada de acordo com o artigo 4.º da Resolução da Diretoria 
+Colegiada n.º 17, de 24/fev./00 – Agência Nacional de Vigilância Sanitária/Ministério 
+da Saúde. O artigo 1.º da referida resolução aprovou o regulamento técnico visando 
+a normatizar o registro de medicamentos fitoterápicos no Sistema de Vigilância 
+Sanitária (LIMA JÚNIOR et al., 2005 apud ALVES, 2011).  
+ A utilização de novas técnicas, como genômica e proteômica, aliadas à 
+biodiversidade da flora mundial, ampliou as perspectivas de descoberta de novas 
+drogas contra diversas doenças (SÁ, 2011). Também, há já algum tempo, que a 
+Organização Mundial de Saúde (OMS) tem mostrado muito interesse no tocante aos 
+sistemas terapêuticos indígenas, especialmente, aqueles que usam medicamentos 
+vegetais (CECHINEL FILHO; YUNES,1998). Em contrapartida, é sabido que os 
+micro-organismos que causam prejuízos à saúde humana estão ficando cada vez 
+mais resistentes à maioria dos antimicrobianos já conhecidos, fato este que contribui 
+ao incentivo da procura por medicamentos de ocorrência natural. 
+ 
+ 
+1.2 EXTRATOS 
+ 
+ 
+ Extratos são preparações líquidas, sólidas ou semissólidas obtidas pela 
+extração de drogas animais ou vegetais, secos ou frescos, através de um líquido 
+extrator apropriado, seguido de evaporação total ou parcial (FARMACOPÉIA 
+BRASILEIRA, 1988). O processo de extração das substâncias presentes nas plantas 
+influencia diretamente na qualidade do medicamento. As diferentes polaridades dos 
+solventes utilizados causam diferenças nas concentrações das substâncias no 
+extrato, assim como a instabilidade de alguns constituintes também influencia na 
+qualidade final do medicamento fitoterápico. Pode-se citar como exemplo a extração 
+dos constituintes das flores da camomila, cujos extratos apresentam concentrações 
+ 16 
+diferentes de flavonoides dependendo do solvente utilizado (etanol, metanol ou 
+isopropanol) (TUROLLA, 2004).  
+ Existem várias metodologias descritas para a preparação de extratos 
+vegetais visando o isolamento de seus constituintes químicos. Um dos métodos que 
+consideramos ser o mais adequado para a análise químico-farmacológica é a 
+preparação de um extrato hidroalcoólico (etanol/água 50/50 v/v). Este extrato é 
+análogo às tinturas realizadas na cultura popular, onde se misturam as partes ativas 
+das plantas com bebidas alcoólicas. Caso o extrato apresente efeitos biológicos de 
+interesse, deve-se proceder a um método sistemático de estudo. Neste caso, o 
+solvente mais adequado para obtenção do extrato bruto é o metanol, pois possibilita 
+a extração de um maior número de compostos. Posteriormente, este extrato deve 
+ser submetido a um processo de partição líquido-líquido, com solventes de 
+polaridades crescentes, como hexano, diclorometano, acetato de etila e butanol, 
+visando uma semipurificação das substâncias através de suas polaridades. Outros 
+solventes de polaridades similares também podem ser utilizados. No sentido de 
+localizar os princípios ativos, todos os extratos semipuros devem ser testados e 
+aquele que apresentar efeito biológico de interesse, deverá ser submetido aos 
+procedimentos cromatográficos para o isolamento e a purificação dos compostos. 
+Recomenda-se sempre utilizar grandes quantidades de planta, pois este fato 
+possibilita determinar também os constituintes presentes em baixas concentrações 
+(CECHINEL FILHO; YUNES,1998). 
+ Outra metodologia de semipurificação de extratos consiste na filtração de 
+extratos alcoólicos (metanol ou etanol) brutos em sílica gel com solventes de 
+polaridades crescentes, ocorrendo também uma separação das substâncias pela 
+polaridade. Posteriormente, os extratos semipuros devem ser testados 
+biologicamente e aqueles que apresentarem atividade de interesse deverão ser 
+submetidos aos procedimentos cromatográficos visando ao isolamento e a 
+elucidação estrutural dos princípios ativos. Os métodos mencionados podem ser 
+geralmente usados quando não se conhece a natureza dos compostos químicos 
+ativos presentes na planta em estudo; caso contrário, podem ser utilizados outros 
+métodos específicos. Por exemplo, quando já são conhecidos alcaloides bioativos 
+de outras espécies do gênero em estudo, deve-se proceder o isolamento pelo 
+método específico e tradicional. Além destes, um método alternativo para obtenção 
+ 17 
+de extratos consiste em macerar a planta em estudo durante vários dias diretamente 
+com solventes de polaridade crescente (MATOS, 1988; IKAN, 1991). 
+ 
+ 
+1.3 Anacardium occidentale L. 
+ 
+ 
+ O cajueiro (Anacardium occidentale L.) pertence ao gênero Anacardium da 
+família Anacardiaceae e pode ser chamado, também, de cajueiro comum. Há cerca 
+de 600 espécies descritas, com dois centros vegetativos: um na Malásia e outro na 
+América Andina. Estendem-se da zona quente até ambas as zonas temperadas. No 
+Brasil, foram catalogados aproximadamente 40 espécies (SHULTZ, 1963 apud 
+ALVES, 2011). É uma planta tropical e desenvolve-se em regiões de alta 
+temperatura e elevadas precipitações (Figura 1). Em baixas temperaturas, há a 
+redução da floração e frutificação. Pode medir cerca de 20 metros de altura em solo 
+favorável; porém, em solos arenosos e secos, geralmente cresce pouco, tornando-
+se quase rasteiro, muito espalhado e produz frutos pequenos. Suas folhas são ovais, 
+pecioladas, onduladas, alternas e de cor rósea quando novas (ARAÚJO et. al., 
+2009). As flores são pequenas, de cor amarelo-rosada, pálidas e dispostas em 
+espigas A produtividade normal do cajueiro comum é de 900kg/ha de castanha e 
+9Mg/ha de frutos após a estabilização da produção. O início da produção é do 3º ao 
+5º ano (SANTOS, 2007). 
+ 
+ 
+FIGURA 1 -  Anacardium occidentale L. 
+Fonte: Santos (2007, p.107) 
+ 18 
+ 
+ O cajueiro ocupa um lugar importante entre as plantas frutíferas devido à 
+crescente comercialização dos seus principais produtos: a amêndoa, considerada 
+uma das nozes mais apreciadas do mercado, e o líquido contido no mesocarpo da 
+castanha, o líquido da casca da castanha do caju (LCC), utilizado na fabricação de 
+resinas fenólicas e pós de fricção para a indústria automotiva, além de apresentar 
+propriedades medicinais, vermífugas, antissépticas e vesicantes. O verdadeiro fruto 
+do cajueiro é a castanha de onde é extraída a amêndoa com 2,5 a 3,0cm de 
+comprimento, 2,5cm de largura e coloração marrom-acinzentado. Após o 
+desenvolvimento da amêndoa, o pedúnculo alongado intumesce para formar um 
+pseudofruto chamado “maçã de caju”, de formato piriforme e romboide com 5 a 
+10cm de comprimento, 4 a 8cm de largura, possui uma casca fina e cerosa de cor 
+vermelho, amarelo ou vermelho e amarelo. A polpa é amarelo pálido, macia, fibrosa, 
+suculenta, adstringente e ácida a subácida, apresenta aroma característico 
+(SEBRAE, 2012). O pedúnculo floral hipertrofiado, pedicelo, hipocarpo ou 
+pseudofruto do cajueiro é a parte polposa, corresponde a cerca de dez vezes o peso 
+da castanha. Apresenta alto valor nutritivo, é um dos frutos mais ricos em vitamina 
+C, com cerca 156 a 387mg/100g, é rico ainda em minerais como cálcio, ferro e 
+fósforo, entretanto, o aproveitamento é insignificante em relação à quantidade de 
+matéria-prima potencialmente disponível (OLSON, 2003, AGOSTINI-COSTA et. al., 
+2004). Além desses dois principais componentes, as outras partes também podem 
+ser aproveitadas: a sombra da árvore, a casca é adstringente e antidiabética, as 
+flores tônicas, a raiz purgativa e as sementes nutritivas são empregadas em rações 
+animais (JORGE et al., 1996).  
+ Atualmente a Índia é disparada o maior produtor mundial de castanha de caju 
+e do óleo de castanha, com 90% da produção. O Brasil está em segundo lugar, 
+seguido por Moçambique, Tanzânia e Quênia. No Brasil, a produção está 
+concentrada na região nordeste, nos estados do Ceará, Piauí e Rio de Grande do 
+Norte. Os maiores consumidores de castanha de caju do mundo são os Estados 
+Unidos (SEBRAE, 2012).  
+ Um dado interessante é que o desperdício chega a 94% da produção, valores 
+que chegam a quase 1,5 milhões de toneladas. Entre os fatores que influenciam o 
+elevado desperdício, estão o curto período de pós-colheita associado à pequena 
+capacidade de aproveitamento pela indústria, curto período de safra e a inexistência 
+ 19 
+de métodos econômicos de preservação da matéria-prima. Além disso, a alta 
+perecibilidade ocasionada pela sua riqueza nutricional exige cuidados especiais para 
+transporte, limpeza e processamento. A indústria de processamento possui 
+segmentos na produção de bebidas, doces, geleias, néctares, farinhas, fermentados 
+e rações. No entanto, o principal produto do pedúnculo continua sendo o suco, 
+embora sua aceitação, no mercado exterior, seja reduzida por causa da 
+adstringência ocasionada pelos taninos (SANTOS, 2007; SEBRAE, 2012). 
+ 
+ 
+FIGURA 2 -  Amostras de caju de pendúculovermelho 
+Fonte: Santos (2012, p. 108) 
+ 
+ O subproduto do pedúnculo, após a extração do suco, é chamado de bagaço 
+do caju e representa aproximadamente 20% em peso total do pedúnculo. É uma das 
+grandes fontes de resíduos produzidos pela agroindústria. O aproveitamento do 
+bagaço do caju – produto com maior porcentagem de fibras do que seus similares – 
+envolve a fabricação de biscoitos, pães e bolos com alto teor de fibras. Outra 
+alternativa para o aproveitamento é a utilização na composição da ração para o 
+gado e aves. O bagaço do caju pode ser utilizado, também, diretamente na 
+alimentação animal ou ser desidratado para uso posterior. No entanto, é necessário 
+cuidado na formulação para evitar prejuízos ao animal. Conforme estudos, a 
+formulação da ração de ruminantes pode conter até 45% de bagaço de caju. Testes 
+realizados com galinha caipira mostram que o uso de até 30% de bagaço na ração 
+não compromete a produção de carne (SANTOS, 2007; SEBRAE, 2012). 
+ 20 
+ O Anacardium occidentale L. é uma fonte de compostos fenólicos. Nos frutos 
+são encontrados lipídios fenólico; e nas folhas, dois grupos químicos principais: 
+flavonoides e taninos. Os flavonoides são pigmentos encontrados frequentemente 
+na natureza e conferem a cor amarelada a alguns vegetais. Estudos demonstraram 
+que esses compostos estão relacionados com a diminuição de doenças 
+cardiovasculares e possuem ação anticarcinogênica, anti-inflamatória e antivirais 
+(BOBBIO; BOBBIO, 2003). O caju apresenta alta concentração de flavonoides por 
+ser rico em quecertina, kaempferol e miricetina (HUBER; AMAYA, 2008). Taninos, 
+por sua vez, são grupos de compostos químicos de origem vegetal que provocam, 
+na pele íntegra, a sensação de adstringência ou “aperto”. Na literatura, são citados 
+teores de tanino de 0,22, 0,28 e 0,58g/100ml, respectivamente, para sucos doce, 
+ácido e adstringente. A cajuína é uma bebida não alcoólica preparada com caju, 
+típica do nordeste do Brasil. Em grande parte é produzida de forma artesanal a partir 
+do suco do caju. O suco é filtrado e misturado à gelatina, que separa o tanino, e, 
+posteriormente, sofre clarificação (SEBRAE, 2012). As aplicações de drogas com 
+taninos estão relacionadas, principalmente, com suas propriedades adstringentes. 
+Por via interna, exercem efeito antidiarreico e antisséptico; por via externa, 
+impermeabilizam as camadas mais expostas da pele e mucosas, protegendo assim 
+as camadas subjacentes. Ao precipitar proteínas, os taninos propiciam um efeito 
+antimicrobiano e antifúngico (AKINPELU, 2001). Ademais, os taninos são 
+hemostáticos e, como precipitam alcaloides, pode servir de antídoto em casos de 
+intoxicações. Em processos de cura de feridas, queimaduras e inflamações, os 
+taninos auxiliam formando uma camada protetora (complexo tanino-proteína e/ou 
+polissacarídeo) sobre tecidos epiteliais lesionados, podendo, logo abaixo dessa 
+camada, o processo curativo ocorrer naturalmente (MONTEIRO et. al., 2005). 
+ Os principais compostos bioativos presentes no caju são os ácidos 
+anacárdicos, biossintetizados a partir de ácidos graxos e constituem cerca de 90% 
+do LCC, em tais concentrações, apresentam propriedades cáusticas e irritantes 
+(TREVISAN, 2006). Quimicamente, o ácido anacárdico é uma mistura de vários 
+compostos orgânicos intimamente relacionados. Cada um consiste de um ácido 
+salicílico substituído com uma cadeia alquílica que tem 15 ou 17 átomos de carbono. 
+O grupo alquila pode ser saturado ou insaturado (ROSEN; FORDICE, 1994).  
+ Uma série de atividades biológicas para os ácidos anacárdicos já foram 
+descritas na literatura, como atividade antitumoral, habilidade em inibir as enzimas 
+ 21 
+tirosinase, prostaglandina sintase e lipo-oxigenase, bem como são conhecidos por 
+suas atividades antiacne, antibacteriana, moluscicida e antifúngica (ARAÚJO, 2009; 
+ELIAKIM-IKECHUKWU et. al., 2010). 
+ 
+ 
+1.4 TOXICIDADE 
+ 
+ 
+ Anacardium occidentale é utilizada como planta medicinal na América do 
+Sul, bem como na África Ocidental, entretanto estudos de toxicidade desta planta 
+são raros (KONAN et al., 2010).  
+ Ensaio de letalidade permite a avaliação da toxicidade geral e, portanto, é 
+considerado essencial como bioensaio preliminar no estudo de compostos com 
+potencial atividade biológica. O teste de letalidade com Artemia salina L. possui uma 
+boa correlação com testes de toxicidade aguda oral in vivo. O procedimento 
+determina valores de concentração letal média (CL50), em μg.mL-1, de compostos e 
+extratos, sendo que inúmeras substâncias ativas conhecidas apresentam toxicidade 
+por este teste. Pesquisas com o extrato metanoico do pedúnculo dos clones CP 06, 
+CP 76 e BRS 189 do caju, demonstraram ausência de toxicidade em Artemia salina 
+nas concentrações avaliadas 1 – 10000ppm (SILVA et. al., 2009). 
+ Testes de toxicidade da infusão da folha do cajueiro comum em Artemia 
+salina, foram consideradas atóxicas nos valores de concentração inibitória mínima 
+de 125 e 62,5µg.mL-1. Os testes de citotoxidade também demonstraram ausência 
+de toxicidade das infusões nas concentrações de 1, 10, 100 e 200µg.mL-1 (ALVES, 
+2011).  
+ A literatura refere toxicidade moderada do extrato hidroalcoólico das folhas 
+do cajueiro em ratos e maior toxicidade do extrato etanolico quando comparado ao 
+extrato aquoso (KONAN et. al., 2007). 
+ Na medicina popular, os extratos são utilizados indiscriminadamente, não 
+levando-se em consideração os possíveis efeitos da toxicidade. Ensaios in vitro são 
+fundamentais para compreender os mecanismos de uma ação tóxica e constituem 
+um pré-requisito para uma abordagem mais racional pertinente à avaliação de risco 
+toxicológico (GIULIANO et. al., 2009 apud ALVES, 2011). 
+ 
+ 22 
+ 
+1.5 CÁRIE DENTÁRIA 
+ 
+ 
+ A cárie dentária e a doença periodontal são os principais indicativos que 
+determinam o estado fisiopatológico da cavidade bucal de um ser humano. Ainda é 
+um desafio complexo e árduo para a odontologia o conhecimento das condições 
+necessárias e suficientes para o aparecimento da cárie e também o seu 
+comportamento em indivíduos e populações, pois a doença cárie é conceituada 
+atualmente como uma patologia de origem multifatorial. A cárie remonta aos tempos 
+bíblicos. Foi detectada em todos os povos, em todas as raças e em todas as épocas. 
+É a doença infecto contagiosa de maior incidência na espécie humana. Segundo o a 
+Organização Mundial de Saúde (OMS, 2003), na maioria dos países desenvolvidos, 
+a prevalência da cárie apresentou uma tendência de declínio nas três últimas 
+décadas do século XX e no início do século XXI. No Brasil, a redução nos valores do 
+índice de Dentes Cariados Perdidos e Obturados (CPO-D) mostra uma tendência 
+consistente de queda ao longo do período. Todavia, em odontologia, a cárie dentária 
+continua sendo a doença mais prevalente e a principal razão para perda dos dentes 
+(BRASIL, 2010).. Assim, a cárie dental constitui, inegavelmente, sério problema 
+social (TEIXEIRA, 2005). 
+ É aceito e estabelecido universalmente que a cárie dentária é uma doença 
+multifatorial, infecciosa, transmissível e dieta dependente que produz uma 
+desmineralização das estruturas dentárias. Esse conceito de cárie é embasado na 
+interação de fatores como dente suscetível, micro-organismo e dieta determinando a 
+doença cárie, que foi ilustrada pelo Diagrama de Keyes (1969).  Newbrum (1983) 
+descreveu a cárie como resultado de um processo crônico que aparece após algum 
+tempo da presença e da interação desses três fatores, julgou-se conveniente incluir 
+o tempo como outro fator etiológico (Figura 03). 
+ 
+ 23 
+ 
+FIGURA 3 -  Diagrama de NewBrum 
+Fonte: Lima (2007) 
+ 
+ Em relação à suscetibilidade à cárie, deve-se diferenciar a suscetibilidade do 
+dente e a do indivíduo como um todo. A suscetibilidade do dente à cárie é determina 
+da pelo grau de mineralização do esmalte, proporcionando maior ou menor 
+resistência à dissolução ácida. A mineralização também é influenciada por fatores 
+que ocorrem durante a formação do dente, bem como por fatores ambientais e 
+locais.  A suscetibilidade do indivíduo, por sua vez, é determinada por fatores 
+extrínsecos (condição sociocultural) e intrínsecos (como capacidade tampão, fluxo, 
+composição da saliva) (LIMA, 2007). 
+ O Streptococcus mutans é considerado como o principal patógeno 
+associado ao início da cárie dentária. Apresentam vantagens ecológicas na 
+presença de sacarose no meio bucal que permitem a sua aderência e colonização 
+da superfície lisa do esmalte, favorecendo seu posterior acúmulo e formação do 
+biofilme oral. (TAUBMAN, NASH, 2006; ALVES, 2011; KUNZI, 2010). 
+ Entre os fatores relacionados à etiologia da cárie dentária, os carboidratos 
+presentes na dieta desempenham um papel fundamental no seu desenvolvimento 
+(MOYNIHAN, 2005), podendo-se destacar a sacarose ─ o açúcar mais comum 
+presente na dieta moderna ─ cujo papel no desenvolvimento da cárie tem sido 
+demonstrado na literatura (NOBRE DOS SANTOS et al., 2002; AIRES et al., 2006). 
+A sacarose, além de ser fermentável como seus monossacarídeos constituintes ─ 
+glicose e frutose ─, é substrato para a síntese de polissacarídeos extracelulares 
+ 24 
+(PEC); já os demais carboidratos são apenas fermentáveis pelas bactérias, 
+resultando em produção de ácidos.  Tão importante quanto o tipo de carboidrato 
+utilizado na dieta é, também, a frequência de ingestão, a qual possui relação com o 
+desenvolvimento de cárie, fato assinalado por estudos em animais e in vivo 
+(ARCELLA et al., 2002 apud ARTHUR, 2006).  
+ A cavitação é o estágio final da cárie do esmalte. Ela é precedida por uma 
+pequena “mancha branca” clinicamente detectável e, antes disso, por uma 
+desmineralização microscópica, detectada apenas por técnicas histológicas. Nem 
+todas as manchas brancas evoluem para a cavitação. Elas podem estacionar e até 
+sofrer um processo de remineralização, que é potencializado pelo flúor (MARSH; 
+MARTIN, 2005).  
+ O caráter infectocontagioso da cárie começou a ser demonstrado 
+experimentalmente com KEYES (1960). Nesta pesquisa, o autor verificou que 
+filhotes de hamsters, cujas mães haviam recebido antibiótico (penicilina ou 
+eritromicina) durante o período de gestação e lactação, não desenvolviam cáries, 
+mesmo com dieta potencialmente cariogênica. Porém, quando estes hamsters eram 
+engaiolados com hamsters infectados sob coprofagia, desenvolviam cáries. Há 
+evidências de que as mães são a fonte de infecção primária nas crianças, e que o 
+nível de infecção da mãe é um preditor do grau de infecção e do desenvolvimento 
+das lesões de cárie da criança. Este caráter de contágio que acontece entre mães e 
+filhos também ocorre entre pais e filhos e entre irmãos (LEITES et al., 2006). 
+ 
+ 
+1.6 STREPTOCOCCUS MUTANS 
+ 
+ 
+ Foram identificados, pela primeira vez, na Inglaterra, por Clarke (1924) a 
+partir de material colhido da boca de crianças que apresentavam cárie. Foi 
+denominado de mutans  porque observou-se um aspecto mutante da bactéria, uma 
+vez que apresentava morfologia de bacilo. Pouca atenção foi dada a esta espécie 
+até 1960, quando foi demonstrado que a cárie poderia ser experimentalmente 
+induzida e transmitida em animais artificialmente infectados com cepas de S. 
+mutans. (MARSH; MARTIN, 2005). Atualmente, existem sete espécies distintas e 
+todas estão envolvidas no desenvolvimento da cárie: Streptococcus mutans, 
+ 25 
+Streptococcus sobrinus, Streptococcus cricetus, Streptococcus rattus, Streptococcus 
+ferus, Streptococcus macacae e Streptococcus downei. As espécies S. mutans e S. 
+sobrinus foram isoladas exclusivamente de humanos, sendo a primeira a mais 
+comumente encontrada na placa dentária (ARTHUR, 2006). 
+ Os S. mutans (Figura 4) são bactérias Gram positivas, apresentam diâmetro 
+médio de 0,5µm a 0,2µm, formato esférico ou ovóide e estão dispostos em pares ou 
+cadeias. Possuem parede celular com antígenos de carboidratos, ácido lipoteicóico, 
+lipoproteínas e proteínas de parede celulares ou associadas com parede celular. O 
+antígeno I/II pode estar associado à aderência inicial da bactéria à superfície 
+dentária pela interação com componentes da película salivar (MITCHELL, 2003). 
+ É considerado um dos principais micro-organismos relacionados à patogenia 
+da cárie dental. São capazes de sintetizar polissacarídeos extracelulares solúveis e 
+insolúveis (glucanos e frutanos) em água a partir da sacarose, que medeiam a sua 
+adesão nas superfícies dentárias, além da produção de amilopectina, um polímero 
+intracelular para reserva nutricional. Na polimerização desses açúcares participam 
+as exzimas denominadas glicosiltransferase. Por possuírem alguns fatores de 
+virulência (acidogênicas e acidoúricas), essas bactérias são capazes de manter a 
+produção de ácidos a partir da glicólise em ambientes com pH menor que 5,0. Essa 
+resistência torna essas bactérias mais competitivas frente aos demais micro-
+organismos do biofilme dental durante períodos de acidificação do meio (ARTHUR, 
+2006; KUNZI, 2010). 
+ 
+ 
+FIGURA 4 -  S. mutans 
+Fonte: Wordpress (2012) 
+ 
+ 
+ 26 
+1.7 BIOFILMES 
+ 
+ 
+ Biofilmes são comunidades microbianas complexas, formadas por várias 
+espécies que se desenvolvem como um consórcio funcional, incorporado em uma 
+matriz de polímeros extracelulares que os próprios micro-organismos produzem, 
+dessa forma, estabelecendo um mutualismo entre os membros. Forma-se em 
+diversas superfícies como tecidos vivos, dispositivos industriais, sistemas de 
+tubulação de água e ambientes marinhos. Dispositivos médicos como catéteres, 
+válvulas cardíacas e lentes de contato podem ser fortemente colonizados. A 
+organização dos micro-organismos em biofilmes ocorre de forma natural, pois as 
+probabilidades de sobrevivência destes aumentam vivendo em comunidade 
+(CARNEIRO, 2010).   
+ O biofilme oral (Figura 5), também chamado de placa dentária, apresenta uma 
+matriz extracelular produzida pelos próprios micro-organismos que interagem com 
+componentes da saliva. Essa Substância pode ser responsável por 50% a 90% do 
+carbono orgânico total do biofilme.  A parte orgânica dessa matriz é formada por 
+exopolissacarídeos bacterianos (glucanos, frutano e heteropolissacarídeos) e, em 
+menor proporção, por proteínas, glicoproteínas, lipídios e sais derivados da dieta do 
+hospedeiro. Pelo menos 700 espécies já foram identificadas em um biofilme oral 
+maduro, formando complexas comunidades microbianas (KOO, 2003; FURLAN, 
+2006; KAWADA-MATSUO et al, 2012). A composição e a quantidade de matriz 
+extracelular variarão dependendo do tipo de microrganismos, da idade do biofilme e 
+das diferentes condições ambientais em que os biofilmes são formados. Estes 
+incluem diferentes níveis de oxigénio e de nitrogênio, de pH, de temperatura e de 
+disponibilidade de nutrientes. Assim como a hidrofobicidade celular e a presença de 
+fímbrias e de flagelos, o grau de produção desta matriz é um dos principais fatores 
+que influencia a taxa e o grau de adesão de células microbianas em diferentes 
+superfícies, além de proteger contra o estresse ambiental e desidratação 
+(CARNEIRO, 2010). 
+ 
+ 27 
+ 
+FIGURA 5 -  Biofilme oral 
+Fonte: Overman (2000) 
+ 
+ Evidências científicas sugerem que o biofilme oral é um importante causador 
+de pneumonias nosocomiais em pacientes com ventilação mecânica em Unidade de 
+Terapia Intensiva (UTI). É considerado um reservatório contínuo de micro-
+organismos patogênicos que, além de causar doenças locais, como as 
+periodontopatias, está relacionado às doenças sistêmicas como as infecções 
+respiratórias (SOUZA, 2009). 
+ As bactérias apresentam diversas vantagens quando residem dentro de um 
+biofilme: (a) elas têm certo grau de proteção contra biocidas, antibióticos, anticorpos, 
+surfactantes, bacteriófagos e organismos predadores; (b) este microambiente 
+permite o fornecimento de nutrientes do meio para algumas cepas; e (c) troca de 
+elementos genéticos das diferentes espécies bacterianas envolvidas no biofilme pelo 
+contato direto entre estas bactérias (STOODLEY et al., 2002 ). 
+ 
+ 
+1.7.1 Formação do biofilme oral 
+ 
+ 
+ Os primeiros micro-organismos a colonizar a boca são chamados de 
+espécies pioneiras, e coletivamente formam uma comunidade microbiana pioneira. 
+Estes aderem, inicialmente, através de interações fracas, como forças de van der 
+Waals. Constituem uma parte selecionada da microbiota oral, principalmente os 
+ 28 
+Estreptococos do grupo mitis, que incluem, Streptococcus mitis, Streptococcus 
+sanguinis, Streptococcus oralis e Streptococcus gordonii. Espécies pioneiras se 
+multiplicam formando microcolônias, as quais ficam mergulhadas em muco 
+bacteriano extracelular, polissacarídeos e proteínas salivares adsorvidas, resultando 
+em um filme confluente de micro-organismos (TAUBMAN, NASH, 2006). 
+ Se não retirados da superfície dos dentes, podem fixar-se de forma mais 
+permanente através de moléculas de adesão celular, tais como pili e flagelo. 
+Eventualmente, uma situação estável é alcançada com uma grande diversidade de 
+espécies e uma comunidade dinâmica chamada de clímax estará formada (MARSH; 
+MARTIN, 2005; KAWADA-MATSUO, 2012). As primeiras colônias facilitam a 
+chegada de outras células através de sítios de adesão e começam a construir a 
+matriz que formará o biofilme. Apenas algumas espécies são capazes de aderir a 
+uma superfície por conta própria. Outras podem ancorar-se à matriz ou até mesmo 
+diretamente às colônias já existentes. Uma vez que a colonização tenha iniciado, o 
+biofilme cresce através de uma combinação de divisão celular e de recrutamento de 
+outras células (CARNEIRO, 2010). 
+ A transferência de informações genéticas de um organismo para outro foi 
+demonstrada em diversos estudos in vitro com membros das espécies 
+Streptococcus e também com outras espécies bacterianas. Esse meio de 
+comunicação pode ocorrer em velocidades aceleradas entre os micro-organismos 
+dentro do biofilme, resultando em sua rápida evolução. Isso cria um ambiente 
+perfeito para o surgimento de novos patógenos, desenvolvimento de resistência a 
+antibióticos e evolução de outras táticas de sobrevivência (KOLENBRANDER, 2000; 
+KUNZI et al., 2010).  Vários estudos têm demonstrado que, durante o crescimento 
+de bactérias em biofilmes, subpopulações da mesma espécie com pequenas 
+variações genéticas podem surgir. Acontecem através de mutação, recombinação e 
+transferência de genes. Estas variações foram detectadas principalmente como 
+alterações na morfologia da colônia de subpopulações de células após o 
+crescimento em biofilme (CARNEIRO, 2010). 
+ O biofilme dentário pode ser formado diretamente sobre a superfície dos 
+dentes, mas o mais comum, in vivo, é formar-se sobre a película adquirida 
+(glicoproteína salivar ou mucina) depositada constantemente sobre os dentes. É 
+uma estrutura firmemente aderida não somente à superfície dentária, mas também a 
+ 29 
+outras estruturas, como cálculo salivar, restaurações e coroas protéticas, artefatos 
+ortodônticos, entre outros (KOO, 2003). 
+ O desenvolvimento do biofilme (figura 6) ocorre inicialmente por uma 
+redistribuição das células fixas na superfície através da motilidade celular. A 
+colonização inicial caracteriza-se por interações bioquímicas específicas envolvendo 
+adesinas (MITCHELL, 2003). Bactérias pioneiras como S. sanguinis, S. oralis, S. 
+mitis, entre outras. S. mutans e S. sobrinus podem se implantar se houver 
+disponibilidade de sacarose. O predomínio dessas bactérias é explicado pelo seu 
+alto grau de adesão ao dente e à proteína salivar que o recobre e pela facilidade 
+com que suas células coagregam (STEINBERG et al., 2003).   
+ Em seguida, os colonizadores iniciais sofrem multiplicação decorrente de 
+sua adaptação ambiental e da disponibilidade de nutrientes, bem como crescimento 
+volumétrico.  Na fase de maturação, aglomerados de células presas à superfície 
+mais externa do biofilme são recrutados por ação do próprio ambiente para o 
+desenvolvimento de outros biofilmes, desse modo, atingindo uma comunidade 
+clímax (CARNEIRO, 2010).  
+ Os mecanismos genéticos associados à dispersão não são ainda bem 
+conhecidos. Existem três tipos de processos de dispersão: expansiva, quando parte 
+das células de uma microcolônia sofre lise e outras retomam a motilidade, sendo 
+então liberadas da estrutura. Outro tipo de dispersão envolve a fragmentação do 
+biofilme, em que porções de matriz extracelular, associadas a micro-organismos, são 
+liberadas. Finalmente, o terceiro tipo de dispersão, denominada superficial, ocorre 
+pelo crescimento do próprio biofilme como um todo (O’TOOLE, 1998). 
+ 
+ 30 
+ 
+FIGURA 6 -  Formação do biofilme microbiano na superfície do esmalte dentário. 
+Fonte: http://vsites.unb.br/ib/cel/microbiologia/biofilme/biofilme.html#genetica (2012) 
+ 
+ Com relação às alterações bioquímicas do biofilme, a concentração de íons 
+é um fator relevante na determinação da saturação do biofilme e, 
+consequentemente, no desenvolvimento de cárie. As concentrações de cálcio e 
+fósforo são relevantes, pois há uma relação inversa entre as concentrações desses 
+íons no biofilme dental e no fluido do biofilme e experiência de cárie. Recentemente, 
+foi indicado que o aumento da concentração de sacarose também promove maior 
+concentração de PEC, menor concentração inorgânica e maior perda mineral do 
+esmalte. Essas evidências sugerem que a maior cariogenicidade do biofilme, além 
+do PEC, também, está relacionada com a menor concentração inorgânica (AIRES et 
+al., 2006; KAVADA-MATSUO et al, 2012). 
+ 
+ 
+1.7.2 Controle de biofilme oral 
+ 
+ 
+ A sofisticação estrutural do biofilme sugere que essas comunidades são 
+reguladas por sinais análogos aos hormônios e ferormônios que controlam 
+comunidades eucarióticas multicelulares. A maior resistência a antibióticos e 
+agentes antimicrobianos das bactérias organizadas em biofilmes em relação às 
+bactérias livres em fase planctônica deve-se à limitação da difusão destes dentro do 
+biofilme e das alterações celulares próprias destas bactérias (COSTERTON et al., 
+ 31 
+2003 apud FURLAN, 2006). Doses de antibióticos que matam bactérias presentes 
+na superfície do biofilme teriam de ser aumentadas em 1.500 vezes para a 
+eliminação das bactérias no interior deste (ELDER et al., 1995; COGHLAN, 1996; 
+SILVA, 2011). 
+ O controle do biofilme bacteriano oral aponta tanto para a prevenção como 
+para o tratamento da cárie. Para o controle da progressão da lesão cariosa é 
+necessária a remoção da origem produtora de ácidos da doença, ou seja, o biofilme 
+(SÁ, 2011). A remoção mecânica por procedimentos eficientes de higiene bucal 
+pode prevenir, quase completamente, a cárie. Tais medidas são particularmente 
+efetivas quando combinadas com a redução na quantidade e frequência da ingestão 
+de açúcar (MARSH; MARTIN, 2005). A presença contínua de flúor pode reduzir em 
+até 50% a incidência de cárie. Evidências apontam que o S. mutans tem o seu 
+crescimento e metabolismo  afetados, o que leva a crer que o flúor pode servir para 
+estabilizar a composição da microflora do biofilme, como um mecanismo preventivo 
+(MARSH; MARTIN, 2005). 
+ Alguns fatores devem ser levados em consideração para a escolha das 
+substâncias antimicrobianas: retentividade toxicidade, baixa permeabilidade e 
+capacidade de manutenção do equilíbrio da microbiota residente na cavidade bucal. 
+Os enxaguatórios têm demonstrado ser veículo de sucesso para a liberação de 
+agentes antiplaca, tais como agentes quaternários de amônio, bisbiguanidas, entre 
+outros (SCHEIE, 2007). 
+ A clorexidina é um dos agentes antimicrobianos mais estudados em 
+pesquisas com biofilmes orais, sendo considerada superior a outras substâncias no 
+controle quantitativo e qualitativo da formação do biofilme bacteriano em razão da 
+sua alta substantividade. O efeito médio de inibição de cárie promovido pela 
+clorexidina pode variar entre 35 e 75%, o que torna a utilização dessa substância 
+relevante no controle da doença. Entretanto, vários protocolos de utilização vêm 
+sendo recomendados, os quais incluem como principais variáveis o método e a 
+frequência de aplicação (ZHANG et al., 2006). Há de se salientar que existem efeitos 
+colaterais como pigmentação dos dentes, interferência gustativa, descamação da 
+mucosa e resistência bacteriana quando do uso diário e prolongado (ZHANG et al., 
+2006). 
+ Inúmeras substâncias químicas vêm sendo pesquisadas com o objetivo de 
+inibir a formação e a progressão do biofilme dentário, nesse sentido, destacando-se, 
+ 32 
+atualmente, os produtos de origem vegetal, como o própolis, a camomila, o alecrim e 
+o caju. Estes mostram-se  potencialmente eficazes no que se refere à atividade 
+antimicrobiana sobre bactérias cariogênicas, podendo atuar seletivamente sobre 
+estas bactérias, além de inibir a síntese de glucanos, (ALVES et al., 2008). Devido à 
+sua ação terapêutica, baixo custo e efeitos tóxicos reduzidos, esses produtos têm 
+sido usados pela população em várias partes do mundo. 
+ 
+ 
+ 33 
+2 OBJETIVOS 
+ 
+ 
+2.1 OBJETIVOS GERAIS 
+ 
+ 
+ Avaliar o potencial antimicrobiano do extrato do bagaço do pedúnculo do 
+caju (Anacardium occidentalle L.) (EBPC) sobre a bactéria Streptococcus mutans a 
+partir da cepa UA159. 
+ 
+ 
+2.2 OBJETIVOS ESPECÍFICOS 
+ 
+ 
+  Preparar um extrato a partir do bagaço do pedúnculo do caju. 
+ Determinar a concentração inibitória mínima (CIM) através do método 
+de microdiluição em placa de poliestireno sobre a S. mutans. 
+ Determinar a concentração bactericida mínima (CBM) em presença da 
+S. mutans. 
+ Avaliar o efeito do EBPC na formação de biomassa no biofilme 
+monoespecífico de S. mutans, através do método do cristal violeta. 
+ 
+ 
+ 34 
+3 MATERIAIS E MÉTODOS 
+ 
+ 
+3.1 PREPARAÇÃO DO EXTRATO 
+ 
+ 
+ Foram obtidas amostras de caju vermelho em plantações do estado do 
+Ceará, Brasil, entre setembro de 2003 e janeiro de 2004. Foi feita a extração da 
+castanha e o pedúnculo foi prensado para a retirada do suco e obtenção do “bagaço 
+o
+do caju”. Este foi seco em estufa a 36C, por 48 horas, e triturado em moinho 
+analítico (SANTOS, 2007). 
+ Foram pesados 2g do pó seco do bagaço em copo descartável e, 
+posteriormente, este foi misturado a 40ml de álcool, a 70%. A mistura foi transferida 
+para um recipiente de vidro limpo e seco e o mesmo foi embalado com papel 
+alumínio, identificado e guardado em temperatura ambiente por sete dias. O extrato 
+o
+foi filtrado e colocado em evaporador rotoativo a 65C para evaporação do álcool. 
+o
+Posteriormente, foi deixado em banho-maria, por 48 horas, a 60C para evaporação 
+da água. Para a obtenção do extrato bruto seco foi necessária a liofilização por 24 
+horas (Figura 7). 
+ 
+ 
+FIGURA 7 -  Desenho esquemático do planejamento experimental para preparação do extrato (EBCP) 
+Fonte: Adaptado de Melo et al. (2006). 
+ 
+ 35 
+ 
+3.2 ENSAIOS DA CONCENTRAÇÃO INIBITÓRIA MÍNIMA (CIM) 
+ 
+ 
+ Andrews (2001) define a CIM como sendo a menor concentração de uma 
+droga que inibe o crescimento visível de um organismo após um período de 
+incubação. O mesmo autor ainda considera a CIM como o padrão ouro para 
+determinar a sensibilidade de micro-organismos a agentes antimicrobianos. 
+ A cepa de Streptococcus mutans foi a UA159, gentilmente cedida pelo 
+Instituto Oswaldo Cruz – FIOCRUZ, Rio de Janeiro - Brasil. Esta foi retirada do 
+freezer a -80oC e, em uma câmara de fluxo previamente limpa com álcool 70% e 
+descontaminada por luz ultravioleta, 50µL da bactéria foi inoculada em 5mL de meio 
+BHI caldo fresco e incubado por 24h, a 37°C com CO2, 10%. Após este período, o 
+mesmo procedimento foi realizado, sendo a incubação realizada por 18 horas. 
+ Para o ajuste da absorbância, a cultura foi transferida para tubos eppendorf 
+e os mesmos centrifugados (5000gr, 4°C, por 5 min). Executou-se, então, a 
+ressuspenção em novo meio BHI caldo estéril duas vezes concentrado e, 
+posteriormente, reunida em tubos falcons de 50mL. Com o auxílio do 
+espectrofotrômetro (Sunrise-tecam) a 620nm, a cultura teve sua densidade celular 
+ajustada a 2x107CFU/mL. 
+ A próxima etapa consistiu na inoculação das amostras em meio de cultura. 
+Para isso foi utilizada uma placa estéril de microtitulação contendo 96 poços fundo 
+“U” padronizada segundo a diretriz M7-A 6ª edição (metodologia dos testes de 
+sensibilidade a agentes antimicrobianos por diluição para bactérias de crescimento 
+aeróbico). Com o auxílio de pipetador multicanal (Eppendorf®), a placa foi 
+preenchida com 100µL da suspensão bacteriana em BHI caldo (2 x 107) e 
+adicionou-se mais 100µL do EBPC em concentrações obtidas através de diluições 
+seriadas na base dois (1000µg,/ml, 500µg,/ml, 250µg,/ml, 125µg,/ml, 62,5µg,/ml, 
+31,25µg,/ml, 15,62µg,/ml e 7,8µg,/ml), obtendo-se um volume final de 200µL (Figura 
+6). Como controles foram utilizados: clorexidina (controle positivo) nas 
+concentrações decrescentes de 125 a 1.9µg × mL -1 e água estéril (controle 
+negativo). Após a montagem da placa (Figura 8), foi realizada uma leitura inicial e 
+outra final a 640nm, em leitor de ELISA (BioTrak II Plate Reader - Amersham 
+Biosciences), após 24 horas de incubação, a 37°C, com 10% de CO2. 
+ 36 
+ 
+ 
+FIGURA 8 -  Desenho esquemático do planejamento experimental para avaliação da concentração 
+inibitória mínima do EBPC variando sua concentração de 1000 ␣ 7,8μg/mL. Na placa de 96 poços 
+fundo “U”, contém ainda o controle negativo e positivo, a clorexidina. 
+Fonte: Dados da pesquisa 
+ 
+ 
+3.2.1 Análise estatística 
+ 
+ 
+ O efeito das diferentes concentrações do EBPC, juntamente com o controle 
+positivo (clorexidina), foram comparadas com o controle negativo (água). Todos os 
+ensaios foram realizados em oito repetições em triplicata e os resultados das 
+medidas de absorbância foram expressos através de seu valor médio ± desvio 
+padrão. O teste não paramétrico Mann-Whitney foi utilizado para determinar a 
+existência ou não de diferenças estatísticas significativas entre dois grupos (ENPC e 
+clorexidina versus água). O nível de significância utilizado foi de 0,01 (P ≤ 0,01). 
+ 
+ 
+3.3 ENSAIO DA CONCENTRAÇÃO BACTERICIDA MÍNIMA 
+ 
+ 37 
+ A Concentração Bactericida Mínima (CBM) é definida como a menor 
+concentração de antimicrobiano necessária para inviabilizar a célula microbiana. É a 
+menor concentração que mata 99.9% do inóculo original em um determinado tempo. 
+Quando os valores da CBM são comparados com o CIM, pode-se avaliar se o 
+composto é bactericida ou bacteriostático (NADER, 2010). 
+ Para verificação da concentração bactericida mínima foram retiradas 
+alíquotas das respectivas concentrações após a leitura de 24h, inoculando-as em 
+tubos de vidro contendo 5ml de BHI caldo, incubados com CO (10%), a 37°C, e 
+2
+observado o crescimento bacteriano por 24 h. 
+ 
+ 
+3.4 AVALIAÇÃO DA INIBIÇÃO DA FORMAÇÃO DO BIOFILME 
+ 
+ 
+ O ensaio de inibição de biofilme microbiano foi realizado em placas de 
+poliestireno de fundo “chato”, segundo a metodologia descrita por Otoole e Kolter 
+(1998). As placas foram preparadas da mesma forma do ensaio de atividade 
+antimicrobiana (Figura 9), adicionando-se 1% de sacarose à suspensão bacteriana 
+em BHI caldo. As concentrações obtidas, através da diluição seriada de base dois, 
+foram: 500µg,/ml, 250µg,/ml, 125µg,/ml, 62,5µg,/ml, 31,25µg,/ml e 15,62µg,/ml. 
+ 
+ 38 
+ 
+FIGURA 9 -  Desenho esquemático do planejamento experimental para avaliação da prevenção da 
+formação do biofilme variando sua concentração de 500 ␣ 15,62μg/mL. Na placa de 96 poços fundo 
+“chato”, contém ainda o controle negativo e positivo, a clorexidina. 
+Fonte: Dados da pesquisa 
+ 
+ 
+3.5 QUANTIFICAÇÃO DA BIOMASSA 
+ 
+ 
+ Após 24h de incubação a 37 °C, com 10% de CO2, os poços foram lavados 
+três vezes para a retirada das células fracamente aderidas e adicionados 200µL de 
+metanol, 95%, por 15 minutos, para fixação das células em biofilme. Em seguida, 
+acrescentou-se 200µL de cristal de violeta, 0,1%, por mais 15 minutos, em 
+temperatura ambiente para corá-lo. Após duas lavagens com água destilada, o 
+corante remanescente foi removido com ácido acético, 33%, e, então, a biomassa foi 
+quantificada através da medição da densidade óptica a 570nm, pelo leitor de placas 
+ELISA (BioTrak II Plate Reader-Amersham Biosciences). 
+ 
+ 
+3.5.1 Análise estatística 
+ 
+ 
+ 39 
+ O efeito das diferentes concentrações do EBPC, juntamente com o controle 
+positivo (clorexidina), foi comparado com o controle negativo (água). Todos os 
+ensaios foram realizados em doze repetições em triplicata e os resultados das 
+medidas de absorbância foram expressos através de seu valor médio ± desvio 
+padrão. O teste não paramétrico Mann-Whitney foi utilizado para determinar a 
+existência ou não de diferenças estatísticas significativas entre dois grupos (EBPC e 
+clorexidina versus água). O nível de significância utilizado foi de 0,01 (P ≤ 0,01). 
+ 
+ 40 
+4 RESULTADOS E DISCUSSÃO 
+ 
+ 
+4.1 CONCENTRAÇÃO INIBITÓRIA MÍNIMA (CIM) 
+ 
+ 
+ A figura 10, a seguir, mostra a ação do EBPC no crescimento de bactérias 
+planctônicas. A solução de clorexidina (controle positivo) inibiu o crescimento 
+bacteriano quando comparado com o controle negativo (P < 0.01). Este resultado 
+era esperado, pois a clorexidina é um potente agente antimicrobiano utilizado em 
+odontologia. A solução do EBPC nas concentrações iguais ou superiores a 
+250µg/mL (CIM) mostrou ação bacteriostática. No CIM, o EBPC causou redução de 
+96% do crescimento das bactérias planctônicas. Na concentração acima 250µg/mL, 
+apresentou ação igual ao da clorexidina (P > 0.01), com um decréscimo de 99% no 
+crescimento das bactérias. 
+ 
+ 
+FIGURA 10 -  Atividade antimicrobiana da EBPC do cajueiro A.occidentale L frente à bactéria 
+S.mutans após 24h de crescimento bacteriano. CN – Controle negativo (água) CP – Controle positivo 
+(clorexidina). P < 0,01. O símbolo “+” indica existência de diferença estatisticamente significativa com 
+relação ao CP, enquanto que “-” indica diferença com relação ao CN. 
+Fonte: Dados da pesquisa. 
+ 
+ 41 
+ Ao extrato do A. occidentale L. são atribuídas diversas propriedades 
+farmacológicas, tais como antidiabético, antimicrobiano, anti-inflamatório, 
+antitussígeno, antissifilítico, diurético e cicatrizante (BARBOSA- FILHO et. al., 2005). 
+Estudos sobre o efeito anti-inflamatório do extrato da casca do cajueiro foram 
+atribuídos a presença de taninos, que apontaram atividade em ambos os modelos 
+de inflamação aguda e crônica (MOTA, 1982). O screening para atividade 
+antibacteriana de várias plantas medicinais foi realizado na Nigéria, e o extrato da 
+folha e casca do Anacardium occidentale L mostrou boa atividade sobre E. coli e P. 
+aeruginosa (KUDI et al., 1999). Houve inibição do crescimento de cepas de E. coli e 
+S. Aureus frente ao extrato hidroalcoólico 80% v/v da casca do caule do Anacardium 
+occidentale L (SILVA et al., 2007). Em outro estudo, mostrou-se bactericida frente a 
+Streptococcus mutans, Streptococcus mitis, Streptococcus sanguis e Streptococcus 
+sobrinus, e Lactobacillus casei em suas formas planctônicas, com resultados 
+análogos aos da clorexidina (ARAÚJO et al., 2009). 
+ 
+ 
+4.2 CONCENTRAÇÃO BACTERICIDA MÍNIMA (CBM) 
+ 
+ 
+ A avaliação do efeito bactericida ou bacteriostático é observada pela 
+turbidez causada pelo crescimento bacteriano. A figura 11 mostra o ensaio 
+microbicida. Os tubos representam concentrações diferentes do extrato na presença 
+do S. mutans UA159 em BHI caldo, depois de 24 horas. As concentrações do EBPC 
+mostradas são: (a) 1000, (b) 500, (c) 250 e (d) 125µg/mL. Na concentração de 
+1000µg/mL, não houve crescimento bacteriano visível (turbidez similar ao do 
+controle positivo) quando comparada a outras com maior turbidez. 
+ 
+ 42 
+ 
+FIGURA 11 -  Fotografias de CBM obtidas pelo EBPC contra S.mutans. 
+Fonte: Dados da pesquisa 
+ 
+ Araújo et al. (2009) obtiveram CBM frente a diversas espécies bacterianas, 
+incluindo o S. mutans com o extrato hidroalcoólico 70% v/v da casca do caule do 
+Anacardium occidentale L. 
+ Os resultados supracitados estão relacionados à forma planctônica de vida 
+bacteriana, no entanto sabe-se que para o desenvolvimento da doença cárie as 
+bactérias organizam- se em biofilmes na cavidade oral (MARSH; MARTIN, 2005). 
+ 
+ 
+4.3 INIBIÇÃO DA FORMAÇÃO DO BIOFILME EM PLACAS DE POLIESTIRENO 
+ 
+ 
+ A figura 12 mostra o efeito do EBPC no crescimento do biofilme 
+monoespécie de S. mutans UA159. Observa-se que a clorexidina inibiu o 
+crescimento do biofilme, quando comparado com o controle negativo (P < 0.01), 
+como esperado. As soluções de EBPC com concentrações iguais ou maiores do que 
+250µg/mL (CIM) também mostraram ação inibitória do biofilme, com ação igual ao 
+da clorexidina (P > 0.01). Nesta concentração, a solução de EBPC causou redução 
+de 96% do crescimento do biofilme. 
+ 
+ 43 
+ 
+FIGURA 12 -  Quantificação da biomassa da de biofilme de S.mutans submetido ao SBPC do 
+cajueiro A.occidentale L após 24h de crescimento bacteriano. CN – Controle negativo (água) CP – 
+Controle positivo (clorexidina). P < 0,01. O símbolo “+” indica existência de diferença estatisticamente 
+significativa com relação ao CP, enquanto que “-” indica diferença com relação ao CN. 
+Fonte: Dados da pesquisa 
+ 
+ A origem do efeito antimicrobiano do EBPC ainda precisa ser investigada. 
+Sua composição (em fase de determinação) é essencial para o entendimento deste 
+efeito. Devido à extração hidroalcóolica, vários compostos do pedúnculo devem 
+estar presentes no EBPC (principalmente taninos, flavonoides e ácidos 
+anacárdicos). Um ou mais destes compostos (juntos ou separados) podem ser 
+responsáveis pelo alto efeito do extrato no crescimento de bactérias planctônicas e 
+biofilme. Taninos são responsáveis pela ação inibitória de vários extratos de plantas 
+(DJIPA et al., 2000). As propriedades antimicrobianas dos taninos são bem 
+conhecidas e documentadas. Moléculas de taninos estão sendo testadas com a 
+intenção de se descobrir uma droga eficiente contra o HIV. Alguns resultados já 
+demonstraram que a atividade anti-HIV é devida à inibição da transcriptase reversa, 
+dificultando assim a replicação viral (MONTEIRO et al., 2005). A presença de taninos 
+no EBPC pode complexar macromoléculas como proteínas e carboidratos, mudando 
+a estrutura da membrana celular bacteriana. Um outro mecanismo de toxicidade 
+deve-se ao fato desses complexarem-se com facilidade a íons metálicos. Sistemas 
+biológicos, incluindo micro-organismos, necessitam de íons metálicos como 
+ 44 
+cofatores enzimático (SIMÕES et al., 2001). 
+ Segundo diversas pesquisas, os ácidos anacárdicos e flavonoides possuem 
+ação bactericida. Ribani (2006), estudando a presença de flavonoides em frutas 
+nativas do Brasil, quantificou uma média de 36mg/kg de flavonoides totais no 
+pedúnculo do caju, sendo que 9% desse valor continuam presentes no extrato do 
+bagaço. Estudos revelam que as bactérias gram-positivas são mais suscetíveis à 
+ação biológica de extratos de plantas que apresentam em sua constituição química 
+flavonoides. Estes são capazes de atuar no comprometimento da membrana 
+plasmática, resultando na lise celular (RÍOS; RECIO, 2005 apud EVARISTO, 2012). 
+ A atividade antimicrobiana dos derivados do Anacardium occidentale vem 
+sendo comprovada na literatura. Kubo et al. (1999) demonstraram que a 
+concentração de ácidos anacárdicos, encontrados no suco do pseudofruto do caju, 
+foi de 0,00006%. Na concentração de 200μg/mL destes fenois, os autores 
+evidenciaram efetividade contra o H. pylori. Green et al. (2008) observaram ação 
+antimicrobiana frente à S. mutans na concentração de 800µg/ml. Kubo et al. (2006) 
+descreveram CBM de 6,25µg/ml dos ácidos anacárdicos frente a S mutans. Estudos 
+com suco de caju comercializado indicaram potencial antitumor, sugerindo que o 
+consumo contínuo do pedúnculo, assim como de seus subprodutos, durante 
+períodos prolongados, pode ser vantajoso no controle de tumores. Lima et al. (2000) 
+relataram atividade antimicrobiana dos ácidos anacárdicos do óleo da casca da 
+castanha do Anacardium ocidentale L. sobre micro-organismos da cavidade bucal – 
+S. mutans, S. aureus, Candida albicans e Candida utilis. Neste estudo, 
+apresentaram atividade antibacteriana sobre todos os micro-organismos, porém a 
+maior atividade inibitória ocorreu sobre o Streptococcus mutans. A literatura relata 
+que os ácidos anacárdicos provocam a desestruturação da membrana celular, 
+assim, ocasionando sua ruptura. Entretanto mecanismos bioquímicos 
+desconhecidos também podem estar envolvidos nesse processo (GRENN et al., 
+2007). 
+ Extratos do cajueiro têm demonstrado atividade antibacteriana em altas 
+concentrações em bactérias gram-negativas Proteus morgani, Psudomonas 
+aeruginosa, Escherichia coli e Salmonella typhi (SILVA et al., 2007) e inibição na 
+aderência de biofilmes multiespécie de Streptococcus (MELO et al., 2006). Santos et 
+al. (2011) observaram ação fungicida das cinzas do bagaço do caju na presença de 
+espécies do gênero Fusarium. 
+ 45 
+ A resistência e os efeitos colaterais são problemas encontrados na terapia 
+antimicrobiana em odontologia. Novas fontes terapêuticas mais eficientes para o 
+tratamento de infecções vêm sendo estudadas e relatadas na literatura. Uma 
+alternativa são as plantas medicinais, por serem fornecedoras de princípios ativos, 
+além de mais econômicas (SILVA et al., 2007). A pesquisa com plantas medicinais é 
+estratégica para o Brasil uma vez que no país, o registro de um fitomedicamento 
+necessita de estudos científicos para a comprovação da qualidade e eficácia 
+(CALIXTO, 2003). Nas últimas décadas, assiste-se a um crescente interesse pelo 
+uso das plantas medicinais e dos respectivos extratos na terapêutica, constituindo, 
+em certas circunstâncias, uma ajuda nos cuidados primários de saúde e um 
+excelente complemento terapêutico, compatível com a medicina clássica. Para isso, 
+para além da qualidade, terá de haver garantia de segurança em relação a efeitos 
+tóxicos e conhecimentos sobre efeitos secundários, interações, contraindicações, 
+mutagenidade, etc. E também a existência de ensaios farmacológicos e 
+experimentação clínica que apontem eficácia para este tipo de medicamentos. 
+ Há diversas possibilidades de aproveitamento industrial do pedúnculo do 
+caju, tais como produção de sucos, doces, cajuína, bebidas alcoólicas, sorvetes e 
+outros produtos alimentícios, além de usos medicinais, no entanto, a elaboração de 
+produtos tradicionais ainda é uma área pouco explorada. Para utilizar o potencial do 
+fruto ao máximo, é necessário oferecer formas alternativas de consumo. O 
+processamento do suco integral é o mais representativo e gera como resíduo a 
+película e a fibra ou bagaço do pedúnculo. Os resíduos industriais são muitas vezes 
+utilizados como ração animal ou na forma de fertilizantes. O custo da secagem, 
+armazenagem e transporte de subprodutos são fatores que economicamente limitam 
+o seu aproveitamento. O presente estudo demonstrou que o extrato hidroalcoólico 
+do bagaço do pedúnculo do caju, um resíduo da agroindústria, apresenta atividade 
+bactericida e bacteriostática em presença da bactéria S. mutans na sua forma 
+planctônica e contra biofilme monoespécie de S. mutans.  
+ Os resultados apresentados mostram-se promissores para a produção de 
+futuros produtos biotecnológicos. Experimentos com unidades formadoras de colônia 
+e ensaios desestruturando o biofilme formado são necessários para ratificar os 
+resultados obtidos neste estudo. Sabe-se, ainda, que os biofilmes são multiespécies 
+e novos estudos com outros tipos de bactérias são necessários. Além disso, testes 
+de toxicidade e citotoxidade são indispensáveis para comprovar a segurança do uso.   
+ 46 
+5 CONCLUSÃO 
+ 
+ 
+ Com base nos resultados obtidos, demonstrou-se que o extrato do 
+pedúnculo do bagaço do caju promoveu a inibição do crescimento bacteriano da S. 
+mutans tanto na forma planctônica, apresentando efeito bactericida, como inibindo a 
+formação de biofilme monoespecífico. Deste modo, verificou-se que este composto 
+possui ação antimicrobiana e antibiofilme, tendo um potencial para futuras 
+aplicações biotecnológicas. 
+ 
+ 
+ 
+ 47 
+REFERÊNCIAS 
+ 
+ 
+AGOSTINI-COSTA, T. S. et al. Teores de ácido anacárdico em pedúnculos de 
+cajueiro Anacardium microcarpum e em oito clones de Anacardium occidentale var. 
+nanum disponíveis no nordeste do Brasil. Ciência Rural, v.34, n. 04, jul/ag. 2004. 
+ 
+AGRA, M. F. et al. Survey of medicinal plants used in the region Northeast of Brazil. 
+Brazilian Journal of Pharmacognosy,  v. 18, n. 3,  p. 472-508, 2008.  
+ 
+AIRES, C. P. et al. Effect of sucrose concentration on dental biofilm formed in situ 
+and enamel demineralization. Caries Res., v. 40, n.1, p. 28-32, 2006. 
+ 
+AKINPELU, D. A. Short report Antimicrobial activity of Anacardium occidentale bark. 
+Fitoterapia, v. 72, p. 286-287, 2001.  
+ 
+ALVES, F. C. S. Avaliação do potencial antimicrobiano da infusão da folha do 
+cajueiro (Anacardium occidentale L.) frente a S. mutans. 2011. 61p. Dissertação 
+(Mestrado em Biotecnologia) Campus Sobral, Universidade Federal do Ceará, 
+Sobral. 
+ 
+ALVES, P. M. et al. Antimicrobial and antiadherent activity, in vitro, of rosmarinus 
+officinalis linn. (alecrim) extract tested on cariogenic microrganisms. Arquivos em 
+Odontologia, v.44, n. 2, ab./jun. 2008. 
+ 
+ANDREWS, J. M. Determination of minimum inhibitory concentrations. The Journal 
+of Antimicrobial Chemotherapy, v. 48, n. 1, p. 5-16, 2001. 
+ 
+ARAÚJO, R. F. et al. Concentração Mínima Bactericida do Extrato do Cajueiro sobre 
+Bactérias do Biofilme Dental. Pesquisa Brasileira em Odontopediatria e Clínica 
+Integrada,  v. 9, n. 2, p. 187-191, maio-ago. 2009. 
+ 
+ARTHUR, R.A. Influência da sacarose na diversidade genotífica do S. mutans 
+no biofilme dental. 2006. 94p. Dissertação (Mestrado em Odontologia).Faculdade 
+de Odontologia de Piracicaba – UNICAMP. 
+ 
+ 48 
+BARBOSA-FILHO, J.M et al. Plants and their active constituents from South, Central, 
+and North America with hypoglycemic activity. Rev Bras Farmacogn. v. 15, p. 392-
+413, 2005. 
+ 
+BOBBIO, P. A.; BOBBIO, F. O. Introdução à Química de Alimentos. 3. ed. São 
+Paulo: Varela, 2003.  
+ 
+BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de 
+Atenção Básica. Coordenação Nacional de Saúde Bucal. Projeto SB Brasil: 
+Condições de Saúde Bucal da População Brasileira. Brasília, 2010. 
+ 
+CALIXTO, J. B. Biodiversidade como fonte de medicamentos. Cienc. Cult. v. 55, n. 
+3, jul/sep. 2003. 
+ 
+CARNEIRO, V. A. Efeitos de lectinas e diterpeno sobre biofilmes microbianos 
+de interesse médico. 2010. 149f. Tese (Doutorado em Bioquímica) - Centro de 
+Ciências Agrárias, Universidade Federal do Ceará, Fortaleza, 2010. 
+ 
+CECHINEL FILHO, V.; YUNES, R. A. Estratégias para a obtenção de compostos 
+farmacologicamente ativos a partir de plantas medicinais. Conceitos sobre 
+modificação estrutural para otimização da atividade. Química nova, v. 21, n. 1,1998. 
+ 
+CHELIKANI, R; KIM, Y. H.; YOON, D. Y.; KIM, D. S. Enzymatic polymerization of 
+natural anacardic acid and antibiofouling effects of polyanacardic acid coatings. Appl 
+Biochem Biotechnol., v. 157, n. 2, p. 263-77, maio 2009.  
+ 
+CLARKE, J. K. On the bacterial factor in the a etiology of dental caries. Br J Exp 
+Pathol , 985v. 5, p. 141-147, 1924 
+ 
+COGHLAN, A. Slime City. New Scientist, v. 2045, p.32-36, 1996.  
+ 
+DJIPA, C. D.; DELMEE, M.; QUENTIN-LECLERCQ, J. Antimicrobial Activity of bark 
+extracts of Syzygium jambos (Myrtaceae). J Ethnopharmacol, v.71, p.307-313, 
+2000. 
+ 
+ 49 
+ELDER, M. J. et al. Biofilm-related infections. Ophthalmology eye, v. 9, n. 1, p.102-
+109, 1995. 
+ 
+ELIAKIM-IKECHUKWU, C. F.;  OBRI, A. I.; AKPA, O. A. Phytochemical and 
+Micronutrient Composition of Anacardium Occidentale Linn (cashew) stem-bark 
+hydroethanolic extract and its effect on the fasting blood glucose levels and body 
+weight of diabetic wistar rats. The Internet Journal of Nutrition and Wellness, v. 
+10, n. 1, 2010. 
+ 
+EVARISTO, F. F. V. Avaliação Antimicrobiana do extrato etanoico e do composto 
+isolado obtido das folhas de Combretum leprosum. 2012. 72p. Dissertação 
+(Mestrado m Biotecnologia). Campus Sobral, Universidade Federal do Ceará, 
+Sobral. 
+ 
+FARMACOPÉIA BRASILEIRA. 4 ed, 1988. 
+ 
+FAZANARO, F. Avaliação in vitro da interferência de lectinas vegetais e do 
+diterpeno casbano isolado de Croton nepetaefolius sobre o crescimento de 
+formas planctônicas e biofilmes de Pseudomonas aeruginosa. 2010. 67f. 
+Dissertação (Mestrado em Biotecnologia) Campus Sobral, Universidade Federal do 
+Ceará, Sobral, 2010. 
+ 
+FEJERSKOV, O; KIDD, E. Cárie dentária - a doença e seu tratamento clínico. 
+São Paulo: Santos, 2005. 
+ 
+FERREIRA, A. L. Atividade Antiulcerogênica da espécie Anacardium humile St. 
+Hil. (Anacardiaceae). 2005. Dissertação (Mestrado Farmacologia) - UNICAMP, 
+Campinas-SP, 2005. 
+ 
+GREEN, I. R. et al. Design and evaluation of anacardic acid derivatives as anticavity 
+agents. Eur J Med Chem, v. 43, p. 1315-1320, 2008. 
+ 
+GRENN, I. R. et al. Molecular design of anti-MRSA agents based on the anacardic 
+acid scaffold. Biorganic and Medicinal Chemistry. v. 15, p. 6236-6241, 2007. 
+ 
+GUGGENHEIM, B.; GIERTSEN, W.; SCHUPBACH, P.; SHAPIRO, S. Validation of 
+an in vitro biofilm model of supragingival plaque. Journal of Dental Research, v. 80, 
+ 50 
+p. 363 - 370, 2000. 
+ 
+HUBER ,L.S.; RODRIGUEZ –AMAYA, D.B. Flavonóis e flavonas: fontes brasileiras e 
+fatores que influenciam a composição em alimentos. Alimen. Nut. Araraquara, n.1, 
+v.19, 2008. p.97-108. 
+ 
+IKAN, R. Natural Products: a Laboratory Guide. London: Academic Press, 1991. 
+ 
+JORGE, L.I.F.  Diagnose Laboratorial dos frutos e folhas de  anacardium occidentale L 
+(CAJU). Revista brasileira de farmacologia. v. 1, 1996. 
+ 
+KAWADA-MATSUO, M. et al. GlmS and NagB Regulate Amino Sugar Metabolism in 
+Opposing Directions and Affect Streptococcus mutans Virulence. PLoS One, v. 3, 
+n.7, p. 333 382, 2012. 
+ 
+KEYES, P. H. Recent advances in dental research: bacteriology. Int. Dent. J., v. 12, 
+n. 4, p. 443-464, 1964. 
+ 
+KOLENBRANDER, P. E. Oral microbial communities: Biofilms, interactions, and 
+genetic systems. Ann Rev Microbiol., v. 54, p. 423-437, 2000. 
+ 
+KONAN, A. N. et al. Acute ,subacute  toxicity and genotoxic effect of a 
+hydroethanolic extract of cashew (Anacardium occidentale,L). Journal of 
+Ethnopharmacology, v. 110, p.30-38, 2007. 
+ 
+KONAN, A. N. et al. Citotoxicity of cashew flavonoids towards malignant cell lines. 
+Experimental and Toxicologic Pathology, 2010.  
+ 
+KOO, H et al. Inhibition of Streptococcus mutans biofilm accumulation and 
+polysaccharide production by apigenin and tt-farnesol. Journal of Antimicrobial 
+Chemotherapy, v.52, n. 5, p.782-789, 2003. 
+ 
+KOO, H.; XIAO, J.; KLEIN, M. I. Extracellular Polysaccharides matrix- An often 
+forgotten virulence factor in oral biofilm research. Int J Oral Sci, Chengdu, v. 1, n. 4, 
+p. 229-234, dez. 2009 
+ 
+ 51 
+KUBO, J.; LEE, J. R.; KUBO, I. Anti-Helicobacter pylori Agents from the Cashew 
+Apple. J. Agric. Food Chem., v. 47, p. 533-537, 1999. 
+ 
+KUBO I.; MASUOKA N.; HA,T J Tsujimoto. K. Antioxidant activity of anacardic acids. 
+Food Chemistry. 99 555–562, 2006 
+ 
+KUDI A. C. et al. Screening of some Nigerian medicinal plants for antibacterial 
+activity. J Ethnopharmacol, v. 67, p. 225-228, 1999. 
+ 
+KUNZI, B. et al. Damage of Streptococcus mutans biofilms by carolacton, a 
+secondary metabolite from the myxobacterium Sorangium cellulosum. BMC 
+Microbiology. v.10, n.199, p. 01-13, 2010. 
+ 
+FURLAN  M. F. et al. Biofilmes Dentários: Aspectos Microbiológicos. 2006. 55f. 
+Monografia de final de curso. Curso de odontologia da Faculdade de Odontologia de 
+Piracicaba – UNICAMP 
+ 
+LEITES, A. C. B. R.; PINTO, M. B.; SOUSA, E. R. S. Aspectos microbiológicos da 
+cárie dental microbiological. Salusvita, v. 25, n. 2, p. 135-148, 2006. 
+ 
+LIMA, C. A. A.; PASTORE, G. M.; LIMA, E. D. P. A. Estudo da atividade 
+antimicrobiana dos ácidos anacárdicos do óleo da casca da castanha de caju 
+(CNSL) dos clones de cajueiro-anão-precoce CCP-76 e CCP-09 em cinco estágios 
+de maturação sobre microrganismos da cavidade bucal. Ciênc Tecnol Aliment, v. 3, 
+n. 20, p.1-10, 2000. 
+ 
+LIMA, E. O. Plantas e suas propriedades antimicrobianas: uma breve análise 
+histórica. In: YUNE, R. A.; CALIXTO, J. B. Plantas medicinais sob a ótica da 
+química medicinal moderna. Chapecó: Argos, 2001. p.479. 
+ 
+LIMA, J. E. O. Cárie dentária: um novo conceito. 2007. 103 f. Tese (Doutorado) – 
+Faculdade de Odontologia de Bauru, Universidade de São Paulo, Bauru, 2007. 
+ 
+LIMA JÚNIOR, J. F. Perspectivas dos cirurgiões dentistas sobre a inserção da 
+fitoterapia na atenção básica de saúde. 2005. 108 f. Universidade Federal do Rio 
+Grande do Norte. Dissertação (mestrado em odontologia preventiva e social), Natal, 
+2005. 
+ 52 
+ 
+LÓPEZ, D.; VLAMAKIS, H.; KOLTER, R. Biofilms. Cold Spring Harb Perspect Biol., 
+doi: 10.1101/cshperspect.a000398, 2010. 
+ 
+MARSH, P.; MARTIN, M. V. Microbiologia Oral. 4. ed. São Paulo: Santos, 2005. 
+ 
+MATOS, F. J. A. Introdução à Fitoquímica Experimental. Fortaleza: Ed. da UFC, 1988. 
+ 
+MATTOS-GRANER, R. O. et al. Comparative analysis of Gtf isozyme production and 
+diversity in isolates of Streptococcus mutans with different biofilm growth 
+phenotypes. J. Clin. Microbiol., v. 42, p. 4586-4592, 2004. 
+ 
+MBOSSO, E. J. T. et al. In vitro antimicrobial activity of extracts and compounds of 
+some selected medicinal plants from Cameroon. Journal of  Ethnopharmacology, 
+v.128, p. 476-481, 2010. 
+ 
+MELO, M. F. A. et al. Atividade antimicrobiana in vitro de extratos de Anacardium 
+occidentale L. sobre espécies de Streptococcus. Revista Brasileira de 
+Farmacognosia, v. 16, n. 2, p.202-205, 2006. 
+ 
+MITCHELL,  T. J. The pathogenesis of streptococcal infections: from tooth decay to 
+meningitis. Nature Reviews, v. 3, n. 1, p.219-230, 2003  
+ 
+MONTEIRO, J. M. et al. Taninos: uma abordagem da química à ecologia. Quím. 
+Nova, v.28, n.5, Sept./Oct. 2005. 
+ 
+MOURA, L. C.; Avaliação da atividade antimicrobiana dos extratos brutos das 
+espécies vegetais Miconia rubinosa e Pfaffia glomerata Em microrganismos da 
+cavidade bucal. 2006. 71f. Dissertação (Mestrado em Promoção de Saúde) – 
+Universidade de Franca, Franca, 2006. 
+ 
+MOYNIHAN, P. J. The role of diet and nutrition in the etiology and prevention of oral 
+diseases. Bull WHO,  v. 83, n. 9, p. 694-99, 2005. 
+ 
+NADER, T. T. Potencial de atividade antimicrobiana in vitro de extratos vegetais 
+do cerrado frente estirpes de Staphylococcus aureus. 2010. 68f. Dissertação  
+ 53 
+(Mestrado em Medicina Veterinária) – Faculdade de Ciências Agrárias e Veterinária, 
+Universidade Estadual Paulista “Julio de Mesquita Filho”, Jaboticabal - SP, 2010. 
+ 
+NEWBRUN, E. Cariology. 2nd ed. Baltimore: Williams & Wilkins, 1983. 
+ 
+NOBRE DOS SANTOS M, et al. Relationship among dental plaque composition, 
+daily sugar exposure and caries in the primary dentition. Caries Res. v. 36, n. 5, p 
+347-52, 2002. 
+ 
+OLSON, J. A. Efeitos biológicos dos carotenóides. Tratado de nutrição moderna 
+na saúde e na doença. 9. ed. São Paulo: Manole, 2003. v. 1. cap. 33. p. 561-578. 
+ 
+O’TOOLE, G.A., and KOLTER, R. (1998a) Flagellar and twitching motility are 
+necessary for Pseudomonas aeruginosa bio- film development. Mol Microbiol. v. 30, 
+p. 295–304. 
+ 
+ 
+O’TOOLE, G.A., and KOLTER, R. (1998b) Initiation of biofilm formation in 
+Pseudomonas fluorescens WCS365 proceeds via multiple, convergent signalling 
+pathways: a genetic analysis. Mol Microbiol. v. 28, p. 449–461. 
+ 
+O’TOOLE, G; KAPLAN, H.B; HOLTER, R. Biofilm formation as a microbial 
+development. Annual Review of Microbiology, v. 54, p. 49 - 79, 2000. 
+ 
+OVERMAN, P.R. Biofilm: a new view of plaque. J. Contemp. Dent. Pract., v. 1, p.1-
+8, 2000. 
+ 
+PERES, D. H. D. F.; RIBEIRO, G. L. U. Avaliação da eficácia do verniz de clorexidina 
+na supressão dos estreptococos do grupo mutans na dentição decídua: estudo in 
+vivo. RPG,  v. 1, n. 11, p. 49-56, 2004. 
+ 
+PINTO, A. C. et al. Produtos Naturais: Atualidade, Desafios e Perspectivas. Quim. 
+Nova, v. 25, n. 1, p. 45-61, 2002. 
+ 
+REIS, M. O. R. Avaliação da atividade antimicrobiana “In Vitro” do extrato 
+hidroalcoólico das folhas de Persea Gratissima Gaertn – Abacateiro – 
+ 54 
+(Lauraceae). 2006. 76f. Dissertação (Mestrado em Promoção de Saúde) - 
+Universidade de Franca, Franca, 2006. 
+ 
+RIBANI, R. H. Compostos fenólicos em erva- mate e frutas. 2006. 138f. Tese 
+(Doutorado em Ciência de Alimentos). Departamento de Ciência de Alimentos, 
+Universidade estadual de Campinas, São Paulo, 2006. 
+ 
+ROSEN, T.; FORDICE, D. B. Cashew Nut Dermatitis. Southern Medical Journal, v. 
+87, n. 4, p. 543-546, 1994. 
+ 
+SÁ, N.C. Avaliação da atividade antimicrobiana do diterpeno casbano, extraído 
+de Croton nepetaefolius Baill, frente a bactérias orais. Dissertação (mestrado em 
+biotecnologia). 2011. 82p. Campus Sobral, Universidade Federal do Ceará, Sobral. 
+ 
+SANTOS, M. N. et al. Relationship among dental plaque composition, daily sugar 
+exposure and caries in the primary dentition. Caries Res., v.36, n. 5, p. 347-52, 
+2002. 
+ 
+SANTOS, P.R. Aproveitamento de resíduos e microscopia de força atômica em 
+materiais biológicos. 2007. 309f.Tese (Doutorado em Física) - Centro de Ciências 
+e Tecnologia Departamento de Física, Universidade Federal do Ceará, Fortaleza, 
+2007. 
+ 
+SANTOS, R.P.; MARINHO M.M.; SÁ, R.A.; MARTINS, J.L. et al. Compositional 
+analysis of cashew (Anacardium occidentale L.) peduncle bagasse ash and its in 
+vitro antifungal activity against Fusarium species. R. bras. Bioci. v.2, p. 200–205, 
+2011. 
+ 
+SEBRAE. Disponível em <http: sebrae.com.br> Último acesso em 10 de Outubro de 
+2012. 
+ 
+SILVA, J. A. et al. Determinação da Atividade Antioxidante e Toxicidade do 
+Pendúnculo de Caju (Anacardium Occidentale L.) de clones comerciais. 
+Disponível em: <http://www.annq.org/congresso2011/arquivos/1300404281.pdf>. 
+Acesso em: 10/08/2012. 
+ 
+ 55 
+SILVA, J. G. S. et al. Atividade antimicrobiana do extrato de Anacardium occidentale 
+Linn. em amostras multiresistentes de Staphylococcus aureus. Revista Brasileira 
+de Farmacognosia, v. 17(4), p. 572-577, 2007. 
+ 
+SILVA, L. L. et al. Composição química, atividade antibacteriana in vitro e toxicidade 
+em Artemia salina do óleo essencial das inflorescências de Ocimum gratissimum L., 
+Lamiaceae. Revista Brasileira de Farmacognosia, Santa Maria-RS, 2009. 
+ 
+SILVEIRA, L. M. S. et al. Metodologias de atividade antimicrobiana aplicadas a 
+extratos de plantas: comparação entre duas técnicas de ágar difusão. Rev. Bras. 
+Farm., v. 90, n. 2, p. 124-128, 2009. 
+ 
+SIMÕES, A. N. et al. Caracterização química de pedúnculos de caju CCP-76 em 
+diferentes estádios de desenvolvimento. Caatinga, v. 14, p. 75-78, 2001. 
+ 
+SOUZA, P. R. Análise microbiológica e genético-molecular da biota orotraqueal 
+de paciente crítico: subsídios na prevenção da pneumonia associada à ventilação 
+mecânica. 2009. 184f. Tese (Doutorado em Enfermagem) - Escola de Enfermagem, 
+Universidade de São Paulo, Ribeirão Preto/SP, 2009. 
+ 
+STEINBERG, D. et al. Formation of streptococcus mutans biofilm following 
+toothbrushing with regular and whitening toothpastes. Am J Dent, v. 16, n. 1, p. 58-
+60, 2003. 
+ 
+STOODLEY, P. et al. Biofilms as complex differentiated communities. Annu Rev 
+Microbiol., v. 56, p. 187-209, 2002. 
+ 
+TAUBMAN M. A; NASH, N. T. D. The scientific and public-health imperative for a 
+vaccine against dental caries. Natury Reviews. Immunology. v.7, p. 555- 563, 
+2006. 
+ 
+TEIXEIRA, H. E. Avaliação do potencial anticárie de lectinas vegetais. 
+2005.106f. Tese (Doutorado em Bioquímica) – Departamento de Bioquímica e 
+Biologia Molecular, Universidade Federal do Ceará, Fortaleza, 2005. 
+ 
+TREVISAN, M.T.; PFUNDSTEIN, B.; HAUBNER, R.; WURTELE, G.; 
+SPIEGELHALDER, B.; BARTSCH, H.; OWEN, R.W. Characterization of alkyl 
+ 56 
+phenols in cashew (Anacardium occidentale) products and assay of their antioxidant 
+capacity. Food and Chemical Toxicology. 44, 188–197, 2006. 
+ 
+TUROLLA, M. S. R. Avaliação dos aspectos toxicológicos dos fitoterápicos: um 
+estudo comparativo. 2004. 145p. Dissertação (Mestrado em Farmacologia). 
+Universidade de São Paulo 
+ 
+ZHANG, Q. et al. Chlorhexidine varnish for preventing dental caries in children, 
+adolescents and young adults: a systematic review. Eur J Oral Sci., v.114, n.6, p. 
+449-455, 2006. 
+ 
+ 
+ 
+ 57 
+ANEXO 
+ 
+ 
+Molecules 2012, 17, 1-x manuscripts; doi:10.3390/molecules170x0000x 
+OPEN ACCESS 
+ 
+molecules 
+ISSN 1420-3049 
+www.mdpi.com/journal/molecules 
+Article 
+Effect of Cashew (Anacardium occidentale L.) 
+Peduncle Bagasse Extract Against Streptococcus 
+mutans  
+1
+Manuela Almeida Montenegro Furtado, Francisca das Chagas de Sousa 
+123,†
+Alves, Jorge Luis Martins, Edson Holanda Teixeira, Mayron Alves de 
+411
+Vasconcelos, Vanessa Sabrine Correia Ramos, Giselly Soares de Sousa, André 
+454,†
+Luis Coelho da Silva, Wladimir Ronald Lobo Farias, Benildo Sousa Cavada, 
+1,†,*
+Ricardo Pires dos Santos 
+ 
+1    
+Laboratory of Materials Engineering and Computation of Sobral (LEMCS), Federal 
+University of Ceará, Campus do Derby, Sobral, CE, 62042-280, Brazil. E-mails: 
+manu.almeida2009@gmail.com (M. A. M.); fcsalves2008@gmail.com (F. C. S. A.); 
+vanessa13eng@gmail.com (G. S. S.), giselly.eng@gmail.com (G. S. S); 
+rpsantos2007@gmail.com (R.P.S.). 
+2    
+Institute of Chemical and Geosciences, Federal University of Pelotas, Campus do Capão do 
+Leão, Pelotas, RS, 96160-000, Brazil. E-mail: jmartins.martins@gmail.com 
+3 
+Integrated Laboratory of Biomolecules (LIBS), Federal University of Ceará, Department of 
+Pathology and Legal Medicine, Faculty of Medicine, Fortaleza, CE, 60430-160, Brazil. E-
+mail: edsonlec@gmail.com (E.H.T.) 
+4    
+Laboratory of Biologically Active Molecules (BioMol-Lab), Federal University of Ceará, 
+Campus of Pici, Fortaleza, CE, 60440-970, Brazil. E-mails: bscavada@gmail.com 
+(B.S.C.); alcoelho.ufc@gmail.com (A.L.C.S.), mayronvasconcelos@gmail.com (M.A.V.) 
+5    
+Department of Fishing Engineering. Federal University of Ceara´, Campus do Pici, 
+Fortaleza, CE, 60.440-970, Brazil. E-mail: wladimir@ufc.br 
+† Scholarship holder of the CNPq Program for Productivity in Research. 
+ 58 
+* Author to whom correspondence should be addressed. E-mail: 
+rpsantos2007@gmail.com (R.P.S.); Tel.: +55-88-3614-1616 (R.P.S.).  
+Received: / Accepted: / Published:  
+ 
+Abstract: The antimicrobial activity of cashew (Anacardium occidentale 
+L.) peduncle bagasse extract was investigated in this study. We prepared 
+a solution of cashew peduncle bagasse extract to determine the minimal 
+inhibitory concentration (MIC) and minimal microbicidal concentration 
+(MMC), of the strain of Streptococcus mutans UA159 in planktonic culture 
+and biofilm after 24 h. The extract of bagasse exhibited antimicrobial 
+action similar to chlorhexidine, a commercial bactericidal agent utilized in 
+dental clinics. The results of this study showed that cashew (Anacardium 
+occidentale L.) peduncle bagasse residue has biotechnological potential 
+as an antimicrobial agent. 
+Keywords: Anacardium occidentale L.; biofilm; extract; peduncle; residue; 
+Streptococcus mutans 
+ 
+1. Introduction 
+The cashew tree (Anacardium occidentale L.) occupies an important position among 
+tropical fruit trees due to the growing commercialization of its main products: the nut and the 
+peduncle, also known as the cashew ‘‘apple’’. Cashew is one of the major crops in the 
+Northeast Region of Brazil (approximately ton/year), where it is grown mainly in the states of 
+Ceará, Rio Grande do Norte and Piauí. The peduncle is processed and used for the production 
+of drinks, sweets, jams, nectar, flour, fermented products and rations, but less than 6% of the 
+peduncle produced is used [1]. The chemical composition of the peduncle is very complex 
+and includes proteins, tannins, sugars, ascorbic acid, phosphorous, calcium, iron and vitamin 
+A [2]. Its juice has been used to produce a film with healing, analgesic and anti-inflammatory 
+properties [3]. Incineration of the peduncle produces ash with fungicidal properties against 
+important species of the genus Fusarium as a result of the large amounts of KHCO produced 
+3
+[4-6]. 
+The cashew peduncle bagasse, the by-product of the juice extraction process, represents 
+approximately 20% of the total weight of the peduncle [7]. It is one of the greatest sources of 
+ 59 
+residues (90–94%) produced by the cashew agronomic industry [8], and its exploitation is 
+restricted to use as a nutritional supplement in animal food. This limited use is a result of its 
+rapid degradation, making it impossible to store. Broinizi and colleagues [9] have shown that 
+the alcoholic extract of peduncle bagasse possesses antioxidant activity due to the presence of 
+phenolic compounds. 
+Pathogenic bacteria rarely exist in the form of pure planktonic cultures [10]; instead, they 
+persist adhered to surfaces within a highly complex ecosystem represented by a structured 
+biofilm established inside the host. In the presence of a biofilm, bacteria are more resistant to 
+the action of antibacterial agents [11]. Dental plaque is a type of biofilm that develops on the 
+surfaces of teeth and is a precursor to tooth decay. Dental plaque consists of multiple species 
+of bacteria that take part in the complex ecosystems of the mouth. One such species is 
+Streptococcus mutans, a gram-positive bacterium that is the primary causative agent of dental 
+caries [12]. Several products originating directly from plants (as extracts, infusions, etc.) have 
+shown activity against microorganisms related to dental caries. Due to their therapeutic 
+effects, low cost and reduced toxicity, these products have been used by populations in 
+several areas of the world [13]. 
+The aim of this work was to evaluate the antimicrobial action of cashew (Anacardium 
+occidentale L.) peduncle bagasse extract (EBPC70) against planktonic cultures and biofilms 
+of Streptococcus mutans. This work also explores alternatives for the use of the large excess 
+of agro-industrial residues produced by cashew and juice extraction. 
+ 
+2. Results and Discussion 
+Figure 1 shows the effects of EBPC70 on bacterial growth. Chlorhexidine solution 
+(positive control) inhibited bacterial growth compared to the negative control (P < 
+0.01). This result was expected because chlorhexidine is a powerful antimicrobial 
+agent used in dentistry. EBPC70 solutions with concentrations greater than or equal 
+to 250 µg/mL (MIC) showed bacteriostatic action. At MIC, the EBPC70 caused a 
+reduction of planktonic growth of approximately 96% relative to the absorbance of the 
+negative control absorbance. Concentrations above 250 µg/mL showed activity equal 
+to chlorhexidine (P > 0.01), with a decrease of planktonic bacteria growth of 
+approximately 99%.  
+ 
+Figure 1. Optical density (mean ± SD) for the antibacterial activity assay 
+against Streptococcus mutans UA159. Plus (+) and minus (-) symbols 
+above the bars indicate statistically significant differences between the 
+ 60 
+means (P < 0.01) and the positive (Chl) and negative (NaCl) controls, 
+respectively. 
+ 
+ 
+ 
+In bactericidal assays (Figure 2), EBPC70 solutions with concentrations equal to 
+or greater than 1000 µg/mL (MMC) caused bacterial death.  
+ 
+ 
+ 
+Figure 2. Microbicidal assays of EBPC70 against Streptococcus mutans 
+UA159. The tubes represent different concentrations of extract with 
+bacteria planktonic cultures and BHI medium after 24 h. The 
+concentrations of EBPC70 shown in the illustration are (a) 1000, (b) 500, 
+(c) 250, and (d) 125 µg/mL. The cultures with concentrations of 1000 
+µg/mL did not present visible microbial growth (turbidity similar to the 
+positive control) compared to the other samples (greater turbidity). 
+ 
+ 61 
+ 
+ 
+Figure 3 shows the effects of EBPC70 on biofilm growth. As expected, we 
+observed that chlorhexidine inhibits the growth of biofilm compared to the negative 
+control (P < 0.01). EBPC70 solutions with concentrations equal to or greater than 250 
+µg/mL (MIC) also showed inhibitory activity on biofilm growth equal to chlorhexidine 
+(P > 0.01). At these concentrations, the EBPC70 solution caused a reduction of 
+approximately 96% in the biofilm growth compared to the absorbance of the negative 
+control. 
+ 
+Figure 3. Optical densities (mean ± SD) for the anti-biofilm activity assay 
+against Streptococcus mutans UA159. Plus (+) and minus (-) symbols 
+above the bars indicate statistically significant differences between the 
+means (P < 0.01) and the positive (Chl) and negative (NaCl) controls, 
+respectively. 
+ 
+ 62 
+ 
+ 
+The origin of the antimicrobial effect of EBPC70 requires additional investigation. 
+The chemical composition (in the determination phase) is essential to understanding 
+this effect. After hydroalcoholic extraction, several compounds of the peduncle 
+should be present in EBPC70 (primarily tannins). One or more of these compounds, 
+acting together or separately, may be responsible for the high efficacy of this extract 
+on the growth of bacteria and biofilms. Tannins are responsible for the bacterial 
+inhibitory activities displayed by several plant extracts [14]. The presence of tannins 
+in the EBPC70 may be causing the complexation of macromolecules such as 
+polysaccharides and proteins, and changing the structure of the bacterial cell 
+membrane [15]. Kubo and colleagues [16] have shown that the ethanolic extract of 
+the peduncle inhibits the growth of Helicobacter pylori. Grenn and colleagues [17] 
+observed that anacardic acids extracted from peduncle juice exhibit antimicrobial 
+activity against S. mutans at concentrations of 800 µg/mL. Thus, the effect of 
+EBPC70 may be a result of the combined presence of tannins and anacardic acids in 
+the extract. However, synergistic effects of other compounds should not be 
+overlooked. 
+Medicinal plants represent an important therapeutic source for the treatment of 
+many types of diseases. Approximately 20,000 species from several families of 
+plants are used for this purpose. Brazil has more than 56,000 species of plants, 
+ 63 
+representing an enormous biodiversity [18]. This biodiversity, along with the popular 
+traditions passed mainly by indigenous cultures, can be used to develop the crude 
+materials in flora into novel drugs. Studies with the goal of obtaining drugs from 
+plants have been increasing in recent years. Approximately 30% of the drugs 
+produced by developed countries are derived from plants [19]. Due to their 
+effectiveness and low cost, medications based on plant extracts are also 
+commercially available herbal products. An example of this is Melxi® (Hebron 
+laboratory), a herbal medicine produced from the extract of pineapple (Ananas 
+comosus). Melxi® is utilized as an adjunctive for the treatment of tracheobronchitis 
+and its manifestations and improves the fluidity of mucous secretions. Antimicrobial 
+agents produced from medicinal plant extracts are proving to be effective for the 
+treatment of infectious diseases and have few side effects compared with 
+antimicrobial agents of synthetic origin [20]. For example, extracts of Xanthosema 
+violaceum Schott (taro) and Syzygium cuminii L. (jambolan) are capable of 
+significantly inhibiting the growth of several bacteria species [21]. Thus, the by-
+product of the cashew peduncle can also be an important source of antimicrobial 
+drugs.  
+3. Experimental Section  
+3.1. Production of extract 
+ 
+Samples of red cashew peduncles were obtained from plantations in the state of 
+Ceará, Brazil during the months of September and October in 2008. After extraction 
+from the nut, the peduncles were pressed to remove the juice, producing the cashew 
+bagasse. The bagasse was then dried in an oven at 36ºC for 48 h and ground in an 
+analytical mill. For production of the extract, the bagasse powder was added to a 
+hydroalcoholic solution (70%), stirred for 30 min, and stored at room temperature for 
+7 days. The solution was filtered and subjected to rotatory evaporation in a water 
+bath at 60ºC for 48 h. Finally, the extract was lyophilized for 24 h to form a powder 
+referred to as EBPC70. 
+ 
+3.2 Microorganism 
+ 
+ 64 
+The bacterial strain Streptococcus mutans UA 159 used in this study was obtained 
+from the Instituto Oswaldo Cruz–FIOCRUZ collection. The strains were kept in BHI 
+(Brain Heart Infusion–Difco) and 20% glycerol at −80 °C. For the experimental 
+procedures, 100 μL of bacteria was inoculated into 10 mL of fresh BHI broth and 
+incubated for 18 h at 37 °C in 10% CO. After initial activation, the culture was 
+2
+renewed using 100 μL of inoculum in 10 mL of sterile BHI broth and grown under the 
+same conditions as described above. 
+ 
+3.3. Effect of EBPC70 on bacterial growth 
+ 
+The effects of EBPC70 on bacterial growth (planktonic culture) were determined 
+using the broth microdilution method in 96-well polystyrene plates, according to the 
+procedure outlined by NCCLS [22]. After cell growth, the culture was centrifuged at 
+1,500 g for 20 min at 4°C, washed twice with 0.9% NaCl and then adjusted to a 
+89
+concentration of 10–10 colony forming units (CFU)/mL. The EBPC70 solutions 
+were prepared by 2-fold serial dilution, with concentrations ranging from 7.8 to 1000 
+µg/mL. The assay in polystyrene plates was carried out by the addition of 200 μL of 
+fresh BHI broth to each well and 4 μL of the EBPC70 solution at each concentration. 
+The negative control used was 0.9% NaCl, which represents the normal growth of 
+bacteria using the same procedure for bacteria/EBPC70. We also included 0.12% 
+chlorhexidine, which represents the inhibitory action (positive control) of a 
+commercially available bacterial agent. The optical density at 640 nm of the content 
+of each well was recorded using an automated Elisa Reader (Synergy TM HT Multi-
+Detection Microtiter Reader) to measure microbial growth. When the plates were 
+ready, an initial measurement was carried out to establish a baseline. Measurements 
+were made after 24 h of incubation at 37 °C in 10% CO. The minimum inhibitory 
+2
+concentration (MIC) was determined as the lowest concentration of EBPC70 that 
+caused a statistically significant reduction in the optical density compared to the 
+negative control (inhibition of growth of the bacteria). 
+ 
+3.4. Microbicidal action of EBPC70 
+ 
+To determine the minimum microbicidal concentration (MMC), 10 μL of the 
+contents of the wells from the experiments in section 3.3 were used to assess the 
+ 65 
+effect of EBPC70 on bacterial growth were inoculated in assay tubes with BHI 
+medium and incubated for 24 h at 37 °C in 10% CO. MMC was considered as being 
+2
+the lowest concentration able to completely inhibit visible microbial growth (turbidity) 
+in tubes compared to the positive control [23-24]. 
+ 
+3.5. Effect of EBPC70 on biofilm growth 
+ 
+The methodology used to monitor biofilm growth was based on the microtiter plate 
+test developed by Stepanovic and colleagues [25] with some modifications [23]. 
+Sterile 96-well flat-bottom  polypropylene tissue culture plates were prepared using a 
+procedure similar to the one used to assay the effects on bacterial growth with the 
+same initial concentration of cells. The plates were incubated aerobically on a 
+horizontal shaker at 120 rpm/min at 37 °C for biofilm development. Biofilm growth 
+was tested in the presence of EBPC70, (concentrations ranging from 15.6 to 500 
+µg/mL), 0.9 % NaCl, or 0.12% chlorhexidine for 24 h.  Following incubation, the 
+content of each well was removed and the biofilms were washed twice with 200 
+μL/well of sterilized water to remove weakly adhered cells. These cells were 
+preserved for posterior analysis. The attached biofilm mass was quantified using 
+crystal violet staining [26]. Briefly, the plates containing the biofilms were dried in air 
+for 30 min, and 200 μL of absolute methanol was transferred to each well to fix the 
+adhered cells. After 15 min, the methanol was removed, and 200 μL of 1% crystal 
+violet (Gram color-staining set for microscopy; Merck; Darmstadt, Germany) per well 
+was added. After 5 min, the washing process was repeated with sterile water, and 
+the plates were allowed to stand at room temperature for 1 h. To re-solubilize the dye 
+bound to biofilms, 200 μL of 33% (v/v) glacial acetic acid (Merck) was added to each 
+well, and the plates were agitated for 15 min. The obtained solutions were transferred 
+to a new sterile 96-well plate, and the optical densities at 570 nm for the contents of 
+each well were recorded using an automated Elisa Reader (Synergy TM HT Multi-
+Detection Microtiter Reader). The minimum inhibitory concentration (MIC) to biofilm 
+growth was determined according to the methodology used in the planktonic culture 
+study. A schematic representation of all experimental procedures is shown in Figure 
+4. 
+ 
+ 66 
+Figure 4. Schematic representation of the preparation and antimicrobial 
+activity of the cashew peduncle bagasse extract (EBPC70). 
+ 
+ 
+ 
+3.6. Statistical analysis 
+ 
+The results from nine repetitions (n = 9) of at least three separate experiments 
+were obtained. Quantitative data are expressed as the means ± standard deviation 
+(SD). A Mann-Whitney non-parametric test was performed to determine the 
+significant differences between two groups [27]. The significance level used was 0.01 
+(P < 0.01). All statistical analyses were performed using OriginPro 8.5 software 
+(OriginLab Corporation). 
+ 
+4. Conclusions  
+In this study, we show that cashew (Anacardium occidentale L.) peduncle 
+bagasse, a residue of the Brazilian cashew agribusiness, has biotechnological 
+potential as an antimicrobial agent. Its extract (EBPC70) showed inhibition of 
+bacterial growth and biofilm formation of Streptococcus mutans UA159 as well as 
+ 67 
+microbicidal activity. These activities were comparable to chlorhexidine, a powerful 
+antimicrobial agent used in dental clinics. Because chlorhexidine is harmful at high 
+concentrations, EPBC70 may be an alternative to the use of this substance. 
+Toxicological studies will need to be performed to validate its applicability in this 
+regard.  
+ 
+Acknowledgments 
+We would like to thank the professors, technicians and students of the 
+Biotechnology Center of Sobral (NUBIS), and the Biologically Active Molecules 
+Laboratory (BioMol-Lab) of the Federal University of Ceará, CE, Brazil for research 
+facilities, technical support and important suggestions during this work. B. S. Cavada, 
+E. H. Teixeira and R. P Santos, are investigators for the National Council of 
+Research (CNPq). This work received partial financial support from CNPq - projects 
+no. 501221/2009-3 and 473911/2010-8. AJE (American Journal Experts) helped with 
+the English editing of the manuscript. 
+ 
+References and Notes 
+1. Moura, C.F.H. Qualidade de pedúnculos de clones de cajueiro-anão-precoce 
+(Anarcadium occidentale L. var. nanum) irrigados. M.Sc Thesis, Universidade 
+Federal do Ceará, Fortaleza –Brazil, 1998.  
+2. FAO - Food and Agricultural Organization. Food and fruitbearing forest 
+species. 3. Examples from Latin America. FAO-Foresty Paper 44/3; Rome, Italy, 
+1986, pp.19–23. 
+3. Silva, M.S.H. Acajumembrana no cuidado cultural em feridas. PhD Thesis. 
+Universidade Federal do Ceará, Fortaleza –Brazil, 2002. 
+4. Santos, R.P.; Marinho M.M.; Sá, R.A.; Martins, J.L.; Teixeira, E.H.; Alves, 
+F.C.S.; Ramos, V.S.C.; Sousa, G.S.; Cavada, B.S.; Santos, R.P. Compositional 
+ 68 
+analysis of cashew (Anacardium occidentale L.) peduncle bagasse ash and its in 
+vitro antifungal activity against Fusarium species. R. bras. Bioci 2011, 2, 200–205. 
+5. Karabulut, O.A.; Arslan, U.; Ilhan, K.; Yagdi, K. The effect of sodium 
+bicarbonate alone or in combination with a reduced rate of mancozeb on the control 
+of leaf rust Puccinia triticina in wheat. Can. J. Plant Pathol 2006, 28, 484–488. 
+6. Diliopoulos, T.; Kettlewell, P.S; Martin, C.H. Fungal disease suppression by 
+inorganic salts: A review. Crop Protection 2010, 29, 1059–1075.  
+7. Agrianual – Anuário da Agricultura Brasileira. FNP Consultoria & Comécio. 
+São Paulo, BR, 2000; p. 244–248. 
+8. Santos R.P.; Santiago, A.A.X.; Gadelha, C.A.A.; Cajazeiras, J.B.; Cavada, 
+B.S.; Martins, J.L.; Oliveira, T.M.; Bezerra, G.A.; Santos, R.P.; Freire, V.N. 
+Production and characterization of the cashew (Anacardium occidentale L.) peduncle 
+bagasse ashes. J Food Eng 2007, 79, 1432–1437. 
+9. Broinizi, P.R.B.; Andrade-Wartha, E.R.S.; Silva, A.M.O.; Novoa, A.J.V.; 
+Torres, R.P.; Azeredo, H.M.C.; Alves, R.E.; Mancini-Filho, J. Evaluation of the 
+antioxidant activity of phenolic compounds naturally contained in by-products of the 
+cashew apple (Anacardium occidentale L.).  Ciênc. Tecnol. Aliment 2007, 27(4), 
+902–908. 
+10. Santos, R.P.; Arruda, T.T.P.; Carvalho, C.B.M.; Carneiro, V.A.; Braga, 
+L.Q.V.; Teixeira, E.H. Arruda, F.V.S.; Cavada, B.S.; Havt, A.; de Oliveira, T.M. ; 
+Bezerra, G.A.; Freire, V.N. Correlation between Enterococcus faecalis biofilms 
+development stage and quantitative surface roughness using atomic force 
+microscopy. Microsc. Microanal 2008, 14, 1–9. 
+11. Gilbert, P.J.; Das, J.; Foley, I. Biofilms susceptibility to antimicrobials. Adv 
+Dent Res 1997, 11, 160–167. 
+ 69 
+12. Takada, K.; Hirasawa, M. A novel selective medium for isolation of 
+Streptococcus mutans. J Microbiol Methods 2005, 60, 189–193. 
+13. Kuete, V.; Ngameni, B.; Fotso, S.C.C.; Kengap, T.R.; Tchaleu, N.B.; Meyer, 
+J.J.M.; Lall, N.; Kuiate, J.R. Antimicrobial activity of the crude extracts and 
+compounds from Ficus chlamydocarpa and Ficus cordata (Moraceae). J 
+Ethnopharmacol 2008, 120, 17–24. 
+14. Djipa, C.D.; Delmee, M.; Quentin-Leclercq, J. Antimicrobial Activity of bark 
+extracts of Syzygium jambos (Myrtaceae). J Ethnopharmacol 2000, 71,307–313. 
+15. Simões, A.N.; Menezes, J.B.; Andrade, J.C.; Freitas, D.F.; Costa, F.B.; 
+Souza, P.A. Caracterização química de pedúnculos de caju CCP-76 em diferentes 
+estádios de desenvolvimento. Caatinga 2001, 14, 75–78. 
+16. Kubo, J.; Lee, J.R.; Kubo, I. Anti-Helicobacter pylori agents from the cashew 
+apple. J Agric Food Chem 1999, 47(2), 533–537. 
+17. Green, I.R.; Tocoli, F.E.; Lee, S.H.; Nihei, K.; Kubo, I. Design and evaluation of 
+anacardic acid derivatives as anticavity agents. Eur J Med Chem 2008, 43, 1315–
+1320. 
+18. Giulietti, A.M.; Harley, R.M.; Queiroz, L.P.; Wanderley, M.G.L.; Van den 
+Berg, C. Biodiversity and conservation of plants in Brazil. Conserv Biol 2005, 19, 
+632–639. 
+19. Silveira, L.M.S.; Olea, R.S.G.; Mesquita, J.S.; Cruz, A.L.N.; Mendes, J.C. 
+Metodologias de atividade antimicrobiana aplicadas a extratos de plantas: 
+comparação entre duas técnicas de ágar difusão. Rev. Bras. Farm 2009, 90(2), 124–
+128. 
+ 70 
+20.  Agra, M.F.; Silva, K.N.; Basílio, I.J.L.D.; Freitas, P.F.; Barbosa-Filho, J.M. 
+Survey of medicinal plants used in the region Northeast of Brazil. Rev. bras. 
+Farmacogn 2008, 18(3), 472–508.   
+21. Michelin, D.C.; Moreschi, P.E.; Lima, A.C.; Nascimento, G.G.F.; Paganelli, 
+M.O.; Chaud, M.V. Avaliação da atividade antimicrobiana de extratos vegetais. Rev. 
+bras. Farmacogn 2005, 15(4), 316–320. 
+22. NCCLC - National Committee for Clinical Laboratory Standards. Methods for 
+dilution antimicrobial susceptibility tests for bacteria that grow aerobically; Approved 
+standard (M7-A63) Wayne, Pennsylvania, 2003. 
+23. Carneiro, V.A.; Santos, H.S.; Arruda, F.V.S.; Bandeira, P.N.; Albuquerque, 
+M.R.J.R.; Pereira, M.O.; Henriques, M.; Cavada, B.S.; Teixeira, E. H. Casbane 
+Diterpene as a Promising Natural Antimicrobial Agent against Biofilm-Associated 
+Infections. Molecules 2011, 16, 190–201. 
+24. Cavalcante, T.T.A.; Rocha, B.A.M.; Carneiro, V.A.; Arruda, F.V.S.; 
+Nascimento, A.S.F.; Sá, N.C.; Nascimento, K.S.; Cavada, B.S; Teixeira, E.H. Effect 
+of Lectins from Diocleinae Subtribe against Oral Streptococci. Molecules 2011, 16, 
+3530–3543. 
+25. Stepanovic, S.; Vukovic, D.; Dakic, I.; Savic, B.; Svabic-Vlahovic, M. A 
+modified microtiterplate test for quantification of staphylococcal biofilm formation. J. 
+Microbiol. Methods 2000, 40, 175–179. 
+26. Burton, E.; Yakandawala, N.; LoVetri, K.; Madhyastha, M.S. A microplate 
+spectrofluorometric assay for bacterial biofilms. J. Ind. Microbiol. Biotechnol 2007, 34, 
+1–4. 
+27.Triola, M. F. Elementary Statistical; Addison Wesley Longman: England, 2008, 
+p.896. 
+ 71 
+Sample Availability: Contact the authors. 
+© 2012 by the authors; licensee MDPI, Basel, Switzerland. This article is an open 
+access article distributed under the terms and conditions of the Creative Commons 
+Attribution license (http://creativecommons.org/licenses/by/3.0/). 
+ 

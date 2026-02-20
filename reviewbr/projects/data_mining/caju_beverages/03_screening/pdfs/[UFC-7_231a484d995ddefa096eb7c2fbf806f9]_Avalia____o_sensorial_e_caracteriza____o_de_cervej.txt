@@ -1,0 +1,465 @@
+ 
+ 
+ 
+ 
+ 
+UNIVERSIDADE FEDERAL DO CEARÁ 
+CENTRO DE CIÊNCIAS 
+DEPARTAMENTO DE TECNOLOGIA DE ALIMENTOS 
+PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIA E TECNOLOGIA DE 
+ALIMENTOS 
+ 
+ 
+ 
+ 
+NATÁLIA VIVIANE SANTOS DE MENEZES 
+  
+ 
+ 
+ 
+ 
+AVALIAÇÃO SENSORIAL E CARACTERIZAÇÃO DE CERVEJA DE TRIGO 
+ADICIONADA DE PSEUDOFRUTO DO CAJU (ANACARDIUM OCCIDENTALE) E 
+CASCAS DE LARANJA (CITRUS SINENSIS) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2018 
+NATÁLIA VIVIANE SANTOS DE MENEZES 
+ 
+ 
+ 
+ 
+ 
+ 
+AVALIAÇÃO SENSORIAL E CARACTERIZAÇÃO DE CERVEJA DE TRIGO 
+ADICIONADA DE PSEUDOFRUTO DO CAJU (ANACARDIUM OCCIDENTALE) E 
+CASCAS DE LARANJA (CITRUS SINENSIS) 
+ 
+ 
+ 
+ 
+Dissertação apresentada ao Programa de Pós-
+graduação em Ciência e Tecnologia de 
+Alimentos, do Departamento de Tecnologia de 
+Alimentos da Universidade Federal do Ceará 
+para a obtenção do título de Mestre em Ciência 
+e Tecnologia de Alimentos. Área de 
+concentração: Processamento de Alimentos de 
+Origem Vegetal. 
+ 
+Orientadora: Profa. Dra. Socorro Vanesca 
+Frota Gaban 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2018 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+NATÁLIA VIVIANE SANTOS DE MENEZES 
+ 
+ 
+ 
+ 
+AVALIAÇÃO SENSORIAL E CARACTERIZAÇÃO DE CERVEJA DE TRIGO 
+ADICIONADA DE PSEUDOFRUTO DO CAJU (ANACARDIUM OCCIDENTALE) E 
+CASCAS DE LARANJA (CITRUS SINENSIS) 
+ 
+ 
+ 
+ 
+Dissertação apresentada ao Programa de Pós-
+graduação em Ciência e Tecnologia de 
+Alimentos, do Departamento de Tecnologia de 
+Alimentos da Universidade Federal do Ceará 
+para a obtenção do título de Mestre em Ciência 
+e Tecnologia de Alimentos. Área de 
+concentração: Processamento de Alimentos de 
+Origem Vegetal. 
+ 
+ 
+ 
+Aprovado em: ___/___/______. 
+ 
+ 
+ 
+ 
+BANCA EXAMINADORA 
+ 
+_____________________________________________ 
+Profª. Drª. Socorro Vanesca Frota Gaban (Orientadora) 
+Universidade Federal do Ceará (UFC) 
+ 
+_____________________________________________ 
+Prof. Dr. Rafael Audino Zambeli 
+Universidade Federal do Ceará (UFC) 
+ 
+_____________________________________________ 
+Profª. Dr.ª Fátima Miranda Nunes 
+Universidade Federal do Ceará (UFC) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+À Deus, primeiramente. 
+Aos meus pais, pela generosidade em abdicar 
+de muito para me fazer chegar até aqui. 
+Às minhas irmãs, Lidiane e Keliane, pelo 
+incentivo constante. 
+Ao meu marido, Alan, que foi minha fortaleza 
+em todos os momentos. 
+Aos meus filhos, Malu e Bento, razão de toda 
+minha luta! 
+AGRADECIMENTOS 
+ 
+Inicio esses agradecimentos por Deus, já que Ele colocou pessoas tão especiais ao 
+meu lado, sem as quais certamente eu não teria dado conta. 
+Aos meus pais, Bonfim e Eliane, que permanentemente acreditaram em minha 
+capacidade e me motivam a tentar ser a melhor de todas sempre. Isso não só me fortaleceu, 
+mas me fez tentar, não a ser a melhor de todas, mas a dar o melhor de mim em tudo que me 
+envolvo. 
+Ao meu amado marido, Alan, que me incentivou, que me levantou todas as vezes 
+que caí, que me colocou no colo quando precisei e que me fez acreditar que posso mais do 
+que imagino. Se não fosse sua paciência, seu companheirismo, sua alegria ou seu amor esse 
+trabalho dificilmente teria se concretizado. 
+Às minhas irmãs, Lidiane e Keliane, que sempre se orgulharam de mim, foram 
+companheiras durante todo esse processo e que me salvaram de todas as maneiras, seja 
+cuidando dos meus filhos para que eu pudesse ir ao laboratório, seja revisando o texto ou 
+traduzindo mil artigos! À vocês meu muito obrigada! 
+À minha sogra, tia Vera, que diversas vezes recebeu meus filhos com tanto 
+carinho para que eles não notassem minha ausência enquanto eu estava estudando para as 
+provas ou fazendo milhares de análises. Nunca me disse um não. Minha eterna gratidão! 
+À minha orientadora, Professora Vanesca Frota, que acreditou em meu potencial 
+de uma forma que eu não acreditava ser capaz de corresponder. Sempre disponível e disposta 
+a ajudar. Aceitou me orientar mesmo eu estando grávida, trabalhando, cheia de compromissos. 
+Comprometeu-se comigo e ensinou-me muito. Fiz-me enxergar que existe mais que 
+pesquisadores e resultados por trás de uma dissertação. Quero que a senhora saiba que se 
+tornou para mim uma grande referência profissional e pessoal para meu crescimento. 
+Obrigada por estar a meu lado! 
+Aos meus colegas do mestrado, pelos momentos divididos juntos e, em 
+especialmente, quero agradecer à Maryana Monteiro, que me ajudou em diversas etapas de 
+produção e análises do trabalho e tornou aqueles dias de trabalho duro mais leves. Já éramos 
+amigas antes mesmo do mestrado, mas aos poucos nos tornamos mais que amigas, quase 
+irmãs. Obrigada por dividir comigo as angústias, alegrias e ouvir minhas bobagens. Foi 
+maravilhoso poder contar com você! 
+A todos os alunos, professores e funcionários do Departamento de Ciência e 
+Tecnologia de Alimentos, que, com ensinamentos, orientações e amizade, ajudaram-me a 
+realizar este sonho. Vocês foram referenciais para mim! Que venha o doutorado! 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+“Eu não posso oferecer nada mais que sangue, 
+labuta, suor e cerveja.” 
+Winston Churchill 
+RESUMO 
+ 
+O objetivo do presente trabalho foi avaliar quatro formulações de cerveja de trigo, sendo uma 
+formulação controle, uma formulação adicionada de 10% pseudofruto do caju (Anacardium 
+occidentale) e 0% cascas de laranja (Citrus sinensis), outra formulação adicionada de 0% 
+pseudofruto do caju (Anacardium occidentale) e 0,6% cascas de laranja (Citrus sinensis) e a 
+última formulação adicionada de ambas as frutas nas concentrações de 10% pseudofruto do 
+caju (Anacardium occidentale) e de 0,6% cascas de laranja (Citrus sinensis). Além disso, 
+deseja-se entender o impacto desses frutos sobre o produto final, a fim de desenvolver uma 
+bebida de alto valor agregado. As cervejas foram avaliadas quanto às suas características 
+físico-químicas (umidade, cinza, carboidratos, proteínas, lipídios, valor energético, acidez 
+total, pH, teor alcoólico, densidade e extratos primitivo, real e aparente) e submetidas à 
+avaliação sensorial. As condições microbiológicas das formulações também foram avaliadas 
+para garantir a qualidade sanitária da bebida. Em conclusão, viu-se que a produção de 
+cervejas acrescidas de cascas de laranja e do pseudofruto de caju como adjuntos no 
+processamento resultou em formulações que se definem como cervejas fortes (extratos 
+originais ≥ 14%), ácidas (0,22 g de ác. acético/ 100ml), com álcool (5,23%) e frutadas. A 
+adição de frutas às formulações trouxe algumas alterações em seus perfis físico-químicos 
+quando comparadas à amostra controle. Adição de caju contribuiu para mudanças como a 
+elevação da acidez, o menor pH (4,12), o maior teor alcoólico (5,17%) e os maiores extratos 
+original (23,23%) e aparente (32,13%) nas formulações em que ele foi adicionado, 
+melhorando o perfil da bebida. Microbiologicamente a fabricação das cervejas mostrou-se 
+eficiente. Sensorialmente, todas as formulações ficaram na faixa de aceitação positiva quanto 
+a aparência, o aroma, a cor, o sabor, a textura e a impressão global; mas a adição do caju e das 
+cascas de laranja não agregou atributos às formulações que as diferenciassem da amostra 
+controle de forma significativa. Já em relação a intenção de compra, as formulações ficaram 
+numa faixa de intenção de compra mediana com nota média de 3,6. Assim, a adição de 
+pseudofruto de caju ou laranja ou de ambas as frutas como adjuntos no processamento da 
+cerveja, torna as formulações viáveis do ponto de vista sensorial e mercadológico. 
+ 
+Palavras-chave: Análise sensorial. Bebidas Fermentadas. Cerveja de trigo. Fruitbeer. 
+ 
+ 
+ 
+ABSTRACT 
+ 
+This study intended to assess four formulations of wheat beer: control; 10% of cashew 
+pseudofruit (Anacardium occidentale) and 0% of orange peels (Citrus sinensis); 0% of 
+cashew pseudofruit (Anacardium occidentale) and 0.6% of orange peels (Citrus sinensis); and 
+10% of cashew pseudofruit (Anacardium occidentale) and 0.6% of orange peels (Citrus 
+sinensis). In addition, it aimed at understanding the impact of these fruits on the final product 
+in order to develop a higher valued beverage. The drinks were assessed for their 
+physicochemical characteristics (moisture, ash, carbohydrates, proteins, lipids, energy, total 
+acidity, pH, alcohol content, density and primitive, real and apparent extracts) and submitted 
+to sensory evaluation. Microbiological conditions of the formulations were also assessed to 
+guarantee the sanitary quality of the beverage. The obtained results showed that the 
+production of beer with orange peels and cashew apple as adjuncts generated formulations 
+defined as strong (original extracts ≥ 14%), sour (0,22 g of acetic acid/100ml), alcoholic 
+(5.23%) and fruity beers. The addition of fruits to beer formulations results in some 
+physicochemical changes when compared to control sample. Cashew was responsible for 
+changes such as increase of acidity, lower pH (4.12), higher alcoholic content (5.17%) and 
+higher original (23.23%) and apparent (32.13%) extracts in the formulations, improving the 
+beverage profile. Microbiologically, the brewing was efficient. Sensorially, all formulations 
+were in the positive acceptance range, regarding appearance, aroma, color, taste, texture and 
+overall impression; but the addition of cashew and orange peels did not add attributes to the 
+formulations that significantly differentiated them from the control sample. Regarding 
+purchase intention, the formulations were in a medium range with an average grade of 3.6. 
+Therefore, from sensorial and marketing points of view, the addition of cashew apple or 
+orange peels or both adjuncts in the production of beer makes the formulations viable. 
+ 
+Keywords: Fermented beverages. Fruitbeer.  Sensory analysis. Wheat beer. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE TABELAS 
+ 
+Tabela 1   – Mudanças ocorridas no grão de cevada malteado ......................…........... 24 
+Tabela 2   – Composição química do lúpulo .................................................…............ 25 
+Tabela 3   – Composição de trigo e malte de cevada ....................................…............ 27 
+Tabela 4   – Composição das formulações de cerveja ...................................…........... 34 
+Tabela 5   – Resultados médios e teste de Tukey para os parâmetros relacionados à  
+composição físico-química das cervejas elaboradas ……………...…….. 45 
+Tabela 6   – Resultados médios e teste de Tukey para os parâmetros relacionados à  
+composição físico-química das cervejas elaboradas ……………...…….. 46 
+Tabela 7   – Resultados das análises microbiológicas das cervejas elaboradas ……… 48 
+Tabela 8   – Frequência de gênero ...........................................................…................. 49 
+Tabela 9   – Nível de escolaridade dos participantes ....................................…............ 50 
+Tabela 10 – Frequência de consumo de cerveja por período ……………….…..……. 51 
+Tabela 11 – Frequência de consumo de pseudofruto de caju por período …….……... 51 
+Tabela 12 – Frequência de consumo de laranja por período …...…………………….. 52 
+Tabela 13 – Resultados médios e teste de Tukey para os atributos sensoriais das  
+diferentes formulações de cerveja ………………………..……………... 52 
+Tabela 14 – Resultados médios e teste T Student para os atributos sensoriais das  
+diferentes formulações de cerveja distribuídos segundo a faixa etária dos  
+53 
+provadores ………………………..……………………………………... 
+Tabela 15 – Análise de OddsRatio (OR) entre as variáveis de frequência alimentar  
+em relação a intenção de compra das formulações de cerveja ………….. 58 
+Tabela 16 – Análise de OddsRatio (OR) entre a variável faixa etária em relação a 
+intensão de compra das formulações de cerveja …………………….….. 59 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE ILUSTRAÇÕES 
+ 
+Figura 1 – Fluxograma do processamento da cerveja..........................…..................... 33 
+Figura 2 – Redução dos sólidos solúveis totais das formulações em função do tempo 43 
+Figura 3 – Distribuição dos participantes segundo sua faixa etária ……...………….. 50 
+Figura 4 – Relação entre as porções de cerveja consumida e o gênero dos 
+participantes .........……………………………………………...………… 50 
+Figura 5 – Análise de correlação entre os atributos sensoriais da cerveja na 
+formulação controle …………………………………………...…………. 55 
+Figura 6 – Análise de correlação entre os atributos sensoriais da cerveja na 
+formulação adicionada de pseudofruto de caju ……………….…............. 55 
+Figura 7 – Análise de correlação entre os atributos sensoriais da cerveja na 
+formulação adicionada de laranja ……………………………...………… 56 
+Figura 8 – Análise de correlação entre os atributos sensoriais da cerveja na 
+formulação adicionada de pseudofruto de caju e laranja ……...…………. 56 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+ 
+1 INTRODUÇÃO.........................................…..............................................…. 14 
+2 REVISÃO DE LITERATURA .........................................................……….. 16 
+2.1 Cerveja: história, produção e consumo.........................................................…. 16 
+2.2 Regulamentação da cerveja no Brasil ………………………………………... 17 
+2.3 O mercado de microcervejarias...................................................................…... 19 
+2.4 Características das cervejas de trigo e a adição de frutas …………………….. 20 
+2.5 Pseudofruto do caju (Anacardium occidentale) ………………….............…... 21 
+2.6 Casca da laranja (Citrus sinensis) ……………………………………………. 22 
+2.7 Matérias-primas da fabricação de cerveja..............................................……… 23 
+2.7.1 Água .................................................................................................................. 23 
+2.7.2 Malte .................................................................................................................. 24 
+2.7.3 Lúpulo ................................................................................................................ 24 
+2.7.4 Leveduras.....................................................................................................….. 25 
+2.7.5 Adjuntos do malte .........................................................................................…. 26 
+2.8 Análise sensorial em cervejas ………………………………………………... 28 
+MATERIAIS E MÉTODOS......................................................................….. 31 
+3 
+3.1 Tipo de estudo ………………………………………………………………... 31 
+3.2 Local e período da pesquisa ………………………………………………….. 31 
+3.3 Matérias-primas ………………………………………………………………. 32 
+3.4 Processamento da cerveja …………………………………………………….. 32 
+3.5 Análises físico-químicas das cervejas ………………………………………... 35 
+3.5.1 Teor de sólidos solúveis das formulações ……………………………………. 35 
+3.5.2 Umidade .....................................................................…................................… 35 
+3.5.3 Cinzas ..........................................................................................................….. 36 
+3.5.4 Proteínas ........................................................................................................… 36 
+3.5.5 Gordura ............................................................................................................. 37 
+3.5.6 Carboidratos ..................................................................................................... 38 
+3.5.7 Valor calórico ………………………………………………………………………… 38 
+3.5.8 PH ...............................................................................................................…... 39 
+3.5.9 Acidez ................................................................................................................ 39 
+3.5.10 Extrato real …………………………………………………………………………… 39 
+3.5.11 Extrato primitivo …………………………………………………………………….. 40 
+3.5.12 Extrato aparente ……………………………………………………………………... 40 
+3.5.13 Teor alcoólico ………………………………………………………………………… 40 
+3.6 Análise Microbiológica ………………………………………………………. 40 
+3.7 Aspectos Éticos ………………………………………………......................... 41 
+3.8 Análise Sensorial ……………………………………………………………... 41 
+3.9 Avaliação Estatística ……………………………………………...................... 42 
+RESULTADOS E DISCUSSÃO ……………………………………………. 43 
+4 
+4.1 Fermentação das formulações de cervejas .........................................…………. 43 
+4.2 Análises físico-químicas das formulações de cerveja ...................................… 44 
+4.3 Análises microbiológicas das formulações de cerveja ……………………….. 48 
+4.4 Análises sociodemográficas dos participantes e da frequência de consumo de 
+cerveja, pseudofruto de caju e laranja................................................………… 49 
+4.5 Análise Sensorial das cervejas adicionadas de pseudofruto de caju e de 
+laranja ………………………………………………………………………… 52 
+5 CONCLUSÃO ................................................................................................. 60 
+ REFERÊNCIAS ……………………….........................................…............. 61 
+ANEXO A – TERMO DE CONSENTIMENTO LIVRE E 
+ ESCLARECIDO …………………………………………………………….. 70 
+ ANEXO B – QUESTIONÁRIO DE FREQUÊNCIA ALIMENTAR …….. 72 
+ ANEXO C – TESTE DE ACEITAÇÃO DO CONSUMIDOR …………… 73 
+ ANEXO D – DELINEAMENTO ANÁLISE SENSORIAL ………………. 74 
+ 

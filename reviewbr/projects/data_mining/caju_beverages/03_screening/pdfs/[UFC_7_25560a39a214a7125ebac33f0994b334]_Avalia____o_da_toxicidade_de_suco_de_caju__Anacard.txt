@@ -1,0 +1,3434 @@
+ 
+ 
+ 
+UNIVERSIDADE FEDERAL DO CEARÁ 
+CENTRO DE CIÊNCIAS AGRAGRIAS 
+DEPARTAMENTO DE ENGENHARIA DE ALIMENTOS 
+PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIAS E TECNOLOGIA DE 
+ALIMENTOS 
+ 
+ 
+LUIZA MICHELLY GONÇALVES LIMA MOTA 
+ 
+  
+ 
+AVALIAÇÃO DA TOXICIDADE DE SUCO DE CAJU (Anacardium occidentale) 
+PROCESSADO POR PLASMA FRIO E ULTRASSOM 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA  
+2022 
+ 
+ 
+LUIZA MICHELLY GONÇALVES LIMA MOTA 
+ 
+ 
+ 
+AVALIAÇÃO DA TOXICIDADE DE SUCO DE CAJU (Anacardium occidentale) 
+PROCESSADO POR PLASMA FRIO E ULTRASSOM 
+ 
+ 
+ 
+ 
+Dissertação apresentada ao programa de 
+Pós-Graduação em Ciência e Tecnologia 
+de Alimentos da Universidade Federal do 
+Ceará, como requisito obrigatório para 
+obtenção do título de mestre em Ciências 
+e Tecnologia de Alimentos. Área de 
+concentração: Ciência e Tecnologia de 
+Alimentos. 
+ 
+Orientador (a): Profa Dra. Sueli Rodrigues. 
+Co-orientador (a): Profa Dra. Thaiz Batista 
+Azevedo Rangel Miguel.  
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA  
+2022 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LUIZA MICHELLY GONÇALVES LIMA MOTA 
+ 
+ 
+AVALIAÇÃO DA TOXICIDADE DE SUCO DE CAJU (Anacardium occidentale) 
+PROCESSADO POR PLASMA FRIO E ULTRASSOM 
+ 
+Dissertação apresentada ao programa de 
+Pós-Graduação em Ciências e Tecnologia 
+de Alimentos da Universidade Federal do 
+Ceará, como requisito obrigatório para 
+obtenção do título de mestre em Ciências 
+e Tecnologia de Alimentos. Área de 
+concentração: Ciência e Tecnologia de 
+Alimentos. 
+ 
+Aprovada em: 05/09/2022 
+ 
+BANCA EXAMINADORA 
+_________________________________ 
+Profa Dra. Sueli Rodrigues (Orientador) 
+Universidade Federal do Ceará (UFC) 
+_________________________________ 
+Prof. Dr. Italo Waldimiro Lima de França 
+Universidade Federal do Ceará (UFC) 
+_________________________________ 
+Profa Dra. Thatyane Vidal Fonteles 
+Universidade Federal do Ceará (UFC) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A minha mãe família, 
+por ser presença em minha vida. 
+Com amor, dedico. 
+ 
+ 
+AGRADECIMENTOS 
+ 
+Primeiramente gostaria de agradecer a Deus desde o momento em que fui 
+abençoada ao ser aprovada na seleção. Obrigada por me transmitir força, foco e fé 
+que me acompanharam ao longo desses anos e que não me permitiram desistir. Serei 
+eternamente grata à Deus por todas as bênçãos sobre a minha família e por 
+proporcionar tranquilidade aos corações daqueles que acompanharam a minha 
+trajetória acadêmica. 
+Agradeço a Universidade Federal do Ceará-UFC, que me deu a 
+oportunidade de cursar Ciências e Tecnologia de Alimentos nesta renomada 
+instituição. Obrigada por proporcionar um ambiente saudável para todos os alunos, 
+além de estimular a criatividade, a interação e a participação nas atividades 
+acadêmicas. Sou grata a todo corpo docente, à direção e administração dessa 
+instituição. Mesmo passando por muitas dificuldades como essa pandemia, que trouxe 
+muitos desafios para todos. 
+Agradeço aos meus pais que me proporcionaram a melhor educação e 
+lutaram para que eu estivesse concluindo mais essa etapa da minha vida. Sei o quanto 
+vocês se doaram para a realização deste sonho. 
+Aos meus colegas de curso, pela amizade e apoio nessa nossa caminhada;  
+ longo de todo meu percurso eu tive o privilégio de trabalhar de perto com 
+os melhores professores, educadores, orientadores. Sem eles não seria possível estar 
+aqui hoje de coração repleto de orgulho. 
+Aos meus amigos do laboratório e do grupo LABIOTEC da professora Sueli, 
+pela ajuda nas pesquisas e na parte pratica do meu trabalho. Vocês foram meu apoio; 
+Ao meu querido irmão Dr. Wemmenson pela ajuda nos momentos mais 
+complicados e difíceis, sempre foi como um segundo pai para mim; 
+Agradeço a minha amada mãe Toinha e meu pai Valdeci (in memorian), 
+que me proporcionaram a melhor educação e lutaram para que eu estivesse 
+concluindo mais essa etapa da minha vida. Sei o quanto vocês se doaram para a 
+realização desse sonho.  
+Aos meus sobrinhos, tios, tias, avós, madrinhas, padrinhos e primos que 
+entenderam a minha ausência, acompanharam a minha dedicação e torceram por 
+mim. Sou grata ao meu marido Gean Carlos, que me apoiou em todos os momentos, 
+soube compreender quando eu não podia estar presente e me deu forças para vencer 
+ 
+ 
+mais essa etapa da minha vida. Obrigada aos meus queridos amigos que não me 
+permitiram desistir. Essa dissertação também é de todos vocês! 
+A disponibilidade, confiança e ajuda por parte das minhas orientadoras 
+professoras Dra. Sueli Rodrigues e Dra. Thaiz Batista Azevedo Rangel Miguel na 
+orientação deste trabalho; 
+Aos membros da banca examinadora, que aceitaram o convite para avaliar 
+e colaborar com este trabalho; 
+E para todos que também merecem, mas por questão de esquecimento 
+não foram mencionados. De certa forma, todos foram responsáveis por essa 
+conquista. 
+Universidade Federal do Ceará (UFC) – Programa de pós-graduação em 
+Ciências e Tecnologia de Alimentos 
+Departamento de Ciências e Tecnologia de Alimentos 
+Laboratório de Biotecnologia (LABIOTEC) – UFC 
+Fundação Cearense de Apoio ao Desenvolvimento Científico e Tecnológico 
+(FUNCAP) 
+Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (Capes) 
+Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) 
+Instituto Nacional de Frutos Tropicais – INFT (CNPq/FUNCAP) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+RESUMO 
+ 
+Tecnologias emergentes têm sido vastamente estudadas para serem utilizadas como 
+alternativa aos métodos convencionais de processamento, pois desencadeiam 
+alterações na matriz na maioria das vezes positiva e são promissoras na preservação 
+de alimentos e na inativação de microrganismos patogênicos. Embora as tecnologias 
+não térmicas sejam amplamente estudadas na ciência de alimentos os estudos sobre 
+a toxicidade de alimentos expostos ao processamento não térmicos são escassos. O 
+objetivo deste trabalho foi avaliar a toxicidade e o efeito protetor do suco de caju não 
+processado e processado termicamente contra o estresse oxidativo em Artemia 
+(Artemia salina). Para tanto, foram realizados testes de toxicidade aguda e efeito 
+protetor em suco de caju não processado e processado termicamente frente a 
+náuplios instar II de A. salina. As amostras resultantes dos experimentos foram 
+investigadas quanto à mortalidade, enzimas oxidativas e morfologia. Não houve 
+mortalidade de náuplios expostos ao suco de caju não processado e processado por 
+ultrassom. No entanto, as amostras plasmolizadas provocaram mortes a 1000 μg/mL. 
+A amostra processada por ultrassom foi a única amostra que apresentou efeito 
+protetor contra o estresse oxidativo provocado pela exposição dos náuplios ao 
+peróxido de hidrogênio. A maioria das amostras de suco de caju causou danos 
+estruturais aos náuplios. A atividade das enzimas antioxidantes não se alterou 
+significativamente. O resultado da aplicação de tratamentos não térmicos aos 
+alimentos depende da matriz utilizada. Mais estudos são necessários para investigar 
+os produtos gerados pelas tecnologias de processamento não térmico do suco de 
+caju. 
+ 
+Palavras-chave: Artemia salina; suco de caju; processamento não térmico; 
+toxicidade. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ABSTRACT 
+ 
+Emerging technologies have been extensively studied to be used as an alternative to 
+conventional processing methods, as they trigger changes in the matrix, most of the 
+time positive, and are promising in food preservation and in the inactivation of 
+pathogenic microorganisms. Although non-thermal technologies are widely studied in 
+food science, studies on the toxicity of foods exposed to non-thermal processing are 
+scarce. The objective of this work was to assess the toxicidityand the protective effect 
+of unprocessed and non-thermal processed cashew apple juice against oxidative 
+stress in brine shrimp (Artemia salina). For this purpose, acute toxicity and protective 
+effect tests on nonprocessed and non-thermally processed cashew juice on A. salina 
+were carried out. Samples resulting from experiments were investigated regarding 
+mortality, oxidative enzymes, and morphology. There was no mortality of nauplii 
+exposed to non-processed and sonicated cashew juice. However, plasmolized 
+samples provoked deaths at 1000 μg/mL-1. Sonicated sample was the only sample 
+that presented a protective effect against hydrogen peroxide stress. Most cashew juice 
+samples caused structural damage to nauplii. Antioxidant enzymes activity did not 
+change significantly. The result of applying nonthermal treatments to food is dependent 
+on the matrix used. More studies are needed to investigate the products generated by 
+cashew juice raw and non-thermal processed technologies. 
+ 
+Keywords: Artemia salina; cashew apple juice; non-thermal processing; toxicity. 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE FIGURAS 
+ 
+Figura 1 - Principais compostos gerados pelo plasma e seus efeitos para a                              
+inativação de microrganismos........................................................ 27 
+Figura 2 - Resumo entre fenômenos físicos e químicos durante a aplicação  
+do ultrassom, que resultam na inativação dos microrganismos..... 31  
+Figura 3 - Cajueiros (A. occidentale) no interior de Pernambuco e o 35 
+pseudofruto (caju)............................................................................ 
+Figura 4 - Representação da morfologia de Artemia salina............................... 37 
+Figura 5 - Imagem de uma Artemia salina no estado adulto.............................. 39 
+Figura 6 - Resultados do teste de toxicidade aguda utilizando náuplios instar  
+II de Artemia salina em suco de caju in natura em 24 e 48 horas..... 48 
+Figura 7 - Resultados do teste de toxicidade aguda utilizando náuplios instar  
+II de Artemia salina em suco de caju processado por ultrassom em 48 
+24 e 48 horas....................................................................................  
+Figura 8 - Resultados do teste de toxicidade aguda utilizando náuplios instar  
+II de Artemia salina em suco de caju processado por plasma a frio  
+á 50Hz em 24 e 48 horas................................................................ 50 
+Figura 9 - Resultados do teste de toxicidade aguda utilizando náuplios instar  
+II de Artemia salina em suco de caju processado por plasma a frio  
+a 1.000Hz em 24 e 48 horas............................................................. 52 
+Figura 10 - Resultados do teste de lipoperoxidação utilizando náuplios instar  
+II de Artemia salina em suco de caju in natura e processado por  
+plasma frio (50 e 1.000 Hz) e por ultrassom..................................... 53 
+Figura 11 - Resultados do teste de catalase utilizando náuplios instar II de  
+Artemia salina em suco de caju in natura e processado por plasma  
+frio (50 e 1.000 Hz) e por ultrassom.................................................. 55 
+Figura 12 - Resultados do teste de superóxido desmutase utilizando náuplios  
+instar II de Artemia salina em suco de caju processado por plasma  
+frio (50 e 1.000 Hz) e por ultrassom.................................................. 56 
+Figura 13 - Resultados do efeito protetivo do suco de caju in natura contra a  
+toxicidade induzida por peróxido de hidrogênio em Artemia salina...  59 
+ 
+ 
+ 
+Figura 14 - Resultados do efeito protetivo do suco de caju processado por  
+ultrassom contra a toxicidade induzida por peróxido de hidrogênio  
+em Artemia salina............................................................................. 60 
+Figura 15 - Resultados do efeito protetivo do suco de caju processado por  
+plasma frio à 50Hz contra a toxicidade induzida por peróxido de  
+hidrogênio em Artemia salina........................................................... 61 
+Figura 16 - Resultados do efeito protetivo do suco de caju processado por  
+plasma frio à 1000Hz contra a toxicidade induzida por peróxido de  
+hidrogênio em Artemia salina.......................................................... 63 
+Figura 17 - Microscopia de luz e eletrônica de varredura de náuplios instar II  
+de Artemia salina em teste de toxicidade aguda do suco de caju  
+não processado (10, 100 e 1000 ppm)……………........................... 65 
+Figura 18 - Microscopia de luz e eletrônica de varredura de náuplios instar II  
+de Artemia salina em teste de toxicidade aguda do suco de caju  
+processado por ultrassom……………………................................... 66 
+Figura 19 - Microscopia de luz e eletrônica de varredura de náuplios insta II  
+de Artemia salina em teste de toxicidade aguda do suco de caju  
+processado por plasma frio (50 e 1000 Hz) …………......…………... 67 
+Figura 20 - Efeito protetor do suco de caju não processado (10, 100 e 1000  
+μg/mL) contra HO em náuplios instar II de A. salina em 48 horas  
+22
+de exposição………………………………………….......................... 69 
+Figura 21 - Efeito protetor do suco de caju processado por plasma frio contra  
+HO(10, 100 e 1000 μg/mL-1) em náuplios instar II de A. salina  
+22 
+em 48 horas de exposição…...………………….............……………. 70 
+Figura 22 - Efeito protetor do suco de caju processado por plasma frio (50 e  
+1000 Hz) contra HO em náuplios instar II de A. salina em 48  
+22
+horas de exposição……………………………………........................ 71 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE ABREVIATURAS E SIGLAS 
+ 
+IBGE Instituto Brasileiro de Geografia e Estatística 
+PIQ Padrões de Identidade e Qualidade 
+US Ultrassom 
+PF Plasma frio 
+PFPA Plasma frio à pressão atmosférica 
+RMN Ressonância magnética nuclear 
+CONA Companhia Nacional de Abastecimento 
+CL50 Concentração letal média 
+DL50 Dose letal média 
+HO
+22 Peróxido de hidrogênio 
+KCrODicromato de potássio 
+227 
+CA Circunferência abdominal 
+LDL Lipoproteína de baixa densidade 
+HDL Lipoproteína de alta densidade 
+HAS Hipertensão arterial 
+SOD Superóxido desmutase 
+CAT Catalase 
+GSH Glutationa reduzida 
+GSH-Px Glutationa-peroxidase 
+EROS Espécies reativas de oxigênio 
+APX Ascorbato peroxidase 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+ 
+1      INTRODUÇÃO......................................................................................... 15 
+2      ESTADO DA ARTE.................................................................................. 17 
+2.1 Sucos de frutas processados.................................................................. 17 
+2.1.1 Suco de frutas.......................................................................................... 17 
+2.1.2 Processamentos...................................................................................... 20 
+2.1.3 Plasma a frio............................................................................................ 24 
+2.1.4 Ultrassom................................................................................................. 29 
+2.2    O cajueiro (Anacardium occidentale L.)........................................................  32 
+2.2    Artemia salina Leach como modelo ................................................... 36 
+3       OBJETIVOS........................................................................................... 41 
+3.1    Objetivo geral......................................................................................... 41 
+3.2    Objetivos específicos............................................................................. 41 
+4       MATERIAIS E MÉTODOS.................................................................... 42 
+4.1    Preparo das amostras......................................................................... 42 
+4.2    Processamentos.................................................................................. 42 
+4.2.1 Ultrassom.............................................................................................. 42 
+4.2.2 Plasma a frio......................................................................................... 42 
+4.3    Teste de toxicidade aguda utilizando náuplios instar II de Artemia  
+salina como modelo experimental....................................................... 42 
+4.4    Lipoperoxidação.................................................................................... 43 
+4.5    Atividade enzimática.............................................................................. 44 
+4.5.1 Preparo de extrato celular para determinação das atividades 44 
+enzimáticas............................................................................................. 
+4.5.2 Catalase.................................................................................................. 44 
+4.5.3 Superóxido dismutase........................................................................... 44 
+4.7  Efeito protetivo dos sucos de frutas (suco de caju) contra a  
+toxicidade induzida por peróxido de hidrogênio em Artemia 45 
+salina...................................................................................................... 
+4.8    Microscopia........................................................................................... 45 
+4.8.1 Microscópio óptica................................................................................. 45 
+4.8.2 Microscopia eletrônica de varredura...................................................... 46 
+4.8.3 Microscopia eletrônica de transmissão.................................................. 46 
+4.9    Determinação da CL50........................................................................... 46 
+4. 10 Análise estatística................................................................................. 46 
+ 
+ 
+5       RESULTADOS E DISCUSSÕES............................................................ 47 
+5.1.   Resultados da toxicidade aguda do suco de caju em náuplios instar  
+II de Artemia salina processado por ultrassom e plasma 47 
+frio........................................................................................................... 
+5.2.    Lipoperóxidação.................................................................................... 53 
+5.3.    Atividade enzimática............................................................................. 55 
+5.3.1. Catalase.................................................................................................. 55 
+5.3.2. Superóxido desmutase............................................................................ 56 
+5.4.    Efeito protetivo do suco de caju contra a toxicidade induzida por 58 
+peróxido de hidrogênio em náuplios de Artemia salina..................... 
+5.5.   Analise morfológica do ensaio de toxicidade aguda em náuplios 64 
+instar II de Artemia salina...................................................................... 
+5.6.   Analise morfológica do ensaio do efeito protetivo contra a toxicidade  
+induzida pelo peróxido de hidrogênio em náuplios instar II de Artemia 
+68 
+salina....................................................................................................... 
+5.7.    Determinação da CL50.......................................................................... 72 
+6        CONCLUSÃO.......................................................................................... 73 
+          REFERÊNCIAS...................................................................................... 74 
+ 
+15 
+ 
+1. INTRODUÇÃO 
+ 
+Os consumidores atuais têm buscado alimentos mais naturais, ricos em 
+fibras e compostos bioativos, e que ao mesmo tempo ofereçam a praticidade de 
+consumo (CORATO, 2020). Neste contexto, a indústria alimentícia tem impulsionado 
+a produção de vegetais minimamente processados e produtos vegetais prontos para 
+o consumo (PUTNIK et al., 2017). 
+A obtenção de um produto seguro e de qualidade envolve as boas práticas 
+agrícolas, de manipulação e de processamento (SANT’ANNA et al., 2020). Para isto, 
+a aplicação de métodos tradicionais, como a utilização do cloro para a sanitização e o 
+uso de tecnologias promissoras, é necessária para obter um produto seguro e de 
+qualidade (DE CORATO, 2020). 
+Nos últimos anos, várias tecnologias de processamento não térmico foram 
+desenvolvidas para satisfazer as necessidades da indústria e do consumidor, tais 
+como ultrassom, alta pressão, processamento ôhmico, luz UV pulsada, plasma frio e 
+ozônio, dentre outras. Os processamentos não térmicos parecem ser menos 
+prejudiciais aos produtos do que os processamentos térmicos, entretanto, seus efeitos 
+variam consideravelmente de uma matriz alimentar para outra (OLIVEIRA et al., 
+2018).  
+O processamento por plasma frio é considerado uma tecnologia emergente 
+não térmica, pois seus efeitos são observados mesmo em temperaturas mais baixas 
+que a de pasteurização, portanto, existe uma tendência à utilização destas tecnologias 
+em substituição ou complementação aos tratamentos térmicos, a fim de preservar a 
+composição nutricional dos alimentos (COUTINHO, 2019). 
+O ultrassom é uma tecnologia considerada segura, não tóxica, não 
+prejudicial ao ambiente e induz a menores perdas de caráter nutricional e sensorial 
+dos produtos, quando comparado aos processos térmicos convencionais. Além disso, 
+existe uma ampla oferta de equipamentos disponíveis no mercado incluindo banhos 
+ultrassônicos e diferentes sondas, que podem ser adaptados a diferentes operações 
+apresentando-se como uma opção a ser explorada pela indústria alimentícia (OJHA 
+et al., 2018). 
+Embora as tecnologias não térmicas sejam amplamente estudadas na 
+ciência de alimentos os estudos sobre a toxicidade de alimentos expostos ao 
+16 
+ 
+processamento não térmicos são escassos e raramente relatam a produção de 
+radicais livres, ou mesmo de produtos tóxicos (ALVES FILHO et al., 2020).  
+Nesse sentido, apesar dos resultados promissores nas propriedades e na 
+preservação dos alimentos, quando processados por tecnologias não térmicas, pouco 
+se sabe sobre sua toxicidade em sistemas biológicos, fazendo-se necessário estudos 
+de toxicidade aguda (MIGUEL et al., 2021). 
+O ensaio de toxicidade aguda é a etapa inicial para investigar o potencial 
+tóxico sistêmico de uma substância administrada em única dose (SCANDELAI et al., 
+2019). Atualmente, um modelo que se destaca no estudo de toxicidade é o 
+microcrustáceo Artemia salina, um invertebrado aquático, amplamente utilizado como 
+uma fonte de alimento vivo para alimentar organismos aquáticos (SARKHEIL et al. 
+2018). 
+A confiabilidade e a validade dos testes ecotoxicológicos com Artemia 
+salina foram confirmadas por diversos testes com diferentes estressores, incluindo 
+nanopartículas (REKULAPALLY et al., 2019), compostos químicos (MORGANA et al., 
+2018), pesticidas (CRUZEIRO et al., 2017) e farmacêuticos (NUNES et al., 2006). 
+Embora existam estudos sobre o efeito protetor contra estresse oxidativo 
+de diferentes compostos em A. salina, nenhum descreveu o efeito protetor de sucos 
+processados por técnicas não térmicas, fazendo-se necessária a avaliação destas 
+técnicas, a interpretação dos resultados e sua posterior recomendação para uso na 
+indústria alimentícia (MIGUEL et al., 2021). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+17 
+ 
+2. ESTADO DA ARTE 
+ 
+ 
+2.1  Sucos de frutas processados  
+ 
+ 
+2.1.1 Suco de frutas 
+ 
+O suco de fruta é uma bebida feita a partir da extração ou prensagem do 
+líquido natural contido nas frutas e legumes. Em países como Reino Unido, Espanha, 
+Áustria, Dinamarca, França, Hungria e Irlanda, uma porção de suco de fruta conta 
+para as recomendações diárias de frutas e vegetais (Science Hub Food-Based Dietary 
+Guidelines in Europe, 1992).  
+Sabe-se que uma alimentação balanceada e diversificada, com a presença 
+dos principais grupos alimentares é capaz de fornecer uma ampla variedade de 
+nutrientes, indispensáveis à manutenção da vida e promoção da saúde (SANTANA e 
+ALVES, 2022).   
+A cultura alimentar que compõe o cardápio atual da alimentação do brasileiro 
+é fundamentada em uma mistura de hábitos advindos do início da colonização do país, 
+com a inserção de grande quantidade de espécies provenientes de diferentes regiões 
+geográficas (SILVA et al., 2022).  
+A fruticultura é uma atividade tradicional da agricultura brasileira e que 
+desponta com significativa importância econômica e social, uma vez que é 
+responsável pela geração de inúmeros empregos ao longo de toda a cadeia produtiva, 
+bem como pela oferta de alimento relacionado ao bem-estar e qualidade de vida, visto 
+que as frutas são fonte de vitaminas e nutrientes indispensáveis à dieta humana 
+(CARDOSO, 2020). 
+O Brasil é o terceiro maior produtor mundial de frutas, com 40 milhões de 
+toneladas (ABRAFRUTAS, 2021). As frutas por serem perecíveis passam pelo 
+processo de deterioração rapidamente, dificultando sua comercialização, 
+especialmente a longas distâncias (LIMA et al., 2018). O consumo de frutas por 
+adultos teve aumento significativo no período de 2006-2018 no percentual de 
+consumo regular de frutas no Brasil (SILVA e CLARO, 2019). 
+Entretanto nota-se significativa diferença nas quantidades adquiridas 
+quando se trata da situação de domicílio, em que a população urbana adquire 
+18 
+ 
+aproximadamente 27,69 quilos de frutas per capita ao ano e a população rural 19,02 
+quilos, bem menos que a média nacional (IBGE, 2022). 
+A flora brasileira possui mais de 40.000 espécies vegetais ricas em 
+fitoquímicos. Frutos fontes de antioxidantes fenólicos, flavonoides, polissacarídeos, 
+vitamina C e os terpenos, com alto potencial para produzir conhecimento e produtos 
+com valor agregado útil em fitomedicina e suplementos alimentares para prevenir e 
+tratar diversos tipos de doenças (CARVALHO e CONTE-JUNIOR, 2021). 
+A área cultivada com frutas corresponde a aproximadamente 3 milhões de 
+hectares e a produção brasileira é em especial aplicada ao mercado interno, com 
+exportação de apenas 3% de sua produção. Existe uma vasta variedade na produção 
+de frutas no Brasil, isso porque as culturas estão espalhadas por todo o país, onde as 
+frutas são comumente consumidas em sua forma natural ou processada (LEITE 
+FILHO et al., 2020). 
+Frutas que apresentam a coloração variando do vermelho ao azul são 
+importantes fontes de compostos fenólicos em dietas alimentares devido à presença 
+das antocianinas (CASSIDY, 2017). As antocianinas são capazes de trazer benefícios 
+à saúde de diversas maneiras, como por exemplo, capturando radicais livres e 
+diminuindo lesões oxidativas que podem desencadear doenças crônicas 
+degenerativas (LIMA et al., 2008).  
+Estudos confirmaram que a prevenção de doenças degenerativas está 
+associada ao consumo de frutas que indicam elevada capacidade antioxidante, e 
+ainda, reforçam que os mesmos são de grande interesse pela capacidade de absorver 
+radicais livres e assim impossibilitar reações oxidativas (VERRUCK et al., 2018; 
+BOMBANA et al., 2021).  
+Ao longo dos últimos anos nota-se a crescente importância dada pelos 
+consumidores à qualidade nutricional dos alimentos, principalmente frutas in natura, o 
+que tem incentivado o mercado a apresentar diferentes possibilidades de produtos 
+(CARDOSO, 2020).  
+Segundo o mesmo autor, neste sentido, destaca-se a importância da 
+realização de estudos de mercado que analisem as preferências dos consumidores e 
+fatores relacionados à aquisição de produtos, como maneira de fornecer subsídios 
+para aplicação de políticas públicas e estratégias de marketing. Pallant et al. (2020) 
+ressaltam a importância da participação do consumidor na personalização de 
+19 
+ 
+produtos, experiências e serviços, como forma de impulsionar a comercialização e 
+uso.  
+No Brasil, o controle das bebidas à base de frutas é realizado tendo como 
+referência os Padrões de Identidade e Qualidade (PIQ), definidos pelo MAPA, que 
+indicam as características físicas, químicas e organolépticas específicas para cada 
+tipo de produto (NOGUEIRA et al., 2020).  
+Seguindo uma tendência mundial, a indústria aposta em uma maior 
+demanda por produtos saudáveis, que beneficia o consumo de sucos no Brasil 
+(VENTURINI FILHO, 2018; MAIA et al., 2019). 
+O consumo de sucos de frutas tem aumentado continuamente em função do 
+valor nutritivo e dos efeitos benéficos para a saúde, ocorrendo uma crescente 
+comercialização desses produtos no mercado internacional (CHOI et al., 2019). 
+Apresenta destaque especial as bebidas não carbonatadas, como os sucos de fruta, 
+que tem chamado a atenção de consumidores de refrigerantes nos últimos anos 
+(VASILAKI et al., 2019). 
+Neste sentido, com o crescimento do consumo de sucos de frutas, o 
+mercado fica mais competitivo, o que leva o consumidor a exigir cada vez mais 
+características de qualidade. Além da sua composição benéfica à saúde, os aspectos 
+sensoriais são muito importantes para a aceitação do produto (MAGRO, 2020).  
+Segundo o mesmo autor, os sucos com aroma e sabor pronunciados, boa 
+aparência e coloração, são características fundamentais de qualidade. Porém, 
+algumas propriedades dos sucos, como a sua composição rica em polissacarídeos, 
+podem influenciar o rendimento produtivo, bem como sua qualidade, podendo este 
+fator estar diretamente ligado com a aceitação do produto.  
+As polpas de frutos são amplamente utilizadas como matérias primas pela 
+indústria de alimentos para elaboração de vários produtos, dentre estes os para sucos 
+desta categoria estão: abacaxi, a acerola, o caju, a goiaba, a manga, o maracujá e a 
+pitanga. As frutas são constituídas de água, carboidratos, proteínas, vitaminas e sais 
+minerais (ABIR, 2019).  
+Com o intuito de garantir a homogeneidade e a segurança dos 
+consumidores, o Ministério da Agricultura elaborou a Instrução Normativa Nº1, de 07 
+de janeiro de 2000, com atualização por meio da Instrução Normativa nº 49, de 26 de 
+setembro de 2018 (BRASIL, 2018) com parâmetros analíticos e quesitos 
+complementares aos Padrões de Identidade e Qualidade (PIQ’s) de diferentes polpas 
+20 
+ 
+de frutas, abordando características organolépticas, físicas, químicas, microscópicas 
+e sanitárias, e estabelecendo limites mínimos específicos para cada polpa de fruta. 
+Os perigos biológicos são: a contaminação, o crescimento e/ou 
+sobrevivência dos microrganismos patogênicos e deteriorantes dos alimentos, e/ou a 
+produção ou persistência de produtos do metabolismo microbiano. Os perigos 
+microbiológicos são responsáveis por, aproximadamente, 97% dos casos de 
+contaminação e vêm ao encontro aos relatos de surtos de toxinfecção. (PERERA e 
+PERERA, 2019). 
+Os sucos de frutas são bebidas não fermentadas obtidas de frutas maduras 
+por processamento tecnológico adequado que devem ser submetidas a tratamento de 
+conservação que assegurem sua qualidade nutricional e microbiológica até o 
+momento do consumo (BRASIL, 2009).  
+Além disso, algumas tecnologias emergentes no processamento mínimo 
+podem ser aplicadas de acordo com a escala de maturidade tecnológica e custo 
+operacional, como alta pressão, aquecimento ôhmico, infravermelho, irradiação, 
+plasma frio, pulso elétrico, ultrassom, a emissão de raios na faixa ultravioleta (SENAI, 
+2019).  
+Segundo o mesmo autor, o uso destas técnicas tem o intuito de permitir que 
+o produto chegue ao consumidor de maneira apropriada para o consumo, sem a 
+degradação das suas características naturais e com inativação de algumas enzimas 
+que podem causar alterações. 
+ 
+2.1.2 Processamentos 
+ 
+A qualidade dos alimentos é uma concepção que vem sendo disputada pelos 
+diferentes atores que integram os sistemas agroalimentares, desde produtores até 
+consumidores, os quais carregam distintos interesses e capacidades de influenciar o 
+ambiente institucional, no qual se estabelecem critérios de qualidade que são, de 
+modo preponderante, vinculados a aspectos sanitários e de aparência (RAMOS et al., 
+2021). 
+Os padrões alimentares no Brasil e no mundo sofreram modificações nas 
+últimas décadas, marcadas pela redução do consumo de alimentos in natura ou 
+minimamente processados, como legumes, verduras e frutas. Em contrapartida, 
+21 
+ 
+observa-se aumento do consumo de alimentos ultra processados, como embutidos, 
+refrigerantes e alimentos congelados (CATTAFESTA et al., 2020).  
+Devido a essa mudança nos padrões alimentares, a classificação dos alimentos 
+de acordo com o seu grau de processamento se torna uma ferramenta essencial para 
+a verificação de fatores relevantes a esse processo de transição (MONTEIRO et al., 
+2019).  
+Deste modo, Monteiro e colaboradores propuseram a classificação NOVA, que 
+categoriza alimentos e produtos alimentícios em quatro grupos, conforme a extensão 
+e a finalidade do processamento industrial a que são submetidos (MONTEIRO et al., 
+2016).   
+Os alimentos são classificados em quatro grupos: alimentos in natura ou 
+minimamente processados, ingredientes culinários processados, alimentos 
+processados e alimentos ultra processados (MONTEIRO et al., 2016). Alimentos in 
+natura são obtidos diretamente de plantas ou animais e adquiridos sem sofrer 
+alteração após deixarem a natureza (MONTEIRO et al., 2019).  
+ Minimamente processados são alimentos in natura submetidos a 
+procedimentos como limpeza, remoção de partes não desejadas, trituração e 
+embalagem (MONTEIRO et al., 2019). Os alimentos ultra processados, por sua vez, 
+são formulações industriais, muitas vezes prontas para consumo, que apresentam 
+cinco ou mais ingredientes em sua composição (MONTEIRO et al., 2016).  
+Danos aos alimentos por micróbios patogênicos causam perdas econômicas 
+generalizadas. Algumas das bactérias nocivas mais frequentemente detectadas em 
+alimentos causam doenças. Em alguns casos, Escherichia coli, Listeria 
+monocytogenes e Salmonella spp., são os principais micróbios que causam a morte 
+em humanos (TIMMONS et al., 2018).  
+Várias estratégias, como tratamento com cloro, ácido ascórbico e ácido cítrico, 
+têm sido usadas para descontaminação de alimentos, mas são menos eficazes, pois 
+reduzem o pequeno número de patógenos (PRASAD et al., 2017). 
+O processamento térmico é a abordagem mais utilizada para a preservação de 
+alimentos para controlar patógenos e microrganismos que provocam deterioração de 
+alimentos. Embora o tratamento térmico tenha inúmeras desvantagens, como 
+alterações na aparência, danos na textura, alterações no sabor e nas qualidades 
+sensoriais e redução das características nutricionais, esses são fatores essenciais 
+para o consumidor (SRIVASTAV et al., 2020). 
+22 
+ 
+As pesquisas têm avançado no sentido da utilização de tecnologias que alterem 
+o mínimo possível as características originais (sabor, cor, aroma e composição 
+nutricional) dos alimentos e que mantenham as propriedades benéficas dos produtos 
+e atendam a todas as demandas dos consumidores, resultando na obtenção de 
+produtos com valor aumentado e despertando novas expectativas para a agricultura 
+e para a indústria (BINOTI e RAMOS, 2015). 
+A contaminação dos alimentos ocorre durante os diversos processos aos quais 
+os alimentos são expostos antes de chegarem ao consumidor. Portanto, diferentes 
+métodos de descontaminação que não causam danos aos alimentos têm sido 
+relatados nos últimos anos, são eles: plasma frio (CP), aquecimento dielétrico 
+(radiofrequência e aquecimento por micro-ondas), processamento de alta pressão 
+(HPP), infravermelho (IR), aquecimento ôhmico, processamento de ozônio, campo 
+elétrico pulsado (PEF), luz pulsada (PL), e ultrassom dentre outros (SRIVASTAV et 
+al., 2020). 
+Portanto, essas tecnologias emergentes têm o desafio de manter a qualidade 
+dos produtos, já que o processamento térmico tradicional causa impactos negativos 
+(DJEKIC et al., 2018). 
+O desenvolvimento de tecnologias verdes no setor de fabricação de alimentos 
+é particularmente relevante com o objetivo de converter agro-matérias-primas em 
+produtos alimentícios com a qualidade desejada e propriedades funcionais, 
+aumentando a eficiência de fabricação. Além disso, as empresas terão que se manter 
+competitivas em um momento em que as demandas dos consumidores e do governo 
+por desenvolvimento sustentável estão aumentando constantemente (CHEMAT et al., 
+2017). 
+Segundo os mesmos autores, os processos não térmicos reconhecidos como 
+tecnologias de valor agregado ganharam importância nas últimas décadas como 
+alternativas sustentáveis ao processamento convencional de alimentos por meio da 
+redução direta do consumo de energia e água durante o processamento, mas também 
+pela redução do impacto da energia durante o armazenamento.  
+As tecnologias emergentes são consideradas uma maneira eficaz de otimizar 
+o uso de recursos naturais, economizando energia e reduzindo custos na indústria de 
+alimentos, sendo consideradas uma alternativa viável em relação às técnicas 
+convencionais de processamento e conservação. Dentre estas tecnologias encontra-
+se o ultrassom (US), o qual consiste na utilização de energia acústica para promover 
+23 
+ 
+modificações na estrutura dos alimentos e, por isso, a indústria vem mostrando cada 
+vez interesse na aplicação desta tecnologia (BARRETO et al., 2018). 
+Novas técnicas não térmicas estão provando serem mais econômicas em 
+termos de energia, ecológicas e eficientes para a qualidade do produto e segurança 
+microbiana (MANZOOR et al., 2019). Mas novas tecnologias (campo elétrico pulsante 
+e ultrassom) requerem energia operacional muito baixa e aceleram os processos 
+(SIDDEEG et al., 2019), melhoram a qualidade dos produtos e eliminam ou reduzem 
+impactos desfavoráveis no meio ambiente (ZHANG et al., 2019). 
+ A qualidade dos sucos processados depende das propriedades físico-químicas 
+(acidez, pH, sólidos solúveis, açúcares, cor, viscosidade e vitamina C) e das 
+características microbiológicas e sensoriais (FREITAS, 2019). 
+Segundo o mesmo autor, para agradar o consumidor e serem considerados de 
+boa qualidade, estes produtos devem apresentar atributos sensoriais e nutricionais 
+semelhantes ao do produto in natura. A instrução normativa Nº 37, de 1º de outubro 
+de 2018, do ministério da agricultura, pecuária e abastecimento (MAPA), fixa os 
+parâmetros analíticos e quesitos complementares aos padrões de identidade e 
+qualidade de sucos de frutas.  
+Atualmente, ultrassom e o campo elétrico pulsado estão sendo usados para a 
+preservação de frutas e sucos de vegetais (KHANDPUR e GOGATE, 2016). As ondas 
+sonoras podem inativar microrganismos e enzimas por meio da quebra ou 
+desnaturação de estruturas proteicas (CINTAS, 2016). 
+Segundo os mesmos autores, certos microrganismos podem ser utilizados como 
+indicadores de contaminação e de falha nas práticas de higiene e sanitização durante 
+os processos de produção, manipulação, transporte e armazenamento dos alimentos.  
+A tecnologia de ultrassom é sustentável em si é uma tecnologia rápida, de baixo 
+custo, não térmica, não destrutiva, com muitas vantagens: processos rápidos, 
+eficiência aprimorada do processo, eliminação de etapas do processo, produto de 
+melhor qualidade e retenção do perfil volátil, qualidade sensorial e estética 
+características dos produtos alimentícios, levando a uma melhor vida de prateleira 
+(ALENYOREGE et al., 2019). 
+ 
+ 
+ 
+ 
+24 
+ 
+2.1.3    Plasma frio 
+ 
+ 
+O interesse em tecnologias que forneçam produtos ricos em compostos 
+bioativos aumenta muito porque podem melhorar a saúde e o bem-estar dos 
+consumidores. O processamento não térmico de alimentos com o auxílio da tecnologia 
+de plasma parece ser uma das soluções mais promissoras, recentemente estudadas, 
+que, por um lado, podem aumentar a vida útil dos produtos sem empobrecer sua 
+composição química (MUNEKATA et al., 2020). 
+O termo plasma foi introduzido por um físico americano, Irving Langmuir, pela 
+primeira vez em 1928 para se referir a um gás ionizado quase neutro. É considerado 
+como o quarto estado físico da matéria, juntamente com os outros: sólidos, líquidos e 
+gases. Suas partículas incluem elétrons, íons, radicais livres, átomos e moléculas em 
+seus estados fundamentais (SHEIKHI et al., 2020). 
+Segundo os mesmos autores, esse processo de ionização faz com que esses 
+gases se tornem condutores de eletricidade, pois é fornecida energia sob tipo, vazão, 
+frequência e pressão adequados ao processo. Este gás, eletricamente condutor e 
+ionizado, chamado plasma, não possui forma nem volume definido, e tem densidade 
+menor que os gases correspondentes.  
+O plasma frio (PF) é classificado como plasma não térmico (plasmas fora do 
+equilíbrio) e plasma térmico (plasmas próximos do equilíbrio). Os plasmas térmicos 
+são caracterizados por elétrons de alta temperatura e partículas densas, enquanto os 
+plasmas frios são compostos de elétrons de temperatura relativamente alta e 
+partículas de baixa temperatura (FARBER et al., 2019). 
+Em plasmas não térmicos, diferentes temperaturas podem ser alcançadas para 
+diferentes espécies de plasma, principalmente em torno da temperatura ambiente. O 
+plasma não térmico usa energia de forma mais eficiente para obter melhor seletividade 
+química. Em plasmas não térmicos, a temperatura do elétron governa a ionização e 
+os processos químicos (ANANTHANARASIMHAN et al., 2019).  
+O plasma está em um estado meta estável com uma carga elétrica líquida 
+aproximadamente zero (MISRA et al., 2018). Apenas plasma não térmico (frio) é 
+aplicado a produtos alimentícios (FERNANDES e RODRIGUES, 2021).  
+O uso crescente, ainda em fase de testes laboratoriais, de plasma frio à pressão 
+atmosférica (PFPA) em sucos de frutas e vegetais é considerado na literatura 
+relevante como o processo não térmico de intervenção emergente que pode preservar 
+25 
+ 
+as propriedades funcionais dessas bebidas diárias, mantendo sua qualidade e 
+segurança (PUTNIK et al., 2019).  
+O plasma origina-se a partir de elétrons, que através da ionização produzem a 
+excitação atômica ou molecular, dissociação e produção de estados moleculares 
+radicais e metaestáveis formando, com isso, um meio gasoso ativo que pode ser 
+utilizado de forma segura, sem provocar danos aos meios que o circunda 
+(SUROWSKY et al., 2015; MISRA et al., 2015). 
+A tecnologia de PF ganhou muito interesse da comunidade científica de ciência 
+e tecnologia de alimentos nos últimos 10 anos. Desde as primeiras pesquisas sobre a 
+aplicação do plasma no processamento de alimentos, essa tecnologia emergente tem 
+mostrado grande potencial na indústria alimentícia (FERNANDES e RODRIGUES, 
+2021).  
+Os primeiros estudos com PF focaram na sanitização de diversos produtos 
+alimentícios (STAREK et al., 2019). Esses estudos comprovaram que o PF era uma 
+tecnologia adequada para sanitização e, aparentemente, nenhuma mudança 
+significativa foi observada nos aspectos físicos ou sensoriais dos produtos 
+alimentícios.   
+Até meados da década de 2010, muitos cientistas afirmavam que o PF não 
+induzia qualquer alteração na qualidade nutricional dos alimentos. No final da década 
+de 2010, o conhecimento do PF evoluiu. Muitos estudos mostraram que o PF mudou 
+a qualidade nutricional dos produtos alimentícios, mas essas mudanças foram 
+principalmente para melhorar a qualidade dos alimentos (CAMPELO et al., 2020). 
+Diversas frutas e sucos de frutas têm vida útil curta, e a preservação e 
+sanitização desses produtos foram escopos de diversos estudos desde o início. A 
+maioria dos estudos se concentrou na preservação de frutas inteiras, como tomates, 
+mirtilos, morangos e outros (HOU et al., 2019; STAREK et al., 2019). Muitos artigos e 
+revisões publicaram uma quantidade significativa de informações e conhecimentos 
+sobre inativação microbiana e preservação da vida útil (GAVAHIAN e KHANEGHAH, 
+2019). 
+Há três mecanismos básicos desencadeados pelo plasma que contribuem para 
+a inativação microbiana: (a) interação química entre a superfície celular e os radicais, 
+espécies reativas ou partículas carregadas; (b) dano à membrana celular e 
+componentes internos, por radiação UV; e (c) destruição de material genético através 
+do UV formado durante a recombinação de espécies (COUTINHO et al., 2018). 
+26 
+ 
+O plasma não térmico pode ser formado por fontes de energia elétrica, de 
+micro-ondas e de radiofrequência que geram uma alta diferença de potencial elétrico 
+entre dois ou mais eletrodos. Dentre todas as tecnologias utilizadas para formar PF, o 
+plasma de barreira dielétrica (DBD), o plasma a jato e o plasma de descarga luminosa 
+são as tecnologias mais estudadas para aplicação com frutas e sucos de frutas 
+(BEVILACQUA et al., 2018). 
+O principal efeito do PF nas células bacterianas, fúngicas ou de esporos está 
+relacionado à interação das espécies reativas do plasma com os componentes 
+celulares, como membranas celulares ou revestimento de esporos (BERMUDEZ-
+AGUIRRE, 2020).  
+Entre as vantagens do PFPA estão a geração de espécies reativas à pressão 
+atmosférica sem equipamentos caros de vácuo, geração seletiva de espécies reativas 
+a depender da escolha do gás de trabalho, geração eficiente de espécies reativas em 
+ambientes líquidos e alta eficiência de inativação por parte dos radicais (LEE et al., 
+2015). 
+Liao e colaboradores (2017) mostraram que, conforme estudos anteriores, os 
+mecanismos de inativação microbiana por plasma não-térmico têm efeitos biológicos 
+e físicos (Figura 2).  
+Embora o mecanismo não tenha sido totalmente compreendido até o momento, 
+sabe-se que seus principais efeitos são devidos a: fotodesorção, erosão, ataque 
+químico, perfuração da membrana, disruptura eletrostática, oxidação de 
+macromoléculas, difusão de espécies reativas e efeitos danosos ao DNA (SCHLÜTER 
+e FRÖHLING, 2014). 
+ 
+27 
+ 
+Figura 1 - Principais compostos gerados pelo plasma e seus efeitos para a 
+inativação de microrganismos 
+Fonte: Adaptado de Schlüter; Fröhling (2014, p. 22). 
+ 
+A radiação UV, com fótons emitidos pelo plasma, é capaz de destruir o material 
+genético dos microrganismos, quebrando as bases das fitas do DNA e impedindo 
+assim a capacidade das células se replicarem. Porém, o efeito mais comprovado da 
+emissão UV foi através de plasma a baixa pressão, enquanto o UV do PFPA tem 
+efeitos mais reduzidos (HERTWIG et al., 2018). 
+A inativação de enzimas em produtos alimentícios pela aplicação do PF tem 
+sido estudada, já que a redução da atividade enzimática pode evitar o escurecimento 
+e problemas no processamento e armazenamento desses produtos. As principais 
+enzimas endógenas responsáveis pelo escurecimento são: PPO (polifenoloxidase) e 
+POD (peroxidase) (THIRUMDAS et al., 2015). 
+Com a aplicação do plasma com presença de campos elétricos e geração de 
+espécies reativas, ocorre uma interação com os aminoácidos, que impede as enzimas 
+de atuarem em seus substratos e/ou nas coenzimas de ligação, causando uma 
+catálise devido às alterações de conformação em torno do centro ativo (THIRUMDAS 
+e ANNAPURE, 2020). 
+28 
+ 
+Estudos com PF em suco de maçã turvo mostraram inativação significativa da 
+POP (ILLERA et al., 2019). Ao contrário, a aplicação dessa tecnologia em sucos de 
+frutas também afeta o teor de compostos bioativos, com aumento ou redução 
+dependendo das condições empregadas no processo (PAIXÃO et al., 2018). 
+O tempo de processamento também foi significativo para Khani et al. (2017), 
+que observaram que o plasma causou inativação da POD do tomate em mais de 90%; 
+já para Illera et al. (2019), em análise de sucos de maçã, houve uma redução 
+significativa da atividade da enzima PPO com o aumento do tempo de processo. 
+A qualidade nutricional de várias polpas e sucos melhorou com o 
+processamento a PF. Alguns estudos mostraram que a capacidade antioxidante, o 
+teor de fenólicos totais e o teor de vitamina C aumentaram após o processamento com 
+PF e que essa tecnologia pode ser utilizada para produzir alimentos mais nutritivos e 
+com melhor bioacessibilidade de nutrientes (ALMEIDA et al., 2017).  
+O uso recente de técnicas avançadas de identificação de compostos, como a 
+Ressonância magnética nuclear (RMN) mostra que o PFPP não apresentou efeito 
+significativo sobre a composição geral de sucos de laranja e acerola, embora 
+pequenas mudanças possam ser observadas (ALVES FILHO et al., 2018).  
+A aplicação de PF em suco de maçã mostrou elevada inativação da enzima 
+polifenoloxidase (>80%) após 5 minutos de processamento a uma voltagem de 10.5 
+kV. Os parâmetros de cor foram alterados positivamente, assim como a atividade 
+antioxidante das amostras tratadas aumentou após o processamento, devido ao 
+aumento do conteúdo de compostos fenólicos. A estabilidade dos parâmetros 
+avaliados se manteve durante um período de 21 dias (ILLERA et al., 2019).   
+Os autores obtiveram resultados satisfatórios com diminuição significativas de 
+aflatoxinas, com tratamentos de rápida duração e também conseguiu inativar fungos 
+da superfície do amendoim. O tratamento não afetou a qualidade sensorial do 
+alimento (IQDIAM et al.,2019). 
+Diante desse cenário, tratamentos não-térmicos têm sido explorados como 
+alternativas para garantir a qualidade de alimentos sem modificar as suas 
+propriedades físico-químicas, nutricionais e sensoriais desejadas (BERISTAÍN-
+BAUZA et al., 2018).  
+Segundo os mesmos autores, o PFPA pode ser uma opção no processamento 
+de alimentos, já que tem a garantia de manter a temperatura ambiente que a maioria 
+29 
+ 
+dos produtos precisa, para evitar que algumas propriedades físico-químicas 
+importantes sejam degradadas. 
+O tratamento por PF ainda é um processo desconhecido em relação aos efeitos 
+adversos nos alimentos, como por exemplo a oxidação de lipídios (LAROQUE et al., 
+2022). Alguns dos principais desafios que limitam sua aplicação industrial incluem as 
+alterações das características nutricionais e sensoriais decorrentes da produção de 
+radicais livres, que podem resultar em auto oxidação (NIVEDITHA et al., 2021). 
+ 
+2.1.4 Ultrassom  
+ 
+A indústria alimentícia tem impulsionado a produção de vegetais minimamente 
+processados e produtos vegetais prontos para o consumo (CORATO, 2020). Ao 
+considerar que frutas e hortaliças são alimentos perecíveis e que podem ser 
+submetidos a diferentes fontes de contaminação, há preocupação na busca pela 
+garantia de qualidade destes alimentos (ALVARENGA et al., 2021). 
+A obtenção de um produto seguro e de qualidade envolve as boas práticas 
+agrícolas, de manipulação e de processamento (SANT’ ANNA et al., 2020). Para isto, 
+a aplicação de métodos tradicionais, como a utilização do cloro para a sanitização e o 
+uso de tecnologias promissoras, é necessária para obter um produto seguro e de 
+qualidade (CORATO, 2020). 
+O ultrassom (US) considerado como uma tecnologia de processamento de 
+alimentos não térmica ganhou atenção significativa devido à sua capacidade de reter 
+o frescor original, sabor e compostos nutricionais dos produtos, bem como menor 
+consumo de energia, em comparação com procedimentos convencionais como 
+pasteurização (WANG et al., 2020). 
+O US pode ser empregado na indústria de processamentos de frutas e hortaliças, 
+seja para contribuir na melhoria da qualidade e na segurança dos produtos, seja para 
+potencializar processos já existentes (OJHA et al., 2018).  
+Recentemente, estudos avaliaram a aplicação do ultrassom em frutas e 
+hortaliças, e em suco de frutas, com resultados positivos nos aspectos sensorial, 
+microbiológico, físico-químico e nutricional (SÃO JOSÉ et al., 2014; WANG et al., 
+2020, ALVARENGA et al., 2020), indicando este método como tecnologia inovadora, 
+viável, de baixo custo e com resultados desejáveis para a preservação da qualidade 
+(DOLAS et al., 2019). 
+30 
+ 
+O US é a simples descrição de uma onda que transporta energia mecânica 
+através da vibração local de partículas em frequências de 20 kHz ou mais. Essa 
+frequência é situada acima do limite audível para o homem, acima de 16 kHz. De 
+modo geral se propaga, em sólidos, líquidos e tecidos (ZHANG et al., 2021).  
+As ondas ultrassônicas (também chamadas de ondas supersônicas) são ondas 
+sonoras na faixa de frequência de 20 kHz a 100 kHz (SINGLA e SIT, 2021). 
+Geralmente, o US de baixa intensidade é considerado uma ferramenta não destrutiva 
+para monitorar as mudanças de compostos físico-químicos durante o processamento 
+de alimentos (WANG et al., 2020). 
+Quando as ondas de US se propagam em solução, uma série de ciclos de 
+compressão e rarefação são gerados. Durante o ciclo de pressão negativa, quando a 
+força de cisalhamento excede as forças intermoleculares de Van der Waals do líquido, 
+bolhas são geradas na solução (QASIM et al., 2020).  
+Segundo os mesmos autores, essas bolhas crescem e finalmente entram em 
+colapso, o que é denominado cavitação. O colapso dessas bolhas cria regiões de alta 
+pressão local e temperaturas na solução. Bolhas de cavitação também fornecem área 
+de superfície interfacial adicional para facilitar a nucleação heterogênea primária. 
+Na Figura 3 é apresentada de forma resumida a combinação entre os fenômenos 
+que ocorrem durante a cavitação. Estes processos proporcionam a liberação de 
+energia mecânica e química (SÃO JOSÉ et al., 2014). Esses fenômenos afetam os 
+microrganismos e provocam morte a partir da ruptura da membrana celular, calor 
+localizado e liberação de radicais livres (LEPAUS e JOSÉ, 2020). 
+ 
+31 
+ 
+Figura 2 - Resumo entre fenômenos físicos e químicos durante a aplicação do 
+ultrassom, que resultam na inativação dos microrganismos 
+ 
+Fonte: Lepaus e José (2020, p. 79). 
+ 
+O aumento na disponibilidade dos compostos bioativos observado em alguns 
+estudos é atribuído principalmente à liberação do conteúdo intracelular após ruptura 
+pelo processo de cavitação (CAMPOLI et al., 2018).  
+A tecnologia do US também é estudada com intuito de minimizar os prejuízos 
+causados pela pasteurização nas propriedades físico-químicas, nutricionais e nos 
+compostos bioativos de sucos (OJHA et al., 2018).  
+O uso combinado de US e calor (termossonicação) tem sido empregado como 
+substituto ao tratamento térmico em suco de frutas, pois oferece menor dano à bebida, 
+sendo esta considerada de boa qualidade nutricional e sensorial (ANAYA-ESPARZA 
+et al., 2017a).  
+MARTÍNEZ-FLORES et al. (2015) e JABBAR et al. (2014) mostraram efeito 
+positivo no uso da termossonicação em sucos quando comparado ao tratamento 
+térmico, com o aumento do teor de carotenóides, vitamina C e polifenois. Além de 
+oferecer vantagens em termo de produtividade e rendimento, é considerada uma 
+tecnologia “amiga do ambiente” por oferecer menor gasto de energia e água, 
+contribuindo para o desenvolvimento sustentável (CAO et al., 2018). 
+O processo de termossonicação tem sido eficaz devido a um “efeito aditivo” 
+causado pela combinação de calor e cavitação. Este efeito, ou choque térmico, 
+32 
+ 
+aumenta a região de letalidade bacteriana e inativação enzimática. O calor e ondas 
+sonoras agem simultaneamente aumentando a sensibilidade nas paredes das células 
+bacterianas, podendo ocorrer danos na estrutura celular (ANAYA-ESPARZA et al., 
+2017a).  
+Contudo, quando essa temperatura é muito elevada, geralmente maior que 55 
+ºC, este “efeito aditivo” pode não acontecer, isso porque altas temperaturas podem 
+prejudicar a formação de grandes bolhas durante a cavitação (ANAYA-ESPARZA et 
+al., 2017b). 
+O efeito da pasteurização térmica e do US em produtos vegetais foram 
+comparados por CAO e colaboradores (2018) em suco de bayberry e por Etzbach e 
+colaboradores (2019) em pasta de goldenberry (Physalis peruviana L.). 
+Em ambos os estudos a sonicação promoveu redução significativa da atividade 
+de enzimática, atingindo níveis acima de 90%. Embora a inativação enzimática 
+atingida pelo US não tenha sido 100% como na pasteurização térmica, em termos de 
+qualidade as amostras tratadas por US apresentaram menores perdas e maiores 
+retenções de compostos bioativos do que no processo térmico convencional. 
+Comportamento semelhante foi demonstrado por Saeeduddin e colaboradores em 
+2015 em suco de pêra. 
+Santos, Rodrigues e Fernandes (2018) observaram melhoramento da 
+estabilidade e aumento do conteúdo de vitaminas em suco de acerola processado por 
+US. A homogeneidade do suco, medida pelo valor de nuvem, foi melhorada em todas 
+as condições de processamento aplicadas e não foi observado separação de fase, 
+problema comum em sucos de fruta não processados.  
+Os resultados após o tratamento com o US dependem, além do tipo de 
+microrganismos, de diversos fatores. As condições de operação (tempo, temperatura 
+e amplitude das ondas ultrassônicas) poderão interferir nos resultados. Fatores como 
+o volume e composição do alimento tratado também podem interferir na eficiência da 
+operação (JAMBRAK et al., 2018). 
+ 
+2.2 O cajueiro (Anacardium occidentale L.)  
+ 
+ 
+O cajueiro, cujo nome científico é Anacardium occidentale L., pertence à família 
+Anacardiaceae é uma espécie arbórea com troncos tortuosos, de origem botânica do 
+norte e nordeste do Brasil (FAO, 2020). O caju possui o sabor suculento e ácido da 
+33 
+ 
+polpa de pseudofruto, é utilizada como matéria-prima na fabricação de sucos, doces, 
+licores, chás e bebidas na região em que ocorre (OLIVEIRA, 2019). 
+Dentre as espécies da família Anacardiaceae, apenas a Anacardium 
+occidentale é cultivada comercialmente e compreende os tipos precoce e comum. O 
+cajueiro-comum possui maior potencial produtivo individual, porém os pomares de 
+cajueiro precoce têm uma maior produtividade, pois permite o plantio de um maior 
+número de plantas por hectare (ICB, 2020; MARTINS et al., 2019) 
+Além disso, espécies desta família se caracterizam por apresentar hábito de 
+vida arbóreo, arbustivo, raramente subarbustivo, grandes nervuras nas folhas, frutos 
+drupas, sâmaras ou bagas, inflorescência terminal ou axilar, e flores actinomórficas, 
+unissexuais ou bissexuais (SILVA-LUZ et al., 2019).  
+Os frutos e pseudofrutos de muitas espécies constituem um importante recurso 
+alimentar, como por exemplo o cajueiro (Anacardium occidentale L.), mangueira 
+(Mangifera indica L.), pistache (Pistacia vera L.) e umbuzeiro (Spondias tuberosa 
+Arruda) (FYFE et al., 2020). 
+Uma revisão de literatura mostrou que o cajueiro (A.  occidentale) tem um 
+potencial medicinal significativo pois contém metabólitos secundários responsáveis 
+por efeitos terapêuticos. Na medicina popular suas indicações simbolizam riqueza de 
+viabilidade para ações farmacológicas e tratamentos alternativos, que envolvem que 
+envolvem processos inflamatórios, infecciosos e cicatrizantes (NOVAES e NOVAES, 
+2021).  
+Também é possível constatar que há estudos na literatura que corroboram com 
+a ideia de que existe relação entre o uso popular do cajueiro por diferentes populações 
+e seu potencial biológico. Além de tudo, torna-se evidente que a mesma se apresenta 
+como um vegetal ampla aplicabilidade para a farmacologia (ARAÚJO et al., 2020). 
+As folhas do cajueiro são bastante utilizadas pela medicina em todo o mundo, 
+seus extratos estudados já comprovaram diversas eficácias no tratamento de doenças 
+e inibição da proliferação de microrganismos, como fungos e bactérias (SILVA e 
+LOPES, 2020). 
+Segundo os mesmos autores, no Brasil a parte aérea do cajueiro (folhas) não 
+tem merecido seu real destaque, visto que a maioria dos produtores agrícolas 
+consideram as podas das árvores como sendo um rejeito, uma vez que a indústria 
+não tem dado a relevante importância das suas propriedades e aplicações. 
+34 
+ 
+É importante conhecer os rendimentos extrativos e condições operacionais de 
+extração que maximizem a recuperação dos extratos presentes nas folhas do cajueiro, 
+bem como sua composição química, de modo a fornecer dados para o 
+desenvolvimento de novos produtos, como por exemplo, fitoterápicos (LEMOS e 
+GALVÃO, 2019). 
+Inicialmente, Durante a 2ª Guerra Mundial, surgiu um grande interesse 
+industrial pelo cajueiro devido ao líquido da casca da castanha-de-caju com casca 
+(LCC). Com o fim da guerra, em 1945, o interesse da economia passou a ser a ACC, 
+iniciando, assim, um crescimento significativo da agroindústria de caju (SECA, 2020).  
+O cajueiro é uma árvore sempre-verde que cresce a uma altura de 8 a 20 m, 
+dependendo das características do solo e do clima. Normalmente começa a florir no 
+terceiro ano, atingindo a produção total no oitavo ano (FAO, 2020).  
+O pedúnculo, seu pseudofruto, é chamado de caju, e apresenta coloração 
+variada em tons de amarelo a vermelho. Junto a ele, tem-se a amêndoa da castanha 
+de caju que, em seu interior, armazena a castanha. O caju e a castanha são 
+apreciados na culinária nordestina, tanto in natura quanto em outros produtos 
+alimentícios (NOVAES e NOVAES, 2021). 
+Durante o seu desenvolvimento, a planta possui inflorescência do tipo panícula 
+(com surgimento no ápice dos ramos) caracterizada por formato piramidal, com cacho 
+terminal e suas ramificações vão decrescendo da base para o ápice que contêm flores 
+masculinas e hermafroditas em proporções variadas, produzidas na periferia da copa, 
+onde se encontram dois tipos de flores: hermafroditas ou perfeitas e masculinas ou 
+estaminadas (ADIGA et al., 2019). 
+O consumo do pedúnculo de caju é bastante apreciado devido ao seu aroma e 
+sabor peculiares, sendo vastamente aceito pelos consumidores. Além disso, o caju 
+tem se destacado devido aos avanços nas descobertas sobre as propriedades 
+farmacológicas, como atividade antimicrobiana e antimutagênica, ação anti-
+inflamatória e prevenção da obesidade e diabetes (CARVALHO et al., 2020). 
+ 
+ 
+ 
+ 
+ 
+35 
+ 
+Figura 3 - Cajueiros (A. occidentale) no interior de Pernambuco e o pseudofruto 
+(caju) 
+ 
+ 
+Fonte: Novaes e Novaes (2021, p. 2). 
+ 
+O caju corresponde a cerca de 90% do peso total do fruto e pode ser consumido 
+diretamente ou processado como sucos, cajuína e doces. A produção mundial de caju 
+em 2019 foi de 1,32 milhão de toneladas e o Brasil participou com 81,4% desse 
+volume, seguido por Mali (12,7%) e Madagascar (5,9%) (FAOSTAT, 2022). 
+A castanha de caju é uma das quatro nozes mais conhecidas no mundo, 
+conhecidas por sua elevada importância nutricional e sabor inimitável. Como parte de 
+uma dieta saudável e equilibrada, a castanha de caju pode modular o risco de doenças 
+cardiovasculares, incluindo acidente vascular cerebral e síndrome metabólica (LIU et 
+al., 2018a).  
+Um estudo anterior avaliou os efeitos da dieta juntamente com subprodutos 
+industriais, como a fruta do caju na saúde intestinal e no metabolismo lipídico de ratos 
+com dislipidemia induzida pela dieta (BATISTA et al., 2018). 
+O cultivo do caju e a comercialização de suas amêndoas são realizados em 32 
+países, com destaque para Vietnã, Índia, Brasil e Indonésia (OLUYOLE et al., 2017). 
+No Brasil, estas atividades vêm sendo realizadas em regiões de clima quente e seco 
+(MELO et al., 2018), sendo o Ceará, Piauí e Rio Grande do Norte os estados 
+responsáveis por 90,58% da produção nacional de caju no ano de 2020 (IBGE, 2022). 
+De acordo com a Companhia Nacional de Abastecimento (CONAB, 2019), no 
+último relatório divulgado no mês de agosto de 2019, pelo Instituto Brasileiro de 
+Geografia e Estatística (IBGE), estima-se que a produção seja de 122,6 mil toneladas 
+36 
+ 
+de castanha de caju in natura, uma redução de 13,2 % na comparação com o ano 
+anterior, quando a produção foi de 141,3 mil toneladas.  
+No Brasil, em 2019, houve um aumento de 39,9% de exportações da castanha 
+de caju principalmente para os EUA e Canadá, enquanto o pedúnculo fica 
+concentrado no comércio interno e local brasileiro, (ICB, 2020).  
+Nesses países, o produto é processado e uma parte deste produto é destinada 
+para consumo interno e outra parte para reexportação, ou seja, a castanha é vendida 
+para outros países, inclusive o Brasil, tornando o Vietnã e a Índia os maiores 
+exportadores mundiais de amêndoa da castanha do caju (BRAINER e VIDAL, 2020). 
+A riqueza em proteínas (21%), carboidratos (25%), ácidos graxos 
+monoinsaturados (48%), minerais, vitamina B e tocoferóis comprova a importância 
+econômica e social das amêndoas de caju em escala global (BHOOMIKA e SUDHA, 
+2018; OLGA et al., 2018; OLUBODE et al., 2020). Além disso, o caju também possui 
+alto teor de triterpenóides e fenólicos, o que desempenha um papel importante na 
+inibição de bactérias causadoras de gastrite em humanos (SALEHI et al., 2020). 
+ 
+2.3 Artemia salina Leach como modelo experimental  
+ 
+O estudo toxicológico é de grande importância para assegurar o uso de 
+determinado material biológico, além de permitir informações sobre suas 
+potencialidades, uma vez que a partir deste tipo de estudo pode-se obter informações 
+quanto à atividade bioativa de determinado material (RAHMAN e PRATAMA, 2019).  
+Segundo os mesmos autores, a RDC Nº 243, de 26 de julho de 2018, 
+substância bioativa é definida como “nutriente ou não nutriente consumido 
+normalmente como componente de um alimento, que possui ação metabólica ou 
+fisiológica específica no organismo humano”. A toxicidade é definida como a 
+capacidade de determinado composto tender a causar uma desordem biológica e/ou 
+até a morte de um organismo teste.  
+A Artemia salina (A. salina) é um microcrustáceo de água salgada utilizado 
+como alimento vivo para peixes, podendo ser encontrada facilmente em lojas 
+especializadas. Este ensaio é rotineiramente utilizado para se detectar potencial 
+biológico a partir da análise da toxicidade de extratos e compostos, por se tratar de 
+um bioensaio simples e de baixo custo (ISLAM et al., 2019). 
+37 
+ 
+Através desse ensaio é obtida a concentração letal média (CL50), que é à 
+concentração de um produto químico no ar ou na água que leva à morte de 50% de 
+uma população em teste num tempo pré-estabelecido, sendo consideradas tóxicas as 
+substâncias que apresentarem valores de CL50 abaixo de 1000 μg/mL (MARTINS et 
+al., 2021). 
+No ambiente marinho, o zooplâncton forma um importante depositário de 
+organismos que ajudam a canalizar o fluxo de energia através da cadeia alimentar 
+(OZKAN et al., 2016). Entre vários zooplânctons, A. salina foi escolhido como o 
+organismo de teste devido ao seu comportamento de alimentação por filtro não 
+seletivo e alta capacidade reprodutiva (GUTNER-HOCH et al., 2019). 
+Artemia é um gênero que pode sobreviver em altas taxas de salinidade (4,5-
+340%) pertencente à família Artemiidae (GBIF, 2019). Ele pode sobreviver e melhorar, 
+especialmente em um ambiente hipertônico, e pode ser encontrado em todo o mundo. 
+É um dos poucos organismos que podem sobreviver nos lagos de água salgada do 
+mundo com microalgas e bactérias (JOHARI et al., 2019; SELLAMI et al., 2020). 
+Este organismo apresenta um ciclo biológico complexo que começa com a 
+incubação de cistos dormentes. A hidratação deve causar incubação dentro de 48 
+horas, iniciando a primeira fase larval da A. salina. Os cistos absorvem a água de 
+maneira rápida e fácil. Se as condições ambientais forem favoráveis, como a 
+temperatura adequada, salinidade, luz solar e oxigênio os embriões internos começam 
+o desenvolvimento (LACERDA, 2019). 
+Figura 4 - Representação da morfologia de Artemia salina  
+ 
+38 
+ 
+Fonte: Adaptado de Amat (1985, p. 15). 
+ 
+O corpo é composto por três segmentos: cabeça, tórax e abdome, como mostra 
+a figura abaixo. A espécie apresenta dimorfismo sexual, as principais diferenças 
+morfológicas entre machos e fêmeas são a largura do terceiro segmento abdominal, 
+comprimento total e o comprimento do abdome. O macho adulto atinge de 8 a 10 mm 
+de comprimento, e a fêmea de 10 a 12 mm (DUMITRASCU, 2011). 
+Segundo o mesmo autor, as condições propícias de vida são calor, presença 
+de luz solar e uma ampla faixa de concentração de sal. Apesar disso, são seres que 
+sobrevivem em águas com baixas dosagens de oxigênio, podendo sobreviver a 
+períodos de seca em estado de cisto, voltando a se reproduzir em situações propicias. 
+Quando as condições ambientais são favoráveis com alto teor de oxigénio 
+dissolvido, abundância de alimento e salinidade dentro dos níveis aceitáveis, ocorre a 
+ovoviviparidade: os náuplios desenvolvem-se dentro do saco ovígero da fêmea até ao 
+instar I e, posteriormente, são libertados pelas fêmeas no ambiente. No caso da 
+oviparidade, esta ocorre quando as condições ambientais são desfavoráveis, ou seja, 
+quando há escassez de alimento, baixo teor em oxigénio dissolvido e alta salinidade 
+(ALVES, 2021).  
+O desenvolvimento e metabolismo do embrião são interrompidos (diapausa e 
+criptobiose) durante o estado de gástrula e uma camada espessa segregada pelas 
+glândulas localizadas no útero (glândulas de casca) desenvolve-se em volta do 
+embrião, formando quistos que são libertados pelas fêmeas para o ambiente (CRIEl e 
+MACRAE, 2002). 
+Dessa maneira, o método de ensaio de toxicidade do camarão marinho, que 
+usa larvas de A. salina como animais de teste, é um teste de bioensaio biológico 
+simples, rápido e de baixo custo que requer uma quantidade mínima de amostra 
+(HAMRUN et al., 2020).  
+Além disso, A. salina pode ser utilizada como náuplios (dentro das 24 h de vida) 
+ou no estado adulto (3 semanas de vida, adulto mede 2 cm de comprimento) para o 
+teste (KOKKALI et al., 2011). O ensaio de toxicidade é baseado na letalidade de 
+Artemia na presença de quaisquer compostos biológicos e/ou químicos (MANSFIELD 
+et al., 2015). 
+ 
+ 
+39 
+ 
+Figura 5 - Imagem de uma Artemia salina no estado adulto 
+ 
+ 
+Fonte: Constantin e Mioara (2011, p. 119). 
+ 
+A literatura descreve vários trabalhos envolvendo a avaliação da toxicidade de 
+extratos e substâncias frente as larvas de Artemia spp., uma vez que este método não 
+faz uso de animais maiores, não precisa de uma infraestrutura avançada para manter 
+os indivíduos. Além disso, os animais utilizados em outros métodos necessitam de 
+acompanhamento e controle do seu metabolismo, o que não é exigido pela Artemia, 
+acarretando assim uma notável redução de custos na sua utilização em testes de 
+toxicidade (VICTAL et al., 2015). 
+Desta forma, diversos autores relatam o uso da A. salina em diferente atividade 
+biológica, como Paz e colaboradores (2022), investigaram a toxicidade do extrato 
+vegetal, óleo essencial e hidrolato. Eles perceberam que a toxicidade do Z. officinale 
+Roscoe foi maior que o A. sativum L. nos dois ensaios, e o extrato vegetal de ambas 
+as plantas possui maior toxicidade que o óleo essencial e o hidrolato. E concluíram 
+40 
+ 
+que resultado favorece uma conduta terapêutica complementar para o combate de 
+infecções microbianas. 
+Segundo Dionisio e colaboradores (2018) em um trabalho publicado na 
+EMBRAPA, usando a metodologia de toxicidade por meio do bioensaio com A. salina, 
+onde eles investigaram o extrato concentrado de carotenoides obtido da fibra do 
+pedúnculo de caju - ECC. Como resultado, com relação ao ECC, a dose letal média 
+(DL50) foi de 1,75 mg/mL. Segundo Meyer e colaboradores (1982), valores superiores 
+a 1,0 mg/mL indicam que o material testado é atóxico, o que é um importante resultado 
+quando se vislumbra uma aplicação alimentar do material. 
+Miguel e colaboradores (2021), avaliando a toxicidade e o efeito protetor da 
+água de coco processada por PF e US, como resultados desse trabalho não foi tóxica 
+−1
+para os náuplios de A. salina a 10, 100 ou 1000 μg mL, todas as amostras de água 
+de coco, incluídas as não tratadas, apresentaram efeito protetor contra o estresse 
+oxidativo causado pelo HO atingindo níveis de 87,5% de proteção em relação ao 
+22
+controle (24 h de experimento). 
+Silva e colaboradores (2013), avaliando a toxicidade do extrato hidroalcóolico 
+da folha do cajueiro submetido a distintas doses de irradiação, demonstraram que 
+todos os materiais apresentaram toxicidade utilizando-se A. salina, sendo que esta 
+toxicidade variou de acordo com o processo aplicado. Os autores sugerem que a 
+irradiação pode vir a alterar a composição dos componentes químicos do material e, 
+consequentemente, alterar a sua toxicidade. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+41 
+ 
+3. OBJETIVOS 
+ 
+ 
+3.1 Objetivo geral 
+ 
+Avaliar a toxicidade de sucos de caju (Anacardium occidentale L.,) processados 
+por plasma frio e ultrassom através da utilização de Artemia salina como modelo 
+experimental. 
+3.2 Objetivos específicos 
+ 
+• Realizar dois tipos de processamentos não térmicos em suco de caju: plasma 
+frio e ultrassom; 
+• Determinar as concentrações letais (CL50) do suco de caju processado por 
+plasma frio e por ultrassom, no modelo experimental de Artemia salina; 
+• Avaliar a lipoperoxidação induzida pelo suco de caju processado por plasma 
+frio e por ultrassom, no modelo experimental de Artemia salina; 
+•  Quantificar a atividade das enzimas catalase e superóxido dismutase em 
+Artemia salina, exposta ao suco de caju processado por plasma frio e por 
+ultrassom; 
+• Avaliar o efeito protetivo do suco de caju processado por plasma frio e por 
+ultrassom, contra a toxicidade em Artemia salina induzida por peróxido de 
+hidrogênio; 
+• Caracterizar as alterações morfológicas e ultraestruturais no modelo 
+experimental de Artemia salina, exposto ao suco de caju processado por 
+plasma frio e por ultrassom, através de técnicas de microscopia ótica, eletrônica 
+de varredura e eletrônica de transmissão. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+42 
+ 
+4. MATERIAIS E MÉTODOS 
+ 
+4.1 Caju 
+O suco de caju foi preparado a partir da diluição de 100g de polpa de caju sem 
+conservantes em 200 mL de água destilada. A polpa foi adquirida no comércio local.   
+4.2 Processamentos 
+ 
+4.2.1 Ultrassom  
+ 
+O suco de caju foi processado segundo metodologia descrita por Alves Filho e 
+colaboradores (2020). Para tanto, foi utilizado um desruptor ultrassônico de 500W, 
+Unique® modelo DES500 com frequência constante de 18kHz e macro ponta de 
+titânio com diâmetro de 13 mm. A sonda de titânio foi imersa 1,5 cm abaixo da 
+superfície do líquido. Amostras de 100 mL de suco de caju foram colocadas em um 
+reator encamisado e em seguida foi aplicada potência ultrassônica de 5000 W/L, 
+o
+durante 5 minutos, a 25 C (banho de água circulante). 
+ 
+4.2.2 Plasma a frio 
+ 
+O suco de caju foi processado em gerador de plasma Inergiae modelo 
+PLS0130, segundo metodologia descrita por (PORTO et al., 2020). O sistema consiste 
+em gerador acoplado a câmara contendo dois discos de alumínio de 8 cm de diâmetro 
+separados a distância de 15 mm. Duas chapas de acrílico de 5 mm de espessura 
+foram utilizadas como barreira dielétrica. Alíquotas de 20 mL do suco de caju foram 
+acondicionadas em placa de Petri de poliestireno fechada e submetidas à exposição 
+direta ao plasma. As frequências utilizadas foram 50 e 1.000 Hz e as voltagens 17 e 
+20 kV. O tempo de processamento foi de 15 min para todos os tratamentos.  
+ 
+4.3 Teste de toxicidade aguda utilizando náuplios instar II de Artemia salina 
+como modelo experimental 
+ 
+Os cistos dormentes de alta eclosão foram adquiridos comercialmente e a 
+metodologia foi baseada na que foi descrita por Meyer (MEYER et al., 1982). Para a 
+obtenção dos náuplios instar II, cistos foram hidratados em 350 mL de água do mar 
+43 
+ 
+artificial, preparada previamente com água destilada e sal marinho, mantidos sob 
+constante aeração e com fotoperíodo de 8h luz/16h escuro, a temperatura de 22 ± 2° 
+C.  
+Inicialmente, 10 náuplios foram adicionados em placas de poliestireno de 24 
+poços, contendo 1 mL de água do mar artificial. Sequencialmente, foram adicionadas 
+-1
+diferentes concentrações dos sucos de frutas (10, 100 e 1.000 µg/mL). Todos os 
+testes foram realizados em quintuplicata e foi utilizado como controle positivo uma 
+solução com dicromato de potássio 0,5 M e para o controle negativo apenas água do 
+mar artificial. As placas foram armazenadas a 22 ± 2° C durante 24 e 48 horas sob 
+iluminação constante. 
+Após 48h de experimento, os animais mortos (imobilização observada por 10 
+segundos) foram contabilizados com auxílio de um microscópio estereoscópico. Em 
+seguida, os náuplios mortos foram fixados em solução contendo glutaraldeído a 2,5%, 
+formaldeído a 4%, diluídos em tampão cacodilato de sódio 0,05 M, e mantidos em 
+temperatura ambiente até́ o processamento para microscopia. Os dados foram 
+plotados no programa Excel (V.15.26-Microsoft) e a equação da reta foi calculada para 
+determinar a concentração capaz de eliminar 50% dos indivíduos (CL). Todos os 
+50
+experimentos foram conduzidos em quintuplicata.  
+ 
+4.4      Lipoperoxidação  
+ 
+A atividade de lipoperoxidação foi avaliada pelo método Fox modificado como 
+equivalentes de hidroperóxido de cumeno (CHP) (HERMES-LIMA et al., 1995; JIANG 
+et al., 1991; VITORINO et al., 2015). Náuplios de artêmias foram congelados e 
+homogeneizados em metanol 100% (1:5 pesos/volumes). Os homogenatos foram 
+centrifugados a frio a 21,130 x g e o sobrenadante (15 μL/por poço) foi transferido 
+para microplacas de 96 poços. As amostras foram tratadas com 90 μL de FeSO (1 
+4
+mM), 35 μL de H2SO4 (0,25 M), 35 μL de alaranjado de xilenol (1 mM) e 175 μL de 
+água ultrapura. A incubação ocorreu por 1 h à temperatura ambiente e a absorção foi 
+medida a 580 nm (Leitor de placas Biotek Epoch). Em seguida, 10 μL de CHP (175 
+μM) foram adicionados às amostras e a absorbância a 580 nm foi lida novamente após 
+15 min. 
+ 
+ 
+44 
+ 
+  4.5     Atividades enzimáticas  
+4.5.1 Preparo de extrato celular para a determinação das atividades enzimáticas 
+ 
+o
+As células foram coletadas por centrifugação (4000 rpm r, 5 minutos e 4C) e 
+lavadas por quatro vezes com água destilada. Posteriormente, as células (0,5 g) foram 
+ressuspendidas em 2,5 mL de tampão fosfato de potássio (50 mM e pH 7,0). Em 
+seguida, as células foram rompidas através de agitação em vortex e pérolas de vidro 
+(Sigma, diâmetro 425-600 um), esse procedimento foi repetido por 4 vezes, com 
+intervalos de um minuto em banho de gelo. Por fim, o homogenato celular foi 
+o
+centrifugado (20000 xg por 20 minutos, 4 C) e o sobrenadante foi utilizado para a 
+determinação das atividades enzimáticas (JAMNIK e RASPOR, 2003). 
+ 
+4.5.2 Catalase 
+ 
+A atividade da catalase foi determinada de acordo com estudos anteriores 
+(JEMEC et al., 2008 e MADHAV et al., 2017) com algumas modificações. Para tanto, 
+50 mg de biomassa foram homogeneizados em 2 mL de tampão fosfato (0,5 M, pH 
+o
+7,5), centrifugados a 12.000 rpm a 4 C por 30 min (YILANCIOGLU et al., 2014) e o 
+sobrenadante foi utilizado para a dosagem enzimática. Em seguida, 50 μL de 
+sobrenadante foram adicionados a 1 mL de solução de peróxido de hidrogênio (20 
+mM) preparada em tampão de triz HCL/EDTA (200mM/2mM)). A reação foi medida 
+espectrofotometricamente durante 3 minutos a 25 °C a 240 nm (Leitor de placas Biotek 
+Epoch). A atividade da catalase foi expressa como μmoles de peróxido de hidrogênio 
+− 1− 1
+esgotado/min/mg de proteína (coeficiente de extinção, ε = 43,6 M cm). 
+240
+ 
+4.5.3 Superóxido dismutase 
+ 
+A atividade da superóxido dismutase foi medida de acordo com o método 
+descrito por Kono (1978) com adaptações. Resumidamente, a mistura de reação (2,1 
+mL) contém 100 µL de tampão de carbonato de sódio (50 mM, pH 7), 20 µL de EDTA 
+(0,01M ou 0,001M), 20 µL de nitroazul de tetrazólio (24 mM), 20 µL de hidroxilamina 
+(1 mM), 20 µL de Triton X-100 (0,3%). Posteriormente, 20 µL de extrato de células 
+foram adicionados e a absorbância foi lida a 560 nm (Leitor de placas Biotek Epoch) 
+por 5 min contra o branco (mistura de reação sem extrato de células). Neste 
+45 
+ 
+experimento, um controle específico contendo mistura de reação com extrato celular 
+(provenientes de indivíduos não expostas) também foi executado. A mudança na 
+absorbância por minuto foi calculada e usada na estimativa da atividade enzimática 
+− 1− 1
+(coeficiente de extinção, ε240 = 39,4 M cm). 
+ 
+4.6 Efeito protetivo do suco de caju contra a toxicidade induzida por peróxido 
+de hidrogênio em Artemia salina 
+ 
+ Primeiramente, a toxicidade dos sucos de frutas processados não 
+termicamente foi avaliada através da metodologia descrita acima para o teste de 
+toxicidade aguda de Artemia salina. Em seguida, aquelas amostras que não 
+apresentarem toxicidade foram testadas quanto ao efeito protetivo.  
+Os cistos de Artemia salina foram eclodidos e transferidos para microplacas de 
+24 poços contendo água do mar artificial. Em seguida foi adicionado HO, à 
+22
+concentração final 127,45 mM (CL50). Após 2h de interação, os sucos de fruta foram 
+adicionados aos poços nas concentrações finais de 10, 100 e 1000 µg/mL, em volume 
+final de 2mL. A contagem dos indivíduos bem como a investigação das alterações 
+morfológicas foram realizadas em 24, 48 e 72h de experimento (LES et al., 2015). O 
+grupo controle foi exposto à apenas a água do mar artificial e o controle positivo foi 
+exposto à peróxido de hidrogênio (127,45 mM). O experimento foi realizado nas 
+condições de teste de toxicidade aguda. 
+ 
+4.7   Microscopia  
+ 
+ Exemplares de náuplios de Artemia salina foram investigados com diferentes 
+abordagens em microscopia óptica, eletrônica de varredura e transmissão. 
+ 
+4.7.1 Microscopia óptica  
+ 
+Para a investigação histológica dos animais expostos a diferentes 
+concentrações de sucos de frutas processados não termicamente os indivíduos foram 
+anestesiados a frio, fixados, desidratados e incluídos em historesina de acordo com 
+metodologia descrita por Castro e colaboradores (2018). Amostras foram seccionadas 
+em micrótomo rotativo (RM 2265 – Leica), coradas e observadas em microscópio 
+46 
+ 
+óptico de campo claro (Primo Star – Zeiss). O registro fotográfico foi através do 
+software Zen Lite (Zeiss). 
+Com o intuito de investigar a produção de radicais livres e o estresse oxidativo 
+foram utilizadas diferentes sondas fluorescentes (KULKARNI et al., 2018; MUGONI et 
+al., 2014). O material foi observado no microscópio confocal a laser (CLSM 710 – 
+Zeiss). 
+ 
+4.7.2 Microscopia eletrônica de varredura 
+  
+Para a análise de mudanças na superfície dos indivíduos foi utilizada a 
+microscopia eletrônica de varredura de acordo com metodologia descrita por Campos 
+e colaboradores (2016) (CASTRO et al., 2018).  
+ 
+4.7.3 Microscopia eletrônica de transmissão 
+ 
+Para a investigação de modificações subcelulares foi utilizada microscopia 
+eletrônica de transmissão de fragmentos dos tecidos dos indivíduos. As amostras 
+foram fixadas, desidratadas e incluídas em resina de acordo com metodologia descrita 
+por Morris e colaboradores (2017) (MORRIS et al., 2017). 
+ 
+4.8    Determinação da CL50  
+ 
+Após diferentes períodos de exposição, quando pertinente, os dados obtidos 
+nos testes de letalidade foram processados através de utilização do programa 
+Microsoft Excel e, os valores de CL50 foram computados a partir da porcentagem de 
+morte e logaritmo das concentrações por análise Probit, como descrito por Finney, em 
+1971(FINNEY, 1971). 
+ 
+4.9   Análise estatística  
+ 
+Os dados foram apresentados como média ± desvio padrão da média de três 
+experimentos independentes. A CL50 (expressa em mg/L) foi determinada com base 
+na mortalidade cumulativa obtida de três experimentos independentes em cada 
+47 
+ 
+instante (24, 48, 72 e 96 h) usando a análise Regression Probit com o SPSS Statistics 
+for Windows versão 17.0 (SPSS Inc., Chicago, EUA). A CL50 em mg/L foi convertida 
+em CL mmol/L para tornar a toxicidade relativa mais fácil de examinar.  
+50
+As comparações estatísticas entre os grupos foram realizadas usando ANOVA 
+unidirecional seguida por teste de LSD, considerando p<0,05 estatisticamente 
+significativo. Quando uma tendência estiver presente, o menor nível de efeito 
+observado (LOEL) foi definido como a menor concentração que induz efeito 
+estatisticamente significativo (α = 0,05) dos controles negativos. 
+ 
+5. RESULTADOS E DISCUSSÃO 
+ 
+5.1 Resultados da toxicidade aguda do suco de caju em náuplios instar II de 
+Artemia salina processado por ultrassom e plasma frio  
+ 
+As propriedades nutricionais favoráveis apresentadas pelos sucos, devem-se 
+tanto à sua macro composição, relacionada a carboidratos, proteínas e fibras, quanto 
+a vitaminas, minerais, compostos bioativos e alto potencial antioxidante 
+(KALAYCIOĞLU e ERIM, 2017).  
+Tal composição pode proporcionar benefícios à saúde desde que os processos 
+de conservação e garantia da qualidade do produto preservem estes elementos sob 
+sua forma ativa (VIEIRA, 2020).  
+O ensaio de A. salina é uma ferramenta útil na avaliação toxicológica de 
+diversos produtos naturais, industrializados e resíduos (SILVA et al., 2020).  
+A interação de náuplios de Artemia salina em suco de caju não tratado não 
+levou a efeito tóxico, mesmo em alta concentração (1000 μg/mL) e tempo de 
+exposição 48h (Fig. 6A). A amostra exposta a KCrO 0,5M (controle positivo) foi letal 
+227
+para 100% dos náuplios em contraste com a exposta apenas à água do mar artificial 
+(controle negativo) que não apresentou indivíduos mortos (Fig. 6). Os controles 
+exibiram os mesmos resultados em todos os experimentos. 
+ 
+ 
+ 
+ 
+48 
+ 
+Figura 6 - Resultados do teste de toxicidade aguda utilizando náuplios instar II de 
+Artemia salina em suco de caju in natura em 24 e 48 horas 
+ 
+CN - Grupo controle negativo: água do mar artificial; CP - Grupo controle positivo: dicromato de potássio 0,5M; 10 – concentração 
+da amostra (10 mg/mL); 100 – concentração da amostra (100 mg/mL); 1000 – concentração da amostra (1.000 mg/mL); 24 horas 
+e 48 horas de experimentação. 
+ 
+Dessa forma, também foi realizada a toxicidade do suco de caju processado 
+por ultrassom para avaliar seu nível de toxicidade, e consequentemente oferecer um 
+produto de qualidade aos consumidores. O resultado do bioensaio é mostrado logo 
+abaixo onde o suco de caju processado por ultrassom não apresentou morte de 
+indivíduos em todas as concentrações e tempos testados (Fig. 7). 
+ 
+Figura 7 - Resultados do teste de toxicidade aguda utilizando náuplios instar II de 
+Artemia salina em suco de caju processado por ultrassom em 24 e 48 horas 
+ 
+49 
+ 
+CN - Grupo controle negativo: água do mar artificial; CP - Grupo controle positivo: dicromato de potássio 0,5M; 10 – concentração 
+da amostra (10 mg/mL); 100 – concentração da amostra (100 mg/mL); 1000 – concentração da amostra (1.000 mg/mL); 24 e 48 
+horas de experimentação. 
+ 
+O ultrassom pode ser empregado na indústria de processamentos de frutas e 
+hortaliças, seja para contribuir na melhoria da qualidade e na segurança dos produtos, 
+seja para potencializar processos já existentes (OJHA et al., 2018).  
+Recentemente, estudos avaliaram a aplicação do ultrassom em frutas e 
+hortaliças, e em suco de frutas, com resultados positivos nos aspectos sensorial, 
+microbiológico, físico-químico e nutricional (ALVARENGA et al., 2020), indicando este 
+método como tecnologia inovadora, viável, de baixo custo e com resultados 
+desejáveis para a preservação da qualidade (DOLAS et al., 2019). 
+Hoje, o uso de tecnologias de processamento de alimentos não térmicos está 
+disponível para atender às demandas dos naturais e saudáveis sucos de frutas com 
+o mínimo de danos às suas propriedades nutricionais e organolépticas naturais. No 
+processo de transformação de sucos de frutas convencional, este é termicamente 
+tratado e resulta em alguma perda de compostos nutricionais tais como flavonoides 
+(IGUAL et al., 2011) e carotenoides (FRATIANNI et al., 2010). 
+Sendo assim, também foi realizada a toxicidade do suco de caju processado 
+por plasma frio à 50Hz, para preservar sua composição nutricional. O suco de caju 
+processado por plasma frio à 50 Hz não causou toxicidade aos náuplios nos expostos 
+a 10 µg/mL e 100 µg/mL. Por outro lado, a 1000 µg/mL (concentração máxima testada) 
+a letalidade foi observada para 43% dos náuplios às 24h e para 73% dos indivíduos 
+às 48h (Fig. 8).  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+50 
+ 
+Figura 8 - Resultados do teste de toxicidade aguda utilizando náuplios instar II de 
+Artemia salina em suco de caju processado por plasma a frio á 50Hz em 24 e 48 horas  
+ 
+ 
+CN - Grupo controle negativo: água do mar artificial; CP - Grupo controle positivo: dicromato de potássio 0,5M; 10 – concentração 
+da amostra (10 mg/mL); 100 – concentração da amostra (100 mg/mL); 1000 – concentração da amostra (1.000 mg/mL); 24 e 48 
+horas de experimentação. 
+ 
+Embora o suco de caju plasmolizado, 50 Hz, atinja alta toxicidade (73% dos 
+indivíduos em 48h), esse nível de toxicidade só foi alcançado em concentrações muito 
+altas, como 1000 µg/mL. Compostos tóxicos conhecidos como nanopartículas de 
+prata são letais para 50% dos indivíduos de Artemia salina (LC50) em concentrações 
+mais baixas como 10,70 µg/mL (AN et al., 2019) e 3,79 µg/mL-1 (GAMBARDELLA et 
+al., 2015). 
+Miguel e colaboradores (2021) demonstraram que a água de coco não tratada 
+e não tratada termicamente (ozônio, plasma frio e ultrassom) não causou mortes em 
+náuplios de Artemia salina. Este fato reforça que os efeitos do processamento não 
+térmico em alimentos são dependentes da matriz alimentar (PAIXÃO et al., 2019). 
+Os efeitos do processamento a plasma em matrizes alimentícias, 
+principalmente em sucos de frutas, ainda são pouco compreendidos do ponto de vista 
+químico. De fato, o efeito da aplicação dessa tecnologia deve ser cuidadosamente 
+investigado para entender qualquer alteração no perfil dos componentes após o 
+tratamento. 
+Um estudo recente elucidou que o processamento a plasma frio afeta a 
+concentração de substâncias como açúcares, ácido málico, ácido lático e vitamina C 
+51 
+ 
+no suco de caju (LEITE et al., 2021). Além disso, o processamento a plasma também 
+afeta a composição da castanha de caju (ALVES FILHO et al., 2019). 
+Os dados obtidos sugerem que, no caso do suco de caju, é possível que alguma 
+substância tóxica seja gerada ou aumente sua concentração. Por outro lado, na água 
+de coco (MIGUEL et al., 2021) é possível que alguma substância com ação contra 
+radicais livres tenha gerado ou aumentado, levando a um efeito protetor. 
+O plasma a frio é considerado uma tecnologia não térmica, pois apresenta boas 
+características de modificação de alimentos, inativação de enzimas e destruição de 
+microrganismos à temperatura ambiente. O plasma age nos alimentos através das 
+espécies reativas formadas como elétrons, íons e radicais livres (THIRUMDAS et al., 
+2017). 
+No processamento de sucos, a tecnologia ultrassônica é relatada por ter um 
+efeito mínimo sobre a degradação dos parâmetros de qualidade, como cor, conteúdo 
+de ácido ascórbico e antocianinas em alguns sucos de frutas estudados como o de 
+amora preta e morango (TIWARI et al., 2010). 
+Segundo os mesmos autores, outros estudos indicam que o processamento 
+com ultrassom aumenta a extração de fenólicos e outros compostos bioativos no 
+mosto de uvas ou de vinho, e que a extração de compostos bioativos e antocianinas 
+assistida por ultrassom melhora a extração e produção de compostos bioativos entre 
+6% e 35%. 
+Estas melhorias são possíveis devido às propriedades de transferência 
+instantânea de energia acústica em sucos de frutas. O tratamento com ultrassom pode 
+penetrar as paredes celulares da fruta e liberar o conteúdo da célula preso nos tecidos 
+do fruto. A preservação térmica, tais como pasteurização e a esterilização são 
+comumente usados para destruir os micro-organismos e inativar enzimas nos sucos 
+de frutas (MENA et al., 2013). 
+A letalidade da tecnologia do plasma frio atmosférico depende de várias 
+variáveis operacionais, entre as quais destaca-se a potência de entrada (tensão e 
+frequência). Quanto maior a frequência e tensão de entrada, maior a inativação 
+(DASAN et al., 2016). 
+O efeito antimicrobiano do plasma frio é resultado da ação de partículas 
+carregadas e espécies reativas presentes no plasma que podem causar danos à 
+membrana celular, podendo levar a maior penetração de espécies reativas na célula, 
+danos ao DNA e quebra de ligações químicas (FERNANDEZ & THOMPSON, 2012). 
+52 
+ 
+Todavia, também foi realizada o teste de toxicidade com o suco de caju 
+processado por plasma frio com uma frequência maior à 1000Hz, para avaliar se o 
+suco seria tóxico em diferentes frequências. O suco de caju processado por plasma 
+frio à 1000 Hz também não apresentou efeito tóxico em 10 µg/mL e 100 µg/mL, e 
+efeito tóxico a 1000 µg/mL para 20% dos indivíduos às 24h e 63% às 48 horas.  
+ 
+Figura 9 - Resultados do teste de toxicidade aguda utilizando náuplios instar II de 
+Artemia salina em suco de caju processado por plasma a frio a 1.000Hz em 24 e 48 
+horas  
+ 
+CN - Grupo controle negativo: água do mar artificial; CP - Grupo controle positivo: dicromato de potássio 0,5M; 10 – concentração 
+da amostra (10 mg/mL); 100 – concentração da amostra (100 mg/mL); 1000 – concentração da amostra (1.000 mg/mL); 24 e 48 
+horas de experimentação. 
+ 
+Muitos trabalhos têm sidos realizados com a utilização do suco de frutas para 
+determinar sua atividade ou não, toxica ou citotóxica. Podemos citar por exemplo, o 
+trabalho de Jiménez e colaboradores (2011) que utilizou o suco de Berberis boliviana 
+e testou a letalidade frente aos náuplios de Artemia salina. Os resultados mostraram 
+uma concentração letal média (CL) de 247 µg/mL, que o significa que este extrato 
+50
+pode ser considerado para mais estudos para determinar sua viabilidade para uso 
+farmacêutico. 
+Outros trabalhos também demonstraram bons resultados com teste de 
+toxicidade aguda frente a náuplios instar II de Artemia salina, como encontrou o Miguel 
+e colaboradores (2021) utilizando a água de coco processado com plasma e 
+ultrassom. Como resultados, a água de coco não foi tóxica para náuplios de Artemia 
+salina em 10, 100 ou 1000 μg/mL.       
+53 
+ 
+ 
+5.2 Lipoperoxidação 
+Como forma de entender melhor os mecanismos de toxicidade, determinamos 
+a quantidade de peroxidação lipídica utilizando o suco de caju in natura e processado 
+(ultrassom e plasma frio) em náuplios de A. salina (Fig. 10). A lipoperoxidação foi 
+maior nos náuplios tratados com suco de caju processado por plasma frio à 50 Hz 
+(8,2±0,43 µmol/mg) e menor na amostra tratada com suco de caju in natura (7,54±0,47 
+µmol/mg) (Fig. 10). 
+ 
+Figura 10 - Resultados do teste de lipoperoxidação utilizando náuplios instar II de 
+Artemia salina em suco de caju in natura e processado por plasma frio (50 e 1.000 Hz) 
+e por ultrassom   
+ 
+ 
+CN - Grupo controle negativo: água do mar artificial; CP - Grupo controle positivo: Peróxido de hidrogênio 127,45 mM; Grupo 
+do suco de caju in natura (15 µL/por poço); Grupo do suco de caju processado por ultrassom (15 µL/por poço); Grupo do suco 
+de caju processado por plasma à 50Hz (15 µL/por poço); Grupo do suco de caju processado por plasma à 1000Hz (15 µL/por 
+poço). 
+ 
+  Os radicais livres são moléculas instáveis e que perdem um elétron ao 
+interagirem com outras moléculas ao seu redor, a sua formação é decorrente da 
+metabolização do oxigênio e são oriundas através de ações endógenas, quando se 
+formam naturalmente pelo organismo e derivam de reações metabólicas, ou por ações 
+exógenas, estímulos externos como os raios ultravioletas, alimentos industrializados 
+e gordurosos (MANGELA e MARTINS, 2021). 
+ As concentrações de radicais livres presentes no organismo são reguladas 
+pelos chamados antioxidantes, moléculas capazes de inibir ou reduzir o estresse 
+oxidativo, que podem ser gerados endogenamente ou podem ser obtidos 
+principalmente através da alimentação. Existe uma infinidade de vitaminas e minerais 
+54 
+ 
+que apresentam função antioxidante presentes nos alimentos, principalmente em 
+frutas e hortaliças. (LIU et al., 2018b). 
+As substâncias antioxidantes naturais podem ser utilizadas para aumentar o 
+tempo de conservação dos alimentos, além de promover benefícios para a saúde, 
+atuando na prevenção de várias doenças relacionadas ao estresse oxidativo, como 
+câncer, doenças cardiovasculares e neurodegenerativas, hipertensão e diabetes (XU 
+et al., 2017). 
+ Os antioxidantes são substâncias que diminuem ou bloqueiam a oxidação 
+provocada pelos radicais livres, podem ter origem endógena ou exógena:  entre os 
+antioxidantes de origem endógena destacam-se glutationa reduzida (GSH), 
+superóxido-dismutase (SOD), catalase, glutationa-peroxidase (GSH-Px) (ROCHA et 
+al., 2016).  
+Segundo os mesmos autores, os antioxidantes de origem exógena que auxiliem 
+na proteção adequada. inseridos no organismo através da ingestão de certos 
+alimentos, os carotenoides, as vitaminas C e E, o selénio, o zinco e os flavonoides.  
+Estes antioxidantes são provenientes da dieta e funcionam como um complemento 
+aos antioxidantes endógenos reduzindo os danos causados por radicais livres no 
+corpo humano. 
+  As superóxidos dismutases (SOD), são enzimas que contem metal e que 
+catalisam a conversão de dois superóxidos em oxigênio e peróxido de hidrogênio, que 
+é menos tóxico que o superóxido. A catalase (CAT), enzima que se localiza nos 
+peroxissomas, degrada o peroxido de hidrogênio em água e oxigênio, completando 
+então a reação iniciada pela SOD (BARBOSA, 2009). 
+ Esses compostos bloqueiam não só a peroxidação dos lipídios, mas também a 
+oxidação de outras moléculas, como proteínas, DNA, entre outras. Os principais 
+antioxidantes dietéticos são algumas vitaminas, compostos fenólicos e carotenoides. 
+Eles interagem com os radicais livres antes que estes possam reagir com as 
+moléculas biológicas, evitando que ocorram as reações em cadeia ou prevenindo a 
+ativação do oxigênio a produtos altamente reativos (SILVA et al., 2016). 
+ Nos últimos anos tem crescido o interesse em determinar a atividade 
+antioxidante das frutas, vegetais e especiarias (SILVA, 2019). Nesse sentido Fu e 
+colaboradores (2011) a fim de fornecer novas informações sobre a função antioxidante 
+de frutas avaliaram 62 frutos, suas atividades antioxidantes e o conteúdo fenólico total. 
+55 
+ 
+Estes estudos são importantes para obter informações nutricionais, demonstrar o valor 
+biológico dos alimentos e priorizá-los na alimentação. 
+ 
+5.3 Atividade enzimática 
+5.3.1 Catalase  
+Para avaliar a resposta ao estresse oxidativo induzido pela aplicação do das 
+tecnologias não térmicas, foi determinada a atividade da catalase no suco de caju in 
+natura e processado (ultrassom e plasma frio).  
+Para avaliar sua atividade e obtivemos esse resultado que mostrado na figura 
+a baixo.  De acordo com o gráfico, o teste apresentou uma atividade da catalase variou 
+de 0,0010±0,0003 µmol/min na amostra tratada apenas com água do mar artificial 
+(controle negativo) a 0,0109±0,0054 µmol/mim na amostra tratada com H2O2 controle 
+positivo (Fig. 11). 
+ 
+Figura 11 - Resultados do teste de catalase utilizando náuplios instar II de Artemia 
+salina em suco de caju in natura e processado por plasma frio (50 e 1.000 Hz) e por 
+ultrassom 
+ 
+CN - Grupo controle negativo: água do mar artificial; CP - Grupo controle positivo: Peróxido de hidrogênio 127,45 mM; Grupo do 
+suco de caju in natura (15 µL/por poço); Grupo do suco de caju processado por ultrassom (15 µL/por poço); Grupo do suco de 
+caju processado por plasma à 50Hz (15 µL/por poço); Grupo do suco de caju processado por plasma à 1000Hz (15 µL/por poço). 
+ 
+Segundo Tyutereva e colaboradores (2017), as catalases têm a capacidade de 
+remover cerca de 25% de todo o H2O2 peroxissomal, bem como a capacidade de atuar 
+nas regulações autofágicas e de morte celular programada, representando a enzima 
+mais abundante nos peroxissomos. 
+Além disso, a CAT possui baixa afinidade pelo substrato e atua na remoção do 
+excesso, onde apresenta alta taxa de atividade, tendo sido a primeira enzima 
+56 
+ 
+antioxidante documentada (KAUSHAL et al., 2018) e que aparece em todos os 
+organismos eucarióticos e procarióticos (AHMAD, 2014).  
+Além da catalase, outras enzimas podem atuar no sequestrador de HO, como 
+22
+a glutationa peroxidase (GPX) ou ascorbato peroxidase (APX), que possuem maior 
+afinidade pelo peróxido e atuam na sua regulação fina (RIBEIRO et al., 2017). Entre 
+outras enzimas também como a superóxido desmutase. 
+ 
+5.3.2 Superóxido desmutase 
+ 
+É importante manter um equilíbrio nas concentrações de ROS intracelulares e 
+extracelulares. A quantidade de ROS produzida e eliminada é controlada por vários 
+fatores dentro do ambiente celular. Esses fatores são conhecidos como antioxidantes 
+e enzimas antioxidantes. Uma molécula ou composto normal torna-se instável quando 
+perde um elétron, que por sua vez encontra elétrons livres para se tornarem estáveis 
+novamente (GNANARAJ et al., 2017).  
+De acordo com a figura 12 podemos ver que o teste da superóxido dismutase 
+a variou de 3882,97±1143,84 na amostra tratada com suco de caju processado por 
+ultrassom a 2161,14±1063,9 na amostra tratada com HO. 
+22
+ 
+Figura 12 - Resultados do teste de superóxido desmutase utilizando náuplios instar II 
+de Artemia salina em suco de caju processado por plasma frio (50 e 1.000 Hz) e por 
+ultrassom  
+ 
+CN - Grupo controle negativo: água do mar artificial; CP - Grupo controle positivo: Peróxido de hidrogênio 127,45 mM; Grupo do 
+suco de caju in natura; Grupo do suco de caju processado por ultrassom; Grupo do suco de caju processado por plasma à 50Hz; 
+Grupo do suco de caju processado por plasma à 1000Hz; - 20 µL de extrato de células.   
+ 
+57 
+ 
+ As superóxidos dismutases (SOD) são metaloenzimas antioxidantes que 
+desmutam O2 − em oxigênio molecular e peróxido de hidrogênio (H2O2), eliminando 
+assim os radicais superóxidos. Eles são atores-chave na defesa das células de 
+espécies reativas de oxigênio (ROS) durante uma infecção de patógenos (MAURYA 
+e NAMDEO, 2021).  
+ROS, como superóxido, peróxido de hidrogênio, radicais hidroxila e oxigênio 
+singlete, entre outros, são geralmente tóxicos para a célula em concentrações 
+elevadas devido à sua alta reatividade com moléculas biologicamente relevantes, por 
+exemplo, proteínas, ácidos nucleicos e lipídios. No entanto, em concentrações 
+fisiológicas, alguns deles também são importantes reguladores dos processos de 
+sinalização celular (HERB e SCHRAMM, 2021).  
+Segundo os mesmos autores, o estresse oxidativo e seu manejo cuidadoso 
+também são importantes, pois é um dos meios de defesa mais comuns empregados 
+pelo sistema imunológico no combate a patógenos invasores. Como tal, as EROs são 
+componentes da resposta imune antimicrobiana direta e indireta. 
+Muitos estudos relatam na literatura, modificações na atividade enzimática 
+foram observadas em náuplios expostos a SnO, CeO e FeO-NPs 
+2234
+(GAMBARDELLA et al., 2015). Ulm e colaboradores (2015) descreveram que a 
+atividade da superóxido dismutase em Daphynia magna exposta a nanopartículas de 
+prata em diferentes concentrações por 48 h não se alterou significativamente quando 
+comparada com o grupo controle.  
+An e colaboradores (2019) relataram que a mesma atividade enzimática em 
+náuplios de Artemia salina expostos a baixa concentração de nanopartículas de prata 
+aumentou significativamente em relação ao grupo controle, no entanto, o nível de SOD 
+diminuiu em 100 mg/L de AgNPs, em comparação com o grupo anterior. 
+Um incremento substancial na atividade da SOD foi observado em náuplios 
+expostos a 0,1 mg/L AgNWs, embora o aumento da concentração deste composto 
+tenha levado a uma diminuição significativa na atividade enzimática. O uso de alta 
+concentração de suco de caju pode ter influenciado na manutenção dos níveis 
+enzimáticos pela alta concentração de ROS (FONTENELES et al., 2022).  
+Segundo os mesmos autores, o ultrassom afeta a formação de espécies 
+reativas de oxigênio, como H2O2, e, consequentemente, as atividades da superóxido 
+dismutase, catalase e ascorbato peroxidase. A atividade da S.O.D aumentou até 
+280% após o processamento. O caju sonicado, pode ser utilizado como fonte de 
+58 
+ 
+enzimas antioxidantes, o que também tem grande importância na indústria 
+terapêutica. 
+Possivelmente, o uso de menores concentrações de suco poderia levar a um 
+aumento das enzimas. A diminuição da atividade de enzimas antioxidantes como 
+superóxido dismutase e catalase pode estar relacionada ao aumento das 
+concentrações de radicais livres (GOTTFREDSEN et al., 2013; OSTMAN e BOHMER, 
+2001) possivelmente relacionado ao estresse provocado pelo HO. 
+22
+ 
+5.4 Efeito protetivo do suco de caju contra a toxicidade induzida por peróxido 
+de hidrogênio em náuplios de Artemia salina 
+O efeito protetor de frutas e hortaliças está relacionado ao seu valor nutricional 
+(BIANCHI e ANTUNES, 1999) e a presença de bioativos com propriedades 
+antioxidantes. Compostos como vitaminas, clorofilina, flavonoides, carotenoides e 
+curcumina são capazes de restringir a propagação de reações em cadeia e lesões 
+induzidas por radicais livres (FOTSIS et al.,1997).  
+ Para avaliar precisamente o efeito protetor do suco de caju não processado em 
+relação ao estresse oxidativo desencadeado pelo peróxido de hidrogênio (HO), onde 
+22
+os náuplios foram expostos a 127,45 mM de HO como agente estressor (MIGUEL 
+22
+et al., 2021). 
+ Embora o aumento da concentração de suco tenha levado a uma 
+diminuição no número absoluto de mortes, não foram observadas diferenças 
+significativas entre os grupos estressados com H2O2 e os grupos em que o suco foi 
+adicionado, seja em 24 ou 48 h (Fig. 13). Os controles exibiram os mesmos resultados 
+em todos os experimentos. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+59 
+ 
+Figura 13 - Resultados do efeito protetivo do suco de caju in natura contra a toxicidade 
+induzida por peróxido de hidrogênio em Artemia salina  
+ 
+ 
+CN - Grupo controle negativo: água do mar artificial; CP - Grupo controle positivo: Dicromato de potássio 0,5M; Grupo somente 
+com o Peróxido de hidrogênio 127,45mM; Grupo do suco de caju in natura; Grupo do suco de caju processado por ultrassom; 
+Grupo do suco de caju processado por plasma à 50Hz; Grupo do suco de caju processado por plasma à 1000Hz; - 10, 100 e 
+-1 
+1000 µg.mL.
+ 
+O valor nutricional (quantidade de vitaminas e compostos antioxidantes) dos 
+alimentos auxilia as enzimas antioxidantes (SOD e CAT) a combater a peroxidação 
+lipídica e proteger o DNA (DEL RÉ e JORGE, 2012).   
+Além disso, o uso de tecnologias não térmicas pode contribuir para a melhoria 
+do efeito protetor, pois pode aumentar a atividade antioxidante dos alimentos vegetais, 
+devido à maior disponibilidade de compostos bioativos após o processamento 
+(MIGUEL et al., 2021).  
+Amostras de suco de caju processado por ultrassom, na maior concentração 
+(1000 µg/mL) foram capazes de prevenir a morte dos náuplios em 24 horas de 
+tratamento, diferentemente das demais concentrações. Por outro lado, o tratamento 
+por 48 horas aumentou o número de óbitos em relação ao grupo exposto apenas ao 
+H2O2 (Fig. 14) 
+ 
+ 
+ 
+ 
+60 
+ 
+Figura 14 - Resultados do efeito protetivo do suco de caju processado por ultrassom 
+contra a toxicidade induzida por peróxido de hidrogênio em Artemia salina  
+ 
+CN - Grupo controle negativo: água do mar artificial; CP - Grupo controle positivo: Dicromato de potássio 0,5M; Grupo somente 
+com o Peróxido de hidrogênio 127,45mM; Grupo do suco de caju in natura; Grupo do suco de caju processado por ultrassom; 
+Grupo do suco de caju processado por plasma à 50Hz; Grupo do suco de caju processado por plasma à 1000Hz; - 10, 100 e 
+-1 
+1000 µg.mL.
+ 
+Os polifenóis são metabolitos secundários produzidos pelas de plantas 
+(ESTEBAN-FERNÁNDEZ et al., 2018). São uma grande família de moléculas de 
+origem natural caracterizadas por mais de um anel fenólico, hidroxilados ou multi-
+hidroxilados. Na natureza, existe uma vasta diversidade estrutural destes compostos, 
+por isso foram divididos em 4 grupos: ácido fenólico, estilbenos, lignanas e flavonóides 
+(SINGLA et al., 2019).  
+São altamente conhecidos pelos seus benefícios para a saúde, por terem 
+propriedades antioxidantes e atuarem contra radicais livres (LORENZO et al., 2016). 
+Este produto natural que faz parte da dieta diária, seja em vinhos, chocolates, frutas 
+e legumes, tem um papel preventivo contra várias doenças, como são exemplo, as 
+doenças degenerativas, cardiovasculares e, até mesmo o cancro (ESTEBAN-
+FERNÁNDEZ et al., 2018; CHENG et al., 2015). 
+Em geral, os antioxidantes (por exemplo, polifenóis) diminuem o dano oxidativo 
+às biomoléculas e células, contribuindo para reduzir os riscos de doenças 
+relacionadas ao estresse oxidativo, como câncer, doenças cardiovasculares, 
+diabetes, inflamação e doenças degenerativas (ZAPATA et al., 2019; NARDINI e 
+FODAI, 2020).  
+61 
+ 
+ Com resultados promissores em ensaios in vitro, in vivo e in sílico, esses 
+compostos se destacam como terapias alternativas complementares, adjuvantes e até 
+mesmo suplementares no tratamento de diferentes condições, com atividade anti-
+inflamatória, imunomoduladora e antineoplásica (PARAISO et al., 2020). 
+ Além disso, os polifenóis podem ser eficazes por produzir peróxido de 
+hidrogênio e, com isso, induzir apoptose em células cancerosas por diferentes 
+mecanismos, devido ao seu efeito pró-oxidante (DO CARMO et al., 2018). 
+O suco de caju processado por plasma frio à 50 Hz não foi capaz de reverter 
+as mortes causadas pelo estressor. Por outro lado, o número de mortes aumentou 
+com o aumento da concentração do suco, para o tratamento 24 horas. Nas 48 horas 
+do experimento, o número de óbitos nos grupos aos quais o suco foi adicionado foi 
+maior do que no grupo exposto apenas ao peróxido de hidrogênio (Fig. 15). 
+ 
+Figura 15 - Resultados do efeito protetivo do suco de caju processado por plasma frio 
+à 50Hz contra a toxicidade induzida por peróxido de hidrogênio em Artemia salina  
+ 
+CN - Grupo controle negativo: água do mar artificial; CP - Grupo controle positivo: Dicromato de potássio 0,5M; Grupo somente 
+com o Peróxido de hidrogênio 127,45mM; Grupo do suco de caju in natura; Grupo do suco de caju processado por ultrassom; 
+Grupo do suco de caju processado por plasma à 50Hz; Grupo do suco de caju processado por plasma à 1000Hz; - 10, 100 e 
+ 
+1000 µg/mL.
+ 
+Os vegetais, em particular as frutas, apresentam em sua constituição vários 
+compostos com ação antioxidante. Os principais antioxidantes são as vitaminas C e 
+E, os carotenoides e os compostos fenólicos, especialmente os flavonoides (AHMAD 
+et al., 2020; JIANG e XIONG, 2016).  
+62 
+ 
+Dentre os compostos fenólicos naturais, destacam-se os flavonoides e os 
+ácidos fenólicos. Barraza-Garza e colaboradores (2020) mostraram que uma maior 
+quantidade de polifenóis apresentou melhor proteção contra o estresse oxidativo em 
+cultura de células in vitro.  
+Além disso, estudos realizados in vivo mostraram evidências de que os 
+compostos fenólicos atuam positivamente no controle da homeostase do organismo, 
+em mecanismos diversos e auxiliando o equilíbrio redox do mesmo. (GRANATO et al., 
+2020)  
+A atividade antioxidante que os compostos fenólicos são capazes de oferecer 
+é dependente de fatores como a concentração e o tipo de composto presente. Ainda, 
+a ação pode existir sob a forma de sinergismo entre os diferentes compostos 
+(BODOIRA e MAESTRI, 2020).  
+O suco e a polpa de caju têm uma quantidade considerável de vitamina C 
+(SILVA et al., 2017). Altos teores de polifenóis, taninos e fibra alimentar também foram 
+relatados (MARIA DO SOCORRO et al., 2010). Além disso, foi relatado que cobre, 
+ferro, zinco e compostos antioxidantes também estão presentes no suco de caju, que 
+foram mais abundantes em comparação com a fibra de caju (LIMA et al., 2014). 
+Diferentes partes do A. occidentale têm forte potência antioxidante. Por 
+exemplo, o extrato etanólico da casca da castanha de caju demonstrou alto teor de 
+fenólicos totais e boa capacidade antioxidante, conforme avaliado pelos ensaios de 
+eliminação de radicais ABTS, eliminação de superóxido, oxidação de desoxirribose e 
+ensaios de peroxidação lipídica (RAJINI, 2011). 
+O consumo alimentar de nutrientes antioxidantes desempenha um papel anti-
+inflamatório, reduzindo o estresse oxidativo e a peroxidação lipídica, auxilia na 
+diminuição da circunferência abdominal (CA); dislipidemia, diminuindo a lipoproteína 
+de baixa densidade (LDL) e aumentando a lipoproteína de alta densidade (HDL); 
+hipertensão arterial (HAS) e resistência à insulina (BRITO et al., 2019). 
+Dessa forma, foi então realizada o teste do efeito protetivo do suco de caju 
+processado por plasma frio em uma frequência maior à 1000 Hz, para diminuir assim 
+os danos causados pelo agressor no caso o peróxido de hidrogênio em náuplios de 
+A. salina.  
+As amostras de suco de caju processado por plasma frio à 1000 Hz também 
+não foram capazes de reverter os danos causados pelo HO em 24 e 48h de 
+22
+63 
+ 
+interação, porém, as amostras tratadas com 100 µg/mL apresentaram resultado um 
+pouco melhor que as demais (Fig. 16). 
+ 
+Figura 16 - Resultados do efeito protetivo do suco de caju processado por plasma frio 
+à 1000Hz contra a toxicidade induzida por peróxido de hidrogênio em Artemia salina 
+ 
+CN - Grupo controle negativo: água do mar artificial; CP - Grupo controle positivo: Dicromato de potássio 0,5M; Grupo somente 
+com o Peróxido de hidrogênio 127,45mM; Grupo do suco de caju in natura; Grupo do suco de caju processado por ultrassom; 
+Grupo do suco de caju processado por plasma à 50Hz; Grupo do suco de caju processado por plasma à 1000Hz; - 10, 100 e 
+-1
+1000 µg.mL. 
+ 
+ Há relatos que diferentes substâncias apresentam efeito protetor e minimiza os 
+danos causados por estressores (HO) reduzindo o teor de ROS, dentre elas 
+22
+destacam-se a metionina; L-arginina; citocinas; selênio; vitamina C; e Zn, Mn e Cu. O 
+H2O2 não danifica diretamente substratos orgânicos; mas, esta molécula pode 
+atravessar a membrana celular e produzir grupos hidroxila altamente reativos pela 
+interação com íons como ferro e cobre (AHSAN et al., 2003). 
+ A água de coco tratada com ultrassom fez com que a taxa letal caísse para 
+16,7% (10 μg/mL), 16% (100 μg/mL) e 5% (1000 μg/mL). A água de coco processada 
+com plasma também foi capaz de prevenir a morte dos náuplios (MIGUEL et al., 2021). 
+  Suco de caju processado por ultrassom 1000 μg/mL, experimento de 24h, foi a 
+única situação capaz de prevenir óbitos. O mirtilo tratado com ozônio foi capaz de 
+ativar um mecanismo de defesa contra o estresse oxidativo (PIECHOWIAK et al., 
+2020). 
+64 
+ 
+ O processamento a plasma também aumentou a atividade antioxidante do suco 
+de siriguela (PAIXÃO et al., 2019), porém, estudos in vivo não foram realizados para 
+demonstrar tal efeito. Pelo exposto, os efeitos do tratamento na ação protetora 
+dependem muito da matriz alimentar utilizada. 
+Nos últimos anos, vários estudos foram realizados para buscar os 
+sequestradores de radicais eficientes para vencer o estresse oxidativo (YOSHIOKA et 
+al., 2017). Inúmeros antioxidantes, principalmente de extratos vegetais, têm chamado 
+a atenção para a promoção da saúde (CHOTPHRUETHIPONG et al., 2019). 
+O caju (Anacardium occidentale L.) é uma planta econômica, abundante na 
+parte sul da Tailândia. Várias partes do cajueiro, especialmente as folhas do cajueiro, 
+possuem compostos fenólicos com bioatividades (KAMATH e RAJINI, 2007).  
+O fruto desta planta, normalmente conhecido como caju, é usado 
+industrialmente para produzir suco. Constituintes fitoquímicos como flavonoides e 
+carotenoides representam um conteúdo importante que pode estar relacionado a 
+atividades biológicas significativas que têm sido utilizadas como medicamentos 
+alternativos para a atenção primária à saúde (KULIS et al., 2012). 
+ 
+5.5 Analise morfológicas do ensaio de toxicidade aguda em náuplios instar II 
+de Artemia salina 
+Sob microscopia, nenhum dano morfológico foi observado nos náuplios 
+expostos apenas à água do mar artificial (controle negativo). As principais 
+características desses animais foram a preservação de estruturas principais como 
+antena, endito e mandíbula (Fig. 17A-2B). A estrutura do abdome, região posterior e 
+anexos não sofreram alterações morfológicas (Fig. 17C-2D).  
+A exposição dos náuplios à situação de controle positivo (K2Cr2O7) exibiu 
+algumas alterações morfológicas como enrugamento da superfície, modificação da 
+estrutura do corpo e danos severos à antena, mandíbula e endito (Fig. 17E e F). A 
+região final e apêndices também apresentaram modificações estruturais significativas 
+(Fig. 17G e H). 
+ 
+ 
+ 
+ 
+65 
+ 
+ 
+ 
+ 
+Figura 17 - Microscopia de luz e eletrônica de varredura de náuplios instar II de Artemia salina 
+em teste de toxicidade aguda do suco de caju não processado (10, 100 e 1000 ppm). A, E, I, 
+M e Q – microscopia de luz; B-D, F-H, J-L, N-P, R-T – microscopia eletrônica de varredura. 
+Observe a modificação na estrutura dos náuplios mesmo na microscopia de luz conforme 
+exposto em Q. A microscopia eletrônica de varredura revelou modificações no abdome e 
+apêndices dos náuplios. Barras: A, E, I, M e Q – 300 μm; B-D, F-H, J-L, N-P, R-T – 50 μm. 
+Embora não tenham sido observadas mortes significativas nos náuplios 
+expostos ao suco de caju não processado na concentração de 10 µg/mL e 100 µg/mL, 
+alterações morfológicas relevantes foram observadas em todas as concentrações. As 
+alterações morfológicas podem ser notadas mesmo na microscopia de luz 
+observando-se o tubo digestivo denso (Fig. 17I).  
+Os náuplios também apresentaram alterações morfológica no corpo, em 
+relação ao controle (Fig. 17J, N e R). Os apêndices estavam deformados (Fig. 17K, O 
+e S). O abdômen e a região posterior sofreram deformação apresentando superfície 
+enrugada (Fig. 17L, P e T). 
+Os náuplios expostos ao suco de caju processado por ultrassom em 10, 100 e 
+1000 µg/ml apresentaram o mesmo padrão que os expostos ao suco de caju 
+66 
+ 
+processado por plasma frio. A microscopia de luz não revelou alterações morfológicas 
+e teve a preservação das estruturas de sobrevivência (Fig. 18A, E e I), no entanto, a 
+microscopia eletrônica de varredura revelou danos no corpo dos náuplios (Fig. 18B, F 
+e J), apêndices (Fig. 18C, G e K) e abdômen (Fig. 18D, H e L). 
+ 
+Figura 18 - Microscopia de luz e eletrônica de varredura de náuplios instar II de Artemia salina 
+em teste de toxicidade aguda do suco de caju processado por ultrassom. A e B - O suco de 
+caju ultrassonográfico na concentração de 10 μg/mL não apresentou toxicidade para A. salina. 
+C - Não foram observados danos aos apêndices. D - Abdome com cutícula preservada. E e F 
+- O suco de caju ultrassonográfico na concentração de 100 μg/mL não apresentou toxicidade 
+para A. salina. G – Anexos preservados. H - Abdômen com leve enrugamento da cutícula. I e 
+J - Não foi observada toxicidade em A. salina na concentração de 1000 μg/mL. K – Anexos 
+preservados. L - Abdome com cutícula enrugada. Barras: A, B, E, F, I e J - 300 µm; C, D, G, 
+H, K e L - 50 µm. 
+ 
+ 
+Náuplios de A. salina expostos ao suco de caju processado por plasma frio à 
+50 Hz, 10 µg/ml exibiram morfologia semelhante em comparação com água do mar 
+artificial (controle negativo) sob microscopia de luz sem alteração morfológica e 
+conservação de apêndices de sobrevivência (Fig. 19A).  
+No entanto, sob microscopia eletrônica de varredura, a estrutura dos náuplios 
+parece estar comprometida (Fig. 19B). Uma visão mais próxima mostra danos 
+relevantes aos apêndices (Fig. 3C) e abdômen (Fig. 19D). 
+ 
+67 
+ 
+Figura 19 - Microscopia de luz e eletrônica de varredura de náuplios insta II de Artemia salina 
+em teste de toxicidade aguda do suco de caju processado por plasma frio (50 e 1000 Hz). A 
+e B - Não foi observada toxicidade aguda em A. salina utilizando suco de caju plasmalizado à 
+50 Hz na concentração de 10 μg/mL. C - Sem danos aos apêndices. D - Nenhum dano ao 
+abdômen. E e F - Não foi observada toxicidade aguda em A. salina utilizando suco de caju 
+plasmalizado à 50 Hz na concentração de 100 μg/mL, porém, foram observados danos ao 
+corpo dos náuplios. G - Anexos danificados. H - Abdômen com leve enrugamento da cutícula. 
+I e J - Não foi observada toxicidade aguda em A. salina utilizando suco de caju plasmalizado 
+à 50 Hz na concentração de 1000 μg/mL. K - Sem danos aos apêndices. L - Abdômen com 
+cutícula enrugada e cavidades visíveis. M e N - Não foi observada toxicidade aguda em A. 
+salina utilizando suco de caju plasmalizado à 1000 Hz na concentração de 10 μg/mL, porém, 
+foram observados danos ao corpo dos náuplios. O - Anexos com perda de cerdas. P - 
+Abdômen com leve enrugamento da cutícula. Q e R - Não foi observada toxicidade aguda em 
+A. salina utilizando suco de caju plasmalizado à 1000 Hz na concentração de 100 μg/mL. S - 
+Sem danos aos apêndices. T - Abdômen com leve enrugamento da cutícula. U e V - Não foi 
+observada toxicidade aguda em A. salina utilizando suco de caju plasmalizado à 1000 Hz na 
+concentração de 1000 μg/mL. W - Sem danos aos apêndices. X - Abdome sem lesão de 
+cutícula. Barras: A, B, E, F, I, J, M, N, Q, R, U, V - 300 µm; C, D, G, H, K, L, O, P, S, T, W, X 
+- 50 μm. 
+Seguindo o mesmo padrão, as amostras expostas ao suco de caju processado 
+por plasma frio à 50 Hz em 100 e 1000 µg/ml e suco de caju processado por plasma 
+frio à 1000 Hz em 10, 100 e 1000 µg.ml não exibiram danos estruturais evidentes sob 
+microscopia de luz (Fig. 19E , I, M, Q e U), mas sob microscopia eletrônica de 
+varredura danos estruturais foram evidentes no corpo dos náuplios (Fig. 19F, J, N, R 
+e V), apêndices (Fig. 19G, K, O, S e W) e abdômen (Fig. 19H, L, P, T e X). 
+68 
+ 
+ Alterações estruturais em náuplios, como dobras superficiais, modificação na 
+estrutura do corpo, danos na antena, mandíbula e desestruturação do endito, além do 
+aumento da densidade intestinal foram descritas anteriormente.  
+Essas alterações são semelhantes em Artemia que interagem com 
+nanopartículas de prata (ARULVASU et al., 2014), óxido de cobre (MADHAV et al., 
+2017), alimentos dies (MOTTA et al., 2019) e água de coco processada por ultrassom 
+(MIGUEL et al., 2021) e provavelmente não são reações específicas a compostos 
+tóxicos.  
+ Náuplios de A. salina expostos a nanopartículas de TiO2 e AgTiO2 exibiram 
+danos oculares graves, formação errática de estruturas corporais, perda de antena e 
+espessamento do sistema digestivo. todo esse dano possivelmente aumenta o ROS 
+nas células (OZKAN et al., 2016). 
+ O fato de os sucos de frutas não causarem a morte de indivíduos, mas 
+causarem alteração estrutural nos náuplios de Artemia salina em testes agudos 
+reforça a necessidade de estudos de toxicidade crônica e o uso da microscopia 
+eletrônica de varredura, pois a microscopia de luz pode não permitir a observação de 
+características importantes como alteração estrutural dos apêndices e abdome. 
+ 
+5.6 Analise morfológica do ensaio do efeito protetivo contra a toxicidade 
+induzida pelo peróxido de hidrogênio em náuplios instar II de Artemia salina 
+Náuplios de Artemia salina expostos à água do mar artificial (controle negativo) 
+exibiram morfologia típica sob microscopia óptica (Fig. 20A) e eletrônica de varredura 
+(Fig. 20B-D).  
+HO causou modificações morfológicas nos náuplios de A. salina. A perda de 
+22
+integridade estrutural do corpo foi notada (Fig. 20E-H). O K2Cr2O7 gerou deformações 
+no corpo do animal e perda de estruturas como olho, antena e apêndices, observadas 
+em ambas as técnicas de microscopia (Fig. 20I-L). 
+  
+ 
+ 
+ 
+ 
+ 
+69 
+ 
+Figura 20 - Efeito protetor do suco de caju não processado (10, 100 e 1000 μg/mL) contra 
+HO em náuplios instar II de A. salina em 48 h de exposição. A, B - A. salina no grupo 
+22
+controle (água do mar artificial) teve o corpo preservado. C - Anexos preservados. D - 
+Abdômen com cutícula lisa. E e F - Toxicidade aguda foi observada em A. salina submetida 
+a H2O2. foram observados danos ao corpo do animal. G – Anexos danificados. H - Abdome 
+com ruptura de cutícula. I e J - Toxicidade aguda foi observada em A. salina submetida a 
+KCrO. K – Anexos de dano. L - Abdômen com leve enrugamento da cutícula. M e N - 
+227
+Suco de caju não processado na concentração de 10 μg/mL-1 em A. salina. danos 
+observados no corpo do animal. O - Não foram observados danos aos apêndices. P - 
+Abdome com cutícula enrugada. Q e R - Suco de caju não processado na concentração de 
+100 μg/mL em A. salina. Nesta concentração, nenhum dano ao corpo de A. salina. S - Sem 
+danos aos apêndices. T - Abdome com cutícula enrugada. U e V - Suco de caju não 
+processado na concentração de 1000 μg/mL em A. salina. Nesta concentração, nenhum 
+dano ao corpo de A. salina foi observado. W – Anexos preservados. X - Abdômen com 
+cutícula preservada. Barras: A, B, E, F, I, J, M, N, Q, R, U, V - 300 µm; C, D, G, H, K, L, O, 
+P, S, T, W, X - 50 μm. 
+ 
+ 
+Os náuplios expostos ao suco de caju não processado na concentração de 10 
+µg.mL apresentaram mudanças estruturais significativas em todo o corpo, incluindo 
+abdômen, antenas e apêndices (Fig. 20N-P).  
+70 
+ 
+Os danos estruturais em náuplios expostos a 100 e 1000 µg.mL foram 
+semelhantes aos mencionados acima (Fig. 20Q-X). Náuplios tratados com suco de 
+caju processado por plasma frio à 50 Hz, 10 µg.mL não apresentaram danos 
+significativos em relação ao controle. 
+ Artemia salina tratada com suco de caju processado por ultrassom mostrou 
+dano morfológico semelhante ao observado para amostra tratada com HOem todas 
+22 
+as concentrações (Fig. 21A-L). Portanto, este tratamento não foi capaz de prevenir 
+danos causados pelo H2O2. 
+Figura 21 - Efeito protetor do suco de caju processado por plasma frio contra HO(10, 100 e 
+22 
+1000 μg/mL-1) em náuplios instar II de A. salina em 48 h de exposição. A e B - O suco de caju 
+ultrassonográfico na concentração de 10 μg/mL mostrando efeito protetor, entretanto, alguns 
+danos foram observados no corpo de A. salina. C – Anexos preservados. D - Abdome com 
+lesão na cutícula. E e F - O suco de caju processado por ultrassom na concentração de 100 
+μg/mL apresentou baixo efeito protetor. G – Cutícula preservada. H - Abdômen com lesão na 
+cutícula. I e J - O suco de caju ultrassonográfico na concentração de 10 μg/mL mostrando 
+efeito protetor, entretanto, alguns danos foram observados no corpo de A. salina. K - Anexos 
+preservados. L - Abdômen com lesão na cutícula. Barras: A, B, E, F, I e J - 300 µm; C, D, G, 
+H, K e L - 50 µm. 
+ 
+Na concentração de 100 ppm do suco de caju processado por ultrassom 
+apresentou baixo efeito protetor em E e F (Fig. 21 e e f). G – Cutícula preservada. H - 
+Abdômen com lesão na cutícula (Fig. 21 g e h).   
+O suco de caju na concentração de 10 ppm mostrando efeito protetor, 
+entretanto, alguns danos foram observados no corpo de Artemia em I e J (Fig. 21 i e 
+j). K - Anexos preservados. L - Abdômen com lesão na cutícula. Barras: A, B, E, F, I e 
+J - 300 µm; C, D, G, H, K e L - 50 µm (Fig. 21 k e l). 
+71 
+ 
+ Os corpos individuais mantiveram a forma típica quando observados em 
+microscopia óptica (Fig. 22A) e microscopia eletrônica de varredura (Fig. 22B). Os 
+apêndices apresentavam morfologia típica (Fig. 22C), assim como o abdome (Fig. 
+22D). A exposição dos indivíduos à 50 Hz, 100 e 1000 µg/mL de suco de caju 
+processado por plasma frio, ao contrário, não preveniu os efeitos indesejáveis do H2O2 
+(Fig. 22E-L). 
+ 
+Figura 22 - Efeito protetor do suco de caju processado por plasma frio (50 e 1000 Hz) contra 
+HO em náuplios instar II de A. salina em 48 h de exposição. A e B - Não foi observada 
+22
+toxicidade aguda em A. salina utilizando suco de caju plasmalizado à 50 Hz na concentração 
+de 10 μg/mL, mostrando efeito protetor. C – Anexos preservados. D - Abdome com cutícula 
+preservada. E e F - Não foi observada toxicidade aguda em A. salina utilizando suco de caju 
+plasmalizado à 50 Hz na concentração de 100 μg/mL. G - Anexos preservados. H - Abdômen 
+com lesão na cutícula. I e J - Não foi observada toxicidade aguda em A. salina utilizando suco 
+de caju plasmalizado à 50 Hz na concentração de 1000 μg/mL. K - Anexos preservados. L - 
+Abdome com cavidades aparentes. M e N - Não foi observada toxicidade aguda em A. salina 
+utilizando suco de caju plasmalizado 1000 Hz na concentração de 10 μg/mL, porém, foram 
+observados danos ao corpo dos náuplios. O - Anexos preservados. P - Abdômen com cutícula 
+enrugada. Q e R - Não foi observada toxicidade aguda em A. salina utilizando suco de caju 
+plasmalizado à 1000 Hz na concentração de 100 μg/mL. S - Anexos preservados. T - Abdome 
+com cutícula preservada. U e V - Não foi observada toxicidade aguda em A. salina utilizando 
+suco de caju plasmalizado à 1000 Hz na concentração de 1000 μg/mL. W – Anexos 
+preservados. X - Abdômen com cutícula preservada. Barras: A, B, E, F, I, J, M, N, Q, R, U, V 
+- 300 µm; C, D, G, H, K, L, O, P, S, T, W, X - 50 μm. 
+72 
+ 
+Organismos expostos ao suco de caju plasmolisado a 1000 Hz também não 
+foram capazes de prevenir danos do agente oxidante, porém, à medida que a 
+concentração do suco aumentou, os danos morfológicos foram evitados (Fig. 22Q-X). 
+O dano no corpo dos náuplios sob exposição a HO provavelmente foi 
+22
+relacionado ao incremento de ROS. Uma possibilidade de diminuição de ROS na 
+célula deve ser o equilíbrio de espécies reativas e enzimas antioxidantes totais 
+(SNEZHKINA et al., 2019) o que ao contrário do que aconteceu neste estudo. 
+Compostos e extratos têm sido usados para proteger Artemia salina de 
+moléculas oxidativas. Um exemplo disso é um biossurfactante de S. lentus que pode 
+proteger os náuplios contra o Vibrio harveyi. No entanto, após 48 h de exposição ao 
+patógeno, observou-se um aumento na taxa de mortalidade (SNEZHKINA et al. 2019). 
+Este é o primeiro relato de toxicidade do suco de caju usando modelos in vivo. 
+Choi (2017) estudou o efeito tóxico do extrato de semente de toranja em A. 
+salina. Embora não tenham sido avaliadas alterações morfológicas, os extratos 
+apresentaram forte efeito larvicida.  
+Segundo Sarker Apu e colaboradores (2013) diferentes frações de folhas, flores 
+e frutos de Solanum sisymbriifolium e Jatropha gossipyfolia também foram tóxicas 
+para A. salina. A maior parte dos estudos de toxicidade no modelo de Artemia são 
+realizados em náuplios do instar II, embora alguns estudos investiguem muitos 
+estágios da vida, incluindo adultos (MADHAV et al., 2017). 
+Isso se justifica pelo fato de os náuplios do instar I serem menos sensíveis em 
+comparação com os náuplios do instar II (OCARANZA-JOYA et al., 2019). Essa 
+diferença se deve ao fato de os náuplios do instar I não poderem incorporar tóxicos 
+pelo trato digestivo, uma vez que a boca e o ânus ainda estão fechados (OCARANZA-
+JOYA et al., 2019). Por esta razão, o uso de náuplios instar II pode avaliar a toxicidade 
+com mais precisão (MIGUEL et al., 2021). 
+ 
+5.6 Determinação da CL50 
+Foi realizada a determinação da CL50 para analisar qual concentração dos 
+alimentos avaliados seria suficiente para inviabilizar 50% dos náuplios de Artemia 
+salina e podemos perceber que o suco processado por plasma frio à 50 Hz nas 
+concentrações (10, 100 e 1000 μg/mL) apresentaram médias da CL50 de 0, 0 e 7,3 
+respectivamente.  
+73 
+ 
+Utilizando o suco de caju processado por plasma frio em uma frequência maior 
+à 1000 Hz, também foi feito a determinação da CL50 para analisar qual a 
+concentração dos alimentos seria suficiente para inviabilizar 50% dos náuplios de 
+Artemia salina e podemos perceber que o suco processado por plasma frio à 1000 Hz 
+nas concentrações testadas (10, 100 e 1000 μg/mL) apresentaram médias da CL50 
+de 0,3, 0 e 6,3 respectivamente.  
+ 
+6. CONSIDERAÇÕES FINAIS 
+ 
+Esse trabalho mostrou que o suco de caju processado não termicamente por 
+ultrassom não causou mortalidade de náuplios de Artemia salina no teste de 
+toxicidade, porém alterações estruturais foram observadas. Nenhum efeito protetivo 
+contra o estresse oxidativo foi observado para esta amostra. 
+Plasma à 50 e 1000Hz provocaram óbitos significativos e alterações estruturais 
+relevantes na morfologia dos náuplios, porém, os óbitos foram parcialmente revertidos 
+no teste que avaliou o possível efeito protetivo dos sucos testados, bem como 
+alterações estruturais, principalmente em 1000 Hz na maior concentração 1000 
+μg/mL. 
+Embora a amostra processada por ultrassom não tenha causado mortes no 
+teste de toxicidade, a morfologia dos náuplios foi modificada. Os resultados sugerem 
+que o tratamento com plasma frio pode conferir a formação de algumas substâncias 
+tóxicas no suco de caju, enquanto o tratamento com ultrassom é menos prejudicial, 
+considerando o modelo de Artemia salina.  
+  O resultado da aplicação de tratamentos não térmicos aos alimentos depende 
+da matriz utilizada. Mais estudos são necessários para investigar os produtos gerados 
+pelas tecnologias de processamento não térmico do suco de caju. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+74 
+ 
+REFERÊNCIAS 
+ 
+ABRAFRUTAS. Brasil é o terceiro maior produtor de frutas do mundo, diz Abrafrutas. 
+2021. Disponível em: https://abrafrutas.org/2019/03/brasil-e-o-terceiro-maior-
+produtor-de-frutas-do-mundo-diz-abrafrutas/. Acesso em: 24 fev. 2022. 
+ 
+ADIGA, J. D.; MURALIDHARA B. M.; PREETHI, P.; SAVADI, S.; Phenological 
+growth stages of the cashew tree (Anacardium occidentale L.) according to the 
+extended BBCH scale. Annals of Applied Biology, [s.l.], 1-7, 2019. 
+ 
+AHMAD, P. Oxidative Damage to Plants. Chapter 4: Catalase. Elsevier Inc, 2014. 
+ 
+AHMAD, S.; ZEB, A.; AYAZ, M.; MURKOVIC, M. Characterization of phenolic 
+compounds using UPLC–HRMS and HPLC–DAD and anti-cholinesterase and anti-
+oxidant activities of Trifolium repens L. leaves. European Food Research 
+Technology, [s.l.], 246(3),485-96, 2020.  
+ 
+AHSAN, H.; ALI, A.; ALI, R. Oxygen free radicals and antioxidants. The American 
+journal of nursing, [s.l.], (131), 389–404, 2003. 
+ 
+ALENYOREGE, E. A.; MA, H.; AYIM, I.; AHETO, J. H.; HONG, C.; ZHOU, C. 
+Reduction of Listeria innocua in fresh-cut Chinese cabbage by a combined washing 
+treatment of sweeping frequency ultrasound and sodium hypochlorite. LWT - Food 
+Science and Technology, [s.l.],101, 410–418, 2019. 
+ 
+ALMEIDA, F. D. L.; GOMES, W. F.; CAVALCANTE, R. S.; TIWARI, B. K.; CULLEN, 
+P. J.; FRIAS, J. M.; RODRIGUES, S. Fructooligosaccharides integrity after 
+atmospheric cold plasma and high-pressure processing of a functional orange juice. 
+Food Research International, [s.l.], 102, 1-39, 2017. 
+ 
+ALVARENGA, P. D. L.; CAVATTI, L. S.; VALIATI, B. S.; MACHADO, B. G.; 
+CAPUCHO, L. C.; DOMINGOS, M. M.; SILVA, M. N.; VIEIRA, M. S.; SÃO JOSÉ, J. 
+F. B. Application of ultrasound in fruits and vegetables processing. Brazilian Journal 
+of Food Technology, [s.l.], 24, e2020274, 2021.  
+ 
+ALVARENGA, P. D. L.; VASCONCELOS, C. M.; SÃO JOSÉ, J. F. B. Application of 
+ultrasound combined with acetic acid and peracetic acid: Microbiological and 
+physicochemical quality of strawberries. Molecules, [s.l.], 26(1), 1-16, 2020.  
+ 
+ALVES FILHO, E. G., SILVA, L. M. A., OIRAM FILHO, F., RODRIGUES, S., 
+FERNANDES, F. A. N., GALLÃO, M. I., MATTISON, C. P.; DE BRITO, E. S. Cold 
+plasma processing effect on cashew nuts composition and allergenicity. Food 
+Research International, [s.l.], 125, 1-37, 2019. 
+ 
+ALVES FILHO, E. G.; SILVA, L. M. A.; DE BRITO, E. S.; WURLITZER, N. J.; 
+FERNANDES, F. A. N.; RABELO, M. C.; FONTELES, T. V.; RODRIGUES, S. 
+Evaluation of thermal and nonthermal processing effect on non-prebiotic and 
+prebiotic acerola juices using 1H qNMR and GC–MS coupled to chemometrics. Food 
+Chemistry, [s.l.], 265, 23–31, 2018. 
+ 
+75 
+ 
+ALVES FILHO, E. G.; SOUSA, V. M.; RODRIGUES, S.; DE BRITO, E. S.; 
+FERNANDES, F. A. N. Green ultrasound-assisted extraction of chlorogenic acids 
+from sweet potato peels and sonochemical hydrolysis of caffeoylquinic acids 
+derivatives. Ultrasonics Sonochemistry, [s.l.], 63, 1-25, 2020.  
+ 
+ALVES, J. F. P. Ensaio de toxicidade das beatas de cigarro na água utilizando 
+Artemia Francesa. 2021. 45 f. Dissertação (Mestrado em Biologia e Gestão da 
+Qualidade da Água) – Faculdade de Ciências da Universidade do Porto, Porto, 2021.  
+ 
+AN, H. J.; SARKHEIL, M.; PARK, H. S.; YU, I. J.; JOHARI, S. A. Comparative toxicity 
+of silver nanoparticles (AgNPs) and silver nanowires (AgNWs) on saltwater 
+microcrustacean, Artemia salina. Comparative Biochemistry and Physiology Part - 
+C: Toxicology and Pharmacology, [s.l.], 218, 62–69, 2019. 
+ 
+ANANTHANARASIMHAN, J.; LAKSHMINARAYANA, R.; ANAND, M.S.; DASAPPA, 
+S. Influence of gas dynamics on arc dynamics and the discharge power of a rotating 
+gliding arc. Plasma Sources Sci. Technol, [s.l.], 28(8), 1-22, 2019. 
+ 
+ANAYA-ESPARZA, L. M.; VELÁZQUEZ-ESTRADA, R. M.; ROIG, A. X.; 
+GARCÍAGALINDO, H. S.; SAYAGO-AYERDI, S. G.; MONTALVO-GONZÁLEZ, E. 
+Thermosonication: An alternative processing for fruit and vegetable juices. Trends in 
+Food Science & Technology, [s. l.], (61), 2017b. 
+ 
+ANAYA-ESPARZA, L. M.; VELAZQUEZ-ESTRADA, R. M.; SAYAGO-AYERDI, S. G.; 
+SANCHEZ-BURGOS, J. A.; RAMÍEREZ-MARES, M. V.; GARCÍA-MAGANA, M. L.; 
+MONTALVO-GONZALEZ, E. Effect of thermosonication on polyphenol oxidase 
+inactivation and quality parameters of soursop néctar. LWT - Food Science and 
+Technology, [s.l.], 75, 545-551, 2017a. 
+ 
+ARAÚJO, J. M. D.; DA SILVA, A. P.; CÂNDIDO, M. B.; DA SILVA, T. W. M.; 
+JÚNIOR, F. P. A. Ethnopharmacological study of Anacardium occidentale: a brief 
+review. Research, Society and Development, [s.l.], 9(8), 1-18, 2020. 
+ 
+Artemia salina (Linnaeus, 1758) in GBIF Secretariat. (2019). GBIF Backbone 
+Taxonomy. Checklist dataset. Disponível em: https://doi.org/10.15468/39omei. 
+Acesso em: 06 set. 2020. 
+ 
+ARULVASU, C.; JENNIFER, S. M.; PRABHU, D.; CHANDHIRASEKAR, D. Toxicity 
+effect of silver nanoparticles in brine shrimp Artemia. The Scientific World Journal, 
+[s.l.], 1-11, 2014. 
+ 
+ASSOCIAÇÃO BRASILEIRA DAS INDÚSTRIAS DE REFRIGERANTES E DE 
+BEBIDAS NÃO ALCOÓLICAS. Volume de produção do mercado brasileiro de 
+néctares e sucos prontos dos anos de 2010 a 2017. [s.l.]: ABIR, 2019. Disponível 
+em: https://abir.org.br/. Acesso em: 18 jun. 2021. 
+ 
+BARBOSA, Filipa Ferreira da Silva. Influência dos antioxidantes na qualidade do 
+sémen de homens em tratamento de fertilidade. 2009. 69 f. Dissertação 
+(Mestrado em Biologia Humana e Ambiente) – Universidade de Lisboa, Lisboa, 
+2009. 
+76 
+ 
+ 
+BARRAZA-GARZA, G.; PÉREZ-LEÓN, J. A.; CASTILLO-MICHEL, H.; DE LA ROSA, 
+L. A.; MARTINEZ, A.; COTTE, M.; ALVAREZ-PARRILLA, E. Antioxidant effect of 
+phenolic compounds (PC) at different concentrations in IEC-6cells: A spectroscopic 
+analysis. Biomolecular Spectroscopy, [s.l.], 227, 1-8, 2020.  
+ 
+BARRETTO, T. L.; POLLONIO, M. A. R.; TELIS-ROMERO, J.; DA SILVA BARRETO, 
+A. C. Improving sensory acceptance and physicochemical properties by ultrasound 
+application to restructured cooked ham with salt (NaCl) reduction. Meat Science, 
+[s.l.], 145, 55-62, 2018. 
+ 
+BATISTA, K. S.; ALVES, A. F.; LIMA, M. S.; SILVA, L. A.; LINS, P. P.; GOMES, J. A. 
+S.; SILVA, A. S.; TOSCANO, L. T.; MEIRELES, B. R. L. A.; CORDEIRO, A. M. T. M.; 
+CONCEIÇÃO, M. L.; SOUZA, E. L.; AQUINO, J. S. Beneficial effects of consumption 
+of acerola, cashew or guava processing by-products on intestinal health and lipid 
+metabolism in dyslipidaemic female Wistar rats. British Journal of Nutrition, 
+[s.l.],119(1), 30-41, 2018. 
+ 
+BERISTAÍN-BAUZA, S.; MARTÍNEZ-NINO, A.; RAMÍREZ-GONZÁLEZ, A. P.; ÁVILA-
+SOSA, R.; RUÍZ-ESPINOSA, H.; RUIZ-LÓPEZ, I. I.; OCHOA-VELASCO, C. E. 
+Inhibition of Salmonella Typhimurium growth in coconut (Cocos nucifera L.) water by 
+hurdle technology. Food Control, [s.l.], 92, 312–318, 2018. 
+ 
+BERMUDEZ-AGUIRRE, D. Advances in the inactivation of microorganisms and 
+viruses in food and model systems using cold plasma. In: Advances in Cold Plasma 
+Applications for Food Safety and Preservation, [s.l.], 49–91, 2020. 
+ 
+BEVILACQUA, A.; PETRUZZI, L.; PERRICONE, M.; SPERANZA, B.; 
+CAMPANIELLO, D.; SINIGAGLIA, M.; CORBO, M. R. Nonthermal Technologies for 
+Fruit and Vegetable Juices and Beverages: Overview and Advances. 
+Comprehensive Reviews in Food Science and Food Safety, [s.l.], 17, 2–62, 2018.  
+ 
+BHOOMIKA, H. R.; SUDHA, R. N. Problems and prospects of cashew cultivation in 
+India ‐ An overview. International Journal Current Microbiology and Applied 
+Sciences, [s,l,], 7(10), 3687–3694, 2018. 
+ 
+BIANCHI, M. L. P.; ANTUNES, L. M. G. Liberação de mercúrio de tecidos humanos 
+armazenados em solução de formalina. Revista de Nutrição, [s.l.], 12(2), 123-130, 
+1999. 
+ 
+BINOTI, M. L.; RAMOS, A. M. Conservação de alimentos: uma visão mais saudável. 
+HU Revista, [s.l.], 41(3), 171-179, 2015. 
+ 
+BODOIRA, R.; MAESTRI, D. Phenolic Compounds from Nuts: Extraction, Chemical 
+Profiles and Bioactivity. Journal of Agricultural and Food Chemistry, [s.l.], 68(4), 
+927-942, 2020. 
+ 
+BOMBANA, V. B.; ORO, G. E. D.; RIGO, D.; POLINA, C. C.; DENTI, A. F.; TRES, B. 
+P.; WISNIEWSKI, M. S. W.; STEFFENS, J.; PAROUL, N.; DALLAGO, R. M.; 
+BACKES, G. T.; CANSIAN, R. L. Influence of drying on bioactive compounds and 
+77 
+ 
+antioxidant activity of fruits of guabiju (Myrcianthes pungens). Research, Society 
+and Development, [s.l.], 10(8), 1-14, 2021. 
+ 
+BRAINER, M. S. C. P.; VIDAL, M. F. Cajucultura Nordestina em recuperação; 
+Caderno Setorial ETENE. Banco do Nordeste-BNB, [s.l.n.], ano 5, n. 114, 2020. 
+ 
+BRASIL. Agência nacional de Vigilância Sanitária. Ministrério da Saúde. Decreto nº 
+6.871 de 4 de junho de 2009. Regulamenta a lei nº. 8.918, de 4 de junho de 1994, 
+que dispõe sobre a padronização, a classificação, o registro, a inspeção e a 
+fiscalização da produção e do comércio de bebidas. Diário Oficial [da] República 
+Federativa do Brasil, Poder executivo, Brasília, DF, jun. 2009.  
+ 
+BRASIL. Agência Nacional de Vigilância Sanitária. Resolução RDC n° 243, de 26 
+de julho de 2018. Dispõe sobre os requisitos para composição, qualidade, segurança 
+e rotulagem dos suplementos alimentares e para atualização das listas de 
+nutrientes, substâncias bioativas, enzimas e probióticos, de limites de uso, de 
+alegações e de rotulagem complementar destes produtos. Diário Oficial da União, 
+Brasília, DF, 27. 144, Seção 1, 100, jul. 2018. 
+ 
+Brasil. Ministério da Agricultura e do Abastecimento (2018). Resolve: Fica 
+estabelecida em todo o território nacional a complementação dos Padrões de 
+Identidade e Qualidade de Suco e Polpa de Fruta, na forma desta Instrução. 
+Normativa (Instrução Normativa n° 49). Disponível em: 
+https://alimentusconsultoria.com.br. Acesso em: 22 jun. 2021.  
+ 
+BRITTO, R. P. A.; VEIGA, R. S.; MARCUCCI, M. C. Potencial terapêutico do açafrão 
+(Crocus sativus L.) na síndrome metabólica. Revista de Fitoterapia, [s.l.], 18(2), 
+139-147, 2019. 
+ 
+CAMPELO, P.H.; FILHO, E.G.A.; SILVA, L.M.; BRITO, E.S.; RODRIGUES, S.; 
+FERNANDES, F.A. Modulation of aroma and flavor using glow discharge plasma 
+technology. Innov. Innovative Food Science and Emerging Technologies, [s.l.], 
+62, 1-11, 2020. 
+ 
+CAMPOLI, S. S.; ROJAS, M. L.; AMARAL, J. E. P. G.; CANNIATTI-BRAZACA, G.; 
+AUGUSTO, P. E. D. Ultrasound processing of guava juice: Effect on structure, 
+physical properties and lycopene in vitro accessibility. Food Chemistry, [s.l.], 268, 
+594-601, 2018. 
+ 
+CAO, X.; CAI, C.; WANG, Y.; ZHENG, X. The inactivation kinetics of polyphenol 
+oxidase and peroxidase in bayberry juice during thermal and ultrasound treatments. 
+Innovative Food Science and Emerging Technologies, [s.l.], 45, 169–178, 2018. 
+ 
+CARDOSO, N. R. P. Análise do consumo de frutas e derivados no município de 
+Belém, Estado do Pará. 2020. 83 f. Dissertação (Mestrado em Agronomia) – 
+Universidade Federal Rural da Amazônia, Amazônia, 2020.  
+ 
+CARMO, M. A. V.; PRESSETE, C. G.; MARQUES, M.J.; GRANATO, D.; AZEVEDO, 
+L. Polyphenols as potential antiproliferative agents: scientific trends. Current 
+Opinion in Food Science, [s.l.], 24, 26–35, 2018. 
+78 
+ 
+ 
+CARVALHO, A. P. A.; CONTE-JUNIOR, C. A. Health benefits of phytochemicals 
+from Brazilian native foods and plants:  Antioxidant, antimicrobial, anti-cancer, and 
+risk factors of metabolic/endocrine disorders control. Trends in Food Science & 
+Technology, [s.l.], 111, 534-548, 2021. 
+ 
+CARVALHO, D. V.; GALLÃO, M. I.; BRITO, E. S. OBESIDADE e fibra dietética: 
+destaque para a fibra de caju. Brazilian Journal of Development, São Paulo, 6(7), 
+43474-43488, 2020. 
+ 
+CASSIDY, A. Berry anthocyanin intake and cardiovascular health. Molecular 
+Aspects of Medicine, [s.l.], 1-7, 2017. 
+ 
+CASTRO, A. J. G.; BAPTISTA, I. E.; MOURSA, K. R.; PADILHA, F.; TONIETTO, J.; 
+SOUZA, A. Z.; SOARES, C. H. L.; SILVA, F. R. M.; VAN DER KRAAK, G. 
+Comparative Biochemistry and Physiology, Part C Exposure to a Brazilian pulp mill 
+effluent impacts the testis and liver in the zebrafish. Comparavite Biochemistry and 
+Physiology Part - C Toxicology Pharmacology, [s.l.], 206-207, 41–47, 2018. 
+ 
+CATTAFESTA, M.; PETARLI, G. B.; DA LUZ, T. C.; ZANDONADE, E.; BEZERRA, O. 
+M. P. A.; SALAROLI, L. B. Dietary patterns of Brazilian farmers and their relation with 
+sociodemographic, labor, and lifestyle conditions. Nutrition Journal, [s.l.], 19(23), 1-
+16, 2020.  
+ 
+CHEMAT, F.; ROMBAUT, N.; MEULLEMIESTRE, A.; TURK, M.; PERINO, S.; 
+TIXER-FABIANO, A. S.; ABERT-VIAN, M. Review of green food processing 
++techniques. preservation, transformation, and extraction. Innovative Food Science 
+& Emerging Technologies, [s.l.], 41, 357–377, 2017. 
+ 
+CHENG, L.; LI, J.; HE, L.; ZHOU, X. Natural products and caries prevention. Caries 
+Research, [s.l.], 49, 38–45, 2015. 
+ 
+CHOI, A.; HÁ, K.; JOUNG, H.; SONG, Y. Frequency of Consumption of Whole Fruit, 
+Not Fruit Juice, Is Associated with Reduced Prevalence of Obesity in Korean Adults. 
+Journal of the Academy of Nutrition and Dietetics, [s.l.], 119(11), 1842-1851, 
+2019. 
+ 
+CHOI, J. S. Larvicidal effects of grapefruit seed extract (GSE) on brine shrimp 
+Artemia salina. Toxicology and Environmental Health Sciences, [s.l.], 9(3), 209–
+214, 2017. 
+ 
+CHOTPHRUETHIPONG, L.; BENJAKUL, S.; KIJROONGROJANA, K. Ultrasound 
+assisted extraction of antioxidative phenolics from cashew (Anacardium occidentale 
+L.) leaves. Journal of Food Science and Technology, [s.l.], 56(4), 1785–1792, 
+2019.  
+ 
+CINTAS, P. Ultrasound and green chemistry− Further comments. Ultrasonics 
+sonochemistry, [s.l.], 28, 257–258, 2016. 
+ 
+79 
+ 
+CONAB. Acompanhamento da Safra Basileira 2019/20. Acompanhamento da Safra 
+Brasileira de Grãos 2019/20, 2019. 
+ 
+CONSTANTIN, M.; MIOARA, D. Artemia salina. Balneo-Research Journal, [s.l.], 
+2(4), 119-122, 2011. 
+ 
+CORATO, U. Improving the shelf-life and quality of fresh and minimally-processed 
+fruits and vegetables for a modern food industry: A comprehensive critical review 
+from the traditional technologies into the most promising advancements. Critical 
+Reviews in Food Science and Nutrition, [s.l.], 60(6), 940-975, 2020.  
+ 
+COUTINHO, N. M.; SILVEIRA, M. R.; ROCHA, R. S.; MORAES, J.; FEREIRA, M. V. 
+S.; PIMENTEL, T. C. et al. Cold plasma processing of milk and dairy products. 
+Trends in Food Science and Technology, [s.l.], 74, 56–68, 2018. 
+ 
+COUTINHO, N. M. PROCESSAMENTO DE BEBIDA LÁCTEA ACHOCOLATADA 
+PELA TECNOLOGIA DE PLASMA FRIO. 2019. 123 f. Tese (Doutorado em 
+Medicina Veterinária) – Universidade Federal Fluminense, Niterói, 2019.  
+ 
+CRIEL, G. R. J.; MACRAE, T. H. Artemia Morphology and Structure. Artemia: Basic 
+and Applied Biology, [s.l.], 1–37, 2002. 
+ 
+CRUZEIRO, C.; ROCHA, E.; JOÃO, M. Determination of 54 pesticidesinwaters of the 
+Iberian Douro River estuary and risk assessment of environmentally relevant 
+mixtures using theoretical approaches and Artemia salina and Daphnia magna 
+bioassays. Ecotoxicology and Environmental Safety, [s.l.], 145, 126–134, 2017. 
+ 
+DASAN, B. G.; MUTLU, M.; BOYACI, I. H. Decontamination of Aspergillus flavus and 
+Aspergillus parasiticus spores on hazelnuts via atmospheric pressure fluidized bed 
+plasma reactor. International Journal of Food Microbiology, [s.l.], 216, 50–59, 
+2016. 
+ 
+DEL RÉ, P. V.; JORGE, N. Especiarias como antioxidantes Natural: Aplicações em 
+alimentos e implicação na saúde. Revista Brasileira de Plantas Medicinais, [s.l.], 
+14(2), 389-399, 2012. 
+ 
+DJEKIC, I.; SANJUÁN, N.; CLEMENTE, G.; JAMBRAK, A. R.; DJUKIć-VUKOVIć, A.; 
+BRODNJAK, U. V.; POP, E.; THOMOPOULOS, R.; TONDA, A. Review on 
+environmental models in the food chain - Current status and future perspectives. 
+Journal Of Cleaner Production, [s.l.], 176, 1012-1025, 2018. 
+ 
+DOLAS, R.; SARAVANAN, C.; KAUR, B. P. Emergence and era of ultrasonic’s in fruit 
+juice preservation: A review. Ultrasonics Sonochemistry, [s.l.], 58, 1-43, 2019.  
+ 
+DUMITRASCU, M. Artemia salina. Balneo Research Journal, [s.l.], 2(4), 119–122, 
+2011.  
+ 
+ESTEBAN-FERNÁNDEZ, A.; ZORRAQUÍN-PENÌA, I.; FERRER, M. D.; MIRA, A.; 
+BARTOLOMÉ, B.; DE LLANO, D. G.; MORENO-ARRIBAS, M. V. Inhibition of Oral 
+Pathogens Adhesion to Human Gingival Fibroblasts by Wine Polyphenols Alone and 
+80 
+ 
+in Combination with an Oral Probiotic. Journal of Agricultural and Food 
+Chemistry, [s.l.], 66(9), 2071–2082, 2018. 
+ 
+ETZBACH, L.; PFEIFFER, A.; SCHIEBER, A.; WEBER, F. Effects of thermal 
+pasteurization and ultrasound treatment on the peroxidase activity, carotenoid 
+composition, and physicochemical properties of goldenberry (Physalis peruviana L.) 
+puree. Lwt, [s.l.], 100, 69–74, 2019. 
+ 
+FAO. Cashew nut. 2020. Disponível em: 
+http://www.fao.org/3/X5043E/x5043E06.htm. Acesso em: 19 jan. 2021.  
+ 
+FAOSTAT - Food and Agriculture Organization of the United Nations. 
+Production. (2022). Disponível em: http://www.fao.org/faostat/en/#data. Acesso em: 
+15 abr. 2022. 
+ 
+FARBER, R. DABUSH-BUSHERI, I.; CHANIEL, G.; ROZENFELD, S.; 
+BORMASHENKO, E.; MULTANEN, V.; CAHAN, R.  Biofilm grown on wood waste 
+pretreated with cold low-pressure nitrogen plasma: Utilization for toluene 
+remediation. International Biodeterioration & Biodegradation, [s.l.], 139, 62–69, 
+2019. 
+ 
+FERNANDES, F. A. N.; RODRIGUES, S. Cold plasma processing on fruits and fruit 
+juices: A review on the effects of plasma on nutritional quality. Processes, Basiléia, 
+v. 9, 1 dez. 2021. Disponível em: https://www.mdpi.com/2227-9717/9/12/2098. 
+Acesso em: 27 fev. 2022. 
+ 
+FERNANDEZ, A.; THOMPSON, A. The inactivation of Salmonella by cold 544 
+atmospheric plasma treatment. Food Research International, [s.l.], 45(2), 545 678-
+684, 2012. 
+ 
+FINNEY, D. J. Probit analysis. 3. ed. Cambridge University Press, Cambridge, 
+1971. 
+ 
+FONTELES, T.; LEITE, A. K.; MIGUEL, T.; FERNANDES, F.; PINHEIRO, S.; 
+MIGUEL, E.; RODRIGUES, S. Optimization of Sonication Parameters to Produce a 
+Cashew Apple Bagasse Puree Rich in Superoxide Dismutase. Foods, [s.l.], 11(17), 
+1-16, 2022.  
+ 
+FOTSIS, T.; PEPPER, M. S; AKTAS, E.; BREIT, S.; RASKU, S.; ADLERCREUTZ, 
+H.; WÄHÄLÄ, K.; MONTESANO, R.; SCHWEIGERER, L. Flavonóides, inibidores da 
+proliferação celular e angiogênese in vitro derivados da dieta. Pesquisa do Câncer, 
+[s.l.], 57(14), 2916-2921, 1997. 
+ 
+FRATIANNI, A.; CINQUANTA, L.; PANFILI, G. Degradation of carotenoids in orange 
+juice during microwave heating. LWT - Food Science and Technology, [s.l.], 43(6), 
+867- 871, 2010. 
+ 
+FREITAS, A. P. Avaliação da qualidade de suco de acerola adicionado de 
+emulsão de óleo essencial de laranja (Citrus sinensis) e quitosana. 2019. 68 f. 
+81 
+ 
+TCC (Bacharel em Nutrição) - Universidade Federal de Pernambuco, Vitória de 
+Santo Antão, 2019.  
+ 
+FU, L. XU, B. T.; XU, X. R.; GAN, R. Y.; ZHANG, Y.; XIA, E. Q.; LI, H. B. Antioxidant 
+capacities and total phenolic 81ontentes of 62 fruits. Food Chemistry, [s.l.], 129(2), 
+345–350, 2011. 
+ 
+FYFE, S.; SMYTH, H. E.; SCHIRRA, H. J.; RYCHLIK, M.; SULTANBAWA, Y. The 
+Nutritional Potential of the Native Australian Green Plum (Buchanania obovata) 
+Compared to Other Anacardiaceae Fruit and Nuts. Frontiers in Nutrition, 
+Switzerland, 7, 1-14, 2020. 
+ 
+GAMBARDELLA, C.; COSTA, E.; PIAZZA, V.; FABBROCINI, A.; MAGI, E.; FAIMALI, 
+M.; GARAVENTA, F. Effect of silver nanoparticles on marine organisms belonging to 
+different trophic levels. Marine Environmental Research, [s.l.], 111, 41–49, 2015.  
+ 
+GAVAHIAN, M.; KHANEGHAH, A. M. Cold plasma as a tool for the elimination of 
+food contaminants: Recent advances and future trends. Critical Reviews in Food 
+Science and Nutrition, [s.l.], 60(9), 1581–1592, 2019. 
+ 
+GNANARAJ, C.; SHAH, M. D.; SONG, T.; IGBAL, M. Hepatoprotective mechanism 
+of Lygodium microphyllum (Cav.) R.Br. through ultrastructural signaling prevention 
+against carbon tetrachloride (CCl4)-mediated oxidative stress. Biomedicine and 
+Pharmacotherapy, [s.l.], 92, 1010-1022, 2017. 
+ 
+GOTTFREDSEN, R. H.; LARSEN, U. G.; ENGHILD, J. J.; PETERSEN, S. V. Hydrogen 
+peroxide induce modifications of human extracellular superoxide dismutase that 
+results in enzyme inhibition. Redox Biology, [s.l.], 1(1), 24–31, 2013. 
+ 
+GRANATO, D.; MOCAN, A.; CAMARA, J. S. Is a higher ingestion of phenolic 
+compounds the best dietary strategy? A scientific opinion on the deleterious effects 
+of polyphenols in vivo. Trends in Food Science Technology, [s.l.], 98, 162-166, 
+2020. 
+ 
+GUTNER-HOCH, E.; MARTINS, R.; MAIA, F.; OLIVEIRA, T.; SHPIGEL, M.; WEIS, 
+M.; TEDIM, J.; BENAYAHU, Y. Toxicity of engineered micro- and nanomaterials with 
+antifouling properties to the brine shrimp Artemia salina and embryonic stages of the 
+sea urchin Paracentrotus lividus. Environmental Pollution, [s.l.], 251, 530–537, 
+2019. 
+ 
+HAMRUN, N.; NABILAH, T.; HASYIM, R.; RUSLIN, M.; DAMMA, I.; ARIANTO, M. A. 
+A. Toxicity Test of Bioactive Red Alga Extract Eucheuma spinosum on Shrimp 
+Artemia salina Leach. Systematic Reviews in Pharmacy, [s.l.], 11(5), 672-676, 
+2020.  
+ 
+HERB, M.; SCHRAMM, M. Functions of ROS in macrophages and antimicrobial 
+immunity. Antioxidants, [s.l.],10(2), 1-39, 2021. 
+ 
+82 
+ 
+HERMES-LIMA, M.; WILLMORE, W. G.; STOREY, K. B. Quantification of lipid 
+peroxidation in tissue extracts based on Fe (III)xylenol orange complex formation. 
+Free Radical Biology and Medicine, [s.l.], 19(3), 271–280, 1995. 
+ 
+HERTWIG, C.; MENESES, N.; MATHYS, A. Cold atmospheric pressure plasma and 
+low energy electron beam as alternative nonthermal decontamination technologies 
+for dry food surfaces: A review. Trends in Food Science and Technology, [s.l.], 77, 
+131–142, 2018. 
+ 
+HOU, Y.; WANG, R.; GAN, Z.; SHAO, T.; ZHANG, X.; HE, M.; SUN, A. Effect of cold 
+plasma on blueberry juice quality. Food Chem, [s.l.], 290, 79–86, 2019. 
+ 
+IBGE. Produção de Castanha de Caju. Disponível em: 
+https://sidra.ibge.gov.br/tabela/6588#resultado. Acesso em: 08 fev. 2023. 
+ 
+ICB-Instituto Caju Brasil. O agronegócio caju em números. [s.l.], boletim n. 4, fer. 
+2020; disponível em: https://cajubrasil.org/wp-content/uploads/2020/02/Boletim-
+ICB_4.pdf. Acesso em: 10 mar. 2022.  
+ 
+IGUAL, M.; GARCÍA-MARTÍNEZ, E.; CAMACHO, M. M.; MARTÍNEZ-NAVARRETE, 
+N. Changes in Flavonoid Content of Grapefruit Juice caused by Thermal Treatment 
+and Storage. Innovative Food Science and Emerging Technologies, [s.l.], 12(2), 
+153-162, 2011. 
+ 
+ILLERA, A. E.; CHAPLE, S.; SANZ, M. T.; NG, S.; LU, P.; JONES, J.; BOURKE, P. 
+Effect of cold plasma on polyphenol oxidase inactivation in cloudy apple juice and on 
+the quality parameters of the juice during storage. Food Chemistry, [s.l.], 3, 1-41, 
+2019. 
+ 
+IQDIAM, B. M.; ABUAGELA, M. O.; BOZ, Z.; MARSHALL, S. M.; GOODRICH‐
+SCHNEIDER, R.; SIMS, C. A.; MARSHALL, M. R.; MACINTOSH, A. J.; WELT, B. A. 
+Effects of atmospheric pressure plasma jet treatment on aflatoxin level, 
+physiochemical quality, and sensory attributes of peanuts. Journal of Food 
+Processing and Preservation, [s.l.], 44(1), 1–11, 2019. 
+ 
+JABBAR, S.; ABID, M.; HU, B.; WU, T.; HASHIM, M. M.; LEI, S.; ZENG, X. Quality of 
+carrot juice as influenced by blanching and sonication treatments. LWT – Food 
+Science and Technology, [s.l.], 55(1), 16–21, 2014. 
+ 
+JAMBRAK, A. R.; SIMUNEK, M.; EVACIC, S.; MARKOV, K.; SMOLJANIC, G.; 
+FRECE, J. Influence of high power ultrasound on selected moulds, yeasts and 
+Alicyclobacillus acidoterrestris in apple, cranberry and blueberry juice and nectar. 
+Ultrasonics, [s.l.], 83, 3-17, 2018. 
+ 
+JAMINIK, P.; RASPOR, P. Stress response of yeast candida intermedia to Cr (VI). 
+Journal of Biochemical and Molecular Toxicology, [s.l.], 17(6), 316-323, 2003.  
+ 
+JEMEC, A.; TIŠLER, T.; DROBNE, D.; SEPČIĆ, K.; JAMNIK, P.; ROŠ, M. 
+Biochemical biomarkers in chronically metal-stressed daphnids. Comparative 
+83 
+ 
+Biochemistry and Physiology - C Toxicology Pharmacology, [s.l.], 147(1), 61–68, 
+2008. 
+ 
+JIANG, J.; XIONG, Y. Natural antioxidants as food and feed additives to promote 
+health benefits and quality of meat products: A review. Meat Science, [s.l.], 120, 
+107-117, 2016.  
+ 
+JIANG, Z.Y.; WOOLLARD, A. C. S.; WOLFF, S. P. Lipid hydroperoxide measurement 
+by oxidation of Fe2+ in the presence of xylenol orange. Comparison with the TBA 
+assay and an iodometric method. Lipids, [s.l.], 26, 853–856, 1991. 
+ 
+JIMÉNEZ, C. D. C.; FLORES, C. S.; HE, J.; TIAN, Q.; SCHWARTZ, S. J.; GIUST, M. 
+M. Characterisation and preliminary bioactivity determination of Berberis boliviana 
+Lechler fruit anthocyanins. Food Chemisry, [s.l.], 128(3), 717-724, 2011.  
+ 
+KALAYCIOĞLU, Z.; ERIM, F. B. Total phenolic contents, antioxidant activities, and 
+bioactive ingredients of juices from pomegranate cultivars worldwide. Food 
+Chemistry, [s.l.], 221, 496-507, 2017. 
+ 
+KAMATH, V.; RAJINI, P. S. Altered glucose homeostasis and oxidative impairment in 
+pancreas of rats subjected to dimethoate intoxication. Toxicology, [s.l.], 231(2), 
+137–146, 2007. 
+ 
+KAUSHAL, J.; SINGH, S. G.; RAINA, A.; ARYA, S. K. Catalase Enzyme: Application 
+in Bioremediation and Food Industry. Biocatalysis and Agricultural 
+Biotechnology, [s.l.], 16, 192-199, 2018. 
+ 
+KHANDPUR, P.; GOGATE, P. R. Evaluation of ultrasound based sterilization 
+approaches in terms of shelf life and quality parameters of fruit and vegetable juices. 
+Ultrasonics Sonochemistry, [s.l.], 29, 337–353, 2016. 
+ 
+KHANI, M. R.; SHOKRI, B.; KHAJEH, K. Studying the performance of dielectric barrier 
+discharge and gliding arc plasma reactors in tomato peroxidase inactivation. Journal 
+Of Food Engineering, [s.l.], 197, 107-112, 2017. 
+ 
+KOKKALI, V.; KATRAMADOS, I.; NEWMAN, J. D. Monitoring the Effect of Metal Ions 
+on the Mobility of Artemia salina Nauplii. Biosensors (Basel), 28, 1(2), 36-45, 2011. 
+ 
+KONO, Y. Generation of superoxide radical during autoxidation of hydroxylamine and 
+an assay for superoxide dismutase. Archives of Biochemistry and Biophysics, 
+[s.l.], 186(1), 189–195, 1978. 
+ 
+KULIS, M.; MACQUEEN, I.; LI, Y.; GUO, R.; ZHONG, X. P.; BURKS, A. W. 
+Pepsinized cashew proteins are hypoallergenic and immunogenic and provide 
+effective immunotherapy in mice with cashew allergy. The Journal of Allergy and 
+Clinical Immunology, [s.l.], 130(3), 716–723, 2012.  
+ 
+KULKARNI, A.A.; CONTEH, A. M.; SORRELL, C. A.; MIRMIRA, A.; TERSEY, S. A.; 
+MIRMIRA, R. G.; LINNEMANN, A. K.; ANDERSON, R. M. An in vivo zebrafish model 
+84 
+ 
+for interrogating ROS-mediated pancreatic β-cell injury, response, and prevention. 
+Oxidative Medicine and Cellular Longevity, [s.l.], 1-9, 2018. 
+ 
+LACERDA, B. F. C. Modelos computacionais para avaliação preditiva de 
+ecotoxicidade em Artemia salina. 2019. 44 f. Dissertação (Mestrado em Ciências 
+Ambientais) – Centro Universitário de Anápolis, Goiás, 2019. 
+ 
+LAROQUE, D. A.; SÉO, S. T.; VALENCIA, G. A.; LAURINDO, J. B.; CARCIOFI, B. A. 
+M. Cold plasma in food processing: Design, mechanisms, and application. Journal 
+of Food Engineering, [s.l.], 312, 1-24, 2022. 
+ 
+LEE, G. J.; SIM, G. B.; CHOI, E. H.; KWON, Y-W.; KIM, J. Y.; JANG, S.; KIM, S. H. 
+Optical and structural properties of plasma-treated Cordyceps bassiana spores as 
+studied by circular dichroism, absorption, and fluorescence spectroscopy. Journal of 
+Applied Physics, [s.l.], 117(2), 1–13, 2015. 
+ 
+LEITE FILHO, M.T.; MARTINS, J. H.; MATA, M. E. R. M. C.; DA SILVA, A. L. C.; 
+MARTINS, I. T. A. Cinética de secagem de resíduos agro-industriais de abacaxi: 
+uma nova abordagem. Brazilian Journal of Development, [s.l.], 6(1), 3928-3949, 
+2020. 
+ 
+LEITE, A. K. F.; FONTELES, T. V. B. A. R.; MIGUEL, T.; SILVESTRE DA SILVA, G., 
+SOUSA DE BRITO, E., ALVES FILHO, E. G.; FERNANDES, F. A. N.; RODRIGUES, 
+S. Atmospheric cold plasma frequency imparts changes on cashew apple juice 
+composition and improves vitamin C bioaccessibility. Food Research International, 
+[s.l.], 147, 1-13, 2021. 
+ 
+LEMOS, A. F. S.; GALVÃO, E. L. Obtenção do extrato das folhas do cajueiro 
+(Anacardium occidentale l.) A partir de diferentes técnicas de extração. 2019. 
+13 f. TCC (Trabalho de conclusão de curso em Ciências Exatas e da Terra) - 
+Universidade Federal Rural do Semi-Árido, Mossoró, 2019.  
+ 
+LEPAUS, B. M.; JOSÉ, J. F. B. S. Fundamentos e atualidades em tecnologia e 
+inspeção de alimentos [livro eletrônico]. / Organizadora: Lina Raquel Santos 
+Araújo. Fortaleza: Editora In Vivo, 2020. 
+ 
+LES, F.; PRIETO, J. M.; ARBONÉS-MAINAR, J. M.; VALERO, M. S.; LÓPEZ, V. 
+Bioactive properties of commercialised pomegranate (Punica granatum) juice: 
+Antioxidant, antiproliferative and enzyme inhibiting activities. Food and Function, 
+[s.l.], 6, 2049–2057, 2015. 
+ 
+LIAO, X.; LIU, D.; XIANG, Q.; AHN, J.; CHEN, S.; YE, X.; DING, T. Inactivation 
+mechanisms of non-thermal plasma on microbes: A review. Food Control, [s.l.], 75, 
+83–91, 2017. 
+ 
+LIMA, A. C. S.; SOARES, D. J.; SILVA, L. M. R.; DE FIGUEIREDO, R. W.; SOUSA, 
+P. H. M.; MENEZES, E. D. In vitro bioaccessibility of copper, iron, zinc and 
+antioxidant compounds of whole cashew apple juice and cashew apple fibre 
+(Anacardium occidentale L.) following simulated gastro-intestinal digestion. Food 
+Chem, [s.l.], 161, 142–147, 2014. 
+85 
+ 
+ 
+LIMA, A. J. B., CORRÊA, A. D., ALVES, A. P. C., ABREU, C. M. P., DANTAS-
+BARROS, A. M., Caracterização química do fruto jabuticaba (Myrciaria cauliflora 
+Berg) e de suas frações. Archivos Latino americos de Nutrición, [s.l.], 58(4), 416-
+421, 2008. 
+ 
+LIMA, L. L. A.; SILVA, A. M. O.; FERREIRA, I. M.; NUNES, T. P.; CARVALHO, M. G.  
+Néctar misto de umbu (Spondias tuberosa Arr.  Câmera) e mangaba (Hancornia 
+Speciosa Gomes):  elaboração e avaliação da qualidade. Braz. Journal of Food 
+Science and Technology, [s.l.], 21, 1-8, 2018.  
+ 
+LIU, C. M.; PENG, Q.; ZHONG, J. Z.; LIU, W.; ZHONG, Y. J.; WANG, F. Molecular 
+and Functional Properties of Protein Fractions and Isolate from Cashew Nut 
+(Anacardium occidentale L.). Molecules, [s.l.], 23(2), 1-15, 2018a. 
+ 
+LIU, Z.; REN, Z.; ZHANG, J.; CHUANG, C-C.; KANDASWAMY, E.; ZHOU, T.; ZUO, 
+L. Nutritional Antioxidants in Oxidative Diseases. Frontiers in Physiology, [s.l.], 9, 
+1-14, 2018b. 
+ 
+LORENZO, A.; BLOISE, N.; MENEGHINI, S.; SUREDA, A.; TENORE, G. C.; VISAI, 
+L.; ARCIOLA, C. R.; DAGLIA, M. Effect of winemaking on the composition of red 
+wine as a source of polyphenols for antiinfective biomaterials. Materials (Basel), 
+[s.l.], 9(5), 1-19, 2016. 
+ 
+MADHAV, M. R., DAVID, S. E. M., KUMAR, R. S. S., SWATHY, J. S., 
+BHUVANESHWARI, M., MUKHERJEE, A., CHANDRASEKARAN, N. Toxicity and 
+accumulation of Copper oxide (CuO) nanoparticles in different life stages of Artemia 
+salina. Environmental Toxicology and Pharmacology, [s.l.], 52, 227–238, 2017.  
+ 
+MAGRO, L. D. Desenvolvimento de biocatalisadores compostos por pectinases 
+e celulases imobilizadas para a clarificação de sucos de frutas. 2020. 309 f. 
+Tese (Doutorado em Ciência e Tecnologia de Alimentos) - Universidade Federal do 
+Rio Grande do Sul, Porto Alegre, 2020. 
+ 
+MAIA, G. A.; SILVA, L. M. R.; PRADO, G. M.; FONSECA, A. V. V.; SOUSA, P. H. M.; 
+DE FIGUEREDO, R. W. 5 - Development of mixed beverages based on tropical 
+fruits. Non-Alcoholic Beverages. The Science of Beverages, [s.l.], 129-162, 2019. 
+ 
+MANGELA, T.; MARTINS, A.   BENEFÍCIOS   DA   VITAMINA   C   NA PELE. 
+Enciclopédia Biosfera, [s.l.], 18(35), 41-55, 2021. 
+ 
+MANSFIELD, C. M.; ALLOY, M. M.; HARMILTON, J.; VERBECK, G. F.; NEWTON, 
+K.; KLAINER, S. J.; ROBERTS, A. P. Photo-induced toxicity of titanium dioxide 
+nanoparticles to Daphnia magna under natural sunlight. Chemosphere, [s.l.], 120, 
+206-210, 2015. 
+ 
+MANZOOR, M. F.; AHMAD, N.; AADIL, R. M.; RAHAMAN, A.; AHMED, Z.; 
+REHMAN, A.; MANZOOR, A. Impact of pulsed electric field on rheological, structural, 
+and physicochemical properties of almond milk. Journal of Food Process 
+Engineering, [s.l.], 42(8), 1-11, 2019. 
+86 
+ 
+ 
+MARIA DO SOCORRO, M. R.; PÉREZ-JIMÉNEZ, J.; TABERNERO, M.; ALVES RE, 
+B. E. S, SAURA-CALIXTO, F. Acerola and cashew apple as sources of antioxidants 
+and dietary fibre. International Journal of Food Science & Technology, [s.l.], 45, 
+2227–2233, 2010. 
+ 
+MARTÍNEZ-FLORES, H. E., GARNICA-ROMO, M. G., BERMÚDEZ-AGUIRRE, D., 
+POKHREL, P. R., & BARBOSA-CÁNOVAS, G. V. Physico-chemical parameters, 
+bioactive compounds and microbial quality of thermo-sonicated carrot juice during 
+storage. Food Chemistry, [s.l.], 172, 650–656, 2015. 
+ 
+MARTINS, A. B. G.; SILVA, A. C. C.; CHIAMOLERA, F. M.; Propagação da cultura 
+do caju. Revista Brasileira de Fruticultura, [s.l.], 41(4), 2019. 
+ 
+MARTINS, A. C. R.; DA COSTA, J. K. N.; HERBERT, A.; FARIAS, F. R. S.; 
+REZENDE, M.; JUNIOR, V. A. K.; DE GEUS, J. L. Avaliação da toxicidade das 
+tinturas de aroeira e de romã através do bioensaio com Artemia salina. J Research, 
+Society Development, [s.l.], 10(3), 1-9, 2021.  
+ 
+MAURYA, R.; NAMDEO, M. Superoxide dismutase: A key enzyme for the 
+survival of intracellular pathogens in host. In Reactive Oxygen Species; Ahmad, 
+R., Ed.; Intech Open Limited: London, UK, 2021. 
+ 
+MELO, C. F. A.; BRAGA, F. F. S.; OLIVEIRA, H. A. L.; ALMEIDA, M. N. Desafios em 
+uma propriedade familiar de produção de caju no interior do Nordeste. Brazilian 
+Journal of Development, [s.l.], 4(6), 3135-3146, 2018.  
+ 
+MENA, P.; VEGARA, S.; MARTÍ, N.; GARCÍA-VIGUERA, C.; SAURA, D.; VALERO, 
+M. Changes on Indigenous Microbiota, Colour, Bioactive Compounds and 
+Antioxidant Activity of Pasteurized Pomegranate Juice. Food Chemistry, 
+[s.l.],141(3), 2122-2129, 2013. 
+ 
+MEYER, B. N.; FERRIGNI, N. R.; PUTNAM, J. E.; JACOBSEN, L. B.; NICHOLS, D. 
+J.; MCLAUGHLIN, J. L. Brine shrimp: a convenient general bioassay for active plant 
+constituents. Planta Médica, [s.l.], 45(5), 31-34, 1982. 
+ 
+MIGUEL, T. B. A. R.; PORTO, E. C. M.; PINHEIRO, S. K. P.; MIGUEL, E. C.; 
+FERNANDES, F. A. N.; RODRIGUES, S. Protective Effect of Natural and Processed 
+Coconut Water by Non-thermal Technologies Against Oxidative Stress in Brine 
+Shrimp (Artemia salina). Food and Bioprocess Technology, [s.l.], 14, 702–716, 
+2021.  
+ 
+MISRA, N. N.; KAUR, S.; TIWARI, B. K.; KAUR, A.; SINGH, N.; CULLEN, P. J. 
+Atmospheric pressure cold plasma (ACP) treatment of wheat flour. Food 
+Hydrocolloids, [s.l.], 44, 115 – 121, 2015. 
+ 
+MISRA, N.N.; MARTYNENKO, A.; CHEMAT, F.; PANIWNYK, L.; BARBA, F.J.; 
+JAMBRAK, A.R. Thermodynamics, transport phenomena, and electrochemistry of 
+external field-assisted nonthermal food technologies. Critical Reviews in Food 
+Science and Nutrition, [s.l.], 58(11), 1832–1863, 2018. 
+87 
+ 
+ 
+MONTEIRO, C. A.; CANNON, G.; LEVY, R. B.; MOUBARAC, J. C.; LOUZADA, M. 
+L.; RAUBER, F.; KHANDPUR, N.; CEDIEL, G.; NERI, D.; MARTINEZ-STEELE, E. 
+Ultra-processed foods: what they aremand how to identify them. Public Health 
+Nutrition, [s.l.], 22(5), 936‐941, 2019.  
+ 
+MONTEIRO, C. A.; CANNON, G.; LEVY, R.; MOUBARAC, J. C.; JAIME, P.; 
+MARTINS, A. P. Classificação dos alimentos. Saúde Pública. NOVA. A estrela brilha. 
+Word Nutrition, [s.l.], 7(1-3), 28-40, 2016. 
+ 
+MORGANA, S.; ESTÉVEZ-CALVAR, N.; GAMBARDELLA, C.; FAIMALI, M.; 
+GARAVENTA, F. A short-term swimming speed alteration test with nauplii of Artemia 
+franciscana. Ecotoxicology and Environmental Safety, [s.l.],147, 558–564, 2018. 
+ 
+MORRIS, A. D.; ERISIR, A.; CRISWELL, S. J.; KUCENAS, S. Transmission electron 
+microscopy of zebrafish spinal motor nerve roots. Developmental Dynamics, [s.l.], 
+246(11), 956–962, 2017. 
+ 
+MOTTA, C. M.; SIMONIELLO, P.; ARENA, C.; CAPRIELLO, T.; PANZUTO, R.; 
+VITALE, E.; AGNISOLA, C.; TIZZANO, M.; AVALLONE, B.; FERRANDINO, I. Effects 
+of four food dyes on development of three model species, Cucumis sativus, Artemia 
+salina and Danio rerio: Assessment of potential risk for the environment. 
+Environmental Pollution, [s.l.], 253, 1126-1135, 2019. 
+ 
+MUGONI, V.; CAMPOREALE, A.; SANTORO, M. M. Analysis of oxidative stress in 
+Zebrafish embryos. Journal of Visualized Experiments, [s.l.], 89, 1–11, 2014. 
+ 
+MUNEKATA, P. E. S.; DOMINGUEZ, R.; PATEIRO, M.; LORENZO. J. M. Influence 
+of plasma treatment on the polyphenols of food products – A review. Foods, [s.l.], 
+9(7), 1-14, 2020.  
+ 
+NARDINI, M.; FODDAI, M. S. Phenolics profile and antioxidant activity of special 
+beers. Molecules, [s.l.], 25(11), 1-15, 2020. 
+ 
+NIVEDITHA, R.; PANDISELVAM, R.; PRASATH, V. A.; SINGH, S. K.; GUL, K.; 
+KOTHAKOTA, A. Application of cold plasma and ozone technology for 
+decontamination of Escherichia coli in foods- a review. Food Control, [s.l.], 130, 1-
+11, 2021. 
+ 
+NOGUEIRA, A. M. P.; FIGUEIRA, R.; IMAIZUMI, V. M.; FILHO, W. G. V. Avaliação 
+físico-química e legislação brasileira de polpas, sucos tropicais e néctares de goiaba 
+comerciais. Energia na Agricultura, Botucatu, [s.l.], 35(1), 136-142, 2020.  
+ 
+NOVAES, T. E. R.; NOVAES, A. S. R. Análise dos potenciais medicinais do cajueiro 
+(Anacardium occidentale Linn): uma breve revisão. Research, Society and 
+Development, [s.l.], 10(1), 1-8, 2021. 
+ 
+NUNES, B. S.; CARVALHO, F. D.; GUILHERMINO, L. M.; STAPPEN, G. V. Use of 
+the genus Artemia in ecotoxicity testing. Environmental Pollution, [s.l.], 144(2), 
+453–462, 2006. 
+88 
+ 
+ 
+OCARANZA-JOYA, V. S.; MANJARREZ-ALCIVAR, I.; RUIZGONZÁLEZ, L. E.; 
+GUERRERO-GALVÁN, S. R.; VEGA-VILLASANTE, F. Sensitivity of different stages 
+of Artemia franciscana to potassium dichromate. Pan-American Journal of Aquatic 
+Sciences, [s.l.], 14(1), 8–12, 2019.  
+ 
+OJHA, K. S.; TIWARI, B. K.; O’DONNELL, C. P. Effect of Ultrasound Technology on 
+Food and Nutritional Quality. In: Advances in Food and Nutrition Research, [s.l.], 
+84, 207-240, 2018. 
+ 
+OLGA, A. A. A.; SOULEYMANE, T.; FATOUMATA, C.; GBOGOURI, G. A.; 
+KOUAKOU, B. Evaluation of technological treatments impact on nutritional value and 
+anti‐nutritional factors of cashew kernel‐based flour (Anacardium occidentale) grown 
+in Côte d'Ivoire. International Journal of Food Science and Nutrition, [s.l.], 3(1), 
+20–28, 2018. 
+ 
+OLIVEIRA, P. S.; CHAVES, V. C.; SOARES, M. S. P.; BONA, N. P.; MENDONÇA, L. 
+T.; CARVALHO, F. B.; GUTIERRES, J. M.; VASCONCELLOS, F. A.; VIZZOTTO, M.; 
+VIEIRA, A.; SPANEVELLO, R. M.; REGINATTO, F. H.; LENCINA, C. L.; 
+STEFANELLO, F. M. Southern Brazilian native fruit shows neurochemical, metabolic 
+and behavioral benefits in an animal model of metabolic syndrome. Metabolic Brain 
+Disease, [s.l.], 33, 1551-1562, 2018.  
+ 
+OLIVEIRA, T. C. Elaboração de biscoitos com adição de farinha do resíduo de 
+maracujá amarelo. 2019. 53 f. TCC (Bacharel em Engenharia de Alimentos) - 
+Universidade Federal do Rio Grande do Norte, Rio Grande do Norte, 2019. 
+ 
+OLUBODE, T. J. O. A.; IBRAHIM, K. O.; AKINOLA, M. O.; OJO, F. K.; OYELEKE, E. 
+O. Sensory properties of sausage roll produced from cashew nut butter. IOSR 
+Journal of Environmental Science, Toxicology and Food Technology, [s.l.], 
+14(2), 10–13, 2020. 
+ 
+OLUYOLE, K. A.; AGBENIYI, S. O.; AYEGBONYIN, K. O. Competitiveness of Cashew 
+Production in Nigeria. International Journal of Research in Agriculture and 
+Forestry, [s.l.], 4(8), 1-7, 2017.  
+ 
+OSTMAN, A.; BOHMER, F. D. Regulation of receptor tyrosine kinase signaling by 
+protein tyrosine phosphatase-1B. Trends in Cell Biology, [s.l.], 11(6), 258–266, 2001. 
+ 
+OZKAN, Y., ALTINOK, I., ILHAN, H., SOKMEN, M. Determination of TiO2 and 
+AgTiO2 Nanoparticles in Artemia salina: Toxicity, Morphological Changes, Uptake 
+and Depuration. Bulletin of Environmental Contamination and Toxicology, [s.l.], 
+96(1), 36–42, 2016. 
+ 
+PAIXÃO, L. M. N., FONTELES, T. V., OLIVEIRA, V. S., FERNANDES, F. A. N., 
+RODRIGUES, S. Cold plasma effects on functional compounds of siriguela juice. 
+Food and Bioprocess Technology, [s.l.], 12(1), 110–121, 2018. 
+ 
+PALLANT, J.; SANDS, S.; KARPEN, I. Product customization: A profile of consumer 
+demand. Journal of Retailing and Consumer Services, [s.l.], 54, 1-10, 2020. 
+89 
+ 
+ 
+PARAISO, I. L.; REVEL, J. S.; STEVENS, J. F. Potential use of polyphenols in the 
+battle against COVID-19. Current Opinion in Food Science, [s.l.], 32, 149–155, 
+2020. 
+ 
+PAZ, I. P.; COELHO, A. A. M.; ASCIMENTO, S. P.; OLIVEIRA, S. A.; ROSA, D. S.; 
+COSTA, M. M.; NASCIMENTO, J. M. L.  Toxicidade do extrato vegetal, óleo 
+essencial e hidrolato das plantas Zingiber officinale Roscoe e Allium sativum L. 
+Brazilian Journal of Development, [s.l.], 8(2), 14318-14329, 2022. 
+ 
+PERERA, C. O.; PERERA, A. D. Technology of Processing of Horticultural Crops. 
+Handbook of Farm, Dairy and Food Machinery Engineering, [s.l.], 299-351, 2019. 
+ 
+PIECHOWIAK, T.; SKÓRA, B.; BALAWEJDER, M. Ozone Treatment Induces 
+Changes in Antioxidative Defense System in Blueberry Fruit During Storage. Food 
+and Bioprocess Technology, [s.l.],13, 1240–1245, 2020. 
+ 
+PORTO, E.; ALVES, E. G. F.; SILVA, L. M. A.; FONTELES, T. V.; DNASCIMENTO, 
+R. B. R.; FERNANDES, F. A. N.; DE BRITO, E. S.; RODRIGUES, S. Ozone and 
+plasma processing effect on green coconut water. Food Research International, 
+[s.l.], 131, 1-9, 2020.  
+ 
+PRASAD, P.; MEHTA, D.; BANSAL, V.; SANGWAN, R. S. Effect of atmospheric cold 
+plasma (ACP) with its extended storage on the inactivation of Escherichia coli 
+inoculated on tomato. Food Research International, [s.l.], 102, 402-408, 2017. 
+ 
+PUTNIK, P.; BURSAĆ KOVAČEVIĆ, D.; HERCEG, K.; ROOHINEJAD, S.; 
+GREINER, R.; BEKHIT, A. E. D. A.; LEVAJ, B. Modelling the shelf-life of minimally-
+processed fresh-cut apples packaged in a modified atmosphere using food quality 
+parameters. Food Control, [s.l.], 81, 55-64, 2017. 
+ 
+PUTNIK, P.; KRESOJA, Z.; BOSILJKOV, T.; JAMBRAK, A. R.; BARBA, F. J.; 
+LORENZO, J. M.; ROOHINEJAD, S.; GRANADO, D.; ZUNTAR, I.; KOVACEVIC, D. 
+B. Comparing the effects of thermal and non-thermal technologies on pomegranate 
+juice quality: A review. Food Chemistry, [s.l.], 279, 150–161, 2019. 
+ 
+QASIM, M.; KHUDHUR, F. W.; AIDAN, A.; DARWISH, N. A. Ultrasound-assisted 
+forward osmosis desalination using inorganic draw solutes. Ultrasonics 
+Sonochemistry, [s.l.], 61, 1-36, 2020. 
+ 
+RAHMAN, M. F.; PRATAMA, A. A. Synthesis of Organonitrogen Compounds from 
+Eugenol through The Ritter Reaction and The Toxicity Test on Artemia salina Leach. 
+In IOP Conference Series: Materials Science and Engineering, [s.l.], 546(4), 1-7, 
+2019.  
+ 
+RAJINI, P. S. Cashew nut (Anacardium occidentale l.) skin extract as a free radical 
+scavenger. In: Preedy VR, Watson RR, Patel VB. editors. Nuts and Seeds in Health 
+and Disease Prevention. San Diego, 301–308, 2011. 
+ 
+90 
+ 
+RAMOS, M. O.; DA CRUZ, F. T.; COELHO-DE-SOUZA, G. Inclusão socioprodutiva e 
+legislação sanitária. Raízes: Revista De Ciências Sociais E Econômicas, [s.l.], 
+41(2), 323-341, 2021. 
+ 
+REKULAPALLY, R.; CHAVALI, L. N. M.; IDRIS, M. M.; SINGH, S. Toxicity of TiO, 
+2
+SiO2, ZnO, CuO, Au and Ag engineered nanoparticles on hatching and early nauplii 
+of Artemia sp. PeerJ, [s.l.], 6(1), 1-20, 2019. 
+ 
+RIBEIRO, C. W.; KORBES, A. P.; GARIGHAN, J. A.; MESSEDER, D. J.; 
+CARVALHO. F. E. L.; SOUSA, R. H. V.; CAVERZAN, A.; TEIXEIRA, F. K.; 
+SILVEIRA, J. A. G.; PINHEIRO, M. M. Rice peroxisomal ascorbate peroxidase 
+knockdown affects ROS signaling and triggers early leaf senescence. Plant Science, 
+[s.l.], 263, 55-65, 2017. 
+ 
+ROCHA, E. C.; SARTORI, C. A.; NAVARRO, F. F. A aplicação de alimentos 
+antioxidantes na prevenção do envelhecimento cutâneo. Revista Científica da 
+FHO|UNIARARAS, [s.l.], 4(1), 1-8, 2016. 
+ 
+SAEEDUDDIN, M.; ABID, M.; JABBAR, S.; WU, T.; HASHIM, M. M.; AWAD, F. N.; 
+ZENG, X. Quality assessment of pear juice under ultrasound and commercial 
+pasteurization processing conditions. LWT - Food Science and Technology, [s.l.], 
+64(1), 452-458, 2015. 
+ 
+SALEHI, B.; ÖZGÜVEN, M. G.; KIRKIN, C.; ÖZÇELIK, B.; BRAGA, M. F. B. M.; 
+CARNEIRO, J. N. P.; BEZERRA, C. F.; SILVA, T. G.; COUTINHO, H. D. M.; AMINA, 
+B.; ARMSTRONG, L.; SELAMOGLU, Z.; SEVINDIK, M.; YOUSAF, Z.; RAD, J. S.; 
+MUDDATHIR, A. M.; DEVKOTA, H. P.; MARTORELL, M.; JUGRAN, A. K.; 
+MARTINS, N. Antioxidant, antimicrobial, and anticancer effects of Anacardium plants: 
+An ethnopharmacological perspective. Frontiers in Endocrinology, [s.l.], 11, 1-16, 
+2020.  
+ 
+ISLAM, S. U. ; AHMED, M. B. ; SHEHZAD, A. ; LEE, Y. S. Extrato metabólico de 
+ovos de Artemia salina e várias frações em solventes diferentes contêm compostos 
+potentes que diminuem a viabilidade celular das linhas celulares de câncer de cólon 
+e pele e mostram atividade antibacteriana contra Pseudomonas aeruginosa, 
+Evidence-Based Complementary and Alternative Medicine, [s.l.], 1-13, 2019. 
+ 
+SANT’ANNA, P. B.; MELO FRANCO, B. D. G.; MAFFEI, D. F. Microbiological safety 
+of ready-to-eat minimally processed vegetables in Brazil: An overview. Journal of 
+the Science of Food and Agriculture, [s.l.], 100(13), 4664-4670, 2020.  
+ 
+SANTANA, P. S.; ALVES, T. C. H. S. Consequências da seletividade alimentar para 
+o estado nutricional na infância: uma revisão narrativa. Research, Society and 
+Development, [s.l.], 11(1), 1-10, 2022. 
+ 
+SANTOS, V.; RODRIGUES, S.; FERNANDES, F. Improvements on the stability and 
+vitamin content of acerola juice obtained by ultrasonic processing. Foods, [s.l.], 7(5), 
+1-10, 2018. 
+ 
+91 
+ 
+SÃO JOSÉ, J. F. B.; ANDRADE, N. J.; RAMOS, A. M.; VANETTI, M. C. D.; 
+STRINGHETA, P. C.; CHAVES, J. B. P. Decontamination by ultrasound application 
+in fresh fruits and vegetables. Food Control, [s.l.], 45, 36-50, 2014. 
+ 
+SARKER APU, A.; BHUYAN, S. H.; KHATUN, F.; LIZA, M. S.; MATIN, M.; HOSSAIN, 
+F. Assessment of cytotoxic activity of two medicinal plants using brine shrimp 
+(Artemia salina) as an experimental tool. International Journal of Pharmaceutical 
+Sciences and Research, [s.l.], 4(3), 1125-1130, 2013.  
+ 
+SARKHEIL, M.; JOHARI, S. A.; AN, H. J.; ASGHARI, S.; PARK, H. S.; SOHN, E. K.; 
+YU, I. J. Acute toxicity, uptake, and elimination of zinc oxide nanoparticles (ZnO NPs) 
+using saltwater microcrustacean, Artemia franciscana. Environmental Toxicology 
+and Pharmacology, [s.l.], 57, 181–188, 2018. 
+ 
+SCHLÜTER, O.; FRÖHLING, A. Non-Thermal Processing: Cold Plasma for 
+Bioefficient Food Processing. Encyclopedia of Food Microbiology: Second 
+Edition, [s.l.], 2, 948–953, 2014. 
+ 
+Science Hub Food-Based Dietary Guidelines in Europe. Available online: 
+https://ec.europa.eu/jrc/en/health-knowledge-gateway/promotion-
+prevention/nutrition/food-based-dietary-guidelines. Acesso em: 20 maio 2022. 
+ 
+SECA, A. I. A Expansão do Cultivo do Caju e Seus Impactos Ambientais e 
+Econômicos na Guiné-Bissau. 2020. 113 f. Dissertação (Mestrado em Ciências do 
+Ambiente e Sustentabilidade) – Universidade Federal do Amazonas, Amazonia, 
+2020.  
+ 
+SELLAMI, I.; CHARMANTIER, G.; NACEUR, H.; KACEM, A.; LORIN-NEBEL, C. Os 
+moregulatory performance and immunolocalization of Na+/K+-ATPase in the 
+branchiopod Artemia salina from the Sebkha of Sidi El Hani (Tunisia). Tissue and 
+Cell, [s.l.], 63, 1-28, 2020. 
+ 
+SENAI - Serviço Nacional de Aprendizagem Industrial. Instituto de inovação e 
+tecnologia. Tecnologias emergentes para preservação dos alimentos, 2019. 
+Disponível em: https://www.senairs.org.br/industria-inteligente/artigo-tecnologias-
+emergentes-para-preservacao-dos-alimentos. Acesso em: 12 mar. 2020. 
+ 
+SHEIKHI, Z.; MIRMOGHTADAIE, L.; KHANI, M. R.; FARHOODI, M.; BEIKZADEH, 
+S.; ABDOLMALEKI, K.; KAZEMIAN-BAZKIAEE, F.; SHOKRI, B.; SHOJAEE-
+ALIABADI, S. Physicochemical Characterization of Argon Plasma-Treated Starch 
+Film. Journal of Agricultural Science and Technology, [s.l.], 22(4), 999-1008, 
+2020. 
+ 
+SIDDEEG, A.; ZENG, X. A.; RAHAMAN, A.; MANZOOR, M. F.; AHMED, Z.; AMMAR, 
+A. F. Quality characteristics of the processed dates vinegar under influence of 
+ultrasound and pulsed electric field treatments. Journal of Food Science and 
+Technology, [s.l.], 56, 4380–4389, 2019. 
+ 
+SILVA, E. B. M. BEBIDA MISTA INDUSTRIALIZADA DE FRUTAS E VEGETAIS 
+“DETOX”: CARACTERIZAÇÃO QUÍMICA, POTENCIAL ANTIOXIDANTE E 
+92 
+ 
+ESTUDO DA ROTULAGEM GERAL E NUTRICIONAL. 2019. 92 f. Dissertação 
+(Mestrado em Ciências de Alimentos) – Faculdade de Farmácia, Universidade 
+Federal de Minas Gerais, Minas Gerais, 2019. 
+ 
+SILVA, E. V.; LOPES, F. A. M. H. Estudo das características físicas e químicas das 
+folhas do cajueiro (Anacardium occidentale) e suas aplicações tecnológicas. In: 
+Congresso Nacional de Pesquisa e Ensino em Ciências, V CONAPESC, 1-14. 
+Anais... Campina Grande 2020.  
+ 
+SILVA, L. M. R.; LIMA, A. C. S.; MAIA, A. G.; SOUSA, P. H. M.; GONZAGA, M. L. C.; 
+RAMOS, A. M. Development of mixed nectar of cashew apple, mango and acerola. 
+International Food Research Journal, [s.l.], 24(1), 232–237, 2017. 
+ 
+SILVA, M. J. S.; ROCHA, A. P. T.; SANTOS, D. C.; ARAUJO, A. S.; OLIVEIRA, M. N. 
+Caracterização físico-química de blend de abacaxi com acerola obtido pelo método 
+de liofilização. Revista Verde de Agroecologia e Desenvolvimento Sustentável, 
+Pombal, [s.l.], 11(5), 110-113, 2016. 
+ 
+SILVA, N. O.; LIMA, L.  F.; NATEL, A. S.; BIANCHINI, H. C.; SILVA, A. B.  Plantas 
+alimentícias não convencionais produzidas no sul de Minas Gerais. Research, 
+Society and Development, [s.l.], 11(1), 1-9, 2022.  
+ 
+SILVA, T. S.; SILVA, A. P. S.; DE SOUZA, D. C.; DE DEUS, M. S. M.; BUENO, P. A. 
+A.; MARQUES, M. M. M.; DE ALMEIDA, P. M.; PERON, A. P. Avaliação tóxica e 
+citogenotóxica de bioestimulantes vegetais em Allium cepa L. e Artemia salina 
+Leach. Itajubá, MG: Stellata editora, 2020.  
+ 
+SILVA-LUZ, C. L.; PIRANI, J. R.; MITCHELL, J. D.; DALY, D.; CAPELLI, N. V.; 
+DEMARCO, D.; PELL, S. K.; PLUNKETT, G. M. Phylogeny of Schinus L. 
+(Anacardiaceae) with a new infrageneric classification and insights into evolution of 
+spinescence and floral traits. Molecular Phylogenetics And Evolution, United 
+States, [s.l.], 133, 302-351, 2019. 
+ 
+SINGLA, M.; SIT, N. Application of ultrasound in combination with other technologies 
+in food processing: A review. Ultrason Sonochem, [s.l.], 73, 1-13, 2021.  
+ 
+SNEZHKINA, A. V., KUDRYAVTSEVA, A. V., KARDYMON, O. L., SAVVATEEVA, M. 
+V., MELNIKOVA, N. V., KRASNOV, G. S., DMITRIEV, A. A. ROS generation and 
+antioxidant defense systems in normal and malignant cells. Oxidative Medicine and 
+Cellular Longevity, [s.l.], 1-18, 2019. 
+ 
+SRIVASTAV, P. P.; VERMA, D. K.; PATEL, A. R.; AL-HILPHY, A. R. Emerging 
+thermal and nonthermal technologies in food processing. 1. ed. New York: 
+Apple Academic Press, 2020.  
+ 
+STAREK, A.; PAWŁAT, J.; CHUDZIK, B.; KWIATKOWSKI, M.; TEREBUN, P.; 
+SAGAN, A.; ANDREJKO, D. Evaluation of selected microbial and physicochemical 
+parameters of fresh tomato juice after cold atmospheric pressure plasma treatment 
+during refrigerated storage. Scientific Reports, [s.l.], 9, 1-11, 2019. 
+ 
+93 
+ 
+SUROWSKY, B.; SCHLÜTER, O.; KNORR, D. Interactions of nonthermal 
+atmospheric pressure plasma with solid and liquid food systems: a review. Food 
+Engineering Reviews, [s.l.], 7(2), 82 – 108, 2015. 
+ 
+THIRUMDAS, R.; KADAM, D., ANNAPURE, U. S. Cold Plasma: an Alternative 
+Technology for the Starch Modification. Food Biophysics, [s.l.], 12(1), 129–139, 
+2017. 
+ 
+THIRUMDAS, R.; ANNAPURE, U. S. Enzyme inactivation in model systems and food 
+matrixes by cold plasma. Advances in Cold Plasma Applications for Food Safety 
+and Preservation, [s.l.], 229–252, 2020. 
+ 
+THIRUMDAS, R.; SARANGAPANI, C.; ANNAPURE, U. S. Cold Plasma: a novel 
+nonthermal technology for food processing. Food Biophysics, [s.l.], 10(1), 1-11, 
+2015. 
+ 
+TIMMONS, C.; PAI, K.; JACOB, J.; ZHANG, G.; MA, L. M. Inactivation of Salmonella 
+enterica, Shiga toxin-producing Escherichia coli, and Listeria monocytogenes by a 
+novel surface discharge cold plasma design. Food Control, [s.l.], 84, 455-462, 2018. 
+ 
+TIWARI, B. K.; PATRAS, A.; BRUNTON, N.; CULLEN, P. J.; O’DONNEL, C. P. Effect 
+of ultrasound processing on anthocyanins and color of red grape juice. Ultrasonics 
+Sonochemistry, [s.l.], 17(3), 598–604, 2010. 
+ 
+TYUTEVERA, E. V.; DOBRYYAKOVA, K. S.; SCHERMEYER, A.; SHISHOVA, M. F.; 
+PAWLOWSKI, K.; DEMIDCHIK, V.; REUMANN, S.; VOITSEKHOVSKAJA, O. V. The 
+levels of peroxisomal catalase protein and activity modulate the onset of cell death in 
+tobacco BY-2 cells via reactive oxygen species levels and autophagy. Functional 
+Plant Biology, [s.l.], 45(2), 247-258, 2017. 
+ 
+ULM, L.; KRIVOHLAVEK, A.; JURASIN, D.; LJUBOJEVIC, M.; SINKO, G.; 
+CRNKOVIC, T.; ZUNTAR, I.; SIKIC, S.; VRCEK, I. V. Response of biochemical 
+biomarkers in the aquatic crustacean Daphinia magna exposed to silver 
+nanoparticles. Environmental Science Pollution Research, [s.l.], 22, 19990–
+19999, 2015.  
+ 
+VASILAKI, A.; HATZIKAMARI, M.; STAGKOS-GEORGIADIS, A.; GOULA, A. M.; 
+MOURTZINOS, J. A natural approach in food preservation: Propolis extract as 
+sorbate alternative in non-carbonated beverage. Food Chemistry, [s.l.], 298, 1-8, 
+2019. 
+ 
+VENTURINI FILHO, Waldemar Gastoni (Coord). Bebidas não alcoólicas: ciência e 
+tecnologia. 2. ed. São Paulo: Blucher, 2018. 
+ 
+VERRUCK, S.; PRUDENCIO, S. E.; DA SILVEIRA, M. S. Compostos Bioativos Com 
+Capacidade Antioxidante e Antimicrobiana em Frutas.  Revista do Congresso Sul 
+Brasileiro de Engenharia de Alimentos, [s.l.], 4(1), 112, 2018.  
+ 
+VICTAL, J. C.; VALÉRIO, L. B; OSHIRO, M. C.; PINHEIRO, F. Métodos alternativos 
+in vitro e in silico: métodos auxiliares e substitutivos à experimentação animal. 
+94 
+ 
+Revista Intertox de Toxicologia, Risco Ambiental e Sociedade, [s.l.], 7(2), 36-57, 
+2015. 
+ 
+VIEIRA, A. N. Alta pressão como técnica de conservação de suco de frutas. 
+2020. 48 f. TCC (Bacharel em Engenharia de Alimentos) - Universidade Federal de 
+Lavras, Lavras, 2020. 
+ 
+VITORINO, H. A.; MANTOVANELLI, L.; ZANOTTO, F. P.; ESPÓSITO, B. P. Iron 
+metallodrugs: Stability, redox activity and toxicity against Artemia salina. PLoS One, 
+[s.l.], 10(4), 1–11, 2015. 
+ 
+WANG, J.; WANG, J.; VANGA, S. K.; RAGHAVAN, V. High-intensity ultrasound 
+processing of kiwifruit juice: Effects on the microstructure, pectin, carbohydrates and 
+rheological properties. Food Chemistry, [s.l.], 313, 1-38, 2020.  
+ 
+XU, C. C.; WANG, B.; PU, Y. Q.; TAO, J. S.; ZHANG, T. Advances in extraction and 
+analysis of phenolic compounds from plant materials. Chinese Journal of Natural 
+Medicines, [s.l.], 15(10), 721-731, 2017. 
+ 
+YILANCIOGLU, K.; COKOL, M.; PASTIRMACI, I.; ERMAN, B.; CETINER, S. 
+Oxidative stress is a mediator for increased lipid accumulation in a newly isolated 
+Dunaliella salina strain. PLoS One, [s.l.], 9(3), 1-13, 2014. 
+ 
+YOSHIOKA, Y. L. I. X.; ZHANG, T.; MITANI, T.; YASUDA, M.; NANBA, F.; ASHIDA, 
+H. Black soybean seed coat polyphenols prevent AAPH-induced oxidative DNA-
+damage in HepG2 cells. Journal of Clinical Biochemistry and Nutrition, [s,l,], 
+60(2), 108–114, 2017. 
+ 
+ZAPATA, P. J.; ESPLÁ, A. M.; VILAPLANA, A. G.; LAX, D. S.; ARTIAGA, L. N.; 
+BARRACHINA, Á. A. C. Phenolic, volatile, and sensory profiles of beer enriched by 
+macerating quince fruits. LWT, [s.l.], 103, 139-146, 2019. 
+ 
+ZHANG, T.; WANG, W.; ZHAO, Y.; BAI, H.; WEN, T.; KANG, S.; SONG, G.; SONG, 
+S.; KOMARNENI, S. Removal of heavy metals and dyes by clay-based adsorbents: 
+From natural clays to 1D and 2D nano-composites. Chemical Engineering Journal, 
+[s.l.], 420, 1-108, 2021. 
+ 
+ZHANG, Z. H.; WANG, L. H.; ZENG, X. A.; HAN, Z.; BRENNAN, C. S. Non-thermal 
+technologies and its current and future application in the food industry: A review. 
+International Journal of Food Science & Technology, [s.l.], 54(1), 1–13, 2019. 
+ 
+ 

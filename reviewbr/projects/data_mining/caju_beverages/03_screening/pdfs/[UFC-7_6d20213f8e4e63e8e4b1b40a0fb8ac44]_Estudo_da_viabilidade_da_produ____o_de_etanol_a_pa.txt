@@ -1,0 +1,866 @@
+     ALEXANDRE MONTEIRO PACHECO      ESTUDO DA VIABILIDADE DA PRODUÇÃO DE ETANOL A PARTIR DE SUCO DE CAJU (ANACARDIUM OCCIDENTALE L.) UTILIZANDO CÉLULAS IMOBILIZADAS EM BAGAÇO DE CAJU            FORTALEZA  2009   
+            
+  1 
+ 
+ALEXANDRE MONTEIRO PACHECO   ESTUDO DA VIABILIDADE DA PRODUÇÃO DE ETANOL A PARTIR DE SUCO DE CAJU (ANACARDIUM OCCIDENTALE L.) UTILIZANDO CÉLULAS IMOBILIZADAS EM BAGAÇO DE CAJU      Dissertação submetida à Coordenação do Curso de Pós-Graduação em Engenharia Química, como requisito parcial para a obtenção do grau de Mestre em Engenharia Química pela Universidade Federal do Ceará.  Área de concentração: Desenvolvimento de processos Químicos e Bioquímicos Orientadora: Profa. Dra. Luciana Rocha Barros Gonçalves            Fortaleza  2009 
+            
+  2 
+ 
+ALEXANDRE MONTEIRO PACHECO  ESTUDO DA VIABILIDADE DA PRODUÇÃO DE ETANOL A PARTIR DE SUCO DE CAJU (ANACARDIUM OCCIDENTALE L.) UTILIZANDO CÉLULAS IMOBILIZADAS EM BAGAÇO DE CAJU   Dissertação submetida à coordenação do curso de Pós-Graduação em Engenharia Química, da Universidade Federal do Ceará, como requisito parcial para a obtenção do grau de mestre em Engenharia Química. Área de concentração, Desenvolvimento  de processos Químicos e Bioquímicos.      BANCA EXAMINADORA    Profa.Dra. Luciana Rocha Barros Gonçalves (Orientadora) Universidade Federal do Ceará-UFC       Embrapa-Ce   
+ 
+            
+  3 
+ 
+                           Dedico à Deus pela saúde, força e coragem, à meus pais por todo o suporte sentimental e financeiro e à Joanice pelo amor, paciência e apoio. 
+P117e       Pacheco, Alexandre Monteiro        Estudo da viabilidade da produção de etanol a partir de suco de caju (Anacardium occidentale L.) utilizando células imobilizadas em bagaço  de caju / Alexandre Monteiro Pacheco, 2009.                        71 f. ; il. color. enc.                                                              Orientadora: Profa. Dra. Luciana Rocha Barros Gonçalves                              Área de concentração: Desenvolvimento de Processos Químicos e      Bioquímicos.       Dissertação (mestrado) - Universidade Federal do Ceará, Centro de Tecnologia. 
+Depto. de Engenharia Química, Fortaleza, 2009.                                 1. Fermentação alcoólica.  2. Levedura.  3. Saccharomyces cerevisiae.  4. Imobilização celular. I. Gonçalves, Luciana Rocha Barros (orienta.). II. Universidade Federal do Ceará – Programa de Pós-Graduação em Engenharia Química. III. Título.                                                                                                     
+ 
+                                                                                                                                                                                                      
+                                                                                                          CDD  660  . Título       
+                                                                                                                      
+                                                                                                      
+                                                                                                     CDD 639.2
+                                  
+                                                                                        
+                                                                                                  
+            
+  4 
+ 
+AGRADECIMENTOS     À professora Luciana, meus sinceros agradecimentos pela atenção, tempo dedicado e experiência, em trabalhos científicos, transmitida. Agradeço também pelo convívio agradável, compartilhado e por todas as orientações. Agradeço à meus pais, Genezio e Jocília, por toda força, conselhos, experiência, exemplos positivos e pela estrutura oferecida durante todas as etapas passadas.   À Joanice pelo carinho, amor e companheirismo. Ela que sempre me encorajou a enfrentar as dificuldades e limitações. E a sua família que também me encorajaram e torceram por mim.  Agradeço à Capes  o apoio financeiro concedido, que foi imprescindível em todas as etapas do trabalho e  me possibilitou uma melhor qualidade de vida.  À Universidade Federal do Ceará pela oportunidade de cursar o mestrado de minha preferência em minha cidade natal.  À ASTEF que também contribuiu financeiramente em algumas etapas do mestrado motivando-me na produção científica.  À professora Sueli por ter participado da minha banca de qualificação e pela gentileza de me ceder  alguns reagentes químicos e pelo uso do microscópio.    Ao doutor Gustavo por participar da minha qualificação e defesa e pelo suporte técnico cedido com relação ao fornecimento da matéria prima principal, o caju.   Aos colegas de laboratório e departamento pela experiência compartilhada e ajuda nos vários momentos de dificuldade, que, sem dúvida,  foram muito importantes para mim. Ao Diego pelo esforço e dedicação divididos. À Valderez pelas direções quando eu ainda estava em processo de adaptação.   Aos amigos, em especial para Alexandre, Jéferson, Raphael e Talles, pela força e fé no meu esforço.   À secretária do curso de pós-graduação, Maria, que me deu suporte nos assuntos burocráticos e foi muito compreensiva.  Ao Luís pelo zelo ao laboratório e disponibilidade de ajudar.   Aos colegas do laboratório de microbiologia que, por várias vezes, permitiram que eu utilizasse seus equipamentos e reagentes.   A Profa.Gorete pela gentileza de aceitar participar da minha defesa.   
+            
+  5 
+ 
+                             ”A alegria está na luta, na tentativa, no sofrimento envolvido. Não na vitória propriamente dita”.   (Mahatma Gandhi) 
+            
+  6 
+ 
+RESUMO   O aproveitamento integral do pedúnculo de caju, uma matéria prima vastamente encontrada no Ceará e pouco aproveitada, aliado a produção de etanol, produto de valor energético são o foco desse projeto. O suco de caju integral, rico em frutose, glicose, sais e vitaminas, mostrou-se bastante adequado para o uso da levedura Saccharomyces cerevisiae no processo fermentativo alcoólico. A busca por melhorias na obtenção de etanol se deu através do estudo do uso de leveduras imobilizadas em suporte de bagaço de caju (SBC). A imobilização celular vem sendo estudada por inúmeros pesquisadores e tem se mostrado uma técnica importante devido aos benefícios e vantagens possibilitados como o aumento na produtividade. O bagaço de caju surge como uma matéria prima barata e de fácil obtenção para a aplicação da técnica de imobilização. Para comparação foram estudados os resultados com células livres e imobilizadas em alginato de cálcio, um conhecido agente de imobilização de células por encapsulamento e células imobilizadas por adsorção em bagaço de caju. Utilizando células imobilizadas em bagaço foram realizadas fermentações preliminares, consecutivas e de estocagem. Foram verificados os seguintes parâmetros cinéticos: produtividade (Q
+-1-1
+g.Lh), eficiência (Ef, %), conversão substrato/biomassa (Yx/s, g.g
+p, 
+-1
+) e conversão substrato/produto (Yp/s, g.g
+-1
+).  O suporte de bagaço de caju atingiu vantagens com relação a adesão e altas densidades celulares, gerando elevadas produtividades (≈ 5 g.L
+-1-1
+h). Com relação a eficiência e a taxa de conversão substrato/produto, células imobilizadas atingiram valores similares aos obtidos com células livres no suco de caju integral (em torno de 90% e 0,47 respectivamente). Outra vantagem foi a durabilidade e possibilidade de reutilização do suporte tornando o processo mais econômico, rápido e eficiente. O SBC mostrou-se apto a reutilização por no mínimo 10 bateladas consecutivas e se manteve estável, em geladeira, por pelo menos 6 meses.    Palavras-chave: suco de caju, bagaço de caju, etanol, fermentação alcoólica, levedura Saccharomyces cerevisiae, imobilização celular.              
+            
+  7 
+ 
+ABSTRACT   The use of cashew apple peduncle, a vast available material found in Ceará that is usually wasted, combined with production of ethanol, is the focus of this project. Cashew apple juice, rich in fructose, glucose, salts and vitamins, is an appropriate raw material for alcoholic fermentation by the yeast Saccharomyces cerevisiae. The search for improvements in ethanol production in this work was achieved through the study of the use of yeast immobilized in cashew apple bagasse support, (SBC). Cell immobilization has been studied by many researchers and has been an important technique because of the possible benefits and advantages as the increase in productivity. Cashew apple bagasse is a cheap and easily accessible raw material to the application of the immobilization technique. As comparison, results with free, immobilized cells in calcium alginate, a known agent for immobilization by encapsulation, and immobilized cells by adsorption on SBC were studied. Preliminary fermentation assays using immobilized cells on SBC were performed, as well as consecutive and storage fermentations. The following kinetic parameters were checked: productivity (Qp, gL
+-1-1-1
+h), efficiency (Ef,%), substrate / biomass yield (Yx / s, g.g) and substrate / product yield (Yp / s, g.g 
+- 1
+). SBC presented advantages, such as high cell densities and adhesion, generating high yields (≈ 5 g.L
+-1-1
+h). With respect to efficiency and rate of substrate / product yield, immobilized cells reached values similar to those obtained with free cells in the integral cashew apple juice (about 90% and 0.47 respectively). Another advantage is the durability and possibility of reuse of SBC making the process more economical, fast and efficient. SBC was reused for at least 10 consecutive batches and remained stable, at refrigerator, for 6 months.    Keywords: cashew apple juice, cashew apple bagasse, ethanol, alcoholic fermentation, Saccharomyces cerevisiae, cell immobilization.              
+            
+  8 
+ 
+LISTA DE ILUSTRAÇÕES   
+FIGURA 1 
+Principais métodos de imobilização celular............................................................................................... pg 24 
+FIGURA 2 
+Fluxograma dos procedimentos experimentais....................................................................................
+ pg 29 
+FIGURA 3 
+Aparato utilizado na imobilização de leveduras em alginato de Cálcio................................................................................................
+ pg 32 
+FIGURA 4 
+Suporte de bagaço de caju com células de leveduras imobilizadas......................................................................................
+ 
+pg 36 
+FIGURA 5 
+Cromatograma de amostras da fermentação para determinação da concentração de açúcares redutores, etanol e glicerol.............................................................................................. pg 38 
+FIGURA 6 
+Fermentação de meio sintético composto por glicose, frutose e sais, utilizando levedura livre........................................................... pg 40 
+FIGURA 7 
+Fermentação do suco de caju integral utilizando a levedura S.cerevisiae livre.............................................................................. pg 41 
+FIGURA 8 
+Fermentação do suco de caju integral utilizando a levedura S. cerevisiae imobilizada em alginato de cálcio 2%............................ pg 43 
+FIGURA 9 
+Fermentação do suco de caju integral utilizando a levedura S. cerevisiae imobilizada em alginato de cálcio 2,5%......................... pg 43 
+FIGURA 10 
+Microscopia óptica do bagaço de caju e células de levedura............................................................................................ pg 46 
+FIGURA 11 
+Fermentação preliminar do suco de caju integral utilizando a levedura S. cerevisiae imobilizada em bagaço de caju.................... pg 47 
+FIGURA 12 
+Concentração de etanol durante a fermentação em batelada de suco de caju usando células livres, imobilizadas em alginato-na, 2 % em bagaço de caju........................................................................ pg 47 
+FIGURA 13 
+1ª batelada de três fermentações consecutivas do suco de caju  integral utilizando um mesmo suporte de bagaço de caju com células imobilizadas......................................................................... pg 49 
+FIGURA 14 
+2ª batelada de três fermentações consecutivas do suco de caju  integral utilizando um mesmo suporte de bagaço de caju com pg 49 
+            
+  9 
+ 
+células imobilizadas......................................................................... 
+FIGURA 15 
+3ª batelada de três fermentações consecutivas do suco de caju integral utilizando um mesmo suporte de bagaço de caju com células imobilizadas......................................................................... pg 50 
+FIGURA 16 
+Concentração final de etanol nas 10 bateladas consecutivas utilizando suco de  caju e SBC com leveduras imobilizadas........... pg 51 
+FIGURA 17 
+Concentração final de etanol nas bateladas do estudo de estocagem utilizando suco de  caju e SBC com leveduras imobilizadas..................................................................................... pg 55 
+FIGURA 18 
+Evolução da produtividade na produção de etanol ao longo dos experimentos de bateladas consecutivas e ensaios de estocagem.... pg 56 
+FIGURA 19 
+Variação da eficiência na produção de etanol ao longo dos experimentos de bateladas consecutivas e ensaios de estocagem.... pg 56 
+FIGURA 20 
+Apêndice - Curva de calibração que relaciona DO (λ = 660 nm) com massa seca (g.L
+-1
+) para a levedura Saccharomyces cerevisiae.  
+pg 71                    
+            
+  10 
+ 
+LISTA DE TABELAS   
+TABELA 1 
+Levantamento sistemático das safras, produção e áreas plantadas de castanha de caju no Brasil e em alguns estados do Nordeste em 2007, 2008 e 2009............................................................................ pg 18 
+TABELA 2 
+Composição química do pedúnculo de caju..................................... pg 19 
+TABELA 3 
+Composição química do suco de caju................................................ pg 20 
+TABELA 4 
+Composição química dos bagaços de caju e de malte...................... pg 21 
+TABELA 5 
+Parâmetros cinéticos das fermentações com células livres.............. pg 42 
+TABELA 6 
+Parâmetros cinéticos das fermentações com células imobilizadas em alginato-Ca................................................................................. pg 44 
+TABELA 7 
+Parâmetros cinéticos das fermentações preliminares com células imobilizadas em bagaço de caju....................................................... pg 50 
+TABELA 8 
+Parâmetros cinéticos das 10 bateladas consecutivas para a produção de etanol a partir de suco de caju e utilizando células imobilizadas em bagaço de caju. Cada fermentação teve a duração de 6h................................................................................................. pg 52 
+TABELA 9 
+Parâmetros cinéticos das fermentações do estudo de estocagem, com bateladas intercaladas por 21 dias aproximadamente. Duração de 6 h cada......................................................................... pg 54 
+TABELA 10 
+Apêndice - Resultados de densidade Óptica (DO) e massa seca para o crescimento de S. cerevisiae em meio sintético a 30 ºC......................................................................... pg 70           
+            
+  11 
+ 
+ABREVIAÇÕES   SBC
+ Suporte de bagaço de caju 
+BC Bagaço de caju 
+SC   Suco de caju integral 
+ART Açúcares redutores totais ARTi
+ Açúcares redutores totais inicial    
+ARTr Açúcares redutores totais residual    Ferm Fermentação Bat Batelada                        
+            
+  12 
+ 
+SUMÁRIO   1 
+INTRODUÇÃO………......………………………………….... 14 2 
+REVISÃO DE LITERATURA………...…………………   16 2.1 
+Produção de frutas no Brasil..............…………….....….... 16 2.2 
+Caju..…..…..................................………………………....... 16 2.2.1 O cajueiro e seu aproveitamento.....................................…… 16 2.2.2 Pseudofruto do caju...............…………...............………… 18 2.2.3 O suco de caju........………………........................…………… 19 2.2.4  Bagaço de caju.............……...................……….. 20 2.3 
+Sacharomyces cerevisiae..............................…...........……… 21 2.3.1 Características e importância.......... 21 2.3.2 Microorganismos produtores de etanol....... 22 2.3.3 Imobilização celular............... 22 2.3.3.1 Métodos de imobilização celular................................ 23 2.3.3.2 Vantagens e desvantagens da imobilização celular........... 25 2.4 
+Fermentação alcoólica....................... 26 2.4.1  Produção, uso e importância do bioetanol............ 26 2.4.2 Principais matérias primas utilizadas para produção de etanol.... 27 2.4 Fermentado de caju................................................................. 28 3 
+MATERIAIS E MÉTODOS……………………………    29 3.1 
+Matéria prima...........................................................     29 3.2  
+Fluxograma do procedimento experimental.................................  29 3.3    
+Microorganismo..................................................................       30 3.3.1  Preparo da cultura estoque.........................................................    30 3.3.2 Meio de manutenção e ativação.........................    31 3.3.3 Preparo do pré inóculo..........................................  31 3.3.4 Preparo do inoculo com células livres e imobilizadas.....................  31 3.3.4.1 Imobilização em alginato de cálcio...............................................   32 3.3.4.2.1 Pré-tratamento do bagaço de caju
+................................................. 33 3.3.4.2.2 Imobilização das células no bagaço tratado...................................... 
+ 33 3.4 
+Meio sintético para produção de etanol........................................  34 3.5 
+Meio à base de suco de caju.................................................     34 3.6 
+Ensaios fermentativos para a produção de etanol........................  35 3.6.1 Ensaios com células livres.................................................................
+ 35 3.6.2 Ensaios com células imobilizadas em alginato de cálcio.................. 35 3.6.3 Ensaios com células imobilizadas em bagaço de caju......................
+ 35 3.7 
+Métodos analíticos........................................................................... 36 3.7.1 Concentração de biomassa................................................................ 36 3.7.2 Contagem de células imobilizadas em SBP...................................... 37 3.7.3  Concentração de ART, etanol e glicerol........................................... 37 3.7.4  Cálculos e parâmetros cinéticos das fermentações....................... 38 4 
+RESULTADOS E DISCUSSÕES…………………........ 40 4.1 Produção de etanol por S. cerevisiae utilizando meio sintético composto por glicose e frutose como fonte de energia................. 40 4.2 
+Fermentação do suco de caju integral......................................... 41 4.3 
+Produção de etanol utilizando células imobilizadas.................... 42 4.3.1 S. Cerevisae imobilizada em alginato de cálcio..............................  42 
+            
+  13 
+ 
+4.3.2 S. Cerevisae imobilizada em bagaço de caju................................... 45 4.3.2.1 Ensaios preliminares de fermentação.............................................. 45 4.3.2.2 Bateladas consecutivas..................................................................... 48 4.3.2.3  Ensaios de estabilidade à estocagem................................................. 53 5 
+CONCLUSÕES……………….....……………………........... 57 REFERÊNCIAS ...........................................................................................
+58 APÊNDICE..........................................................................................................  
+   
+ 70                              
+            
+  14 
+ 
+1. INTRODUÇÃO     A procura mundial por etanol tem aumentado bastante, principalmente devido a participação crescente como biocombustível, renovável, contribuindo para a redução do consumo de gasolina, que é gerado a partir de um combustível fóssil, o petróleo. O Brasil é destaque na produção e uso do etanol, especialmente o oriundo da cana-de-açúcar. O Brasil é o segundo maior produtor mundial de etanol perdendo apenas para os Estados Unidos, que usa como biomassa o milho. Mesmo assim o etanol brasileiro oriundo da cana é o mais competitivo do mundo, já que esse, para cada unidade de energia fóssil consumida, gera 8,9 unidades de energia na forma de etanol, perto de 5 vezes a mais que para o milho. Esse sucesso do etanol brasileiro se deve tanto pela produção eficiente e aproveitamento do bagaço de cana na produção de energia gerando cerca de 3% de toda energia elétrica consumida no país, quanto por ser bem menos poluente que os combustíveis fósseis (ÚNICA, 2007). De acordo com dados da Única e Conab (2008) a produção brasileira estimada para 2009 será de 26,90 bilhões de litros sendo que 80% tem como destino o uso carburante, 5% alimentação, perfumaria e alcoolquímica e 15% a exportação. Um aumento na demanda por etanol vem preocupando os ecologistas com relação à ocupação de áreas de pastagem, cerrado ou qualquer área de preservação natural por monoculturas de cana. Apesar da evolução tecnológica em todas as cadeias da produção sucroalcooleira, faz-se necessário o uso de outras fontes de biomassa para complementar essa produção para que no futuro a demanda por esse combustível seja atendida.  Segundo Lin e Tanaka (2006), biomassa é uma fonte interessante de energia por diversas razões. A mais importante é que este tipo de energia contribui para o desenvolvimento sustentável, criando novas oportunidades em regiões rurais. Além disso, se resíduos agroindustriais forem utilizados em processos biotecnológicos, não apenas se estabelecem substratos alternativos, mas também se resolve um problema de descarte. O caju, por exemplo, é constituído pela castanha, verdadeiro fruto, e pelo pedúnculo, que é o pseudofruto. A castanha é amplamente aproveitada devido a seu valor econômico, enquanto que o pedúnculo é desperdiçado em torno de 90% apesar de ser rico em açúcares redutores totais (glicose e frutose), sais, ácidos orgânicos, e vitamina C, o que o torna propício a produção de etanol (Morton, 1987; Campos et al., 2002; Assunção; Mercadante, 2003; Azevedo; Rodrigues, 2000; Pinheiro et al., 2007). O pedúnculo de caju, 
+            
+  15 
+ 
+diante desse cenário, se apresenta como interessante opção para suplementação da produção nacional de etanol.  Outras matérias primas têm sido utilizadas na produção de etanol como beterraba e trigo na Europa, mandioca na Tailândia e sorgo na África. Um fato comum entre os países é que a produção, em sua maioria, se dá por fermentação alcoólica. A levedura Saccharomyces cerevisiae é o mais importante microorganismos produtor de etanol devido a sua versatilidade em processos fermentativos submersos. Apesar de serem tolerantes, essas leveduras podem ser limitadas por altas concentrações de açúcares e etanol e ter menor durabilidade quando utilizadas livres no meio de fermentação.  Vários pesquisadores, como Dragone et al (2006), Giordano et al (2000), Lei Liang et al (2008) e Santos et al (2007), têm abordado o aumento da produtividade, redução do tempo dos processos, menor tamanho dos equipamentos, maior durabilidade e resistência das células quando utilizados microorganismos imobilizados nos mais diversos suportes. Os suportes de imobilização tem a função de proteger as células de efeitos tóxicos do meio, pH, temperatura, efeitos osmóticos, inibidores e permitir um elevado crescimento celular em seu interior reduzindo custos do processo.  Alguns empecilhos ao uso de técnicas de imobilização tem sido o custo adicional que elas conferem e dificuldades com relação a manutenção da integridade dos suportes contendo células imobilizadas durante os processos. Por outro lado, as pesquisas têm se voltado para o uso de suportes baratos feitos de matérias primas abundantes, estáveis e de baixo custo, como pedaços de maçãs, casca de laranja e resíduos de celulose deslignificados (Lei Liang, et al 2007). Existem várias técnicas de imobilização celular que podem ser divididas em quatro grandes categorias: imobilização por adsorção em suportes sólidos, por exemplo, materiais lignocelulósicos, que geralmente passam por um tratamento para aumentar o seu poder de adsorção. Imobilização por encapsulamento, alginatos, quitosanas, etc. Imobilização de auto-agregação por floculação natural ou artificialmente induzida e por último barreiras de contenção celular. Este trabalho teve como propósito estudar a viabilidade da produção de etanol utilizando o suco de caju integral obtido do pedúnculo através de processos fermentativos utilizando a levedura Saccharomyces cerevisiae, livre e imobilizada em um suporte de baixo custo, feito a partir de bagaço de caju.      
+            
+  16 
+ 
+2. REVISÃO DE LITERATURA   2.1. Produção de frutas no Brasil   O Brasil devido ao seu vasto e diversificado território possui uma enorme quantidade e variedade de frutas que o coloca na posição de terceiro maior produtor mundial.  Principalmente na região norte do país o principal destaque são os frutos tropicais. O Estado do Ceará é um dos maiores produtores de sucos tropicais, tendo como um dos destaques o suco de caju (Kohlschmitt, 2004).     2.2. Caju   2.2.1. O cajueiro, o caju e seu aproveitamento   O caju (Anacardium occidentale L.) é formado por um fruto, a castanha de caju, e por um pseudofruto, o pedúnculo e é oriundo do cajueiro. O cajueiro é uma planta tropical originária do Nordeste brasileiro que existe na natureza em duas formas, comum (ou gigante) e anão. O cajueiro anão precoce é o que mais tem se destacado devido ao menor tempo de florescimento, maior produtividade e por gerar pedúnculos com maior teor de açúcares e menor adstringência. A produção de pedúnculos de caju no Brasil é estimada em torno de 1,8 milhões de toneladas/ano concentrando-se basicamente na região Nordeste (Globo Rural, 2005). A área ocupada com cajueiro no Brasil é estimada em 700.000 ha dos quais, mais de 90% se encontra na região Nordeste e, 80% estão distribuídos nos estados do Piauí, Ceará, Paraíba e Rio Grande do Norte. Os produtos industriais são consumidos basicamente pelo mercado 
+            
+  17 
+ 
+local e não desempenham um papel importante na economia brasileira. Além disso, grande parte do caju é perdida na colheita acumulando-se no solo, com aproveitamento industrial de no máximo 15 % do total (Morton, 1987; Campos et al., 2002; Assunção; Mercadante, 2003; Azevedo; Rodrigues, 2000). Nos últimos anos foram desenvolvidos diferentes clones de cajueiro anão a fim de obter-se melhor qualidade e maior produtividade. O uso de clones resistentes representa uma forma de manejo, econômico, ecológico e seguro, impedindo a invasão de pragas e doenças, além de proporcionar uma melhor utilização da variabilidade genética da espécie, existente tanto na natureza como aquela exteriorizada nas progênies, oriundas de cruzamentos entre plantas de tipos distintos no programa de melhoramento genético (Paixa; Barros, 2004). Os principais clones comerciais foram criados no Campo Experimental de Pacajus da Embrapa. O Brasil está entre os maiores produtores mundiais de caju e tem o Ceará como o principal estado produtor. De acordo com a Food and Agriculture Organization (FAO), o Brasil é o quarto maior produtor com 1,6 milhões de toneladas, atrás de Índia (4 milhões), Nigeria (5 milhões) e Vietnam (8,4 milhões), (Pinheiro et al., 2007). A castanha de caju é o segundo maior item de exportação do Ceará, perdendo apenas para calçados, porém apenas a castanha tem valor econômico significativo, pois o aproveitamento do pedúnculo é baixo. Com uma maior implantação do cajueiro anão a produção de pedúnculo de caju poderá ser triplicada e a demanda por derivados do pseudofruto será bastante inferior favorecendo então o aproveitamento desse para a produção de etanol.  Outros itens de importância econômica para o Estado do Ceará são tecidos, fruticultura, camarões, lagostas, ceras vegetais, entre outros (Secex/MDIC, 2009). A tabela 1 apresenta os dados da safra nacional de castanha de caju distribuída entre os Estados. Podemos observar que Ceará, Rio Grande do Norte e Piauí correspondem a aproximadamente 90 % da produção nacional de caju. A expectativa para a produção de 2009 na produção de castnha é de um aumento nessa produção. O estado do Ceará tanto em 2007 quanto em 2008 foi o líder no mercado de produção e exportação de castanha de caju (Secex/MDIC, 2009).  O pedúnculo corresponde a 90% do peso do caju enquanto a castanha representa 10%.  Sua importância se deve ao consumo in-natura e aos derivados como suco, refrigerante, cajuína, aguardente, vinagre, doce, etc. Alguns fatores ainda inibem a demanda por esses tipos de produtos como a alta perecibilidade do caju, devido a ausência de uma casca mais resistente, a presença significativa de açúcares redutores (glicose e frutose), a elevada quantidade de taninos que inibem o consumo devido o sabor adstringente e ao aspecto de 
+            
+  18 
+ 
+polpa causado por estes. O grande desperdício do pedúnculo é devido à reduzida estabilidade pós-colheita, associada à pequena capacidade de absorção da indústria e curto período de safra (Paiva et al., 2002).    
+Tabela 1 - Levantamento sistemático das safras, produção e áreas plantadas de castanha de caju no Brasil e em alguns estados do Nordeste em 2007, 2008 e 2009 (estimativa feita em maio de 2009).  
+Brasil e Estados Safra Área (ha) plantada Produção em (t) Participação em (%)²  
+Brasil 2007 
+747351 137804 100 
+2008 
+762962 240139 100 
+2009¹ 
+781000 280994 100 
+Maranhão 2007 
+19599 6287 4,60 
+2008 
+19820 6587 2,70 
+2009¹ 
+19607 6512 2,32 
+Piauí 2007 
+172712 23744 17,20 
+2008 
+179395 56223 23,40 
+2009¹ 
+184610 67920 24,17 
+Ceará 2007 
+388455 53420 38,80 
+2008 
+397349 123510 50,40 
+2009¹ 
+410412 149278 53,12 
+R. G. do Norte 2007 
+124028 40408 29,30 
+2008 
+125856 42877 17,90 
+2009¹ 
+125984 43263 15,40 
+Paraíba 2007 
+8139 2901 2,10 
+2008 
+8160 3227 1,30 
+2009¹ 
+8120 3204 1,14 
+Pernambuco 2007 
+6625 4919 3,60 
+2008 
+7541 5683 2,30 
+2009¹ 
+7901 5687 2,02 
+Bahia 2007 
+27793 6125 4,40 
+2008 
+24841 5439 1,90 
+2009¹ 
+24366 5130 1,83 
+1
+ Estimativa realizada em maio de 2009. 
+2
+ Participação na produção nacional de castanha de caju de cada estado  Fonte: Grupo de Coordenação de Estatísticas Agropecuárias - GCEA/IBGE 
+  
+2.2.2. Pseudofruto do caju   
+            
+  19 
+ 
+Quando o pedúnculo é industrialmente processado para a produção do suco, 40% (p/p) de bagaço são produzidos, geralmente rejeitados pela indústria local. Esses fatores tornam o suco e bagaço do caju substratos interessantes e de baixo custo (menos de R$ 0,25/Kg de pedúnculo) para diversas aplicações potenciais (Ferreira et al., 2004; Matias et al., 2005; Rocha et al., 2007), como por exemplo, a produção de bioetanol, uma fonte limpa e renovável de energia, por fermentação (Pacheco et al., 2009; Garruti et al, 2003). O pedúnculo de caju é rico em açúcares redutores, vitamina C, sais minerais, ácidos orgânicos e taninos. O teor de vitamina C varia de 3 a 5 vezes a mais que a laranja. A tabela 2 mostra a composição química e físico-química do pedúnculo de caju.  Tabela 2 - Composição química do pedúnculo de caju, Cajucultura (2007)
+1
+ .  Componente Quantidade
+ 
+Umidade (%) 86 
+Brix 11 
+pH 4,2 
+Açúcares redutores (%) 7,9 
+Açúcares totais (%) 8,4 
+Acidez total (%) 0,36 
+Ácido ascórbico (mg/100g) 18,5 
+Taninos (%) 0,35 
+Cálcio (mg/100g) 14,5 
+Fósforo (mg/100g) 33 
+Ferro (mg/100g) 0,36 
+    2.2.3. O suco de caju   O suco de caju é o principal produto do processamento do pedúnculo que tem grande aceitação principalmente no mercado nacional. Devido ao seu valor nutricional o suco de caju pode ser utilizado facilmente em processos fermentativos como na produção de biosurfactantes por Pseudomonas aeroginosa (Rocha et al. 2007),  produção de ácido hilaurônico por Sterptococcus zooepidemicus (Santana et al. 2004), produção de etanol por                                                 
+ 1
+ WWW.cajucultura.com.br acessado em 30 de janeiro de 2009. 
+            
+  20 
+ 
+células livres de S. cerevisiae (Pinheiro et al., 2007), entre outros. Os açúcares redutores totais (ART) que estão presentes no suco de caju são diretamente fermentados pelas leveduras. A sacarose, que é a fonte de carboidrato presente na cana-de-açúcar necessita de uma ação de hidrólise, que geralmente é feita pelo microorganismo através de uma enzima chamada invertase que converte sacarose em glicose e frutose. A presença dos ART no suco de caju permite fermentações rápidas (Garruti et al., 2003). São gerados por ano em torno de 2 milhões de toneladas de pedúnculo de caju, porém grande parte é desperdiçada no campo durante o descastanhamento ou devido ao desinteresse, baixa demanda e maus cuidados no manejo dessa matéria prima,  em vista que  menos de um décimo desse montante é processado para esse fim. Segundo PIMENTEL (1997), o suco de caju integral possui limitações de expansão a novos mercados devido a aspectos de qualidade, como falta de estabilidade física e elevada adstringência.  Tabela 3 - Composição química do suco de caju, Rocha et al., 2007
+. 
+Nutriente Quantidade 
+Vitamina C (mg/100g);                            135-372 
+Brix;                                            7,4 
+pH;                                             3,8-4,2 
+Ácido málico (g/100g);                0,4 
+Taninos totais (mg/100g);           0,6 
+Taninos condensados (mg/100g);  0,2 
+Cálcio (mg/100g);                       0,9-5,4 
+Fósforo (mg/100g);                     6,1-21,4 
+Ferro (mg/100g);                      0,2-0,7 
+Caroteno (mg/100g);                   0,03-0,74 
+Carboidratos (g/100g);                9-9,7 
+Açúcares redutores (%);              10,7 
+Açúcares não-redutores (%);         0,4 
+Amido (%);                              2,7-8,5 
+Alanina (µmol/100mL);               336 
+Serina (µmol/100mL);                 273 
+Fenilananina (µmol/100mL);        175,6 
+Leucina (µmol/100mL);              178 
+Ácido glutâmico (µmol/100mL);   148,4 
+Ácido aspártico (µmol/100mL);   87,6 
+Prolina (µmol/100mL);                158,7 
+Tirosina (µmol/100mL);              115,5 
+ 2.2.4 Bagaço de caju  
+            
+  21 
+ 
+Apesar do desperdício, o bagaço de caju pode ser um importante suplemento nutritivo para silagem de capim-elefante além de proporcionar melhor conservação da massa ensilada (Ferreira et al., 2004).   O bagaço de caju pode ser aproveitado como suporte de imobilização visando maiores e melhores resultados na fermentação. Para tornar o bagaço de caju um eficiente suporte de imobilização, neste trabalho, utilizou-se tratamento similar ao efetuado por Dragone et al. (2006) utilizando bagaço de malte, de composição química parecida com a do bagaço de caju. O objetivo desse tratamento é a remoção de lignina, presente em ambos os bagaços, e expor ao máximo o número de grupos hidrofílicos para favorecer as ligações entre o suporte (carga positiva) e as leveduras (carga negativa) A tabela 4 mostra a composição químico-bromatológica dos bagaços de caju e de malte.  Tabela 4 - Composição química dos bagaços de caju e de malte Parâmetros (%MS) Bagaço de caju
+12
+ Bagaço de malte 
+Matéria seca 25,4 - 
+Matéria orgânica 91,6 - 
+Proteína bruta 14,2 - 
+Extrato etéreo 4,1 - 
+Hemicelulose 18,5 28,4 
+Celulose  24,3 16,8 
+Lignina 22,5 27,8 
+Carboidratos não fibrosos 11,9 - 
+12
+Fonte: Ferreira et al. (2004); Vaz et al. (1999).  
+   2.3 Saccharomyces cerevisiae    2.3.1 Características e importância   As leveduras são fungos unicelulares, não filamentosos, caracteristicamente esféricos ou ovais (Tortora et al 2002). Sua multiplicação ocorre por brotamento, isto é, 
+            
+  22 
+ 
+formação de broto e divisão em duas células de tamanhos desiguais, a célula mãe e uma pequena nova célula que irá crescer até atingir o tamanho médio das células normais.  São anaeróbios facultativos, podendo crescer na presença ou ausência de oxigênio.  Saccharomyces cerevisiae, mais conhecida como levedura de cerveja, se destaca por seu caráter dominante com relação a presença de outros microorganismos e por ser resistente a concentrações de açúcares e de etanol superiores aos resistidos por outros microorganismos. Em condições anaeróbicas e com fontes de carbono como carboidratos simples produz etanol e dióxido de carbono sendo considerado o microorganismo mais eficiente nos processos que utilizam a fermentação alcoólica e também muito conhecido na fabricação de pães e bebidas.   2.3.2 Microorganismos produtores de etanol   Existem vários microorganismos capazes de produzir etanol, porém nenhum com a eficiência de Saccharomyces cerevisiae. Kluyveromyces marxianus, por exemplo, é uma levedura fermentadora de lactose e faz parte dos grãos de kefir utilizado na produção da bebida feita de leite fermentado. Lintong et al., (2007) conseguiu, fermentando caldo de cana-de-açúcar como substrato, produtividade de 1,45g.L
+-1-1
+.h na produção de etanol utilizando essa levedura. De acordo com Tano et al (2000) a bactéria  Zymomonas mobilis é considerada competitiva por apresentar uma membrana resistente a altas concentrações de sacarose e etanol. Outros microorganismos como Candida guilliermondii, Clostridium ljungdahlii,
+ 
+ 
+e Synechococcus leopoliensis foram utilizados na produção de etanol (Schirmer-Michel et al., 2007; Rajagopalan et al., 2001; Ohtaguchi et al., 1997).   2.3.3 Imobilização celular   A imobilização celular é uma inovação que tem se desenvolvido na busca de processos fermentativos mais competitivos e lucrativos.   
+            
+  23 
+ 
+O uso de sistemas com células imobilizadas tem sido considerado como uma alternativa viável para se aumentar a produtividade em razão das elevadas densidades celulares normalmente obtidas (Rama-Krishna e Prakasham, 1999). Em sistemas com células imobilizadas consegue-se maior massa de células por unidade de volume de trabalho do que em sistemas descontínuos, contínuos e de recuperação de células trabalhando com células livres (Williams e Munnecke, 1981; Pilkington et al, 1998). A imobilização eleva a atividade fermentativa da levedura, promovendo a adaptação das células ao meio e eliminando a fase lag em bateladas sucessivas de fermentação (Duran e Bailey, 1986).  As técnicas de imobilização usadas em geral podem ser agrupadas em quatro grandes categorias de acordo com vários autores (Tanaka e Kawamoto, 1999; Groboillot. et al., 1994; Canilha et al., 2006; Carvalho et al., 2006; Brányik, T. et al., 2004).    2.3.3.1 Métodos de imobilização celular   Ligação a superfícies Baseia-se em sólidos com forças iônicas, de adsorção, ou covalentes atraindo os microorganismos a superfície do suporte. Alguns suportes são porosos permitindo a ligação de células no interior do suporte. As ligações iônicas são um método simples e barato, porém, tem como desvantagem a vulnerabilidade de perdas de células para o meio reacional. As ligações do tipo covalente são mais fortes, mas podem causar danos as membranas celulares. São polissacarídeos como celulose, dextrana; proteínas como gelatina albumina; etc. (Park; Chang, 2000; Groboillot. et al., 1994; Canilha et al., 2006; Carvalho et al., 2006). Aglomeração A segunda categoria é a imobilização por aglomeração, que pode ser natural ou artificialmente induzida. Poucas células têm a capacidade de se aglomerar naturalmente, e geralmente formam aglomerados pouco estáveis, portanto, faz-se necessário a utilização de componentes multifuncionais que imobilizam por floculação como glutaraldeído, tolueno, hexametileno, etc. (Tanaka; Kawamoto, 1999; Groboillot. et al., 1994; Canilha et al., 2006; Carvalho et al., 2006; Brányik, T. et al., 2004). Aprisionamento em matrizes porosas 
+            
+  24 
+ 
+É a contenção de células em matrizes porosas, sintetizadas em torno das células, que tem como exemplo de substâncias o alginato, carragena, poliacrilamida, etc. São géis com poros de diâmetro médio inferior ao tamanho das células, permitindo a passagem de nutrientes do meio para os microorganismos ao mesmo tempo em que os retém. A difusão do meio para as células ocorre de forma lenta e limitada gerando uma proteção. (Tanaka; Kawamoto, 1999; Groboillot. et al., 1994; Park; Chang, 2000; Brányik, T. et al., 2004). Contenção por membranas A quarta categoria é a imobilização por contenção em barreiras. Utilizam membranas pré-formadas ou com formação, in situ, em torno das células a serem imobilizadas. Reatores Hollow fiber, compostos por micro esferas, são o tipo mais comum. É um método alternativo ao aprisionamento em matrizes porosas.  Necessitam de equipamento especial. Alta capacidade de contenção de células e prevenção da perda de células para o meio de fermentação. Devido à ausência de um núcleo gelificado as limitações à transferência de massa são reduzidas (Park; Chang, 2000). Exemplo de compostos utilizados: interações iônicas entre sulfato de celulose e cloreto de poli-dimetil-dialil-amônio (hollow fiber). (Tanaka; Kawamoto, 1999; Groboillot. et al., 1994; Canilha et al., 2006; Carvalho et al., 2006; Brányik, T. et al., 2004). A Figura 1 é um esquema ilustrando os principais tipos de imobilização considerados pelos autores.  Figura 1- Principais métodos de imobilização celular  
+Bagaço de caju 
+Adsorção natural 
+Ligação a  superfícies 
+Ligação química 
+  Métodos de  Imobilização Celular 
+Natural 
+Aglomeração 
+Artificial 
+Gel 
+Aprisionamento em  
+matrizes porosas 
+Suportes pré- formados 
+Contenção Aprisionamento  
+em fase 
+ por barreiras 
+Barreiras 
+Pré-formadas 
+            
+  25 
+ 
+ 2.3.3.2 Vantagens e desvantagens da imobilização celular   Vários autores (Lei Liang et al., 2008; Santos et al., 2007; Dragone et al., 2006; Brányik et AL., 2004; Pilkington et al, 1998; Ramakrishna; Prakasham, 1999; Carvalho et al, 2006; Lee et al, 1983; Hamdy et al, 1990), entre outros, citam as vantagens do processo utilizando células imobilizadas, como alta produtividade devido a alta densidade celular, menores custos de produção e de recuperação de células, reutilização das células, processos fermentativos mais rápidos, maior proteção contra fatores físicos e químicos que interferem no metabolismo microbiano como pH, pressão osmótica, temperatura, toxicidade de substâncias, entre outros. É preferível o uso de células imobilizadas que de enzimas, pois se evita o trabalho de extração das enzimas dos microorganismos para depois fixa-las no suporte, além da capacidade que as células tem de regenerar os cofatores necessários para a ação das enzimas e sua maior estabilidade (Corcoran, 1985; Chibata, 1983; Vitolo, 1988).  A principal desvantagem do emprego dessa técnica tem sido o custo. Desta forma, uma possível alternativa que pode ser considerada é a utilização de suportes de baixo custo baseados em subprodutos industriais (Dragone et al., 2005). O alginato de cálcio é bastante útil para imobilização de leveduras Saccharomyces cerevisiae  devido o baixo custo, grande disponibilidade no mercado, possibilidade de ampliação de escala de produção e a aceitação das substâncias utilizadas para imobilização (alginato e cloreto de cálcio) como aditivos na produção de alimentos têm sido citadas na literatura (Corcoran, 1985; Champagne et al., 2000; Jamai et al.; 2001; Canilha et al.; 2006). Entre as desvantagens do uso deste polímero como suporte destacam-se a instabilidade química na presença de agentes quelantes do íon cálcio (como fosfato, lactato e citrato), a tendência das esferas em sofrer dilatação na presença de cátions monovalentes e as limitações impostas à transferência de substratos e produtos (Freeman e Lilly, 1998). Fontes naturais de celulose como o bagaço de caju contêm grande número de grupos hidrofílicos com carga positiva. A superfície das leveduras possui cargas negativas e por isso são adsorvidos pelos suportes a base de celulose. Um tratamento de deslignificação com hidróxido de sódio aumenta a afinidade entre o suporte e as células (Santos D.T. et al., 2007; Lei Liang et al., 2008 e Brányik et al., 2001).     
+            
+  26 
+ 
+2.4 Fermentação alcoólica    É a transformação de açúcares, principalmente a glicose, em etanol, gás carbônico e energia por um microorganismo. De acordo com Gay-Lussac a estequiometria da reação anaeróbica de produção de etanol ocorre conforme a equação1 (Leninger et al., 2000; Kolb, 2002): C
+HO →  2CHCHOH  +  2CO  +  energia                                                               (2.1) O etanol também pode ser obtido por via sintética, onde o subproduto de petróleo, etileno é hidratado e transformado em etanol.   2.4.1 Produção, uso e importância do bioetanol   O Brasil é o segundo maior produtor de etanol do mundo perdendo apenas para os Estados Unidos e juntos produzem mais da metade da produção mundial. O primeiro usa como matéria prima a cana-de-açúcar e o segundo o milho. A região de destaque no Brasil, tanto na produção de etanol como em pesquisa, é São Paulo correspondendo a aproximadamente 80% da produção nacional (Ortiz e Rodrigues, 2006).  O etanol ou álcool etílico é uma substância pura formada apenas por C
+6126 322
+HOH. Mas, devido à formação de mistura azeotrópica com a água, é difícil e muito dispendioso, do ponto de vista energético, a obtenção de etanol 100% por requerer técnicas de destilação, retificação e desidratação para separar o etanol da água. O etanol combustível é comercializado de duas formas, etanol anidro com teor de água em torno de 0,5% e etanol hidratado com teor de água em torno de 5%, sendo ambos em volume.  Na produção industrial do etanol, o tipo hidratado é o que sai diretamente das colunas de destilação. Para produzir o etanol anidro é necessário utilizar um processo adicional que retira a maior parte da água presente. O etanol hidratado é diretamente vendido nos postos enquanto o etanol anidro é adicionado a gasolina de 20 a 25% para produzir a gasolina tipo C que é a única que pode ser vendida no Brasil. A distribuição do álcool etílico produzido se dar da seguinte forma: 80% para uso carburante, 5% para uso alimentar, perfumaria e alcoolquímica e 15% para exportação (Única, 2007).  O etanol pode atuar como energia renovável através de células combustíveis, como solvente na indústria química, como desinfetante, anti-séptico e para 
+25
+            
+  27 
+ 
+aumentar a efetividade de outros compostos químicos. Como desinfetante a concentração recomendada é 70 % (Tortora, et al., 2002). O etanol possui mais uma infinidade de utilizações em diversos ramos industriais e laboratoriais.  A relação entre energia renovável produzida e energia fóssil consumida da produção de etanol a partir da cana-de-açúcar no Brasil é a maior do mundo sendo em torno de 8,9 unidades de energia enquanto que os diversos tipos de biodiesel variam entre 2 e 3 unidades, o etanol de milho americano e de beterraba européia produzem em torno de 2 unidades e o etanol de sorgo africano produz 4 unidades (ÚNICA, 2005).  Isso é possível graças a utilização do bagaço de cana no abastecimento energético da produção industrial e também a evolução da produção sucroalcoleira que vem ocorrendo desde a criação do extinto Instituto do Açúcar e do Álcool anterior ao Proálcool 1975 que ocorreu posteriormente, devido a crise mundial do petróleo, e foi também muito importante para o desenvolvimento da indústria produtora de etanol.   Sem dúvida, o uso deste biocombustível em grande escala é uma contribuição importante aos esforços globais para a redução das emissões de gases de efeito estufa por oferecer uma alternativa renovável ao petróleo. Mas a sustentabilidade ambiental não se limita à redução das emissões de gases de efeito estufa, à avanços tecnológicos ou ao enquadramento legal da atividade de produção de biocombustíveis. A sustentabilidade requer maior responsabilidade, austeridade e equidade nos padrões mundiais de consumo e uso da energia, cuja demanda tem contribuído para a especialização e homogeneização do uso da terra e para a disponibilização de recursos naturais ao mercado global, fatores que podem colocar em risco a sustentabilidade das populações e do ambiente nos países produtores (Rodrigues e Ortis, 2006). A demanda por etanol é crescente e há uma enorme preocupação com relação ao aumento da monocultura de cana, que contribui para o desmatamento de regiões de preservação, por isso é necessária uma busca por outras matérias primas disponíveis, e muitas vezes desperdiçadas, para uma produção complementar de etanol.   2.4.2 Principais matérias primas utilizadas para produção de etanol   Existe uma grande diversidade de materiais que podem ser utilizados pelos microorganismos para produção de etanol: Diretamente fermentescíveis: são açúcares simples, trioses, tetroses e hexoses. Ex: glicose, frutose, etc. São rapidamente consumidos pelos microorganismos por serem monossacarídeos, 
+            
+  28 
+ 
+isto é, as estruturas de carboidratos mais simples. São o principal componente nos ciclos bioquímicos para obtenção de energia. A glicose é a fonte mais abundante de energia de carboidrato utilizada pelas células (Tortora et al., 2002; Leninger, 2000). Podem ser encontrados em frutas, vegetais, mel, etc. Indiretamente fermentecíveis: dissacarídeos e polissacarídeos. Moléculas formadas por monossacarídeos ligados de diversas formas em quantidade de duas ou mais moléculas. Podem ser açucaradas: sacarose, rafinose, maltose, etc. Amiláceas: amido (cereais, etc) e féculas (raízes, mandioca,etc). Celulósicas: bagaço de caju e cana, lenhosos (madeiras), resíduos sulfíticos (lixívia), etc.  As principais fontes renováveis existentes no mundo são a cana-de-açúcar brasileira o sorgo e a cana africanos, a beterraba e o trigo europeus, o milho americano e o arroz e cana asiáticos são exemplos dessas matérias primas. Alguns autores estão estudando o uso de matérias primas celulósicas, principalmente resíduos da agroindústria para produção de etanol mas, por enquanto têm encontrado dificuldades para viabilizar economicamente devido os altos custos necessários para preparo, hidrólise e sacarificação.    2.4.3 Fermentado de caju    Por ser rico em açúcares e sais minerais, o pedúnculo do caju é uma matéria prima bastante favorável à fermentação alcoólica. A história das bebidas fermentadas de caju está ligada aos hábitos indígenas e começa com o cauim (Garruti et al., 2003). Cascudo (1983) menciona que para fabricar o cauim de caju bastava espremer os cajus maduros com as mãos e deixá-los em repouso. O suco fermentado era então filtrado, resultando em um líquido branco e depois opaco, que era diretamente consumido. Foram determinados alguns parâmetros do processo de vinificação do suco de caju, como a necessidade de clarificação e sulfitação do mosto (faria, 1994; Dias, 1996; garruti 2001), temperatura e agitação.      
+            
+  29 
+ 
+3. MATERIAIS E MÉTODOS   3.1 Matéria prima   O suco de caju integral e bagaço de caju utilizados neste trabalho foram fornecidos pela Embrapa Agroindústria Tropical e pela Sucos do Brasil S/A, respectivamente. O material foi mantido congelado em freezer dividido em vários recipientes até sua utilização.   3.2 Fluxograma do procedimento experimental                                          Figura 2- Fluxograma do procedimento experimental 
+Matéria prima Microorganismo 
+Levedura (em pó) Saccharomyces cerevisiae 
+Pedúnculo de caju 
+Preparo da  cultura estoque 
+S ujac o deuco de uja cBçaga
+Adição de sais Autoclavagem Tratamento Trituração + Peneiragem 
+Cultivo e ativação  em placas c/ meio AS 
+SC + sais  SBC tratado 
+(pronto p/fermentação) (pronto p/imobilização) 
+Autoclavagem Mistura 
+Meio sintético (glicose + sais) 
+Preparo do Pré-inóculo 
+e SBC 
+Imobilização das leveduras 
+ no SBC  
+Leveduras  
+livres 
+Fermentação 
+alcoólica 
+Glicose + Frutose + sais  
+(meio sintético) 
+R CBSo do lcicel de amostras esiCná a eateol
+Imobilização em 
+ alginato de cálcio 
+            
+  30 
+ 
+O procedimento experimental pode ser dividido em duas grandes etapas paralelas entre si de acordo com a figura 2. Preparo do pedúnculo de caju para a imobilização e para fermentação e preparo do inoculo. A partir do pedúnculo obtém-se o suco integral e o bagaço.  
+   
+3.3 Microrganismo   O microorganismo utilizado neste trabalho foi a levedura Saccharomyces cerevisiae, obtido comercialmente como fermento Saf-momento (SAF Argentina, Buenos Aires).   3.3.1 Preparo da cultura estoque    Preparam-se 200 mL de meio para crescimento da levedura: 5 g.L
+-1
+ de extrato de levedura, 5 g.L
+-1 -1 -1
+de glicose, 2,5 g.Lde sulfato de amônio (NHSO), 0,5 g.L de fosfato de potássio (KH
+44
+-1
+PO), 0,65 g.L de sulfato de magnésio heptahidratado (MgSO.7HO) e 0,65 g.L
+2442
+-1
+ de sulfato de zinco (ZnSO) que foram divididos em 2 erlenmeyers de 250 mL, com 100 mL de meio cada, e autoclavado (Autoclave: PHOENIX, Araraquara, SP, Brasil)  a 110 ºC por 10 minutos. Após o resfriamento desse meio, realizou-se a introdução de 1 g da levedura Saccharomyces cerevisiae em pó, em cada erlenmeyer, dentro da câmara de fluxo laminar (Câmara de fluxo laminar: LABCONCO, Kansas, Missouri, EUA), e em seguida os erlenmeyers foram dispostos em agitação de 150 rpm, e 30 ºC no agitador rotativo, Shaker (Shaker: TECNAL CE/420, SP Brasil), gerando boas condições de mistura e temperatura para que as leveduras se multiplicassem. Depois de 24 h os erlenmeyers foram levados de volta para a câmara de fluxo laminar, sempre devidamente esterilizada com etanol 70% e lâmpada UV, onde, com o auxílio de uma alça de Grialsky, inoculou-se placas de Petri contendo meio Ágar Sabouraud (AS), ideal para o cultivo de Saccharomyces cerevisiae. Depois de 48 h, observou-se crescimento desordenado por toda a placa. Retirou-se uma pequena quantidade com alça de inoculação e inoculou-se nova placa de forma sistematizada para permitir um crescimento mais ordenado em forma de colônias e poder selecionar células mais eficientes, isto é, células com melhor capacidade de formar colônias nas placas. 
+4
+            
+  31 
+ 
+Esse cultivo vem sendo mantido por todo período em que o projeto vem sendo realizado através da replicação de placa em placa.   3.3.2 Meio de Manutenção e Ativação   O meio Ágar sabouraud (AS) foi utilizado para manutenção e ativação da levedura. Depois de diluído, na proporção indicada na embalagem, o meio AS foi autoclavado dentro de Erlenmeyers a 121 ºC por 15 minutos. Em seguida foi resfriado e rapidamente colocado em placas de Petri dentro da câmara de fluxo laminar. Essas placas eram previamente esterilizadas, no autoclave  nas mesmas condições do AS. Foram colocados, aproximadamente, de 15 a 20 mL do meio AS em cada placa.   3.3.3 Preparo do pré inóculo   As colônias cultivadas nas placas foram multiplicadas através do crescimento da levedura em solução salina, contendo glicose como fonte de carboidrato, para geração de biomassa suficiente para se inocular os meios de fermentação. Para preparo dessa solução sintética os seguintes reagentes foram diluídos em água destilada: 30 g.L
+-1-1
+ de glicose, 5 g.L de extrato de levedura, 10 g.L
+-1 -1-1
+de NHSO, 4,5 g.L de KHPO, 1 g.L MgSO.7HO e 0,65 g.L
+442442
+-1
+ ZnSO. Depois foram distribuídos em erlenmeyers de 250 mL, sendo colocado no máximo 100 mL de meio em cada para favorecer a mistura. Após a diluição, a solução foi autoclavada a 110 ºC por 10 minutos. Os microorganismos eram alçados das placas de petri cultivadas e inoculados no meio de cultivo sintético dentro da câmara de fluxo laminar para crescimento microbiano e posterior centrifugação (Centrífuga: Sigma C15, Osterode am Harz, Alemanha), a 10000 rpm por 15 minutos, para separação das leveduras do caldo fermentado.          3.3.4 Preparo do inoculo com células livres e imobilizadas   
+4
+            
+  32 
+ 
+As leveduras obtidas após 24 h de crescimento do pré-inoculo em shaker a 30 ºC e 150 rpm de agitação foram separadas por centrifugação. Essas células úmidas de Saccharomyces cerevisiae foram pesadas e diretamente utilizadas nas fermentações com células livres. Também foram utilizadas para imobilização.     3.3.4.1 Imobilização em alginato de cálcio   A imobilização em alginato foi realizada de acordo o método de GIORDANO et al (2000). Para imobilizar as células em alginato de cálcio, misturaram-se 25 g de alginato-Na 2% ou 2,5% (m/v) e  2,5 g de levedura úmida em funil de 500 mL acoplado a um kitassato, contendo cloreto de cálcio 0,2 M onde a mistura foi gotejada através da sucção feita pela bomba de vácuo. Procedimento feito na câmara de fluxo laminar. O aparato utilizado está ilustrado na figura 3. 
+ Figura 3 - Aparato utilizado na imobilização de leveduras em alginato-Ca.  A medida que a solução de alginato-Na e células foi sendo gotejada, pellets aproximadamente esféricos com leveduras imobilizadas foram formados dentro da solução de cloreto de cálcio. Em seguida, os pellets formados foram transferidos para uma nova solução de cloreto de cálcio 0,2 M e mantidos em cura por 2 h, sob refrigeração. 3.3.4.2 Imobilização em bagaço de caju 
+            
+  33 
+ 
+3.3.4.2.1 Pre-tratamento do bagaço de caju   O tratamento do bagaço de caju foi feito de acordo com o método utilizado por Dragone et al. (2006), para o tratamento do bagaço de malte na produção de cervejas, com pequenas modificações. Esse método foi bastante válido devido a semelhança entre os bagaços de caju e de malte. O bagaço foi inicialmente lavado com água para retirada de impurezas e seco em estufa a 50 ºC. Em seguida o bagaço foi moído e pesado para início do tratamento ácido. Para cada 100 g de bagaço de caju seco e moído, 1,5 L de solução de HCl 3% (v/v) foram misturados em Becker de 4 L e colocados em banho termostático (Banho termostático: Tecnal, TE/0541, Piracicaba, SP, Brasil) a 60 ºC sob agitação, para promover uma homogeneidade do tratamento por 2,5 h.   Posteriormente, o bagaço tratado foi separado da solução ácida por filtração sob vácuo. Depois, o pH do bagaço foi neutralizado com solução tampão fosfato, pH 8, na mesma proporção massa de bagaço por volume de solução do tratamento ácido. O bagaço com pH em torno de 6,5 foi lavado com água e secado na estufa a 50 ºC.  O tratamento de deslignificação com base (NaOH 2%) foi feito também na proporção de cada 100 g de bagaço para 1,5 L de solução. Nesse caso, porém, o experimento foi realizado em shaker sendo o material distribuído em erlenmeyers. A remoção da lignina tem como objetivo expor mais grupos hidrofílicos de carga positiva presentes na celulose, aumentando as chances de absorção das leveduras, possuidoras de cargas negativas (Lei Liang et al., 2008). As condições do tratamento foram 120 rpm e 30 ºC por 24 h. Finalmente o bagaço tratado foi separado por filtração sob vácuo, neutralizado com solução tampão acetato, pH 4, lavado com água, secado em estufa, moído e por último peneirado em peneiras com diâmetro de poros entre 0,84 e 0,35 mm para obtenção do bagaço no tamanho desejado. Depois de pronto, o bagaço foi autoclavado a 110ºC por 10 minutos dentro de 250 mL de meio de propagação do inóculo.   3.3.4.2.2 Imobilização das células no bagaço tratado   
+            
+  34 
+ 
+Todas as etapas de manipulação, de inoculação e amostragem do bagaço de caju, após autoclavagem, foram feitas dentro da câmara de fluxo laminar. Meio sintético, o mesmo utilizado para obtenção do pre-inóculo, contendo o bagaço de caju tratado, SBC, foi autoclavado a 110 ºC por 10 minutos e após resfriamento foi inoculado com 1% (m/v) de leveduras úmidas para possibilitar o crescimento destas no interior do suporte por 24 h. Todos os processos fermentativos com suporte de bagaço contendo células foram realizados em duplicata sendo 2 erlenmeyers de 500 mL contendo 12,5 g de bagaço e 125 mL de meio de fermentação cada.   3.4 Meio sintético para produção de etanol   No início dos experimentos foi utilizado meio sintético para a fermentação com a seguinte composição: 45 g.L
+-1-1-1-1
+ de glicose, 44 g.L de frutose, 2,50 g.L de NHSO, 0,50 g.L
+44
+-1-1
+ de KHPO, 0,65 g.L de MgSO.7HO e 0,65 g.L de ZnSO.  O meio sintético serviu como teste da capacidade da levedura de produzir etanol e como parâmetro de comparação com o suco de caju.    3.5 Meio à base de suco de caju   O principal meio de fermentação do presente estudo foi o suco de caju integral suplementado com pequena quantidade de sais: 2,50 g.L
+24424
+-1-1
+ de NHSO, 0,50 g.L de KHPO, 0,65 g.L
+4424
+-1-1
+ de MgSO.7HO e 0,65 g.L de ZnSO. Antes da adição de sais o suco integral de caju foi centrifugado a 10000 rpm por 10 minutos para que fosse retirado o excesso de sólidos em suspensão, deixando o suco mais límpido e homogêneo. Os meios foram dispostos em erlenmeyers e sofreram tratamento térmico a 110ºC por 10 minutos em autoclave para reduzir ao máximo o número de microorganismos sem causar escurecimento por caramelização, o que ocorreria se o meio fosse exposto a temperaturas maiores ou por tempo de aquecimento mais longo (DAMASCENO et al., 2007).  O pH dos meios eram sempre corrigidos para valores entre 4,3 e 4,7 (Pinheiro et al 2008) através do pHmêtro. 
+424
+            
+  35 
+ 
+3.6 Ensaios fermentativos para a produção de etanol    Os ensaios foram divididos em três categorias. Ensaios com células livres, imobilizadas em alginato-Ca e imobilizadas em bagaço de caju.  As células livres foram utilizadas nas fermentações de meio sintético e suco de caju integral. As leveduras imobilizadas fermentaram o suco de caju integral.   3.6.1 Ensaios com células livres   A fermentação com células livres foi conduzida em frascos de Erlenmeyer de 500 ml com 250 ml de meio em um agitador rotativo shaker a 30°C e 150 rpm. A concentração inicial de microrganismo inoculado no meio de cultura foi 10 g.L
+-1 
+de células úmidas. Amostras foram coletadas em intervalos de tempo pré-definidos
+ e submetidas a análise para determinação da concentração celular.    3.6.2 Ensaios com células imobilizadas em alginato de CÁLCIO   Após o período de cura, descrito no item 3.5.1, os “pellets” contendo células foram separados da solução de cloreto de cálcio através da bomba de vácuo, pesados e divididos em 2 erlenmeyers de 500 ml contendo 250 ml de suco de caju integral cada. Os frascos foram então colocados em agitador rotativo, shaker, a 30°C e 150 rpm. Amostras foram retiradas em tempos pré-determinados, seguindo o mesmo procedimento utilizado para a fermentação com células livres.  3.6.3 Ensaios com células imobilizadas em bagaço de caju   Para dar início a fermentação, o suporte bagaço de caju com células imobilizadas foi pesado e distribuído em 2 erlenmeyers de 500 ml contendo 125 mL de meio de fermentação. Os frascos foram então colocados em shaker a 30°C e 150 rpm. Amostras foram 
+            
+  36 
+ 
+retiradas seguindo o mesmo procedimento utilizado para a fermentação com células livres. No final das fermentações o bagaço foi separado por filtração e guardado sob refrigeração para uma posterior utilização. A Figura 4, mostra o suporte de bagaço de caju contendo células imobilizadas, durante os períodos de armazenamento.    
+ Figura 4 - Suporte de bagaço de caju com células de leveduras imobilizadas. As manchas amareladas mais claras são as leveduras
+. 
+  3.7 Métodos analíticos   3.7.1 Concentração de biomassa   A concentração celular livre foi determinada através da densidade óptica (DO) do caldo fermentado à 660 nm, em espectrofotômetro (Marca: BIOCHROM LIBRA 322, Cambridge Inglaterra). Este procedimento foi utilizado nas fermentações com células livres, bem como nas fermentações com células imobilizadas. Para analisar o crescimento da biomassa no interior dos pellets de alginato foi necessário a dissolução de 1 g de pellets em 20 mL de solução EDTA 5% por 24 h. Após esse 
+            
+  37 
+ 
+período foi analisada a DO a partir da qual, obteve-se a concentração celular por grama de pellet (Giordano et al., 2000).    3.7.2 Contagem de células imobilizadas em SBP  A contagem de células imobilizadas no bagaço foi feita utilizando câmara de Neubauer (marca: New Optik) e microscópio óptico (Marca: OLYMPUS CX21) com objetiva de 40X. Uma amostra de 0,5 g do bagaço contendo células era misturado a 50 ml de NaCl 0,85% dentro de um erlenmeyer sob agitação de 150 rpm no agitador rotativo por 24 h. Foram retirados 0,1 ml da solução de leveduras extraídas e misturados a 0,3 ml de uma solução de azul de metileno 0,2%. Essa mistura foi colocada por capilaridade entre a câmara de Neubauer e uma lamínula. Após 2 minutos esperando as células sedimentarem a câmara era colocada no microscópio óptico para contagem.   A câmara de Neubauer possui 4 quadrantes. Depois da contagem do número de células em todos os quadrantes, foram obtidos o número de células por grama de bagaço através da equação:   
+º×××=fnqcélsN                                                                               (1) Onde “nº de céls” é o número de células por grama de suporte de bagaço, “nq” é o número de células contadas nos quatro quadrantes, “f” é o fator de diluição que é igual 4, já que houve diluição de 0,1 ml de células para 0,4 ml. O fator 10000 foi utilizado para encontrar o número de células por mL, pois o volume de um quadrante é 0,00002 mL (0,02 mm x 1 mm x 1mm).  O fator 100 mL nos dar a quantidade de células por grama de bagaço, já que são 50 mL de solução extraindo células de 0,5 g de bagaço.   3.7.3 Concentração de ART, etanol e glicerol  A concentração de substrato (açúcares redutores) e a concentração de produto (etanol e glicerol) foram determinados por cromatografia líquida de alta eficiência (HPLC), utilizando sistema de HPLC equipado com um detector de índice de refração Waters 2414 e com coluna Aminex HPX-87H. Uma solução 5 mmoL.L10010000
+4
+-1
+ HSO em água MiliQ era usada como fase móvel com vazão de 0,5 mL.min
+24
+-1
+ e 65°C. As amostras foram identificadas comparando os tempos de retenção com o tempo de retenção das amostras padrão. 
+            
+  38 
+ 
+ 
+ Figura 5 - Cromatogramas de amostras da fermentação para determinação da concentração de açúcares redutores, etanol e glicerol. Coluna Aminex HPX-87H e H
+SO (5 mM) como fase móvel na vazão de 0,5 mL.min
+24
+-1
+ a 65°C, injeções de 20 µL. O cromatograma (A ) representa uma amostra  no início da fermentação (0 h), enquanto o (B) representa a análise de uma amostra no final da fermentação (6 h) de  uma batelada com células imobilizadas em SBC.   3.7.4 CÁLCULOS E PARÂMETROS CINÉTICOS DAS FERMENTAÇÕES   Através dos resultados obtidos (concentração de células, concentrações de ART, glicerol e etanol) foi possível calcular os parâmetros cinéticos das fermentações. Os principais parâmetros cinéticos estudados foram produtividade (Q
+), eficiência (η), fator de conversão substrato/biomassa (Yx/s), fator de conversão substrato/produto (Yp/s) e foram calculados pelas equações 3.2, 3.3, 3.4 e 3.5, respectivamente.  
+p
+ PfQp=                          (2)              sendo Q
+t
+-1-1-1
+(g.L.h) a produtividade, Pf é a concentração de etanol (g.L) no final da fermentação e t (h) é o tempo de duração da fermentação.  
+p 
+            
+  39 
+ 
+η1005111,0)( Pf  ••−=SfSi                                                                                                     (3)    Sendo η (%) a eficiência, Si a concentração inicial de substrato, açúcares redutores totais (ART), e Sf a concentração final de ART. De acordo com equação de Gay Lussac para a produção de etanol em condições anaeróbias, o fator 0,5111 deve ser multiplicado ao denominador porque no balanço de massa, cada grama de ART  consumida gera, no máximo, 0,5111 gramas de etanol já que é produzido também gás carbônico (Hashizume; Aquarone, 2005; Pacheco et al., 2009).   
+)(Xi)-(Xf  Yx/sSfSi−=;                                                                                                                    (4)  sendo Yx/s
+-1
+o fator de conversão de substrato em biomassa (g.g), ou ART em biomassa, Xi é a concentração inicial de biomassa e Xf a concentração de biomassa final.  
+ 
+)(Pf  Yp/sSfSi−=                                                                                                                      (5)  sendo Yp/s
+-1
+o fator de conversão de substrato em produto, ou ART em etanol, (g.g).  Para calcular a conversão, ou percentual de consumo, total de açúcares (ART) nas fermentações utiliza-se a seguinte equação.  
+ 
+)S - Si (  (%) conversãof=
+                                                                                                       (6)         
+Si
+            
+  40 
+ 
+4. RESULTADOS E DISCUSSÕES   4.1 Produção de etanol por S. cerevisiae utilizando meio sintético composto por glicose e frutose como fonte de energia   A título de comparação, meio sintético contendo glicose e frutose como fontes de carbono e sais, na mesma proporção que foi posteriormente adicionada como suplemento ao suco de caju (SC), foi fermentado usando a levedura Saccharomyces cerevisae livre no meio e os resultados são mostrados no gráfico 1. Este experimento foi denominado de controle.  02468100510152025303540455055606570758085
+ 
+ 
+Concentração g.L-1
+Tempo h
+ Figura 6 - Fermentação de meio sintético composto por glicose, frutose e sais, utilizando levedura livre. Consumo de ART(
+▼), formação de etanol (►), glicerol (●) e  biomassa seca (■) em função do tempo de fermentação alcoólica a 150 rpm e 30ºC. Pelo gráfico 1, pode-se observar que os ART não foram consumidos ao longo de 9 h de fermentação. A conversão do ART foi de apenas 22,73 %. O lento consumo do substrato pode ter sido causado pela baixa concentração de sais adicionada, o que não ocorreu com o suco de caju por ter naturalmente elevada concentração de sais e outros nutrientes. Houve um pequeno crescimento da biomassa, que depois de 4 horas se manteve estável, e de acordo com a equação 3, eficiência na produção de etanol igual a 94,35%.  
+            
+  41 
+ 
+A tabela 4 mostra os parâmetros cinéticos para este ensaio: produtividade (Qp), eficiência (η), conversão substrato/biomassa (Y
+) e conversão substrato/produto (Y).   4.2 Fermentação do suco de caju integral   Posteriormente, utilizou-se suco de caju como meio de fermentação para a produção de etanol por S. cerevisiae livre. A figura 7 mostra as curvas de consumo de ART, formação de glicerol e etanol e concentração de biomassa durante a fermentação do suco de caju integral pela levedura Saccharomyces cerevisiae livre.  0246810020406080100
+X/SP/S
+ 
+ 
+Concentração g.L-1
+Tempo h
+ Figura 7 - Fermentação do suco de caju integral utilizando a levedura S. cerevisiae livre. Consumo de ART(
+▼), formação de etanol (►), glicerol (●) e crescimento da biomassa (■)versus o tempo de fermentação a 150 rpm e 30ºC. O suco de caju demonstrou ser bastante adequado para produção de etanol já que a levedura Saccharomyces cerevisiae atingiu resultados melhores aos obtidos quando se utilizou meio sintético, com uma eficiência na produção de etanol de 88,95%, conversão de ART em biomassa (Y
+ = 0,10) um pouco inferior que no meio sintético (Y = 0,13) e produtividade (4,29 g.L
+X/SX/S
+-1-1-1-1
+.h) significativamente maior que no meio sintético (1,12 g.L.h), dados ilustrados na tabela 5.  
+            
+  42 
+ 
+Tabela 5 – Parâmetros cinéticos das fermentações com células livres. Tempo final de 9 h para cada. Meio de fermentação ART inicial (g.L-1) ART Residual  (g.L-1) Etanol (g.L-1) Qp (g.L-1.h-1) YP/S
+ 
+(g.g-1) η (%) YX/S (g.g-1) 
+Sintético: glucose +  fructose + sais 85,06 ± 0,00 65,73 ± 0,44  9,32 ± 0,08 1,03 ± 0,01 0,48 94,35 0,17 
+Suco de caju integral 86,06 ± 2,98 3,77 ± 0,62 38,57 ± 2,51 4,29 ± 0,28 0,47 90,10 0,10 
+ A levedura apresentou maior produtividade em etanol (4,29 g.L
+-1-1
+.h) fermentando o suco de caju integral do que o meio sintético usado como controle. Pinheiro et al. (2007) fermentando o suco de caju integral com levedura Saccharomyces cerevisiae livre, usando a concentração inicial de ART de 87,7 g.L
+-1-1-1
+, obtiveram maior produtividade (9,71±0,3 g.L.h
+-1
+). Porém, a concentração inicial de biomassa seca foi de 7,55 g.L, isto é, cerca de 5 vezes maior que a utilizada neste trabalho, 1,49 g/l, o que contribuiu para um tempo menor de fermentação e consequentemente maior produtividade.   4.3 Produção de etanol utilizando células imobilizadas   S. cerevisiae imobilizada em alginato de cálcio   Neste trabalho, estudou-se a produção de etanol utilizando células imobilizadas em alginato-Ca. Avaliou-se a influência das concentrações concentração de alginato de sódio (2% ou 2,5% (m/v)) e seus parâmetros de fermentação. Os resultados obtidos na fermentação do suco de caju integral com levedura imobilizada em alginato a partir de alginato-Na  2% estão representados na figura 8. A figura 9 ilustra a variação de substratos e produtos em função do tempo de fermentação do suco de caju integral pela levedura imobilizada em alginato-Na 2,5%. 
+            
+  43 
+ 
+ 
+ 
+Concentração g.L-1
+024681001020304050607080
+Tempo h
+ Figura 8 - Fermentação do suco de caju integral utilizando a levedura S. cerevisiae imobilizada em alginato de cálcio 2%. Consumo de ART(
+▼), formação de etanol (►), glicerol (
+●), biomassa livre (■) e biomassa imobilizada (♦) em função do tempo de fermentação de suco de caju por S. cerevisiae na imobilização em alginato-Ca 2,0%. 024681001020304050607080
+ 
+ 
+Concentração g.L-1
+Tempo h
+ Figura 9 - Fermentação do suco de caju integral utilizando a levedura S. cerevisiae imobilizada em alginato de cálcio 2,5%. Consumo de ART(
+▼), formação de etanol (►), glicerol (
+●), biomassa livre (■) e biomassa imobilizada(♦) em função do tempo de fermentação de suco de caju por S. cerevisiae imobilização em alginato-Ca 2,5%.   Quando se utilizaram células imobilizadas em alginato-Ca (2,0% ou 2,5%), o consumo dos ART ocorreu de forma um pouco mais lenta devido, provavelmente a dois fatores, a dificuldade de difusão através do gel atrasando o acesso aos nutrientes pelas 
+            
+  44 
+ 
+leveduras em ambas as concentrações de alginato-Na e a baixa concentração celular inicial, no interior dos pellets. Por isso os ART não foram consumidos por completo nas 9 h de fermentação, como aconteceu quando as células estavam livres no meio de fermentação. Diferentemente da fermentação com leveduras livres na qual restaram apenas 3,83 g de ART, seria necessário um tempo um pouco maior para que fossem consumidos os restantes 13,09 e 6,36 g.L
+-1
+ de ART nas fermentações com pellets de alginato 2% e 2,5% respectivamente. Observou-se aumento elevado de biomassa no interior dos pellets de alginato, produção de etanol de forma eficiente, em torno de 90%, elevados fatores de conversão Y
+ e Y, superiores as fermentações com células livres, ver Tabela 6. Ressalta-se que maior crescimento de biomassa ocorreu no interior dos pellets, mas o Yx/s calculado neste trabalho representa a conversão de ART, consumidos, em biomassa total, isto é, massa celular dentro e fora dos pellets. Ocorreu crescimento de células livres devido ao rompimento de alguns pellets. Tabela 6 - Parâmetros cinéticos das fermentações com células imobilizadas em alginato-Ca. Tempo de 9 h cada. Concentração  de alginato-Ca ART inicial (g.L-1) ART Residual  (g.L-1) Etanol (g.L-1) Qp (g.L-1.h-1) YP/S
+P/SX/S
+ 
+(g.g-1) η (%) YX/S (g.g-1) 
+2% 69,26 ± 5,87 13,09 ± 1,46 27,47 ± 0,62 3,05 ± 0,07 0,49 95,71 0,20 
+2,5% 75,68 ± 1,10 6,36 ± 0,50 29,20 ± 1,84 3,24 ± 0,20 0,43 84,00 0,19 
+ O alginato-Ca demonstrou ser um agente imobilizante adequado com resultados comparáveis aos obtidos com células livres. A tendência da reutilização dos pellets de alginato contendo células seria um aumento da biomassa interna e consequentemente da produtividade, porém, mesmo fazendo-se a manutenção com sais de cálcio, os pellets se rompem facilmente, o que pode acarretar problemas de perdas, entupimento, liberação de células e aumento nos custos inviabilizando o processo.  Utilizando células de Saccharomyces cerevisiae (Σ1278) imobilizadas em alginato Jamai, L. et al (2001) obteve produtividade de 5,5 g.L
+-1-1
+.h na produção de etanol em tempos de fermentação de 3 h, sendo, maior que os valores de produtividade observados na tabela 6. Isso demonstra que o alginato permite um acúmulo de células no seu interior, proporcionando fermentações mais rápidas e produtivas.   
+            
+  45 
+ 
+Usando o suporte composto de alginato-Ca de 2% na fermentação do suco integral, foram observados os seguintes parâmetros: eficiência (95,71%) e a conversão de ART em etanol (0,49). Estes resultados são melhores do que os observados quando se utilizou o suporte composto de alginato-Ca de 2,5%, como mostra a tabela 6.   4.3.2 S. Cerevisae imobilizada em bagaço de caju   4.3.2.1 Ensaios preliminares de fermentação   A Figura 10 mostra fotos do SBC antes e após a imobilização de células de Saccharomyces cerevisiae, e imagem das leveduras livres.  Através da microscopia óptica, com um aumento de 400 x, é possível observar a diferença entre o suporte de bagaço de caju com e sem células. Nas Figuras 10 (E) e 10 (F) observa-se a alta densidade de células aderida a superfície do suporte. De acordo com a literatura (Yu J. et al, 2007) a capacidade que as células imobilizadas tem de produzir etanol por longo tempo ainda não foi elucidado por completo, mas, que poderia ser pelo fato de as células imobilizadas conterem percentuais significativamente maiores de ácidos graxos saturados, em comparação com células livres, que conduz a maior tolerância ao etanol para as células imobilizadas e consequentemente maior sobrevida e produtividade durante os ciclos fermentativos, conforme foi observado. Outros autores (Rychtera, M., Basarova, G. and Ivanova, V., 1987) relataram que as células imobilizadas podem reter a atividade enzimática por mais tempo devido a diferente composição das células com relação a proteínas, DNA, RNA lipídeos e substâncias inorgânicas quando comparado com células livres. 
+            
+  46 
+ 
+A 
+A BB  
+CC  DD  
+ Figura 10 – Microscopia óptica do bagaço de caju e células de levedura. Bagaço sem células com aumento de 100X (A) e 400X (B). Leveduras livres (C). Bagaço com células imobilizadas aumento de 100X (D) e 400X (E) e (F).   A figura 11 ilustra os resultados da fermentação de suco de caju por Saccharomyces cerevisiae imobilizada em suporte de bagaço de caju: variação de substratos e produtos em função do tempo de fermentação, bem como concentração celular. Observou-se bom aproveitamento dos ART com conversão de 93,22 % em 7 h de fermentação. O suporte mostrou-se adequado para imobilização com bons resultados preliminares de eficiência (84,61%), fator de conversão de ART em etanol (0,43) e produtividade igual a 2,98 g.L
+EE  FF  
+-1-1
+.h, comparáveis aos processos fermentativos com células imobilizadas em alginato-Ca e com células livres.  
+            
+  47 
+ 
+ 
+ 
+Concentração g.L-1
+Tempo h
+ 02468100102030405060 Figura 11 - Fermentação preliminar do suco de caju integral utilizando a levedura S. cerevisiae imobilizada em bagaço de caju. Consumo de ART(
+▼), formação de etanol (►), biomassa livre (■) e glicerol (
+●) em função do tempo de fermentação de suco de caju por S. cerevisiae imobilizada em bagaço de caju. 0246810051015202530354045
+ 
+ Lev livre
+ alginato 2%
+ Bagaço
+ 
+Concentração g.L-1
+Tempo h
+ Figura 12 - Concentração de etanol durante a fermentação em batelada de suco de caju usando células livres (
+), imobilizadas em alginato-ca, 2 % (■) e em bagaço de caju (■).  A figura 12 exibe uma comparação da produção de etanol utilizando células livres e imobilizadas (em alginato e bagaço de caju). Pode-se observar que, ao final da fermentação, SBC teve um desempenho semelhante ao alginato-Ca, porém, observando a figura 12, verifica-se que a velocidade na produção de etanol foi superior para as células livres e 
+            
+  48 
+ 
+imobilizadas no SBC que teve tempo final de fermentação igual a 7 h. A ausência de barreiras difusionais, uma vez que as células são adsorvidas superficialmente, maior concentração celular inicial e a boa adaptabilidade das células no SBC foram umas das possíveis causas do melhor desempenho com relação a velocidade do processo. A velocidade específica de produção de etanol (µ
+-1
+) para a levedura livre atingiu valores entre 0,98 e 2,17 h, para a levedura imobilizada em alginato valores entre 0,40 e 1,89 h
+p
+-1
+ e para a levedura imobilizada no SBC valores entre 0,43 e 1,97 h
+-1
+. Por se tratar de apenas um ensaio, o SBC ainda não estava saturado com células e deve-se levar em conta uma concentração inicial de ART, inferior, no SC utilizado pela levedura imobilizada no suporte. Alguns autores, como Liang et al. (2008) observaram que a imobilização de células é um processo dependente do tempo e dependem de dois fatores: multiplicação celular e formação de adesão forte e irreversível. A produtividade foi maior para as células livres, devido uma biomassa inicial maior e ausência de barreiras para difusão dos nutrientes para os microorganismos, ao contrário do que acontece quando imobilizadas em alginato. E também devido a maior quantidade de ART inicial no SC utilizado células livres, 86,06 g.L
+-1
+, quando comparado ao ART inicial do SC quando utilizado o SBC que foi 51,78 g.L
+-1
+ .    4.3.2.2 Bateladas consecutivas   Para se avaliar a reutilização do biocatalisador, realizaram-se, inicialmente, três (03) bateladas consecutivas para a produção de etanol utilizando S. cerevisiae imobilizada em bagaço de caju. Avaliou-se a evolução dos parâmetros cinéticos ao longo das fermentações, mostrados na Tabela 7. A Figura 13 mostra os resultados da 1ª fermentação com relação ao consumo de ART e formação de etanol e glicerol. O Figura 14 mostra o consumo de ART e formação de etanol, glicerol e crescimento microbiano durante o 1º reciclo do suporte (ou segunda batelada) na fermentação do suco de caju. 
+            
+  49 
+ 
+ 
+ 
+Concentration g.L-1
+01234560102030405060
+Time h
+ Figura 13 - Três Fermentações consecutivas do suco de caju integral utilizando um mesmo suporte de bagaço de caju com células imobilizadas. Consumo de ART(
+▼), formação de etanol (
+►), glicerol (●) e crescimento da biomassa livre (■) em função do tempo de fermentação – 1ª batelada. 0246810010203040506070
+ 
+ 
+Concentration g.L-1
+Time h
+ Figura 14 - Três Fermentações consecutivas do suco de caju integral utilizando um mesmo suporte de bagaço de caju com células imobilizadas. Consumo de ART(
+▼), formação de etanol (
+►), glicerol (●) e crescimento da biomassa (■) em função do tempo de fermentação – 2ª batelada. 
+            
+  50 
+ 
+A Figura 15 ilustra as curvas de consumo de ART, formação de etanol, glicerol e crescimento de células livres no meio durante o 2º reciclo do suporte (ou terceira betelada) contendo leveduras imobilizadas.    024681001020304050607080
+ 
+ 
+Concentration g.L-1
+Time h
+ Figura 15 - Três Fermentações consecutivas do suco de caju integral utilizando um mesmo SBC com células imobilizadas. Consumo de ART(
+▼), formação de etanol (►), glicerol (●)e crescimento da biomassa (■) em função do tempo de fermentação – 3ª batelada. Tabela 7 - Parâmetros cinéticos das fermentações preliminares com células imobilizadas em SBC. 
+ 
+Ensaio Tempo de  ferm (h) ARTi (g.L
+P/S
+-1-1-1-1-1-1
+) ARTr  (g.L) Etanol (g.L) Qp (g.L.h) Y(g.g) η (%) 
+Ferm  sem reciclo 7 51,78±0,93 3,51 ± 0,22 20,87 ± 0,27 2,98±0,69 0,43 84,61 
+1ª bat com  reciclo  de células 6 57,83 ± 0,90 14,68 ± 0,97 13,50 ± 1,54 1,84 ± 0,65 0,26 50,08 
+2ª bat com  reciclo  de células 6 68,03 ± 0,19  3,58 ± 0,25 30,14 ± 0,63 3,41 ± 1,18 0,32 71,08 
+3ª bat com  reciclo  de células 6 70,01 ± 7,70 3,92 ± 0,27 36,91 ± 0,24 5,40 ± 1,81 0,49 96,44 
+  
+            
+  51 
+ 
+Na Tabela 7, observa-se que os parâmetros cinéticos obtidos nas fermentações com o uso do suporte de caju demonstraram sua viabilidade na produção de etanol, uma vez que o reciclo do suporte não afetou negativamente a produção de etanol, uma vez que houve aumento da produtividade (5,40 ± 1,81 g.L
+-1-1
+h de etanol na 3ª batelada, comparada a 1,84 ± 0,65 g.L
+-1-1
+h de etanol na 1ª batelada). O aumento na produtividade está relacionado com o aumento do número de células no interior do SBC. A eficiência (96,44%) na produção de etanol e o rendimento (0,49), na 3ª batelada, atingiram valores superiores a fermentação com células livres que foram 88,95 % e 0,45, respectivamente.  Para uma melhor análise do sistema, realizaram-se 10 fermentações consecutivas, utilizando-se um mesmo suporte contendo células imobilizadas. Com base nos experimentos mostrados nas Figuras 13 a 15, o tempo de fermentação foi padronizado em 6 h. A Figura 16 ilustra a concentração de etanol no final de cada batelada consecutiva. Pode-se observar que a concentração de etanol aumentou após os dois primeiros reciclos, mantendo-se relativamente constante até o 10º ciclo. Concentrações de etanol entre 18,10 e 34,69 g.L
+-1
+. 
+ 
+ 
+Concentração g.L-1
+012345678910110510152025303540
+nº da Batelada 
+ Figura 16 - Bateladas repetidas para a produção de etanol a partir de suco de caju utilizando levedura imobilizada em bagaço de caju. Tempo de cada batelada = 6 h. Pode-se observar na Tabela 8 os parâmetros cinéticos das 10 fermentações consecutivas utilizando um mesmo suporte com leveduras Saccharomyces cerevisiae imobilizadas. A evolução dos parâmetros cinéticos ocorreu de forma satisfatória. Um fator que dificultou a ação das leveduras foi a alta concentração de ARTi, em torno de 90 g.L
+-1
+. Segundo Schmidell et al. (2001), o metabolismo do microorganismo pode ser inibido por altas 
+            
+  52 
+ 
+concentrações de substrato. Pinheiro et al. (2007) utilizando levedura Saccharomyces cerevisiae comercial livre e suco de caju integral com concentração inicial de 103,1  g.L
+-1 
+-1-1
+atingiu produtividade de 6,37±0,38 g.L.h. Lei Liang et al. (2008) utilizando meio sintético composto por glicose como fonte de carboidrato e células de Saccharomyces cerevisiae imobilizadas em suporte de casca de laranja atingiu produtividade de 5,33 g.L
+-1-1
+.h. A eficiência na produção de etanol e o fator de conversão de ART em etanol se mantiveram estáveis ao longo das 10 fermentações em torno de 90% e 0,43, respectivamente.  Tabela 8 - Parâmetros cinéticos das 10 bateladas consecutivas para a produção de etanol a partir de suco de caju e utilizando células imobilizadas em bagaço de caju. Cada fermentação teve a duração de 6h. Bat ARTi (g.L-1) ARTr  (g.L-1) Qp (g.L-1.h-1)  YP/S
+ 
+(g.g-1) η (%) Biomassa livre final (g.L-1) nº. de céls imob./g de bag. (final) 
+1ª 90,94±0,79 50,22±2,50 3,30 ± 0,23 0,49 95,27 - 2,08 E+07  
+2ª 89,95±1,53 28,57±1,56 4,46 ± 0,0 0,44 85,30 1,99 2,23E+07  
+3ª 85,99±2,77 12,66±1,68 5,40 ± 0,6 0,44 86,46 4,18 - 
+4ª 77,08±6,73 3,13±0,29 6,08 ± 0,0 0,49 96,57 9,43 2,48E+07  
+5ª 90,34±0,34 3,61±0,04 6,31 ± 0,0 0,50 98,52 10,82 - 
+6ª 89,84±0,79 3,11±0,10 5,53 ± 0,0 0,45 88,61 9,38 - 
+7ª 79,29±1,93 3,60±0,19 5,99 ± 0,1 0,47 92,89 12,06 2,62E+08  
+8ª 84,10±3,20 3,52±0,01 5,92 ± 0,1 0,44 86,31 12,77 -  
+9ª 84,47±9,29 3,39±0,09 6,28 ± 0,1 0,46 90,99 15,06 1,49E+08  
+10ª 79,81±0,06 2,89±0,65 5,68 ± 0,0 0,44 86,77 10,83 3,10E+08  
+  Foram observados também concentrações de glicerol em torno de 9 g.L
+-1
+ a partir da 4ª fermentação. Ocorreu aumento de biomassa dentro e fora do suporte atingindo valores acima de 10 g.L
+-1 
+para as células livres no meio, devido ao excesso de leveduras que se acumulava no suporte. O número de células contadas na câmara de Neubauer após o final da 10ª fermentação foi de 3,10 x 10
+8
+. A biomassa livre e imobilizada atingiu valores máximos a partir da 4ª batelada e se manteve aproximadamente constante. A tabela 8 mostra claramente 
+            
+  53 
+ 
+que esse aumento da biomassa está diretamente relacionado com o aumento da produtividade. A eficiência e o fator de conversão substrato/produto não se alteraram significativamente com o aumento da biomassa.     4.3.2.3 Ensaios de estabilidade à estocagem    Os ensaios de estabilidade à estocagem foram realizados utilizando leveduras imobilizadas em SBC que eram mantidos sob refrigeração. Esses experimentos tiveram o intuito de estudar a resistência das leveduras a longos períodos de armazenamento sob refrigeração. Antes de se iniciar a 1ª fermentação, o suporte contendo células imobilizadas ficou guardado por 12 dias sob refrigeração. O tempo de fermentação também foi padronizado em 6 h. Depois da primeira fermentação foi feito reciclo do suporte, e uma nova fermentação foi realizada a cada 21 dias, nesse intervalo o SBC era mantido sob refrigeração. A Tabela 9 apresenta os resultados dos sete experimentos realizados ao longo de 6 meses. Os parâmetros cinéticos obtidos foram bastante similares aos obtidos anteriormente (10 bateladas consecutivas). Foram realizadas 7 bateladas em intervalos de 21 dias, aproximadamente, cada. Pode-se observar que a levedura imobilizada no SBC não perdeu atividade quando armazenada sob refrigeração, uma vez que a concentração final de etanol obtida ao final da 7ª batelada (31,68 ± 0,98 g.L
+-1
+, Tabela 9) é similar à obtida na 7ª batelada consecutiva (31,27 ± 0,69 g.L
+-1
+, Tabela 8). Outra semelhança observada entre os estudos de estocagem e de bateladas consecutivas foi a obtenção de valores máximos de produtividade a partir da 3ª batelada, e em seguida mantendo-se aproximadamente constante. O consumo máximo do substrato se deu igualmente a partir da 4 ª batelada, para os dois estudos. Os valores de eficiência e conversão substrato/produto se mantiveram estável em torno de 90% e 0,46 respectivamente.  A biomassa livre e imobilizada se manteve em elevadas concentrações a partir da 3ª batelada. Atingindo valores entre 6,58 e 27,18 g.L
+-1
+, concentrações finais de leveduras livres,e 2,08E+07  e 3,10E+08 de leveduras imobilizadas em SBC.   
+            
+  54 
+ 
+Tabela 9 - Parâmetros cinéticos das fermentações do estudo de estocagem, com bateladas intercaladas por 21 dias aproximadamente. Duração de 6 h cada.  Bat ARTi (g.L-1) ARTr  (g.L-1) Etanol (g.L-1) Qp (g.L-1.h-1) YP/S
+ 
+(g.g-) η (%) Biomassa  Livre  final (g.L-1) nº. de céls  imob./g de  bag. (final)  
+1ª  90,27 ± 0,00 64,45 ± 3,80 10,76 ± 0,08 1,79 ± 0,03 0,42 81,62 6,58 ± 1,46 3,40 E+07 
+2ª  69,96 ± 1,42 19,32 ± 5,37 20,13 ± 0,60 3,35 ± 0,10 0,48 94,16 7,99 ± 0,71 8,38 E+07  
+3ª  83,29 ± 1,39 7,54 ± 0,07 33,53 ± 0,13 5,59± 0,02 0,44 86,61 14,25 ± 0,77 2,40 E+08  
+4ª  70,30 ± 1,61 3,47 ± 0,18 29,89 ± 3,84 4,98 ± 0,64 0,45 87,54 23,26 ± 1,98 3,66 E+08  
+5ª  74,67 ± 0,73 3,18 ± 0,19 32,43 ± 0,83 5,40 ± 0,14 0,45 88,75 25,40 ± 1,84 4,73 E+08 
+6ª  79,20 ± 0,60 3,68 ± 0,13 30,88 ± 0,39 5,15 ± 0,06 0,41 80,01 23,98 ± 1,93 3,74 E+08 
+7ª  68,77 ± 3,02 2,84 ± 0,12 31,68 ± 0,98 5,28 ± 0,16 0,48 94,04 27,18 ± 1,54 5,59 E+08 
+  Quando comparados com os resultados obtidos por outros autores que usaram o caldo de cana-de-açúcar os resultados obtidos com o SC utilizando células imobilizadas em SBC se mostram bastante satisfatórios. Olguín et al. (1995), conseguiu em seus melhores resultados conversão de ART em etanol igual a 0,38 g.g
+-1
+ e eficiência igual a 82,79 % a partir do mosto de cana e levedura S. cerevisiae. Ribeiro e Horii (1999) obteve 89 % de eficiência, 0,46 g.g
+-1L-1-1
+ na conversão de ART em etanol e 3,40 g..h de produtividade, resultados obtidos pela levedura da linhagem mais bem sucedida (linhagem floculante IZ 987).  Fermentando o SC com leveduras imobilizadas em SBC, atingiu-se eficiência em torno de 90 %, fator de conversão de ART em etanol aproximadamente 0,47 g.g
+-1-1-1
+ e produtividade ≈ 5,3 g.L.h. A Figura 17 apresenta as concentrações finais de etanol, isto é, em 6 h de fermentação, nas 7 bateladas do estudo de estocagem. Podemos observar que até a 2ª batelada, devido a uma menor concentração celular do SBC, a concentração final de etanol é menor que nas bateladas restantes. A partir da 3ª fermentação a concentração de etanol final produzida atingiu um máximo e se manteve aproximadamente constante até o final, porém o percentual máximo de consumo de ART só foi atingido a partir da 4ª batelada (≈95 %). As 10 bateladas consecutivas se comportaram de forma semelhante. Foram produzidos de 1,43 a 9,64 g.L
+-1
+ de glicerol no final das bateladas consecutivas e de estocagem. O glicerol que tem como importância para as leveduras o fato 
+            
+  55 
+ 
+de ser um regulador osmótico e participar do balanço redox. Além disso, o glicerol possui ampla utilidade, seja na indústria de alimentos como umectante e emulsificante, em margarinas, queijos, bolos, sorvetes, etc. Na indústria química como solvente e amaciante, farmacêutica (remédios e pastas dentais), têxtil, cosméticos, etc.   
+ 
+-1
+ 
+Concentração g.L
+12345670510152025303540
+Batelada Figura 17 - Concentração de etanol nas diferentes bateladas do estudo da estocagem com reciclo de suporte de bagaço em intervalos de 21 dias, aproximadamente, para a produção de etanol a partir de suco integral de caju. Tempo final de cada batelada igual a 6 h.  Ocorreu aumento na produtividade na proporção em que aumentava a densidade celular no SBC durante as etapas de reciclo das bateladas consecutivas. Podemos observar na Figura 18 que a produtividade partiu de valores mais baixos nas duas primeiras bateladas atingindo valores maiores, e aproximadamente constantes, a partir da terceira batelada em diante. Isto tanto para as 10 bateladas consecutivas quanto nas bateladas do estudo de estocagem. Os valores variaram entre 3,02 e 5,78 para as bateladas consecutivas (10 bateladas) e entre 1,79 e 5,59 para o ensaio de estocagem (7 bateladas). De acordo com a Figura 19 tanto para as bateladas consecutivas quanto para o ensaio de estocagem a eficiência varia um pouco, mas não de forma crescente da primeira para a última batelada demonstrando que o aumento da biomassa não interfere significativamente. Os valores variaram de 75,71 a 90,33 % para as 10 bateladas consecutivas e de 80,01 a 94,16 % para o ensaio de estocagem. Durante os ensaios, o tempo de retirada da amostra final foi de 6 h de fermentação. Portanto os valores obtidos para a produtividade na produção de etanol são no mínimo os 
+            
+  56 
+ 
+valores citados, podendo haver subestimação, já que há a possibilidade de que em alguns ensaios o tempo de consumo dos ART tenha sido inferior a 6 h. 02468100,00,51,01,52,02,53,03,54,04,55,05,56,06,5
+ 
+ 
+Produtividade g.L-1.h-1
+Batelada
+ Figura 18 – Evolução da produtividade na produção de etanol ao longo das bateladas nos experimentos: 10 bateladas consecutivas (■) e 7 bateladas intercaladas por períodos de estocagem em torno de 21 dias (
+●).  0246810020406080100
+ 
+ 
+Eficiência %
+Batelada Figura 19 – Variação da eficiência na produção de etanol ao longo das bateladas nos experimentos: 10 bateladas consecutivas (■) e 7 bateladas intercaladas por períodos de estocagem em torno de 21 dias (
+●).  
+            
+  57 
+ 
+5. CONCLUSÃO   O pedúnculo de caju cumpriu as expectativas funcionando como um meio adequado na produção de etanol. A levedura Saccharomyces cerevisae se adaptou bem tanto ao suco integral como ao bagaço de caju que foi eficiente na imobilização por adsorção, conforme se observa nas fotos de microscopia óptica e através dos eficientes e produtivos resultados. O alginato apesar de ser um bom agente imobilizante, tem algumas desvantagens com relação a dificuldade na difusão dos nutrientes para as células presentes no seu interior e problemas de estabilidade.    Outra vantagem do SBC foi o aumento da produtividade, até valores acima de 6 g.L
+-1-1
+.h, conseguido com o reciclo do SBC por várias fermentações permitindo não só o aproveitamento de um resíduo industrial como também a reutilização por mais tempo das células de leveduras reduzindo os custos na produção de etanol. Os valores de produtividade alcançados foram entre 3,30 e 6,31 para as 10 bateladas consecutivas e entre 1,45 e 5,59 para as 7 bateladas do estudo de estocagem. Outros resultados positivos obtidos pelas 10 bateladas consecutivas e pelo estudo de estocagem:  - eficiência entre 75,71 e100.  - Conversão substrato produto entre 0,39 e 0,51.  - Alta densidade celular livre, 12,06 e 27,18 (máximos obtidos) em ambos os experimentos e biomassa imobilizada 3,10 x 10
+88
+ e 5,59 x 10, respectivamente.  O SBC além de barato permite uma reutilização por pelo menos 10 ciclos repetitivos e períodos de estocagem de no mínimo 6 meses sem perder o máximo desempenho conseguido, como foi demonstrado nos experimentos desse trabalho. Para ampliar o conhecimento sobre SBC, como material de imobilização celular, pode-se fazer fermentações contínuas. Uma modelagem através dos dados cinéticos obtidos nas fermentações, para possibilitar a simulação de fermentações utilizando o SBC também seria útil para estudos, pesquisas e projetos industriais.      
+            
+  58 
+ 
+REFERÊNCIAS    ANDRIETTA, S.R.; STECKELBERG, C.; ANDRIETTA, M.G.S. Study of ﬂocculent yeast performance in tower reactors for bioethanol production in a continuous fermentation process with no cell recycling. Bioresour Technol. Jun, 2007. Campinas, SP, Brasil.    ASSUNÇÃO, R.B.; MERCADANTE, A.Z. Carotenoids and ascorbic acid composition from commercial products of cashew apple (Anacardium occidentale L.). Journal of Food Composition and Analysis 16 (2003) 647–657.   ASSUNÇÃO, R.B.; MERCADANTE, A.Z.. Carotenoids and ascorbic acid from cashew apple (Anacardium occidentale L.): variety and geographic eects. (2003), J. Food Composition Anal. 16, 647–657.   AZEVEDO D.C.S.;  RODRIGUES A. SMB chromatography applied to the separation/purification of frutose from cashew apple juice. Brazilian Journal of Chemical Engineering 17 (4-7): 507-516 DEC 2000.   BAPTISTA, C.M.S.G.; CÓIAS, J.M.A.; OLIVEIRA, A.C.M.; ROCHA, J.M.S.; DEMPSEY, M.J.; LANNIGAN, K.C.; BENSON, P.S. Natural immobilisation of microorganisms for contínuos ethanol production. Enzyme and Microbial Tecnology 40 (2006) 127-131.    BARROS, L. de M.; CAVALCANTI, J.J.V.; PAIVA, J.R. de; CRISÓSTOMO,J.R.; CORRÊA, M.P.F.; LIMA, A.C. Seleção de clones de cajueiro anão para o plantio comercial no Estado do Ceará. Pesquisa Agropecuária Brasileira, v.35, n.11, p.2197-2204, 2000.   
+            
+  59 
+ 
+BRÁNYIK, T.; VICENTE, A.A.; KUNCOVÁ, G.; PODRAZKÝ, O.; DOSTÁLEK, P.; TEIXEIRA, J.A. Growth model and metabolic activity of brewing yeast biofilm on the surface of spent grains: a biocatalyst for continuos beer fermentation. BIOTECNOL. PROG. 2004, 20, 1733-1740.   BRÁNYIK, T.; VICENTE, A.A.; MACHADO CRUZ, J.M.; TEIXEIRA, J.A. Spent grains - a new support for brewing yeast immobilization. Biotechnology letters 23: 1073-1078, 2001.   CAMPOS, D. C. P.; SANTOS, A S.; WOLKOFF, D. B.; MATTA, V. M.; CABRAL, L. M. C.; COURI, S.; Cashew apple juice stabilization by microfiltration, Desalination, 148, 61-65, 2002;   CAMPOS, J.O.S.; BRINGEL, M.H.F.; BORGES, M.F.; CASIMIRO, A.R.S. Avaliação de leveduras insdustriais na fermentação do suco de caju: tolerância a SO2. Congresso ibero-americano de engenharia de alimentos, 1995, Campinas. Anais... Campinas: FEA-UNICAMP, 1995. p. 119.  CANILHA, L.; CARVALHO, W.; SILVA, J.B.A. Biocatalizadores imobilizados: uso de células e enzimas imobilizadas em processos biotecnológicos.  Biotecnologia Ciência e Desenvolvimento ano IX – nº 36 – janeiro/julho 2006.   CARVALHO, W.; CANILHA, L.; SILVA, S.S. Uso de biocatalisadores imobilizados: uma alternativa para a condução de bioprocessos. Revista Analytica nº 23, p. 60-70, 2006.   CASCUDO, L.C. Cardápio indígena. Cascudo, L.C. (Ed.) História da alimentação no Brasil. São Paulo: Universidade de São Paulo, 1983. p. 84-176.    
+            
+  60 
+ 
+CASTRO, T.R. Processo de clarificação de suco de caju (anacardium occindentale) utilizando membranas. 2005. Disertação (Mestrado em Engenharia Química) – Centro de Tecnologia da Universidade Federal do Ceará, Fortaleza, 2005.   CHAMPAGHE, C.P.; BLAHUTA, N.; GAGNON, C. A vortex-bowl disk atomizer system for the production of alginate beads in a 1500-liter fermentor. Biotechnolgy and Bioengineering, v. 68, p.681-688, 2000.   CHIBATA, I.; TOSA, T. Immobilized biocatalyst to produce aminoacids and other organic compounds. In: Laskin A.I. Enzyme and immobilized cells in Biotechnmology. P.37-70. The Benjamin/Cummings, U.S.A., 1983.   CONAB, Companhia Nacional de Abastecimento, Ministério da Agricultura, Pecuária e Abastecimento. http://www.conab.gov.br. Dezembro 2007.   CORCORAN, E. The production and use of immobilized living microbial cells. In: WISEMAN, A. Topics in Enzyme and Fermentation. Biotechnology. England: Ellis Horwood. v.10, p.12-50, 1985.  DAMASCENO, L.F.; FERNANDES, F.A.N.; MAGALHÃES, M.M.A.; BRITO, E.S. Non-enzymatic browning in clarified cashew apple juice during thermal treatment: kinetics and process controlo. Food Chemistry 106 (2008) 172-179.   DIAS, A.L.M. Influência de diferentes cepas de leveduras e mostos na formação dos compostos voláteis majoritários em vinho de caju. 1996. 94f. Dissertação (Mestrado em Tecnologia de Alimentos) – Universidade Federal do Ceará, Fortaleza.   
+            
+  61 
+ 
+DIEGO, T. S.; SARROUH, B.F.; RIVALDI, J.D.; CONVERTI, A.; SILVA, S.S. Use of sugarcane bagasse as biomaterial for cell immobilization for xylitol production. Journal of Food Engineering 86 (2008) 542-548.   DRAGONE, G., MUSSATO, S. I., SILVA, J. B. A. Fermentación de Cervezas de Altas Densidades por Processo Continuo Utilizando Levaduras Inmovilizadas. XXII IACChE (CHQ) 2006 / VCAIQ.   DURAN, P.M.; BAILEY, J.E. Effects of immobilization on growth, fermentation properties and macromolecular compositions of Saccharomyces cerevisiae attached to gelatin. Biotechnology and Bioengineering, v.28, p.73-87, 1986.   ELMER CCOPA RIVERA , ALINE C. COSTA, DANIEL I.P. ATALA, FRANCISCO MAUGERI, MARIA R. WOLF MACIEL, RUBENS MACIEL FILHO. Evaluation of optimization techniques for parameter estimation: Application to ethanol fermentation considering the effect of temperature. Process Biochemistry 41 (2006) 1682–1687.   FARIA, F.S.E.D.V. Influência de duas linhagens de Saccharomyces cerevisiae na elaboração de fermentados de caju (Anarcadium occidentale,L.) em diferentes condições de fermentação.1994. 99f. Dissertação (Mestrado em Tecnologia de Alimentos) – Universidade Federal do Ceará, Fortaleza.   FERREIRA, A.C.H.; NEIVA, J.N.M; RODRIGUEZ, N.M.; LÔBO, R.N.B.; VÂNIA, R.V.; Valor Nutritivo das Silagens de Capim-Elefante com Diferentes Níveis de Subprodutos da Indústria do Suco de Caju. R. Bras. Zootec., v.33, n.6, p.1380-1385, 2004.   
+            
+  62 
+ 
+FREEMAN, A.; LILLY, M.D. Effect of processing parameters on the feasibility and operational stability of immobilized viable microbial cells. Enzyme and Microbial Technology, v.23, p.335-345, 1998.   FUKUDA, H. Immobilized microorganism bioreactors. In: ASENJO, JA; In: ASENJO, JA; MERCHUK, JC. Bioreactor System Design. New York: Marcel Dekker. New York: Marcel Dekker. 1994, p. 339-75.   GARRUTI, D.S.; CASIMIRO, A. R.S. E ABREU, F.A.P. Processo Agroindustrial: elaboração de fermentado de caju. Comunicado Técnico da Embrapa Agroindústria Tropical, nº 82, 1-3, outubro de 2003.   GIORDANO, R.L.C. ;   HIRANO, P.C.; GONÇALVES, L.R.B.; SCHMIDELL NETTO, W. Study of Biocatalyst to Produce Ethanol from Starch Coimmobilization of Glucoamylase and Yeast in Gel. Applied Biochemistry and Biotechnology. Vol. 84–86, 2000.   GOVINDASWAMY, S. VANE, L.M. Kinetics of growth and ethanol production on different carbon substrates using genetically engineered xylose-fermenting yeast. Bioresource Technology 98 (2007) 677–685.   GROBOILLOT, A; BOADI, DK; PONCELET, D; NEUFELD, RJ. Immobilization of cells for application in the food industry. Critical Reviews in Biotechnology. v.14, p.75-107, 1994.   HAMDY, M.K.; KIM, K.; RUDTKE, C.A. Continuos ethanol production by yeast immobilized onto channeled alumina beads. Biomass, v.21, p.189-206, 1990.   
+            
+  63 
+ 
+HASHIZUME T., AQUARONE E. Biotecnologia Industrial. Vol 4. 1ª edição pg 43. 1ª reimpressão 2005.   JAMAI, L., SENDIDE, K., ETTAYEBI, K., ERRACHIDI, F., HAMDOUNI-ALAMI, O., TAHRI-JOUTI, M. A., MCDERMOTT, T., ETTAYEBI, M. Physiological di¡erence during ethanol fermentation between calcium alginate-immobilized Candida tropicalis and Saccharomyces cerevisiae. FEMS Microbiology Letters 204 (2001) 375-379. 2001.   KOHLSCHMITT, S. The integrated utilization of the cashew plant in Brazil – Fruit juice and its sales opportunities on the German fruit juice industry.  Universitat Bonn. Thesis. 2004.    LASER, M.; SCHULMAN, D.; ALLEN, S.G.; LICHWA, J.; ANTAL JR., M.J.; LYND, L.R.  A comparison of liquid hot water and steam pretreatments of sugar cane bagasse for bioconversion to ethanol. Bioresource Tecnology 81 (2002) 33-44.   LEE, T.H.; AHN, J.C.; RYU, D.Y. Performance of an immobilized yeast reactor system for ethanol production. Enzyme and Microbial Technology, v.5, p.41-45, 1983.   LEHNINGER, A. L.; NELSON, D. L.; COX, M. M. Princípios de Bioquímica. 2 ed. São Paulo: Savier, 2000.    LIANG, L.; ZHANG, Y.; ZHANG, L.; ZHU, M.; LIANG, S.; HUANG, Y. Study of sugarcane pieces as yeast supports for ethanol production from sugarcane juice and molasses. J Ind Microbiol Biotechnol, 2008.    
+            
+  64 
+ 
+LIMTONG, S.; SRINGIEW, C.; YONGMANITCHAI, W. Production of fuel ethanol at high temperature from sugar cane juice by a newly isolated Kluyveromyces marxianus. Bioresource Technology 98 (2007) 3367–3374.  LIN, Y.; TANAKA, S. Ethanol fermentation form biomass resources: current state and prospects. Applied Microbiol. Biotechnol., 69, 627-642, 2006.   MATIAS, M.F.O.; OLIVEIRA, E.L. GERTRUDES, E.; MAGALHÃES, M.M.A. Use  of  Fibres  Obtained  from  the  Cashew  (Anacardium ocidentale,  L)  and  Guava  (Psidium  guayava)  Fruits  for Enrichment of Food Products. Brazilian Archives of Biology and Technology. Vol. 48, Special n.: pp. 143-150, junho 2005.    MOHANTY, S.; RAY, P.; SWAIN, M.R.; RAY, R.C. Fermentation of cashew (Anacardium occidentale L.) "apple" into wine. Journal of Food Processing and Preservation, 30, 314-322, 2006.   MORTON, J.F., Fruits of warm climates, Florida Flair Books, Miami, 1997.   OHTAGUCHI, K.; KAJIWARA, S.; MUSTAQIM, D.; TAKAHASHI, N. Cyanobacterial Bioconversion of carbon dioxide for fuel productions. Energy Convers. Mgmt Vol. 38, Suppl., pp. 523-528, 1997.   OLGUIN E.J.; DOELLE H.W.; MERCADO G. Resource recovery through recycling of sugar processing by products and residuals. Resour Conserv Recycling 15, 1995. Vol.2, p.85–94.    OLIVEIRA, V.H. Cajucultura, site de notícias sobre o caju, http://www.cajucultura.com.br/. Data de acesso: 23:54, 22-11-2008.  
+            
+  65 
+ 
+OSHO, A. Ethanol and sugar tolerance of wine yeasts isolated from fermenting cashew apple juice. African Journal of Biotechnology, 4, 660-662, 2005.   PAIVA, J.R. de; CARDOSO, J.E.; BARROS, L. de M.; CRISÓSTOMO, J.R.; CAVALCANTI, J.J.V.; ALENCAR, E.S. Clone de cajueiro-anão precoce BRS 226 ou Planalto: nova alternativa para o plantio na Região Semi-Árida do Nordeste. Fortaleza: Embrapa Agroindústria Tropical, 2002. 4p. (Embrapa Agroindústria Tropical. Comunicado Técnico, 78).   PAIVA, J. R. & BARROS, L. M. Clones de cajueiro: obtenção,  características  e  perspectivas / - Fortaleza  : Embrapa Agroindústria  Tropical,  2004. 26p.  (Embrapa Agroindústria  Tropical.  Documentos,  82).    PARK, JK; CHANG, HN. Microencapsulation of microbial cells. Biotechnology Advances. v.18, p.303-319, 2000.   PHISALAPHONG, M.; SRIRATTANA, N.; TANTHAPANICHAKOON, W. Mathematical modeling to investigate temperature effect on kinetic parameters of ethanol fermentation. Biochemical Engineering Journal 28 (2006) 36–43.    PILKINGTON, PH; MARGARITIS, A; MENSOUR, NA. Mass transfer characteristics of immobilized cells used in fermentation processes. Critical Reviews in Biotechnology. v.18, p. 237-55, 1998a.   PILKINGTON, PH; MARGARITIS, A; MENSOUR, NA; RUSSELL, Fundamentals of immobilized yeast cells for continuous beer fermentation: a review. Journal of the Institute of Brewing. v.104, p.19-31, 1998b.   
+            
+  66 
+ 
+PIMENTEL, C.R.M. Castanha de caju: produção e consumo internacional. Fortaleza. Embrapa/CNPCa. 18p. , 1997.   PINHEIRO, A. D. T., ROCHA, M. V. P., MACEDO, G. R., GONÇALVES, L. R. B. Evaluation of Cashew Apple Juice for the Production of Fuel ethanol. Biochemical Biotechnology Journal. 2007.   RAJAGOPALAN, S.; DATAR, R.P.; LEWIS. R.S. Formation of ethanol from carbon monoxide via a new microbial catalyst. Biomass and Bioenergy 23 (2002) 487 – 493.   RAMAKRISHNA, SV; PRAKASHAM, RS. Microbial fermentations with immobilized cells. Current Science. v.77, p.87-100, 1999.   REDDY, L. V., REDDY, Y. H. K., REDDY, P. A. Wine production by novel yeast biocatalyst prepared by immobilization on watermelon (Citrullus vulgaris) rind pieces and characterization of volatile compounds. Process Biochemistry Journal, 2008.   RIBEIRO, C.A.F.; HORII, J. Potencialidades de linhagens de levedura Saccharomyces cerevisiae para a fermentação do caldo de cana. Sci.agric. vol.56 n.2 Piracicaba,  1999.   ROCHA, M.V.P.; SOUZA, M.C.M.; BENEDICTO, S.C.L.; BEZERRA, M.S.; MACEDO, G.R.; PINTO, G.A.S.; GONÇALVES, G.A.S. Production of biosurfactant by Pseudomonas aeruginosa Grown on Cashew Apple Juice. Copyright 2007 by Humana Press Inc, 136-140/185-194.   
+            
+  67 
+ 
+RODRIGUES, D.; ORTIZ, L. Em direção à sustentabilidade da produção de etanol de cana de açúcar no Brasil. Outubro de 2006. Amigos da Terra Brasil; Vitae Civilis, Desenvolvimento, Meio Ambiente e Paz.   RODRIGUES, T. H. S. ; PINTO, G. A. S. ; GONCALVES, L. R. B. . Produção de Tanase por Fermentação em Estado Sólido de Bagaço de Caju: Efeito de Variáveis de Processo. In: Sinaferm 2007 XVI Simpósio Nacional de Bioprocessos, 2007, Curitiba - Paraná.    Rychtera M ; Basarova G ; Ivanova V..  Behaviour and properties of released and in calcium alginate gel immobilized cells of Saccharomyces cerevisiae in continuous culture. In: O.M. Neijssel, R.R. Van der Meer and K. Luvben, Editors, Fourth European Congress on Biotechnology vol. 2, Elsevier Science Publishers, Amsterdam (1987), pp. 107-109.    SANTANA, M. H. A. ; OLIVEIRA, A. H. ; OGRODOSKI, C. S. ; GONCALVES, L. R. . Produção de ácido Hialurônico por fermentação do suco de caju com Streptococcus zooepidemicus e caracterização do produto. In: XV Congresso Brasileiro de Engenharia Química, 2004, Curitiba. Anais do XV Congresso Brasileiro de Engenharia Química.   SANTOS, D.T.S.; SARROUH, B.F.; RIVALDI, J.D.; CONVERTI, A.; SILVA, S.S. Use of sugarcane bagasse as biomaterial for cell immobilization for xylitol production. Journal of food Engineering 86 (2008) 542-548.   SCHIMIDELL,W.;LIMA, U.A.; AQUARONE, E.; BORZANI, W. (2001). Biotechnologia Industrial (vol. 2). São Paulo: Edgard Blucher.   Schirmer-Michel, A. C., Flôres, S. H., Hertz, P. F., Matos, G. S., Ayub, M. A. Z.. Production of ethanol from soybean hull hydrolysate by osmotolerant Candida guilliermondii NRRL Y-2075. Bioresource Technology xxx-xxx (2007).  
+            
+  68 
+ 
+ STANISZEWSKI, M.; KUJAWSKI, W.; LEWANDOWSKA, M. Ethanol production from whey in bioreactor withco-immobilized enzyme and yeast cells followed by pervaporative recovery of product – Kinetic model predictions. Journal of Food Engineering 82 (2007) 618–625.    TANAKA, A.; KAWAMOTO, T. Cell and enzyme immobilizatiom. In: Demain AL, Davies JE(eds) Manual of industrial microbiology and biotechnology, 2
+nd
+ edn. ASM Press, Washington, DC, pp 94-102. 1999.   TANO, M.S.;  BUZATO, J.B.; CELLIGOI, M.A.P.C. Sugar cane juice fermentation by Zymomonas mobilis CP4 subjected to inhibition by ethanol and high initial concentration of substrate.   Brazilian Archives Biology Technology, v.43, n.4, p.425-430, 2000.   TORRES NETO, A.B.; SILVA, M.E.; SILVA, W.B.; SWARNAKAR, R.; SILVA, F.L.H. . Cinética e Caracterização Físico-Química do Fermentado do Pseudofruto do Caju (Anacardium Occidentale L.). Química Nova, São Paulo, v. 29, n. 3, p. 489-492, 2006.   TORTORA, G.J.; FUNKE, B.R.; CASE, C.L.. Microbiologia: an introduction, 6.ed. São Paulo: ARTMED EDITORA S/A, p.322-323, 2002.    ÚNICA, União da Indústria de Cana-de-áçucar, http://www.portalunica.com.br/portalunica 23 de Novembro de 2007.   VAZ, A. C. S. ; MUSSATTO, S. I. ; ROBERTO, I. C.. Avaliação da composição química do hidrolisado hemicelulósico de bagaço de malte visando sua utilização em processos fermentativos. In: VI COBEQ IC - Congresso Brasileiro de Engenharia Química em 
+            
+  69 
+ 
+Iniciação Científica, 2005, Campinas / SP. Caderno de Programação e de Resumos do VI COBEQ IC, 2005. p. BT39.  VITOLO, M. Imobilização de células e enzimas. Biotecnologia, n. 11, p.2: Agropecuária - Energia – Saúde. Jan., 1988.   WILLIAMS, D.; MUNNECKE, D.M. The production of ethanol by immobilizaed yeast cells. Biotechnology and Bioengineering, v.23, p.1813-1825, 1981.    YALÇIN, S.K.; ÖZBAS, Z.Y. Effects of different substrates on growth and glycerol production kinetics of a wine yeast strain Saccharomyces cerevisiae Narince 3. Process Biochemistry 39 (2004) 1285–1291.   Yu J.; Zhang X.; Tan T.. An novel immobilization method of Saccharomyces cerevisiae to sorghum bagasse for ethanol production. Journal of Biotechnology Volume 129, 3ª edição, 1 maio 2007, pág. 415-420.              
+            
+  70 
+ 
+7. APÊNDICE   7.1 Correlação entre densidade óptica e massa seca para a determinação da biomassa durante os ensaios fermentativos.   Inicialmente, determinou-se a relação entre a densidade óptica do caldo fermentado e a biomassa, determinada por massa seca, para o acompanhamento da concentração celular. Os resultados de densidade óptica e massa seca, usando meio sintético para o crescimento da levedura, estão dispostos na tabela 7.1.   Tabela 10 – Resultados de densidade Óptica (DO) e massa seca para o crescimento de S. cerevisiae em meio sintético a 30 ºC. DO (λ = 640 nm) Diluição Massa seca (g/l) 
+0,144 1/10 0,80 
+0,186 1/10 0,97 
+0,338 1/10 1,66 
+0,320 1/10 1,85 
+0,480 1/10 2,39 
+  A partir dos resultados mostrados na tabela 7.1, utilizando o método da regressão linear (software Microcal Origin 6.0), foi possível obter uma curva de calibração, mostrada na equação 5.1. 
+• X51672,0Y
+2
+=; R = 0,98                                                                                                (7.1) Na qual y é a concentração celular em g.L
+D
+-1
+, x é a absorbância e D é o fator de diluição, sendo D = 1/10 valor referente a uma diluição de 10 vezes. O R
+2
+ representa o coeficiente de correlação linear de Pearson, ao quadrado, mais conhecido como coeficiente de determinação ou coeficiente de explicação da reta. Esse coeficiente quantifica a qualidade do ajustamento da reta e pode variar de 0 a 1 (Rodrigues,M.I. e Iemma,A.F., 2005). Quanto mais próximo de 
+            
+  71 
+ 
+um é o valor mais precisa é a equação da reta. A figura 21 apresenta a curva de calibração que relaciona dados de DO e massa seca. 
+ 
+)
+-1
+ 
+Biomassa (g.l
+0123450,00,51,01,52,02,5
+Abs 640 (nm) Figura 20 - Curva de calibração que relaciona DO (λ = 660 nm) com massa seca (g.L
+-1
+) para a levedura Saccharomyces cerevisiae.   
+ 

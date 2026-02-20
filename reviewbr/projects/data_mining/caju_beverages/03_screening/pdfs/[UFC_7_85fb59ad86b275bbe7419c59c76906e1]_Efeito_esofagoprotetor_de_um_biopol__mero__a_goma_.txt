@@ -1,0 +1,3408 @@
+ 
+UNIVERSIDADE FEDERAL DO CEARÁ 
+FACULDADE DE MEDICINA 
+DEPARTAMENTO DE FISIOLOGIA E FARMACOLOGIA 
+PROGRAMA DE PÓS-GRADUAÇÃO EM FARMACOLOGIA 
+ 
+ 
+ 
+ 
+ 
+ 
+LUCAS ANTONIO DUARTE NICOLAU 
+ 
+ 
+ 
+ 
+EFEITO ESOFAGOPROTETOR DE UM BIOPOLÍMERO, A GOMA DO 
+CAJUEIRO, NA DOENÇA DO REFLUXO NÃO-EROSIVA EM MURINOS E 
+EM BIÓPSIAS ESOFÁGICAS HUMANAS: PERFIL ANTI-INFLAMATÓRIO E 
+EFEITO TÓPICO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2018 
+ 
+ 
+LUCAS ANTONIO DUARTE NICOLAU 
+ 
+ 
+EFEITO ESOFAGOPROTETOR DE UM BIOPOLÍMERO, A GOMA DO 
+CAJUEIRO, NA DOENÇA DO REFLUXO NÃO-EROSIVA EM MURINOS E 
+EM BIÓPSIAS ESOFÁGICAS HUMANAS: PERFIL ANTI-INFLAMATÓRIO E 
+EFEITO TÓPICO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Tese apresentada ao Curso de Doutorado em 
+Farmacologia do Departamento de Fisiologia e 
+ 
+Farmacologia da Universidade Federal do 
+Ceará, como parte dos requisitos para obtenção 
+ 
+do título de Doutor em Farmacologia. 
+ 
+Orientador: Prof. Dr. Marcellus Henrique 
+ 
+Loiola Ponte de Souza. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FORTALEZA 
+2018 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LUCAS ANTONIO DUARTE NICOLAU 
+ 
+ 
+EFEITO ESOFAGOPROTETOR DE UM BIOPOLÍMERO, A GOMA DO 
+CAJUEIRO, NA DOENÇA DO REFLUXO NÃO-EROSIVA EM MURINOS E 
+EM BIÓPSIAS ESOFÁGICAS HUMANAS: PERFIL ANTI-INFLAMATÓRIO E 
+EFEITO TÓPICO 
+ 
+ 
+ 
+ 
+ 
+BANCA EXAMINADORA 
+ 
+_______________________________________________ 
+Prof. Dr. Marcellus Henrique Loiola Ponte de Souza 
+Universidade Federal do Ceará – UFC (Presidente) 
+ 
+_______________________________________________ 
+Prof. Dr. Armênio Aguiar dos Santos 
+Universidade Federal do Ceará – UFC 
+ 
+_______________________________________________ 
+Profa. Dra. Gardenia Costa do Carmo 
+Centro Universitário Christus – UNICHRISTUS 
+ 
+_______________________________________________ 
+Prof. Dr. Miguel Ângelo Nobre e Souza 
+Universidade Federal do Ceará – UFC 
+ 
+_______________________________________________ 
+Prof. Dr. Jand Venes Rolim Medeiros 
+Universidade Federal do Piauí – UFPI 
+ 
+ 
+FORTALEZA 
+2018 
+ 
+ 
+DEDICATÓRIA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Aos meus pais Selma e Ricardo, pelo amor incondicional e 
+apoio que nunca mediu esforços para me fazer alçar voos 
+ 
+inimagináveis e realizar meus sonhos. 
+ 
+Aos meus irmãos, Aline e Ricardo Filho, pela amizade 
+ininterrupta e serem um porto seguro sempre que eu precisei. 
+ 
+A vocês, eu dedico 
+ 
+ 
+ 
+ 
+EPÍGRAFE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+“Ousar é perder o equilíbrio momentaneamente. 
+ 
+Não ousar é perder-se.” 
+ 
+Søren Kierkegaard 
+ 
+ 
+ 
+ 
+ 
+AGRADECIMENTOS 
+Agradeço primeiramente a DEUS, pelo sustento diante dos desafios postos à minha 
+caminhada incluindo este projeto de doutorado, pela graça de ter me levado a lugares 
+inimagináveis ao jovem sonhador do interior do Maranhão. 
+Ao meu admirável orientador Prof. Dr. Marcellus Henrique Loiola Ponte de Souza, 
+pela confiança depositada em mim, pelo privilégio de ter podido aprender mais sobre 
+pesquisa, ciência, e por ter tido paciência em todos os momentos sempre com entusiasmo, 
+otimismo sem deixar de ser realista. Gratidão é pouco por tudo que recebi sob sua 
+supervisão. 
+Ao meu co-orientador Prof. Dr. Daniel Sifrim, por ter sido sempre cirúrgico, objetivo e 
+sempre atento ao projeto com dicas valiosas e sempre conceituais. Ademais, por ter sido 
+mais que um orientador no período áureo que estive em Londres. É uma honra tê-lo como 
+meu co-orientador e feito parte da minha história, certamente fará parte das minhas 
+memórias durante toda a vida. 
+Ao Prof. Dr. Jand Venes Rolim Medeiros, o orientador amigo de todo tempo. Grato 
+por ter sido seu aluno desde a iniciação científica e até hoje poder contar com suas valiosas 
+contribuições em minha formação, meu coração é grato pela propulsão que sua tutela me 
+encaminhou na carreira científica. 
+Ao mestre Prof. Dr. Armênio Aguiar dos Santos, pela confiança, disponibilidade e 
+todas as conversas trocadas durante meu doutorado. Sempre pronto para ajudar e nutrir o 
+senso crítico e científico durante os goles de café. 
+Ao saudoso e eterno Prof. Dr. Ronaldo Albuquerque Ribeiro (in memoriam), por 
+sempre ter aberto as portas do LAFICA desde minha iniciação científica ainda quando 
+estava na graduação, pelo ânimo que sempre nos contagiou, pelos momentos de 
+descontração e bons vinhos. 
+Aos amigos queridos Dr. Francisco José Batista Lima Junior (Franzé) e Dra. Ana 
+Paula Macedo Santana, por terem sido meus pés e meus braços enquanto estive em 
+Londres, por terem sido sempre atenciosos e dispostos a me ajudar no decorrer deste 
+projeto. Vocês são especiais para mim. 
+À querida Prof. Dra. Mariana Lima Vale, pela prontidão e ter ajudado nos estudos de 
+microscopia confocal. Além de sempre ter sido presente em momentos de descontração 
+ 
+ 
+deveras úteis nas Jam Sessions com nossa “Banda Inflamassamba” defronte às 
+mangueiras da Patologia. 
+À Prof. Dra. Durcilene Alves Silva, pela forte contribuição com a parte química da 
+Goma do Cajueiro e sempre aberta às minhas sugestões. Muito obrigado! 
+Ao Prof. Dr. Pedro Marcos Soares, pela importante contribuição nas análises 
+morfológicas do meu projeto, bem como de todas as vezes que precisei de sua ajuda e 
+obtive a atenção necessária para resolver as demandas. 
+Ao amigo Prof. Dr. Pedro Jorge Caldas Magalhães, pelas contribuições profissionais 
+e pessoais, pelas portas abertas do LAFARMULI sempre que precisei. Grato por todas as 
+conversas sobre ciência e política que nos aproximaram de maneira positiva. 
+À minha família, meus pais Selma Duarte Nicolau e Ricardo da Silva Nicolau, pelo 
+carinho, sempre estarem presentes em todos os momentos da minha vida me dando 
+suporte e sendo minha base. Aos meus amados irmãos Aline Duarte Nicolau e Ricardo 
+Nicolau Filho, pela amizade e sempre acreditarem em mim, vocês são muito especiais 
+para mim. Essa conquista é NOSSA! 
+Ao meu melhor amigo desde a infância bacabalense, João Pedro do Carmo Neto, por 
+sempre ter participado mesmo que de longe de cada momento que enfrentei, sua amizade 
+é preciosa em minha vida. 
+Ao pós-graduando amigo Thiago Meneses Sales, por ter sido presente em quase todas as 
+etapas deste estudo, pela amizade compartilhada, pelas conversas desde conjecturas 
+científicas a situações burlescas. 
+Aos alunos de Iniciação Científica (ICs) Gutierres Bernardo Freitas, Levy Rubens e 
+Rudy Bingana, pela contribuição sempre visando a resolução dos problemas, pela pró-
+atividade e pela coragem de encarar os desafios do projeto ainda que precisasse pernoitar 
+uma madrugada inteira no LELC. 
+Aos membros do LEFFAG (Álvaro, Tiago, Marcos, Ronaldo Fonteles, Ronaldo 
+Farias, Jean, Priscilla, Bárbara, Jhonatan, Cecília, Patrícia, Fabrícia, Kaira, 
+Deysen, Samara, Renan, Humberto e todos os demais colegas), pelos momentos de 
+interação e conhecimento compartilhado. 
+ 
+ 
+Aos membros da família LAFICA (Camila Fernandes, Camila Meirelles, Carlos 
+Wagner, Lucas Carvalho, Renata Falcão, Diego, Venúcia, Lívia Nobre, Anielle, 
+Lívia Talita, Maraíza, Wagner, Wanderley e todos os demais colegas), pela amizade, 
+momentos inesquecíveis e por terem feito parte de uma época agradável em minha vida 
+em Fortaleza-CE. 
+Ao Prof. Dr. Roberto César Lima Junior, pelas contribuições valiosas em minha 
+carreira, por ter sido um dos professores mais brilhantes que eu já vi em sala de aula e no 
+âmbito científico. 
+Ao Prof. Dr. Alexandre Havt Bindá, pelas atitudes resolutivas relativas às demandas do 
+comitê de ética e por ter aceitado o convite de fazer parte da banca examinadora desta 
+tese. 
+Às amigas Dra. Aline Figueiredo, Dra. Larisse Lucetti e Dra. Deysi Wong, pelos 
+momentos de apoio mútuo, pelas conversas e experiências compartilhadas em nosso 
+“Grupo Poliglotas”. 
+Aos membros do LABICONTE (Cristhyane Costa, Lianna Cavalcante, Kildere 
+Canuto, Dulce Maria, Carol Benício e Juliana Rêgo), pela amizade e momentos de 
+descontração compartilhados pelos corredores do Centro de Biomedicina e além destes 
+portões. 
+Aos parceiros do LAFARMULI, em especial à minha amiga conterrânea de estado e 
+contemporânea desde o mestrado Emanuella Feitosa, pela amizade sempre presente e 
+sensível. Ademais, aos amigos Daniel Maia, Kalinne Gadelha, Karine Silva, Alfredo 
+Vasconcelos, Teresinha Brito e Taty, pela alegria de sempre encontrar um bom café 
+com biscoitos e muita conversa boa. 
+Aos amigos de Londres-UK, especialmente Jo Ooi, Ahmed Albusoda, Stephanos 
+Christodoulides, Kornilia Nikaki, Chung Lee, Philip Woodland, James Evans e 
+Federica Grassi, por terem feito meus dias mais leves na QMUL e ajudado no decorrer 
+da minha jornada nas terras da rainha. 
+Aos parceiros da Universidade Federal do Piauí (Parnaíba), em especial ao Prof. Dr. 
+Daniel Vasconcelos e Thiago Lopes Araújo, pela imensa contribuição nos estudos 
+toxicológicos. 
+ 
+ 
+Aos técnicos de laboratório, Vandinha (LAFICA), Dona Eliane (LEFFAG), Josi, 
+Junior (NEMPI), pela disponibilidade em ajudar no preparo de soluções e na confecção 
+das lâminas de histologia. 
+Aos amigos da eterna 4ª Turma de Biomedicina da UFPI, especialmente aos parceiros 
+mais presentes Luiz Fernando, Ana Clara e Bruno Caldas. 
+Aos funcionários do Centro de Biomedicina, em especial ao José (Zé), Jeferson, 
+Cláudia, Valdenir, Sr Rogério e Waliton, que sempre foram solícitos nos momentos 
+em que precisei. 
+Às secretárias do Programa de Pós-graduação em Farmacologia, Laura e Célia, pela 
+disponibilidade, empatia e por terem sido sempre prestativas às minhas demandas 
+acadêmicas. 
+Aos meus familiares espalhados por Bacabal-MA, Goiânia-GO, Fortaleza-CE, São Paulo-
+SP, Palmas-TO, Teresina-PI, em especial a minha tia Tamah Duarte (in memoriam), que 
+partiu muito cedo, mas nos deixou profundos ensinamentos de vida que irão perpetuar em 
+minha vida. 
+Aos professores do Programa de Pós-Graduação em Farmacologia pelos 
+ensinamentos ministrados. 
+Ao CNPq e à CAPES pelo apoio financeiro. 
+Enfim, a todos que contribuíram direta ou indiretamente na realização deste trabalho, meu 
+muito OBRIGADO! 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+RESUMO 
+A Doença do Refluxo Gastroesofágico (DRGE) pode ser definida como sintomas ou 
+danos na mucosa produzidos pelo refluxo anormal do conteúdo gástrico no esôfago. 
+Formas alternativas de tratamento devem ser consideradas uma vez que o tratamento 
+padrão falha em todos os fenótipos da doença, majoritariamente em pacientes com o 
+fenótipo mais prevalente (Doença do Refluxo Não-Erosiva, NERD). Nosso objetivo foi 
+avaliar o efeito protetor da mucosa esofágica pelo biopolímero da Goma do Cajueiro 
+(GC), um produto natural obtido da casca da árvore do Nordeste brasileiro (Anacardium 
+occidentale L.), em camundongos (modelo experimental de NERD) e em biópsias do 
+esôfago humano. O projeto experimental foi dividido em "Estudo Pré-Clínico: NERD 
+murino" e em "Estudo Clínico: Biópsias esofágicas humanas". A princípio, os 
+camundongos foram submetidos a uma indução cirúrgica da NERD, na qual realizou-se 
+uma sub-estenose pilórica seguida de ligadura de fundo gástrico. Após 7 dias, os animais 
+foram eutanasiados e amostras de esôfago distal retiradas para avaliar indícios sugestivos 
+de inflamação, tais como edema, atividade da MPO e infiltrado de neutrófilos [escores 
+histológicos e citocina inflamatória (KC)]. No estudo da função de barreira, amostras de 
+esôfago distal de camundongos foram montadas em câmaras Üssing para avaliar a 
+Resistência Elétrica Transepitelial (RETE) e, em seguida, a permeabilidade à 
+fluoresceína. Em biópsias esofágicas humanas, também foi avaliado RETE e 
+permeabilidade transepitelial. Além disso, um teste de toxicidade aguda foi conduzido de 
+acordo com a diretriz 423 da OCDE. Por fim, realizamos um experimento utilizando 
+técnicas de microscopia confocal para localizar no epitélio esofágico o biopolímero GC 
+previamente marcado com FITC. Em nosso estudo, os animais com NERD estabeleceram 
+edema esofágico (peso úmido aumentado como indicador indireto de edema e arquitetura 
+histológica alterada como marcador direto de edema) e aumento da atividade de MPO 
+(15,90 ± 1,68 mg/cm e 23,14 ± 9,3 U/mg de tecido, respectivamente), enquanto a 
+administração diária de GC reduziu (P<0,05) parâmetros inflamatórios de edema e 
+infiltração de neutrófilos (10,52 ± 0,5 mg/cm e 6,11 ± 0,57 U/mg de tecido, 
+respectivamente). Os camundongos com NERD tiveram os níveis de KC aumentados 
+(40,82 ± 11,71 pg/mg de tecido) no tecido esofágico, enquanto esse fenômeno foi 
+reduzido (P<0,05) pela administração de GC (4,46 ± 1,3 pg/mg de tecido). Os parâmetros 
+microscópicos (neutrófilos intraepiteliais e edema na lâmina própria diminuídos) e níveis 
+reduzidos de KC corroboram o perfil anti-inflamatório da GC. Os parâmetros funcionais 
+de barreira estudados demonstraram que a GC protegeu a mucosa esofágica. Enquanto os 
+animais do NERD apresentaram uma queda substancial na RETE (-40 ± 3,5%) e uma 
+permeabilidade da mucosa esofágica aumentada (13,9 ± 1,51 IF), GC 10% reverteu 
+parcialmente (P<0,05) esses marcadores funcionais (+0,3 ± 0,82% e 3,99 ± 1,13 IF, 
+respectivamente). Vale ressaltar que a GC não induziu sinais de toxicidade que conferem 
+ao biopolímero GC segurança e boa tolerabilidade de acordo com a diretriz 423 da OCDE. 
+Além disso, nossos dados em biópsias humanas mostraram que 30 minutos de exposição 
+ácida à mucosa esofágica causou queda da RETE (-27,3 ± 2,4 %) em comparação com os 
+níveis da resistência basal, que pôde ser prevenida (P<0,05) pela aplicação do alginato 
+(+3,7 ± 6,1% em relação à resistência basal). Da mesma forma, o revestimento tecidual 
+com GC (10% e 5%) impediu a queda da RETE (P<0,05) quando comparada com a 
+resistência basal (+1,69 ± 1,06% e -3,5 ± 2,4%, respectivamente). GC em 2,5% e 
+sucralfato não protegeram a mucosa esofágica contra a solução desafio que mimetiza o 
+ 
+ 
+conteúdo de suco gástrico. O efeito protetor da mucosa foi sustentado até 1h, em que as 
+biópsias não submetidas a nenhuma proteção apresentaram queda de -36,79 ± 5,5% na 
+RETE, mas a aplicação de alginato e GC 10% impediu a queda de resistência causada por 
+acidificação, pepsina e TDCA (+4,2 ± 0,8% e +3,5 ± 0,6%, respectivamente). A 
+permeabilidade à fluoresceína aumentou em biópsias sem proteção prévia (135,7 ± 37,43 
+IF), enquanto que a GC 10% impediu (P<0,05) este evento (40,8 ± 17,1 IF). As imagens 
+do microscópio epifluorescente mostraram a aderência luminal à mucosa esofágica 
+exercida pela GC 10% marcado com FITC até 1h. Até o presente momento, não existe 
+um medicamento que atue tanto na mucosa esofágica evitando o ataque ácido quanto na 
+resolução no sítio da inflamação esofágica. Tanto no NERD experimental murino quanto 
+em biópsias da mucosa esofágica humana, a GC mostrou 1) potencial anti-inflamatório 
+ao esôfago, reduzindo marcadores da inflamação esofágica, 2) tópica proteção contra um 
+ácido "agressivo", pepsina, solução BA, 3) aderência in vitro à mucosa esofágica humana 
+por pelo menos 1 hora, e 4) ausência de sinais tóxicos, ou seja, bem tolerável em 
+camundongos. Portanto, é a primeira vez que um produto exibe não apenas uma proteção 
+tópica à mucosa esofágica, mas também a vantagem do perfil anti-inflamatório que pode 
+ser útil no manejo da DRGE. Esses benefícios devem ser explorados ainda mais para o 
+desenvolvimento de uma nova abordagem tópica e anti-inflamatória como terapia 
+complementar para DRGE. 
+Palavras-chave: Anacardium occidentale, polímero, inflamação, refluxo. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ABSTRACT 
+ESOPHAGOPROTECTIVE EFFECT OF A BIOPOLYMER, CASHEW GUM, IN 
+MURINE NON-EROSIVE REFLUX DISEASE AND IN HUMAN ESOPHAGEAL 
+MUCOSA: ANTIINFLAMMATORY PROFILE AND TOPICAL EFFECT 
+Gastroesophageal reflux disease (GERD) can be defined as symptoms or mucosal damage 
+produced by the abnormal reflux of gastric contents into the esophagus. Alternative ways 
+of treatment must be considered since the standard therapy fails in all phenotypes of 
+GERD, expressly in the most prevalent form (Non-Erosive Reflux Disease, NERD). We 
+aimed to assess the esophageal mucosal protection effect of the biopolymer cashew gum 
+(CG), a natural product obtained from bark of Brazilian northeastern tree (Anacardium 
+occidentale L.), in mice (experimental model of NERD, non-erosive reflux disease) and 
+in human esophageal biopsies. Experimental design was divided in “Pré-Clinical Studies: 
+Murine NERD” and in “Human Oesophageal Biopsies Studies”. Firstly, mice were 
+achieved by a surgical induction of NERD in which a pyloric sub-stenosis and ligation of 
+forestomach were performed. After 7 days, animals were euthanized and samples of distal 
+oesophagus taken to assess suggestive hallmarks of inflammation such as oedema, MPO 
+activity and neutrophil infiltrate [histologic scores and keratinocyte-derived cytokine 
+(KC)]. In functional studies, distal oesophageal samples of mice were mounted in Üssing 
+chambers to evaluate Transepithelial Electrical Resistance (TER) and permeability to 
+fluorescein. In human esophageal biopsies, it was evaluated TER and permeabiliy, but 
+with pH adjustment to 2. As control in biopsies studies, alginate was used, besides 
+sucralfate also was evaluated. In addition, an acute toxicity test was conducted in 
+accordance with OECD guideline 423. Finally, we performed an epifluorescence 
+microscopy to localize on the oesopageal epithelium the biopolymer previously labeled 
+with FITC. In our study, animals with NERD established oesophageal oedema 
+(augmented wet weight as an indirect oedema hallmark and altered histologic architecture 
+as a direct oedema hallmark) and increased MPO activity (15.90±1.68 mg/cm and 
+23.14±9.3 U/mg tissue, respectively), while CG daily administration reduced (P<0.05) 
+inflammatory parameters of oedema and neutrophil infiltration (10.52±0.5 mg/cm and 
+6.11±0.57 U/mg tissue, respectively). Mice with NERD had increased KC levels 
+(40.82±11.71 pg/mg of tissue) in the oesophageal tissue while this phenomenon was 
+(P<0.05) reduced by CG administration (4.46±1.3 pg/mg of tissue). The microscopic 
+parameters (reduced intraepithelial neutrophils and oedema in the lamina propria) and 
+reduced KC levels corroborate the anti-inflammatory profile of CG. Functional 
+parameters studied demonstrated that CG protected the oesophageal mucosa. While 
+NERD animals had a substantial drop in TER (-40±3.5%) and an augmented oesophageal 
+mucosal permeability (13.9±1.51 RFI), CG 10% reverted partially (P<0.05) these 
+functional markers (+0.3±0.82% and 3.99±1.13 RFI, respectively). It is worth mentioning 
+that the CG did not induce any toxicity signs which ensured a safety biopolymer 
+according to OECD guideline 423. Furthermore, our data in human biopsies showed that 
+30 minutes of mucosal exposure to the acidic solution caused TER drop (-27.3±2.4%) 
+compared with 100% of basal resistance, that could be prevented (P<0.05) by alginate 
+pre-coating (+3.7±6.1% over basal resistance). Similarly, pre-coating with CG solutions 
+(10% and 5%) prevented the TER drop (P<0.05) when compared with basal resistance 
+(+1.69±1.06% and -3.5±2.4%, respectively). CG at 2.5% and sucralfate did not protect 
+the oesophageal mucosa against the challenge solution that mimics the gastric juice 
+ 
+ 
+content. The mucosal protective effect was extended up to 1h in which unprotected 
+biopsies had shown a drop of -36.79±5.5%, but alginate and CG 10% pre-coating 
+prevented the resistance drop caused by acidification, pepsin and BA (+4.2±0.8% and 
++3.5±0.6%, respectively). The permeability to fluorescein increased in unprotected 
+biopsies (135.7±37.43 RFI), whereas CG 10% prevented (P<0.05) this event (40.8±17.1 
+RFI). Epifluorescent microscope images showed mucosal luminal adherence of FITC-
+labeled CG 10% for up to 1h. Up to now, there is no therapeutic tools which could display 
+in the same time a role of pre-epithelial barrier and anti-inflammatory framework to 
+oesophageal mucosa injured by gastric contents such as CG did. Both in murine 
+experimental NERD and in human oesophageal mucosal biopsies CG showed 1) anti-
+inflammatory potential to oesophagus by reducing key hallmarks of oesophageal 
+inflammation in reflux oesophagitis, 2) topical protection against an “aggressive” acid, 
+pepsin, BA solution, 3) in vitro adherence to human mucosa for at least 1 hour, and 4) 
+nontoxic signs, i.e., well tolerable by mice. Then, it is the first time that a product displays 
+not only a topical protection to oesophageal mucosa, but also an anti-inflammatory profile 
+advantage that may be useful in GERD management. These benefits should be further 
+explored in development of new topical and anti-inflammatory approach as add-on 
+therapy for GERD.  
+Key-words: Anacardium occidentale, polymer, inflammation, reflux. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE FIGURAS 
+ 
+Figura 1. Fotografias de Alexis St. Martin (A) que ficou famoso após sobreviver  
+a um tiro de mosquetão e de Dr. William Beaumont (B) que fez diversos  
+experimentos “graças” a St. Martin........................................................................ 27 
+Figura 2. Gastroenterologista americano Dr. Asher Winkelstein (1893–1972)..... 28 
+Figura 3. Tendências temporais das taxas de hospitalizações por úlcera gástrica,  
+úlcera duodenal e refluxo gastroesofágico. Os dados pontuais representam a  
+média de períodos de tempo consecutivos como mostrado no eixo  
+x.............................................................................................................................. 30 
+Figura 4. Prevalência de sintomas semanais de refluxo gastroesofágico em todo  
+o mundo, baseado nos sintomas em uma frequência de uma vez por semana ou  
+mais........................................................................................................................ 31 
+Figura 5. Alterações macroscópicas e microscópicas durante o refluxo  
+gastroesofágico. Representação esquemática das alterações macroscópicas  
+(erosão) e microscópicas (hiperplasia da camada basal, alongamento das papilas  
+e espaços intercelulares dilatados) no epitélio esofágico que estão associados ao  
+refluxo gastroesofágico.......................................................................................... 32 
+Figura 6. Fenótipos e porcentagens de prevalência em pacientes com a DRGE..... 33 
+Figura 7. Fotomicrografias eletrônicas de transmissão de espécimes de biópsia  
+esofágica de (A) um sujeito assintomático e (B) um paciente com  
+NERD..................................................................................................................... 34 
+Figura 8. Difusão do refluxo ácido gástrico (H+) no espaço intercelular............... 35 
+Figura 9. Um corte histológico de espessura total demonstrando a localização  
+relativa de uma fibra nervosa superficial (CRGP, em verde). Nerve: nervo;  
+Location of DIS: localização dos EID.................................................................... 36 
+Figura 10. Proporção de falha sintomática de pacientes com DRGE frente aos  
+IBPs........................................................................................................................ 41 
+Figura 11. Resina extraída do troco do cajueiro (A e B), Goma do Cajueiro após  
+purificação (C) e representação da estrutura química da goma do cajueiro  
+(D).......................................................................................................................... 50 
+Figura 12. Indução cirúrgica da NERD em camundongos e esquema do roteiro  
+experimental........................................................................................................... 52 
+ 
+ 
+Figura 13. Câmara de Üssing e suas ferramentas de funcionamento (A). Metade  
+de uma câmara montada com um adaptador cujo orifício mede 0,017 cm2  
+(B).......................................................................................................................... 55 
+Figura 14. Desenho esquemático do estudo da RETE em Câmara de Üssing........ 56 
+Figura 15. Desenho esquemático do experimento para medir permeabilidade  
+transepitelial à fluoresceína.................................................................................... 57 
+Figura 16. Desenho esquemático do procedimento em biópsias de pacientes com  
+NERD e a repercussão da Goma do Cajueiro na RETE.......................................... 60 
+Figura 17. Representação da estrutura química fixa da Goma do Cajueiro  
+(preto), da exposição dos grupamentos carboxílicos a estruturas aminas (azul)  
+após a adição da epicloridrina e a ligação do FITC (vermelho) na molécula da  
+Goma do Cajueiro.................................................................................................. 61 
+Figura 18. Alterações inflamatórias esofágicas em camundongos com NERD.  
+Peso úmido (A), atividade de MPO (B), níveis de KC  
+(C).......................................................................................................................... 64 
+Figura 19. Fotomicrografias do esôfago em camundongos com NERD. Animais  
+ 
+do grupo sham apresentam arquitetura esofágica íntegra (painéis A e D). 
+ 
+Alterações microscópicas no esôfago foram observadas em animais com NERD 
+ 
+(painéis B e E) e animais tratados com a Goma do Cajueiro (painéis C e F)............ 
+66 
+Figura 20. Parâmetros de função de barreira em esôfago distal de camundongos  
+com NERD. Média da Resistência Basal (A), perfil temporal do Percentual da  
+Resistência Inicial (B) e a permeabilidade transepitelial da fluoresceína (C)......... 69 
+Figura 21. Zona cortical renal em HE, corte sagital. Grupo Salina (A) e Goma  
+do Cajueiro (B), ambos os grupos apresentam corpúsculo renal com glomérulo  
+normal (G) e espaço capsular normal, rodeados pela Cápsula de Bowman, em  
+torno dos corpúsculos estão os túbulos contorcidos distal e proximal  
+normais................................................................................................................... 73 
+Figura 22. Parâmetros de função de barreira sobre a RETE em biópsas  
+esofágicas de pacientes com NERD. Perfil temporal do Percentual da Resistência  
+Inicial em 30 min (A) e em 60 min (B).................................................................... 75 
+ 
+ 
+ 
+ 
+ 
+LISTA DE TABELAS 
+ 
+Tabela 1. Parâmetros histológicos analisados em esôfago distal de  
+camundongos.......................................................................................................... 53 
+Tabela 2. Escores das alterações microscópicas esofágicas em camundongos  
+com NERD............................................................................................................. 67 
+Tabela 3. Média dos valores obtidos no consumo de água, consumo de ração,  
+produção de excretas e aspecto fecal avaliados por 14 dias, em camundongos  
+fêmeas, tratados com salina 0,9% e Goma do Cajueiro (GC, 2.000mg/kg, v.o.)... 70 
+Tabela 4. Parâmetros relacionados ao screening hipocrático, após administração  
+oral em dose única da Goma do Cajueiro (GC), em camundongos fêmeas, na dose  
+de 2.000 mg/kg (G2). O controle (G1) recebeu salina 0,9% por  
+gavagem.................................................................................................................. 71 
+Tabela 5. Efeito da Goma do Cajueiro (GC, 2.000 mg/kg, v.o.) no ganho de  
+Massa Corporal (g) e na Massa relativa dos órgãos (%) em camundongos fêmeas  
+após 14 dias consecutivos....................................................................................... 72 
+Tabela 6. Análises hematológicas e bioquímicas de sangue e plasma  
+(respectivamente) após administração oral em dose única da Goma do Cajueiro  
+(GC; 2.000 mg/kg) em camundongos fêmeas após 14 dias consecutivos................ 72 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE SIGLAS E ABREVIATURAS 
+ 
+AINES – Anti-Inflamatórios Não-Esteroides  
+ALT – Alanina Aminotransferase 
+ANOVA – Análise de Variância  
+ARH – Antagonista do Receptor de Histamina Tipo 2  
+2
+AST – Aspartato Aminotransferase 
+ATPase – Adenosinatrifosfatases  
+BIOTEC – Núcleo de Pesquisas em Biodiversidade e Biotecnologia 
+CB1 – Receptor de Canabinóide Tipo 1 
+CCK1 – Receptor de Colecistocinina 1 
+CEUA – Comitê de Ética em Uso de Animais  
+DAMP – Padrões Moleculares Associados a Danos 
+DAPI – 4 6-Diamidino-2-fenilindol 
+DCA – Ácido Deoxicólico  
+DRGE – Doença do Refluxo Gastroesofágico  
+EDTA – Ácido Etileno Diaminotetracético  
+EE – Esofagite Eosinofílica 
+EEI – Esfíncter Esofágico Inferior  
+EID – Espaçamento Intercelular Dilatado  
+EPM – Erro Padrão da Média  
+FITC – Fluoresceína de Isotiocianato 
+GABA – Receptores de Ácido Gama-AminoButírico de tipo B 
+B
+GC – Goma do Cajueiro 
+GCA – Ácido Glicólico  
+ 
+ 
+HE – Hematoxilina e Eosina  
+HTAB – Brometo de Hexadeciltrimetilamônio  
+IBP – Inibidor da Bomba de Prótons  
+IFN- – Intérferon Gama 
+IL-8 – Interleucina-8  
+KC – Quimiocina Derivada de Queratinócitos  
+KHBB – Tampão bicarbonato Krebs-Henseleit  
+LPS – Lipopolissacarídeo 
+mGluR5 – Receptor de Glutamato Metabotrópico 
+MPO – Mieloperoxidase  
+mRNA – Ácido Ribonucleico Mensageiro  
+NERD – Doença do Refluxo Não Erosiva  
+NFB – Fator Nuclear Kappa B 
+NO – Óxido nítrico  
+PAMP – Padrões Moleculares Associados a Patógenos 
+PCR – Polymerase Chain Reaction (Reação em Cadeia da Polimerase) 
+PGE2 – Prostaglandina E2 
+pH – Potencial de Hidrogênio 
+PMN – Polimorfonuclear  
+QMUL – Queen Mary University of London 
+RETE – Resistência Elétrica Transepitelial  
+RTEEI –Relaxamento Transitório do Esfíncter Esofágico Inferior 
+TDCA – Ácido taurodeoxicólico  
+TGI – Trato gastrointestinal  
+ 
+ 
+TNF-α – Fator de necrose tumoral-alfa  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LISTA DE SÍMBOLOS 
+ 
+Ω – Ohms 
+μg – Micrograma 
+μl – Microlitro  
+μmol – Micromol  
+% – Porcentagem  
+Ag – Prata 
+AgCl – Cloreto de Prata 
+2+
+Ca – Cálcio  
+CaCl – Cloreto de Cálcio  
+2
+-
+Cl – Cloro  
+cm – Centímetro  
+2
+cm – Centímetro quadrado  
+CO – Dióxido de Carbono  
+2
+Da – Dalton  
+fL – Fentolitro 
+g – Grama  
+H – Hidrogênio  
+HCl – Ácido clorídrico  
+HCO- – Bicarbonato  
+3
+i – Corrente Elétrica 
+ip – Intraperitoneal  
++
+K – Potássio 
+KCl – Cloreto de Potássio  
+ 
+ 
+kDa – Quilodalton 
+kg – Quilograma  
+mg – Miligrama  
+MgSO – Sulfato de Magnésio  
+4
+min – Minutos 
+ml – Mililitro  
+mM – Milimolar  
+ms – Milissegundos 
++
+Na – Sódio  
+NaCl – Cloreto de Sódio  
+NaHPO – Fosfato Monossódico  
+24
+NaHCO – Bicarbonato de Sódio  
+3
+NaOH – Hidróxido de Sódio 
+O – Oxigênio  
+2
+OH – Hidroxila 
+pg – Picograma  
+po – Via oral  
+s – Segundos 
+U – Unidade  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUMÁRIO 
+ 
+1. Introdução......................................................................................................... 23 
+2. Referencial Teórico........................................................................................... 26 
+2.1. Doença do Refluxo Gastroesofágico (DRGE)............................................... 26 
+2.1.1. Histórico....................................................................................................... 26 
+2.1.2. Epidemiologia e Prevalência...................................................................... 29 
+2.1.3. Conceitos e Classificação da DRGE........................................................... 31 
+2.1.4. Doença do Refluxo Não-Erosiva (NERD).................................................. 33 
+2.2. Composição do Refluxato.............................................................................. 36 
+2.3. Diagnóstico..................................................................................................... 38 
+2.4. Tratamento da DRGE.................................................................................... 39 
+2.4.1. Tratamento Não Farmacológico................................................................ 39 
+2.4.2. Tratamento Farmacológico........................................................................ 39 
+2.5. Goma do Cajueiro.......................................................................................... 43 
+3. Justificativa....................................................................................................... 46 
+4. Objetivos............................................................................................................ 47 
+4.1. Geral................................................................................................................ 47 
+4.2. Específicos...................................................................................................... 47 
+5. Material e Métodos........................................................................................... 48 
+5.1. Drogas, Reagentes e Outros Materiais.......................................................... 48 
+5.2. Aspectos Éticos............................................................................................... 48 
+5.3. Extração e Purificação da Goma do Cajueiro.............................................. 49 
+5.4. Animais........................................................................................................... 50 
+5.5. Indução da NERD.......................................................................................... 50 
+5.5.1. Peso Úmido.................................................................................................. 52 
+5.5.2. Atividade da Mieloperoxidase (MPO)....................................................... 52 
+5.5.3. Análise Histopatológica.............................................................................. 53 
+5.5.4. Ensaio imunoenzimático para quantificação de KC................................. 53 
+5.5.5. Preâmbulo Experimental da Câmara de Üssing....................................... 54 
+5.5.6. Resistência Elétrica Transepitelial (RETE).............................................. 56 
+5.5.7. Permeabilidade Transepitelial................................................................... 56 
+5.5.8. Avaliação Toxicológica da Goma do Cajueiro.......................................... 57 
+5.6. Pacientes e Endoscopia.................................................................................. 59 
+5.7. Resistência Elétrica Transepitelial (RETE)................................................. 59 
+5.8. Permeabilidade Transepitelial...................................................................... 60 
+5.9. Localização da Goma do Cajueiro................................................................ 60 
+5.10. Análises estatísticas...................................................................................... 62 
+6. Resultados.......................................................................................................... 63 
+6.1. Peso Úmido..................................................................................................... 63 
+6.2. Atividade da Mieloperoxidase (MPO).......................................................... 63 
+6.3. Expressão dos Níveis de KC........................................................................... 63 
+6.4. Análise Histopatológica................................................................................. 65 
+6.5. Resistência Elétrica Transepitelial (RETE)................................................. 67 
+6.6. Permeabilidade Transepitelial...................................................................... 68 
+6.7. Avaliação Toxicológica da Goma do Cajueiro............................................. 70 
+6.8. Resistência Elétrica Transepitelial (RETE)................................................. 74 
+6.9. Permeabilidade Transepitelial...................................................................... 76 
+6.10. Localização da Goma do Cajueiro.............................................................. 77 
+ 
+ 
+7. DISCUSSÃO..................................................................................................... 80 
+8. CONCLUSÕES................................................................................................. 91 
+REFERÊNCIAS................................................................................................... 92 
+ANEXOS............................................................................................................... 109 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+1. INTRODUÇÃO 
+A Doença do Refluxo Gastroesofágico (DRGE) é uma condição prevalente que 
+acomete cerca de 20% da população ocidental. Embora a taxa de mortalidade diretamente 
+associada seja rara, a DRGE diminui a qualidade de vida de indivíduos e tem um alto 
+impacto econômico nos custos diretos, como testes diagnósticos, uso de medicação e 
+hospitalizações, mas também em custos indiretos, como o absenteísmo no trabalho e a 
+perda de produtividade (DENT et al., 2005; EL-SERAG et al., 2009; BREDENOORD, 
+PANDOLFINO, SMOUT, 2017). Além disso, esta doença é um forte fator de risco para 
+o esôfago de Barrett e o adenocarcinoma esofágico (NAPIER et al., 2014). 
+Embora a terapia com Inibidores da Bomba de Prótons (IBPs), considerada padrão 
+ouro no tratamento da DRGE, obtenha bom prognóstico para a maioria dos pacientes com 
+DRGE [especialmente aqueles com Refluxo Erosivo (RE)], permanece uma minoria 
+significativa de 30% que não responde adequadamente aos IBPs (WEIJENBORG et al., 
+2012). As razões para esse evento refratário podem incluir refluxo fracamente ácido 
+sintomático, refluxo biliar, regurgitação ácida noturna, concentração de pepsina ou 
+hipersensibilidade de vias aferentes nociceptivas (BREDENOORD; SMOUT, 2008). 
+Além disso, nos últimos anos, alguns tópicos de alerta têm sido levantados sobre a 
+segurança a terapia de longo prazo com IBPs e pondo em questão o uso deste fármaco 
+(MOAYYEDI; LEONTIADIS, 2012; REIMER 2013; ZHU; HONG, 2017). Desse modo, 
+existe uma necessidade clínica de desenvolver terapias alternativas para DRGE. 
+Anatomicamente, o esôfago está posicionado de maneira acessível a terapias 
+tópicas, com exceção de terapias para esofagite eosinofílica (EE), que é de cunho 
+imunológico, e raramente tem sido empregada uma estratégia na doença do esôfago 
+(SEGAL; CHANDE, 2013). Talvez essa dificuldade ocorra devido a problemas do rápido 
+trânsito esofágico e incertezas quanto à adesão do medicamento ingerido à mucosa. 
+A mucosa do esôfago consiste de um epitélio escamoso estratificado que atua 
+como uma firme barreira defensiva contra os componentes nocivos do refluxo 
+gastroesofágico. Acredita-se que o dano na integridade desta barreira mucosa é 
+importante na patogênese dos sintomas do refluxo gastroesofágico. Pacientes com a 
+Doença do Refluxo Gastroesofágico Não-Erosiva (NERD, advindo da língua inglesa) 
+correspondem a 70% dos pacientes com a DRGE, isto é, representam o fenótipo mais 
+prevalente da doença (EL-SERAG, 2008). Embora possuam a mucosa esofágica 
+23 
+ 
+macroscopicamente íntegra, suporta-se a hipótese de que estes pacientes possuam, em 
+termos morfológicos celulares e moleculares, defeito de barreira que permite a infiltração 
+de substâncias nocivas tais como ácido gástrico e outros componentes em camadas mais 
+profundas do epitélio, os quais podem estimular nociceptores aferentes (ORLANDO, 
+2006). A integridade da mucosa pode ainda ser demonstrada funcionalmente, por 
+exemplo através de medidas de Resistência Elétrica Transepitelial (RETE), uma medida 
+de permeabilidade transcelular de cargas através da mucosa tanto de humanos quanto de 
+camundongos (TOBEY et al., 2007; PARDON et al., 2016; SILVA et al., 2017). 
+Recentemente, Woodland e colaboradores demonstraram, em um modelo experimental 
+através da câmara de Üssing, que a exposição de biópsias humanas de pacientes com 
+NERD a soluções ácidas contendo ácido biliar e pepsina seria capaz de causar uma queda 
+significante na RETE (WOODLAND et al., 2015). Isso sugere que a integridade da 
+mucosa é notadamente vulnerável nesses pacientes. 
+ Se topicamente protegida contra componentes nocivos do refluxo gastroesofágico, 
+a mucosa esofágica pode ser menos suscetível às percepções sintomáticas dos eventos do 
+refluxo e, consequentemente, resistir às agressões que desencadeiam a inflamação 
+esofágica. 
+ Usualmente combinadas com antiácidos, produtos contendo alginato são 
+frequentemente utilizados na prática clínica no tratamento da DRGE. Tem sido 
+demonstrado que alginato no meio gástrico pode ser capaz de reduzir o número de 
+episódios de refluxo ácido. Sua propriedade física, considerada uma barreira de tensão de 
+superfície próximo à junção esôfago-gástrica, reduz as consequências do refluxo na 
+parede esofágica. Porém, evidências recentes sugerem que a habilidade do alginato na 
+redução do número de episódios de refluxo em pacientes pode ser limitado (ROHOF et 
+al., 2013; DE RUIGH et al., 2014).  
+ O mecanismo de ação mais evidente acerca das propriedades protetoras dos 
+alginatos no ambiente esofágico sugere que esta classe de polissacarídeos naturais 
+proveniente de algas marinhas marrons ou pardas (Phacophycae), constituídos por uma 
+proporção de ácidos D-manurônico e L-glicurônico, possui adesividade à mucosa 
+esofágica que confere a eles o único mecanismo de ação descrito na literatura, o qual está 
+relacionado com o controle da pirose em pacientes (SAVARINO et al., 2012; 
+WOODLAND et al., 2015). Um outro polímero natural vem ganhando destaque em 
+diversas linhas de pesquisa como um versátil biomaterial, a goma do cajueiro, um 
+24 
+ 
+heteropolissacarídeo natural que ocorre na resina do cajueiro (Anacardium occidentale 
+L.) após sutis incisões em seu caule (KUMAR et al., 2012). Este biopolímero possui 
+propriedades peculiares já bem descritas na literatura tais como perfil imunomodulatório 
+em macrófagos murinos (reduz a secreção de citocinas pró-inflamatórias após serem 
+estimulados com LPS), gastroprotetor em modelo experimental de úlcera gastroduodenal 
+induzida por AINEs, propriedades anti-diarréicas, cicatrização de ferimentos, perfil anti-
+inflamatório na doença periodontal experimental em ratos, efeito protetor tópico em 
+laringes de camundongos e efeito adesivo em superfícies inertes (LIMA et al., 2002; 
+MOREIRA et al., 2015; YAMASSAKI et al., 2015; CARVALHO et al., 2015; LEITE et 
+al., 2017; FIGUEIREDO et al., 2017; SOUZA FILHO et al., 2017). Embora as 
+propriedades supracitadas sejam atrativas no contexto do refluxo gastroesofágico, não há 
+estudos que demonstrem seu efeito nem em tecidos humanos no âmbito da DRGE, e nem 
+modelos experimentais que representem a DRGE. 
+ Desse modo, o presente estudo teve como objetivo 1) avaliar o efeito anti-
+inflamatório da goma do cajueiro no esôfago de camundongos com NERD, 2) investigar 
+o efeito tópico protetor e sua durabilidade da goma do cajueiro in vitro em biópsias 
+esofágicas humanas e 3) checar a mucoadesividade da goma do cajueiro em biópsias 
+esofágicas humanas. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+25 
+ 
+2. REFERENCIAL TEÓRICO 
+ 
+2.1. Doença do Refluxo Gastroesofágico (DRGE) 
+ 
+2.1.1. Histórico 
+ Atualmente, é provável que a Doença do Refluxo Gastroesofágico (DRGE) seja 
+uma das afecções digestivas mais relevantes no mundo, uma vez que as altas e crescentes 
+incidências, a intensidade da sintomatologia e a seriedade das complicações do ponto de 
+vista clínico (MORAES-FILHO et al., 2005). Entretanto, a noção do que vem a ser essa 
+patologia, sua relação com a acidez gástrica e repercussões esofágicas já percorreu um 
+longo caminho até os dias atuais. 
+ Estima-se que desde o século XVII, os fisiologistas já cogitavam a possível 
+presença de substância ácida no estômago humano. Tal ideia deixou de ser hipótese e 
+passou a ser confirmada graças a um experimento realizado pelo cirurgião do exército 
+americano William Beaumont. Beaumont conseguiu isolar o ácido clorídrico contido no 
+suco gástrico de um paciente pouco convencional, o jovem de 19 anos e caçador de peles 
+franco-canadense Alexis Saint Martin, o qual, em 1822, foi alvejado por um projétil de 
+arma de fogo (mosquetão) em seu abdome superior esquerdo. Após ter sido devidamente 
+tratado, St. Martin recuperou-se. Porém, adquiriu uma sequela: uma fístula gastrocutânea 
+que permitiu Beaumont observar que o suco gástrico tinha propriedades ácidas que 
+ajudavam a digerir alimentos de diversas naturezas segundo seus experimentos. Ele 
+publicou no ano de 1833 um livro contendo todas suas observações detalhadas, incluindo 
+a constatação da acidez gástrica, intitulado “Experiments and Observations on the Gastric 
+Juice and the Physiology of Digestion”. Dessa forma, o Dr. Beaumont entrou para a 
+história da medicina e se tornou o "pai da fisiologia gástrica" (MALFERTHEINER, 2007; 
+SCHWARTZ, 2009; BERCHE, LEFRÈRE, 2010). 
+ 
+26 
+ 
+ 
+Figura 1. Fotografias de Alexis St. Martin (A) que ficou famoso após sobreviver a um 
+tiro de mosquetão e de Dr. William Beaumont (B) que fez diversos experimentos “graças” 
+a St. Martin. Fonte: BERCHE, LEFRÈRE, Presse Medicale, 2010. 
+ 
+Talvez uma das especulações mais antigas acerca da associação da acidez gástrica 
+e a DRGE tenha ocorrido em 1906. Neste ano, enquanto patologista de Harvard, Wilder 
+Tileston coletou todos os casos de "úlcera péptica do esôfago" que havia sido relatada no 
+momento (44 ao todo, incluindo três dos seus próprios casos) e avaliou o histórico de cada 
+paciente e a patologia post mortem. Suas observações levaram-no a incluir a "úlcera 
+péptica do esôfago" entre pelo menos outras 12 causas de ulceração esofágica. Tileston 
+relatou, em forma de especulação, que um dano na região esôfago-gástrica poderia levar 
+ao evento do refluxo em sua publicação, na qual o próprio dissera: “Para que a úlcera 
+péptica seja formada, é evidentemente necessário que a cárdia seja insuficiente, 
+permitindo regurgitação de suco gástrico no esôfago” (TILESTON, 1906; DENT, 2006). 
+Em seguida, em 1925, Julius Friedenwald e Maurice Feldman publicaram um estudo, no 
+qual os autores descreveram sintomas típicos da DRGE especialmente a pirose (“azia”). 
+Eles chegaram bem próximo de reconhecer a entidade da DRGE quando associaram os 
+sintomas clássicos com a particularidade anatômica da hérnia hiatal (FRIEDENWALD, 
+FELDMAN, 1925; GRANDERATH et al., 2006). 
+27 
+ 
+Em registros da literatura científica, data-se o dia 16 de março de 1935 a primeira 
+publicação que aborda a descrição etiológica do que viria a ser a DRGE cujo título 
+proposto pelo gastroenterologista americano Asher Winkelstein (Figura 2) foi “Esofagite 
+péptica: Uma nova entidade clínica” publicado na Revista da Associação Médica 
+Americana, JAMA (WINKELSTEIN, 1935). Esta notícia teve um preâmbulo em junho 
+de 1934 durante a 85ª Sessão Anual da Associação Médica Americana na cidade de 
+Cleveland, EUA, na qual o Dr. Winkelstein relatou achados microscópicos em biópsias 
+de pacientes que consistiam em infiltrados de células polimorfonucleares nas camadas 
+mucosa, submucosa e muscular. Ademais, graças às contribuições do professor de 
+fisiologia Walter Cannon que em 1911, por meio de achados radiológicos com o contraste 
+visualizou pela primeira vez os movimentos gastrintestinais de gatos acordados, o 
+gastroenterologista Winkelstein encontrou um alargamento na parte distal do esôfago em 
+humanos e ainda espasmos irregulares nesta parte do órgão, o que viria a ser a hérnia 
+hiatal (GRANDERATH et al., 2006). Decerto, a montagem do principal quadro 
+conceitual clássico da DRGE deve ser atribuída a Asher Winkelstein. 
+ 
+Figura 2. Gastroenterologista americano Dr. Asher Winkelstein (1893–1972). Fonte: 
+WOLF, The Mount Sinai Journal of Medicine, 2000. 
+ 
+ A partir desse momento, a evolução que abrange os conhecimentos de 
+fisiopatologia e terapêutica da DRGE vieram referenciando e corroborando os achados 
+28 
+ 
+das três primeiras décadas do século XX. Em 1946, Allison descreveu a hérnia hiatal 
+como um fator causal no desenvolvimento da DRGE. Em 1958, Bernstein e Baker 
+mostraram uma relação direta entre acidificação esofágica e pirose em pacientes com 
+refluxo gastroesofágico, independentemente dos achados endoscópicos, levando ao 
+reconhecimento do fenótipo da Doença do Refluxo Gastroesofágico Não-Erosiva 
+(NERD). Na década de 1980, gravações contínuas do Esfíncter Esofágico Inferior (EEI) 
+mostraram que os episódios de refluxo se relacionam com relaxamentos transitórios no 
+tônus do EEI. Há atualmente uma ideia crescente de que a DRGE surge da interação de 
+vários fatores anatômicos e fisiológicos. Uma revolução no tratamento médico da DRGE 
+veio com a introdução do primeiro Inibidor da Bomba de Prótons (IBP), omeprazol, em 
+1989 (DENT, 2006). 
+ 
+2.1.2. Epidemiologia e prevalência 
+ A DRGE é afecção de demasiada relevância médico-social pela alta e crescente 
+incidência e por determinar sintomas de intensidade variável, que se manifestam por 
+tempo prolongado, podendo comprometer consideravelmente a qualidade de vida do 
+indidíduo (SONNENBERG, EL-SERAG, 1999). É digno de nota que o surgimento 
+substancial evidenciado na DRGE tem sido associado a diversos fatores tais como estilo 
+de vida urbano, estado emocional alterado, exposição a intensas exposições de estresse e 
+doenças mentais como ansiedade e depressão, mas muito direciona-se ao fato de que nas 
+últimas três décadas a erradicação de H pylori na população geral apresenta-se como fator 
+de risco à patogênese da DRGE e, consequentemente, leva os indivíduos a buscar os 
+serviços ambulatoriais de gastrenterologia no mundo inteiro como mostra a Figura 3 (EL-
+SERAG, SONNENBERB, 1998; JAVADI, SHAFIKHANI, 2017). 
+29 
+ 
+ 
+Figura 3. Tendências temporais das taxas de hospitalizações por úlcera gástrica, úlcera 
+duodenal e refluxo gastroesofágico. Os dados pontuais representam a média de períodos 
+de tempo consecutivos como mostrado no eixo x. Fonte: Adaptado de EL-SERAG, 
+SONNENBERG, Gut, 1998. 
+ 
+A prevalência combinada de sintomas de GERD pelo menos semanais relatados 
+em estudos populacionais em todo o mundo é de aproximadamente 13%, mas há uma 
+variação geográfica considerável. As estimativas precisas são difíceis devido à 
+heterogeneidade nos projetos de estudo, mas a prevalência de DRGE parece ser mais alto 
+no sul da Ásia e no Sudeste da Europa (mais de 25%) e menor no Sudeste Asiático, 
+Canadá e França (abaixo de 10%) como mostra a Figura 4 (RICHTER, RUBENSTEIN, 
+2017; EUSEBI et al., 2017). 
+Não há dados sobre a prevalência de DRGE na África. Nos Estados Unidos, as 
+estimativas da prevalência de sintomas de DRGE variaram de 6% a 30%, com 
+heterogeneidade relacionada ao questionário específico utilizado, incluindo a frequência 
+e a duração dos sintomas exigidos para serem classificados como DRGE (RICHTER, 
+RUBENSTEIN, 2017). 
+ 
+30 
+ 
+ 
+Figura 4. Prevalência de sintomas semanais de refluxo gastroesofágico em todo o mundo, 
+baseado nos sintomas em uma frequência de uma vez por semana ou mais. Fonte: 
+Adaptado de EUSEBI, et al., Gut. 2017 
+ 
+No Brasil, um estudo populacional realizado no início do século XXI, ano de 
+2003, em 22 metrópoles, entrevistando-se amostra populacional de 13.959 indivíduos, 
+constatou-se que 4,6% dos entrevistados apresentavam pirose (azia) uma vez por semana 
+e que 7,3% apresentavam tal sintoma duas ou mais vezes por semana. Em função desses 
+dados, estima-se que a prevalência da DRGE, no Brasil, seja em torno de 12% 
+(MORAES-FILHO et al., 2003). Vale ressaltar que os índices da DRGE vêm crescendo 
+e trazendo essa proporção do último estudo realizado por Moraes-Filho e colaboradores 
+em 2003 para dias de hoje, estima-se que o número relativo de indivíduos acometidos 
+com a doença do refluxo seja cerca de 25 milhões considerando que a população passa de 
+207,7 milhões de habitantes de acordo com o IBGE em nota pública. 
+  
+2.1.3. Conceitos e classificação da DRGE 
+ Por consenso, a Doença do Refluxo Gastroesofágico (DRGE) foi definida como 
+o movimento sem esforço do conteúdo estomacal no esôfago ou na boca causando 
+sintomas ou complicações problemáticas que podem apresentar ou não lesões na mucosa 
+esofágica. Como forte característica da condição clínica, os sintomas cardinais da DRGE 
+são pirose (azia) e regurgitação (VAKIL et al., 2006).  
+31 
+ 
+ Em se tratando de patogênese da DRGE, existem dois conceitos (Figura 5) que 
+compartilham de informações que culminam no estabelecimento do dano esofágico e 
+convergem na ideia da resposta inflamatória, a qual em um dos conceitos é tida como 
+consequência, já no outro como fator causal da gênese. 
+ O conceito tradicional, suportado e aprimorado a partir de sua primeira publicação 
+em 1935 por Winkelstein, no qual a morte da superfície epitelial induzida pelo ácido do 
+suco gástrico refluído é o evento iniciador, resultando em inflamação que progride até a 
+lâmina própria. Recentemente, um novo conceito proposto por Dunbar e colaboradores 
+ressalta que a injúria no esôfago não é proveniente do contato direto do material gástrico 
+em contato com a mucosa esofágica, e propõe que o suco gástrico refluído inicia um 
+influxo de células T mediado por citocinas que causam alterações microscópicas e, por 
+fim, erosões (DUNBAR et al., 2016; SMOUT, BREDENOORD, 2016). 
+ 
+ 
+Figura 5. Alterações macroscópicas e microscópicas durante o refluxo gastroesofágico. 
+Representação esquemática das alterações macroscópicas (erosão) e microscópicas 
+(hiperplasia da camada basal, alongamento das papilas e espaços intercelulares dilatados) 
+no epitélio esofágico que estão associados ao refluxo gastroesofágico. Fonte: Adaptado 
+de SMOUT, BREDENOORD, Nat Rev Gastroenterol Hepatol., 2016. 
+ 
+ É digno de nota que a DRGE pode apresentar-se com ou sem erosão, pois mesmo 
+com ausência de achados endoscópicos alterados, o paciente pode sentir os sintomas 
+clássicos da doença. A propósito, essas diferenças de padrões endoscópicos classifica a 
+32 
+ 
+DRGE em três fenótipos (Figura 6) que são: Doença do Refluxo Não-Erosiva (NERD), 
+Esofagite Erosiva e Esôfago de Barrett (FASS, DICKMAN, 2006). 
+ 
+Figura 6. Fenótipos e porcentagens de prevalência em pacientes com a DRGE. Fonte: 
+Adaptado de FASS, DICKMAN, GI Motility online, 2006. 
+ 
+2.1.4. Doença do Refluxo Não-Erosiva (NERD) 
+ Como mostra a Figura 6, a NERD é o fenótipo mais comum da DRGE, 
+compreendida por pacientes que apresentam sintomatologia típica de refluxo, 
+principalmente pirose (azia) e/ou regurgitação, e ausência de erosões na mucosa esofágica 
+sob a avaliação endoscópica (FASS, OFMAN, 2002). A pirose é definida como uma 
+sensação de queimação que irradia desde a região epigástrica até a base do pescoço, 
+ocorrendo principalmente no momento pós-prandial e após o decúbito. Já a regurgitação 
+é o retorno do conteúdo gástrico para o esôfago ou até a boca, não associado ao esforço 
+de vômito (NASI, MORAES-FILHO, CECCONELLO, 2006). 
+Juntos, esses sintomas em pacientes com NERD são responsáveis por significativa 
+limitação da qualidade de vida, de modo que seu controle se torna uma necessidade na 
+prática médica e que até o momento não foi completamente atendido. Esses aspectos 
+sobre o subtipo mais prevalente da DRGE, sua fisiopatologia e progressão são dilemas 
+científicos relevantes e atuais, o que tem levado pesquisadores a testar hipóteses e levar 
+motes acerca deste proeminente e fascinante tema na gastrenterologia clínica 
+(WOODLAND, SIFRIM, 2014). 
+33 
+ 
+Embora o paciente com NERD não apresente erosões esofágicas, sua mucosa não 
+é completamente íntegra. Um estudo realizado entre pacientes assintomáticos para a 
+DRGE e pacientes diagnosticados com a NERD mostrou diferenças celulares em relação 
+ao espaço intercelular dilatado, isto é, pacientes com NERD apresentaram maior espaço 
+comparado aos assintomáticos como mostra a Figura 7 (CAVIGLIA et al., 2005). 
+Ademais, outros estudos demonstram que soluções ácidas ou fracamente ácidas contendo 
+sais biliares e pepsina são capazes de alterar a integridade da mucosa esofágica de 
+pacientes com NERD de modo que a função de barreira esofágica são enfraquecidas pela 
+diminuição da Resistência Elétrica Transepitelial (RETE) e o aumento da permeabilidade 
+da mucosa esofágica a pequenas moléculas (CHEN et al., 2012; PARDON et al., 2016). 
+Tomados juntos, esses fenômenos direcionam a hipótese de que o ácido luminal pode 
+infiltrar a camadas mais profundas e sensibilizar neurônios aferentes que culminam na 
+sensação da dor epigástrica e pirose nos pacientes como representa a Figura 8 
+(ORLANDO, 2006).  
+ 
+Figura 7. Fotomicrografias eletrônicas de transmissão de espécimes de biópsia esofágica 
+de (A) um sujeito assintomático e (B) um paciente com NERD. Fonte: Adaptado de 
+CAVIGLIA et al., Aliment Pharmacol Ther, 2007. 
+ 
+34 
+ 
+ 
++
+Figura 8. Difusão do refluxo ácido gástrico (H) no espaço intercelular. Fonte: Adaptado 
+de ORLANDO, GI Motility online, 2006. 
+ 
+No âmbito da patologia experimental, a NERD não possui robustas ferramentas e 
+abordagens experimentais que revelem os fenômenos que acontecem na prática clínica, 
+contudo, recentemente, um modelo experimental da NERD em camundongos foi 
+desenvolvido, o qual demonstrou uma comunicação interativa entre achados de 
+inflamação esofágica e o envolvimento da integridade da barreira epitelial induzidos por 
+ácido que contribui para o entendimento da fisiopatologia da NERD (SILVA et al., 2017). 
+Outro dado recente acerca do subtipo mais prevalente da DRGE sugere que a mucosa 
+esofágica proximal e distal de pacientes com NERD tem nervos aferentes mais 
+superficiais em comparação com saudáveis ou pacientes com fenótipos Esofagite Erosiva 
+ou Esôfago de Barrett (Figura 9). Segundo os autores, este dado sugere que a 
+hipersensibilidade ácida em pacientes com NERD pode ser parcialmente explicada pela 
+maior proximidade de seus nervos aferentes ao lúmen esofágico e, portanto, maior 
+exposição a substâncias nocivas em refluxo (WOODLAND et al., 2017). 
+35 
+ 
+ 
+Figura 9. Um corte histológico de espessura total demonstrando a localização relativa de 
+uma fibra nervosa superficial (CGRP, em verde). Nerve: nervo; Location of DIS: 
+localização dos EID. Fonte: WOODLAND et al., Gastroenterology, 2017. 
+ 
+2.2. Composição do Refluxato 
+A patogênese da DRGE é multifatorial, na qual o material gástrico que reflui, 
+refluxato, é inerente ao processo da doença. As características e a composição do 
+refluxato dependem de várias variáveis fisiológicas. Não é de surpreender que o efeito da 
+composição do refluxato seja mais complexo do que os efeitos da acidez isolados. 
+Também incorporados ao refluxo estão os conteúdos do duodeno, incluindo ácidos 
+biliares e enzimas pancreáticas, e ar  refluxo gasoso (WOODLAND, SIFRIM, 2010).  
+ O pH fisiológico (usual) do estômago é altamente ácido variando 
+aproximadamente entre 1,5 a 3,5. Quando este suco gástrico entre em contato com o 
+esôfago, a mucosa esofágica é exposta ao ácido e pode levar à injúria epitelial. Em 
+algumas situações, o refluxo será menos ácido devido a um maior pH gástrico, mais 
+comumente em pacientes tratados com Inibidores da Bomba de Prótons (IBPs). Estes 
+bloqueiam poderosamente a secreção de ácido gástrico e, ao fazê-lo, podem elevar o pH 
+36 
+ 
+gástrico para acima de 4, comumente dito um refluxo fracamente ácido, porém, ainda 
+assim estes pacientes podem sentir um dos sintomas clássicos, a pirose (WOODLAND, 
+SIFRIM, 2010). Se o ácido e o ácido fraco podem ser uma causa dos sintomas na DRGE, 
+e qual o seu papel no dano da mucosa? Para refluxos fortemente ácidos, a evidência é 
+convincente. Em estudos com animais e em biópsias de esôfago humano, o ácido sozinho 
+(ou em combinação com a pepsina e/ou ácidos biliares) é capaz de induzir esofagite 
+(GOLDBERG et al., 1969; FARRÉ et al., 2008). 
+A pepsina é uma enzima cujo precursor, pepsinogênio, é liberado por Células de 
+Chief no estômago. Sua atividade proteolítica tem sido proposta como um possível 
+candidato na lesão da mucosa em GORD, particularmente em associação com o refluxo 
+ácido (a pepsina causa maior dano na sua faixa de atividade de pH ideal: pH 2-3). Existem 
+algumas evidências para o papel da pepsina no curso da DRGE. Estudos ex vivo em 
+coelhos mostraram que a infusão de ácido causou lesão na mucosa esofágica apenas 
+quando combinada com pepsina (LILLEMOE, JOHNSON, HARMON, 1982). 
+Suportando essa ideia sobre o papel da pepsina na DRGE, um estudo experimental onde 
+ratos foram induzidos à exposição do conteúdo gástrico, exceto aos conteúdos duodenais 
+por meio de uma ligadura pilórica e do fundo gástrico por 4 horas. Os resultados 
+evidenciaram que a inibição da atividade da pepsina por um inibidor seletivo (peptastina), 
+sem interferência na secreção gástrica, exibiu ação protetora sobre as lesões esofágicas, 
+demonstrando que o ácido clorídrico (HCl) sozinho é capaz de injuriar a mucosa 
+esofágica. Por outro lado, a introdução de pepsina exógena potencializou os efeitos 
+danosos, especialmente em pH 1,5-3 (NAGAHAMA et al., 2006). 
+ Outra classe de componentes do refluxato referente aos ácidos biliares tem sido 
+associada com o dano à mucosa esofágica. Com relação a estes elementos, um estudo 
+utilizando cultura de células primárias epiteliais esofágicas, o qual mimetiza um modelo 
+in vitro de epitélio estratificado esofágico humano foi utilizado para avaliar as funções de 
+barreira do tecido. Neste estudo, foi demonstrado que os ácidos biliares ácido taurocólico 
+(TCA) e ácido glicocólico (GCA) comprometem a função da barreira epitelial por 
+modular a expressão das proteínas do complexo juncional (claudinas, ocludinas e zônulas 
+de oclusão), diminuem a RETE e aumentam a permeabilidade paracelular (CHEN et al., 
+2012). Recentemente, estudos mostraram que uma solução fracamente ácida (pH 5) 
+contendo ácido deoxicólico (DCA) promove EID e diminui a RETE na mucosa esofágica 
+de coelhos e de humanos. Além disso, os estudos evidenciaram mecanismos que 
+37 
+ 
+envolvem esses danos morfológicos e funcionais, são eles a indução da apoptose e o efeito 
+rápido e sustentado do material luminal nocivo (FARRÉ et al., 2008; PARDON et al., 
+2016). 
+ 
+2.3. Diagnóstico 
+A DRGE é extremamente comum, estando dentre os diagnósticos gastrintestinais 
+mais frequentes associados a visitas ambulatoriais na prática da gastrenterologia clínica. 
+Embora complicações como esofagite erosiva sangrenta ou estenose péptica sejam cada 
+vez menos comuns, os indivíduos com sintomas de DRGE têm uma diminuição da 
+qualidade de vida que é semelhante aos pacientes com doença inflamatória intestinal. Para 
+diagnosticar e gerenciar com precisão a DRGE, é importante reconhecer os fatores de 
+risco epidemiológicos para DRGE, a variedade de apresentar sintomas e sua relativa 
+probabilidade de representação do refluxo patológico e o potencial de sobreposição com 
+outras doenças gastrointestinais (VAKIL et al., 2006; RICHTER, RUBENSTEIN, 2017). 
+O diagnóstico da NERD parte inicialmente por meio da anamnese do paciente, 
+que é capaz de detectar as características de sintomas tais como intensidade, duração, 
+frequência e evolução ao longo do tempo. Ademais, é válido ressaltar que a presença de 
+sinais de alarme (disfagia, odinofagia, anemia e emagrecimento) e pacientes acima de 40 
+anos com histórico familiar de câncer digestivo deve ser considerado um importante 
+sugestivo para realização do exame de endoscopia digestiva alta. Este exame consiste na 
+avaliação da presença de alterações esofágicas macroscópicas e exclusão de outras 
+condições mais graves como o adenocarcinoma esofágico (MORAES-FILHO et al., 
+2002).  
+O teste terapêutico com IBPs em dose plena diária por 4 semanas como conduta 
+inicial direciona-se a pacientes sintomáticos ou que apresentem sinais de alarme com 
+endoscopia negativa. Caso os sintomas sejam satisfatoriamente resolvidos, faz-se a 
+inferência do diagnosticado do paciente de DRGE. Por outro lado, caso não respondam 
+ao teste terapêutico, deve-se realizar testes complementares para melhor diagnosticar em 
+termos de classificação esse paciente (SCARPELLINI et al., 2016). Tomando sequência 
+após a resposta negativa ao teste terapêutico, realiza-se o exame de impedâncio-pHmetria, 
+o qual é capaz de verificar alterações de resistência elétrica através de eletrodos 
+posicionados no lúmen esofágico. Combinado com uma sonda de pH, o exame permite 
+38 
+ 
+ainda detectar os eventos de refluxo gastroesofágico em ácido (pH<4), fracamente ácido 
+(pH 4-7) ou fracamente alcalino (pH>7), e ainda mensurar o volume do material refluído 
+(SAVARINO, GIACCHINO, SAVARINO et al., 2013). 
+ 
+2.4. Tratamento da DRGE 
+A abordagem terapêutica da NERD propõe-se em aliviar a sintomatologia, 
+prevenir recaídas dos sintomas e melhorar a qualidade de vida dos pacientes. Seu 
+monitoramento e controle consiste em intervenções não farmacológicas e farmacológicas. 
+ 
+2.4.1. Terapias Não Farmacológicas 
+Mudanças no estilo de vida auxiliam na prevenção de situações que podem ser o 
+gatilho de um evento de refluxo gastroesofágico tais como uso substâncias e consumo de 
+alimentos que promovam ou facilitem o refluxo gastroesofágico, comumente chamados 
+de trigger foods pela comunidade científica (YAMAMICHI et al., 2012; SAVARINO et 
+al., 2017; SOUZA et al., 2017). Tais medidas podem ser: 
+✓ Elevação do ângulo da cabeceira da cama, especialmente os indivíduos com 
+distúrbio do sono decorrente de pirose noturna. 
+✓ Consumo moderado de alimentos possam se desencadear com os sintomas tais 
+como café, bebidas alcoólicas, fumo, cítricos, chocolate etc. 
+✓ Reduzir os alimentos ricos em lipídios. 
+✓ Evitar medicamentos risco potencial como por exemplo AINEs, bisfosfonatos e 
+antibióticos. 
+✓ Aumentar o tempo entre refeições e o momento de deitar-se de pelo menos 2 horas 
+após as refeições. 
+✓ Redução do peso corporal, principalmente para obesos. 
+✓ Exercícios respiratórios que fortaleçam o diafragma crural. 
+✓ Em alguns casos, intervenção cirúrgica da fundoplicatura de Nissen. 
+ 
+2.4.2. Terapias Farmacológicas 
+2.4.2.1. Antagonistas dos Receptores de Histamina tipo 2 (ARH2) 
+39 
+ 
+Antes do desenvolvimento dos IBPs, ARH2 foi a primeira classe de drogas tidas 
+como agentes supressores de ácido a atuar pela inibição competitiva da histamina nos 
+receptores H localizados nas células parietais e na redução da secreção de pepsina, bem 
+2
+como o volume de secreção gástrica. ARH mostram melhor eficácia do que os antiácidos 
+2
+na cicatrização da esofagite erosiva e no alívio dos sintomas do refluxo (TRAN et al., 
+2007). ARHtambém são medicamentos populares que não requerem receita médica e 
+2 
+amplamente utilizados para controlar os sintomas da DRGE devido ao seu rápido início 
+de ação. No entanto, desde o desenvolvimento dos IBPs, os ARH2 apresentam uma 
+resposta terapêutica inferior no alívio dos sintomas de refluxo e cicatrização da esofagite 
+erosiva em comparação com os IBPs (CHIBA et al., 1997). 
+ 
+2.4.2.2. Inibidores da Bomba de Prótons (IBPs) 
+++
+Ao inibir a bomba H/K-adenosina trifosfatase (ATPase) presente na membrana 
+apical das células parietais gástricas, o passo final da secreção ácida, o IBP tem sido o 
+tipo mais potente de supressor de ácido desde o seu desenvolvimento e é mais eficaz que 
+o ARH na cicatrização da esofagite erosiva e alívio de sintomas. Como sugerem as 
+2
+diretrizes, o IBP é o tratamento de primeira linha da DRGE, e um curso de 8 semanas de 
+IBPs é a terapia de escolha para alívio de sintomas e cicatrização de esofagite erosiva 
+(KUNG et al., 2017). Em se tratando do fenótipo mais prevalente (NERD), é digno de 
+nota que embora seu primeiro representante, o omeprazol, tenha sido descoberto em 1979, 
+os IBPs foram introduzidos na terapêutica apenas no final da década de 80 e atualmente 
+ainda são considerados a terapia de primeira escolha para o tratamento de pacientes com 
+NERD, tanto no tratamento agudo quanto de manutenção (DENT, 2006). 
+Embora o IBP seja o supressor de ácido mais eficaz no tratamento da DRGE, ainda 
+existem resultados insatisfatórios durante a terapia com IBP em cerca de um terço dos 
+pacientes que não responde adequadamente à terapia com IBP (SIFRIM, ZERBIB, 2012). 
+Ao avaliar a resposta a longo prazo da terapia de IBP com uma dose diária, a porcentagem 
+de pacientes com sintomas persistentes de refluxo tem sido relatada como sendo de até 
+59% (RAGHUNATH et al., 2009).  
+ Fass e Dickman (2006) propuseram um esquema sobre as taxas de falha do 
+tratamento da DRGE com IBPs e expressou esses dados em percentagem de falha como 
+ilustra a Figura 10, isto é, são pacientes que não respondem de modo satisfatório às doses 
+40 
+ 
+padrão da terapia de primeira escolha. Estes são chamados de refratários na prática 
+médica e têm sido considerados um desafio no tratamento da NERD. 
+ 
+Figura 10. Proporção de falha sintomática de pacientes com DRGE frente aos IBPs. 
+Fonte: Adaptado de FASS, DICKMAN, GI Motility online, 2006. 
+ 
+2.4.2.3. Alginato/Antiácido 
+O bolsão ácido ou “acid pocket” é uma zona curta de suco gástrico altamente ácido 
+e sem tampão que se acumula no estômago proximal após as refeições. Servindo como 
+fonte de refluxo ácido, o bolsão ácido aumenta a propensão ao refluxo ácido por todos os 
+mecanismos convencionais, como os Relaxamentos Transitórios do Esfíncter Esofágico 
+Inferior (RTEEI) e hérnia de hiato, e tem sido considerada como uma causa importante 
+causa da DRGE (BECHER, MULLIGAN, JOHNSON, 2012). O alginato é um 
+polissacarídeo aniônico que ocorre naturalmente em algas marrons e tem uma 
+propriedade única no tratamento da DRGE, eliminar o bolsão ácido. A formulação 
+“alginato-antiácido” pode reduzir os sintomas pós-prandiais ao neutralizar a acidez do 
+conteúdo gástrico. Além de neutralizar a acidez gástrica, mais importante ainda, o 
+alginato e o bicarbonato, geralmente contidos numa formulação à base de alginato, 
+formam um gel espumoso flutuante na superfície do conteúdo gástrico depois de interagir 
+com o ácido gástrico, e este gel forma uma barreira que desloca o bolsão ácido da junção 
+esofagogástrica e protege a mucosa esofágica do refluxo ácido e não ácido pelo 
+revestimento do gel formado (SWEIS et al., 2013). Semelhante a um antiácido, uma 
+41 
+ 
+formulação contendo alginato desempenha um efeito de início imediato dentro de 1 h de 
+administração, que é mais rápido que um IBP e ARH (DETTMAR et al., 2006). 
+2
+®
+Há exemplos clássicos de formulações à base de alginato que são o Gaviscon e 
+®
+o Faringel, estes produtos são comercializados em todo o mundo sob outras marcas com 
+o apelo terapêutico para pacientes sintomáticos com DRGE, incluindo a NERD 
+(SAVARINO et al., 2012). Em um ensaio clínico duplo-cego randomizado, comparou-se 
+a eficácia do alginato com o omeprazol em pacientes com NERD. O alginato não 
+demonstrou inferioridade ao omeprazol e foi tão efetivo quanto o omeprazol ao alívio 
+sintomático (CHIU et al., 2013). Além disso, adicionar alginato a um IBP pode aliviar 
+significativamente a pirose em comparação com a utilização de um IBP em pacientes com 
+NERD, sugerindo um benefício adicional de alginato como terapia complementar no 
+tratamento de sintomas refratários (MANABE et al., 2012).  
+Além do mecanismo já sabido, uma pesquisa recente comprovou que uma solução 
+®
+contendo alginato de sódio (Gaviscon) pode aderir a mucosa esofágica formando uma 
+barreira tópica capaz de proteger a integridade da mucosa do esôfago contra fatores 
+agressores contidos no refluxato. Tal fenômeno foi evidenciado por meio da aplicação 
+®
+tópica em biópsias esofágicas humanas, nas quais o Gaviscon foi capaz de prevenir a 
+queda da RETE provocada pela exposição a uma solução ácida contendo pepsina e sal 
+biliar (TDCA), mesmo após 1 hora de exposição (WOODLAND et al., 2015). Em outras 
+palavras, a abordagem tópica também contribui para a proteção da mucosa esofágica. 
+ 
+2.4.2.3. Outras Terapias Farmacológicas 
+O sucralfato, um complexo de sulfato de sacarose e hidróxido de alumínio, liga-
+se à mucosa do trato gastrintestinal. É usado para tratar pacientes com Esofagite Erosiva, 
+particularmente úlceras de estresse. O sucralfato tem níveis mais elevados de eficácia do 
+que o placebo em pacientes com Esofagite Erosiva, mas seu benefício não foi estabelecido 
+em pacientes com NERD (SIMON, RAVELLI, GOFFIN, 1996). Além disso, o sucralfato 
+deve ser tomado com a frequência de 4 vezes ao dia. A disponibilidade de medicamentos 
+alternativos efetivos (IBPs, ARH) limita o uso rotineiro de sucralfato a mulheres 
+2
+grávidas ou a pacientes com doença erosiva que não respondem à supressão ácida 
+(GYAWALI, FASS, 2017). 
+42 
+ 
+Em teoria, existem várias vantagens potenciais no uso de drogas procinéticas no 
+manejo da DRGE, incluindo aumento do peristaltismo esofágico, aceleração do clearance 
+esofágico, facilitando o esvaziamento gástrico e aumentando a pressão basal do EEI. Em 
+vez dos procinéticos serem usados sozinhos, os procinéticos são usados geralmente como 
+um adjunto à terapia de IBP. Alguns procinéticos, como metoclopramida, domperidona e 
+cisaprida, não são sugeridos para uso rotineiro por diretrizes devido aos benefícios 
+limitados e ao alto perfil de efeito colateral (DEVAULT, CASTELL, 2005; KUNG et al., 
+2017). 
+O Relaxamento Transitório do Esfíncter Esofágico Inferior (RTEEI) é um 
+mecanismo fisiológico normal de eructação e respostas à distensão gástrica pós-prandial. 
+Esse tipo de relaxamento é um reflexo desencadeado pela ativação de mecanorreceptores 
+na região da cárdia devido à distensão gástrica proximal e é transmitido pela via 
+vagovagal para o tronco encefálico. O RTEEI permite que a ventilação e o refluxo do 
+conteúdo gástrico ocorram ao mesmo tempo. Vários receptores e neurotransmissores são 
+capazes de modular o RTEEI e assim se tornam potenciais alvos terapêuticos para DRGE. 
+Estes agentes farmacológicos incluem agonistas de receptores de ácido -aminobutírico 
+de tipo B (GABA), agonistas de canabinóides (agonistas de receptores CB1), 
+B
+antagonistas de receptor de glutamato metabotrópico 5 (mGluR5), agonistas de grupo III 
+de receptor de glutamato metabotrópico, antagonistas de receptor de colecistocinina 1 
+(CCK1), antagonistas de receptor muscarínico, inibidores de óxido nítrico sintase e 
+agonistas de receptores opióides do tipo µ. Atualmente, apenas os agonistas dos 
+receptores GABA atingem um efeito terapêutico e um nível de efeito colateral tolerável 
+B
+no uso clínico, a exemplo tem-se o baclofeno, uma antiga droga sintetizada pela primeira 
+vez em 1962, é um agonista prototípico de GABA com propriedades inibitórias nos 
+B
+sistemas nervoso periférico e central. Tanto em animais quanto em humanos, o baclofeno 
+demonstrou ter atividade no RTEEI (KUNG et al., 2017; BREDENOORD, 
+PANDOLFINO, SMOUT, 2017). 
+ 
+2.5. Goma do Cajueiro 
+O cajueiro, Anacardium occidentele L., é pertencente à família Anacardiaceae. As 
+plantas do cajueiro podem chegar a uma altura de vinte metros, contudo, no litoral e no 
+sertão do Nordeste brasileiro, apresentam-se como uma árvore baixa, atarracada, tortuosa 
+43 
+ 
+e esgalhada a partir da base (LIMA et al., 1988). Do ponto de vista econômico, esta árvore 
+nativa ganha destaque por suas inúmeras aplicações nas áreas industriais e de 
+conhecimento científico, inclusive no âmbito da farmacologia. No Brasil, o cajueiro é 
+empregado para fins terapêuticos no Nordeste desde a época pré-colombiana. Na 
+literatura etnofarmacológica é descrito que preparações de uso oral, feitas a partir da 
+casca, da entrecasca, do líquido da castanha, das folhas, das raízes e do exsudato (goma) 
+possuem ampla aplicação para o tratamento de várias doenças, incluindo distúrbios 
+gastrointestinais, inflamações cutâneas e tosses irritativas (AGRA et al., 2007; MORAIS 
+et al., 2005). 
+Dentre os materiais obtidos a partir do cajueiro, a goma do cajueiro (GC) tem 
+ganhado destaque por oferecer diversas aplicações na indústria alimentícia, farmacêutica 
+e farmacológica. As gomas são hidrocolóides vegetais naturais que podem ser substâncias 
+translúcidas e amorfas, frequentemente, produzidas pelas plantas superiores como 
+proteção depois de uma agressão. Muitas plantas que crescem em condições semiáridas 
+produzem exsudatos gomosos (também chamadas de resina) em grandes quantidades 
+quando seu córtex é agredido; isso serve para vedar o corte e evitar a desidratação 
+(RIBEIRO et al., 2016). O uso de gomas naturais, provenientes dos exsudados e extratos 
+de plantas, vem tomando grande impulso por suas múltiplas e lucrativas possibilidades 
+de industrialização (KUMAR et al., 2009). 
+ Após ser purificada, a Goma do Cajueiro (GC) apresenta em sua composição  
+galactose (59.4%), glicose (6.4%), arabinose (5.3%), ramnose (2.4%), manose (1%), e 
+ácido glicurônico (13.5%) que são obtidos a partir do exsudato, a Goma do Cajueiro bruta  
+(PAULA, RODRIGUES, 1995). Esse processo de purificação ocorre em estágios 
+ordenados de trituração, dissolução em água com ajuste de pH, filtração, precipitação com 
+EtOH e, por fim, liofilização (RODRIGUES et al., 1993). 
+ Estudos experimentais com a Goma do Cajueiro mostraram que este polímero tem 
+propriedades anti-inflamatórias capazes de reduzir edema e processo de hiperemia, inibir 
+de PGE2 e reduzir marcadores inflamatórios como infiltrado neutrofílico, 
+mieloperoxidase e malondialdeído, bem como barreira de proteção tópica em laringe de 
+camundongos (SCHIRATO et al., 2006; ARAÚJO et al., 2015; SOUZA et al., 2017; 
+FIGUEIREDO et al., 2017). Além disso, a Goma do Cajueiro demonstrou ter uma 
+significante influência na diminuição dos níveis de óxido nítrico (NO·), IFN-γ e na 
+modulação de macrófagos murinos pela redução de citocinas pró-inflamatórias, além de 
+44 
+ 
+apresentar propriedades gastroprotetoras em modelo experimental de úlceras 
+gastroduodenais induzidas por AINEs (YAMASSAKI et al., 2015; CARVALHO et al., 
+2015). Embora esses achados façam deste polímero um produto bastante atraente do 
+ponto de vista de aplicabilidade na DRGE, não existe nenhum estudo com a aplicação da 
+Goma do Cajueiro nesta patologia. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+45 
+ 
+3. JUSTIFICATIVA 
+Cerca de 40-50% dos pacientes com NERD relatam sintomas persistentes de 
+refluxo gastroesofágico (DRGE) apesar da terapia com IBPs, isto é, são refratários ao 
+tratamento padrão e são categoricamente conhecidos como não responsivos. No manejo 
+clínico, o uso de medicamentos adjuntos pode ser considerado particularmente quando se 
+suspeita o mecanismo fisiológico para a não responsividade de pacientes aos IBPs 
+(HILLMAN et al., 2017). Diante desse contexto, faz-se necessário o esforço em estudos 
+que utilizem medicamentos auxiliares, de modo que haja um melhoramento de estudo e 
+arrolamento dos pacientes para delinear melhor as opções de gerenciamento médico antes 
+de proceder a intervenções anti-refluxo. 
+ A goma do cajueiro é um polímero natural com propriedades atraentes aos alvos 
+pertinentes à fisiopatologia que a DRGE sabidamente dispõe. Desse modo, a hipótese do 
+seu estudo na doença em questão, mais especificamente na sua apresentação fenotípica 
+mais prevalente, a NERD, foi o que norteou a elaboração do presente projeto de pesquisa. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+46 
+ 
+4. OBJETIVOS 
+ 
+4.1. Objetivo Geral 
+ Estudar o efeito esofagoprotetor de um polímero natural obtido de Anacardium 
+occidentale L., a goma do cajueiro, na Doença do Refluxo Não-Erosiva em murinos e em 
+biópsias esofágicas humanas. 
+ 
+4.2. Objetivos Específicos 
+Abordagem pré-clínica em um modelo experimental da Doença do Refluxo Não-
+Erosiva (NERD) em camundongos: 
+✓ Avaliar o efeito da goma do cajueiro no parâmetro de peso úmido esofágico no 
+modelo de NERD; 
+✓ Avaliar os efeitos da goma do cajueiro em eventos inflamatórios por meio da 
+atividade de mieloperoxidase (MPO) e da citocina pró-inflamatória KC em 
+esôfago distal de camundongos com NERD; 
+✓ Avaliar o efeito da goma do cajueiro nas alterações histopatológicas do esôfago 
+distal no modelo de NERD em camundongos; 
+✓ Avaliar a implicação da goma do cajueiro a integridade da mucosa esofágica por 
+meio da Resistência Elétrica Transepitelial (RETE) e da permeabilidade em 
+camundongos com NERD; 
+✓ Avaliar a toxicidade da goma do cajueiro em camundongos. 
+ 
+Abordagem clínica utilizando biópsias esofágicas humanas: 
+✓ Testar o efeito tópico da goma do cajueiro em biópsias esofágicas humanas por 
+meio da avaliação da RETE e permeabilidade mucosa; 
+✓ Estudar o efeito mucoadesivo da goma do cajueiro em biópsias esofágicas 
+humanas. 
+ 
+ 
+47 
+ 
+5. MATERIAL E MÉTODOS 
+ 
+5.1. Drogas, reagentes e outros materiais 
+• Ácido taurodeoxicólico (Sigma®, São Paulo, Brasil) 
+• Cetamina (Syntec®, Santana de Parnaíba, Brasil) 
+• Epicloridrina (Sigma®, São Paulo, Brasil) 
+• Fluoresceína 376 Da (Sigma®, São Paulo, Brasil) 
+• FITC (Sigma®, São Paulo, Brasil) 
+• Gaviscon (Reckitt Benckiser Healthcare, UK) 
+• O-dianisidina (Sigma®, São Paulo, Brasil) 
+• Pepsina (Sigma®, São Paulo, Brasil) 
+• Xilazina (Konig®, Mairinque, Brasil) 
+• Kit para dosagem de citocinas (R&D Systems®) 
+• Membrana de acetato de celulose para diálise, cut-off de 12 kDa (Sigma®, São 
+Paulo, Brasil) 
+• Fio de nylon 4-0 (Point suture®, Fortaleza, Brasil) 
+• Fio de nylon 6-0 (Point suture®, Fortaleza, Brasil) 
+• Fio Cat Gut (Point suture®, Fortaleza, Brasil) 
+• Câmara de Üssing (Mussler Scientific Instruments, Aachen, Germany) 
+• Fluorímetro Fluostar Optima (BMG labtech. Ontemberg, Germany) 
+• Lupa (Leica LED2500, Leica Microsystems) 
+• Criostato (Leica CM1850, Leica Microsystems) 
+• Material Cirúrgico AD Instrumentos 
+ 
+5.2. Aspectos Éticos 
+ Como o presente estudo possui uma abordagem translacional, isto é, uma parte 
+realizada em animais de laboratório e a outra em amostras humanas de pacientes que 
+voluntariamente aderiram ao estudo. Deste modo, o projeto conta com dois protocolos de 
+comitês de ética animal e em humanos. 
+48 
+ 
+No estudo pré-clínico, os experimentos foram realizados de acordo com o Guia 
+de Cuidados e Usos de Animais de Laboratório, estabelecidos pelo Colégio Brasileiro de 
+Experimentação Animal (COBEA) e o projeto foi aprovado pelo Comitê de Ética em 
+Pesquisa Animal (CEPA) da UFC, sob protocolo 123/2016. Por outro lado, o estudo 
+clínico foi aprovado pelo Comitê de Ética em Pesquisa Humana da UFC, sob protocolo 
+39538814.6.0000.5045. 
+ 
+5.3. Extração e Purificação da Goma do Cajueiro 
+Amostras brutas de goma do cajueiro foram coletadas pelo Núcleo de Pesquisa 
+em Biodiversidade e Biotecnologia (BIOTEC), Parnaíba-PI, Brasil, a partir do tronco de 
+árvores de caju nativas (Anacardium occidentale L.), no município de Ilha Grande de 
+Santa Isabel, Piauí, Brasil (Latitude, graus decimais S -2,8242; Longitude, graus decimais 
+W-41,7331). A árvore foi identificada e o espécime recebeu o comprovante de número 
+52, sendo depositado no herbário HDELTA (Universidade Federal do Piauí, Parnaíba, 
+Piauí, Brasil). Nódulos do caule foram selecionados e dissolvidos em água destilada à 
+temperatura ambiente para dar origem a uma solução de 5% (peso/volume). O pH da 
+solução foi ajustado para aproximadamente 7.0 por adição de NaOH. A solução límpida 
+foi sucessivamente filtrada e o polissacarídeo foi precipitado com etanol (SILVA et al., 
+2009). A goma foi purificada como um sal de sódio utilizando o método previamente 
+descrito (DE PAULA, SANTANA, RODRIGUES et al., 2001). 
+ 
+49 
+ 
+ 
+Figura 11. Resina extraída do troco do cajueiro (A e B), Goma do Cajueiro após 
+purificação (C) e representação da estrutura química da goma do cajueiro (D). Fonte: 
+Próprio autor. 
+ 
+ESTUDO PRÉ-CLÍNICO 
+ 
+5.4. Animais 
+Os protocolos foram realizados utilizando camundongos (Mus musculus) fêmeas, 
+linhagem Swiss, com peso variando entre 30 a 35g, provenientes do Biotério Setorial do 
+Departamento de Fisiologia e Farmacologia da Universidade Federal do Ceará – UFC. 
+Durante o período de adaptação e experimentação, os animais foram mantidos em caixas 
+de polipropileno, em um ambiente com temperatura e luminosidade controladas, um ciclo 
+de 12h claro/12h escuro, com acesso a comida e água ad libitum. No entanto, foram 
+privados de alimentação por 14-16 horas antes dos experimentos, porém foi mantido o 
++
+acesso livre a uma solução de reidratação oral (contendo 75 mmol/l de Na, 65 mmol/l de 
+-+
+Cl, 20 mmol/l de K, 10 mmol/l de citrato, e 75 mmol/l de glicose). 
+ 
+ 
+50 
+ 
+5.5. Indução da NERD 
+O modelo de NERD em camundongos foi realizado de acordo com Silva e 
+colaboradores (2017). Inicialmente, os camundongos foram anestesiados com uma 
+solução contendo cetamina (100 mg/kg, i.p.) e xilazina (10 mg/kg, i.p.), o abdômen foi 
+aberto (incisão de cerca de 1 cm) e um anel de silicone não tóxico (diâmetro: 3,25 mm; 
+largura: 2,50 mm, Embramed, São Paulo, Brasil) foi colocado em torno do duodeno 
+próximo ao piloro para realizar uma sub-estenose e limitar parcialmente o esvaziamento 
+gástrico. A seguir, a região de transição entre o fundo e a região glandular do estômago 
+foi ligada com fio de nylon 4-0 para diminuir a complacência do estômago (Figura 12). 
+O abdômen foi então fechado por sutura da parede abdominal e da pele com fio Cat Gut 
+4-0. Como grupo controle (sham; falso operado), os animais foram submetidos ao 
+procedimento operacional semelhante, menos a execução da sub-estenose e ligadura. Em 
+vez disso, o estômago foi exteriorizado por aproximadamente 30 s e, logo, retornado para 
+a cavidade abdominal. 
+ Os tratamentos com salina ou Goma do Cajueiro (10%, p/v) foram realizados 
+diariamente por gavagem às 21h devido aos seus hábitos noturnos, o que serviu de escolha 
+para adotar este como melhor horário. Os camundongos foram eutanasiados no dia 7 após 
+a cirurgia. Após a eutanásia, o esôfago foi dissecado, lavado com soro fisiológico estéril, 
+pesado, e uma amostra da região distal foi retirada para avaliação das alterações 
+histopatológicas, atividade de MPO e níveis de KC, bem como avaliação de parâmetro 
+funcionais de barreira (RETE e permeabilidade mucosa), como descritos a seguir. 
+51 
+ 
+ 
+Figura 12. Indução cirúrgica da NERD em camundongos e esquema do roteiro 
+experimental. Fonte: Próprio autor. 
+ 
+ESTUDO PRÉ-CLÍNICO: AVALIAÇÃO DOS PARÂMETROS INFLAMATÓRIOS 
+NO ESÔFAGO 
+ 
+5.5.1. Peso Úmido 
+O peso úmido do esôfago foi utilizado como um indicador adicional de edema, 
+um sinal clínico da inflamação. Para isso, o esôfago foi dissecado, lavado com soro 
+fisiológico estéril, pesado e medido. Os resultados foram expressos em miligramas por 
+centímetro (mg/cm). 
+ 
+5.5.2. Atividade da Mieloperoxidase (MPO) 
+A atividade de MPO foi avaliada como um marcador bioquímico indireto da 
+infiltração de granulócitos, a qual é uma enzima presente nos grânulos azurofílicos de 
+neutrófilos e outras células da linhagem mielóide. A avaliação da atividade da MPO foi 
+determinada pelo método de Bradley e colaboradores (1982). Resumidamente, uma 
+52 
+ 
+amostra de tecido de esôfago distal dos camundongos foi homogeneizada em tampão de 
+potássio com 0,5% de hexadecitrimetilamônio (HTAB). Em seguida, foi homogeneizado 
+e centrifugado a 4.000 rpm durante 7 minutos a 4° C. Atividade de MPO no sedimento 
+ressuspenso foi ensaiada através da medição da alteração na absorvância a 450 nm 
+utilizando dicloridrato de o-dianisidina e 1% de peróxido de hidrogênio. Os resultados 
+foram expressos em unidades de MPO por mg de tecido (U/mg de tecido).  
+ 
+5.5.3. Análise Histopatológica 
+Amostras do esôfago distal foram retiradas e fixadas em formol tamponado a 10%, 
+onde permaneceram por 18 h. A seguir, foram transferidas para uma solução de álcool a 
+70%, onde permaneceram até a realização dos procedimentos histológicos. O material 
+biológico foi seccionado e embebido em parafina, e realizados cortes 5 μm. O material 
+foi então corado com Hematoxilina e Eosina (HE), e analisado usando um microscópio 
+óptico. As amostras foram avaliadas de acordo com modificações dos critérios descritos 
+previamente (Tabela 1) (YERIAN et al., 2011). Toda a avaliação histopatológica foi 
+realizada por um patologista sem o conhecimento prévio dos grupos experimentais (P. 
+Soares). 
+ 
+Tabela 1. Parâmetros histológicos analisados em esôfago distal de camundongos. 
+ESCORES PARÂMETROS ANALISADOS 
+0 – 2 Hiperplasia da Camada de Células Basais 
+0 – 2 Polimorfonucleares Intraepitelial 
+0 – 3 Polimorfonucleares na Lâmina Própria 
+0 – 1 Erosões 
+0 – 4 Edema 
+ 
+ 
+5.5.4. Ensaio imunoenzimático para quantificação de KC 
+Para realização do ELISA, um fragmento de esôfago distal foi utilizado. O tecido 
+foi ressuspenso em 250 µl de PBS com inibidor de protease e homogeneizado em 
+53 
+ 
+macerador. Após centrifugação a 10.000 rpm por 15 minutos a 4ºC, 100 µL de 
+sobrenadante foi adicionado ao poço da placa de 96 poços fundo chato, previamente 
+sensibilizada overnight (16h) a 4ºC com 100 µl do anticorpo de captura e bloqueada com 
+300 µL de PBS-BSA 1%. Uma concentração conhecida da citocina padrão foi adicionada 
+ao primeiro ponto da curva, seguido de diluição seriada, conforme as recomendações do 
+fabricante (R&D Systems). Ao poço correspondente ao branco foi adicionado apenas o 
+diluente. Após duas horas de incubação à temperatura ambiente (24ºC) a placa foi lavada 
+três vezes com 400 µL de tampão contendo PBS filtrado e tween-20 0,05%. Adicionou-
+se 100 µL do anticorpo de detecção biotinilado diluído em PBS-BSA 1% na concentração 
+de trabalho indicada pelo fabricante para cada citocina em questão. Incubou-se por duas 
+horas à temperatura ambiente. Após três lavagens, adicionou-se 100 µL de 
+estreptoavidina-peroxidase diluída 1:200 em PBS-BSA 1%, incubando-se por 20 
+minutos, temperatura ambiente e ao abrigo da luz. Em seguida, adicionou-se 100 µL do 
+reagente A+B provido no kit, contendo o cromógeno, TMB, e o substrato da enzima, 
+peróxido de hidrogênio. Após 20 minutos de incubação, temperatura ambiente e no 
+escuro, a reação foi interrompida com a solução de parada presente no kit, contendo ácido 
+sulfúrico. A leitura foi realizada imediatamente em espectrofotômetro em comprimento 
+de onda de 450 nm. Os valores das absorbâncias das amostras foram subtraídos do branco 
+e interpolados com a curva padrão. O resultado foi expresso em picograma (pg) de 
+citocinas por mg de tecido. 
+ 
+ESTUDO PRÉ-CLÍNICO: AVALIAÇÃO DAS ALTERAÇÕES FUNCIONAIS DE 
+BARREIRA DA MUCOSA ESOFÁGICA 
+ 
+5.5.5. Preâmbulo Experimental da Câmara de Üssing 
+Na investigação da função de barreira, foram utilizadas amostras da mucosa do 
+esôfago distal de camundongos com NERD experimental e eutanasiados no dia 7 após a 
+cirurgia de indução, e animais Sham. Em seguida, o esôfago foi dissecado, retirada a 
+camada muscular (amostra constituída por epitélio escamoso estratificado queratinizado 
+e tecido conjuntivo subjacente) e aberto numa Placa de Petri contendo solução tampão 
+bicarbonato Krebs-Henseleit (KHBB, pH 7,4, contendo NaCl a 118 mM, KCl a 4,7 mM, 
+CaCl a 1,2 mM, MgSO a 1,2 mM, NaHPO a 1,2 mM, NaHCO a 25 mM e glicose a 
+24243
+54 
+ 
+11 mM). As mucosas esofágicas foram imediatamente montadas na Câmara de Üssing 
+2
+(Mussler Scientific Instruments, Aachen, Alemanha), com 0,017 cm de área exposta com 
+auxílio de um adaptador (Figura 13). O KHBB foi mantido a 37º C e aerado com mistura 
+de carbogênio (95% de O e 5% de CO). Logo após, foram realizadas as avaliações da 
+22
+RETE e de permeabilidade mucosa, como descritos em mais detalhes a seguir. 
+ 
+ 
+Figura 13. Câmara de Üssing e suas ferramentas de funcionamento (A). Metade de uma 
+2
+câmara montada com um adaptador cujo orifício mede 0,017 cm (B). Fonte: Própria 
+autoria 
+ 
+55 
+ 
+5.5.6. Resistência Elétrica Transepitelial (RETE) 
+A princípio, a resistência elétrica do sistema aquoso foi aferida nas câmaras por 
+meio de eletrodos de prata (Ag/AgCl) submersos na solução de KHBB. A resistência 
+elétrica foi calculada de acordo com a Lei de Ohm a partir das deflexões de tensão 
+induzidas por pulsos de corrente (i) bipolar de 50 μA, duração de 200 ms a cada 6 s 
+aplicada pelo meio dos fios de prata. Em seguida, os tecidos foram montados nas câmaras 
+e o sistema foi equilibrado até obter um platô da RETE basal estável (cerca de 20 a 30 
+min). Posteriormente, o lado luminal foi exposto durante 60 min a uma “solução de 
+desafio” KHBB pH 0,5, contendo pepsina (1 mg/ml) e ácido taurodeoxicólico (TDCA, 2 
+mM). A RETE foi continuamente registrada durante o tempo de exposição e representada 
+2
+como Ω/cm (TOBEY et al., 2004). Os resultados foram expressos como percentual (%) 
+de variação da resistência basal, nos tempos de 5, 10, 30 e 60 min após a exposição, sendo 
+a resistência basal considerada como 100% (Figura 14). 
+ 
+Figura 14. Desenho esquemático do estudo da RETE em Câmara de Üssing. Fonte: 
+Próprio autor. 
+ 
+5.5.7. Permeabilidade Transepitelial 
+Para avaliação da permeabilidade transepitelial esofágica, a RETE foi registrada 
+por 60 minutos, de acordo com metodologia supracitada no item anterior (“5.5.6”), e 
+parada. Em seguida, os eletrodos foram retirados da solução, a sala de experimentação 
+foi submetida a um ambiente desprovido de luz para evitar degradação da fluoresceína 
+que foi utilizada posteriormente. A solução do lado luminal foi substituída por solução de 
+56 
+ 
+fluoresceína (376 Da, 1 mg/ml). Uma amostra de 100 μl foi retirada do lado seroso da 
+câmara nos tempos 0, 30, 60, 90 e 120 minutos. A mesma quantidade de solução foi 
+retirada a cada intervalo de tempo do lado mucoso a fim de manter equilibrado o volume 
+nos dois lados da câmara (Figura 15). A permeabilidade do tecido à fluoresceína foi 
+calculada a partir da medida de fluoresceína na amostra mediante uso de um fluorímetro 
+(Fluostar Optima, BMG labtech. Ontemberg, Germany) e expressa na forma de razão de 
+intensidade de fluorescência, dividindo-se a intensidade de fluorescência em cada tempo 
+pela intensidade de fluorescência no tempo inicial. Matematicamente, os dados foram 
+normalizados através da relação do fluxo de fluoresceína (Figura 15) é baseada na razão 
+(taxa de intensidade de fluorescência, “R”) entre a enésima leitura da coleta (T) sobre a 
+n
+coleta basal (T). Cada leitura é individual para cada amostra e os resultados foram 
+0
+expressos em Intensidade de Fluorescência (IF) após a normalização dos dados. 
+ 
+Figura 15. Desenho esquemático do experimento para medir permeabilidade 
+transepitelial à fluoresceína. Fonte: Próprio autor. 
+ 
+ESTUDO DA TOXICIDADE DA GOMA DO CAJUEIRO EM CAMUNDONGOS 
+ 
+5.5.8. Avaliação Toxicológica da Goma do Cajueiro 
+ Este procedimento seguiu as normas presentes no protocolo de toxicidade aguda 
+da Organization for Economic Cooperation and Development (OECD), Guideline 
+423/2001 (OECD, 2001). Os procedimentos foram realizados com camundongos Swiss 
+57 
+ 
+fêmeas (25-30 g). Os animais foram divididos em dois grupos, os animais do grupo teste 
+receberam goma do cajueiro (2000 mg/kg) dissolvidos em solução salina por gavagem e 
+o grupo controle recebeu apenas soro fisiológico. 
+ Os animais foram observados 30 minutos após o tratamento e periodicamente 
+durante as primeiras 24 h, com atenção especial nas primeiras 4 h, e diariamente a partir 
+de então, durante um total de 14 dias. Todos os sintomas de mal-estar ou comportamento 
+anormal foram levados em consideração. Os parâmetros dos sinais tóxicos foram 
+estudados de acordo com a diretriz 423 da OCDE, incluindo tremores, convulsões, 
+salivação, diarreia, letargia, sono e coma. Piloereção, olhos e membranas mucosas, 
+sistema respiratório, circulatório, autônomo e nervoso central, atividade locomotora e 
+padrões de comportamento também foram avaliados. Além disso, o peso corporal dos 
+animais foi monitorado ao longo do período de estudo, bem como o consumo de água, 
+consumo de ração, produção de excretas e aspecto fecal avaliados por 14 dias.  
+ Além das avaliações voltadas ao screening hipocrático e indicadores 
+comportamentais mencionados anteriormente, outros parâmetros toxicológicos foram 
+avaliados. No final do estudo de toxicidade aguda, todos os animais foram anestesiados 
+com uma combinação de cloridrato de xilazina (5 mg/kg, i.p.) e cetamina (60 mg/kg, i.p.). 
+As amostras de sangue foram então coletadas por punção cardíaca e armazenadas em 
+tubos com ácido etilenodiaminotetracético (EDTA) para realização do hemograma. A 
+análise bioquímica foi realizada utilizando o Analisador Bioquímico Semi-automático 
+®
+(TEKNA) para os seguintes parâmetros: aspartato aminotransferase (AST), alanina 
+aminotransferase (ALT) e uréia, de acordo com as especificações do fabricante (Labtest 
+Diagnosis, São Paulo, Brasil). Ademais, os órgãos (fígado, rim, coração, baço) foram 
+removidos e pesados. O peso relativo de cada órgão foi calculado a partir da seguinte 
+expressão: peso do órgão/peso corporal após o tratamento × 100. Para análise histológica, 
+foi destinada uma amostra de cada órgão mencionado e seguido os procedimentos 
+histotécnicos descritos no item “5.5.2”, bem como o preparo das lâminas. 
+ 
+ 
+ 
+ 
+58 
+ 
+ESTUDO CLÍNICO 
+ 
+5.6. Pacientes e Endoscopia 
+Após o estágio de 6 meses na Queen Mary University of London, tive a 
+oportunidade de aprender e desenvolver a técnica de montagem de biópsias esofágicas 
+humanas que, porventura, foi implementada na Universidade Federal do Ceará após meu 
+retorno. Tal feito só foi possível graças aos investimentos públicos vinculados aos editais 
+do CNPq que fomentaram os custos dessa interação. Nós investigamos biópsias 
+esofágicas de 33 pacientes atendidos no serviço de Endoscopia Digestiva Alta do Hospital 
+Universitário Walter Cantídio (HUWC) em Fortaleza-CE, Brasil e no Departamento de 
+Endoscopia do Royal London Hospital, Londres, Inglaterra. Esses pacientes apresentaram 
+majoritariamente sintomas de pirose e apresentaram mucosa esofágica endoscópica 
+normal nos fragmentos retirados para estudo. 
+ Os procedimentos endoscópicos foram realizados sob sedação de midazolam. 
+Foram realizadas cerca de 5 biópsias da mucosa esofágica a partir de 3 cm acima da 
+junção escamosa-colunar e imediatamente colocadas numa solução tampão pré-
+oxigenada de Krebs-Henseleit (pH 7,4). As biópsias foram rapidamente transportadas 
+para o laboratório para o estudo da Câmara Üssing. Todas as biópsias para os seguintes 
+estudos foram realizadas pelo mesmo endoscopista (D. Matos, Fortaleza, Brasil; J. Evans, 
+Londres, UK), utilizando a mesma técnica. 
+ 
+5.7. Resistência Elétrica Transepitelial (RETE) 
+ Nesta etapa, segue-se o mesmo procedimento de RETE executado em amostras 
+de esôfago distal de camundongos, porém com algumas alterações que são descritas a 
+seguir: 
+ As biópsias esofágicas humanas foram montadas na câmara com auxílio de 
+2
+adaptadores de 0,017 cm e em seguida submetidas às mesmas condições de execução 
+presentes no item “5.5.6” até que atingissem um platô de equilíbrio em torno de 20 a 30 
+minutos. A gravação foi interrompida e as câmaras foram removidas do aparelho, e as 
+duas metades foram separadas. Este procedimento foi feito de tal forma que o aspecto 
+luminal da biópsia foi exposto. Em seguida, aplicaram-se 200 µl de uma “solução 
+59 
+ 
+protetora” que foi de Alginato comercial ou Sucralfato ou Goma do Cajueiro em 
+diferentes concentrações (2,5, 5 ou 10%, p/v). A solução protetora foi aplicada ao lado 
+luminal exposto da biópsia e deixaram-se na superfície da biópsia durante 5 min. O 
+próximo passo foi o retorno das câmaras devidamente fechadas ao sistema, e após uma 
+lavagem de 15 min com Krebs 7,4, as biópsias foram expostas durante 30 ou 60 minutos 
+no compartimento referente ao lado luminal a uma “solução desafio” KHBB pH 2 
+contendo pepsina (1 mg/ml) e TDCA (2 mM) como representa a Figura 16. 
+ 
+ 
+Figura 16. Desenho esquemático do procedimento em biópsias de pacientes com NERD 
+e a repercussão da Goma do Cajueiro na RETE. Fonte: Próprio autor. 
+ 
+5.8. Permeabilidade Transepitelial 
+ Após o registro da RETE, as biópsias continuaram sendo avaliadas quanto à 
+função de barreira através do teste de permeabilidade transepitelial da fluoresceínca. O 
+procedimento seguiu as mesmas condições e detalhes contidos no item “5.5.7” sem 
+alterações. 
+ 
+5.9. Localização da Goma do Cajueiro 
+60 
+ 
+Para a execução desta etapa, foi adicionada uma sonda fluorescente ao grupo 
+carboxílico da Goma do Cajueiro na presença de epicloridrina (um agente desidratante 
+que permite a ligação da amina) como ilustra a Figura 17. 
+Adicionou-se 0,5 g Goma de Cajueiro em NaOH a 1M (17,5 ml) e 400 μl de 
+epicloridrina, em uma sequência. A solução foi agitada a 60° C ± 2° durante 2 h. Depois 
+disso, a solução foi dialisada contra água desionizada até o pH atingir < 8. Após a diálise, 
+o pH foi ajustado para 12 usando solução de NaOH e a mistura foi agitada a 60° C ± 2° 
+durante 2 h. O fluoróforo FITC (advindo do inglês, Fluorescein IsoThioCyanate) (0,32 
+mmol/g), NaCl (0,15 M) e sacarose (0,3 M) foram adicionados e a mistura foi agitada 
+durante 12 h no escuro. A solução foi novamente dialisada contra água desionizada 
+durante 5 dias (GHOSH, ABDULLAH, MUKHERJEE, 2015). 
+ 
+ 
+Figura 17. Representação da estrutura química fixa da Goma do Cajueiro (preto), da 
+exposição dos grupamentos carboxílicos a estruturas aminas (azul) após a adição da 
+epicloridrina  e a ligação do FITC (vermelho) na molécula da Goma do Cajueiro. Fonte: 
+Próprio autor. 
+ 
+61 
+ 
+ Após o preparo e o devido armazenamento da Goma do Cajueiro marcada com 
+FITC, foi realizado o procedimento da aplicação deste produto em biópsias esofágicas 
+humanas. Para avaliar a aderência da Goma do Cajueiro em até 60 minutos após a 
+aplicação, outras cinco amostras de biópsia foram coletadas e em seguida cobertas com 
+200 µl da Goma do Cajueiro com fluorescência (idêntico à aplicação usada no 
+procedimento do item 5.7). O experimento foi realizado como descrito no item “5.7”, 
+com a exceção de que, após 15 ou 60 min de lavagem seguido de 30 min de exposição da 
+“solução desafio”, as biópsias foram removidas da câmara e imediatamente fixadas em 
+solução de paraformaldeído (PFA) a 4%. Os núcleos foram corados com 4’,6-diamidino-
+2-fenilindol (DAPI) e examinados sob um microscópio epifluorescente. Foram tiradas 
+cinco seções por biópsia, cinco campos de alta potência por seção (ou seja, 25 imagens 
+por biópsia). A espessura (em µm) da camada da Goma do Cajueiro fluorescente em cada 
+imagem foi calculada como a média de cinco medidas e a espessura total da camada da 
+Goma do Cajueiro foi calculada como o valor médio das 25 imagens. 
+ 
+5.10. Análises Estatísticas 
+Os dados foram mostrados como média ± E.P.M. ou mediana com mínimo e máximo, 
+quando apropriado. As análises estatísticas foram realizadas pelo teste em análise de 
+variância com um fator, One-way ANOVA, seguido pelo teste de Newman–Keuls ou pelo 
+pelo teste em análise de variância com dois fatores, Two-way ANOVA, seguido pelo teste 
+de Bonferroni's (para dados paramétricos) e teste de Kruskal–Wallis seguido pelo teste 
+de Dunn´s (para dados não-paramétricos). Valor de P menor que 0,05 (P<0,05) foi 
+considerado como sendo significante estatisticamente. Os dados foram analisados através 
+®
+do programa estatístico GraphPad Prism 5.0 (San Diego, CA, EUA). 
+ 
+ 
+ 
+ 
+ 
+ 
+62 
+ 
+6. RESULTADOS 
+ 
+ESTUDO PRÉ-CLÍNICO: AVALIAÇÃO DOS PARÂMETROS INFLAMATÓRIOS 
+NO ESÔFAGO 
+ 
+6.1. Peso Úmido 
+Em nosso estudo, os animais com NERD no sétimo dia estabeleceram edema 
+esofágico (peso úmido aumentado como marcador indireto de edema (15,90 ± 1,68 
+mg/cm) quando comparados com o grupo sham. Por outro lado, a administração diária de 
+Goma do Cajueiro reduziu (P<0,05) o parâmetro inflamatório de edema através da 
+medida do peso úmido (10,52 ± 0,5 mg/cm) como consta na Figura 18. 
+ 
+6.2. Atividade da Mieloperoxidase (MPO) 
+Outro marcador do processo inflamatório, a atividade da MPO, foi avaliado e os 
+resultados mostraram (Figura 18) que os animais com NERD expressaram um aumento 
+significativo (P<0,05) na atividade da MPO (23,14 ± 9,3 U/mg de tecido) em comparação 
+com o grupo sham, enquanto a administração diária da Goma do Cajueiro reduziu 
+(P<0,05) a expressão da enzima nos tecidos esofágicos murinos (6,11 ± 0,57 U/mg de 
+tecido). 
+ 
+6.3. Expressão dos Níveis de KC 
+Na Figura 18 observa-se também que os animais com NERD apresentam aumento 
+significativo (P<0,05) dos níveis de KC no esôfago distal (40,82 ± 11,71 pg/mg de tecido) 
+no sétimo dia após a indução cirúrgica, quando comparados aos animais do grupo sham 
+(1,104 ± 0,53 pg/mg de tecido). O tratamento diário dos animais com a Goma do Cajueiro 
+reduziu significativamente os níveis de KC no esôfago distal (4,46 ± 1,3 pg/mg de tecido). 
+ 
+63 
+ 
+ 
+ 
+ 
+Figura 18. Alterações inflamatórias esofágicas em camundongos com NERD. Peso 
+úmido (A), atividade de MPO (B), níveis de KC (C). Os resultados são expressos como 
+média ± E.P.M de 6-7 animais por grupo e foram analisados pelo teste One-way ANOVA 
+seguido pelo teste de Bonferroni. *P < 0,05 versus grupo sham; #P<0,05 versus grupo 
+NERD. 
+ 
+64 
+ 
+6.4. Análise Histopatológica 
+A avaliação histopatológica mostra que os animais com NERD, no sétimo dia após 
+a cirurgia de indução, apresentaram alterações microscópicas com uma resposta 
+inflamatória esofágica, quando comparados aos animais do grupo sham. Essas alterações 
+microscópicas foram caracterizadas por infiltrado celular de polimorfonucleares (com 
+preponderância de neutrófilos) intraepitelial, e edema na lâmina própria (Figura 19 e 
+Tabela 2). Além do mais, foi também observado hiperplasia da camada de células basais, 
+quando comparados aos animais do grupo sham. A Goma do Cajueiro foi capaz de reduzir 
+os escores de edema na lâmina própria e infiltrado de polimorfonucleares intraepitelial. É 
+digno de nota que não foram observadas úlceras no esôfago em nenhum dos esôfagos 
+analisados (Figura 19 e Tabela 2). 
+ 
+ 
+65 
+ 
+ 
+Figura 19. Fotomicrografias do esôfago em camundongos com NERD. Animais do grupo 
+sham apresentam arquitetura esofágica íntegra (painéis A e D). Alterações microscópicas 
+no esôfago foram observadas em animais com NERD (painéis B e E) e animais tratados 
+com a Goma do Cajueiro (painéis C e F). Painéis A – C (100×) e D – F (400×). Seta 
+vermelha indica edema, seta amarela indica hiperplasia da camada de células basais e seta 
+branca indica infiltrado de polimorfonucleares na lâmina própria. 
+ 
+66 
+ 
+Tabela 2. Escores das alterações microscópicas esofágicas em camundongos com NERD. 
+Grupos Hiperplasia PMN Erosões Edema na PMN na 
+Experimentais da Camada Intraepitelial  (0-1) Lamina Lamina 
+(n=5-7) de Células (0-2)  Própria Própria 
+Basais (0-2) (0-4) (0-3) 
+Sham 0 (0-1) 0 (0-1) 0 0 (0-1) 1 (0-1) 
+NERD 2 (1-2)* 2 (1-2)* 0 2 (2-4)* 3 (1-3) 
+##
+Goma do 0 (0-1) 0 1 (0-2) 
+0 (0-1) 1 (0-1) 
+Cajueiro 10% 
+Nota: Os resultados são expressos como mediana com mínimo e máximo mostrados nos 
+parênteses. Os dados foram analisados pelo teste de Kruskal–Wallis seguido pelo teste de 
+Dunn´s. *P<0,05 versus grupo sham; #P<0,05 versus grupo NERD. 
+ 
+ESTUDO PRÉ-CLÍNICO: AVALIAÇÃO DAS ALTERAÇÕES FUNCIONAIS DE 
+BARREIRA DA MUCOSA ESOFÁGICA 
+ 
+6.5. Resistência Elétrica Transepitelial (RETE) 
+A Figura 20A mostra que os animais com NERD eutanasiados no sétimo dia após 
+a indução cirúrgica apresentaram RETE basal da mucosa esofágica menor (P<0,05) que 
+22
+os animais do grupo sham (129,3 ± 15,39 Ω/cm e 276,8 ± 33,64 Ω/cm, respectivamente). 
+Por outro lado, o grupo de animais que foi tratado diariamente com a Goma do Cajueiro 
+2
+apresentou um ganho substancial (P<0,05) na RETE (308 ± 12,35 Ω/cm) quando 
+comparado aos animais do grupo NERD. 
+Além disso, a Figura 20B mostra que a mucosa esofágica de animais com NERD  
+apresenta alterações significativas na RETE quando exposta a uma solução KHBB pH 
+0,5 contendo pepsina e TDCA, observou-se uma queda na RETE após 60 min maior 
+(P<0,05) na mucosa esofágica de animais dos grupos NERD e sham (-53,92 ± 10,09 e -
+22,18 ± 7,86% da resistência basal, respectivamente), e do grupo que foi tratado 
+diariamente com a Goma do Cajueiro (+0,9 ± 1,83% da resistência basal). O sinal 
+negativo “-“ representa queda e o sinal positivo “+” representa sustentação da resistência 
+acima do basal (100%). 
+ 
+67 
+ 
+6.6. Permeabilidade Transepitelial 
+Conforme mostrado na Figura 20C, a mucosa esofágica de animais com NERD 
+apresentou um aumento significativo (P<0,05) da permeabilidade à fluoresceína após 90 
+min e 120 min (12,9 ± 1,51 e 37,13 ± 11,8 IF, respectivamente), quando comparados aos 
+animais do grupo sham (3,47 ± 1,17 e 4,01 ± 1,47 IF, respectivamente). Os animais 
+tratados com a Goma do Cajueiro diariamente tiveram a passagem de fluoresceína 
+diminuída (P<0,05) tanto no minuto 90 quanto no 120 (3,99 ± 1,13 e 4,42 ± 1,037 IF, 
+respectivamente) quando comparados ao grupo NERD. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+68 
+ 
+ 
+ 
+ 
+Figura 20. Parâmetros de função de barreira em esôfago distal de camundongos com 
+NERD. Média da Resistência Basal (A), perfil temporal do Percentual da Resistência 
+Inicial (B) e a permeabilidade transepitelial da fluoresceína (C). Os resultados são 
+expressos como média ± E.P.M de 6-7 animais por grupo e foram analisados pelo teste 
+One-way (A) ou Two-way (B e C) ANOVA seguido pelo teste de Bonferroni. *P < 0,05 
+versus grupo sham; #P<0,05 versus grupo NERD. 
+ 
+69 
+ 
+ESTUDO DA TOXICIDADE DA GOMA DO CAJUEIRO EM CAMUNDONGOS 
+ 
+6.7. Avaliação Toxicológica da Goma do Cajueiro 
+ Os resultados acerca da avaliação toxicológica da Goma do Cajueiro em 
+camundongos mostraram que em nenhum dos parâmetros avaliados houve sinal de 
+toxicidade. A descrição para cada resultado está detalhada nas Tabelas 3-6 e Figura 21. 
+ 
+Tabela 3. Média dos valores obtidos no consumo de água, consumo de ração, produção 
+de excretas e aspecto fecal avaliados por 14 dias, em camundongos fêmeas, tratados com 
+salina 0,9% e Goma do Cajueiro (GC, 2.000mg/kg, v.o.). 
+Tratamento  Dose Consumo Consumo Produção Aspecto  
+de água de ração de excretas Fecal 
+(ml/dia/grupo) (g/dia/grupo) (g/dia/grupo) (0-3) 
+ 
+Controle 2,5 (ml/kg) 29,08±1,46 19,23±0,69 17,33±1,300 
+GC 2.000 (mg/kg) 32,69±1,66 21,54±1,75 21,30±2,43 0 
+Os valores são apresentados como Média ± EPM. Número de animais/grupo: cinco. *P 
+<0,05 vs. Grupo controle (salina), Teste t de Student.  
+As pontuações para aspecto fecal foram atribuídas usando o método de Di Carlo e 
+colaboradores (1994). Fezes normais = 0, fezes semissólidas = 1, fezes pastosas em 
+pequena/moderada quantidade = 2, fezes aquosas em grande quantidade = 3. 
+ 
+ 
+ 
+70 
+ 
+ 
+Tabela 4. Parâmetros relacionados ao screening hipocrático, após administração oral em dose única da 
+Goma do Cajueiro (GC), em camundongos fêmeas, na dose de 2.000 mg/kg (G2). O controle (G1) recebeu 
+salina 0,9% por gavagem. 
+ Parâmetros Grupo            Tempo (h)    Tempo (dias) 
+avaliados (n=5) 
+0,25 0,5 1 2 24 3 7 10 14 
+Estado Atividade Geral G1 4 4 4 4 4 4 4 4 4 
+Consciente 
+G2 4 4 4 4 4 4 4 4 4 
+ e Disposição 
+ Resposta ao toque G1 4 4 4 4 4 4 4 4 4 
+ 
+G2 4 4 4 4 4 4 4 4 4 
+ 
+Aperto de cauda G1 4 4 4 4 4 4 4 4 4 
+ 
+Atividade e G2 4 4 4 4 4 4 4 3 3 
+Coordenação  
+Endireitamento G1 4 4 4 4 4 4 4 4 4 
+do Sistema 
+G2 4 4 4 4 4 4 4 4 4 
+Motor e Tônus 
+muscular Tônus corporal G1 4 4 4 4 4 4 4 4 4 
+G2 4 4 4 4 4 4 4 4 4 
+Força de agarrar G1 4 4 4 4 4 4 4 4 4 
+G2 4 4 4 4 4 4 4 4 4 
+  G1 4 4 4 4 4 4 4 4 4 
+Reflexos Reflexo corneal G2 4 4 4 4 4 4 4 4 4 
+  G1 0 0 0 0 0 0 0 0 0 
+ Tremores G2 0 0 0 0 0 0 0 0 0 
+ 
+G1 0 0 0 0 0 0 0 0 0 
+Sistema Nervoso  
+Convulsões G2 0 0 0 0 0 0 0 0 0 
+Central (SNC) 
+ G1 0 0 0 0 0 0 0 0 0 
+ 
+Contorção G2 0 0 0 0 0 0 0 0 0 
+ 
+G1 0 0 0 0 0 0 0 0 0 
+ 
+ Straub G2 0 0 0 0 0 0 0 0 0 
+ Lacrimação G1 0 0 0 0 0 0 0 0 0 
+Sistema Nervoso 
+G2 0 0 0 0 0 0 0 0 0 
+ Autônomo 
+ G1 0 0 0 0 0 0 0 0 0 
+(SNA) 
+Piloereção 
+G2 0 0 0 0 0 0 0 0 0 
+Respiração G1 4 4 4 4 4 4 4 4 4 
+G2 4 4 4 4 4 4 4 4 4 
+ G1 0 0 0 0 0 0 0 0 0 
+Constipação 
+G2 0 0 0 0 0 0 0 0 0 
+Intestinal 
+Mortalidade  G1 0 0 0 0 0 0 0 0 0 
+G2 0 0 0 0 0 0 0 0 0 
+Escores: 4: normal; 3: levemente reduzido; 2: moderadamente reduzido; 1: intensamente reduzido;  0: 
+ausente (De acordo com Brito, 1994). 
+71 
+ 
+Tabela 5. Efeito da Goma do Cajueiro (GC, 2.000 mg/kg, v.o.) no ganho de  Massa 
+Corporal (g)  e na  Massa relativa dos órgãos  (%) em camundongos fêmeas após 14 dias 
+consecutivos. 
+ 
+Os valores são apresentados como Média ± EPM. Número de animais/grupo: cinco. *P 
+<0,05 vs. Grupo controle (salina), Teste t de Student. 
+A massa relativa dos órgãos foi calculada como a relação da massa do órgão/massa 
+corporal após o tratamento x 100. 
+ 
+Tabela 6. Análises hematológicas e bioquímicas de sangue e plasma (respectivamente) 
+após administração oral em dose única da Goma do Cajueiro (GC; 2.000 mg/kg) em 
+camundongos fêmeas após 14 dias consecutivos. 
+ Parâmetros Controle GC 
+(2.000 mg/kg, v.o.) 
+ 
+ Eritrócitos 6,31±0,46 6,02±0,62 
+3
+ (milhões/mm) 
+ Hemoglobina (g/dL) 10,65±0,69 13,08±1,50 
+ Hematócrito (%) 33,00±0,89 35,00±1,76 
+Hematológicos -VCM (fL) 53,57±4,56 60,34±6,08 
+-HCM (pg) 17,21±1,57 22,27±2,56 
+-CHCM (g/dL) 32,28±1,87 38,08±5,35 
+3
+Leucócitos/mm 4.150±294,10 5.270±663,40 
+-Segmentados 53,00±1,67 56,00±1,51 
+(%) 
+-Monócitos (%) 3,40±1,07 5,00±1,61 
+-Linfócitos (%) 41,60±2,73 36,00±3,43 
+-Eosinófilos (%) 2,00±1,04 3,00±0,77 
+Plaquetas/μL 764.800 765.200 
+     
+ Função 
+Creatinina (mg/gL) 0,53±0,11 0,55±0,08 
+ Renal 
+Ureia (mg/gL) 26,05±2,20 25,12±1,27 
+Bioquímicos     
+Função Proteínas Totais (g/dL) 3,53±0,18 3,52±0,14 
+Hepática ALT (TGP) (U/L) 56,43±7,74 59,06±3,08 
+AST (TGO) (U/L) 24,50±4,05 20,20±1,39 
+Os valores são apresentados como média ± EPM. Número de animais/grupo: cinco. 
+Aspartato Aminotransferase (AST) e Alanina Aminotransferase  (ALT).    
+*P <0,05 vs. Grupo controle (salina), Teste t de Student. 
+ 
+ 
+72 
+ 
+ 
+Figura 21. Zona cortical renal em HE, corte sagital. Grupo  Salina (A) e Goma do 
+Cajueiro (B), ambos os grupos apresentam corpúsculo renal com glomérulo normal (G) 
+e espaço capsular normal, rodeados pela Cápsula de Bowman, em torno dos corpúsculos 
+estão os túbulos contorcidos distal e proximal normais. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+73 
+ 
+ESTUDO CLÍNICO 
+ 
+6.8. Resistência Elétrica Transepitelial (RETE) 
+ Nossos dados em biópsias esofágicas humanas mostraram que 30 minutos de 
+exposição da mucosa à solução ácida causou queda da RETE (-27,3 ± 2,4%) em 
+comparação com 100% da sua resistência basal, que pôde ser prevenida (P<0,05) pela 
+aplicação de alginato (+3,7 ± 6,1% sobre a resistência basal). Da mesma forma, a 
+aplicação com soluções de Goma do Cajueiro (10% e 5%) impediu a queda da RETE 
+(P<0,05) quando comparada com a resistência basal (+1,69 ± 1,06% e -3,5 ± 2,4%, 
+respectivamente). A Goma do Cajueiro (GC) em 2,5% e o Sucralfato não protegeu a 
+mucosa esofágica contra a solução desafio que mimetiza o conteúdo do suco gástrico. O 
+efeito protetor da mucosa foi prolongado até 1h, em que as biópsias sem proteção 
+apresentaram queda de -36,79 ± 5,5%, mas a aplicação de alginato e GC 10% impediu a 
+queda de resistência causada pelo ácido, pepsina e TDCA (+4,2 ± 0,8% e +3,5 ± 0,6%, 
+respectivamente) como mostra a Figura 22. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+74 
+ 
+ 
+ 
+Figura 22. Parâmetros de função de barreira sobre a RETE em biópsas esofágicas de 
+pacientes com NERD. Perfil temporal do Percentual da Resistência Inicial em 30 min (A) 
+e em 60 min (B). Os resultados são expressos como média ± E.P.M. Foram analisados 
+pelo teste Two-way ANOVA seguido pelo teste de Bonferroni. *P<0.05 Alginato versus 
+Grupo “Sem proteção”; #P<0.05 GC 10% versus “Sem proteção”; ΨP<0.05 Alginato ou 
+GC 10% ou GC 5% versus “Sem proteção”. λP<0.05 Alginato ou GC 10% versus 
+Sucralfato. 
+ 
+ 
+ 
+ 
+75 
+ 
+6.9. Permeabilidade Transepitelial 
+ Em se tratando da permeabilidade transepitelial, a permeabilidade à fluoresceína 
+aumentou (P<0,05) comparada ao grupo GC 10% a partir do minuto 60. Ademais, esse 
+aumento foi ainda mais evidenciado em biópsias “Sem proteção” (135,7 ± 37,43 IF), 
+enquanto a GC 10% impediu (P<0,05) este evento (40,8 ± 17,1 IF) como mostra a Figura 
+23. 
+ 
+ 
+ 
+Figura 23. Parâmetros de função de barreira sobre a permeabilidade transepitelial em 
+biópsas esofágicas de pacientes com NERD. Perfil temporal da Permeabilidade 
+Transepitelial de 0 a 90 min (A) e no minuto 90 (B). Os resultados são expressos como 
+média ± E.P.M. Foram analisados pelo teste Two-way ANOVA seguido pelo teste de 
+Bonferroni. #P<0.05 GC 10% ou Krebs (pH 7,4) versus “Sem proteção”. 
+76 
+ 
+6.10. Localização da Goma do Cajueiro 
+ Como mostram os resultados nas Figura 24 e Figura 25, as imagens de 
+microscopia epifluorescente mostraram a aderência luminal à mucosa esofágica em 
+biópsias humanas da Goma do Cajueiro (GC) 10% marcado até 1 hora. Embora tenha 
+havido a redução da espessura em 1 hora comparada com o tempo 30 min, os resultados 
+funcionais mostram que a GC é capaz de sustentar a RETE e proteger as biópsias 
+esofágicas humanas. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+77 
+ 
+ 
+Figura 24. Microscopia a 20X sob microscópio epifluorescente com a Goma do Cajueiro 
+(GC) marcada com FITC na superfície luminal da mucosa da biópsia. As amostras foram 
+submetidas a 1 h de lavagem em solução neutra e em seguida expostas à solução desafio. 
+Os núcleos são corados com DAPI. As setas amarelas indicam medidas de espessura de 
+exemplo. 
+78 
+ 
+ 
+ 
+Figura 25. Média de espessura da Goma do Cajueiro (GC) em µm sem lavagem ou com 
+lavagem de 15 ou 60 minutos expostas à solução desafio. Os resultados são expressos 
+como média ± E.P.M. Foram analisados pelo teste One-way ANOVA seguido pelo teste 
+de Bonferroni. *P<0.05 15 min versus 60 min. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+79 
+ 
+7. DISCUSSÃO 
+ No presente estudo de abordagem translacional, nós demonstramos que tanto no 
+modelo experimental de NERD em camundongos quanto em biópsias esofágicas 
+humanas a Goma do Cajueiro (GC) demonstrou um interessante implicação do ponto de 
+vista terapêutico e conceitual sobre a fisiopatologia da DRGE, sobretudo o subtipo mais 
+prevalente, a NERD. Nossos resultados mostraram que a GC apresentou propriedades 
+anti-inflamatórias por reduzir edema esofágico, reduzir infiltrado de células inflamatórias 
+no esôfago distal de camundongos e reduzir os níveis de KC, uma citocina pró-
+inflamatória. Ademais, propriedades protetoras que levaram a uma preservação da 
+integridade da mucosa esofágica tanto em camundongos quanto em humanos por 
+sustentar a RETE e prevenir o aumento da permeabilidade transepitelial. Por fim, a Goma 
+do Cajueiro desempenhou forte interação com a parede epitelial esofágica humana, deste 
+modo possui propriedades mucoadesivas formando um escudo extra na camada pré-
+epitelial. 
+ Além do mais, a avaliação da toxicidade da Goma do Cajueiro garantiu segurança 
+do produto e abriu portas para, em um futuro breve, ser testada diretamente em pacientes 
+com a DRGE de maneira que sejam estudos devidamente guiados com ferramentas 
+diagnósticas precisas e tecnologias do ponto de vista padronização de uma formulação 
+farmacêutica que possibilitem a avaliação deste produto em uma possível abordagem 
+terapêutica. Por que destinar esforços para desenvolver um novo medicamento para o 
+tratamento da DRGE? Na prática clínica ainda não existe uma abordagem terapêutica 
+inteiramente eficaz para tratar os sintomas clínicos de indivíduos com DRGE, 
+especialmente aqueles que não respondem aos fármacos padrão disponíveis no mercado 
+(SCHOLTEN, 2007). 
+ Nas condutas clínicas preconizadas,  o manejo de intervenções médicas 
+farmacológicas e não farmacológicas atingem uma gama substancial de pacientes, porém, 
+todos os fenótipos possuem falha na terapia padrão ouro atualmente recomendada, os 
+IBPs (GYAWALI, FASS, 2017). O maior índice de falha aos IBPs ocorre em pacientes 
+com NERD, dessa maneira a busca de alternativas terapêuticas tem sido explorada e 
+esforços direcionados à melhoria desta lacuna da gastrenterologia clínica (FASS, 
+DICKMAN, 2006). Nesse sentido, alguns fármacos já foram introduzidos no mercado 
+com boa aceitação e eficácia no tratamento dos sintomas clássicos da DRGE. Neste caso, 
+destaca-se o alginato que tanto utilizado isoladamente é capaz de reduzir a sensação da 
+80 
+ 
+pirose em pacientes com NERD quanto em combinação com os IBPs, que melhora ainda 
+mais os sintomas clássicos. Em outras palavras, a ideia de controlar a acidez adicionada 
+de outro produto que atue em outro alvo, como o epitélio esofágico no caso do alginato, 
+é reportada com bom êxito no tratamento da DRGE, especialmente em pacientes com 
+NERD.  
+ Conceitualmente, a DRGE apresenta dois, o tradicional e o alternativo. Até pouco 
+tempo atrás, o conceito tradicional fora aceito durante quase 90 anos desde a publicação 
+de Winkelstein (1935) sem causar dicotomias, portanto teve grande adesão consensual. 
+Baseado nele, surgiram os tratamentos que focaram basicamente em conter a acidez 
+gástrica. O conceito tradicional diz que a morte epitelial superficial induzida pelo ácido 
+do suco gástrico refluído é o evento gatilho, isto é, o evento inicial que resulta em 
+inflamação progredindo até a lâmina própria. Por outro lado, o conceito alternativo 
+proposto em 2016 por um grupo da Universidade do Texas, Dallas-EUA, o qual suporta 
+a ideia que o contato direto do material gástrico não lesiona o epitélio esofágico 
+diretamente, porém, o suco gástrico refluído estimula as células epiteliais e inicia-se um 
+influxo linfócitos T mediado por citocinas que causam alterações microscópicas e, por 
+fim, erosões na mucosa (DUNBAR et al., 2016). É válido ressaltar sobre os conceitos que 
+ambos envolvem o perfil inflamatório e que pouco se fala em tratar o sítio da inflamação 
+esofágica em vez de apenas mirar na acidez gástrica e em seu dano potencial. 
+ O modelo experimental de NERD publicado recentemente por Silva e 
+colaboradores (2017) é uma ferramenta bastante eficaz para a investigação de candidatos 
+a fármaco no tratamento e modulação da NERD. Os autores mostraram o envolvimento 
+da resposta inflamatória seguida do comprometimento da função de barreira esofágica 
+em animais que foram submetidos ao modelo cirúrgico. Nossos resultados mostraram que 
+o modelo possui boa reprodutividade e dados semelhantes aos observados por Silva e 
+colaboradores. Os hábitos de consumo de alimento são mais acentuados em período 
+noturno nos roedores, consequentemente as repercussões do aumento da acidez são 
+requeridas para a devida digestão (ELLACOTT et al., 2010). Baseado nessas nuances, 
+nós escolhemos administrar a Goma do Cajueiro diariamente às 21:00 para que o efeito 
+acompanhasse o período condizente com o aumento da acidez gástrica. 
+Na esofagite aguda causada por refluxo, o edema da mucosa e a inflamação podem 
+manifestar-se em radiografias de duplo contraste na região torácica por aparência granular 
+ou sutilmente nodular no terço distal ou esôfago medial (KRESSEL et al., 1981; 
+81 
+ 
+GRAZIANI et al., 1985). Silva e colaboradores (2017) avaliaram o peso úmido do 
+esôfago de camundongos com NERD como uma medida indireta de se quantificar o 
+edema do órgão. Os autores demonstraram que o esôfago do grupo com NERD 
+apresentava edema quando comparado com o grupo controle (sham). Em nosso estudo, o 
+modelo experimental apresentou boa reprodutibilidade considerando que a presença do 
+edema esofágico foi acentuada nos animais com NERD quando comparados com o grupo 
+sham, enquanto os animais tratados com a Goma do Cajueiro tiveram os valores de peso 
+úmido reduzidos em relação ao grupo com NERD. Este dado serviu de estaca inicial para 
+entender que mecanismos o biopolímero, Goma do Cajueiro, apresentava em sua 
+composição. 
+ Outros estudos com a Goma do Cajueiro têm sugerido um perfil anti-inflamatório 
+diante de condições inflamatórias induzidas. Já foi demonstrado que a Goma do Cajueiro 
+foi capaz de reduzir edema da mucosa gástrica de ratos com gastrite induzida por 
+naproxeno (CARVALHO et al., 2015). Além disso, a Goma do Cajueiro mostrou 
+capacidade de modular a resposta inflamatória de macrófagos murinos estimulados com 
+LPS, um produto da parede bacteriana, na qual o biopolímero reduziu a expressão de IL-
+6, citocina ligada à quimiotaxia de leucócitos para o local inflamado, e aumentou a 
+expressão de IL-10, citocina que comumente inibe a secreção de citocinas pró-
+inflamatórias (YAMASSAKI et al., 2015). 
+ Em se tratando de cenário inflamatório, um dos primeiros eventos a ocorrer é a 
+migração de leucócitos para o sítio inflamado, majoritariamente neutrófilos. A resposta 
+inflamatória pode ser deflagrada por elementos que podem ser produtos de patógenos 
+(PAMPs) ou substâncias endógenas (DAMPs) (ABBAS, LICHTMAN, PILLAI, 2012). 
+No caso da DRGE, componentes do refluxato são considerados nocivos quando entram 
+em contato com a mucosa esofágica (WOODLAND, SIFRIM, 2010). No presente 
+trabalho, a participação da resposta inflamatória deflagrada pelo contato entre mucosa 
+esofágica e material gástrico refluído pôde ser avaliada através da mensuração da 
+atividade da MPO, enzima presente nos grânulos azurófilos de neutrófilos, no esôfago 
+distal de camundongos. Animais com NERD apresentaram aumento da atividade da MPO 
+esofágico, contudo, animais tratados diariamente com a Goma do Cajueiro tiveram 
+redução da atividade desta enzima que é um marcador da presença de neutrófilos no 
+tecido. 
+82 
+ 
+Embora pacientes com NERD não apresentem lesões macroscópicas acessadas 
+pela endoscopia digestiva alta, a mucosa esofágica apresenta alterações microscópicas 
+caracterizadas pela presença de hiperplasia na camada de células basais, alongamento das 
+papilas e infiltrado de PMN (YERIAN et al., 2011). Em nosso estudo pré-clínico, usamos 
+o peso úmido como indicador da presença de edema esofágico, mas além do edema, as 
+alterações histológicas ocorreram sincronicamente. Nossos dados corroboraram 
+translações demasiadamente importantes em animais com a doença do refluxo, os quais 
+apresentaram, de maneira semelhante ao observado em pacientes com NERD, hiperplasia 
+da camada de células basais, infiltrado celular de PMN (com preponderância de 
+neutrófilos) intraepitelial, e edema na lâmina própria. Por outro lado, a Goma do Cajueiro 
+reduziu alterações histológicas de edema e infiltrado neutrofílico, indicando mais uma 
+vez que este polímero possui indícios de efeito anti-inflamatório no epitélio esofágico. 
+ Entender a fisiopatologia da DRGE possibilita a elaboração de alvos terapêuticos 
+que podem ser acessados por intervenções. Vários estudos têm demonstrado que não 
+apenas a acidez é capaz de levar à inflamação esofágica culminando na expressão de 
+citocinas pró-inflamatórias, especialmente a IL-8, mas outros ingredientes do refluxato 
+desempenham papel flogístico como DAMPs à mucosa esofágica tais como pepsina e sais 
+biliares (TOBEY et al., 2001; SOUZA, 2010). Ademais, Oh e colaboradores (2007) 
+demonstraram que a expressão do mRNA que codifica a interleucina 8 (IL-8) aumenta 
+durante a progressão da doença de refluxo desde mucosa estratificada normal até o 
+adenocarcinoma esofágico em pacientes. Por outro lado, a correção cirúrgica do refluxo 
+com fundoplicatura de Nissen reduz significativamente a expressão de IL-8 tanto na 
+mucosa estratificada como na mucosa de Barrett (OH et al., 2007). Um outro estudo 
+reportou que, em biópsias da mucosa esofágica de pacientes com NERD, os níveis 
+aumentados de IL-8 ocorrem associados ao infiltrado de neutrófilos (YOSHIDA et al., 
+2004). Em abordagens experimentais, a aplicação de ácido biliar em células epiteliais 
+esofágicas levou à expressão de mRNA para IL-8 e a própria proteína IL-8 via ativação 
+do fator de transcrição nuclear NFκB (HUO et al., 2014).  
+ Nossos dados experimentais intercomunicam-se com a repercussão do material 
+refluído ao esôfago e o aumento da expressão de KC (Quimiocina Derivada dos 
+Queratinócitos, advinda do inglês “Keratinocyte Chemoattractant”), citocina murina 
+análoga à IL-8 em humanos. Animais do grupo NERD tiveram um aumento nos níveis 
+de KC deveras acentuado comparado ao controle corroborando com os estudos 
+83 
+ 
+disponíveis na literatura. Todavia, o uso diário da Goma do Cajueiro levou a uma 
+diminuição significante na expressão dessa citocina chave para a DRGE. Juntos, estes 
+resultados correlacionam-se e fortalecem a hipótese de que a Goma do Cajueiro exerce 
+um papel importante na diminuição da resposta inflamatória no esôfago caracterizado por 
+atenuar esses marcadores inflamatórios supracitados. 
+ Como mencionado anteriormente, elementos presentes no refluxato são 
+potencialmente lesivos à mucosa esofágica. Além de acionarem uma resposta 
+inflamatória no epitélio do esôfago, estes materiais gástricos em contato com a parede 
+esofágica promovem prejuízos na integridade da mucosa. Oshima e colaboradores (2012) 
+demonstraram em um modelo de cultura de células esofágicas humanas em 3D que o 
+ácido é capaz de causar queda na RETE epitélio esofágico seguido da perda da expressão 
+da claudina-4, uma proteína do complexo juncional que promove adesão paracelular 
+(OSHIMA et al., 2012). Não apenas a acidez, mas a pepsina também já é conhecida por 
+degradar as proteínas do complexo juncional e por poder acometer proteínas vitais na 
+superfície das células epiteliais (THANGARAJAH et al., 2002). A digestão péptica das 
+proteínas juncionais aumentam a permeabilidade da mucosa, o que facilita a entrada de 
+íons de hidrogênio na mucosa, e torna as células nas camadas profundas do epitélio 
+estratificado esofágico vulneráveis ao ataque de ácido (ORLANDO, 2008). 
+ Recentemente, Pardon e colaboradores (2016) mostraram que mesmo em 
+situações fracamente ácidas (pH 5), semelhante àquelas presentes em pacientes que fazem 
+uso de IBPs, soluções contendo sais biliares alteram a integridade da mucosa esofágica. 
+Os autores demonstraram que a presença de sais biliares promove um aumento dos EID, 
+causam danos no material genético (sugestivo do processo apoptótico) e promove queda 
+na RETE da mucosa esofágica (PARDON et al., 2016). Tomados juntos, esses dados 
+norteiam que utilizar um sistema aquoso que contém acidez, pepsina e sais biliares pode 
+mimetizar bem as condições do refluxato que causam prejuízo à integridade da mucosa 
+esofágica. 
+ Jovov e colaboradores (2011) investigaram biópsias esofágicas de 20 pacientes 
+com DRGE e 23 controles saudáveis. Em câmaras Üssing eles montaram as biópsias em 
+soluções neutras, e não realizaram exposições a soluções ácidas. Eles descobriram que a 
+resistência basal foi significativamente menor em pacientes com DRGE do que em 
+controles e que o fluxo de fluoresceína através do epitélio foi significativamente maior 
+durante 2 horas em pacientes com DRGE que em pacientes controles (JOVOV et al., 
+84 
+ 
+2011). Outra maneira de medir a resistência do tecido esofágico é através da impedância 
+intraluminal esofágica. Um estudo de Farré e colaboradores (2011) mostrou que a 
+impedância basal do esôfago distal foi menor em pacientes com DRGE (NERD e 
+Esofagite Erosiva) do que em indivíduos saudáveis (FARRÉ et al., 2011). 
+ Nos nossos estudos acerca da função de barreira, encontramos resultados 
+interessantes que corroboraram com a literatura acerca da resistência basal da mucosa 
+esofágica. Camundongos com NERD apresentaram uma RETE basal significativamente 
+inferior quando comparada à RETE do grupo sham após 7 dias da indução cirúrgica da 
+doença. Interessantemente, os valores basais da RETE em animais tratados diariamente 
+com a Goma do Cajueiro foram superiores quando comparados com o grupo NERD. 
+Esses dados nos levam a inferir que a Goma do Cajueiro possui um princípio terapêutico 
+de modo que trata a inflamação esofágica e previne os danos de barreira repercutidos pelo 
+contato do suco gástrico à mucosa esofágica. 
+ Outro achado incitador no presente estudo foi o fato da Goma do Cajueiro ter 
+prevenido a queda da RETE nos animais tratados com a Goma do Cajueiro durante 60 
+min de exposição ao ácido, enquanto tanto o grupo NERD quanto o grupo sham tiveram 
+diminuição na RETE. Tal achado pode ser explicado pela possível presença residual da 
+Goma do Cajueiro aderido à mucosa esofágica. Ademais, o experimento de 
+permeabilidade transepitelial também corroborou com os achados de resistência. Animais 
+tratados com Goma do Cajueiro tiveram uma diminuição substancial na permeabilidade 
+da fluoresceína à mucosa esofágica comparada ao grupo NERD. Juntos esses dados 
+indicam que o polímero em questão também é um protetor da integridade da mucosa 
+esofágica. 
+ Baseado nos dados obtidos até o presente momento, a Goma do Cajueiro mostra 
+ser uma opção atraente para o tratamento da DRGE, especialmente ao subtipo NERD. 
+Caso um dia a Goma do Cajueiro adentre no plano de tornar-se, de fato, um medicamento, 
+seria viável a obtenção escalonada do produto para a indústria farmacêutica? A goma do 
+cajueiro é um polímero natural derivado da árvore Anacardium occidentale L., a qual é 
+farta no nordeste brasileiro, podendo ser extraída fazendo-se incisões no tronco ou ramos 
+da árvore (DE PAULA, HEALTHY, BUDD, 1998). A média de produção no Brasil é de 
+700g/árvore/ano, com potencial de produção de cerca de 50000 toneladas/ano (CUNHA, 
+PAULA, FEITOSA, 2009). 
+85 
+ 
+ Uma vez viável para ser produzida em larga escala, a Goma do Cajueiro teria 
+segurança enquanto fármaco para o tratamento da DRGE? Nossos estudos toxicológicos 
+seguiram as normas internacionais preconizadas pela OECD (Guideline 423/2001). Como 
+resultados, obtivemos que a Goma do Cajueiro em dose elevada (2000 mg/kg) não 
+produziu nenhum efeito tóxico sobre os animais frente aos parâmetros avaliados, que 
+foram: peso de órgãos fundamentais (fígado, rins, coração), avaliações comportamentais 
+hipocráticas incluindo locomoção, piloereção, salivação, etc. Além de testes de função 
+hepática (ALT e AST) e renal (ureia e creatinina), bem como análise clínica de parâmetros 
+hematológicos. Diante dos resultados bioquímicos, histológicos e hematológicos 
+encontrados, podemos assim sugerir que a administração, no decorrer de 14 dias 
+consecutivos, da Goma do Cajueiro não resulta em toxicidade sistêmica, mostrando-se 
+segura e bem tolerada em camundongos e viável como um possível composto com 
+propriedades de potencialidade terapêutica à DRGE, sobretudo a NERD.  
+ Surgiu, então, o questionamento acerca da eficácia em tecido humano. Teria a 
+Goma do Cajueiro capacidade de interagir com a mucosa esofágica humana de modo que 
+pudesse proteger contra o ataque do material gástrico refluído? Uma vez que a mucosa 
+de murinos difere da mucosa de humanos em alguns aspectos histológicos, isto é, a 
+mucosa de camundongos possui uma camada considerável de queratina para além da 
+mucosa esofágica, enquanto nos humanos o tecido epitelial é caracterizado por ser 
+estratificado não queratinizado. Tal questionamento nos levou a utilizar uma abordagem 
+que mais se aproxima à clínica no que diz respeito à simulação de um episódio de refluxo, 
+ou seja, utilizamos um modelo que faz o uso de biópsias esofágicas humanas para estudar 
+a repercussão do ácido contendo pepsina e sal biliar na RETE e permeabilidade 
+transepitelial. 
+ Como mencionado anteriormente, é possível que o alginato (usualmente 
+combinado com antiácidos) diminua os sintomas da DRGE e proteja momentaneamente 
+a mucosa esofágica por atenuar o bolsão ácido, mas também por interagir com o epitélio 
+esofágico. Alginatos têm demonstrado potencial bioadesivo à parede do esôfago, uma 
+propriedade determinada pela longa cadeia polimérica e a presença de grupamentos 
+ionizáveis em vez de unicamente ser uma substância viscosa (BATCHELOR et al., 2002). 
+Corroborando com essa informação, estudos utilizando cultura de células epiteliais de 
+esôfago humano e biópsias esofágicas humanas realizado por Woodland e colaboradores 
+(2015) comprovaram que o uso de uma solução sob condições de viscosidade semelhante 
+86 
+ 
+®
+à encontrada em alginato comercial (Gaviscon) não foi capaz de prevenir a queda da 
+RETE (WOODLAND et al., 2013; WOODLAND et al., 2015). Baseado nestes dados, o 
+uso do alginato tem sido utilizado como padrão ouro nesta abordagem de proteção tópica 
+utilizando a câmara de Üssing. 
+ As gomas naturais, assim como celulose e alginato, são polissacarídeos. O que 
+difere uns dos outros quanto à estrutura, mais precisamente na configuração química, é a 
+forma como as unidades monoméricas são unidas. Essas unidades monoméricas, 
+monossacarídeos ou seus derivados, estão ligados em uma variedade massiva (RIBEIRO 
+et al., 2016). Baseado em semelhanças aos alginatos, tais como natureza polimérica, 
+capacidade de adesividade, fácil obtenção e indicativo de proteção à mucosa esofágica, 
+nosso grupo decidiu avaliar a capacidade de proteção tópica da Goma do Cajueiro em 
+biópsias esofágicas humanas. Como já esperado, o alginato protegeu as biópsias 
+submetidas à agressão ácida. De modo similar, diferentes concentrações da Goma do 
+Cajueiro mostraram que a proteção foi melhorando conforme a concentração do 
+biopolímero. Enquanto a concentração de 2,5% não protegeu as biópsias frente à solução 
+desafio (pH 2, contendo pepsina e TDCA) durante 30 minutos, as concentrações de 5 e 
+10% protegeram as biópsias. Foi utilizada a concentração de 10% nos demais estudos, 
+pois sua proteção teve início a partir do minuto 10, semelhante ao que ocorreu com o 
+alginato. 
+ Sucralfato é um complexo de sulfato de alumínio e sacarose que se liga à mucosa 
+esofágica, particularmente em áreas ulceradas (aderindo proteínas carregadas 
+positivamente na base da úlcera), talvez protegendo contra a posterior difusão de ácidos, 
+pepsina e ácidos biliares (SZABO, 1991). Dois estudos verificaram que o sucralfato 
+obteve resolução de pirose e cicatrização de esofagite equivalente aos pacientes 
+submetidos ao uso de ARH (ranitidina e cimetidina) (HAMEETEMAN et al., 1987; 
+2
+SIMON, MUELLER, 1987). Embora seja útil no tratamento da DRGE, especialmente no 
+fenótipo de Esofagite Erosiva, o sucralfato não é uma terapia de suporte a pacientes com 
+NERD. Nossos resultados mostraram pela primeira vez que a aplicação tópica de 
+sucralfato em biópsias de esôfago humano não foi capaz de proteger a integridade da 
+mucosa, uma vez que a RETE teve uma queda substancial após 30 min e 60 min de 
+exposição ao ácido. Foi citado anteriormente um trabalho recente desenvolvido por 
+Woodland e colaboradores (2017) sobre a diferente da posição dos nervos aferentes da 
+mucosa esofágica. Os autores mostraram que pacientes com NERD possuem o nervo mais 
+87 
+ 
+próximo ao lúmen quando comparados com o grupo controle assintomático para a DRGE 
+(WOODLAND et al., 2017). Nosso resultado encontrado pode explicar parcialmente 
+porque sucralfato não é uma droga mais recomendada para pacientes com NERD, 
+enquanto o alginato é. Uma vez que a droga promove um reforço extra na camada pré-
+epitelial, o esôfago reconhece menos os episódios do refluxo. 
+ Além da avaliação de 30 minutos, a Goma do Cajueiro pôde sustentar a proteção 
+por até 1 hora de exposição à solução desafio, outra semelhança também vista em biópsias 
+cobertas com alginato. Esse tempo de proteção representa uma translação nevrálgica da 
+atuação medicinal dos alginatos, o mesmo pode ocorrer com a Goma do Cajueiro, pois o 
+efeito protetor da mucosa pode ser de potencial benefício terapêutico em momentos onde 
+o refluxo é aumentado, por exemplo, no pós-prandial que dura cerca de 1 hora. 
+ As alterações funcionais de barreira esofágica podem ainda ser avaliadas pela 
+permeabilidade de pequenas moléculas através da mucosa. A permeabilidade aumentada 
+pode ser explicada, em partes, pelas alterações morfológicas ocorridas na mucosa que é 
+repetidamente agredida pelo conteúdo gástrico. Pardon e colaboradores (2016) mostraram 
+que mesmo em condições fracamente ácidas, semelhante ao que se observa em pacientes 
+sob uso de IBPs, a pepsina e sais biliares promovem danos tanto na superfície das células 
+epiteliais quanto em camadas mais profundas aumentando os EID (PARDON et al., 
+2016). Outro estudo provou que tanto a função de barreira do epitélio esofágico 
+(diminuição da RETE e aumento da permeabilidade transepitelial) quanto a expressão de 
+proteínas do complexo juncional são prejudicadas pelo conteúdo gástrico (CHEN et al., 
+2012). Nossos resultados mostraram que solução ácida contendo pepsina e TDCA 
+promoveu um aumento do influxo de fluoresceína, uma pequena molécula de 376 Da, na 
+mucosa esofágica de pacientes. Por outro lado, a Goma do Cajueiro preveniu 
+parcialmente o aumento da permeabilidade transepitelial da fluoresceína nas biópsias 
+esofágicas humanas. Vale ressaltar ainda que biópsias não expostas à solução desafio, 
+porém, a uma solução neutra, tiveram a passagem de fluoresceína deveras inferior àquelas 
+desafiadas com ácido. 
+ A literatura traz informações que inferem possibilidade de interação química 
+elementos da composição da Goma do Cajueiro com a mucosa esofágica. Antes de tudo, 
+a mucosa do esôfago possui uma sutil camada de muco não tão desenvolvido como no 
+estômago, mas este padrão de muco pode ser útil tanto na compreensão da fisiopatologia 
+da DRGE quanto no tratamento da doença (ORLANDO, 2006; NIV, FASS, 2011). Um 
+88 
+ 
+dos mecanismos sugeridos para a atividade protetora gastrintestinal de produtos de 
+natureza polimérica se deve a sua natureza aniônica e elevada capacidade de ligação a 
+resíduos de aminoácidos de mucina, carregados positivamente, funcionando como 
+revestimento protetor (REES, 1991; SRIKANTA et al., 2007). Nesse sentido, nosso 
+trabalho levantou a hipótese de que os efeitos observados em biópsias humanas são 
+decorrentes de uma relação mucoadesiva entre a Goma do Cajueiro e aminoácidos de 
+mucina (transmembranar ou secretadas) ou ainda o próprio epitélio superficial. 
+ Conhecer a natureza química de uma substância permite compreender ligações 
+químicas tanto em abordagens in vivo, in vitro e in silico (ATANASOV et al., 2015). Um 
+estudo realizado em biópsias esofágicas humanas, foi utilizado um alginato marcado com 
+um fluoróforo e analisado sob microscopia epifluorescente. O estudo mostrou que o 
+alginato promove uma ligação na superfície da mucosa esofágica mesmo após a lavagem 
+e exposição a uma solução ácida por até 1 hora (WOODLAND et al., 2015). De maneira 
+semelhante, nosso estudo pôde recorrer ao recurso químico de ligar aos grupamentos 
+carboxilas da Goma do Cajueiro a uma sonda fluorescente, o FITC, via exposição de 
+estruturas funcionais de aminas. Após a diálise, a Goma do Cajueiro marcada com FITC 
+foi aplicada à mucosa esofágica de pacientes, a qual seguiu os mesmos 5 minutos de 
+contato, seguido da lavagem com solução de Krebs neutro e, por fim, expostas à solução 
+desafio. Nossos resultados mostraram que a Goma do Cajueiro adere fortemente à mucosa 
+esofágica, pois foi capaz de resistir por todas estas etapas acima citadas. Embora nossos 
+resultados mostrem que a espessura do biopolímero diminuiu após 1 hora de lavagem 
+seguida da exposição ácida (comparados com as as biópsias que foram lavadas por apenas 
+15 minutos) os dados de RETE mostraram que a proteção ainda é sustentada. 
+ As limitações deste estudo devem ser consideradas. Em primeiro lugar, o modelo 
+é um modelo in vitro e, como tal, não é um verdadeiro reflexo de condições fisiológicas. 
+Nas situações in vivo, a gravidade, a ingestão de saliva e o muco podem atuar no 
+destacamento do alginato e da Goma do Cajueiro da mucosa esofágica. Para superar isso, 
+utilizamos uma técnica de lavagem relativamente vigorosa para garantir que o alginato 
+não aderisse à mucosa por causa da estática no sistema. Também precisamos estar 
+conscientes de que o efeito sobre a integridade não se traduz necessariamente em um 
+efeito terapêutico in vivo. No entanto, sugere um potencial para uma abordagem de 
+tratamento promissor para o tratamento com DRGE com base na proteção da mucosa 
+tópica. Além disso, os métodos que relatamos podem ser a base para o rastreio de novos 
+89 
+ 
+produtos semelhantes à Goma do Cajueiro e alginato para avaliar a aderência e os efeitos 
+protetores antes de se traduzirem para a situação in vivo. Entretanto, tomados juntos todos 
+os resultados obtidos neste estudo, podemos inferir que a Goma do Cajueiro é o primeiro 
+produto que demonstrou possuir atividade anti-inflamatória seguida de proteção tópica 
+tanto em animais quanto em tecidos humanos. Em outras palavras, acreditamos que a 
+Goma do Cajueiro atua tanto prevenindo o acesso do conteúdo gástrico à parede esofágica 
+quanto tratando a resposta inflamatória do epitélio. 
+Essa repercussão terapêutica na mucosa esofágica parece ser um alvo atraente no 
+tratamento da DRGE, uma vez que, recentemente, Dunbar e colaboradores (2016) 
+mostraram que a inflamação na mucosa do esôfago de pacientes pode ser o gatilho inicial 
+para o desenvolvimento da DRGE, pois mesmo sem presença de lesões macroscópicas, 
+este ambiente inflamado altera a arquitetura histológica do epitélio esofágico e aumenta 
+os níveis de proteínas inflamatórias, culminam no enfraquecimento da mucosa esofágica, 
+que por sua vez facilitam a infiltração do suco gástrico em camadas mais profundas da 
+mucosa do esôfago (DUNBAR et al., 2016). Embora haja convergência entre os conceitos 
+tradicional e alternativo acerca da DRGE no que diz respeito à resposta inflamatória, não 
+existe até o momento um medicamento que tenha a mucosa do esôfago como alvo a ser 
+tratado de maneira a reduzir a resposta inflamatória local. Consideramos que outros 
+estudos necessitam ser realizados para entender melhor os efeitos anti-inflamatórios  da 
+Goma do Cajueiro, porém, o presente trabalho propõe a Goma do Cajueiro como um 
+candidato a fármaco promissor no tratamento da DRGE e que pode diminuir a taxa de 
+refratariedade da doença. 
+Em resumo, este estudo demonstra que tanto a aplicação oral em camundongos 
+quanto a aplicação tópica da Goma do Cajueiro em esôfago humano pode atuar, in vivo e 
+in vitro, na proteção da mucosa esofágica contra danos induzidos pelo ácido. Além disso, 
+a Goma do Cajueiro mostrou-se um produto seguro e bem tolerado. Juntos, os dados 
+indicam que a Goma do Cajueiro é um forte candidato a fármaco para o tratamento da 
+DRGE. 
+ 
+ 
+ 
+ 
+90 
+ 
+8. CONCLUSÕES 
+ 
+✓ A Goma do Cajueiro reduziu a resposta inflamatória no esôfago de camundongos 
+com NERD por melhorar marcadores inflamatórios, tais como edema, infiltrado 
+neutrofílico no epitélio esofágico, atividade da MPO e níveis de KC; 
+✓ A avaliação da integridade da mucosa esofágica no modelo de NERD demonstrou 
+que a Goma do Cajueiro melhorou os valores basais  da Resistência Elétrica 
+Transepitelial (RETE); 
+✓ Observou-se neste estudo que a Goma do Cajueiro não apresentou efeitos tóxicos 
+sistêmicos em camundongos; 
+✓ A queda da RETE frente ao desafio ácido, associado a uma melhoria da 
+permeabilidade epitelial à fluoresceína foi mais um benefício da Goma do 
+Cajueiro tanto no modelo pré-clínico de NERD quanto na translação clínica com 
+biópsias esofágicas humanas; 
+✓ Confirmou-se que a Goma do Cajueiro adere fortemente à mucosa esofágica 
+formando um escudo pré-epitelial diante da agressão ácida; 
+✓ A goma possui um efeito anti-inflamatório e preventivo no prejuízo da barreira 
+epitelial esofágica; 
+✓ Espera-se que estes resultados permitam o norteamento de uma nova intervenção 
+terapêutica na DRGE, especialmente aos pacientes com NERD. E tem-se a 
+perspectiva de testar a Goma do Cajueiro em pacientes com refluxo, e ainda 
+modificar o biopolímero que porventura venha melhorar este produto promissor. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+91 
+ 
+REFERÊNCIAS 
+ 
+ABBAS, A. K.; LICHTMAN, A. H.; & Pillai, S. Imunologia celular e molecular. 7 ed. 
+Rio de Janeiro: Elsevier Brasil, 2012. 
+ 
+AGRA, M. F.; FRANÇA, P. F.; BARBOSA-FILHO, J. M. Synopsis of the plants known 
+as medicinal and poisonous in Northeast of Brazil. Rev. Bras. Farmacogn., v. 17, p. 114-
+140, 2007. 
+ 
+ARAÚJO, T.S.; COSTA, D.S.; SOUSA, N.A.; SOUZA, L.K.; DE ARAÚJO S.; A.P. et 
+al. Antidiarrheal activity of cashew gum, a complex heteropolysaccharide extracted from 
+exudate of Anacardium occidentale L. in rodents. J. Ethnopharmacol., n.174, p. 299–
+307, 2015. 
+ 
+ARAÚJO, T.S.; COSTA, D.S.; SOUSA, N.A.; SOUZA, L.K.; DE ARAÚJO, S. et al. 
+Antidiarrheal activity of cashew GUM, a complex heteropolysaccharide extracted from 
+exudate of Anacardium occidentale L. in rodents. J Ethnopharmacol. n.4, p. 174:299-
+307, Nov, 2015. 
+ 
+ATANASOV, A.G.; WALTENBERGER, B. PFERSCHY-WENZIG, E.M.; LINDER, T. 
+et, al. Discovery and resupply of pharmacologically active plant-derived natural products: 
+A review. Biotechnol Adv., n.33, v.8, p.1582-1614, Dec, 2015.  
+ 
+BATCHELOR, H.K.; BANNING, D.; DETTMAR, P.W.; HAMPSON, F.C.; JOLLIFFE, 
+I.G.  et al. An in vitro mucosal model for prediction of the bioadhesion of alginate 
+solutions to the oesophagus. Int J Pharm., n. 238, p.123–132, 2002. 
+ 
+92 
+ 
+BERCHE, P.; LEFRÈRE, J.J. The history of Saint-Martin and Beaumont [L’aventure de 
+Saint-Martin et Beaumont]. Presse Med., n. 39, v. 5, p.598-604, May, 2010. 
+ 
+BRADLEY, P.P. et al. Cellular and extracellular myeloperoxidase in pyogenic 
+inflammation. Blood., v. 60, p. 618–622, 1982. 
+ 
+BREDENOORD, A.J.; PANDOLFINO, J.E.; SMOUT, A.J. Gastro-oesophageal reflux 
+disease. Lancet. 2013 Jun 1;381(9881):1933-42. 
+ 
+BRITO, A. S. Manual de Ensaios Toxicológicos In Vivo. Campinas: UNICAMP, 1994. 
+ 
+CARVALHO, N.S.; SILVA, M. M.; SILVA, R.O.; NICOLAU, L. A.; SOUSA, F.B. et 
+al. Gastroprotective properties of cashew gum, a complex heteropolysaccharide of 
+Anacardium occidentale, in naproxen-induced gastrointestinal damage in rats. Drug Dev 
+Res. n. 76(3), p.143-51May, 2015. 
+ 
+CARVALHO, N.S.; SILVA, M.M.; Silva, R.O; NICOLAU, L.A.;SOUSA, F.B. 
+Gastroprotective properties of cashew gum, a complex heteropolysaccharide of 
+Anacardium occidentale, in naproxen-induced gastrointestinal damage in rats. Drug Dev. 
+Res., n.76, p.143–151, 2015. 
+ 
+CAVIGLIA, R.; RIBOLSI, M.; MAGGIANO, N.; GABBRIELLI, A.M.; 
+EMERENZIANI, S. et al. Dilated intercellular spaces of esophageal epithelium in 
+nonerosive reflux disease patients with physiological esophageal acid exposure. Am J 
+Gastroenterol., n.100, v.3, p. 543-8, Mar, 2005. 
+ 
+CHEN, X.; OSHIMA, T.; SHAN. J.; FUKUI, H.; WATARI, J.; MIWA, H. Bile salts 
+disrupt human esophageal squamous epithelial barrier function by modulating tight 
+93 
+ 
+junction proteins. Am J Physiol Gastrointest Liver Physiol., n. 15, v. 303(2), p. G199-
+208, Jul, 2012. 
+ 
+CHIBA, N.; DE GARA, C.J.; WILKINSON, J.M.; HUNT, R.H. Speed of healing and 
+symptom relief in grade II to IV gastroesophageal reflux disease: a meta-analysis. 
+Gastroenterology., n.112, p.1798–1810, 1997. 
+ 
+CHIU, C.T.; HSU, C.M.; WANG, C.C. et al. Randomised clinical trial: sodium alginate 
+oral suspension is non-inferior to omeprazole in the treatment of patients with non-erosive 
+gastroesophageal disease. Aliment Pharmacol Ther., n.38, p.1054–1064, 2013. 
+ 
+CUNHA, P. L. R.; PAULA, R. C. M.; FEITOSA, J. P. A. Polysaccharides from brazilian 
+biodiversity: an opportunity to change knowledge into economic value. Química Nova., 
+São Paulo, v. 32, p. 649-660, 2009. 
+ 
+DE PAULA, R. C. M.; HEALTHY, F.; BUDD, P. M. Characterization of Anacardium 
+occidentale: exudate polysaccharide. Polym. Int., Hoboken., v. 45, p. 27-35, 1998. 
+ 
+DE PAULA, R. C. M.; SANTANA, S. A.; RODRIGUES, J. F. Composition and 
+rheological properties of Albizia lebbeck gum exudates. Carbohydr. Polym., 
+Amsterdam, v. 44, p. 133-139, 2001. 
+ 
+DE RUIGH, A.; ROMAN, S.; CHEN, J.; PANDOLFINO, J.E.; KAHRILAS, P.J. 
+Gaviscon Double Action Liquid (antacid & alginate) is more effective than antacid in 
+controlling post-prandial oesophageal acid exposure in GERD patients: a double-blind 
+crossover study. Aliment Pharmacol Ther., n. 40, p. 531–537, 2014. 
+ 
+94 
+ 
+DENT, J. Review article: from 1906 to 2006--a century of major evolution of 
+understanding of gastro-oesophageal reflux disease. Aliment Pharmacol Ther., n. 1, v. 
+24(9), p.1269-81, Nov, 2006. 
+DENT, J.; EL-SERAG, H. B.; WALLANDER, M. A.; JOHANSSON, S. Epidemiology 
+of gastro-oesophageal reflux disease: a systematic review., Gut., v. 54, p. 710–717, 2005. 
+ 
+DETTMAR, P.W.; SYKES, J.; LITTLE, S.L.; BRYAN, J. Rapid onset of effect of 
+sodium alginate on gastro-oesophageal reflux compared with ranitidine and omeprazole, 
+and relationship between symptoms and reflux episodes. Int J Clin Pract., n.60, p.275–
+283, 2006. 
+ 
+DEVAULT, K.R.; CASTELL, D.O. American College of G. Updated guidelines for the 
+diagnosis and treatment of gastroesophageal reflux disease. Am J Gastroenterol., n.100, 
+p.190–200, 2005. 
+ 
+DI CARLO, G, N.; MASCOLO, A.A.; Izzo, F.; CAPASSO. et al. Effect of quercetin on 
+gastrointestinal tract in rats and mice. Phytother., Res., n.8, p. 42-45, 1994. 
+ 
+DUNBAR, K.B.; AGOSTON, A.T.; ODZE, R.D.; HUO, X.; PHAM, T.H.; D.J, 
+CASTELL, D.O.et al. Association of Acute Gastroesophageal Reflux Disease With 
+Esophageal Histologic Changes. JAMA., n.17, v.315(19), p. 2104-12, May, 2016. 
+ 
+ELLACOTT, K.L.; MORTON, G.J.; WOODS, S.C.; TSO, P.; SCHWARTZ, M.W. 
+Assessment of feeding behavior in laboratory mice. Cell Metab., n.7, v.12(1), p.10-7, 
+Jul, 2010. 
+ 
+EL-SERAG, H. B. Epidemiology of non-erosive reflux disease. Digestion., n 78, Suppl 
+1, p. 6–10, 2008. 
+95 
+ 
+ 
+EL-SERAG, H.; HILL, C.; JONES, R. Systematic review: the epidemiology of gastro-
+oesophageal reflux disease in primary care, using the UK General Practice Research 
+Database. Aliment Pharmacol Ther., v. 29, p. 470–480, 2009. 
+ 
+EL-SERAG, H.B.; SONNENBERG, A. Opposing time trends of peptic ulcer and reflux 
+disease. Gut. n. 43, v. 3, p. 327-33, Sep, 1998. 
+ 
+EUSEBI, L.H.; RATNAKUMARAN, R.; YUAN, Y, et al. Global prevalence of, and risk 
+factors for, gastro-oesophageal reflux symptoms: a meta-analysis. Gut 2017. 
+ 
+FARRÉ, R. et al. Short exposure of oesophageal mucosa to bile acids, both in acidic and 
+weakly acidic conditions, can impair mucosal integrity and provoke dilated intercellular 
+spaces. Gut, v. 57, p. 1366–1374, 2008. 
+ 
+FARRÉ, R.; BLONDEAU, K.; CLEMENT, D. et al. Evaluation of oesophageal mucosa 
+integrity by the intraluminal impedance technique. Gut., n.60, p. 885–92, 2011. 
+ 
+FASS, R.; DICKMAN, R. Nonerosive reflux disease. PART 1 Oral cavity, pharynx and 
+esophagus. GI Motility online., 2006. 
+ 
+FASS, R.; OFMAN, J.J. Gastroesophageal reflux disease—should we adopt a new 
+conceptual framework? Am J Gastroenterol., v. 97, p. 1901–1909, 2002. 
+ 
+FIGUEIREDO, A.A.; SANTANA, A.P.M.; NICOLAU, L.A.D.; BATISTA-LIMA, F.J.; 
+WONG, D.V.T. et al. Topical protection of mice laryngeal mucosa using the natural 
+product cashew gum. Laryngoscope. n.27, Oct, 2017. 
+96 
+ 
+ 
+FRIEDENWALD, J.; FELDMAN, M. Report of an interesting type of diaphragmatic 
+hernia of the cardia of the stomach through the esophageal orifice. Am Med Sci., n.170, 
+p. 263, 1925. 
+ 
+FRIEDENWALD, J.; FELDMAN, M.; ZINN, W. F. Peptic ulcer of the esophagus. Am. 
+J. Med., Sc. 177: 1, 1929 
+ 
+GHOSH, S. K.; ABDULLAH, F.; MUKHERJEE, A. Material science and engineering 
+C, n.46, v.3, p.521–529, 2015.  
+ 
+GOLDBERG, H.I.; DODDS, W.J.; GEE, S.; MONTGOMERY, C.; ZBORALSKE, F.F. 
+Role of acid and pepsin in acute experimental esophagitis. Gastroenterology., n.56, v.2, 
+p.223–30, Feb.1969. 
+ 
+GRANDERATH.; FRANK, A.; KAMOLZ.; THOMAS.; POINTNER.; RUDOLPH. 
+Gastroesophageal Reflux Disease: Principles of Disease, Diagnosis, and Treatment. 
+Springer Science & Business Media., p. 161, 2006. 
+ 
+GRAZIANI, L.; BEARZI, l.; ROMAGNOLI, A. et al. Significance of diffuse granularity 
+and nodularity of the esophageal mucosa at double-contrast radiography Gastrointest 
+Radiol.,n.;10, p.l-6, 1985. 
+ 
+GYAWALI, C.P.; FASS, R. Management of Gastroesophageal Reflux Disease. 
+Gastroenterology., pii: S0016-5085(17)35989-9, Aug,2017. 
+ 
+97 
+ 
+HAMEETEMAN, W.; BOOMGAARD, D.M.; DEKKER, W.; SCHRIJVER, M.; 
+WESDORP, I.C.; TYTGAT, G.N. Sucralfate versus cimetidine in reflux esophagitis. A 
+single-blind multicenter study. J Clin Gastroenterol., n.9, v.4, p.390-4, Aug, 1987. 
+ 
+HILLMAN, L.; YADLAPATI, R.; THULUVATH, A.J.; BERENDSEN, M.A.; 
+PANDOLFINO, J.E. A review of medical therapy for proton pump inhibitor 
+nonresponsive gastroesophageal reflux disease. Dis Esophagus. n.1, v. 30(9), p.1-15, 
+Sep, 2017. 
+ 
+HUO, X.; ZHANG, X.; YU, C.; ZHANG, Q.; CHENG, E.; WANG, D.H. et al.  In 
+oesophageal squamous cells exposed to acidic bile salt medium, omeprazole inhibits IL-
+8 expression through effects on nuclear factor-κB and activator protein-1. Gut., n.63,v.7, 
+p.1042-52, Jul, 2014. 
+ 
+JAVADI, S.A.H.S.; SHAFIKHANI, A,A. Anxiety and depression in patients with 
+gastroesophageal reflux disorder. Electron Physician., n. 1; v.9(8), p. 5107-5112, Aug, 
+2017. 
+ 
+JOVOV, B.; QUE, J.; TOBEY, N.A.; DJUKIC, Z; HOGAN, B.L.; ORLANDO, R.C. 
+Role of E-cadherin in the pathogenesis of gastroesophageal reflux disease. Am J 
+Gastroenterol., n.106, v.6, p.1039-47, Jun, 2011. 
+ 
+KRESSEL, H.Y.; CLICK, S.N.; LAUFER, I. et al. Radiologic features of esophagitis. 
+Gastrointest Radiol., n.6, p.103-108, 1981. 
+ 
+KUMAR, A.; MOIN, A.; SHRUTHI, R.; AYAZ, A.; SHIVAKUMAR, H.G. Cashew 
+Gum A Versatile Hydrophyllic Polymer: A Review. Current Drug Therapy., n. 7,p. 2-
+12, 2012. 
+ 
+98 
+ 
+KUNG, Y.M.; HSU, W.H.; WU, M.C.; WANG, J.W.; LIU, C.J. et al. Recent Advances 
+in the Pharmacological Management of Gastroesophageal Reflux Disease. Dig Dis Sci., 
+n.6, Nov, 2017. 
+ 
+LEITE, Á.J.; COSTA, R.R.; COSTA, A.M.S.; MACIEL, J.S.; COSTA, J.F.G.et al. The 
+potential of cashew gum functionalization as building blocks for layer-by-layer films. 
+Carbohydr Polym. n.15, v. 174, p.849-857, Oct, 2017. 
+ 
+LILLEMOE, K.D.; JOHNSON, L.F.; HARMON, J.W. Role of the components of the 
+gastroduodenal contents in experimental acid esophagitis. Surgery, n.92, v.2, p.276–84, 
+Aug,1982. 
+ 
+LIMA, R.S.N.; LIMA, J. R.; SALIS, C. R.; MOREIRA, R.A. Cashew-tree (Anacardium 
+occidentale L.) exudate gum: a novel bioligand tool. Biotechnol Appl Biochem., n. 35, 
+(Pt 1), p.45-53, Feb, 2002. 
+ 
+LIMA, V.P.M.S. A cultura do cajueiro no Nordeste do Brasil. Fortaleza, Banco do 
+Nordeste do Brasil, ETENE, p. 458, 1988. 
+ 
+MALFERTHEINER, M.V.1.; FILL, S.; KIDD, M.; MODLIN, I. M. The elucidation of 
+peptic esophagitis: from Hamperl to heartburn. Z Gastroenterol. 2007 n. 45, v.11, p. 
+1164-8, Nov, 2007. 
+ 
+MANABE, N.; HARUMA, K.; ITO, M. et al. Efficacy of adding sodium alginate to 
+omeprazole in patients with nonerosive reflux disease: a randomized clinical trial. Dis 
+Esophagus., n.25, p.373–380, 2012. 
+ 
+99 
+ 
+MARKEL, H. Experiments and observations: how William Beaumont and Alexis St. 
+Martin seized the moment of scientific progress. JAMA., n. 19, v. 302(7), p. 804-6, Aug, 
+2009. 
+ 
+MOAYYEDI, P.; LEONTIADIS, G. I. The risks of PPI therapy. Nat Rev Gastroenterol 
+Hepatol., v. 9, p. 132–139, 2012. 
+ 
+MORAES-FILHO, J.P.P.; CHINZON, D.; EISIG, J.N. Prevalence of heartburn and 
+gastroesophageal reflux disease in the urban Brazilian population. Gastroenterology., n. 
+124, v. 4 (Suppl 1):A-166, 2003. 
+ 
+MORAES-FILHO, J.P.P.; NAVARRO-RODRIGUES, T.; BARBUTI, R.; EISIG, J. 
+CHINZON, D. Guidelines for the diagnosis and management of GERD: An evident-
+based consensus. Arq Gastroenterol. n.47, p. 99-115, 2010. 
+ 
+MORAIS, S. M.; DANTAS, J. D. P.; SILVA, A. R. A.; MAGALHÃES, E. F. Ethno-
+medicinal plants of Tapeba Indians from the State of Ceará – Brazil. Rev. Bras. 
+Farmacogn., v. 15, p. 169-177, 2005. 
+ 
+MOREIRA, B.R.; BATISTA, K.A.; CASTRO, E.G.; LIMA E.M.; FERNANDES, K. F. 
+A bioactive film based on cashew gum polysaccharide for wound dressing applications. 
+Carbohydr Polym. n.20, p. 122:69-76, May, 2015. 
+ 
+NAGAHAMA, K.; YAMATO, M.; NISHIO, H.; TAKEUCHI, K. Essential role of pepsin 
+in pathogenesis of acid reflux esophagitis in rats. Dig Dis Sci., n.51, v.2, p. 303-9, Feb, 
+2006. 
+ 
+100 
+ 
+NAPIER, K. J.; SCHEERER, M.; MISRA, S. Esophageal cancer: A Review of 
+epidemiology, pathogenesis, staging workup and treatment modalities. World J 
+Gastrointest Oncol., n. 6, v. 5, p. 112–120, May 2014.  
+ 
+NASI, A.; MORAES-FILHO, J.P.P.; CECCONELLO, I. Doença do refluxo 
+gastroesofágico: revisão ampliada. Arq Gastroenterol., n.4, v. 43, out./dez. 2006. 
+ 
+NASI, A.; MORAES-FILHO, J.P.P.; CECCONELLO, I. Gastroesophageal reflux 
+disease: an overview. Arq. Gastroenterol., v. 43, p. 334–341, 2006. 
+ 
+NIV, Y.; FASS, R. The role of mucin in GERD and its complications. Nat Rev 
+Gastroenterol Hepatol., n. 8, v.9(1), p 55-9, Nov, 2011. 
+ 
+OH, D.S.; DEMEESTER, S.R.; VALLBOHMER, D.; MORI, R; KURAMOCHI, H.; 
+HAGEN, J.A.; LIPHAM, J.; DANENBERG, K.D.; DANENBERG, P.V.; 
+CHANDRASOMA, P.; DEMEESTER, T.R. Reduction of interleukin 8 gene expression 
+in reflux esophagitis and Barrett's esophagus with antireflux surgery. Arch Surg., 2007 
+Jun;142(6):554-9; discussion 559-60. 
+ 
+Organization for Economic Cooperation and Development (OECD). Guidelines for the 
+Testing of Chemicals, OECD 423. Acute Oral Toxicity-Acute Toxic Class Method. 
+Organization for Economic Cooperation and Development, Paris, 2001. 
+ 
+ORLANDO, R. C. Esophageal mucosal defense mechanisms. PART 1 Oral cavity, 
+pharynx and esophagus. GI Motility Online., 2006. 
+ 
+ORLANDO, R.C. Pathophysiology of gastroesophageal reflux disease. J Clin 
+Gastroenterol., n.42, p.584 –588, 2008. 
+101 
+ 
+ 
+OSHIMA, T.; KOSEKI, J.; CHEN, X.; MATSUMOTO, T.; MIWA, H. Acid modulates 
+the squamous epithelial barrier function by modulating the localization of claudins in the 
+superficial layers. Lab Invest., n.92, v.1, p.22-31, Jan, 2012. 
+ 
+PARDON, N. A.; VICARIO, M.; VANHEEL, H.; VANUYTSEL, T.; CEULEMANS, 
+L.J. et al. A weakly acidic solution containing deoxycholic acid induces esophageal 
+epithelial apoptosis and impairs integrity in an in vivo perfusion rabbit model. Am J 
+Physiol Gastrointest Liver Physiol., n. 1, v. 310(7), p .487-96, Apr, 2016.  
+ 
+RAGHUNATH, A.S.; HUNGIN, A.P.; MASON, J.; JACKSON, W. Symptoms in 
+patients on long-term proton pump inhibitors: prevalence and predictors. Aliment 
+Pharmacol Ther., n.29, p. 431–439, 2009. 
+ 
+REES, W.D. Mechanisms of gastroduodenal protection by sucralfate. Am J Med., n.91 
+p.58S–63S, 1991. 
+ 
+REIMER, C. Safety of long-term PPI therapy. Best Practice & Research Clinical 
+Gastroenterology., n. 27, v. 3, p. 443-454, 2013. 
+ 
+RIBEIRO, A.J.; DE SOUZA, F.R.; BEZERRA, J.M.; OLIVEIRA, C.; NADVORNY, D. 
+et al. Gums' based delivery systems: Review on cashew gum and its derivatives. 
+Carbohydr Polym., n.20, v.147, p.188-200, Aug, 2016.  
+ 
+RICHTER, J.E.; RUBENSTEIN, J.H. Presentation and Epidemiology of 
+Gastroesophageal Reflux Disease. Gastroenterology., 2. pii: S0016-5085(17)35977-2, 
+Aug, 2017. 
+ 
+102 
+ 
+RICHTER, J.E.; RUBENSTEIN, J.H. Presentation and Epidemiology of 
+Gastroesophageal Reflux Disease. Gastroenterology., pii: S0016-5085(17)35977-2, 
+Aug, 2017. 
+ 
+RODRIGUES, J.F.; PAULA, R.C.M.; COSTA, S.M.O. “Methods of isolation of natural 
+gums: comparison through cashew gum” (Anacardium occidentale L.). Polím. Ciênc. e 
+Tecnol., n.3, p.31–36, 1993.  
+ 
+ROHOF, W.O.; BENNINK, R.J.; SMOUT, A.J.; THOMAS, E.; BOECKXSTAENS, 
+G.E. An alginate-antacid formulation localizes to the acid pocket to reduce acid reflux in 
+patients with gastroesophageal reflux disease. Clin Gastroenterol Hepatol., n. 11, p. 
+1585–1591, 2013. 
+ 
+SAVARINO, E.; DE BORTOLI, N.; ZENTILIN, P.; MARTINUCCI, I.; BRUZZONE, 
+L. et al. Alginate controls heartburn in patients with erosive and nonerosive reflux disease. 
+World J Gastroenterol. n. 28, v.18(32), p.4371-8, Aug, 2012. 
+ 
+SAVARINO, E.; GIACCHINO, M.; SAVARINO, V. The importance of subgrouping 
+refractory NERD patients according to esophageal pH-impedance testing. Surg Endosc, 
+v. 27, p. 3503–3504, 2013. 
+ 
+SAVARINO, E.; ZENTILIN, P.; MARABOTTO, E.; BODINI, G.; DELLA COLETTA, 
+M.; FRAZZONI, M. et al. A review of pharmacotherapy for treating gastroesophageal 
+reflux disease (GERD). Expert Opin Pharmacother., n.18, v.13, p.1333-1343, Sep, 
+2017. 
+ 
+SCARPELLINI, E. et al. Management of refractory typical GERD symptoms. Nat Rev 
+Gastroenterol Hepatol., v. 13, p. 281–294, 2016. 
+ 
+103 
+ 
+SCHIRATO, G.V.; MONTEIRO, F.M.F.; SILVA, F.O.; LIMA FILHO, J.L.;  LEAO, 
+A.M.A.C.; PORTO, A.L.F. O polissacarídeo do Anacardium occidentale L. na fase 
+inflamatória do processo cicatricial de lesões cutâneas. Ciênc. Rural., n.36, p.149–154, 
+2006. 
+ 
+SCHOLTEN, T. Long-term management of gastroesophageal reflux disease with 
+pantoprazole. Ther Clin Risk Manag., v. 3, p. 231–243, 2007. 
+ 
+SCHWARTZ, S. The beginning of clinical experimentation: birth of a specialty. In: 
+Schwartz S. Gifted hands. New York: Prometheus Books., p.37-48, 2009. 
+ 
+SEGAL, D.; CHANDE, N. The management of eosinophilic esophagitis in adults. J Clin 
+Gastroenterol., n. 47, p. 570–577, 2013. 
+ 
+SIFRIM, D.; ZERBIB, F.; Diagnosis and management of patients with reflux symptoms 
+refractory to proton pump inhibitors. Gut. n.61, p.1340–1354, 2012. 
+ 
+SILVA, D. A.; FEITOSA, J. P. A.; PAULA, H. C. B.; DE PAULA, R. C. M. Synthesis 
+and characterization of cashew gum/acrylic acid nanoparticles. Mat. Sci. Eng., 
+Amsterdam, v. C29, p. 437-441, 2009. 
+ 
+SILVA, R.O.; OLIVEIRA, F.F.B.; BINGANA, R.D.; ARRUDA, M.O.; WOODLAND, 
+P. et al. A novel murine model of esophageal nonerosive reflux disease: from 
+inflammation to impairment in mucosal integrity. Am J Physiol Gastrointest Liver 
+Physiol., n. 1, v. 312(6), p.G658-G665, Jun, 2017. 
+ 
+SIMON, B.; MUELLER, P. Comparison of the effect of sucralfate and ranitidine in reflux 
+esophagitis. Am J Med., n.28, v.83(3B), p.43-7, Sep, 1987. 
+104 
+ 
+ 
+SIMON, B.; RAVELLI, G.P.; GOFFIN, H. Sucralfate gel versus placebo in patients with 
+nonerosive gastro-oesophageal reflux disease. Aliment Pharmacol Ther., n.10, p.441-
+6, 1996. 
+ 
+SMOUT, A.J.; BREDENOORD, A.J. GERD: A challenge to our view of reflux 
+oesophagitis pathogenesis. Nat Rev Gastroenterol Hepatol., n.13, v.9, p.504-5, 
+Sep,2016. 
+ 
+SONNENBERG, A. EL-SERAG, H.B. Clinical epidemiology and natural history of 
+gastroesophageal reflux disease. Yale J Biol Med., n. 72, p. 81-9,1999.  
+ 
+SOUZA FILHO, M.D.; MEDEIROS, J.V.R.; VASCONCELOS, D.F.P.; SILVA, D.A.; 
+LEÓDIDO, A.C.M. et al. Orabase formulation with cashew gum polysaccharide 
+decreases inflammatory and bone loss hallmarks in experimental periodontitis. Int J Biol 
+Macromol. n 28, pii: S0141-8130(17)32377-2., Sep, 2017. 
+ 
+SOUZA FILHO, M.D.; MEDEIROS, J.V.R.; VASCONCELOS, D.F.P.; SILVA, D.A.; 
+LEÓDIDO, A.C.M. et al. Orabase formulation with cashew gum polysaccharide 
+decreases inflammatory and bone loss hallmarks in experimental periodontitis. Int J Biol 
+Macromol., n.28, pii: S0141-8130(17)32377-2, Sep, 2017. 
+ 
+SOUZA R.F. The role of acid and bile reflux in oesophagitis and Barrett's metaplasia. 
+Biochem Soc Trans., n.38, v. 2, p.348-52, Apr, 2010. 
+ 
+SOUZA MÂ, NOBRE RA, BEZERRA PC, DOS SANTOS AA, SIFRIM D. Anatomical 
+and functional deficiencies of the crural diaphragm in patients with esophagitis. 
+Neurogastroenterol Motil., 29(1), 2017. 
+105 
+ 
+ 
+ 
+SRIKANTA, B.M.; SIDDARAJU, M.N.; DHARMESH, S.M. A novel phenol-bound 
+pectic polysaccharide from Decalepis hamiltonii with multi-step ulcer preventive activity. 
+World J. Gastroenterol., v.13, p.5196-5207, 2007. 
+ 
+SWEIS, R.; KAUFMAN, E.; Anggiansah A. et al. Post-prandial reflux suppression by a 
+raft-forming alginate (Gaviscon Advance) compared to a simple antacid documented by 
+magnetic resonance imaging and pH-impedance monitoring: mechanistic assessment in 
+healthy volunteers and randomised, controlled, double-blind study in reflux patients. 
+Aliment Pharmacol Ther., n.37, p.1093–1102, 2013. 
+ 
+SZABO, S. The mode of action of sucralfate: the 1 x 1 x 1 mechanism of action.  Scand 
+J Gastroenterol Suppl., n.185, p.7-12, 1991. 
+ 
+TACK; J.; BECHER, A.; MULLIGAN, C.; JOHNSON, D.A. Systematic review: the 
+burden of disruptive gastro-oesophageal reflux disease on health-related quality of life. 
+Aliment Pharmacol Ther., n.35, p.1257–1266, 2012. 
+ 
+THANGARAJAH, H.; WONG, A.; CHOW, D.C. et al. Gastric H-K-ATPase and acid-
+resistant surface proteins. Am J Physiol Gastrointest Liver Physiol., n.282, p.G953–
+G961, 2002. 
+ 
+TILESTON, W. Peptic ulcer of the oesophagus. Am J Med Sci., n. 132, p. 240–65. 
+ 
+TOBEY, N. A.; ARGOTE, C. M.; VANEGAS, X. C.; BARLOW, W.; ORLANDO, R. 
+C. Electrical parameters and ion species for active transport in human esophageal 
+106 
+ 
+stratified squamous epithelium and Barrett’s specialized columnar epithelium. Am J 
+Physiol Gastrointest Liver Physiol., n. 293, p. G264–G270, 2007. 
+ 
+TOBEY, N.A. et al. Dilated intercellular spaces and shunt permeability in nonerosive 
+acid-damaged esophageal epithelium. Am J Gastroenterol., v. 99, p. 13–22, 2004. 
+ 
+TOBEY, N.A.; HOSSEINI, S.S.; CAYMAZ-BOR, C. et al. The role of pepsin in acid 
+injury to esophageal epithelium. Am J Gastroenterol ., n.96, p.3062–3070, 2001. 
+ 
+TRAN, T.; LOWRY, A.M.; EL-SERAG, H.B. Meta-analysis: the efficacy of over-the-
+counter gastro-oesophageal reflux disease therapies. Aliment Pharmacol Ther., n.25, 
+p.143–153, 2007. 
+ 
+VAKIL, N. VAN ZANTEN, S.V.; KAHRILAS, P. et al. The Montreal Definition and 
+Classification of Gastroesophageal Reflux Disease: A Global Evidence-Based 
+Consensus. Am J Gastroenterol., n.101, v. 8, p.1900-20, 2006. 
+ 
+WINKELSTEIN, A. Peptic esophagitis: a new clinical entity. JAMA., n. 104(11), p. 906-
+909, 1935. 
+ 
+WOLF, E.L. The esophagus. Mt Sinai J Med., n.67, p. 25–31, 2000. 
+ 
+WOODLAND, P.; BATISTA-LIMA, F. LEE, C.; PRESTON, S.L.; DETTMAR, P.; 
+SIFRIM, D. Topical protection of human esophageal mucosal integrity. Am J Physiol 
+Gastrointest Liver Physiol., n. 15, v. 308(12), p.G975-80, jun, 2016. 
+ 
+107 
+ 
+WOODLAND, P.; LEE, C.; DURAISAMY, Y.; FARRE, R.; DETTMAR, P. et al.  
+Assessment and protection of esophageal mucosal integrity in patients with heartburn 
+without esophagitis. Am J Gastroenterol., n.108, p.535–543, 2013. 
+ 
+WOODLAND, P.; SHEN OOI, JL.; GRASSI, F.; NIKAKI, K.; LEE.; C.; EVANS. J.A. 
+et al.  Superficial Esophageal Mucosal Afferent Nerves May Contribute to Reflux 
+Hypersensitivity in Nonerosive Reflux Disease. Gastroenterology., n.153, v.5, p.1230-
+1239, Nov, 2017 
+WOODLAND, P.; SIFRIM, D. Esophageal mucosal integrity in nonerosive reflux 
+disease. J Clin Gastroenterol., v. 48, p. 6–12, 2014. 
+ 
+WOODLAND, P.; SIFRIM, D.;. The refluxate: The impact of its magnitude, composition 
+and distribution. Best Pract Res Clin Gastroenterol., n.24, v.(6), p.861-71, Dec, 2010. 
+ 
+YAMAMICHI, N.; MOCHIZUKI, S.; ASADA-HIRAYAMA, I.; MIKAMI-
+MATSUDA, R, SHIMAMOTO, T. et al. Lifestyle factors affecting gastroesophageal 
+reflux disease symptoms: a cross-sectional study of healthy 19864 adults using FSSG 
+scores. BMC Med., n.3, p.10:45, May, 2012. 
+ 
+YAMASSAKI, F.T.; YAMASSAKI, R.M.; LENZI, L. H.; CAMPESTRINI, F.; BOVO, 
+M. et al. Maurer, Effect of the native polysaccharide of cashew-nut tree gum exudate on 
+murine peritoneal macrophage modulatory activities. Carbohydr. Polym., n.125, p.241–
+248. 
+ 
+YAMASSAKI, F.T.; LENZI, R.M.; CAMPESTRINI, L.H.; BOVO, F.; SEYFRIED, M. 
+et al. Effect of the native polysaccharide of cashew-nut tree gum exudate on murine 
+peritoneal macrophage modulatory activities. Carbohydr Polym. n. 10, p. 125:241-8. 
+Jul, 2015. 
+ 
+108 
+ 
+YERIAN, L.; FIOCCA, R.; MASTRACCI, L.; RIDDELL, R.; VIETH, M. et al. 
+Refinement and reproducibility of histologic criteria for the assessment of microscopic 
+lesions in patients with gastroesophageal reflux disease: the Esohisto Project. Dig Dis 
+Sci., v. 56, p. 2656–2665, 2011. 
+ 
+ZHU, W.; HONG, K. Potential Cardiovascular Risks of Proton Pump Inhibitors in the 
+General Population. Int Heart J., n. 6, v. 58(2), p.163-166, Apr, 2017. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+109 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ANEXOS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+110 
+ 
+ 
+ 
+ 
+ 
+111 
+ 
+Repercussão em revistas de circulação nacional 
+ 
+ 
+112 
+ 
+ 
+Finalista e Premiado em 5º Lugar no Prêmio José Ribeiro do Valle 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+113 
+ 
+ 
+Publicação derivada deste projeto 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+114 
+ 
+ 
+ 
+115 
+ 
