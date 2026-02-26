@@ -1,1 +1,0 @@
-Total: 47\nSuccess: 34\nFailed: 13\n

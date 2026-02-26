@@ -12,6 +12,7 @@
 import { OaiPmhClient } from "./oai-pmh.js";
 import { DSpaceRestClient } from "./dspace-rest.js";
 import { HtmlScraper } from "./html-scraper.js";
+import { UniversalProvider } from "../services/universal_provider.js";
 import { BdtdAdapter, ScieloAdapter, UspAdapter, resolveOaiEndpoint } from "./platform-adapters.js";
 import type { RepositoryEntry, SearchResult, SearchOptions, OaiRecord, DublinCoreMetadata, DSpaceItem } from "../types.js";
 
@@ -28,6 +29,7 @@ export class AccessStrategy {
     private scraper = new HtmlScraper();
     private bdtd = new BdtdAdapter();
     private scielo = new ScieloAdapter();
+    private universal = new UniversalProvider();
     private usp = new UspAdapter();
     private capabilities = new Map<string, CapabilityCache>();
 
@@ -69,6 +71,20 @@ export class AccessStrategy {
             } catch {
                 // Fall through
             }
+        }
+
+        // Universal API Provider: for repositories with mapping config (Europe PMC, DOAJ, etc)
+        if ((repo as any).access?.mapping) {
+            try {
+                const config = {
+                    id: repo.id,
+                    baseUrl: (repo.access as any).baseUrl,
+                    endpoints: (repo.access as any).endpoints || {},
+                    mapping: (repo as any).access.mapping
+                };
+                const results = await this.universal.search(config, query, opts);
+                if (results.results.length > 0) return results.results;
+            } catch { /* Fall through */ }
         }
 
         // ─── Standard access layer cascade ───────────────────────

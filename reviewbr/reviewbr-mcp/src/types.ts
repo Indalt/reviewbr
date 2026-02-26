@@ -1,9 +1,8 @@
-import { z } from "zod";
+﻿import { z } from "zod";
 
 // ─── Registry Types ───────────────────────────────────────────
 
-
-export const InstitutionTypeSchema = z.string(); // Relaxed from enum
+export const InstitutionTypeSchema = z.string();
 export type InstitutionType = z.infer<typeof InstitutionTypeSchema>;
 
 export const PlatformSchema = z.string();
@@ -12,8 +11,27 @@ export type Platform = z.infer<typeof PlatformSchema>;
 export const ContentTypeSchema = z.string();
 export type ContentType = z.infer<typeof ContentTypeSchema>;
 
-export const RepoStatusSchema = z.string(); // Relaxed from enum
+export const RepoStatusSchema = z.string();
 export type RepoStatus = z.infer<typeof RepoStatusSchema>;
+
+const accessSchema = z.object({
+    oaiPmh: z.object({
+        available: z.boolean(),
+        endpoint: z.string().nullable().optional(),
+        verified: z.boolean(),
+        lastVerified: z.string().nullable().optional(),
+    }).passthrough(),
+    restApi: z.object({
+        available: z.boolean().optional(),
+        endpoint: z.string().nullable().optional(),
+        version: z.number().nullable().optional(),
+    }).passthrough().optional(),
+    searchEndpoints: z.array(z.string()).optional(),
+    // International REST API Mapping Extensions
+    baseUrl: z.string().optional(),
+    endpoints: z.record(z.string()).optional(),
+    mapping: z.record(z.string()).optional(),
+}).passthrough();
 
 export const RepositoryEntrySchema = z.object({
     id: z.string(),
@@ -23,30 +41,18 @@ export const RepositoryEntrySchema = z.object({
         type: InstitutionTypeSchema,
         state: z.string(),
         city: z.string(),
-    }),
+    }).passthrough(),
     repository: z.object({
         name: z.string(),
-        url: z.string(), // Relaxed .url() validation which can be strict
+        url: z.string(),
         platform: PlatformSchema,
         contentType: ContentTypeSchema,
-    }),
-    access: z.object({
-        oaiPmh: z.object({
-            available: z.boolean(),
-            endpoint: z.string().nullable().optional(), // Made optional
-            verified: z.boolean(),
-            lastVerified: z.string().nullable().optional(), // Made optional
-        }),
-        restApi: z.object({
-            available: z.boolean().optional(),
-            endpoint: z.string().nullable().optional(),
-            version: z.number().nullable().optional(),
-        }).optional(), // Made entire object optional
-        searchEndpoints: z.array(z.string()).optional(),
-    }),
+    }).passthrough(),
+    access: accessSchema,
     status: RepoStatusSchema,
-    layer: z.string().optional(), // Added missing field seen in JSON
-});
+    layer: z.string().optional(),
+}).passthrough();
+
 export type RepositoryEntry = z.infer<typeof RepositoryEntrySchema>;
 
 // ─── OAI-PMH Types ───────────────────────────────────────────
@@ -114,33 +120,33 @@ export interface SearchResult {
     description: string;
     date: string;
     type: string;
-    url: string;            // HTTP URL obrigatória
-    doi?: string;           // DOI quando disponível
-    pdfUrl?: string;        // link direto ao PDF
-    degreeType?: string;    // mestrado, doutorado, etc.
-    institution?: string;   // universidade/instituição
-    state?: string;         // UF (SP, RJ, MG, etc.)
-    journal?: string;       // nome do periódico
-    issn?: string;          // ISSN do periódico
-    subjectAreas?: string[];// áreas do conhecimento
-    language?: string;      // idioma principal
-    accessMethod: "oai-pmh" | "dspace-rest" | "html-scraper" | "bdtd-vufind" | "scielo-articlemeta" | "usp-custom" | "manual_import" | "api";
+    url: string;
+    doi?: string;
+    pdfUrl?: string;
+    degreeType?: string;
+    institution?: string;
+    state?: string;
+    journal?: string;
+    issn?: string;
+    subjectAreas?: string[];
+    language?: string;
+    accessMethod: "oai-pmh" | "dspace-rest" | "html-scraper" | "bdtd-vufind" | "scielo-articlemeta" | "usp-custom" | "manual_import" | "bvs_import" | "api";
 }
 
 export interface SearchOptions {
-    query?: string;         // busca textual livre
-    title?: string;         // busca por título
-    author?: string;        // busca por autor
-    dateFrom?: string;      // data início (YYYY-MM-DD)
-    dateUntil?: string;     // data fim (YYYY-MM-DD)
+    query?: string;
+    title?: string;
+    author?: string;
+    dateFrom?: string;
+    dateUntil?: string;
     degreeType?: "graduacao" | "mestrado" | "doutorado" | "pos-doutorado" | "livre-docencia";
-    institution?: string;   // universidade/instituição
-    state?: string;         // estado (SP, RJ, MG, etc.)
-    subjectArea?: string;   // área do conhecimento
-    issn?: string;          // ISSN do periódico (SciELO)
-    contentType?: string[]; // tipos de conteúdo
+    institution?: string;
+    state?: string;
+    subjectArea?: string;
+    issn?: string;
+    contentType?: string[];
     maxResults?: number;
-    set?: string;           // OAI-PMH set
+    set?: string;
 }
 
 // ─── DSpace REST Types ────────────────────────────────────────

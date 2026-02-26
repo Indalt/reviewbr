@@ -102,9 +102,35 @@ export class SnowballService {
         }));
     }
 
-    private async fetchJson(url: string): Promise<any> {
+    async fetchJson(url: string): Promise<any> {
         const res = await fetch(url);
         if (!res.ok) return null;
         return await res.json();
+    }
+
+    async search(query: string, options: { maxResults?: number } = {}): Promise<{ results: SearchResult[]; totalFound: number }> {
+        const maxResults = options.maxResults || 200;
+        const url = `https://api.openalex.org/works?search=${encodeURIComponent(query)}&per_page=${Math.min(maxResults, 200)}&mailto=${this.mailto}`;
+
+        const res = await this.fetchJson(url);
+        if (!res || !res.results) return { results: [], totalFound: 0 };
+
+        const results = res.results.map((r: any) => ({
+            repositoryId: "openalex",
+            repositoryName: "OpenAlex",
+            identifier: r.id,
+            title: r.display_name,
+            creators: r.authorships?.map((a: any) => a.author.display_name) || [],
+            date: r.publication_date,
+            url: r.doi || r.id,
+            doi: r.doi,
+            type: r.type,
+            accessMethod: "api"
+        }));
+
+        return {
+            results,
+            totalFound: res.meta?.count || results.length
+        };
     }
 }

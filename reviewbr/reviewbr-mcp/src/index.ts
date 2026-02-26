@@ -15,9 +15,22 @@ import { ScreeningService } from "./services/screen.js";
 import { SnowballService } from "./services/snowball.js";
 import { DataService } from "./services/data.js";
 import { PubMedService } from "./services/pubmed.js";
+import { CrossrefService } from "./services/crossref.js";
+import { DatabaseService } from "./services/database.js";
 import { PrismaFlowValidator, PrismaFlowSchema } from "./services/prisma_validator.js";
+import { BvsService } from "./services/bvs.js";
+import { ProjectInitService } from "./services/project_init.js";
+
+import * as path from "node:path";
+import * as fs from "node:fs";
 
 // ─── Initialize ───────────────────────────────────────────────
+const toolHandlers = new Map<string, (params: any) => Promise<any>>();
+
+function regTool(name: string, description: string, schema: any, handler: (params: any) => Promise<any>) {
+    server.tool(name, description, schema, handler);
+    toolHandlers.set(name, handler);
+}
 
 const registry = Registry.loadDefault();
 const strategy = new AccessStrategy();
@@ -27,6 +40,36 @@ const screeningService = new ScreeningService(process.env.GOOGLE_API_KEY ?? "");
 const snowballService = new SnowballService();
 const dataService = new DataService();
 const pubmedService = new PubMedService();
+const crossrefService = new CrossrefService();
+const dbService = new DatabaseService();
+const bvsService = new BvsService();
+const projectInitService = new ProjectInitService();
+
+/**
+ * Helper to log tool execution directly into the project's local directory.
+ */
+async function logToLocalProject(projectPath: string, toolName: string, data: any) {
+    try {
+        const logDir = path.join(process.cwd(), projectPath, "logs");
+        if (!fs.existsSync(logDir)) fs.mkdirSync(logDir, { recursive: true });
+        const logPath = path.join(logDir, "search_history.json");
+        const logEntry = {
+            timestamp: new Date().toISOString(),
+            tool: toolName,
+            ...data
+        };
+        let history = [];
+        if (fs.existsSync(logPath)) {
+            try {
+                history = JSON.parse(fs.readFileSync(logPath, "utf-8"));
+            } catch (e) { history = []; }
+        }
+        history.push(logEntry);
+        fs.writeFileSync(logPath, JSON.stringify(history, null, 2));
+    } catch (e) {
+        console.error("Local logging error:", e);
+    }
+}
 
 const server = new McpServer({
     name: "reviewbr-mcp",
@@ -73,12 +116,40 @@ server.tool(
             .describe("Camadas: 1=Agregadores (Oasisbr/SciELO), 2=Instituições (Cobertas pelo Oasisbr - Passivo), 3=Prioridade (UFC/Embrapa - Ativo), 4=Especializados, 5=Literatura Cinzenta"),
         dateFrom: z.string().optional(),
         dateUntil: z.string().optional(),
+        projectId: z.number().optional().describe("ID do projeto no banco central"),
+        projectPath: z.string().optional().describe("Caminho do projeto ativo"),
     },
     async (params) => {
         const { results, errors } = await searchService.searchPapers(params.query, params.layers, {
             dateFrom: params.dateFrom,
             dateUntil: params.dateUntil
         });
+
+        // Resolve project for audit
+        let projectId = params.projectId;
+        if (!projectId && params.projectPath) {
+            const project = await dbService.findProjectByPath(params.projectPath);
+            if (project) projectId = project.id;
+        }
+
+        if (projectId) {
+            await dbService.insertRecords(projectId, "optimized_search", results);
+            await dbService.logAuditEvent({
+                project_id: projectId,
+                tool_name: "search_papers_optimized",
+                action_type: "search",
+                params: JSON.stringify(params),
+                result_summary: `Busca otimizada: ${results.length} registros importados para o banco.`
+            });
+        }
+
+        if (params.projectPath) {
+            await logToLocalProject(params.projectPath, "search_papers_optimized", {
+                query: params.query,
+                found: results.length,
+                errors
+            });
+        }
 
         return {
             content: [{
@@ -204,13 +275,70 @@ server.tool(
     "Importa dados de arquivo RIS (ex: Zotero/EndNote).",
     {
         content: z.string().describe("Conteúdo do arquivo .ris"),
+        projectId: z.number().optional(),
+        projectPath: z.string().optional(),
     },
     async (params) => {
         const results = dataService.importRis(params.content);
+
+        // Resolve project for audit
+        let projectId = params.projectId;
+        if (!projectId && params.projectPath) {
+            const project = await dbService.findProjectByPath(params.projectPath);
+            if (project) projectId = project.id;
+        }
+
+        if (projectId) {
+            await dbService.insertRecords(projectId, "ris_import", results);
+        }
+
         return {
             content: [{
                 type: "text",
                 text: JSON.stringify(results, null, 2)
+            }]
+        };
+    }
+);
+
+server.tool(
+    "import_bvs_export",
+    "Importa resultados exportados do portal BVS/LILACS (CSV).",
+    {
+        filePath: z.string().describe("Caminho absoluto para o arquivo CSV exportado da BVS"),
+        projectId: z.number().optional(),
+        projectPath: z.string().optional(),
+    },
+    async (params) => {
+        if (!fs.existsSync(params.filePath)) {
+            return { content: [{ type: "text", text: `Arquivo não encontrado: ${params.filePath}` }] };
+        }
+
+        const csvContent = fs.readFileSync(params.filePath, "utf-8");
+        const results = bvsService.parseCSV(csvContent);
+
+        // Resolve project for audit
+        let projectId = params.projectId;
+        if (!projectId && params.projectPath) {
+            const project = await dbService.findProjectByPath(params.projectPath);
+            if (project) projectId = project.id;
+        }
+
+        if (projectId) {
+            await dbService.insertRecords(projectId, "lilacs", results);
+            await dbService.logAuditEvent({
+                project_id: projectId,
+                tool_name: "import_bvs_export",
+                action_type: "import",
+                params: JSON.stringify(params),
+                result_summary: `Importado BVS CSV: ${results.length} registros.`
+            });
+        }
+
+        return {
+            content: [{
+                type: "text",
+                text: `Sucesso: ${results.length} registros importados da BVS para o projeto ${projectId || "(sem ID)"}.`
             }]
         };
     }
@@ -222,12 +350,41 @@ server.tool(
     {
         query: z.string().describe("Termo de busca (ex: 'Anacardium occidentale AND antioxidant')"),
         maxResults: z.number().default(20).describe("Máximo de resultados"),
+        projectId: z.number().optional(),
+        projectPath: z.string().optional(),
     },
     async (params) => {
-        const { results, error } = await pubmedService.search(params.query, params.maxResults);
+        const { results, error } = await pubmedService.search(params.query, {
+            maxResults: params.maxResults
+        });
 
         if (error) {
             return { content: [{ type: "text", text: `Erro na busca PubMed: ${error}` }] };
+        }
+
+        // Resolve project for audit
+        let projectId = params.projectId;
+        if (!projectId && params.projectPath) {
+            const project = await dbService.findProjectByPath(params.projectPath);
+            if (project) projectId = project.id;
+        }
+
+        if (projectId) {
+            await dbService.insertRecords(projectId, "pubmed", results);
+            await dbService.logAuditEvent({
+                project_id: projectId,
+                tool_name: "search_pubmed",
+                action_type: "search",
+                params: JSON.stringify(params),
+                result_summary: `Busca PubMed: ${results.length} registros importados.`
+            });
+        }
+
+        if (params.projectPath) {
+            await logToLocalProject(params.projectPath, "search_pubmed", {
+                query: params.query,
+                found: results.length
+            });
         }
 
         const summary = [
@@ -258,6 +415,93 @@ server.tool(
     }
 );
 
+server.tool(
+    "retrieve_fulltexts",
+    "Verifica acesso aberto e baixa PDFs para o texto completo (F4.3).",
+    {
+        projectId: z.number().optional(),
+        projectPath: z.string().describe("Caminho do projeto (ex: 'projects/data_mining/estado_arte_caju')"),
+        datasetPath: z.string().optional().describe("Caminho absoluto para o JSON filtrado (opcional)"),
+    },
+    async (params) => {
+        const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
+        const outputDir = path.join(projectDir, "03_screening/pdfs");
+        if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
+
+        const inputPath = params.datasetPath || path.join(projectDir, "03_screening/audit_dataset_f4.json");
+        if (!fs.existsSync(inputPath)) {
+            return { content: [{ type: "text", text: `Dataset não encontrado: ${inputPath}` }] };
+        }
+
+        const dataContent = fs.readFileSync(inputPath, "utf-8");
+        const data = JSON.parse(dataContent);
+        const recordsToProcess = data.included || data;
+
+        const stats = { found: 0, downloaded: 0, failed: 0 };
+        const results: any[] = [];
+
+        const batchSize = 10;
+        for (let i = 0; i < recordsToProcess.length; i += batchSize) {
+            const batch = recordsToProcess.slice(i, i + batchSize);
+            const promises = batch.map(async (item: any) => {
+                const r = item.record || item;
+                const identifier = r.doi || r.identifier;
+
+                let pdfUrl = r.pdfUrl;
+
+                if (!pdfUrl && r.doi) {
+                    try {
+                        const unpayUrl = `https://api.unpaywall.org/v2/${encodeURIComponent(r.doi)}?email=reviewbr@prismaid.com`;
+                        const res = await fetch(unpayUrl);
+                        if (res.ok) {
+                            const upData = await res.json();
+                            pdfUrl = upData.best_oa_location?.url_for_pdf;
+                        }
+                    } catch (e) { }
+                }
+
+                if (!pdfUrl && r.repositoryId && r.repositoryId !== 'crossref' && r.repositoryId !== 'openalex') {
+                    const repo = registry.getById(r.repositoryId);
+                    if (repo) {
+                        try {
+                            pdfUrl = await strategy.findPdfUrl(repo, r.identifier);
+                        } catch (e) { }
+                    }
+                }
+
+                if (pdfUrl) {
+                    stats.found++;
+                    try {
+                        const fileName = `${r.identifier.replace(/[^a-zA-Z0-9]/g, "_")}.pdf`;
+                        const filePath = path.join(outputDir, fileName);
+
+                        const response = await fetch(pdfUrl);
+                        if (response.ok) {
+                            const buffer = await response.arrayBuffer();
+                            fs.writeFileSync(filePath, Buffer.from(buffer));
+                            stats.downloaded++;
+                            r.pdfPath = filePath;
+                        } else {
+                            stats.failed++;
+                        }
+                    } catch (e) {
+                        stats.failed++;
+                    }
+                }
+                results.push(item);
+            });
+            await Promise.all(promises);
+            fs.writeFileSync(inputPath, JSON.stringify({ ...data, included: results }, null, 2));
+        }
+
+        return {
+            content: [{
+                type: "text",
+                text: `Processamento F4.3 concluído:\n- Encontrados links: ${stats.found}\n- Downloads realizados: ${stats.downloaded}\n- Falhas: ${stats.failed}\nLocal: ${outputDir}`
+            }]
+        };
+    }
+);
 
 // ─── Legacy Tools ─────────────────────────────────────────────
 
@@ -281,6 +525,8 @@ server.tool(
         dateFrom: z.string().optional().describe("Data inicial (ISO: '2020-01-01')"),
         dateUntil: z.string().optional().describe("Data final (ISO: '2025-12-31')"),
         maxResults: z.number().default(50).describe("Máximo de resultados por repositório"),
+        projectId: z.number().optional(),
+        projectPath: z.string().optional(),
     },
     async (params) => {
         let repos = registry.getActive();
@@ -323,6 +569,32 @@ server.tool(
             } catch (error) {
                 errors.push(`${repo.id} (${repo.institution.acronym}): ${(error as Error).message}`);
             }
+        }
+
+        // Resolve project for audit
+        let projectId = params.projectId;
+        if (!projectId && params.projectPath) {
+            const project = await dbService.findProjectByPath(params.projectPath);
+            if (project) projectId = project.id;
+        }
+
+        if (projectId) {
+            await dbService.insertRecords(projectId, "repository", allResults);
+            await dbService.logAuditEvent({
+                project_id: projectId,
+                tool_name: "search_repository",
+                action_type: "search",
+                params: JSON.stringify(params),
+                result_summary: `Busca Repositórios: ${allResults.length} registros importados.`
+            });
+        }
+
+        if (params.projectPath) {
+            await logToLocalProject(params.projectPath, "search_repository", {
+                query: params.query,
+                found: allResults.length,
+                errors
+            });
         }
 
         const summary = [
@@ -515,6 +787,36 @@ server.tool(
     }
 );
 
+regTool(
+    "plan_research_protocol",
+    "Planeja um novo projeto de pesquisa, registra no banco central e cria a estrutura de pastas.",
+    {
+        name: z.string().describe("Nome do projeto"),
+        userId: z.string().describe("ID do usuário"),
+        topic: z.string().describe("Tema/Objetivo da pesquisa"),
+        researchType: z.enum([
+            "systematic_review",
+            "scoping_review",
+            "integrative_review",
+            "meta_analysis",
+            "rapid_review",
+            "exploratory"
+        ]).describe("Tipo de pesquisa"),
+        projectPath: z.string().describe("Caminho base onde o projeto será criado"),
+    },
+    async (params) => {
+        const projectId = await projectInitService.register(params as any, dbService);
+        const result = await projectInitService.initializeWorkspace(projectId, params.projectPath, dbService);
+
+        return {
+            content: [{
+                type: "text",
+                text: `Projeto criado com sucesso!\nID: ${result.projectId}\nProtocolo: ${result.protocolPath}\nTipo: ${params.researchType}`
+            }]
+        };
+    }
+);
+
 // ─── Verification Tools ─────────────────────────────────────────
 
 server.tool(
@@ -553,9 +855,201 @@ server.tool(
     }
 );
 
+const openAlexHandler = async (params: any) => {
+    // Resolve project for audit
+    let projectId = params.projectId;
+    if (!projectId && params.projectPath) {
+        const project = await dbService.findProjectByPath(params.projectPath);
+        if (project) projectId = project.id;
+    }
+
+    const { results, totalFound } = await snowballService.search(params.query, {
+        maxResults: params.maxResults || 200
+    });
+
+    // Audit results
+    await dbService.logAuditEvent({
+        project_id: projectId,
+        tool_name: "search_openalex",
+        action_type: "search",
+        params: JSON.stringify(params),
+        result_summary: `Busca OpenAlex: ${results.length} artigos encontrados (${totalFound} total).`
+    });
+
+    // Local User Log & File Save
+    if (params.projectPath) {
+        await logToLocalProject(params.projectPath, "search_openalex", {
+            query: params.query,
+            found: results.length,
+            totalFound,
+            params
+        });
+
+        // Auto-save result set to 01_raw
+        try {
+            const { default: path } = await import("node:path");
+            const { default: fs } = await import("node:fs");
+            const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
+            if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
+            const outputPath = path.join(rawDir, `dataset_openalex_${timestamp}.json`);
+            fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
+        } catch (saveError) {
+            console.error("Failed to auto-save OpenAlex results:", saveError);
+        }
+    }
+
+    const summary = [
+        `## Resultados OpenAlex: "${params.query}"`,
+        `**Total encontrado na base:** ${totalFound}`,
+        `**Retornados nesta página:** ${results.length}`,
+        "",
+        ...results.slice(0, 10).map((r: any, i: number) => [
+            `### ${i + 1}. ${r.title}`,
+            r.creators.length > 0 ? `**Autores:** ${r.creators.join("; ")}` : "",
+            r.date ? `**Data:** ${r.date}` : "",
+            r.doi ? `**DOI:** ${r.doi}` : "",
+            `**URL:** ${r.url}`,
+            "",
+        ].filter(Boolean).join("\n")),
+        results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+    ].join("\n");
+
+    return { content: [{ type: "text", text: summary }] };
+};
+
+const crossrefHandler = async (params: any) => {
+    // Resolve project for audit
+    let projectId = params.projectId;
+    if (!projectId && params.projectPath) {
+        const project = await dbService.findProjectByPath(params.projectPath);
+        if (project) projectId = project.id;
+    }
+
+    const { results, totalFound } = await crossrefService.search(params.query, {
+        maxResults: params.maxResults || 200
+    });
+
+    // Audit results
+    await dbService.logAuditEvent({
+        project_id: projectId,
+        tool_name: "search_crossref",
+        action_type: "search",
+        params: JSON.stringify(params),
+        result_summary: `Busca Crossref: ${results.length} artigos encontrados (${totalFound} total).`
+    });
+
+    // Local User Log & File Save
+    if (params.projectPath) {
+        await logToLocalProject(params.projectPath, "search_crossref", {
+            query: params.query,
+            found: results.length,
+            totalFound,
+            params
+        });
+
+        // Auto-save result set to 01_raw
+        try {
+            const { default: path } = await import("node:path");
+            const { default: fs } = await import("node:fs");
+            const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
+            if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
+            const outputPath = path.join(rawDir, `dataset_crossref_${timestamp}.json`);
+            fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
+        } catch (saveError) {
+            console.error("Failed to auto-save Crossref results:", saveError);
+        }
+    }
+
+    const summary = [
+        `## Resultados Crossref: "${params.query}"`,
+        `**Total encontrado na base:** ${totalFound}`,
+        `**Retornados nesta página:** ${results.length}`,
+        "",
+        ...results.slice(0, 10).map((r: any, i: number) => [
+            `### ${i + 1}. ${r.title}`,
+            r.creators.length > 0 ? `**Autores:** ${r.creators.join("; ")}` : "",
+            r.date ? `**Data:** ${r.date}` : "",
+            r.doi ? `**DOI:** ${r.doi}` : "",
+            `**URL:** ${r.url}`,
+            "",
+        ].filter(Boolean).join("\n")),
+        results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+    ].join("\n");
+
+    return { content: [{ type: "text", text: summary }] };
+};
+
+regTool(
+    "search_openalex",
+    "Busca artigos diretamente no OpenAlex (Multidisciplinar Internacional). Ideal para construir listas mestras.",
+    {
+        query: z.string().describe("Termo de busca (ex: 'cashew OR Anacardium occidentale')"),
+        maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),
+        projectId: z.number().optional().describe("ID do projeto"),
+        projectPath: z.string().optional().describe("Caminho do projeto ativo"),
+    },
+    openAlexHandler
+);
+
+regTool(
+    "search_crossref",
+    "Busca artigos diretamente no Crossref (Multidisciplinar Internacional). Focado em metadados de DOIs.",
+    {
+        query: z.string().describe("Termo de busca"),
+        maxResults: z.number().default(200).describe("Máximo de resultados"),
+        projectId: z.number().optional().describe("ID do projeto"),
+        projectPath: z.string().optional().describe("Caminho do projeto ativo"),
+    },
+    crossrefHandler
+);
+
 // ─── Start Server ─────────────────────────────────────────────
 
 async function main() {
+    const args = process.argv;
+    const toolIdx = args.indexOf("--tool");
+
+    if (toolIdx !== -1) {
+        const name = args[toolIdx + 1];
+        const argsIdx = args.indexOf("--args");
+        let toolParams: any = {};
+
+        if (argsIdx !== -1) {
+            const rawArgs = args[argsIdx + 1];
+            try {
+                toolParams = JSON.parse(rawArgs);
+            } catch (e: any) {
+                try {
+                    // Fallback for PowerShell escaped quotes
+                    const fixed = rawArgs.replace(/\\"/g, '"').replace(/^"/, '').replace(/"$/, '');
+                    toolParams = JSON.parse(fixed);
+                } catch (e2: any) {
+                    console.error(`Fatal error: Failed to parse --args. JSON error: ${e.message}`);
+                    console.error(`Raw args received: ${rawArgs}`);
+                    process.exit(1);
+                }
+            }
+        }
+
+        const handler = toolHandlers.get(name);
+        if (handler) {
+            console.error(`Running tool "${name}" via CLI...`);
+            try {
+                const result = await handler(toolParams);
+                console.log(JSON.stringify(result, null, 2));
+                process.exit(0);
+            } catch (handlerError: any) {
+                console.error(`Fatal error in tool "${name}":`, handlerError);
+                process.exit(1);
+            }
+        } else {
+            console.error(`Error: Tool "${name}" not found.`);
+            process.exit(1);
+        }
+    }
+
     const transport = new StdioServerTransport();
     await server.connect(transport);
     console.error("mcp-repos-br server ready");

@@ -1,7 +1,0 @@
-id,string_busca
-BUS-2026-001,"garrafada" AND ("composto de" OR "a base de")
-BUS-2026-002,("bebeu" OR "tomou") AND "preparado com" -cafe -vinho
-BUS-2026-003,"bebida" AND "feita de" -"refrigerante" -"cerveja"
-BUS-2026-004,("infusao" OR "tonico") AND "fermentado"
-BUS-2026-005,("licor de" OR "aguardente de") AND "regiao"
-BUS-2026-006,"vinho de" -"uva"
