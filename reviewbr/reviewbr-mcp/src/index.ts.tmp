@@ -27,7 +27,10 @@ import * as fs from "node:fs";
 // ─── Initialize ───────────────────────────────────────────────
 const toolHandlers = new Map<string, (params: any) => Promise<any>>();
 
-
+function regTool(name: string, description: string, schema: any, handler: (params: any) => Promise<any>) {
+    server.tool(name, description, schema, handler);
+    toolHandlers.set(name, handler);
+}
 
 const registry = Registry.loadDefault();
 const strategy = new AccessStrategy();
@@ -113,8 +116,8 @@ server.tool(
             .describe("Camadas: 1=Agregadores (Oasisbr/SciELO), 2=Instituições (Cobertas pelo Oasisbr - Passivo), 3=Prioridade (UFC/Embrapa - Ativo), 4=Especializados, 5=Literatura Cinzenta"),
         dateFrom: z.string().optional(),
         dateUntil: z.string().optional(),
-        projectId: z.number().optional(),
-        projectPath: z.string().optional(),
+        projectId: z.number().optional().describe("ID do projeto no banco central"),
+        projectPath: z.string().optional().describe("Caminho do projeto ativo"),
     },
     async (params) => {
         const { results, errors } = await searchService.searchPapers(params.query, params.layers, {
@@ -246,7 +249,7 @@ server.tool(
     "Exporta dados para CSV, Markdown (Bibliografia) ou JSON.",
     {
         dataset: z.string().describe("JSON string com resultados"),
-        format: z.enum(["csv", "markdown", "json"]).default("json").describe("Formato de saída"),
+        format: z.enum(["csv", "markdown", "json"]).default("json"),
     },
     async (params) => {
         let records;
@@ -420,7 +423,7 @@ server.tool(
     {
         projectId: z.number().optional(),
         projectPath: z.string().describe("Caminho do projeto (ex: 'projects/data_mining/estado_arte_caju')"),
-        datasetPath: z.string().optional(),
+        datasetPath: z.string().optional().describe("Caminho absoluto para o JSON filtrado (opcional)"),
     },
     async (params) => {
         const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
@@ -509,22 +512,20 @@ server.tool(
     "Busca artigos/teses em repositórios acadêmicos brasileiros. Usa OAI-PMH, DSpace REST ou scraping conforme disponibilidade.",
     {
         query: z.string().describe("Termo(s) de busca por tema (ex: 'bebida fermentada', 'inteligência artificial')"),
-        scope: z.enum(["global_open_science", "regional_latam", "national_br", "institutional_br"]).optional()
-            .describe("Restringe a busca a um escopo específico da ciência aberta. Se não informado, busca na camada escolhida."),
         repositories: z.array(z.string()).optional()
             .describe("IDs dos repos (ex: ['BR-FED-0001', 'BR-AGG-0001']). Omita para buscar em todos os ativos."),
-        title: z.string().optional(),
-        author: z.string().optional(),
-        state: z.string().optional(),
+        title: z.string().optional().describe("Buscar especificamente no título"),
+        author: z.string().optional().describe("Filtrar por autor"),
+        state: z.string().optional().describe("Filtrar por UF (ex: 'BA', 'SP')"),
         institutionType: z.enum(["federal", "estadual", "privada", "comunitaria", "instituto_federal"]).optional()
             .describe("Filtrar por tipo de instituição"),
-        institution: z.string().optional(),
+        institution: z.string().optional().describe("Filtrar por universidade (ex: 'Universidade Federal da Bahia')"),
         degreeType: z.enum(["graduacao", "mestrado", "doutorado", "pos-doutorado", "livre-docencia"]).optional()
             .describe("Tipo de grau (mestrado, doutorado, etc.) — funciona em BDTD"),
-        subjectArea: z.string().optional(),
-        issn: z.string().optional(),
-        dateFrom: z.string().optional(),
-        dateUntil: z.string().optional(),
+        subjectArea: z.string().optional().describe("Área do conhecimento (ex: 'ciências agrárias')"),
+        issn: z.string().optional().describe("ISSN do periódico — funciona em SciELO"),
+        dateFrom: z.string().optional().describe("Data inicial (ISO: '2020-01-01')"),
+        dateUntil: z.string().optional().describe("Data final (ISO: '2025-12-31')"),
         maxResults: z.number().default(50).describe("Máximo de resultados por repositório"),
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
@@ -537,9 +538,6 @@ server.tool(
                 .map((id) => registry.getById(id))
                 .filter((r): r is NonNullable<typeof r> => r !== undefined);
         } else {
-            if (params.scope) {
-                repos = repos.filter((r) => r.scope === params.scope);
-            }
             if (params.state) {
                 repos = repos.filter((r) => r.institution.state.toUpperCase() === params.state!.toUpperCase());
             }
@@ -659,9 +657,9 @@ server.tool(
     "Coleta registros em massa via OAI-PMH de um repositório específico. Ideal para harvesting completo ou por coleção.",
     {
         repositoryId: z.string().describe("ID do repositório"),
-        set: z.string().optional(),
-        dateFrom: z.string().optional(),
-        dateUntil: z.string().optional(),
+        set: z.string().optional().describe("Coleção/comunidade OAI-PMH (setSpec)"),
+        dateFrom: z.string().optional().describe("Data inicial (ISO)"),
+        dateUntil: z.string().optional().describe("Data final (ISO)"),
         maxRecords: z.number().default(100).describe("Máximo de registros a coletar"),
         metadataPrefix: z.string().default("oai_dc").describe("Formato de metadados"),
     },
@@ -792,7 +790,7 @@ server.tool(
     }
 );
 
-server.tool(
+regTool(
     "plan_research_protocol",
     "Planeja um novo projeto de pesquisa, registra no banco central e cria a estrutura de pastas.",
     {
@@ -986,105 +984,28 @@ const crossrefHandler = async (params: any) => {
     return { content: [{ type: "text", text: summary }] };
 };
 
-const scieloHandler = async (params: any) => {
-    let projectId = params.projectId;
-    if (!projectId && params.projectPath) {
-        const project = await dbService.findProjectByPath(params.projectPath);
-        if (project) projectId = project.id;
-    }
-
-    // P4310312277 is the OpenAlex Publisher ID for SciELO
-    const { results, totalFound } = await snowballService.search(params.query, {
-        maxResults: params.maxResults || 200,
-        filter: "primary_location.source.publisher_lineage:P4310312277"
-    });
-
-    results.forEach(r => {
-        r.repositoryId = "scielo";
-        r.repositoryName = "SciELO (via OpenAlex)";
-    });
-
-    await dbService.logAuditEvent({
-        project_id: projectId,
-        tool_name: "search_scielo",
-        action_type: "search",
-        params: JSON.stringify(params),
-        result_summary: `Busca SciELO: ${results.length} artigos encontrados (${totalFound} total).`
-    });
-
-    if (params.projectPath) {
-        await logToLocalProject(params.projectPath, "search_scielo", {
-            query: params.query,
-            found: results.length,
-            totalFound,
-            params
-        });
-
-        try {
-            const { default: path } = await import("node:path");
-            const { default: fs } = await import("node:fs");
-            const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
-            if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
-            const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
-            const outputPath = path.join(rawDir, `dataset_scielo_${timestamp}.json`);
-            fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
-        } catch (saveError) {
-            console.error("Failed to auto-save SciELO results:", saveError);
-        }
-    }
-
-    const summary = [
-        `## Resultados SciELO: "${params.query}"`,
-        `**Total encontrado na base:** ${totalFound}`,
-        `**Retornados nesta página:** ${results.length}`,
-        "",
-        ...results.slice(0, 10).map((r: any, i: number) => [
-            `### ${i + 1}. ${r.title}`,
-            r.creators.length > 0 ? `**Autores:** ${r.creators.join("; ")}` : "",
-            r.date ? `**Data:** ${r.date}` : "",
-            `**URL:** ${r.url}`,
-            "",
-        ].filter(Boolean).join("\n")),
-        results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
-    ].join("\n");
-
-    return { content: [{ type: "text", text: summary }] };
-};
-
-server.tool(
+regTool(
     "search_openalex",
     "Busca artigos diretamente no OpenAlex (Multidisciplinar Internacional). Ideal para construir listas mestras.",
     {
         query: z.string().describe("Termo de busca (ex: 'cashew OR Anacardium occidentale')"),
         maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),
-        projectId: z.number().optional(),
-        projectPath: z.string().optional(),
+        projectId: z.number().optional().describe("ID do projeto"),
+        projectPath: z.string().optional().describe("Caminho do projeto ativo"),
     },
-    openAlexHandler as any
+    openAlexHandler
 );
 
-server.tool(
+regTool(
     "search_crossref",
     "Busca artigos diretamente no Crossref (Multidisciplinar Internacional). Focado em metadados de DOIs.",
     {
         query: z.string().describe("Termo de busca"),
         maxResults: z.number().default(200).describe("Máximo de resultados"),
-        projectId: z.number().optional(),
-        projectPath: z.string().optional(),
+        projectId: z.number().optional().describe("ID do projeto"),
+        projectPath: z.string().optional().describe("Caminho do projeto ativo"),
     },
-    crossrefHandler as any
-);
-
-server.tool(
-    "search_scielo",
-    "Busca artigos no SciELO (Scientific Electronic Library Online). Foco exclusivo na América Latina (Open Science).",
-    {
-        query: z.string().describe("Termo de busca para o SciELO (ex: 'dengue OR zika')"),
-        maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),
-        projectId: z.number().optional(),
-        projectPath: z.string().optional(),
-    },
-    scieloHandler as any
+    crossrefHandler
 );
 
 // ─── Start Server ─────────────────────────────────────────────

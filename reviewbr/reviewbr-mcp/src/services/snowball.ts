@@ -108,9 +108,13 @@ export class SnowballService {
         return await res.json();
     }
 
-    async search(query: string, options: { maxResults?: number } = {}): Promise<{ results: SearchResult[]; totalFound: number }> {
+    async search(query: string, options: { maxResults?: number, filter?: string } = {}): Promise<{ results: SearchResult[]; totalFound: number }> {
         const maxResults = options.maxResults || 200;
-        const url = `https://api.openalex.org/works?search=${encodeURIComponent(query)}&per_page=${Math.min(maxResults, 200)}&mailto=${this.mailto}`;
+        let url = `https://api.openalex.org/works?search=${encodeURIComponent(query)}&per_page=${Math.min(maxResults, 200)}&mailto=${this.mailto}`;
+
+        if (options.filter) {
+            url += `&filter=${options.filter}`;
+        }
 
         const res = await this.fetchJson(url);
         if (!res || !res.results) return { results: [], totalFound: 0 };

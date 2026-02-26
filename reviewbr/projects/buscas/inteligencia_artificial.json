@@ -1,0 +1,290 @@
+{
+  "query": "inteligencia artificial",
+  "timestamp": "2026-02-15T02:37:12.247Z",
+  "strategy": "mcp-repos-br",
+  "filters": {
+    "maxResults": 20
+  },
+  "results": [
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Regulação da inteligência artificial na saúde",
+      "url": "https://www.teses.usp.br/teses/disponiveis/5/5137/tde-23042024-111255/",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Dourado, Daniel de Araujo"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Inteligência Artificial para jogos de tabuleiro.",
+      "url": "https://teses.usp.br/teses/disponiveis/45/45134/tde-20210729-135244/",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Carvalho, Marcelo Nunes de"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "O uso de inteligência artificial no STJ",
+      "url": "http://repositorio.unb.br/handle/10482/46810",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Nunes, Paulo Nicholas de Freitas"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "É preciso regular a Inteligência Artificial?",
+      "url": "https://repositorio.unifesp.br/handle/11600/60469",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Gil, Luis Felipe [UNIFESP]"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Arbitragem estatística e inteligência artificial",
+      "url": "https://www.teses.usp.br/teses/disponiveis/92/92131/tde-13072023-113828/",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Parreiras, Luiz Paulo Rodrigues de Freitas"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Inteligência artificial: a relevância para a arquitetura",
+      "url": "https://www.teses.usp.br/teses/disponiveis/102/102131/tde-20092024-095508/",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Quesada, Christian Jhulian Braga"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Inteligência artificial popperiana",
+      "url": "http://hdl.handle.net/10183/5901",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Schuler, Joao Paulo Schwarz"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Inteligência artificial: um perguntar pelo homem?",
+      "url": "https://repositorio.ufpb.br/jspui/handle/123456789/11842",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Silveira, José Atílio Pires da"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Processo tributário e Inteligência Artificial",
+      "url": "https://repositorio.pucsp.br/jspui/handle/handle/42427",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Souza Júnior, José Ildo de"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Inteligência artificial e responsabilidade penal",
+      "url": "http://bibliotecatede.uninove.br/handle/tede/3426",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Ortiz, Mariana Fleming Soares"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Inteligência artificial e o mínimo informacional",
+      "url": "http://hdl.handle.net/10183/264012",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Mello, Alexandre Schmitt da Silva"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Veículos autônomos e inteligência artificial",
+      "url": "https://hdl.handle.net/1884/91888",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Lazzarotto, Gabriel Strapasson"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "A obra de arte na era da inteligência artificial",
+      "url": "http://repositorio.utfpr.edu.br/jspui/handle/1/26309",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Loch, Carolina Valentim"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "A inteligência artificial no judiciário",
+      "url": "http://repositorio.ufsc.br/xmlui/handle/123456789/79410",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Cardoso, Sérgio Eduardo"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Direito à explicação em inteligência artificial",
+      "url": "https://dspace.mackenzie.br/handle/10899/40483",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Santos, Marcelo Fonseca"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "[pt] A RESPONSABILIDADE CIVIL NA INTELIGÊNCIA ARTIFICIAL",
+      "url": "https://www.maxwell.vrac.puc-rio.br/colecao.php?strSecao=resultado&nrSeq=61871&idi=1",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "PEDRO ALBERTO SCHILLER DE FARIA"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Aplicação de métodos de inteligência artificial em inteligência de negócios.",
+      "url": "https://www.teses.usp.br/teses/disponiveis/3/3142/tde-13092024-080026/",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Dutra, Rogério Garcia"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "O uso de inteligência artificial no ensino de contabilidade",
+      "url": "http://www.teses.usp.br/teses/disponiveis/12/12136/tde-24112014-190541/",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Souza, Marcelo Cunha de"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Maturidade e adoção da inteligência artificial no backoffice",
+      "url": "https://www.teses.usp.br/teses/disponiveis/12/12139/tde-20062024-154457/",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Oliveira, Valmir Mesquita de"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    },
+    {
+      "repo_id": "BR-AGG-0001",
+      "repo_name": "BDTD (IBICT)",
+      "title": "Inteligência artificial aplicada em séries temporais",
+      "url": "https://www.teses.usp.br/teses/disponiveis/45/45133/tde-08042024-094807/",
+      "doi": null,
+      "pdf_url": null,
+      "published_date": "",
+      "type": "thesis/dissertation",
+      "creators": [
+        "Martins, Daniel Walter de Paula"
+      ],
+      "scraped_at": "2026-02-15T02:37:12.250Z"
+    }
+  ]
+}

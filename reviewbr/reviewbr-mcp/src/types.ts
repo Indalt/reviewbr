@@ -14,6 +14,14 @@ export type ContentType = z.infer<typeof ContentTypeSchema>;
 export const RepoStatusSchema = z.string();
 export type RepoStatus = z.infer<typeof RepoStatusSchema>;
 
+export const ScopeSchema = z.enum([
+    "global_open_science",
+    "regional_latam",
+    "national_br",
+    "institutional_br"
+]);
+export type ScopeCategory = z.infer<typeof ScopeSchema>;
+
 const accessSchema = z.object({
     oaiPmh: z.object({
         available: z.boolean(),
@@ -29,8 +37,8 @@ const accessSchema = z.object({
     searchEndpoints: z.array(z.string()).optional(),
     // International REST API Mapping Extensions
     baseUrl: z.string().optional(),
-    endpoints: z.record(z.string()).optional(),
-    mapping: z.record(z.string()).optional(),
+    endpoints: z.record(z.string(), z.string()).optional(),
+    mapping: z.record(z.string(), z.string()).optional(),
 }).passthrough();
 
 export const RepositoryEntrySchema = z.object({
@@ -50,6 +58,7 @@ export const RepositoryEntrySchema = z.object({
     }).passthrough(),
     access: accessSchema,
     status: RepoStatusSchema,
+    scope: ScopeSchema.optional(),
     layer: z.string().optional(),
 }).passthrough();
 

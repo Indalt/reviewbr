@@ -34,7 +34,7 @@
     "openalex-sdk": "^1.1.6",
     "pdf-parse": "^1.1.4",
     "sqlite3": "^5.1.7",
-    "zod": "3.23.3"
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "^25.3.0",

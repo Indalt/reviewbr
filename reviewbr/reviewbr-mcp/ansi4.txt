@@ -1,0 +1,62 @@
+src/index.ts(108,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(165,8): error TS2769: No overload matches this call.
+  Overload 1 of 6, '(name: string, description: string, paramsSchemaOrAnnotations: ZodRawShapeCompat | { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Type 'ZodString' is not assignable to type 'AnySchema'.
+      Type 'ZodString' is missing the following properties from type 'ZodType<any, any, any>': "~standard", "~validate"
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(191,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(220,8): error TS2769: No overload matches this call.
+  Overload 1 of 6, '(name: string, description: string, paramsSchemaOrAnnotations: ZodRawShapeCompat | { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Type 'ZodString' is not assignable to type 'AnySchema'.
+      Type 'ZodString' is missing the following properties from type 'ZodType<any, any, any>': "~standard", "~validate"
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(246,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(273,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(304,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(347,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(419,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(509,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(535,23): error TS7006: Parameter 'id' implicitly has an 'any' type.
+src/index.ts(536,26): error TS7006: Parameter 'r' implicitly has an 'any' type.
+src/index.ts(630,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(654,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(702,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(792,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(822,8): error TS2769: No overload matches this call.
+  Overload 1 of 6, '(name: string, description: string, paramsSchemaOrAnnotations: ZodRawShapeCompat | { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Type 'ZodString' is not assignable to type 'AnySchema'.
+      Type 'ZodString' is missing the following properties from type 'ZodType<any, any, any>': "~standard", "~validate"
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(986,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.
+src/index.ts(998,5): error TS2769: No overload matches this call.
+  Overload 2 of 6, '(name: string, paramsSchema: ZodRawShapeCompat, annotations: { title?: string | undefined; readOnlyHint?: boolean | undefined; destructiveHint?: boolean | undefined; idempotentHint?: boolean | undefined; openWorldHint?: boolean | undefined; }, cb: (args: ShapeOutput<...>, extra: RequestHandlerExtra<...>) => { ...; } | Promise<...>): RegisteredTool', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ZodRawShapeCompat'.

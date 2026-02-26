@@ -1,121 +1,89 @@
-# reviewbr
+# ReviewBR: Open Science AI Tools for Systematic Literature Reviews
 
-# Open Science AI Tools for Systematic, Protocol-Based Literature Reviews
+**ReviewBR** é um ecossistema avançado de inteligência artificial projetado para atuar como um **Coordenador Metodológico Implacável** na condução de Revisões Sistemáticas da Literatura e Mapeamentos Científicos.
 
-**reviewbr** offers a suite of tools using generative AI models to streamline systematic reviews of scientific literature, tailored specifically for the Brazilian scientific database ecosystem.
-
-### Acknowledgments / Credits
-
-This ecosystem is a specialized fork and expansion based on the foundational architecture of the original [prismAId](https://github.com/Open-and-Sustainable/prismAId) project. We extend our gratitude to the original authors for their open-source contributions to automated systematic reviews.
+Construído como um *fork* especializado e uma evolução arquitetural do aclamado projeto [prismAId](https://github.com/Open-and-Sustainable/prismAId), o ReviewBR adapta a automação de ponta a ponta para as necessidades do ecossistema científico brasileiro, operando sob uma matriz estrita de **Ciência Aberta (Open Science)** e rastreabilidade PRISMA.
 
 ---
 
-[![GitHub Release](https://img.shields.io/github/v/release/Open-and-Sustainable/prismAId?sort=semver&display_name=tag&style=flat)](https://github.com/Open-and-Sustainable/prismAId/releases)
-[![GitHub top language](https://img.shields.io/github/languages/top/Open-and-Sustainable/prismAId?style=flat)](https://go.dev/)
-[![Go Report Card](https://goreportcard.com/badge/github.com/open-and-sustainable/prismaid)](https://goreportcard.com/report/github.com/open-and-sustainable/prismaid)
-[![Go Reference](https://pkg.go.dev/badge/github.com/open-and-sustainable/prismaid.svg)](https://pkg.go.dev/github.com/open-and-sustainable/prismaid)
-[![PyPI - Version](https://img.shields.io/pypi/v/prismaid?logo=pypi)](https://pypi.org/project/prismaid/)
-[![R-universe status badge](https://open-and-sustainable.r-universe.dev/badges/prismaid)](https://open-and-sustainable.r-universe.dev/prismaid)
+## 🚀 O Potencial do Sistema
 
-[![GitHub License](https://img.shields.io/github/license/Open-and-Sustainable/prismAId?style=flat)](https://www.gnu.org/licenses/agpl-3.0.en.html#license-text)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11210796.svg)](https://doi.org/10.5281/zenodo.11210796)
-[![DOI](https://joss.theoj.org/papers/10.21105/joss.07616/status.svg)](https://doi.org/10.21105/joss.07616)
-[![DOI]( https://img.shields.io/badge/user_manual-10.5281/zenodo.15394332-blue)](https://raw.githubusercontent.com/open-and-sustainable/prismaid_manual/main/prismaid_manual.pdf)
+O ReviewBR transcende a simples automação de buscas. Ele é um motor de processamento distribuído onde a orquestração de Inteligência Artificial opera localmente via protocolo MCP (Model Context Protocol), conectando LLMs a bibliotecas potentes escritas em Go, Python e TypeScript.
 
----
+O sistema elimina o atrito entre a pesquisa acadêmica e a programação, oferecendo um arsenal completo *"no-code"* para pesquisadores, guiado puramente através de um Agente de Inteligência Artificial.
 
-## Toolkit Overview
+### 1. Modelagem Metodológica e Trava de Auditoria (Protocol Guards)
 
-prismAId offers a comprehensive set of tools for systematic literature reviews:
+O sistema garante a integridade científica impedindo que o escopo mude silenciosamente.
 
-<div style="text-align: center;">
-    <img src="https://raw.githubusercontent.com/open-and-sustainable/prismaid/main/figures/tools.png" alt="Tools Overview" style="width: 600px;">
-</div>
+* **Planejamento Dinâmico:** Inicialização estruturada de projetos baseados na metodologia PICO (População, Intervenção, Comparação, Desfechos).
+* **Previews Computacionais Mapeados:** LLMs são programados para, obrigatoriamente, testarem as queries de busca através de uma "Amostragem Rápida" (que não escreve no banco de dados) permitindo ao pesquisador validar os descritores.
+* **Locked Execution (Execução Travada):** No momento em que uma busca bibliográfica oficial é disparada nas bases, o protocolo bloqueia o sistema. Nenhuma modificação nos metadados primários é permitida, forçando a transparência nos relatórios finais.
 
-### Core Tools
+### 2. Hub de Repositórios Multi-Camada
 
-1. **Screening** - Filter and tag manuscripts to identify items for exclusion
-2. **Download** - Download papers from Zotero collections or from URL lists
-3. **Convert** - Convert files (PDF, DOCX, HTML) to plain text for analysis
-4. **Review** - Process systematic literature reviews based on TOML configurations
+Total integração via API nativa com repositórios e agregadores globais, filtrados através das lentes da Ciência Aberta:
 
-### Workflow
+* **Camada Institucional e Nacional (OasisBR):** Buscas distribuídas via OAI-PMH em quase 100 repositórios universitários brasileiros (como USP, UFSC, Unicamp, Teses CAPES).
+* **Camada Regional Latino-Americana (SciELO):** Conector robusto que extrai a totalidade de metadados da Rede SciELO via OpenAlex.
+* **Visão Global:** Consultas automatizadas no OpenAlex, PubMed e Crossref.
 
-Our tools support a comprehensive systematic review workflow following the standard sequence: Search → Screen → Download → Convert → Review
+### 3. Pipeline de Triagem (Screening)
 
-<div style="text-align: center;">
-    <img src="https://raw.githubusercontent.com/ricboer0/prismaid/main/figures/prismAId_workflow.png" alt="Workflow Diagram" style="width: 600px;">
-</div>
+Não dependa da leitura cega. O motor ReviewBR aplica triagem algorítmica e por IA em escala:
 
-### Access Methods
+* **Deduplicação Inteligente.**
+* **Corte por Metadados:** Classificação automática do tipo do artigo e corte por idioma.
+* **Leitura Seletiva Estruturada:** O LLM não engole lixo. O sistema fraciona artigos brutos em Introdução, Metodologia e Conclusão, decidindo a inclusão/exclusão da literatura primária embasado estritamente no seu protocolo PICO original.
 
-- **Command Line Interface** - For users who prefer terminal-based workflows
-- **Web Initializer** - A browser-based setup tool for configuring reviews
-- **Programming Libraries** - API access through multiple languages:
-  - Go (native implementation)
-  - Python package
-  - R package
-  - Julia package
+### 4. Extração Nativa de PDFs e Text Mining
+
+O calcanhar de aquiles das pesquisas resolvido via back-end super otimizado em Go:
+
+* Conexão integrada (ou manual via Zotero) para realizar downloads síncronos da literatura elegível diretamente dos links nativos OA.
+* Conversão robusta de PDF, DOCX, e HTML através do Apache Tika nativo.
 
 ---
 
-## Specifications
+## 🛠️ Especificações Técnicas
 
-- **Review protocol**: Supports any literature review protocol with a preference for [Prisma 2020](https://www.prisma-statement.org/prisma-2020), which inspired our project name.
-- **Distribution**: Available as:
-  - Go [package](https://pkg.go.dev/github.com/open-and-sustainable/prismaid)
-  - Python [package](https://pypi.org/project/prismaid/)
-  - R [package](https://open-and-sustainable.r-universe.dev/prismaid)
-  - Julia [package](https://github.com/JuliaRegistries/General/tree/master/P/PrismAId)
-  - 'no-coding' [binaries](https://github.com/open-and-sustainable/prismaid/releases) for Windows, MacOS, and Linux (AMD64/ARM64)
-- **Supported LLMs**:
-    1. **OpenAI**: GPT-3.5 Turbo, GPT-4 Turbo, GPT-4o, GPT-4o Mini, GPT-4.1, GPT-4.1 Mini, GPT-4.1 Nano, GPT-5, GPT-5.1, GPT-5.2, GPT-5 Mini, GPT-5 Nano, o1, o1 Mini, o3, o3 Mini, and o4 Mini
-    2. **GoogleAI**: Gemini 1.5 Pro, Gemini 1.5 Flash, Gemini 2.0 Flash, Gemini 2.0 Flash Lite, Gemini 2.5 Pro, Gemini 2.5 Flash, Gemini 2.5 Flash Lite, Gemini 3 Pro Preview, and Gemini 3 Flash Preview
-    3. **Cohere**: Command, Command Light, Command R, Command R+, Command R7B, Command R (August 2024), Command A, and Command A Reasoning
-    4. **Anthropic**: Claude 3 Sonnet, Claude 3 Opus, Claude 3 Haiku, Claude 3.5 Haiku, Claude 3.5 Sonnet, Claude 3.7 Sonnet, Claude 4.0 Sonnet, Claude 4.0 Opus, Claude 4.5 Opus, Claude 4.5 Sonnet, and Claude 4.5 Haiku
-    5. **DeepSeek**: DeepSeek Chat v3, and DeepSeek Reasoner v3
-    6. **Perplexity**: Sonar, Sonar Pro, Sonar Reasoning Pro, and Sonar Deep Research
-    7. **Cloud Providers**: AWS Bedrock, Azure AI, Vertex AI
-    8. **Self-Hosted**: OpenAI-compatible endpoints
-- **Screening capabilities**: Deduplication, language filtering, article type classification, and off-topic detection
-- **Output format**: Data in CSV or JSON formats
-- **Performance**: Efficiently processes extensive datasets with minimal setup and **no coding** required
-- **Programming Language**: Core implementation in Go with bindings for Python, R, and Julia
+* **Padrão de Revisão:** Suporte end-to-end do [Prisma 2020](https://www.prisma-statement.org/prisma-2020) e Prisma-S.
+* **Integração de LLMs Suportadas via MCP/PrismAId:**
+  * **OpenAI:** GPT-4o, o1, o3, etc.
+  * **GoogleAI:** Gemini 1.5 Pro, Flash, Gemini 2.0 (Motores recomendados do ReviewBR).
+  * **Anthropic:** Claude 3.5 Sonnet, Claude 3 Opus.
+  * **Provedores Abertos/Cloud:** Cohere, DeepSeek, AWS e Groq.
+* **Engines Base:**
+  * Orquestrador de Contexto escrito em TypeScript / Node (MCP Server).
+  * Backend de Mineração e Extrator de PDF processado através binários compilados em **Go**.
+* **Saída Estruturada:** Dados tabulados entregues em CSV, JSON ou RIS puro, facilitando o consumo em softwares genéricos ou bibliotecários (SciVal, Zotero, Mendeley).
 
 ---
 
-## Documentation
+## 📖 Fluxo Clássico de Uso no Terminal / Chat
 
-All information on installation, usage, and development is available at [prismaid.review](https://prismaid.review/) and in the [prismAId User Manual](https://raw.githubusercontent.com/open-and-sustainable/prismaid_manual/main/prismaid_manual.pdf).
+Um pesquisador deve simplesmente abrir seu ambiente de Inteligência Artificial pareado com o conector MCP do ReviewBR e instruir em linguagem natural:
 
----
-
-## Credits
-
-### Authors
-
-Riccardo Boero - <ribo@nilu.no>
-
-### Acknowledgments
-
-This project was initiated with the generous support of a SIS internal project from [NILU](https://nilu.com). Their support was crucial in starting this research and development effort. Further, acknowledgment is due for the research credits received from the [OpenAI Researcher Access Program](https://grants.openai.com/prog/openai_researcher_access_program/) and the [Cohere For AI Research Grant Program](https://share.hsforms.com/1aF5ZiZDYQqCOd8JSzhUBJQch5vw?ref=txt.cohere.com), both of which have significantly contributed to the advancement of this work.
-
----
-
-## License
-
-GNU AFFERO GENERAL PUBLIC LICENSE, Version 3
-
-[![license](https://www.gnu.org/graphics/agplv3-155x51.png)](https://www.gnu.org/licenses/agpl-3.0.en.html#license-text)
+1. **"Inicialize um projeto para pesquisar sobre o desenvolvimento de embalagens biodegrádaveis a partir de casca de abacaxi."**
+   *(O sistema criará o planejamento metodológico de forma autônoma na máquina).*
+2. **"Faça uma amostra rápida no portal do SciELO usando os termos (pineapple AND biodegradable) para vermos o que retorna."**
+   *(O sistema mostrará tendências sem congelar o protocolo).*
+3. **"Os termos parecem bons. Oficialize a pesquisa na base Global e Institucional Brasileira."**
+   *(O projeto travará a matriz, o log de auditoria será gerado, e os dados brutos salvos).*
+4. **"Execute a triagem e dedup para remover artigos falhos."**
+   *(O robô local executará a filtragem técnica dos metadados).*
+5. **"Baixe ospdfs elegíveis e indique quais de fato atendem ao tema utilizando a inteligência Gemini Pro."**
+   *(O motor Go entrará em ação, convertendo e delegando a leitura de milhares de páginas num curto período de tempo).*
 
 ---
 
-## Contributing
+### Mantenha o Rigor Científico
 
-Contributions are welcome! Please follow guidelines at [https://github.com/open-and-sustainable/prismaid?tab=contributing-ov-file](https://github.com/open-and-sustainable/prismaid?tab=contributing-ov-file).
+O ReviewBR atua em ambiente de *No-Code*. Qualquer requisição para que o Agent de IA construa gambiarras (scripts soltos em Python/R) na máquina para tabular dados será rejeitada a favor das *Tools* nativas auditadas do repositório, mantendo o estuário da ciência totalmente limpo e reprodutivel por pares no futuro.
 
 ---
 
-## Citation
+## Agradecimentos & Licença
 
-Boero, R. (2024). prismAId - Open Science AI Tools for Systematic, Protocol-Based Literature Reviews. Zenodo. [DOI: 10.5281/zenodo.11210796](https://doi.org/10.5281/zenodo.11210796)
+As ferramentas basais de mineração foram idealizadas no projeto `prismAId` (Criado por Riccardo Boero). Modificações profundas neste ecossistema refletem o núcleo especializado do ReviewBR para indexação da ciência latino-americana.
+**Licença:** GNU AFFERO GENERAL PUBLIC LICENSE, Version 3.

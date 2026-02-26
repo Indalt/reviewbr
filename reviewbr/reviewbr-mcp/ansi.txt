@@ -1,0 +1,6 @@
+src/index.ts(30,16): error TS1005: '(' expected.
+src/index.ts(30,26): error TS1005: ',' expected.
+src/index.ts(30,47): error TS1005: ',' expected.
+src/index.ts(30,63): error TS1005: ',' expected.
+src/index.ts(30,77): error TS1005: ',' expected.
+src/index.ts(30,110): error TS1005: ';' expected.

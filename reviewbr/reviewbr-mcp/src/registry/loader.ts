@@ -24,7 +24,7 @@ export class Registry {
     static loadDefault(): Registry {
         const __filename = fileURLToPath(import.meta.url);
         const __dirname = dirname(__filename);
-        const brPath = join(__dirname, "..", "..", "data", "sources", "repositorios_brasileiros.json");
+        const brPath = join(__dirname, "..", "..", "data", "sources", "repositories_catalog.json");
         const intPath = join(__dirname, "..", "..", "data", "sources", "bases_internacionais.json");
 
         try {

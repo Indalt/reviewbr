@@ -1,0 +1,43 @@
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+Limiting extraction to first 3 articles.
+Starting extraction for 3 articles...
+Processing batch 1/1...
+Working on: Treatment of Produced Water from Niger Delta Using Modified Cashew Nut (Anacardium Occidentale) Shells, Banana (Musa Acuminata) Stems and Peels
+Error parsing PDF C:\Users\Vicente\reviewbr\reviewbr\projects\data_mining\estado_arte_caju\03_screening\pdfs\10_53902_tpe_2025_05_000546.pdf: TypeError: pdf is not a function
+    at extractTextFromPdf (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:29:28)
+    at <anonymous> (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:66:35)
+    at Array.map (<anonymous>)
+    at runExtraction (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:64:32)
+    at <anonymous> (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:165:7)
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Working on: OBTAINING BIODEGRADABILITY FILM OF CASHEW (ANACARDIUM OCCIDENTALE) RESIDUE FROM THE CARIRI REGION FOR FOOD
+Error parsing PDF C:\Users\Vicente\reviewbr\reviewbr\projects\data_mining\estado_arte_caju\03_screening\pdfs\10_47820_recima21_v5i9_5666.pdf: TypeError: pdf is not a function
+    at extractTextFromPdf (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:29:28)
+    at <anonymous> (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:66:35)
+    at Array.map (<anonymous>)
+    at runExtraction (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:64:32)
+    at <anonymous> (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:165:7)
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Working on: Antioxidant Activity of Endophytic Fungi Isolated from Cashew (Anacardium occidentale) Leaves
+Error parsing PDF C:\Users\Vicente\reviewbr\reviewbr\projects\data_mining\estado_arte_caju\03_screening\pdfs\10_26538_tjnpr_v7i12_18.pdf: TypeError: pdf is not a function
+    at extractTextFromPdf (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:29:28)
+    at <anonymous> (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:66:35)
+    at Array.map (<anonymous>)
+    at runExtraction (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:64:32)
+    at <anonymous> (C:\Users\Vicente\reviewbr\reviewbr\reviewbr-mcp\scripts\run_extraction_f5.ts:165:7)
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+Failed to extract text from Treatment of Produced Water from Niger Delta Using Modified Cashew Nut (Anacardium Occidentale) Shells, Banana (Musa Acuminata) Stems and Peels
+Failed to extract text from OBTAINING BIODEGRADABILITY FILM OF CASHEW (ANACARDIUM OCCIDENTALE) RESIDUE FROM THE CARIRI REGION FOR FOOD
+Failed to extract text from Antioxidant Activity of Endophytic Fungi Isolated from Cashew (Anacardium occidentale) Leaves
+Batch 1 produced 0 successful extractions.
+Total results in memory: 0
+Extraction loop finished. Preparing to save 0 results.
+Writing JSON to: C:\Users\Vicente\reviewbr\reviewbr\projects\data_mining\estado_arte_caju\04_extraction\extraction_results.json
+File written successfully. Size: 2 bytes.
+Extraction complete. Results saved to 04_extraction/
