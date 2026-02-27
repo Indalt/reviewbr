@@ -20,6 +20,7 @@ import { DatabaseService } from "./services/database.js";
 import { PrismaFlowValidator, PrismaFlowSchema } from "./services/prisma_validator.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
+import { SemanticScholarService } from "./services/semantic_scholar.js";
 
 import * as path from "node:path";
 import * as fs from "node:fs";
@@ -38,6 +39,7 @@ const snowballService = new SnowballService();
 const dataService = new DataService();
 const pubmedService = new PubMedService();
 const crossrefService = new CrossrefService();
+const semanticScholarService = new SemanticScholarService();
 const dbService = new DatabaseService();
 const bvsService = new BvsService();
 const projectInitService = new ProjectInitService();
@@ -1051,6 +1053,68 @@ const scieloHandler = async (params: any) => {
     return { content: [{ type: "text", text: summary }] };
 };
 
+const semanticScholarHandler = async (params: any) => {
+    let projectId = params.projectId;
+    if (!projectId && params.projectPath) {
+        const project = await dbService.findProjectByPath(params.projectPath);
+        if (project) projectId = project.id;
+    }
+
+    const { results, totalFound } = await semanticScholarService.search(params.query, {
+        maxResults: params.maxResults || 200
+    });
+
+    if (projectId) {
+        await dbService.logAuditEvent({
+            project_id: projectId,
+            tool_name: "search_semanticscholar",
+            action_type: "search",
+            params: JSON.stringify(params),
+            result_summary: `Busca SemanticScholar: ${results.length} artigos encontrados (${totalFound} total).`
+        });
+    }
+
+    if (params.projectPath) {
+        await logToLocalProject(params.projectPath, "search_semanticscholar", {
+            query: params.query,
+            found: results.length,
+            totalFound,
+            params
+        });
+
+        if (projectId) { // Only save raw files if it is not a preview run
+            try {
+                const { default: path } = await import("node:path");
+                const { default: fs } = await import("node:fs");
+                const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
+                if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
+                const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
+                const outputPath = path.join(rawDir, `dataset_semanticscholar_${timestamp}.json`);
+                fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
+            } catch (saveError) {
+                console.error("Failed to auto-save SemanticScholar results:", saveError);
+            }
+        }
+    }
+
+    const summary = [
+        `## Resultados Semantic Scholar (Open Access): "${params.query}"`,
+        `**Total encontrado na base:** ${totalFound}`,
+        `**Retornados nesta página:** ${results.length}`,
+        "",
+        ...results.slice(0, 10).map((r: any, i: number) => [
+            `### ${i + 1}. ${r.title}`,
+            r.creators.length > 0 ? `**Autores:** ${r.creators.join("; ")}` : "",
+            r.date ? `**Data:** ${r.date}` : "",
+            `**URL do PDF:** ${r.url}`, // Highlight the direct PDF access
+            "",
+        ].filter(Boolean).join("\n")),
+        results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+    ].join("\n");
+
+    return { content: [{ type: "text", text: summary }] };
+};
+
 server.tool(
     "search_openalex",
     "Busca artigos diretamente no OpenAlex (Multidisciplinar Internacional). Ideal para construir listas mestras.",
@@ -1085,6 +1149,18 @@ server.tool(
         projectPath: z.string().optional(),
     },
     scieloHandler as any
+);
+
+server.tool(
+    "search_semanticscholar",
+    "Busca artigos no Semantic Scholar. Utiliza IA para agregar artigos com **Acesso Aberto (PDFs diretos)**.",
+    {
+        query: z.string().describe("Termo de busca para o Semantic Scholar"),
+        maxResults: z.number().default(200).describe("Máximo de resultados (default: 200, limite físico: 100 por chamada)"),
+        projectId: z.number().optional(),
+        projectPath: z.string().optional(),
+    },
+    semanticScholarHandler as any
 );
 
 // ─── Start Server ─────────────────────────────────────────────

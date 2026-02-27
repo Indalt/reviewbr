@@ -26,7 +26,7 @@ Total integração via API nativa com repositórios e agregadores globais, filtr
 
 * **Camada Institucional e Nacional (OasisBR):** Buscas distribuídas via OAI-PMH em quase 100 repositórios universitários brasileiros (como USP, UFSC, Unicamp, Teses CAPES).
 * **Camada Regional Latino-Americana (SciELO):** Conector robusto que extrai a totalidade de metadados da Rede SciELO via OpenAlex.
-* **Visão Global:** Consultas automatizadas no OpenAlex, PubMed e Crossref.
+* **Visão Global:** Consultas automatizadas no OpenAlex, PubMed, Crossref e agora **Semantic Scholar** (com filtro em nível de API garantindo PDFs de Acesso Aberto).
 
 ### 3. Pipeline de Triagem (Screening)
 
