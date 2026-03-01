@@ -21,6 +21,11 @@ import { PrismaFlowValidator, PrismaFlowSchema } from "./services/prisma_validat
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
+import { CoreService } from "./services/core.js";
+import { EuropePmcService } from "./services/europe_pmc.js";
+import { PdfExtractorService } from "./services/pdf_extractor.js";
+import { TelemetryService } from "./services/telemetry.js";
+import { MethodologyAuditorService } from "./services/methodology_auditor.js";
 
 import * as path from "node:path";
 import * as fs from "node:fs";
@@ -40,9 +45,14 @@ const dataService = new DataService();
 const pubmedService = new PubMedService();
 const crossrefService = new CrossrefService();
 const semanticScholarService = new SemanticScholarService();
+const coreService = new CoreService();
+const europePmcService = new EuropePmcService();
+const pdfExtractorService = new PdfExtractorService();
 const dbService = new DatabaseService();
 const bvsService = new BvsService();
 const projectInitService = new ProjectInitService();
+const telemetryService = new TelemetryService();
+const auditorService = new MethodologyAuditorService();
 
 /**
  * Helper to log tool execution directly into the project's local directory.
@@ -119,6 +129,7 @@ server.tool(
         projectPath: z.string().optional(),
     },
     async (params) => {
+        telemetryService.logSearch("optimized_search", params.query, params.layers.join(','), undefined);
         const { results, errors } = await searchService.searchPapers(params.query, params.layers, {
             dateFrom: params.dateFrom,
             dateUntil: params.dateUntil
@@ -190,10 +201,11 @@ server.tool(
 
 server.tool(
     "screen_candidates",
-    "Triagem de candidatos usando IA (Gemini). Requer GOOGLE_API_KEY.",
+    "Triagem de candidatos usando IA (Gemini). Requer GOOGLE_API_KEY. Irá usar o texto completo extraído automaticamente se disponível no projectPath.",
     {
         candidates: z.string().describe("JSON string com array de candidatos"),
         criteria: z.string().describe("Critérios de inclusão/exclusão"),
+        projectPath: z.string().optional().describe("Caminho do projeto (ex: projects/meu_projeto) para buscar o texto completo."),
     },
     async (params) => {
         if (!process.env.GOOGLE_API_KEY) {
@@ -207,11 +219,43 @@ server.tool(
             return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
         }
 
-        const result = await screeningService.screenCandidates(records, params.criteria);
+        const result = await screeningService.screenCandidates(records, params.criteria, params.projectPath);
         return {
             content: [{
                 type: "text",
                 text: JSON.stringify(result, null, 2)
+            }]
+        };
+    }
+);
+
+// ─── Phase 2: Refined Central Extraction ──────────────────────
+
+server.tool(
+    "download_and_extract_pdfs",
+    "Realiza o download e a extração estruturada de texto a partir de PDFs ou páginas HTML. **Ferramenta OBRIGATÓRIA para leitura de documentos em background, não tente abrir links manualmente no navegador.**",
+    {
+        urlsAndIds: z.array(z.object({
+            id: z.string().describe("Identificador / Nome do arquivo"),
+            url: z.string().describe("URL aberta do PDF ou Página")
+        })).describe("Lista de PDFs para baixar em massa"),
+        projectPath: z.string().describe("Caminho do projeto (ex: projects/meu_projeto)"),
+    },
+    async (params) => {
+        const results = [];
+        for (const item of params.urlsAndIds) {
+            const result = await pdfExtractorService.downloadAndExtract(item.url, item.id, params.projectPath);
+            results.push({
+                id: item.id,
+                url: item.url,
+                ...result
+            });
+        }
+
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify({ extraction_batch: results }, null, 2)
             }]
         };
     }
@@ -1115,6 +1159,155 @@ const semanticScholarHandler = async (params: any) => {
     return { content: [{ type: "text", text: summary }] };
 };
 
+const coreHandler = async (params: any) => {
+    let projectId = params.projectId;
+    if (!projectId && params.projectPath) {
+        const project = await dbService.findProjectByPath(params.projectPath);
+        if (project) projectId = project.id;
+    }
+
+    const { results, totalFound } = await coreService.search(params.query, {
+        maxResults: params.maxResults || 200
+    });
+
+    if (projectId) {
+        await dbService.logAuditEvent({
+            project_id: projectId,
+            tool_name: "search_core",
+            action_type: "search",
+            params: JSON.stringify(params),
+            result_summary: `Busca CORE: ${results.length} artigos encontrados (${totalFound} total).`
+        });
+    }
+
+    if (params.projectPath) {
+        await logToLocalProject(params.projectPath, "search_core", {
+            query: params.query,
+            found: results.length,
+            totalFound,
+            params
+        });
+
+        if (projectId) {
+            try {
+                const { default: path } = await import("node:path");
+                const { default: fs } = await import("node:fs");
+                const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
+                if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
+                const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
+                const outputPath = path.join(rawDir, `dataset_core_${timestamp}.json`);
+                fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
+            } catch (saveError) {
+                console.error("Failed to auto-save CORE results:", saveError);
+            }
+        }
+    }
+
+    const summary = [
+        `## Resultados CORE (Open Access): "${params.query}"`,
+        `**Total encontrado na base:** ${totalFound}`,
+        `**Retornados nesta página:** ${results.length}`,
+        "",
+        ...results.slice(0, 10).map((r: any, i: number) => [
+            `### ${i + 1}. ${r.title}`,
+            r.creators.length > 0 ? `**Autores:** ${r.creators.join("; ")}` : "",
+            r.date ? `**Data:** ${r.date}` : "",
+            `**URL do PDF:** ${r.url}`,
+            "",
+        ].filter(Boolean).join("\n")),
+        results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+    ].join("\n");
+
+    return { content: [{ type: "text", text: summary }] };
+};
+
+const europePmcHandler = async (params: any) => {
+    let projectId = params.projectId;
+    if (!projectId && params.projectPath) {
+        const project = await dbService.findProjectByPath(params.projectPath);
+        if (project) projectId = project.id;
+    }
+
+    const { results, totalFound } = await europePmcService.search(params.query, {
+        maxResults: params.maxResults || 200
+    });
+
+    if (projectId) {
+        await dbService.logAuditEvent({
+            project_id: projectId,
+            tool_name: "search_europe_pmc",
+            action_type: "search",
+            params: JSON.stringify(params),
+            result_summary: `Busca Europe PMC: ${results.length} artigos encontrados (${totalFound} total).`
+        });
+    }
+
+    if (params.projectPath) {
+        await logToLocalProject(params.projectPath, "search_europe_pmc", {
+            query: params.query,
+            found: results.length,
+            totalFound,
+            params
+        });
+
+        if (projectId) {
+            try {
+                const { default: path } = await import("node:path");
+                const { default: fs } = await import("node:fs");
+                const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
+                if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
+                const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
+                const outputPath = path.join(rawDir, `dataset_europe_pmc_${timestamp}.json`);
+                fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
+            } catch (saveError) {
+                console.error("Failed to auto-save Europe PMC results:", saveError);
+            }
+        }
+    }
+
+    const summary = [
+        `## Resultados Europe PMC (Open Access): "${params.query}"`,
+        `**Total encontrado na base:** ${totalFound}`,
+        `**Retornados nesta página:** ${results.length}`,
+        "",
+        ...results.slice(0, 10).map((r: any, i: number) => [
+            `### ${i + 1}. ${r.title}`,
+            r.creators.length > 0 ? `**Autores:** ${r.creators.join("; ")}` : "",
+            r.date ? `**Data:** ${r.date}` : "",
+            `**URL:** ${r.url}`,
+            r.pdfUrl ? `**PDF Direto:** ${r.pdfUrl}` : "",
+            "",
+        ].filter(Boolean).join("\n")),
+        results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+    ].join("\n");
+
+    return { content: [{ type: "text", text: summary }] };
+};
+
+server.tool(
+    "search_europe_pmc",
+    "Busca artigos no Europe PMC, excelente repositório de ciências da vida e biomedicina.",
+    {
+        query: z.string().describe("Termo de busca (ex: 'dengue OR zika')"),
+        maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),
+        projectId: z.number().optional(),
+        projectPath: z.string().optional(),
+    },
+    europePmcHandler as any
+);
+
+server.tool(
+    "search_core",
+    "Busca artigos no CORE (core.ac.uk), o maior agregador mundial de repositórios Open Access.",
+    {
+        query: z.string().describe("Termo de busca (ex: 'quantum OR computadores')"),
+        maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),
+        projectId: z.number().optional(),
+        projectPath: z.string().optional(),
+    },
+    coreHandler as any
+);
+
 server.tool(
     "search_openalex",
     "Busca artigos diretamente no OpenAlex (Multidisciplinar Internacional). Ideal para construir listas mestras.",
@@ -1161,6 +1354,61 @@ server.tool(
         projectPath: z.string().optional(),
     },
     semanticScholarHandler as any
+);
+
+// ─── Audit Tool ───────────────────────────────────────────────
+
+server.tool(
+    "audit_methodology",
+    "Audita a conformidade metodológica de uma pesquisa já concluída (Post-Hoc Validation). NÃO busca, baixa ou gera dados novos. Apenas diagnostica.",
+    {
+        dataset: z.string().describe("JSON string com array de registros submetidos (SearchResult[])"),
+        searchTermsUsed: z.string().optional().describe("String de busca completa utilizada pelo pesquisador (com operadores booleanos)"),
+        prismaFlowData: z.string().optional().describe("JSON string com os 10 campos numéricos do PRISMA Flow (identified_db, screened, included, etc)"),
+        projectPath: z.string().optional().describe("Caminho do projeto de auditoria (ex: projects/user/audit_minha_tese)"),
+    },
+    async (params) => {
+        let records;
+        try {
+            records = JSON.parse(params.dataset);
+        } catch (e) {
+            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON do dataset." }] };
+        }
+
+        let prismaFlow = undefined;
+        if (params.prismaFlowData) {
+            try {
+                const parsed = JSON.parse(params.prismaFlowData);
+                const validate = PrismaFlowSchema.safeParse(parsed);
+                if (validate.success) prismaFlow = validate.data;
+            } catch (e) { /* silently ignore malformed prisma data */ }
+        }
+
+        const report = auditorService.audit({
+            dataset: records,
+            searchTermsUsed: params.searchTermsUsed,
+            prismaFlowData: prismaFlow,
+        });
+
+        // Save the conformity report to disk if projectPath is provided
+        if (params.projectPath) {
+            try {
+                const reportDir = path.join(process.cwd(), params.projectPath, "audit_report");
+                if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir, { recursive: true });
+                const reportPath = path.join(reportDir, "conformity_report.md");
+                fs.writeFileSync(reportPath, report.markdownReport, "utf-8");
+            } catch (e) {
+                console.error("Failed to save audit report:", e);
+            }
+        }
+
+        return {
+            content: [{
+                type: "text",
+                text: report.markdownReport
+            }]
+        };
+    }
 );
 
 // ─── Start Server ─────────────────────────────────────────────

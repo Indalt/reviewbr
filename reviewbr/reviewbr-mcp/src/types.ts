@@ -139,6 +139,7 @@ export interface SearchResult {
     issn?: string;
     subjectAreas?: string[];
     language?: string;
+    tldr?: string;
     accessMethod: "oai-pmh" | "dspace-rest" | "html-scraper" | "bdtd-vufind" | "scielo-articlemeta" | "usp-custom" | "manual_import" | "bvs_import" | "api";
 }
 

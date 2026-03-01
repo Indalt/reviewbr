@@ -1,6 +1,9 @@
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { SearchResult } from "../types.js";
+import { PdfExtractorService } from "./pdf_extractor.js";
+import * as path from "node:path";
+import * as fs from "node:fs";
 
 // ─── Interfaces ──────────────────────────────────────────────
 
@@ -50,10 +53,12 @@ export interface ScreeningConfig {
 export class ScreeningService {
     private genAI: GoogleGenerativeAI;
     private model: any;
+    private pdfExtractor: PdfExtractorService;
 
     constructor(apiKey: string) {
         this.genAI = new GoogleGenerativeAI(apiKey);
         this.model = this.genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+        this.pdfExtractor = new PdfExtractorService();
     }
 
     /**
@@ -62,7 +67,8 @@ export class ScreeningService {
      */
     async screenCandidates(
         candidates: SearchResult[],
-        configOrCriteria: ScreeningConfig | string
+        configOrCriteria: ScreeningConfig | string,
+        projectPath?: string
     ): Promise<{ included: ScreeningResult[]; excluded: ScreeningResult[]; errors: string[] }> {
         // Backward-compatible: accept string as criteria
         const config: ScreeningConfig = typeof configOrCriteria === "string"
@@ -77,7 +83,7 @@ export class ScreeningService {
         const concurrency = 5;
         for (let i = 0; i < candidates.length; i += concurrency) {
             const chunk = candidates.slice(i, i + concurrency);
-            const promises = chunk.map(candidate => this.screenOne(candidate, config));
+            const promises = chunk.map(candidate => this.screenOne(candidate, config, projectPath));
 
             const results = await Promise.all(promises);
 
@@ -100,10 +106,11 @@ export class ScreeningService {
 
     private async screenOne(
         candidate: SearchResult,
-        config: ScreeningConfig
+        config: ScreeningConfig,
+        projectPath?: string
     ): Promise<{ result?: ScreeningResult; record?: SearchResult; error?: string }> {
         try {
-            const prompt = this.buildPrompt(candidate, config);
+            const prompt = await this.buildPrompt(candidate, config, projectPath);
 
             const result = await this.model.generateContent(prompt);
             const responseText = result.response.text();
@@ -143,7 +150,7 @@ export class ScreeningService {
      * Build the screening prompt with multi-filter support and optional CoT.
      * Absorbs patterns from Go Screening() and prompt.PrepareInput().
      */
-    private buildPrompt(candidate: SearchResult, config: ScreeningConfig): string {
+    private async buildPrompt(candidate: SearchResult, config: ScreeningConfig, projectPath?: string): Promise<string> {
         const filterInstructions: string[] = [];
 
         // Language filter (from Go filters.language)
@@ -207,17 +214,28 @@ export class ScreeningService {
   }`
             : "";
 
+        let fulltextContent = "";
+        if (projectPath && candidate.identifier) {
+            const textPath = path.join(process.cwd(), projectPath, "02_fulltext", `${candidate.identifier}.txt`);
+            if (fs.existsSync(textPath)) {
+                fulltextContent = await this.pdfExtractor.smartChunk(textPath);
+            }
+        }
+
+        const fulltextBlock = fulltextContent ? `\n\n--- FULLTEXT EXTRACT (SMART CHUNKS) ---\n${fulltextContent}` : "";
+
         return `You are an expert systematic reviewer. Evaluate the following academic paper against the provided criteria.
 
 CRITERIA:
 ${config.criteria}
 ${filtersBlock}
-PAPER:
+PAPER METADATA:
 Title: ${candidate.title}
 Abstract: ${candidate.description || "No abstract available."}
 Keywords: ${candidate.subjectAreas?.join(", ") || ""}
 Date: ${candidate.date || "Unknown"}
 Repository: ${candidate.repositoryName || "Unknown"}
+${fulltextBlock}
 
 TASK:
 1. Assign a Relevance Score (0-100).

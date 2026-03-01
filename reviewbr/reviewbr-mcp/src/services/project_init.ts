@@ -25,7 +25,8 @@ export type ResearchType =
     | "integrative_review"
     | "meta_analysis"
     | "rapid_review"
-    | "exploratory";
+    | "exploratory"
+    | "methodological_audit";
 
 export interface ProjectConfig {
     name: string;
@@ -111,6 +112,13 @@ const RESEARCH_TYPE_META: Record<ResearchType, {
         requiresRegistration: false,
         registrationPlatform: "N/A",
         description: "Busca bibliográfica sem metodologia sistemática formal."
+    },
+    methodological_audit: {
+        label: "Auditoria Metodológica (Post-Hoc)",
+        prismaStandard: "PRISMA 2020 + PRISMA-S (Validação Passiva — Somente Leitura)",
+        requiresRegistration: false,
+        registrationPlatform: "N/A",
+        description: "Validação retroativa de pesquisa já concluída. O sistema NÃO busca, baixa ou gera novos dados. Apenas diagnostica a conformidade metodológica do material submetido pelo pesquisador."
     }
 };
 
@@ -163,7 +171,13 @@ export class ProjectInitService {
         const projectPath = path.join(userPath, safeName);
 
         // Create folder structure
-        const folders = [
+        // Audit projects get a simplified folder structure
+        const isAudit = config.researchType === "methodological_audit";
+        const folders = isAudit ? [
+            "00_submitted",
+            "audit_report",
+            "logs",
+        ] : [
             "00_protocol",
             "01_raw",
             "01_raw/downloads",
