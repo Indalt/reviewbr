@@ -43,7 +43,22 @@ Utilize o argumento `scope` apropriado para filtrar as bases.
 ## Rastreabilidade e Auditoria PRISMA
 
 Todas as ações que você toma utilizando as tools são logadas localmente na pasta `projects/[nome]/logs/search_history.json`.
-Não tente manipular os contadores lógicos dos relatórios. Siga sempre o pipeline estruturado (Busca -> Extração -> Remoção de Duplicatas -> Triagem) através do arsenal do MCP.
+Não tente manipular os contadores lógicos dos relatórios. Siga sempre o pipeline estruturado (Busca -> Extração -> Remoção de Duplicatas -> Triagem -> **Métricas de Saturação** -> Exportação) através do arsenal do MCP.
+
+## 📊 Métricas de Triagem e Stopping Rule (OBRIGATÓRIO)
+
+Após **cada batch de triagem** (chamada ao `screen_candidates`), você DEVE chamar `get_screening_report` para avaliar o estado da triagem. Este é um passo obrigatório no pipeline — não é opcional.
+
+**REGRAS:**
+
+1. **Frequência:** Chame `get_screening_report` após cada execução de `screen_candidates`, sem exceção.
+2. **Interpretação:** Se o relatório indicar `saturationAlert: true`, você DEVE apresentar ao pesquisador a seguinte mensagem, adaptando os números reais:
+   *"Os últimos 3 batches de triagem apresentaram uma taxa média de X% de novos artigos relevantes (limiar: 5%). A evidência estatística sugere que a triagem pode ser encerrada. Deseja continuar triando ou aceita o ponto de saturação?"*
+3. **Decisão final:** A decisão de parar ou continuar é EXCLUSIVAMENTE do pesquisador. Você NUNCA deve parar a triagem automaticamente.
+4. **Documentação:** O relatório de métricas é salvo automaticamente em `03_screening/screening_metrics_report.md` quando `projectPath` é fornecido. Este arquivo faz parte da documentação auditável do projeto.
+5. **Cobertura por fonte:** Se o relatório mostrar que alguma fonte (ex: PubMed, OpenAlex) tem cobertura de triagem < 50%, informe o pesquisador sobre a lacuna.
+
+**AGENTES AUTORIZADOS:** `get_screening_report` pode ser chamado apenas pelo **SCREENER** (após batches) e pelo **COORDINATOR** (para visão geral do progresso).
 
 ## Reporte e Citação de Origem (OBRIGATÓRIO)
 
@@ -75,6 +90,7 @@ Quando o usuário indicar que **já possui uma pesquisa concluída** e deseja va
    - `deduplicate_dataset` — como parte do diagnóstico de duplicatas residuais
    - `validate_prisma_flow` — para validar a aritmética do funil
    - `audit_methodology` — para gerar o relatório de conformidade completo
+   - `get_screening_report` — para analisar métricas de saturação da triagem realizada
    - `export_dataset` — para formatar a saída
 
 3. **SUGESTÕES, NÃO AÇÕES:** O relatório de auditoria pode **sugerir** que o pesquisador complemente sua busca em bases adicionais. Porém, você NUNCA deve executar essa complementação automaticamente. A decisão é exclusivamente do pesquisador.
@@ -85,4 +101,5 @@ Quando o usuário indicar que **já possui uma pesquisa concluída** e deseja va
    - Perguntar: *"Quais foram os termos de busca que você utilizou?"*
    - Perguntar: *"Você tem os números do seu fluxograma PRISMA?"*
    - Chamar `audit_methodology` com os dados coletados
+   - Chamar `get_screening_report` para verificar métricas de saturação
    - Apresentar o relatório de conformidade ao pesquisador
