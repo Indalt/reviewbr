@@ -360,6 +360,20 @@ const TOOL_DECLARATIONS: ToolDeclaration[] = [
             required: ["repositoryId"],
         },
     },
+    // ─── Screening Metrics ───────────────────────────────────
+    {
+        name: "get_screening_report",
+        description: "Gera relatório de métricas de triagem com análise de saturação (Stopping Rule). Leitura pura — NUNCA modifica dados.",
+        parameters: {
+            type: "object",
+            properties: {
+                projectId: { type: "number", description: "ID do projeto" },
+                batchSize: { type: "number", description: "Tamanho do batch para análise (default: 20)" },
+                projectPath: { type: "string", description: "Caminho do projeto para salvar relatório" },
+            },
+            required: ["projectId"],
+        },
+    },
 ];
 
 // ─── Chat Handler ────────────────────────────────────────────

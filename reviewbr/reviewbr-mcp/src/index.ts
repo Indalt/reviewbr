@@ -26,6 +26,7 @@ import { EuropePmcService } from "./services/europe_pmc.js";
 import { PdfExtractorService } from "./services/pdf_extractor.js";
 import { TelemetryService } from "./services/telemetry.js";
 import { MethodologyAuditorService } from "./services/methodology_auditor.js";
+import { ScreeningMetricsService } from "./services/screening_metrics.js";
 
 import * as path from "node:path";
 import * as fs from "node:fs";
@@ -53,6 +54,7 @@ const bvsService = new BvsService();
 const projectInitService = new ProjectInitService();
 const telemetryService = new TelemetryService();
 const auditorService = new MethodologyAuditorService();
+const screeningMetricsService = new ScreeningMetricsService();
 
 /**
  * Helper to log tool execution directly into the project's local directory.
@@ -1406,6 +1408,67 @@ server.tool(
             content: [{
                 type: "text",
                 text: report.markdownReport
+            }]
+        };
+    }
+);
+
+// ─── Screening Metrics Tool ───────────────────────────────────
+
+server.tool(
+    "get_screening_report",
+    "Gera relatório de métricas de triagem com análise de saturação (Stopping Rule). Leitura pura — NUNCA modifica dados. Use após cada batch de triagem para avaliar se a triagem pode ser encerrada.",
+    {
+        projectId: z.number().describe("ID do projeto"),
+        batchSize: z.number().optional().describe("Tamanho do batch para análise (default: 20)"),
+        projectPath: z.string().optional().describe("Caminho do projeto para salvar relatório"),
+    },
+    async (params) => {
+        const report = await screeningMetricsService.generateReport(
+            dbService,
+            params.projectId,
+            params.batchSize
+        );
+
+        // Save report to disk if projectPath is provided
+        if (params.projectPath) {
+            try {
+                const reportDir = path.join(
+                    path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath),
+                    "03_screening"
+                );
+                if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir, { recursive: true });
+                const reportPath = path.join(reportDir, "screening_metrics_report.md");
+                fs.writeFileSync(reportPath, report.markdownReport, "utf-8");
+            } catch (e) {
+                console.error("Failed to save screening metrics report:", e);
+            }
+        }
+
+        // Log the metrics check in audit
+        await dbService.logAuditEvent({
+            project_id: params.projectId,
+            tool_name: "get_screening_report",
+            action_type: "metrics",
+            params: JSON.stringify({ projectId: params.projectId, batchSize: params.batchSize }),
+            result_summary: `Métricas: ${report.totalScreened}/${report.totalRecords} triados, ${report.included} incluídos, saturação: ${report.saturationAlert ? "SIM" : "NÃO"}`
+        });
+
+        return {
+            content: [{
+                type: "text",
+                text: report.markdownReport
+            }, {
+                type: "text",
+                text: JSON.stringify({
+                    totalRecords: report.totalRecords,
+                    totalScreened: report.totalScreened,
+                    included: report.included,
+                    excluded: report.excluded,
+                    screeningProgress: report.screeningProgress,
+                    saturationAlert: report.saturationAlert,
+                    stoppingRecommendation: report.stoppingRecommendation,
+                }, null, 2)
             }]
         };
     }
