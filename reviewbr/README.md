@@ -137,9 +137,9 @@ Uma preocupação comum de segurança é: *"Como uma IA na nuvem salva milhares 
 
 O sistema conta hoje com **25 ferramentas auditadas em TypeScript (Node.js)** divididas em suas responsabilidades essenciais:
 
-#### Busca Global e Regional
+#### Busca Global e Regional (Alcance Mundial)
 
-* `search_papers_optimized`: Busca em provedores nacionais (BVS, BDENF, LILACS) e institucionais (OasisBR).
+* `search_papers_optimized`: Busca unificada em provedores sem restrição de escopo regional.
 * `search_openalex`: Extração focada na gigantesca base do OpenAlex.
 * `search_semanticscholar`: Extração focada em Semantic Scholar com filtro nativo de Open Access e links do Unpaywall.
 * `search_core`: Interação com o maior agregador de repositórios Open Access do mundo (CORE).
@@ -147,7 +147,7 @@ O sistema conta hoje com **25 ferramentas auditadas em TypeScript (Node.js)** di
 * `search_europe_pmc`: Conexão com repositório líder europeu em ciências da vida e biomédicas.
 * `search_pubmed`: Extração focada em dados médicos do PubMed NCBI.
 * `search_scielo`: Busca direta no SciELO (América Latina, Open Access).
-* `search_repository`: Busca em repositórios acadêmicos brasileiros via OAI-PMH, DSpace, ou scraping (filtros: estado, tipo de instituição, grau).
+* `search_repository`: Busca abrangente e sem restrições regionais em repositórios institucionais (OAI-PMH, DSpace).
 * `harvest_records`: Coleta em massa via OAI-PMH.
 * `get_record_metadata`: Obtém metadados Dublin Core completos de registros individuais.
 * `validate_repository`: Verifica saúde e capacidades de repositórios (conectividade, OAI-PMH, REST).
