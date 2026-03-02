@@ -39,7 +39,8 @@ export interface ProjectConfig {
         comparison?: string;
         outcome: string;
     };
-    searchScope: "national" | "international" | "both";
+    /** @deprecated Busca é global por padrão. Mantido para retrocompatibilidade. */
+    searchScope?: "national" | "international" | "both";
     dateRestriction?: {
         minDate: string;
         maxDate: string;
@@ -48,6 +49,7 @@ export interface ProjectConfig {
     registrationRequired?: boolean;
     blinding?: BlindingType;
     hasMetaAnalysis?: boolean;
+    screeningMethod?: "llm_generative" | "asreview_ml" | "pending";
 }
 
 export interface ProjectInitResult {
@@ -252,7 +254,7 @@ ${config.topic}
 ${picoSection}
 ## Critérios de Elegibilidade
 
-**Escopo de busca:** ${config.searchScope === "national" ? "Nacional (repositórios brasileiros)" : config.searchScope === "international" ? "Internacional (PubMed, Scopus, WoS)" : "Nacional + Internacional"}
+**Escopo de busca:** Global (todas as fontes disponíveis)
 **Período:** ${dateRange}
 ${langSection}
 
@@ -269,7 +271,8 @@ Strings de busca a serem definidas com base nos descritores DeCS/MeSH do tema.
 1. **F2 — Mineração:** Busca nas fontes definidas
 2. **F3 — Deduplicação:** Remoção de duplicatas (DOI + título)
 3. **F4 — Triagem:**
-   - Fase 1: Triagem por título e resumo (IA + revisão manual)
+   - Método: ${config.screeningMethod === "asreview_ml" ? "ASReview ML (Active Learning ELAS, Nature Machine Intelligence 2021)" : config.screeningMethod === "llm_generative" ? "IA Generativa (LLM com protocolo PICO)" : "A definir pelo pesquisador"}
+   - Fase 1: Triagem por título e resumo
    - Fase 2: Leitura de texto completo
 4. **F5 — Extração:** Extração de dados estruturados
 5. **F6 — Síntese:** ${config.researchType === "meta_analysis" ? "Síntese estatística (meta-análise)" : "Síntese narrativa/temática"}
@@ -287,50 +290,49 @@ Checklist ${meta.prismaStandard} será preenchido ao final do estudo.
     }
 
     /**
-     * Get search sources section based on scope.
+     * Get search sources section — always lists ALL available sources.
+     * Science has no borders. Regional filtering only if researcher explicitly requests.
      */
     private getSearchSourcesSection(config: ProjectConfig): string {
-        const sections: string[] = [];
+        return `### Fontes Científicas Globais
+- OpenAlex (maior índice aberto do mundo)
+- PubMed / MEDLINE (ciências da saúde)
+- Crossref (metadados de DOIs)
+- Semantic Scholar (IA + grafo de citações)
+- CORE (maior agregador Open Access)
+- Europe PMC (ciências da vida — Europa)
 
-        if (config.searchScope === "national" || config.searchScope === "both") {
-            sections.push(`### Fontes Nacionais
-- BDTD (Biblioteca Digital Brasileira de Teses e Dissertações)
-- OasisBR (Portal Brasileiro de Publicações Científicas)
-- SciELO Brasil
-- Repositórios institucionais (via Registry)`);
-        }
-
-        if (config.searchScope === "international" || config.searchScope === "both") {
-            sections.push(`### Fontes Internacionais
-- PubMed / MEDLINE (via E-utilities)
-- Scopus (pendente integração)
-- Web of Science (pendente integração)
-- OpenAlex (via Snowballing)`);
-        }
-
-        return sections.join("\n\n");
+### Fontes Latino-Americanas e Brasileiras
+- SciELO (América Latina, Open Access)
+- BVS / LILACS / BDENF (saúde — BIREME)
+- OasisBR (portal brasileiro de publicações)
+- BDTD (teses e dissertações brasileiras)
+- Repositórios institucionais (via Registry ReviewBR)`;
     }
 
     /**
-     * Get search strategy recommendation.
+     * Get search strategy recommendation — always global, all sources.
      */
     private getSearchStrategy(config: ProjectConfig): string {
-        const parts: string[] = [];
+        const dateNote = config.dateRestriction
+            ? `, minDate: "${config.dateRestriction.minDate}", maxDate: "${config.dateRestriction.maxDate}"`
+            : " (sem restrição temporal)";
 
-        if (config.searchScope === "national" || config.searchScope === "both") {
-            parts.push("→ search_papers_optimized (repositórios brasileiros, Layers 1-5)");
-        }
-        if (config.searchScope === "international" || config.searchScope === "both") {
-            const dateNote = config.dateRestriction
-                ? `, minDate: "${config.dateRestriction.minDate}", maxDate: "${config.dateRestriction.maxDate}"`
-                : " (sem restrição temporal — busca completa)";
-            parts.push(`→ search_pubmed (PubMed/MEDLINE${dateNote})`);
-        }
-        parts.push("→ deduplicate_dataset");
-        parts.push("→ screen_candidates (com filtros conforme protocolo)");
-        parts.push("→ expand_search_snowball (se aplicável)");
-
-        return parts.join("\n");
+        return [
+            `→ search_openalex (OpenAlex${dateNote})`,
+            `→ search_pubmed (PubMed/MEDLINE${dateNote})`,
+            `→ search_crossref (Crossref)`,
+            `→ search_semanticscholar (Semantic Scholar)`,
+            `→ search_core (CORE Open Access)`,
+            `→ search_europe_pmc (Europe PMC)`,
+            `→ search_scielo (SciELO)`,
+            `→ search_papers_optimized (BVS/LILACS/OasisBR)`,
+            `→ search_repository (repositórios institucionais)`,
+            `→ deduplicate_dataset`,
+            `→ screen_candidates OU screen_with_asreview`,
+            `→ get_screening_report (métricas de saturação)`,
+            `→ snowball_search (se aplicável)`,
+        ].join("\n");
     }
 
     /**
@@ -355,10 +357,9 @@ Checklist ${meta.prismaStandard} será preenchido ao final do estudo.
    - C (Comparação) ou C (Contexto): ?
    - O (Desfecho/Outcome): ?
 
-4. **Escopo de busca:**
-   - Nacional (repos brasileiros)
-   - Internacional (PubMed, Scopus, etc.)
-   - Ambos
+4. **Confirmar escopo de busca:**
+   A busca será realizada em TODAS as fontes disponíveis (globais + latino-americanas + brasileiras).
+   Deseja restringir a alguma região ou base específica? (Padrão: busca global)
 
 5. **Restrição temporal?**
    - Sem restrição (toda a literatura)

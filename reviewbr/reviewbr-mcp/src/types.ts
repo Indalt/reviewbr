@@ -14,13 +14,6 @@ export type ContentType = z.infer<typeof ContentTypeSchema>;
 export const RepoStatusSchema = z.string();
 export type RepoStatus = z.infer<typeof RepoStatusSchema>;
 
-export const ScopeSchema = z.enum([
-    "global_open_science",
-    "regional_latam",
-    "national_br",
-    "institutional_br"
-]);
-export type ScopeCategory = z.infer<typeof ScopeSchema>;
 
 const accessSchema = z.object({
     oaiPmh: z.object({
@@ -58,7 +51,7 @@ export const RepositoryEntrySchema = z.object({
     }).passthrough(),
     access: accessSchema,
     status: RepoStatusSchema,
-    scope: ScopeSchema.optional(),
+
     layer: z.string().optional(),
 }).passthrough();
 
@@ -140,6 +133,8 @@ export interface SearchResult {
     subjectAreas?: string[];
     language?: string;
     tldr?: string;
+    /** País de origem do artigo (afiliação, journal, etc.). 'desconhecida' se não disponível. */
+    originCountry?: string;
     accessMethod: "oai-pmh" | "dspace-rest" | "html-scraper" | "bdtd-vufind" | "scielo-articlemeta" | "usp-custom" | "manual_import" | "bvs_import" | "api";
 }
 

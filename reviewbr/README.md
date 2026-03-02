@@ -135,7 +135,7 @@ Uma preocupação comum de segurança é: *"Como uma IA na nuvem salva milhares 
 
 ### Arsenal de Ferramentas Ativas (Tools API)
 
-O sistema conta hoje com **24 ferramentas auditadas em TypeScript (Node.js)** divididas em suas responsabilidades essenciais:
+O sistema conta hoje com **25 ferramentas auditadas em TypeScript (Node.js)** divididas em suas responsabilidades essenciais:
 
 #### Busca Global e Regional
 
@@ -154,7 +154,8 @@ O sistema conta hoje com **24 ferramentas auditadas em TypeScript (Node.js)** di
 
 #### Triagem e Mineração Profunda
 
-* `screen_candidates`: Ferramenta poderosa que envia os metadados (ou PDFs extraídos completos, via **Smart Chunking**) para o LLM realizar a leitura técnica e decidir "Sim, Não ou Talvez" com base no protocolo PICO.
+* `screen_candidates`: Triagem por IA generativa — envia metadados (ou PDFs extraídos completos, via **Smart Chunking**) para o LLM decidir "Sim, Não ou Talvez" com base no protocolo PICO. Ideal para exploração ágil.
+* `screen_with_asreview`: **Triagem por ASReview ML (Active Learning ELAS)** — validada pela *Nature Machine Intelligence* (2021). O ReviewBR exporta o dataset, chama o ASReview como subprocesso, e importa os resultados automaticamente. O pesquisador escolhe uma trilha por projeto: LLM (rápida) ou ASReview ML (rigorosa para publicação). Requer `pip install asreview`.
 * `snowball_search`: Rastreio passivo que minera as referências (para trás e para frente) dos seus melhores artigos elegíveis (Zotero ou OpenAlex) descobrindo a literatura oculta. **Tática de Extração e Fallback:** O sistema tenta primeiramente consultar Grafos de Conhecimento (APIs estruturadas como OpenAlex/Crossref), onde as referências já existem como identificadores atômicos estruturados, garantindo precisão absoluta e poupando custos computacionais de leitura textual.
 * `deduplicate_dataset`: Motor avançado que compara DOI, Autores, e similaridade matemática de títulos para fundir e eliminar repetições na velocidade da luz.
 * `get_screening_report`: **Métricas de Saturação (Stopping Rule)** — analisa a progressão da triagem batch a batch, calculando taxas de relevância cumulativas e detectando saturação. Quando os últimos 3 batches apresentam <5% de novos artigos relevantes, o sistema alerta que a triagem pode ser encerrada com base em evidência estatística.

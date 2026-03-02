@@ -55,6 +55,7 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
 
     // ─── Screening Metrics (SCREENER + COORDINATOR) ─────────
     get_screening_report: [AgentRole.SCREENER, AgentRole.COORDINATOR],
+    screen_with_asreview: [AgentRole.SCREENER],
 
     // ─── Text Extraction (LIBRARIAN) ────────────────────────
     download_and_extract_pdfs: [AgentRole.LIBRARIAN],

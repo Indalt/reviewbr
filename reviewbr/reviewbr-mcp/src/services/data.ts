@@ -4,7 +4,7 @@ import * as crypto from "node:crypto";
 
 export class DataService {
 
-    exportDataset(records: SearchResult[], format: "csv" | "markdown" | "json"): string {
+    exportDataset(records: SearchResult[], format: "csv" | "markdown" | "json" | "asreview"): string {
         if (format === "json") {
             const output = {
                 _validation: {
@@ -17,13 +17,30 @@ export class DataService {
             return JSON.stringify(output, null, 2);
         }
 
+        // ASReview-compatible CSV: clean format, no comment lines, required columns
+        if (format === "asreview") {
+            const header = "title,abstract,keywords,authors,doi,url\n";
+            const rows = records.map(r => {
+                const title = (r.title || "").replace(/"/g, '""');
+                const abstract = (r.description || "").replace(/"/g, '""');
+                const keywords = (r.subjectAreas || []).join("; ").replace(/"/g, '""');
+                const authors = r.creators.join("; ").replace(/"/g, '""');
+                const doi = (r.doi || "").replace(/"/g, '""');
+                const url = (r.url || "").replace(/"/g, '""');
+                return `"${title}","${abstract}","${keywords}","${authors}","${doi}","${url}"`;
+            });
+            return header + rows.join("\n");
+        }
+
         if (format === "csv") {
-            const header = "id,title,year,authors,doi,url,repo,layer\n";
+            const header = "id,title,abstract,year,authors,keywords,doi,url,repo,layer\n";
             const rows = records.map(r => {
                 const authors = r.creators.join("; ").replace(/"/g, '""');
                 const title = (r.title || "").replace(/"/g, '""');
+                const abstract = (r.description || "").replace(/"/g, '""');
+                const keywords = (r.subjectAreas || []).join("; ").replace(/"/g, '""');
                 const year = r.date ? r.date.substring(0, 4) : "";
-                return `"${r.identifier}","${title}","${year}","${authors}","${r.doi || ""}","${r.url}","${r.repositoryName}","${(r as any).layer || ""}"`;
+                return `"${r.identifier}","${title}","${abstract}","${year}","${authors}","${keywords}","${r.doi || ""}","${r.url}","${r.repositoryName}","${(r as any).layer || ""}"`;
             });
             const stamp = `# VALIDATION: PRISMA-S Compliant / Strict Protocol Enforced\n`;
             return stamp + header + rows.join("\n");

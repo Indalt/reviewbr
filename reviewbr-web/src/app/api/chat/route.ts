@@ -374,6 +374,21 @@ const TOOL_DECLARATIONS: ToolDeclaration[] = [
             required: ["projectId"],
         },
     },
+    // ─── ASReview ML Bridge ─────────────────────────────────
+    {
+        name: "screen_with_asreview",
+        description: "Executa triagem via ASReview ML (Active Learning ELAS, validado pela Nature). Requer Python + ASReview instalados.",
+        parameters: {
+            type: "object",
+            properties: {
+                dataset: { type: "string", description: "JSON string com registros a triar" },
+                projectPath: { type: "string", description: "Caminho do projeto" },
+                model: { type: "string", description: "Modelo: 'elas_u4' (default), 'elas_l4', 'elas_h4'" },
+                seed: { type: "number", description: "Seed para reprodutibilidade (default: 42)" },
+            },
+            required: ["dataset", "projectPath"],
+        },
+    },
 ];
 
 // ─── Chat Handler ────────────────────────────────────────────

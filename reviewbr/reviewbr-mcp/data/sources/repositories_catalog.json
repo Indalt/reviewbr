@@ -24,9 +24,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "1",
-    "scope": "national_br"
-  },
+    "layer": "1"
+    },
   {
     "id": "BR-EST-0001",
     "institution": {
@@ -52,9 +51,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0002",
     "institution": {
@@ -80,9 +78,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0003",
     "institution": {
@@ -108,9 +105,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0004",
     "institution": {
@@ -136,9 +132,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0005",
     "institution": {
@@ -164,9 +159,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0006",
     "institution": {
@@ -192,9 +186,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0007",
     "institution": {
@@ -220,9 +213,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0008",
     "institution": {
@@ -248,9 +240,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0009",
     "institution": {
@@ -276,9 +267,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0010",
     "institution": {
@@ -304,9 +294,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0011",
     "institution": {
@@ -332,9 +321,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0012",
     "institution": {
@@ -360,9 +348,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0013",
     "institution": {
@@ -388,9 +375,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0014",
     "institution": {
@@ -416,9 +402,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0015",
     "institution": {
@@ -444,9 +429,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0016",
     "institution": {
@@ -472,9 +456,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0017",
     "institution": {
@@ -500,9 +483,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0018",
     "institution": {
@@ -528,9 +510,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-EST-0019",
     "institution": {
@@ -556,9 +537,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0001",
     "institution": {
@@ -584,9 +564,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0002",
     "institution": {
@@ -612,9 +591,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0003",
     "institution": {
@@ -640,9 +618,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0004",
     "institution": {
@@ -668,9 +645,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "3",
-    "scope": "institutional_br"
-  },
+    "layer": "3"
+    },
   {
     "id": "BR-FED-0005",
     "institution": {
@@ -696,9 +672,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0006",
     "institution": {
@@ -724,9 +699,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0007",
     "institution": {
@@ -752,9 +726,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0008",
     "institution": {
@@ -780,9 +753,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0009",
     "institution": {
@@ -808,9 +780,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0010",
     "institution": {
@@ -836,9 +807,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0011",
     "institution": {
@@ -864,9 +834,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0012",
     "institution": {
@@ -892,9 +861,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0013",
     "institution": {
@@ -920,9 +888,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0014",
     "institution": {
@@ -948,9 +915,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "3",
-    "scope": "institutional_br"
-  },
+    "layer": "3"
+    },
   {
     "id": "BR-FED-0015",
     "institution": {
@@ -976,9 +942,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0016",
     "institution": {
@@ -1004,9 +969,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0017",
     "institution": {
@@ -1032,9 +996,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0018",
     "institution": {
@@ -1060,9 +1023,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0019",
     "institution": {
@@ -1088,9 +1050,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0020",
     "institution": {
@@ -1116,9 +1077,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0021",
     "institution": {
@@ -1144,9 +1104,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0022",
     "institution": {
@@ -1172,9 +1131,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "3",
-    "scope": "institutional_br"
-  },
+    "layer": "3"
+    },
   {
     "id": "BR-FED-0023",
     "institution": {
@@ -1200,9 +1158,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0024",
     "institution": {
@@ -1228,9 +1185,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0025",
     "institution": {
@@ -1256,9 +1212,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0026",
     "institution": {
@@ -1284,9 +1239,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0027",
     "institution": {
@@ -1312,9 +1266,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0028",
     "institution": {
@@ -1340,9 +1293,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0029",
     "institution": {
@@ -1368,9 +1320,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-FED-0030",
     "institution": {
@@ -1396,9 +1347,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "3",
-    "scope": "institutional_br"
-  },
+    "layer": "3"
+    },
   {
     "id": "BR-FED-0033",
     "institution": {
@@ -1424,9 +1374,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "3",
-    "scope": "institutional_br"
-  },
+    "layer": "3"
+    },
   {
     "id": "BR-PRI-0001",
     "institution": {
@@ -1452,9 +1401,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0002",
     "institution": {
@@ -1480,9 +1428,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0003",
     "institution": {
@@ -1508,9 +1455,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0004",
     "institution": {
@@ -1536,9 +1482,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0005",
     "institution": {
@@ -1564,9 +1509,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "national_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0006",
     "institution": {
@@ -1592,9 +1536,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "national_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0007",
     "institution": {
@@ -1620,9 +1563,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0008",
     "institution": {
@@ -1648,9 +1590,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0009",
     "institution": {
@@ -1676,9 +1617,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0010",
     "institution": {
@@ -1704,9 +1644,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0011",
     "institution": {
@@ -1732,9 +1671,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0012",
     "institution": {
@@ -1760,9 +1698,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0013",
     "institution": {
@@ -1788,9 +1725,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0014",
     "institution": {
@@ -1816,9 +1752,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0015",
     "institution": {
@@ -1844,9 +1779,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0016",
     "institution": {
@@ -1872,9 +1806,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "national_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0017",
     "institution": {
@@ -1900,9 +1833,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0018",
     "institution": {
@@ -1928,9 +1860,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0019",
     "institution": {
@@ -1956,9 +1887,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0020",
     "institution": {
@@ -1984,9 +1914,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0021",
     "institution": {
@@ -2012,9 +1941,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0022",
     "institution": {
@@ -2040,9 +1968,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0023",
     "institution": {
@@ -2068,9 +1995,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0024",
     "institution": {
@@ -2096,9 +2022,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0025",
     "institution": {
@@ -2124,9 +2049,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0026",
     "institution": {
@@ -2152,9 +2076,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0027",
     "institution": {
@@ -2180,9 +2103,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0028",
     "institution": {
@@ -2208,9 +2130,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0029",
     "institution": {
@@ -2236,9 +2157,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0030",
     "institution": {
@@ -2264,9 +2184,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0031",
     "institution": {
@@ -2292,9 +2211,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0032",
     "institution": {
@@ -2320,9 +2238,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0033",
     "institution": {
@@ -2348,9 +2265,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-PRI-0034",
     "institution": {
@@ -2376,9 +2292,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "institutional_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-RES-0001",
     "institution": {
@@ -2404,9 +2319,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "2",
-    "scope": "national_br"
-  },
+    "layer": "2"
+    },
   {
     "id": "BR-RES-0002",
     "institution": {
@@ -2432,9 +2346,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "1",
-    "scope": "regional_latam"
-  },
+    "layer": "1"
+    },
   {
     "id": "BR-RES-0004",
     "institution": {
@@ -2460,9 +2373,8 @@
       "searchEndpoints": []
     },
     "status": "inactive",
-    "layer": "3",
-    "scope": "national_br"
-  },
+    "layer": "3"
+    },
   {
     "id": "BR-AGG-0003",
     "institution": {
@@ -2488,9 +2400,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "1",
-    "scope": "national_br"
-  },
+    "layer": "1"
+    },
   {
     "id": "BR-AGG-0004",
     "institution": {
@@ -2516,9 +2427,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "1",
-    "scope": "national_br"
-  },
+    "layer": "1"
+    },
   {
     "id": "BR-AGG-0005",
     "institution": {
@@ -2544,9 +2454,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "1",
-    "scope": "national_br"
-  },
+    "layer": "1"
+    },
   {
     "id": "BR-FED-0034",
     "institution": {
@@ -2572,9 +2481,8 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "3",
-    "scope": "institutional_br"
-  },
+    "layer": "3"
+    },
   {
     "id": "BR-FED-0035",
     "institution": {
@@ -2600,7 +2508,6 @@
       "searchEndpoints": []
     },
     "status": "active",
-    "layer": "3",
-    "scope": "institutional_br"
-  }
+    "layer": "3"
+    }
 ]

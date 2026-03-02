@@ -27,6 +27,7 @@ import { PdfExtractorService } from "./services/pdf_extractor.js";
 import { TelemetryService } from "./services/telemetry.js";
 import { MethodologyAuditorService } from "./services/methodology_auditor.js";
 import { ScreeningMetricsService } from "./services/screening_metrics.js";
+import { AsreviewBridgeService } from "./services/asreview_bridge.js";
 
 import * as path from "node:path";
 import * as fs from "node:fs";
@@ -55,6 +56,7 @@ const projectInitService = new ProjectInitService();
 const telemetryService = new TelemetryService();
 const auditorService = new MethodologyAuditorService();
 const screeningMetricsService = new ScreeningMetricsService();
+const asreviewBridge = new AsreviewBridgeService();
 
 /**
  * Helper to log tool execution directly into the project's local directory.
@@ -119,12 +121,12 @@ server.resource(
 
 server.tool(
     "search_papers_optimized",
-    "Busca artigos em repositórios organizados por Camadas de Cobertura (Estratégia Nacional 5-Camadas).",
+    "Busca artigos em repositórios organizados por Camadas de Cobertura.",
     {
         query: z.string().describe("Termo de busca"),
         layers: z.array(z.number())
             .default([1, 3])
-            .describe("Camadas: 1=Agregadores (Oasisbr/SciELO), 2=Instituições (Cobertas pelo Oasisbr - Passivo), 3=Prioridade (UFC/Embrapa - Ativo), 4=Especializados, 5=Literatura Cinzenta"),
+            .describe("Camadas: 1=Agregadores (Oasisbr/SciELO), 2=Instituições, 3=Prioridade, 4=Especializados, 5=Literatura Cinzenta"),
         dateFrom: z.string().optional(),
         dateUntil: z.string().optional(),
         projectId: z.number().optional(),
@@ -291,10 +293,10 @@ server.tool(
 
 server.tool(
     "export_dataset",
-    "Exporta dados para CSV, Markdown (Bibliografia) ou JSON.",
+    "Exporta dados para CSV, Markdown (Bibliografia), JSON, ou formato ASReview.",
     {
         dataset: z.string().describe("JSON string com resultados"),
-        format: z.enum(["csv", "markdown", "json"]).default("json").describe("Formato de saída"),
+        format: z.enum(["csv", "markdown", "json", "asreview"]).default("json").describe("Formato de saída. Use 'asreview' para gerar CSV compatível com ASReview LAB."),
     },
     async (params) => {
         let records;
@@ -392,7 +394,7 @@ server.tool(
 
 server.tool(
     "search_pubmed",
-    "Busca artigos no PubMed (via Biopython). Ideal para literatura internacional biomédica e de saúde.",
+    "Busca artigos no PubMed (via Biopython). Ideal para literatura biomédica e de saúde.",
     {
         query: z.string().describe("Termo de busca (ex: 'Anacardium occidentale AND antioxidant')"),
         maxResults: z.number().default(20).describe("Máximo de resultados"),
@@ -554,11 +556,9 @@ server.tool(
 
 server.tool(
     "search_repository",
-    "Busca artigos/teses em repositórios acadêmicos brasileiros. Usa OAI-PMH, DSpace REST ou scraping conforme disponibilidade.",
+    "Busca artigos/teses em repositórios acadêmicos. Usa OAI-PMH, DSpace REST ou scraping conforme disponibilidade.",
     {
         query: z.string().describe("Termo(s) de busca por tema (ex: 'bebida fermentada', 'inteligência artificial')"),
-        scope: z.enum(["global_open_science", "regional_latam", "national_br", "institutional_br"]).optional()
-            .describe("Restringe a busca a um escopo específico da ciência aberta. Se não informado, busca na camada escolhida."),
         repositories: z.array(z.string()).optional()
             .describe("IDs dos repos (ex: ['BR-FED-0001', 'BR-AGG-0001']). Omita para buscar em todos os ativos."),
         title: z.string().optional(),
@@ -585,9 +585,6 @@ server.tool(
                 .map((id) => registry.getById(id))
                 .filter((r): r is NonNullable<typeof r> => r !== undefined);
         } else {
-            if (params.scope) {
-                repos = repos.filter((r) => r.scope === params.scope);
-            }
             if (params.state) {
                 repos = repos.filter((r) => r.institution.state.toUpperCase() === params.state!.toUpperCase());
             }
@@ -1312,7 +1309,7 @@ server.tool(
 
 server.tool(
     "search_openalex",
-    "Busca artigos diretamente no OpenAlex (Multidisciplinar Internacional). Ideal para construir listas mestras.",
+    "Busca artigos diretamente no OpenAlex (Multidisciplinar). Ideal para construir listas mestras.",
     {
         query: z.string().describe("Termo de busca (ex: 'cashew OR Anacardium occidentale')"),
         maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),
@@ -1324,7 +1321,7 @@ server.tool(
 
 server.tool(
     "search_crossref",
-    "Busca artigos diretamente no Crossref (Multidisciplinar Internacional). Focado em metadados de DOIs.",
+    "Busca artigos diretamente no Crossref (Multidisciplinar). Focado em metadados de DOIs.",
     {
         query: z.string().describe("Termo de busca"),
         maxResults: z.number().default(200).describe("Máximo de resultados"),
@@ -1469,6 +1466,81 @@ server.tool(
                     saturationAlert: report.saturationAlert,
                     stoppingRecommendation: report.stoppingRecommendation,
                 }, null, 2)
+            }]
+        };
+    }
+);
+
+// ─── ASReview Bridge Tool ─────────────────────────────────────
+
+server.tool(
+    "screen_with_asreview",
+    "Executa a triagem via ASReview ML (Active Learning ELAS, validado pela Nature Machine Intelligence). Chama o ASReview como subprocesso, processa o dataset, e retorna os resultados. Requer Python + ASReview instalados.",
+    {
+        dataset: z.string().describe("JSON string com os registros a triar"),
+        projectPath: z.string().describe("Caminho do projeto"),
+        model: z.string().optional().describe("Modelo ELAS: 'elas_u4' (default), 'elas_l4', 'elas_h4'"),
+        seed: z.number().optional().describe("Seed para reprodutibilidade (default: 42)"),
+    },
+    async (params) => {
+        // 1. Check installation
+        const { installed, version } = await asreviewBridge.checkInstalled();
+        if (!installed) {
+            return {
+                content: [{
+                    type: "text",
+                    text: "❌ ASReview não está instalado.\nPara usar a triagem ML validada, instale com:\n\n```\npip install asreview\n```\n\nApós instalar, tente novamente."
+                }]
+            };
+        }
+
+        // 2. Parse dataset
+        let records;
+        try {
+            records = JSON.parse(params.dataset);
+            if (records.results) records = records.results;
+        } catch (e) {
+            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON do dataset." }] };
+        }
+
+        // 3. Run ASReview simulate
+        const result = await asreviewBridge.runSimulate(records, params.projectPath, {
+            model: params.model || "elas_u4",
+            seed: params.seed ?? 42,
+            nStop: -1,
+        });
+
+        // 4. Log in audit
+        await dbService.logAuditEvent({
+            tool_name: "screen_with_asreview",
+            action_type: "asreview_simulate",
+            params: JSON.stringify({
+                model: params.model || "elas_u4",
+                seed: params.seed ?? 42,
+                records: records.length,
+                asreview_version: version,
+            }),
+            result_summary: result.success
+                ? `ASReview ${version}: ${records.length} registros processados com ${params.model || 'elas_u4'}`
+                : `ERRO: ${result.error}`,
+        });
+
+        // 5. Log to project dir
+        if (params.projectPath) {
+            logToLocalProject(params.projectPath, "screen_with_asreview", {
+                model: params.model || "elas_u4",
+                seed: params.seed ?? 42,
+                records: records.length,
+                asreview_version: version,
+                success: result.success,
+                screening_method: "asreview_ml",
+            });
+        }
+
+        return {
+            content: [{
+                type: "text",
+                text: result.success ? result.summary : `❌ ${result.error}`,
             }]
         };
     }
