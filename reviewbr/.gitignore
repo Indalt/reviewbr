@@ -29,3 +29,6 @@ projects/data_mining/downloads/**
 .env
 .env.local
 .env.*
+
+# Local Extensions & Plugins
+plugins/

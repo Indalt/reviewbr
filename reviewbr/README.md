@@ -151,6 +151,7 @@ O sistema conta hoje com **25 ferramentas auditadas em TypeScript (Node.js)** di
 * `harvest_records`: Coleta em massa via OAI-PMH.
 * `get_record_metadata`: Obtém metadados Dublin Core completos de registros individuais.
 * `validate_repository`: Verifica saúde e capacidades de repositórios (conectividade, OAI-PMH, REST).
+* `heal_repositories`: Motor de auto-cura (Auto-Healer). Lê o HTML da raiz das instituições com falha e varre ativamente em busca de links OAI-PMH ocultos, restaurando a conexão no catálogo mestre.
 
 #### Triagem e Mineração Profunda
 
@@ -258,6 +259,15 @@ Essas chaves residem exclusivamente no hardware do usuário. A IA da nuvem nunca
 ### Mantenha o Rigor Científico
 
 O ReviewBR atua em ambiente de *No-Code*. Qualquer requisição para que o Agent de IA construa gambiarras (scripts soltos em Python/R) na máquina para tabular dados será rejeitada a favor das *Tools* nativas auditadas do repositório, mantendo o estuário da ciência totalmente limpo e reprodutivel por pares no futuro.
+
+### 🧩 Extensões Privadas (Local Plugins / BYOS)
+
+Para necessidades específicas que violam políticas estritas de servidores públicos ou repositórios como o GitHub (ex: extração de PDFs em *Shadow Libraries* como o **Sci-Hub** para furar paywalls das grandes editoras), o ReviewBR adota a arquitetura corporativa **Bring Your Own Script (BYOS)**.
+
+1. **Pasta Blindada:** Qualquer script criado dentro da pasta raiz `plugins/` é automaticamente ignorado pelo controle de versão. Eles nunca vão parar no GitHub (evitando *takedowns* via DMCA).
+2. **Execução Supervisionada:** A Inteligência Artificial (Gemini/Claude) tem visibilidade e permissão para executar seus scripts de forma controlada no terminal local do seu PC.
+3. **Casamento Perfeito:** Você pode instruir a IA no chat orgânico: *"Notei que temos 5 artigos com paywall. Acione o plugin local `scihub_extractor.py` enviando os DOIs deles para baixar forçadamente as cópias."*
+4. **Python First para Scraping:** Embora o *core* do servidor funcione em altíssima performance no ecossistema Node.js / Go, recomendamos fortemente o uso do **Python** para a escrita desses plugins piratas (ex: usando `requests` e `beautifulsoup4`). A linguagem Python domina de forma absoluta as rotinas e quebras de captcha e anti-bots exigidas nesses cenários.
 
 ---
 

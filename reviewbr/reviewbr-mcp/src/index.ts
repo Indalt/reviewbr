@@ -28,6 +28,7 @@ import { TelemetryService } from "./services/telemetry.js";
 import { MethodologyAuditorService } from "./services/methodology_auditor.js";
 import { ScreeningMetricsService } from "./services/screening_metrics.js";
 import { AsreviewBridgeService } from "./services/asreview_bridge.js";
+import { RepositoryHealerService } from "./services/repository_healer.js";
 
 import * as path from "node:path";
 import * as fs from "node:fs";
@@ -57,6 +58,7 @@ const telemetryService = new TelemetryService();
 const auditorService = new MethodologyAuditorService();
 const screeningMetricsService = new ScreeningMetricsService();
 const asreviewBridge = new AsreviewBridgeService();
+const repositoryHealerService = new RepositoryHealerService();
 
 /**
  * Helper to log tool execution directly into the project's local directory.
@@ -1541,6 +1543,23 @@ server.tool(
             content: [{
                 type: "text",
                 text: result.success ? result.summary : `❌ ${result.error}`,
+            }]
+        };
+    }
+);
+
+// ─── Repository Healer Tool ───────────────────────────────────
+
+server.tool(
+    "heal_repositories",
+    "Realiza auto-cura do catálogo de repositórios (OAI-PMH). Lê o HTML da raiz das instituições desativadas para descobrir e reabilitar endpoints quebrados de Ciência Aberta.",
+    {},
+    async () => {
+        const report = await repositoryHealerService.healRepositories();
+        return {
+            content: [{
+                type: "text",
+                text: report
             }]
         };
     }

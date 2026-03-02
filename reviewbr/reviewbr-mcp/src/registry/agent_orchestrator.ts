@@ -44,6 +44,7 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     harvest_records: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
     get_record_metadata: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
     validate_repository: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
+    heal_repositories: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
 
     // ─── Import & Normalization (LIBRARIAN + COORDINATOR) ───
     import_dataset_ris: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
