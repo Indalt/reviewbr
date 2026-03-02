@@ -16,16 +16,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "http://harvester.ibict.br:8092/request",
         "verified": false,
-        "lastVerified": "2026-02-19"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "1"
-    },
+  },
   {
     "id": "BR-EST-0001",
     "institution": {
@@ -43,16 +43,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.usp.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0002",
     "institution": {
@@ -71,15 +71,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.unesp.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://repositorio.unesp.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0003",
     "institution": {
@@ -97,16 +97,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "http://repositorio.unicamp.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0004",
     "institution": {
@@ -124,16 +124,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://www.bdtd.uerj.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0005",
     "institution": {
@@ -160,7 +160,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0006",
     "institution": {
@@ -178,16 +178,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://siduece.uece.br/rodeo/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0007",
     "institution": {
@@ -214,7 +214,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0008",
     "institution": {
@@ -232,16 +232,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.uepa.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0009",
     "institution": {
@@ -260,15 +260,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://saberaberto.uneb.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://saberaberto.uneb.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0010",
     "institution": {
@@ -286,16 +286,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.unemat.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0011",
     "institution": {
@@ -313,16 +313,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.uems.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0012",
     "institution": {
@@ -340,16 +340,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "http://repositorio.uem.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0013",
     "institution": {
@@ -367,16 +367,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://ri.uepg.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0014",
     "institution": {
@@ -403,7 +403,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0015",
     "institution": {
@@ -421,16 +421,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.unicentro.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0016",
     "institution": {
@@ -448,16 +448,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "http://avalon.uefs.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0017",
     "institution": {
@@ -484,7 +484,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0018",
     "institution": {
@@ -502,16 +502,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.uea.edu.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-EST-0019",
     "institution": {
@@ -529,16 +529,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.uerr.edu.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0001",
     "institution": {
@@ -556,16 +556,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.ufba.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0002",
     "institution": {
@@ -583,16 +583,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://app.uff.br/riuff/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0003",
     "institution": {
@@ -619,7 +619,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0004",
     "institution": {
@@ -637,16 +637,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.ufc.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "3"
-    },
+  },
   {
     "id": "BR-FED-0005",
     "institution": {
@@ -673,7 +673,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0006",
     "institution": {
@@ -700,7 +700,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0007",
     "institution": {
@@ -719,15 +719,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.ufpa.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://repositorio.ufpa.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0008",
     "institution": {
@@ -754,7 +754,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0009",
     "institution": {
@@ -773,15 +773,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.ufes.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://repositorio.ufes.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0010",
     "institution": {
@@ -808,7 +808,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0011",
     "institution": {
@@ -835,7 +835,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0012",
     "institution": {
@@ -853,16 +853,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.bc.ufg.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0013",
     "institution": {
@@ -881,15 +881,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.ufmg.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://repositorio.ufmg.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0014",
     "institution": {
@@ -907,16 +907,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.ufpi.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "3"
-    },
+  },
   {
     "id": "BR-FED-0015",
     "institution": {
@@ -943,7 +943,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0016",
     "institution": {
@@ -962,15 +962,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.furg.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://repositorio.furg.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0017",
     "institution": {
@@ -989,15 +989,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://dspace.unila.edu.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://dspace.unila.edu.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0018",
     "institution": {
@@ -1016,15 +1016,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.ufla.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://repositorio.ufla.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0019",
     "institution": {
@@ -1043,15 +1043,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://www.repositorio.ufop.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://www.repositorio.ufop.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0020",
     "institution": {
@@ -1078,7 +1078,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0021",
     "institution": {
@@ -1105,7 +1105,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0022",
     "institution": {
@@ -1132,7 +1132,7 @@
     },
     "status": "active",
     "layer": "3"
-    },
+  },
   {
     "id": "BR-FED-0023",
     "institution": {
@@ -1151,15 +1151,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.ufscar.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://repositorio.ufscar.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0024",
     "institution": {
@@ -1178,15 +1178,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.ufrn.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://repositorio.ufrn.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0025",
     "institution": {
@@ -1213,7 +1213,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0026",
     "institution": {
@@ -1240,7 +1240,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0027",
     "institution": {
@@ -1259,15 +1259,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.ifce.edu.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://repositorio.ifce.edu.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0028",
     "institution": {
@@ -1285,16 +1285,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://dspace.ifrs.edu.br/xmlui/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0029",
     "institution": {
@@ -1313,15 +1313,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.ifsc.edu.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://repositorio.ifsc.edu.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-FED-0030",
     "institution": {
@@ -1340,15 +1340,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.ufersa.edu.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-19"
+        "endpoint": "https://repositorio.ufersa.edu.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "3"
-    },
+  },
   {
     "id": "BR-FED-0033",
     "institution": {
@@ -1366,16 +1366,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://dspace.sti.ufcg.edu.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-19"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "3"
-    },
+  },
   {
     "id": "BR-PRI-0001",
     "institution": {
@@ -1402,7 +1402,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0002",
     "institution": {
@@ -1429,7 +1429,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0003",
     "institution": {
@@ -1456,7 +1456,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0004",
     "institution": {
@@ -1474,16 +1474,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://dspace.mackenzie.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0005",
     "institution": {
@@ -1502,15 +1502,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.fgv.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://repositorio.fgv.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0006",
     "institution": {
@@ -1528,16 +1528,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.insper.edu.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0007",
     "institution": {
@@ -1564,7 +1564,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0008",
     "institution": {
@@ -1591,7 +1591,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0009",
     "institution": {
@@ -1618,7 +1618,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0010",
     "institution": {
@@ -1636,16 +1636,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.ucb.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0011",
     "institution": {
@@ -1663,16 +1663,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.puc-campinas.edu.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0012",
     "institution": {
@@ -1690,16 +1690,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://biblioteca.pucminas.br/teses/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0013",
     "institution": {
@@ -1717,16 +1717,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.pucgoias.edu.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0014",
     "institution": {
@@ -1744,16 +1744,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://bibliotecadigital.pucpr.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0015",
     "institution": {
@@ -1780,7 +1780,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0016",
     "institution": {
@@ -1807,7 +1807,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0017",
     "institution": {
@@ -1825,16 +1825,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://rd.unochapeco.edu.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0018",
     "institution": {
@@ -1852,16 +1852,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://www.univates.br/bdu/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0019",
     "institution": {
@@ -1879,16 +1879,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://biblioteca.feevale.br/RI/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0020",
     "institution": {
@@ -1906,16 +1906,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.ucs.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0021",
     "institution": {
@@ -1933,16 +1933,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "http://ri.upf.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0022",
     "institution": {
@@ -1960,16 +1960,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.unisc.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0023",
     "institution": {
@@ -1996,7 +1996,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0024",
     "institution": {
@@ -2015,15 +2015,15 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://comum.rcaap.pt/oai/request",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "endpoint": "https://comum.rcaap.pt/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0025",
     "institution": {
@@ -2041,16 +2041,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://ri.unimar.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0026",
     "institution": {
@@ -2068,16 +2068,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "http://senhorinha.unicap.br/jspui/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0027",
     "institution": {
@@ -2104,7 +2104,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0028",
     "institution": {
@@ -2122,16 +2122,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "http://repositorio.metodista.br/jspui/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0029",
     "institution": {
@@ -2149,7 +2149,7 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "",
         "verified": false,
         "lastVerified": "2026-02-11"
@@ -2158,7 +2158,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0030",
     "institution": {
@@ -2176,7 +2176,7 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "",
         "verified": false,
         "lastVerified": "2026-02-11"
@@ -2185,7 +2185,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0031",
     "institution": {
@@ -2203,7 +2203,7 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "",
         "verified": false,
         "lastVerified": "2026-02-11"
@@ -2212,7 +2212,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0032",
     "institution": {
@@ -2230,16 +2230,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.animaeducacao.com.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0033",
     "institution": {
@@ -2257,16 +2257,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.animaeducacao.com.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-PRI-0034",
     "institution": {
@@ -2284,16 +2284,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "https://repositorio.animaeducacao.com.br/oai/request",
         "verified": false,
-        "lastVerified": "2026-02-11"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-RES-0001",
     "institution": {
@@ -2320,7 +2320,7 @@
     },
     "status": "active",
     "layer": "2"
-    },
+  },
   {
     "id": "BR-RES-0002",
     "institution": {
@@ -2338,16 +2338,16 @@
     },
     "access": {
       "oaiPmh": {
-        "available": true,
+        "available": false,
         "endpoint": "http://www.scielo.br/oai/scielo-oai.php",
         "verified": false,
-        "lastVerified": "2026-02-19"
+        "lastVerified": "2026-03-02"
       },
       "searchEndpoints": []
     },
     "status": "active",
     "layer": "1"
-    },
+  },
   {
     "id": "BR-RES-0004",
     "institution": {
@@ -2374,7 +2374,7 @@
     },
     "status": "inactive",
     "layer": "3"
-    },
+  },
   {
     "id": "BR-AGG-0003",
     "institution": {
@@ -2401,7 +2401,7 @@
     },
     "status": "active",
     "layer": "1"
-    },
+  },
   {
     "id": "BR-AGG-0004",
     "institution": {
@@ -2428,7 +2428,7 @@
     },
     "status": "active",
     "layer": "1"
-    },
+  },
   {
     "id": "BR-AGG-0005",
     "institution": {
@@ -2455,7 +2455,7 @@
     },
     "status": "active",
     "layer": "1"
-    },
+  },
   {
     "id": "BR-FED-0034",
     "institution": {
@@ -2482,7 +2482,7 @@
     },
     "status": "active",
     "layer": "3"
-    },
+  },
   {
     "id": "BR-FED-0035",
     "institution": {
@@ -2509,5 +2509,5 @@
     },
     "status": "active",
     "layer": "3"
-    }
+  }
 ]
