@@ -83,7 +83,13 @@ export class EuropePmcService {
                     url: accessUrl,
                     doi: r.doi || "",
                     pdfUrl: pdfUrl,
-                    accessMethod: "api"
+                    accessMethod: "api",
+                    audit: {
+                        methodology: "CUSTOM" as any,
+                        searchQueryUsed: query,
+                        extractionDate: new Date().toISOString(),
+                        provenanceSource: "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+                    }
                 };
             });
 

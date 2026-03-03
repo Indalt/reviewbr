@@ -83,7 +83,13 @@ export class CoreService {
                     url: displayUrl,
                     doi: r.doi || "",
                     pdfUrl: r.downloadUrl || "",
-                    accessMethod: "api"
+                    accessMethod: "api",
+                    audit: {
+                        methodology: "CUSTOM" as any,
+                        searchQueryUsed: query,
+                        extractionDate: new Date().toISOString(),
+                        provenanceSource: "https://api.core.ac.uk/v3/search/works"
+                    }
                 };
             });
 

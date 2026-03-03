@@ -229,6 +229,12 @@ export class ScieloAdapter {
             subjectAreas: art.subject_areas,
             language: art.languages?.[0],
             accessMethod: "scielo-articlemeta",
+            audit: {
+                methodology: "CUSTOM" as any,
+                searchQueryUsed: "SCIELO_ARTICLE_META_QUERY",
+                extractionDate: new Date().toISOString(),
+                provenanceSource: this.baseUrl
+            }
         };
     }
 }
@@ -378,6 +384,12 @@ export class BdtdAdapter {
             subjectAreas: r.subjects?.flat(),
             language: r.languages?.[0],
             accessMethod: "bdtd-vufind",
+            audit: {
+                methodology: "CUSTOM" as any,
+                searchQueryUsed: "BDTD_VUFIND_API_QUERY",
+                extractionDate: new Date().toISOString(),
+                provenanceSource: this.baseUrl
+            }
         };
     }
 }
@@ -439,6 +451,12 @@ export class UspAdapter {
                 institution: "Universidade de São Paulo",
                 state: "SP",
                 accessMethod: "usp-custom",
+                audit: {
+                    methodology: "CUSTOM" as any,
+                    searchQueryUsed: "USP_CUSTOM_HTML_QUERY",
+                    extractionDate: new Date().toISOString(),
+                    provenanceSource: this.baseUrl
+                }
             });
         });
 

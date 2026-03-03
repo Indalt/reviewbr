@@ -36,7 +36,13 @@ export class UniversalProvider {
                 date: this.resolvePath(item, config.mapping.year || "pubYear"),
                 url: this.resolvePath(item, config.mapping.url || "url"),
                 doi: this.resolvePath(item, config.mapping.doi || "doi"),
-                accessMethod: "api"
+                accessMethod: "api",
+                audit: {
+                    methodology: "CUSTOM" as any,
+                    searchQueryUsed: query,
+                    extractionDate: new Date().toISOString(),
+                    provenanceSource: config.baseUrl
+                }
             }));
 
             return {

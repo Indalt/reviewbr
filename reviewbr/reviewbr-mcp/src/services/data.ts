@@ -70,7 +70,7 @@ export class DataService {
             const value = line.substring(6).trim();
 
             if (tag === 'TY') {
-                if (Object.keys(current).length > 0) entries.push(this.finalizeEntry(current));
+                if (Object.keys(current).length > 0) entries.push(this.finalizeEntry(current, sourceName));
                 current = { accessMethod: "manual_import", repositoryName: sourceName };
             } else if (tag === 'TI' || tag === 'T1') {
                 current.title = value;
@@ -92,7 +92,7 @@ export class DataService {
                 current.subjectAreas.push(value);
             } else if (tag === 'ER') {
                 if (Object.keys(current).length > 0) {
-                    entries.push(this.finalizeEntry(current));
+                    entries.push(this.finalizeEntry(current, sourceName));
                     current = {};
                 }
             }
@@ -150,6 +150,12 @@ export class DataService {
                 subjectAreas: keywords,
                 type: get("type"),
                 accessMethod: "bvs_import",
+                audit: {
+                    methodology: "CUSTOM" as any,
+                    searchQueryUsed: "BVS_LILACS_EXPORT",
+                    extractionDate: new Date().toISOString(),
+                    provenanceSource: get("database") ? `BVS/${get("database")}` : "BVS/LILACS Portal CSV"
+                }
             };
 
             if (entry.title) {
@@ -214,11 +220,19 @@ export class DataService {
         return results;
     }
 
-    private finalizeEntry(entry: Partial<SearchResult>): SearchResult {
+    private finalizeEntry(entry: Partial<SearchResult>, sourceName?: string): SearchResult {
         if (!entry.identifier) {
             const hash = crypto.createHash('md5').update(JSON.stringify(entry)).digest('hex');
             entry.identifier = `MANUAL-${hash.substring(0, 8)}`;
         }
+
+        entry.audit = {
+            methodology: "CUSTOM" as any,
+            searchQueryUsed: "MANUAL_IMPORT",
+            extractionDate: new Date().toISOString(),
+            provenanceSource: sourceName || "Local File Import"
+        };
+
         return entry as SearchResult;
     }
 }

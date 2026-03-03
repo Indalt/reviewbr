@@ -64,13 +64,14 @@ export class MethodologyAuditorService {
         checks.push(this.checkPrismaFlow(input.prismaFlowData));
         checks.push(this.checkResidualDuplicates(input.dataset));
         checks.push(this.checkSelectionBias(input.dataset));
+        checks.push(this.checkTransparencyAudit(input.dataset));
 
         const score = checks.filter(c => c.status === "PASS").length;
         const report = this.generateMarkdownReport(checks, score, input.dataset.length);
 
         return {
             score,
-            maxScore: 5,
+            maxScore: 6,
             checks,
             markdownReport: report,
             timestamp: new Date().toISOString(),
@@ -315,6 +316,50 @@ export class MethodologyAuditorService {
                 icon: warnings.length >= 2 ? "❌" : "⚠️",
                 detail: `Indicadores de viés detectados:\n${warnings.map(w => `  - ${w}`).join("\n")}`,
                 suggestion: "Documente as justificativas para qualquer restrição intencional (ex: recorte temporal definido no protocolo). Se não foram intencionais, considere expandir os critérios.",
+            };
+        }
+    }
+
+    // ─── Check 6: Transparency & Data Retrieval (PRISMA-S) ──
+
+    private checkTransparencyAudit(dataset: SearchResult[]): AuditCheckResult {
+        if (dataset.length === 0) {
+            return {
+                id: "transparency_audit",
+                name: "Auditoria de Transparência e Proveniência (PRISMA-S)",
+                status: "WARNING",
+                icon: "⚠️",
+                detail: "Dataset vazio — não é possível auditar proveniência.",
+            };
+        }
+
+        const missingAudit = dataset.filter(r => !r.audit).length;
+        const missingQuery = dataset.filter(r => r.audit && !r.audit.searchQueryUsed).length;
+        const missingProvenance = dataset.filter(r => r.audit && !r.audit.provenanceSource).length;
+        const missingMethodology = dataset.filter(r => r.audit && !r.audit.methodology).length;
+
+        const warnings: string[] = [];
+        if (missingAudit > 0) warnings.push(`${missingAudit} registros sem bloco de auditoria estruturado.`);
+        if (missingQuery > 0) warnings.push(`${missingQuery} registros sem registro da query exata utilizada (PRISMA-S Item 3).`);
+        if (missingProvenance > 0) warnings.push(`${missingProvenance} registros sem fonte de proveniência técnica (URL/API).`);
+        if (missingMethodology > 0) warnings.push(`${missingMethodology} registros sem metodologia de captura definida.`);
+
+        if (warnings.length === 0) {
+            return {
+                id: "transparency_audit",
+                name: "Auditoria de Transparência e Proveniência (PRISMA-S)",
+                status: "PASS",
+                icon: "✅",
+                detail: `Proveniência completa: Todos os ${dataset.length} registros possuem metadados de auditoria estruturados (Query, Data, Fonte e Metodologia).`,
+            };
+        } else {
+            return {
+                id: "transparency_audit",
+                name: "Auditoria de Transparência e Proveniência (PRISMA-S)",
+                status: "FAIL",
+                icon: "❌",
+                detail: `Lacunas de transparência crítica detectadas (Violação do Item 3 e 8 do PRISMA-S):\n${warnings.map(w => `  - ${w}`).join("\n")}`,
+                suggestion: "As novas travas do sistema exigem que toda captura de dados registre a query e a fonte exata. Registros antigos ou importações manuais incompletas devem ser enriquecidos.",
             };
         }
     }

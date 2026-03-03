@@ -173,6 +173,12 @@ export class HtmlScraper {
                 type: "",
                 url: finalUrl,
                 accessMethod: "html-scraper",
+                audit: {
+                    methodology: "CUSTOM" as any,
+                    searchQueryUsed: query,
+                    extractionDate: new Date().toISOString(),
+                    provenanceSource: baseUrl
+                }
             });
         });
 

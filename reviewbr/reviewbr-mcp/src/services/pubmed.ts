@@ -60,7 +60,18 @@ export class PubMedService {
             for (let i = 0; i < ids.length; i += EFETCH_BATCH_SIZE) {
                 const batch = ids.slice(i, i + EFETCH_BATCH_SIZE);
                 const batchResults = await this.efetch(batch);
-                results.push(...batchResults);
+
+                const auditedBatch = batchResults.map(r => ({
+                    ...r,
+                    audit: {
+                        methodology: "CUSTOM" as any,
+                        searchQueryUsed: query,
+                        extractionDate: new Date().toISOString(),
+                        provenanceSource: `${EUTILS_BASE}/efetch.fcgi`
+                    }
+                })) as SearchResult[];
+
+                results.push(...auditedBatch);
 
                 // Polite delay between batches (NCBI requires max 3 requests/sec without API key)
                 if (i + EFETCH_BATCH_SIZE < ids.length) {
@@ -117,9 +128,9 @@ export class PubMedService {
 
     /**
      * Step 2: EFetch — fetch full article metadata for a batch of PMIDs.
-     * Returns PubMed XML, parsed into SearchResult[].
+     * Returns PubMed XML, parsed into partial SearchResult[].
      */
-    private async efetch(ids: string[]): Promise<SearchResult[]> {
+    private async efetch(ids: string[]): Promise<Omit<SearchResult, 'audit'>[]> {
         const params = new URLSearchParams({
             db: "pubmed",
             id: ids.join(","),
@@ -134,15 +145,15 @@ export class PubMedService {
     }
 
     /**
-     * Parse PubMed XML (efetch response) into SearchResult[].
+     * Parse PubMed XML (efetch response) into partial SearchResult[].
      */
-    private parsePubmedXml(xml: string): SearchResult[] {
+    private parsePubmedXml(xml: string): Omit<SearchResult, 'audit'>[] {
         const parsed = xmlParser.parse(xml);
         const articles = parsed?.PubmedArticleSet?.PubmedArticle;
         if (!articles) return [];
 
         const articleArray = Array.isArray(articles) ? articles : [articles];
-        const results: SearchResult[] = [];
+        const results: Omit<SearchResult, 'audit'>[] = [];
 
         for (const article of articleArray) {
             try {
@@ -158,9 +169,9 @@ export class PubMedService {
     }
 
     /**
-     * Parse a single PubmedArticle node into a SearchResult.
+     * Parse a single PubmedArticle node into a partial SearchResult.
      */
-    private parseOneArticle(article: any): SearchResult | null {
+    private parseOneArticle(article: any): Omit<SearchResult, 'audit'> | null {
         const medline = article?.MedlineCitation;
         if (!medline) return null;
 

@@ -360,6 +360,12 @@ export class AccessStrategy {
             type: record.metadata.type[0] ?? "",
             url,
             accessMethod: "oai-pmh",
+            audit: {
+                methodology: "CUSTOM" as any,
+                searchQueryUsed: "RECOVERY_FROM_OAI_HARVEST",
+                extractionDate: new Date().toISOString(),
+                provenanceSource: repo.access.oaiPmh.endpoint || repo.repository.url
+            }
         };
     }
 
@@ -391,6 +397,12 @@ export class AccessStrategy {
             type: getFirst("dc.type"),
             url,
             accessMethod: "dspace-rest",
+            audit: {
+                methodology: "CUSTOM" as any,
+                searchQueryUsed: "DSPACE_REST_API_QUERY",
+                extractionDate: new Date().toISOString(),
+                provenanceSource: baseUrl
+            }
         };
     }
 }

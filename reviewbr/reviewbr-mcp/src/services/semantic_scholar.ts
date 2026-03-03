@@ -70,7 +70,13 @@ export class SemanticScholarService {
                 url: r.openAccessPdf?.url || r.url || (r.externalIds?.DOI ? `https://doi.org/${r.externalIds.DOI}` : ""),
                 doi: r.externalIds?.DOI || "",
                 type: "journal-article",
-                accessMethod: "api"
+                accessMethod: "api",
+                audit: {
+                    methodology: "CUSTOM" as any,
+                    searchQueryUsed: query,
+                    extractionDate: new Date().toISOString(),
+                    provenanceSource: "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
+                }
             }));
 
             return {

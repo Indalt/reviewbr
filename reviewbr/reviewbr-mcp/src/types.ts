@@ -111,6 +111,36 @@ export interface MetadataFormat {
     metadataNamespace: string;
 }
 
+// ─── Methodology & Audit Protocols ────────────────────────────
+
+export const SupportedMethodologySchema = z.enum([
+    "PRISMA_2020",
+    "PRISMA_ScR", // Scoping Reviews
+    "COCHRANE",
+    "CUSTOM"
+]);
+export type SupportedMethodology = z.infer<typeof SupportedMethodologySchema>;
+
+export interface ProcessAuditMetadata {
+    /** The strictly enforced scientific protocol this record is bound to */
+    methodology: SupportedMethodology;
+
+    /** MUST exist: The exact query execution that yielded this record */
+    searchQueryUsed: string;
+
+    /** MUST exist: The date of the extraction from the primary source */
+    extractionDate: string;
+
+    /** MUST exist: The specific endpoint or human that generated the record */
+    provenanceSource: string;
+
+    /** Optional flags used by active auditors */
+    validationFlags?: {
+        isMethodologyCompliant: boolean;
+        missingCompliantFields: string[];
+    };
+}
+
 // ─── Search Result Types ──────────────────────────────────────
 
 export interface SearchResult {
@@ -136,6 +166,16 @@ export interface SearchResult {
     /** País de origem do artigo (afiliação, journal, etc.). 'desconhecida' se não disponível. */
     originCountry?: string;
     accessMethod: "oai-pmh" | "dspace-rest" | "html-scraper" | "bdtd-vufind" | "scielo-articlemeta" | "usp-custom" | "manual_import" | "bvs_import" | "api";
+    /** Timestamp of when the record was first imported into the systemic review system. */
+    importedAt?: string;
+    /** Detailed status of full-text retrieval (success, error message, etc). */
+    fulltextStatus?: string;
+
+    /** 
+     * STRICT METADATA REQUIREMENT 
+     * Any agent, scraper or ingestor MUST provide this block to satisfy PRISMA/Cochrane rules.
+     */
+    audit: ProcessAuditMetadata;
 }
 
 export interface SearchOptions {

@@ -27,7 +27,13 @@ export class CrossrefService {
                 url: r.URL || (r.DOI ? `https://doi.org/${r.DOI}` : ""),
                 doi: r.DOI || "",
                 type: r.type || "",
-                accessMethod: "api"
+                accessMethod: "api",
+                audit: {
+                    methodology: "CUSTOM" as any,
+                    searchQueryUsed: query,
+                    extractionDate: new Date().toISOString(),
+                    provenanceSource: "https://api.crossref.org/works"
+                }
             }));
 
             return {

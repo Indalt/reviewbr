@@ -95,10 +95,15 @@ export class SnowballService {
             title: r.display_name,
             creators: r.authorships?.map((a: any) => a.author.display_name) || [],
             date: r.publication_date,
-            url: r.doi || r.id,
             doi: r.doi,
             type: r.type,
-            accessMethod: "api"
+            accessMethod: "api",
+            audit: {
+                methodology: "CUSTOM" as any,
+                searchQueryUsed: `Snowball citations for: ${workId}`,
+                extractionDate: new Date().toISOString(),
+                provenanceSource: "https://api.openalex.org/works"
+            }
         }));
     }
 
@@ -126,10 +131,15 @@ export class SnowballService {
             title: r.display_name,
             creators: r.authorships?.map((a: any) => a.author.display_name) || [],
             date: r.publication_date,
-            url: r.doi || r.id,
             doi: r.doi,
             type: r.type,
-            accessMethod: "api"
+            accessMethod: "api",
+            audit: {
+                methodology: "CUSTOM" as any,
+                searchQueryUsed: query,
+                extractionDate: new Date().toISOString(),
+                provenanceSource: "https://api.openalex.org/works"
+            }
         }));
 
         return {

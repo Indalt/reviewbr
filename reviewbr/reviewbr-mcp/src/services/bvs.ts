@@ -25,7 +25,13 @@ export class BvsService {
             description: r.abstract || r.AB || "",
             journal: r.journal || r.SO || r.Source || "",
             type: "journal-article",
-            accessMethod: "bvs_import"
+            accessMethod: "bvs_import",
+            audit: {
+                methodology: "CUSTOM" as any,
+                searchQueryUsed: "BVS_CSV_IMPORT",
+                extractionDate: new Date().toISOString(),
+                provenanceSource: "BVS/LILACS Portal Export"
+            }
         }));
     }
 

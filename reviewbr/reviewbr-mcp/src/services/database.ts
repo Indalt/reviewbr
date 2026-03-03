@@ -10,6 +10,7 @@ import sqlite3 from "sqlite3";
 import { promisify } from "node:util";
 import * as path from "node:path";
 import * as fs from "node:fs";
+import { SearchResult } from "../types.js";
 
 export type BlindingType = "NONE" | "SINGLE_BLIND" | "DOUBLE_BLIND";
 
@@ -20,7 +21,7 @@ export interface ProjectMetadata {
     project_type: string;
     topic?: string;
     project_path?: string; // Optional for DRAFT projects
-    status: "DRAFT" | "ACTIVE" | "LOCKED_EXECUTION";
+    status: "DRAFT_DESIGN" | "ACTIVE_MINING" | "LOCKED_EXECUTION";
     blinding?: BlindingType;
     has_meta_analysis?: boolean;
     created_at?: string;
@@ -62,7 +63,7 @@ export class DatabaseService {
                     project_type TEXT NOT NULL,
                     topic TEXT,
                     project_path TEXT,
-                    status TEXT DEFAULT 'DRAFT',
+                    status TEXT DEFAULT 'DRAFT_DESIGN',
                     blinding TEXT DEFAULT 'NONE',
                     has_meta_analysis INTEGER DEFAULT 0,
                     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
@@ -72,9 +73,10 @@ export class DatabaseService {
             // Safe migrations: add columns that may not exist in older DBs
             const migrations = [
                 "ALTER TABLE projects ADD COLUMN topic TEXT",
-                "ALTER TABLE projects ADD COLUMN status TEXT DEFAULT 'DRAFT'",
+                "ALTER TABLE projects ADD COLUMN status TEXT DEFAULT 'DRAFT_DESIGN'",
                 "ALTER TABLE projects ADD COLUMN blinding TEXT DEFAULT 'NONE'",
                 "ALTER TABLE projects ADD COLUMN has_meta_analysis INTEGER DEFAULT 0",
+                "ALTER TABLE records ADD COLUMN audit_metadata TEXT",
             ];
             for (const sql of migrations) {
                 this.db.run(sql, (err) => {
@@ -121,6 +123,7 @@ export class DatabaseService {
                     screening_decision TEXT,
                     screening_reason TEXT,
                     extraction_data TEXT,
+                    audit_metadata TEXT,
                     imported_at DATETIME DEFAULT CURRENT_TIMESTAMP,
                     FOREIGN KEY(project_id) REFERENCES projects(id)
                 )
@@ -160,7 +163,7 @@ export class DatabaseService {
     async activateProject(projectId: number, projectPath: string): Promise<void> {
         return new Promise((resolve, reject) => {
             const stmt = this.db.prepare(`
-                UPDATE projects SET status = 'ACTIVE', project_path = ? WHERE id = ?
+                UPDATE projects SET status = 'ACTIVE_MINING', project_path = ? WHERE id = ?
             `);
             stmt.run([projectPath, projectId], (err) => {
                 if (err) reject(err);
@@ -242,19 +245,30 @@ export class DatabaseService {
 
     /**
      * Batch insert records into the database.
+     * EXTREMELY STRICT: Requires full PRISMA/Cochrane audit metadata.
      */
-    async insertRecords(projectId: number, source: string, records: any[]): Promise<number> {
+    async insertRecords(projectId: number, source: string, records: SearchResult[]): Promise<number> {
         return new Promise((resolve, reject) => {
             this.db.serialize(() => {
                 this.db.run("BEGIN TRANSACTION");
                 const stmt = this.db.prepare(`
                     INSERT INTO records (
                         project_id, source, identifier, title, creators, description, 
-                        date, url, doi, journal, raw_metadata
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        date, url, doi, journal, raw_metadata, audit_metadata
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 `);
 
                 for (const r of records) {
+                    // METHODOLOGY GUARDRAIL: Reject any record that lacks strict provenance.
+                    // This forces agents to respect the Single Source of Truth (PRISMA-S Item 8)
+                    if (!r.audit || !r.audit.methodology || !r.audit.searchQueryUsed || !r.audit.provenanceSource || !r.audit.extractionDate) {
+                        this.db.run("ROLLBACK");
+                        return reject(new Error(
+                            `[METHODOLOGY VIOLATION] Cannot insert record "${r.title || r.identifier}". ` +
+                            `Missing mandatory audit block. Required fields: methodology, searchQueryUsed, provenanceSource, extractionDate.`
+                        ));
+                    }
+
                     stmt.run([
                         projectId,
                         source,
@@ -266,7 +280,8 @@ export class DatabaseService {
                         r.url || null,
                         r.doi || null,
                         r.journal || null,
-                        JSON.stringify(r)
+                        JSON.stringify(r),
+                        JSON.stringify(r.audit)
                     ]);
                 }
 

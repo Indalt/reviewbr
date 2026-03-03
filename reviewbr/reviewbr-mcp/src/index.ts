@@ -26,6 +26,7 @@ import { EuropePmcService } from "./services/europe_pmc.js";
 import { PdfExtractorService } from "./services/pdf_extractor.js";
 import { TelemetryService } from "./services/telemetry.js";
 import { MethodologyAuditorService } from "./services/methodology_auditor.js";
+import { ProtocolDesignAuditor } from "./services/protocol_auditor.js";
 import { ScreeningMetricsService } from "./services/screening_metrics.js";
 import { AsreviewBridgeService } from "./services/asreview_bridge.js";
 import { RepositoryHealerService } from "./services/repository_healer.js";
@@ -56,6 +57,7 @@ const bvsService = new BvsService();
 const projectInitService = new ProjectInitService();
 const telemetryService = new TelemetryService();
 const auditorService = new MethodologyAuditorService();
+const protocolAuditor = new ProtocolDesignAuditor();
 const screeningMetricsService = new ScreeningMetricsService();
 const asreviewBridge = new AsreviewBridgeService();
 const repositoryHealerService = new RepositoryHealerService();
@@ -84,6 +86,21 @@ async function logToLocalProject(projectPath: string, toolName: string, data: an
     } catch (e) {
         console.error("Local logging error:", e);
     }
+}
+
+async function checkDesignGuardrail(projectId?: number, projectPath?: string): Promise<string | null> {
+    let id = projectId;
+    if (!id && projectPath) {
+        const project = await dbService.findProjectByPath(projectPath);
+        if (project) id = project.id;
+    }
+    if (id) {
+        const project = await dbService.getProjectById(id);
+        if (project && project.status === "DRAFT_DESIGN") {
+            return `🚫 ACESSO NEGADO: O projeto "${project.project_name}" está bloqueado em DRAFT_DESIGN. A fase de execução e mineração (ferramentas de busca/triagem) não pode iniciar sem um planejamento metodológico. Preencha o arquivo 'draft_protocol.md' e solicite aprovação via 'submit_protocol_for_approval'.`;
+        }
+    }
+    return null;
 }
 
 const server = new McpServer({
@@ -135,6 +152,9 @@ server.tool(
         projectPath: z.string().optional(),
     },
     async (params) => {
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+
         telemetryService.logSearch("optimized_search", params.query, params.layers.join(','), undefined);
         const { results, errors } = await searchService.searchPapers(params.query, params.layers, {
             dateFrom: params.dateFrom,
@@ -404,6 +424,9 @@ server.tool(
         projectPath: z.string().optional(),
     },
     async (params) => {
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+
         const { results, error } = await pubmedService.search(params.query, {
             maxResults: params.maxResults
         });
@@ -580,6 +603,9 @@ server.tool(
         projectPath: z.string().optional(),
     },
     async (params) => {
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+
         let repos = registry.getActive();
 
         if (params.repositories && params.repositories.length > 0) {
@@ -713,6 +739,9 @@ server.tool(
         metadataPrefix: z.string().default("oai_dc").describe("Formato de metadados"),
     },
     async (params) => {
+        const guardrailError = await checkDesignGuardrail(undefined, undefined);
+        if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+
         const repo = registry.getById(params.repositoryId);
         if (!repo) {
             return { content: [{ type: "text", text: `Repositório ${params.repositoryId} não encontrado.` }] };
@@ -869,6 +898,60 @@ server.tool(
     }
 );
 
+server.tool(
+    "submit_protocol_for_approval",
+    "Analisa o 'draft_protocol.md' para liberar o projeto para a fase de mineração (ACTIVE_MINING). Somente após aprovação, as buscas poderão ser feitas.",
+    {
+        projectId: z.number().optional(),
+        projectPath: z.string().describe("Caminho do projeto onde está o '00_protocol/draft_protocol.md'"),
+    },
+    async (params) => {
+        let projectId = params.projectId;
+        if (!projectId && params.projectPath) {
+            const project = await dbService.findProjectByPath(params.projectPath);
+            if (project) projectId = project.id;
+        }
+
+        if (!projectId) {
+            return { content: [{ type: "text", text: "Erro: Projeto não encontrado no banco." }] };
+        }
+
+        const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
+        const protocolPath = path.join(projectDir, "00_protocol", "draft_protocol.md");
+
+        const audit = protocolAuditor.auditFile(protocolPath);
+
+        if (audit.valid) {
+            await dbService.activateProject(projectId, params.projectPath); // Updates to ACTIVE_MINING
+            await dbService.logAuditEvent({
+                project_id: projectId,
+                tool_name: "submit_protocol_for_approval",
+                action_type: "protocol_approval",
+                params: JSON.stringify(params),
+                result_summary: `Protocolo APROVADO! Score: ${audit.score}/${audit.maxScore}. Status alterado para ACTIVE_MINING.`
+            });
+
+            // Rename draft to final protocol
+            const finalPath = path.join(projectDir, "00_protocol", "protocol.md");
+            if (fs.existsSync(protocolPath)) fs.renameSync(protocolPath, finalPath);
+
+            return {
+                content: [{
+                    type: "text",
+                    text: `✅ SUCESSO! Protocolo aprovado por atingir nota ${audit.score}/${audit.maxScore}. O sistema alterou o status do projeto para ACTIVE_MINING e removeu as travas de pesquisa. As ferramentas de busca agora estão liberadas.`
+                }]
+            };
+        } else {
+            return {
+                content: [{
+                    type: "text",
+                    text: `❌ REPROVADO! O protocolo falhou na auditoria (Nota: ${audit.score}/${audit.maxScore}). Corrija o arquivo draft_protocol.md e tente novamente.\n\nErros pendentes:\n${audit.errors.join('\n')}\n\nSugestões:\n${audit.suggestions.join('\n')}`
+                }]
+            };
+        }
+    }
+);
+
 // ─── Verification Tools ─────────────────────────────────────────
 
 server.tool(
@@ -908,6 +991,9 @@ server.tool(
 );
 
 const openAlexHandler = async (params: any) => {
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+
     // Resolve project for audit
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
@@ -971,6 +1057,9 @@ const openAlexHandler = async (params: any) => {
 };
 
 const crossrefHandler = async (params: any) => {
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+
     // Resolve project for audit
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
@@ -1034,6 +1123,9 @@ const crossrefHandler = async (params: any) => {
 };
 
 const scieloHandler = async (params: any) => {
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
         const project = await dbService.findProjectByPath(params.projectPath);
@@ -1099,6 +1191,9 @@ const scieloHandler = async (params: any) => {
 };
 
 const semanticScholarHandler = async (params: any) => {
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
         const project = await dbService.findProjectByPath(params.projectPath);
@@ -1161,6 +1256,9 @@ const semanticScholarHandler = async (params: any) => {
 };
 
 const coreHandler = async (params: any) => {
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
         const project = await dbService.findProjectByPath(params.projectPath);
@@ -1223,6 +1321,9 @@ const coreHandler = async (params: any) => {
 };
 
 const europePmcHandler = async (params: any) => {
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
         const project = await dbService.findProjectByPath(params.projectPath);

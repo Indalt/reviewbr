@@ -137,7 +137,7 @@ export class ProjectInitService {
             project_name: config.name,
             project_type: config.researchType,
             topic: config.topic,
-            status: "DRAFT",
+            status: "DRAFT_DESIGN",
             blinding: config.blinding || "NONE",
             has_meta_analysis: config.hasMetaAnalysis || false
         });
@@ -198,9 +198,9 @@ export class ProjectInitService {
             fs.mkdirSync(path.join(projectPath, folder), { recursive: true });
         }
 
-        // Generate protocol (minimal for now)
+        // Generate draft protocol
         const protocol = this.generateProtocol(config, meta);
-        const protocolPath = path.join(projectPath, "00_protocol", "protocol.md");
+        const protocolPath = path.join(projectPath, "00_protocol", "draft_protocol.md");
         fs.writeFileSync(protocolPath, protocol, "utf8");
 
         // Update database
@@ -241,7 +241,12 @@ ${config.pico.intervention ? `| **Intervenção (I)** | ${config.pico.interventi
             ? `**Idiomas aceitos:** ${config.languages.join(", ")}`
             : "**Idiomas aceitos:** Sem restrição";
 
-        return `# Protocolo — ${config.name}
+        return `# Rascunho de Protocolo — ${config.name}
+
+> ⚠️ **STATUS: DRAFT_DESIGN**
+> Este projeto está bloqueado. Para liberar as ferramentas de mineração de dados,
+> preencha rigorosamente as seções com [PREENCHIMENTO OBRIGATÓRIO] abaixo e 
+> solicite ao sistema a aprovação do protocolo.
 
 **Tipo de pesquisa:** ${meta.label}
 **PRISMA aplicável:** ${meta.prismaStandard}
@@ -252,7 +257,14 @@ ${config.pico.intervention ? `| **Intervenção (I)** | ${config.pico.interventi
 ${config.topic}
 
 ${picoSection}
+
 ## Critérios de Elegibilidade
+
+### Critérios de Inclusão
+[PREENCHIMENTO OBRIGATÓRIO: Liste 2 a 3 critérios claros do que DEVE estar no artigo para ele ser aceito. Ex: "Estudos que aplicaram deep learning", "Estudos em humanos"]
+
+### Critérios de Exclusão
+[PREENCHIMENTO OBRIGATÓRIO: Liste 2 a 3 critérios claros do que ELIMINA o artigo. Ex: "Revisões de literatura", "Estudos em animais", "Artigos sem texto completo disponível"]
 
 **Escopo de busca:** Global (todas as fontes disponíveis)
 **Período:** ${dateRange}
@@ -262,9 +274,8 @@ ${langSection}
 
 ${this.getSearchSourcesSection(config)}
 
-## Estratégia de Busca
-
-Strings de busca a serem definidas com base nos descritores DeCS/MeSH do tema.
+## Estratégia de Busca (Sintaxe)
+[PREENCHIMENTO OBRIGATÓRIO: Escreva a string de busca exata utilizando operadores booleanos (AND, OR). Use parênteses para agrupar as lógicas. Ex: (cashew OR anacardium) AND (disease OR pest)]
 
 ## Processo de Seleção
 
