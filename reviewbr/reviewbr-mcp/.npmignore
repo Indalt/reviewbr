@@ -1,0 +1,7 @@
+.env
+.DS_Store
+node_modules/
+projects/
+data/
+tmp_results.txt
+*.log

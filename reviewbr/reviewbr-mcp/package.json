@@ -1,6 +1,6 @@
 {
   "name": "reviewbr-mcp",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "MCP Server for Brazilian Academic Repositories (OAI-PMH, DSpace REST, HTML scraping) and PRISMA Systematic Reviews",
   "type": "module",
   "main": "dist/index.js",
