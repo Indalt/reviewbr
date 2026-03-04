@@ -353,4 +353,149 @@ export class BatchProcessorService {
 
         return { results, summary };
     }
+
+    // ─── Engine 4: Document Translation ──────────────────────
+
+    /**
+     * Engine 4: Translate a PDF document to a target language.
+     * 
+     * ⚠️ IMPORTANT: Translations are SUPPORT TEXT ONLY.
+     * They are explicitly marked as non-authoritative and must NOT be used
+     * as primary sources in the research protocol. Every translation introduces
+     * semantic loss — both literal and figurative meaning may shift.
+     * 
+     * @param pdfPath    Absolute path to the PDF file
+     * @param targetLang Target language (e.g., "português", "english", "español")
+     * @returns          Path to the generated .md file + summary
+     */
+    async translateDocument(
+        pdfPath: string,
+        targetLang: string = "português",
+    ): Promise<{ outputPath: string; summary: string }> {
+        const startTime = Date.now();
+        const llm = createDefaultProvider();
+
+        if (!llm) {
+            throw new Error("Nenhuma chave de API LLM configurada para tradução.");
+        }
+
+        if (!fs.existsSync(pdfPath)) {
+            throw new Error(`Arquivo não encontrado: ${pdfPath}`);
+        }
+
+        logger.info("TRANSLATE", `Iniciando tradução de ${path.basename(pdfPath)} → ${targetLang}`);
+
+        // Extract text from PDF
+        const buffer = fs.readFileSync(pdfPath);
+        const data = await pdfParse(buffer);
+        const fullText = data.text;
+        const totalChars = fullText.length;
+
+        // Chunk the text into segments the LLM can handle (~8000 chars each)
+        const CHUNK_SIZE = 8000;
+        const chunks: string[] = [];
+        for (let i = 0; i < fullText.length; i += CHUNK_SIZE) {
+            chunks.push(fullText.substring(i, i + CHUNK_SIZE));
+        }
+
+        logger.info("TRANSLATE", `Documento dividido em ${chunks.length} segmentos (${totalChars} caracteres)`);
+
+        // Translate each chunk
+        const translatedChunks: string[] = [];
+        for (let i = 0; i < chunks.length; i++) {
+            try {
+                const prompt = [
+                    `Você é um tradutor acadêmico de alta fidelidade.`,
+                    `Traduza o texto a seguir para ${targetLang}.`,
+                    ``,
+                    `REGRAS:`,
+                    `- Preserve a estrutura do texto (parágrafos, listas, títulos).`,
+                    `- Mantenha termos técnicos e científicos quando não houver equivalente preciso.`,
+                    `- Preserve nomes próprios, siglas e referências bibliográficas intactos.`,
+                    `- Não adicione explicações, comentários ou notas do tradutor.`,
+                    `- Se houver tabelas ou dados numéricos, preserve-os exatamente.`,
+                    ``,
+                    `TEXTO ORIGINAL (Segmento ${i + 1} de ${chunks.length}):`,
+                    ``,
+                    chunks[i],
+                ].join("\n");
+
+                const translated = await llm.generateContent(prompt);
+                translatedChunks.push(translated);
+
+                logger.info("TRANSLATE", `[${i + 1}/${chunks.length}] Segmento traduzido`);
+            } catch (err: any) {
+                logger.error("TRANSLATE", `Erro no segmento ${i + 1}`, { error: err.message });
+                translatedChunks.push(`\n\n[⚠️ ERRO NA TRADUÇÃO DO SEGMENTO ${i + 1}: ${err.message}]\n\n`);
+            }
+        }
+
+        // Build the output markdown
+        const basename = path.basename(pdfPath, path.extname(pdfPath));
+        const outputPath = path.join(
+            path.dirname(pdfPath),
+            `${basename}_tradução_${targetLang.replace(/\s+/g, "_")}.md`
+        );
+
+        const disclaimer = [
+            `> [!CAUTION]`,
+            `> **TEXTO DE APOIO — NÃO É FONTE PRIMÁRIA**`,
+            `>`,
+            `> Esta tradução foi gerada automaticamente por LLM a partir do arquivo original`,
+            `> \`${path.basename(pdfPath)}\` e destina-se EXCLUSIVAMENTE à leitura de apoio.`,
+            `>`,
+            `> Toda tradução introduz perdas de sentido — literal e figurativamente.`,
+            `> Para fins de pesquisa, citação ou análise, utilize SEMPRE o texto original.`,
+            `> Este documento NÃO integra o protocolo de pesquisa.`,
+        ].join("\n");
+
+        const metadata = [
+            ``,
+            `---`,
+            ``,
+            `| Metadado | Valor |`,
+            `|----------|-------|`,
+            `| **Arquivo original** | \`${path.basename(pdfPath)}\` |`,
+            `| **Idioma alvo** | ${targetLang} |`,
+            `| **Páginas** | ${data.numpages} |`,
+            `| **Caracteres originais** | ${totalChars.toLocaleString()} |`,
+            `| **Segmentos traduzidos** | ${translatedChunks.length} |`,
+            `| **Data da tradução** | ${new Date().toISOString().slice(0, 10)} |`,
+            ``,
+            `---`,
+            ``,
+        ].join("\n");
+
+        const content = [
+            disclaimer,
+            metadata,
+            ...translatedChunks,
+        ].join("\n\n");
+
+        fs.writeFileSync(outputPath, content, "utf-8");
+
+        const durationMs = Date.now() - startTime;
+
+        logger.apiCall("TRANSLATE", {
+            endpoint: pdfPath,
+            query: targetLang,
+            resultCount: translatedChunks.length,
+            durationMs,
+        });
+
+        const summary = [
+            `## Tradução Concluída`,
+            ``,
+            `> ⚠️ **Texto de apoio.** Não é fonte primária. Para pesquisa, utilize o original.`,
+            ``,
+            `- **Arquivo:** \`${path.basename(pdfPath)}\``,
+            `- **Idioma alvo:** ${targetLang}`,
+            `- **Páginas:** ${data.numpages}`,
+            `- **Segmentos traduzidos:** ${translatedChunks.length}`,
+            `- **Tempo:** ${(durationMs / 1000).toFixed(1)}s`,
+            `- **Salvo em:** \`${outputPath}\``,
+        ].join("\n");
+
+        return { outputPath, summary };
+    }
 }

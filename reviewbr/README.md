@@ -94,7 +94,7 @@ A interface web oferece acesso completo ao sistema via chat com IA:
 
 * **Login sem senha** — apenas identificador de workspace (cada usuário tem seus projetos isolados)
 * **Multi-Modelo LLM** — suporte a Google Gemini, OpenAI (GPT-4o) e Anthropic (Claude)
-* **28 ferramentas** expostas via chat hermético (a IA só acessa o que está declarado)
+* **29 ferramentas** expostas via chat hermético (a IA só acessa o que está declarado)
 * **Ações rápidas** — cards para Planejar, Importar, Deduplicar, Triar, Auditar, Exportar
 * **Auditoria visual** com apontamento de debilidades e score de conformidade
 
@@ -137,7 +137,7 @@ Uma preocupação comum de segurança é: *"Como uma IA na nuvem salva milhares 
 
 ### Arsenal de Ferramentas Ativas (Tools API)
 
-O sistema conta hoje com **28 ferramentas auditadas em TypeScript (Node.js)** divididas em suas responsabilidades essenciais:
+O sistema conta hoje com **29 ferramentas auditadas em TypeScript (Node.js)** divididas em suas responsabilidades essenciais:
 
 #### Busca Global e Regional (Alcance Mundial)
 
@@ -168,6 +168,7 @@ O sistema conta hoje com **28 ferramentas auditadas em TypeScript (Node.js)** di
 * `batch_keyword_screen`: **Triagem Massiva por Palavras-Chave.** Lê todos os PDFs em um diretório e filtra por keywords no modo AND (todas devem aparecer) ou OR (qualquer uma basta). Retorna relatório com trechos relevantes e contagem de correspondências. Substitui a necessidade de scripts descartáveis para exploração de coleções.
 * `batch_llm_extract`: **Extração LLM em Lote.** Aplica um prompt personalizado de extração a cada PDF em um diretório via LLM (Gemini/OpenAI/Anthropic). Ideal para extrair tabelas de dados, compostos mencionados, ou qualquer informação estruturada de coleções inteiras de artigos.
 * `batch_db_screen`: **Triagem de Registros do Banco de Dados.** Filtra títulos e/ou abstracts de todos os registros de um projeto por keywords ou por classificação semântica via LLM. Permite explorar grandes acervos sem sair do protocolo MCP.
+* `translate_document`: **Tradução de Documentos (Texto de Apoio).** Traduz um PDF completo para o idioma alvo via LLM, gerando um Markdown legível. ⚠️ Traduções são **exclusivamente texto de apoio** — toda tradução introduz perdas de sentido (literal e figurativamente). Para fins de pesquisa, citação ou análise, o original deve ser sempre utilizado. A tradução NÃO integra o protocolo de pesquisa.
 
 #### Extração de Textos Brutos (Fallback Metodológico)
 

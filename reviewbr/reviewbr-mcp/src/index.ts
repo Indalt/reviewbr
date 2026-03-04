@@ -1744,6 +1744,26 @@ server.tool(
     }
 );
 
+server.tool(
+    "translate_document",
+    "Traduz um documento PDF para o idioma alvo, gerando um arquivo Markdown. ⚠️ TEXTO DE APOIO: Traduções NÃO são fontes primárias e NÃO integram o protocolo de pesquisa. Toda tradução introduz perdas de sentido. Para citação e análise, utilize SEMPRE o original.",
+    {
+        pdfPath: z.string().describe("Caminho absoluto para o arquivo PDF a ser traduzido"),
+        targetLang: z.string().optional().describe("Idioma alvo (padrão: português). Ex: 'português', 'english', 'español'"),
+    },
+    async (params) => {
+        try {
+            const { outputPath, summary } = await batchService.translateDocument(
+                params.pdfPath,
+                params.targetLang ?? "português",
+            );
+            return { content: [{ type: "text", text: summary }] };
+        } catch (error: any) {
+            return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
+        }
+    }
+);
+
 // ─── Start Server ─────────────────────────────────────────────
 
 
