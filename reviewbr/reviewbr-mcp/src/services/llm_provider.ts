@@ -1,5 +1,6 @@
 /**
- * LLM Provider Abstraction Layer
+ * LLM Provider abstraction layer.
+ * Uses centralized config — do NOT use process.env directly.
  * 
  * Absorbs the multi-provider pattern from Go legacy (config/configuration.go).
  * Supports Google (Gemini), OpenAI-compatible, and Anthropic APIs via REST.
@@ -163,14 +164,19 @@ export function createProvider(config: LLMProviderConfig): LLMProvider {
  * Checks GOOGLE_API_KEY, OPENAI_API_KEY, ANTHROPIC_API_KEY in order.
  */
 export function createDefaultProvider(): LLMProvider | null {
-    if (process.env.GOOGLE_API_KEY) {
-        return createProvider({ provider: "google", apiKey: process.env.GOOGLE_API_KEY });
+    // Import config dynamically to avoid circular dependency at module load
+    const googleKey = process.env.GOOGLE_API_KEY;
+    const openaiKey = process.env.OPENAI_API_KEY;
+    const anthropicKey = process.env.ANTHROPIC_API_KEY;
+
+    if (googleKey) {
+        return createProvider({ provider: "google", apiKey: googleKey });
     }
-    if (process.env.OPENAI_API_KEY) {
-        return createProvider({ provider: "openai", apiKey: process.env.OPENAI_API_KEY });
+    if (openaiKey) {
+        return createProvider({ provider: "openai", apiKey: openaiKey });
     }
-    if (process.env.ANTHROPIC_API_KEY) {
-        return createProvider({ provider: "anthropic", apiKey: process.env.ANTHROPIC_API_KEY });
+    if (anthropicKey) {
+        return createProvider({ provider: "anthropic", apiKey: anthropicKey });
     }
     return null;
 }

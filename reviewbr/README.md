@@ -94,7 +94,7 @@ A interface web oferece acesso completo ao sistema via chat com IA:
 
 * **Login sem senha** — apenas identificador de workspace (cada usuário tem seus projetos isolados)
 * **Multi-Modelo LLM** — suporte a Google Gemini, OpenAI (GPT-4o) e Anthropic (Claude)
-* **23 ferramentas** expostas via chat hermético (a IA só acessa o que está declarado)
+* **28 ferramentas** expostas via chat hermético (a IA só acessa o que está declarado)
 * **Ações rápidas** — cards para Planejar, Importar, Deduplicar, Triar, Auditar, Exportar
 * **Auditoria visual** com apontamento de debilidades e score de conformidade
 
@@ -131,11 +131,13 @@ O coração do ReviewBR é o **Servidor MCP (Model Context Protocol)**. Ele func
 Uma preocupação comum de segurança é: *"Como uma IA na nuvem salva milhares de PDFs e planilhas na minha máquina? E como sei que ela não vai ler meus arquivos pessoais?"*
 
 1. **A IA não acessa o seu HD diretamente.** A LLM (Gemini/Claude) é "cega e sem mãos" no seu sistema operacional. Todo o processo de criação de arquivos `.json`, gravação de CSVs ou downloads ocorre **integralmente pelo código do Servidor MCP que você instala localmente no seu computador**.
-2. **Ambiente "Enjaulado" (Sandbox de Segurança):** Ao rodar o nosso servidor Node.js no terminal do seu computador, ele estabelece uma fronteira. As ferramentas (Tools API) construídas por nós **apenas permitem que a IA atue dentro das pastas do projeto** (`reviewbr/projects/`). A IA não possui ferramentas para "vasculhar o drive C:\", ler seus documentos ou instalar programas. Ela está completamente contida no escopo da pesquisa científica delimitada pelo servidor.
+2. **Ambiente "Enjaulado" (Sandbox de Segurança):** Ao rodar o nosso servidor Node.js no terminal do seu computador, ele estabelece uma fronteira. As ferramentas (Tools API) construídas por nós **apenas permitem que a IA atue dentro das pastas do projeto** (`reviewbr/projects/`). O módulo `path_sandbox.ts` bloqueia automaticamente qualquer tentativa de acesso fora do diretório autorizado. A IA não possui ferramentas para "vasculhar o drive C:\", ler seus documentos ou instalar programas.
+3. **Configuração Validada e Centralizada:** Todas as variáveis de ambiente (chaves de API, credenciais) são validadas pelo módulo `config.ts` usando schemas Zod na inicialização. Nenhum serviço acessa `process.env` diretamente — eliminando falhas silenciosas por chaves ausentes.
+4. **Logging Estruturado para Reprodutibilidade:** Todo evento relevante (buscas em APIs externas, erros, métricas de desempenho) é registrado em formato JSON Lines (`logs/reviewbr_YYYY-MM-DD.jsonl`) com timestamp, serviço, severidade e contexto. Isso garante rastreabilidade completa para auditoria PRISMA e reprodução de resultados.
 
 ### Arsenal de Ferramentas Ativas (Tools API)
 
-O sistema conta hoje com **25 ferramentas auditadas em TypeScript (Node.js)** divididas em suas responsabilidades essenciais:
+O sistema conta hoje com **28 ferramentas auditadas em TypeScript (Node.js)** divididas em suas responsabilidades essenciais:
 
 #### Busca Global e Regional (Alcance Mundial)
 
@@ -160,6 +162,12 @@ O sistema conta hoje com **25 ferramentas auditadas em TypeScript (Node.js)** di
 * `snowball_search`: Rastreio passivo que minera as referências (para trás e para frente) dos seus melhores artigos elegíveis (Zotero ou OpenAlex) descobrindo a literatura oculta. **Tática de Extração e Fallback:** O sistema tenta primeiramente consultar Grafos de Conhecimento (APIs estruturadas como OpenAlex/Crossref), onde as referências já existem como identificadores atômicos estruturados, garantindo precisão absoluta e poupando custos computacionais de leitura textual.
 * `deduplicate_dataset`: Motor avançado que compara DOI, Autores, e similaridade matemática de títulos para fundir e eliminar repetições na velocidade da luz.
 * `get_screening_report`: **Métricas de Saturação (Stopping Rule)** — analisa a progressão da triagem batch a batch, calculando taxas de relevância cumulativas e detectando saturação. Quando os últimos 3 batches apresentam <5% de novos artigos relevantes, o sistema alerta que a triagem pode ser encerrada com base em evidência estatística.
+
+#### Processamento em Lote (Batch Engines)
+
+* `batch_keyword_screen`: **Triagem Massiva por Palavras-Chave.** Lê todos os PDFs em um diretório e filtra por keywords no modo AND (todas devem aparecer) ou OR (qualquer uma basta). Retorna relatório com trechos relevantes e contagem de correspondências. Substitui a necessidade de scripts descartáveis para exploração de coleções.
+* `batch_llm_extract`: **Extração LLM em Lote.** Aplica um prompt personalizado de extração a cada PDF em um diretório via LLM (Gemini/OpenAI/Anthropic). Ideal para extrair tabelas de dados, compostos mencionados, ou qualquer informação estruturada de coleções inteiras de artigos.
+* `batch_db_screen`: **Triagem de Registros do Banco de Dados.** Filtra títulos e/ou abstracts de todos os registros de um projeto por keywords ou por classificação semântica via LLM. Permite explorar grandes acervos sem sair do protocolo MCP.
 
 #### Extração de Textos Brutos (Fallback Metodológico)
 

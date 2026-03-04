@@ -30,6 +30,9 @@ import { ProtocolDesignAuditor } from "./services/protocol_auditor.js";
 import { ScreeningMetricsService } from "./services/screening_metrics.js";
 import { AsreviewBridgeService } from "./services/asreview_bridge.js";
 import { RepositoryHealerService } from "./services/repository_healer.js";
+import { config } from "./config.js";
+import { logger } from "./utils/structured_logger.js";
+import { BatchProcessorService } from "./services/batch_processor.js";
 
 import * as path from "node:path";
 import * as fs from "node:fs";
@@ -37,13 +40,16 @@ import * as fs from "node:fs";
 // ─── Initialize ───────────────────────────────────────────────
 const toolHandlers = new Map<string, (params: any) => Promise<any>>();
 
-
+logger.info("MCP_SERVER", "Inicializando ReviewBR MCP Server", {
+    hasLlmKey: config.hasLlmKey,
+    hasZotero: config.hasZotero,
+});
 
 const registry = Registry.loadDefault();
 const strategy = new AccessStrategy();
 const searchService = new SearchService(registry, strategy);
 const dedupeService = new DeduplicationService();
-const screeningService = new ScreeningService(process.env.GOOGLE_API_KEY ?? "");
+const screeningService = new ScreeningService(config.googleApiKey);
 const snowballService = new SnowballService();
 const dataService = new DataService();
 const pubmedService = new PubMedService();
@@ -234,8 +240,8 @@ server.tool(
         projectPath: z.string().optional().describe("Caminho do projeto (ex: projects/meu_projeto) para buscar o texto completo."),
     },
     async (params) => {
-        if (!process.env.GOOGLE_API_KEY) {
-            return { content: [{ type: "text", text: "GOOGLE_API_KEY não configurada." }] };
+        if (!config.hasLlmKey) {
+            return { content: [{ type: "text", text: "Nenhuma chave de API de LLM configurada (GOOGLE_API_KEY, OPENAI_API_KEY ou ANTHROPIC_API_KEY)." }] };
         }
 
         let records;
@@ -1666,7 +1672,80 @@ server.tool(
     }
 );
 
+// ─── Batch Processing Engines ─────────────────────────────────
+
+const batchService = new BatchProcessorService();
+
+server.tool(
+    "batch_keyword_screen",
+    "Triagem em lote de PDFs por palavras-chave. Lê todos os PDFs em um diretório e filtra por keywords no modo AND ou OR. Retorna relatório com trechos relevantes.",
+    {
+        pdfDir: z.string().describe("Caminho absoluto para o diretório de PDFs"),
+        keywords: z.array(z.string()).describe("Lista de palavras-chave para buscar"),
+        mode: z.enum(["AND", "OR"]).optional().describe("AND = todas devem aparecer; OR = qualquer uma basta (padrão: OR)"),
+    },
+    async (params) => {
+        try {
+            const { results, summary } = await batchService.screenByKeywords(
+                params.pdfDir,
+                params.keywords,
+                params.mode ?? "OR",
+            );
+            return { content: [{ type: "text", text: summary }] };
+        } catch (error: any) {
+            return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
+        }
+    }
+);
+
+server.tool(
+    "batch_llm_extract",
+    "Extração LLM em lote. Aplica um prompt personalizado a cada PDF em um diretório via LLM (Gemini/OpenAI/Anthropic). Ideal para extrair dados estruturados de coleções de artigos.",
+    {
+        pdfDir: z.string().describe("Caminho absoluto para o diretório de PDFs"),
+        prompt: z.string().describe("Instrução de extração (o que extrair de cada documento)"),
+        maxPdfs: z.number().optional().describe("Número máximo de PDFs a processar (padrão: todos)"),
+    },
+    async (params) => {
+        try {
+            const { results, summary } = await batchService.llmExtract(
+                params.pdfDir,
+                params.prompt,
+                params.maxPdfs,
+            );
+            return { content: [{ type: "text", text: summary }] };
+        } catch (error: any) {
+            return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
+        }
+    }
+);
+
+server.tool(
+    "batch_db_screen",
+    "Triagem em lote de registros do banco de dados por keywords ou LLM. Filtra títulos e/ou abstracts de um projeto.",
+    {
+        projectId: z.number().describe("ID do projeto no banco de dados"),
+        criteria: z.string().describe("Critérios de triagem (keywords separadas por vírgula, ou texto livre para LLM)"),
+        field: z.enum(["title", "abstract", "both"]).optional().describe("Campo a analisar (padrão: both)"),
+        useLlm: z.boolean().optional().describe("Se true, usa LLM para classificação semântica (padrão: false = keywords)"),
+    },
+    async (params) => {
+        try {
+            const { results, summary } = await batchService.screenDbRecords(
+                params.projectId,
+                params.criteria,
+                params.field ?? "both",
+                params.useLlm ?? false,
+            );
+            return { content: [{ type: "text", text: summary }] };
+        } catch (error: any) {
+            return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
+        }
+    }
+);
+
 // ─── Start Server ─────────────────────────────────────────────
+
 
 async function main() {
     const args = process.argv;
