@@ -33,6 +33,7 @@ import { RepositoryHealerService } from "./services/repository_healer.js";
 import { config } from "./config.js";
 import { logger } from "./utils/structured_logger.js";
 import { BatchProcessorService } from "./services/batch_processor.js";
+import { AgentOrchestrator } from "./services/agent_orchestrator.js";
 
 import * as path from "node:path";
 import * as fs from "node:fs";
@@ -67,6 +68,23 @@ const protocolAuditor = new ProtocolDesignAuditor();
 const screeningMetricsService = new ScreeningMetricsService();
 const asreviewBridge = new AsreviewBridgeService();
 const repositoryHealerService = new RepositoryHealerService();
+const orchestrator = new AgentOrchestrator("PROJETISTA");
+
+/**
+ * RBAC Guard: wraps every tool handler with permission checking.
+ * If the current agent doesn't have permission, returns a rejection
+ * message instead of executing. This avoids modifying all handlers.
+ */
+function guardedHandler(toolName: string, handler: (params: any) => Promise<any>) {
+    return async (params: any) => {
+        if (!orchestrator.isAllowed(toolName)) {
+            return {
+                content: [{ type: "text", text: orchestrator.getRejectionMessage(toolName) }],
+            };
+        }
+        return handler(params);
+    };
+}
 
 /**
  * Helper to log tool execution directly into the project's local directory.
@@ -114,6 +132,26 @@ const server = new McpServer({
     version: "1.0.0",
 });
 
+// ─── RBAC Proxy ───────────────────────────────────────────────
+// Wrap the server.tool method to automatically apply RBAC guard
+// to every tool registration. This avoids modifying 29+ handlers.
+
+const RBAC_EXEMPT_TOOLS = new Set(["get_current_agent", "switch_agent"]);
+const originalToolMethod = server.tool.bind(server);
+
+server.tool = function (...args: any[]) {
+    const toolName = args[0] as string;
+    const handlerIdx = args.length - 1; // handler is always the last arg
+    const originalHandler = args[handlerIdx];
+
+    if (!RBAC_EXEMPT_TOOLS.has(toolName) && typeof originalHandler === "function") {
+        args[handlerIdx] = guardedHandler(toolName, originalHandler);
+    }
+
+    return (originalToolMethod as any)(...args);
+} as any;
+
+
 // ─── Resources ────────────────────────────────────────────────
 
 server.resource(
@@ -140,6 +178,34 @@ server.resource(
             text: JSON.stringify(registry.getStats(), null, 2),
         }],
     })
+);
+
+// ─── Agent Orchestrator Tools ─────────────────────────────────
+
+server.tool(
+    "get_current_agent",
+    "Mostra o agente ativo e suas ferramentas disponíveis. Acessível por todos os agentes.",
+    {},
+    async () => {
+        return {
+            content: [{ type: "text", text: orchestrator.getStatusReport() }],
+        };
+    }
+);
+
+server.tool(
+    "switch_agent",
+    "Troca o agente ativo. EXCLUSIVO DO COORDINATOR. Papéis: PROJETISTA, COORDINATOR, LIBRARIAN, SCREENER, EXTRACTOR, ANALYST.",
+    {
+        targetRole: z.enum(["PROJETISTA", "COORDINATOR", "LIBRARIAN", "SCREENER", "EXTRACTOR", "ANALYST"])
+            .describe("O papel do agente para ativar"),
+    },
+    async (params) => {
+        const result = orchestrator.switchAgent(orchestrator.getCurrentRole(), params.targetRole);
+        return {
+            content: [{ type: "text", text: result.message }],
+        };
+    }
 );
 
 // ─── Tools ────────────────────────────────────────────────────

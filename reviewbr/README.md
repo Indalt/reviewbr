@@ -94,7 +94,7 @@ A interface web oferece acesso completo ao sistema via chat com IA:
 
 * **Login sem senha** — apenas identificador de workspace (cada usuário tem seus projetos isolados)
 * **Multi-Modelo LLM** — suporte a Google Gemini, OpenAI (GPT-4o) e Anthropic (Claude)
-* **29 ferramentas** expostas via chat hermético (a IA só acessa o que está declarado)
+* **31 ferramentas** expostas via chat hermético (a IA só acessa o que está declarado)
 * **Ações rápidas** — cards para Planejar, Importar, Deduplicar, Triar, Auditar, Exportar
 * **Auditoria visual** com apontamento de debilidades e score de conformidade
 
@@ -137,7 +137,7 @@ Uma preocupação comum de segurança é: *"Como uma IA na nuvem salva milhares 
 
 ### Arsenal de Ferramentas Ativas (Tools API)
 
-O sistema conta hoje com **29 ferramentas auditadas em TypeScript (Node.js)** divididas em suas responsabilidades essenciais:
+O sistema conta hoje com **31 ferramentas auditadas em TypeScript (Node.js)** divididas em suas responsabilidades essenciais:
 
 #### Busca Global e Regional (Alcance Mundial)
 
@@ -184,17 +184,20 @@ O sistema conta hoje com **29 ferramentas auditadas em TypeScript (Node.js)** di
 * `audit_methodology`: Audita conformidade metodológica de pesquisa já concluída (5 checks: cobertura de bases, estratégia de busca, PRISMA, duplicatas, viés de seleção).
 * `validate_prisma_flow`: Valida a consistência matemática do Fluxograma PRISMA (10 campos obrigatórios).
 
-### 🎭 Orquestração de Agentes (Skills e Perfis)
+### 🎭 Orquestração de Agentes (RBAC Funcional)
 
-Para lidar com a complexidade de uma pesquisa pesada, o ReviewBR não entrega todo o poder do sistema de uma vez. Ele impõe um **Controle de Acesso Baseado em Papéis (RBAC)** através do seu `AgentOrchestrator`. A IA (como Gemini ou Claude) "veste diferentes chapéus" *(skills)* durante o processo, garantindo isolamento de contexto e segurança:
+O ReviewBR não entrega todo o poder do sistema de uma vez. Ele implementa um **Controle de Acesso Baseado em Papéis (RBAC)** funcional através do `AgentOrchestrator`. Cada ferramenta só pode ser executada pelo agente autorizado — tentativas de acesso não autorizado são rejeitadas com mensagem clara.
 
-1. **COORDINATOR (Coordenador Metodológico):** O agente líder. É o único com permissão para travar protocolos, modificar a estrutura do projeto (`registry.json`) e apagar arquivos. Ele planeja a pesquisa dialogando com você.
-2. **LIBRARIAN (Bibliotecário):** Possui permissão exclusiva de Busca e Download. O agente bibliotecário mapeia as bases (OpenAlex, PubMed, OasisBR), mas ele **não julga** o conteúdo do que está baixando, evitando viés prematuro.
-3. **SCREENER (Triador):** Lê os metadados brutos e os PDFs (usando *Smart Chunking*). A única missão do Screener é disparar queries puras contra a base para aceitar ou rejeitar arquivos cruzando com os critérios PICO. Ele é proibido de fazer downloads.
-4. **EXTRACTOR (Minerador de Dados):** Lê as "pastas dos artigos elegíveis" e constrói planilhas formatadas, extraindo respostas cirúrgicas do corpo de texto para a pesquisa.
-5. **ANALYST (Estatístico/Sintetizador):** Avalia os datasets finais exportados, montando sínteses bibliométricas (Tabelas e Gráficos Mentais) de tudo o que foi publicado.
+**Fluxo padrão:** PROJETISTA → COORDINATOR → LIBRARIAN → SCREENER → EXTRACTOR → ANALYST
 
-Ao fragmentar a responsabilidade em agentes hiperfocados, o ReviewBR aniquila a "alucinação de IA", pois cada agente trabalha em um estuário de dados enclausurado.
+1. **PROJETISTA (Designer de Pesquisa):** Primeiro agente ativado. Cria projetos, define protocolos e configura o ambiente. Ferramentas: `plan_research_protocol`, `validate_prisma_flow`, `validate_repository`, `heal_repositories`.
+2. **COORDINATOR (Coordenador Metodológico):** Único agente que pode trocar de papel via `switch_agent`. Supervisiona, audita e exporta. Herda permissões do PROJETISTA.
+3. **LIBRARIAN (Bibliotecário):** Busca e download exclusivos. Mapeia bases (OpenAlex, PubMed, OasisBR). **Não julga** conteúdo, evitando viés prematuro.
+4. **SCREENER (Triador):** Triagem algorítmica e por IA. Aceita ou rejeita artigos conforme o protocolo PICO. **Proibido de fazer downloads.**
+5. **EXTRACTOR (Minerador de Dados):** Extrai dados estruturados, gera traduções de apoio (que não integram o protocolo), processa coleções em lote.
+6. **ANALYST (Sintetizador):** Auditoria metodológica, validação PRISMA, exportação de relatórios finais.
+
+Ao fragmentar a responsabilidade em agentes hiperfocados com permissões reais (`AgentOrchestrator` no servidor), o ReviewBR previne que a IA misture responsabilidades — um Bibliotecário não pode triar, um Triador não pode baixar.
 
 ---
 
