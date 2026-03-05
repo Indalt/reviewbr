@@ -94,7 +94,7 @@ A interface web oferece acesso completo ao sistema via chat com IA:
 
 * **Login sem senha** — apenas identificador de workspace (cada usuário tem seus projetos isolados)
 * **Multi-Modelo LLM** — suporte a Google Gemini, OpenAI (GPT-4o) e Anthropic (Claude)
-* **31 ferramentas** expostas via chat hermético (a IA só acessa o que está declarado)
+* **32 ferramentas** expostas via chat hermético (a IA só acessa o que está declarado)
 * **Ações rápidas** — cards para Planejar, Importar, Deduplicar, Triar, Auditar, Exportar
 * **Auditoria visual** com apontamento de debilidades e score de conformidade
 
@@ -137,7 +137,7 @@ Uma preocupação comum de segurança é: *"Como uma IA na nuvem salva milhares 
 
 ### Arsenal de Ferramentas Ativas (Tools API)
 
-O sistema conta hoje com **31 ferramentas auditadas em TypeScript (Node.js)** divididas em suas responsabilidades essenciais:
+O sistema conta hoje com **32 ferramentas auditadas em TypeScript (Node.js)** divididas em suas responsabilidades essenciais:
 
 #### Busca Global e Regional (Alcance Mundial)
 

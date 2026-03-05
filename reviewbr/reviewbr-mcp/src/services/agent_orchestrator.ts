@@ -34,6 +34,7 @@ const PROJETISTA_TOOLS = new Set([
     "validate_prisma_flow",
     "validate_repository",
     "heal_repositories",
+    "assess_research_design",
     "get_current_agent",
 ]);
 
@@ -50,6 +51,7 @@ const COORDINATOR_TOOLS = new Set([
     "plan_research_protocol",
     "validate_repository",
     "heal_repositories",
+    "assess_research_design",
 ]);
 
 const LIBRARIAN_TOOLS = new Set([

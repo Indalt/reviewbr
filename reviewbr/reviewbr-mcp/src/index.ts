@@ -127,9 +127,170 @@ async function checkDesignGuardrail(projectId?: number, projectPath?: string): P
     return null;
 }
 
+// ─── PROJETISTA Helper Functions ──────────────────────────────
+
+interface ResearchTypeMeta {
+    label: string;
+    prismaStandard: string;
+    requiresRegistration: boolean;
+    registrationPlatform: string;
+    description: string;
+}
+
+function detectResearchType(intent: string): string {
+    const lower = intent.toLowerCase();
+
+    // Direct match patterns
+    if (/revis[aã]o\s+sistem[aá]tica|systematic\s+review/.test(lower)) return "systematic_review";
+    if (/meta.an[aá]lise|meta.analysis/.test(lower)) return "meta_analysis";
+    if (/scoping|escopo/.test(lower)) return "scoping_review";
+    if (/revis[aã]o\s+integrativa|integrative/.test(lower)) return "integrative_review";
+    if (/revis[aã]o\s+r[aá]pida|rapid\s+review/.test(lower)) return "rapid_review";
+    if (/auditoria|audit/.test(lower)) return "methodological_audit";
+
+    // Intent-based detection
+    if (/mapear|mapeamento|panorama|amplitude|overview/.test(lower)) return "scoping_review";
+    if (/quantificar|efeito|efic[aá]cia|efetividade|risco|odds/.test(lower)) return "meta_analysis";
+    if (/responder|pergunta|foco|interven[cç][aã]o|tratamento/.test(lower)) return "systematic_review";
+    if (/urgente|r[aá]pido|prazo|relat[oó]rio/.test(lower)) return "rapid_review";
+    if (/validar|conferir|verificar/.test(lower)) return "methodological_audit";
+
+    // Default: exploratory
+    return "exploratory";
+}
+
+function getResearchTypeMeta(researchType: string): ResearchTypeMeta {
+    const META: Record<string, ResearchTypeMeta> = {
+        systematic_review: {
+            label: "Revisão Sistemática",
+            prismaStandard: "PRISMA 2020 (27 itens, 44 subitens) + PRISMA-S (16 itens) + PRISMA-P (protocolo)",
+            requiresRegistration: true,
+            registrationPlatform: "PROSPERO (saúde) ou OSF Registries (outros domínios)",
+            description: "Revisão que responde a uma pergunta focada usando metodologia pré-definida, reprodutível e transparente."
+        },
+        scoping_review: {
+            label: "Revisão de Escopo (Scoping Review)",
+            prismaStandard: "PRISMA-ScR (Extensão para Scoping Reviews) + Guia JBI",
+            requiresRegistration: false,
+            registrationPlatform: "Opcional: OSF Registries",
+            description: "Mapeia a extensão e natureza da literatura, identifica lacunas e conceitos-chave."
+        },
+        integrative_review: {
+            label: "Revisão Integrativa",
+            prismaStandard: "PRISMA 2020 adaptado (Whittemore & Knafl)",
+            requiresRegistration: false,
+            registrationPlatform: "Opcional: PROSPERO ou OSF",
+            description: "Combina evidências experimentais e não-experimentais para compreensão abrangente."
+        },
+        meta_analysis: {
+            label: "Meta-Análise",
+            prismaStandard: "PRISMA 2020 (27 itens, 44 subitens) + PRISMA-S + Diretrizes de síntese estatística",
+            requiresRegistration: true,
+            registrationPlatform: "PROSPERO (obrigatório)",
+            description: "Síntese quantitativa usando métodos estatísticos (forest plot, I², heterogeneidade)."
+        },
+        rapid_review: {
+            label: "Revisão Rápida",
+            prismaStandard: "PRISMA 2020 simplificado + Diretrizes Cochrane para Rapid Reviews",
+            requiresRegistration: false,
+            registrationPlatform: "Opcional: OSF",
+            description: "Metodologia simplificada para prazos curtos. Risco de viés documentado."
+        },
+        exploratory: {
+            label: "Pesquisa Exploratória / Básica",
+            prismaStandard: "Sem PRISMA formal — protocolo de busca livre documentado",
+            requiresRegistration: false,
+            registrationPlatform: "N/A",
+            description: "Busca bibliográfica sem metodologia sistemática formal."
+        },
+        methodological_audit: {
+            label: "Auditoria Metodológica (Post-Hoc)",
+            prismaStandard: "PRISMA 2020 + PRISMA-S (Validação Passiva — Somente Leitura)",
+            requiresRegistration: false,
+            registrationPlatform: "N/A",
+            description: "Validação retroativa de pesquisa já concluída. O sistema NÃO gera novos dados."
+        }
+    };
+
+    return META[researchType] || META["exploratory"];
+}
+
+function getCapabilitiesForType(researchType: string): { can: string[]; cannot: string[] } {
+    const baseCan = [
+        "Busca automatizada em 10+ bases (OpenAlex, PubMed, SciELO, CORE, Crossref, OasisBR, Europe PMC)",
+        "Download e extração de texto de PDFs (com PDF Link Resolver)",
+        "Deduplicação inteligente (DOI, autores, similaridade de títulos)",
+        "Logs estruturados JSONL para reprodutibilidade",
+    ];
+
+    const baseCannot: string[] = [];
+
+    switch (researchType) {
+        case "systematic_review":
+        case "meta_analysis":
+            return {
+                can: [
+                    ...baseCan,
+                    "Triagem por IA (Gemini/GPT/Claude) e por ML (ASReview)",
+                    "Validação PRISMA (fluxograma matemático, 10 campos)",
+                    "Auditoria metodológica (5 checks de conformidade)",
+                    "Snowball search (forward/backward via OpenAlex/Crossref)",
+                    "Tradução de apoio (texto auxiliar, NÃO fonte primária)",
+                ],
+                cannot: [
+                    "Avaliação de risco de viés (RoB2, Newcastle-Ottawa) — requer julgamento humano",
+                    ...(researchType === "meta_analysis" ? [
+                        "Meta-análise estatística (forest plot, I²) — requer R/RevMan/Stata",
+                    ] : []),
+                    "Registro PROSPERO — feito manualmente pelo pesquisador no site",
+                    "Cegamento multiusuário real — sistema simula separação de revisores",
+                ],
+            };
+        case "scoping_review":
+        case "integrative_review":
+            return {
+                can: [
+                    ...baseCan,
+                    "Triagem por IA e ML",
+                    "Extração estruturada em lote (batch_llm_extract)",
+                    "Processamento em lote (keyword screen, DB screen)",
+                    "Tradução de apoio",
+                ],
+                cannot: [
+                    "Categorização temática automática — requer validação humana",
+                ],
+            };
+        case "exploratory":
+        case "rapid_review":
+            return {
+                can: [
+                    ...baseCan,
+                    "Triagem por palavras-chave e IA",
+                    "Tradução de apoio",
+                ],
+                cannot: [],
+            };
+        case "methodological_audit":
+            return {
+                can: [
+                    "Auditoria de conformidade (5 checks)",
+                    "Validação PRISMA (fluxograma matemático)",
+                    "Detecção de duplicatas residuais",
+                    "Análise de viés de seleção",
+                ],
+                cannot: [
+                    "NÃO busca, baixa ou gera novos dados — apenas diagnostica",
+                ],
+            };
+        default:
+            return { can: baseCan, cannot: [] };
+    }
+}
+
 const server = new McpServer({
     name: "reviewbr-mcp",
     version: "1.0.0",
+
 });
 
 // ─── RBAC Proxy ───────────────────────────────────────────────
@@ -206,6 +367,115 @@ server.tool(
             content: [{ type: "text", text: result.message }],
         };
     }
+);
+
+// ─── PROJETISTA Knowledge Resource ────────────────────────────
+
+const protocolKnowledgePath = path.join(process.cwd(), "data", "knowledge", "research_protocols.md");
+const protocolKnowledge = fs.existsSync(protocolKnowledgePath)
+    ? fs.readFileSync(protocolKnowledgePath, "utf-8")
+    : "⚠️ Base de conhecimento não encontrada. Certifique-se de que data/knowledge/research_protocols.md existe.";
+
+server.resource(
+    "research_protocols",
+    "projetista://protocols",
+    { description: "Base de conhecimento PRISMA, protocolos científicos e árvore de decisão do PROJETISTA. A LLM deve ler este recurso ao assumir o papel de Designer de Pesquisa." },
+    async () => ({
+        contents: [{
+            uri: "projetista://protocols",
+            mimeType: "text/markdown",
+            text: protocolKnowledge,
+        }],
+    })
+);
+
+// ─── PROJETISTA: assess_research_design ───────────────────────
+
+server.tool(
+    "assess_research_design",
+    "Avalia a intenção de pesquisa do usuário e recomenda o tipo de pesquisa, protocolo, requisitos e limitações. Aceita tanto pesquisadores que precisam de orientação quanto os que já sabem o que querem. Retorna briefing para o COORDINATOR.",
+    {
+        intent: z.string().describe("O que o pesquisador quer fazer — pode ser uma frase livre ou um tipo de pesquisa já definido"),
+        area: z.string().optional().describe("Área do conhecimento (ex: Saúde, Engenharia, Ciência de Alimentos)"),
+        researchType: z.enum([
+            "systematic_review", "scoping_review", "integrative_review",
+            "meta_analysis", "rapid_review", "exploratory", "methodological_audit"
+        ]).optional().describe("Se o pesquisador já sabe o tipo, informe diretamente"),
+    },
+    guardedHandler("assess_research_design", async (params) => {
+        const intent = params.intent.toLowerCase();
+        const area = params.area || "Não especificada";
+
+        // ─── Research type detection ───────────────────
+        let detectedType = params.researchType || detectResearchType(intent);
+        const meta = getResearchTypeMeta(detectedType);
+
+        // ─── Topic analysis for design advice ──────────
+        const designAdvice = ProjectInitService.getDesignAdvice(params.intent, detectedType as any);
+
+        // ─── Build response ────────────────────────────
+        const sections: string[] = [];
+
+        sections.push(`## 🏗️ Diagnóstico de Design de Pesquisa\n`);
+
+        // Mode indicator
+        if (params.researchType) {
+            sections.push(`> **Modo Direto** — O pesquisador já definiu: **${meta.label}**\n`);
+        } else {
+            sections.push(`> **Modo Guiado** — Tipo detectado pela intenção: **${meta.label}**\n`);
+        }
+
+        sections.push(`**Área:** ${area}\n**Intenção:** "${params.intent}"\n`);
+
+        // Protocol requirements
+        sections.push(`### 📋 Protocolo Recomendado\n`);
+        sections.push(`- **Tipo:** ${meta.label}`);
+        sections.push(`- **Padrão PRISMA:** ${meta.prismaStandard}`);
+        sections.push(`- **Registro:** ${meta.requiresRegistration ? `⚠️ OBRIGATÓRIO (${meta.registrationPlatform})` : `Opcional (${meta.registrationPlatform})`}`);
+        sections.push(`- **Descrição:** ${meta.description}\n`);
+
+        // Design recommendations
+        sections.push(`### ⚖️ Recomendações de Design\n`);
+        sections.push(`- **Cegamento:** ${designAdvice.suggestBlinding}`);
+        sections.push(`- **Meta-análise:** ${designAdvice.suggestMetaAnalysis ? "Recomendada" : "Não se aplica"}`);
+        for (const advice of designAdvice.advice) {
+            sections.push(`- ${advice}`);
+        }
+
+        // Capabilities check
+        sections.push(`\n### ✅ O que o ReviewBR pode fazer para esta pesquisa\n`);
+        const capabilities = getCapabilitiesForType(detectedType);
+        for (const cap of capabilities.can) {
+            sections.push(`- ✅ ${cap}`);
+        }
+        if (capabilities.cannot.length > 0) {
+            sections.push(`\n### ⚠️ Limitações identificadas\n`);
+            for (const lim of capabilities.cannot) {
+                sections.push(`- ❌ ${lim}`);
+            }
+        }
+
+        // COORDINATOR briefing
+        sections.push(`\n### 📤 Briefing para o COORDINATOR\n`);
+        sections.push(`Quando o PROJETISTA finalizar e o COORDINATOR assumir, comunique:`);
+        sections.push(`1. **Tipo:** ${meta.label} (${detectedType})`);
+        sections.push(`2. **PRISMA:** ${meta.prismaStandard}`);
+        sections.push(`3. **Cegamento:** ${designAdvice.suggestBlinding}`);
+        sections.push(`4. **Registro:** ${meta.requiresRegistration ? "OBRIGATÓRIO antes da busca" : "Opcional"}`);
+        sections.push(`5. **Meta-análise:** ${designAdvice.suggestMetaAnalysis ? "Sim" : "Não"}`);
+        sections.push(`6. **Limitações:** ${capabilities.cannot.length > 0 ? capabilities.cannot.join("; ") : "Nenhuma crítica identificada"}`);
+
+        // Next steps
+        sections.push(`\n### ➡️ Próximos Passos\n`);
+        sections.push(`1. Pesquisador confirma ou ajusta o design`);
+        sections.push(`2. PROJETISTA chama \`plan_research_protocol\` com os parâmetros definidos`);
+        sections.push(`3. COORDINATOR assume via \`switch_agent\``);
+        sections.push(`4. COORDINATOR ativa o LIBRARIAN para iniciar as buscas`);
+
+        return {
+            content: [{ type: "text", text: sections.join("\n") }],
+        };
+    })
 );
 
 // ─── Tools ────────────────────────────────────────────────────
