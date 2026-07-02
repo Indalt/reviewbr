@@ -18,6 +18,8 @@ import { PubMedService } from "./services/pubmed.js";
 import { CrossrefService } from "./services/crossref.js";
 import { DatabaseService } from "./services/database.js";
 import { PrismaFlowValidator, PrismaFlowSchema } from "./services/prisma_validator.js";
+import { FlowComputer } from "./services/flow_computer.js";
+import { indexCorpus, queryCorpus } from "./services/rag_lexical.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -33,7 +35,6 @@ import { RepositoryHealerService } from "./services/repository_healer.js";
 import { config } from "./config.js";
 import { logger } from "./utils/structured_logger.js";
 import { BatchProcessorService } from "./services/batch_processor.js";
-import { AgentOrchestrator } from "./services/agent_orchestrator.js";
 
 import * as path from "node:path";
 import * as fs from "node:fs";
@@ -68,22 +69,20 @@ const protocolAuditor = new ProtocolDesignAuditor();
 const screeningMetricsService = new ScreeningMetricsService();
 const asreviewBridge = new AsreviewBridgeService();
 const repositoryHealerService = new RepositoryHealerService();
-const orchestrator = new AgentOrchestrator("PROJETISTA");
 
 /**
- * RBAC Guard: wraps every tool handler with permission checking.
- * If the current agent doesn't have permission, returns a rejection
- * message instead of executing. This avoids modifying all handlers.
+ * RBAC de runtime APOSENTADO (modelo multi-subagente).
+ *
+ * O modelo antigo mantinha UM papel mutável no servidor ("um chapéu por vez") e
+ * bloqueava toda tool fora dele — o que travava um cliente novo (default PROJETISTA)
+ * de buscar ou triar até chamar switch_agent. No cockpit multi-subagente do Claude Code,
+ * a fronteira de papéis é o allow-list de cada subagente em `.claude/agents/`, e o
+ * guardião DECLARATIVO (consultável) vive em `registry/agent_orchestrator.ts`
+ * (defense-in-depth). Por isso `guardedHandler` vira PASS-THROUGH — mantém os
+ * call-sites existentes sem bloquear em runtime.
  */
-function guardedHandler(toolName: string, handler: (params: any) => Promise<any>) {
-    return async (params: any) => {
-        if (!orchestrator.isAllowed(toolName)) {
-            return {
-                content: [{ type: "text", text: orchestrator.getRejectionMessage(toolName) }],
-            };
-        }
-        return handler(params);
-    };
+function guardedHandler(_toolName: string, handler: (params: any) => Promise<any>) {
+    return handler;
 }
 
 /**
@@ -293,25 +292,10 @@ const server = new McpServer({
 
 });
 
-// ─── RBAC Proxy ───────────────────────────────────────────────
-// Wrap the server.tool method to automatically apply RBAC guard
-// to every tool registration. This avoids modifying 29+ handlers.
-
-const RBAC_EXEMPT_TOOLS = new Set(["get_current_agent", "switch_agent"]);
-const originalToolMethod = server.tool.bind(server);
-
-server.tool = function (...args: any[]) {
-    const toolName = args[0] as string;
-    const handlerIdx = args.length - 1; // handler is always the last arg
-    const originalHandler = args[handlerIdx];
-
-    if (!RBAC_EXEMPT_TOOLS.has(toolName) && typeof originalHandler === "function") {
-        args[handlerIdx] = guardedHandler(toolName, originalHandler);
-    }
-
-    return (originalToolMethod as any)(...args);
-} as any;
-
+// ─── RBAC Proxy REMOVIDO ──────────────────────────────────────
+// O proxy que auto-embrulhava toda tool com o guard de runtime foi removido
+// junto com o modelo "um chapéu por vez". A governança de papéis agora é
+// declarativa (registry/agent_orchestrator.ts) + allow-list dos subagentes.
 
 // ─── Resources ────────────────────────────────────────────────
 
@@ -341,33 +325,10 @@ server.resource(
     })
 );
 
-// ─── Agent Orchestrator Tools ─────────────────────────────────
-
-server.tool(
-    "get_current_agent",
-    "Mostra o agente ativo e suas ferramentas disponíveis. Acessível por todos os agentes.",
-    {},
-    async () => {
-        return {
-            content: [{ type: "text", text: orchestrator.getStatusReport() }],
-        };
-    }
-);
-
-server.tool(
-    "switch_agent",
-    "Troca o agente ativo. EXCLUSIVO DO COORDINATOR. Papéis: PROJETISTA, COORDINATOR, LIBRARIAN, SCREENER, EXTRACTOR, ANALYST.",
-    {
-        targetRole: z.enum(["PROJETISTA", "COORDINATOR", "LIBRARIAN", "SCREENER", "EXTRACTOR", "ANALYST"])
-            .describe("O papel do agente para ativar"),
-    },
-    async (params) => {
-        const result = orchestrator.switchAgent(orchestrator.getCurrentRole(), params.targetRole);
-        return {
-            content: [{ type: "text", text: result.message }],
-        };
-    }
-);
+// ─── Agent Orchestrator Tools REMOVIDAS ───────────────────────
+// `get_current_agent` e `switch_agent` foram aposentadas com o modelo de papel
+// mutável. No cockpit multi-subagente, cada subagente (.claude/agents/) já é um
+// papel isolado com seu próprio allow-list — não há chapéu para trocar em runtime.
 
 // ─── PROJETISTA Knowledge Resource ────────────────────────────
 
@@ -468,9 +429,8 @@ server.tool(
         // Next steps
         sections.push(`\n### ➡️ Próximos Passos\n`);
         sections.push(`1. Pesquisador confirma ou ajusta o design`);
-        sections.push(`2. PROJETISTA chama \`plan_research_protocol\` com os parâmetros definidos`);
-        sections.push(`3. COORDINATOR assume via \`switch_agent\``);
-        sections.push(`4. COORDINATOR ativa o LIBRARIAN para iniciar as buscas`);
+        sections.push(`2. O subagente **designer** chama \`plan_research_protocol\` e trava o protocolo`);
+        sections.push(`3. O coordenador (skill conduct-review) aciona o subagente **librarian** para as buscas`);
 
         return {
             content: [{ type: "text", text: sections.join("\n") }],
@@ -1329,6 +1289,85 @@ server.tool(
                 text: JSON.stringify(validation, null, 2)
             }]
         };
+    }
+);
+
+server.tool(
+    "compute_flow_counts",
+    "Deriva o Fluxograma PRISMA (F8.1) a partir dos ARTEFATOS reais do projeto (Regra RV-02: os números emergem do processo, nunca são digitados). Conta os arquivos canônicos, aplica as identidades PRISMA, valida a aritmética (RV-05), faz checagem cruzada de 'included' e sinaliza edições manuais no prisma_flow.json. Grava o arquivo recomputado quando write=true.",
+    {
+        projectPath: z.string().describe("Caminho (absoluto ou relativo ao cwd) da raiz do projeto de revisão"),
+        write: z.boolean().optional().describe("Se true (padrão), grava o prisma_flow.json recomputado; se false, apenas retorna o cálculo"),
+    },
+    async (params) => {
+        const projectDir = path.isAbsolute(params.projectPath)
+            ? params.projectPath
+            : path.join(process.cwd(), params.projectPath);
+
+        if (!fs.existsSync(projectDir)) {
+            return { content: [{ type: "text", text: `Erro: diretório do projeto não encontrado: ${projectDir}` }] };
+        }
+
+        const computer = new FlowComputer();
+        const result = computer.compute(projectDir);
+
+        const shouldWrite = params.write !== false;
+        if (shouldWrite) computer.writeFlow(projectDir, result.computed);
+
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify({
+                    ...result,
+                    written: shouldWrite ? "prisma_flow.json atualizado" : "não gravado (write=false)",
+                }, null, 2),
+            }],
+        };
+    }
+);
+
+// ─── Leitura/RAG do corpus curado (F5.5) ──────────────────────
+
+server.tool(
+    "rag_index_corpus",
+    "Indexa o corpus curado (textos completos dos estudos incluídos) para leitura orientada a objetivo (F5.5). Retriever léxico BM25, 100% local. Cada trecho carrega proveniência (study_id, fonte, url) para citação rastreável (RV-08). Grava rag/index.json. Só indexa .txt/.md — PDFs precisam ser extraídos antes.",
+    {
+        projectPath: z.string().describe("Caminho (absoluto ou relativo ao cwd) da raiz do projeto"),
+        corpusDir: z.string().optional().describe("Subpasta do corpus (padrão tenta 04_extraction/fulltext, 03_screening/fulltext, 03_screening/pdfs)"),
+    },
+    async (params) => {
+        const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
+        try {
+            const r = indexCorpus(projectDir, params.corpusDir);
+            const warn = r.indexed === 0
+                ? `\n\n⚠️ Nenhum texto indexado. ${r.skippedPdfsOnly > 0 ? `Há ${r.skippedPdfsOnly} PDF(s) que precisam ser extraídos para texto antes (o corpus RAG lê .txt/.md).` : ""}`
+                : "";
+            const provWarn = r.missingProvenance.length > 0
+                ? `\n\n⚠️ ${r.missingProvenance.length} estudo(s) sem proveniência completa (RV-08): ${r.missingProvenance.slice(0, 10).join(", ")}`
+                : "";
+            return { content: [{ type: "text", text: JSON.stringify(r, null, 2) + warn + provWarn }] };
+        } catch (e: any) {
+            return { content: [{ type: "text", text: `Erro ao indexar corpus: ${e.message}` }] };
+        }
+    }
+);
+
+server.tool(
+    "rag_query",
+    "Recupera os trechos mais relevantes do corpus indexado para uma pergunta (F5.5), com proveniência rastreável. NÃO redige resposta nem sintetiza — só recupera (RV-06); a síntese/citação é do agente.",
+    {
+        projectPath: z.string().describe("Caminho (absoluto ou relativo ao cwd) da raiz do projeto"),
+        question: z.string().describe("A subpergunta a recuperar"),
+        topK: z.number().optional().describe("Número de trechos a retornar (padrão 8)"),
+    },
+    async (params) => {
+        const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
+        try {
+            const hits = queryCorpus(projectDir, params.question, params.topK ?? 8);
+            return { content: [{ type: "text", text: JSON.stringify(hits, null, 2) }] };
+        } catch (e: any) {
+            return { content: [{ type: "text", text: `Erro na consulta RAG: ${e.message}` }] };
+        }
     }
 );
 

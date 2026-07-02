@@ -15,11 +15,21 @@ __pycache__/
 venv/
 .venv/
 
-# Large Datasets / Downloads
-projects/*/01_raw/
-projects/*/02_deduplicated/
-projects/*/03_screening/pdfs/
-projects/data_mining/downloads/
+# Large Datasets / Downloads (qualquer profundidade — projetos podem estar aninhados)
+**/01_raw/
+**/02_deduplicated/
+**/02_deduped/
+**/03_screening/pdfs/
+**/downloads/
+**/rag/
+*.pdf
+
+# Dados de pesquisa locais fora do repo de código (ver .claude/README.md)
+old/
+
+# Dados de runtime do MCP (projetos/logs vivem localmente, não no repo)
+reviewbr/reviewbr-mcp/projects/
+reviewbr/reviewbr-mcp/logs/
 
 # IDE / System
 .vscode/

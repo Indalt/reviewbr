@@ -1,0 +1,51 @@
+{
+  "id": "prisma-sr",
+  "name": "Revisão Sistemática (PRISMA 2020 + PRISMA-S)",
+  "review_type": "Sistemática",
+  "description": "Trilha completa de revisão sistemática com rastreabilidade PRISMA 2020 e PRISMA-S. Método mais rigoroso: exige registro de protocolo, avaliação de risco de viés e (quando aplicável) síntese quantitativa/meta-análise.",
+  "spec": "spec.md",
+  "protocol_template": "protocol_template.md",
+  "flow_template": "prisma_flow.template.json",
+  "extraction_template": "study_characteristics_table.template.csv",
+
+  "question_frameworks": ["PICOS", "PECO", "SPIDER"],
+  "default_question_framework": "PICOS",
+
+  "phases": {
+    "F0": { "name": "Pré-registro", "active": true, "requires_registration": true },
+    "F1": { "name": "Protocolo da questão", "active": true },
+    "F2": { "name": "Busca (PRISMA-S)", "active": true },
+    "F3": { "name": "Deduplicação", "active": true },
+    "F4": { "name": "Triagem TA + full-text", "active": true },
+    "F5": { "name": "Extração de dados", "active": true },
+    "F5_5": { "name": "Leitura/RAG orientada a objetivo", "active": true },
+    "F6": { "name": "Risco de viés", "active": true, "tools": ["RoB2", "ROBINS-I", "Newcastle-Ottawa", "JBI"] },
+    "F7": { "name": "Síntese", "active": true, "allow_meta_analysis": true, "certainty": ["GRADE", "CERQual"] },
+    "F8": { "name": "Resultados e manuscrito", "active": true }
+  },
+
+  "invariants_always_on": ["RV-01", "RV-02", "RV-03", "RV-04", "RV-05", "RV-06", "RV-07", "RV-08"],
+
+  "gates": [
+    { "phase": "F1", "rule": "RV-01", "tool": "submit_protocol_for_approval", "blocks": "spawn do librarian se protocolo não estiver [LOCKED] ou tiver campos [TBD] obrigatórios" },
+    { "phase": "F4", "rule": "RV-02", "tool": "compute_flow_counts", "blocks": "escrita manual de contagens no prisma_flow.json" },
+    { "phase": "F8", "rule": "RV-05", "tool": "validate_prisma_flow", "blocks": "export/manuscrito se a aritmética do funil não fechar" },
+    { "phase": "F8", "rule": "RV-08", "tool": "audit_methodology", "blocks": "síntese se algum estudo incluído não tiver fonte_repositorio/url_hospedagem" }
+  ],
+
+  "required_supplements": [
+    "prisma_checklist_filled.md",
+    "prisma_s_checklist_filled.md",
+    "supplement_search_prisma_s.md",
+    "supplement_sources_registry.md",
+    "dedupe_report.md",
+    "screening_report.md",
+    "study_characteristics_table.csv",
+    "prisma_flow_counts.md",
+    "manuscript_prisma_revised.md",
+    "change_log.md",
+    "audit_summary.md"
+  ],
+
+  "project_folders": ["01_raw", "02_deduplicated", "03_screening", "03_screening/pdfs", "04_extraction", "05_synthesis", "logs", "rag"]
+}
