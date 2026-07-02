@@ -13,11 +13,16 @@ export class PdfExtractorService {
      * the actual PDF link from the HTML and retries the download.
      */
     async downloadAndExtract(url: string, documentId: string, projectPath: string): Promise<{ success: boolean; textPath?: string; error?: string }> {
-        const fulltextDir = path.join(process.cwd(), projectPath, "02_fulltext");
-        if (!fs.existsSync(fulltextDir)) fs.mkdirSync(fulltextDir, { recursive: true });
+        // Contrato unificado: PDF em 03_screening/pdfs; TEXTO em 04_extraction/fulltext
+        // (corpus lido pelo rag_index_corpus; proveniência resolvida via included.json pelo id).
+        const base = path.isAbsolute(projectPath) ? projectPath : path.join(process.cwd(), projectPath);
+        const pdfDir = path.join(base, "03_screening", "pdfs");
+        const textDir = path.join(base, "04_extraction", "fulltext");
+        fs.mkdirSync(pdfDir, { recursive: true });
+        fs.mkdirSync(textDir, { recursive: true });
 
-        const pdfPath = path.join(fulltextDir, `${documentId}.pdf`);
-        const textPath = path.join(fulltextDir, `${documentId}.txt`);
+        const pdfPath = path.join(pdfDir, `${documentId}.pdf`);
+        const textPath = path.join(textDir, `${documentId}.txt`);
 
         // Skip if already extracted as NATIVE PDF (re-process MASKED HTML)
         if (fs.existsSync(textPath)) {

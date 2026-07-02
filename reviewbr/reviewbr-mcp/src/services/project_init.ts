@@ -16,6 +16,16 @@
 import * as fs from "fs";
 import * as path from "path";
 import { DatabaseService, BlindingType } from "./database.js";
+import { ProjectStateService } from "./project_state.js";
+
+/** Mapeia o tipo de pesquisa do MCP para o método/framework da camada de metodologia (.claude). */
+function mapMethod(researchType: ResearchType): { method: string; framework: string } {
+    switch (researchType) {
+        case "scoping_review": return { method: "scoping-prisma-scr", framework: "PCC" };
+        case "exploratory": return { method: "prisma-sr", framework: "livre" };
+        default: return { method: "prisma-sr", framework: "PICOS" };
+    }
+}
 
 // ─── Types ───────────────────────────────────────────────────
 
@@ -164,46 +174,46 @@ export class ProjectInitService {
         const meta = RESEARCH_TYPE_META[config.researchType];
         const warnings: string[] = [];
 
-        // Create project directory name
-        const safeName = config.name
-            .toLowerCase()
-            .replace(/[^a-z0-9_]/g, "_")
-            .replace(/_+/g, "_");
-        const userPath = path.join(basePath, config.userId);
-        const projectPath = path.join(userPath, safeName);
+        // A raiz do projeto É o caminho passado (sem aninhar userId/safeName) — alinha
+        // com a camada de agentes, que trabalha com o diretório absoluto do projeto.
+        const projectPath = basePath;
 
-        // Create folder structure
-        // Audit projects get a simplified folder structure
+        // Estrutura de pastas — CONTRATO UNIFICADO (consumido por flow_computer/rag_lexical e agentes)
         const isAudit = config.researchType === "methodological_audit";
         const folders = isAudit ? [
             "00_submitted",
             "audit_report",
             "logs",
         ] : [
-            "00_protocol",
             "01_raw",
-            "01_raw/downloads",
             "02_deduplicated",
             "03_screening",
-            "03_screening/included",
-            "03_screening/excluded",
-            "04_audit",
-            "05_extraction",
-            "06_synthesis",
+            "03_screening/pdfs",
+            "04_extraction",
+            "04_extraction/fulltext",
+            "05_synthesis",
             "logs",
-            "scripts",
+            "rag",
         ];
 
         for (const folder of folders) {
             fs.mkdirSync(path.join(projectPath, folder), { recursive: true });
         }
 
-        // Generate draft protocol
+        // Protocolo na RAIZ com marcador [DRAFT] (o gate RV-01 e o guardrail leem isto)
         const protocol = this.generateProtocol(config, meta);
-        const protocolPath = path.join(projectPath, "00_protocol", "draft_protocol.md");
+        const protocolPath = path.join(projectPath, "protocol.md");
         fs.writeFileSync(protocolPath, protocol, "utf8");
 
-        // Update database
+        // Estado on-disk = fonte da verdade (project_state.json)
+        if (!isAudit) {
+            const { method, framework } = mapMethod(config.researchType);
+            ProjectStateService.init(projectPath, {
+                method, framework, reviewType: meta.label, topic: config.topic, userId: config.userId,
+            });
+        }
+
+        // Atualiza o SQLite como CACHE/auditoria (não é mais a fonte da verdade do estado)
         await dbService.activateProject(projectId, projectPath);
 
         return {
@@ -241,12 +251,12 @@ ${config.pico.intervention ? `| **Intervenção (I)** | ${config.pico.interventi
             ? `**Idiomas aceitos:** ${config.languages.join(", ")}`
             : "**Idiomas aceitos:** Sem restrição";
 
-        return `# Rascunho de Protocolo — ${config.name}
+        return `# Protocolo — ${config.name}
 
-> ⚠️ **STATUS: DRAFT_DESIGN**
-> Este projeto está bloqueado. Para liberar as ferramentas de mineração de dados,
-> preencha rigorosamente as seções com [PREENCHIMENTO OBRIGATÓRIO] abaixo e 
-> solicite ao sistema a aprovação do protocolo.
+**Status**: [DRAFT] <!-- muda para [LOCKED] na aprovação (submit_protocol_for_approval) -->
+
+> ⚠️ Projeto em rascunho: a busca fica bloqueada até o protocolo ser aprovado.
+> Preencha as seções com [PREENCHIMENTO OBRIGATÓRIO] e solicite a aprovação.
 
 **Tipo de pesquisa:** ${meta.label}
 **PRISMA aplicável:** ${meta.prismaStandard}

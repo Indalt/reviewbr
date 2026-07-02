@@ -20,6 +20,8 @@ import { DatabaseService } from "./services/database.js";
 import { PrismaFlowValidator, PrismaFlowSchema } from "./services/prisma_validator.js";
 import { FlowComputer } from "./services/flow_computer.js";
 import { indexCorpus, queryCorpus } from "./services/rag_lexical.js";
+import { ProjectStateService } from "./services/project_state.js";
+import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening } from "./services/project_artifacts.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -113,6 +115,26 @@ async function logToLocalProject(projectPath: string, toolName: string, data: an
 
 async function checkDesignGuardrail(projectId?: number, projectPath?: string): Promise<string | null> {
     let id = projectId;
+    // Fonte da verdade = estado ON-DISK (RV-01). Preview (sem projectPath) NUNCA bloqueia.
+    if (projectPath) {
+        const projectDir = path.isAbsolute(projectPath) ? projectPath : path.join(process.cwd(), projectPath);
+        const st = ProjectStateService.read(projectDir);
+        if (st) {
+            if (st.status !== "LOCKED") {
+                return `🚫 ACESSO NEGADO: o protocolo está em ${st.status}. Preencha o protocol.md e aprove via 'submit_protocol_for_approval' antes de iniciar buscas/mineração.`;
+            }
+            return null; // LOCKED → liberado
+        }
+        // Fallback: marcador [LOCKED] no protocol.md da raiz
+        const protoPath = path.join(projectDir, "protocol.md");
+        if (fs.existsSync(protoPath)) {
+            if (!/\[LOCKED\]/.test(fs.readFileSync(protoPath, "utf-8"))) {
+                return `🚫 ACESSO NEGADO: o protocol.md ainda não está [LOCKED]. Aprove via 'submit_protocol_for_approval'.`;
+            }
+            return null;
+        }
+    }
+    // Fallback legado (projetos antigos rastreados só no SQLite)
     if (!id && projectPath) {
         const project = await dbService.findProjectByPath(projectPath);
         if (project) id = project.id;
@@ -120,7 +142,7 @@ async function checkDesignGuardrail(projectId?: number, projectPath?: string): P
     if (id) {
         const project = await dbService.getProjectById(id);
         if (project && project.status === "DRAFT_DESIGN") {
-            return `🚫 ACESSO NEGADO: O projeto "${project.project_name}" está bloqueado em DRAFT_DESIGN. A fase de execução e mineração (ferramentas de busca/triagem) não pode iniciar sem um planejamento metodológico. Preencha o arquivo 'draft_protocol.md' e solicite aprovação via 'submit_protocol_for_approval'.`;
+            return `🚫 ACESSO NEGADO: O projeto "${project.project_name}" está bloqueado em DRAFT_DESIGN. Preencha o protocolo e solicite aprovação via 'submit_protocol_for_approval'.`;
         }
     }
     return null;
@@ -472,6 +494,7 @@ server.tool(
 
         if (projectId) {
             await dbService.insertRecords(projectId, "optimized_search", results);
+            if (params.projectPath) appendRawRecords(params.projectPath, results, "database");
             await dbService.lockProject(projectId);
             await dbService.logAuditEvent({
                 project_id: projectId,
@@ -505,23 +528,47 @@ server.tool(
 
 server.tool(
     "deduplicate_dataset",
-    "Remove duplicatas de um conjunto de resultados (JSON).",
+    "Deduplica os resultados (F3). Com projectPath: CONSOLIDA todos os brutos de 01_raw/*.json (todas as fontes), grava 01_raw/database_records.json e escreve 02_deduplicated/dataset.json + dedupe_report.json (RV-02). Sem projectPath: deduplica o JSON passado e só retorna.",
     {
-        dataset: z.string().describe("JSON string com array de resultados (SearchResult[])"),
+        dataset: z.string().optional().describe("JSON string com array de resultados (opcional se projectPath for informado — nesse caso consolida 01_raw)"),
+        projectPath: z.string().optional().describe("Raiz do projeto: consolida 01_raw e persiste os artefatos canônicos"),
     },
     async (params) => {
-        let records;
-        try {
-            records = JSON.parse(params.dataset);
-        } catch (e) {
-            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
+        let records: any[] = [];
+        let consolidatedNote = "";
+
+        if (params.projectPath) {
+            const { database, other } = consolidateRaw(params.projectPath);
+            records = [...database, ...other];
+            consolidatedNote = `Consolidados de 01_raw: ${database.length} (bases) + ${other.length} (outras fontes).\n`;
+        } else if (params.dataset) {
+            try { records = JSON.parse(params.dataset); }
+            catch { return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] }; }
+        } else {
+            return { content: [{ type: "text", text: "Informe 'dataset' (JSON) ou 'projectPath' (para consolidar 01_raw)." }] };
         }
 
         const result = dedupeService.deduplicate(records);
+
+        if (params.projectPath) {
+            writeDeduped(params.projectPath, result.unique, {
+                method: "DOI > título+ano > url",
+                total_before: result.stats.total,
+                duplicates_removed: result.stats.duplicates,
+                total_after: result.stats.unique,
+                generated: new Date().toISOString(),
+            });
+            ProjectStateService.setPhase(
+                path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath),
+                "F3",
+            );
+        }
+
         return {
             content: [{
                 type: "text",
-                text: JSON.stringify(result, null, 2)
+                text: `${consolidatedNote}Deduplicação: ${result.stats.total} → ${result.stats.unique} únicos (${result.stats.duplicates} duplicatas removidas).` +
+                    (params.projectPath ? `\nGravado: 02_deduplicated/dataset.json + dedupe_report.json.` : `\n\n${JSON.stringify(result.stats, null, 2)}`),
             }]
         };
     }
@@ -529,29 +576,57 @@ server.tool(
 
 server.tool(
     "screen_candidates",
-    "Triagem de candidatos usando IA (Gemini). Requer GOOGLE_API_KEY. Irá usar o texto completo extraído automaticamente se disponível no projectPath.",
+    "Triagem por IA (Gemini). stage='ta' (título/resumo) ou 'fulltext' (texto completo). Com projectPath e sem 'candidates', lê o insumo do funil automaticamente (ta ← 02_deduplicated/dataset.json; fulltext ← 03_screening/included_ta.json) e grava included/excluded por estágio (RV-02). A triagem TA deve ser DECISIVA usando os critérios+booleanos — não empurre tudo para 'maybe'.",
     {
-        candidates: z.string().describe("JSON string com array de candidatos"),
-        criteria: z.string().describe("Critérios de inclusão/exclusão"),
-        projectPath: z.string().optional().describe("Caminho do projeto (ex: projects/meu_projeto) para buscar o texto completo."),
+        candidates: z.string().optional().describe("JSON com array de candidatos (opcional se projectPath+stage forem dados)"),
+        criteria: z.string().describe("Critérios de inclusão/exclusão (derivados do protocolo)"),
+        stage: z.enum(["ta", "fulltext"]).optional().describe("Fase da triagem (default: ta)"),
+        projectPath: z.string().optional().describe("Raiz do projeto: lê o insumo e persiste os artefatos por estágio"),
     },
     async (params) => {
         if (!config.hasLlmKey) {
             return { content: [{ type: "text", text: "Nenhuma chave de API de LLM configurada (GOOGLE_API_KEY, OPENAI_API_KEY ou ANTHROPIC_API_KEY)." }] };
         }
 
-        let records;
-        try {
-            records = JSON.parse(params.candidates);
-        } catch (e) {
-            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
+        const stage = params.stage ?? "ta";
+        let records: any[] = [];
+        if (params.candidates) {
+            try { records = JSON.parse(params.candidates); }
+            catch { return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] }; }
+        } else if (params.projectPath) {
+            const dir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
+            const inputRel = stage === "ta" ? "02_deduplicated/dataset.json" : "03_screening/included_ta.json";
+            const inputPath = path.join(dir, inputRel);
+            if (!fs.existsSync(inputPath)) {
+                return { content: [{ type: "text", text: `Insumo da triagem ${stage} não encontrado: ${inputRel}. Rode a fase anterior primeiro.` }] };
+            }
+            try {
+                const parsed = JSON.parse(fs.readFileSync(inputPath, "utf-8"));
+                records = Array.isArray(parsed) ? parsed : (parsed.records ?? parsed.included ?? []);
+                // se vier de included_ta (ScreeningResult[]), extrai o .record
+                records = records.map((r: any) => r?.record ?? r);
+            } catch { return { content: [{ type: "text", text: `Erro ao ler ${inputRel}.` }] }; }
+        } else {
+            return { content: [{ type: "text", text: "Informe 'candidates' ou 'projectPath'+'stage'." }] };
         }
 
         const result = await screeningService.screenCandidates(records, params.criteria, params.projectPath);
+
+        if (params.projectPath) {
+            writeScreening(params.projectPath, stage, result.included, result.excluded);
+            ProjectStateService.setPhase(
+                path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath),
+                "F4",
+            );
+        }
+
+        const excludedRel = stage === "ta" ? "excluded_ta.json" : "excluded_fulltext.json";
+        const includedRel = stage === "ta" ? "included_ta.json (encaminhados p/ texto completo)" : "included.json (incluídos finais)";
         return {
             content: [{
                 type: "text",
-                text: JSON.stringify(result, null, 2)
+                text: `Triagem ${stage.toUpperCase()}: ${result.included.length} incluídos, ${result.excluded.length} excluídos.` +
+                    (params.projectPath ? `\nGravado: 03_screening/${includedRel} + 03_screening/${excludedRel}.` : `\n\n${JSON.stringify(result, null, 2)}`),
             }]
         };
     }
@@ -746,6 +821,7 @@ server.tool(
 
         if (projectId) {
             await dbService.insertRecords(projectId, "pubmed", results);
+            if (params.projectPath) appendRawRecords(params.projectPath, results, "database");
             await dbService.lockProject(projectId);
             await dbService.logAuditEvent({
                 project_id: projectId,
@@ -959,6 +1035,7 @@ server.tool(
 
         if (projectId) {
             await dbService.insertRecords(projectId, "repository", allResults);
+            if (params.projectPath) appendRawRecords(params.projectPath, allResults, "database");
             await dbService.lockProject(projectId);
             await dbService.logAuditEvent({
                 project_id: projectId,
@@ -1202,10 +1279,10 @@ server.tool(
 
 server.tool(
     "submit_protocol_for_approval",
-    "Analisa o 'draft_protocol.md' para liberar o projeto para a fase de mineração (ACTIVE_MINING). Somente após aprovação, as buscas poderão ser feitas.",
+    "Audita o 'protocol.md' (na raiz do projeto) e, se aprovado, TRAVA o protocolo ([LOCKED]) liberando a fase de mineração. Somente após aprovação as buscas oficiais podem ser feitas (RV-01).",
     {
         projectId: z.number().optional(),
-        projectPath: z.string().describe("Caminho do projeto onde está o '00_protocol/draft_protocol.md'"),
+        projectPath: z.string().describe("Caminho da raiz do projeto (onde está o 'protocol.md')"),
     },
     async (params) => {
         let projectId = params.projectId;
@@ -1214,40 +1291,49 @@ server.tool(
             if (project) projectId = project.id;
         }
 
-        if (!projectId) {
-            return { content: [{ type: "text", text: "Erro: Projeto não encontrado no banco." }] };
-        }
-
         const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
-        const protocolPath = path.join(projectDir, "00_protocol", "draft_protocol.md");
+        const protocolPath = path.join(projectDir, "protocol.md");
+
+        if (!fs.existsSync(protocolPath)) {
+            return { content: [{ type: "text", text: `Erro: protocol.md não encontrado em ${projectDir}. Crie o projeto com plan_research_protocol primeiro.` }] };
+        }
 
         const audit = protocolAuditor.auditFile(protocolPath);
 
         if (audit.valid) {
-            await dbService.activateProject(projectId, params.projectPath); // Updates to ACTIVE_MINING
-            await dbService.logAuditEvent({
-                project_id: projectId,
-                tool_name: "submit_protocol_for_approval",
-                action_type: "protocol_approval",
-                params: JSON.stringify(params),
-                result_summary: `Protocolo APROVADO! Score: ${audit.score}/${audit.maxScore}. Status alterado para ACTIVE_MINING.`
-            });
+            // Trava o protocolo NO ARQUIVO ([DRAFT] → [LOCKED])
+            let content = fs.readFileSync(protocolPath, "utf-8");
+            content = /\[DRAFT\]/.test(content)
+                ? content.replace(/\[DRAFT\]/g, "[LOCKED]")
+                : content.replace(/^# /, "**Status**: [LOCKED]\n\n# ");
+            fs.writeFileSync(protocolPath, content, "utf-8");
 
-            // Rename draft to final protocol
-            const finalPath = path.join(projectDir, "00_protocol", "protocol.md");
-            if (fs.existsSync(protocolPath)) fs.renameSync(protocolPath, finalPath);
+            // Estado on-disk = fonte da verdade
+            ProjectStateService.patch(projectDir, { status: "LOCKED", phase: "F2" });
+
+            // SQLite como cache/auditoria (não obrigatório)
+            if (projectId) {
+                await dbService.activateProject(projectId, params.projectPath);
+                await dbService.logAuditEvent({
+                    project_id: projectId,
+                    tool_name: "submit_protocol_for_approval",
+                    action_type: "protocol_approval",
+                    params: JSON.stringify(params),
+                    result_summary: `Protocolo APROVADO (${audit.score}/${audit.maxScore}). [LOCKED].`
+                });
+            }
 
             return {
                 content: [{
                     type: "text",
-                    text: `✅ SUCESSO! Protocolo aprovado por atingir nota ${audit.score}/${audit.maxScore}. O sistema alterou o status do projeto para ACTIVE_MINING e removeu as travas de pesquisa. As ferramentas de busca agora estão liberadas.`
+                    text: `✅ SUCESSO! Protocolo aprovado (${audit.score}/${audit.maxScore}) e TRAVADO ([LOCKED]). As buscas oficiais estão liberadas.`
                 }]
             };
         } else {
             return {
                 content: [{
                     type: "text",
-                    text: `❌ REPROVADO! O protocolo falhou na auditoria (Nota: ${audit.score}/${audit.maxScore}). Corrija o arquivo draft_protocol.md e tente novamente.\n\nErros pendentes:\n${audit.errors.join('\n')}\n\nSugestões:\n${audit.suggestions.join('\n')}`
+                    text: `❌ REPROVADO! O protocolo falhou na auditoria (Nota: ${audit.score}/${audit.maxScore}). Corrija o 'protocol.md' e tente novamente.\n\nErros pendentes:\n${audit.errors.join('\n')}\n\nSugestões:\n${audit.suggestions.join('\n')}`
                 }]
             };
         }
@@ -1382,9 +1468,13 @@ const openAlexHandler = async (params: any) => {
         if (project) projectId = project.id;
     }
 
-    const { results, totalFound } = await snowballService.search(params.query, {
+    const { results, totalFound, error } = await snowballService.search(params.query, {
         maxResults: params.maxResults || 200
     });
+
+    if (error) {
+        return { content: [{ type: "text", text: `⚠️ **OpenAlex — lacuna de cobertura (não silenciosa):** ${error}` }] };
+    }
 
     // Audit results
     await dbService.logAuditEvent({
@@ -1514,10 +1604,14 @@ const scieloHandler = async (params: any) => {
     }
 
     // P4310312277 is the OpenAlex Publisher ID for SciELO
-    const { results, totalFound } = await snowballService.search(params.query, {
+    const { results, totalFound, error } = await snowballService.search(params.query, {
         maxResults: params.maxResults || 200,
         filter: "primary_location.source.publisher_lineage:P4310312277"
     });
+
+    if (error) {
+        return { content: [{ type: "text", text: `⚠️ **SciELO (via OpenAlex) — lacuna de cobertura:** ${error}` }] };
+    }
 
     results.forEach(r => {
         r.repositoryId = "scielo";

@@ -8,9 +8,26 @@
 
 import { z } from "zod";
 import dotenv from "dotenv";
+import * as os from "node:os";
+import * as fsNode from "node:fs";
+import * as pathNode from "node:path";
+import { fileURLToPath } from "node:url";
 
-// Load .env file (safe to call multiple times)
-dotenv.config();
+// Carregamento robusto de .env: procura em múltiplos locais canônicos, pois o
+// diretório de execução do servidor MCP varia conforme o cliente. dotenv.config()
+// NÃO sobrescreve variáveis já definidas, então a ordem = prioridade.
+// Ordem: pasta do MCP (onde ficam as chaves de dev) → ~/.reviewbr/.env (canônico do
+// README) → raiz do repo → cwd.
+const mcpRoot = pathNode.resolve(pathNode.dirname(fileURLToPath(import.meta.url)), "..");
+const envCandidates = [
+    pathNode.join(mcpRoot, ".env"),                       // reviewbr-mcp/.env
+    pathNode.join(os.homedir(), ".reviewbr", ".env"),     // ~/.reviewbr/.env (canônico)
+    pathNode.join(mcpRoot, "..", ".env"),                 // reviewbr/.env
+    pathNode.join(process.cwd(), ".env"),                 // cwd
+];
+for (const p of envCandidates) {
+    if (fsNode.existsSync(p)) dotenv.config({ path: p });
+}
 
 // ─── Schema ──────────────────────────────────────────────────
 const envSchema = z.object({
