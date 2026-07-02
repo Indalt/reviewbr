@@ -31,6 +31,10 @@ old/
 reviewbr/reviewbr-mcp/projects/
 reviewbr/reviewbr-mcp/logs/
 
+# Runtime do MCP na raiz (cwd = raiz do repo): banco, telemetria, logs
+/data/
+/logs/
+
 # IDE / System
 .vscode/
 .idea/
