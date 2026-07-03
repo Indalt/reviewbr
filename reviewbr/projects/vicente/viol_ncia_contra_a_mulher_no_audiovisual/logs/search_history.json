@@ -1,0 +1,36 @@
+[
+  {
+    "timestamp": "2026-03-11T18:13:10.443Z",
+    "tool": "search_openalex",
+    "query": "(film OR films OR movies OR cinema OR television OR \"mass media\" OR audiovisual) AND (behavior OR attitude OR aggression OR imitation OR normalization OR desensitization OR \"copycat\" OR empathy) AND (empirical OR experiment OR \"control group\" OR \"randomized\" OR longitudinal OR \"meta-analysis\" OR \"effect size\" OR \"causal\" OR \"measured\" OR \"observational study\") AND (\"violence against women\" OR \"gender-based violence\" OR \"domestic violence\" OR \"sexual violence\" OR misogyny)",
+    "dateFilter": "1930-1990",
+    "label": "Eixo 1 (Empirico cruzado)",
+    "found": 254,
+    "totalFound": 254
+  },
+  {
+    "timestamp": "2026-03-11T18:13:16.383Z",
+    "tool": "search_openalex",
+    "query": "(\"violence against women\" OR \"gender-based violence\" OR \"domestic violence\" OR \"intimate partner violence\" OR femicide OR \"sexual violence\") AND (film OR movies OR cinema OR television OR broadcast)",
+    "dateFilter": "1930-1990",
+    "label": "Eixo 2 (Historico)",
+    "found": 335,
+    "totalFound": 335
+  },
+  {
+    "timestamp": "2026-03-11T18:14:58.151Z",
+    "tool": "search_papers_optimized",
+    "query": "(\"violência contra a mulher\" OR feminicídio) AND (filme OR cinema OR televisão OR audiovisual)",
+    "dateFilter": "1930-1990",
+    "label": "Eixo_2_PT",
+    "found": 62
+  },
+  {
+    "timestamp": "2026-03-11T18:17:01.626Z",
+    "tool": "search_papers_optimized",
+    "query": "(\"violência contra a mulher\" OR feminicídio) AND (filme OR cinema OR audiovisual) AND (comportamento OR empírico OR experi*)",
+    "dateFilter": "1930-1990",
+    "label": "Eixo_1_PT",
+    "found": 60
+  }
+]
