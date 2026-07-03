@@ -98,10 +98,14 @@ export class ProtocolDesignAuditor {
      * Helper to grab content between headers
      */
     private extractSection(content: string, headerName: string): string {
-        const regex = new RegExp(`###? ${headerName}[\\s\\S]*?(?=###? |$)`, "i");
+        // Escapa caracteres especiais de regex no nome do cabeçalho — headers como
+        // "Estratégia de Busca (Sintaxe)" têm parênteses LITERAIS que, sem escape,
+        // o motor de regex interpretaria como grupo de captura e nunca casariam.
+        const escaped = headerName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const regex = new RegExp(`###? ${escaped}[\\s\\S]*?(?=###? |$)`, "i");
         const match = content.match(regex);
         if (match) {
-            return match[0].replace(new RegExp(`^###? ${headerName}`, "i"), "").trim();
+            return match[0].replace(new RegExp(`^###? ${escaped}`, "i"), "").trim();
         }
         return "";
     }

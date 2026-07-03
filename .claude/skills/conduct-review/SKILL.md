@@ -20,6 +20,9 @@ Subagentes têm contexto isolado; o chat pode ser interrompido. Por isso **todo 
 
 Sempre passe o **caminho absoluto do projeto** e o **método** a cada subagente.
 
+## Onde os projetos vivem (convenção FIXA — não pergunte ao pesquisador)
+Todo projeto novo é criado em **`<raiz-do-repo>/reviewbr/projects/<nome-do-projeto>`**. É a única localização correta — monte esse caminho você mesmo, sem perguntar. **Nunca** dentro de `reviewbr/reviewbr-mcp/` (código do servidor, não dado). Se encontrar um projeto legado em `reviewbr-mcp/projects/`, trate como histórico e sugira migração para o local canônico antes de continuar o trabalho nele.
+
 ## Nível de controle configurável (a coleira)
 Gravado em `project_state.json` como `control_level`, definido no início (o `designer` pergunta) e alterável a pedido:
 

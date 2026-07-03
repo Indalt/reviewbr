@@ -32,7 +32,7 @@ class GoogleProvider implements LLMProvider {
     readonly providerName = "google";
     readonly modelName: string;
 
-    constructor(apiKey: string, model: string = "gemini-2.0-flash", temperature: number = 0) {
+    constructor(apiKey: string, model: string = "gemini-2.5-flash-lite", temperature: number = 0) {
         const genAI = new GoogleGenerativeAI(apiKey);
         this.model = genAI.getGenerativeModel({
             model,
@@ -138,7 +138,7 @@ export function createProvider(config: LLMProviderConfig): LLMProvider {
         case "google":
             return new GoogleProvider(
                 config.apiKey,
-                config.model || "gemini-2.0-flash",
+                config.model || "gemini-2.5-flash-lite",
                 config.temperature ?? 0
             );
         case "openai":

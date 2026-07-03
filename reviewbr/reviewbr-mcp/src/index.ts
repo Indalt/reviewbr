@@ -614,6 +614,18 @@ server.tool(
 
         const result = await screeningService.screenCandidates(records, params.criteria, params.projectPath);
 
+        // Falha ruidosa: se TUDO errou, não finja sucesso silencioso nem avance a fase.
+        const totalDecided = result.included.length + result.excluded.length;
+        if (result.errors.length > 0 && totalDecided === 0) {
+            const sample = [...new Set(result.errors)].slice(0, 3).join(" | ");
+            return {
+                content: [{
+                    type: "text",
+                    text: `❌ Triagem ${stage.toUpperCase()} FALHOU para todos os ${records.length} candidatos (0 decisões, ${result.errors.length} erros). Nada foi gravado, fase NÃO avançou.\nAmostra de erros: ${sample}\n\nVerifique GOOGLE_API_KEY/OPENAI_API_KEY/ANTHROPIC_API_KEY em reviewbr-mcp/.env (chave inválida/expirada é a causa mais comum).`,
+                }]
+            };
+        }
+
         if (params.projectPath) {
             writeScreening(params.projectPath, stage, result.included, result.excluded);
             ProjectStateService.setPhase(
@@ -624,11 +636,15 @@ server.tool(
 
         const excludedRel = stage === "ta" ? "excluded_ta.json" : "excluded_fulltext.json";
         const includedRel = stage === "ta" ? "included_ta.json (encaminhados p/ texto completo)" : "included.json (incluídos finais)";
+        const errorNote = result.errors.length > 0
+            ? `\n⚠️ ${result.errors.length} candidato(s) com erro na triagem (não decididos, não incluídos nem excluídos): ${[...new Set(result.errors)].slice(0, 3).join(" | ")}`
+            : "";
         return {
             content: [{
                 type: "text",
                 text: `Triagem ${stage.toUpperCase()}: ${result.included.length} incluídos, ${result.excluded.length} excluídos.` +
-                    (params.projectPath ? `\nGravado: 03_screening/${includedRel} + 03_screening/${excludedRel}.` : `\n\n${JSON.stringify(result, null, 2)}`),
+                    (params.projectPath ? `\nGravado: 03_screening/${includedRel} + 03_screening/${excludedRel}.` : `\n\n${JSON.stringify(result, null, 2)}`) +
+                    errorNote,
             }]
         };
     }
@@ -1251,7 +1267,7 @@ server.tool(
 
 server.tool(
     "plan_research_protocol",
-    "Planeja um novo projeto de pesquisa, registra no banco central e cria a estrutura de pastas.",
+    "Planeja um novo projeto de pesquisa, registra no banco central e cria a estrutura de pastas. CONVENÇÃO CANÔNICA (não pergunte ao usuário — use direto): todo projeto vive em '<raiz-do-repo>/reviewbr/projects/<nome-do-projeto>'. NUNCA crie projetos dentro de 'reviewbr/reviewbr-mcp/' (isso é código do servidor, não dado — reviewbr-mcp/projects/ é local legado, não usar).",
     {
         name: z.string().describe("Nome do projeto"),
         userId: z.string().describe("ID do usuário"),
@@ -1264,7 +1280,7 @@ server.tool(
             "rapid_review",
             "exploratory"
         ]).describe("Tipo de pesquisa"),
-        projectPath: z.string().describe("Caminho base onde o projeto será criado"),
+        projectPath: z.string().describe("Caminho ONDE o projeto será criado. CONVENÇÃO FIXA: '<raiz-do-repo>/reviewbr/projects/<nome-do-projeto>' (ex: 'reviewbr/projects/bebidas_maca_do_coco'). Nunca dentro de reviewbr-mcp/."),
     },
     async (params) => {
         const projectId = await projectInitService.register(params as any, dbService);

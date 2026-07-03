@@ -33,6 +33,7 @@ for (const p of envCandidates) {
 const envSchema = z.object({
     // LLM API keys (at least one required)
     GOOGLE_API_KEY: z.string().optional(),
+    GEMINI_API_KEY: z.string().optional(), // alias comum (nome do modelo, não da empresa) — mesmo efeito de GOOGLE_API_KEY
     OPENAI_API_KEY: z.string().optional(),
     ANTHROPIC_API_KEY: z.string().optional(),
 
@@ -60,11 +61,14 @@ if (!parsed.success) {
 
 const env = parsed.data;
 
+// GEMINI_API_KEY é aceita como alias de GOOGLE_API_KEY (mesmo provedor, nome mais intuitivo)
+const googleKey = env.GOOGLE_API_KEY ?? env.GEMINI_API_KEY;
+
 // Validate that at least one LLM key is available
-const hasLlmKey = !!(env.GOOGLE_API_KEY || env.OPENAI_API_KEY || env.ANTHROPIC_API_KEY);
+const hasLlmKey = !!(googleKey || env.OPENAI_API_KEY || env.ANTHROPIC_API_KEY);
 if (!hasLlmKey) {
     console.error(
-        "⚠️  AVISO: Nenhuma chave de API de LLM encontrada (GOOGLE_API_KEY, OPENAI_API_KEY, ANTHROPIC_API_KEY).\n" +
+        "⚠️  AVISO: Nenhuma chave de API de LLM encontrada (GOOGLE_API_KEY/GEMINI_API_KEY, OPENAI_API_KEY, ANTHROPIC_API_KEY).\n" +
         "   Ferramentas que dependem de LLM não estarão disponíveis."
     );
 }
@@ -72,10 +76,10 @@ if (!hasLlmKey) {
 // ─── Typed Exports ───────────────────────────────────────────
 export const config = {
     /** Primary LLM key (first available) */
-    llmApiKey: env.GOOGLE_API_KEY ?? env.OPENAI_API_KEY ?? env.ANTHROPIC_API_KEY ?? "",
+    llmApiKey: googleKey ?? env.OPENAI_API_KEY ?? env.ANTHROPIC_API_KEY ?? "",
 
     /** Individual provider keys */
-    googleApiKey: env.GOOGLE_API_KEY ?? "",
+    googleApiKey: googleKey ?? "",
     openaiApiKey: env.OPENAI_API_KEY ?? "",
     anthropicApiKey: env.ANTHROPIC_API_KEY ?? "",
 
