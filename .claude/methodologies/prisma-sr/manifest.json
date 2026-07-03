@@ -47,5 +47,5 @@
     "audit_summary.md"
   ],
 
-  "project_folders": ["01_raw", "02_deduplicated", "03_screening", "03_screening/pdfs", "04_extraction", "05_synthesis", "logs", "rag"]
+  "project_folders": ["01_raw", "02_deduplicated", "03_screening", "03_screening/pdfs", "04_extraction", "04_extraction/fulltext", "05_synthesis", "logs", "rag"]
 }

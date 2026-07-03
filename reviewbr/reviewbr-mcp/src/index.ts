@@ -33,6 +33,7 @@ import { MethodologyAuditorService } from "./services/methodology_auditor.js";
 import { ProtocolDesignAuditor } from "./services/protocol_auditor.js";
 import { ScreeningMetricsService } from "./services/screening_metrics.js";
 import { AsreviewBridgeService } from "./services/asreview_bridge.js";
+import { ScihubBridgeService } from "./services/scihub_bridge.js";
 import { RepositoryHealerService } from "./services/repository_healer.js";
 import { config } from "./config.js";
 import { logger } from "./utils/structured_logger.js";
@@ -70,6 +71,7 @@ const auditorService = new MethodologyAuditorService();
 const protocolAuditor = new ProtocolDesignAuditor();
 const screeningMetricsService = new ScreeningMetricsService();
 const asreviewBridge = new AsreviewBridgeService();
+const scihubBridge = new ScihubBridgeService();
 const repositoryHealerService = new RepositoryHealerService();
 
 /**
@@ -1454,6 +1456,32 @@ server.tool(
         } catch (e: any) {
             return { content: [{ type: "text", text: `Erro na consulta RAG: ${e.message}` }] };
         }
+    }
+);
+
+// ─── BYOS: recuperação via Sci-Hub (opt-in, nunca automático) ─
+server.tool(
+    "retrieve_fulltext_byos",
+    "BYOS (opt-in): recupera o texto completo via Sci-Hub para um DOI quando o acesso aberto FALHOU. SÓ chame após 'sim' EXPLÍCITO do pesquisador — NUNCA automático. Salva o PDF em 03_screening/pdfs e o texto em 04_extraction/fulltext com proveniência 'Sci-Hub (BYOS)' registrada de forma separável. Requer python + plugins/scihub_extractor.py.",
+    {
+        doi: z.string().describe("DOI do artigo (ex: 10.1590/xyz)"),
+        projectPath: z.string().describe("Raiz do projeto"),
+    },
+    async (params) => {
+        const r = await scihubBridge.retrieveByDoi(params.doi, params.projectPath);
+        if (params.projectPath) {
+            await logToLocalProject(params.projectPath, "retrieve_fulltext_byos", {
+                doi: params.doi, success: r.success, acquisition: "BYOS", error: r.error,
+            });
+        }
+        return {
+            content: [{
+                type: "text",
+                text: r.success
+                    ? `✅ BYOS: full-text de ${params.doi} arquivado (PDF em 03_screening/pdfs, texto em 04_extraction/fulltext; proveniência: Sci-Hub/BYOS, registrada separadamente).` + (r.error ? `\n⚠️ ${r.error}` : "")
+                    : `❌ BYOS falhou para ${params.doi}: ${r.error}`,
+            }]
+        };
     }
 );
 
