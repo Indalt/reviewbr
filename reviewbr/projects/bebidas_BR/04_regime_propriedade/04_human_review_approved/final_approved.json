@@ -1,0 +1,77 @@
+[
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title suggests the paper addresses Geographic Indications and Collective Intellectual Property in Brazil, which aligns with the criteria. However, the lack of an abstract makes it impossible to determine if the paper specifically discusses caju in the Ceará region, patents related to production processes, or collective trademarks, as required. Therefore, a definitive decision is not possible without more information.",
+    "record": {
+      "identifier": "https://openalex.org/W4405682921",
+      "title": "GEOGRAPHIC INDICATION AND REGISTRATION OF COLLECTIVE INTELLECTUAL PROPERTY IN THE BRAZILIAN SEMI-ARID REGION",
+      "description": "",
+      "creators": [
+        "Rodrigo Costa da Silva",
+        "J. V. C. NASCIMENTO",
+        "Michelli Assis",
+        "R. Silva",
+        "Kelven Rawly Claudino de Araújo",
+        "Marcelo C. Borba",
+        "Instituto Nacional do Semiárido – INSA",
+        "K. R. C. ARAUJO",
+        "Instituto Nacional do Semiárido – INSA",
+        "M. C. BORBA"
+      ],
+      "date": "2024-12-19",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title mentions Geographic Indication, which aligns with the IG/DO aspect of the criteria.",
+        "The title mentions Collective Intellectual Property, which aligns with the collective trademark aspect.",
+        "The title specifies the Brazilian Semi-Arid region, which *could* include Ceará, but this is not explicit. The missing abstract prevents confirming this detail.",
+        "The absence of an abstract prevents verifying the focus on caju, production processes related patents, and specific connection to Ceará traditions."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "en",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "04_regime_propriedade",
+    "_unique_id": "TITLE_geographic indication and registration of collective intellectual property in the brazilian semi-arid region"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions \"patentes bioinovadoras\" which could potentially relate to patents on production processes linked to traditional knowledge of cashew production. However, the lack of an abstract makes it difficult to definitively ascertain its relevance to the specified criteria. The mention of \"comunidade tradicional\" is a positive indicator. More information is needed.",
+    "record": {
+      "identifier": "https://openalex.org/W4417405377",
+      "title": "DA COMUNIDADE TRADICIONAL AO LABORATÓRIO – DO LABORATÓRIO À COMUNIDADE TRADICIONAL: PATENTES BIOINOVADORAS",
+      "description": "",
+      "creators": [
+        "Karoline Greice Viana Cardoso da Silva",
+        "Vinícius Santos da Silva"
+      ],
+      "date": "2025-01-01",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title mentions \"patentes bioinovadoras\", which might be related to production process patents.",
+        "The title also refers to \"comunidade tradicional\", suggesting a potential link to traditional knowledge related to cashew production in Ceara.",
+        "The absence of an abstract makes it impossible to determine the precise scope and relevance of the paper without further investigation."
+      ],
+      "supporting_sentences": [
+        "DA COMUNIDADE TRADICIONAL AO LABORATÓRIO – DO LABORATÓRIO À COMUNIDADE TRADICIONAL: PATENTES BIOINOVADORAS"
+      ]
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "04_regime_propriedade",
+    "_unique_id": "TITLE_da comunidade tradicional ao laboratório – do laboratório à comunidade tradicional: patentes bioinovadoras"
+  }
+]

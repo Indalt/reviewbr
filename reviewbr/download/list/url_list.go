@@ -183,6 +183,10 @@ func (cd *ConcurrentDownloader) downloadConcurrently(tasks []*DownloadTask) []Do
 				}
 			}
 
+			// Add a mandatory delay to prevent anti-bot blocking from academic repositories
+			logger.Info("Waiting 15 seconds to prevent rate limiting...")
+			time.Sleep(15 * time.Second)
+
 			results[idx] = DownloadResult{Task: t, Success: err == nil, Error: err}
 		}(i, task)
 	}
@@ -392,8 +396,9 @@ func processCSVFile(path, dirPath string, delimiter rune) error {
 
 	logger.Info(fmt.Sprintf("Found %d entries to process", len(papers)))
 
-	// Create concurrent downloader with reasonable limits
-	downloader := NewConcurrentDownloader(25, 4) // 25 global, 4 per host
+	// Create concurrent downloader with extremely conservative limits for academic repos
+	// 2 global parallel downloads, max 1 per host at a time
+	downloader := NewConcurrentDownloader(2, 1)
 
 	// Process each paper to prepare download tasks
 	successCount := 0

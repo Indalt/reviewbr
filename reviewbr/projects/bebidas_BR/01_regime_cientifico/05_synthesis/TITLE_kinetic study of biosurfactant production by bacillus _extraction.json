@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_kinetic study of biosurfactant production by bacillus subtilis lami005 grown in clarified cashew apple juice.",
+    "title": "Kinetic study of biosurfactant production by Bacillus subtilis LAMI005 grown in clarified cashew apple juice.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Não mencionado",
+    "actantes_relacoes": "Bacillus subtilis LAMI005, suco de caju clarificado, água destilada, sulfato de amônio ((NH4)2SO4), solução de elementos traço (ZnSO4·7H2O, FeSO4·7H2O, MnSO4·H2O, CuSO4·5H2O, Co(NO3)2·6H2O, Na2B4O7·10H2O), pH, temperatura, tempo de incubação, concentração de substrato (glicose e frutose), oxigênio, nitrogênio, impurezas, equipamentos de laboratório (centrífuga, espectrofotômetro, cromatógrafo líquido de alta eficiência (HPLC), tensiômetro, espectrômetro FTLA 2000-ABB).",
+    "enquadramento_regime": "O estudo enquadra a bebida (suco de caju clarificado) como um substrato de baixo custo para a produção de biossurfactante Surfactina, buscando otimizar o processo de produção por meio de diferentes suplementações e concentrações do suco. Normatiza o processo de produção em condições laboratoriais controladas, avaliando a concentração de surfactina produzida, a tensão superficial e a atividade emulsificante. Não menciona exclusões explícitas, mas o foco está na otimização do uso do suco de caju para essa finalidade específica.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "Bacillus subtilis LAMI005 é capaz de crescer e produzir biossurfactante em meio de cultura alternativo preparado com suco de caju clarificado suplementado com sulfato de amônio. O suco de caju clarificado emerge como um meio de baixo custo para a produção de surfactina, com uma concentração máxima alcançada de 319,3 mg/L. O biossurfactante demonstra capacidade de emulsificar querosene e óleo de soja, indicando seu potencial para aplicações industriais."
+  }
+}

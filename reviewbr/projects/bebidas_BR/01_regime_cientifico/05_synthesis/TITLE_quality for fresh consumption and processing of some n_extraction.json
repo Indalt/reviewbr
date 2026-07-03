@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_quality for fresh consumption and processing of some non-traditional tropical fruits from brazil",
+    "title": "Quality for fresh consumption and processing of some non-traditional tropical fruits from Brazil",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Não mencionado",
+    "actantes_relacoes": "Os actantes mencionados no texto são: 1) As 18 frutas tropicais não tradicionais do Brasil (Anacardiaceae, Apocynaceae, Arecaceae, Clusiaceae, Malpighiaceae, Melastomataceae e Myrtaceae). 2) Solos e áreas de ocorrência, cultivo comercial e coleções nas regiões Norte, Nordeste e Sudeste do Brasil. 3) Reagentes químicos (anthrone, ácido galacturônico, ácido dinitrosalicílico, glicose, m-hydroxydiphenyl). 4) Equipamentos de laboratório (refratômetro, espectrofotômetro, potenciômetro). 5) Água destilada e etanol. 6) Enzimas (pectinase, amilase). 7) Ministério da Agricultura e Abastecimento (MAPA). 8) Consumidores. A interação entre esses elementos define as propriedades e o potencial de processamento das frutas.",
+    "enquadramento_regime": "O texto enquadra a bebida (implícita) e a fruta dentro de um regime científico e de mercado, avaliando a qualidade para consumo in natura e processamento agroindustrial, seguindo (ou não) os padrões estabelecidos pelo Ministério da Agricultura e Abastecimento (MAPA).",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O estudo conclui que as propriedades de qualidade das 18 frutas indicam potencial para consumo in natura e processamento agroindustrial. Algumas frutas atendem aos padrões do Ministério da Agricultura, mas altos níveis de pectina e amido podem dificultar a produção de sucos e néctares, o que pode ser resolvido com a introdução de complexos enzimáticos."
+  }
+}

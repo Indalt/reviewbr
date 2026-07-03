@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_fermented cashew apple beverages: current state of knowledge and prospects",
+    "title": "Fermented Cashew Apple Beverages: Current State of Knowledge and Prospects",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "A bebida de caju é definida como um produto da fermentação de maçãs de caju, explorando o potencial tecnológico e nutricional através de microorganismos. É enquadrada como uma alternativa para reduzir o desperdício agrícola e gerar valor econômico.",
+    "actantes_relacoes": "Os actantes incluem: maçã de caju, diversos microorganismos (bactérias, leveduras e fungos, tanto nativos quanto não-nativos, como Saccharomyces cerevisiae, Lactobacillus spp., Acetobacter spp.), açúcares, compostos fenólicos, taninos, pH, temperatura, tempo de fermentação, clarificantes (naturais, químicos e enzimáticos), indústrias alimentícias, pesquisadores, consumidores e o processo de destilação (no caso do Feni). A interação desses elementos define as características das diferentes bebidas.",
+    "enquadramento_regime": "A bebida é enquadrada dentro do regime da ciência (estudos sobre composição química, processos de fermentação, benefícios nutricionais e sensoriais), estado (indicação geográfica do Feni), propriedade (comercialização de vinhos e outras bebidas fermentadas) e comunidade (consumo e valorização de produtos locais).",
+    "contexto_tradicional": "O texto menciona que o nome 'acajou' vem da língua Tupi, da região amazônica, onde os povos indígenas cultivavam cajus antes da chegada dos europeus. Não há menção explícita aos povos originários do Ceará, nem uma relação direta com a agricultura familiar/tradicional, embora se mencione métodos artesanais de produção de vinagre.",
+    "desfecho_conclusao": "O documento conclui que, apesar do alto valor nutricional e potencial de inovação em bebidas fermentadas de caju (vinho, álcool comestível, bebidas probióticas e vinagre), é crucial priorizar a exploração da microbiota indígena do caju, buscando cepas microbianas com capacidades metabólicas únicas para melhorar a palatabilidade e enriquecer as bebidas com compostos bioativos. Além disso, o estudo enfatiza o desenvolvimento de bebidas com baixo teor de álcool e a necessidade de um marco regulatório robusto para garantir a confiança do consumidor e facilitar a comercialização global dos produtos."
+  }
+}

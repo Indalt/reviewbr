@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_chemometric analysis of the volatile profile in peduncles of cashew clones and its correlation with sensory attributes.",
+    "title": "Chemometric analysis of the volatile profile in peduncles of cashew clones and its correlation with sensory attributes.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "A bebida de caju é definida como um suco altamente nutritivo derivado do pedúnculo (caju-maçã) do cajueiro (Anacardium occidentale L.), caracterizado por altos níveis de vitamina C, açúcares redutores, ácidos orgânicos, minerais, aminoácidos, carotenóides e compostos fenólicos. Possui sabor exótico forte, mas alta adstringência.",
+    "actantes_relacoes": "Os actantes incluem: cajueiro (Anacardium occidentale L.), caju-maçã (pedúnculo hipertrofiado), clones de caju, solo, clima da região semi-árida do Ceará, extrator (Incomap, Brasil), membrana cerâmica tubular (Membralox-Pal, Alemanha), compostos voláteis, taninos, painel sensorial treinado (4 mulheres e 4 homens), cromatógrafo gasoso (Varian), espectrômetro de massas (Shimadzu), software de análise estatística (ANOVA, Dunnett), pesquisadores da Embrapa, e o processo de microfiltração tangencial.",
+    "enquadramento_regime": "A bebida é enquadrada principalmente no regime da ciência e da indústria alimentícia. O estudo visa otimizar o processo de clarificação do suco para melhorar sua aceitabilidade, mantendo o aroma característico. A legislação ou normatização estatal não é mencionada diretamente, mas a importância econômica do caju, gerando empregos e renda, sugere um interesse estatal indireto.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "A clarificação do suco de caju por microfiltração tangencial causa algumas alterações no perfil volátil do suco, mas essas mudanças não impactam significativamente o aroma característico do caju no suco clarificado."
+  }
+}

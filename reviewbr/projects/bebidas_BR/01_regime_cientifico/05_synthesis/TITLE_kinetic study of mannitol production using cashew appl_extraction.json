@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_kinetic study of mannitol production using cashew apple juice as substrate.",
+    "title": "Kinetic study of mannitol production using cashew apple juice as substrate.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Não mencionado",
+    "actantes_relacoes": "Os actantes que intra-agem para formar a bebida (suco de maçã de caju) e o produto (manitol) são: maçã de caju (fonte de frutose e glicose), micro-organismos (L. mesenteroides B-512F), enzimas (manitol desidrogenase), sacarose (em algumas fermentações), pH, temperatura, tempo, nitrogênio, fosfato, extrato de levedura, água, equipamentos de laboratório (fermentador, centrífuga, HPLC), e pesquisadores.",
+    "enquadramento_regime": "A bebida de caju é enquadrada como um substrato de baixo custo para a produção de manitol através de fermentação microbiana, inserindo-se em um regime de biotecnologia industrial e engenharia de bioprocessos.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O estudo conclui que o suco de caju é um substrato viável para a produção de manitol, com rendimentos máximos obtidos superiores aos relatados para outras cepas de Leuconostoc. A adição de sacarose aumentou o rendimento de manitol, mas diminuiu a produtividade. A otimização das condições de processo é necessária para melhorar ainda mais o rendimento e a produtividade do manitol."
+  }
+}

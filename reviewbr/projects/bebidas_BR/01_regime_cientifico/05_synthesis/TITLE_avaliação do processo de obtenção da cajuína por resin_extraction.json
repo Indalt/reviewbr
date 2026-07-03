@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_avaliação do processo de obtenção da cajuína por resinas de troca iônica",
+    "title": "Avaliação do processo de obtenção da cajuína por resinas de troca iônica",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "A cajuína é definida como uma bebida refrescante, não diluída, não fermentada, obtida a partir do pseudofruto do cajueiro por meio de processo tecnológico adequado e submetida a um processo físico de clarificação para remoção de taninos. Deve ter cor entre incolor e amarelo translúcido, sabor levemente ácido e adstringente, e aroma próprio. A cajuína é um produto 100% brasileiro, caracterizado pela baixa adstringência e ausência de turbidez, sem adição de açúcar ou conservantes.",
+    "actantes_relacoes": "Os actantes mencionados no texto são: pseudofruto do cajueiro (fonte da cajuína), taninos (a serem removidos), resinas de troca iônica (agentes clarificantes), temperatura, tempo, técnicas de filtração, garrafas de vidro, legislação brasileira (normatiza a bebida), gelatina comercial (agente precipitador de taninos), tratamento térmico, consumidores (apreciam a bebida),  e os parâmetros físico-químicos como pH, acidez, sólidos solúveis totais - SST e a própria água.",
+    "enquadramento_regime": "A cajuína é classificada dentro do regime da ciência e da legislação brasileira. A pesquisa busca otimizar o processo de obtenção através de métodos científicos (resinas de troca iônica) e o produto final deve estar em conformidade com os Padrões de Identidade e Qualidade (PIQ) fixados para suco de fruta pela legislação.",
+    "contexto_tradicional": "O texto menciona que a cajuína é um produto 100% brasileiro e que sua produção tradicional envolve técnicas não padronizadas e/ou rudimentares para remoção de taninos. Originalmente era utilizada resina do cajueiro, e depois cola de sapateiro, mas atualmente se utiliza gelatina em pó. Não há relação explícita com povos originários do Ceará ou agricultura familiar/tradicional além da menção ao conhecimento tradicional sobre o processo de produção.",
+    "desfecho_conclusao": "A tese busca avaliar o uso de resinas de troca iônica como alternativa para a obtenção da cajuína, visando um produto com maior qualidade e vida útil, e que a utilização de resina de troca iônica macroporosa de base forte se mostrou viável, sendo uma importante alternativa para a produção da cajuína."
+  }
+}

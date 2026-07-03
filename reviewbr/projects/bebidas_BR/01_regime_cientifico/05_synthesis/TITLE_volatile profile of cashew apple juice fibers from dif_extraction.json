@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_volatile profile of cashew apple juice fibers from different production steps",
+    "title": "Volatile Profile of Cashew Apple Juice Fibers from Different Production Steps",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O texto define a bebida de caju como um produto resultante do processamento industrial do caju, cujo uso gera resíduos fibrosos (fibras) que são reutilizados na alimentação animal ou descartados. A bebida de caju, ou o suco, é caracterizado por um perfil de compostos voláteis, principalmente ésteres e terpenos, que conferem o aroma característico do caju.",
+    "actantes_relacoes": "Os actantes que intra-agem para formar a bebida de caju, conforme o texto, incluem: a matéria-prima (caju), as tecnologias de processamento (expeller press), os compostos químicos voláteis (ésteres, terpenos, aldeídos, ácidos carboxílicos), a força mecânica do processo de prensagem, a água utilizada nas lavagens, a energia despendida no processo, e os equipamentos de análise laboratorial (HS-SPME, GC-MS). Também interagem os pesquisadores, as instituições de pesquisa (Embrapa, Universidades) e os consumidores, que influenciam a necessidade de adaptação do sabor para a aceitação do produto.",
+    "enquadramento_regime": "O texto enquadra a bebida de caju dentro do regime da ciência (análise laboratorial dos componentes voláteis, estudo de processos de desodorização), da indústria (processamento do suco e reaproveitamento das fibras), e da economia (redução de custos operacionais, busca por alternativas de uso do coproduto para aumentar o valor da cadeia produtiva). A bebida é normatizada implicitamente através da busca por padrões de aceitabilidade do consumidor e da necessidade de adequação para uso em produtos alimentícios industrializados (hambúrgueres, barras de cereal).",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O estudo conclui que, embora a lavagem das fibras de caju reduza a presença de ésteres odoríferos, alguns compostos voláteis persistem, contribuindo para o aroma residual de caju. Recomenda-se reduzir a força da prensagem e limitar a lavagem a duas vezes para otimizar custos e sustentabilidade do processo, pois lavagens adicionais não removem significativamente os compostos odoríferos restantes. Os compostos ethyl octanoate, γ-dodecalactone, (E)-2-decenal, copaene, e caryophyllene têm grande importância no sabor característico da maçã de caju."
+  }
+}

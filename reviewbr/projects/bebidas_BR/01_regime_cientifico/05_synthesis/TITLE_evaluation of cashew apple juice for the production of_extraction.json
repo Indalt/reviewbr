@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_evaluation of cashew apple juice for the production of fuel ethanol.",
+    "title": "Evaluation of cashew apple juice for the production of fuel ethanol.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "A bebida de caju (suco de maçã de caju clarificado - CCAJ) é definida como um subproduto agroindustrial rico em açúcares redutores (glicose e frutose), vitaminas e sais minerais, sendo considerado um meio de cultura interessante e barato para a produção de biossurfactantes.",
+    "actantes_relacoes": "Os actantes que intra-agem para formar a bebida (CCAJ) no contexto deste documento incluem: maçã de caju (Anarcardium occidentale L.), Bacillus subtilis LAMI005, água destilada, sulfato de amônio ((NH4)2SO4), solução de elementos traço (ZnSO4·7H2O, FeSO4·7H2O, MnSO4·H2O, CuSO4·5H2O, Co(NO3)2·6H2O, Na2B4O7·10H2O), hidróxido de sódio (NaOH), ácido clorídrico (HCl), querosene, óleo de soja, gelatina, papel filtro, equipamentos de laboratório (centrífuga, espectrofotômetro, cromatógrafo líquido de alta performance, tensiômetro, espectrômetro FT-IR) e os pesquisadores que conduzem os experimentos.",
+    "enquadramento_regime": "A bebida (CCAJ) é enquadrada no regime científico como um meio de cultura alternativo e de baixo custo para a produção de biossurfactantes. O estudo busca otimizar a produção de biossurfactante (surfactina) por Bacillus subtilis LAMI005 usando CCAJ como fonte de carbono e energia, visando reduzir os custos de produção e tornar o processo competitivo com surfactantes sintéticos.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "Bacillus subtilis LAMI005 é capaz de crescer e produzir biossurfactante em um meio de cultura alternativo preparado com suco de maçã de caju clarificado (CCAJ) suplementado com sulfato de amônio. O CCAJ surge como um meio solúvel em água de baixo custo. A produção de surfactina foi influenciada pela quantidade de CCAJ utilizada para preparar o meio de cultura, atingindo uma concentração máxima de 319,3 mg/L e IE24 de 65% para querosene e óleo de soja. A análise bioquímica indica que a surfactina foi produzida por B. subtilis LAMI005 sob as condições testadas."
+  }
+}

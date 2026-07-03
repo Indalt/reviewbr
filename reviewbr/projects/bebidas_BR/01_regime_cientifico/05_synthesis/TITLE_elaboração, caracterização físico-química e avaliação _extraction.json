@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_elaboração, caracterização físico-química e avaliação da capacidade antioxidante de cerveja de trigo adicionada de pseudofruto de caju (anacardium occidenale) e casca de laranja (citrus sinensis)",
+    "title": "Elaboração, caracterização físico-química e avaliação da capacidade antioxidante de cerveja de trigo adicionada de pseudofruto de caju (anacardium occidenale) e casca de laranja (citrus sinensis)",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "A cerveja é definida como uma bebida obtida pela fermentação alcoólica do mosto cervejeiro proveniente do malte de cevada e água potável, por ação da levedura, com adição de lúpulo. Há menção específica à cerveja artesanal de trigo.",
+    "actantes_relacoes": "Os actantes que intra-agem para formar a bebida, de acordo com o texto, incluem: malte de cevada, água potável, levedura (Saccharomyces cerevisiae), lúpulo, pseudofruto do caju (Anacardium occidentale), casca de laranja (Citrus sinensis), legislação, processo de fermentação, equipamentos de laboratório, e pesquisadores.",
+    "enquadramento_regime": "A bebida é enquadrada dentro do regime da ciência (através da caracterização físico-química e microbiológica), do estado (através da legislação que define os parâmetros da cerveja) e do mercado (cerveja artesanal como produto, reaproveitamento de resíduos agroindustriais para reduzir custos).",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O uso do pseudofruto do caju e da casca de laranja na elaboração de cervejas artesanais é viável, permitindo o reaproveitamento de resíduos agroindustriais, a redução de custos e o acréscimo de características físico-químicas importantes à bebida. A formulação com 10% de pseudofruto de caju e 0,6% de casca de laranja apresentou os resultados mais satisfatórios."
+  }
+}

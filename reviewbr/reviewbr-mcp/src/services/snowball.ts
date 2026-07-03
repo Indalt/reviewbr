@@ -1,5 +1,6 @@
 
 import { SearchResult } from "../types.js";
+import { config } from "../config.js";
 
 interface OpenAlexWork {
     id: string;
@@ -107,13 +108,38 @@ export class SnowballService {
         }));
     }
 
-    async fetchJson(url: string): Promise<any> {
-        const res = await fetch(url);
-        if (!res.ok) return null;
-        return await res.json();
+    private delay(ms: number): Promise<void> {
+        return new Promise((r) => setTimeout(r, ms));
     }
 
-    async search(query: string, options: { maxResults?: number, filter?: string } = {}): Promise<{ results: SearchResult[]; totalFound: number }> {
+    async fetchJson(url: string): Promise<any> {
+        // Anexa a chave gratuita do OpenAlex (acesso estável) quando configurada.
+        let finalUrl = url;
+        if (config.openalexApiKey && url.includes("api.openalex.org") && !url.includes("api_key=")) {
+            finalUrl += (url.includes("?") ? "&" : "?") + "api_key=" + encodeURIComponent(config.openalexApiKey);
+        }
+        let lastStatus = 0;
+        for (let attempt = 0; attempt < 3; attempt++) {
+            try {
+                const res = await fetch(finalUrl);
+                if (res.ok) return await res.json();
+                lastStatus = res.status;
+                // 503 (carga) / 429 (rate-limit) → backoff e nova tentativa
+                if (res.status === 503 || res.status === 429) {
+                    await this.delay(400 * (attempt + 1));
+                    continue;
+                }
+                break;
+            } catch {
+                lastStatus = -1;
+                await this.delay(400 * (attempt + 1));
+            }
+        }
+        // Falha RUIDOSA (não devolve null silencioso): o chamador reporta a lacuna.
+        return { __error: true, status: lastStatus };
+    }
+
+    async search(query: string, options: { maxResults?: number, filter?: string } = {}): Promise<{ results: SearchResult[]; totalFound: number; error?: string }> {
         const maxResults = options.maxResults || 200;
         let url = `https://api.openalex.org/works?search=${encodeURIComponent(query)}&per_page=${Math.min(maxResults, 200)}&mailto=${this.mailto}`;
 
@@ -122,6 +148,12 @@ export class SnowballService {
         }
 
         const res = await this.fetchJson(url);
+        if (res && res.__error) {
+            const hint = (res.status === 503 || res.status === 429)
+                ? " Busca anônima do OpenAlex está sob rate-limit. Configure OPENALEX_API_KEY (chave grátis em openalex.org/rest-api) no seu ~/.reviewbr/.env ou em reviewbr-mcp/.env."
+                : "";
+            return { results: [], totalFound: 0, error: `OpenAlex indisponível (HTTP ${res.status}).${hint}` };
+        }
         if (!res || !res.results) return { results: [], totalFound: 0 };
 
         const results = res.results.map((r: any) => ({

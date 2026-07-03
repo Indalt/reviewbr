@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_compostos voláteis responsáveis pela qualidade sensorial de fermentados espumantes de diferentes clones de caju (anacardium occidentale l.)",
+    "title": "COMPOSTOS VOLÁTEIS RESPONSÁVEIS PELA QUALIDADE SENSORIAL DE FERMENTADOS ESPUMANTES DE DIFERENTES CLONES DE CAJU (ANACARDIUM OCCIDENTALE L.)",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "A bebida de caju é definida como um fermentado espumante elaborado a partir de suco clarificado de clones de cajueiro anão precoce (Anacardium occidentale L.) e levedura Saccharomyces cerevisiae, seguindo um processo produtivo semelhante ao dos vinhos tradicionais. Busca-se determinar compostos voláteis e qualidades sensoriais.",
+    "actantes_relacoes": "Os actantes são: clones de cajueiro anão precoce (CCP09, CCP76, BRS189, CCP1001), suco clarificado do pedúnculo, levedura Saccharomyces cerevisiae bayanus, metabissulfito de potássio (antioxidante), bentonite (clarificante), açúcar (sacarose/licor de expedição), dióxido de carbono, água. Há também a Embrapa Agroindústria Tropical (Pacajus/Ceará) que realiza o processo de obtenção dos sucos, a Embrapa Uva e Vinho (Bento Gonçalves-Rio Grande do Sul) que elabora os fermentados, e o painel sensorial com 12 julgadores experientes.",
+    "enquadramento_regime": "O texto enquadra a bebida dentro do regime da ciência (estudo de compostos voláteis e análise sensorial) e da indústria (potencial de mercado e produção em escala semi-industrial). A legislação brasileira (Decreto Nº 6.871/2009 do MAPA) define o fermentado de fruta, influenciando a normatização da bebida.",
+    "contexto_tradicional": "Há menção à bebida indígena Cauim, mas sem conexão direta com as comunidades Tremembé, Tapeba ou Jenipapo-Kanindé. Há menção sobre a evolução do processo de elaboração desta bebida através da determinação de parâmetros físico-químicos, fermentação alcóolica e etapas de produção, e que o vinho de caju poderá acrescentar maiores ganhos econômicos para os pequenos e médios produtores da cultura do cajueiro.",
+    "desfecho_conclusao": "O estudo visa identificar os compostos voláteis determinantes para a qualidade sensorial dos fermentados espumantes de caju, de modo a caracterizar a bebida e sugerir clones promissores para a sua elaboração, destacando o BRS 189 por apresentar o melhor perfil de voláteis responsáveis por aromas doce e frutado."
+  }
+}

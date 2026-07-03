@@ -8,11 +8,13 @@
  */
 
 export enum AgentRole {
-    COORDINATOR = 'COORDINATOR',
-    LIBRARIAN = 'LIBRARIAN',   // F2: Search/Download
-    SCREENER = 'SCREENER',     // F4: Screening
-    EXTRACTOR = 'EXTRACTOR',   // F5: Data Extraction
-    ANALYST = 'ANALYST'        // F6-F7: Synthesis/Stats
+    PROJETISTA = 'PROJETISTA',   // F0/F1: Protocol design
+    COORDINATOR = 'COORDINATOR', // Orquestrador (skill conduct-review)
+    LIBRARIAN = 'LIBRARIAN',     // F2: Search/Download
+    SCREENER = 'SCREENER',       // F3/F4: Screening
+    EXTRACTOR = 'EXTRACTOR',     // F5: Data Extraction
+    READER = 'READER',           // F5.5: Leitura/RAG do corpus curado
+    ANALYST = 'ANALYST'          // F6-F8: Synthesis/Stats/Manuscript
 }
 
 export interface AgentCapability {
@@ -31,6 +33,23 @@ export interface AgentCapability {
  * a tool without a mapping is a tool without governance.
  */
 const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
+    // ─── Design de protocolo (PROJETISTA + COORDINATOR) ─────
+    assess_research_design: [AgentRole.PROJETISTA, AgentRole.COORDINATOR],
+    submit_protocol_for_approval: [AgentRole.PROJETISTA, AgentRole.COORDINATOR],
+
+    // ─── Leitura/RAG (READER + ANALYST) ─────────────────────
+    rag_index_corpus: [AgentRole.READER],
+    rag_query: [AgentRole.READER, AgentRole.ANALYST],
+
+    // ─── Extração (EXTRACTOR) ───────────────────────────────
+    batch_llm_extract: [AgentRole.EXTRACTOR],
+    translate_document: [AgentRole.EXTRACTOR, AgentRole.READER],
+    batch_keyword_screen: [AgentRole.SCREENER, AgentRole.EXTRACTOR],
+    batch_db_screen: [AgentRole.SCREENER],
+
+    // ─── Cálculo do funil (COORDINATOR + ANALYST) ───────────
+    compute_flow_counts: [AgentRole.COORDINATOR, AgentRole.ANALYST],
+
     // ─── Search (LIBRARIAN + COORDINATOR) ───────────────────
     search_openalex: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
     search_pubmed: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
@@ -66,8 +85,8 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     // ─── Data Export (EXTRACTOR + ANALYST + COORDINATOR) ────
     export_dataset: [AgentRole.EXTRACTOR, AgentRole.ANALYST, AgentRole.COORDINATOR],
 
-    // ─── Project Management (COORDINATOR only) ──────────────
-    plan_research_protocol: [AgentRole.COORDINATOR],
+    // ─── Project Management (PROJETISTA + COORDINATOR) ──────
+    plan_research_protocol: [AgentRole.PROJETISTA, AgentRole.COORDINATOR],
 
     // ─── Audit (COORDINATOR + ANALYST) ──────────────────────
     audit_methodology: [AgentRole.COORDINATOR, AgentRole.ANALYST],
@@ -80,6 +99,13 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
  */
 export class AgentOrchestrator {
     private static REGISTRY: Record<AgentRole, AgentCapability> = {
+        [AgentRole.PROJETISTA]: {
+            canWriteProtocol: true,
+            canDownload: false,
+            canAccessLLM: true,
+            canDeleteFiles: false,
+            canReadMetrics: false,
+        },
         [AgentRole.COORDINATOR]: {
             canWriteProtocol: true,
             canDownload: true,
@@ -102,6 +128,13 @@ export class AgentOrchestrator {
             canReadMetrics: true,
         },
         [AgentRole.EXTRACTOR]: {
+            canWriteProtocol: false,
+            canDownload: false,
+            canAccessLLM: true,
+            canDeleteFiles: false,
+            canReadMetrics: false,
+        },
+        [AgentRole.READER]: {
             canWriteProtocol: false,
             canDownload: false,
             canAccessLLM: true,

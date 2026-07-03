@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_effect of a beverage fortified with evaporated sugarcane juice on hemoglobin levels in preschool children.",
+    "title": "Effect of a beverage fortified with evaporated sugarcane juice on hemoglobin levels in preschool children.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Cashew juice (caju) is the base, fortified with either rapadura (evaporated sugarcane juice) or refined sugar. Rapadura is defined as unbleached, unrefined sweetener obtained from the sugarcane plant (Saccharum officinarum), essentially pure, dried juice.",
+    "actantes_relacoes": "Humans: preschool children, researchers, school professionals (nutritionist, medical officer), participants’ mothers. Non-humans: cashew juice, rapadura, refined sugar, ascorbic acid, iron, hemoglobin, sugarcane plant (Saccharum officinarum), blood samples, laboratory equipment (automatic analyzer), state-run school in Sobral, Brazil, WHO criteria, Ethics Committee, Brazilian National Health Council Resolution no. 196/96",
+    "enquadramento_regime": "The beverage is framed within the scientific regime of nutritional intervention and public health. It is normatized by WHO criteria for anemia and regulated by ethical guidelines for research involving human beings (Brazilian National Health Council Resolution no. 196/96). The study classifies and compares the beverage sweetened with rapadura versus refined sugar, assessing their impact on hemoglobin levels.",
+    "contexto_tradicional": "Rapadura is described as a regional foodstuff with high iron content, readily available, and of low-cost in Latin America, especially Brazil and Venezuela, and the countries of the Caribbean.",
+    "desfecho_conclusao": "Consumption of a beverage sweetened with rapadura increased hemoglobin levels and reduced iron deficiency anemia in preschool children aged 2-3 years in the studied school in Sobral, Brazil."
+  }
+}

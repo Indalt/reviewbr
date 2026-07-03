@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_anti-inflammatory and wound healing potential of cashew apple juice (anacardium occidentale l.) in mice.",
+    "title": "Anti-inflammatory and wound healing potential of cashew apple juice (Anacardium occidentale L.) in mice.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O texto define a bebida de caju como um pseudfruto tropical consumido como suco devido às suas excelentes propriedades nutricionais e sensoriais. É rica em vitamina C, ácidos orgânicos, antioxidantes, minerais e carboidratos. O texto também se refere à cajuína, uma forma concentrada e processada do suco, como um produto popular no Nordeste do Brasil.",
+    "actantes_relacoes": "Os actantes que intra-agem para formar a bebida, de acordo com o texto, incluem: a planta *Anacardium occidentale* (a árvore do caju), o clima e condições ambientais (temperatura, precipitação), o processo de colheita (frutos maduros e imaturos), o processamento (uso de processador de alimentos, filtragem), a diluição em água, o armazenamento em baixas temperaturas, os compostos químicos (antioxidantes, fenólicos, vitamina C), e os camundongos (como modelo experimental).",
+    "enquadramento_regime": "O texto enquadra a bebida principalmente dentro do regime da ciência (pesquisa experimental, análise fitoquímica, avaliação de propriedades anti-inflamatórias e cicatrizantes) e da nutrição (propriedades nutricionais, potencial terapêutico). Menciona o potencial econômico da bebida, mas não detalha seu enquadramento em regimes de estado ou propriedade.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O principal achado do estudo é que o suco de caju verde (UNCAJ) apresenta melhores atividades anti-inflamatórias e de cicatrização de feridas do que o suco de caju maduro (RCAJ), provavelmente devido a um efeito sinérgico de seus componentes fitoquímicos que melhoram os mecanismos de defesa imunológica e equilibram a sinalização e neutralização de espécies reativas de oxigênio (ROS)."
+  }
+}

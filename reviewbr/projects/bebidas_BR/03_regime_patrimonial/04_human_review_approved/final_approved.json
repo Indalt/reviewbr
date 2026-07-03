@@ -1,0 +1,134 @@
+[
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title and keywords suggest a possible connection to traditional beverages, potentially including cashew-based drinks within an indigenous cultural context. However, the lack of an abstract makes it difficult to determine if the paper discusses relevant cultural heritage inventories or registers related to the topic. Further information is needed to confirm.",
+    "record": {
+      "identifier": "https://openalex.org/W2280419429",
+      "title": "OUTRAS ALEGRIAS: CACHAÇA E CAUIM NA EMBRIAGUEZ MBYÁ-GUARANI",
+      "description": "",
+      "creators": [
+        "Guilherme Orlandini Heurich"
+      ],
+      "date": "2015-12-01",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title mentions 'Cachaça e Cauim', indicating a focus on alcoholic beverages.",
+        "The mention of 'Mbyá-Guarani' suggests a possible link to indigenous cultural practices.",
+        "It is unclear if the paper discusses cultural inventories or registers related to cashew-based beverages due to the absence of an abstract."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "03_regime_patrimonial",
+    "_unique_id": "TITLE_outras alegrias: cachaça e cauim na embriaguez mbyá-guarani"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions a beverage based on cashew apple, which could potentially relate to the cultural practices surrounding the caju beverage, as well as its chemical/physicochemical stability, and if this links to relevant INRC, dossiês or resolutions.",
+    "record": {
+      "identifier": "https://openalex.org/W3113611037",
+      "title": "Chemical and physicochemical stability of beverage based integral cashew apple and honey",
+      "description": "",
+      "creators": [
+        "Giovana Matias do Prado",
+        "Geraldo Arraes Maia",
+        "Raimundo Wilane de Figueiredo",
+        "Jorgiane Silva Severino Lima",
+        "Claísa Andrea Freitas Rabelo",
+        "Paulo Henrique Machado de Sousa"
+      ],
+      "date": "2020-12-19",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title suggests a focus on a cashew apple beverage.",
+        "The abstract is unavailable, making it difficult to determine the paper's specific content and connection to cultural heritage documentation.",
+        "The paper potentially refers to a traditional beverage made from cashew, so it could contain some information relating to the cultural aspects."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "en",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "03_regime_patrimonial",
+    "_unique_id": "TITLE_chemical and physicochemical stability of beverage based integral cashew apple and honey"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title and keywords suggest a focus on food culture. The mention of 'sabores' (flavors) and 'sistemas alimentares' (food systems) is promising, but the connection to the specific requirements of INRC, dossiers, resolutions related to caju beverage needs further investigation.",
+    "record": {
+      "identifier": "https://openalex.org/W2344740940",
+      "title": "Saberes e sabores da cultura kalunga : origens e consequências das alterações nos sistemas alimentares",
+      "description": "",
+      "creators": [
+        "Cecilia Ricardo Fernandes"
+      ],
+      "date": "2014-12-15",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title mentions 'saberes e sabores' of a specific culture, which suggests a focus on cultural practices related to food.",
+        "The phrase 'sistemas alimentares' implies an examination of how food is produced, processed, and consumed within that culture.",
+        "The connection to INRC, dossiers, and resolutions related to caju beverage needs to be confirmed to determine relevance."
+      ],
+      "supporting_sentences": [
+        "Saberes e sabores da cultura kalunga",
+        "origens e consequências das alterações nos sistemas alimentares"
+      ]
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "03_regime_patrimonial",
+    "_unique_id": "TITLE_saberes e sabores da cultura kalunga : origens e consequências das alterações nos sistemas alimentares"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions \"Ebriedades\" (drunkenness) and the Amazon, which could relate to fermented beverages, including cashew-based ones. However, without an abstract, it's difficult to determine if the paper specifically discusses cultural heritage inventories, registration dossiers, or cultural masters related to cashew beverages.",
+    "record": {
+      "identifier": "https://openalex.org/W3005992626",
+      "title": "Ebriedades na Amazônia Colonial: cosmologias do Rio Negro e as tentativas de coerção no tempo do Diretório (1754-1802)",
+      "description": "",
+      "creators": [
+        "Cauê Dal Colletto Alves Tanan da Silva"
+      ],
+      "date": "2020-02-06",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title suggests a focus on alcoholic beverages in the Amazon.",
+        "The mention of \"cosmologias\" hints at cultural practices related to these beverages.",
+        "The lack of an abstract makes it impossible to confirm a direct connection to INRC, registration dossiers, or lists of cultural masters related to cashew beverages."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "03_regime_patrimonial",
+    "_unique_id": "TITLE_ebriedades na amazônia colonial: cosmologias do rio negro e as tentativas de coerção no tempo do diretório (1754-1802)"
+  }
+]

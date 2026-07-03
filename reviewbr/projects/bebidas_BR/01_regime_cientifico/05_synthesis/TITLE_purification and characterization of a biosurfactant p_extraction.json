@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_purification and characterization of a biosurfactant produced by bacillus subtilis in cashew apple juice and its application in the remediation of oil-contaminated soil.",
+    "title": "Purification and characterization of a biosurfactant produced by Bacillus subtilis in cashew apple juice and its application in the remediation of oil-contaminated soil.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Não mencionado",
+    "actantes_relacoes": "Bacillus subtilis LAMI005 (microrganismo), clarified cashew apple juice (fonte de carbono e energia), surfactin (lipopeptídeo), água, n-hexadecane, hidrocarbonetos (diesel, querosene, gasolina, tolueno, n-hexadecano, heptano), pH, temperatura, salinidade, solo contaminado com óleo, sementes de Lactuca sativa, Artemia salina, tensiômetro, espectrômetro, cromatógrafo, indústrias (alimentícia, farmacêutica, cosmética).",
+    "enquadramento_regime": "A bebida de caju (clarified cashew apple juice) é enquadrada como um resíduo agroindustrial (agro-industry waste) e substrato alternativo para a produção de biossurfactantes, visando reduzir custos e aumentar a sustentabilidade na produção industrial de surfactina.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O estudo conclui que o suco de caju clarificado é um meio de cultura adequado para o crescimento de Bacillus e produção de biossurfactantes, em especial o Bacillus subtilis LAMI005. O biossurfactante produzido, identificado como um lipopeptídeo cíclico (surfactina), demonstra estabilidade e eficácia em diferentes condições ambientais e na remoção de contaminantes de hidrocarbonetos do solo, apresentando baixo nível de toxicidade e potencial para aplicações em biorremediação."
+  }
+}

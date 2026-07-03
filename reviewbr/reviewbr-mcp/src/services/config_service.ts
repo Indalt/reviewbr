@@ -50,7 +50,7 @@ export class ConfigService {
      */
     private getDefaults(): ProjectConfig {
         return {
-            geminiModel: 'gemini-2.0-flash',
+            geminiModel: 'gemini-2.5-flash-lite',
             pdfParserVersion: '1.1.4',
             protocolPath: '00_protocol/protocol.md',
             isLocked: false,

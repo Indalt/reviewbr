@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_evaluation of physicochemical properties of south african cashew apple juice as a biofuel feedstock",
+    "title": "Evaluation of Physicochemical Properties of South African Cashew Apple Juice as a Biofuel Feedstock",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Cashew apple juice (CAJ) is defined as a feedstock used for biofuel production, specifically ethanol. It is also characterized by its physical and chemical properties, including specific gravity, pH, sugar content, condensed tannins, Vitamin C, minerals, and total protein.",
+    "actantes_relacoes": "The actants include: Cashew apple (variety and maturity), Cashew tree (species Anacardium occidentale Linn var. nanum, age and health), Climate (temperature, rainfall, sunlight), Soil (composition and nutrients), Extraction process (method, equipment - KENWOOD-JE720 food processor), Yeast (Saccharomyces cerevisiae strains), Sugars (glucose, fructose, maltose), Tannins, Vitamin C, Minerals (zinc, copper, magnesium, iron, sodium, and manganese), Researchers (methods of analysis, interpretation), Gelatine powder (for tannin precipitation), Centrifuge (BECKMAN model TJ-6), and the Coastal Cashew plantation environment (KwaNgwanase region, KwaZulu-Natal province of South Africa). These intra-act to influence the physicochemical properties and the suitability of the juice for ethanol production.",
+    "enquadramento_regime": "The document frames the cashew apple juice (CAJ) within the regime of biofuel feedstock evaluation, specifically for ethanol production. It aims to document its physicochemical characteristics to legitimize its use as a biomass feedstock in South Africa. It also normatizes the CAJ properties by comparing them with CAJ from other regions and determining their suitability for fermentation. The research also touches on economic viability by mentioning the low cost, that use as biofuel feedstock will prevent discarding of the product, and mentioning that it is the properties that are most useful that encourage yeast growth.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "The central argument is that South African cashew apple juice (CAJ) possesses suitable physicochemical characteristics, particularly high sugar content, making it a viable feedstock for ethanol production. The study concludes that the properties of CAJ stimulate and support yeast growth for ethanol fermentation, and CAJ prevents contamination of the sugary content to achieve maximum ethanol yield."
+  }
+}

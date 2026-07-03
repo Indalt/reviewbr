@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_suco de caju contendo oligossacarídeos prébioticos",
+    "title": "Suco de caju contendo oligossacarídeos prébioticos",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Suco de caju clarificado, rico em glicose e frutose, que funciona como fonte de aceptores para a síntese de oligossacarídeos prebióticos.",
+    "actantes_relacoes": "Sacarose, glicose, frutose, enzima dextrana-sacarase, Leuconostoc mesenteroides NRRL B512F, polietileno glicol (PEG 1500), temperatura, pH, tubos de ensaio, água destilada, gelatina.",
+    "enquadramento_regime": "Dentro do regime da Ciência e Tecnologia de Alimentos, como substrato de baixo custo para síntese de oligossacarídeos prebióticos via processo enzimático. Enquadrado também como alimento funcional com potencial benefício para a saúde.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O suco de caju clarificado pode ser empregado como substrato de baixo custo para a síntese enzimática de oligossacarídeos prebióticos com a enzima dextrana-sacarase, com maior concentração de oligossacarídeos obtida com 75 g/L de sacarose e 75 g/L de açúcares redutores, e obtenção de oligossacarídeos com grau de polimerização até 12."
+  }
+}

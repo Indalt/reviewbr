@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_desenvolvimento e caracterização de bebidas produzidas à base de castanha de caju (anacardium occidentale l.)",
+    "title": "Desenvolvimento e caracterização de bebidas produzidas à base de castanha de caju (Anacardium occidentale L.)",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Bebida definida como extrato aquoso da castanha de caju (Anacardium occidentale L.) fermentado com culturas bacterianas, podendo ser funcional ou simbiótica dependendo da adição de probióticos e prebióticos.",
+    "actantes_relacoes": "Castanha de caju, água, culturas starter (Streptococcus thermophilus e Lactobacillus delbrüeckii subsp. Bulgaricus), Lactobacillus acidophilus, frutooligossacarídeo (FOS), sacarose, temperatura, pH, legislação (Instrução Normativa nº46/2007 e outras), equipamentos de laboratório, pesquisadores, consumidores.",
+    "enquadramento_regime": "Enquadrada como alimento funcional (formulação L3) de acordo com a legislação vigente, desde que atenda aos critérios de contagem de probióticos viáveis. Normatizada pela Instrução Normativa nº46/2007 (apesar de ser um produto não lácteo, utilizada como referência). Pode ser classificada como parcialmente desnatada ou com creme dependendo do teor de gordura.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "A formulação simbiótica (L3) à base de extrato aquoso de castanha de caju com adição de FOS mostrou-se viável e pode ser utilizada como substituto para produtos lácteos convencionais, apresentando características físico-químicas e microbiológicas adequadas e potencial funcional probiótico."
+  }
+}

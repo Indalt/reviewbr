@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_análise dos componentes que influenciam no processamento seguro da cajuína sob a ótica do appcc: uma revisão",
+    "title": "Análise dos componentes que influenciam no processamento seguro da cajuína sob a ótica do APPCC: uma revisão",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Bebida não fermentada e não diluída, obtida da parte comestível do pedúnculo do caju (Anacardium ocidentale L.) por meio de processo tecnológico adequado. É também definida como o suco do caju clarificado comercializada e consumida na forma líquida.",
+    "actantes_relacoes": "Caju (pedúnculo), água, cloro, gelatina de grau alimentício, garrafas de vidro, equipamentos de processamento (prensa, filtros), microrganismos (E. coli, Salmonella, Staphylococcus aureus, Listeria monocytogenes), pesticidas, ANVISA, manipuladores, produtores, consumidores, legislação (Instrução Normativa n° 1, RDC n° 14/2014, decreto nº 6.871), equipe de qualidade, laudos de cultivo, temperatura, tempo.",
+    "enquadramento_regime": "A cajuína é classificada dentro do regime da segurança alimentar e saúde pública, normatizada por legislações (Instrução Normativa n° 1, RDC n° 14/2014, decreto nº 6.871) que estabelecem padrões de identidade e qualidade e controlada através do plano APPCC (Análise de Perigos e Pontos Críticos de Controle) para garantir a segurança do consumidor.",
+    "contexto_tradicional": "A cajuína é mencionada como uma bebida tradicional muito apreciada na região Nordeste do Brasil e como Patrimônio Cultural Brasileiro da Produção Tradicional e Práticas Socioculturais no Piauí. Não há menção explícita a povos originários do Ceará ou à agricultura familiar/tradicional, além da menção de seu forte apelo de identificação e pertencimento aos piauienses.",
+    "desfecho_conclusao": "A ferramenta APPCC é aplicável em unidades agroindustriais produtoras de cajuína para minimizar os perigos associados à produção da bebida, garantindo a segurança do consumidor, o cumprimento das especificações legais e a melhor aceitação do produto."
+  }
+}

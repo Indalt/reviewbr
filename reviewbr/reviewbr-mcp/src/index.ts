@@ -18,6 +18,10 @@ import { PubMedService } from "./services/pubmed.js";
 import { CrossrefService } from "./services/crossref.js";
 import { DatabaseService } from "./services/database.js";
 import { PrismaFlowValidator, PrismaFlowSchema } from "./services/prisma_validator.js";
+import { FlowComputer } from "./services/flow_computer.js";
+import { indexCorpus, queryCorpus } from "./services/rag_lexical.js";
+import { ProjectStateService } from "./services/project_state.js";
+import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening } from "./services/project_artifacts.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -29,11 +33,11 @@ import { MethodologyAuditorService } from "./services/methodology_auditor.js";
 import { ProtocolDesignAuditor } from "./services/protocol_auditor.js";
 import { ScreeningMetricsService } from "./services/screening_metrics.js";
 import { AsreviewBridgeService } from "./services/asreview_bridge.js";
+import { ScihubBridgeService } from "./services/scihub_bridge.js";
 import { RepositoryHealerService } from "./services/repository_healer.js";
 import { config } from "./config.js";
 import { logger } from "./utils/structured_logger.js";
 import { BatchProcessorService } from "./services/batch_processor.js";
-import { AgentOrchestrator } from "./services/agent_orchestrator.js";
 
 import * as path from "node:path";
 import * as fs from "node:fs";
@@ -67,23 +71,22 @@ const auditorService = new MethodologyAuditorService();
 const protocolAuditor = new ProtocolDesignAuditor();
 const screeningMetricsService = new ScreeningMetricsService();
 const asreviewBridge = new AsreviewBridgeService();
+const scihubBridge = new ScihubBridgeService();
 const repositoryHealerService = new RepositoryHealerService();
-const orchestrator = new AgentOrchestrator("PROJETISTA");
 
 /**
- * RBAC Guard: wraps every tool handler with permission checking.
- * If the current agent doesn't have permission, returns a rejection
- * message instead of executing. This avoids modifying all handlers.
+ * RBAC de runtime APOSENTADO (modelo multi-subagente).
+ *
+ * O modelo antigo mantinha UM papel mutável no servidor ("um chapéu por vez") e
+ * bloqueava toda tool fora dele — o que travava um cliente novo (default PROJETISTA)
+ * de buscar ou triar até chamar switch_agent. No cockpit multi-subagente do Claude Code,
+ * a fronteira de papéis é o allow-list de cada subagente em `.claude/agents/`, e o
+ * guardião DECLARATIVO (consultável) vive em `registry/agent_orchestrator.ts`
+ * (defense-in-depth). Por isso `guardedHandler` vira PASS-THROUGH — mantém os
+ * call-sites existentes sem bloquear em runtime.
  */
-function guardedHandler(toolName: string, handler: (params: any) => Promise<any>) {
-    return async (params: any) => {
-        if (!orchestrator.isAllowed(toolName)) {
-            return {
-                content: [{ type: "text", text: orchestrator.getRejectionMessage(toolName) }],
-            };
-        }
-        return handler(params);
-    };
+function guardedHandler(_toolName: string, handler: (params: any) => Promise<any>) {
+    return handler;
 }
 
 /**
@@ -114,6 +117,26 @@ async function logToLocalProject(projectPath: string, toolName: string, data: an
 
 async function checkDesignGuardrail(projectId?: number, projectPath?: string): Promise<string | null> {
     let id = projectId;
+    // Fonte da verdade = estado ON-DISK (RV-01). Preview (sem projectPath) NUNCA bloqueia.
+    if (projectPath) {
+        const projectDir = path.isAbsolute(projectPath) ? projectPath : path.join(process.cwd(), projectPath);
+        const st = ProjectStateService.read(projectDir);
+        if (st) {
+            if (st.status !== "LOCKED") {
+                return `🚫 ACESSO NEGADO: o protocolo está em ${st.status}. Preencha o protocol.md e aprove via 'submit_protocol_for_approval' antes de iniciar buscas/mineração.`;
+            }
+            return null; // LOCKED → liberado
+        }
+        // Fallback: marcador [LOCKED] no protocol.md da raiz
+        const protoPath = path.join(projectDir, "protocol.md");
+        if (fs.existsSync(protoPath)) {
+            if (!/\[LOCKED\]/.test(fs.readFileSync(protoPath, "utf-8"))) {
+                return `🚫 ACESSO NEGADO: o protocol.md ainda não está [LOCKED]. Aprove via 'submit_protocol_for_approval'.`;
+            }
+            return null;
+        }
+    }
+    // Fallback legado (projetos antigos rastreados só no SQLite)
     if (!id && projectPath) {
         const project = await dbService.findProjectByPath(projectPath);
         if (project) id = project.id;
@@ -121,7 +144,7 @@ async function checkDesignGuardrail(projectId?: number, projectPath?: string): P
     if (id) {
         const project = await dbService.getProjectById(id);
         if (project && project.status === "DRAFT_DESIGN") {
-            return `🚫 ACESSO NEGADO: O projeto "${project.project_name}" está bloqueado em DRAFT_DESIGN. A fase de execução e mineração (ferramentas de busca/triagem) não pode iniciar sem um planejamento metodológico. Preencha o arquivo 'draft_protocol.md' e solicite aprovação via 'submit_protocol_for_approval'.`;
+            return `🚫 ACESSO NEGADO: O projeto "${project.project_name}" está bloqueado em DRAFT_DESIGN. Preencha o protocolo e solicite aprovação via 'submit_protocol_for_approval'.`;
         }
     }
     return null;
@@ -293,25 +316,10 @@ const server = new McpServer({
 
 });
 
-// ─── RBAC Proxy ───────────────────────────────────────────────
-// Wrap the server.tool method to automatically apply RBAC guard
-// to every tool registration. This avoids modifying 29+ handlers.
-
-const RBAC_EXEMPT_TOOLS = new Set(["get_current_agent", "switch_agent"]);
-const originalToolMethod = server.tool.bind(server);
-
-server.tool = function (...args: any[]) {
-    const toolName = args[0] as string;
-    const handlerIdx = args.length - 1; // handler is always the last arg
-    const originalHandler = args[handlerIdx];
-
-    if (!RBAC_EXEMPT_TOOLS.has(toolName) && typeof originalHandler === "function") {
-        args[handlerIdx] = guardedHandler(toolName, originalHandler);
-    }
-
-    return (originalToolMethod as any)(...args);
-} as any;
-
+// ─── RBAC Proxy REMOVIDO ──────────────────────────────────────
+// O proxy que auto-embrulhava toda tool com o guard de runtime foi removido
+// junto com o modelo "um chapéu por vez". A governança de papéis agora é
+// declarativa (registry/agent_orchestrator.ts) + allow-list dos subagentes.
 
 // ─── Resources ────────────────────────────────────────────────
 
@@ -341,33 +349,10 @@ server.resource(
     })
 );
 
-// ─── Agent Orchestrator Tools ─────────────────────────────────
-
-server.tool(
-    "get_current_agent",
-    "Mostra o agente ativo e suas ferramentas disponíveis. Acessível por todos os agentes.",
-    {},
-    async () => {
-        return {
-            content: [{ type: "text", text: orchestrator.getStatusReport() }],
-        };
-    }
-);
-
-server.tool(
-    "switch_agent",
-    "Troca o agente ativo. EXCLUSIVO DO COORDINATOR. Papéis: PROJETISTA, COORDINATOR, LIBRARIAN, SCREENER, EXTRACTOR, ANALYST.",
-    {
-        targetRole: z.enum(["PROJETISTA", "COORDINATOR", "LIBRARIAN", "SCREENER", "EXTRACTOR", "ANALYST"])
-            .describe("O papel do agente para ativar"),
-    },
-    async (params) => {
-        const result = orchestrator.switchAgent(orchestrator.getCurrentRole(), params.targetRole);
-        return {
-            content: [{ type: "text", text: result.message }],
-        };
-    }
-);
+// ─── Agent Orchestrator Tools REMOVIDAS ───────────────────────
+// `get_current_agent` e `switch_agent` foram aposentadas com o modelo de papel
+// mutável. No cockpit multi-subagente, cada subagente (.claude/agents/) já é um
+// papel isolado com seu próprio allow-list — não há chapéu para trocar em runtime.
 
 // ─── PROJETISTA Knowledge Resource ────────────────────────────
 
@@ -468,9 +453,8 @@ server.tool(
         // Next steps
         sections.push(`\n### ➡️ Próximos Passos\n`);
         sections.push(`1. Pesquisador confirma ou ajusta o design`);
-        sections.push(`2. PROJETISTA chama \`plan_research_protocol\` com os parâmetros definidos`);
-        sections.push(`3. COORDINATOR assume via \`switch_agent\``);
-        sections.push(`4. COORDINATOR ativa o LIBRARIAN para iniciar as buscas`);
+        sections.push(`2. O subagente **designer** chama \`plan_research_protocol\` e trava o protocolo`);
+        sections.push(`3. O coordenador (skill conduct-review) aciona o subagente **librarian** para as buscas`);
 
         return {
             content: [{ type: "text", text: sections.join("\n") }],
@@ -512,6 +496,7 @@ server.tool(
 
         if (projectId) {
             await dbService.insertRecords(projectId, "optimized_search", results);
+            if (params.projectPath) appendRawRecords(params.projectPath, results, "database");
             await dbService.lockProject(projectId);
             await dbService.logAuditEvent({
                 project_id: projectId,
@@ -545,23 +530,47 @@ server.tool(
 
 server.tool(
     "deduplicate_dataset",
-    "Remove duplicatas de um conjunto de resultados (JSON).",
+    "Deduplica os resultados (F3). Com projectPath: CONSOLIDA todos os brutos de 01_raw/*.json (todas as fontes), grava 01_raw/database_records.json e escreve 02_deduplicated/dataset.json + dedupe_report.json (RV-02). Sem projectPath: deduplica o JSON passado e só retorna.",
     {
-        dataset: z.string().describe("JSON string com array de resultados (SearchResult[])"),
+        dataset: z.string().optional().describe("JSON string com array de resultados (opcional se projectPath for informado — nesse caso consolida 01_raw)"),
+        projectPath: z.string().optional().describe("Raiz do projeto: consolida 01_raw e persiste os artefatos canônicos"),
     },
     async (params) => {
-        let records;
-        try {
-            records = JSON.parse(params.dataset);
-        } catch (e) {
-            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
+        let records: any[] = [];
+        let consolidatedNote = "";
+
+        if (params.projectPath) {
+            const { database, other } = consolidateRaw(params.projectPath);
+            records = [...database, ...other];
+            consolidatedNote = `Consolidados de 01_raw: ${database.length} (bases) + ${other.length} (outras fontes).\n`;
+        } else if (params.dataset) {
+            try { records = JSON.parse(params.dataset); }
+            catch { return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] }; }
+        } else {
+            return { content: [{ type: "text", text: "Informe 'dataset' (JSON) ou 'projectPath' (para consolidar 01_raw)." }] };
         }
 
         const result = dedupeService.deduplicate(records);
+
+        if (params.projectPath) {
+            writeDeduped(params.projectPath, result.unique, {
+                method: "DOI > título+ano > url",
+                total_before: result.stats.total,
+                duplicates_removed: result.stats.duplicates,
+                total_after: result.stats.unique,
+                generated: new Date().toISOString(),
+            });
+            ProjectStateService.setPhase(
+                path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath),
+                "F3",
+            );
+        }
+
         return {
             content: [{
                 type: "text",
-                text: JSON.stringify(result, null, 2)
+                text: `${consolidatedNote}Deduplicação: ${result.stats.total} → ${result.stats.unique} únicos (${result.stats.duplicates} duplicatas removidas).` +
+                    (params.projectPath ? `\nGravado: 02_deduplicated/dataset.json + dedupe_report.json.` : `\n\n${JSON.stringify(result.stats, null, 2)}`),
             }]
         };
     }
@@ -569,29 +578,73 @@ server.tool(
 
 server.tool(
     "screen_candidates",
-    "Triagem de candidatos usando IA (Gemini). Requer GOOGLE_API_KEY. Irá usar o texto completo extraído automaticamente se disponível no projectPath.",
+    "Triagem por IA (Gemini). stage='ta' (título/resumo) ou 'fulltext' (texto completo). Com projectPath e sem 'candidates', lê o insumo do funil automaticamente (ta ← 02_deduplicated/dataset.json; fulltext ← 03_screening/included_ta.json) e grava included/excluded por estágio (RV-02). A triagem TA deve ser DECISIVA usando os critérios+booleanos — não empurre tudo para 'maybe'.",
     {
-        candidates: z.string().describe("JSON string com array de candidatos"),
-        criteria: z.string().describe("Critérios de inclusão/exclusão"),
-        projectPath: z.string().optional().describe("Caminho do projeto (ex: projects/meu_projeto) para buscar o texto completo."),
+        candidates: z.string().optional().describe("JSON com array de candidatos (opcional se projectPath+stage forem dados)"),
+        criteria: z.string().describe("Critérios de inclusão/exclusão (derivados do protocolo)"),
+        stage: z.enum(["ta", "fulltext"]).optional().describe("Fase da triagem (default: ta)"),
+        projectPath: z.string().optional().describe("Raiz do projeto: lê o insumo e persiste os artefatos por estágio"),
     },
     async (params) => {
         if (!config.hasLlmKey) {
             return { content: [{ type: "text", text: "Nenhuma chave de API de LLM configurada (GOOGLE_API_KEY, OPENAI_API_KEY ou ANTHROPIC_API_KEY)." }] };
         }
 
-        let records;
-        try {
-            records = JSON.parse(params.candidates);
-        } catch (e) {
-            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
+        const stage = params.stage ?? "ta";
+        let records: any[] = [];
+        if (params.candidates) {
+            try { records = JSON.parse(params.candidates); }
+            catch { return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] }; }
+        } else if (params.projectPath) {
+            const dir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
+            const inputRel = stage === "ta" ? "02_deduplicated/dataset.json" : "03_screening/included_ta.json";
+            const inputPath = path.join(dir, inputRel);
+            if (!fs.existsSync(inputPath)) {
+                return { content: [{ type: "text", text: `Insumo da triagem ${stage} não encontrado: ${inputRel}. Rode a fase anterior primeiro.` }] };
+            }
+            try {
+                const parsed = JSON.parse(fs.readFileSync(inputPath, "utf-8"));
+                records = Array.isArray(parsed) ? parsed : (parsed.records ?? parsed.included ?? []);
+                // se vier de included_ta (ScreeningResult[]), extrai o .record
+                records = records.map((r: any) => r?.record ?? r);
+            } catch { return { content: [{ type: "text", text: `Erro ao ler ${inputRel}.` }] }; }
+        } else {
+            return { content: [{ type: "text", text: "Informe 'candidates' ou 'projectPath'+'stage'." }] };
         }
 
         const result = await screeningService.screenCandidates(records, params.criteria, params.projectPath);
+
+        // Falha ruidosa: se TUDO errou, não finja sucesso silencioso nem avance a fase.
+        const totalDecided = result.included.length + result.excluded.length;
+        if (result.errors.length > 0 && totalDecided === 0) {
+            const sample = [...new Set(result.errors)].slice(0, 3).join(" | ");
+            return {
+                content: [{
+                    type: "text",
+                    text: `❌ Triagem ${stage.toUpperCase()} FALHOU para todos os ${records.length} candidatos (0 decisões, ${result.errors.length} erros). Nada foi gravado, fase NÃO avançou.\nAmostra de erros: ${sample}\n\nVerifique GOOGLE_API_KEY/OPENAI_API_KEY/ANTHROPIC_API_KEY em reviewbr-mcp/.env (chave inválida/expirada é a causa mais comum).`,
+                }]
+            };
+        }
+
+        if (params.projectPath) {
+            writeScreening(params.projectPath, stage, result.included, result.excluded);
+            ProjectStateService.setPhase(
+                path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath),
+                "F4",
+            );
+        }
+
+        const excludedRel = stage === "ta" ? "excluded_ta.json" : "excluded_fulltext.json";
+        const includedRel = stage === "ta" ? "included_ta.json (encaminhados p/ texto completo)" : "included.json (incluídos finais)";
+        const errorNote = result.errors.length > 0
+            ? `\n⚠️ ${result.errors.length} candidato(s) com erro na triagem (não decididos, não incluídos nem excluídos): ${[...new Set(result.errors)].slice(0, 3).join(" | ")}`
+            : "";
         return {
             content: [{
                 type: "text",
-                text: JSON.stringify(result, null, 2)
+                text: `Triagem ${stage.toUpperCase()}: ${result.included.length} incluídos, ${result.excluded.length} excluídos.` +
+                    (params.projectPath ? `\nGravado: 03_screening/${includedRel} + 03_screening/${excludedRel}.` : `\n\n${JSON.stringify(result, null, 2)}`) +
+                    errorNote,
             }]
         };
     }
@@ -786,6 +839,7 @@ server.tool(
 
         if (projectId) {
             await dbService.insertRecords(projectId, "pubmed", results);
+            if (params.projectPath) appendRawRecords(params.projectPath, results, "database");
             await dbService.lockProject(projectId);
             await dbService.logAuditEvent({
                 project_id: projectId,
@@ -999,6 +1053,7 @@ server.tool(
 
         if (projectId) {
             await dbService.insertRecords(projectId, "repository", allResults);
+            if (params.projectPath) appendRawRecords(params.projectPath, allResults, "database");
             await dbService.lockProject(projectId);
             await dbService.logAuditEvent({
                 project_id: projectId,
@@ -1212,7 +1267,7 @@ server.tool(
 
 server.tool(
     "plan_research_protocol",
-    "Planeja um novo projeto de pesquisa, registra no banco central e cria a estrutura de pastas.",
+    "Planeja um novo projeto de pesquisa, registra no banco central e cria a estrutura de pastas. CONVENÇÃO CANÔNICA (não pergunte ao usuário — use direto): todo projeto vive em '<raiz-do-repo>/reviewbr/projects/<nome-do-projeto>'. NUNCA crie projetos dentro de 'reviewbr/reviewbr-mcp/' (isso é código do servidor, não dado — reviewbr-mcp/projects/ é local legado, não usar).",
     {
         name: z.string().describe("Nome do projeto"),
         userId: z.string().describe("ID do usuário"),
@@ -1225,7 +1280,7 @@ server.tool(
             "rapid_review",
             "exploratory"
         ]).describe("Tipo de pesquisa"),
-        projectPath: z.string().describe("Caminho base onde o projeto será criado"),
+        projectPath: z.string().describe("Caminho ONDE o projeto será criado. CONVENÇÃO FIXA: '<raiz-do-repo>/reviewbr/projects/<nome-do-projeto>' (ex: 'reviewbr/projects/bebidas_maca_do_coco'). Nunca dentro de reviewbr-mcp/."),
     },
     async (params) => {
         const projectId = await projectInitService.register(params as any, dbService);
@@ -1242,10 +1297,10 @@ server.tool(
 
 server.tool(
     "submit_protocol_for_approval",
-    "Analisa o 'draft_protocol.md' para liberar o projeto para a fase de mineração (ACTIVE_MINING). Somente após aprovação, as buscas poderão ser feitas.",
+    "Audita o 'protocol.md' (na raiz do projeto) e, se aprovado, TRAVA o protocolo ([LOCKED]) liberando a fase de mineração. Somente após aprovação as buscas oficiais podem ser feitas (RV-01).",
     {
         projectId: z.number().optional(),
-        projectPath: z.string().describe("Caminho do projeto onde está o '00_protocol/draft_protocol.md'"),
+        projectPath: z.string().describe("Caminho da raiz do projeto (onde está o 'protocol.md')"),
     },
     async (params) => {
         let projectId = params.projectId;
@@ -1254,40 +1309,49 @@ server.tool(
             if (project) projectId = project.id;
         }
 
-        if (!projectId) {
-            return { content: [{ type: "text", text: "Erro: Projeto não encontrado no banco." }] };
-        }
-
         const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
-        const protocolPath = path.join(projectDir, "00_protocol", "draft_protocol.md");
+        const protocolPath = path.join(projectDir, "protocol.md");
+
+        if (!fs.existsSync(protocolPath)) {
+            return { content: [{ type: "text", text: `Erro: protocol.md não encontrado em ${projectDir}. Crie o projeto com plan_research_protocol primeiro.` }] };
+        }
 
         const audit = protocolAuditor.auditFile(protocolPath);
 
         if (audit.valid) {
-            await dbService.activateProject(projectId, params.projectPath); // Updates to ACTIVE_MINING
-            await dbService.logAuditEvent({
-                project_id: projectId,
-                tool_name: "submit_protocol_for_approval",
-                action_type: "protocol_approval",
-                params: JSON.stringify(params),
-                result_summary: `Protocolo APROVADO! Score: ${audit.score}/${audit.maxScore}. Status alterado para ACTIVE_MINING.`
-            });
+            // Trava o protocolo NO ARQUIVO ([DRAFT] → [LOCKED])
+            let content = fs.readFileSync(protocolPath, "utf-8");
+            content = /\[DRAFT\]/.test(content)
+                ? content.replace(/\[DRAFT\]/g, "[LOCKED]")
+                : content.replace(/^# /, "**Status**: [LOCKED]\n\n# ");
+            fs.writeFileSync(protocolPath, content, "utf-8");
 
-            // Rename draft to final protocol
-            const finalPath = path.join(projectDir, "00_protocol", "protocol.md");
-            if (fs.existsSync(protocolPath)) fs.renameSync(protocolPath, finalPath);
+            // Estado on-disk = fonte da verdade
+            ProjectStateService.patch(projectDir, { status: "LOCKED", phase: "F2" });
+
+            // SQLite como cache/auditoria (não obrigatório)
+            if (projectId) {
+                await dbService.activateProject(projectId, params.projectPath);
+                await dbService.logAuditEvent({
+                    project_id: projectId,
+                    tool_name: "submit_protocol_for_approval",
+                    action_type: "protocol_approval",
+                    params: JSON.stringify(params),
+                    result_summary: `Protocolo APROVADO (${audit.score}/${audit.maxScore}). [LOCKED].`
+                });
+            }
 
             return {
                 content: [{
                     type: "text",
-                    text: `✅ SUCESSO! Protocolo aprovado por atingir nota ${audit.score}/${audit.maxScore}. O sistema alterou o status do projeto para ACTIVE_MINING e removeu as travas de pesquisa. As ferramentas de busca agora estão liberadas.`
+                    text: `✅ SUCESSO! Protocolo aprovado (${audit.score}/${audit.maxScore}) e TRAVADO ([LOCKED]). As buscas oficiais estão liberadas.`
                 }]
             };
         } else {
             return {
                 content: [{
                     type: "text",
-                    text: `❌ REPROVADO! O protocolo falhou na auditoria (Nota: ${audit.score}/${audit.maxScore}). Corrija o arquivo draft_protocol.md e tente novamente.\n\nErros pendentes:\n${audit.errors.join('\n')}\n\nSugestões:\n${audit.suggestions.join('\n')}`
+                    text: `❌ REPROVADO! O protocolo falhou na auditoria (Nota: ${audit.score}/${audit.maxScore}). Corrija o 'protocol.md' e tente novamente.\n\nErros pendentes:\n${audit.errors.join('\n')}\n\nSugestões:\n${audit.suggestions.join('\n')}`
                 }]
             };
         }
@@ -1332,6 +1396,111 @@ server.tool(
     }
 );
 
+server.tool(
+    "compute_flow_counts",
+    "Deriva o Fluxograma PRISMA (F8.1) a partir dos ARTEFATOS reais do projeto (Regra RV-02: os números emergem do processo, nunca são digitados). Conta os arquivos canônicos, aplica as identidades PRISMA, valida a aritmética (RV-05), faz checagem cruzada de 'included' e sinaliza edições manuais no prisma_flow.json. Grava o arquivo recomputado quando write=true.",
+    {
+        projectPath: z.string().describe("Caminho (absoluto ou relativo ao cwd) da raiz do projeto de revisão"),
+        write: z.boolean().optional().describe("Se true (padrão), grava o prisma_flow.json recomputado; se false, apenas retorna o cálculo"),
+    },
+    async (params) => {
+        const projectDir = path.isAbsolute(params.projectPath)
+            ? params.projectPath
+            : path.join(process.cwd(), params.projectPath);
+
+        if (!fs.existsSync(projectDir)) {
+            return { content: [{ type: "text", text: `Erro: diretório do projeto não encontrado: ${projectDir}` }] };
+        }
+
+        const computer = new FlowComputer();
+        const result = computer.compute(projectDir);
+
+        const shouldWrite = params.write !== false;
+        if (shouldWrite) computer.writeFlow(projectDir, result.computed);
+
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify({
+                    ...result,
+                    written: shouldWrite ? "prisma_flow.json atualizado" : "não gravado (write=false)",
+                }, null, 2),
+            }],
+        };
+    }
+);
+
+// ─── Leitura/RAG do corpus curado (F5.5) ──────────────────────
+
+server.tool(
+    "rag_index_corpus",
+    "Indexa o corpus curado (textos completos dos estudos incluídos) para leitura orientada a objetivo (F5.5). Retriever léxico BM25, 100% local. Cada trecho carrega proveniência (study_id, fonte, url) para citação rastreável (RV-08). Grava rag/index.json. Só indexa .txt/.md — PDFs precisam ser extraídos antes.",
+    {
+        projectPath: z.string().describe("Caminho (absoluto ou relativo ao cwd) da raiz do projeto"),
+        corpusDir: z.string().optional().describe("Subpasta do corpus (padrão tenta 04_extraction/fulltext, 03_screening/fulltext, 03_screening/pdfs)"),
+    },
+    async (params) => {
+        const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
+        try {
+            const r = indexCorpus(projectDir, params.corpusDir);
+            const warn = r.indexed === 0
+                ? `\n\n⚠️ Nenhum texto indexado. ${r.skippedPdfsOnly > 0 ? `Há ${r.skippedPdfsOnly} PDF(s) que precisam ser extraídos para texto antes (o corpus RAG lê .txt/.md).` : ""}`
+                : "";
+            const provWarn = r.missingProvenance.length > 0
+                ? `\n\n⚠️ ${r.missingProvenance.length} estudo(s) sem proveniência completa (RV-08): ${r.missingProvenance.slice(0, 10).join(", ")}`
+                : "";
+            return { content: [{ type: "text", text: JSON.stringify(r, null, 2) + warn + provWarn }] };
+        } catch (e: any) {
+            return { content: [{ type: "text", text: `Erro ao indexar corpus: ${e.message}` }] };
+        }
+    }
+);
+
+server.tool(
+    "rag_query",
+    "Recupera os trechos mais relevantes do corpus indexado para uma pergunta (F5.5), com proveniência rastreável. NÃO redige resposta nem sintetiza — só recupera (RV-06); a síntese/citação é do agente.",
+    {
+        projectPath: z.string().describe("Caminho (absoluto ou relativo ao cwd) da raiz do projeto"),
+        question: z.string().describe("A subpergunta a recuperar"),
+        topK: z.number().optional().describe("Número de trechos a retornar (padrão 8)"),
+    },
+    async (params) => {
+        const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
+        try {
+            const hits = queryCorpus(projectDir, params.question, params.topK ?? 8);
+            return { content: [{ type: "text", text: JSON.stringify(hits, null, 2) }] };
+        } catch (e: any) {
+            return { content: [{ type: "text", text: `Erro na consulta RAG: ${e.message}` }] };
+        }
+    }
+);
+
+// ─── BYOS: recuperação via Sci-Hub (opt-in, nunca automático) ─
+server.tool(
+    "retrieve_fulltext_byos",
+    "BYOS (opt-in): recupera o texto completo via Sci-Hub para um DOI quando o acesso aberto FALHOU. SÓ chame após 'sim' EXPLÍCITO do pesquisador — NUNCA automático. Salva o PDF em 03_screening/pdfs e o texto em 04_extraction/fulltext com proveniência 'Sci-Hub (BYOS)' registrada de forma separável. Requer python + plugins/scihub_extractor.py.",
+    {
+        doi: z.string().describe("DOI do artigo (ex: 10.1590/xyz)"),
+        projectPath: z.string().describe("Raiz do projeto"),
+    },
+    async (params) => {
+        const r = await scihubBridge.retrieveByDoi(params.doi, params.projectPath);
+        if (params.projectPath) {
+            await logToLocalProject(params.projectPath, "retrieve_fulltext_byos", {
+                doi: params.doi, success: r.success, acquisition: "BYOS", error: r.error,
+            });
+        }
+        return {
+            content: [{
+                type: "text",
+                text: r.success
+                    ? `✅ BYOS: full-text de ${params.doi} arquivado (PDF em 03_screening/pdfs, texto em 04_extraction/fulltext; proveniência: Sci-Hub/BYOS, registrada separadamente).` + (r.error ? `\n⚠️ ${r.error}` : "")
+                    : `❌ BYOS falhou para ${params.doi}: ${r.error}`,
+            }]
+        };
+    }
+);
+
 const openAlexHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
@@ -1343,9 +1512,13 @@ const openAlexHandler = async (params: any) => {
         if (project) projectId = project.id;
     }
 
-    const { results, totalFound } = await snowballService.search(params.query, {
+    const { results, totalFound, error } = await snowballService.search(params.query, {
         maxResults: params.maxResults || 200
     });
+
+    if (error) {
+        return { content: [{ type: "text", text: `⚠️ **OpenAlex — lacuna de cobertura (não silenciosa):** ${error}` }] };
+    }
 
     // Audit results
     await dbService.logAuditEvent({
@@ -1475,10 +1648,14 @@ const scieloHandler = async (params: any) => {
     }
 
     // P4310312277 is the OpenAlex Publisher ID for SciELO
-    const { results, totalFound } = await snowballService.search(params.query, {
+    const { results, totalFound, error } = await snowballService.search(params.query, {
         maxResults: params.maxResults || 200,
         filter: "primary_location.source.publisher_lineage:P4310312277"
     });
+
+    if (error) {
+        return { content: [{ type: "text", text: `⚠️ **SciELO (via OpenAlex) — lacuna de cobertura:** ${error}` }] };
+    }
 
     results.forEach(r => {
         r.repositoryId = "scielo";

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_complex coacervates of cashew gum and gelatin as carriers of green coffee oil: the effect of microcapsule application on the rheological and sensorial quality of a fruit juice.",
+    "title": "Complex coacervates of cashew gum and gelatin as carriers of green coffee oil: The effect of microcapsule application on the rheological and sensorial quality of a fruit juice.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O texto define a bebida de caju (cashew gum) como um exsudato da Anacardium occidentale, composto por β-D-galactopyranose (72%), α-D-glucopyranose (14%), α-L-arabinofuranose (4.6%), α-L-trianopyranose (3.2%) e ácido glucurónico (4.5%).",
+    "actantes_relacoes": "Os actantes que intra-agem para formar a bebida (suco de tamarindo com microcápsulas de óleo de café verde) incluem: goma de caju, gelatina, óleo de café verde (rico em cafestol e kahweol), água, tamarindo, adoçante, HCl, KOH, enzimas (pepsina, pancreatina), sais biliares, microrganismos (implícito devido à pasteurização), equipamentos de laboratório (Ultra Turrax, centrífuga, liofilizador, microscópios, cromatógrafo, reômetro), e consumidores (participantes da avaliação sensorial). As relações são complexas, envolvendo interações eletrostáticas, encapsulamento, liberação controlada, reologia, sabor, e aceitação sensorial.",
+    "enquadramento_regime": "A bebida é enquadrada dentro do regime da ciência alimentar, com foco na otimização da estabilidade, liberação controlada e propriedades sensoriais de compostos bioativos (cafestol e kahweol) através da microencapsulação por coacervação complexa. Ela é normatizada através de análises físico-químicas (tamanho de partícula, rendimento do processo, capacidade de carga, eficiência de encapsulamento, estabilidade oxidativa, liberação gastrointestinal simulada) e sensoriais (testes hedônicos, CATA, RATA). O texto não explicita exclusões.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "A coacervação complexa com goma de caju e gelatina é eficiente para encapsular óleo de café verde, protegendo-o da oxidação e permitindo sua incorporação em suco de tamarindo sem alterar suas propriedades reológicas ou sensoriais. As microcápsulas permanecem estáveis durante o processamento e armazenamento, oferecendo uma via viável para a aplicação de óleo de café verde em sucos."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_desenvolvimento de uma bebida fermentada à base de xerém de castanha de caju (anacardium occidentale l.)",
+    "title": "Desenvolvimento de uma bebida fermentada à base de xerém de castanha de caju (Anacardium occidentale L.)",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "A bebida é definida como um néctar misto à base de suco integral de caju e polpa de açaí, potencialmente funcional devido às características nutricionais e antioxidantes das frutas, destinado ao consumo direto após processamento industrial.",
+    "actantes_relacoes": "Os actantes identificados são:\n*   Humanos: Pesquisadores (Analia Maria Pinheiro, orientadores, provadores), produtores, consumidores, funcionários do DETAL, secretários do curso de mestrado, Jandaia Agroindústria Ltda e a Dafruta Indústria e Comércio S.A.\n*   Não-humanos: Caju (Anacardium occidentale L.), Açaí (Euterpe oleracea Mart.), água, sacarose, aditivos (benzoato de sódio, metabissulfito de sódio), embalagens (vidro e PET), clima (implícito nas safras), equipamentos de laboratório (refratômetro, medidor de pH, espectrofotômetro), leis e regulamentos (BRASIL, 2001), artigos científicos revisados (Bates et al, 2001), software estatístico (Statistica).",
+    "enquadramento_regime": "A bebida é enquadrada dentro do regime científico, com a dissertação buscando desenvolver e otimizar sua formulação, analisar suas propriedades físico-químicas, sensoriais e microbiológicas, e avaliar sua estabilidade em diferentes embalagens. Também se enquadra no regime estatal por meio da legislação brasileira que define néctares (BRASIL, 2001, 2005) e no regime da propriedade através de empresas doadoras de materia prima.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O estudo conclui que é possível elaborar um néctar misto de caju e açaí com características desejáveis, definindo a melhor formulação (30% de polpa total, com 54,2% de açaí e 45,8% de caju) e demonstrando que o processamento garante a estabilidade microbiológica por 30 dias, sem diferenças significativas entre embalagens de vidro e PET nos atributos sensoriais."
+  }
+}

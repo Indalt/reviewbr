@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_as plantas comestíveis no brasil dos séculos xvi e xvii segundo relatos de época",
+    "title": "As plantas comestíveis no Brasil dos séculos XVI e XVII segundo relatos de época",
+    "regime": "05_regime_historico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Menciona-se bebidas alcoólicas e vinhos elaborados com a fermentação de diversos tipos de plantas, incluindo mandioca, batata-doce, milho, caju, frutíferas e palmeiras, sendo uma forma popular de consumo entre a população local.",
+    "actantes_relacoes": "Elementos mencionados que intra-agem para formar bebidas incluem: mandioca, batata-doce, milho, caju, frutíferas, palmeiras, população local, festividades, atividades de socialização, e processos de fermentação para neutralizar toxicidade.",
+    "enquadramento_regime": "A produção de bebidas fermentadas está relacionada a práticas culturais e sociais locais, bem como estratégias de segurança alimentar (detoxificação da mandioca).",
+    "contexto_tradicional": "Há menção a festividades e atividades de socialização relacionadas ao consumo de bebidas fermentadas em comunidades tradicionais do Brasil.",
+    "desfecho_conclusao": "Durante os séculos XVI e XVII, havia uma grande diversidade de plantas na alimentação dos brasileiros, incluindo 183 espécies vegetais, com destaque para a mandioca, abacaxi, jenipapo, caju, taiobas, carás e sapucaia, além das americanas e naturalizadas batata-doce, pimentas Capsicum, feijões e milho, e das exóticas cana-de-açúcar e bananeira. Ocorreu um grande intercâmbio de plantas com outras regiões do mundo promovido pelos europeus, e já havia no Brasil diversas espécies exóticas do país e nativas das Américas cultivadas e naturalizadas, evidenciando a intensa troca entre as populações durante o período pre-colombiano. Muitas das espécies citadas caíram em desuso."
+  }
+}

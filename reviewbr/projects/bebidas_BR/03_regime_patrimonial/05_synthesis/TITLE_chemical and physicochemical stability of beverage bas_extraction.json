@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_chemical and physicochemical stability of beverage based integral cashew apple and honey",
+    "title": "Chemical and physicochemical stability of beverage based integral cashew apple and honey",
+    "regime": "03_regime_patrimonial"
+  },
+  "extraction": {
+    "ontologia_bebida": "Bebida à base de polpa de caju integral e mel, com foco na estabilidade química e físico-química durante o armazenamento.",
+    "actantes_relacoes": "Polpa de caju (Anacardium occidentale L.), mel (Apis melifera), concentrações diferentes dos ingredientes (F1, F2, F3), temperatura de armazenamento (25°C ± 2°C), tempo de armazenamento (120 dias), garrafas de vidro, tampas de plástico, tratamento térmico (90°C/60s), equipamentos de laboratório (pHmetro, refratômetro, espectrofotômetro, colorímetro, centrífuga), NaOH, ácido clorídrico, Folin-Ciocalteau, etc.",
+    "enquadramento_regime": "Dentro do regime científico, o estudo busca avaliar a estabilidade química e físico-química da bebida, com parâmetros normatizados por legislação brasileira (Brasil, 2000a, 2000b, 2005), Codex Alimentarius (2005) e FAO/WHO (2001). Busca agregar valor à polpa de caju através da formulação de uma bebida alternativa.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "A preparação de bebidas à base de polpa de caju com mel é viável e pode agregar valor ao caju e ao mel. Apesar da perda de ácido ascórbico durante o armazenamento, a bebida continua sendo uma boa fonte de vitamina C."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_dextransucrase production using cashew apple juice as substrate: effect of phosphate and yeast extract addition.",
+    "title": "Dextransucrase production using cashew apple juice as substrate: effect of phosphate and yeast extract addition.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Não mencionado",
+    "actantes_relacoes": "Leuconostoc mesenteroides, suco de caju, fosfato, extrato de levedura, sacarose, pH, temperatura, taninos, nitrogênio, açúcares redutores, glicosiltransferases, dextrana, frutose, oligossacarídeos prebióticos, ácido láctico, água, equipamentos de laboratório (HPLC, fermentador, centrífuga, etc.), artigos científicos, enzimas.",
+    "enquadramento_regime": "A bebida é enquadrada no regime da biotecnologia e engenharia de bioprocessos, investigada como substrato de baixo custo para a produção de dextransucrase, uma enzima com aplicações industriais. O estudo normatiza a bebida através de planejamento fatorial para otimizar o crescimento microbiano e atividade enzimática, e exclui outros usos potenciais do suco de caju ao focar na produção de dextransucrase.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O suco de caju é um substrato interessante para o crescimento de L. mesenteroides e produção de dextransucrase, com altas atividades enzimáticas obtidas mesmo sem adição de extrato de levedura ou fosfato. A estabilidade da enzima produzida no suco de caju é maior do que a produzida em meio sintético."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_desenvolvimento de néctares mistos à base de caju (anacardium occidentale l) e açaí (euterpe oleracea mart.)",
+    "title": "Desenvolvimento de néctares mistos à base de caju (Anacardium occidentale L) e açaí (Euterpe oleracea Mart.)",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O texto define a bebida de caju como um néctar misto, obtido pela dissolução em água de polpa de açaí e suco integral de caju, com adição de açúcares e aditivos (benzoato de sódio e metabissulfito de sódio), submetido a tratamento térmico para consumo direto. É caracterizado por suas propriedades químicas, físico-químicas e sensoriais.",
+    "actantes_relacoes": "Os actantes que intra-agem para formar a bebida incluem:\n\n*   **Humanos:**\n    *   Pesquisadores (na formulação, análise e otimização do néctar).\n    *   Provadores (na avaliação sensorial).\n    *   Produtores de caju e açaí (fornecedores da matéria-prima).\n    *   Consumidores (alvo do produto).\n    *   Professores orientadores e membros da banca examinadora.\n    *   Funcionários do departamento de tecnologia de alimentos e secretários do curso.\n\n*   **Não-humanos:**\n    *   Caju (Anacardium occidentale L.): suco integral.\n    *   Açaí (Euterpe oleracea Mart.): polpa.\n    *   Água.\n    *   Sacarose (açúcar).\n    *   Aditivos (benzoato de sódio e metabissulfito de sódio).\n    *   Embalagens (vidro e PET).\n    *   Equipamentos de laboratório (refratômetro, medidor de pH, espectrofotômetro).\n    *   Microorganismos (coliformes e salmonella, controlados pelo tratamento térmico).\n    *   Legislação (normas para néctares).\n    *   Temperatura.\n    *   Luz (influenciando a degradação de carotenóides e antocianinas).\n    *   Ferramentas estatísticas (superfície de resposta, ANOVA).\n    *   Bancos de dados e literatura científica.",
+    "enquadramento_regime": "A bebida é classificada e normatizada dentro do regime da **ciência e tecnologia de alimentos**, através de análises físico-químicas, químicas, microbiológicas e sensoriais. A legislação brasileira estabelece padrões de identidade e qualidade para sucos e néctares, que são considerados. O processo de desenvolvimento do néctar é otimizado utilizando metodologia de superfície de resposta. A bebida é enquadrada como um produto a ser comercializado, com estudos de intenção de compra e estabilidade em diferentes embalagens (vidro e PET).",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "A dissertação conclui que é possível elaborar um néctar misto de caju e açaí com características químicas, físico-químicas e sensoriais aceitáveis, seguindo as normas da legislação. A formulação otimizada, com 30% de polpa total (45,8% de suco de caju e 54,2% de polpa de açaí), apresentou boa estabilidade ao longo de 30 dias de armazenamento, tanto em embalagens de vidro quanto em PET."
+  }
+}

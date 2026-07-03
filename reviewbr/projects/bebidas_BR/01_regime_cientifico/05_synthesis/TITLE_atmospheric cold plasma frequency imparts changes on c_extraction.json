@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_atmospheric cold plasma frequency imparts changes on cashew apple juice composition and improves vitamin c bioaccessibility.",
+    "title": "Atmospheric cold plasma frequency imparts changes on cashew apple juice composition and improves vitamin C bioaccessibility.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O texto define a bebida de caju como uma fonte rica em vitamina C, com atividade antioxidante estabelecida, e como um produto com compostos orgânicos (açúcares, aminoácidos, ácidos orgânicos) que podem desempenhar um papel essencial na saúde e nutrição.",
+    "actantes_relacoes": "Os actantes que intra-agem para formar a bebida incluem: a polpa de caju, água potável, plasma frio atmosférico (ACP), diferentes frequências (200 Hz e 700 Hz), equipamentos de processamento (fonte de alta voltagem, descarga de barreira dielétrica, reatores de digestão in vitro), soluções gástricas e entéricas (NaCl, KCl, KH2PO4, MgCl2, NaHCO3, CaCl2, pepsina, pancreatina, bile), enzimas digestivas, espectrômetro de RMN, cromatógrafo líquido, software de análise de dados, componentes químicos (vitamina C, compostos fenólicos, açúcares, aminoácidos, ácidos orgânicos), e o sistema digestivo humano (simulado in vitro).",
+    "enquadramento_regime": "A bebida é enquadrada no regime da ciência, especificamente na área de tecnologia de alimentos e nutrição. O texto a classifica e normatiza por meio de análises químicas e estatísticas, avaliando o impacto do processamento com plasma frio atmosférico (ACP) na composição e bioacessibilidade de compostos bioativos, seguindo metodologias científicas padronizadas para digestão in vitro e análises instrumentais (NMR, UPLC-HRMS, HPLC). Não há menção explícita de exclusão da bebida, mas sim uma busca por otimizar suas propriedades nutricionais.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O processamento com Plasma Frio Atmosférico (ACP) afeta a concentração de açúcares e aumenta o ácido málico, ácido lático e vitamina C nos sucos não digeridos. O processamento com plasma não causou perdas no conteúdo fenólico total e sua bioacessibilidade, mas aumentou a bioacessibilidade da Vitamina C em ambos os tratamentos, ACP200 e ACP700. O efeito do plasma no conteúdo e bioacessibilidade da Vitamina C foi mais pronunciado em alta frequência. Durante a digestão in vitro, foi observada uma alta concentração de ácido málico e fenilalanina nos sucos processados do que no suco controle. Especificamente, na fase gástrica, houve um incremento de todos os componentes dos sucos processados quantificados por 1H qNMR."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_mathematical modeling of the ethanol fermentation of cashew apple juice by a flocculent yeast: the effect of initial substrate concentration and temperature.",
+    "title": "Mathematical modeling of the ethanol fermentation of cashew apple juice by a flocculent yeast: the effect of initial substrate concentration and temperature.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "A bebida de caju é definida como um meio para produção de bioetanol, derivado do suco da maçã de caju (Anacardium occidentale L.), um subproduto agroindustrial rico em açúcares redutores, fibras, vitaminas e sais minerais, essencial para a assimilação e crescimento de leveduras.",
+    "actantes_relacoes": "Os actantes que intra-agem para formar a bebida incluem: a maçã de caju (Anacardium occidentale L.), o suco de maçã de caju (CAJ), a levedura floculenta Saccharomyces cerevisiae CCA008, os açúcares redutores (glicose e frutose), a concentração inicial de substrato, a temperatura, o pH, as enzimas, o meio de cultura (YEPD), o biorreator de 1L, os modelos matemáticos (Monod, Andrews, Levenspiel, Ghose e Tyagi), dados experimentais, equipamentos de laboratório (centrífugas, estufas, HPLC), e agências de financiamento de pesquisa (BNB, CNPq, FUNCAP, CAPES).",
+    "enquadramento_regime": "A bebida é enquadrada como um substrato para a produção de bioetanol, inserida em um regime de pesquisa científica com o objetivo de otimizar o processo fermentativo, modelar matematicamente a produção de etanol e determinar as condições operacionais ideais. O estudo avalia a eficiência, a produtividade e a concentração de etanol no produto final.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O modelo de Ghose e Tyagi foi considerado o mais adequado para descrever o processo fermentativo do suco de maçã de caju pela levedura floculenta Saccharomyces cerevisiae CCA008, considerando a influência da concentração inicial de substrato e da temperatura. As condições ótimas para a fermentação alcoólica são: concentração inicial de substrato entre 100 e 120 g L-1, temperatura entre 34 e 36°C, concentração inicial de células de 4 g L-1 e velocidade de agitação de 150 rpm."
+  }
+}

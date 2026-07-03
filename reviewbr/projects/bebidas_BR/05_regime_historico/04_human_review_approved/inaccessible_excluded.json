@@ -1,0 +1,34 @@
+[
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions food habits in Brazil from the 16th to 18th centuries, potentially including cashew-based beverages. However, the absence of an abstract makes it impossible to confirm if the paper meets the specific criteria of describing the production, consumption, trade, or ritual use of cashew beverages.",
+    "record": {
+      "identifier": "https://openalex.org/W2248990901",
+      "title": "Habitos alimentares dos jesuítas em Portugal, na Índia e no Brasil (séc. XVI-XVIII)",
+      "description": "",
+      "creators": [
+        "Cristina Osswald"
+      ],
+      "date": "2010-01-01",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title indicates the paper discusses food habits in Brazil during the specified period.",
+        "The temporal scope (16th-18th centuries) aligns with the required timeframe.",
+        "The title's focus on food habits suggests the potential inclusion of information about cashew beverages.",
+        "The absence of an abstract prevents definitive confirmation of the paper's relevance to the specified criteria."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_habitos alimentares dos jesuítas em portugal, na índia e no brasil (séc. xvi-xviii)"
+  }
+]

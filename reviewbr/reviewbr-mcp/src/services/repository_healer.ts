@@ -1,8 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 export class RepositoryHealerService {
-    private catalogPath = path.join(process.cwd(), 'data', 'sources', 'repositories_catalog.json');
+    // Resolvido relativo ao próprio módulo (não process.cwd(), que varia conforme
+    // o cliente MCP) — mesmo padrão de config.ts e registry/loader.ts.
+    private catalogPath = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "..", 'data', 'sources', 'repositories_catalog.json');
 
     public async healRepositories(): Promise<string> {
         let catalog: any[];

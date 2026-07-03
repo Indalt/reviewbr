@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_evaluation of cashew apple juice for surfactin production by bacillus subtilis lami008.",
+    "title": "Evaluation of cashew apple juice for surfactin production by Bacillus subtilis LAMI008.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O texto define o suco de caju clarificado como um meio de cultura barato e interessante para a produção de biossurfactantes, rico em vitamina C, sabor, aroma, açúcares redutores, vitaminas e sais minerais.",
+    "actantes_relacoes": "Os actantes incluem: _Bacillus subtilis_ LAMI005 (microrganismo), suco de caju clarificado (substrato), nitrogênio (na forma de sulfato de amônio), água destilada, pH, temperatura, tempo de incubação, equipamentos de laboratório (centrífuga, filtro, espectrofotômetro, cromatógrafo, tensiômetro), querosene, óleo de soja, ar, agitador rotatório e os pesquisadores.",
+    "enquadramento_regime": "A bebida (suco de caju clarificado) é enquadrada como um substrato de baixo custo para produção de biossurfactantes, com potencial para substituir surfactantes sintéticos derivados de petróleo. Ela é normatizada dentro do regime científico através da avaliação de sua composição, parâmetros de fermentação, e sua capacidade de suportar o crescimento de _Bacillus subtilis_ e a produção de surfactina.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "_Bacillus subtilis_ LAMI005 é capaz de crescer e produzir biossurfactante em um meio de cultura alternativo, preparado com suco de caju clarificado (um subproduto agroindustrial da indústria do caju) suplementado com sulfato de amônio. CCAJ surge como um meio solúvel em água e de baixo custo, influenciando na concentração de surfactina e demonstrando capacidade de emulsificar querosene e óleo de soja."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_validation of a method for anacardic acid quantification in cashew peduncles via high-performance liquid chromatography coupled to a diode-array detector.",
+    "title": "Validation of a Method for Anacardic Acid Quantification in Cashew Peduncles via High-Performance Liquid Chromatography Coupled to a Diode-Array Detector.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Não mencionado",
+    "actantes_relacoes": "Anacardic acids (AnAc), cashew peduncles, high-performance liquid chromatography (HPLC), diode-array detector, C18 reverse-phase column, UV spectra, Shimadzu LC Solution software, extraction methods, different cashew clones (CCP 09, CCP 76, BRS 265, BRS 275, and Embrapa 51), methanol, acetonitrile, acetic acid, formic acid.",
+    "enquadramento_regime": "A bebida de caju (mais precisamente, os ácidos anacárdicos presentes no pedúnculo do caju) é classificada e normatizada dentro do regime da ciência analítica, com foco na validação de um método de quantificação por HPLC-DAD. O artigo busca estabelecer um protocolo de controle de qualidade para a indústria alimentícia e programas de melhoramento genético, normatizando a análise do conteúdo de ácidos anacárdicos.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O estudo valida um método cromatográfico rápido, preciso e acurado para quantificar os principais ácidos anacárdicos presentes no pedúnculo do caju por HPLC-DAD. O método é proposto como uma alternativa para estabelecer protocolos de controle de qualidade na indústria alimentícia e para auxiliar na classificação de pedúnculos e escolha de clones de caju com base no teor desejado de ácidos anacárdicos."
+  }
+}

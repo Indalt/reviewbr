@@ -1,0 +1,451 @@
+[
+  {
+    "decision": "MAYBE",
+    "score": 70,
+    "reasoning": "The title mentions beverages among indigenous groups, which could include cashew beverages. However, the absence of an abstract makes it difficult to ascertain whether the paper specifically addresses cashew beverage production, consumption, or prohibition as described in the criteria. More information is needed.",
+    "record": {
+      "identifier": "https://openalex.org/W2519539942",
+      "title": "The cauim and the beverages among the Guarani and the Tupinambá: equipments, preparation techniques and consumption.",
+      "description": "",
+      "creators": [
+        "Francisco Silva Noelli",
+        "José Proenza Brochado"
+      ],
+      "date": "1998-12-02",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title mentions 'beverages among the Guarani and the Tupinambá'.",
+        "The title also mentions 'preparation techniques and consumption', which is relevant to the criteria.",
+        "The absence of an abstract makes it impossible to confirm if the beverage is made from cashew fruit or not."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 70
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_the cauim and the beverages among the guarani and the tupinambá: equipments, preparation techniques and consumption."
+  },
+  {
+    "decision": "MAYBE",
+    "score": 75,
+    "reasoning": "The title mentions edible plants in Brazil during the 16th and 17th centuries based on historical accounts. This suggests a possibility of the paper discussing cashew beverages, but it is uncertain. Without the abstract, it's hard to confirm if cashew drinks specifically are discussed.",
+    "record": {
+      "identifier": "https://openalex.org/W2967420374",
+      "title": "As plantas comestíveis no Brasil dos séculos XVI e XVII segundo relatos de época",
+      "description": "",
+      "creators": [
+        "Bernardo Tomchinsky",
+        "Lin Chau Ming"
+      ],
+      "date": "2019-01-01",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title indicates the study focuses on edible plants in Brazil during the specified period.",
+        "The phrase \"relatos de época\" suggests the use of historical accounts, fitting the required document types.",
+        "It is unknown if the study includes information on the preparation, consumption, commerce, or ritual use of cashew beverages."
+      ],
+      "supporting_sentences": [
+        "As plantas comestíveis no Brasil dos séculos XVI e XVII segundo relatos de época"
+      ]
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 0
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_as plantas comestíveis no brasil dos séculos xvi e xvii segundo relatos de época"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 70,
+    "reasoning": "The title suggests the paper discusses indigenous celebrations, potentially including cashew-based beverages. However, without an abstract, it's impossible to confirm whether the paper contains primary source accounts or addresses the specific criteria of preparation, consumption, commerce, or ritual use of cashew beverages.",
+    "record": {
+      "identifier": "https://openalex.org/W1495107683",
+      "title": "Sobriedade e embriaguez: a luta dos soldados de Cristo contra as festas dos tupinambás",
+      "description": "",
+      "creators": [
+        "João Azevedo Fernandes"
+      ],
+      "date": "2007-01-01",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title mentions 'festas dos tupinambás' (Tupinamba celebrations) which could involve alcoholic beverages.",
+        "The conflict described in the title 'Sobriedade e embriaguez' (Sobriety and inebriation) suggests the presence of alcohol consumption.",
+        "The lack of an abstract makes it impossible to confirm if cashew-based beverages are specifically discussed using primary source accounts as required by the prompt."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 0
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_sobriedade e embriaguez: a luta dos soldados de cristo contra as festas dos tupinambás"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions Tupinambá in Maranhão, which could potentially involve descriptions of their customs related to cashew beverages as requested by the prompt. However, the absence of an abstract makes it difficult to confirm the paper's relevance without further information.",
+    "record": {
+      "identifier": "https://openalex.org/W3180905591",
+      "title": "OS TUPINAMBÁ NA ILHA DO MARANHÃO",
+      "description": "",
+      "creators": [
+        "Alexandre Guida Navarro",
+        "Yuri Givago Alhadef Sampaio Mateus",
+        "Karen Cristina Costa da Conceição",
+        "Adriana Dourado Oliveira"
+      ],
+      "date": "2021-06-28",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title suggests the paper discusses the Tupinambá people.",
+        "Tupinambá customs could include preparation, consumption, or ritualization of cashew beverages.",
+        "The lack of an abstract prevents confirming if the paper contains specific details about cashew beverage production or prohibition."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_os tupinambá na ilha do maranhão"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 70,
+    "reasoning": "The title \"Morrer e beber manicuera\" suggests a possible connection to the consumption of cashew-derived beverages. 'Manicuera' might be related to a cashew drink. Without an abstract, it's impossible to confirm if the paper contains the required details from traveler's accounts or other relevant historical documents related to the production or consumption of cashew beverages.",
+    "record": {
+      "identifier": "https://openalex.org/W2928969331",
+      "title": "Morrer e beber manicuera",
+      "description": "",
+      "creators": [
+        "Maria Betânia Barbosa Albuquerque",
+        "Karen Azevedo Malar"
+      ],
+      "date": "2019-03-28",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title contains \"beber\" which indicates drinking.",
+        "The title mentions \"manicuera\", potentially a name for a cashew beverage.",
+        "No abstract is available to confirm relevance to historical accounts of cashew beverage production or consumption."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 0
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_morrer e beber manicuera"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title suggests a broad overview of indigenous food in Latin America. While it might contain information about cashew beverage production, it's not specific. The lack of an abstract makes it difficult to ascertain the content's relevance to the specific criteria.",
+    "record": {
+      "identifier": "https://openalex.org/W1918029055",
+      "title": "ALIMENTAÇÃO INDÍGENA NA AMÉRICA LATINA: COMIDA INVISÍVEL, COMIDA DE POBRES OU PATRIMÔNIO CULINÁRIO?",
+      "description": "",
+      "creators": [
+        "Esther Katz"
+      ],
+      "date": "2009-06-30",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title focuses on indigenous food in Latin America, which might include cashew-based beverages.",
+        "The lack of an abstract prevents definitive confirmation of the paper's specific content.",
+        "The title mentions \"comida invisível, comida de pobres ou patrimônio culinário?\" which might be relevant to consumption patterns."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_alimentação indígena na américa latina: comida invisível, comida de pobres ou patrimônio culinário?"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions \"anacardier\" (cashew tree) and \"Nordeste du Brésil\" (Northeast Brazil), which aligns with the geographical focus and main topic of the review. However, without the abstract, it's impossible to determine if the paper specifically addresses the production, consumption, or prohibition of cashew-based beverages as outlined in the criteria. It could be about cashew farming, economics, or other aspects not directly relevant.",
+    "record": {
+      "identifier": "https://openalex.org/W2978147017",
+      "title": "SYSTEME ALIMENTAIRE ET POLITIQUES AGRAIRES A L’OMBRE DES POMMIERS-CAJOU: LES DYNAMIQUES AGRAIRES ET ALIMENTAIRES LIEES A L’ANACARDIER DANS LE NORDESTE DU BRESIL (SISTEMA ALIMENTAR E POLÍTICA AGRÁRIA NAS SOMBRAS DOS CAJUEIROS: AS DINÂMICAS AGRÁRIAS E ALIMENTARES LIGADAS AO CAJUEIRO NO NORDESTE DO BRASIL)",
+      "description": "",
+      "creators": [
+        "Camille Notebaert"
+      ],
+      "date": "2019-10-01",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title contains \"anacardier\" (French for cashew tree) and \"cajueiro\" (Portuguese for cashew tree), which relates to the topic.",
+        "The title mentions \"Nordeste du Brésil\" (Northeast Brazil), a relevant geographical area.",
+        "The absence of an abstract makes it impossible to definitively assess if the article discusses the production, consumption, or prohibition of cashew beverages."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "fr",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_systeme alimentaire et politiques agraires a l’ombre des pommiers-cajou: les dynamiques agraires et alimentaires liees a l’anacardier dans le nordeste du bresil (sistema alimentar e política agrária nas sombras dos cajueiros: as dinâmicas agrárias e alimentares ligadas ao cajueiro no nordeste do brasil)"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title and available information suggest a potential focus on Brazilian cuisine in the Northeast, which could include beverages made from cashew. However, the lack of an abstract makes it impossible to confirm whether the paper meets the specific criteria regarding historical accounts of cashew beverage production, consumption, or prohibition.",
+    "record": {
+      "identifier": "https://openalex.org/W3127043628",
+      "title": "“A doçura que envolve”: a culinária brasileira do Nordeste em Baú de Ossos",
+      "description": "",
+      "creators": [
+        "Maria Alice Ribeiro Gabriel"
+      ],
+      "date": "2021-01-29",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title indicates a focus on Brazilian cuisine from the Northeast.",
+        "Caju (cashew) is a fruit common in the Northeast region of Brazil.",
+        "Without an abstract, it's impossible to determine if the article specifically discusses the preparation, consumption, trade, or ritualization of cashew beverages based on historical accounts as outlined in the inclusion criteria."
+      ],
+      "supporting_sentences": [
+        "“A doçura que envolve”: a culinária brasileira do Nordeste em Baú de Ossos"
+      ]
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_“a doçura que envolve”: a culinária brasileira do nordeste em baú de ossos"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions observations from travelers in the early 19th century regarding health, food, and medicine in São Paulo province. This aligns with the criteria of traveler accounts from the 16th-19th centuries. However, it is uncertain if the paper discusses the production, consumption, or prohibition of cashew beverages. Without an abstract, it is hard to make a definite decision.",
+    "record": {
+      "identifier": "https://openalex.org/W1954119250",
+      "title": "Saúde, alimentação e medicamentos na província de São Paulo: o olhar de Spix, Martius e Auguste de Saint-Hilaire no início do século XIX",
+      "description": "",
+      "creators": [
+        "Daniela Machado Gonzaga Ferreira Didone"
+      ],
+      "date": "2007-12-17",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title explicitly mentions travelers (Spix, Martius, Saint-Hilaire) in the early 19th century, which fits the time period requirement.",
+        "The title mentions 'alimentação' (food), which suggests the potential for discussing cashew beverages.",
+        "Without an abstract, it is impossible to confirm if cashew beverages are actually discussed."
+      ],
+      "supporting_sentences": [
+        "Saúde, alimentação e medicamentos na província de São Paulo: o olhar de Spix, Martius e Auguste de Saint-Hilaire no início do século XIX"
+      ]
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_saúde, alimentação e medicamentos na província de são paulo: o olhar de spix, martius e auguste de saint-hilaire no início do século xix"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions the consumption of fruits in Portuguese America in the 16th century, which could potentially include cashew fruit beverages. However, without an abstract, it's impossible to determine if the paper specifically addresses the preparation, consumption, trade, or ritualization of cashew beverages as described in the inclusion criteria. Therefore, I will mark as MAYBE.",
+    "record": {
+      "identifier": "https://openalex.org/W2791422038",
+      "title": "Saborosos, sadios e digestivos: o discurso médico presente no consumo de frutos, conservas e compotas na América portuguesa do século XVI",
+      "description": "",
+      "creators": [
+        "Christian Fausto Moraes dos Santos",
+        "Julianna Morcelli Oliveros"
+      ],
+      "date": "2017-10-01",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title suggests a focus on fruit consumption in Portuguese America.",
+        "The time period (16th century) aligns with the specified timeframe.",
+        "The absence of an abstract makes it difficult to confirm if cashew beverages are discussed."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_saborosos, sadios e digestivos: o discurso médico presente no consumo de frutos, conservas e compotas na américa portuguesa do século xvi"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions \"alimentação e consumo\" within the relevant time period for São Paulo. Without an abstract, it's difficult to determine if it discusses caju beverages specifically but the focus on consumption makes it potentially relevant. It might be worth further investigation to see if it includes the required information.",
+    "record": {
+      "identifier": "https://openalex.org/W1955791232",
+      "title": "Sabores Urbanos: alimentação, sociabilidade e consumo (São Paulo 1828-1910)",
+      "description": "",
+      "creators": [
+        "Joana de Moraes Monteleone"
+      ],
+      "date": "2008-12-05",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title suggests a focus on food and consumption in São Paulo between 1828 and 1910, which falls within the timeframe specified in the criteria.",
+        "The keywords are not available which would have provided more insight into the paper's contents.",
+        "The title mentions \"Sabores Urbanos,\" which hints at a potential discussion of specific foods and beverages consumed in the urban environment."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_sabores urbanos: alimentação, sociabilidade e consumo (são paulo 1828-1910)"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions \"sabores\" (flavors) and \"culinária popular\" (popular cuisine) in Cuiabá, which suggests a potential discussion of food and drinks. However, the absence of an abstract makes it difficult to ascertain whether the paper specifically addresses the production or consumption of cashew-based beverages within the specified time period and using the required source materials. The keywords are missing, further hindering the assessment.",
+    "record": {
+      "identifier": "https://openalex.org/W2566676746",
+      "title": "Rumores e sabores de uma feira: Culinária popular e cosmopolitismo banal em Cuiabá",
+      "description": "",
+      "creators": [
+        "Yuji Gushiken",
+        "Lawrenberg Advíncula da Silva",
+        "Adoniram Judson Almeida de Magalhães"
+      ],
+      "date": "2015-07-07",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title suggests the paper may discuss food and drinks.",
+        "The phrase \"culinária popular\" indicates a focus on local cuisine.",
+        "The absence of an abstract prevents a definitive assessment of the paper's content and relevance to the specific topic of cashew beverage production/consumption."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_rumores e sabores de uma feira: culinária popular e cosmopolitismo banal em cuiabá"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title suggests a broad overview of food history in Portuguese America, which could potentially include information about cashew beverages. However, the absence of an abstract makes it impossible to determine the specific focus and whether it meets the inclusion criteria.",
+    "record": {
+      "identifier": "https://openalex.org/W3022551935",
+      "title": "O impacto dos primeiros séculos de história da América Portuguesa na formação da brasilidade alimentar",
+      "description": "",
+      "creators": [
+        "Rosemeire Bertolini Lorimer"
+      ],
+      "date": "2020-03-17",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title indicates the paper addresses the history of food in Portuguese America.",
+        "This suggests a possibility of discussing cashew beverages.",
+        "The lack of an abstract prevents confirmation of the paper's specific content and relevance to the research question."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_o impacto dos primeiros séculos de história da américa portuguesa na formação da brasilidade alimentar"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions 'caju' and 'cultura alimentar nordestina', which suggests a possible connection to the topic of cashew-based beverages in Northeastern Brazil. However, the lack of an abstract makes it difficult to determine the specific focus of the paper. It is uncertain if the paper discusses historical accounts of cashew beverage production or consumption, as required by the criteria.",
+    "record": {
+      "identifier": "https://openalex.org/W4392162224",
+      "title": "complexo do caju e a cultura alimentar nordestina",
+      "description": "",
+      "creators": [
+        "Flavia Fernandes"
+      ],
+      "date": "2023-12-31",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title contains keywords related to the topic: 'caju' and 'cultura alimentar nordestina'.",
+        "The absence of an abstract prevents a detailed understanding of the paper's content.",
+        "Without an abstract, it is impossible to confirm if the paper covers historical accounts of cashew beverage production or consumption."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "05_regime_historico",
+    "_unique_id": "TITLE_complexo do caju e a cultura alimentar nordestina"
+  }
+]
