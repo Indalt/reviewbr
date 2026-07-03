@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_cashew apple juice as microbial cultivation medium for non-immunogenic hyaluronic acid production.",
+    "title": "Cashew apple juice as microbial cultivation medium for non-immunogenic hyaluronic acid production.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O suco de caju é definido como um meio de cultivo natural rico em açúcares redutores (glicose e frutose), fósforo e aminoácidos, adequado para a produção de ácido hialurônico.",
+    "actantes_relacoes": "Os actantes incluem: o suco de caju (CAJ), a levedura (yeast extract), a bactéria *Streptococcus zooepidemicus*, o meio BHI (Brain Heart Infusion), o pH, a aeração (níveis de oxigênio), a temperatura (37°C), os nutrientes (vitaminas B, aminoácidos), os açúcares (glicose, frutose), o ácido lático, o ácido acético, ATP, o equipamento de fermentação (Erlenmeyer flasks e BioFLO III fermenter), o processo de esterilização (ultravioleta), e as enzimas (hyaluronidase synthase - HAS). As relações entre esses actantes afetam o crescimento da bactéria, a produção, concentração e viscosidade do ácido hialurônico (HA).",
+    "enquadramento_regime": "O suco de caju é enquadrado como um substituto de baixo custo para meios de cultura convencionais (BHI) na produção biotecnológica de ácido hialurônico, dentro de um regime de pesquisa científica e otimização de processos fermentativos. O artigo busca normatizar o uso do suco de caju como meio de cultura, buscando substituir o BHI.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O suco de caju é um substrato adequado para o crescimento de *Streptococcus zooepidemicus* e a produção de oligômeros de ácido hialurônico. O suco de caju suplementado com extrato de levedura é um substituto adequado para o meio BHI na propagação do inóculo. A composição do meio de cultura e o fornecimento de oxigênio influenciam a produção microbiana de HA (concentração e viscosidade), sendo as concentrações mais elevadas obtidas quando a fermentação é realizada sob aeração."
+  }
+}

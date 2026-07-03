@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_bebida mista com propriedade estimulante à base de água de coco e suco de caju clarificado",
+    "title": "Bebida mista com propriedade estimulante à base de água de coco e suco de caju clarificado",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "A bebida de caju (cajuína) é definida como suco de caju clarificado, esterilizado, com cor amarelo-âmbar resultante da caramelização dos açúcares. É reconhecida como fonte de vitamina C.",
+    "actantes_relacoes": "Os actantes incluem: água de coco, suco de caju clarificado (cajuína), cafeína, ácido cítrico, benzoato de sódio, metabissulfito de sódio, açúcar, cocos verdes (provenientes de Paraipaba, Ceará), provadores não treinados, legislação brasileira, garrafas de vidro, tampas plásticas, água clorada, equipamentos de laboratório, microrganismos (coliformes, aeróbios mesófilos, fungos filamentosos, leveduras, Salmonella sp), pesquisadores, indústria local fornecedora de cajuína, varejistas, e o sistema nervoso central (afetado pela cafeína). Suas relações se dão através da combinação dos ingredientes para a formulação da bebida, testes sensoriais e microbiológicos para avaliar sua aceitação e segurança, e análises químicas e físico-químicas para determinar suas propriedades.",
+    "enquadramento_regime": "A bebida é enquadrada dentro do regime da ciência (através de análises laboratoriais, padronização e avaliação sensorial), do estado (através da legislação brasileira que regulamenta os limites de cafeína e os padrões microbiológicos), da propriedade (como um produto comercializável com potencial de desenvolvimento de agroindústrias) e do mercado (como uma bebida não alcoólica com apelo à saúde e boa forma).",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "A formulação ACC 20 (20% de cajuína + 80% de água de coco) é considerada a mais viável para a elaboração da bebida mista, devido à boa aceitação sensorial, preferência de compra pelos provadores e ao bom incremento de vitamina C que a quantidade de cajuína utilizada nessa formulação fornece."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_elaboração de licor artesanal a base do pedúnculo de caju (anacardium occidentale l.)",
+    "title": "ELABORAÇÃO DE LICOR ARTESANAL A BASE DO PEDÚNCULO DE CAJU (ANACARDIUM OCCIDENTALE L.)",
+    "regime": "02_regime_regulatorio"
+  },
+  "extraction": {
+    "ontologia_bebida": "O texto define a bebida de caju como um derivado do processamento do pedúnculo, com potencial para agregar valor ao caju e estender sua vida útil pós-colheita. Também é vista como uma alternativa para a comercialização, oferecendo um produto com inovação tecnológica e reduzindo perdas pós-colheita.",
+    "actantes_relacoes": "Os actantes incluem: o pedúnculo do caju (Anacardium occidentale L.), álcool etílico, xarope (açúcar e água), os laboratórios de Técnica Dietética e Análise Sensorial de Alimentos da UNIFACEMA, avaliadores sensoriais (estudantes e funcionários), pesquisadores, normas de análise sensorial (NBR 13526, Escala Hedônica), o comércio local (fornecedor dos ingredientes), equipamentos de laboratório (liquidificador, panelas, garrafões de vidro), e a legislação de testes em humanos (Resolução 466/2012). As relações envolvem o processo de elaboração do licor (higienização, liquidificação, mistura, maceração, filtragem), a avaliação sensorial (teste de aceitação, análise de dados), a interação entre os avaliadores e o produto, e a conformidade com as normas éticas e de segurança alimentar.",
+    "enquadramento_regime": "O texto enquadra a bebida dentro do regime da ciência (através da análise sensorial e metodologia científica), da nutrição (como uma vertente associada ao empreendedorismo e valorização de frutos regionais), da tecnologia de alimentos (inovação tecnológica), do mercado (potencial de comercialização e lucratividade para a indústria de frutas), e da regulamentação (normas para testes em humanos e padrões de qualidade).",
+    "contexto_tradicional": "O texto menciona que aproximadamente 75% dos produtores de caju na região Nordeste são agricultores familiares que possuem áreas inferiores a 20 hectares. Também indica que a colheita do caju permite uma intercalação entre outras culturas de subsistência, como arroz, feijão, mandioca e milho. Não há menção explícita a povos originários do Ceará.",
+    "desfecho_conclusao": "O argumento central é que a elaboração de licor artesanal a base do pedúnculo de caju é uma alternativa viável para a comercialização, agregando valor ao pedúnculo, reduzindo perdas pós-colheita, oferecendo um produto com inovação tecnológica e representando uma oportunidade de negócios dentro da nutrição e do empreendedorismo."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_adsorptive separation of fructose and glucose from an agroindustrial waste of cashew industry.",
+    "title": "Adsorptive separation of fructose and glucose from an agroindustrial waste of cashew industry.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "A bebida de caju é definida como um resíduo agroindustrial da cultura do caju (Anacardium occidentale, L.) no Nordeste do Brasil, contendo açúcares (frutose e glicose) e suscetível à separação adsortiva para obtenção de xaropes.",
+    "actantes_relacoes": "Os actantes incluem: a maçã de caju (Anacardium occidentale,L.), frutose, glicose, resinas de troca iônica (DOWEX Monosphere 99/Ca e DIAION UBK555), água, colunas de adsorção, equipamentos de laboratório (bombas, detectores, HPLC), dados experimentais, modelos matemáticos, artigos científicos, pesquisadores, Embrapa/CNPAT, e oligosacarídeos. As relações envolvem a adsorção seletiva de frutose e glicose pelas resinas, a modelagem matemática do processo, a análise experimental das curvas de eluição e a influência de outros componentes do suco (possivelmente oligosacarídeos) na adsorção.",
+    "enquadramento_regime": "A bebida é enquadrada como um resíduo agroindustrial com potencial para ser valorizado através da separação de seus componentes (frutose e glicose) para produção de xaropes. É normatizada através de processos de purificação (clarificação com gelatina e tratamento com resinas e carvão ativado) e analisada sob o regime da química analítica e engenharia química (HPLC, modelos de adsorção, parâmetros cinéticos e de equilíbrio).",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O estudo conclui que experimentos independentes com soluções sintéticas monocomponentes geram parâmetros confiáveis, e um modelo simples consegue prever razoavelmente bem a curva de eluição dos açúcares presentes no suco, sob diferentes condições de purificação. No entanto, componentes complexos do suco de caju (CAJ) causam adsorção irreversível e afetam a capacidade das resinas."
+  }
+}

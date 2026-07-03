@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_avaliação da influência de adjuvantes de secagem sobre as propriedades de suco de caju atomizado",
+    "title": "Avaliação da influência de adjuvantes de secagem sobre as propriedades de suco de caju atomizado",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Suco de caju atomizado, obtido a partir do pedúnculo (pseudofruto) do caju (Anacardium occidentale), com o objetivo de criar um produto estável, disponível ao longo do ano, e com transporte facilitado. O texto foca nas propriedades físicas (higroscopicidade, fluidez, solubilidade) e na retenção de ácido ascórbico durante o processo de atomização.",
+    "actantes_relacoes": "O documento envolve a intra-ação de: \n\n*   Seres humanos: Consumidores (exigindo conveniência, segurança alimentar e benefícios à saúde), pesquisadores, produtores industriais, agricultores (cajucultura).\n*   Não-humanos: Suco de caju, maltodextrina, goma de cajueiro, ar quente, atomizador (spray dryer), embalagens, ácido ascórbico, carotenóides, fenóis, temperatura, umidade, legislação, mercado.",
+    "enquadramento_regime": "A bebida é enquadrada dentro do regime da ciência (tecnologia de alimentos, pesquisa, otimização de processos), da indústria (processamento de frutas, produção de sucos em pó), do mercado (alternativa aos sucos integrais, competição com refrescos artificiais), e da legislação (parâmetros de qualidade para sucos). Existe uma tentativa de normatizar a produção do suco de caju em pó, buscando uma alternativa mais interessante para reduzir custos com refrigeração e transporte, além de facilitar a exportação.",
+    "contexto_tradicional": "O texto menciona que o caju é uma fruta originária do Nordeste brasileiro, para o qual apresenta grande importância socioeconômica, mas não especifica a relação com povos originários do Ceará ou com agricultura familiar/tradicional. Apenas cita que o pedúnculo é uma importante fonte de alimento no Nordeste, consumido in natura ou processado.",
+    "desfecho_conclusao": "A tese central do documento é que a proporção do adjuvante de secagem (goma de cajueiro e/ou maltodextrina) e sua concentração (relação adjuvante de secagem/sólidos do caju) influenciam na retenção de ácido ascórbico e nas propriedades físicas (higroscopicidade e fluidez) do suco de caju atomizado. A goma de cajueiro mostrou-se um material promissor como adjuvante de secagem. As condições consideradas mais adequadas são: proporção AS/SC, 5:1, com pelo menos 50% de substituição de maltodextrina por goma de cajueiro."
+  }
+}

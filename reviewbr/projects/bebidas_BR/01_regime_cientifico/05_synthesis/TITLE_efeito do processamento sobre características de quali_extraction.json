@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_efeito do processamento sobre características de qualidade do suco de caju (anacardium occidentale l.).",
+    "title": "Efeito do processamento sobre características de qualidade do suco de caju (Anacardium occidentale L.).",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Suco de caju com alto teor de polpa definido como a bebida não fermentada e não diluída, obtida da parte comestível do pedúnculo do caju (Anacardium occidentale L.), através de processo tecnológico adequado.",
+    "actantes_relacoes": "Incluem o pedúnculo do caju (Anacardium occidentale L.), processos de formulação, homogeneização e pasteurização, equipamentos industriais, pH, ácido cítrico, dióxido de enxofre, temperatura, oxigênio, vitaminas (ácido ascórbico, ácido fólico, carotenóides, antocianinas), enzimas, bactérias, luz, garrafas de vidro, água, etc.",
+    "enquadramento_regime": "O suco de caju com alto teor de polpa é classificado de acordo com a legislação brasileira, normativa nº 136, que estabelece os padrões de identidade e qualidade.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "As características químicas e físico-químicas do suco de caju com alto teor de polpa apresentaram variações significativas durante o processamento industrial, principalmente nos parâmetros de sólidos solúveis totais, acidez, atividade de água, vitaminas e pigmentos. As perdas de ácido ascórbico, carotenóides e antocianinas foram mais elevadas na etapa de pasteurização. O ácido fólico apresentou um comportamento diferenciado, apresentando variação significativa entre as etapas de formulação e homogeneização."
+  }
+}

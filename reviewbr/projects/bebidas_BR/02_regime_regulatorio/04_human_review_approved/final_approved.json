@@ -1,0 +1,137 @@
+[
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title suggests the paper discusses the production of cashew-based liquor. It is necessary to examine the full text to determine if Brazilian laws, decrees, normative instructions, RDCs, official letters, and technical manuals related to the production, sale, or classification of cashew-derived beverages are addressed.",
+    "record": {
+      "identifier": "https://openalex.org/W3168424210",
+      "title": "ELABORAÇÃO DE LICOR ARTESANAL A BASE DO PEDÚNCULO DE CAJU (ANACARDIUM OCCIDENTALE L.)",
+      "description": "",
+      "creators": [
+        "Natalli de Sousa Silva",
+        "Herbert Igor Rodrigues de Medeiros",
+        "Francisco Laurindo Silva",
+        "Magnólia de Jesus Sousa Magalhães",
+        "Francisco Cesino de Medeiros Júnior"
+      ],
+      "date": "2020-01-01",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title indicates the paper focuses on the creation of cashew liquor.",
+        "The absence of an abstract limits a thorough assessment of the paper's content.",
+        "The title suggests that the paper may discuss the artisanal production of cashew liquor in Brazil. To assess relevance, it's necessary to examine the full text to find out if the paper mentions laws, normative instructions, RDCs, official letters or technical manuals."
+      ],
+      "supporting_sentences": [
+        "No abstract available."
+      ]
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "02_regime_regulatorio",
+    "_unique_id": "TITLE_elaboração de licor artesanal a base do pedúnculo de caju (anacardium occidentale l.)"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title mentions 'Cajuína', a cashew-derived beverage, and a location in Ceará, Brazil. This suggests a potential connection to Brazilian regulations, but the lack of an abstract makes it difficult to determine if the paper discusses the legal aspects of its production, sale, or classification. It might be focused on sustainability only.",
+    "record": {
+      "identifier": "https://openalex.org/W4411482296",
+      "title": "CAJUÍNA SÃO JOÃO, UMA ATIVIDADE SUSTENTÁVEL EM ARACOIABA, CEARÁ",
+      "description": "",
+      "creators": [
+        "Antonia Franciany Araujo Coelho",
+        "Antônio Augusto Moura da Sílva",
+        "Joaquim Silva Pereira",
+        "A. S. do Nascimento",
+        "Thalles Ribeiro Gomes"
+      ],
+      "date": "2025-06-20",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title includes the term 'Cajuína', indicating a cashew-derived beverage.",
+        "The title mentions 'Aracoiaba, Ceará' which is a location in Brazil.",
+        "The title references 'Sustentabilidade', suggesting a potential focus on sustainability practices which may or may not include any reference to regulations."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "02_regime_regulatorio",
+    "_unique_id": "TITLE_cajuína são joão, uma atividade sustentável em aracoiaba, ceará"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title suggests a focus on the competitiveness of cashew production chains in Brazil, which could involve regulations, but the lack of an abstract makes it difficult to confirm if it directly addresses the specific types of documents (laws, decrees, etc.) related to cashew-derived beverages as required by the criteria. A MAYBE decision is appropriate since it has some potential for relevance but needs further investigation.",
+    "record": {
+      "identifier": "https://openalex.org/W2738626162",
+      "title": "Competitividade de cadeias produtivas através de uma lente comparativa: oportunidades para a cajucultura brasileira",
+      "description": "",
+      "creators": [
+        "Hugo Santana de Figueirêdo",
+        "Aimee Duncan Sostowski"
+      ],
+      "date": "2017-03-24",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title mentions 'cadeias produtivas' (production chains) of 'cajucultura brasileira' (Brazilian cashew cultivation), suggesting a focus on the cashew industry in Brazil.",
+        "The criteria require a focus on Brazilian regulations concerning cashew-derived beverages.",
+        "Without an abstract, it's impossible to determine if the paper delves into the specific laws, decrees, and normative instructions related to the production, sale, or classification of cashew-derived beverages."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "02_regime_regulatorio",
+    "_unique_id": "TITLE_competitividade de cadeias produtivas através de uma lente comparativa: oportunidades para a cajucultura brasileira"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 40,
+    "reasoning": "The title \"EM BUSCA DE SABORES E SABERES TRADICIONAIS\" suggests a focus on traditional knowledge and flavors. While it could potentially relate to the regulation of cashew-derived beverages, the lack of an abstract makes it difficult to determine the specific content and its relevance to Brazilian regulations concerning the production, sale, or classification of cashew beverages. Therefore, I cannot definitively confirm its relevance without further information.",
+    "record": {
+      "identifier": "https://openalex.org/W1602758716",
+      "title": "EM BUSCA DE SABORES E SABERES TRADICIONAIS",
+      "description": "",
+      "creators": [
+        "Isabel M. R. Mendes Drumond Braga"
+      ],
+      "date": "2015-03-28",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title indicates a focus on traditional knowledge and flavors.",
+        "There is no abstract available to further clarify the paper's focus.",
+        "Without an abstract, it's difficult to assess the paper's relevance to the specific legal and regulatory context regarding cashew-derived beverages in Brazil."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 40
+    },
+    "_regime": "02_regime_regulatorio",
+    "_unique_id": "TITLE_em busca de sabores e saberes tradicionais"
+  }
+]

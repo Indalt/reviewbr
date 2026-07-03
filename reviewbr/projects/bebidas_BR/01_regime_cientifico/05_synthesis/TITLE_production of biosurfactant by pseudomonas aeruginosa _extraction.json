@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_production of biosurfactant by pseudomonas aeruginosa grown on cashew apple juice.",
+    "title": "Production of biosurfactant by Pseudomonas aeruginosa grown on cashew apple juice.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O suco de caju (CAJ) é definido como um subproduto da indústria de castanha de caju no Brasil, especificamente no Ceará. É descrito como um substrato alternativo, barato e rico em nutrientes, derivado do pseudofruto do caju (pedúnculo). Ele contém vitamina C, carboidratos, açúcares redutores e não redutores, além de aminoácidos e outros componentes (ver tabela 1).",
+    "actantes_relacoes": "Os actantes que intra-agem para formar a bebida (CAJ) e seu uso na produção de biossurfactantes incluem: a bactéria *Pseudomonas aeruginosa*, o próprio suco de caju (CAJ), peptona (como suplemento), equipamentos de laboratório (frascos Erlenmeyer, espectrofotômetro, centrífuga, etc.), a composição química do CAJ (vitaminas, açúcares, ácidos, etc.), temperatura, agitação, pH, membranas de filtro, e a indústria de castanha de caju como contexto de produção do resíduo.",
+    "enquadramento_regime": "O artigo enquadra o suco de caju como um resíduo agroindustrial com potencial para ser um substrato de baixo custo para a produção de biossurfactantes, inserindo-o em um regime de biotecnologia e aproveitamento de resíduos. Ele normatiza o uso do CAJ através da suplementação com peptona e esterilização para otimizar o crescimento bacteriano e a produção de biossurfactante. O artigo não menciona exclusão.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O estudo conclui que o suco de caju (CAJ), suplementado com peptona (CAJP), é um substrato adequado para a produção de biossurfactantes pela *Pseudomonas aeruginosa*. O biossurfactante produzido demonstra atividade emulsificante, sugerindo que o CAJ pode substituir fontes de carbono tradicionais, além de oferecer uma alternativa para o gerenciamento de resíduos da indústria de castanha de caju no Nordeste do Brasil."
+  }
+}

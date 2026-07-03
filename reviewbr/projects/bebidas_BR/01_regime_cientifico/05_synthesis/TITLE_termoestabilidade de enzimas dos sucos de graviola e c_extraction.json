@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_termoestabilidade de enzimas dos sucos de graviola e caju",
+    "title": "Termoestabilidade de enzimas dos sucos de graviola e caju",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O texto define o suco de caju como uma fonte de vitamina C e um produto resultante da prensagem de pedúnculos maduros da planta *Anacardium occidentale L.*",
+    "actantes_relacoes": "Os actantes identificáveis no texto são: pedúnculos de caju maduros, prensa do tipo EXPELLER, diferentes temperaturas (55, 65, 75, 85 e 95 °C), diferentes tempos de tratamento térmico (1, 3, 5, 10, 15, 20 e 30 minutos), enzimas (SOD, CAT, APX, G-POD, PME e PG), água destilada, liquidificador doméstico, polpa de graviola madura, liquidificador, espectrofotômetro, soluções tampão e pesquisadores.",
+    "enquadramento_regime": "O texto enquadra a bebida de caju principalmente sob o regime da ciência (bioquímica, tecnologia de alimentos), estado (via EMBRAPA e CNPq), e propriedade (industrialização de produtos alimentícios). A bebida é normatizada via estudo de sua estabilidade enzimática e exclusão de enzimas indesejadas para aumentar seu tempo de vida útil.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O argumento central do documento é que as enzimas do suco de caju são mais termorresistentes que as do suco de graviola e que o tratamento a 75 °C por 30 minutos é o melhor para o suco de caju, enquanto 55 °C por 30 minutos é suficiente para o suco de graviola, considerando apenas a atividade residual das enzimas."
+  }
+}

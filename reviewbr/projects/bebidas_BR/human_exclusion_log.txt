@@ -1,0 +1,35 @@
+REGISTRO DE EXCLUSÃO HUMANA TIE-BREAKER (PRISMA-ScR)
+Data: 2026-03-08T21:36:26.403Z
+
+[-] UID: TITLE_efeito da adição de suco clarificado de caju nas características tecnológicas e propriedades sensoriais da kombucha.
+    TÍTULO: Efeito da adição de suco clarificado de caju nas características tecnológicas e propriedades sensoriais da kombucha.
+    MOTIVO: Excluído manualmente pelo Coordenador (score IA: 85, regime: 01_regime_cientifico)
+
+[-] UID: TITLE_efeito da adição de suco clarificado de caju nas caractéristicas tecnólogicas e propriedades sensoriais da kombucha
+    TÍTULO: Efeito da adição de suco clarificado de caju nas caractéristicas tecnólogicas e propriedades sensoriais da kombucha
+    MOTIVO: Excluído manualmente pelo Coordenador (score IA: 85, regime: 01_regime_cientifico)
+
+[-] UID: TITLE_a yeast isolated from cashew apple juice and its ability to produce first- and second-generation ethanol
+    TÍTULO: A Yeast Isolated from Cashew Apple Juice and Its Ability to Produce First- and Second-Generation Ethanol
+    MOTIVO: Excluído manualmente pelo Coordenador (score IA: 85, regime: 01_regime_cientifico)
+
+[-] UID: TITLE_ethanol production from cashew apple bagasse: improvement of enzymatic hydrolysis by microwave-assisted alkali pretreatment.
+    TÍTULO: Ethanol production from cashew apple bagasse: improvement of enzymatic hydrolysis by microwave-assisted alkali pretreatment.
+    MOTIVO: Excluído manualmente pelo Coordenador (score IA: 60, regime: 01_regime_cientifico)
+
+[-] UID: TITLE_fundamentos e atualidades em tecnologia e inspeção de alimentos
+    TÍTULO: FUNDAMENTOS E ATUALIDADES EM TECNOLOGIA E INSPEÇÃO DE ALIMENTOS
+    MOTIVO: Excluído manualmente pelo Coordenador (score IA: 60, regime: 02_regime_regulatorio)
+
+[-] UID: TITLE_insumos e doces cearenses
+    TÍTULO: Insumos e doces cearenses
+    MOTIVO: Excluído manualmente pelo Coordenador (score IA: 60, regime: 03_regime_patrimonial)
+
+[-] UID: TITLE_encontro de saberes. a inclusão de mestres da cultura popular e seus saberes no ensino superior
+    TÍTULO: Encontro de Saberes. A inclusão de mestres da cultura popular e seus saberes no ensino superior
+    MOTIVO: Excluído manualmente pelo Coordenador (score IA: 60, regime: 03_regime_patrimonial)
+
+[-] UID: TITLE_comunidade quilombola são sebastião da boa vista: cotidiano, resistência e políticas públicas
+    TÍTULO: COMUNIDADE QUILOMBOLA SÃO SEBASTIÃO DA BOA VISTA: COTIDIANO, RESISTÊNCIA E POLÍTICAS PÚBLICAS
+    MOTIVO: Excluído manualmente pelo Coordenador (score IA: 60, regime: 03_regime_patrimonial)
+

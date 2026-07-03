@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_an integrated analytical approach based on nmr, lc-ms and gc-ms to evaluate thermal and non-thermal processing of cashew apple juice.",
+    "title": "An integrated analytical approach based on NMR, LC-MS and GC-MS to evaluate thermal and non-thermal processing of cashew apple juice.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Definida como 'suco de caju' (cashew apple juice), um produto passível de processamento térmico e não térmico com o objetivo de inativar microrganismos e prolongar a vida útil, mantendo as características nutricionais e sensoriais. É também descrita como uma matriz complexa contendo fenólicos (ácidos anacárdicos), vitaminas, aminoácidos, carotenoides, ácidos orgânicos e antioxidantes.",
+    "actantes_relacoes": "Os actantes incluem: frutos de caju, microrganismos, equipamentos de processamento (NMR, LC-MS, GC-MS, pasteurizadores, etc), processos térmicos (HTST, UHT), processos não-térmicos (ultrassom, plasma, luz pulsada UV, ozônio), compostos químicos (ácidos anacárdicos, sacarose, tirosina, fenilalanina, ésteres, aldeídos, cetonas, etc), dados analíticos gerados pelos equipamentos, métodos chemométricos (PCA, PARADISe, data fusion), pesquisadores e as instituições Universidade Federal do Ceará e Embrapa Agroindústria Tropical.",
+    "enquadramento_regime": "A bebida é enquadrada no regime da ciência alimentar e da tecnologia de alimentos, com foco na avaliação do impacto de diferentes métodos de processamento (térmicos e não térmicos) em sua composição química e perfil de aroma. A classificação e normatização são implícitas, buscando otimizar os processos para manter a qualidade e segurança do suco.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O processamento térmico (HTST e UHT) tem maior impacto na composição do suco de caju comparado ao processamento não-térmico. O ultrassom aumenta o teor de ácidos anacárdicos. O processamento térmico diminui os ácidos anacárdicos, a sacarose e a tirosina. Ambos os tipos de processamento afetam o odor (flavor) do suco. A análise chemométrica e a fusão de dados NMR e LC-MS, juntamente com a decomposição de dados GC-MS via PARADISe, proporcionaram uma compreensão mais abrangente das mudanças químicas induzidas pelos processos."
+  }
+}

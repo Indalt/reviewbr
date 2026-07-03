@@ -1,0 +1,260 @@
+[
+  {
+    "decision": "YES",
+    "score": 60,
+    "reasoning": "The paper discusses the Torém ritual of the Tremembé indigenous people, which may involve traditional food and beverages related to cashew, fitting the inclusion criteria. The title suggests a focus on cultural practices, and the absence of an abstract requires assuming potential relevance based on the available information.",
+    "record": {
+      "identifier": "https://openalex.org/W2991503201",
+      "title": "Aninhá Vaguretê: reflexões simbólicas para a Educação Física no ritual do Torém dos índios Tremembé",
+      "description": "",
+      "creators": [
+        "Arliene Stephanie Menezes Pereira"
+      ],
+      "date": "2019-09-04",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title mentions \"ritual do Torém dos índios Tremembé\" suggesting indigenous cultural practices.",
+        "The paper could potentially relate to traditional food or beverages including cashew-derived drinks.",
+        "Due to the lack of an abstract, the decision is based on the potential relevance derived from the title and keywords."
+      ],
+      "supporting_sentences": [
+        "Aninhá Vaguretê: reflexões simbólicas para a Educação Física no ritual do Torém dos índios Tremembé"
+      ]
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "01_regime_cientifico",
+    "_unique_id": "TITLE_aninhá vaguretê: reflexões simbólicas para a educação física no ritual do torém dos índios tremembé"
+  },
+  {
+    "decision": "MAYBE",
+    "score": 60,
+    "reasoning": "The title indicates relevance to cashew products in Ceará, but the lack of an abstract makes it difficult to determine the specific focus. Further investigation is needed to confirm if it aligns with the inclusion criteria, particularly concerning cashew-derived beverages or relevant cultural practices.",
+    "record": {
+      "identifier": "https://openalex.org/W2948176356",
+      "title": "A importancia do caju no ceará e seus subprodutos.",
+      "description": "",
+      "creators": [
+        "Dienka Casle da Costa Ferreira",
+        "Geilton Matheus Sales Braga",
+        "Juliana Andrade Moura",
+        "Julio Bezerra Viana",
+        "Leopoldo Gondim Neto"
+      ],
+      "date": "2016-01-01",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title mentions the importance of cashew in Ceará and its byproducts, suggesting relevance.",
+        "However, the absence of an abstract prevents a clear understanding of the study's specific focus.",
+        "Without an abstract, it's impossible to determine if the byproducts discussed are beverages or if the article covers relevant cultural practices."
+      ],
+      "supporting_sentences": []
+    },
+    "filters_applied": {
+      "language": "pt",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "01_regime_cientifico",
+    "_unique_id": "TITLE_a importancia do caju no ceará e seus subprodutos."
+  },
+  {
+    "decision": "YES",
+    "score": 80,
+    "reasoning": "The paper investigates the effects of ultrasound and ozone processing on cashew apple juice quality and microbial stability, which aligns with the inclusion criteria focused on beverages produced from cashew apple.",
+    "record": {
+      "identifier": "https://openalex.org/W4200177423",
+      "title": "Ultrasound and Ozone Processing of Cashew Apple Juice: Effects of Single and Combined Processing on the Juice Quality and Microbial Stability",
+      "description": "",
+      "creators": [
+        "Thatyane Vidal Fonteles",
+        "Maria Karolina de Araújo Barroso",
+        "Elenilson G. Alves Filho",
+        "Fabiano A.N. Fernandes",
+        "Suelí Rodrigues"
+      ],
+      "date": "2021-12-13",
+      "url": null,
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The title explicitly mentions \"Cashew Apple Juice\".",
+        "The study investigates processing methods for the juice.",
+        "The focus on juice quality and microbial stability is relevant to beverage production."
+      ],
+      "supporting_sentences": [
+        "Ultrasound and Ozone Processing of Cashew Apple Juice: Effects of Single and Combined Processing on the Juice Quality and Microbial Stability"
+      ]
+    },
+    "filters_applied": {
+      "language": "en",
+      "article_type": null,
+      "topic_score": 80
+    },
+    "_regime": "01_regime_cientifico",
+    "_unique_id": "TITLE_ultrasound and ozone processing of cashew apple juice: effects of single and combined processing on the juice quality and microbial stability"
+  },
+  {
+    "decision": "YES",
+    "score": 90,
+    "reasoning": "The study directly investigates the effects of cajuína, a beverage produced from cashew, on physical performance and physiological markers in runners, aligning with the inclusion criteria.",
+    "record": {
+      "identifier": "39985583",
+      "title": "A single dose of caju&#xed;na does not improve leukocyte count, lipid peroxidation, and physical performance in runners: a randomized, crossover, double&#x2011;blind, placebo study.",
+      "description": "To investigate the effects of a single dose of caju&#xed;na juice physical performance, leukocyte counts, and oxidative stress markers following a 10-km time trial in male runners. A total of nine recreationally trained male runners (32&#x2009;&#xb1;&#x2009;9.2&#xa0;years; 70.9&#x2009;&#xb1;&#x2009;8.1&#xa0;kg, 1.71&#x2009;&#xb1;&#x2009;0.06&#xa0;m, 3.9&#x2009;&#xb1;&#x2009;1.9 training sessions per week) were randomly assigned to receive either caju&#xed;na juice (containing approximately one gram of vitamin C) or a placebo (a similar drink containing 0&#xa0;mg of vitamin C) two hours before exercise, with a one-week washout period between interventions. Blood samples were collected immediately before ingestion and post-exercise. Leukocyte counts, as well as malondialdehyde (MDA), uric acid, and albumin concentrations, were analyzed from the samples. Physical performance was not affected by caju&#xed;na intake (p&#x2009;>&#x2009;0.05). Although a time effect (p&#x2009;=&#x2009;0.01) was observed for MDA concentrations, no condition (p&#x2009;=&#x2009;0.47) or interaction effects (p&#x2009;=&#x2009;0.84) were revealed. Additionally, there were no effects of condition, time, and interaction for albumin (p&#x2009;=&#x2009;0.83, p&#x2009;=&#x2009;0.37, and p&#x2009;=&#x2009;0.16, respectively) and uric acid (p&#x2009;=&#x2009;0.64, p&#x2009;=&#x2009;0.19, and p&#x2009;=&#x2009;0.55, respectively) concentrations. No significant or positive changes in leukocyte counts were observed (p&#x2009;>&#x2009;0.05). The single-dose intake of caju&#xed;na (Anacardium occidentale L.) does not improve leukocyte count, lipid peroxidation, or physical performance in recreationally trained male runners subjected to a 10-km time trial. The study was registered in the Brazilian Clinical Trials Registry (REBEC) under the following registration number: RBR-3cb6qtz. The study was prospectively registered on November 17, 2023.",
+      "creators": [
+        "Solon-J&#xfa;nior, Luiz Jos&#xe9; Frota",
+        "de Sousa Fortes, Leonardo",
+        "da Silva Oliveira, Jos&#xe9; Klinger",
+        "Toscano, Lydiane de Lima Tavares",
+        "da Silva Neto, Luiz Vieira"
+      ],
+      "date": "2025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39985583/",
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The paper's title and abstract explicitly mention 'cajuína', indicating a focus on a cashew-derived beverage.",
+        "The study investigates the impact of cajuína on runners' physical performance and physiological markers, indicating a direct relationship with the beverage's effects."
+      ],
+      "supporting_sentences": [
+        "To investigate the effects of a single dose of cajuína juice physical performance, leukocyte counts, and oxidative stress markers following a 10-km time trial in male runners.",
+        "The single-dose intake of cajuína (Anacardium occidentale L.) does not improve leukocyte count, lipid peroxidation, or physical performance in recreationally trained male runners subjected to a 10-km time trial."
+      ]
+    },
+    "filters_applied": {
+      "language": "en",
+      "article_type": null,
+      "topic_score": 90
+    },
+    "_regime": "01_regime_cientifico",
+    "_unique_id": "TITLE_a single dose of caju&#xed;na does not improve leukocyte count, lipid peroxidation, and physical performance in runners: a randomized, crossover, double&#x2011;blind, placebo study."
+  },
+  {
+    "decision": "YES",
+    "score": 85,
+    "reasoning": "The paper focuses on cashew apple juice, a beverage produced from cashew, and analyzes the impact of different processing methods on its chemical composition, including sugars, amino acids, and organic acids. This aligns with the inclusion criteria related to beverages produced from cashew.",
+    "record": {
+      "identifier": "39986766",
+      "title": "Plasma and ultrasound-treated cashew apple juices: An NMR analysis approach of its sugars, amino and organic acids.",
+      "description": "Cashew apple juice is a beverage derived from the peduncles of the cashew fruit (Anacardium occidentale). It is a nutrient-dense juice containing vitamins, organic acids, phenolics, carotenoids, amino acids, and sugars. Thermal processing darkens the juice, reducing its appeal, while non-thermal processing preserves its visual appeal but may lead to changes in its chemical composition. In this study, we evaluate the effects of plasma and ultrasound processing on the concentration of sugars, organic, and amino acids in cashew apple juice, analysing them by NMR technique. Experimental designs were planned to map each process's main operating conditions range. Processing the juice with plasma has the advantage of preserving its natural chemical characteristics while boosting the amino acid content. Meanwhile, ultrasound processing reduces the juice's sugar content by up to 21&#xa0;%, offering the potential to create lower-calorie cashew apple juice without compromising its natural sweetness and sourness.",
+      "creators": [
+        "Alves Filho, Elenilson G",
+        "Silva, Lorena M A",
+        "Canuto, Kirley M",
+        "Maia, Dayanne Lara Holanda",
+        "Rodrigues, Sueli",
+        "Fernandes, Fabiano Andre Narciso"
+      ],
+      "date": "2025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39986766/",
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The abstract explicitly mentions 'cashew apple juice' as the beverage of interest.",
+        "The study analyzes the impact of processing techniques on the juice's components like sugars, relevant to the beverage's characteristics.",
+        "The focus on modifying the juice's sugar content aligns with the interest in altering the beverage's properties."
+      ],
+      "supporting_sentences": [
+        "Cashew apple juice is a beverage derived from the peduncles of the cashew fruit (Anacardium occidentale).",
+        "In this study, we evaluate the effects of plasma and ultrasound processing on the concentration of sugars, organic, and amino acids in cashew apple juice, analysing them by NMR technique.",
+        "Meanwhile, ultrasound processing reduces the juice's sugar content by up to 21&#xa0;%, offering the potential to create lower-calorie cashew apple juice without compromising its natural sweetness and sourness."
+      ]
+    },
+    "filters_applied": {
+      "language": "en",
+      "article_type": null,
+      "topic_score": 85
+    },
+    "_regime": "01_regime_cientifico",
+    "_unique_id": "TITLE_plasma and ultrasound-treated cashew apple juices: an nmr analysis approach of its sugars, amino and organic acids."
+  },
+  {
+    "decision": "YES",
+    "score": 65,
+    "reasoning": "The paper describes the development of a prebiotic beverage using cashew nut kernels and passion fruit juice, fitting the inclusion criteria regarding beverages produced from cashew.",
+    "record": {
+      "identifier": "24961964",
+      "title": "Optimization of the acceptance of prebiotic beverage made from cashew nut kernels and passion fruit juice.",
+      "description": "The aim of this research was to develop a prebiotic beverage from a hydrosoluble extract of broken cashew nut kernels and passion fruit juice using response surface methodology in order to optimize acceptance of its sensory attributes. A 2(2) central composite rotatable design was used, which produced 9 formulations, which were then evaluated using different concentrations of hydrosoluble cashew nut kernel, passion fruit juice, oligofructose, and 3% sugar. The use of response surface methodology to interpret the sensory data made it possible to obtain a formulation with satisfactory acceptance which met the criteria of bifidogenic action and use of hydrosoluble cashew nut kernels by using 14% oligofructose and 33% passion fruit juice. As a result of this study, it was possible to obtain a new functional prebiotic product, which combined the nutritional and functional properties of cashew nut kernels and oligofructose with the sensory properties of passion fruit juice in a beverage with satisfactory sensory acceptance. This new product emerges as a new alternative for the industrial processing of broken cashew nut kernels, which have very low market value, enabling this sector to increase its profits.",
+      "creators": [
+        "Rebou&#xe7;as, Marina Cabral",
+        "Rodrigues, Maria do Carmo Passos",
+        "Afonso, Marcos Rodrigues Amorim"
+      ],
+      "date": "2014",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24961964/",
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The study focuses on developing a prebiotic beverage.",
+        "The beverage is made from cashew nut kernels, which falls under the category of 'bebidas produzidas a partir do caju'."
+      ],
+      "supporting_sentences": [
+        "The aim of this research was to develop a prebiotic beverage from a hydrosoluble extract of broken cashew nut kernels and passion fruit juice using response surface methodology in order to optimize acceptance of its sensory attributes."
+      ]
+    },
+    "filters_applied": {
+      "language": "en",
+      "article_type": null,
+      "topic_score": 65
+    },
+    "_regime": "01_regime_cientifico",
+    "_unique_id": "TITLE_optimization of the acceptance of prebiotic beverage made from cashew nut kernels and passion fruit juice."
+  },
+  {
+    "decision": "YES",
+    "score": 60,
+    "reasoning": "The article discusses the use of cashew apple juice processing residue to produce bacterial cellulose, which can then be used as a biomaterial. While not directly about cashew-based beverages or traditional practices, it explores the utilization of a byproduct from cashew juice production, which indirectly relates to the topic.",
+    "record": {
+      "identifier": "37100327",
+      "title": "Superabsorbent bacterial cellulose film produced from industrial residue of cashew apple juice processing.",
+      "description": "The industrial residue of cashew apple juice processing (MRC) was evaluated as an alternative medium for bacterial cellulose (BC) production by Komagataeibacter xylinus ATCC 53582 and Komagataeibacter xylinus ARS B42. The synthetic Hestrin-Schramm medium (MHS) was used as a control for growing and BC production. First, BC production was assessed after 4, 6, 8, 10, and 12&#xa0;days under static culture. After 12&#xa0;days of cultivation, K. xylinus ATCC 53582 produced the highest BC titer in MHS (3.1&#xa0;g&#xb7;L) and MRC (3&#xa0;g&#xb7;L), while significant productivity was attained at 6&#xa0;days of fermentation. To understand the effect of culture medium and fermentation time on the properties of the obtained films, BC produced at 4, 6, or 8&#xa0;days were submitted to infrared spectroscopy with Fourier transform, thermogravimetry, mechanical tests, water absorption capacity, scanning electron microscopy, degree of polymerization and X-ray diffraction. The properties of BC synthesized in MRC were identical to those of BC from MHS, according to structural, physical, and thermal studies. MRC, on the other hand, allows the production of BC with a high water absorption capacity when compared to MHS. Despite the lower titer (0.88&#xa0;g&#xb7;L) achieved in MRC, the BC from K. xylinus ARS B42 presented a high thermal resistance and a remarkable absorption capacity (14664&#xa0;%), suggesting that it might be used as a superabsorbent biomaterial.",
+      "creators": [
+        "Guimar&#xe3;es, Darlyson Tavares",
+        "de Oliveira Barros, Matheus",
+        "de Ara&#xfa;jo E Silva, Renata",
+        "Silva, Sarah Maria Frota",
+        "de Almeida, Jessica Silva",
+        "de Freitas Rosa, Morsyleide",
+        "Gon&#xe7;alves, Luciana Rocha Barros",
+        "Br&#xed;gida, Ana Iraidy Santa"
+      ],
+      "date": "2023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37100327/",
+      "repositoryName": "DB Central"
+    },
+    "justification": {
+      "reasoning_steps": [
+        "The paper focuses on bacterial cellulose production from cashew apple juice processing residue.",
+        "This residue is a byproduct of cashew juice production, linking it to the processing of cashew apples for beverages.",
+        "The study explores alternative uses for this byproduct, contributing to the understanding of cashew apple utilization."
+      ],
+      "supporting_sentences": [
+        "The industrial residue of cashew apple juice processing (MRC) was evaluated as an alternative medium for bacterial cellulose (BC) production by Komagataeibacter xylinus ATCC 53582 and Komagataeibacter xylinus ARS B42.",
+        "MRC, on the other hand, allows the production of BC with a high water absorption capacity when compared to MHS.",
+        "Despite the lower titer (0.88&#xa0;g&#xb7;L) achieved in MRC, the BC from K. xylinus ARS B42 presented a high thermal resistance and a remarkable absorption capacity (14664&#xa0;%), suggesting that it might be used as a superabsorbent biomaterial."
+      ]
+    },
+    "filters_applied": {
+      "language": "en",
+      "article_type": null,
+      "topic_score": 60
+    },
+    "_regime": "01_regime_cientifico",
+    "_unique_id": "TITLE_superabsorbent bacterial cellulose film produced from industrial residue of cashew apple juice processing."
+  }
+]

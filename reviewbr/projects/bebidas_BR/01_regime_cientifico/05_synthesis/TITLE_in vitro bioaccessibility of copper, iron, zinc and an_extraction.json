@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_in vitro bioaccessibility of copper, iron, zinc and antioxidant compounds of whole cashew apple juice and cashew apple fibre (anacardium occidentale l.) following simulated gastro-intestinal digestion.",
+    "title": "In vitro bioaccessibility of copper, iron, zinc and antioxidant compounds of whole cashew apple juice and cashew apple fibre (Anacardium occidentale L.) following simulated gastro-intestinal digestion.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O suco de caju é definido em termos de sua composição química (cobre, ferro, zinco, ácido ascórbico, polifenóis totais extraíveis, atividade antioxidante total) e sua bioacessibilidade in vitro após digestão gastrointestinal simulada.",
+    "actantes_relacoes": "Elementos humanos: Os pesquisadores que realizam a análise in vitro, empresas produtoras do suco de caju.\nElementos não-humanos: Suco de caju, fibra de caju, cobre, ferro, zinco, ácido ascórbico, polifenóis, antioxidantes, enzimas digestivas (pepsina, pancreatina), sais biliares, pH, temperatura, equipamentos de laboratório (ICP-OES, HPLC, espectrofotômetro, etc), membranas de diálise.",
+    "enquadramento_regime": "O estudo enquadra a bebida (suco de caju e fibra de caju) dentro do regime da ciência nutricional, buscando quantificar e qualificar a bioacessibilidade de certos compostos após digestão gastrointestinal simulada. Não há menção de normatização estatal, propriedade ou comunidade.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O principal achado é que a bioacessibilidade dos minerais (zinco), do ácido ascórbico e dos polifenóis totais extraíveis é maior no suco de caju em comparação com a fibra, possivelmente devido ao menor teor de taninos e fitatos no suco. O estudo conclui que o consumo de suco de caju é altamente recomendado devido a esses fatores."
+  }
+}

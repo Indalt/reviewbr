@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_uplc-qtof-ms/ms-based phenolic profile and their biosynthetic enzyme activity used to discriminate between cashew apple (anacardium occidentale l.) maturation stages.",
+    "title": "UPLC-qTOF-MS/MS-based phenolic profile and their biosynthetic enzyme activity used to discriminate between cashew apple (Anacardium occidentale L.) maturation stages.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Não mencionado",
+    "actantes_relacoes": "Os actantes que intra-agem para formar o perfil fenólico da bebida (suco) de caju, de acordo com o texto, incluem: pedúnculos de caju (Anacardium occidentale L.) dos clones CCP 76 e BRS 189 em diferentes estágios de maturação (verde e maduro), enzimas (PAL, UGT, FLS, LAR), compostos fenólicos (cinnamoyl glucoside, monogalloyl diglucoside, digalloyl glucoside, flavonols), solventes (água, metanol, acetonitrila), equipamentos de laboratório (UPLC-qTOF-MS/MS), e as atividades enzimáticas.",
+    "enquadramento_regime": "O documento enquadra a bebida (suco) de caju dentro do regime da ciência, através da análise e identificação de compostos fenólicos e atividades enzimáticas utilizando métodos como UPLC-qTOF-MS/MS e análise estatística multivariada. A bebida é normatizada através da classificação dos compostos identificados e da avaliação de sua variação em diferentes estágios de maturação e clones. A exclusão é feita ao se concentrar em certos compostos e enzimas, deixando de lado outros aspectos da composição da bebida.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O estudo conclui que o perfil de compostos fenólicos e a atividade de enzimas biossintéticas variam significativamente durante a maturação do caju, permitindo a identificação de marcadores químicos para diferentes estágios de maturação e clones. Cinnamoyl glucoside é um marcador potencial para caju maduro, enquanto monogalloyl diglucoside e digalloyl glucoside são marcadores para caju imaturo. Ácidos anacárdicos e GA19 são marcadores para a fração fibrosa do caju imaturo. A atividade da enzima PAL diminui durante o desenvolvimento do caju."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_isolation, identification and screening of the yeast flora from indian cashew apple for sugar and ethanol tolerance",
+    "title": "Isolation, Identification and Screening of the Yeast Flora from Indian Cashew Apple for Sugar and Ethanol Tolerance",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O texto define a bebida de caju como uma bebida alcoólica produzida a partir do suco de caju, rico em açúcares fermentáveis, minerais e vitaminas, tornando-o um substrato adequado para a produção de bebidas alcoólicas.",
+    "actantes_relacoes": "Os actantes e suas relações, de acordo com o texto, incluem: caju (fonte de açúcares), leveduras (Candida spp., Saccharomyces cereviciae), enzimas (invertase), açúcar (glicose, frutose), etanol, meio de cultura (Oxytetracycline Glucose Agar), equipamentos de laboratório (Biovis Image analyzer, mini API instrument), artigos científicos, e pesquisadores.",
+    "enquadramento_regime": "O texto enquadra a bebida dentro do regime da ciência (investigação microbiológica, identificação de leveduras, testes de tolerância a açúcar e etanol) e da indústria (potencial para produção comercial de bebidas alcoólicas). Feni é mencionada como uma bebida tradicional, mas a pesquisa visa identificar cepas de leveduras para produção industrial.",
+    "contexto_tradicional": "O texto menciona a feni como uma bebida alcoólica tradicional produzida e consumida em Goa, feita a partir da fermentação alcoólica do suco de caju. Não há menção explícita a povos originários do Ceará ou agricultura familiar/tradicional.",
+    "desfecho_conclusao": "O argumento central é que leveduras Candida spp. isoladas do caju indiano exibem alta tolerância a açúcar e etanol, tornando-as alternativas potenciais às tradicionais Saccharomyces spp. para a produção de bebidas alcoólicas."
+  }
+}

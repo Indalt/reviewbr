@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_desenvolvimento e caracterização de bebida vegetal à base de amêndoa de castanha de caju, adicionada de achocolatado, leite de coco ou banana",
+    "title": "Desenvolvimento e caracterização de bebida vegetal à base de amêndoa de castanha de caju, adicionada de achocolatado, leite de coco ou banana",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "O texto define a bebida de caju como um 'néctar misto' obtido da mistura de suco integral de caju e polpa de açaí, potencialmente com características funcionais devido às propriedades nutricionais das frutas.",
+    "actantes_relacoes": "Os actantes e suas relações, conforme o texto, incluem: \n*   **Humanos**: Pesquisadores (Analia Maria Pinheiro, Geraldo Arraes Maia, Paulo Henrique Machado de Sousa), provadores (70 não treinados para testes sensoriais iniciais, 100 para avaliação final), produtores de matéria-prima, consumidores.\n*   **Não-Humanos**: Caju (Anacardium occidentale L.), açaí (Euterpe oleracea Mart.), água, sacarose, aditivos (benzoato de sódio, metabissulfito de sódio), embalagens (vidro, PET), equipamentos de laboratório (refratômetro, medidor de pH, espectrofotômetro), microrganismos (coliformes, Salmonella sp.), legislação (normas para néctares e sucos), dados estatísticos de consumo, artigos científicos.\n*   **Instituições**: Universidade Federal do Ceará, FUNCAP, Jandaia Agroindústria Ltda, Dafruta Indústria e Comércio S.A.",
+    "enquadramento_regime": "A bebida é enquadrada dentro do regime da ciência (através de pesquisa e análise laboratorial), do estado (através de regulamentação e legislação sobre padrões de qualidade) e do mercado/indústria (como um produto comercializável e sujeito a testes de aceitação do consumidor). Existe uma normatização da bebida por meio de parâmetros físico-químicos e sensoriais.",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "O principal achado é a formulação otimizada do néctar misto de caju e açaí, definida como aquela com 30% de polpa total, sendo 54,2% de polpa de açaí e 45,8% de suco de caju integral. O texto também conclui que o processamento utilizado é adequado para a estabilidade do néctar por 30 dias, e que as embalagens (PET e vidro) não apresentaram diferenças significativas na aceitação sensorial do produto."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "unique_id": "TITLE_hybrid neural network modeling and particle swarm optimization for improved ethanol production from cashew apple juice.",
+    "title": "Hybrid neural network modeling and particle swarm optimization for improved ethanol production from cashew apple juice.",
+    "regime": "01_regime_cientifico"
+  },
+  "extraction": {
+    "ontologia_bebida": "Cashew apple juice is viewed as a substrate for ethanol production via alcoholic fermentation, primarily studied for its potential as an alternative raw material to corn and sugarcane. It's a culture medium suitable for the growth of a flocculating yeast (Saccharomyces cerevisiae).",
+    "actantes_relacoes": "The key actants include: Cashew apple juice (substrate), Saccharomyces cerevisiae CCA008 (flocculating yeast, FLO5α gene modification), temperature, stirring speed, initial substrate concentration, initial cell concentration, time, ethanol (product), artificial neural networks (ANNs), hybrid neural model (HNM), particle swarm optimization (PSO), bioreactor, mass balance equations, physicochemical and biochemical laws, and operational conditions. These elements intra-act through biochemical reactions, mass transfer, and optimization algorithms to influence ethanol production.",
+    "enquadramento_regime": "The beverage (cashew apple juice as substrate for ethanol) is enquadred primarily within the regime of scientific investigation focused on optimizing bioprocess engineering. It is normatized through mathematical modeling (HNM, ANN, PSO), statistical analysis, and experimental validation to improve ethanol production efficiency and productivity. Exclusion criteria are indirectly present in the form of constraints within the optimization algorithm to ensure realistic outcomes (e.g., maximum theoretical yield for ethanol).",
+    "contexto_tradicional": "Não mencionado",
+    "desfecho_conclusao": "The study concludes that the HNM-PSO approach is an efficient tool for analyzing and simulating alcoholic fermentation of cashew apple juice by flocculant yeast, offering a valuable alternative for complex biotechnological processes. The combination of advanced modeling techniques and optimization was successful in maximizing efficiency and reaction productivity."
+  }
+}
