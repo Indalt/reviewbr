@@ -1,0 +1,14 @@
+[
+  {
+    "decision": "NO",
+    "score": 0,
+    "reasoning": "O documento avaliado não possui conteúdo científico real, tratando-se apenas de uma página de navegação do repositório DSpace da UNICENTRO.",
+    "record": {
+      "repositoryId": "BR-EST-0015",
+      "repositoryName": "Repositório Institucional UNICENTRO",
+      "identifier": "/jspui/handle/123456789/1145",
+      "title": "Comunicação",
+      "url": "https://repositorio.unicentro.br/jspui/handle/123456789/1145"
+    }
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "timestamp": "2026-07-03T02:56:00.731Z",
+    "tool": "search_scielo",
+    "query": "haustório OR \"maçã do coco\" OR \"coração do coco\"",
+    "found": 2,
+    "totalFound": 2,
+    "params": {
+      "query": "haustório OR \"maçã do coco\" OR \"coração do coco\"",
+      "maxResults": 50,
+      "projectPath": "reviewbr/projects/bebidas_maca_do_coco"
+    }
+  },
+  {
+    "timestamp": "2026-07-03T02:56:07.505Z",
+    "tool": "search_core",
+    "query": "haustório coco bebida Brasil",
+    "found": 0,
+    "totalFound": 0,
+    "params": {
+      "query": "haustório coco bebida Brasil",
+      "maxResults": 50,
+      "projectPath": "reviewbr/projects/bebidas_maca_do_coco"
+    }
+  },
+  {
+    "timestamp": "2026-07-03T03:25:03.415Z",
+    "tool": "search_repository",
+    "query": "haustório do coco bebida",
+    "found": 197,
+    "errors": []
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "timestamp": "2026-07-03T04:11:16.718Z",
+    "tool": "search_openalex",
+    "query": "\"coconut apple\" OR \"coconut haustorium\" OR \"coconut sprout\" beverage",
+    "found": 100,
+    "totalFound": 628146,
+    "params": {
+      "query": "\"coconut apple\" OR \"coconut haustorium\" OR \"coconut sprout\" beverage",
+      "maxResults": 100,
+      "projectPath": "reviewbr/projects/bebidas_maca_do_coco_global"
+    }
+  },
+  {
+    "timestamp": "2026-07-03T04:11:21.147Z",
+    "tool": "search_core",
+    "query": "coconut apple haustorium beverage fermented",
+    "found": 0,
+    "totalFound": 0,
+    "params": {
+      "query": "coconut apple haustorium beverage fermented",
+      "maxResults": 100,
+      "projectPath": "reviewbr/projects/bebidas_maca_do_coco_global"
+    }
+  },
+  {
+    "timestamp": "2026-07-03T04:44:16.282Z",
+    "tool": "search_repository",
+    "query": "haustório do coco bebida",
+    "found": 197,
+    "errors": []
+  },
+  {
+    "timestamp": "2026-07-03T10:49:25.400Z",
+    "tool": "search_openalex",
+    "query": "coconut haustorium apple beverage",
+    "found": 13,
+    "totalFound": 13,
+    "params": {
+      "query": "coconut haustorium apple beverage",
+      "maxResults": 50,
+      "projectPath": "reviewbr/projects/bebidas_maca_do_coco_global"
+    }
+  }
+]

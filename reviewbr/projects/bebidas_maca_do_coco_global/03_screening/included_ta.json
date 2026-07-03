@@ -1,0 +1,77 @@
+[
+  {
+    "decision": "MAYBE",
+    "score": 30,
+    "reasoning": "The metadata is extremely limited, containing only a generic title ('Comunicação') and no abstract or keywords. It is impossible to determine whether this document meets the inclusion criteria (beverages from coconut haustorium) without retrieving and reviewing the full text.",
+    "record": {
+      "repositoryId": "BR-EST-0015",
+      "repositoryName": "Repositório Institucional UNICENTRO",
+      "identifier": "/jspui/handle/123456789/1145",
+      "title": "Comunicação",
+      "creators": [],
+      "description": "",
+      "date": "",
+      "type": "",
+      "url": "https://repositorio.unicentro.br/jspui/handle/123456789/1145",
+      "accessMethod": "html-scraper",
+      "audit": {
+        "methodology": "CUSTOM",
+        "searchQueryUsed": "haustório do coco bebida",
+        "extractionDate": "2026-07-03T04:29:11.045Z",
+        "provenanceSource": "https://repositorio.unicentro.br"
+      }
+    }
+  },
+  {
+    "decision": "MAYBE",
+    "score": 40,
+    "reasoning": "The title indicates a focus on non-conventional value-added products of coconut, which could potentially include the coconut haustorium (coconut apple). However, because there is no abstract available, it is impossible to verify if the text specifically addresses beverages produced from this part of the coconut. Full-text retrieval is required to confirm eligibility.",
+    "record": {
+      "repositoryId": "openalex",
+      "repositoryName": "OpenAlex",
+      "identifier": "https://openalex.org/W4401099647",
+      "title": "Coconut: Expanding avenues in processing and an exposition on non‐conventional value‐added products",
+      "creators": [
+        "S. Ashwin Kumar",
+        "Aditi Negi",
+        "P. Santhoshkumar",
+        "J.A. Moses",
+        "V. R. Sinija"
+      ],
+      "date": "2024-07-28",
+      "doi": "https://doi.org/10.1002/jsfa.13764",
+      "type": "review",
+      "accessMethod": "api",
+      "audit": {
+        "methodology": "CUSTOM",
+        "searchQueryUsed": "coconut haustorium apple beverage",
+        "extractionDate": "2026-07-03T10:49:25.395Z",
+        "provenanceSource": "https://api.openalex.org/works"
+      }
+    }
+  },
+  {
+    "decision": "MAYBE",
+    "score": 30,
+    "reasoning": "The title refers to the development of a 'functional fermented beverage,' which could potentially be made from coconut haustorium. However, because there is no abstract or keywords available, the raw material used to produce the beverage is not specified. It is categorized as MAYBE because of missing information, requiring full-text screening to confirm the substrate.",
+    "record": {
+      "repositoryId": "openalex",
+      "repositoryName": "OpenAlex",
+      "identifier": "https://openalex.org/W7120418321",
+      "title": "Development of a functional fermented beverage with neuroprotective potential evaluated in Zebrafish model (DANIO RERIO)",
+      "creators": [
+        "Brenda da Silva Bernardino"
+      ],
+      "date": "2025-01-01",
+      "doi": null,
+      "type": "dissertation",
+      "accessMethod": "api",
+      "audit": {
+        "methodology": "CUSTOM",
+        "searchQueryUsed": "coconut haustorium apple beverage",
+        "extractionDate": "2026-07-03T10:49:25.395Z",
+        "provenanceSource": "https://api.openalex.org/works"
+      }
+    }
+  }
+]

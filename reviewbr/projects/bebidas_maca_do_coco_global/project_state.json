@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "method": "scoping-prisma-scr",
+  "framework": "PCC",
+  "reviewType": "Revisão de Escopo",
+  "topic": "Bebidas produzidas a partir do haustorio (maca/coracao) do coco (Cocos nucifera): aspectos tecnologicos, fisico-quimicos, sensoriais e saberes populares, sem restricao geografica",
+  "userId": "vicente",
+  "status": "LOCKED",
+  "control_level": "estrito",
+  "phase": "F5",
+  "createdAt": "2026-07-03T04:10:34.627Z",
+  "updatedAt": "2026-07-03T11:32:26.101Z",
+  "decisions": []
+}
