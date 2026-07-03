@@ -529,10 +529,10 @@
     },
     "access": {
       "oaiPmh": {
-        "available": false,
-        "endpoint": "https://repositorio.uerr.edu.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-03-02"
+        "available": true,
+        "endpoint": "https://repositorio.uerr.edu.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-07-03"
       },
       "searchEndpoints": []
     },
@@ -907,10 +907,10 @@
     },
     "access": {
       "oaiPmh": {
-        "available": false,
+        "available": true,
         "endpoint": "https://repositorio.ufpi.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-03-02"
+        "verified": true,
+        "lastVerified": "2026-07-03"
       },
       "searchEndpoints": []
     },
@@ -1285,10 +1285,10 @@
     },
     "access": {
       "oaiPmh": {
-        "available": false,
-        "endpoint": "https://dspace.ifrs.edu.br/xmlui/oai/request",
-        "verified": false,
-        "lastVerified": "2026-03-02"
+        "available": true,
+        "endpoint": "https://dspace.ifrs.edu.br/oai/request",
+        "verified": true,
+        "lastVerified": "2026-07-03"
       },
       "searchEndpoints": []
     },
@@ -1609,10 +1609,10 @@
     },
     "access": {
       "oaiPmh": {
-        "available": false,
-        "endpoint": "",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "available": true,
+        "endpoint": "https://repositorio.pgsscogna.com.br/oai/request",
+        "verified": true,
+        "lastVerified": "2026-07-03"
       },
       "searchEndpoints": []
     },
@@ -1906,10 +1906,10 @@
     },
     "access": {
       "oaiPmh": {
-        "available": false,
-        "endpoint": "https://repositorio.ucs.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-03-02"
+        "available": true,
+        "endpoint": "https://repositorio.ucs.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-07-03"
       },
       "searchEndpoints": []
     },
@@ -1960,10 +1960,10 @@
     },
     "access": {
       "oaiPmh": {
-        "available": false,
+        "available": true,
         "endpoint": "https://repositorio.unisc.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-03-02"
+        "verified": true,
+        "lastVerified": "2026-07-03"
       },
       "searchEndpoints": []
     },
@@ -2149,10 +2149,10 @@
     },
     "access": {
       "oaiPmh": {
-        "available": false,
-        "endpoint": "",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "available": true,
+        "endpoint": "https://repositorio.cruzeirodosul.edu.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-07-03"
       },
       "searchEndpoints": []
     },
@@ -2176,10 +2176,10 @@
     },
     "access": {
       "oaiPmh": {
-        "available": false,
-        "endpoint": "",
-        "verified": false,
-        "lastVerified": "2026-02-11"
+        "available": true,
+        "endpoint": "https://repositorio.unicid.edu.br/server/oai/request",
+        "verified": true,
+        "lastVerified": "2026-07-03"
       },
       "searchEndpoints": []
     },
