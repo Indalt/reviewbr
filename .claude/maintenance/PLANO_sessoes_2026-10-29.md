@@ -82,6 +82,30 @@ Consequências para ler o disco sem se enganar:
 **Estado:** sessão 0 fechada em 29/10/2026 (carta no fim deste arquivo). Sessão 1 com prompt de abertura pronto,
 não iniciada.
 
+### Modelo e esforço de cada sessão (calculado em 29/10/2026)
+
+Modelo: **Opus 5.5 em todas** — *"nunca deixar de usar o opus pela complexidade das tarefas"* (Vicente, 25/09). O
+que muda é o esforço: **max** onde o erro não é pego por teste (leitura de norma oficial, arquitetura, mudança de
+direção em muitos arquivos — o sistema passaria a mentir em silêncio); **xhigh** onde as decisões já estão
+tomadas e a suíte confere o conserto. O padrão salvo do Vicente para o Opus 5.5 é *medium*, e *max* não fica
+salvo: o esforço se escolhe no começo de cada chat (`/effort`), antes de colar o prompt. Custo estimado pela
+sessão 0 (em max, ~4 M de ponderado ≈ 40% de uma janela de 5h, sem contar outro projeto aberto na mesma janela).
+
+| # | esforço | ultracode | custo estimado (janela de 5h) | por quê |
+|---|---|---|---|---|
+| 1 | max | não | 40–60% | leitura do checklist oficial e mapeamento contra a norma; o falsificador só confere em parte |
+| 2 | max | não na execução; revisão independente depois, se aprovada | 60–100% — pode virar duas janelas | DEBT-142 muda a arquitetura de declarações e é pré-requisito do DEBT-045/014 e da sessão 6 |
+| 3 | xhigh | não | 40–60% | consertos de código com decisão tomada (DEBT-138, 070…) e aritmética conferida pela suíte |
+| 4 | xhigh | não | 40–60% | idem (log PRISMA-S, saturação, dedup) |
+| 5 | xhigh | não | 40–60% | idem; o DEBT-018 mexe na trava do protocolo, com cuidado de compatibilidade com projetos antigos |
+| 6 | max | não na execução; revisão independente depois, recomendada | 70–100%+ — planejar duas janelas | mudança de direção em agentes, skills e manifests: risco de deriva e de quebrar o `prisma-sr` |
+| 7+ | high nas 19 declarações; xhigh nos consertos; max na assimilação de método validado | só na assimilação, para varrer fontes oficiais, com custo aprovado | um bloco por janela | declarar é mecânico; assimilar é ler norma |
+| testes | xhigh na execução; max na análise | não | a definir | — |
+| acompanhamento | high | não | — | conferência e redação curta; o contexto deste chat já é longo e cada volta custa caro |
+
+Uma sessão por janela de 5h, começando com a janela nova; trabalho pesado em outro projeto na mesma janela
+reduz o que sobra para a sessão.
+
 ## Como trabalhar — para o disco e a sessão não dependerem um do outro
 
 1. **Uma porta de entrada.** Este arquivo e o topo da `ESPECIFICACAO_vestir_metodos.md` dizem o estado; os
@@ -149,7 +173,8 @@ na mesma janela (68 mil). E das 10 corridas em disco, 6 morreram com agentes pel
 Objetivo: <uma frase>
 Entrada: <o que precisa estar pronto/decidido>
 Saída verificável: <teste, comando ou número que prova o fim>
-Tokens na abertura: <% que o Vicente lê> · medido: principal <saída>, subagentes <saída> · projeção da sessão: <estimativa>
+Modelo e esforço: <modelo · esforço · ultracode sim/não>
+Tokens na abertura: <% estimada pelo --agora (piso), ou lida no painel> · medido: principal, subagentes · projeção da sessão: <estimativa>
 --- fechamento ---
 Tokens no fechamento: <%> · medido: principal <saída>, subagentes <saída>
 Feito: <achados fechados, com id>
@@ -203,6 +228,7 @@ Preparado no chat de acompanhamento em 29/10/2026. Cole num chat novo:
 
 ```
 Sessão 1 do .claude/maintenance/PLANO_sessoes_2026-10-29.md — Escopo e PRISMA-S.
+Modelo e esforço: Opus 5.5, esforço max, sem ultracode (definidos pelo Vicente antes de colar; anote na carta).
 
 Este é o chat da sessão 1: execute só ela. Decisões, dúvidas e a próxima sessão ficam no chat de
 acompanhamento. Furo do plano (algo que este prompt e o plano não decidem): registre pela tool, feche o passo
