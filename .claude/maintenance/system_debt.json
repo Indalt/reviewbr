@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-29T11:29:04.986Z",
+  "updatedAt": "2026-10-29T20:19:18.193Z",
   "findings": [
     {
       "id": "DEBT-001",
@@ -1546,17 +1546,17 @@
       "depende_de": []
     },
     {
-      "reproduction": "Comparar o escopo da skill system-audit (4 varreduras, todas internas ao sistema) com a ausencia de qualquer varredura que confronte o sistema contra padroes externos vigentes. O criterio de parada da skill nao tem item de conformidade externa.",
-      "location": ".claude/skills/system-audit/SKILL.md (criterio de parada) e .claude/maintenance/DIAGNOSTICO_frente_2.md",
-      "resolution": "RESOLVIDO em 29/10/2026 (pergunta 14, 'fechar se concluido'). Conferido em 18/10 e sem mudanca desde entao: a pergunta 'o que o sistema declara ainda basta?' virou rotina de entrada do maintainer — passo 1a (obsolescencia dos padroes assimilados, DEBT-010), passo 2 (EQUATOR e fonte oficial de cada padrao) e passo 1b (ferramentas de IA e infraestrutura brasileira, DEBT-144). O RAISE 3 esta assimilado; o que falta dele (padrao-ouro, recall, variabilidade, declaracao por metodo) fica no DEBT-094, que manda na ordem das correcoes nas tools de IA.",
-      "found_by": "revisao do ReviewBR — pergunta do pesquisador sobre auditoria tardia antes de corrigir",
-      "found_at": "2026-09-25",
-      "context": "E EXTENSAO: a skill de auditoria nunca prometeu varredura de conformidade externa, entao nao ha promessa descumprida. Levantado pelo pesquisador ao perguntar se havia algo a auditar ANTES de aplicar correcoes. A resposta e sim, e este e o achado. Decisao do pesquisador pendente sobre a ordem: (a) fechar DEBT-094 primeiro, absorvendo as diretrizes de IA no catalogo, e so entao corrigir as tools de IA; ou (b) corrigir agora e revisar depois. VERIFICAÇÃO 26/09/2026 (pedido do pesquisador, que afirmou que DEBT-094 já teria sido fechado): reapurei DEBT-094 no backlog atual (não confiei na afirmação) — status é EM_CURSO, NÃO RESOLVIDO. É verdade que DEBT-099 (RESOLVIDO) construiu boa parte da trilha de triagem contra o §4.9 (ScreeningAuditService: prompt_template.txt, decisions.jsonl, run.json com nome/versão/datas do modelo — cobre 4.9.1 e parte do §4.3), mas a resolution de DEBT-099 registra explicitamente que FICOU DE FORA: 'padrão-ouro, meta de recall e avaliação de desempenho (RAISE §4.9.3.1/4.9.3.2)... isso é Fase 3 e exige protocolo próprio'. Ou seja, 4.9.2 (finalidade/partes impactadas), 4.9.3.1 (avaliação de desempenho), parte de 4.9.3.2 (padrão-ouro), 4.9.3.3 (interesses) e 4.9.3.4 (limitações) do RAISE §4.9 — e as exigências do RAISE 2 sobre padrão-ouro/recall — seguem sem tratamento, e DEBT-094 permanece corretamente EM_CURSO, não RESOLVIDO. NÃO FECHEI DEBT-096: a pré-condição de ordem que ele exige (DEBT-094 resolvido) NÃO está cumprida. Divergência registrada para o pesquisador decidir — não decidi em seu lugar. Se ele considerar que o que DEBT-099 já cobriu é suficiente para destravar DEBT-096 (redefinindo o que 'resolver DEBT-094' significa), isso é decisão dele, não minha.",
       "id": "DEBT-096",
       "summary": "A auditoria respondeu 'o sistema faz o que declara?' mas nao 'o que ele declara ainda basta?' — corrigir antes disso e mirar no alvo errado",
       "change_type": "EXTENSAO",
       "evidence": "[BLOQUEIA] A Frente 2 auditou CONFORMIDADE INTERNA: cada trava declarada tem verificador, cada tool executa o que promete. Nao auditou CONFORMIDADE EXTERNA: se o conjunto de padroes que o sistema persegue ainda e o exigido para publicar. Sao perguntas diferentes, e a segunda governa a primeira.\n\nCaso concreto que prova a diferenca: a auditoria registrou 'a triagem por LLM e irreprodutivel — temperatura nao fixada, modelo nao registrado, nenhum log'. Corrigido como defeito de reprodutibilidade, o conserto e registrar temperatura e modelo. Mas se a diretriz aplicavel exigir tambem declarar prompt, versao do modelo, papel da IA em cada etapa e taxa de verificacao humana, o conserto fica incompleto e tera de ser refeito. O sistema nao sabe qual e a diretriz aplicavel (DEBT-094).",
+      "reproduction": "Comparar o escopo da skill system-audit (4 varreduras, todas internas ao sistema) com a ausencia de qualquer varredura que confronte o sistema contra padroes externos vigentes. O criterio de parada da skill nao tem item de conformidade externa.",
+      "location": ".claude/skills/system-audit/SKILL.md (criterio de parada) e .claude/maintenance/DIAGNOSTICO_frente_2.md",
       "status": "RESOLVIDO",
+      "resolution": "RESOLVIDO em 29/10/2026 (pergunta 14, 'fechar se concluido'). Conferido em 18/10 e sem mudanca desde entao: a pergunta 'o que o sistema declara ainda basta?' virou rotina de entrada do maintainer — passo 1a (obsolescencia dos padroes assimilados, DEBT-010), passo 2 (EQUATOR e fonte oficial de cada padrao) e passo 1b (ferramentas de IA e infraestrutura brasileira, DEBT-144). O RAISE 3 esta assimilado; o que falta dele (padrao-ouro, recall, variabilidade, declaracao por metodo) fica no DEBT-094, que manda na ordem das correcoes nas tools de IA.",
+      "found_by": "revisao do ReviewBR — pergunta do pesquisador sobre auditoria tardia antes de corrigir",
+      "found_at": "2026-09-25",
+      "context": "E EXTENSAO: a skill de auditoria nunca prometeu varredura de conformidade externa, entao nao ha promessa descumprida. Levantado pelo pesquisador ao perguntar se havia algo a auditar ANTES de aplicar correcoes. A resposta e sim, e este e o achado. Decisao do pesquisador pendente sobre a ordem: (a) fechar DEBT-094 primeiro, absorvendo as diretrizes de IA no catalogo, e so entao corrigir as tools de IA; ou (b) corrigir agora e revisar depois. VERIFICAÇÃO 26/09/2026 (pedido do pesquisador, que afirmou que DEBT-094 já teria sido fechado): reapurei DEBT-094 no backlog atual (não confiei na afirmação) — status é EM_CURSO, NÃO RESOLVIDO. É verdade que DEBT-099 (RESOLVIDO) construiu boa parte da trilha de triagem contra o §4.9 (ScreeningAuditService: prompt_template.txt, decisions.jsonl, run.json com nome/versão/datas do modelo — cobre 4.9.1 e parte do §4.3), mas a resolution de DEBT-099 registra explicitamente que FICOU DE FORA: 'padrão-ouro, meta de recall e avaliação de desempenho (RAISE §4.9.3.1/4.9.3.2)... isso é Fase 3 e exige protocolo próprio'. Ou seja, 4.9.2 (finalidade/partes impactadas), 4.9.3.1 (avaliação de desempenho), parte de 4.9.3.2 (padrão-ouro), 4.9.3.3 (interesses) e 4.9.3.4 (limitações) do RAISE §4.9 — e as exigências do RAISE 2 sobre padrão-ouro/recall — seguem sem tratamento, e DEBT-094 permanece corretamente EM_CURSO, não RESOLVIDO. NÃO FECHEI DEBT-096: a pré-condição de ordem que ele exige (DEBT-094 resolvido) NÃO está cumprida. Divergência registrada para o pesquisador decidir — não decidi em seu lugar. Se ele considerar que o que DEBT-099 já cobriu é suficiente para destravar DEBT-096 (redefinindo o que 'resolver DEBT-094' significa), isso é decisão dele, não minha.",
       "gravidade": "BLOQUEIA",
       "destino": "FASE_1",
       "depende_de": []
@@ -2369,6 +2369,54 @@
         "DEBT-055",
         "DEBT-128"
       ]
+    },
+    {
+      "id": "DEBT-146",
+      "summary": "Nenhum teste trava o corpo dos agentes ('Ferramentas (contrato de papel)') contra o frontmatter: as correções do DEBT-061 e do DEBT-065 podem regredir sem nada reprovar",
+      "change_type": "CORRECAO",
+      "evidence": "A verificação de 27/09 02:23Z (27fac9ba L2779, registrada no DECISOES_chat_a_conferir.md como DEC-43) deu DEBT-046, 061 e 065 como PARCIAIS: a correção foi feita no texto dos .md, mas faltou o teste de regressão que compare o corpo dos agentes com o frontmatter e trave o texto do reader.md. Conferido em 29/10/2026: governance.test.ts compara frontmatter x AgentOrchestrator.getAuthorizedTools, e integracao.test.ts:110 confere que toda tool exposta é citada em algum corpo de agente ou skill — nenhum teste lê a seção 'Ferramentas (contrato de papel)' nem compara a lista dela com o frontmatter. O DEBT-065 nasceu exatamente dessa divergência (corpo concedendo tool que o frontmatter não dava, em 5 de 8 agentes).",
+      "reproduction": "grep -rn 'contrato de papel' reviewbr/reviewbr-mcp/tests/ -> zero ocorrências. Controle positivo: grep -n 'contrato de papel' .claude/agents/extractor.md -> linha 22 (a seção existe). Logo, tirar uma tool da seção 'Ferramentas (contrato de papel)' de qualquer agente, ou pôr nela uma que o frontmatter não concede, mantém a suíte verde.",
+      "location": ".claude/agents/*.md (seção 'Ferramentas (contrato de papel)') x reviewbr/reviewbr-mcp/tests/governance.test.ts",
+      "status": "ABERTO",
+      "resolution": "",
+      "found_by": "sessão 0 (29/10/2026) — resolução do DECISOES_chat_a_conferir.md, item DEC-43",
+      "found_at": "2026-10-29",
+      "context": "Item 2 da DEC-43 ('a próxima sessão registra os itens 2 e 3 no backlog'). O item 3 (F8 bloqueada enquanto o DEBT-014 estiver aberto) já está no context do DEBT-014. Gravidade MENOR: o DEBT-065 sincronizou corpo e frontmatter em 26/09; o risco é regressão silenciosa, não defeito apurado hoje.",
+      "gravidade": "MENOR",
+      "destino": "AGENTE_SKILL",
+      "depende_de": []
+    },
+    {
+      "id": "DEBT-147",
+      "summary": "Requisito do Vicente: abrir a pasta numa IDE com IA e o ReviewBR funcionar, com o Node como pré-requisito — hoje o clone só funciona depois de npm install e npm run build",
+      "change_type": "EXTENSAO",
+      "evidence": "25/09/2026 01:27Z (27fac9ba L495, citação conferida pelo .claude/maintenance/confere_decisoes_chat.py): 'esse nosso sistema nao precisa de instalacao, ele é uma pasta que pode ser aberta em qualquer IA e a partir desta abertura de produto em uma ide ser possivel agir sem quebrar o sistema'. Reafirmado em 29/10/2026, perguntado se continuava requisito: 'ja existe como mcp server, mas quero sim com node.' Estado do disco: dist/ e node_modules/ estão no .gitignore; .mcp.json aponta para reviewbr/reviewbr-mcp/dist/index.js; .claude/README.md:30 manda rodar 'npm install && npm run build'. Num clone novo, o MCP reviewbr não sobe até alguém rodar os dois comandos.",
+      "reproduction": "",
+      "location": ".gitignore (dist/, node_modules/), .mcp.json, .claude/README.md:30",
+      "status": "ABERTO",
+      "resolution": "",
+      "found_by": "sessão 0 (29/10/2026) — resolução do DECISOES_chat_a_conferir.md, item DEC-09",
+      "found_at": "2026-10-29",
+      "context": "Leitura registrada da resposta de 29/10: o Node é pré-requisito aceito ('quero sim com node'); o que se pede é a pasta funcionar ao ser aberta, sem o passo de instalar dependências e compilar. A forma (build versionado, bundle único, ou primeira execução que se prepara sozinha) é decisão a levar ao Vicente quando o achado for tratado, e a leitura acima se confirma com ele nessa hora. Por isso o destino é DECISAO_PESQ.",
+      "gravidade": "MENOR",
+      "destino": "DECISAO_PESQ",
+      "depende_de": []
+    },
+    {
+      "reproduction": "Contar, num .jsonl de sessão, as linhas com message.usage e os message.id distintos: e5229a50 -> 150 linhas, 65 ids. Controle: os usages repetidos são idênticos (61 de 61), logo a soma por linha conta a mesma resposta 2 a 3 vezes. find ~/.claude/projects/C--reviewbr -path '*/subagents/*' -name 'agent-*.jsonl' -not -path '*/workflows/*' -> 7 arquivos que nenhuma função do script lê.",
+      "location": ".claude/maintenance/medir_esforco.py: carregar(), custo_workflows() e PROJ",
+      "resolution": "Corrigido em 29/10/2026 (sessão 0), gate RV-11 aprovado (CORRECAO, addresses DEBT-148). (1) respostas() conta uma vez por message.id; carregar() e custo_workflows() passaram a usá-la. Verificação: sessão e5229a50 com 185 linhas e 79 respostas -> o script mostra 79; 00a84351 com 180 linhas e 84 respostas -> 84. (2) carregar_subagentes() lê <sessão>/subagents/**/agent-*.jsonl, Agent tool incluído. (3) --agora soma sessões principais e subagentes de TODOS os projetos de ~/.claude/projects e estima a porcentagem da janela de 5h da conta; --em=<ISO> calcula até um instante, para calibrar. (4) Régua recalibrada em ponderado deduplicado: ~10,4 M = 100% (faixa 9,5–11,5 M), por dois pares que concordam (24/10 14:40Z, 20% com 2,08 M; 29/10 19:50Z, 5% com 0,52 M); os pares que discordam e o porquê estão no CONTINUAR.md §1. Limite declarado no próprio script e nos documentos: a estimativa é piso, porque o uso no claude.ai não deixa transcrito neste disco.",
+      "found_by": "sessão 0 (29/10/2026) — ao atender o pedido do Vicente de não precisar informar o consumo",
+      "found_at": "2026-10-29",
+      "context": "Gravidade SERIO porque é o único instrumento da regra de tokens (PLANO_sessoes §Tokens), e o limite estourou sem aviso em 03/10 e 17/10. O pedido do Vicente de 29/10: 'queria nao precisar informar sempre. se eu posso olhar vc deveria ser capaz'.",
+      "id": "DEBT-148",
+      "summary": "medir_esforco.py conta cada bloco de conteúdo de uma resposta como uma mensagem (números inflados ~2,2×) e não enxerga subagentes do Agent tool nem o uso de outros projetos, que pesam no mesmo limite da conta",
+      "change_type": "CORRECAO",
+      "evidence": "O Claude Code grava uma linha .jsonl por bloco de conteúdo (thinking, texto, tool_use) da mesma resposta, e todas repetem o mesmo message.usage. carregar() e custo_workflows() somam o usage de cada LINHA. Medido em 29/10/2026: na sessão e5229a50, 150 linhas com usage para 65 respostas (2,31×); na 00a84351, 180 para 84 (2,14×); nos 61 ids repetidos da e5229a50 o usage é idêntico em todas as linhas. A régua do CONTINUAR §1 ('~410–425 mil de saída por janela') e os números das cartas estão nessa unidade inflada, com fator que varia por sessão. Além disso: (a) subagentes do Agent tool (<sessão>/subagents/agent-*.jsonl fora de workflows/) não entram em conta nenhuma; (b) o script lê só ~/.claude/projects/c--reviewbr, mas o limite de 5h é da CONTA — em 24/10 o Vicente estava a 20% (5h) trabalhando no projeto Cultura Líquida, invisível para o script. O uso no claude.ai (web) também não aparece em transcrição local.",
+      "status": "RESOLVIDO",
+      "gravidade": "SERIO",
+      "destino": "FASE_1",
+      "depende_de": []
     }
   ]
 }

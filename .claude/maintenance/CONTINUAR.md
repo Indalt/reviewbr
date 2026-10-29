@@ -45,6 +45,24 @@
 
 ## 1. Orçamento de tokens — a régua, medida
 
+> **Atualização de 29/10/2026 — vale esta, não a régua de 25/09 logo abaixo.**
+> 1. **O Vicente não informa o consumo; o agente mede e estima.** *"1% de tokens. apenas
+>    avisando ja que nas proximas situacoes nao vou avisar"* (26/09, be12a326 L35) e *"queria nao
+>    precisar informar sempre. se eu posso olhar vc deveria ser capaz"* (29/10). O comando é
+>    `python .claude/maintenance/medir_esforco.py --agora`.
+> 2. **A régua de 25/09 está numa unidade inflada.** O script contava cada bloco de uma resposta
+>    como uma mensagem (~2,2×) e não via os subagentes do Agent tool nem os outros projetos da
+>    conta (`DEBT-148`, corrigido em 29/10).
+> 3. **Régua nova: ~10,4 M de ponderado deduplicado = 100% da janela de 5h**, somando todos os
+>    projetos desta máquina (faixa de 9,5 a 11,5 M). Vem de dois pares que concordam: 24/10
+>    14:40Z, 20% com 2,08 M (projeto Cultura Líquida), e 29/10 19:50Z, 5% com 0,52 M. Discordam
+>    três: 24/09 (estouro com 7,97 M visíveis) e 25/09 (70% com 4,07 M), quando o uso fora deste
+>    PC não era visível; e a manhã de 29/10 (91% lido, 17,1 M na janela aproximada), muito
+>    provavelmente porque a janela real da conta não coincide com a que o script reconstrói.
+> 4. **A estimativa é piso:** o uso no claude.ai (web e app) não deixa transcrito aqui. Onde a
+>    regra diz 85% lidos, use 75% estimados.
+> 5. **Semanal:** um par só (18% em 29/10/2026, logo depois de um reset), ainda sem régua.
+
 Calibrada com dois pontos reais desta conta (Claude Team):
 
 | Janela | Saída | Ponderado | Estado observado |
@@ -88,7 +106,12 @@ Python e nunca entraram no contexto — se tivessem entrado, entrariam na leitur
 
 ## 2. Política de esforço — o que merece Opus no talo
 
-Opus para tudo, sempre: **não**. Opus para o julgamento difícil: **sempre**.
+**Modelo: Opus, sempre** — *"podemos não precisar do ultracode para tudo, mas nunca deixar de
+usar o opus pela complexidade das tarefas"* (Vicente, 25/09/2026, 27fac9ba L1054). O que se
+regula é o **esforço** (e o ultracode); o que é mecânico vai para script, sem agente. Em 26/09 a
+execução rodou em Sonnet por escolha dele no seletor do cliente (be12a326 L3), e isso não mudou a
+regra. (Corrigido em 29/10/2026: aqui dizia "Opus para tudo, sempre: não" — DEC-19 do
+`DECISOES_chat_a_conferir.md`.)
 
 | Tipo de tarefa | Modelo / esforço | Por quê |
 |---|---|---|
@@ -100,8 +123,9 @@ Opus para tudo, sempre: **não**. Opus para o julgamento difícil: **sempre**.
 | Síntese final, redação do diagnóstico | Opus, esforço alto | é o entregável |
 
 Nas chamadas de `Agent` e dentro de `Workflow`, isso se expressa em `opts.effort`
-(`low` | `medium` | `high` | `xhigh` | `max`) e `opts.model`. **Omitir herda a sessão** —
-então declare explicitamente o baixo quando a tarefa for mecânica.
+(`low` | `medium` | `high` | `xhigh` | `max`); `opts.model` não serve para rebaixar o modelo.
+**Omitir herda a sessão** — então declare explicitamente o esforço baixo quando a tarefa for
+mecânica.
 
 ### 2.1 Regras que economizam mais que trocar de modelo
 

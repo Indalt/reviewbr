@@ -13,13 +13,17 @@ seria palpite — o mesmo vicio que o RV-11 existe para impedir no plano das alt
 
 O QUE NAO FAZ
 -------------
-Nao le a cota de 5h da conta e nao preve quando ela estoura. Correlacionar o total medido
-aqui com a porcentagem que o cliente mostra e' tarefa do operador humano: rode o script
-quando o cliente avisar "X%" e anote o par. Alguns pares bastam para calibrar.
+Nao le a cota de 5h da conta. O --agora ESTIMA a porcentagem por uma regua calibrada com
+pares (porcentagem que o Vicente leu x ponderado medido aqui), e a estimativa e' piso: o uso
+no claude.ai e em outra maquina nao deixa transcrito neste disco. O Vicente pediu, em
+29/10/2026, para nao precisar informar a porcentagem; quando ele informar, anote o par e
+recalibre (CONTINUAR.md §1).
 
 USO
 ---
-    python .claude/maintenance/medir_esforco.py                # janelas de 5h
+    python .claude/maintenance/medir_esforco.py                # janelas de 5h (este projeto)
+    python .claude/maintenance/medir_esforco.py --agora        # % estimada da janela da CONTA
+    python .claude/maintenance/medir_esforco.py --agora --em=2026-10-24T14:40:00Z   # ate um instante
     python .claude/maintenance/medir_esforco.py --sessoes      # custo por sessao
     python .claude/maintenance/medir_esforco.py --workflows    # custo dos workflows
     python .claude/maintenance/medir_esforco.py --tudo
@@ -45,32 +49,76 @@ PROJ = os.path.expanduser(r"~\.claude\projects\c--reviewbr")
 CACHE_R = 0.1   # troque para 0.05 se o modelo da sessao for Opus 5.5
 PESO = {"input": 1.0, "output": 5.0, "cache_w": 1.25, "cache_r": CACHE_R}
 
+# O limite de 5h e' da CONTA, e o Vicente usa o Claude Code em outros projetos: a estimativa
+# (--agora) le todas as pastas de projeto desta maquina (DEBT-148).
+TODOS = os.path.expanduser(r"~\.claude\projects")
 
-def carregar():
-    """Le todos os transcritos do projeto e devolve os registros com contabilidade."""
+# Regua da janela de 5h em ponderado DEDUPLICADO (uma vez por resposta), todos os projetos.
+# Dois pares limpos concordam em ~10,4 M para 100%: 24/10 14:40Z, 20% com 2,08 M; 29/10 19:50Z,
+# 5% com 0,52 M. A faixa de +-10% cobre o arredondamento da porcentagem lida. Os pares que
+# discordam (setembro e a manha de 29/10) e o porque estao no CONTINUAR.md §1. Ao ganhar um
+# par novo, recalcule e atualize os dois lugares.
+REGUA_5H = (9.5e6, 11.5e6)
+
+
+def respostas(f):
+    """Uma entrada por RESPOSTA da API num transcrito: (timestamp, modelo, usage).
+
+    O Claude Code grava uma linha por bloco de conteudo (thinking, texto, tool_use) da mesma
+    resposta, e todas repetem o mesmo usage. Somar por linha contava a mesma resposta 2 a 3
+    vezes (DEBT-148, medido em 29/10/2026: 150 linhas para 65 respostas numa sessao, com o
+    usage identico nas 61 repetidas). Conta-se uma vez por message.id.
+    """
+    vistos = set()
+    for line in abrir(f):
+        try:
+            d = json.loads(line)
+        except Exception:
+            continue
+        m = d.get("message")
+        if not isinstance(m, dict):
+            continue
+        u = m.get("usage")
+        if not u or not d.get("timestamp"):
+            continue
+        mid = m.get("id") or d.get("uuid")
+        if mid in vistos:
+            continue
+        vistos.add(mid)
+        yield d["timestamp"], m.get("model", "") or "", u
+
+
+def registro(ts, rotulo, modelo, u):
+    return {
+        "ts": ts,
+        "sessao": rotulo,
+        "modelo": modelo,
+        "input": u.get("input_tokens", 0) or 0,
+        "output": u.get("output_tokens", 0) or 0,
+        "cache_w": u.get("cache_creation_input_tokens", 0) or 0,
+        "cache_r": u.get("cache_read_input_tokens", 0) or 0,
+    }
+
+
+def carregar(proj=PROJ):
+    """Le os transcritos das sessoes principais do projeto e devolve os registros."""
     regs = []
-    for f in sorted(glob.glob(os.path.join(PROJ, "*.jsonl"))):
+    for f in sorted(glob.glob(os.path.join(proj, "*.jsonl"))):
         sid = os.path.basename(f)[:8]
-        for line in abrir(f):
-            try:
-                d = json.loads(line)
-            except Exception:
-                continue
-            m = d.get("message")
-            if not isinstance(m, dict):
-                continue
-            u = m.get("usage")
-            if not u or not d.get("timestamp"):
-                continue
-            regs.append({
-                "ts": d["timestamp"],
-                "sessao": sid,
-                "modelo": m.get("model", "") or "",
-                "input": u.get("input_tokens", 0) or 0,
-                "output": u.get("output_tokens", 0) or 0,
-                "cache_w": u.get("cache_creation_input_tokens", 0) or 0,
-                "cache_r": u.get("cache_read_input_tokens", 0) or 0,
-            })
+        regs.extend(registro(ts, sid, mod, u) for ts, mod, u in respostas(f))
+    regs.sort(key=lambda r: r["ts"])
+    return regs
+
+
+def carregar_subagentes(proj=PROJ):
+    """Subagentes do Agent tool E de workflows: <sessao>/subagents/**/agent-*.jsonl.
+
+    Ate 29/10/2026 os do Agent tool (fora de workflows/) nao entravam em conta nenhuma (DEBT-148).
+    """
+    regs = []
+    for f in sorted(glob.glob(os.path.join(proj, "*", "subagents", "**", "agent-*.jsonl"), recursive=True)):
+        rot = "sub " + os.path.basename(f)[6:14]
+        regs.extend(registro(ts, rot, mod, u) for ts, mod, u in respostas(f))
     regs.sort(key=lambda r: r["ts"])
     return regs
 
@@ -145,18 +193,8 @@ def custo_workflows():
     for d in sorted(glob.glob(base)):
         acc = {}
         for f in glob.glob(os.path.join(d, "agent-*.jsonl")):
-            for line in abrir(f):
-                try:
-                    o = json.loads(line)
-                except Exception:
-                    continue
-                m = o.get("message")
-                u = m.get("usage") if isinstance(m, dict) else None
-                if u:
-                    soma(acc, {"input": u.get("input_tokens", 0) or 0,
-                               "output": u.get("output_tokens", 0) or 0,
-                               "cache_w": u.get("cache_creation_input_tokens", 0) or 0,
-                               "cache_r": u.get("cache_read_input_tokens", 0) or 0})
+            for ts, mod, u in respostas(f):
+                soma(acc, registro(ts, "", mod, u))
         if not acc:
             continue
         terminaram = comecaram = 0
@@ -171,9 +209,52 @@ def custo_workflows():
     return linhas
 
 
+def agora(ate=None):
+    """Estima quanto da janela de 5h da conta ja foi usado, ate `ate` (padrao: o ultimo registro).
+
+    Soma sessoes principais e subagentes de TODOS os projetos desta maquina. Nao ve o uso no
+    claude.ai (web/app) nem em outra maquina: o numero e' piso, nao teto.
+    """
+    regs = []
+    for p in sorted(glob.glob(os.path.join(TODOS, "*"))):
+        if not os.path.isdir(p):
+            continue
+        nome = os.path.basename(p)
+        for r in carregar(p):
+            r["grupo"] = f"{nome[:28]} principal"
+            regs.append(r)
+        for r in carregar_subagentes(p):
+            r["grupo"] = f"{nome[:28]} subagentes"
+            regs.append(r)
+    regs.sort(key=lambda r: r["ts"])
+    if ate is not None:
+        regs = [r for r in regs if dt(r["ts"]) <= ate]
+    if not regs:
+        print("Nenhum registro.")
+        return
+    ini, acc = janelas_5h(regs)[-1]
+    grupos = {}
+    for r in regs:
+        if dt(r["ts"]) >= ini:
+            soma(grupos.setdefault(r["grupo"], {}), r)
+    fim = dt(regs[-1]["ts"])
+    tabela(f"JANELA DE 5H DA CONTA (aprox.) desde {ini:%d/%m %H:%M} UTC, ate {fim:%d/%m %H:%M} UTC"
+           f" — fecha por volta de {ini + timedelta(hours=5):%H:%M} UTC",
+           sorted(grupos.items(), key=lambda x: -ponderado(x[1])), "projeto", largura=40)
+    tot = ponderado(acc)
+    lo, hi = (100 * tot / REGUA_5H[1], 100 * tot / REGUA_5H[0])
+    print(f"\nTotal: {int(tot):,} ponderado -> estimativa {lo:.0f}% a {hi:.0f}% da janela de 5h"
+          f" (regua {REGUA_5H[0]/1e6:.1f}-{REGUA_5H[1]/1e6:.1f} M; CONTINUAR.md §1).")
+    print("Piso, nao teto: o uso no claude.ai (web/app) e em outra maquina nao aparece aqui.")
+
+
 def main():
     args = set(sys.argv[1:])
     tudo = "--tudo" in args
+    if "--agora" in args:
+        em = [a for a in sys.argv[1:] if a.startswith("--em=")]
+        agora(dt(em[0][5:]) if em else None)
+        return
     regs = carregar()
     if not regs:
         print(f"Nenhum transcrito com contabilidade em {PROJ}")

@@ -146,8 +146,9 @@ tipado e critério de parada. O `maintainer.md` manda carregá-la antes de audit
 | RV-09 | o critério exige provar contra os 8 falsos negativos conhecidos; eles existem só em prosa no briefing — não há fixture nem caso de teste |
 | DEBT-004 (campo de versão) | DEBT-012 e DEBT-013 mostram que o sistema não sabe a numeração nem a granularidade do padrão que já usa; preencher versão agora registraria como dado algo não verificado |
 
-Ambas esbarram no §4: **o rastreio externo está fora de escopo**. Nenhuma fecha sem a fonte
-oficial do PRISMA em mãos.
+Ambas esbarravam no §4 (rastreio externo fora de escopo). **O §4 foi revogado em 24/09/2026**
+(ver §7): o rastreio das fontes oficiais entrou no escopo. Nenhuma fecha sem a fonte oficial do
+PRISMA em mãos.
 
 ### 3.2 Regra de parada por deriva — e a saída da fila
 
@@ -245,3 +246,7 @@ aqui, com data e motivo.
 | 24/09/2026 | correção de premissa | **"27 itens PRISMA" era afirmação não verificada.** O padrão usa subitens por letra (16a, 16b, 24a...) — o próprio sistema os cita no manifesto e no agente, mas a spec nunca os usa e o `prisma-2020.json` não os representa. O arquivo recebeu `structure_warning` e `items_are_top_level_only`; o checklist gerado passou a carregar o aviso; teste trava a declaração. Ver DEBT-013 |
 | 24/09/2026 | correção de premissa | Os critérios de parada da Frente 2 embutiam "36 tools" e "7 agentes" — desatualizados no mesmo dia (39 e 8). Denominador agora se apura na hora da auditoria, não no protocolo |
 | 24/09/2026 | alteração executada | **Backlog + gate de dívida implementados** como EXTENSAO: `system_debt.ts`, `system_debt.json` (5 achados migrados de prosa para estrutura), tool `audit_system_debt`, 11 testes. O `maintainer.md` ganhou o procedimento de entrada em sessão nova. Total: 38 tools, 41 testes |
+| 29/10/2026 | correção de premissa | **§3.1 corrigido (DEC-17 do `DECISOES_chat_a_conferir.md`).** A frase "o rastreio externo está fora de escopo" sobreviveu à revogação do §4 de 24/09; agora diz que o §4 foi revogado. A lente 5 de 26/09 já apontava. Gate RV-11 aprovado (CORRECAO) |
+| 29/10/2026 | decisão do pesquisador transcrita | **O estado da manutenção mora em `.claude/maintenance/`, não em `reviewbr/docs/` (DEC-08).** Escolha do Vicente em 25/09 (27fac9ba L495, Ask: "`.claude/maintenance/` na raiz"). A razão dada na hora: `docs/` é o site publicado do prismAId e, sincronizado com o upstream, os arquivos iriam junto ou sumiriam. O `origem/BRIEFING_revisao_reviewbr.md` ainda manda ir a `reviewbr/docs/` — é histórico, não siga |
+| 29/10/2026 | decisão do pesquisador transcrita | **Regra de `old/` (DEC-13):** *"o que está em old fica em old se não é projeto de pesquisa"* (Vicente, 25/09, 27fac9ba L650). Foi assim que o curso, que era pesquisa, virou projeto em `reviewbr/projects/` (DEC-11) |
+| 29/10/2026 | decisão do pesquisador | **Ferramenta quebrada no meio de uma pesquisa (DEC-M1): vale a última linha do §4.** Perguntado em 29/10, o Vicente escolheu: a pesquisa para naquele passo, o defeito vai à fila pelo `record_system_finding` e é consertado numa sessão de manutenção — não se contorna dentro do projeto. A memória que dizia o contrário foi corrigida. Coerente com *"scripts só são usados em último caso"* (25/09, bbfd7ac8 L4193) |

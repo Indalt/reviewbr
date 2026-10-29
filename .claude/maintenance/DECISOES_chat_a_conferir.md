@@ -1,6 +1,12 @@
 # Decisões do Vicente sobre o sistema ReviewBR: chat × disco
 
-> **NÃO VERIFICADO — insumo para conferência, não registro de decisão.**
+> **CONFERIDO E RESOLVIDO em 29/10/2026 (sessão 0 do `PLANO_sessoes_2026-10-29.md`) — ver §7.**
+> As 55 citações com âncora foram achadas na linha citada por `confere_decisoes_chat.py`, com
+> controle positivo; os 3 itens de memória foram conferidos contra a memória de hoje. Cada item
+> está resolvido, superado, corrigido, na fila ou recusado no §7. O texto abaixo é o
+> levantamento de 02/10, mantido como estava.
+>
+> **(Aviso original de 02/10) NÃO VERIFICADO — insumo para conferência, não registro de decisão.**
 > Levantamento automático feito em 02/10/2026, na troca de computador (ver
 > `TRANSICAO_PC_2026-10-02.md`). Ele lista decisões do Vicente que estariam só no chat ou
 > divergentes do disco. Os verificadores adversariais pararam no limite de sessão, então trate
@@ -248,3 +254,61 @@ $D/busca.sh 'fase de testes|testes do sistema'      # busca em disco (exporta LC
 $D/busca.sh 'proibido corrigir'                     # controle positivo
 perl $D/debt.pl /c/reviewbr/.claude/maintenance/system_debt.json 3000 DEBT-001 DEBT-096
 ```
+
+## 7. Resolução item a item — sessão 0, 29/10/2026
+
+Feita inline, por escolha do Vicente ("só inline"), contra o disco de 29/10 e as decisões de
+03/10, 03b, 04/10, 08/10, 17/10 e 29/10. Estados: **RESOLVIDO** (o disco diz o que ele decidiu),
+**SUPERADO** (uma decisão posterior dele tomou o lugar), **CORRIGIDO** (o disco foi acertado
+nesta sessão), **NA FILA** (virou achado no backlog) e **RECUSADO**.
+
+**Conferência das citações.** `python .claude/maintenance/confere_decisoes_chat.py --controle`
+procura cada citação na transcrição, na linha da âncora. Resultado: **55 de 55 na linha
+citada**; nenhuma achada em outra linha, nenhuma ausente. Os 3 itens de memória (DEC-07m, DEC-M1
+e DEC-M3) não têm transcrição nas quatro sessões e foram conferidos contra a memória de hoje.
+Controle positivo do script: a citação inventada dá `NAO_ACHADA`, e uma real é achada na L359.
+
+| ID | Classe em 02/10 | Estado em 29/10 | Como fechou |
+|---|---|---|---|
+| DEC-01–05, 07, 11, 12, 14–16, 18, 20–25, 28–32, 34, 35, 38–41, 46, 47, 50–55 (37 itens) | REGISTRADO | RESOLVIDO | citação conferida na linha; o registro em disco é o que a classificação de 02/10 apontou. DEC-46: o `prisma-scr.json` entrou no git no commit `a2391e4`; o PDF oficial segue fora (`*.pdf`), como todo PDF de terceiros |
+| DEC-06 | DIVERGENTE | SUPERADO | `DEBT-001` RECUSADO em 04/10/2026 pelo critério do Vicente (*"o ReviewBR nao prejudicando uma pesquisa e o que digo sobre o sistema"*); o enquadramento divergente foi tratado no `DEBT-115` |
+| DEC-07m | DIVERGENTE | RESOLVIDO | a memória `manutencao-reviewbr-estado-em-disco` foi corrigida em 09/10: aponta `.claude/maintenance/` e a rota PASSAGEM → CONTINUAR → `audit_system_debt` |
+| DEC-08 | SO_NO_CHAT | CORRIGIDO | escolha e razão transcritas no `PROTOCOLO_revisao_reviewbr.md` §7 |
+| DEC-09 | SO_NO_CHAT | NA FILA | perguntado em 29/10: *"ja existe como mcp server, mas quero sim com node."* Virou o `DEBT-147` (DECISAO_PESQ), com a leitura registrada: o Node é pré-requisito aceito, e a pasta tem de funcionar ao ser aberta |
+| DEC-10 | SO_NO_CHAT (sem efeito) | RESOLVIDO | executada; `old/descarte_2026-09-24/` é o rastro (e `old/descarte_2026-10-29/` seguiu a mesma regra nesta sessão) |
+| DEC-13 | SO_NO_CHAT | CORRIGIDO | regra transcrita no PROTOCOLO §7 |
+| DEC-17 | DIVERGENTE | CORRIGIDO | PROTOCOLO §3.1 corrigido; gate RV-11 aprovado (CORRECAO) |
+| DEC-19 | DIVERGENTE | CORRIGIDO | o `CONTINUAR.md` §2 transcreve a regra dele (*"nunca deixar de usar o opus pela complexidade das tarefas"*): Opus sempre, regula-se o esforço, e `opts.model` não rebaixa o modelo |
+| DEC-26 | DIVERGENTE | SUPERADO | `DEBT-096` RESOLVIDO em 29/10/2026 (pergunta 14) |
+| DEC-27 | SO_NO_CHAT | RESOLVIDO | o gate (`DEBT-097`, resolvido em 26/09) substituiu a proposta do módulo que "eduque o pesquisador", e o Vicente respondeu *"isso me parece relevante"* (L1637). A origem fica registrada aqui; nada a mudar no sistema |
+| DEC-33 | SO_NO_CHAT (sem efeito) | SUPERADO | pelas decisões de 27/09 |
+| DEC-36 | SO_NO_CHAT | SUPERADO | o modelo de trabalho de 29/10 (`PLANO_sessoes_2026-10-29.md`, itens 4 e 7) decide o caso: o que o plano não decide é furo, a sessão para e o assunto vai ao Vicente; o `maintainer.md` manda não decidir por ele. A frase de 26/09 foi resposta de contexto e não vira regra permanente |
+| DEC-37 | SO_NO_CHAT | SUPERADO | o rastreio passou a ser por sessão (carta com tokens na abertura e no fechamento, um assunto por sessão), e o `medir_esforco.py --workflows` mede os subagentes |
+| DEC-42 | SO_NO_CHAT | RESOLVIDO | a sequência manutenção → fase de testes está no `DECISOES_2026-10-03.md` (critério de entrada de 03/10) e no `DEBT-116`; o `PLANO_sessoes_2026-10-29.md` passou a apontá-la depois das sessões |
+| DEC-43 | SO_NO_CHAT | NA FILA + SUPERADO | item 2 (falta o teste que trava o corpo dos agentes contra o frontmatter) virou o `DEBT-146`; o item 3 (F8 bloqueada pelo `DEBT-014`) já está no context do `DEBT-014`; o item 4 (fazer o `DEBT-014` antes dos testes?) foi superado pela ordem de 29/10 (remapeamento depois do `DEBT-142`) |
+| DEC-44 | DIVERGENTE | SUPERADO | decisão do Vicente de 02/10 (chat de execução × chat de briefing): furo do plano para a execução; achado que não bloqueia registra e segue. Está no `maintainer.md` ("Furo do plano"), no PASSAGEM ("registre e siga") e no PLANO_sessoes, item 7 |
+| DEC-45 | SO_NO_CHAT | CORRIGIDO | reafirmado em 29/10 (*"queria nao precisar informar sempre. se eu posso olhar vc deveria ser capaz"*) e escrito no `CONTINUAR.md` §1 e no `PLANO_sessoes_2026-10-29.md` §Tokens |
+| DEC-48 | SO_NA_MEMORIA | RESOLVIDO | registrada como `DEBT-110` em 03/10; o aviso "pendente de registro" do PASSAGEM e a memória foram atualizados. O plugin ficou fora do git (`.gitignore`) |
+| DEC-49 | SO_NO_CHAT (sem efeito) | RESOLVIDO | migração do histórico feita em 02/10 (`TRANSICAO_PC_2026-10-02.md` §2) |
+| DEC-M1 | DIVERGENTE | RESOLVIDO | perguntado em 29/10, o Vicente escolheu "parar, registrar, consertar": vale a linha do PROTOCOLO §4 (registrado no §7), e a memória `projeto-nao-altera-reviewbr` foi corrigida |
+| DEC-M3 | SO_NA_MEMORIA | RECUSADO (arquivado) | perguntado em 29/10, o Vicente escolheu "arquivar como superado": as direções de 04/10 (ferramenta que veste métodos) e de 29/10 tomaram o lugar. O resumo que restou fica abaixo, e a memória foi apagada |
+
+**Plano A/B (julho de 2026), arquivado em 29/10/2026 — o que restou dele.** Incorporar dois
+protocolos-fonte, A (IA como ferramenta) e B (IA formuladora). Regra mestra: nada substitui,
+tudo se adiciona atrás de portão desligável; invariante, tool, metodologia ou subagente novo
+nasce desligado. Pré-requisito concluído em 13/07/2026: o guardião de papéis (`TOOL_PERMISSIONS`
+em `agent_orchestrator.ts`, travado por `tests/governance.test.ts`). Fases não executadas:
+(1) enriquecer o manifest `scoping-prisma-scr`, com invariantes RV-09+ desligados e a entidade
+`Anomaly`; (2) o `methodology-router` classificando a intenção em modo sombra; (3) prova de
+anterioridade no `[LOCKED]` (`lockedAt` imutável e hash SHA-256 do `protocol.md`); (3.5) o
+artefato `mandate.md` antes do `designer`; (4) o subagente `conjecturador` (doc B) em modo
+proposta, num servidor MCP dedicado. O arquivo do plano
+(`~/.claude/plans/confirme-que-voce-l-curried-quokka.md`) ficou no PC antigo.
+
+**As observações laterais do §5, no estado de 29/10:** o `prisma-scr.json` está versionado
+(`a2391e4`) e o PDF oficial, não; continua não havendo `CLAUDE.md` na raiz (a rota de entrada é
+o `maintainer.md`); a pergunta "os agentes ficariam?" foi respondida pelo `DEBT-100`, executado
+em 09/10, e pela direção de 29/10 (sessão 6: agentes descritos por papel); o `RETOMAR.md`
+continua velho, fora do assunto desta sessão; a memória `pesquisa-cajuina-piaui` passou a
+apontar `reviewbr/projects/masterclass_historia/cajuina/`; e o prompt da L1467, que não é do
+Vicente, segue sem efeito.

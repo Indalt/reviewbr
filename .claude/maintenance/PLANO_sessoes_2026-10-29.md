@@ -35,7 +35,15 @@
   triagem do disco (DEBT-021) · 7 dedup ≥90% só sinaliza o par (DEBT-025) · 8 página guardada na extração
   (DEBT-031) · 9 trava só pelo `project_state.json` (DEBT-018) · 12 `targets` na fila de extensão, com aviso
   (DEBT-016).
-- **Única decisão que falta:** o que vai ao GitHub (público) no commit da sessão 0.
+- **O que vai ao GitHub (sessão 0):** *"Só o sistema"* — código, testes, agentes, skills, normas e o
+  registro da manutenção. Ficam no `.gitignore`: as pesquisas (cajuína e Roda de Aromas), as conversas do
+  Antigravity, o zip, o plugin Bio Research e a configuração local do Claude Code e do Antigravity. Push:
+  *"Sim, push agora"*.
+- **Tokens (sessão 0):** *"5% (5h) e 18% semanal queria nao precisar informar sempre. se eu posso olhar vc
+  deveria ser capaz"* — virou a regra 1 de §Tokens.
+- **`DECISOES_chat_a_conferir.md` (sessão 0):** conferir *"só inline"*; DEC-M1 *"parar, registrar,
+  consertar"*; DEC-M3 *"arquivar como superado"*; DEC-09 *"ja existe como mcp server, mas quero sim com
+  node."* (`DEBT-147`). Resolução item a item no §7 do próprio arquivo.
 
 ## Contexto que desfaz ambiguidades: o sistema mudou DURANTE a troca de computador
 
@@ -45,7 +53,8 @@ isso há três retratos do sistema, de datas diferentes:
 | onde | retrato de | edita-se? |
 |---|---|---|
 | PC antigo (e as sessões que ficaram nele) | até a cópia, em 02/10/2026 | não — ficou para trás |
-| `D:\backupantigravity` e `C:\Antigravity` | a cópia de 02/10/2026, conferida arquivo a arquivo (`TRANSICAO_PC_2026-10-02.md`) | não |
+| `D:\backupantigravity\reviewbr` | a cópia de 02/10/2026, conferida arquivo a arquivo (`TRANSICAO_PC_2026-10-02.md`); reconferida íntegra em 29/10 (nenhum arquivo alterado depois de 03/10) | não — arquivo morto, única outra cópia do que o `.gitignore` deixa de fora |
+| `C:\Antigravity` | nada do ReviewBR: é a pasta das outras aplicações do Vicente, em uso (corrigido em 29/10; aqui dizia "cópia de 02/10") | — |
 | `C:\reviewbr` | o sistema de hoje: tudo o que mudou de 02/10 em diante só existe aqui, **sem commit** | sim — o único |
 
 Consequências para ler o disco sem se enganar:
@@ -68,6 +77,7 @@ Consequências para ler o disco sem se enganar:
 | 5 | Leitura e governança | 8 (DEBT-031), 9 (DEBT-018), 12 (DEBT-016), DEBT-141 | — | citação com página; trava só pelo `project_state.json`; aviso na tool de `targets`; atualização do catálogo sem apagar campos |
 | 6 | Sair do esqueleto PRISMA | DEBT-137 (agentes e skills descritos por F0–F8), DEBT-134 (protocolo exigido de todo projeto), DEBT-136 (tabela de tipos duplicada), tabela F0–F8 do `conduct-review` | sessão 2 | agentes descritos por papel; cada etapa do manifest diz que skill a executa; o que é do `prisma-sr` fica no `prisma-sr` |
 | 7+ | O resto da reclassificação | 19 declarações e consertos restantes; assimilação de métodos validados (JBI, GRADE/CERQual, exploratório…) | sessões 1–6 | um bloco por sessão, na ordem do arquivo de reclassificação |
+| depois | Fase de testes do sistema e análise do trabalho | sequência decidida pelo Vicente em 27/09 (DEC-42 do `DECISOES_chat_a_conferir.md`); critério de entrada registrado em 03/10 (`DECISOES_2026-10-03.md`), a reconferir ao chegar lá | sessões 1–7+ | a definir |
 
 ## Como trabalhar — para o disco e a sessão não dependerem um do outro
 
@@ -95,13 +105,16 @@ em disco; corrigido para ler as transcrições dos agentes. O que ele mostrou ex
 da corrida interrompida gastaram **154 mil tokens de saída em ~15 minutos**, mais que o dobro do chat principal
 na mesma janela (68 mil). E das 10 corridas em disco, 6 morreram com agentes pela metade.
 
-1. **Registro.** Ao abrir e ao fechar a sessão, a carta anota a porcentagem que o Vicente lê e o que o
-   `medir_esforco.py` mede (principal e `--workflows`). Cada par calibra a régua do `CONTINUAR.md`.
+1. **Registro — o agente mede; o Vicente não precisa informar.** *"queria nao precisar informar sempre. se eu
+   posso olhar vc deveria ser capaz"* (Vicente, 29/10/2026). Ao abrir e ao fechar a sessão, a carta anota o que
+   `python .claude/maintenance/medir_esforco.py --agora` estima para a janela de 5h da conta (todos os projetos
+   desta máquina, com subagentes) e a régua usada. Se o Vicente disser a porcentagem, ela entra ao lado como
+   par de calibração (`CONTINUAR.md` §1). A estimativa é piso: o uso no claude.ai não deixa transcrito aqui.
 2. **Projeção antes de executar.** Estimar a sessão: chat principal + subagentes. Medido: agente que lê código
    gasta de 10 a 80 mil de saída; a revisão de 3 agentes gastou 138 mil, a reclassificação de 7, 76 mil. Se a
    projeção passa do que resta com folga de 15%, a sessão se divide ou roda sem fan-out.
-3. **Acompanhamento.** Gravar em disco a cada passo concluído (arquivo ou commit). A 85% não se começa passo
-   novo: fecha-se a sessão com carta e commit.
+3. **Acompanhamento.** Gravar em disco a cada passo concluído (arquivo ou commit). A 85% lidos — ou 75%
+   estimados, porque a estimativa é piso — não se começa passo novo: fecha-se a sessão com carta e commit.
 4. **Corte seguro.** Fan-out só se cada agente gravar o resultado ao terminar; se cortar, o parcial se extrai das
    transcrições (foi o resgate de 18/10) antes de qualquer outra coisa.
 
@@ -120,4 +133,39 @@ Verificação: <suíte X testes verde; build; audit_system_debt ok>
 Commit: <hash>
 Decisões do Vicente registradas: <ids>
 Próxima sessão: <N+1>
+```
+
+## Sessão 0 — Fechar a troca de computador — 29/10/2026
+
+```
+Objetivo: commitar com segurança o trabalho de 02/10 a 29/10 e fechar as pendências da troca de computador.
+Entrada: decisão do Vicente sobre o que vai ao GitHub — "Só o sistema", com push.
+Saída verificável: commit sem .env, conversas de outras aplicações nem o zip; git status limpo;
+  DECISOES_chat_a_conferir.md resolvido item a item.
+Tokens na abertura: 5% (5h) e 18% (semanal), lidos pelo Vicente · medido: principal 0,52 M ponderado
+  (unidade nova, deduplicada; 42,5 mil de saída na unidade antiga), subagentes 0 · projeção: só inline.
+--- fechamento ---
+Tokens no fechamento: 40% a 48% da janela de 5h da conta, estimados (--agora, piso) · medido: principal
+  163 mil de saída / 3,2 M ponderado; subagentes 40 mil / 0,47 M (uma consulta ao claude-code-guide);
+  outro projeto na mesma janela (Cultura Líquida) 0,91 M.
+Feito:
+- Commit a2391e4 (137 arquivos) e push para origin/reorg/agentic-layer. O .gitignore recebeu o que fica fora;
+  207 arquivos de conversas do Antigravity saíram do stage (5 trechos com cara de chave de API, nunca
+  enviados); varredura de segredos no que entrou: zero, com controle positivo. Sete sondas de 09/10
+  (reviewbr-mcp/_*_tmp*) foram para old/descarte_2026-10-29/ (regra do DEC-10).
+- DECISOES_chat_a_conferir.md resolvido item a item (§7): 55/55 citações na linha citada
+  (confere_decisoes_chat.py); DEC-17, DEC-19 e DEC-48 corrigidos sob gate RV-11; DEC-08, DEC-13 e DEC-45
+  transcritos; DEC-M1, DEC-M3 e DEC-09 respondidos pelo Vicente; achados novos DEBT-146 (DEC-43) e
+  DEBT-147 (DEC-09).
+- Cópias antigas: D:\backupantigravity\reviewbr íntegra, mantida como arquivo morto; C:\Antigravity não tem
+  ReviewBR (tabela do contexto corrigida).
+- Tokens: o Vicente deixa de informar a porcentagem. DEBT-148 (o medir_esforco.py contava cada bloco de
+  uma resposta como mensagem, ~2,2×, e não via o Agent tool nem outros projetos) corrigido sob gate RV-11,
+  com --agora e régua nova no CONTINUAR §1.
+Verificação: suíte 361/361 em 32 arquivos; build ok; audit_system_debt válido — 148 achados (55 abertos,
+  4 em curso, 73 resolvidos, 16 recusados); git status limpo depois do commit de fechamento.
+Commit: a2391e4 (o trabalho de 02/10 a 29/10) + o commit de fechamento desta carta.
+Decisões do Vicente registradas: o que vai ao GitHub; push; conferência inline; DEC-M1; DEC-M3;
+  DEC-09 (DEBT-147); tokens (§Tokens, regra 1).
+Próxima sessão: 1 — Escopo e PRISMA-S (DEBT-055, DEBT-128).
 ```
