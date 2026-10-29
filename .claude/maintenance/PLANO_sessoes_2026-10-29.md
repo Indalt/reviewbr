@@ -79,6 +79,9 @@ Consequências para ler o disco sem se enganar:
 | 7+ | O resto da reclassificação | 19 declarações e consertos restantes; assimilação de métodos validados (JBI, GRADE/CERQual, exploratório…) | sessões 1–6 | um bloco por sessão, na ordem do arquivo de reclassificação |
 | depois | Fase de testes do sistema e análise do trabalho | sequência decidida pelo Vicente em 27/09 (DEC-42 do `DECISOES_chat_a_conferir.md`); critério de entrada registrado em 03/10 (`DECISOES_2026-10-03.md`), a reconferir ao chegar lá | sessões 1–7+ | a definir |
 
+**Estado:** sessão 0 fechada em 29/10/2026 (carta no fim deste arquivo). Sessão 1 com prompt de abertura pronto,
+não iniciada.
+
 ## Como trabalhar — para o disco e a sessão não dependerem um do outro
 
 1. **Uma porta de entrada.** Este arquivo e o topo da `ESPECIFICACAO_vestir_metodos.md` dizem o estado; os
@@ -95,6 +98,24 @@ Consequências para ler o disco sem se enganar:
 7. **Um assunto por sessão.** Furo do plano encerra a sessão com registro, não com improviso.
 8. **Abrir e fechar conferindo, não lembrando:** testes verdes, build em dia, `git status` e `audit_system_debt`
    no começo e no fim.
+
+### Os dois chats, e como cada sessão abre e fecha
+
+*"este chat vai servir tanto para acompanhar as sessoes antes e ao fechar quanto para tirar duvidas ou registrar
+decisoes para as sessoes me ajudando com a criacao do prompt de cada sessao"* (Vicente, 29/10/2026).
+
+- **Chat de acompanhamento.** É o chat que fechou a sessão 0 (aberto em 29/10/2026). Ele prepara o prompt de
+  abertura de cada sessão e o grava neste arquivo, na seção da sessão; tira dúvidas; grava no disco, na hora, as
+  decisões do Vicente; e, no fechamento, confere a carta (saída verificável, suíte, commit, `audit_system_debt`) e
+  prepara a próxima. Não executa sessão. Se ele se perder ou ficar caro demais, qualquer chat novo assume o papel
+  lendo este arquivo.
+- **Chat da sessão.** Um chat novo por sessão, aberto com o prompt preparado no acompanhamento. Executa só a sua
+  sessão, escreve a carta logo abaixo do prompt, commita, faz push e para. Diante de um furo do plano, registra o
+  achado, fecha o passo com segurança e devolve o assunto ao acompanhamento.
+
+O ciclo: (1) no acompanhamento, "prepara a sessão N" — o prompt sai em `## Sessão N — prompt de abertura`;
+(2) num chat novo, cola-se o prompt; (3) a sessão fecha com a carta; (4) no acompanhamento, "fecha a sessão N" —
+confere a carta e prepara a N+1. A sessão começa de preferência numa janela de 5h nova.
 
 ### Tokens — registro, acompanhamento e projeção (para não perder trabalho no limite)
 
@@ -174,4 +195,52 @@ Commit: a2391e4 (o trabalho de 02/10 a 29/10) + o commit de fechamento desta car
 Decisões do Vicente registradas: o que vai ao GitHub; push; conferência inline; DEC-M1; DEC-M3;
   DEC-09 (DEBT-147); tokens (§Tokens, regra 1).
 Próxima sessão: 1 — Escopo e PRISMA-S (DEBT-055, DEBT-128).
+```
+
+## Sessão 1 — prompt de abertura
+
+Preparado no chat de acompanhamento em 29/10/2026. Cole num chat novo:
+
+```
+Sessão 1 do .claude/maintenance/PLANO_sessoes_2026-10-29.md — Escopo e PRISMA-S.
+
+Este é o chat da sessão 1: execute só ela. Decisões, dúvidas e a próxima sessão ficam no chat de
+acompanhamento. Furo do plano (algo que este prompt e o plano não decidem): registre pela tool, feche o passo
+com segurança e pare com "FURO DO PLANO — levar ao acompanhamento", em até 3 linhas.
+
+Abertura, conferindo e não lembrando: leia neste plano o "Como trabalhar" e a seção da sessão 1; rode a suíte
+(npx vitest run em reviewbr/reviewbr-mcp), git status, python .claude/maintenance/medir_esforco.py --agora e
+audit_system_debt (devolve ~150 mil caracteres: leia por script só valid, counts e os achados desta sessão).
+Não pergunte ao Vicente a porcentagem de uso.
+
+Já decidido, não perguntar de novo:
+- DEBT-055: "As perguntas 1, 3, 4, 5, 6, 7, 8, 9 e 12 sim para todas" (Vicente, 29/10). Mapear já os 22
+  itens do PRISMA-ScR contra a trilha do método scoping-prisma-scr, no formato atual (antes do DEBT-142),
+  lendo o checklist oficial em reviewbr/download/PRISMA-ScR-Fillable-Checklist_11Sept2019.pdf (fora do git,
+  existe no disco). Item sem cobertura vai declarado, nunca encaixado.
+- DEBT-128: "se existe metodologia, vamos assimilar" (17/10) e "assimilar só metodologia validada
+  cientificamente" (29/10). Gravar no prisma-s.json os 16 enunciados oficiais com a fonte no
+  version_source, passar titulos_oficiais para true, rodar o falsificador (mapping_coherence) e remapear os
+  ponteiros S1–S16 da spec do prisma-sr, que hoje seguem a numeração do ReviewBR.
+
+Armadilhas já conhecidas:
+1. O catálogo NÃO tem os 16 títulos do PRISMA-S, só a contagem e as seções (context do DEBT-128). A fonte é
+   o checklist oficial (OSF, https://osf.io/y765x/) ou o artigo de 2021, em acesso aberto. Sem ler a fonte,
+   não transcreva de memória (RV-03): é furo.
+2. O item 12 do PRISMA-ScR (avaliação crítica, "se feita") pede item condicional, e o mecanismo de condição
+   é o DEBT-142, da sessão 2. Se o formato atual não comportar, declare e registre — não invente o
+   mecanismo aqui.
+3. Toda alteração passa pelo gate RV-11 (validate_system_change, com addresses) e todo achado pela tool,
+   nunca pelo JSON à mão.
+
+Saída verificável: check_standard_coverage do PRISMA-ScR sem omissão silenciosa; prisma-s.json com
+titulos_oficiais: true; o falsificador com poder — com os títulos oficiais e antes do remapeamento, ele
+deve acusar os ponteiros S11 e S13, que o DEBT-128 já mostrou deslocados (controle positivo), e depois do
+remapeamento não acusar mais; se não acusar antes, ele não tem poder, e isso é achado a registrar (atenção:
+os rótulos da spec estão em português e os títulos oficiais, em inglês); suíte verde, build em dia,
+audit_system_debt válido; DEBT-055 e DEBT-128 fechados citando as decisões acima.
+
+Fechamento: escreva a carta da sessão 1 no plano, logo abaixo deste prompt (modelo "Carta de sessão"),
+commit e push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. Workflow só com o custo
+projetado e aprovado por ele; a 75% estimados não comece passo novo.
 ```
