@@ -26,7 +26,10 @@ const envCandidates = [
     pathNode.join(process.cwd(), ".env"),                 // cwd
 ];
 for (const p of envCandidates) {
-    if (fsNode.existsSync(p)) dotenv.config({ path: p });
+    // `quiet: true` cala a linha "[dotenv] injecting env ..." que o dotenv escreve no
+    // STDOUT. No transporte stdio do MCP esse canal é exclusivo das mensagens do protocolo,
+    // e uma linha não-JSON ali é erro de parse para o cliente (DEBT-108).
+    if (fsNode.existsSync(p)) dotenv.config({ path: p, quiet: true });
 }
 
 // ─── Schema ──────────────────────────────────────────────────

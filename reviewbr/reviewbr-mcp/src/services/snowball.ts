@@ -10,51 +10,110 @@ interface OpenAlexWork {
     referenced_works: string[];
 }
 
+/** DEBT-059 — as 4 salvaguardas que librarian.md:24-27 declara obrigatórias. */
+export interface SnowballExpandOptions {
+    /** Níveis de expansão. Padrão 1 (só as citações das sementes, sem recursar). */
+    depth?: number;
+    /** Descritores/termos do protocolo. Um candidato só é aceito se título+descrição
+     *  contiver PELO MENOS UM (case-insensitive). Vazio/omitido = filtro não aplicado
+     *  (declarado em stats.filter_applied — não fabricamos poda sem critério). */
+    filterKeywords?: string[];
+    /** Registros já conhecidos do projeto (01_raw/02_deduplicated) para dedup real —
+     *  além do dedup intra-lote que 'seen' já fazia. */
+    existingDataset?: SearchResult[];
+    /** Teto de candidatos aceitos. Padrão 200. Ao atingir, a expansão para e o motivo
+     *  entra em stats.stop_reason — "relatório de parada". */
+    maxCandidates?: number;
+}
+
 export class SnowballService {
     private mailto: string = "vicente@prismaid.com";
 
-    async expandSearch(seeds: SearchResult[]): Promise<{ newCandidates: SearchResult[]; stats: any }> {
+    async expandSearch(
+        seeds: SearchResult[],
+        options: SnowballExpandOptions = {},
+    ): Promise<{ newCandidates: SearchResult[]; stats: any }> {
+        const depth = Number.isFinite(options.depth) && (options.depth as number) > 0
+            ? Math.floor(options.depth as number) : 1;
+        const maxCandidates = Number.isFinite(options.maxCandidates) && (options.maxCandidates as number) > 0
+            ? Math.floor(options.maxCandidates as number) : 200;
+        const filterKeywords = (options.filterKeywords ?? []).map((k) => k.toLowerCase().trim()).filter(Boolean);
+
+        // knownIds = sementes + dataset já existente do projeto: nunca reentra como "novo".
+        const knownIds = new Set<string>();
+        seeds.forEach((s) => knownIds.add(this.normalizeId(s)));
+        (options.existingDataset ?? []).forEach((r) => knownIds.add(this.normalizeId(r)));
+
+        const matchesFilter = (r: SearchResult): boolean => {
+            if (filterKeywords.length === 0) return true;
+            const haystack = `${r.title ?? ""} ${(r as any).description ?? ""}`.toLowerCase();
+            return filterKeywords.some((k) => haystack.includes(k));
+        };
+
         const newCandidates: SearchResult[] = [];
-        const seen = new Set<string>();
+        const perLevel: { level: number; fetched: number; accepted: number }[] = [];
+        let alreadyKnown = 0;
+        let filteredOutByKeyword = 0;
+        let capped = false;
 
-        // Mark seeds as seen
-        seeds.forEach(s => seen.add(this.normalizeId(s)));
+        let currentLevelSeeds = seeds;
+        for (let level = 1; level <= depth && !capped && currentLevelSeeds.length > 0; level++) {
+            const levelAccepted: SearchResult[] = [];
+            let fetchedThisLevel = 0;
 
-        for (const seed of seeds) {
-            try {
-                // 1. Resolve OpenAlex Work ID
-                const work = await this.resolveWork(seed);
-                if (!work) continue;
+            for (const seed of currentLevelSeeds) {
+                if (capped) break;
+                try {
+                    const work = await this.resolveWork(seed);
+                    if (!work) continue;
 
-                // 2. Backward Snowballing (References)
-                if (work.referenced_works) {
-                    // Fetch details for referenced works (batching would be better, doing simple here)
-                    // For MVP, we might just get the IDs, but to be useful we need metadata.
-                    // Let's implement a limited fetch.
-                    console.log(`Processing references for ${work.display_name}`);
-                }
+                    // Backward snowballing (referências) NÃO é implementado aqui — segue
+                    // como estava (só forward/citações). Fora do escopo do DEBT-059, que é
+                    // sobre as 4 salvaguardas de profundidade/filtro/dedup/teto, não sobre
+                    // adicionar a direção "para trás".
+                    const citations = await this.fetchCitations(work.id);
+                    fetchedThisLevel += citations.length;
 
-                // 3. Forward Snowballing (Citations)
-                const citations = await this.fetchCitations(work.id);
+                    for (const cit of citations) {
+                        const id = this.normalizeId(cit);
+                        if (knownIds.has(id)) { alreadyKnown++; continue; }
+                        knownIds.add(id); // evita reprocessar o mesmo candidato dentro desta expansão
 
-                for (const cit of citations) {
-                    const id = this.normalizeId(cit);
-                    if (!seen.has(id)) {
-                        seen.add(id);
+                        if (!matchesFilter(cit)) { filteredOutByKeyword++; continue; }
+
                         newCandidates.push(cit);
+                        levelAccepted.push(cit);
+                        if (newCandidates.length >= maxCandidates) { capped = true; break; }
                     }
+                } catch (e) {
+                    console.error(`Error processing seed ${seed.title}:`, e);
                 }
-
-            } catch (e) {
-                console.error(`Error processing seed ${seed.title}:`, e);
             }
+
+            perLevel.push({ level, fetched: fetchedThisLevel, accepted: levelAccepted.length });
+            currentLevelSeeds = levelAccepted;
         }
+
+        const stopReason = capped
+            ? `Teto de ${maxCandidates} candidatos atingido — expansão interrompida antes de esgotar a profundidade ${depth}.`
+            : perLevel.length < depth
+                ? `Expansão esgotou candidatos no nível ${perLevel.length} (nenhum aceito para recursar) antes de atingir a profundidade ${depth}.`
+                : `Profundidade ${depth} concluída sem atingir o teto de ${maxCandidates}.`;
 
         return {
             newCandidates,
             stats: {
                 seeds: seeds.length,
-                new_found: newCandidates.length
+                new_found: newCandidates.length,
+                depth,
+                max_candidates: maxCandidates,
+                capped,
+                already_known: alreadyKnown,
+                filter_applied: filterKeywords.length > 0,
+                filter_keywords: filterKeywords,
+                filtered_out_by_keyword: filteredOutByKeyword,
+                per_level: perLevel,
+                stop_reason: stopReason,
             }
         };
     }

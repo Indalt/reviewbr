@@ -57,7 +57,7 @@ Princípio: **tools são determinísticas e não decidem** (RV-06). Elas executa
 - **Aposentar** `switch_agent` / `get_current_agent` e o runtime `src/services/agent_orchestrator.ts` (RBAC "um chapéu por vez" — obsoleto no modelo multi-subagente).
 - **Manter** `src/registry/agent_orchestrator.ts` como **guardião server-side** (defense-in-depth): corrigir o enum de papéis (5→ inclui PROJETISTA e READER) e espelhar os allow-lists dos frontmatters de `.claude/agents/`. Um subagente que peça uma tool fora do seu papel é recusado pelo MCP.
 - **Reescrever** `SYSTEM_PROMPT.md` para o mundo multi-subagente (hoje assume o coordenador único com `switch_agent`).
-- **Bridge Go↔MCP** (`services/go_bridge.ts`, padrão `asreview_bridge.ts`): conversão de PDF e download em massa delegados ao binário `prismaid.exe`; APIs bibliográficas seguem no TS. Cada capacidade tem um dono. *(Adiável se o acoplamento ao binário preocupar.)*
+- **Bridge Go↔MCP** (`services/go_bridge.ts`, padrão `scihub_bridge.ts`): conversão de PDF e download em massa delegados ao binário `prismaid.exe`; APIs bibliográficas seguem no TS. Cada capacidade tem um dono. *(Adiável se o acoplamento ao binário preocupar.)*
 - **Sci-Hub BYOS:** `plugins/scihub_extractor.py` como tool opt-in `retrieve_fulltext_byos`, só do `librarian` e só com flag ligada; nunca automático.
 
 ## Compatibilidade de nomes

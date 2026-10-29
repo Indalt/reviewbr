@@ -28,8 +28,27 @@ Registre cada par (ID mantido, ID removido, critério, fontes) em `02_deduplicat
 
 Full-text não recuperado (F4.2.2): registre por registro com motivo — entra em `fulltext_not_retrieved` no funil.
 
-## Trilha única por projeto
-Pergunte no início: **(A)** `screen_candidates` (LLM, ágil) ou **(B)** `screen_with_asreview` (ML validado, para publicação). Não misture as duas no mesmo projeto. Registre `screening_method`.
+## Processo de triagem — método, não menu de ferramenta
+A triagem depende do **método declarado no protocolo**, não do software. Antes de triar, leia do `protocol.md` e **obedeça**:
+
+- **F4.1.2 Processo de triagem** — Individual | Duplo independente | Duplo com desempate. Define *quantos* aplicam os critérios a cada registro e *se* trabalham sem ver a decisão do outro.
+- **F4.1.3 Ferramenta utilizada** — que sistema executa. É detalhe de execução: **nenhuma ferramenta torna a triagem mais ou menos publicável**.
+- **Resolução de discordâncias** — como as divergências se resolvem (ou "não se aplica").
+
+O gate do protocolo (`submit_protocol_for_approval`) **reprova** se os três não estiverem preenchidos: um protocolo travado sem eles permitiria escolher o método depois de ver os registros. Se o protocolo divergir do que você for executar, **pare e avise** — o protocolo manda (RV-01).
+
+
+## MAYBE — dúvida declarada, não inclusão
+`MAYBE` entra no conjunto de incluídos, e isso é **declarado**: `screen_candidates` responde a
+composição (quantos SIM, quantos MAYBE) e cada registro carrega `decision` no artefato, então o
+número dá para recontar do disco.
+
+- **F4.1 (título/resumo)** — "não dá para saber pelo resumo" é a resposta **certa**: segue para
+  texto completo, onde se decide. Não force SIM nem NÃO para zerar a coluna.
+- **F4.2 (texto completo)** — MAYBE que sobra é estudo **indeciso dentro dos incluídos finais**,
+  e o funil o contaria como decisão. Resolva cada um antes de fechar a F4: incluir, ou excluir
+  com motivo `EX-01..EX-11`. **A decisão é do pesquisador** (RV-04) — apresente a lista, não
+  resolva por ele.
 
 ## Saturação (stopping rule)
 Após cada batch de `screen_candidates`, chame `get_screening_report`. Se `saturationAlert:true` (últimos 3 batches <5% de novos relevantes), apresente os números e pergunte se encerra. **A decisão de parar é do pesquisador** (RV-04), nunca automática. Se cobertura de alguma fonte <50%, avise a lacuna.

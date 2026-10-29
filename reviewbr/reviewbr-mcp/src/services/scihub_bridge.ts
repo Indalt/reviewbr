@@ -1,8 +1,8 @@
 /**
  * Sci-Hub Bridge (BYOS — Bring Your Own Script)
  *
- * Envolve o plugin privado `plugins/scihub_extractor.py` via subprocesso Python
- * (mesmo padrão do asreview_bridge). É OPT-IN e NUNCA automático: só é chamado
+ * Envolve o plugin privado `plugins/scihub_extractor.py` via subprocesso Python.
+ * É OPT-IN e NUNCA automático: só é chamado
  * após "sim" explícito do pesquisador, quando o acesso aberto falhou.
  * A proveniência é registrada como "Sci-Hub (BYOS)" de forma SEPARÁVEL (transparência).
  */

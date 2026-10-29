@@ -150,6 +150,44 @@ export class PdfExtractorService {
     /**
      * Extract text from a validated PDF file.
      */
+    /**
+     * A extração produziu texto que dá para ler? Devolve o motivo da recusa, ou `null`.
+     *
+     * Dois critérios, e os dois são deliberadamente frouxos — a guarda existe para pegar o
+     * PDF-imagem, não para julgar qualidade de redação. Recusar demais seria trocar um falso
+     * negativo por outro.
+     *
+     *  1. VOLUME ABSOLUTO: menos de 200 caracteres não é artigo nenhum — é capa, erro de
+     *     download ou página de login.
+     *  2. DENSIDADE POR PÁGINA: menos de 100 caracteres por página indica PDF digitalizado,
+     *     em que o `pdf-parse` só colhe cabeçalho e número de página. Um artigo tem milhares.
+     *
+     * Não checa densidade léxica nem idioma: isso julgaria o conteúdo, e o sistema não
+     * decide o que é bom — decide se LEU.
+     */
+    static avaliarExtracao(texto: string, paginas: number): string | null {
+        const limpo = (texto ?? "").replace(/\s+/g, " ").trim();
+
+        if (limpo.length < 200) {
+            return `PDF sem texto extraível (${limpo.length} caracteres). Provavelmente é um ` +
+                "digitalizado, que exige OCR — o `pdf-parse` só lê texto já embutido no arquivo. " +
+                "NÃO foi gravado .txt: o estudo não foi lido, e a revisão não pode tratá-lo como " +
+                "se nada dissesse (DEBT-102).";
+        }
+
+        if (paginas > 0) {
+            const porPagina = Math.round(limpo.length / paginas);
+            if (porPagina < 100) {
+                return `PDF com texto insuficiente: ${limpo.length} caracteres em ${paginas} ` +
+                    `páginas (${porPagina}/página). Densidade de documento digitalizado — o texto ` +
+                    "colhido tende a ser só cabeçalho e numeração. Exige OCR. NÃO foi gravado " +
+                    ".txt, para o estudo não entrar no corpus como vazio (DEBT-102).";
+            }
+        }
+
+        return null;
+    }
+
     private async extractFromPdf(
         pdfPath: string, textPath: string, documentId: string, url: string
     ): Promise<{ success: boolean; textPath?: string; error?: string }> {
@@ -157,6 +195,22 @@ export class PdfExtractorService {
             const dataBuffer = fs.readFileSync(pdfPath);
             const data = await pdfParse(dataBuffer);
             const sizeKB = Math.round(fs.statSync(pdfPath).size / 1024);
+
+            // DEBT-102 — GUARDA DE QUALIDADE. `pdf-parse` extrai texto JÁ EMBUTIDO no
+            // arquivo; não faz OCR. Um PDF digitalizado (só imagem) devolve quase nada, e a
+            // versão anterior gravava esse quase-nada e declarava sucesso. O caminho da
+            // falha, ponta a ponta: .txt vazio → rag_index_corpus indexa vazio → rag_query
+            // não acha → o analyst conclui que o estudo NÃO TRATA DO TEMA. O estudo foi lido
+            // por ninguém e a revisão segue como se ele nada dissesse.
+            //
+            // É falso negativo silencioso, a classe mais cara: não aparece em lugar nenhum.
+            // A guarda não lê o PDF digitalizado — para isso é preciso OCR, que é outra
+            // decisão. O que ela faz é o sistema PARAR DE FINGIR que leu.
+            const falha = PdfExtractorService.avaliarExtracao(data.text, data.numpages);
+            if (falha) {
+                logger.error("PDF_EXTRACTOR", `Extração sem texto útil: ${documentId}`, { motivo: falha });
+                return { success: false, error: falha };
+            }
 
             const extractedText = `[NATIVE PDF EXTRACTED]\nDocument ID: ${documentId}\nURL: ${url}\nPages: ${data.numpages}\nSize: ${sizeKB} KB\n\n${data.text}`;
             fs.writeFileSync(textPath, extractedText);

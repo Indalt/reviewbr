@@ -5,12 +5,13 @@
  * This service NEVER searches, downloads, or generates new data.
  * It acts as a mirror, not a paintbrush.
  * 
- * Runs 5 conformity checks:
+ * Runs 6 conformity checks (DEBT-044: docstring/relatório diziam 5, o código já rodava 6):
  *   1. Base Coverage (≥2 databases)
  *   2. Search Strategy Documentation
  *   3. PRISMA Flow Mathematical Consistency
  *   4. Residual Duplicates Detection
  *   5. Selection Bias Indicators
+ *   6. Transparency Audit
  */
 
 import { SearchResult } from "../types.js";
@@ -23,6 +24,11 @@ export interface AuditInput {
     dataset: SearchResult[];
     searchTermsUsed?: string;
     prismaFlowData?: PrismaFlowData;
+    /** Log de 02_deduplicated/dedupe_pairs.json (DEBT-029), quando o projeto veio desta
+     *  ferramenta. `undefined` = não disponível (auditoria de pesquisa externa: mantém o
+     *  re-run do algoritmo, único recurso possível). Presente (mesmo `[]`) = self-audit:
+     *  o check DEBT-024 passa a auditar o log em vez de reaplicar o mesmo algoritmo. */
+    dedupePairs?: { mantido: string; removido: string; criterio: string; fontes: string[] }[];
 }
 
 export interface AuditCheckResult {
@@ -54,7 +60,7 @@ export class MethodologyAuditorService {
     }
 
     /**
-     * Run all 5 conformity checks on the submitted dataset.
+     * Run all 6 conformity checks on the submitted dataset.
      */
     audit(input: AuditInput): AuditReport {
         const checks: AuditCheckResult[] = [];
@@ -62,16 +68,18 @@ export class MethodologyAuditorService {
         checks.push(this.checkBaseCoverage(input.dataset));
         checks.push(this.checkSearchStrategy(input.searchTermsUsed));
         checks.push(this.checkPrismaFlow(input.prismaFlowData));
-        checks.push(this.checkResidualDuplicates(input.dataset));
+        checks.push(this.checkResidualDuplicates(input.dataset, input.dedupePairs));
         checks.push(this.checkSelectionBias(input.dataset));
         checks.push(this.checkTransparencyAudit(input.dataset));
 
         const score = checks.filter(c => c.status === "PASS").length;
-        const report = this.generateMarkdownReport(checks, score, input.dataset.length);
+        // DEBT-044: maxScore precisa vir do nº real de checagens (checks.length), não de um
+        // "5" hardcoded no relatório — senão as 6 checagens aprovadas imprimem "6/5".
+        const report = this.generateMarkdownReport(checks, score, input.dataset.length, checks.length);
 
         return {
             score,
-            maxScore: 6,
+            maxScore: checks.length,
             checks,
             markdownReport: report,
             timestamp: new Date().toISOString(),
@@ -130,7 +138,7 @@ export class MethodologyAuditorService {
                 status: "FAIL",
                 icon: "❌",
                 detail: "Os termos de busca utilizados não foram fornecidos. PRISMA-S (Item 3) exige documentação completa da estratégia de busca.",
-                suggestion: "Forneça a string de busca completa utilizada em cada base (incluindo operadores booleanos, truncamentos e filtros). Exemplo: '(cashew OR \"Anacardium occidentale\") AND antioxidant'.",
+                suggestion: "Forneça a string de busca completa utilizada em cada base (incluindo operadores booleanos, truncamentos e filtros). Exemplo de forma: '(<termo> OR \"<sinônimo exato>\") AND <desfecho>'.",
             };
         }
 
@@ -197,7 +205,10 @@ export class MethodologyAuditorService {
 
     // ─── Check 4: Residual Duplicates ────────────────────────
 
-    private checkResidualDuplicates(dataset: SearchResult[]): AuditCheckResult {
+    private checkResidualDuplicates(
+        dataset: SearchResult[],
+        dedupePairs?: AuditInput["dedupePairs"],
+    ): AuditCheckResult {
         if (dataset.length === 0) {
             return {
                 id: "residual_duplicates",
@@ -206,6 +217,15 @@ export class MethodologyAuditorService {
                 icon: "⚠️",
                 detail: "Dataset vazio — não é possível verificar duplicatas.",
             };
+        }
+
+        // DEBT-024: quando existe dedupe_pairs.json (o dataset já passou por
+        // deduplicate_dataset NESTA ferramenta), rodar o MESMO DeduplicationService sobre
+        // ele é tautológico — por construção sempre acha 0 duplicatas. Nesse caso, o check
+        // vira auditoria do LOG: confere que cada "removido" está de fato ausente do
+        // dataset submetido e cada "mantido" está presente, o que é falseável de verdade.
+        if (dedupePairs !== undefined) {
+            return this.checkResidualDuplicatesFromLog(dataset, dedupePairs);
         }
 
         const result = this.dedupeService.deduplicate(dataset);
@@ -238,6 +258,59 @@ export class MethodologyAuditorService {
                 suggestion: "Execute a ferramenta `deduplicate_dataset` sobre o dataset para remover repetições antes de prosseguir com a triagem.",
             };
         }
+    }
+
+    /** DEBT-024 — audita o log de dedupe_pairs.json contra o dataset submetido, em vez de
+     *  reaplicar o mesmo algoritmo que já produziu esse dataset (o que seria tautológico:
+     *  duplicates sempre daria 0). Falseável de verdade: um "removido" que ainda aparece
+     *  no dataset, ou um "mantido" que sumiu, é uma inconsistência real entre o log e o
+     *  artefato final — não pode ser mascarada rodando o dedup de novo. */
+    private checkResidualDuplicatesFromLog(
+        dataset: SearchResult[],
+        pairs: NonNullable<AuditInput["dedupePairs"]>,
+    ): AuditCheckResult {
+        if (pairs.length === 0) {
+            return {
+                id: "residual_duplicates",
+                name: "Duplicatas Residuais",
+                status: "PASS",
+                icon: "✅",
+                detail: `dedupe_pairs.json declara 0 duplicatas removidas entre os ${dataset.length} registros. Verificação por LOG (DEBT-024), não por reexecução do algoritmo.`,
+            };
+        }
+
+        const presentIds = new Set(dataset.map((r) => r.identifier ?? r.title ?? r.url));
+        const removidosAindaPresentes = pairs.filter((p) => presentIds.has(p.removido));
+        const mantidosAusentes = pairs.filter((p) => !presentIds.has(p.mantido));
+
+        if (removidosAindaPresentes.length > 0) {
+            return {
+                id: "residual_duplicates",
+                name: "Duplicatas Residuais",
+                status: "FAIL",
+                icon: "❌",
+                detail: `${removidosAindaPresentes.length} registro(s) que o log de deduplicação diz ter REMOVIDO ainda estão no dataset submetido: ${removidosAindaPresentes.slice(0, 5).map((p) => p.removido).join(", ")}. O log e o artefato final divergem.`,
+                suggestion: "Regravar 02_deduplicated/dataset.json a partir do resultado real do deduplicate_dataset, ou corrigir o log se o dataset foi editado manualmente depois.",
+            };
+        }
+
+        if (mantidosAusentes.length > 0) {
+            return {
+                id: "residual_duplicates",
+                name: "Duplicatas Residuais",
+                status: "WARNING",
+                icon: "⚠️",
+                detail: `${mantidosAusentes.length} registro(s) marcado(s) como "mantido" no log não aparecem no dataset submetido (podem ter sido excluídos depois, na triagem — verificar se é intencional).`,
+            };
+        }
+
+        return {
+            id: "residual_duplicates",
+            name: "Duplicatas Residuais",
+            status: "PASS",
+            icon: "✅",
+            detail: `dedupe_pairs.json confere com o dataset: os ${pairs.length} registro(s) removido(s) não estão presentes, os mantidos estão. Verificação por LOG (DEBT-024), não por reexecução do algoritmo.`,
+        };
     }
 
     // ─── Check 5: Selection Bias Indicators ──────────────────
@@ -366,14 +439,15 @@ export class MethodologyAuditorService {
 
     // ─── Report Generation ───────────────────────────────────
 
-    private generateMarkdownReport(checks: AuditCheckResult[], score: number, datasetSize: number): string {
+    private generateMarkdownReport(checks: AuditCheckResult[], score: number, datasetSize: number, maxScore: number): string {
         const lines: string[] = [];
+        const proporcao = maxScore > 0 ? score / maxScore : 0;
 
         lines.push("# 📋 Relatório de Auditoria Metodológica (Post-Hoc)");
         lines.push("");
         lines.push(`**Data:** ${new Date().toISOString().split("T")[0]}`);
         lines.push(`**Registros Submetidos:** ${datasetSize}`);
-        lines.push(`**Score de Conformidade:** **${score}/5** ${score >= 4 ? "✅" : score >= 2 ? "⚠️" : "❌"}`);
+        lines.push(`**Score de Conformidade:** **${score}/${maxScore}** ${proporcao >= 0.8 ? "✅" : proporcao >= 0.4 ? "⚠️" : "❌"}`);
         lines.push("");
         lines.push("> **Modo de Operação:** Auditoria Passiva — Nenhum dado novo foi gerado, buscado ou inserido. Este relatório reflete exclusivamente a análise do material submetido pelo pesquisador.");
         lines.push("");
@@ -396,12 +470,12 @@ export class MethodologyAuditorService {
         // Final verdict
         lines.push("## Veredito");
         lines.push("");
-        if (score === 5) {
-            lines.push("A pesquisa submetida atende **todos os 5 critérios de conformidade** auditados. A metodologia está alinhada com as diretrizes PRISMA/PRISMA-S.");
-        } else if (score >= 3) {
-            lines.push(`A pesquisa atende ${score} de 5 critérios. Os itens pendentes devem ser documentados ou justificados antes da submissão para publicação.`);
+        if (score === maxScore) {
+            lines.push(`A pesquisa submetida atende **todos os ${maxScore} critérios de conformidade** auditados. A metodologia está alinhada com as diretrizes PRISMA/PRISMA-S.`);
+        } else if (proporcao >= 0.4) {
+            lines.push(`A pesquisa atende ${score} de ${maxScore} critérios. Os itens pendentes devem ser documentados ou justificados antes da submissão para publicação.`);
         } else {
-            lines.push(`A pesquisa atende apenas ${score} de 5 critérios. Recomenda-se revisão metodológica significativa antes da submissão.`);
+            lines.push(`A pesquisa atende apenas ${score} de ${maxScore} critérios. Recomenda-se revisão metodológica significativa antes da submissão.`);
         }
         lines.push("");
         lines.push("---");

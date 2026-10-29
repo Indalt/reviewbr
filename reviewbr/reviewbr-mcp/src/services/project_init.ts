@@ -15,16 +15,52 @@
 
 import * as fs from "fs";
 import * as path from "path";
-import { DatabaseService, BlindingType } from "./database.js";
+import { DatabaseService, BlindingType, ScreeningProcess } from "./database.js";
 import { ProjectStateService } from "./project_state.js";
+import { escolherMetodo } from "./methods_for_type.js";
+import { lerTrilha, etapaInicial, Etapa } from "./method_trail.js";
+import { StandardsService } from "./standards.js";
+import { fileURLToPath } from "node:url";
 
 /** Mapeia o tipo de pesquisa do MCP para o método/framework da camada de metodologia (.claude). */
-function mapMethod(researchType: ResearchType): { method: string; framework: string } {
-    switch (researchType) {
-        case "scoping_review": return { method: "scoping-prisma-scr", framework: "PCC" };
-        case "exploratory": return { method: "prisma-sr", framework: "livre" };
-        default: return { method: "prisma-sr", framework: "PICOS" };
+
+/**
+ * Raiz do repositório, a partir da localização DESTE módulo — não do cwd.
+ * O cwd varia conforme o cliente que sobe o MCP; foi a classe de bug que quebrou o
+ * catálogo de repositórios (commit 1c697d1) e a gravação de 01_raw (DEBT-084).
+ */
+function repoRoot(): string {
+    const mcpRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
+    return path.resolve(mcpRoot, "..", "..");
+}
+
+/**
+ * Os padrões que a metodologia declara cumprir, lidos do `conformance.standards` do
+ * manifest (DEBT-047). Devolve [] quando a metodologia não declara — e aí o chamador cai
+ * no texto antigo, em vez de afirmar conformidade que o dado não sustenta.
+ */
+function standardsOfMethod(methodId: string): string[] {
+    try {
+        const mp = path.join(repoRoot(), ".claude", "methodologies", methodId, "manifest.json");
+        if (!fs.existsSync(mp)) return [];
+        const man = JSON.parse(fs.readFileSync(mp, "utf-8"));
+        const stds = man?.conformance?.standards;
+        return Array.isArray(stds) ? stds.filter((x: unknown) => typeof x === "string") : [];
+    } catch {
+        return [];
     }
+}
+
+/**
+ * O tipo de pesquisa FILTRA os metodos assimilados (ver services/methods_for_type.ts).
+ *
+ * Era um `switch` com `default: prisma-sr`: cinco dos sete tipos caiam no ramo de escape e
+ * recebiam a trilha da revisao sistematica PRISMA em silencio. Agora quem declara servir a um
+ * tipo e o proprio metodo, no `serves_research_types` do manifest, e tipo sem metodo assimilado
+ * e RECUSA com explicacao — nunca substituicao.
+ */
+function mapMethod(researchType: ResearchType, escolhido?: string): { method: string; framework: string } {
+    return escolherMetodo(repoRoot(), researchType, escolhido);
 }
 
 // ─── Types ───────────────────────────────────────────────────
@@ -57,9 +93,18 @@ export interface ProjectConfig {
     };
     languages?: string[];
     registrationRequired?: boolean;
+    /**
+     * @deprecated Nunca foi lido. O campo colapsava três coisas distintas: cegamento de
+     * avaliador (ocultar autor/periódico — NÃO implementado: o prompt de triagem envia
+     * repositório e data ao modelo), separação multiusuário real (declarada em `cannot`:
+     * "o sistema simula separação de revisores") e triagem em duplicata por dois revisores
+     * independentes — que é o que a pergunta de fato queria dizer e não é cegamento.
+     * O que o PRISMA 2020 item 8 exige é esse terceiro, e ele agora é declarado no
+     * protocolo como F4.1.2. Dado já gravado NÃO migra: traduzir resposta a pergunta mal
+     * formulada em declaração metodológica seria inventar declaração.
+     */
     blinding?: BlindingType;
     hasMetaAnalysis?: boolean;
-    screeningMethod?: "llm_generative" | "asreview_ml" | "pending";
 }
 
 export interface ProjectInitResult {
@@ -156,7 +201,7 @@ export class ProjectInitService {
     /**
      * Activate a project by creating its physical folder structure.
      */
-    async initializeWorkspace(projectId: number, basePath: string, dbService: DatabaseService): Promise<ProjectInitResult> {
+    async initializeWorkspace(projectId: number, basePath: string, dbService: DatabaseService, methodId?: string): Promise<ProjectInitResult> {
         const project = await dbService.getProjectById(projectId);
         if (!project) throw new Error(`Project ${projectId} not found.`);
         if (project.status === 'LOCKED_EXECUTION') {
@@ -173,6 +218,26 @@ export class ProjectInitService {
 
         const meta = RESEARCH_TYPE_META[config.researchType];
         const warnings: string[] = [];
+
+        // DEBT-122/DEBT-053 — a frase "PRISMA aplicável" DERIVA do padrão, não é prosa.
+        // Era string literal duplicada aqui e em index.ts, e as duas divergiam: uma dizia
+        // "27 itens", a outra "27 itens, 44 subitens" (são 42 linhas) e anunciava PRISMA-P,
+        // que não existe em .claude/standards/. Os critérios de uma metodologia são DELA,
+        // publicados com a norma; o ReviewBR assimila e declara, não digita de memória.
+        const metodo = mapMethod(config.researchType, methodId);
+        const padroesDoMetodo = standardsOfMethod(metodo.method);
+        const prismaStandard = padroesDoMetodo.length
+            ? StandardsService.describeStandards(repoRoot(), padroesDoMetodo)
+            : meta.prismaStandard;
+
+        // DEBT-100 — a trilha é do MÉTODO, lida do manifest. `escolherMetodo` já recusou método
+        // sem trilha legível; conferir de novo aqui é o que impede o projeto de nascer numa
+        // etapa que ninguém declarou.
+        const trilha = lerTrilha(repoRoot(), metodo.method);
+        const inicial = etapaInicial(trilha.etapas);
+        if (!inicial) {
+            throw new Error(`A trilha do método "${metodo.method}" não tem etapa ativa: ${trilha.erros.join("; ") || "lista vazia"}.`);
+        }
 
         // A raiz do projeto É o caminho passado (sem aninhar userId/safeName) — alinha
         // com a camada de agentes, que trabalha com o diretório absoluto do projeto.
@@ -201,15 +266,16 @@ export class ProjectInitService {
         }
 
         // Protocolo na RAIZ com marcador [DRAFT] (o gate RV-01 e o guardrail leem isto)
-        const protocol = this.generateProtocol(config, meta);
+        const protocol = this.generateProtocol(config, meta, prismaStandard, metodo.method, trilha.etapas);
         const protocolPath = path.join(projectPath, "protocol.md");
         fs.writeFileSync(protocolPath, protocol, "utf8");
 
-        // Estado on-disk = fonte da verdade (project_state.json)
+        // Estado on-disk = fonte da verdade (project_state.json). O projeto nasce na primeira
+        // etapa ativa da trilha do método — não numa fase escrita aqui.
         if (!isAudit) {
-            const { method, framework } = mapMethod(config.researchType);
             ProjectStateService.init(projectPath, {
-                method, framework, reviewType: meta.label, topic: config.topic, userId: config.userId,
+                method: metodo.method, framework: metodo.framework, reviewType: meta.label,
+                topic: config.topic, userId: config.userId, phase: inicial.id,
             });
         }
 
@@ -221,7 +287,7 @@ export class ProjectInitService {
             projectPath,
             protocolPath,
             researchType: config.researchType,
-            prismaStandard: meta.prismaStandard,
+            prismaStandard,
             registrationAdvice: meta.requiresRegistration ? "Required" : "Optional",
             searchStrategy: this.getSearchStrategy(config),
             folderStructure: folders,
@@ -232,7 +298,15 @@ export class ProjectInitService {
     /**
      * Generate a protocol document based on research type.
      */
-    private generateProtocol(config: ProjectConfig, meta: typeof RESEARCH_TYPE_META[ResearchType]): string {
+    private generateProtocol(
+        config: ProjectConfig,
+        meta: typeof RESEARCH_TYPE_META[ResearchType],
+        /** Já DERIVADO do padrão em disco (DEBT-122); `meta.prismaStandard` é só fallback. */
+        prismaStandard: string,
+        /** Método assumido e a trilha dele, lida do manifest (DEBT-100). */
+        method: string,
+        etapas: Etapa[],
+    ): string {
         const dateRange = config.dateRestriction
             ? `${config.dateRestriction.minDate} a ${config.dateRestriction.maxDate}`
             : "Sem restrição temporal";
@@ -251,6 +325,16 @@ ${config.pico.intervention ? `| **Intervenção (I)** | ${config.pico.interventi
             ? `**Idiomas aceitos:** ${config.languages.join(", ")}`
             : "**Idiomas aceitos:** Sem restrição";
 
+        // DEBT-100 — a lista de etapas sai da trilha do método. Era escrita aqui, F2→F6, e
+        // errava a do próprio método de referência: chamava a F6 de "Síntese", quando no
+        // prisma-sr a F6 é risco de viés e a síntese é a F7. Etapa que não se aplica ao
+        // método aparece riscada e com o motivo — declarada, não omitida.
+        const trilhaTexto = etapas.length
+            ? etapas.map((e, i) => e.active
+                ? `${i + 1}. **${e.id} — ${e.name}** (executa: \`${e.role}\`)`
+                : `${i + 1}. ~~${e.id} — ${e.name}~~ — não se aplica a este método: ${e.note}`).join("\n")
+            : "[SEM TRILHA DECLARADA]";
+
         return `# Protocolo — ${config.name}
 
 **Status**: [DRAFT] <!-- muda para [LOCKED] na aprovação (submit_protocol_for_approval) -->
@@ -259,12 +343,24 @@ ${config.pico.intervention ? `| **Intervenção (I)** | ${config.pico.interventi
 > Preencha as seções com [PREENCHIMENTO OBRIGATÓRIO] e solicite a aprovação.
 
 **Tipo de pesquisa:** ${meta.label}
-**PRISMA aplicável:** ${meta.prismaStandard}
+**PRISMA aplicável:** ${prismaStandard}
 **Data do protocolo:** ${new Date().toISOString().split("T")[0]}
 
 ## Objetivo
 
 ${config.topic}
+
+## Justificativa
+[PREENCHIMENTO OBRIGATÓRIO: por que esta pesquisa é necessária agora.]
+
+## Revisões Anteriores
+[PREENCHIMENTO OBRIGATÓRIO: revisões que já existem sobre o tema e por que uma nova se justifica — ou "nenhuma encontrada", com onde se procurou.]
+
+## Lacuna
+[PREENCHIMENTO OBRIGATÓRIO: o que a literatura ainda não respondeu.]
+
+## Relevância
+[PREENCHIMENTO OBRIGATÓRIO: para quem o resultado importa e que uso ele terá.]
 
 ${picoSection}
 
@@ -285,18 +381,20 @@ ${langSection}
 ${this.getSearchSourcesSection(config)}
 
 ## Estratégia de Busca (Sintaxe)
-[PREENCHIMENTO OBRIGATÓRIO: Escreva a string de busca exata utilizando operadores booleanos (AND, OR). Use parênteses para agrupar as lógicas. Ex: (cashew OR anacardium) AND (disease OR pest)]
+[PREENCHIMENTO OBRIGATÓRIO: Escreva a string de busca exata utilizando operadores booleanos (AND, OR). Use parênteses para agrupar as lógicas. Ex. de FORMA, não de tema: (<termo> OR <sinônimo>) AND (<conceito> OR <variante>)]
 
 ## Processo de Seleção
 
-1. **F2 — Mineração:** Busca nas fontes definidas
-2. **F3 — Deduplicação:** Remoção de duplicatas (DOI + título)
-3. **F4 — Triagem:**
-   - Método: ${config.screeningMethod === "asreview_ml" ? "ASReview ML (Active Learning ELAS, Nature Machine Intelligence 2021)" : config.screeningMethod === "llm_generative" ? "IA Generativa (LLM com protocolo PICO)" : "A definir pelo pesquisador"}
+Trilha do método \`${method}\`, lida de \`.claude/methodologies/${method}/manifest.json\` — a ordem das etapas e o papel que executa cada uma são do método:
+
+${trilhaTexto}
+
+**Declaração do processo de triagem** (obrigatória antes de travar):
+   - **F4.1.2 Processo de triagem:** [PREENCHIMENTO OBRIGATÓRIO: Individual | Duplo independente | Duplo com desempate. Quem aplica os critérios a cada registro, e quantos aplicam de forma independente.]
+   - **F4.1.3 Ferramenta utilizada:** [PREENCHIMENTO OBRIGATÓRIO: que sistema, software ou planilha executa a triagem, e em que etapa. É detalhe de execução, não substitui o processo declarado acima.]
+   - **Resolução de discordâncias:** [PREENCHIMENTO OBRIGATÓRIO: como as divergências entre triadores são resolvidas — ou "não se aplica (triagem individual)".]
    - Fase 1: Triagem por título e resumo
    - Fase 2: Leitura de texto completo
-4. **F5 — Extração:** Extração de dados estruturados
-5. **F6 — Síntese:** ${config.researchType === "meta_analysis" ? "Síntese estatística (meta-análise)" : "Síntese narrativa/temática"}
 
 ## Registro de Protocolo
 
@@ -306,7 +404,7 @@ ${meta.requiresRegistration
 
 ## Auditoria PRISMA
 
-Checklist ${meta.prismaStandard} será preenchido ao final do estudo.
+Checklist ${prismaStandard} será preenchido ao final do estudo.
 `;
     }
 
@@ -350,7 +448,7 @@ Checklist ${meta.prismaStandard} será preenchido ao final do estudo.
             `→ search_papers_optimized (BVS/LILACS/OasisBR)`,
             `→ search_repository (repositórios institucionais)`,
             `→ deduplicate_dataset`,
-            `→ screen_candidates OU screen_with_asreview`,
+            `→ screen_candidates (conforme o processo declarado no protocolo, F4.1.2)`,
             `→ get_screening_report (métricas de saturação)`,
             `→ snowball_search (se aplicável)`,
         ].join("\n");
@@ -395,10 +493,13 @@ Checklist ${meta.prismaStandard} será preenchido ao final do estudo.
    - OSF Registries (opcional)
    - Não
 
-8. **Cegamento da revisão?**
-   - Nenhum (NONE)
-   - Cego simples (SINGLE_BLIND — um revisor independente)
-   - Duplo cego (DOUBLE_BLIND — dois revisores independentes)
+8. **Processo de triagem (PRISMA 2020 item 8)?**
+   - Individual (um triador aplica os critérios a cada registro)
+   - Duplo independente (dois triadores aplicam em paralelo, sem ver a decisão do outro)
+   - Duplo com desempate (duplo independente + terceiro resolve as divergências)
+
+   E, à parte: que **ferramenta** executa a triagem? A ferramenta é detalhe de execução —
+   ela não define o processo nem o torna mais ou menos publicável.
 
 9. **Inclui metanálise?**
    - Sim (síntese estatística quantitativa)
@@ -406,29 +507,29 @@ Checklist ${meta.prismaStandard} será preenchido ao final do estudo.
     }
 
     /**
-     * Proactive design advice based on topic keywords and research type.
-     * Returns recommendations about blinding and meta-analysis.
+     * Recomendação de desenho a partir do TIPO de revisão.
+     *
+     * `suggestScreeningProcess` é o F4.1.2 da spec (PRISMA 2020 item 8): quantos triadores
+     * aplicam os critérios e se trabalham de forma independente. NÃO é cegamento — cegar o
+     * avaliador é ocultar dele autor, periódico ou resultados, coisa que este sistema não
+     * faz (o prompt de triagem envia repositório e data ao modelo) e que nenhuma norma exige
+     * na triagem. O campo antigo chamava "duplo cego" o que é triagem em duplicata.
+     *
+     * A recomendação deriva do `researchType`, que é categoria metodológica. NÃO deriva de
+     * palavra-chave do tema: inferir método a partir de domínio quebra o princípio de que o
+     * sistema é agnóstico a domínio, e `tests/integracao.test.ts` reprova termo temático no
+     * código. A metanálise segue sugerida por desfecho quantitativo porque isso é
+     * propriedade do DADO a sintetizar, não do assunto da revisão.
      */
     static getDesignAdvice(topic: string, researchType: ResearchType): {
-        suggestBlinding: BlindingType;
+        suggestScreeningProcess: ScreeningProcess;
         suggestMetaAnalysis: boolean;
         advice: string[];
     } {
         const lowerTopic = topic.toLowerCase();
         const advice: string[] = [];
-        let suggestBlinding: BlindingType = "NONE";
+        let suggestScreeningProcess: ScreeningProcess = "INDIVIDUAL";
         let suggestMetaAnalysis = false;
-
-        // Keywords that suggest clinical/intervention studies
-        const clinicalKeywords = [
-            "treatment", "tratamento", "therapy", "terapia",
-            "efficacy", "eficácia", "effectiveness", "efetividade",
-            "clinical trial", "ensaio clínico", "intervention", "intervenção",
-            "drug", "medicamento", "fármaco", "pharmaceutical",
-            "randomized", "randomizado", "placebo",
-            "dosage", "dose", "posologia",
-            "surgical", "cirúrgico", "cirurgia",
-        ];
 
         // Keywords that suggest quantitative outcomes (meta-analysis candidates)
         const quantitativeKeywords = [
@@ -441,14 +542,16 @@ Checklist ${meta.prismaStandard} será preenchido ao final do estudo.
             "cohort", "coorte", "case-control", "caso-controle",
         ];
 
-        const hasClinicalIndicators = clinicalKeywords.some(kw => lowerTopic.includes(kw));
         const hasQuantitativeIndicators = quantitativeKeywords.some(kw => lowerTopic.includes(kw));
 
         // Research type-based suggestions
         if (researchType === "systematic_review" || researchType === "meta_analysis") {
-            suggestBlinding = "DOUBLE_BLIND";
+            suggestScreeningProcess = "DUPLO_COM_DESEMPATE";
             advice.push(
-                "⚖️ **Cegamento Duplo Recomendado**: Revisões sistemáticas de alta evidência devem ter pelo menos dois revisores independentes na triagem e extração."
+                "⚖️ **Triagem em duplicata recomendada**: revisões sistemáticas de alta evidência usam " +
+                "dois triadores independentes, com desempate declarado — e relatam a concordância entre eles " +
+                "(PRISMA 2020 item 8; Cochrane MECIR C40-C41). Declare o processo no protocolo (F4.1.2); " +
+                "a ferramenta que o executa é item separado (F4.1.3)."
             );
         }
 
@@ -456,17 +559,6 @@ Checklist ${meta.prismaStandard} será preenchido ao final do estudo.
             suggestMetaAnalysis = true;
             advice.push(
                 "📊 **Metanálise Ativada**: Tipo de pesquisa selecionado como Meta-Análise. Os dados deverão ser estruturados para síntese estatística."
-            );
-        }
-
-        // Topic-based suggestions
-        if (hasClinicalIndicators && researchType !== "meta_analysis" && researchType !== "exploratory") {
-            if (suggestBlinding !== "DOUBLE_BLIND") {
-                suggestBlinding = "DOUBLE_BLIND";
-            }
-            advice.push(
-                "🔬 **Tema Clínico Detectado**: O tema " +
-                "sugere estudos de intervenção/tratamento. Considere cegamento duplo para reduzir viés de seleção."
             );
         }
 
@@ -479,27 +571,33 @@ Checklist ${meta.prismaStandard} será preenchido ao final do estudo.
         }
 
         if (researchType === "scoping_review") {
-            suggestBlinding = "NONE";
+            // A JBI recomenda duplicata também em revisão de escopo; o desempate formal é
+            // que costuma não se aplicar. Metanálise não se aplica por definição.
+            suggestScreeningProcess = "DUPLO_INDEPENDENTE";
             suggestMetaAnalysis = false;
             advice.push(
-                "📋 **Revisão de Escopo**: Cegamento e metanálise geralmente não se aplicam. Foco no mapeamento da literatura."
+                "📋 **Revisão de Escopo**: metanálise não se aplica. A triagem em duplicata continua " +
+                "recomendada (JBI); declare em F4.1.2 o processo que de fato usar."
             );
         }
 
         if (researchType === "exploratory") {
-            suggestBlinding = "NONE";
+            suggestScreeningProcess = "INDIVIDUAL";
             suggestMetaAnalysis = false;
             advice.push(
-                "🔍 **Pesquisa Exploratória**: Sem requisitos formais de cegamento ou metanálise."
+                "🔍 **Pesquisa Exploratória**: sem exigência de duplicata nem de metanálise; triagem " +
+                "individual é adequada, desde que declarada. Hoje este tipo é conduzido pela trilha do " +
+                "método que o serve — não por protocolo livre."
             );
         }
 
         if (advice.length === 0) {
             advice.push(
-                "ℹ️ Não foram detectadas palavras-chave específicas. Revise manualmente se cegamento ou metanálise se aplicam ao tema."
+                "ℹ️ Sem recomendação automática para este tipo de revisão. Declare no protocolo o " +
+                "processo de triagem (F4.1.2) e a ferramenta (F4.1.3): o gate exige ambos antes de travar."
             );
         }
 
-        return { suggestBlinding, suggestMetaAnalysis, advice };
+        return { suggestScreeningProcess, suggestMetaAnalysis, advice };
     }
 }

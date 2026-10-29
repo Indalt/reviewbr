@@ -556,10 +556,10 @@
     },
     "access": {
       "oaiPmh": {
-        "available": false,
+        "available": true,
         "endpoint": "https://repositorio.ufba.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-03-02"
+        "verified": true,
+        "lastVerified": "2026-07-27"
       },
       "searchEndpoints": []
     },
@@ -1366,10 +1366,10 @@
     },
     "access": {
       "oaiPmh": {
-        "available": false,
+        "available": true,
         "endpoint": "https://dspace.sti.ufcg.edu.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-03-02"
+        "verified": true,
+        "lastVerified": "2026-07-27"
       },
       "searchEndpoints": []
     },
@@ -1717,10 +1717,10 @@
     },
     "access": {
       "oaiPmh": {
-        "available": false,
+        "available": true,
         "endpoint": "https://repositorio.pucgoias.edu.br/oai/request",
-        "verified": false,
-        "lastVerified": "2026-03-02"
+        "verified": true,
+        "lastVerified": "2026-07-27"
       },
       "searchEndpoints": []
     },

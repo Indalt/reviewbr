@@ -12,7 +12,22 @@ import * as path from "node:path";
 import * as fs from "node:fs";
 import { SearchResult } from "../types.js";
 
+/**
+ * @deprecated Nome errado para o conceito. "Duplo cego" aqui significava, na pergunta da
+ * entrevista, "dois revisores independentes" — que é triagem em DUPLICATA, não cegamento.
+ * Cegar o avaliador é ocultar dele autor, periódico ou resultados; o sistema não faz isso
+ * (o prompt de triagem envia repositório e data ao modelo) e nenhuma norma o exige na
+ * triagem. Use `ScreeningProcess`. A coluna `blinding` fica inerte no SQLite por
+ * retrocompatibilidade; dado já gravado não migra.
+ */
 export type BlindingType = "NONE" | "SINGLE_BLIND" | "DOUBLE_BLIND";
+
+/**
+ * F4.1.2 da spec (PRISMA 2020 item 8): quantos triadores aplicam os critérios a cada
+ * registro e se trabalham de forma independente. É decisão de PROCEDIMENTO — declara-se no
+ * protocolo e audita-se depois. A ferramenta que executa é campo separado (F4.1.3).
+ */
+export type ScreeningProcess = "INDIVIDUAL" | "DUPLO_INDEPENDENTE" | "DUPLO_COM_DESEMPATE";
 
 export interface ProjectMetadata {
     id?: number;

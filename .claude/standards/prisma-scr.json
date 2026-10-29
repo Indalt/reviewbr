@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "PRISMA-ScR",
+  "name": "PRISMA-ScR",
+  "version": "2018",
+  "version_source": "CONFIRMADO em 26/09/2026 contra a fonte oficial: Tricco AC, Lillie E, Zarin W, O'Brien KK, Colquhoun H, Levac D, et al. \"PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation.\" Ann Intern Med. 2018;169:467–473. doi: 10.7326/M18-0850. Documento consultado: reviewbr/download/PRISMA-ScR-Fillable-Checklist_11Sept2019.pdf (St. Michael's Hospital / Joanna Briggs Institute) — já lido e conferido pelo pesquisador nesta sessão-mãe (DEBT-050). Fonte oficial também referenciada por: Levac D, Colquhoun H, O'Brien KK. Scoping studies: advancing the methodology. Implement Sci. 2010;5:69; e pela JBI Manual for Evidence Synthesis.",
+  "titulos_oficiais": true,
+  "note": "22 itens em 7 seções (Title, Abstract, Introduction, Methods, Results, Discussion, Funding), SEM subitens por letra — ao contrário do PRISMA 2020, que se desdobra em 10a/10b, 13a-13f etc. covered_by de TODOS os itens está VAZIO DE PROPÓSITO: mapear contra a trilha de .claude/methodologies/scoping-prisma-scr/spec.md é o objeto de um achado JÁ REGISTRADO em separado (DEBT-055 — 'a spec da revisão de escopo não mapeia nenhum subitem a nenhum item de padrão'), não desta criação. check_standard_coverage('prisma-scr') vai reportar valid=false com os 22 itens como órfãos até esse mapeamento ser feito — comportamento esperado, mesma classe do que já ocorre com prisma-2020.json antes de DEBT-046/047 serem tratados. Notas de rodapé do checklist oficial, preservadas na íntegra (os símbolos * † ‡ § aparecem nos títulos dos itens 7, 9, 10 e 12, exatamente como no documento-fonte): [*] Where sources of evidence (see dagger footnote) are compiled from, such as bibliographic databases, social media platforms, and Web sites. [†] A more inclusive/heterogeneous term used to account for the different types of evidence or data sources (e.g., quantitative and/or qualitative research, expert opinion, and policy documents) that may be eligible in a scoping review as opposed to only studies. This is not to be confused with information sources (see asterisk footnote). [‡] The frameworks by Arksey and O'Malley (6) and Levac and colleagues (7) and the JBI guidance (4, 5) refer to the process of data extraction in a scoping review as data charting. [§] The process of systematically examining research evidence to assess its validity, results, and relevance before using it to inform a decision. This term is used for items 12 and 19 instead of 'risk of bias' (which is more applicable to systematic reviews of interventions) to include and acknowledge the various sources of evidence that may be used in a scoping review (e.g., quantitative and/or qualitative research, expert opinion, and policy document). [NOTA DE VERIFICAÇÃO (controle positivo, não suspeita própria): o texto acima ('itens 12 e 19') é a transcrição literal do documento fonte desta correção. Mas .claude/catalog/ já tinha uma entrada PRISMA-ScR ABSORVIDA independentemente antes desta sessão (fonte: EQUATOR Network PDF + prisma-statement.org, confidence:'alta'), e ela documenta a MESMA discrepância com a mesma conclusão: 'a nota de rodapé do próprio PDF oficial diz este termo é usado para os itens 12 e 19 ao tratar de critical appraisal, o que conflita com a numeração do corpo do checklist, onde a apreciação crítica em Resultados é o item 16 (e o item 19 é Summary of evidence). Trata-se, ao que tudo indica, de erro de rodapé no material oficial — mas o sistema não deve gravar 19 como item de apreciação crítica.' Duas extrações independentes (Tricco et al. via caminhos distintos) convergem: os itens de apreciação crítica/critical appraisal são 12 (Methods) e 16 (Results, 'Critical appraisal within sources of evidence'), NÃO 12 e 19. Ao mapear covered_by (DEBT-055) ou ao citar este rodapé em qualquer lugar, use 16, não 19.]",
+  "items": [
+    { "id": "1", "section": "Title", "title": "Title", "covered_by": [] },
+    { "id": "2", "section": "Abstract", "title": "Structured summary", "covered_by": [] },
+    { "id": "3", "section": "Introduction", "title": "Rationale", "covered_by": [] },
+    { "id": "4", "section": "Introduction", "title": "Objectives", "covered_by": [] },
+    { "id": "5", "section": "Methods", "title": "Protocol and registration", "covered_by": [] },
+    { "id": "6", "section": "Methods", "title": "Eligibility criteria", "covered_by": [] },
+    { "id": "7", "section": "Methods", "title": "Information sources*", "covered_by": [] },
+    { "id": "8", "section": "Methods", "title": "Search", "covered_by": [] },
+    { "id": "9", "section": "Methods", "title": "Selection of sources of evidence†", "covered_by": [] },
+    { "id": "10", "section": "Methods", "title": "Data charting process‡", "covered_by": [] },
+    { "id": "11", "section": "Methods", "title": "Data items", "covered_by": [] },
+    { "id": "12", "section": "Methods", "title": "Critical appraisal of individual sources of evidence§", "covered_by": [] },
+    { "id": "13", "section": "Methods", "title": "Synthesis of results", "covered_by": [] },
+    { "id": "14", "section": "Results", "title": "Selection of sources of evidence", "covered_by": [] },
+    { "id": "15", "section": "Results", "title": "Characteristics of sources of evidence", "covered_by": [] },
+    { "id": "16", "section": "Results", "title": "Critical appraisal within sources of evidence", "covered_by": [] },
+    { "id": "17", "section": "Results", "title": "Results of individual sources of evidence", "covered_by": [] },
+    { "id": "18", "section": "Results", "title": "Synthesis of results", "covered_by": [] },
+    { "id": "19", "section": "Discussion", "title": "Summary of evidence", "covered_by": [] },
+    { "id": "20", "section": "Discussion", "title": "Limitations", "covered_by": [] },
+    { "id": "21", "section": "Discussion", "title": "Conclusions", "covered_by": [] },
+    { "id": "22", "section": "Funding", "title": "Funding", "covered_by": [] }
+  ]
+}

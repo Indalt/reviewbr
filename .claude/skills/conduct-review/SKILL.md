@@ -31,11 +31,38 @@ Gravado em `project_state.json` como `control_level`, definido no início (o `de
 
 **Travas inegociáveis em qualquer nível** (RV-04): travar o protocolo, o ponto de saturação da triagem, e a lista final de incluídos são decisões do pesquisador. Um gate vermelho para tudo, sempre.
 
+### A coleira é TRAVA, não instrução — e o que destrava
+
+Sob `estrito`, o sistema **não avança de fase** sem decisão registrada do pesquisador sobre a que encerra. Isso é verificado em código (`ProjectStateService.podeAvancar`), não confiado à sua cooperação: as tools de deduplicação e triagem gravam o resultado e **não mudam a fase** enquanto a decisão não existir.
+
+**O que conta como decisão, e por quê:**
+
+| | destrava? |
+|---|---|
+| contribuição específica do pesquisador — o que avaliou, o que decidiu | **sim** |
+| `"ok"`, `"pode seguir"`, `"aprovado"` | **não** — carimbo não é supervisão |
+| decisão registrada pelo sistema | **não** — não destrava a si mesma |
+| decisão de outra fase | **não** |
+
+Grave com a tool `record_researcher_decision` — a etapa sobre a qual ele decidiu e a contribuição nas palavras dele. Ela recusa carimbo e etapa que a trilha do método não tem, e, se o artefato da etapa já existe, a fase avança na hora. **Não escreva a contribuição por ele**: a decisão é dele, e inventá-la é o inverso exato do que a trava existe para garantir.
+
+**`fluido` avança sem decisão, mas declara** que foi automático na resposta da tool. Não é exceção à regra — é escolha do pesquisador para trabalho exploratório, e o que ela não pode ser é silenciosa.
+
+**Por que isto é mais que rigor:** o RAISE 3 (`.claude/standards/raise-3.json`, linha T44) classifica *"síntese agêntica ponta a ponta, com etapas executadas autonomamente"* como **não aceitável**. O ReviewBR escapa dessa categoria porque cada etapa para e aguarda decisão humana registrada — e isso precisa ser **demonstrável no dado**, não afirmado em prosa. Era por isso que a coleira não podia continuar sendo instrução.
+
 ## Guardrails anti-deriva (aplique a cada acionamento)
 1. Dê a cada subagente **apenas a fase corrente**. Instrua-o a **parar ao concluí-la** — nunca "adiantar" a próxima.
 2. **Não preencher lacuna com conhecimento próprio**: campo sem dado = `[TBD]` (RV-03). Vale inclusive na leitura/RAG (só afirmar o que tem trecho com origem).
 3. **A IA propõe, a tool valida**: os gates determinísticos aprovam/reprovam; nenhum agente se autocertifica (RV-06).
 4. Ao menor sinal de que a próxima ação foge do protocolo travado, **pare e pergunte** — abrir uma pergunta é sempre preferível a improvisar.
+
+## Explique o porquê de cada etapa — executar sem explicar é meia execução
+O sistema veste métodos e, ao fazê-lo, informa quem não sabe que existem vários modos de pesquisar (DEBT-126). Ao **abrir** cada etapa — e ao retomar —, diga ao pesquisador, em duas ou três linhas:
+- **o que a etapa protege**: os itens da norma que ela atende — `check_standard_coverage` com cada padrão do método e o `methodologyId` do projeto devolve `itens_por_etapa`, só com correspondência não contestada. Título (e enunciado, quando o padrão o traz) em `.claude/standards/<padrão>.json`, fonte no `version_source`; o `requires` da entrada do catálogo detalha o item. **Não use a coluna *Item* da `spec.md`**: ela numera só o PRISMA 2020 e tem pares deslocados (DEBT-045). Etapa sem item em `itens_por_etapa` diz-se assim — inclusive quando o padrão ainda não tem mapeamento (o PRISMA-ScR, DEBT-055) ou tem títulos fora da fonte, caso em que a tool não dá fundamento algum (o PRISMA-S, DEBT-128);
+- **se ela não se aplica** a este método, por quê: a `note` da etapa no `manifest.json`;
+- **quando a etapa não vem de norma** (ex.: a leitura/RAG da F5.5 é procedimento da ferramenta), diga isso. Fundamento inventado é pior que nenhum.
+
+Curto e na hora: é contexto para decidir, não aula. O resto fica no disco, e o pesquisador pede se quiser. Os especialistas devolvem esse porquê no retorno — repasse-o.
 
 ## Painel de estado (mostre ao abrir/retomar e ao fim de cada fase)
 - **Projeto / método / tipo** e status do `protocol.md` (`DRAFT`/`LOCKED`) e `control_level`.

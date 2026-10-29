@@ -39,3 +39,26 @@ reviewbr/reviewbr-mcp/logs/
 .vscode/
 .idea/
 .DS_Store
+
+# Acervo bruto de fontes primárias (jornais, almanaques digitalizados).
+# Mesma razão de 01_raw/: dado bruto baixado de repositório fica em disco, não no git.
+# Sem isto, mover um projeto de pesquisa de old/ para reviewbr/projects/ traria GBs junto.
+**/01_fontes_primarias/
+**/_tmp_pdf/
+**/04_full_text/
+
+# Fora do GitHub público — decisão do Vicente em 29/10/2026 (sessão 0): "só o sistema".
+# Ficam no disco desta máquina; ver .claude/maintenance/PLANO_sessoes_2026-10-29.md.
+# Conversas exportadas de outras aplicações (há trechos com cara de chave de API).
+/antigravity_conversas_export/
+# Pacotes da troca de computador (o zip do histórico do Claude Code, 02/10/2026).
+*.zip
+# Plugin de terceiros baixado só para análise.
+/Bio Research-*/
+# Configuração local do Claude Code e do Antigravity: permissões e caminhos desta máquina.
+/.claude/settings.json
+/.claude/settings.local.json
+/.agents/
+# Pesquisas do Vicente.
+/reviewbr/projects/masterclass_historia/
+/reviewbr/projects/roda_de_aromas/

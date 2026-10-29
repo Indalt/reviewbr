@@ -55,7 +55,7 @@ A função principal é **revisão sistemática + meta-análise (PRISMA 2020 + P
 ## Triagem: saturação e trilha
 
 - Após cada batch de `screen_candidates`, chame `get_screening_report`. Se `saturationAlert:true`, apresente os números e **pergunte se encerra** — a decisão é sempre do pesquisador.
-- Uma trilha por projeto: **(A)** `screen_candidates` (LLM, ágil) ou **(B)** `screen_with_asreview` (ML validado, para publicação). Não misture.
+- O **processo** de triagem vem do protocolo (F4.1.2: Individual | Duplo independente | Duplo com desempate), não de um menu de ferramentas. A ferramenta (F4.1.3) é detalhe de execução e não torna a triagem mais publicável.
 
 ## Proveniência e transparência (obrigatório)
 

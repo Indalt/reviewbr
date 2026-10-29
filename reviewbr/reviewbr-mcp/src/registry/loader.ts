@@ -40,10 +40,13 @@ export class Registry {
 
             const combined = [...brData, ...intData];
 
-            console.log(`[Registry] Validating ${combined.length} entries...`);
+            // stderr, nunca stdout: no transporte stdio do MCP o stdout é canal exclusivo
+            // das mensagens do protocolo. Linha não-JSON ali é erro de parse para o cliente
+            // — o SDK atual descarta e segue, um cliente estrito derruba a conexão (DEBT-108).
+            console.error(`[Registry] Validating ${combined.length} entries...`);
             const validated = RegistrySchema.parse(combined);
 
-            console.log(`[Registry] Successfully loaded ${validated.length} repositories (${brData.length} BR, ${intData.length} INT).`);
+            console.error(`[Registry] Successfully loaded ${validated.length} repositories (${brData.length} BR, ${intData.length} INT).`);
             return new Registry(validated);
         } catch (error) {
             if (error instanceof z.ZodError) {

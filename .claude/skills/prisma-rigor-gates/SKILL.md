@@ -32,11 +32,29 @@ Cada fase tem subitens obrigatórios na spec do método (`.claude/methodologies/
 - **F8**: F8.1.1–F8.1.10 (todos calculados), F8.2 (colunas obrigatórias da tabela), F8.3.1–F8.3.27 (seções do manuscrito), F8.4.x (disponibilidade).
 
 ## Camada 3 — Checklists de conformidade (suplementos obrigatórios)
-Antes de declarar a revisão pronta, confira os checklists item a item:
-- **SUP.1 — PRISMA 2020**: 27 itens, cada um com status e evidência (arquivo/seção que o cumpre).
-- **SUP.2 — PRISMA-S**: 16 itens (S1–S16), idem.
+Antes de declarar a revisão pronta, **chame `check_standard_coverage`** para cada padrão do
+método, com `methodologyId` = o `method` do `project_state.json` — não confira "de olho": é a
+verificação determinística, a mesma classe de `validate_prisma_flow` (RV-05). Sem `methodologyId`
+a tool confere contra todos os métodos que declaram o padrão, e a fração sai por método. Ela confere quatro coisas contra a trilha dos métodos que
+declaram o padrão (DEBT-140): **(a)** o subitem apontado existe na spec; **(b)** o rótulo dele
+não contradiz o item, por falsificação; **(c)** se alguma tool produz o artefato da etapa ou só o
+agente; **(d)** toda linha está coberta ou declarada `[NÃO COBERTO]` / `[NÃO SE APLICA]`.
+- **SUP.1 — PRISMA 2020**: `check_standard_coverage("prisma-2020")` — 27 itens (42 linhas
+  contando subitens a/b/c).
+- **SUP.2 — PRISMA-S**: `check_standard_coverage("prisma-s")` — 16 itens (S1–S16).
 - Demais suplementos do `manifest.json` (`supplement_search_prisma_s.md`, `dedupe_report.md`, `screening_report.md`, `change_log.md`, `audit_summary.md`, ...).
-Um item de checklist sem evidência é uma pendência que **impede a finalização**.
+
+**Leia o veredito com a premissa e o limite que vêm junto** (`premissa_da_falsificacao`,
+`limite`): a falsificação acha deslocamento, não encaixe, e só vale com título oficial. E não
+confunda as três situações de uma linha:
+- **`orphans`** — sem cobertura e sem declaração: omissão silenciosa, **impede a finalização**.
+  Reporte ao pesquisador em vez de gerar o suplemento como se estivesse completo.
+- **`[NÃO COBERTO]`** — lacuna do sistema, declarada: o item vai ao checklist como não coberto
+  pela trilha, e cobri-lo por conta própria ou declará-lo no manuscrito é decisão do pesquisador.
+- **`[NÃO SE APLICA]`** — não é falha: o item vai ao checklist como N/A, com o motivo.
+
+`valid=false` **bloqueia** declarar o checklist completo. A `fracao` (ex.: 12/26) é o que se pode
+afirmar — nunca a arredonde para "coberto".
 
 ## Regra de ouro
 Um gate **vermelho para tudo**. Nunca contorne: corrija o insumo e re-rode a verificação, ou leve a decisão ao pesquisador. Foi a ausência de um agente que **chamasse** essas verificações no momento certo (não a ausência delas) que travou o sistema antigo — `validate_prisma_flow` (RV-05) já existia e nunca era chamada.

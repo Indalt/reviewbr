@@ -125,7 +125,7 @@ function resolveProvenance(
 export function indexCorpus(
     projectDir: string,
     corpusRelDir?: string,
-): { indexed: number; studies: number; skippedPdfsOnly: number; indexPath: string; missingProvenance: string[] } {
+): { indexed: number; studies: number; skippedPdfsOnly: number; indexPath: string; missingProvenance: string[]; skippedTranslations: string[] } {
     const candidates = corpusRelDir
         ? [corpusRelDir]
         : ["04_extraction/fulltext", "03_screening/fulltext", "03_screening/pdfs"];
@@ -138,7 +138,15 @@ export function indexCorpus(
 
     const provMap = buildProvenanceMap(projectDir);
     const files = fs.readdirSync(corpusDir);
-    const textFiles = files.filter((f) => /\.(txt|md)$/i.test(f));
+    // Arquivos gerados por translate_document (batch_processor.ts) seguem o padrão
+    // "<basename>_tradução_<idioma>.md" e trazem, no próprio corpo, o aviso "TEXTO DE
+    // APOIO — NÃO É FONTE PRIMÁRIA". Sem excluí-los aqui, o match por identifier na
+    // resolução de proveniência (base.includes(id)) faz a tradução herdar a fonte e a
+    // URL do estudo real: texto gerado por LLM sai do rag_query com o rótulo do artigo
+    // primário (DEBT-023 — fabricação de evidência com rastro aparentemente íntegro).
+    const isTranslationDerivative = (f: string) => /_tradu[cç][aã]o_/i.test(f);
+    const textFiles = files.filter((f) => /\.(txt|md)$/i.test(f) && !isTranslationDerivative(f));
+    const skippedTranslations = files.filter((f) => /\.(txt|md)$/i.test(f) && isTranslationDerivative(f));
     const skippedPdfsOnly = files.filter((f) => /\.pdf$/i.test(f)).length;
 
     const docs: IndexedDoc[] = [];
@@ -180,7 +188,7 @@ export function indexCorpus(
     const indexPath = path.join(ragDir, "index.json");
     fs.writeFileSync(indexPath, JSON.stringify(index));
 
-    return { indexed: N, studies: studies.size, skippedPdfsOnly, indexPath, missingProvenance };
+    return { indexed: N, studies: studies.size, skippedPdfsOnly, indexPath, missingProvenance, skippedTranslations };
 }
 
 /** Consulta o índice por BM25 e retorna os top-k trechos com proveniência. */

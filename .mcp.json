@@ -2,7 +2,7 @@
   "mcpServers": {
     "reviewbr": {
       "command": "node",
-      "args": ["f:/Users/Vicente/reviewbr/reviewbr/reviewbr-mcp/dist/index.js"],
+      "args": ["c:/reviewbr/reviewbr/reviewbr-mcp/dist/index.js"],
       "env": {}
     }
   }

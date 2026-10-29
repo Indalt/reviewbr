@@ -1,4 +1,6 @@
 import { z } from "zod";
+import * as fs from "node:fs";
+import * as path from "node:path";
 
 export const PrismaFlowSchema = z.object({
     identified_db: z.number().min(0),
@@ -51,5 +53,55 @@ export class PrismaFlowValidator {
             valid: errors.length === 0,
             errors
         };
+    }
+
+    /**
+     * Gate de export (RV-05): lê o `prisma_flow.json` do projeto e valida a aritmética.
+     *
+     * Existe como método, e não embutido no handler da tool, para ser testável — a auditoria
+     * registrou que lógica de gate dentro do handler não tem como ser verificada.
+     *
+     * Semântica deliberada, em três estados:
+     *  - fluxo AUSENTE  → `blocked: false`. Em F2–F4 ele ainda não existe e exportar é legítimo.
+     *  - fluxo ILEGÍVEL ou incompleto → bloqueia. Arquivo corrompido não é o mesmo que ausente.
+     *  - fluxo que NÃO FECHA → bloqueia, com a conta que falhou.
+     */
+    public checkExportGate(projectDir: string): { blocked: boolean; reason?: string; errors: string[] } {
+        const flowPath = path.join(projectDir, "prisma_flow.json");
+        if (!fs.existsSync(flowPath)) {
+            return { blocked: false, errors: [] };
+        }
+
+        let raw: unknown;
+        try {
+            raw = JSON.parse(fs.readFileSync(flowPath, "utf-8"));
+        } catch {
+            return {
+                blocked: true,
+                reason: `prisma_flow.json ilegível em ${flowPath}. Recompute com 'compute_flow_counts'.`,
+                errors: []
+            };
+        }
+
+        const parsed = PrismaFlowSchema.safeParse(raw);
+        if (!parsed.success) {
+            return {
+                blocked: true,
+                reason: "prisma_flow.json não tem os 10 campos canônicos.",
+                errors: parsed.error.issues.map((i) => `${i.path.join(".") || "(raiz)"}: ${i.message}`)
+            };
+        }
+
+        const v = this.validate(parsed.data);
+        if (!v.valid) {
+            return {
+                blocked: true,
+                reason: "A aritmética do funil não fecha. Recompute com 'compute_flow_counts' " +
+                    "(RV-02: as contagens emergem dos artefatos, nunca são digitadas).",
+                errors: v.errors
+            };
+        }
+
+        return { blocked: false, errors: [] };
     }
 }

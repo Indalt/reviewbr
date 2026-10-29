@@ -18,10 +18,20 @@ import { PubMedService } from "./services/pubmed.js";
 import { CrossrefService } from "./services/crossref.js";
 import { DatabaseService } from "./services/database.js";
 import { PrismaFlowValidator, PrismaFlowSchema } from "./services/prisma_validator.js";
+import { ChangeValidator, ChangeProposalSchema } from "./services/change_validator.js";
+import { SystemDebtService } from "./services/system_debt.js";
+import { StandardCoverageService } from "./services/standard_coverage.js";
+import { checarUsoDeIA } from "./registry/ai_use.js";
+import { StandardsService } from "./services/standards.js";
+import { MethodologyCatalogService } from "./services/methodology_catalog.js";
+import { BacklogWriter, CatalogWriter, MethodologyWriter } from "./services/maintenance_writes.js";
 import { FlowComputer } from "./services/flow_computer.js";
 import { indexCorpus, queryCorpus } from "./services/rag_lexical.js";
+import { ProtocolGate } from "./services/protocol_gate.js";
 import { ProjectStateService } from "./services/project_state.js";
-import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening } from "./services/project_artifacts.js";
+import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
+import { apresentarMetodos } from "./services/methods_for_type.js";
+import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -32,14 +42,15 @@ import { TelemetryService } from "./services/telemetry.js";
 import { MethodologyAuditorService } from "./services/methodology_auditor.js";
 import { ProtocolDesignAuditor } from "./services/protocol_auditor.js";
 import { ScreeningMetricsService } from "./services/screening_metrics.js";
-import { AsreviewBridgeService } from "./services/asreview_bridge.js";
 import { ScihubBridgeService } from "./services/scihub_bridge.js";
 import { RepositoryHealerService } from "./services/repository_healer.js";
+import { AgentOrchestrator } from "./registry/agent_orchestrator.js";
 import { config } from "./config.js";
 import { logger } from "./utils/structured_logger.js";
 import { BatchProcessorService } from "./services/batch_processor.js";
 
 import * as path from "node:path";
+import { fileURLToPath } from "node:url";
 import * as fs from "node:fs";
 
 // ─── Initialize ───────────────────────────────────────────────
@@ -70,7 +81,6 @@ const telemetryService = new TelemetryService();
 const auditorService = new MethodologyAuditorService();
 const protocolAuditor = new ProtocolDesignAuditor();
 const screeningMetricsService = new ScreeningMetricsService();
-const asreviewBridge = new AsreviewBridgeService();
 const scihubBridge = new ScihubBridgeService();
 const repositoryHealerService = new RepositoryHealerService();
 
@@ -115,39 +125,86 @@ async function logToLocalProject(projectPath: string, toolName: string, data: an
     }
 }
 
-async function checkDesignGuardrail(projectId?: number, projectPath?: string): Promise<string | null> {
-    let id = projectId;
-    // Fonte da verdade = estado ON-DISK (RV-01). Preview (sem projectPath) NUNCA bloqueia.
-    if (projectPath) {
-        const projectDir = path.isAbsolute(projectPath) ? projectPath : path.join(process.cwd(), projectPath);
-        const st = ProjectStateService.read(projectDir);
-        if (st) {
-            if (st.status !== "LOCKED") {
-                return `🚫 ACESSO NEGADO: o protocolo está em ${st.status}. Preencha o protocol.md e aprove via 'submit_protocol_for_approval' antes de iniciar buscas/mineração.`;
+/**
+ * Prefixo que DECLARA o modo em que a busca operou, quando não é a trilha oficial.
+ *
+ * Passar em silêncio era o defeito. Busca sem `projectPath` é legítima — é a fronteira
+ * entre exploração e busca oficial, e a escolha é do pesquisador (RV-04). Mas o sistema
+ * não dizia em que modo operou: quem esquecesse o parâmetro com um projeto aberto recebia
+ * resultados normais, e a busca ficava fora do funil sem nenhum sinal. O PRISMA-S exige
+ * declarar o que foi recuperado por base; o que não entrou, ninguém sabe que faltou.
+ *
+ * Tornar `projectPath` obrigatório mataria a busca exploratória e decidiria pelo
+ * pesquisador. Declarar o modo preserva a escolha e tira o silêncio — a mesma regra que
+ * vale para a triagem individual: **omissão declarada é método, omissão silenciosa é falha.**
+ *
+ * Função pura, sem estado entre chamadas: estado de módulo daria corrida entre tools.
+ */
+/**
+ * Envolve a resposta de uma tool de aquisição declarando o modo em que ela operou.
+ *
+ * Aplicado no RETORNO, não no início: o aviso tem de chegar junto com os resultados, que é
+ * onde o pesquisador olha. Texto recebe prefixo; JSON recebe o campo `modo_busca`, porque
+ * prefixar texto em JSON quebraria quem faz parse — o aviso não pode custar a máquina.
+ */
+
+function declararModo(projectPath: string | undefined, resposta: any): any {
+    const aviso = ProtocolGate.check(projectPath).advisory;
+    if (!aviso) return resposta;
+
+    const bloco = resposta?.content?.[0];
+    if (!bloco || bloco.type !== "text" || typeof bloco.text !== "string") return resposta;
+
+    const txt = bloco.text.trimStart();
+    if (txt.startsWith("{") || txt.startsWith("[")) {
+        try {
+            const dados = JSON.parse(bloco.text);
+            if (dados && typeof dados === "object" && !Array.isArray(dados)) {
+                return { ...resposta, content: [{ ...bloco, text: JSON.stringify({ modo_busca: aviso, ...dados }, null, 2) }] };
             }
-            return null; // LOCKED → liberado
-        }
-        // Fallback: marcador [LOCKED] no protocol.md da raiz
-        const protoPath = path.join(projectDir, "protocol.md");
-        if (fs.existsSync(protoPath)) {
-            if (!/\[LOCKED\]/.test(fs.readFileSync(protoPath, "utf-8"))) {
-                return `🚫 ACESSO NEGADO: o protocol.md ainda não está [LOCKED]. Aprove via 'submit_protocol_for_approval'.`;
-            }
-            return null;
-        }
+        } catch { /* não era JSON: cai no prefixo de texto */ }
     }
-    // Fallback legado (projetos antigos rastreados só no SQLite)
+    return { ...resposta, content: [{ ...bloco, text: `${aviso}\n\n---\n\n${bloco.text}` }] };
+}
+
+async function checkDesignGuardrail(projectId?: number, projectPath?: string): Promise<string | null> {
+    // A decisão vive em `ProtocolGate` (src/services/protocol_gate.ts), como serviço testável.
+    // A mudança de semântica mais importante está lá: o gate passou a NEGAR POR PADRÃO.
+    // Antes, projeto declarado e sem nenhum artefato de protocolo caía num `return null` e
+    // seguia adiante — um projeto vazio era indistinguível de um aprovado.
+    const gate = ProtocolGate.check(projectPath);
+
+    // O estado ON-DISK decide (RV-01). O SQLite só é consultado quando o disco não tem o
+    // que dizer — projetos antigos, rastreados só no banco, anteriores ao estado estruturado.
+    if (gate.status !== "SEM_PROTOCOLO") {
+        return gate.message;
+    }
+
+    let id = projectId;
     if (!id && projectPath) {
         const project = await dbService.findProjectByPath(projectPath);
         if (project) id = project.id;
     }
     if (id) {
         const project = await dbService.getProjectById(id);
-        if (project && project.status === "DRAFT_DESIGN") {
-            return `🚫 ACESSO NEGADO: O projeto "${project.project_name}" está bloqueado em DRAFT_DESIGN. Preencha o protocolo e solicite aprovação via 'submit_protocol_for_approval'.`;
+        if (project) {
+            // LISTA DE PERMISSÃO, não de negação. Antes, só `DRAFT_DESIGN` bloqueava e todo o
+            // resto passava — inclusive qualquer status que viesse a ser acrescentado depois,
+            // que nasceria liberado sem ninguém decidir isso. É a mesma inversão que o ramo
+            // em disco recebeu: quem não está explicitamente autorizado, não passa.
+            const AUTORIZADOS = ["ACTIVE_MINING", "LOCKED_EXECUTION"];
+            if (AUTORIZADOS.includes(project.status)) return null;
+
+            if (project.status === "DRAFT_DESIGN") {
+                return `🚫 ACESSO NEGADO: O projeto "${project.project_name}" está bloqueado em DRAFT_DESIGN. Preencha o protocolo e solicite aprovação via 'submit_protocol_for_approval'.`;
+            }
+            return `🚫 ACESSO NEGADO: o projeto "${project.project_name}" está com status "${project.status}", que não autoriza busca nem aquisição. ` +
+                `Autorizados: ${AUTORIZADOS.join(", ")}. Status desconhecido não libera por omissão.`;
         }
     }
-    return null;
+
+    // Nada no disco e nada no banco: nega. É a correção do fall-through.
+    return gate.message;
 }
 
 // ─── PROJETISTA Helper Functions ──────────────────────────────
@@ -254,7 +311,7 @@ function getCapabilitiesForType(researchType: string): { can: string[]; cannot: 
             return {
                 can: [
                     ...baseCan,
-                    "Triagem por IA (Gemini/GPT/Claude) e por ML (ASReview)",
+                    "Triagem assistida por IA (Gemini/GPT/Claude), com trilha de auditoria por decisão",
                     "Validação PRISMA (fluxograma matemático, 10 campos)",
                     "Auditoria metodológica (5 checks de conformidade)",
                     "Snowball search (forward/backward via OpenAlex/Crossref)",
@@ -316,10 +373,20 @@ const server = new McpServer({
 
 });
 
-// ─── RBAC Proxy REMOVIDO ──────────────────────────────────────
-// O proxy que auto-embrulhava toda tool com o guard de runtime foi removido
-// junto com o modelo "um chapéu por vez". A governança de papéis agora é
-// declarativa (registry/agent_orchestrator.ts) + allow-list dos subagentes.
+// ─── Guardião de completude (RV-06) ───────────────────────────
+// A fronteira de papéis POR CHAMADOR é imposta pelo harness do Claude Code
+// (campos `tools:`/`mcpServers:` de cada subagente em `.claude/agents/`), pois o
+// servidor único compartilhado não sabe qual subagente chamou. O guardião no
+// runtime do servidor garante a INTEGRIDADE do mapa de governança: registramos
+// o nome de toda tool exposta e, no boot (main()), exigimos que cada uma tenha
+// dono de papel em TOOL_PERMISSIONS. Assim é impossível adicionar uma capacidade
+// (efeito colateral) sem governança — o servidor falha ruidosamente no boot.
+const REGISTERED_TOOLS = new Set<string>();
+const _serverTool = server.tool.bind(server);
+(server as any).tool = (name: string, ...rest: any[]) => {
+    REGISTERED_TOOLS.add(name);
+    return (_serverTool as any)(name, ...rest);
+};
 
 // ─── Resources ────────────────────────────────────────────────
 
@@ -378,7 +445,7 @@ server.resource(
 
 server.tool(
     "assess_research_design",
-    "Avalia a intenção de pesquisa do usuário e recomenda o tipo de pesquisa, protocolo, requisitos e limitações. Aceita tanto pesquisadores que precisam de orientação quanto os que já sabem o que querem. Retorna briefing para o COORDINATOR.",
+    "Avalia a intenção de pesquisa e apresenta ao pesquisador os MÉTODOS ASSIMILADOS que servem ao tipo — cada um com a trilha que traz, os padrões que declara e o contexto do catálogo (o que é, quando usar, o que exige, fonte oficial) —, para que ele saiba o que está escolhendo. Tipo sem método assimilado recusa e diz o que existe. Sem researchType, o tipo é palpite por palavra-chave, a confirmar. Retorna briefing para o COORDINATOR.",
     {
         intent: z.string().describe("O que o pesquisador quer fazer — pode ser uma frase livre ou um tipo de pesquisa já definido"),
         area: z.string().optional().describe("Área do conhecimento (ex: Saúde, Engenharia, Ciência de Alimentos)"),
@@ -394,34 +461,66 @@ server.tool(
         // ─── Research type detection ───────────────────
         let detectedType = params.researchType || detectResearchType(intent);
         const meta = getResearchTypeMeta(detectedType);
-
-        // ─── Topic analysis for design advice ──────────
-        const designAdvice = ProjectInitService.getDesignAdvice(params.intent, detectedType as any);
+        const repoRoot = RAIZ();
 
         // ─── Build response ────────────────────────────
         const sections: string[] = [];
 
         sections.push(`## 🏗️ Diagnóstico de Design de Pesquisa\n`);
 
-        // Mode indicator
+        // Mode indicator. O modo guiado é correspondência de palavra-chave (DEBT-095): dizê-lo
+        // "detectado" vendia como diagnóstico o que é palpite.
         if (params.researchType) {
             sections.push(`> **Modo Direto** — O pesquisador já definiu: **${meta.label}**\n`);
         } else {
-            sections.push(`> **Modo Guiado** — Tipo detectado pela intenção: **${meta.label}**\n`);
+            sections.push(`> **Modo Guiado** — palpite por palavra-chave na intenção: **${meta.label}**. Não é diagnóstico: confirme o tipo com o pesquisador antes de seguir.\n`);
         }
 
         sections.push(`**Área:** ${area}\n**Intenção:** "${params.intent}"\n`);
 
-        // Protocol requirements
-        sections.push(`### 📋 Protocolo Recomendado\n`);
+        // ─── DEBT-095: os métodos que servem ao tipo, com o contexto do catálogo ───
+        // "O pesquisador pode não conhecer o método e poderia saber o que está escolhendo de
+        // fato." O tipo FILTRA os métodos assimilados (methods_for_type); o que se apresenta é o
+        // método, com a trilha que traz e o que o catálogo diz dele, com fonte oficial. Antes,
+        // esta tool descrevia o padrão por um ternário que mandava todo tipo que não fosse
+        // escopo para o prisma-sr — o 7→2 que o DEBT-121 tirou do project_init.ts e que aqui
+        // sobrevivia, anunciando PRISMA 2020 para revisão integrativa.
+        const { metodos, linhas: apresentacao, recusa } = apresentarMetodos(repoRoot, detectedType);
+
+        if (!metodos.length) {
+            // A mesma recusa de plan_research_protocol — uma fonte só para o texto.
+            sections.push(`### 🚫 Nenhum método assimilado serve a este tipo\n`);
+            sections.push(recusa);
+            sections.push(
+                `\nO catálogo pode conhecer o método sem que o sistema o execute: consulte \`query_methodology_catalog\` ` +
+                `com o nome do método — o status diz se ele está AUSENTE, só com o padrão disponível, ou implementado. ` +
+                `Assimilar um método é trabalho de manutenção, não desta conversa.`
+            );
+            sections.push(`\n### ➡️ Próximos Passos\n`);
+            sections.push(`1. Pesquisador escolhe um dos tipos atendidos hoje, ou pede a assimilação do método que a pergunta pede (manutenção)`);
+            return { content: [{ type: "text", text: sections.join("\n") }] };
+        }
+
+        sections.push(`### 🧭 ${metodos.length > 1 ? "Métodos que servem" : "Método que serve"} a este tipo — o que se está escolhendo\n`);
+        sections.push(...apresentacao);
+
+        // ─── Topic analysis for design advice ──────────
+        const designAdvice = ProjectInitService.getDesignAdvice(params.intent, detectedType as any);
+
+        // Sobre o TIPO — não sobre o método. A tabela de tipos descreve cada tipo em abstrato, e
+        // pode divergir da trilha do método que o serve (ex.: o tipo exploratório é servido hoje
+        // pela trilha do prisma-sr). Dizer isso é o que impede a resposta de se contradizer na
+        // hora da escolha.
+        sections.push(`### 📋 Sobre o tipo de pesquisa\n`);
+        sections.push(`> Esta seção descreve o TIPO. O que se executa é a trilha do método acima: onde as duas divergirem, vale a trilha.\n`);
         sections.push(`- **Tipo:** ${meta.label}`);
-        sections.push(`- **Padrão PRISMA:** ${meta.prismaStandard}`);
         sections.push(`- **Registro:** ${meta.requiresRegistration ? `⚠️ OBRIGATÓRIO (${meta.registrationPlatform})` : `Opcional (${meta.registrationPlatform})`}`);
         sections.push(`- **Descrição:** ${meta.description}\n`);
 
         // Design recommendations
         sections.push(`### ⚖️ Recomendações de Design\n`);
-        sections.push(`- **Cegamento:** ${designAdvice.suggestBlinding}`);
+        // Sem citar o item de UMA norma: no PRISMA-ScR o item 8 é "Search" (cada norma inteira).
+        sections.push(`- **Processo de triagem (F4.1.2):** ${designAdvice.suggestScreeningProcess}`);
         sections.push(`- **Meta-análise:** ${designAdvice.suggestMetaAnalysis ? "Recomendada" : "Não se aplica"}`);
         for (const advice of designAdvice.advice) {
             sections.push(`- ${advice}`);
@@ -430,6 +529,17 @@ server.tool(
         // Capabilities check
         sections.push(`\n### ✅ O que o ReviewBR pode fazer para esta pesquisa\n`);
         const capabilities = getCapabilitiesForType(detectedType);
+        // A limitação é da TRILHA executada, não do rótulo do tipo: etapa ativa do método sem tool
+        // que grave o artefato é feita pelo agente, com julgamento humano. Sem isto, o tipo
+        // exploratório — servido pela trilha do prisma-sr — saía com "Nenhuma crítica identificada".
+        const toolsExistentes = new Set(AgentOrchestrator.getGovernedTools());
+        for (const m of metodos) {
+            for (const e of lerTrilha(repoRoot, m.id).etapas) {
+                if (e.active && !e.producer_tools.some((t) => toolsExistentes.has(t))) {
+                    capabilities.cannot.push(`${e.id} — ${e.name} (${m.id}): nenhuma tool grava o artefato da etapa; o agente executa e o pesquisador julga`);
+                }
+            }
+        }
         for (const cap of capabilities.can) {
             sections.push(`- ✅ ${cap}`);
         }
@@ -444,15 +554,15 @@ server.tool(
         sections.push(`\n### 📤 Briefing para o COORDINATOR\n`);
         sections.push(`Quando o PROJETISTA finalizar e o COORDINATOR assumir, comunique:`);
         sections.push(`1. **Tipo:** ${meta.label} (${detectedType})`);
-        sections.push(`2. **PRISMA:** ${meta.prismaStandard}`);
-        sections.push(`3. **Cegamento:** ${designAdvice.suggestBlinding}`);
+        sections.push(`2. **Método(s) que servem:** ${metodos.map((m) => `${m.id} (${m.padroes.join(" + ") || "sem padrão declarado"})`).join("; ")}`);
+        sections.push(`3. **Processo de triagem (F4.1.2):** ${designAdvice.suggestScreeningProcess}`);
         sections.push(`4. **Registro:** ${meta.requiresRegistration ? "OBRIGATÓRIO antes da busca" : "Opcional"}`);
         sections.push(`5. **Meta-análise:** ${designAdvice.suggestMetaAnalysis ? "Sim" : "Não"}`);
         sections.push(`6. **Limitações:** ${capabilities.cannot.length > 0 ? capabilities.cannot.join("; ") : "Nenhuma crítica identificada"}`);
 
         // Next steps
         sections.push(`\n### ➡️ Próximos Passos\n`);
-        sections.push(`1. Pesquisador confirma ou ajusta o design`);
+        sections.push(`1. Pesquisador confirma o tipo e o método, sabendo o que cada um exige`);
         sections.push(`2. O subagente **designer** chama \`plan_research_protocol\` e trava o protocolo`);
         sections.push(`3. O coordenador (skill conduct-review) aciona o subagente **librarian** para as buscas`);
 
@@ -515,7 +625,7 @@ server.tool(
             });
         }
 
-        return {
+        return declararModo(params.projectPath, {
             content: [{
                 type: "text",
                 text: JSON.stringify({
@@ -524,7 +634,7 @@ server.tool(
                     results: results
                 }, null, 2)
             }]
-        };
+        });
     }
 );
 
@@ -552,6 +662,7 @@ server.tool(
 
         const result = dedupeService.deduplicate(records);
 
+        let avisoRV04Dedup = "";
         if (params.projectPath) {
             writeDeduped(params.projectPath, result.unique, {
                 method: "DOI > título+ano > url",
@@ -559,18 +670,24 @@ server.tool(
                 duplicates_removed: result.stats.duplicates,
                 total_after: result.stats.unique,
                 generated: new Date().toISOString(),
-            });
-            ProjectStateService.setPhase(
-                path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath),
-                "F3",
-            );
+            }, result.pairs);
+
+            // RV-04 (DEBT-037). A deduplicação decide o que SAI do corpus: cada par removido
+            // é um estudo que não será mais visto. Sob `estrito`, a fase seguinte só abre com
+            // a decisão registrada do pesquisador — o resultado fica gravado de qualquer
+            // forma, porque perder trabalho não é trava, é dano.
+            // DEBT-100: a tool sabe que artefato gravou; QUE ETAPA ele encerra é da trilha do
+            // método. O literal "F3" morava aqui.
+            const dirDedup = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
+            avisoRV04Dedup = `\n\n${avancarPorArtefato(RAIZ(), dirDedup, "02_deduplicated/dataset.json").aviso}`;
         }
 
         return {
             content: [{
                 type: "text",
                 text: `${consolidatedNote}Deduplicação: ${result.stats.total} → ${result.stats.unique} únicos (${result.stats.duplicates} duplicatas removidas).` +
-                    (params.projectPath ? `\nGravado: 02_deduplicated/dataset.json + dedupe_report.json.` : `\n\n${JSON.stringify(result.stats, null, 2)}`),
+                    (params.projectPath ? `\nGravado: 02_deduplicated/dataset.json + dedupe_report.json + dedupe_pairs.json (${result.pairs.length} par(es): mantido/removido/critério/fontes).` : `\n\n${JSON.stringify(result.stats, null, 2)}`) +
+                    avisoRV04Dedup,
             }]
         };
     }
@@ -612,7 +729,19 @@ server.tool(
             return { content: [{ type: "text", text: "Informe 'candidates' ou 'projectPath'+'stage'." }] };
         }
 
-        const result = await screeningService.screenCandidates(records, params.criteria, params.projectPath);
+        // DEBT-020: passar criteria como string pura descartava `stage` (o serviço aceita
+        // string só por compatibilidade retroativa, tratando-a como {criteria} sem stage) —
+        // 'fulltext' nunca chegava a buildPrompt, então a triagem de texto completo nunca
+        // lia o texto completo. Monta o ScreeningConfig real, com o stage que o schema pediu.
+        // RAISE 3 (DEBT-131). Triagem de relevância por LLM generativo é a linha T21 da
+        // Tabela 2: C3, "requires validation within the review". A exigência de limiar
+        // pré-especificado é conferida no protocolo, que é o único artefato com trava de
+        // anterioridade (RV-01) — aqui o uso é declarado na resposta, para não acontecer
+        // em silêncio.
+        const iaScreen = checarUsoDeIA("screen_candidates", true);
+        if (iaScreen.blocked) return { content: [{ type: "text", text: iaScreen.message }] };
+
+        const result = await screeningService.screenCandidates(records, { criteria: params.criteria, stage }, params.projectPath);
 
         // Falha ruidosa: se TUDO errou, não finja sucesso silencioso nem avance a fase.
         const totalDecided = result.included.length + result.excluded.length;
@@ -626,16 +755,45 @@ server.tool(
             };
         }
 
+        let avisoRV04 = "";
         if (params.projectPath) {
             writeScreening(params.projectPath, stage, result.included, result.excluded);
-            ProjectStateService.setPhase(
-                path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath),
-                "F4",
-            );
+            const dir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
+
+            // RV-04 COMO TRAVA (DEBT-037). A triagem produz a decisão metodológica mais
+            // consequente da revisão: que estudos entram. Sob `estrito`, a fase seguinte só
+            // abre com a contribuição específica do pesquisador sobre esta — e o resultado
+            // da triagem fica gravado de qualquer forma, porque perder trabalho não é trava,
+            // é dano. O que a trava impede é AVANÇAR sem supervisão humana registrada.
+            // DEBT-100: a etapa vem da trilha do método, pelo artefato que este estágio gravou.
+            const artefatoTriagem = stage === "ta" ? "03_screening/included_ta.json" : "03_screening/included.json";
+            avisoRV04 = `\n\n${avancarPorArtefato(RAIZ(), dir, artefatoTriagem).aviso}`;
         }
 
         const excludedRel = stage === "ta" ? "excluded_ta.json" : "excluded_fulltext.json";
         const includedRel = stage === "ta" ? "included_ta.json (encaminhados p/ texto completo)" : "included.json (incluídos finais)";
+
+        // ─── O MAYBE É DECLARADO (DEBT-028) ─────────────────────────────────
+        // MAYBE continua entrando em `included` — a regra de inclusão NÃO muda aqui, porque
+        // mudar quem entra no corpus no meio de um conserto alteraria o resultado da revisão
+        // sem decisão do pesquisador (RV-04). O que muda é o SILÊNCIO: a composição do
+        // conjunto passa a ser dita. O artefato já a carrega — cada item de included_ta.json
+        // é um ScreeningResult com `decision` —, então quem auditar depois acha o mesmo número.
+        //
+        // Os dois estágios não são o mesmo caso:
+        //   TA       — "não sei pelo título/resumo" é a resposta CERTA: segue para texto completo.
+        //   FULLTEXT — "não sei com o texto na mão" é estudo indeciso dentro dos incluídos
+        //                FINAIS, e o funil publicado o contaria como decidido. Isso o pesquisador
+        //                precisa ver, e não cabe ao sistema resolver por omissão (RV-04).
+        const { sim: sims, maybe: maybes } = composicaoTriagem(result.included);
+        const notaMaybe = maybes === 0 ? "" : (stage === "ta"
+            ? `
+⚖️ Composição dos ${result.included.length} encaminhados: ${sims} SIM + ${maybes} MAYBE. `
+            + `MAYBE é dúvida declarada, não inclusão — segue para o texto completo, onde se decide.`
+            : `
+⚠️ ${maybes} dos ${result.included.length} incluídos FINAIS estão como MAYBE: indecisão `
+            + `depois de ler o texto completo, que o funil contaria como decisão. Resolva cada um `
+            + `(incluir, ou excluir com motivo EX-01..EX-11) antes de fechar a F4 — a decisão é sua (RV-04).`);
         const errorNote = result.errors.length > 0
             ? `\n⚠️ ${result.errors.length} candidato(s) com erro na triagem (não decididos, não incluídos nem excluídos): ${[...new Set(result.errors)].slice(0, 3).join(" | ")}`
             : "";
@@ -643,8 +801,9 @@ server.tool(
             content: [{
                 type: "text",
                 text: `Triagem ${stage.toUpperCase()}: ${result.included.length} incluídos, ${result.excluded.length} excluídos.` +
+                    notaMaybe +
                     (params.projectPath ? `\nGravado: 03_screening/${includedRel} + 03_screening/${excludedRel}.` : `\n\n${JSON.stringify(result, null, 2)}`) +
-                    errorNote,
+                    errorNote + avisoRV04 + `\n${iaScreen.message}`,
             }]
         };
     }
@@ -663,6 +822,8 @@ server.tool(
         projectPath: z.string().describe("Caminho do projeto (ex: projects/meu_projeto)"),
     },
     async (params) => {
+        const guardrailError = await checkDesignGuardrail(undefined, params.projectPath);
+        if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         const results = [];
         for (const item of params.urlsAndIds) {
             const result = await pdfExtractorService.downloadAndExtract(item.url, item.id, params.projectPath);
@@ -686,11 +847,18 @@ server.tool(
 
 server.tool(
     "expand_search_snowball",
-    "Expande a busca via Snowballing (Citações e Referências via OpenAlex).",
+    "Expande a busca via Snowballing (Citações via OpenAlex), com as 4 salvaguardas obrigatórias da skill do librarian: profundidade limitada (padrão 1, sem recursão), filtro por descritores do protocolo, dedup contra o dataset já existente do projeto e teto de candidatos com relatório de parada.",
     {
         dataset: z.string().describe("JSON string com sementes (SearchResult[])"),
+        projectId: z.number().optional(),
+        projectPath: z.string().optional().describe("Projeto sob o qual a operação é feita. Sem ele é exploratório e nada persiste (RV-01). Também usado para ler o dataset já existente (dedup real) quando informado."),
+        depth: z.number().optional().describe("Níveis de expansão. Padrão 1 (só citações das sementes, sem recursar)."),
+        filterKeywords: z.array(z.string()).optional().describe("Descritores/critérios do protocolo: um candidato só é aceito se título+descrição contiver ao menos um termo. Omitido = filtro não aplicado (declarado em stats.filter_applied)."),
+        maxCandidates: z.number().optional().describe("Teto de candidatos aceitos. Padrão 200."),
     },
     async (params) => {
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         let seeds;
         try {
             seeds = JSON.parse(params.dataset);
@@ -698,7 +866,14 @@ server.tool(
             return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
         }
 
-        const result = await snowballService.expandSearch(seeds);
+        const existingDataset = params.projectPath ? readExistingDataset(params.projectPath) : undefined;
+
+        const result = await snowballService.expandSearch(seeds, {
+            depth: params.depth,
+            filterKeywords: params.filterKeywords,
+            maxCandidates: params.maxCandidates,
+            existingDataset,
+        });
         return {
             content: [{
                 type: "text",
@@ -714,6 +889,7 @@ server.tool(
     {
         dataset: z.string().describe("JSON string com resultados"),
         format: z.enum(["csv", "markdown", "json", "asreview"]).default("json").describe("Formato de saída. Use 'asreview' para gerar CSV compatível com ASReview LAB."),
+        projectPath: z.string().optional().describe("Caminho do projeto. Quando informado e houver prisma_flow.json, a aritmética do funil é validada (RV-05) e o export é BLOQUEADO se não fechar."),
     },
     async (params) => {
         let records;
@@ -724,11 +900,63 @@ server.tool(
             return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] };
         }
 
+        // RV-05 no caminho do export. O manifest declara o gate F8:
+        //   { rule: "RV-05", tool: "validate_prisma_flow", blocks: "export/manuscrito se a
+        //     aritmética do funil não fechar" }
+        // O verificador existia, reprovava de verdade, e o único caminho que ele deveria
+        // bloquear não o chamava — o precedente que a skill de gates conta como passado e
+        // que seguia sendo presente.
+        //
+        // ⚠️ DÍVIDA CONHECIDA (DEBT-081): `projectPath` opcional significa que omitir o
+        // parâmetro desliga a trava. Mantido opcional por consistência com as outras 10 tools
+        // guardadas, e porque export sem projeto é uso legítimo (ex.: gerar CSV para o
+        // ASReview no meio do processo). A decisão de negar-por-padrão é sistêmica
+        // (DEBT-080 × DEBT-081, exclusão mútua) e não deve ser tomada dentro deste conserto.
+        if (params.projectPath) {
+            const projectDir = path.isAbsolute(params.projectPath)
+                ? params.projectPath
+                : path.join(process.cwd(), params.projectPath);
+            const gate = new PrismaFlowValidator().checkExportGate(projectDir);
+            if (gate.blocked) {
+                return {
+                    content: [{
+                        type: "text",
+                        text: "🚫 EXPORT BLOQUEADO — RV-05 (aritmética do funil).\n\n"
+                            + gate.reason + "\n\n" + gate.errors.join("\n")
+                    }]
+                };
+            }
+        }
+
+        // RV-08 é gate, não aviso: a skill `prisma-rigor-gates` declara que a reprovação aqui
+        // BLOQUEIA a síntese e o export. Antes, o carimbo de conformidade saía incondicional —
+        // e viajava para dentro do artigo publicado como afirmação que ninguém verificou.
+        const check = dataService.checkProvenance(records);
+        if (!check.valid) {
+            return {
+                content: [{
+                    type: "text",
+                    text:
+                        `🚫 EXPORT BLOQUEADO — RV-08 (origem rastreável).\n\n` +
+                        check.errors.join("\n") +
+                        `\n\nCorrija a origem dos registros e exporte de novo. Se a origem não existir` +
+                        ` mesmo, o estudo não pode entrar na síntese: a revisão não teria como dizer` +
+                        ` de onde ele veio.\n\n` +
+                        `Detalhe: ${JSON.stringify(check.missing.slice(0, 20), null, 2)}`
+                }]
+            };
+        }
+
         const output = dataService.exportDataset(records, params.format as any);
+        const nota = check.semInstituicao > 0
+            ? `\n\n⚠️ ${check.semInstituicao} de ${check.total} registro(s) sem 'institution'. Não bloqueia` +
+              ` (o campo é opcional e nem toda fonte o expõe), mas a RV-08 nomeia instituição —` +
+              ` decida se isso basta para a sua revisão.`
+            : "";
         return {
             content: [{
                 type: "text",
-                text: output
+                text: output + nota
             }]
         };
     }
@@ -740,11 +968,17 @@ server.tool(
     "Importa dados de arquivo RIS (ex: Zotero/EndNote).",
     {
         content: z.string().describe("Conteúdo do arquivo .ris"),
+        sourceName: z.string().optional().describe("Base de onde o export saiu (ex.: Scopus, Web of Science). Omitido: usa a tag DB do próprio RIS; sem nenhuma das duas, os registros ficam SEM origem e o export é bloqueado pela RV-08 — a importação não fabrica procedência."),
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
     async (params) => {
-        const results = dataService.importRis(params.content);
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+        // A origem vem de quem importa ou do próprio RIS. Antes, o handler nunca passava
+        // `sourceName` e o default "Manual Import" carimbava procedência falsa em tudo — que
+        // ainda por cima PASSAVA no gate da RV-08, porque é texto não-vazio.
+        const results = dataService.importRis(params.content, params.sourceName);
 
         // Resolve project for audit
         let projectId = params.projectId;
@@ -757,10 +991,23 @@ server.tool(
             await dbService.insertRecords(projectId, "ris_import", results);
         }
 
+        // DEBT-086: sem isto, o importado entra no SQLite mas nunca no funil PRISMA —
+        // flow_computer.ts só conta 01_raw/database_records.json. Fonte da verdade é
+        // on-disk (project_artifacts.ts:7-8), não o banco.
+        let rawWriteNote = "";
+        if (params.projectPath) {
+            try {
+                const raw = appendRawRecords(params.projectPath, results, "database");
+                rawWriteNote = `\n\n01_raw/database_records.json: ${raw.added} novo(s) de ${results.length} (total no arquivo: ${raw.total}).`;
+            } catch (e: any) {
+                rawWriteNote = `\n\n⚠️ Registros importados mas NÃO gravados em 01_raw (${e?.message ?? e}). O funil PRISMA não vai contá-los até isso ser corrigido.`;
+            }
+        }
+
         return {
             content: [{
                 type: "text",
-                text: JSON.stringify(results, null, 2)
+                text: JSON.stringify(results, null, 2) + rawWriteNote
             }]
         };
     }
@@ -775,6 +1022,8 @@ server.tool(
         projectPath: z.string().optional(),
     },
     async (params) => {
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         if (!fs.existsSync(params.filePath)) {
             return { content: [{ type: "text", text: `Arquivo não encontrado: ${params.filePath}` }] };
         }
@@ -800,10 +1049,23 @@ server.tool(
             });
         }
 
+        // DEBT-086: sem isto, o importado entra no SQLite mas nunca no funil PRISMA —
+        // flow_computer.ts só conta 01_raw/database_records.json. Fonte da verdade é
+        // on-disk (project_artifacts.ts:7-8), não o banco.
+        let rawWriteNote = "";
+        if (params.projectPath) {
+            try {
+                const raw = appendRawRecords(params.projectPath, results, "database");
+                rawWriteNote = ` 01_raw/database_records.json: ${raw.added} novo(s) (total no arquivo: ${raw.total}).`;
+            } catch (e: any) {
+                rawWriteNote = ` ⚠️ NÃO gravados em 01_raw (${e?.message ?? e}). O funil PRISMA não vai contá-los até isso ser corrigido.`;
+            }
+        }
+
         return {
             content: [{
                 type: "text",
-                text: `Sucesso: ${results.length} registros importados da BVS para o projeto ${projectId || "(sem ID)"}.`
+                text: `Sucesso: ${results.length} registros importados da BVS para o projeto ${projectId || "(sem ID)"}.${rawWriteNote}`
             }]
         };
     }
@@ -813,7 +1075,7 @@ server.tool(
     "search_pubmed",
     "Busca artigos no PubMed (via Biopython). Ideal para literatura biomédica e de saúde.",
     {
-        query: z.string().describe("Termo de busca (ex: 'Anacardium occidentale AND antioxidant')"),
+        query: z.string().describe("Termo de busca (ex: '<conceito> AND <desfecho>')"),
         maxResults: z.number().default(20).describe("Máximo de resultados"),
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
@@ -873,7 +1135,7 @@ server.tool(
             ].filter(Boolean).join("\n"))
         ].join("\n");
 
-        return {
+        return declararModo(params.projectPath, {
             content: [{
                 type: "text",
                 text: summary // Return summary for easy reading
@@ -881,7 +1143,7 @@ server.tool(
                 type: "text",
                 text: JSON.stringify(results, null, 2) // Return JSON for processing
             }]
-        };
+        });
     }
 );
 
@@ -890,10 +1152,12 @@ server.tool(
     "Verifica acesso aberto e baixa PDFs para o texto completo (F4.3).",
     {
         projectId: z.number().optional(),
-        projectPath: z.string().describe("Caminho do projeto (ex: 'projects/data_mining/estado_arte_caju')"),
+        projectPath: z.string().describe("Caminho do projeto (ex: 'reviewbr/projects/<nome-do-projeto>')"),
         datasetPath: z.string().optional(),
     },
     async (params) => {
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
         const outputDir = path.join(projectDir, "03_screening/pdfs");
         if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
@@ -979,7 +1243,7 @@ server.tool(
     "search_repository",
     "Busca artigos/teses em repositórios acadêmicos. Usa OAI-PMH, DSpace REST ou scraping conforme disponibilidade.",
     {
-        query: z.string().describe("Termo(s) de busca por tema (ex: 'bebida fermentada', 'inteligência artificial')"),
+        query: z.string().describe("Termo(s) de busca por tema (ex: '<tema da sua revisão>')"),
         repositories: z.array(z.string()).optional()
             .describe("IDs dos repos (ex: ['BR-FED-0001', 'BR-AGG-0001']). Omita para buscar em todos os ativos."),
         title: z.string().optional(),
@@ -1107,8 +1371,12 @@ server.tool(
         repositoryId: z.string().describe("ID do repositório (ex: 'BR-FED-0001')"),
         recordIdentifier: z.string()
             .describe("Identificador OAI ou URL/handle do registro (ex: 'oai:repositorio.ufba.br:ri/36884' ou 'https://repositorio.ufba.br/handle/ri/36884')"),
+        projectId: z.number().optional(),
+        projectPath: z.string().optional().describe("Projeto sob o qual a operação é feita. Sem ele é exploratório e nada persiste (RV-01)."),
     },
     async (params) => {
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         const repo = registry.getById(params.repositoryId);
         if (!repo) {
             return { content: [{ type: "text", text: `Repositório ${params.repositoryId} não encontrado.` }] };
@@ -1134,9 +1402,15 @@ server.tool(
         dateUntil: z.string().optional(),
         maxRecords: z.number().default(100).describe("Máximo de registros a coletar"),
         metadataPrefix: z.string().default("oai_dc").describe("Formato de metadados"),
+        projectId: z.number().optional(),
+        projectPath: z.string().optional().describe("Projeto sob o qual a coleta é feita. Sem ele, a coleta é exploratória e nada é persistido (RV-01)."),
     },
     async (params) => {
-        const guardrailError = await checkDesignGuardrail(undefined, undefined);
+        // Antes: checkDesignGuardrail(undefined, undefined) — a tool nem expunha projectId ou
+        // projectPath no schema, então a trava era sintaticamente presente e semanticamente
+        // morta. Duas varreduras independentes acharam isto; foi o único caso em que a guarda
+        // estava no código e não podia bloquear coisa alguma.
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
 
         const repo = registry.getById(params.repositoryId);
@@ -1280,11 +1554,12 @@ server.tool(
             "rapid_review",
             "exploratory"
         ]).describe("Tipo de pesquisa"),
-        projectPath: z.string().describe("Caminho ONDE o projeto será criado. CONVENÇÃO FIXA: '<raiz-do-repo>/reviewbr/projects/<nome-do-projeto>' (ex: 'reviewbr/projects/bebidas_maca_do_coco'). Nunca dentro de reviewbr-mcp/."),
+        projectPath: z.string().describe("Caminho ONDE o projeto será criado. CONVENÇÃO FIXA: '<raiz-do-repo>/reviewbr/projects/<nome-do-projeto>' (ex: 'reviewbr/projects/<nome-do-projeto>'). Nunca dentro de reviewbr-mcp/."),
+        methodId: z.string().optional().describe("Método que o pesquisador escolheu, quando mais de um método assimilado serve ao tipo (assess_research_design os apresenta). A escolha é dele (RV-04): o sistema confere que o método serve ao tipo e está pronto, e não elege por ele. Com um método só, pode ser omitido."),
     },
     async (params) => {
         const projectId = await projectInitService.register(params as any, dbService);
-        const result = await projectInitService.initializeWorkspace(projectId, params.projectPath, dbService);
+        const result = await projectInitService.initializeWorkspace(projectId, params.projectPath, dbService, params.methodId);
 
         return {
             content: [{
@@ -1292,6 +1567,24 @@ server.tool(
                 text: `Projeto criado com sucesso!\nID: ${result.projectId}\nProtocolo: ${result.protocolPath}\nTipo: ${params.researchType}`
             }]
         };
+    }
+);
+
+server.tool(
+    "record_researcher_decision",
+    "Grava a DECISÃO DO PESQUISADOR sobre uma etapa da trilha (RV-04) — é o que destrava a etapa seguinte sob control_level 'estrito'. Exige a contribuição específica dele, nas palavras dele: 'ok', 'pode seguir', 'aprovado' são recusados, porque carimbo não é supervisão. Confere que a etapa existe na trilha do método do projeto. Se o artefato que encerra a etapa já foi gravado, a fase avança agora. NÃO escreva a contribuição pelo pesquisador.",
+    {
+        projectPath: z.string().describe("Raiz do projeto (onde está o project_state.json)"),
+        etapa: z.string().describe("Id da etapa na trilha do método do projeto (ex.: 'F3') — a etapa sobre a qual ele decidiu"),
+        contribuicao: z.string().describe("O que o pesquisador avaliou e o que decidiu, nas palavras dele"),
+        decisao: z.string().optional().describe("Resumo curto da decisão, se diferente da contribuição"),
+        agente: z.string().optional().describe("Quem levou a decisão ao registro (ex.: 'coordinator', 'screener')"),
+    },
+    async (params) => {
+        // DEBT-143 — a trava do RV-04 existia sem escritor legítimo: logDecision não tinha
+        // chamador, e sob 'estrito' a fase só avançava com edição à mão do project_state.json.
+        const r = registrarDecisaoDoPesquisador(RAIZ(), resolveProjectDir(params.projectPath), params);
+        return { content: [{ type: "text", text: r.mensagem }] };
     }
 );
 
@@ -1326,8 +1619,21 @@ server.tool(
                 : content.replace(/^# /, "**Status**: [LOCKED]\n\n# ");
             fs.writeFileSync(protocolPath, content, "utf-8");
 
-            // Estado on-disk = fonte da verdade
-            ProjectStateService.patch(projectDir, { status: "LOCKED", phase: "F2" });
+            // Estado on-disk = fonte da verdade. DEBT-100: a etapa que abre com o protocolo
+            // travado é a que vem DEPOIS da última que o `protocol.md` encerra, na trilha do
+            // método — o literal "F2" morava aqui.
+            const estadoAtual = ProjectStateService.read(projectDir);
+            const trilhaProj = estadoAtual ? lerTrilha(RAIZ(), estadoAtual.method) : null;
+            const fechadaPeloProtocolo = trilhaProj ? etapaDoArtefato(trilhaProj.etapas, "protocol.md") : null;
+            const abre = trilhaProj && fechadaPeloProtocolo ? etapaSeguinte(trilhaProj.etapas, fechadaPeloProtocolo.id) : null;
+            ProjectStateService.patch(projectDir, abre ? { status: "LOCKED", phase: abre.id } : { status: "LOCKED" });
+            // Trilha ilegível não é trilha sem etapa seguinte: afirmar uma propriedade de uma
+            // trilha que nem foi lida esconderia a causa real.
+            const notaEtapa = abre
+                ? `\nEtapa seguinte na trilha do método: ${abre.id} — ${abre.name} (executa: ${abre.role}).`
+                : trilhaProj && trilhaProj.erros.length
+                    ? `\n🚧 A trilha do método não pôde ser lida (${trilhaProj.erros.join("; ")}): a fase do projeto NÃO mudou.`
+                    : `\n🚧 A trilha do método não declara etapa depois do protocolo: a fase do projeto NÃO mudou.`;
 
             // SQLite como cache/auditoria (não obrigatório)
             if (projectId) {
@@ -1344,7 +1650,7 @@ server.tool(
             return {
                 content: [{
                     type: "text",
-                    text: `✅ SUCESSO! Protocolo aprovado (${audit.score}/${audit.maxScore}) e TRAVADO ([LOCKED]). As buscas oficiais estão liberadas.`
+                    text: `✅ SUCESSO! Protocolo aprovado (${audit.score}/${audit.maxScore}) e TRAVADO ([LOCKED]). As buscas oficiais estão liberadas.${notaEtapa}`
                 }]
             };
         } else {
@@ -1449,7 +1755,10 @@ server.tool(
             const provWarn = r.missingProvenance.length > 0
                 ? `\n\n⚠️ ${r.missingProvenance.length} estudo(s) sem proveniência completa (RV-08): ${r.missingProvenance.slice(0, 10).join(", ")}`
                 : "";
-            return { content: [{ type: "text", text: JSON.stringify(r, null, 2) + warn + provWarn }] };
+            const tradWarn = r.skippedTranslations.length > 0
+                ? `\n\nℹ️ ${r.skippedTranslations.length} tradução(ões) NÃO indexada(s) (texto de apoio, não é fonte primária — DEBT-023): ${r.skippedTranslations.slice(0, 10).join(", ")}`
+                : "";
+            return { content: [{ type: "text", text: JSON.stringify(r, null, 2) + warn + provWarn + tradWarn }] };
         } catch (e: any) {
             return { content: [{ type: "text", text: `Erro ao indexar corpus: ${e.message}` }] };
         }
@@ -1484,6 +1793,8 @@ server.tool(
         projectPath: z.string().describe("Raiz do projeto"),
     },
     async (params) => {
+        const guardrailError = await checkDesignGuardrail(undefined, params.projectPath);
+        if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         const r = await scihubBridge.retrieveByDoi(params.doi, params.projectPath);
         if (params.projectPath) {
             await logToLocalProject(params.projectPath, "retrieve_fulltext_byos", {
@@ -1504,6 +1815,7 @@ server.tool(
 const openAlexHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+    let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
 
     // Resolve project for audit
     let projectId = params.projectId;
@@ -1538,17 +1850,16 @@ const openAlexHandler = async (params: any) => {
             params
         });
 
-        // Auto-save result set to 01_raw
+        // Auto-save result set to 01_raw (DEBT-084: caminho absoluto tratado, falha visível)
         try {
-            const { default: path } = await import("node:path");
-            const { default: fs } = await import("node:fs");
-            const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
+            const rawDir = path.join(resolveProjectDir(params.projectPath), "01_raw");
             if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
             const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
             const outputPath = path.join(rawDir, `dataset_openalex_${timestamp}.json`);
             fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
-        } catch (saveError) {
+        } catch (saveError: any) {
             console.error("Failed to auto-save OpenAlex results:", saveError);
+            rawSaveError = `⚠️ Resultados encontrados mas NÃO gravados em 01_raw (${saveError?.message ?? saveError}). O funil PRISMA não vai contá-los até isso ser corrigido.`;
         }
     }
 
@@ -1566,6 +1877,7 @@ const openAlexHandler = async (params: any) => {
             "",
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+        rawSaveError ?? "",
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -1574,6 +1886,7 @@ const openAlexHandler = async (params: any) => {
 const crossrefHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+    let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
 
     // Resolve project for audit
     let projectId = params.projectId;
@@ -1604,17 +1917,16 @@ const crossrefHandler = async (params: any) => {
             params
         });
 
-        // Auto-save result set to 01_raw
+        // Auto-save result set to 01_raw (DEBT-084: caminho absoluto tratado, falha visível)
         try {
-            const { default: path } = await import("node:path");
-            const { default: fs } = await import("node:fs");
-            const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
+            const rawDir = path.join(resolveProjectDir(params.projectPath), "01_raw");
             if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
             const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
             const outputPath = path.join(rawDir, `dataset_crossref_${timestamp}.json`);
             fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
-        } catch (saveError) {
+        } catch (saveError: any) {
             console.error("Failed to auto-save Crossref results:", saveError);
+            rawSaveError = `⚠️ Resultados encontrados mas NÃO gravados em 01_raw (${saveError?.message ?? saveError}). O funil PRISMA não vai contá-los até isso ser corrigido.`;
         }
     }
 
@@ -1632,6 +1944,7 @@ const crossrefHandler = async (params: any) => {
             "",
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+        rawSaveError ?? "",
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -1640,6 +1953,7 @@ const crossrefHandler = async (params: any) => {
 const scieloHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+    let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
 
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
@@ -1679,15 +1993,14 @@ const scieloHandler = async (params: any) => {
         });
 
         try {
-            const { default: path } = await import("node:path");
-            const { default: fs } = await import("node:fs");
-            const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
+            const rawDir = path.join(resolveProjectDir(params.projectPath), "01_raw");
             if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
             const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
             const outputPath = path.join(rawDir, `dataset_scielo_${timestamp}.json`);
             fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
-        } catch (saveError) {
+        } catch (saveError: any) {
             console.error("Failed to auto-save SciELO results:", saveError);
+            rawSaveError = `⚠️ Resultados encontrados mas NÃO gravados em 01_raw (${saveError?.message ?? saveError}). O funil PRISMA não vai contá-los até isso ser corrigido.`;
         }
     }
 
@@ -1704,6 +2017,7 @@ const scieloHandler = async (params: any) => {
             "",
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+        rawSaveError ?? "",
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -1712,6 +2026,7 @@ const scieloHandler = async (params: any) => {
 const semanticScholarHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+    let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
 
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
@@ -1743,15 +2058,14 @@ const semanticScholarHandler = async (params: any) => {
 
         if (projectId) { // Only save raw files if it is not a preview run
             try {
-                const { default: path } = await import("node:path");
-                const { default: fs } = await import("node:fs");
-                const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
+                const rawDir = path.join(resolveProjectDir(params.projectPath), "01_raw");
                 if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
                 const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
                 const outputPath = path.join(rawDir, `dataset_semanticscholar_${timestamp}.json`);
                 fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
-            } catch (saveError) {
+            } catch (saveError: any) {
                 console.error("Failed to auto-save SemanticScholar results:", saveError);
+                rawSaveError = `⚠️ Resultados encontrados mas NÃO gravados em 01_raw (${saveError?.message ?? saveError}). O funil PRISMA não vai contá-los até isso ser corrigido.`;
             }
         }
     }
@@ -1769,6 +2083,7 @@ const semanticScholarHandler = async (params: any) => {
             "",
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+        rawSaveError ?? "",
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -1777,6 +2092,7 @@ const semanticScholarHandler = async (params: any) => {
 const coreHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+    let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
 
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
@@ -1808,15 +2124,14 @@ const coreHandler = async (params: any) => {
 
         if (projectId) {
             try {
-                const { default: path } = await import("node:path");
-                const { default: fs } = await import("node:fs");
-                const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
+                const rawDir = path.join(resolveProjectDir(params.projectPath), "01_raw");
                 if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
                 const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
                 const outputPath = path.join(rawDir, `dataset_core_${timestamp}.json`);
                 fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
-            } catch (saveError) {
+            } catch (saveError: any) {
                 console.error("Failed to auto-save CORE results:", saveError);
+                rawSaveError = `⚠️ Resultados encontrados mas NÃO gravados em 01_raw (${saveError?.message ?? saveError}). O funil PRISMA não vai contá-los até isso ser corrigido.`;
             }
         }
     }
@@ -1834,6 +2149,7 @@ const coreHandler = async (params: any) => {
             "",
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+        rawSaveError ?? "",
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -1842,6 +2158,7 @@ const coreHandler = async (params: any) => {
 const europePmcHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
+    let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
 
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
@@ -1873,15 +2190,14 @@ const europePmcHandler = async (params: any) => {
 
         if (projectId) {
             try {
-                const { default: path } = await import("node:path");
-                const { default: fs } = await import("node:fs");
-                const rawDir = path.join(process.cwd(), params.projectPath, "01_raw");
+                const rawDir = path.join(resolveProjectDir(params.projectPath), "01_raw");
                 if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
                 const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
                 const outputPath = path.join(rawDir, `dataset_europe_pmc_${timestamp}.json`);
                 fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
-            } catch (saveError) {
+            } catch (saveError: any) {
                 console.error("Failed to auto-save Europe PMC results:", saveError);
+                rawSaveError = `⚠️ Resultados encontrados mas NÃO gravados em 01_raw (${saveError?.message ?? saveError}). O funil PRISMA não vai contá-los até isso ser corrigido.`;
             }
         }
     }
@@ -1900,6 +2216,7 @@ const europePmcHandler = async (params: any) => {
             "",
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+        rawSaveError ?? "",
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -1933,7 +2250,7 @@ server.tool(
     "search_openalex",
     "Busca artigos diretamente no OpenAlex (Multidisciplinar). Ideal para construir listas mestras.",
     {
-        query: z.string().describe("Termo de busca (ex: 'cashew OR Anacardium occidentale')"),
+        query: z.string().describe("Termo de busca (ex: '<termo> OR <sinônimo>')"),
         maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
@@ -2005,10 +2322,18 @@ server.tool(
             } catch (e) { /* silently ignore malformed prisma data */ }
         }
 
+        // DEBT-024: se o projeto tem 02_deduplicated/dedupe_pairs.json (produzido por
+        // deduplicate_dataset, DEBT-029), o dataset submetido já passou pelo mesmo
+        // DeduplicationService — reaplicá-lo daria sempre PASS por construção. Nesse
+        // caso o check audita o LOG; sem projectPath ou sem o arquivo (auditoria de
+        // pesquisa externa), undefined preserva o re-run como única verificação possível.
+        const dedupePairs = params.projectPath ? readDedupePairs(params.projectPath) ?? undefined : undefined;
+
         const report = auditorService.audit({
             dataset: records,
             searchTermsUsed: params.searchTermsUsed,
             prismaFlowData: prismaFlow,
+            dedupePairs,
         });
 
         // Save the conformity report to disk if projectPath is provided
@@ -2093,80 +2418,6 @@ server.tool(
     }
 );
 
-// ─── ASReview Bridge Tool ─────────────────────────────────────
-
-server.tool(
-    "screen_with_asreview",
-    "Executa a triagem via ASReview ML (Active Learning ELAS, validado pela Nature Machine Intelligence). Chama o ASReview como subprocesso, processa o dataset, e retorna os resultados. Requer Python + ASReview instalados.",
-    {
-        dataset: z.string().describe("JSON string com os registros a triar"),
-        projectPath: z.string().describe("Caminho do projeto"),
-        model: z.string().optional().describe("Modelo ELAS: 'elas_u4' (default), 'elas_l4', 'elas_h4'"),
-        seed: z.number().optional().describe("Seed para reprodutibilidade (default: 42)"),
-    },
-    async (params) => {
-        // 1. Check installation
-        const { installed, version } = await asreviewBridge.checkInstalled();
-        if (!installed) {
-            return {
-                content: [{
-                    type: "text",
-                    text: "❌ ASReview não está instalado.\nPara usar a triagem ML validada, instale com:\n\n```\npip install asreview\n```\n\nApós instalar, tente novamente."
-                }]
-            };
-        }
-
-        // 2. Parse dataset
-        let records;
-        try {
-            records = JSON.parse(params.dataset);
-            if (records.results) records = records.results;
-        } catch (e) {
-            return { content: [{ type: "text", text: "Erro ao fazer parse do JSON do dataset." }] };
-        }
-
-        // 3. Run ASReview simulate
-        const result = await asreviewBridge.runSimulate(records, params.projectPath, {
-            model: params.model || "elas_u4",
-            seed: params.seed ?? 42,
-            nStop: -1,
-        });
-
-        // 4. Log in audit
-        await dbService.logAuditEvent({
-            tool_name: "screen_with_asreview",
-            action_type: "asreview_simulate",
-            params: JSON.stringify({
-                model: params.model || "elas_u4",
-                seed: params.seed ?? 42,
-                records: records.length,
-                asreview_version: version,
-            }),
-            result_summary: result.success
-                ? `ASReview ${version}: ${records.length} registros processados com ${params.model || 'elas_u4'}`
-                : `ERRO: ${result.error}`,
-        });
-
-        // 5. Log to project dir
-        if (params.projectPath) {
-            logToLocalProject(params.projectPath, "screen_with_asreview", {
-                model: params.model || "elas_u4",
-                seed: params.seed ?? 42,
-                records: records.length,
-                asreview_version: version,
-                success: result.success,
-                screening_method: "asreview_ml",
-            });
-        }
-
-        return {
-            content: [{
-                type: "text",
-                text: result.success ? result.summary : `❌ ${result.error}`,
-            }]
-        };
-    }
-);
 
 // ─── Repository Healer Tool ───────────────────────────────────
 
@@ -2244,13 +2495,20 @@ server.tool(
     },
     async (params) => {
         try {
+            // RAISE 3 (DEBT-131). `useLlm` decide se há automação generativa nesta corrida —
+            // só a tool sabe. Com LLM, a tarefa é "screening for relevance" (Tabela 2, T21) e
+            // cai em C3: exige validação dentro da revisão. Sem LLM, é filtro por keyword e
+            // não aciona o gate.
+            const ia = checarUsoDeIA("batch_db_screen", params.useLlm ?? false);
+            if (ia.blocked) return { content: [{ type: "text", text: ia.message }] };
+
             const { results, summary } = await batchService.screenDbRecords(
                 params.projectId,
                 params.criteria,
                 params.field ?? "both",
                 params.useLlm ?? false,
             );
-            return { content: [{ type: "text", text: summary }] };
+            return { content: [{ type: "text", text: ia.message ? `${ia.message}\n\n${summary}` : summary }] };
         } catch (error: any) {
             return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
         }
@@ -2277,10 +2535,298 @@ server.tool(
     }
 );
 
+server.tool(
+    "validate_system_change",
+    "Valida uma alteração do PRÓPRIO ReviewBR contra a Regra RV-11: toda alteração declara seu TIPO (CORRECAO | CONFORMIDADE | EXTENSAO) e satisfaz o requisito daquele tipo — correção exige falha documentada e reproduzível; conformidade exige padrão, versão e item; extensão exige protocolo próprio travado. Submissão sem tipo declarado é REPROVADA. Verificação determinística: não infere o tipo a partir do conteúdo (RV-06).",
+    {
+        proposal: z.string().describe(
+            "JSON da proposta. Campos: summary (obrigatório), change_type ('CORRECAO'|'CONFORMIDADE'|'EXTENSAO', obrigatório), targets[]; " +
+            "para CORRECAO: documented_failure, reproduction; " +
+            "para CONFORMIDADE: standard, standard_version, standard_item; " +
+            "para EXTENSAO: protocol_path, protocol_locked; " +
+            "addresses[]: ids dos achados que esta alteração corrige (ex.: ['DEBT-021']) — o gate confere a ORDEM e reprova se um pré-requisito seguir aberto"
+        ),
+        repoRoot: z.string().optional().describe(
+            "Raiz do repositório, para ler o backlog e conferir a ordem de correção. Omitido: resolve a partir do próprio módulo."
+        ),
+    },
+    async (params) => {
+        let raw: unknown;
+        try {
+            raw = JSON.parse(params.proposal);
+        } catch {
+            return {
+                content: [{
+                    type: "text",
+                    text: JSON.stringify({
+                        valid: false,
+                        change_type: null,
+                        errors: ["Proposta não é JSON válido."],
+                        requirement: "declarar o tipo da alteração"
+                    }, null, 2)
+                }]
+            };
+        }
+
+        const validador = new ChangeValidator();
+        const validation = validador.validateRaw(raw);
+
+        // ORDEM DE CORREÇÃO (RV-11). Só confere se o tipo já passou: proposta sem tipo
+        // declarado não chega a ter ordem a conferir. Corrigir fora de ordem gera
+        // retrabalho já mapeado — 13 dependências e 1 exclusão mútua apuradas —, e até
+        // aqui esse dado existia sem ninguém consultá-lo no momento de decidir.
+        if (validation.valid) {
+            const proposta = ChangeProposalSchema.parse(raw);
+            const raizMcp = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+            const raizRepo = params.repoRoot ?? path.resolve(raizMcp, "..", "..");
+            const ordem = validador.checkOrder(proposta, SystemDebtService.probe(raizRepo));
+            if (ordem.errors.length > 0) {
+                return {
+                    content: [{
+                        type: "text",
+                        text: JSON.stringify({
+                            ...validation,
+                            valid: ordem.ok && validation.valid,
+                            errors: [...validation.errors, ...ordem.errors]
+                        }, null, 2)
+                    }]
+                };
+            }
+        }
+
+        return { content: [{ type: "text", text: JSON.stringify(validation, null, 2) }] };
+    }
+);
+
+server.tool(
+    "audit_system_debt",
+    "Lê o backlog de achados sobre o PRÓPRIO ReviewBR (system_debt.json) e audita sua integridade (Regra RV-11). PONTO DE ENTRADA do agente maintainer em sessão nova: devolve o panorama por estado, por DESTINO e por GRAVIDADE, os achados abertos e quais deles ESPERAM outro ser corrigido antes — tudo DERIVADO do dado, nunca lido de documento que envelhece. Sem depender de nenhum contexto de conversa anterior. REPROVA se um achado saiu da fila sem decisão registrada, se um achado de tipo CORRECAO não tem reprodução, ou se há ids duplicados. Fila com item ABERTO é estado normal e não reprova.",
+    {
+        repoRoot: z.string().optional().describe(
+            "Raiz do repositório ReviewBR. Omitido: resolve a partir da localização do próprio módulo (não do cwd — mesma classe do bug que quebrou o catálogo de repositórios)."
+        ),
+    },
+    async (params) => {
+        // Resolução relativa ao MÓDULO: src/ -> reviewbr-mcp -> reviewbr -> raiz do repo.
+        const mcpRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+        const repoRoot = params.repoRoot ?? path.resolve(mcpRoot, "..", "..");
+
+        // `probe`, não `read`. Esta tool é o PONTO DE ENTRADA do mantenedor em sessão nova, e
+        // `read()` devolve null tanto para ausente quanto para ilegível — um backlog de
+        // centenas de achados corrompido era anunciado como "possivelmente inexistente", sem
+        // dizer qual dos dois nem por quê. O DEBT-068 corrigiu os ESCRITORES e deixou o LEITOR
+        // com a mesma confusão: a sessão nova começaria acreditando que não há memória.
+        const sonda = SystemDebtService.probe(repoRoot);
+        if (sonda.status === "ILEGIVEL") {
+            return {
+                content: [{
+                    type: "text",
+                    text: JSON.stringify({
+                        valid: false,
+                        status: "ILEGIVEL",
+                        errors: [
+                            `O backlog EXISTE em ${SystemDebtService.debtPath(repoRoot)} e está ILEGÍVEL — ${sonda.detail}`,
+                            "Isto NÃO é 'backlog ausente': há memória em disco e ela não pode ser lida. " +
+                            "Corrija o arquivo ou restaure uma versão anterior. Escrever agora é recusado " +
+                            "pelas tools de escrita, justamente para não apagar o que está lá."
+                        ]
+                    }, null, 2)
+                }]
+            };
+        }
+
+        const debt = sonda.debt ?? null;
+        const audit = SystemDebtService.audit(debt);
+
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify({
+                    repoRoot,
+                    debtPath: SystemDebtService.debtPath(repoRoot),
+                    ...audit
+                }, null, 2)
+            }]
+        };
+    }
+);
+
+server.tool(
+    "check_standard_coverage",
+    "Confere a cobertura de um padrão metodológico (.claude/standards/) em QUATRO pontos (DEBT-140): (a) cada subitem apontado existe na spec do método; (b) o rótulo do subitem não contradiz o item — por falsificação contra o título oficial, com a PREMISSA declarada no resultado; (c) se alguma tool produz o artefato da etapa do subitem ou só o agente; (d) toda linha ou é coberta, ou declarada [NÃO COBERTO] (fila de manutenção) ou [NÃO SE APLICA] (não é falha) — omissão silenciosa REPROVA. Roda contra os métodos que DECLARAM o padrão em conformance.standards, e diz quando nenhum declara. Devolve a fração honesta (ex.: 12/26), o que foi contestado e o LIMITE do que a máquina não julga. Com render=true, emite o template do checklist de conformidade a partir do padrão.",
+    {
+        standardId: z.string().describe("Id do padrão, como o nome do arquivo sem .json (ex.: 'prisma-2020', 'prisma-s'). Vazio (\"\"): lista os padrões assimilados com versão, version_source, fonte oficial e os métodos que declaram cada um — a lista de trabalho da conferência de obsolescência."),
+        render: z.boolean().optional().describe("true: devolve o template do checklist em Markdown, em vez do relatório de cobertura."),
+        methodologyId: z.string().optional().describe("Id da metodologia em .claude/methodologies/ (ex.: 'prisma-sr'). Omitido: confere contra TODOS os métodos que declaram o padrão. Informado: só contra ele — e avisa se ele não declara o padrão."),
+        repoRoot: z.string().optional().describe("Raiz do repositório. Omitido: resolve a partir do módulo, não do cwd."),
+    },
+    async (params) => {
+        const mcpRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+        const repoRoot = params.repoRoot ?? path.resolve(mcpRoot, "..", "..");
+
+        if (!params.standardId) {
+            // DEBT-010 — a lista de trabalho da conferência de obsolescência: versão, fonte e
+            // quem declara cada padrão. Ir à fonte e relatar é passo da rotina do maintainer.
+            return {
+                content: [{
+                    type: "text", text: JSON.stringify({
+                        available: StandardsService.list(repoRoot),
+                        padroes: StandardCoverageService.panorama(repoRoot),
+                    }, null, 2)
+                }]
+            };
+        }
+
+        const std = StandardsService.read(repoRoot, params.standardId);
+        if (params.render) {
+            if (!std) {
+                return { content: [{ type: "text", text: `ERRO: padrão "${params.standardId}" não encontrado em .claude/standards/.` }] };
+            }
+            // O template leva a conferência junto: contestado sai marcado, e a fração, a premissa
+            // e o limite vão no rodapé — é o documento que o pesquisador preenche e publica.
+            const rel = StandardCoverageService.conferir(repoRoot, params.standardId, params.methodologyId);
+            return {
+                content: [{
+                    type: "text", text: StandardsService.renderChecklist(std, {
+                        contestados: Object.fromEntries(rel.contestados.map((c) => [c.item, c.por])),
+                        rodape: [
+                            `**Fração conferida:** ${rel.fracao}`,
+                            `**Premissa da falsificação:** ${rel.premissa_da_falsificacao}`,
+                            `**Limite da conferência:** ${rel.limite}`,
+                        ],
+                    }),
+                }]
+            };
+        }
+
+        // DEBT-140 — `checkCoverage` sozinho só via `covered_by` vazio: verde por construção, o
+        // mesmo resultado para qualquer projeto. A conferência roda contra os métodos que
+        // declaram o padrão, e a falsificação (DEBT-124) deixou de depender de alguém pedir.
+        const report = StandardCoverageService.conferir(repoRoot, params.standardId, params.methodologyId);
+
+        return { content: [{ type: "text", text: JSON.stringify(report, null, 2) }] };
+    }
+);
+
+server.tool(
+    "query_methodology_catalog",
+    "Consulta o CATÁLOGO de metodologias de revisão (.claude/catalog/) — o mapa do território: que métodos existem, quando usar cada um, o que exigem e qual o status de cada um NO SISTEMA (implementada / padrão disponível / declarada / ausente). O status é DERIVADO do disco, nunca declarado: o catálogo não consegue afirmar que algo está implementado quando não está (mesmo princípio do RV-02). Reprova entrada sem fonte rastreável e metodologia implementada cujo padrão não existe como dado.",
+    {
+        termo: z.string().optional().describe("Filtra por id, nome, tipo ou pelo 'quando usar' (ex.: 'scoping', 'qualitativa', 'risco de viés'). Omita para o panorama completo."),
+        detalhe: z.boolean().optional().describe("true: devolve os campos completos de cada entrada. false (padrão): devolve o resumo."),
+        repoRoot: z.string().optional().describe("Raiz do repositório. Omitido: resolve a partir do módulo, não do cwd."),
+    },
+    async (params) => {
+        const mcpRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+        const repoRoot = params.repoRoot ?? path.resolve(mcpRoot, "..", "..");
+
+        const report = MethodologyCatalogService.resolve(repoRoot, MethodologyCatalogService.read(repoRoot));
+        const achadas = MethodologyCatalogService.find(report, params.termo ?? "");
+
+        const corpo = params.detalhe
+            ? achadas
+            : achadas.map((e) => ({
+                id: e.id, name: e.name, kind: e.kind, version: e.version,
+                status: e.status_in_system, unverified: e.unverified,
+                when_to_use: e.when_to_use
+            }));
+
+        return {
+            content: [{
+                type: "text",
+                text: JSON.stringify({
+                    total_no_catalogo: report.total,
+                    por_status: report.by_status,
+                    encontradas: corpo.length,
+                    valid: report.valid,
+                    errors: report.errors,
+                    entries: corpo
+                }, null, 2)
+            }]
+        };
+    }
+);
+
+// ─── Escrita do mantenedor ────────────────────────────────────
+// Ate 25/09/2026 o maintainer so tinha tools de LEITURA: toda escrita era edicao de JSON na
+// mao, sem verificacao no momento de escrever. Estas quatro fecham o lado de escrita, e cada
+// uma valida ANTES de gravar em vez de deixar o gate descobrir depois.
+
+const RAIZ = () => path.resolve(path.resolve(path.dirname(fileURLToPath(import.meta.url)), ".."), "..", "..");
+const RESP = (r: any) => ({ content: [{ type: "text" as const, text: JSON.stringify(r, null, 2) }] });
+const JSONP = (s: string, campo: string) => {
+    try { return { ok: true as const, v: JSON.parse(s) }; }
+    catch { return { ok: false as const, v: null, erro: `'${campo}' nao e JSON valido.` }; }
+};
+
+server.tool(
+    "record_system_finding",
+    "REGISTRA (ou atualiza) um achado no backlog de divida do ReviewBR. Valida NO MOMENTO DA ESCRITA as mesmas regras que audit_system_debt cobra depois: id unico, tipo declarado (RV-11), CORRECAO exige reproducao, e saida da fila (RESOLVIDO/RECUSADO) exige justificativa. Recusa a escrita em vez de gravar backlog inconsistente.",
+    {
+        finding: z.string().describe("JSON do achado: id, summary, change_type (CORRECAO|CONFORMIDADE|EXTENSAO), evidence, status (ABERTO|EM_CURSO|RESOLVIDO|RECUSADO), destino (FASE_1|FASE_2|CONFORM_EXTERNA|METODOLOGIA_NOVA|AGENTE_SKILL|DECISAO_PESQ|BLOQUEADO|DIAGNOSTICO); opcionais gravidade (BLOQUEIA|SERIO|MENOR), depende_de[] (ids a corrigir ANTES deste), reproduction, location, resolution, found_by, found_at, context. SEM 'destino' o achado nasce orfao e a auditoria reprova."),
+        atualizar: z.boolean().optional().describe("true para alterar achado existente. Sem isto, id repetido e recusado."),
+        repoRoot: z.string().optional(),
+    },
+    async (p) => {
+        const j = JSONP(p.finding, "finding");
+        if (!j.ok) return RESP({ ok: false, errors: [j.erro] });
+        return RESP(BacklogWriter.registrar(p.repoRoot ?? RAIZ(), j.v, p.atualizar ?? false));
+    }
+);
+
+server.tool(
+    "absorb_methodology",
+    "ABSORVE uma metodologia no catalogo (.claude/catalog/) — o 'conhecer sem implementar'. Exige source_url EXTERNO (http/https) da fonte oficial consultada: entrada sem fonte rastreavel e palpite, nao catalogo. O status no sistema NAO e escrito: continua derivado do disco a cada consulta (RV-02).",
+    {
+        entry: z.string().describe("JSON da entrada: id, name, kind, version, what_it_is, when_to_use, requires, source_url (obrigatorio, http); opcionais full_name, version_year, item_count, related_standards, confidence, notes, standard_file, methodology_dir."),
+        atualizar: z.boolean().optional().describe("true para alterar entrada existente."),
+        repoRoot: z.string().optional(),
+    },
+    async (p) => {
+        const j = JSONP(p.entry, "entry");
+        if (!j.ok) return RESP({ ok: false, errors: [j.erro] });
+        return RESP(CatalogWriter.absorver(p.repoRoot ?? RAIZ(), j.v, p.atualizar ?? false));
+    }
+);
+
+server.tool(
+    "scaffold_methodology",
+    "CRIA o esqueleto de uma metodologia nova em .claude/methodologies/<id>/. Metodologia nova e EXTENSAO pelo RV-11: exige protocolo proprio TRAVADO, que precisa existir no disco, e exige que cada padrao declarado ja exista em .claude/standards/. Escreve so esqueleto com [TBD] (RV-03) — nunca conteudo inventado.",
+    {
+        methodology: z.string().describe("JSON: id (kebab-case), name, review_type, description, standards[] (ids de .claude/standards/), question_frameworks[], protocol_path, protocol_locked."),
+        repoRoot: z.string().optional(),
+    },
+    async (p) => {
+        const j = JSONP(p.methodology, "methodology");
+        if (!j.ok) return RESP({ ok: false, errors: [j.erro] });
+        return RESP(MethodologyWriter.criar(p.repoRoot ?? RAIZ(), j.v));
+    }
+);
+
+server.tool(
+    "validate_methodology",
+    "VALIDA uma metodologia existente — a verificacao que faltava para ALTERACOES. Mudar metodologia e editar spec.md/manifest.json; o controle certo e RV-11 antes e esta validacao depois. Reprova: spec declarada ausente, invariante 'always_on' sem gate que o ative (pega o DEBT-003 automaticamente), ausencia de conformance.standards (DEBT-004) e padrao declarado que nao existe como dado.",
+    {
+        methodologyId: z.string().describe("Id da pasta em .claude/methodologies/ (ex.: 'prisma-sr')."),
+        repoRoot: z.string().optional(),
+    },
+    async (p) => RESP(MethodologyWriter.validar(p.repoRoot ?? RAIZ(), p.methodologyId))
+);
+
 // ─── Start Server ─────────────────────────────────────────────
 
 
 async function main() {
+    // Guardião de completude: toda tool exposta precisa ter dono de papel (RV-06),
+    // e todo mapeamento precisa corresponder a uma tool real. Falha ruidosa no boot
+    // (vale para o modo servidor e para o modo CLI `--tool`). As tools são todas
+    // registradas em nível de módulo, então REGISTERED_TOOLS já está completo aqui.
+    AgentOrchestrator.assertGovernanceCompleteness(REGISTERED_TOOLS);
+    logger.info("MCP_SERVER", "Guardião de governança OK", {
+        governedTools: AgentOrchestrator.getGovernedTools().length,
+        registeredTools: REGISTERED_TOOLS.size,
+    });
+
     const args = process.argv;
     const toolIdx = args.indexOf("--tool");
 

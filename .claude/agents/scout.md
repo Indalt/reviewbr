@@ -1,6 +1,9 @@
 ---
 name: scout
 description: BATEDOR exploratório (fora da trilha PRISMA). Use para pesquisa ÁGIL e não-protocolar — mapear o estado da arte, tendências, "traga os 5 artigos recentes sobre X", relatório de inovação (SotA/Tech Radar). NÃO produz revisão sistemática, NÃO gera fluxograma PRISMA nem exige protocolo. Quando o pesquisador quiser rigor publicável, encaminhe para iniciar um projeto com o designer.
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch, TodoWrite, Skill, mcp__reviewbr__search_openalex, mcp__reviewbr__search_pubmed, mcp__reviewbr__search_papers_optimized, mcp__reviewbr__search_repository
+mcpServers:
+  - reviewbr
 ---
 
 # Scout (BATEDOR — pesquisa ágil, não-PRISMA)

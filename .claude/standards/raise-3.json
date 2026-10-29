@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 1,
+  "id": "RAISE-3",
+  "name": "RAISE 3",
+  "version": "4.0 (DRAFT, 23 September 2026)",
+  "version_source": "CONFIRMADO em 04/10/2026 por leitura direta da fonte oficial: PDF 'RAISE 3 - selecting and using v.4.pdf', 44 páginas, hospedado no OSF (projeto fwaud, https://osf.io/fwaud/), extraído e lido integralmente. Responsible use of AI in Evidence Synthesis (RAISE 2026) 3: Living guidance for selecting and using AI evidence synthesis tools. Autoria coletiva: Cochrane, JBI, Campbell, CEE, ICASR, NICE, IQWiG e OMS, liderada por James Thomas (EPPI Centre/UCL). DOCUMENTO VIVO E EM RASCUNHO: 'DRAFT Version 4.0: 23 September 2026', para consulta e revisão. As classificações da Tabela 2 declaram ser o estado de FEVEREIRO DE 2026 e mudam a cada versão — reassimilar quando sair a v5 é premissa, não surpresa. As 5 categorias, as 5 questões-chave e as 45 linhas da Tabela 2 são transcrição verbatim; nada foi inferido ou resumido.",
+  "titulos_oficiais": true,
+  "structure": {
+    "top_level_items": 55,
+    "checklist_lines": 55,
+    "items_with_subitems": {},
+    "note": "Não é checklist de relato: é guia de SELEÇÃO E USO. Estrutura em três blocos — 5 categorias de recomendação (C1-C5), 5 questões-chave do Responsible Handover Framework (Q1-Q5) e 45 linhas da Tabela 2 (T01-T45), cada uma com tarefa, classe de ferramenta e categoria atribuída."
+  },
+  "note": "NORMA DE USO DE IA EM SÍNTESE DE EVIDÊNCIA. Entra em conformance.standards quando a metodologia escolhida a exige — não é fonte de verdade do sistema (decisão do pesquisador em 04/10/2026, modelo B: dar-lhe esse status seria dar ao ReviewBR epistemologia própria). A CLASSIFICAÇÃO É POR TAREFA **E POR CLASSE DE FERRAMENTA**, não só por LLM: a Tabela 2 distingue rule-based, unsupervised, supervised ML, generative LLM, agentic AI, hybrid e conversational. Isso importa para o ReviewBR, que usa pelo menos quatro modos (LLM generativo, ML/aprendizado ativo, busca léxica BM25 e similaridade algorítmica). ENQUADRAMENTO DO REVIEWBR, tarefa a tarefa (leitura da norma, verificável contra o texto): deduplicação rule-based = C1; triagem priorizada sem parada antecipada = C1; rag_query, sendo BM25 léxico e não LLM, = C1; triagem e extração por LLM = C3, exigindo limiar pré-especificado e comparador; tradução automática = C2; síntese entre estudos por LLM (T32/T35) = C5, e por isso a saída da F7 não alimenta o manuscrito. SOBRE T44 (síntese agêntica ponta a ponta = C5): o texto descreve 'agentes executando passos autonomamente, resultando num relatório final que resume achados entre estudos', e cita Elicit e Perplexity. O ReviewBR não entrega relatório pronto: cada etapa encerra gravando artefato e não avança sem decisão registrada do pesquisador com contribuição específica (RV-04, implementado em ProjectStateService.podeAvancar). O enquadramento é 'ferramenta assistida com supervisão humana por etapa', e é demonstrável no dado, não afirmado em prosa.",
+  "items_are_top_level_only": false,
+  "items": [
+    {
+      "id": "C1",
+      "section": "Recommendation categories",
+      "title": "Acceptable for use",
+      "covered_by": [],
+      "text": "AI outputs may be used directly within the review workflow, if any limitations or potential biases are acknowledged and accounted for."
+    },
+    {
+      "id": "C2",
+      "section": "Recommendation categories",
+      "title": "Human verification required",
+      "covered_by": [],
+      "text": "AI outputs may be used to support review tasks but must be carefully checked by humans before use. The degree of checking required may vary, but typically this will require a human to read and possibly make amendments to the entirety of the output."
+    },
+    {
+      "id": "C3",
+      "section": "Recommendation categories",
+      "title": "Requires validation within the review",
+      "covered_by": [],
+      "text": "AI outputs may be used if their performance is explicitly evaluated within the context of the review itself and deemed adequate against a prespecified, task-specific threshold and an appropriate benchmark."
+    },
+    {
+      "id": "C4",
+      "section": "Recommendation categories",
+      "title": "Exploratory and supplementary use",
+      "covered_by": [],
+      "text": "AI outputs may be used for developing ideas or as a starting point to support understanding. All outputs should be extensively refined by human reviewers prior to use for a review task. Alternatively, outputs may be appropriate for use as an additional, supplementary approach, but without replacing established processes."
+    },
+    {
+      "id": "C5",
+      "section": "Recommendation categories",
+      "title": "Not acceptable for use",
+      "covered_by": [],
+      "text": "The current state of technology means that these AI outputs have such serious limitations, that they should not be relied upon."
+    },
+    {
+      "id": "Q1",
+      "section": "Responsible Handover Framework",
+      "title": "What is the purpose of the tool?",
+      "covered_by": [],
+      "text": "What is the purpose of the tool?"
+    },
+    {
+      "id": "Q2",
+      "section": "Responsible Handover Framework",
+      "title": "Is the tool validated and performing sufficiently well for use?",
+      "covered_by": [],
+      "text": "Is the tool validated and performing sufficiently well for use?"
+    },
+    {
+      "id": "Q3",
+      "section": "Responsible Handover Framework",
+      "title": "Does the team have the expertise and resource to use the AI tool effectively, and is the usability acceptable?",
+      "covered_by": [],
+      "text": "Does the team have the expertise and resource to use the AI tool effectively, and is the usability acceptable?"
+    },
+    {
+      "id": "Q4",
+      "section": "Responsible Handover Framework",
+      "title": "Is there sufficient transparency around licenses and other available documentation?",
+      "covered_by": [],
+      "text": "Is there sufficient transparency around licenses and other available documentation?"
+    },
+    {
+      "id": "Q5",
+      "section": "Responsible Handover Framework",
+      "title": "Is the level of human oversight appropriate?",
+      "covered_by": [],
+      "text": "Is the level of human oversight appropriate?"
+    },
+    {
+      "id": "T01",
+      "section": "Table 2 — Developing a protocol",
+      "title": "Question formulation [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C2.",
+      "recommendation": "C2",
+      "tool_class": "Generative LLMs",
+      "task": "Question formulation"
+    },
+    {
+      "id": "T02",
+      "section": "Table 2 — Developing a protocol",
+      "title": "Exploring the literature [Unsupervised]",
+      "covered_by": [],
+      "text": "Tool class: Unsupervised. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Unsupervised",
+      "task": "Exploring the literature"
+    },
+    {
+      "id": "T03",
+      "section": "Table 2 — Developing a protocol",
+      "title": "Estimating the resource requirement [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Rule-based",
+      "task": "Estimating the resource requirement"
+    },
+    {
+      "id": "T04",
+      "section": "Table 2 — Developing a protocol",
+      "title": "Drafting [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C2.",
+      "recommendation": "C2",
+      "tool_class": "Generative LLMs",
+      "task": "Drafting"
+    },
+    {
+      "id": "T05",
+      "section": "Table 2 — The Search",
+      "title": "Scoping the literature [Unsupervised]",
+      "covered_by": [],
+      "text": "Tool class: Unsupervised. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Unsupervised",
+      "task": "Scoping the literature"
+    },
+    {
+      "id": "T06",
+      "section": "Table 2 — The Search",
+      "title": "Scoping the literature [Agentic AI]",
+      "covered_by": [],
+      "text": "Tool class: Agentic AI. Recommendation: C4.",
+      "recommendation": "C4",
+      "tool_class": "Agentic AI",
+      "task": "Scoping the literature"
+    },
+    {
+      "id": "T07",
+      "section": "Table 2 — The Search",
+      "title": "Search strategy development [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Rule-based",
+      "task": "Search strategy development"
+    },
+    {
+      "id": "T08",
+      "section": "Table 2 — The Search",
+      "title": "Search strategy development [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C4.",
+      "recommendation": "C4",
+      "tool_class": "Generative LLMs",
+      "task": "Search strategy development"
+    },
+    {
+      "id": "T09",
+      "section": "Table 2 — The Search",
+      "title": "Search strategy development [Agentic AI]",
+      "covered_by": [],
+      "text": "Tool class: Agentic AI. Recommendation: C4.",
+      "recommendation": "C4",
+      "tool_class": "Agentic AI",
+      "task": "Search strategy development"
+    },
+    {
+      "id": "T10",
+      "section": "Table 2 — The Search",
+      "title": "Citation chasing [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Rule-based",
+      "task": "Citation chasing"
+    },
+    {
+      "id": "T11",
+      "section": "Table 2 — The Search",
+      "title": "Citation retrieval [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Rule-based",
+      "task": "Citation retrieval"
+    },
+    {
+      "id": "T12",
+      "section": "Table 2 — The Search",
+      "title": "Citation retrieval [Agentic AI]",
+      "covered_by": [],
+      "text": "Tool class: Agentic AI. Recommendation: C4.",
+      "recommendation": "C4",
+      "tool_class": "Agentic AI",
+      "task": "Citation retrieval"
+    },
+    {
+      "id": "T13",
+      "section": "Table 2 — The Search",
+      "title": "Query translation [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C2.",
+      "recommendation": "C2",
+      "tool_class": "Rule-based",
+      "task": "Query translation"
+    },
+    {
+      "id": "T14",
+      "section": "Table 2 — The Search",
+      "title": "Query translation [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C2.",
+      "recommendation": "C2",
+      "tool_class": "Generative LLMs",
+      "task": "Query translation"
+    },
+    {
+      "id": "T15",
+      "section": "Table 2 — The Search",
+      "title": "Query validation [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Rule-based",
+      "task": "Query validation"
+    },
+    {
+      "id": "T16",
+      "section": "Table 2 — The Search",
+      "title": "Duplicate removal [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Rule-based",
+      "task": "Duplicate removal"
+    },
+    {
+      "id": "T17",
+      "section": "Table 2 — Screening for relevance",
+      "title": "Study selection [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Rule-based",
+      "task": "Study selection"
+    },
+    {
+      "id": "T18",
+      "section": "Table 2 — Screening for relevance",
+      "title": "Supervised prioritised screening algorithms without early stopping [Supervised ML]",
+      "covered_by": [],
+      "text": "Tool class: Supervised ML. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Supervised ML",
+      "task": "Supervised prioritised screening algorithms without early stopping"
+    },
+    {
+      "id": "T19",
+      "section": "Table 2 — Screening for relevance",
+      "title": "Supervised prioritised screening algorithms where early stopping is used [Supervised ML]",
+      "covered_by": [],
+      "text": "Tool class: Supervised ML. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Supervised ML",
+      "task": "Supervised prioritised screening algorithms where early stopping is used"
+    },
+    {
+      "id": "T20",
+      "section": "Table 2 — Screening for relevance",
+      "title": "Supervised machine learning [Supervised ML]",
+      "covered_by": [],
+      "text": "Tool class: Supervised ML. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Supervised ML",
+      "task": "Supervised machine learning"
+    },
+    {
+      "id": "T21",
+      "section": "Table 2 — Screening for relevance",
+      "title": "Study selection [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Generative LLMs",
+      "task": "Study selection"
+    },
+    {
+      "id": "T22",
+      "section": "Table 2 — Quality assessment",
+      "title": "Reporting quality [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Rule-based",
+      "task": "Reporting quality"
+    },
+    {
+      "id": "T23",
+      "section": "Table 2 — Quality assessment",
+      "title": "Reporting quality [Supervised ML]",
+      "covered_by": [],
+      "text": "Tool class: Supervised ML. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Supervised ML",
+      "task": "Reporting quality"
+    },
+    {
+      "id": "T24",
+      "section": "Table 2 — Quality assessment",
+      "title": "Risk of bias assessment [Supervised ML]",
+      "covered_by": [],
+      "text": "Tool class: Supervised ML. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Supervised ML",
+      "task": "Risk of bias assessment"
+    },
+    {
+      "id": "T25",
+      "section": "Table 2 — Quality assessment",
+      "title": "Risk of bias assessment [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Generative LLMs",
+      "task": "Risk of bias assessment"
+    },
+    {
+      "id": "T26",
+      "section": "Table 2 — Data extraction",
+      "title": "Named entity extraction [Supervised ML]",
+      "covered_by": [],
+      "text": "Tool class: Supervised ML. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Supervised ML",
+      "task": "Named entity extraction"
+    },
+    {
+      "id": "T27",
+      "section": "Table 2 — Data extraction",
+      "title": "Named entity extraction [Hybrid]",
+      "covered_by": [],
+      "text": "Tool class: Hybrid. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Hybrid",
+      "task": "Named entity extraction"
+    },
+    {
+      "id": "T28",
+      "section": "Table 2 — Data extraction",
+      "title": "Named entity extraction [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Generative LLMs",
+      "task": "Named entity extraction"
+    },
+    {
+      "id": "T29",
+      "section": "Table 2 — Data extraction",
+      "title": "Quantitative extraction [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Generative LLMs",
+      "task": "Quantitative extraction"
+    },
+    {
+      "id": "T30",
+      "section": "Table 2 — Data extraction",
+      "title": "Image extraction [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C2.",
+      "recommendation": "C2",
+      "tool_class": "Generative LLMs",
+      "task": "Image extraction"
+    },
+    {
+      "id": "T31",
+      "section": "Table 2 — Data synthesis",
+      "title": "Quantitative analysis [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Rule-based",
+      "task": "Quantitative analysis"
+    },
+    {
+      "id": "T32",
+      "section": "Table 2 — Data synthesis",
+      "title": "The use of LLMs to synthesise (as opposed to summarise) results across studies [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C5.",
+      "recommendation": "C5",
+      "tool_class": "Generative LLMs",
+      "task": "The use of LLMs to synthesise (as opposed to summarise) results across studies"
+    },
+    {
+      "id": "T33",
+      "section": "Table 2 — Data synthesis",
+      "title": "Code drafting and troubleshooting [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C2.",
+      "recommendation": "C2",
+      "tool_class": "Generative LLMs",
+      "task": "Code drafting and troubleshooting"
+    },
+    {
+      "id": "T34",
+      "section": "Table 2 — Data synthesis",
+      "title": "Qualitative analysis [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C3.",
+      "recommendation": "C3",
+      "tool_class": "Generative LLMs",
+      "task": "Qualitative analysis"
+    },
+    {
+      "id": "T35",
+      "section": "Table 2 — Data synthesis",
+      "title": "The use of LLMs to synthesise (as opposed to summarise) results across studies [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C5.",
+      "recommendation": "C5",
+      "tool_class": "Generative LLMs",
+      "task": "The use of LLMs to synthesise (as opposed to summarise) results across studies"
+    },
+    {
+      "id": "T36",
+      "section": "Table 2 — Data synthesis",
+      "title": "Visual synthesis [Rule-based software]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based software. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Rule-based software",
+      "task": "Visual synthesis"
+    },
+    {
+      "id": "T37",
+      "section": "Table 2 — Certainty of evidence assessment",
+      "title": "Certainty of evidence assessment [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Rule-based",
+      "task": "Certainty of evidence assessment"
+    },
+    {
+      "id": "T38",
+      "section": "Table 2 — Certainty of evidence assessment",
+      "title": "Certainty of evidence assessment [Supervised ML]",
+      "covered_by": [],
+      "text": "Tool class: Supervised ML. Recommendation: C4.",
+      "recommendation": "C4",
+      "tool_class": "Supervised ML",
+      "task": "Certainty of evidence assessment"
+    },
+    {
+      "id": "T39",
+      "section": "Table 2 — Text Generation",
+      "title": "Drafting [Rule-based]",
+      "covered_by": [],
+      "text": "Tool class: Rule-based. Recommendation: C1.",
+      "recommendation": "C1",
+      "tool_class": "Rule-based",
+      "task": "Drafting"
+    },
+    {
+      "id": "T40",
+      "section": "Table 2 — Text Generation",
+      "title": "Drafting [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C4.",
+      "recommendation": "C4",
+      "tool_class": "Generative LLMs",
+      "task": "Drafting"
+    },
+    {
+      "id": "T41",
+      "section": "Table 2 — Text Generation",
+      "title": "Revisions [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C2.",
+      "recommendation": "C2",
+      "tool_class": "Generative LLMs",
+      "task": "Revisions"
+    },
+    {
+      "id": "T42",
+      "section": "Table 2 — Text Generation",
+      "title": "Plain language summaries [Generative LLMs]",
+      "covered_by": [],
+      "text": "Tool class: Generative LLMs. Recommendation: C2.",
+      "recommendation": "C2",
+      "tool_class": "Generative LLMs",
+      "task": "Plain language summaries"
+    },
+    {
+      "id": "T43",
+      "section": "Table 2 — Text Generation",
+      "title": "Machine translation of non-English studies [Generative and other machine learning approaches]",
+      "covered_by": [],
+      "text": "Tool class: Generative and other machine learning approaches. Recommendation: C2.",
+      "recommendation": "C2",
+      "tool_class": "Generative and other machine learning approaches",
+      "task": "Machine translation of non-English studies"
+    },
+    {
+      "id": "T44",
+      "section": "Table 2 — Agentic end-to-end evidence synthesis",
+      "title": "Multiple tasks executed autonomously [Agentic AI]",
+      "covered_by": [],
+      "text": "Tool class: Agentic AI. Recommendation: C5.",
+      "recommendation": "C5",
+      "tool_class": "Agentic AI",
+      "task": "Multiple tasks executed autonomously"
+    },
+    {
+      "id": "T45",
+      "section": "Table 2 — Chatbot-enabled interaction",
+      "title": "Interacting with evidence synthesis data (e.g. in a map) using a chatbot [Conversational / Chatbot]",
+      "covered_by": [],
+      "text": "Tool class: Conversational / Chatbot. Recommendation: C4.",
+      "recommendation": "C4",
+      "tool_class": "Conversational / Chatbot",
+      "task": "Interacting with evidence synthesis data (e.g. in a map) using a chatbot"
+    }
+  ]
+}

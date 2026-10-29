@@ -1,0 +1,443 @@
+[
+ {
+  "id": "DEBT-002",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "RV-04 VENCEU: ganhou verificador determinístico em services/project_state.ts:165-188 (podeAvancar exige decisão com por='pesquisador' + contribuicao não vazia), ligado em index.ts:666 (F3) e index.ts:756 (F4). RV-03, RV-06 e RV-07 continuam sem tool: a própria tabela da skill ainda diz '.claude/skills/prisma-rigor-gates/SKILL.md:16' = 'inspeção de artefatos', ':19' = 'conduta: agente decide, tool executa', ':20' = 'conferência F1.2→F1.4'. E a linha 8 da mesma skill segue afirmando 'Rigor não é autocertificação do agente: cada gate é uma verificação determinística' — a afirmação continua maior que o código. O guardião (registry/agent_orchestrator.ts:250) só confere completude do mapa, não 'executa vs decide'.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-003",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido hoje nos dois manifests: .claude/methodologies/prisma-sr/manifest.json invariants_always_on = 8 (RV-01..RV-08) e gates = 4 (RV-01/F1, RV-02/F4, RV-05/F8, RV-08/F8); .claude/methodologies/scoping-prisma-scr/manifest.json idêntico. DEBT-047 acrescentou conformance.standards aos dois, mas não tocou em gates. RV-03, RV-04, RV-06 e RV-07 seguem declaradas 'sempre ativas' sem nada que as ative — mesmo com o RV-04 já tendo trava em código (project_state.ts:165), o manifest não a declara como gate.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-012",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "O deslocamento continua no disco. .claude/methodologies/prisma-sr/spec.md:414-417 ainda mapeia 'Financiamento→Item 24', 'Conflito de interesses→Item 25', 'Disponibilidade de dados→Item 26', 'Informações adicionais→Item 27', e :424-426 (F8.4.1/2/3)→Item 26. Os títulos oficiais em .claude/standards/prisma-2020.json contradizem: 24=Registration and protocol, 25=Support, 26=Competing interests, 27=Availability of data, code and other materials. A contaminação está no dado: item 26 ('Competing interests') tem covered_by ['F5.2.5.3','F8.3.26','F8.4.1','F8.4.2','F8.4.3'] — três subitens de disponibilidade de dados. DEBT-124 criou o falsificador (services/mapping_coherence.ts, ligado em index.ts:2696) que ACUSA isso, mas ele sinaliza e não corrige, e só roda se o chamador passar methodologyId (index.ts:2669, parâmetro opcional).",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-014",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido hoje em .claude/standards/prisma-2020.json: 48 itens, 21 sem covered_by — exatamente 10a,10b,13a-13f,16a,16b,20a-20d,23a-23d,24a-24c. Nenhum subitem por letra foi mapeado desde 25/09. Não encerra manutenção porque o sistema não afirma cobertura que não tem: check_standard_coverage REPROVA (index.ts:2688, StandardsService.checkCoverage) e a lacuna aparece. É trabalho de mapeamento da trilha, isto é, escopo.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-018",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido hoje: grep 'hooks' em .claude/settings.json devolve zero — nenhum PreToolUse configurado. AgentOrchestrator.validateToolAccess continua existindo só como definição (registry/agent_orchestrator.ts:207) e tests/governance.test.ts; controle positivo: assertGovernanceCompleteness TEM call site de runtime (index.ts:2826), logo o método de busca acha chamador quando existe. Não encerra manutenção: a fronteira de papel que vale é a do frontmatter 'tools:', imposta pelo harness, e agent_orchestrator.ts:240-249 já DECLARA isso em vez de prometer trava que não tem. O que falta (hooks) é decisão de arquitetura, não afirmação falsa.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-020",
+  "veredicto": "VENCIDO",
+  "evidencia_ainda_vale": false,
+  "porque": "Resolvido. '02_fulltext' sumiu do código — a única ocorrência hoje é o comentário services/screen.ts:298 explicando que nunca existiu. O stage agora chega ao serviço: index.ts:698 lê params.stage, :705 escolhe o insumo por estágio, :732 chama screenCandidates(records, {criteria, stage}, projectPath). E screen.ts:300-321 só anexa texto completo quando stage==='fulltext', procurando em 04_extraction/fulltext e 03_screening/fulltext; se não achar, LANÇA erro em vez de decidir por resumo. A premissa do achado venceu.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-021",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido hoje: services/database.ts:327 define updateScreening e grep -rn 'updateScreening' em src/ devolve APENAS essa linha — zero chamadores. Controle positivo: grep 'logAuditEvent(' acha chamadores reais (index.ts:597, :1010, :1073), logo o método detecta call site quando existe. services/screening_metrics.ts:71-85 segue filtrando por r.stage==='screened' e r.screening_decision, de modo que screenedRecords é sempre vazio. Encerra manutenção porque a skill screening-rules continua oferecendo get_screening_report como gate de saturação: é salvaguarda citada que NUNCA pode reprovar — o sistema afirma um controle que não exerce.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-022",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "O defeito funcional continua: services/asreview_bridge.ts:122-124 exporta CSV sem coluna de rótulo e o .asreview de saída nunca é lido (nenhuma leitura em src/). MAS a parte que mentia morreu: asreview_bridge.ts:175-196 agora responde '⚠️ Subprocesso ASReview executado — nenhuma decisão de triagem foi produzida', e a descrição da tool (index.ts:2360) abre com '⚠️ NÃO EXECUTA TRIAGEM'. Não encerra manutenção porque o que resta é tool inerte declarada como inerte — escopo, não afirmação falsa. O resíduo de log está anotado em DEBT-111.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-036",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Mesma evidência do DEBT-003, reconferida hoje: 8 invariants_always_on contra 4 gates nos dois manifests. O verificador que pega isso continua existindo e reprovando (services/maintenance_writes.ts:295-300, MethodologyWriter.validar, cujo próprio comentário diz 'Pega automaticamente o DEBT-003'). Este é o achado que mais pesa no critério: a regra que detecta o buraco só roda por validate_methodology, tool exclusiva do maintainer — a manutenção não pode se dar por encerrada com o próprio verificador dela reprovando as duas metodologias que existem.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-045",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido linha a linha hoje. .claude/methodologies/prisma-sr/spec.md:404 ainda diz 'F8.3.14 | Métodos — Certeza da evidência | Item 14' e :405 'F8.3.15 | Métodos — Registro e protocolo | Item 15'; .claude/standards/prisma-2020.json dá 14='Reporting bias assessment' e 15='Certainty assessment'. A contaminação do dado persiste: item 15 ('Certainty assessment') tem covered_by ['F0.1.4','F0.1.5','F0.2.1','F0.2.2','F0.2.3','F0.2.4','F0.2.5','F8.3.15'] — oito subitens de registro de protocolo sob o item de certeza da evidência; item 14 ('Reporting bias assessment') aponta F8.3.14, rotulado 'Certeza da evidência'. Os 6 deslocamentos continuam. O que mudou é que agora são FALSIFICÁVEIS (services/mapping_coherence.ts, index.ts:2692-2703) — o verde falso virou suspeito nomeado, mas o mapeamento errado segue no disco.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-056",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido hoje: grep -rn 'search_log_prisma_s' em src/ devolve ZERO. Controle positivo no mesmo método: 'search_history' aparece em index.ts:109 e utils/protocol_guard.ts:14 — a busca acha log quando ele existe no código. .claude/agents/librarian.md:19 continua mandando anexar linha ao CSV e .claude/skills/conduct-review/SKILL.md usa esse CSV como gate de retorno da F2. Encerra manutenção: o artefato mais auditável da revisão PRISMA-S é digitado pelo agente que será verificado por ele — autocertificação explícita, e o sistema declara ter registro de busca que nenhuma tool produz.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-060",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido hoje nos 8 frontmatters (.claude/agents/*.md linha 4): todos trazem 'Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch, TodoWrite, Skill' antes das tools mcp__reviewbr__ — inclusive os sete que proíbem gerar scripts em prosa. tests/governance.test.ts:32 segue filtrando por t.startsWith('mcp__reviewbr__'), logo nenhuma tool nativa entra na conferência de governança. Não encerra manutenção: é proibição por prosa que ninguém verifica, mas o sistema não AFIRMA impor; e o maintainer recebeu Bash/Write/WebSearch de propósito (DEBT-011). É decisão de arquitetura do pesquisador.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-094",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "Metade do §4.9 venceu. 4.9.1 (nome+versão+datas) está coberto: services/screening_audit.ts:36-45 grava model, model_pinned, temperature e timestamp por decisão, e :63-67 AVISA quando o nome é alias em vez de versão fixada. 4.9.3.2 (publicar prompts) idem: screening_audit.ts:107-108 persiste prompt_template.txt íntegro por corrida, com sha256 por decisão. Ligado de verdade em services/screen.ts:115. O mapa do RAISE 3 (src/registry/ai_use.ts, fail-closed) roda em index.ts:729 e :2511. Falta 4.9.3.1 (evidência de desempenho), 4.9.3.3 (interesses) e 4.9.3.4 (limitações) — mas screening_audit.ts:69-73 DECLARA a falta em raise_warnings, dentro do manifesto da corrida. Não encerra manutenção: o que sobra é trabalho de validação (padrão-ouro, meta de recall), e a lacuna deixou de ser silenciosa.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-096",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": false,
+  "porque": "A premissa central venceu. O achado dizia 'o sistema não sabe qual é a diretriz aplicável (DEBT-094)' — hoje sabe: .claude/standards/raise-3.json existe (22 KB, assimilado em 08/10) e src/registry/ai_use.ts classifica 11 tools por tarefa/classe/categoria com citação da linha da Tabela 2. O caso concreto que o achado usava para provar a diferença (triagem por LLM irreprodutível) foi corrigido pelo critério EXTERNO e não pelo interno: screening_audit.ts grava o que o §4.9.1 pede, não o que a auditoria interna tinha pedido. A pergunta 'o que declaramos ainda basta?' passou a ser feita, e o maintainer ganhou WebSearch/WebFetch para fazê-la. Resta cobertura de outros padrões — escopo.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-102",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido hoje: grep -rni 'ocr|tesseract|deskew|osd' em src/ devolve ZERO. Controle positivo no mesmo método: 'pdf-parse|pdfParse' acha services/batch_processor.ts:13,:80,:190,:390 e services/pdf_extractor.ts:6,:158 — a busca enxerga dependência de PDF quando existe. E services/pdf_extractor.ts:153-168 segue sem guarda de qualidade: pdfParse devolve data.text, o arquivo é escrito sem conferir tamanho, contagem de palavras ou densidade, e a linha :164 loga '✅ PDF extraído: ... (N págs, K KB)' mesmo com texto vazio. Encerra manutenção: o sistema AFIRMA extração bem-sucedida de um PDF do qual não leu uma palavra, e o .txt vazio segue para rag_index_corpus — relatório fechado sobre leitura que não houve.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-111",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "As superfícies voltadas ao pesquisador foram corrigidas, conferidas hoje: services/asreview_bridge.ts:175-196 (resumo que declara 'nenhuma decisão de triagem foi produzida'), index.ts:2360 (descrição da tool), index.ts:2374 (mensagem de não-instalado), .claude/agents/screener.md:19, .claude/skills/screening-rules/SKILL.md:40 e reviewbr/README.md:161. Nenhuma menção sobrevivente a 'Nature Machine Intelligence'. RESÍDUO REAL, e é por isso que não fecho: index.ts:2397-2408 ainda grava no audit_logs 'ASReview {versão}: {N} registros processados com elas_u4' — N é records.length, o mesmo número falso do achado — e index.ts:2412-2419 grava no log do projeto screening_method: 'asreview_ml'. A trilha de auditoria, que é justamente o que se publica, continua afirmando triagem que não houve.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-112",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Os quatro pontos continuam válidos, reconferidos hoje. (1) services/project_artifacts.ts:168-181 — writeScreening escreve em nomes FIXOS (included_ta.json / included.json / excluded_*.json), sem run_id nem sufixo: a segunda corrida sobrescreve a primeira em silêncio. (2) services/database.ts:135-141 — a tabela records segue com screening_decision e screening_reason ESCALARES, sem coluna reviewer nem run_id. (3) grep -rni 'reviewer' em src/ só acha screen.ts:324 (dentro do prompt) e comentários. (4) O kappa de services/screening_audit.ts:157-193 segue comparando duas corridas da MESMA LLM. Encerra manutenção porque o protocolo agora EXIGE declarar F4.1.2 com 'Duplo independente' entre as opções (services/project_init.ts:349) e o auditor aceita essa declaração (services/protocol_auditor.ts:161-181) — o sistema passa a chancelar um processo que é estruturalmente incapaz de executar ou representar.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-114",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "Três das quatro declarações do item 8 ganharam verificador que BLOQUEIA: services/protocol_auditor.ts:72-76 define ROTULOS_F41 = ['F4.1.2 Processo de triagem', 'F4.1.3 Ferramenta utilizada', 'Resolução de discordâncias'] e :161-181 reprova se qualquer um estiver ausente, vazio ou com [TBD], entrando no valid (:185). Os campos existem no template (project_init.ts:349-350). Venceu o 'nenhum dos quais tem verificador em código'. O que resta: F4.1.5 segue sem verificador (grep 'F4.1.5' em src/ = zero fora de comentário) e .claude/standards/prisma-2020.json item 8 continua declarando covered_by ['F4.1.2','F4.1.3','F4.1.5','F8.3.8'] — um terço da cobertura declarada sem referente. Esse resíduo é a mesma substância do DEBT-112 (kappa interavaliadores), e lá fica contado.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-121",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido hoje: a única leitura NOVA do manifest por código de execução é conformance.standards — index.ts:163-167 e services/project_init.ts:42-48 (DEBT-047/122). Nenhum serviço lê phases, gates, question_frameworks nem required_supplements; as demais ocorrências de '.claude/methodologies' em src/ são catálogo (methodology_catalog.ts:131), manutenção (maintenance_writes.ts:252,:303) e o falsificador (mapping_coherence.ts:285,:294). Quem governa a trilha continua sendo o enum ResearchType com mapMethod hardcoded (project_init.ts:52-60) e RESEARCH_TYPE_META (:118). Encerra manutenção por dois motivos somados: a skill methodology-router promete 'a metodologia é DADO — outros métodos entram como nova pasta sem tocar no núcleo', o que o código não cumpre; e isso atinge direto o trabalho do mantenedor — scaffold_methodology cria uma pasta que o runtime de revisão ignora, de modo que assimilar metodologia não muda a execução.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-130",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "O fato continua: a trilha F0-F8 é do ReviewBR e os métodos são encaixados nela — scoping-prisma-scr tem as mesmas fases do prisma-sr menos a F6, e mapMethod (services/project_init.ts:52-60) resolve método por enum, não por manifest. O mapeamento por aproximação também persiste: .claude/standards/prisma-p.json tem 31 itens, 5 sem covered_by ('1','3','5','11','15') e ZERO marcas de 'aproximação' no JSON — a aproximação que você mesmo descreveu ao mapear não está declarada no dado, só na prosa do achado. O que mudou é que a divergência deixou de ser invisível: services/mapping_coherence.ts cruza rótulo da trilha com título oficial e acusa, sem LLM. Não encerra manutenção: destino DECISAO_PESQ — é a direção 'ferramenta que veste métodos' contra 'método que veste a ferramenta', decisão sua, não defeito a corrigir. O braço executável dela é o DEBT-121.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-004",
+  "veredicto": "VENCIDO",
+  "evidencia_ainda_vale": false,
+  "porque": "A premissa ('zero resultados para version/standard/conformance nos .json de .claude/') e falsa hoje. Os 5 arquivos de .claude/standards/ (prisma-2020, prisma-p, prisma-s, prisma-scr, raise-3) trazem `version` + `version_source` com data de conferencia (ex.: prisma-2020.json:5-6 'version: 2020', 'CONFIRMADO em 24/09/2026'). Os 2 manifests declaram `conformance.standards` (.claude/methodologies/prisma-sr/manifest.json, bloco _conformance_note + conformance; idem scoping-prisma-scr). O codigo LE isso: src/services/standards.ts:114 describeStandards, :174 marca version_unverified por regex, :178-182 devolve version no CoverageReport; src/services/project_init.ts:223 e src/index.ts:158-167 derivam a frase do padrao do dado. E ha verificador: src/services/maintenance_writes.ts:329-331 reprova metodologia sem conformance.standards, exposto em validate_methodology (src/index.ts:2810, que cita DEBT-004 nominalmente).",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-007",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "A parte 'citado' continua: .claude/methodologies/prisma-sr/manifest.json, phases.F6 = {active:true, tools:[RoB2, ROBINS-I, Newcastle-Ottawa, JBI]} — quatro strings, nenhuma implementacao (grep 'JBI' em reviewbr/reviewbr-mcp/src = 1 unica ocorrencia, e e comentario em services/methodology_catalog.ts:9). A parte 'nada no sistema sabe o que e JBI' VENCEU: .claude/catalog/methodologies.json traz 10 entradas JBI (jbi-manual edicao 2024 com PDF oficial, jbi-umbrella-review, jbi-scoping-review, jbi-conqual, jbi-critical-appraisal-tools...), cada uma com source_url e confidence, e status_in_system e DERIVADO do disco (services/methodology_catalog.ts:30-38) — JBI aparece como AUSENTE porque nao tem standard_file nem methodology_dir. Consultavel por query_methodology_catalog (src/index.ts:2717). O que resta e implementar metodologia JBI = escopo, nao achado.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-008",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "Continua sem tool/servico/template de certeza da evidencia: grep 'GRADE|CERQual' em reviewbr/reviewbr-mcp/src = zero ocorrencia funcional (so o comentario de services/methodology_catalog.ts:9-10), e o manifest segue declarando phases.F7.certainty = ['GRADE','CERQual'] (.claude/methodologies/prisma-sr/manifest.json). Venceu a parte 'nomes sem conteudo': .claude/catalog/methodologies.json tem as entradas grade (GRADE Handbook 2013 -> GRADE Book 2024, 4 fontes oficiais) e grade-cerqual (serie de 7 artigos Implement Sci 2018;13(Suppl 1) + cap. 13 do Cochrane-Campbell Handbook), ambas confidence alta. Implementar a avaliacao de certeza e trabalho futuro de metodologia.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-009",
+  "veredicto": "VENCIDO",
+  "evidencia_ainda_vale": false,
+  "porque": "A evidencia era 'zero mencoes no sistema inteiro' e 'nao ha nem declaracao de que estao fora'. Hoje .claude/catalog/methodologies.json tem a entrada `mecir` (Standards do MECIR Manual, versao de agosto de 2023, source_url cochrane.org/authors/handbooks-and-manuals/mecir-manual, confidence alta) e `cochrane-handbook` (versao 6.5.1/2026, com a nota de que a pagina 'current version' ainda exibe 6.5/2024) — exatamente a declaracao que faltava, com o status AUSENTE derivado do disco (services/methodology_catalog.ts:30-38) em vez de digitado. Ha ainda mencao operacional em src/services/project_init.ts:511 ('Cochrane MECIR C40-C41'). Controle positivo da busca: o mesmo grep -rln 'Cochrane' em .claude/ devolve 8 arquivos, logo nao e falso negativo da ferramenta.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-015",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "Mapeamento confirmado hoje: as rotas de LLM seguem 4 (services/screen.ts, services/batch_processor.ts via batch_llm_extract/batch_db_screen/translate_document) e rag_query continua BM25 lexico (classificado como rule-based em src/registry/ai_use.ts:~108, nota explicita). Venceu o 'silencio': o RAISE 3 agora classifica (ai_use.ts) e screen.ts fecha trilha por decisao (screen.ts:172-175). NAO venceu, e e o que importa: nenhuma verificacao determinística confere o RESULTADO, e a propriedade fail-closed anunciada no DEBT-131 nao vale em runtime para metade das rotas generativas — grep 'checarUsoDeIA' em src/index.ts devolve SO 3 linhas (:24 import, :729 screen_candidates, :2511 batch_db_screen). O handler de batch_llm_extract (index.ts:2475-2494, C3 no mapa) e o de translate_document (index.ts:2528-2546, C2 no mapa) nunca chamam o gate: rodam sem declarar categoria e rodariam mesmo se fossem retirados do mapa. O teste de varredura confere pertencimento ao mapa, nao o call site.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-025",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "src/services/dedupe.ts:52-66 esta igual ao descrito: `doi:${record.doi.toLowerCase().trim()}` sem normalizar prefixo https://doi.org/ (:54), `title.toLowerCase().replace(/[^a-z0-9]/g,'')` apagando acento sem transliterar (:59), fallback url (:65). A interface DedupePair:8 enumera os criterios existentes — 'doi'|'titulo_ano'|'url', tres, e nenhum de similaridade. Os niveis 3 e 4 da skill continuam inexistentes. Agravante novo: src/registry/ai_use.ts:126, escrito nesta semana, declara ao RAISE 3 que a tool usa 'Hierarquia DOI > titulo+ano > similaridade' — a classificacao de conformidade afirma um nivel que o codigo nao tem, e src/index.ts:325 lista como capacidade 'Deduplicacao inteligente (DOI, autores, similaridade de titulos)'.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-026",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "grep -rn 'EX-0|EX-1' em reviewbr/reviewbr-mcp/src --include=*.ts devolve ZERO. Controle positivo exigido pela regra 3: o mesmo metodo de busca com 'RV-04' acha 6 arquivos (index.ts, maintenance_writes.ts, mapping_coherence.ts, project_state.ts, protocol_gate.ts, system_debt.ts) — a busca funciona, o zero e real. O que a triagem grava segue sendo texto livre do LLM: src/services/screen.ts:12 declara o tipo com `reasoning: string` e o prompt (screen.ts:339-345) pede so decision/reasoning, sem enum de motivo. A skill .claude/skills/screening-rules/SKILL.md continua mandando que toda exclusao receba motivo padronizado derivado de F1.3 — procedimento que o agente nao tem como cumprir, porque nao existe campo nem vocabulario onde escreve-lo.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-028",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "O nucleo vale: src/services/screen.ts:163 ainda faz `if (res.result.decision === 'YES' || === 'MAYBE') included.push(...)`, e src/services/screening_metrics.ts:77-78 e :110-112 contam included como YES||MAYBE. Nenhum gate mede taxa de MAYBE. Venceu o adjetivo 'silenciosamente': screen.ts:156-162 agora registra o comportamento em comentario e a trilha conta MAYBE separado de YES; screening_metrics.ts:82-84 e :116-118 calculam `uncertain`, e o relatorio imprime as duas linhas — '| Incluidos (YES/MAYBE) |' e '| Incertos (MAYBE) |' (screening_metrics.ts:248-250). Ou seja, a incerteza nao desaparece mais do registro; o que resta e a REGRA de inclusao, que e decisao metodologica do pesquisador e nao uma promessa descumprida do sistema.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-030",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Reli os quatro handlers inteiros em src/index.ts:2453-2546: batch_keyword_screen (:2453), batch_llm_extract (:2475), batch_db_screen (:2497) e translate_document (:2528) — nenhum chama logAuditEvent nem logToLocalProject, e os quatro descartam o array `results`, devolvendo so `summary` (:2467, :2489, :2518, :2540). Controle positivo: no mesmo arquivo, retrieve_fulltext_byos (index.ts:1735) e o handler do OpenAlex (index.ts:1771) chamam o log — a busca por essas chamadas funciona. Duas das quatro DECIDEM; batch_db_screen ganhou o aviso RAISE C3 (index.ts:2511) que diz 'EXIGE VALIDACAO DENTRO DA REVISAO' sobre uma corrida que nao deixa nenhum rastro para validar — a declaracao ficou mais forte que o registro.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-039",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Mudou a numeracao, nao o comportamento: src/index.ts:1659-1660 segue `const shouldWrite = params.write !== false; if (shouldWrite) computer.writeFlow(projectDir, result.computed);` sem nenhuma consulta a `result.validation.valid`, embora o campo exista (src/services/flow_computer.ts:31 e :133-134 `const validation = this.validator.validate(computed)`). As edicoes manuais continuam virando so aviso acumulado (flow_computer.ts:120-127) e os clamps por Math.max permanecem em :83, :89, :92 e :95. O manifest segue prometendo o contrario: gate F4 { rule: RV-02, tool: compute_flow_counts, blocks: 'escrita manual de contagens no prisma_flow.json' } — e a propria descricao da tool (index.ts:1642) diz 'valida a aritmetica (RV-05)' e 'Grava o arquivo recomputado quando write=true', sem ligar uma coisa a outra.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-040",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "O nucleo vale: grep 'fonte_repositorio|url_hospedagem' em src/services/methodology_auditor.ts devolve ZERO (as unicas ocorrencias no src/ sao services/rag_lexical.ts:18-19,41-42,95,113-114,224-225 e services/scihub_bridge.ts:73-74 — controle positivo de que a busca acha os campos onde eles existem). checkTransparencyAudit (methodology_auditor.ts:398-415) continua conferindo r.audit, r.audit.searchQueryUsed, r.audit.provenanceSource e r.audit.methodology, campos diferentes dos que o gate RV-08 nomeia no manifest, e o resultado segue sendo um check com icone (:402-406), nunca bloqueio. Venceu so a observacao lateral sobre o export: src/index.ts:859 e :882+ agora validam o funil no export_dataset — mas e RV-05, aritmetica; a proveniencia (RV-08) continua sem validacao em qualquer caminho de export.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-042",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Intacto. grep -rn 'ProtocolGuard|protocol_guard' em reviewbr/reviewbr-mcp/src --include=*.ts devolve exatamente 2 linhas, ambas dentro da propria definicao: src/utils/protocol_guard.ts:6 (comentario) e :9 (export class). Nenhum call site. Os dois caminhos que escrevem o protocolo seguem por fora: src/index.ts:1568 `fs.writeFileSync(protocolPath, content, 'utf-8')` dentro da propria tool que trava o protocolo (ela le em :1564 e sobrescreve em :1568), e src/services/project_init.ts:255 `fs.writeFileSync(protocolPath, protocol, 'utf8')`. Os quatro CRITICAL_FILES declarados — protocol.md, registration.json, incident_log.md, search_history.json — nao tem protecao nenhuma contra sobrescrita.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-054",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido por contagem hoje, nao por leitura: src/services/standards.ts:150 segue `const linhas = std.items.filter((i) => !i.has_subitems)` e o covered_by dos cabecalhos nunca e lido (checkCoverage, :143-190). Rodando sobre .claude/standards/prisma-2020.json: os 6 cabecalhos carregam 2+7+22+1+2+5 = 39 referencias da trilha (item 10 -> F5.2.2.3/F8.3.10; item 13 -> 7; item 16 -> 22, entre elas F2.1.3.1, F3.1.6, F3.1.7; item 20 -> 1; item 23 -> 2; item 24 -> 5) e os 42 itens-linha incluem 21 orfaos: exatamente 10a,10b,13a-13f,16a,16b,20a-20d,23a-23d,24a-24c. O numero bate com o achado. Consequencia direta para a revisao de manutencao: check_standard_coverage (index.ts:2664) reprova o PRISMA 2020 em 21/42 enquanto 39 mapeamentos existem — a medida de cobertura de padrao, que e um dos produtos do agente de manutencao, esta errada nos dois sentidos.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-058",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "O codigo continua so forward: src/services/snowball.ts:70-73 traz agora um comentario explicito ('Backward snowballing (referencias) NAO e implementado aqui — segue como estava (so forward/citacoes)') e o unico fetch e this.fetchCitations(work.id) (:74). A declaracao da tool FOI corrigida: src/index.ts:817 agora diz 'Expande a busca via Snowballing (Citacoes via OpenAlex)' — sumiu o 'e Referencias'. Mas a afirmacao sobrevive em dois lugares que o pesquisador le: src/index.ts:339, na lista de capacidades devolvida por tipo de pesquisa, ainda anuncia 'Snowball search (forward/backward via OpenAlex/Crossref)'; e .claude/agents/librarian.md:24-25 ainda manda 'puxe referencias apenas das sementes'. Duas linhas de texto; o resto do achado virou escopo declarado.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-062",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "grep -rni 'consent' em reviewbr/reviewbr-mcp/src --include=*.ts devolve ZERO; controle positivo: 'BYOS' no mesmo escopo acha 3 arquivos (index.ts, registry/agent_orchestrator.ts, services/scihub_bridge.ts), logo a busca funciona. O estado e o descrito: src/index.ts:1725 mantem a trava como frase ('SO chame apos sim EXPLICITO do pesquisador — NUNCA automatico'), o schema em :1727-1728 tem apenas { doi, projectPath }, e o log de :1735-1737 grava doi/success/acquisition:'BYOS'/error — nenhum campo de consentimento. scihub_bridge.ts:73-74 registra a proveniencia 'Sci-Hub (BYOS)' no artefato, o que separa a ORIGEM, mas nada no artefato distingue o caso consentido do nao consentido. A unica guarda que roda antes e checkDesignGuardrail (index.ts:1731), que e sobre desenho de pesquisa, nao sobre consentimento.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-063",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Reli o manifest inteiro: .claude/methodologies/prisma-sr/manifest.json mantem phases.F6 = { name: 'Risco de vies', active: true, tools: ['RoB2','ROBINS-I','Newcastle-Ottawa','JBI'] } e a lista `gates` continua com 4 entradas, todas F1/F4/F8 (RV-01, RV-02, RV-05, RV-08) — nenhuma de F6. No codigo nao existe tool de risco de vies: grep 'RoB2|ROBINS|Newcastle' em reviewbr/reviewbr-mcp/src acha so src/index.ts:343, que e a lista `cannot` ('Avaliacao de risco de vies (RoB2, Newcastle-Ottawa) — requer julgamento humano'). Ou seja, o mesmo sistema declara F6 ativa com quatro ferramentas no manifest e declara nao fazer F6 na capacidade — as duas afirmacoes coexistem, e a fase ativa nao tem gate algum por cima do julgamento que mais afeta a conclusao da revisao.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-010",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": false,
+  "porque": "A premissa literal ('zero mencoes') VENCEU. Hoje, 08/10: .claude/catalog/methodologies.json:151-162 e :169-180 trazem duas entradas EQUATOR com o mecanismo de descoberta inteiro apurado (feed RSS /reporting-guidelines/feed/ paginavel, sitemap wp-sitemap-posts-eq_guidelines-1.xml com lastmod para detectar REVISAO, 707 guidelines como controle positivo, e a restricao do robots.txt a respeitar); o catalogo e lido por query_methodology_catalog (services/methodology_catalog.ts:93-115); .claude/agents/maintainer.md:4 ja concede WebSearch/WebFetch (DEBT-011) e :141-142 manda consultar a EQUATOR. O que CONTINUA aberto e so a automacao: grep -rniI equator em todo o repo (fora node_modules/.git) nao devolve UMA linha de reviewbr/reviewbr-mcp/src/ — nenhum poll, nenhum diff de lastmod. Controle positivo do metodo: o mesmo grep por 'prisma-s' devolve dezenas de arquivos.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-016",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Confirmado linha a linha em services/change_validator.ts (arquivo inteiro, 267 linhas): grep por existsSync|fs.|readFile|diff|git devolve UMA ocorrencia, a declaracao do campo na linha 43 (targets: z.array(z.string()).default([])). validate() :114-177 so confere preenchimento de campo por tipo; validateRaw() :251-267 so desserializa. index.ts:2562-2607 nao le disco nenhum alem do backlog. MITIGACAO PARCIAL desde 25/09: checkOrder (:203-241), chamado em index.ts:2591 com SystemDebtService.probe(raizRepo), confere o campo 'addresses' contra o system_debt.json REAL — reprova id inexistente (:222-223) e pre-requisito ABERTO/EM_CURSO (:232-237). Ou seja, uma parte da proposta ja e cruzada com dado de disco; 'targets' nao.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-031",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Intacto. services/rag_lexical.ts:38-45 — RagQueryHit segue com text, study_id, fonte_repositorio, url_hospedagem, section e score, sem pagina; RagChunk :15-22 tambem nao tem; chunkText :60-82 divide por paragrafo e so rastreia heading (markdown/ALL-CAPS), sem marcacao de pagina. Do outro lado, .claude/skills/evidence-reading/SKILL.md:14 segue mandando 'cada afirmacao com citacao [study_id, p.X]', :23 repete 'com pagina', e a propria descricao da skill (:3) promete evidencia 'rastreavel a estudo e pagina'. Conferi se o dado existe antes na cadeia: services/pdf_extractor.ts:161 so grava 'Pages: ${data.numpages}' no cabecalho do texto achatado — numero total de paginas, nao offset por trecho. Nao ha pagina em lugar nenhum do caminho.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-043",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "A reapuracao de 04/10 segue exata hoje, inclusive depois dos 28 testes novos. tests/ tem 25 arquivos; grep -rln 'FlowComputer|flow_computer' em tests/ = ZERO e grep -rln 'checkDesignGuardrail|guardrail' = ZERO. Os dois existem e sao muito chamados: services/flow_computer.ts:53 (class FlowComputer) e index.ts:192 (checkDesignGuardrail), com 19 ocorrencias em index.ts (chamadas em :577, :792, :827, :943 e seguintes). CONTROLE POSITIVO do metodo, no mesmo comando: 'ProtocolGate' aparece em tests/protocol_gate.test.ts, tests/append_raw_records.test.ts e tests/rv04_decisao.test.ts — logo o grep detecta cobertura quando ela existe. Os unicos vizinhos sao indiretos: tests/export_rv05.test.ts:70 so casa a MENSAGEM que cita compute_flow_counts, e tests/ai_use.test.ts:20 classifica o nome da tool.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-055",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Confirmado e ate autodocumentado. .claude/methodologies/scoping-prisma-scr/spec.md tem 32 linhas e nenhuma linha de tabela de subitem; herda por prosa (:3-4) e :29 manda usar PRISMA-ScR. CONTROLE POSITIVO: grep -c '^| F' em prisma-sr/spec.md = 196. O que MUDOU desde 25/09 e que o padrao agora existe como dado — .claude/standards/prisma-scr.json, 22 itens, versao 2018 com citacao Tricco et al. Ann Intern Med 2018;169:467-473 — e o 'note' desse arquivo diz, literalmente, que covered_by de TODOS os 22 esta vazio DE PROPOSITO e remete a este achado. Verifiquei: 0 de 22 itens tem covered_by. O sistema, porem, NAO mente sobre isso: StandardsService.checkCoverage (services/standards.ts:153-186) marca os 22 como orfaos, devolve valid:false e a frase 'A revisao nao pode declarar aderencia ao padrao inteiro'; renderChecklist :237 imprime '**[SEM COBERTURA]**'.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-070",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "A formulacao reapurada de 04/10 segue valendo. grep por 'gates' em reviewbr-mcp/src/ hoje devolve so comentarios (index.ts:874, change_validator.ts:51, project_state.ts:8, protocol_auditor.ts:81,:101) e UM leitor real: services/maintenance_writes.ts:319-327 e :377, dentro de validate_methodology — e o que esse leitor faz e cruzar gates[].rule com invariants_always_on para reprovar invariante sem gate, nada que ligue a declaracao a tool que a cumpre. O manifest de scoping declara 4 gates (submit_protocol_for_approval, compute_flow_counts, validate_prisma_flow, audit_methodology) e o campo 'tool' de cada um nunca e conferido contra as tools registradas: um manifest poderia nomear uma tool inexistente e passar. CONTROLE POSITIVO: o mesmo metodo acha a leitura real de .claude/standards/ em services/standards.ts:86-91.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-077",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Literalmente intacto, linha por linha. services/repository_healer.ts:18 — const brokenRepos = catalog.filter(r => !r.access?.oaiPmh?.available || !r.access?.oaiPmh?.endpoint); :19-20 — se nenhum esta marcado quebrado, devolve '✅ **Diagnostico:** Todos os repositorios OAI-PMH no catalogo estao ativos e operantes. Nada a consertar.' antes de qualquer fetch (o primeiro fetch do arquivo so aparece em :37, dentro do laco sobre brokenRepos). :87 fs.writeFileSync sobre o proprio catalogo, sem backup e sem dry-run. E o modo de falha que a RV-09 cataloga, dentro de uma tool: afirmacao de saude que a funcao nao mediu.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-093",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Vale, com as linhas deslocadas pelas sessoes recentes. index.ts:593 'if (projectId) {' e :595 'if (params.projectPath) appendRawRecords(...)' em search_papers_optimized; :1069/:1071 em search_pubmed; :1285/:1287 em search_repository. Nos tres, projectId vem de dbService.findProjectByPath (:589, :1065, :1281): projeto que existe em disco e nao no SQLite nao grava NADA em 01_raw, mesmo com projectPath valido. CONTRASTE que serve de controle positivo e de modelo pronto: as duas tools de importacao ja foram consertadas pelo DEBT-086 — index.ts:963-972 (import_dataset_ris) e :1019-1030 (import_bvs_export) chamam appendRawRecords FORA do if, com try/catch e aviso ao usuario ('O funil PRISMA nao vai conta-los ate isso ser corrigido'). A mesma correcao nunca chegou as tres de busca.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-105",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "Reexecutei a varredura hoje sobre .claude/maintenance/system_debt.json (132 achados), mesmo padrao /scratchpad|AppData.{1,3}Local.{1,3}Temp|\\/tmp\\//i nos campos evidence/reproduction/location/resolution/context: continuam 6 achados com reproduction apontando para o scratchpad (067, 068, 069, 071, 072, 073), mas a contagem de ABERTOS caiu de 3 para 2 — DEBT-072 agora esta RECUSADO; seguem abertos e de tipo CORRECAO so DEBT-071 e DEBT-073. A pasta citada nao existe neste PC: ls de .../27fac9ba-.../scratchpad/aud devolve 'No such file or directory' (a raiz scratchpad/ existe e tem outros arquivos — logo nao e falso negativo de caminho). E a verificacao segue sendo de presenca, nao de existencia: services/maintenance_writes.ts:111 e services/system_debt.ts:227 so testam !reproduction.trim().",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-106",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Reconferido hoje: TESSDATA_PREFIX='C:/Users/alqui/tessdata' nos mesmos 6 (controle_ocr.py:8, varre_almanaque.py:12, varre_alm_v3.py:13, varre_anuncio.py:12, varre_jornais_mdt.py:10, varre_pdfs.py:9) e BASE/INV fixados no projeto cajuina em 9 scripts + controle_ocr.py:12. Os dois caminhos seguem inservíveis: C:/Users/alqui/tessdata existe VAZIA (ls -a so devolve . e ..) e C:/reviewbr/old/curso_alquimista/01_masterclass_historia/cajuina NAO existe — AJUSTE a evidencia original: C:/reviewbr/old/curso_alquimista existe, o que nao existe e o subcaminho. Nada em reviewbr/reviewbr-mcp/src/ referencia esses scripts (grep por codigo_origem|varre_|controle_ocr = zero; controle positivo: grep 'import' em index.ts = 68).",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-110",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Intacto. index.ts:468-479 — assess_research_design recebe intent/area/researchType, detecta o tipo (detectResearchType, :484), devolve meta, designAdvice (:488) e, agora, o padrao derivado do dado (:511, DEBT-122) — nenhuma pergunta sobre viabilidade, existencia de literatura ou destinatario do resultado. grep -rniE 'viabilidade|viavel|feasib|busca.piloto|pilot' em .claude/agents, .claude/skills, .claude/methodologies e reviewbr-mcp/src devolve exatamente 3 linhas, todas do piloto do FORMULARIO de extracao (skills/extraction-form/SKILL.md:8 e prisma-sr/spec.md:239 e :245) — o controle positivo do metodo, que prova que o grep acha quando existe. Nenhuma etapa antes do F0.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-063",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido hoje: .claude/methodologies/prisma-sr/manifest.json ainda tem phases.F6 = {active:true, tools:[RoB2,ROBINS-I,Newcastle-Ottawa,JBI]} e a lista `gates` continua com exatamente 4 entradas (F1/RV-01, F4/RV-02, F8/RV-05, F8/RV-08) — nenhuma de F6. .claude/agents/analyst.md:17 segue mandando 'avalie risco de vies com a ferramenta declarada (RoB2/ROBINS-I/Newcastle-Ottawa/JBI), com julgamento e justificativa por dominio'. Controle positivo da busca: grep por 'rob2|robins|newcastle|risk_of_bias' em src/ ACHA as mencoes de prosa (index.ts:299, :343, :2717) e methodology_catalog.ts:44 — logo o metodo detecta o termo quando ele existe; o que nao existe e tool nenhuma. NAO encerra manutencao: o sistema DECLARA essa limitacao ao pesquisador no proprio diagnostico de design — index.ts:343 lista em `cannot`: 'Avaliacao de risco de vies (RoB2, Newcastle-Ottawa) — requer julgamento humano'. Ou seja, nao afirma o que nao cumpre; e trabalho futuro (implementar a fase), que o pesquisador ja classificou como escopo.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-066",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "A Camada 3 VENCEU: .claude/skills/prisma-rigor-gates/SKILL.md:35-43 nao diz mais 'confira os checklists item a item' — hoje manda 'chame check_standard_coverage para cada padrao — nao confira de olho: e a verificacao deterministica', com valid=false bloqueando. A Camada 2 CONTINUA ABERTA: SKILL.md:24 ainda afirma 'O gate de cada fase confere que todos os subitens marcados obrigatorios (OK) estao preenchidos ou explicitamente [TBD]' e lista F0..F8 subitem a subitem, e nao existe verificador disso. Controle positivo: grep por 'subitem|subitens|completude' em src/ ACHA services/mapping_coherence.ts e services/standards.ts:153 (checkCoverage) — o metodo encontra servico de verificacao quando ele existe; o que nao aparece e nenhum que confira os artefatos DE UM PROJETO contra os subitens obrigatorios da spec. ENCERRA: a skill de gates e o instrumento que define o que e rigor neste sistema, e abre (SKILL.md:8) com 'cada gate e uma verificacao deterministica ... A conferencia tem tres camadas, todas obrigatorias'. Uma das tres e promessa sem codigo — o sistema afirma uma verificacao que nao cumpre, e e contra essa declaracao que o proprio agente de manutencao audita.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-071",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Codigo inalterado. services/flow_computer.ts:89-96 continua DERIVANDO retrieved_fulltext/fulltext_assessed/included pelas identidades F8.1.6/8/10, e a linha 133 (`this.validator.validate(computed)`) valida esses mesmos numeros contra as mesmas identidades — tautologia. A unica checagem independente, includedCrossCheck (flow_computer.ts:112-117, conta 03_screening/included.json), NAO entra em validation.valid: a linha 134 devolve os dois como campos irmaos. E a gravacao em src/index.ts:1669-1670 segue `const shouldWrite = params.write !== false; if (shouldWrite) computer.writeFlow(...)` — sem consultar result.validation.valid nem includedCrossCheck.matches. ENCERRA: compute_flow_counts e o gate declarado do RV-02 no manifest (gates[1]) e na skill de rigor (SKILL.md:15). Ele devolve validation {valid:true} e grava o prisma_flow.json enquanto a unica verificacao independente reprova — e literalmente o sistema afirmar o que nao cumpre, no numero mais publicavel da revisao.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-073",
+  "veredicto": "VENCIDO",
+  "evidencia_ainda_vale": false,
+  "porque": "A premissa morreu no codigo. services/project_state.ts:102-122: `patch` le o estado e, se nao existir, LANCA — 'project_state.json ausente ou ilegivel ... method, framework e tipo de revisao sao declarados pelo pesquisador em plan_research_protocol. Inventa-los fabricaria a metodologia da revisao (RV-03)'. O `?? this.init(projectDir, {method:'prisma-sr', framework:'PICOS', ...})' citado na evidencia nao existe mais em lugar nenhum do arquivo. O call-site segue o mesmo (index.ts:1570, `ProjectStateService.patch(projectDir, {status:'LOCKED', phase:'F2'})`), mas agora ele nao pode inventar: sem estado, falha. Resolvido por premissa vencida, nao por recusa. Observacao lateral (nao e este achado): a excecao sobe sem try/catch no handler de submit_protocol_for_approval, depois de o protocol.md ja ter sido reescrito para [LOCKED] em index.ts:1568 — vale como achado novo se alguem quiser registrar, mas o DEBT-073 como escrito esta fechado.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-085",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Inalterado. src/index.ts:107 ainda e `const logDir = path.join(process.cwd(), projectPath, 'logs')`, sem path.isAbsolute, e o catch de :122-124 so faz console.error — falha silenciosa. Controle positivo de que a correcao existe e nao foi aplicada aqui: services/project_artifacts.ts:36-50 (`resolveDir`) ja trata o caso — `return path.isAbsolute(projectPath) ? projectPath : path.join(process.cwd(), projectPath)` — e esta importado em index.ts:32; logToLocalProject simplesmente nao o usa. ENCERRA: logToLocalProject e o unico registro local de busca das tools que o chamam (logs/search_history.json, index.ts:109) e a skill prisma-s-logging abre com 'Toda busca deixa rastro reproduzivel. Sem registro, a busca nao aconteceu'. Com projectPath absoluto — a forma que o proprio guardrail aceita e que index.ts usa em todo lugar — a busca retorna sucesso e o rastro nao existe. Correcao de uma linha, na mesma classe ja fechada em 7 pontos.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-087",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "A parte do SCHEMA venceu: src/index.ts:819-821 hoje tem projectPath, depth, filterKeywords e maxCandidates (a evidencia dizia 'apenas dataset'), e projectPath ja e usado para dedup real (index.ts:836, readExistingDataset). O NUCLEO continua aberto: o handler (index.ts:838-848) devolve JSON.stringify(result) e nao persiste nada. Controle positivo: `appendRawRecords(projectPath, results, 'database')` aparece 5 vezes em index.ts (:595, :967, :1025, :1071, :1287) e `appendRawRecords(..., 'other')` ZERO vezes — o mesmo metodo de busca que acha o ramo 'database' nao acha nenhum escritor do ramo 'other'. services/flow_computer.ts:73 segue esperando 01_raw/other_records.json. NAO encerra manutencao: o funil NAO mente em silencio — flow_computer.ts:64 grava a proveniencia '01_raw/other_records.json ausente -> assumido 0 (verificar — RV-03)'. A ausencia e declarada; o que falta e implementar a persistencia do braco 'outros metodos', que e escopo.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-089",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Identico ao descrito, so mudou a numeracao. src/index.ts:1196 — `fs.writeFileSync(inputPath, JSON.stringify({...data, included: results}, null, 2))` esta DENTRO do laco de lotes (:1145-1197), gravando sobre o arquivo lido em :1137-1138; `results` e preenchido por push (:1193) dentro de promessas paralelas sob Promise.all (:1195), e `recordsToProcess` aceita `data.included || data` (:1140), de modo que entrada sem a chave 'included' recebe uma chave que ela nao tinha. Depois do 1o lote o arquivo passa a conter so 10 registros. NAO encerra manutencao pelo criterio dado: e perda de dados do corpus do pesquisador, nao impedimento ao agente de manutencao nem afirmacao falsa do sistema (03_screening/audit_dataset_f4.json nao e contado pelo flow_computer). REGISTRO MESMO ASSIM: e o bug puro mais perigoso deste lote — destruicao irreversivel e silenciosa de parte do corpus incluido, sem backup e sem log.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-090",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "Duas partes da evidencia VENCERAM: o handler hoje chama o guardrail (src/index.ts:1732, checkDesignGuardrail) e deixa rastro (index.ts:1735-1737, logToLocalProject com acquisition:'BYOS'). O NUCLEO continua: a descricao em index.ts:1725 ainda diz 'SO chame apos sim EXPLICITO do pesquisador — NUNCA automatico' e 'quando o acesso aberto FALHOU', e o schema (index.ts:1727-1729) tem apenas doi e projectPath — nao existe parametro de consentimento nem checagem de que o DOI consta em 03_screening/fulltext_not_retrieved.json. ENCERRA: e exatamente a classe que o pesquisador acabou de fechar no DEBT-037 — 'a decisao e do pesquisador' vivia em comentario e virou TRAVA em project_state.ts:165-187, exigindo por:'pesquisador' + contribuicao nao vazia. Aqui o sistema registra no log 'BYOS' como se tivesse havido consentimento que ele nunca verificou, numa fronteira legal. Um campo de confirmacao, no mesmo molde de `contribuicao`, fecha.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-091",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Reconferido hoje varrendo bloco a bloco os 44 server.tool() de index.ts: seguem sem logAuditEvent E sem logToLocalProject download_and_extract_pdfs (:781), expand_search_snowball (:815), import_dataset_ris (:933), retrieve_fulltexts (:1117), get_record_metadata (:1334) e harvest_records (:1362). Controle positivo pelo mesmo metodo: import_bvs_export (:983) tem logAuditEvent, e search_pubmed (:1041), search_repository (:1209) e search_papers_optimized (:563) tem os dois — o metodo detecta registro quando existe. ENCERRA: o manifest agora DECLARA conformance.standards ['prisma-2020','prisma-s'] (DEBT-047), e a skill prisma-s-logging abre com 'Toda busca deixa rastro reproduzivel. Sem registro, a busca nao aconteceu (para fins de auditoria)'. Com seis rotas de aquisicao sem rastro nenhum — inclusive OAI-PMH em massa e todo o snowballing — o suplemento PRISMA-S so pode sair da autocertificacao do agente, que e o unico tipo de prova que este sistema diz nao aceitar. O padrao declarado nao e cumprido.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-095",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "A parte do AGENTE venceu: .claude/agents/designer.md:23 hoje cita a tool no CORPO, nao so no frontmatter — 'query_methodology_catalog (consultar metodos disponiveis/status de implementacao antes de escolher o do protocolo)'. A evidencia dizia que o grep devolvia so a linha 4 do frontmatter; devolve duas linhas agora. O NUCLEO continua: src/index.ts:245-261 segue decidindo o tipo de pesquisa por regex ('Direct match patterns' + 'Intent-based detection', caindo em 'exploratory' por default), o enum do schema (index.ts:474-477) tem 7 tipos fixos, e assess_research_design (index.ts:479-560) nao consulta o catalogo em momento nenhum — so le manifest de prisma-sr ou scoping-prisma-scr (index.ts:162). NAO encerra manutencao: o sistema nao finge saber mais do que sabe — index.ts:341-349 lista explicitamente o que NAO consegue por tipo. Fazer a escolha de metodo consultar as 107 entradas do catalogo e capacidade nova, nao defeito de afirmacao.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-100",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Reconferido hoje nos dois manifests: prisma-sr e scoping-prisma-scr declaram EXATAMENTE as mesmas 10 fases F0,F1,F2,F3,F4,F5,F5_5,F6,F7,F8, e a unica diferenca e scoping desligar F6 (active:false). Nenhuma das duas define fase fora do molde F0-F8. Os agentes continuam amarrados nominalmente: grep de 'F2..F8' da librarian 4, screener 6, extractor 4, reader 2, analyst 7 ocorrencias, e os description dos agentes trazem a fase no proprio papel (analyst.md:3 'fases F6/F7/F8'). ENCERRA: .claude/skills/methodology-router/SKILL.md:8 afirma sem ressalva 'O sistema e agnostico a metodo: os agentes sao genericos; a metodologia e dado', e :15 promete que 'outros metodos ... entram como nova pasta no mesmo formato — sem tocar no nucleo nem no MCP'. Isso e verdade para metodo em forma de revisao e falso para o resto do catalogo (F3=deduplicacao e F4=triagem nao existem em estudo de campo). O tratamento que fecha e DECLARAR o limite do agnosticismo na skill — nao implementar fase nova. Enquanto a frase ficar como esta, o sistema promete o que nao cumpre.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-101",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Confirmado hoje: `compararCorridas` existe em src/services/screening_audit.ts:161 e e exercitada em tests/screening_audit.test.ts (:97,:106,:116,:122,:127), mas grep por 'compararCorridas' em index.ts devolve ZERO — nenhuma tool a chama, logo a concordancia entre corridas nunca e medida nem reportada. Controle positivo: o mesmo grep ACHA a funcao no servico e nos testes, entao ele detecta a referencia quando ela existe. NAO encerra manutencao: o sistema ja parou de afirmar o que nao cumpre neste ponto — .claude/maintenance/PLANO_usabilidade.md:18 marca a concordancia como 'NAO feito' em texto explicito, com a correcao datada de 04/10/2026 (DEBT-109). O que resta e capacidade a construir (gravar duas corridas, DEBT-112, e expor a comparacao), ou seja, escopo. O PRINCIPIO que o achado registra — o alvo e auditabilidade e variabilidade medida, nao determinismo — ja esta assentado e nao exige codigo para valer.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-118",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Codigo inalterado e AGRAVADO em relacao ao que a evidencia descrevia. services/screening_metrics.ts:77-79 conta included como (YES || MAYBE) e :83-85 conta uncertain como (MAYBE): todo MAYBE entra nas duas. A tabela markdown (:246-248) os empilha como linhas do mesmo quadro de desfechos. O que a evidencia nao registrava e que a divulgacao parcial que existe no rotulo markdown ('Incluidos (YES/MAYBE)') SE PERDE nos dois consumidores estruturados: src/index.ts:2345 devolve `included: report.included` no bloco JSON sem qualquer qualificador, e index.ts:2333 grava no registro permanente de auditoria `${report.included} incluidos`. ENCERRA: o numero que o agente consome e que fica no audit log e um 'incluidos' inflado por MAYBE, sem aviso, e nao fecha com o included que o flow_computer deriva de 03_screening/included.json. Incluidos+Excluidos+Incertos excede o triado sempre que houver MAYBE — um quadro que nao fecha, apresentado como resultado da triagem.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-126",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Re-rodei o mesmo grep hoje em .claude/agents/: 'explique|porque|por que|justifi|fundament' da designer 0, screener 0, librarian 0, extractor 0, analyst 1, reader 1 — numeros identicos aos da evidencia. Controle positivo: o mesmo metodo acha 'EX-01' 2 vezes em .claude/skills/screening-rules/SKILL.md, logo detecta instrucao operacional quando ela existe; o que falta e especificamente a instrucao de fundamentar a etapa ao pesquisador. NAO encerra manutencao: o agente de manutencao audita, assimila metodologia, registra achado e valida alteracao sem depender disso, e o sistema nao afirma em lugar nenhum que ensina o metodo. E ganho pedagogico real para quem nao conhece a metodologia, mas e capacidade nova dos agentes de revisao — escopo, nao conformidade.",
+  "encerra_manutencao": false
+ },
+ {
+  "id": "DEBT-128",
+  "veredicto": "ABERTO",
+  "evidencia_ainda_vale": true,
+  "porque": "Conferido item a item hoje em .claude/standards/prisma-s.json. A parte confirmada na fonte foi corrigida e esta certa: version '2021' com version_source citando Rethlefsen et al. (Syst Rev 2021;10(1):39), structure com as secoes oficiais INFORMATION SOURCES AND METHODS (1-7), SEARCH STRATEGIES (8-13), PEER REVIEW (14), MANAGING RECORDS (15-16). Os TITULOS seguem os da nossa trilha, e a incoerencia agora esta explicita no proprio arquivo: S11 'Revisao por pares da estrategia' fica em SEARCH STRATEGIES, S14 'Deduplicacao' fica sob PEER REVIEW e S15 'Datas das buscas' sob MANAGING RECORDS. O campo note confessa: 'os TITULOS dos 16 itens abaixo foram extraidos da coluna de mapeamento da spec do ReviewBR, NAO do enunciado oficial'. ENCERRA, por dois motivos: (1) StandardsService.describeStandards (services/standards.ts:114-137) anuncia 'PRISMA-S 2021 (16 itens)' como assimilado, sem ressalva — o mecanismo de DEBT-122 so detecta arquivo AUSENTE (:121), nao titulo nao-oficial; (2) o falsificador do DEBT-124 confere o mapeamento de PRISMA-S contra esses titulos (mapping_coherence.ts:282-284, caminho paresDoCoveredBy), isto e, falsifica contra a nossa propria declaracao — perde todo o poder justamente neste padrao.",
+  "encerra_manutencao": true
+ },
+ {
+  "id": "DEBT-132",
+  "veredicto": "PARCIAL",
+  "evidencia_ainda_vale": true,
+  "porque": "Os TRES CAMINHOS ABERTOS continuam exatamente como apurados: services/protocol_gate.ts:101 testa `st.status !== 'LOCKED'` e :113 testa /\\[LOCKED\\]/ no markdown, sem olhar procedencia; os artefatos do funil seguem JSON comuns contados por flow_computer; os subagentes seguem com Write/Edit. O que o achado PEDIA — declarar — foi FEITO: .claude/agents/maintainer.md:24-30 traz a tabela dos tres niveis citando DEBT-132 nominalmente ('garante contra acidente e atalho' / 'torna visivel a adulteracao' / 'nao protege contra fraude deliberada ... cabe a ferramenta nao deixa-lo burlar sem saber que esta burlando'), com a analogia do caderno de laboratorio em :32-33. ENCERRA, por uma lacuna estreita: a declaracao vive SO no agente de manutencao. Controle positivo: grep por 'o que o sistema garante|nao protege|burlar' em todo .claude/ e reviewbr/ devolve UM arquivo, maintainer.md — a skill conduct-review, que e a interface viva com o pesquisador, nao a tem (grep de 'garant|protege|visiv' nela devolve so a linha 47, sobre a contribuicao do RV-04). Quem le a promessa e o pesquisador, nao o auditor. Replicar o bloco no conduct-review fecha.",
+  "encerra_manutencao": true
+ }
+]

@@ -279,7 +279,7 @@ O pesquisador quer...
 
 - Busca automatizada em 10+ bases (OpenAlex, PubMed, SciELO, CORE, Crossref, OasisBR, etc.)
 - Download e extração de texto de PDFs (com PDF Link Resolver para repos brasileiros)
-- Triagem por IA (Gemini/GPT/Claude) e por ML (ASReview Active Learning)
+- Triagem assistida por IA (Gemini/GPT/Claude), com trilha de auditoria por decisão e o processo (individual/duplo) declarado no protocolo
 - Deduplicação inteligente (DOI, autores, similaridade de títulos)
 - Validação PRISMA (fluxograma matemático, 10 campos)
 - Auditoria metodológica (5 checks de conformidade)
