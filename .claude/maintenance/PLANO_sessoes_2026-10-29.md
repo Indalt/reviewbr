@@ -84,23 +84,24 @@ não iniciada.
 
 ### Modelo e esforço de cada sessão (calculado em 29/10/2026)
 
-Modelo: **Opus 5.5 em todas** — *"nunca deixar de usar o opus pela complexidade das tarefas"* (Vicente, 25/09). O
-que muda é o esforço: **max** onde o erro não é pego por teste (leitura de norma oficial, arquitetura, mudança de
-direção em muitos arquivos — o sistema passaria a mentir em silêncio); **xhigh** onde as decisões já estão
-tomadas e a suíte confere o conserto. O padrão salvo do Vicente para o Opus 5.5 é *medium*, e *max* não fica
-salvo: o esforço se escolhe no começo de cada chat (`/effort`), antes de colar o prompt. Custo estimado pela
-sessão 0 (em max, ~4 M de ponderado ≈ 40% de uma janela de 5h, sem contar outro projeto aberto na mesma janela).
+Modelo: **Opus 5.5 em todas** — *"nunca deixar de usar o opus pela complexidade das tarefas"* (Vicente, 25/09).
+Esforço: **xhigh**, o mais alto que o seletor do Antigravity oferece — *max* não existe mais nele (Vicente,
+29/10). Nas sessões 1, 2 e 6 o erro não é pego por teste (leitura de norma oficial, arquitetura, mudança de
+direção em muitos arquivos), e eram as que pediriam *max*. **high** só onde o trabalho é mecânico. O padrão
+salvo do Opus 5.5 passou a xhigh em 29/10. **Cada prompt começa com uma linha de modelo e esforço, para o
+Vicente ajustar o seletor e apagá-la antes de enviar** (pedido dele, 29/10). Custo estimado pela sessão 0 (~4 M
+de ponderado ≈ 40% de uma janela de 5h, sem contar outro projeto aberto na mesma janela).
 
 | # | esforço | ultracode | custo estimado (janela de 5h) | por quê |
 |---|---|---|---|---|
-| 1 | max | não | 40–60% | leitura do checklist oficial e mapeamento contra a norma; o falsificador só confere em parte |
-| 2 | max | não na execução; revisão independente depois, se aprovada | 60–100% — pode virar duas janelas | DEBT-142 muda a arquitetura de declarações e é pré-requisito do DEBT-045/014 e da sessão 6 |
+| 1 | xhigh | não | 40–60% | leitura do checklist oficial e mapeamento contra a norma; o falsificador só confere em parte |
+| 2 | xhigh | não na execução; revisão independente depois, se aprovada | 60–100% — pode virar duas janelas | DEBT-142 muda a arquitetura de declarações e é pré-requisito do DEBT-045/014 e da sessão 6 |
 | 3 | xhigh | não | 40–60% | consertos de código com decisão tomada (DEBT-138, 070…) e aritmética conferida pela suíte |
 | 4 | xhigh | não | 40–60% | idem (log PRISMA-S, saturação, dedup) |
 | 5 | xhigh | não | 40–60% | idem; o DEBT-018 mexe na trava do protocolo, com cuidado de compatibilidade com projetos antigos |
-| 6 | max | não na execução; revisão independente depois, recomendada | 70–100%+ — planejar duas janelas | mudança de direção em agentes, skills e manifests: risco de deriva e de quebrar o `prisma-sr` |
-| 7+ | high nas 19 declarações; xhigh nos consertos; max na assimilação de método validado | só na assimilação, para varrer fontes oficiais, com custo aprovado | um bloco por janela | declarar é mecânico; assimilar é ler norma |
-| testes | xhigh na execução; max na análise | não | a definir | — |
+| 6 | xhigh | não na execução; revisão independente depois, recomendada | 70–100%+ — planejar duas janelas | mudança de direção em agentes, skills e manifests: risco de deriva e de quebrar o `prisma-sr` |
+| 7+ | high nas 19 declarações; xhigh nos consertos e na assimilação de método validado | só na assimilação, para varrer fontes oficiais, com custo aprovado | um bloco por janela | declarar é mecânico; assimilar é ler norma |
+| testes | xhigh | não | a definir | — |
 | acompanhamento | high | não | — | conferência e redação curta; o contexto deste chat já é longo e cada volta custa caro |
 
 Uma sessão por janela de 5h, começando com a janela nova; trabalho pesado em outro projeto na mesma janela
@@ -224,11 +225,13 @@ Próxima sessão: 1 — Escopo e PRISMA-S (DEBT-055, DEBT-128).
 
 ## Sessão 1 — prompt de abertura
 
-Preparado no chat de acompanhamento em 29/10/2026. Cole num chat novo:
+Preparado no chat de acompanhamento em 29/10/2026. Cole num chat novo, ajuste o seletor pela primeira linha e
+apague-a antes de enviar:
 
 ```
+>>> APAGUE ESTA LINHA ANTES DE ENVIAR — seletor: Opus 5.5 · esforço xhigh · sem ultracode <<<
 Sessão 1 do .claude/maintenance/PLANO_sessoes_2026-10-29.md — Escopo e PRISMA-S.
-Modelo e esforço: Opus 5.5, esforço max, sem ultracode (definidos pelo Vicente antes de colar; anote na carta).
+Modelo e esforço: Opus 5.5, xhigh, sem ultracode (anote na carta).
 
 Este é o chat da sessão 1: execute só ela. Decisões, dúvidas e a próxima sessão ficam no chat de
 acompanhamento. Furo do plano (algo que este prompt e o plano não decidem): registre pela tool, feche o passo
