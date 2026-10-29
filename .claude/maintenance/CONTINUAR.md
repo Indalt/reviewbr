@@ -49,7 +49,12 @@
 > 1. **O Vicente não informa o consumo; o agente mede e estima.** *"1% de tokens. apenas
 >    avisando ja que nas proximas situacoes nao vou avisar"* (26/09, be12a326 L35) e *"queria nao
 >    precisar informar sempre. se eu posso olhar vc deveria ser capaz"* (29/10). O comando é
->    `python .claude/maintenance/medir_esforco.py --agora`.
+>    `python .claude/maintenance/medir_esforco.py --agora`. **Leitura exata, quando houver:** com
+>    a aprovação dele, a barra de status global (`statusLine` em `~/.claude/settings.json`, script
+>    `~/.claude/statusline_uso.py`) grava em `~/.claude/uso_atual.json` o `rate_limits` que o
+>    Claude Code entrega (documentado para Pro e Max; no Team, a conferir), e o `--agora` mostra
+>    essa leitura. Se o arquivo disser `rate_limits_presente: false`, a decisão de 29/10 é
+>    desfazer: tirar o `statusLine` do settings global e ficar com a estimativa.
 > 2. **A régua de 25/09 está numa unidade inflada.** O script contava cada bloco de uma resposta
 >    como uma mensagem (~2,2×) e não via os subagentes do Agent tool nem os outros projetos da
 >    conta (`DEBT-148`, corrigido em 29/10).

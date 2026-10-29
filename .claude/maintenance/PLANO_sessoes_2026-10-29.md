@@ -110,6 +110,9 @@ na mesma janela (68 mil). E das 10 corridas em disco, 6 morreram com agentes pel
    `python .claude/maintenance/medir_esforco.py --agora` estima para a janela de 5h da conta (todos os projetos
    desta máquina, com subagentes) e a régua usada. Se o Vicente disser a porcentagem, ela entra ao lado como
    par de calibração (`CONTINUAR.md` §1). A estimativa é piso: o uso no claude.ai não deixa transcrito aqui.
+   Quando a barra de status global gravar a leitura exata do painel (`~/.claude/uso_atual.json`, configurada
+   em 29/10 com a aprovação do Vicente), o `--agora` a mostra e ela vale; se o plano Team não entregar o dado,
+   desfaz-se a barra (`CONTINUAR.md` §1).
 2. **Projeção antes de executar.** Estimar a sessão: chat principal + subagentes. Medido: agente que lê código
    gasta de 10 a 80 mil de saída; a revisão de 3 agentes gastou 138 mil, a reclassificação de 7, 76 mil. Se a
    projeção passa do que resta com folga de 15%, a sessão se divide ou roda sem fan-out.
@@ -145,9 +148,10 @@ Saída verificável: commit sem .env, conversas de outras aplicações nem o zip
 Tokens na abertura: 5% (5h) e 18% (semanal), lidos pelo Vicente · medido: principal 0,52 M ponderado
   (unidade nova, deduplicada; 42,5 mil de saída na unidade antiga), subagentes 0 · projeção: só inline.
 --- fechamento ---
-Tokens no fechamento: 40% a 48% da janela de 5h da conta, estimados (--agora, piso) · medido: principal
-  163 mil de saída / 3,2 M ponderado; subagentes 40 mil / 0,47 M (uma consulta ao claude-code-guide);
-  outro projeto na mesma janela (Cultura Líquida) 0,91 M.
+Tokens no fechamento: 54% a 65% da janela de 5h da conta, estimados (--agora, piso) · medido: o chat
+  principal e uma consulta ao claude-code-guide, que sozinha gastou ~206 mil tokens em 28 min, mais o
+  projeto Cultura Líquida aberto na mesma janela. (Na primeira versão desta carta, 40% a 48%: medido
+  antes de a consulta terminar.)
 Feito:
 - Commit a2391e4 (137 arquivos) e push para origin/reorg/agentic-layer. O .gitignore recebeu o que fica fora;
   207 arquivos de conversas do Antigravity saíram do stage (5 trechos com cara de chave de API, nunca
@@ -161,7 +165,9 @@ Feito:
   ReviewBR (tabela do contexto corrigida).
 - Tokens: o Vicente deixa de informar a porcentagem. DEBT-148 (o medir_esforco.py contava cada bloco de
   uma resposta como mensagem, ~2,2×, e não via o Agent tool nem outros projetos) corrigido sob gate RV-11,
-  com --agora e régua nova no CONTINUAR §1.
+  com --agora e régua nova no CONTINUAR §1. Barra de status global configurada com a aprovação dele, para a
+  leitura exata do painel; até o fechamento ela ainda não tinha gravado nada (a conferir na próxima sessão:
+  se o Team não entregar o dado, desfazer).
 Verificação: suíte 361/361 em 32 arquivos; build ok; audit_system_debt válido — 148 achados (55 abertos,
   4 em curso, 73 resolvidos, 16 recusados); git status limpo depois do commit de fechamento.
 Commit: a2391e4 (o trabalho de 02/10 a 29/10) + o commit de fechamento desta carta.
