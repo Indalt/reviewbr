@@ -69,10 +69,13 @@ describe("cobertura — nenhum item do padrão fica órfão", () => {
         expect(r.orphans.length).toBeGreaterThanOrEqual(21);
     });
 
-    it("PRISMA-S: os 16 itens têm cobertura", () => {
+    it("PRISMA-S: nenhum item órfão — 9 com correspondência e 7 declarados [NÃO COBERTO] (DEBT-128)", () => {
+        // Eram 16/16 enquanto o mapeamento seguia a numeração da trilha; refeito contra os
+        // enunciados oficiais, o que a trilha não coleta ficou declarado, não encaixado.
         const r = StandardsService.checkCoverage(StandardsService.read(REPO_ROOT, "prisma-s"), "prisma-s");
         expect(r.orphans).toEqual([]);
-        expect(r.covered).toBe(16);
+        expect(r.covered).toBe(9);
+        expect(r.nao_coberto).toHaveLength(7);
     });
 
     it("REPROVA quando um item do padrão não é coberto por nenhum subitem", () => {

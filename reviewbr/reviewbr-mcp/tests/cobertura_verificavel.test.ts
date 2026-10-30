@@ -112,6 +112,13 @@ describe("(b) sem título oficial, a falsificação não tem poder — e isso é
         expect(r.errors.join(" ")).toMatch(/SEM PODER/);
     });
 
+    it("sem título oficial a etapa não ganha fundamento; com ele, ganha (controle)", () => {
+        // Era o PRISMA-S que exercia este ramo, até ganhar os títulos oficiais (DEBT-128).
+        expect(r.conferencia_por_metodo[0].itens_por_etapa).toEqual({});
+        expect(StandardCoverageService.conferir(repo(), "teste").conferencia_por_metodo[0].itens_por_etapa)
+            .toEqual({ E1: ["2"], E2: ["3"] });
+    });
+
     it("suspeito sem poder não contesta — mas a fração passa a ser afirmação, e o aviso diz isso", () => {
         expect(r.contestados.map((c) => c.item)).toEqual(["4"]);
         expect(r.fracao).toBe("4/7");
@@ -157,11 +164,18 @@ describe("o estado REAL dos padrões assimilados, medido", () => {
         expect(r.valid).toBe(true);
     });
 
-    it("PRISMA-S: títulos não oficiais (DEBT-128) — a cobertura é declarada, não verificável", () => {
+    it("PRISMA-S: títulos oficiais e mapeamento refeito (DEBT-128) — 9/16, as lacunas declaradas", () => {
+        // Até 30/10/2026 os títulos vinham da trilha e a falsificação não tinha poder. O zero
+        // suspeito de agora NÃO prova acerto: neste padrão o falsificador quase não tem poder
+        // (DEBT-149) — o controle positivo está em prisma_s_scr_oficial.test.ts.
         const r = StandardCoverageService.conferir(REPO, "prisma-s");
         expect(r.declarado_por).toEqual(["prisma-sr", "scoping-prisma-scr"]);
-        expect(r.conferencia_por_metodo.every((c) => !c.falsificacao.com_poder)).toBe(true);
-        expect(r.valid).toBe(false);
+        expect(r.conferencia_por_metodo.every((c) => c.falsificacao.com_poder)).toBe(true);
+        expect(r.conferencia_por_metodo.flatMap((c) => c.falsificacao.suspeitos)).toEqual([]);
+        expect(r.orphans).toEqual([]);
+        expect(r.nao_coberto.map((x) => x.id)).toEqual(["S2", "S7", "S9", "S10", "S11", "S12", "S14"]);
+        expect(r.fracao).toBe("prisma-sr 9/16 · scoping-prisma-scr 9/16");
+        expect(r.valid).toBe(true);
     });
 
     it("scoping herda a spec-base: os subitens existem e a falsificação tem rótulo a conferir", () => {
@@ -210,9 +224,12 @@ describe("o estado REAL dos padrões assimilados, medido", () => {
         for (const deslocado of ["14", "15", "25", "26", "27"]) expect(todos).not.toContain(deslocado);
     });
 
-    it("itens_por_etapa: padrão com títulos fora da fonte não dá fundamento nenhum (PRISMA-S, DEBT-128)", () => {
+    it("itens_por_etapa: com os títulos oficiais, o PRISMA-S fundamenta as etapas — sem os [NÃO COBERTO] (DEBT-128)", () => {
         const c = StandardCoverageService.conferir(REPO, "prisma-s", "prisma-sr").conferencia_por_metodo[0];
-        expect(c.itens_por_etapa).toEqual({});
+        expect(c.itens_por_etapa["F2"]).toEqual(expect.arrayContaining(["S1", "S8", "S13"]));
+        expect(c.itens_por_etapa["F3"]).toEqual(expect.arrayContaining(["S15", "S16"])); // total de registros, deduplicação
+        const todos = Object.values(c.itens_por_etapa).flat();
+        for (const lacuna of ["S2", "S7", "S9", "S10", "S11", "S12", "S14"]) expect(todos).not.toContain(lacuna);
     });
 });
 

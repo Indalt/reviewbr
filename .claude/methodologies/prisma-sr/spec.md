@@ -16,7 +16,7 @@ PRISMA 2020 + PRISMA-S + PRISMA-ScR — Mapa Total de Coleta
 **Versão**: 1.0
 **Uso**: Documento de referência para o sistema PRISMA Research Tool e orquestração do MCP
 **Princípio**: Nenhum campo é preenchido com valor inventado. Campos sem dado recebem [TBD] e são sinalizados para resolução humana.
-**Notação**: Itens PRISMA 2020 = números (ex: Item 1). Itens PRISMA-S = prefixo S (ex: S1). Subitens da trilha = notação decimal (ex: F0.1, F1.2.3).
+**Notação**: Itens PRISMA 2020 = números (ex: Item 1). Itens PRISMA-S = prefixo S + o número do item no checklist oficial (ex: S1 = item 1, *Database name*; numeração conferida na fonte em 30/10/2026, DEBT-128). Subitens da trilha = notação decimal (ex: F0.1, F1.2.3).
 
 ## F0 — PRÉ-REGISTRO
 
@@ -72,15 +72,15 @@ Fechado após F0. Nenhum critério pode ser alterado após início da busca sem 
 | Subitem | Elemento | Campo | Descrição | Obrigatório | Item PRISMA |
 |---|---|---|---|---|---|
 | F1.2.1 | P | População/Problema | Definição precisa da população ou problema | ✅ | Item 5 |
-| F1.2.2 | P | Termos de busca — P | MeSH + DeCS + termos livres pt/en/es | ✅ | Item 7 / S12 |
+| F1.2.2 | P | Termos de busca — P | MeSH + DeCS + termos livres pt/en/es | ✅ | Item 7 / S8 |
 | F1.2.3 | I | Intervenção/Exposição | O que foi feito, aplicado ou estudado | ✅ | Item 5 |
-| F1.2.4 | I | Termos de busca — I | MeSH + DeCS + termos livres pt/en/es | ✅ | Item 7 / S12 |
+| F1.2.4 | I | Termos de busca — I | MeSH + DeCS + termos livres pt/en/es | ✅ | Item 7 / S8 |
 | F1.2.5 | C | Comparador | Grupo controle, comparação ou "N/A + justificativa" | ✅ | Item 5 |
-| F1.2.6 | C | Termos de busca — C | Se aplicável | ⚠️ se aplicável | Item 7 / S12 |
+| F1.2.6 | C | Termos de busca — C | Se aplicável | ⚠️ se aplicável | Item 7 / S8 |
 | F1.2.7 | O | Outcomes/Desfechos | Listar TODOS os desfechos primários e secundários | ✅ | Item 5 |
-| F1.2.8 | O | Termos de busca — O | Se incluídos na string | ⚠️ se aplicável | Item 7 / S12 |
+| F1.2.8 | O | Termos de busca — O | Se incluídos na string | ⚠️ se aplicável | Item 7 / S8 |
 | F1.2.9 | S | Tipo de Estudo | Delineamentos elegíveis | ✅ | Item 5 |
-| F1.2.10| S | Termos de busca — S | Filtros de tipo de estudo | ⚠️ se aplicável | Item 7 / S12 |
+| F1.2.10| S | Termos de busca — S | Filtros de tipo de estudo | ⚠️ se aplicável | Item 7 / S8 / S10 |
 
 ### F1.3 — Critérios de Elegibilidade Completos
 
@@ -92,8 +92,8 @@ Fechado após F0. Nenhum critério pode ser alterado após início da busca sem 
 | F1.3.1.2 | Intervenção / Objeto | Tipos de intervenção ou objeto de estudo aceitos | ✅ | Item 5 |
 | F1.3.1.3 | Desfechos mínimos | Ao menos um desfecho que o estudo deve reportar | ✅ | Item 5 |
 | F1.3.1.4 | Tipo de documento | Artigo / Tese / Dissertação / etc. | ✅ | Item 5 |
-| F1.3.1.5 | Período de publicação | Ano inicial e ano final | ✅ | Item 5 / S10 |
-| F1.3.1.6 | Idiomas aceitos | pt / en / es / outros + justificativa | ✅ | Item 5 / S11 |
+| F1.3.1.5 | Período de publicação | Ano inicial e ano final | ✅ | Item 5 |
+| F1.3.1.6 | Idiomas aceitos | pt / en / es / outros + justificativa | ✅ | Item 5 |
 | F1.3.1.7 | Acesso ao texto completo | Texto completo disponível | ✅ | Item 5 |
 
 #### F1.3.2 — Critérios de Exclusão
@@ -103,9 +103,9 @@ Fechado após F0. Nenhum critério pode ser alterado após início da busca sem 
 | F1.3.2.1 | Escopo | O que está fora do escopo por definição | ✅ | Item 5 |
 | F1.3.2.2 | Tipo de documento | O que não será aceito | ✅ | Item 5 |
 | F1.3.2.3 | Período | Publicações fora do recorte | ✅ | Item 5 |
-| F1.3.2.4 | Idioma | Idiomas não aceitos | ✅ | Item 5 / S11 |
-| F1.3.2.5 | Duplicatas | Critério de identificação e resolução | ✅ | Item 5 / S15 |
-| F1.3.2.6 | Texto completo indisponível | Após tentativas de recuperação | ✅ | Item 5 / S16 |
+| F1.3.2.4 | Idioma | Idiomas não aceitos | ✅ | Item 5 |
+| F1.3.2.5 | Duplicatas | Critério de identificação e resolução | ✅ | Item 5 / S16 |
+| F1.3.2.6 | Texto completo indisponível | Após tentativas de recuperação | ✅ | Item 5 |
 | F1.3.2.7 | Qualidade mínima | Se aplicável — ferramenta ou critério usado | ⚠️ se aplicável | Item 11 |
 
 ### F1.4 — Geração das Strings de Busca
@@ -114,11 +114,11 @@ O sistema gera as strings a partir do F1.2. O pesquisador revisa e aprova antes 
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA-S |
 |---|---|---|---|---|
-| F1.4.1 | String por repositório | Gerada pelo sistema com base no PICOS | ✅ | S12 |
-| F1.4.2 | Operadores booleanos definidos | AND / OR / NOT / proximidade | ✅ | S12 |
-| F1.4.3 | Vocabulários controlados definidos | MeSH / DeCS / Emtree / Nenhum | ✅ | S13 |
-| F1.4.4 | Aprovação do pesquisador | Data e confirmação explícita | ✅ | S12 |
-| F1.4.5 | Versão da string | Número de versão para controle de alterações | ✅ | S12 |
+| F1.4.1 | String por repositório | Gerada pelo sistema com base no PICOS | ✅ | S8 |
+| F1.4.2 | Operadores booleanos definidos | AND / OR / NOT / proximidade | ✅ | S8 |
+| F1.4.3 | Vocabulários controlados definidos | MeSH / DeCS / Emtree / Nenhum | ✅ | S8 |
+| F1.4.4 | Aprovação do pesquisador | Data e confirmação explícita | ✅ | — |
+| F1.4.5 | Versão da string | Número de versão para controle de alterações | ✅ | — |
 
 ## F2 — PROTOCOLO DE BUSCA
 
@@ -130,48 +130,48 @@ Executado pelo MCP sob orquestração do sistema. Uma entrada por fonte/reposit�
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA-S |
 |---|---|---|---|---|
-| F2.1.1.1 | Nome da fonte | Nome completo e sigla | ✅ | S1 / S2 |
-| F2.1.1.2 | Tipo de fonte | Base bibliográfica / Registro / Repositório institucional / Literatura cinzenta / Outro | ✅ | S1 / S2 / S3 / S4 |
-| F2.1.1.3 | URL base | Endereço de acesso | ✅ | S1 |
-| F2.1.1.4 | Camada na estratégia | Camada 1 / 2 / 3 / 4 / 5 | ✅ | S1 |
-| F2.1.1.5 | Interface utilizada | Web / API / OAI-PMH + versão se disponível | ✅ | S7 |
-| F2.1.1.6 | Campos pesquisados | Título / Resumo / Assunto / Texto completo / Todos | ✅ | S7 |
-| F2.1.1.7 | Limitações de acesso | Requer login / Acesso restrito / Livre | ✅ | S8 |
+| F2.1.1.1 | Nome da fonte | Nome completo e sigla | ✅ | S1 / S2 / S3 / S7 |
+| F2.1.1.2 | Tipo de fonte | Base bibliográfica / Registro / Repositório institucional / Literatura cinzenta / Outro | ✅ | S3 / S7 |
+| F2.1.1.3 | URL base | Endereço de acesso | ✅ | S1 / S3 |
+| F2.1.1.4 | Camada na estratégia | Camada 1 / 2 / 3 / 4 / 5 | ✅ | — |
+| F2.1.1.5 | Interface utilizada | Web / API / OAI-PMH + versão se disponível | ✅ | S1 / S2 |
+| F2.1.1.6 | Campos pesquisados | Título / Resumo / Assunto / Texto completo / Todos | ✅ | S8 |
+| F2.1.1.7 | Limitações de acesso | Requer login / Acesso restrito / Livre | ✅ | — |
 
 #### F2.1.2 — Execução da Busca
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA-S |
 |---|---|---|---|---|
-| F2.1.2.1 | Data e hora da busca | ISO8601 completo | ✅ | S9 |
-| F2.1.2.2 | Abrangência cronológica aplicada | Datas de início e fim do filtro | ✅ | S10 |
-| F2.1.2.3 | Restrição de idioma aplicada | Idiomas filtrados na fonte | ✅ | S11 |
-| F2.1.2.4 | String exata executada | Copiar literalmente — sem parafrasear | ✅ | S12 |
-| F2.1.2.5 | Vocabulários controlados usados | MeSH / DeCS / Emtree / Outros / Nenhum | ✅ | S13 |
-| F2.1.2.6 | Termos livres usados | Lista de todos termos não controlados | ✅ | S12 |
-| F2.1.2.7 | Filtros adicionais aplicados | Tipo de doc / Idioma / Período / Revisado por pares | ✅ | S14 |
-| F2.1.2.8 | Iterações de busca | Se houve mais de uma rodada — enumerar todas | ✅ | S12 |
-| F2.1.2.9 | Notas de limitações | Timeout / Truncamento / Bloqueio / Resultado parcial | ✅ | S8 |
+| F2.1.2.1 | Data e hora da busca | ISO8601 completo | ✅ | S12 / S13 |
+| F2.1.2.2 | Abrangência cronológica aplicada | Datas de início e fim do filtro | ✅ | S9 |
+| F2.1.2.3 | Restrição de idioma aplicada | Idiomas filtrados na fonte | ✅ | S9 |
+| F2.1.2.4 | String exata executada | Copiar literalmente — sem parafrasear | ✅ | S8 |
+| F2.1.2.5 | Vocabulários controlados usados | MeSH / DeCS / Emtree / Outros / Nenhum | ✅ | S8 |
+| F2.1.2.6 | Termos livres usados | Lista de todos termos não controlados | ✅ | S8 |
+| F2.1.2.7 | Filtros adicionais aplicados | Tipo de doc / Idioma / Período / Revisado por pares | ✅ | S9 |
+| F2.1.2.8 | Iterações de busca | Se houve mais de uma rodada — enumerar todas | ✅ | S8 / S12 |
+| F2.1.2.9 | Notas de limitações | Timeout / Truncamento / Bloqueio / Resultado parcial | ✅ | — |
 
 #### F2.1.3 — Resultados da Fonte
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA-S / PRISMA |
 |---|---|---|---|---|
-| F2.1.3.1 | Total de resultados brutos | Número exato antes de qualquer filtro manual | ✅ | S12 / Item 16 |
-| F2.1.3.2 | Formato de exportação | RIS / BibTeX / CSV / JSON / XML | ✅ | S12 |
-| F2.1.3.3 | Identificador do arquivo exportado | Nome ou hash para rastreamento | ✅ | S12 |
-| F2.1.3.4 | Registros não recuperados | Artigos identificados mas não obtidos + motivo | ✅ | S16 |
+| F2.1.3.1 | Total de resultados brutos | Número exato antes de qualquer filtro manual | ✅ | S15 / Item 16 |
+| F2.1.3.2 | Formato de exportação | RIS / BibTeX / CSV / JSON / XML | ✅ | — |
+| F2.1.3.3 | Identificador do arquivo exportado | Nome ou hash para rastreamento | ✅ | — |
+| F2.1.3.4 | Registros não recuperados | Artigos identificados mas não obtidos + motivo | ✅ | — |
 
 ### F2.2 — Outros Recursos de Busca
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA-S |
 |---|---|---|---|---|
-| F2.2.1 | Literatura cinzenta — fontes | Nome das fontes consultadas | ✅ | S3 |
-| F2.2.2 | Literatura cinzenta — strings | Strings usadas por fonte | ✅ | S3 |
-| F2.2.3 | Literatura cinzenta — resultados | Número de registros por fonte | ✅ | S3 |
-| F2.2.4 | Rastreamento de citações | De quais estudos / ferramenta usada | ⚠️ se aplicável | S4 |
+| F2.2.1 | Literatura cinzenta — fontes | Nome das fontes consultadas | ✅ | S4 |
+| F2.2.2 | Literatura cinzenta — strings | Strings usadas por fonte | ✅ | S4 / S8 |
+| F2.2.3 | Literatura cinzenta — resultados | Número de registros por fonte | ✅ | S15 |
+| F2.2.4 | Rastreamento de citações | De quais estudos / ferramenta usada | ⚠️ se aplicável | S5 |
 | F2.2.5 | Busca manual em periódicos | Quais periódicos / volumes consultados | ⚠️ se aplicável | S4 |
-| F2.2.6 | Especialistas contatados | Nome, instituição, data, resposta | ⚠️ se aplicável | S5 |
-| F2.2.7 | Listas de referências verificadas | De quais estudos incluídos | ⚠️ se aplicável | S6 |
+| F2.2.6 | Especialistas contatados | Nome, instituição, data, resposta | ⚠️ se aplicável | S6 |
+| F2.2.7 | Listas de referências verificadas | De quais estudos incluídos | ⚠️ se aplicável | S5 |
 
 ## F3 — DEDUPLICAÇÃO
 
@@ -181,16 +181,16 @@ Executada pelo sistema sobre os dados brutos entregues pelo MCP.
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA-S |
 |---|---|---|---|---|
-| F3.1.1 | Método de deduplicação | Algoritmo do sistema / Critérios aplicados | ✅ | S15 |
-| F3.1.2 | Critério nível 1 | DOI idêntico | ✅ | S15 |
-| F3.1.3 | Critério nível 2 | Título normalizado idêntico | ✅ | S15 |
-| F3.1.4 | Critério nível 3 | Título normalizado + ano + primeiro autor | ✅ | S15 |
-| F3.1.5 | Critério nível 4 | Similaridade de título ≥ 90% + mesmo ano | ✅ | S15 |
+| F3.1.1 | Método de deduplicação | Algoritmo do sistema / Critérios aplicados | ✅ | S16 |
+| F3.1.2 | Critério nível 1 | DOI idêntico | ✅ | S16 |
+| F3.1.3 | Critério nível 2 | Título normalizado idêntico | ✅ | S16 |
+| F3.1.4 | Critério nível 3 | Título normalizado + ano + primeiro autor | ✅ | S16 |
+| F3.1.5 | Critério nível 4 | Similaridade de título ≥ 90% + mesmo ano | ✅ | S16 |
 | F3.1.6 | Total antes da deduplicação | Soma de todos os brutos por fonte | ✅ | S15 / Item 16 |
-| F3.1.7 | Total de duplicatas removidas | Por critério aplicado | ✅ | S15 / Item 16 |
-| F3.1.8 | Total após deduplicação | Encaminhado para triagem | ✅ | S15 / Item 16 |
-| F3.1.9 | Registro de cada par | ID mantido + ID removido + critério + fontes | ✅ | S15 |
-| F3.1.10 | Conflitos para decisão manual | Casos não resolvidos automaticamente | ✅ | S15 |
+| F3.1.7 | Total de duplicatas removidas | Por critério aplicado | ✅ | Item 16 |
+| F3.1.8 | Total após deduplicação | Encaminhado para triagem | ✅ | Item 16 |
+| F3.1.9 | Registro de cada par | ID mantido + ID removido + critério + fontes | ✅ | S16 |
+| F3.1.10 | Conflitos para decisão manual | Casos não resolvidos automaticamente | ✅ | S16 |
 
 ## F4 — TRIAGEM
 
@@ -211,7 +211,7 @@ Todas as decisões registradas com agente (Sistema / IA / Pesquisador) e timesta
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA |
 |---|---|---|---|---|
 | F4.2.1 | Total recuperado para leitura | Após triagem TA | ✅ | Item 16 |
-| F4.2.2 | Total não recuperado | Com motivo por registro | ✅ | Item 16 / S16 |
+| F4.2.2 | Total não recuperado | Com motivo por registro | ✅ | Item 16 |
 | F4.2.3 | Total avaliado em texto completo | | ✅ | Item 16 |
 | F4.2.4 | Total excluído com motivo | Tabela por motivo padronizado | ✅ | Item 16 |
 | F4.2.5 | Total final incluído | | ✅ | Item 16 |
@@ -356,13 +356,13 @@ Todos os números calculados pelo sistema — nunca importados prontos.
 
 | Subitem | Variável | Fonte do número | Item PRISMA |
 |---|---|---|---|
-| F8.1.1 | identified_db | Soma dos brutos por fonte (bases de dados) | Item 16 |
-| F8.1.2 | identified_other | Soma de outras fontes (cinzenta, especialistas) | Item 16 |
+| F8.1.1 | identified_db | Soma dos brutos por fonte (bases de dados) | Item 16 / S15 |
+| F8.1.2 | identified_other | Soma de outras fontes (cinzenta, especialistas) | Item 16 / S15 |
 | F8.1.3 | duplicates_removed | Calculado em F3 | Item 16 |
 | F8.1.4 | screened | F8.1.1 + F8.1.2 − F8.1.3 | Item 16 |
 | F8.1.5 | title_abstract_excluded | Calculado em F4.1 | Item 16 |
 | F8.1.6 | retrieved_fulltext | F8.1.4 − F8.1.5 | Item 16 |
-| F8.1.7 | fulltext_not_retrieved | Registrado em F4.2.2 | Item 16 / S16 |
+| F8.1.7 | fulltext_not_retrieved | Registrado em F4.2.2 | Item 16 |
 | F8.1.8 | fulltext_assessed | F8.1.6 − F8.1.7 | Item 16 |
 | F8.1.9 | fulltext_excluded | Calculado em F4.2 com tabela de motivos | Item 16 |
 | F8.1.10 | included | F8.1.8 − F8.1.9 | Item 16 |
@@ -393,8 +393,8 @@ Colunas obrigatórias do study_characteristics_table.csv
 | F8.3.3 | Introdução — Justificativa | Item 3 |
 | F8.3.4 | Introdução — Objetivos | Item 4 |
 | F8.3.5 | Métodos — Critérios de elegibilidade | Item 5 |
-| F8.3.6 | Métodos — Fontes de informação | Item 6 / S1–S9 |
-| F8.3.7 | Métodos — Estratégia de busca | Item 7 / S12–S14 |
+| F8.3.6 | Métodos — Fontes de informação | Item 6 / S1 / S3 / S4 / S5 / S6 / S13 |
+| F8.3.7 | Métodos — Estratégia de busca | Item 7 / S8 / S9 |
 | F8.3.8 | Métodos — Seleção de estudos | Item 8 |
 | F8.3.9 | Métodos — Coleta de dados | Item 9 |
 | F8.3.10 | Métodos — Itens dos dados | Item 10 |
@@ -403,7 +403,7 @@ Colunas obrigatórias do study_characteristics_table.csv
 | F8.3.13 | Métodos — Síntese | Item 13 |
 | F8.3.14 | Métodos — Certeza da evidência | Item 14 |
 | F8.3.15 | Métodos — Registro e protocolo | Item 15 |
-| F8.3.16 | Resultados — Seleção | Item 16 |
+| F8.3.16 | Resultados — Seleção | Item 16 / S15 |
 | F8.3.17 | Resultados — Características | Item 17 |
 | F8.3.18 | Resultados — Risco de viés | Item 18 |
 | F8.3.19 | Resultados — Individuais | Item 19 |
@@ -430,10 +430,10 @@ Colunas obrigatórias do study_characteristics_table.csv
 |---|---|---|---|
 | SUP.1 | prisma_checklist_filled.md | 27 itens PRISMA 2020 com status e evidência | Todos |
 | SUP.2 | prisma_s_checklist_filled.md | 16 itens PRISMA-S com status e evidência | S1–S16 |
-| SUP.3 | supplement_search_prisma_s.md | Strings + interfaces + filtros + datas + contagens | S7–S14 |
-| SUP.4 | supplement_sources_registry.md | Todas as fontes com URLs e evidências | S1–S4 |
-| SUP.5 | dedupe_report.md | Regras + contagens + pares + conflitos | S15 |
-| SUP.6 | screening_report.md | Processo + contagens + motivos + não recuperados | Item 16 / S16 |
+| SUP.3 | supplement_search_prisma_s.md | Strings + interfaces + filtros + datas + contagens | S1 / S2 / S8–S10 / S13 / S15 |
+| SUP.4 | supplement_sources_registry.md | Todas as fontes com URLs e evidências | S1–S7 |
+| SUP.5 | dedupe_report.md | Regras + contagens + pares + conflitos | S16 |
+| SUP.6 | screening_report.md | Processo + contagens + motivos + não recuperados | Item 16 |
 | SUP.7 | study_characteristics_table.csv | Tabela mínima de estudos incluídos | Item 17 |
 | SUP.8 | prisma_flow_counts.md | Números calculados pelo sistema | Item 16 |
 | SUP.9 | manuscript_prisma_revised.md | Manuscrito completo revisado | Todos |

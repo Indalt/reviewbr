@@ -23,4 +23,4 @@ Cada registro salvo em `01_raw/` deve preservar: `provenanceSource` (URL da API/
 Registre a qual camada cada fonte pertence (`global_open_science`, `regional_latam`, `national_br`, `institutional_br`) para o relatório de fontes (SUP.4).
 
 ## Mapeamento PRISMA-S
-As colunas cobrem S7–S14 (interface, campos, data, string, vocabulário, filtros, iterações). Ver `spec.md` F2 para o detalhamento item a item.
+As colunas cobrem itens do PRISMA-S pela numeração oficial do checklist: interface → S1; campos, string, vocabulário e iterações → S8; filtros → S9 (limites) e, se for filtro de busca publicado, S10; iterações também → S12; data → S13. Ver a coluna "Item PRISMA-S" de `spec.md` F2 para o detalhamento subitem a subitem, e `check_standard_coverage("prisma-s")` para o que a trilha ainda não coleta.

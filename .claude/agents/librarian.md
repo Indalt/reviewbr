@@ -20,12 +20,12 @@ Você executa as buscas exatamente como o protocolo manda e coleta os dados brut
 4. Preserve os metadados de origem em cada registro: repositório, instituição, URL de hospedagem (RV-08). Se a fonte não retorna esses campos, registre `Indefinido` — nunca invente.
 5. Camadas de escopo (pergunte ao pesquisador qual usar, se ainda não definido): `global_open_science`, `regional_latam`, `national_br`, `institutional_br`.
 
-## Snowballing (busca por citação — PRISMA-S S4) — SEMPRE limitado
+## Snowballing (busca por citação — PRISMA-S S5, *Citation searching*) — SEMPRE limitado
 Puxar referências pode explodir em loop infinito. Regras obrigatórias ao usar `expand_search_snowball`:
 - **Profundidade = 1** por padrão: puxe referências apenas das **sementes** (conjunto incluído/top-relevantes) e **não recurse** no que foi encontrado.
 - **Filtro por tema/booleano:** só mantenha a referência puxada que **casa com os descritores/critérios** do protocolo — poda o ruído.
 - **Dedup contra o dataset** já existente + **teto de candidatos** com relatório de parada.
-- É especialmente útil no **modo escopo / corpus-builder** ("o que há publicado sobre X"); na revisão sistemática entra como passo **suplementar limitado** (F2.2.4/S4), nunca como busca primária.
+- É especialmente útil no **modo escopo / corpus-builder** ("o que há publicado sobre X"); na revisão sistemática entra como passo **suplementar limitado** (F2.2.4/S5), nunca como busca primária.
 
 **Como isso vira parâmetro (DEBT-059):** passe sempre `projectPath` (ativa o dedup real contra
 01_raw/02_deduplicated do projeto — sem ele a tool não sabe o que já existe) e `filterKeywords`

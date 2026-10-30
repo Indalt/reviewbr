@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-29T20:19:18.193Z",
+  "updatedAt": "2026-10-30T04:22:08.613Z",
   "findings": [
     {
       "id": "DEBT-001",
@@ -877,17 +877,17 @@
       "depende_de": []
     },
     {
+      "reproduction": "cd C:\\reviewbr && grep -c 'Item PRISMA' .claude/methodologies/scoping-prisma-scr/spec.md → 0; e grep -c 'Item PRISMA' .claude/methodologies/prisma-sr/spec.md → 24 (controle positivo: o método de grep acha o cabeçalho onde ele existe).",
+      "location": "",
+      "resolution": "RESOLVIDO em 30/10/2026 (sessão 1 do PLANO_sessoes_2026-10-29), sob a decisão do Vicente: 'As perguntas 1, 3, 4, 5, 6, 7, 8, 9 e 12 sim para todas' (29/10/2026) — pergunta 1: mapear já o PRISMA-ScR, no formato atual (antes do DEBT-142). Gate RV-11: CONFORMIDADE (PRISMA-ScR 2018, itens 1–22), addresses DEBT-055, aprovado. FEITO: os 22 itens de .claude/standards/prisma-scr.json mapeados contra a trilha do scoping-prisma-scr (a spec do prisma-sr por extends, com os deltas do scoping), lendo o checklist oficial (reviewbr/download/PRISMA-ScR-Fillable-Checklist_11Sept2019.pdf, SHA-256 1b70ecd1…), com o enunciado de cada item gravado (text). Correspondência declarada em 14 (1, 2, 4, 5, 7, 8, 9, 14, 15, 17 a 21); [NÃO COBERTO] declarado em 8, com o motivo — 3, 6, 10, 11, 13 e 22 parciais; 12 e 16 condicionais ('If done'), que o formato atual não comporta: mecanismo do DEBT-142, pendência registrada no DEBT-150. check_standard_coverage('prisma-scr'): orphans [] — sem omissão silenciosa —; (a) sem ponteiro para subitem inexistente nem para a F6 desligada; fração 12/22 porque a falsificação contesta 4 pares que a leitura do enunciado confirma (falsos positivos F2.1.2.1→7, F2.2.5→7, F5.2.5.1→11, F8.1.5→14, registrados no DEBT-149) — valid=false só por isso. Achado de passagem: DEBT-151 (o template de protocolo do scoping dá outro sentido a F1.3.1.2, F1.3.1.3 e F0.3.4). Testes em tests/prisma_s_scr_oficial.test.ts; build ok; suíte 372/372.",
+      "found_by": "AUDITORIA Frente 2 — varredura sistematica (skill system-audit), 25/09/2026",
+      "found_at": "2026-09-25",
+      "context": "Achado de AUDITORIA, nao de conversa. Gravidade atribuida pelo auditor: menor. Denominador apurado na corrida: 44 tools, 8 agentes, 9 skills, 2 metodologias, 2 padroes, 8 RV. A varredura A1 (16 tools de busca/aquisicao) NAO rodou — morreu no limite de sessao; essa faixa segue NAO AUDITADA.",
       "id": "DEBT-055",
       "summary": "A spec da revisão de escopo não mapeia nenhum subitem a nenhum item de padrão",
       "change_type": "CONFORMIDADE",
       "evidence": "[MENOR] .claude/methodologies/scoping-prisma-scr/spec.md tem 32 linhas e nenhuma tabela `| Subitem | ... | Item PRISMA |`; herda por prosa (`:3` 'Este arquivo descreve os DELTAS em relação a ../prisma-sr/spec.md') e na linha :29 manda 'Use PRISMA-ScR (extensão scoping) no lugar do PRISMA 2020 completo'. Como a base é a trilha do PRISMA 2020 e o PRISMA-ScR não existe como dado, não há mapeamento algum para o padrão que a metodologia declara seguir. Para comparação, a spec de prisma-sr define 196 subitens em linha de tabela, dos quais 184 apontam para algum item (12 marcados '—' por desenho: F0.1.2, F5.2.5.4 e F8.2.1-10).\n\nPOR QUE IMPORTA: A pergunta 'a spec mapeia cada subitem da trilha a um item do padrão?' tem resposta diferente por metodologia: em prisma-sr o mapeamento existe e está errado em 6 itens; em scoping-prisma-scr ele simplesmente não existe. A instrução de trocar o checklist está em prosa, dirigida a um agente, não a um verificador — de novo o padrão que o sistema recusa no próprio princípio.",
-      "reproduction": "cd C:\\reviewbr && grep -c 'Item PRISMA' .claude/methodologies/scoping-prisma-scr/spec.md → 0; e grep -c 'Item PRISMA' .claude/methodologies/prisma-sr/spec.md → 24 (controle positivo: o método de grep acha o cabeçalho onde ele existe).",
-      "location": "",
-      "status": "ABERTO",
-      "resolution": "",
-      "found_by": "AUDITORIA Frente 2 — varredura sistematica (skill system-audit), 25/09/2026",
-      "found_at": "2026-09-25",
-      "context": "Achado de AUDITORIA, nao de conversa. Gravidade atribuida pelo auditor: menor. Denominador apurado na corrida: 44 tools, 8 agentes, 9 skills, 2 metodologias, 2 padroes, 8 RV. A varredura A1 (16 tools de busca/aquisicao) NAO rodou — morreu no limite de sessao; essa faixa segue NAO AUDITADA.",
+      "status": "RESOLVIDO",
       "gravidade": "MENOR",
       "destino": "CONFORM_EXTERNA",
       "depende_de": []
@@ -2080,8 +2080,8 @@
       "evidence": "O proprio arquivo confessava a origem no campo note: 'extraido da coluna de mapeamento da spec (notacao S1..S16)' — ou seja, os titulos sao os rotulos da NOSSA trilha, nao o enunciado do checklist oficial. A divergencia e verificavel contra a estrutura que o catalogo confirmou por leitura direta: pela fonte, PEER REVIEW e o item 14 e MANAGING RECORDS sao 15-16; no arquivo, S11 aparece como 'Revisao por pares' e S13 como 'Total de registros recuperados'. A spec reforca: spec.md:96 e :106 usam S11 para IDIOMA, e :119 e :149 usam S13 para VOCABULARIO CONTROLADO. CONTROLE POSITIVO: a CONTAGEM (16) e as SECOES (7+6+1+2) foram confirmadas na fonte e agora estao corretas no arquivo — logo o metodo distingue o que foi verificado do que nao foi.",
       "reproduction": "1) python: ler .claude/standards/prisma-s.json e imprimir items[].title -> 'Revisao por pares' no S11. 2) Comparar com item_count da entrada prisma-s no catalogo: 'PEER REVIEW (item 14)'. 3) grep -n 'S11\\|S13' .claude/methodologies/prisma-sr/spec.md -> S11=idioma, S13=vocabulario controlado.",
       "location": ".claude/standards/prisma-s.json (campo items[].title)",
-      "status": "ABERTO",
-      "resolution": "",
+      "status": "RESOLVIDO",
+      "resolution": "RESOLVIDO em 30/10/2026 (sessão 1 do PLANO_sessoes_2026-10-29), sob as decisões do Vicente: 'se existe metodologia, vamos assimilar. não há porque divagar.' (17/10/2026) e 'assimilar só metodologia validada cientificamente' (29/10/2026). Gate RV-11: CONFORMIDADE (PRISMA-S 2021, itens 1–16), addresses DEBT-128, aprovado. FEITO: (1) .claude/standards/prisma-s.json com os 16 tópicos (title), enunciados (text) e seções oficiais, transcritos de DUAS fontes oficiais lidas por inteiro e conferidas uma contra a outra por script, sem divergência — o checklist do OSF (https://osf.io/y765x/, 'PRISMA-S Checklist.pdf', 'Last updated February 27, 2020', SHA-256 d40867ba…) e a Tabela 1 do artigo (Syst Rev 2021;10:39) —; a fonte vai no version_source; titulos_oficiais: true. (2) Falsificador rodado ANTES do remapeamento, como controle positivo: com_poder true, 14/16 e só 2 suspeitos (F2.1.3.1→S12, F4.2.2→S16); NÃO acusou os ponteiros de S11 nem de S13 — sem poder para esta classe de deslocamento: DEBT-149. (3) Remapeamento contra os enunciados e o E&E do artigo: covered_by refeito item a item (dos 70 pares antigos, 58 mudaram) e a coluna 'Item PRISMA-S' da spec do prisma-sr reescrita como o inverso exato do covered_by (57 linhas, 4 suplementos e a linha de notação), com teste que reprova divergência entre as duas (controle positivo: mutar uma célula reprova). Lacunas DECLARADAS, não encaixadas: 2, 7, 9, 10 e 12 parciais; 11 (prior work) e 14 (peer review) sem campo na trilha — 9/16. Depois do remapeamento, zero suspeito nos dois métodos, o que sem poder não prova acerto (dito na nota do padrão). (4) Ponteiros da numeração antiga fora da spec: skill prisma-s-logging ('S7–S14') e agente librarian (snowballing 'S4' → S5, Citation searching). Testes: tests/prisma_s_scr_oficial.test.ts (novo) e os de standards e cobertura_verificavel que fixavam o estado antigo; build ok; suíte 372/372.",
       "found_by": "validacao do PRISMA-S em 04/10/2026, pedida pelo administrador",
       "found_at": "2026-10-04",
       "context": "ENCONTRADO em 04/10/2026 ao validar o PRISMA-S (DEBT-052), a pedido do administrador. E A MESMA CLASSE DO DEBT-045, agora no PRISMA-S em vez do PRISMA 2020: o mapeamento trilha->padrao foi gravado a partir do que a trilha chama, nao do que a norma diz. NAO FOI CORRIGIDO NA HORA, e a razao importa: corrigir exigiria o enunciado oficial de cada um dos 16 itens, que nao esta no catalogo (so a contagem, as secoes e os intervalos estao). Inventar enunciado oficial seria pior que declarar a divergencia — e exatamente o erro que o sistema existe para impedir (RV-03). A validacao da versao e das secoes foi feita porque ESTAVA confirmada; os titulos ficam como estao, com a divergencia escrita no campo note do proprio arquivo. CONSERTO: ler o checklist oficial no OSF (https://osf.io/y765x/) e transcrever os 16 enunciados — leitura de fonte, do administrador, nao engenharia. Quando isso acontecer, rodar o falsificador do DEBT-124 contra o PRISMA-S tambem: hoje ele so e exercido contra o PRISMA 2020.",
@@ -2360,14 +2360,15 @@
       "resolution": "",
       "found_by": "decisao do pesquisador — 17/10/2026",
       "found_at": "2026-10-17",
-      "context": "Quando os quatro fecharem: escolherMetodo passa a recusar metodo cujo padrao declarado tenha omissao silenciosa ou mapeamento contestado — o mesmo verificador de check_standard_coverage, para o metodo em questao. Declaracao [NAO COBERTO] honesta nao reprova; omissao silenciosa sim.",
+      "context": "Quando os quatro fecharem: escolherMetodo passa a recusar metodo cujo padrao declarado tenha omissao silenciosa ou mapeamento contestado — o mesmo verificador de check_standard_coverage, para o metodo em questao. Declaracao [NAO COBERTO] honesta nao reprova; omissao silenciosa sim. DEPENDÊNCIA ACRESCENTADA em 30/10/2026 (sessão 1): DEBT-149 — a falsificação contesta pares corretos (4 no PRISMA-ScR, dois deles derrubando os itens 7 e 14 da fração) e quase não acha deslocamento real no PRISMA-S. Com 'mapeamento contestado' como trava, o scoping seria recusado por falso positivo; a trava espera o falsificador. Se o acompanhamento decidir que a trava usa só a omissão silenciosa, esta dependência cai.",
       "gravidade": "SERIO",
       "destino": "FASE_2",
       "depende_de": [
         "DEBT-014",
         "DEBT-045",
         "DEBT-055",
-        "DEBT-128"
+        "DEBT-128",
+        "DEBT-149"
       ]
     },
     {
@@ -2403,20 +2404,72 @@
       "depende_de": []
     },
     {
-      "reproduction": "Contar, num .jsonl de sessão, as linhas com message.usage e os message.id distintos: e5229a50 -> 150 linhas, 65 ids. Controle: os usages repetidos são idênticos (61 de 61), logo a soma por linha conta a mesma resposta 2 a 3 vezes. find ~/.claude/projects/C--reviewbr -path '*/subagents/*' -name 'agent-*.jsonl' -not -path '*/workflows/*' -> 7 arquivos que nenhuma função do script lê.",
-      "location": ".claude/maintenance/medir_esforco.py: carregar(), custo_workflows() e PROJ",
-      "resolution": "Corrigido em 29/10/2026 (sessão 0), gate RV-11 aprovado (CORRECAO, addresses DEBT-148). (1) respostas() conta uma vez por message.id; carregar() e custo_workflows() passaram a usá-la. Verificação: sessão e5229a50 com 185 linhas e 79 respostas -> o script mostra 79; 00a84351 com 180 linhas e 84 respostas -> 84. (2) carregar_subagentes() lê <sessão>/subagents/**/agent-*.jsonl, Agent tool incluído. (3) --agora soma sessões principais e subagentes de TODOS os projetos de ~/.claude/projects e estima a porcentagem da janela de 5h da conta; --em=<ISO> calcula até um instante, para calibrar. (4) Régua recalibrada em ponderado deduplicado: ~10,4 M = 100% (faixa 9,5–11,5 M), por dois pares que concordam (24/10 14:40Z, 20% com 2,08 M; 29/10 19:50Z, 5% com 0,52 M); os pares que discordam e o porquê estão no CONTINUAR.md §1. Limite declarado no próprio script e nos documentos: a estimativa é piso, porque o uso no claude.ai não deixa transcrito neste disco.",
-      "found_by": "sessão 0 (29/10/2026) — ao atender o pedido do Vicente de não precisar informar o consumo",
-      "found_at": "2026-10-29",
-      "context": "Gravidade SERIO porque é o único instrumento da regra de tokens (PLANO_sessoes §Tokens), e o limite estourou sem aviso em 03/10 e 17/10. O pedido do Vicente de 29/10: 'queria nao precisar informar sempre. se eu posso olhar vc deveria ser capaz'.",
       "id": "DEBT-148",
       "summary": "medir_esforco.py conta cada bloco de conteúdo de uma resposta como uma mensagem (números inflados ~2,2×) e não enxerga subagentes do Agent tool nem o uso de outros projetos, que pesam no mesmo limite da conta",
       "change_type": "CORRECAO",
       "evidence": "O Claude Code grava uma linha .jsonl por bloco de conteúdo (thinking, texto, tool_use) da mesma resposta, e todas repetem o mesmo message.usage. carregar() e custo_workflows() somam o usage de cada LINHA. Medido em 29/10/2026: na sessão e5229a50, 150 linhas com usage para 65 respostas (2,31×); na 00a84351, 180 para 84 (2,14×); nos 61 ids repetidos da e5229a50 o usage é idêntico em todas as linhas. A régua do CONTINUAR §1 ('~410–425 mil de saída por janela') e os números das cartas estão nessa unidade inflada, com fator que varia por sessão. Além disso: (a) subagentes do Agent tool (<sessão>/subagents/agent-*.jsonl fora de workflows/) não entram em conta nenhuma; (b) o script lê só ~/.claude/projects/c--reviewbr, mas o limite de 5h é da CONTA — em 24/10 o Vicente estava a 20% (5h) trabalhando no projeto Cultura Líquida, invisível para o script. O uso no claude.ai (web) também não aparece em transcrição local.",
+      "reproduction": "Contar, num .jsonl de sessão, as linhas com message.usage e os message.id distintos: e5229a50 -> 150 linhas, 65 ids. Controle: os usages repetidos são idênticos (61 de 61), logo a soma por linha conta a mesma resposta 2 a 3 vezes. find ~/.claude/projects/C--reviewbr -path '*/subagents/*' -name 'agent-*.jsonl' -not -path '*/workflows/*' -> 7 arquivos que nenhuma função do script lê.",
+      "location": ".claude/maintenance/medir_esforco.py: carregar(), custo_workflows() e PROJ",
       "status": "RESOLVIDO",
+      "resolution": "Corrigido em 29/10/2026 (sessão 0), gate RV-11 aprovado (CORRECAO, addresses DEBT-148). (1) respostas() conta uma vez por message.id; carregar() e custo_workflows() passaram a usá-la. Verificação: sessão e5229a50 com 185 linhas e 79 respostas -> o script mostra 79; 00a84351 com 180 linhas e 84 respostas -> 84. (2) carregar_subagentes() lê <sessão>/subagents/**/agent-*.jsonl, Agent tool incluído. (3) --agora soma sessões principais e subagentes de TODOS os projetos de ~/.claude/projects e estima a porcentagem da janela de 5h da conta; --em=<ISO> calcula até um instante, para calibrar. (4) Régua recalibrada em ponderado deduplicado: ~10,4 M = 100% (faixa 9,5–11,5 M), por dois pares que concordam (24/10 14:40Z, 20% com 2,08 M; 29/10 19:50Z, 5% com 0,52 M); os pares que discordam e o porquê estão no CONTINUAR.md §1. Limite declarado no próprio script e nos documentos: a estimativa é piso, porque o uso no claude.ai não deixa transcrito neste disco.",
+      "found_by": "sessão 0 (29/10/2026) — ao atender o pedido do Vicente de não precisar informar o consumo",
+      "found_at": "2026-10-29",
+      "context": "Gravidade SERIO porque é o único instrumento da regra de tokens (PLANO_sessoes §Tokens), e o limite estourou sem aviso em 03/10 e 17/10. O pedido do Vicente de 29/10: 'queria nao precisar informar sempre. se eu posso olhar vc deveria ser capaz'.",
       "gravidade": "SERIO",
       "destino": "FASE_1",
       "depende_de": []
+    },
+    {
+      "id": "DEBT-149",
+      "summary": "O falsificador do mapeamento (check_standard_coverage, conferência b) não tem poder no PRISMA-S: com os títulos oficiais, não acusa os deslocamentos conhecidos de S11 e S13 — e o relatório passa a dizer com_poder: true",
+      "change_type": "CORRECAO",
+      "evidence": "Controle positivo pedido no prompt da sessão 1 (30/10/2026): com os 16 títulos oficiais gravados (DEBT-128) e ANTES do remapeamento, o falsificador devia acusar os ponteiros de S11 e S13, que o DEBT-128 já mostrara deslocados. Não acusou. check_standard_coverage('prisma-s','prisma-sr') devolveu com_poder: true, fração 14/16 e só 2 suspeitos: F2.1.3.1 'Total de resultados brutos' → S12 'Updates' (sugere S15) e F4.2.2 'Total não recuperado' → S16 'Deduplication' (sugere S15). Nenhum ponteiro de S11 'Prior work' (F1.3.1.6 'Idiomas aceitos', F1.3.2.4 'Idioma', F2.1.2.3 'Restrição de idioma aplicada') nem de S13 'Dates of searches' (F1.4.3 e F2.1.2.5 'Vocabulários controlados…', F8.3.7 'Métodos — Estratégia de busca'). MEDIDA DO PODER: dos 70 pares do mapeamento antigo, 58 mudam no remapeamento feito contra os enunciados e o E&E (deslocados para outro item ou retirados por não servirem a item algum do PRISMA-S); o falsificador acusou 2 — recall de ~3%. POR QUÊ: (1) compara o rótulo com o TÍTULO, não com o enunciado; (2) a tabela PT⟷EN (mapping_coherence.ts, EQUIV) só tem conceitos dos títulos do PRISMA 2020 — nenhum conceito dos títulos do PRISMA-S (limits, restrictions, dates, records, deduplication, updates, peer review, citation, contacts, registries, filters) tem par em português, e 'Restrição de idioma' nunca encontra 'Limits and restrictions'; (3) a classe do S13 — vocabulário controlado declarado como 'Dates of searches' — não é detectável por título em caso algum: nenhum título do PRISMA-S nomeia vocabulário, e o item certo (8, 'Full search strategies') é inclusão conceitual, não lexical. E com_poder é derivado SÓ de titulos_oficiais (standard_coverage.ts:184): título oficial é condição necessária, não suficiente — com ele, o relatório afirmou 14/16 conferido num mapeamento com 58 de 70 pares fora do lugar. O OUTRO LADO, FALSO POSITIVO (PRISMA-ScR, mesmo dia, DEBT-055): no mapeamento feito contra os enunciados, a falsificação contesta 4 pares que a leitura confirma — F2.1.2.1 'Data e hora da busca' → 7 (sugere 8, porque 'busca'→'search' e o título do item 8 é só 'Search'; o item 7 pede 'the date the most recent search was executed'), F2.2.5 'Busca manual em periódicos' → 7 (sugere 8; periódico folheado é fonte de informação, e o item 8 é a estratégia ELETRÔNICA), F5.2.5.1 'Financiamento do estudo' → 11 (sugere 22; é variável da extração, e também está no 22) e F8.1.5 'title_abstract_excluded' → 14 (sugere 1 'Title': o nome da variável casa com o título do item 1). Dois deles (7 e 14) viram contestados e a fração cai de 14/22 para 12/22; valid fica false só por isso.",
+      "reproduction": "Teste reviewbr/reviewbr-mcp/tests/prisma_s_scr_oficial.test.ts — bloco 'controle positivo do falsificador no PRISMA-S (DEBT-149) — SEM PODER': monta em memória o PRISMA-S com os títulos oficiais e o covered_by de antes do remapeamento (git show d64067d:.claude/standards/prisma-s.json, transcrito no teste) e chama MappingCoherenceService.checarMetodologia(REPO, 'prisma-sr', std) → 2 suspeitos (F2.1.3.1→S12, F4.2.2→S16), nenhum par de S11 ou S13; e conta 58 de 70 pares mudados. Falso positivo: check_standard_coverage('prisma-scr') → 4 suspeitos, os listados acima. Controle: o mesmo falsificador acha os 15 deslocados do PRISMA 2020 (DEBT-045), onde os rótulos casam com os títulos pela tabela EQUIV.",
+      "location": "src/services/mapping_coherence.ts (EQUIV, casam, checar); src/services/standard_coverage.ts:184 (com_poder = titulos_oficiais)",
+      "status": "ABERTO",
+      "resolution": "",
+      "found_by": "sessão 1 (30/10/2026) — controle positivo do falsificador pedido no prompt de abertura",
+      "found_at": "2026-10-30",
+      "context": "O prompt da sessão 1 previu o caso: 'se não acusar antes, ele não tem poder, e isso é achado a registrar (atenção: os rótulos da spec estão em português e os títulos oficiais, em inglês)'. NÃO CORRIGIDO NA SESSÃO 1: o prompt manda registrar, e dar poder ao falsificador é escolha de desenho que volta ao acompanhamento — comparar também o enunciado? equivalências por padrão? exigir controle positivo por padrão para afirmar com_poder? registrar o suspeito lido e descartado? Relação com o DEBT-145: a trava na escolha de método vai usar 'mapeamento contestado'.",
+      "gravidade": "SERIO",
+      "destino": "DECISAO_PESQ",
+      "depende_de": []
+    },
+    {
+      "id": "DEBT-150",
+      "summary": "PRISMA-ScR: os itens 12 e 16 (avaliação crítica, 'If done') são condicionais e ficaram declarados [NÃO COBERTO] — o formato atual não recebe do projeto se a avaliação foi feita",
+      "change_type": "CONFORMIDADE",
+      "evidence": "Mapeamento do DEBT-055 (30/10/2026), lido no checklist oficial (reviewbr/download/PRISMA-ScR-Fillable-Checklist_11Sept2019.pdf): item 12 'If done, provide a rationale for conducting a critical appraisal of included sources of evidence; describe the methods used and how this information was used in any data synthesis (if appropriate).' e item 16 'If done, present data on critical appraisal of included sources of evidence (see item 12).' O catálogo os registra como os 2 opcionais do PRISMA-ScR. A aplicabilidade depende do PROJETO, e o formato atual só tem duas declarações, ambas do padrão inteiro: [NÃO SE APLICA] diria que nunca se aplica (falso: se aplica quando a avaliação é feita) e [NÃO COBERTO] diz que o sistema ainda não implementa. A trilha do scoping desliga a F6 (manifest: 'Não se aplica a scoping'): não feita, o item não se aplica; feita, a trilha não tem onde registrá-la. Declarados [NÃO COBERTO], com covered_by vazio — ponteiro para a F6 desligada reprovaria a conferência (a).",
+      "reproduction": "",
+      "location": ".claude/standards/prisma-scr.json (itens 12 e 16)",
+      "status": "ABERTO",
+      "resolution": "",
+      "found_by": "sessão 1 (30/10/2026) — mapeamento do PRISMA-ScR (DEBT-055)",
+      "found_at": "2026-10-30",
+      "context": "O prompt da sessão 1: 'O item 12 do PRISMA-ScR (avaliação crítica, \"se feita\") pede item condicional, e o mecanismo de condição é o DEBT-142, da sessão 2. Se o formato atual não comportar, declare e registre — não invente o mecanismo aqui.' Quando o DEBT-142 existir: o método scoping-prisma-scr declara 12 e 16 condicionados a 'avaliação crítica feita'; o projeto responde; com 'não', saem do denominador; com 'sim', a trilha precisa de onde registrar a avaliação (hoje a F6 está desligada no método, e a spec do método diz que um charting de qualidade opcional 'é nota, não gate').",
+      "gravidade": "MENOR",
+      "destino": "CONFORM_EXTERNA",
+      "depende_de": [
+        "DEBT-142"
+      ]
+    },
+    {
+      "id": "DEBT-151",
+      "summary": "A trilha do scoping diz uma coisa e o template de protocolo do scoping diz outra sobre os mesmos subitens: F1.3.1.2, F1.3.1.3 e F0.3.4 têm um sentido na spec herdada (PICOS) e outro no template (PCC), e o elemento Contexto do PCC não tem subitem",
+      "change_type": "CORRECAO",
+      "evidence": "A trilha do scoping-prisma-scr é a spec do prisma-sr lida por `extends` (a spec do scoping só traz deltas, sem tabela de subitens). Nela: F1.3.1.2 'Intervenção / Objeto — Tipos de intervenção ou objeto de estudo aceitos' (spec.md:92), F1.3.1.3 'Desfechos mínimos — Ao menos um desfecho que o estudo deve reportar' (spec.md:93; motivo de exclusão EX-03 'Desfecho não reportado', :227), F0.3.4 'Relevância para política ou prática' (spec.md:56). O template de protocolo do scoping usa os MESMOS ids com outro sentido: '**Conceito** [F1.3.1.2]', '**Contexto** [F1.3.1.3]' (protocol_template.md:53-54) e '**Objetivo do mapeamento** [F0.3.4]' (:29). E o PCC que a spec do scoping manda usar (P, Conceito, Contexto — spec do scoping :13-16) não tem subitem para o Contexto em F1.2, cujos campos são os do PICOS (F1.2.1–F1.2.10); o template põe o PCC numa tabela sem ids (protocol_template.md:41-47). Consequência: o que o sistema mostra da trilha do escopo (rótulo na falsificação, fundamento da etapa ao agente, DEBT-126) é o rótulo do PICOS — 'Desfechos mínimos' numa revisão de escopo —, enquanto o pesquisador preenche 'Contexto'. Não muda o mapeamento do DEBT-055 (os dois sentidos são critério de elegibilidade, item 6), mas é o sistema dizendo duas coisas do mesmo campo.",
+      "reproduction": "grep -n 'F1.3.1.2\\|F1.3.1.3\\|F0.3.4' .claude/methodologies/prisma-sr/spec.md .claude/methodologies/scoping-prisma-scr/protocol_template.md → spec: 'Intervenção / Objeto', 'Desfechos mínimos', 'Relevância para política ou prática'; template do scoping: 'Conceito', 'Contexto', 'Objetivo do mapeamento'. Controle: no template do prisma-sr os mesmos ids têm o sentido da spec ('Intervenção' [F1.3.1.2], 'Desfechos' [F1.3.1.3], 'Relevância' [F0.3.4]).",
+      "location": ".claude/methodologies/scoping-prisma-scr/protocol_template.md; .claude/methodologies/prisma-sr/spec.md (lido pelo scoping por extends)",
+      "status": "ABERTO",
+      "resolution": "",
+      "found_by": "sessão 1 (30/10/2026) — mapeamento do PRISMA-ScR (DEBT-055)",
+      "found_at": "2026-10-30",
+      "context": "Achado de passagem, registrado e não executado (um assunto por sessão). Resolve-se no ponto (2) da leitura para execução do DEBT-142: 'o scoping-prisma-scr ... vira metodo completo, com spec e mapeamento proprios' — aí o PCC ganha subitens próprios, e o mapeamento do PRISMA-ScR passa a apontá-los.",
+      "gravidade": "MENOR",
+      "destino": "FASE_1",
+      "depende_de": [
+        "DEBT-142"
+      ]
     }
   ]
 }

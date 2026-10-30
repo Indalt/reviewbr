@@ -3,31 +3,325 @@
   "id": "PRISMA-ScR",
   "name": "PRISMA-ScR",
   "version": "2018",
-  "version_source": "CONFIRMADO em 26/09/2026 contra a fonte oficial: Tricco AC, Lillie E, Zarin W, O'Brien KK, Colquhoun H, Levac D, et al. \"PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation.\" Ann Intern Med. 2018;169:467–473. doi: 10.7326/M18-0850. Documento consultado: reviewbr/download/PRISMA-ScR-Fillable-Checklist_11Sept2019.pdf (St. Michael's Hospital / Joanna Briggs Institute) — já lido e conferido pelo pesquisador nesta sessão-mãe (DEBT-050). Fonte oficial também referenciada por: Levac D, Colquhoun H, O'Brien KK. Scoping studies: advancing the methodology. Implement Sci. 2010;5:69; e pela JBI Manual for Evidence Synthesis.",
+  "version_source": "CONFIRMADO em 26/09/2026 contra a fonte oficial: Tricco AC, Lillie E, Zarin W, O'Brien KK, Colquhoun H, Levac D, et al. \"PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation.\" Ann Intern Med. 2018;169:467–473. doi: 10.7326/M18-0850. Documento consultado: reviewbr/download/PRISMA-ScR-Fillable-Checklist_11Sept2019.pdf (St. Michael's Hospital / Joanna Briggs Institute) — já lido e conferido pelo pesquisador nesta sessão-mãe (DEBT-050). Fonte oficial também referenciada por: Levac D, Colquhoun H, O'Brien KK. Scoping studies: advancing the methodology. Implement Sci. 2010;5:69; e pela JBI Manual for Evidence Synthesis. Enunciados (campo text) e mapeamento (covered_by e declarações) gravados em 30/10/2026 (DEBT-055) a partir do mesmo PDF, lido por inteiro (pdftotext; SHA-256 1b70ecd1d4fc1105d9abc4996e6a3d1822986d00fdf22061f3aa8b9c237facf2).",
   "titulos_oficiais": true,
-  "note": "22 itens em 7 seções (Title, Abstract, Introduction, Methods, Results, Discussion, Funding), SEM subitens por letra — ao contrário do PRISMA 2020, que se desdobra em 10a/10b, 13a-13f etc. covered_by de TODOS os itens está VAZIO DE PROPÓSITO: mapear contra a trilha de .claude/methodologies/scoping-prisma-scr/spec.md é o objeto de um achado JÁ REGISTRADO em separado (DEBT-055 — 'a spec da revisão de escopo não mapeia nenhum subitem a nenhum item de padrão'), não desta criação. check_standard_coverage('prisma-scr') vai reportar valid=false com os 22 itens como órfãos até esse mapeamento ser feito — comportamento esperado, mesma classe do que já ocorre com prisma-2020.json antes de DEBT-046/047 serem tratados. Notas de rodapé do checklist oficial, preservadas na íntegra (os símbolos * † ‡ § aparecem nos títulos dos itens 7, 9, 10 e 12, exatamente como no documento-fonte): [*] Where sources of evidence (see dagger footnote) are compiled from, such as bibliographic databases, social media platforms, and Web sites. [†] A more inclusive/heterogeneous term used to account for the different types of evidence or data sources (e.g., quantitative and/or qualitative research, expert opinion, and policy documents) that may be eligible in a scoping review as opposed to only studies. This is not to be confused with information sources (see asterisk footnote). [‡] The frameworks by Arksey and O'Malley (6) and Levac and colleagues (7) and the JBI guidance (4, 5) refer to the process of data extraction in a scoping review as data charting. [§] The process of systematically examining research evidence to assess its validity, results, and relevance before using it to inform a decision. This term is used for items 12 and 19 instead of 'risk of bias' (which is more applicable to systematic reviews of interventions) to include and acknowledge the various sources of evidence that may be used in a scoping review (e.g., quantitative and/or qualitative research, expert opinion, and policy document). [NOTA DE VERIFICAÇÃO (controle positivo, não suspeita própria): o texto acima ('itens 12 e 19') é a transcrição literal do documento fonte desta correção. Mas .claude/catalog/ já tinha uma entrada PRISMA-ScR ABSORVIDA independentemente antes desta sessão (fonte: EQUATOR Network PDF + prisma-statement.org, confidence:'alta'), e ela documenta a MESMA discrepância com a mesma conclusão: 'a nota de rodapé do próprio PDF oficial diz este termo é usado para os itens 12 e 19 ao tratar de critical appraisal, o que conflita com a numeração do corpo do checklist, onde a apreciação crítica em Resultados é o item 16 (e o item 19 é Summary of evidence). Trata-se, ao que tudo indica, de erro de rodapé no material oficial — mas o sistema não deve gravar 19 como item de apreciação crítica.' Duas extrações independentes (Tricco et al. via caminhos distintos) convergem: os itens de apreciação crítica/critical appraisal são 12 (Methods) e 16 (Results, 'Critical appraisal within sources of evidence'), NÃO 12 e 19. Ao mapear covered_by (DEBT-055) ou ao citar este rodapé em qualquer lugar, use 16, não 19.]",
+  "note": "22 itens em 7 seções (Title, Abstract, Introduction, Methods, Results, Discussion, Funding), SEM subitens por letra — ao contrário do PRISMA 2020, que se desdobra em 10a/10b, 13a-13f etc. title = tópico oficial (com os símbolos de rodapé do documento-fonte); text = enunciado oficial, verbatim. MAPEADO em 30/10/2026 (DEBT-055) contra a trilha do scoping-prisma-scr — a spec do prisma-sr lida por `extends`, com os deltas do scoping —, no formato atual (antes do DEBT-142), item a item contra o enunciado. COBERTURA: 14/22 com correspondência declarada; 8 declarados [NÃO COBERTO] — 3, 6, 10, 11, 13 e 22 parciais; 12 e 16, condicionais ('If done'), à espera do item condicional (DEBT-142; pendência no DEBT-150), com ponteiros vazios porque a F6 está desligada no método. FALSIFICAÇÃO: contesta 4 pares — F2.1.2.1→7 e F2.2.5→7 (o rótulo traz 'busca' e o título do item 8 é só 'Search'), F5.2.5.1→11 (financiamento, que também está no 22) e F8.1.5→14 (a variável 'title_abstract_excluded' casa com o item 1, 'Title'). Lidos contra o enunciado, os quatro são falsos positivos: o item 7 pede 'the date the most recent search was executed'; periódicos folheados são fonte de informação; toda variável da F5.2 é item de dado; a contagem da triagem é do item 14. Por isso a conferência reporta 12/22, e não 14/22. Registrado no DEBT-149. Notas de rodapé do checklist oficial, preservadas na íntegra (os símbolos * † ‡ § aparecem nos títulos dos itens 7, 9, 10 e 12, exatamente como no documento-fonte): [*] Where sources of evidence (see dagger footnote) are compiled from, such as bibliographic databases, social media platforms, and Web sites. [†] A more inclusive/heterogeneous term used to account for the different types of evidence or data sources (e.g., quantitative and/or qualitative research, expert opinion, and policy documents) that may be eligible in a scoping review as opposed to only studies. This is not to be confused with information sources (see asterisk footnote). [‡] The frameworks by Arksey and O'Malley (6) and Levac and colleagues (7) and the JBI guidance (4, 5) refer to the process of data extraction in a scoping review as data charting. [§] The process of systematically examining research evidence to assess its validity, results, and relevance before using it to inform a decision. This term is used for items 12 and 19 instead of 'risk of bias' (which is more applicable to systematic reviews of interventions) to include and acknowledge the various sources of evidence that may be used in a scoping review (e.g., quantitative and/or qualitative research, expert opinion, and policy document). [NOTA DE VERIFICAÇÃO (controle positivo, não suspeita própria): o texto acima ('itens 12 e 19') é a transcrição literal do documento fonte desta correção. Mas .claude/catalog/ já tinha uma entrada PRISMA-ScR ABSORVIDA independentemente antes desta sessão (fonte: EQUATOR Network PDF + prisma-statement.org, confidence:'alta'), e ela documenta a MESMA discrepância com a mesma conclusão: 'a nota de rodapé do próprio PDF oficial diz este termo é usado para os itens 12 e 19 ao tratar de critical appraisal, o que conflita com a numeração do corpo do checklist, onde a apreciação crítica em Resultados é o item 16 (e o item 19 é Summary of evidence). Trata-se, ao que tudo indica, de erro de rodapé no material oficial — mas o sistema não deve gravar 19 como item de apreciação crítica.' Duas extrações independentes (Tricco et al. via caminhos distintos) convergem: os itens de apreciação crítica/critical appraisal são 12 (Methods) e 16 (Results, 'Critical appraisal within sources of evidence'), NÃO 12 e 19. Ao mapear covered_by (DEBT-055) ou ao citar este rodapé em qualquer lugar, use 16, não 19.]",
   "items": [
-    { "id": "1", "section": "Title", "title": "Title", "covered_by": [] },
-    { "id": "2", "section": "Abstract", "title": "Structured summary", "covered_by": [] },
-    { "id": "3", "section": "Introduction", "title": "Rationale", "covered_by": [] },
-    { "id": "4", "section": "Introduction", "title": "Objectives", "covered_by": [] },
-    { "id": "5", "section": "Methods", "title": "Protocol and registration", "covered_by": [] },
-    { "id": "6", "section": "Methods", "title": "Eligibility criteria", "covered_by": [] },
-    { "id": "7", "section": "Methods", "title": "Information sources*", "covered_by": [] },
-    { "id": "8", "section": "Methods", "title": "Search", "covered_by": [] },
-    { "id": "9", "section": "Methods", "title": "Selection of sources of evidence†", "covered_by": [] },
-    { "id": "10", "section": "Methods", "title": "Data charting process‡", "covered_by": [] },
-    { "id": "11", "section": "Methods", "title": "Data items", "covered_by": [] },
-    { "id": "12", "section": "Methods", "title": "Critical appraisal of individual sources of evidence§", "covered_by": [] },
-    { "id": "13", "section": "Methods", "title": "Synthesis of results", "covered_by": [] },
-    { "id": "14", "section": "Results", "title": "Selection of sources of evidence", "covered_by": [] },
-    { "id": "15", "section": "Results", "title": "Characteristics of sources of evidence", "covered_by": [] },
-    { "id": "16", "section": "Results", "title": "Critical appraisal within sources of evidence", "covered_by": [] },
-    { "id": "17", "section": "Results", "title": "Results of individual sources of evidence", "covered_by": [] },
-    { "id": "18", "section": "Results", "title": "Synthesis of results", "covered_by": [] },
-    { "id": "19", "section": "Discussion", "title": "Summary of evidence", "covered_by": [] },
-    { "id": "20", "section": "Discussion", "title": "Limitations", "covered_by": [] },
-    { "id": "21", "section": "Discussion", "title": "Conclusions", "covered_by": [] },
-    { "id": "22", "section": "Funding", "title": "Funding", "covered_by": [] }
+    {
+      "id": "1",
+      "section": "Title",
+      "title": "Title",
+      "text": "Identify the report as a scoping review.",
+      "covered_by": [
+        "F0.1.1",
+        "F0.1.3",
+        "F8.3.1"
+      ]
+    },
+    {
+      "id": "2",
+      "section": "Abstract",
+      "title": "Structured summary",
+      "text": "Provide a structured summary that includes (as applicable): background, objectives, eligibility criteria, sources of evidence, charting methods, results, and conclusions that relate to the review questions and objectives.",
+      "covered_by": [
+        "F8.3.2"
+      ]
+    },
+    {
+      "id": "3",
+      "section": "Introduction",
+      "title": "Rationale",
+      "text": "Describe the rationale for the review in the context of what is already known. Explain why the review questions/objectives lend themselves to a scoping review approach.",
+      "covered_by": [
+        "F0.3.1",
+        "F0.3.2",
+        "F0.3.3",
+        "F0.3.4",
+        "F8.3.3"
+      ],
+      "nao_coberto": "parcial — a trilha coleta a justificativa da revisão (F0.3.1–F0.3.4), mas não pede por que as perguntas e os objetivos se prestam a uma revisão de ESCOPO, a segunda frase do item; F0.1.3 só registra o tipo de revisão. Mapeamento de 30/10/2026 (DEBT-055)."
+    },
+    {
+      "id": "4",
+      "section": "Introduction",
+      "title": "Objectives",
+      "text": "Provide an explicit statement of the questions and objectives being addressed with reference to their key elements (e.g., population or participants, concepts, and context) or other relevant key elements used to conceptualize the review questions and/or objectives.",
+      "covered_by": [
+        "F1.1.1",
+        "F1.1.2",
+        "F1.1.3",
+        "F8.3.4"
+      ]
+    },
+    {
+      "id": "5",
+      "section": "Methods",
+      "title": "Protocol and registration",
+      "text": "Indicate whether a review protocol exists; state if and where it can be accessed (e.g., a Web address); and if available, provide registration information, including the registration number.",
+      "covered_by": [
+        "F0.1.5",
+        "F0.2.1",
+        "F0.2.2",
+        "F0.2.3",
+        "F0.2.4",
+        "F0.2.5",
+        "F8.3.15"
+      ]
+    },
+    {
+      "id": "6",
+      "section": "Methods",
+      "title": "Eligibility criteria",
+      "text": "Specify characteristics of the sources of evidence used as eligibility criteria (e.g., years considered, language, and publication status), and provide a rationale.",
+      "covered_by": [
+        "F1.3.1.1",
+        "F1.3.1.2",
+        "F1.3.1.3",
+        "F1.3.1.4",
+        "F1.3.1.5",
+        "F1.3.1.6",
+        "F1.3.1.7",
+        "F1.3.2.1",
+        "F1.3.2.2",
+        "F1.3.2.3",
+        "F1.3.2.4",
+        "F1.3.2.6",
+        "F8.3.5"
+      ],
+      "nao_coberto": "parcial — a trilha coleta as características usadas como critério (F1.3.1.x e F1.3.2.x: período, idioma, tipo de documento, acesso), mas só pede justificativa para o idioma (F1.3.1.6); o item pede a justificativa dos critérios. Mapeamento de 30/10/2026 (DEBT-055)."
+    },
+    {
+      "id": "7",
+      "section": "Methods",
+      "title": "Information sources*",
+      "text": "Describe all information sources in the search (e.g., databases with dates of coverage and contact with authors to identify additional sources), as well as the date the most recent search was executed.",
+      "covered_by": [
+        "F2.1.1.1",
+        "F2.1.1.2",
+        "F2.1.1.3",
+        "F2.1.2.1",
+        "F2.1.2.2",
+        "F2.2.1",
+        "F2.2.4",
+        "F2.2.5",
+        "F2.2.6",
+        "F2.2.7",
+        "F8.3.6"
+      ]
+    },
+    {
+      "id": "8",
+      "section": "Methods",
+      "title": "Search",
+      "text": "Present the full electronic search strategy for at least 1 database, including any limits used, such that it could be repeated.",
+      "covered_by": [
+        "F1.2.2",
+        "F1.2.4",
+        "F1.2.6",
+        "F1.2.8",
+        "F1.2.10",
+        "F1.4.1",
+        "F1.4.2",
+        "F1.4.3",
+        "F2.1.1.6",
+        "F2.1.2.2",
+        "F2.1.2.3",
+        "F2.1.2.4",
+        "F2.1.2.5",
+        "F2.1.2.6",
+        "F2.1.2.7",
+        "F2.1.2.8",
+        "F8.3.7"
+      ]
+    },
+    {
+      "id": "9",
+      "section": "Methods",
+      "title": "Selection of sources of evidence†",
+      "text": "State the process for selecting sources of evidence (i.e., screening and eligibility) included in the scoping review.",
+      "covered_by": [
+        "F4.1.2",
+        "F4.1.3",
+        "F4.1.5",
+        "F8.3.8"
+      ]
+    },
+    {
+      "id": "10",
+      "section": "Methods",
+      "title": "Data charting process‡",
+      "text": "Describe the methods of charting data from the included sources of evidence (e.g., calibrated forms or forms that have been tested by the team before their use, and whether data charting was done independently or in duplicate) and any processes for obtaining and confirming data from investigators.",
+      "covered_by": [
+        "F5.1.1",
+        "F5.1.2",
+        "F5.1.3",
+        "F5.1.4",
+        "F8.3.9"
+      ],
+      "nao_coberto": "parcial — F5.1 coleta o formulário pilotado, o número de revisores, a resolução de conflitos e o software, mas não há campo para os processos de obter e confirmar dados junto aos investigadores (a mesma lacuna do item 11c do PRISMA-P). Mapeamento de 30/10/2026 (DEBT-055)."
+    },
+    {
+      "id": "11",
+      "section": "Methods",
+      "title": "Data items",
+      "text": "List and define all variables for which data were sought and any assumptions and simplifications made.",
+      "covered_by": [
+        "F5.2.1.1",
+        "F5.2.1.2",
+        "F5.2.1.3",
+        "F5.2.1.4",
+        "F5.2.1.5",
+        "F5.2.1.6",
+        "F5.2.1.7",
+        "F5.2.2.1",
+        "F5.2.2.2",
+        "F5.2.2.3",
+        "F5.2.3.1",
+        "F5.2.3.2",
+        "F5.2.3.3",
+        "F5.2.3.4",
+        "F5.2.3.5",
+        "F5.2.4.1",
+        "F5.2.4.2",
+        "F5.2.4.3",
+        "F5.2.5.1",
+        "F5.2.5.2",
+        "F5.2.5.3",
+        "F8.3.10"
+      ],
+      "nao_coberto": "parcial — F5.2 define as variáveis-base da extração, mas as dimensões de charting próprias do escopo, que a spec do método manda priorizar (tipo de conceito, contexto, tipo de fonte), não são subitens da trilha, e não há campo para os pressupostos e simplificações que o item pede. Mapeamento de 30/10/2026 (DEBT-055)."
+    },
+    {
+      "id": "12",
+      "section": "Methods",
+      "title": "Critical appraisal of individual sources of evidence§",
+      "text": "If done, provide a rationale for conducting a critical appraisal of included sources of evidence; describe the methods used and how this information was used in any data synthesis (if appropriate).",
+      "covered_by": [],
+      "nao_coberto": "item condicional ('If done'), que o formato atual não comporta: o padrão não tem como receber do projeto se a avaliação crítica foi feita. A trilha do scoping desliga a F6 — não feita, o item não se aplica; feita, a trilha não tem onde registrá-la. O mecanismo é o do DEBT-142 (o método declara a condição, o projeto responde); sem ponteiro para a F6 desligada. Mapeamento de 30/10/2026 (DEBT-055; pendência registrada no DEBT-150)."
+    },
+    {
+      "id": "13",
+      "section": "Methods",
+      "title": "Synthesis of results",
+      "text": "Describe the methods of handling and summarizing the data that were charted.",
+      "covered_by": [
+        "F7.1.1",
+        "F8.3.13"
+      ],
+      "nao_coberto": "parcial — F7.1.1 registra só o tipo de síntese; os métodos de tratar e resumir os dados mapeados (categorias, frequências, mapas de evidência, que a spec do método descreve em prosa) não têm subitem, e a F7 do escopo não nomeia artefato. Mapeamento de 30/10/2026 (DEBT-055)."
+    },
+    {
+      "id": "14",
+      "section": "Results",
+      "title": "Selection of sources of evidence",
+      "text": "Give numbers of sources of evidence screened, assessed for eligibility, and included in the review, with reasons for exclusions at each stage, ideally using a flow diagram.",
+      "covered_by": [
+        "F4.1.1",
+        "F4.1.4",
+        "F4.2.1",
+        "F4.2.2",
+        "F4.2.3",
+        "F4.2.4",
+        "F4.2.5",
+        "F8.1.1",
+        "F8.1.2",
+        "F8.1.3",
+        "F8.1.4",
+        "F8.1.5",
+        "F8.1.6",
+        "F8.1.7",
+        "F8.1.8",
+        "F8.1.9",
+        "F8.1.10",
+        "F8.3.16"
+      ]
+    },
+    {
+      "id": "15",
+      "section": "Results",
+      "title": "Characteristics of sources of evidence",
+      "text": "For each source of evidence, present characteristics for which data were charted and provide the citations.",
+      "covered_by": [
+        "F8.2.1",
+        "F8.2.2",
+        "F8.2.3",
+        "F8.2.4",
+        "F8.2.5",
+        "F8.2.6",
+        "F8.2.7",
+        "F8.2.8",
+        "F8.2.9",
+        "F8.2.10",
+        "F8.3.17"
+      ]
+    },
+    {
+      "id": "16",
+      "section": "Results",
+      "title": "Critical appraisal within sources of evidence",
+      "text": "If done, present data on critical appraisal of included sources of evidence (see item 12).",
+      "covered_by": [],
+      "nao_coberto": "item condicional ('If done'; é o resultado do item 12) — a mesma situação do item 12: não feita, não se aplica; feita, a trilha do scoping não tem onde registrá-la. Mecanismo do DEBT-142. Mapeamento de 30/10/2026 (DEBT-055; pendência registrada no DEBT-150)."
+    },
+    {
+      "id": "17",
+      "section": "Results",
+      "title": "Results of individual sources of evidence",
+      "text": "For each included source of evidence, present the relevant data that were charted that relate to the review questions and objectives.",
+      "covered_by": [
+        "F5.2.4.1",
+        "F5.2.4.2",
+        "F8.2.10",
+        "F8.3.19"
+      ]
+    },
+    {
+      "id": "18",
+      "section": "Results",
+      "title": "Synthesis of results",
+      "text": "Summarize and/or present the charting results as they relate to the review questions and objectives.",
+      "covered_by": [
+        "F8.3.20"
+      ]
+    },
+    {
+      "id": "19",
+      "section": "Discussion",
+      "title": "Summary of evidence",
+      "text": "Summarize the main results (including an overview of concepts, themes, and types of evidence available), link to the review questions and objectives, and consider the relevance to key groups.",
+      "covered_by": [
+        "F8.3.23"
+      ]
+    },
+    {
+      "id": "20",
+      "section": "Discussion",
+      "title": "Limitations",
+      "text": "Discuss the limitations of the scoping review process.",
+      "covered_by": [
+        "F8.3.23"
+      ]
+    },
+    {
+      "id": "21",
+      "section": "Discussion",
+      "title": "Conclusions",
+      "text": "Provide a general interpretation of the results with respect to the review questions and objectives, as well as potential implications and/or next steps.",
+      "covered_by": [
+        "F8.3.23"
+      ]
+    },
+    {
+      "id": "22",
+      "section": "Funding",
+      "title": "Funding",
+      "text": "Describe sources of funding for the included sources of evidence, as well as sources of funding for the scoping review. Describe the role of the funders of the scoping review.",
+      "covered_by": [
+        "F0.1.8",
+        "F5.2.5.1",
+        "F8.3.24"
+      ],
+      "nao_coberto": "parcial — a trilha coleta o financiamento da revisão (F0.1.8) e o de cada fonte incluída (F5.2.5.1), mas não o papel dos financiadores na revisão de escopo, que a segunda frase do item pede (a mesma lacuna do item 5c do PRISMA-P). Mapeamento de 30/10/2026 (DEBT-055)."
+    }
   ]
 }
