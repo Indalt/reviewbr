@@ -4,7 +4,9 @@ import { z } from "zod";
 import { ChangeType } from "./change_validator.js";
 import { SystemDebtService, DebtFindingSchema, SystemDebtSchema } from "./system_debt.js";
 import { MethodologyCatalogService, CatalogEntrySchema, CatalogSchema } from "./methodology_catalog.js";
-import { errosDaTrilha } from "./method_trail.js";
+import { errosDaTrilha, lerCondicoes } from "./method_trail.js";
+import { lerMapeamento, arquivoDoMapeamento } from "./method_mapping.js";
+import { StandardsService } from "./standards.js";
 import { AgentOrchestrator } from "../registry/agent_orchestrator.js";
 
 /**
@@ -294,8 +296,22 @@ export class MethodologyWriter {
             `## Mapeamento para o padrão\n\n[TBD] — cada subitem da trilha precisa apontar o item do padrão que atende.\n`);
         fs.writeFileSync(path.join(dir, "protocol_template.md"),
             `# Protocolo — ${m.name}\n\n**Estado:** [DRAFT]\n\n[TBD]\n`);
+        // DEBT-142 — o mapeamento de cada padrão é do método. Esqueleto sem linha nenhuma: toda
+        // linha do padrão sai como omissão até quem assimila mapeá-la ou declará-la.
+        const mapeamentos = m.standards.map((s) => arquivoDoMapeamento(m.id, s));
+        fs.mkdirSync(path.join(dir, "conformance"), { recursive: true });
+        for (const s of m.standards) {
+            fs.writeFileSync(path.join(repoRoot, arquivoDoMapeamento(m.id, s)), JSON.stringify({
+                schemaVersion: 1, standard: s,
+                note: "[TBD] — mapear cada linha do padrão contra os subitens desta trilha, ou declará-la [NÃO COBERTO] / [NÃO SE APLICA], com o motivo.",
+                items: [],
+            }, null, 2) + "\n");
+        }
 
-        return { ok: true, errors: [], resultado: { id: m.id, criada_em: path.relative(repoRoot, dir), arquivos: ["manifest.json", "spec.md", "protocol_template.md"] } };
+        return {
+            ok: true, errors: [],
+            resultado: { id: m.id, criada_em: path.relative(repoRoot, dir), arquivos: ["manifest.json", "spec.md", "protocol_template.md", ...mapeamentos.map((a) => path.relative(dir, path.join(repoRoot, a)).replace(/\\/g, "/"))] },
+        };
     }
 
     /**
@@ -363,8 +379,15 @@ export class MethodologyWriter {
         for (const s of stds) {
             if (!fs.existsSync(path.join(repoRoot, ".claude", "standards", `${s}.json`))) {
                 errors.push(`Padrão "${s}" declarado mas ausente de .claude/standards/ — checklist não pode ser gerado.`);
+                continue;
             }
+            // DEBT-142 — o mapeamento do padrão é deste método, e é dado que a conferência LÊ.
+            const mapa = lerMapeamento(repoRoot, id, s, StandardsService.read(repoRoot, s));
+            if (!mapa.existe) errors.push(`Padrão "${s}" declarado sem o mapeamento do método (${mapa.arquivo}).`);
+            for (const e of mapa.erros) errors.push(`Mapeamento: ${e}.`);
         }
+        // DEBT-142 — condição malformada é item condicional que o projeto não consegue responder.
+        for (const e of lerCondicoes(repoRoot, id).erros) errors.push(`Condições: ${e}.`);
 
         const bruto = fs.existsSync(specPath) ? fs.readFileSync(specPath, "utf-8") : "";
 

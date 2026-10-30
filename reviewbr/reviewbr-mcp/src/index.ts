@@ -1572,13 +1572,15 @@ server.tool(
 
 server.tool(
     "record_researcher_decision",
-    "Grava a DECISÃO DO PESQUISADOR sobre uma etapa da trilha (RV-04) — é o que destrava a etapa seguinte sob control_level 'estrito'. Exige a contribuição específica dele, nas palavras dele: 'ok', 'pode seguir', 'aprovado' são recusados, porque carimbo não é supervisão. Confere que a etapa existe na trilha do método do projeto. Se o artefato que encerra a etapa já foi gravado, a fase avança agora. NÃO escreva a contribuição pelo pesquisador.",
+    "Grava a DECISÃO DO PESQUISADOR sobre uma etapa da trilha (RV-04) — é o que destrava a etapa seguinte sob control_level 'estrito'. Exige a contribuição específica dele, nas palavras dele: 'ok', 'pode seguir', 'aprovado' são recusados, porque carimbo não é supervisão. Confere que a etapa existe na trilha do método do projeto. Se o artefato que encerra a etapa já foi gravado, a fase avança agora. Com 'condicao' e 'resposta', grava a RESPOSTA dele a uma condição que o método declara (manifest 'condicoes', DEBT-142): a resposta tem de ser uma das opções do método, decide que itens condicionais do padrão se aplicam ao projeto e NÃO destrava a etapa. NÃO escreva a contribuição nem a resposta pelo pesquisador.",
     {
         projectPath: z.string().describe("Raiz do projeto (onde está o project_state.json)"),
-        etapa: z.string().describe("Id da etapa na trilha do método do projeto (ex.: 'F3') — a etapa sobre a qual ele decidiu"),
+        etapa: z.string().optional().describe("Id da etapa na trilha do método do projeto (ex.: 'F3') — a etapa sobre a qual ele decidiu. Com 'condicao', dispensável: a etapa é a da condição."),
         contribuicao: z.string().describe("O que o pesquisador avaliou e o que decidiu, nas palavras dele"),
         decisao: z.string().optional().describe("Resumo curto da decisão, se diferente da contribuição"),
         agente: z.string().optional().describe("Quem levou a decisão ao registro (ex.: 'coordinator', 'screener')"),
+        condicao: z.string().optional().describe("Id de uma condição declarada no manifest do método do projeto (ex.: 'avaliacao_critica') — para gravar a resposta do pesquisador a ela"),
+        resposta: z.string().optional().describe("Com 'condicao': a opção que o pesquisador escolheu, uma das declaradas pelo método"),
     },
     async (params) => {
         // DEBT-143 — a trava do RV-04 existia sem escritor legítimo: logDecision não tinha
@@ -2653,11 +2655,12 @@ server.tool(
 
 server.tool(
     "check_standard_coverage",
-    "Confere a cobertura de um padrão metodológico (.claude/standards/) em QUATRO pontos (DEBT-140): (a) cada subitem apontado existe na spec do método; (b) o rótulo do subitem não contradiz o item — por falsificação contra o título oficial, com a PREMISSA declarada no resultado; (c) se alguma tool produz o artefato da etapa do subitem ou só o agente; (d) toda linha ou é coberta, ou declarada [NÃO COBERTO] (fila de manutenção) ou [NÃO SE APLICA] (não é falha) — omissão silenciosa REPROVA. Roda contra os métodos que DECLARAM o padrão em conformance.standards, e diz quando nenhum declara. Devolve a fração honesta (ex.: 12/26), o que foi contestado e o LIMITE do que a máquina não julga. Com render=true, emite o template do checklist de conformidade a partir do padrão.",
+    "Confere a cobertura de um padrão metodológico (.claude/standards/) em QUATRO pontos (DEBT-140): (a) cada subitem apontado existe na spec do método; (b) o rótulo do subitem não contradiz o item — por falsificação contra o título oficial, com a PREMISSA declarada no resultado; (c) se alguma tool produz o artefato da etapa do subitem ou só o agente; (d) toda linha ou é coberta, ou declarada [NÃO COBERTO] (fila de manutenção) ou [NÃO SE APLICA] (não é falha) — omissão silenciosa REPROVA. O mapeamento e as declarações são do MÉTODO (.claude/methodologies/<método>/conformance/<padrão>.json, DEBT-142). Roda contra os métodos que DECLARAM o padrão em conformance.standards, cada um com o seu mapeamento, e diz quando nenhum declara. Com projectPath, confere contra o método do projeto e aplica as respostas dele às condições do método: item condicional respondido fora do que o método exige sai do denominador. Devolve a fração honesta (ex.: 12/26), o que foi contestado, os itens condicionais e o LIMITE do que a máquina não julga. Com render=true, emite o template do checklist de conformidade do método.",
     {
         standardId: z.string().describe("Id do padrão, como o nome do arquivo sem .json (ex.: 'prisma-2020', 'prisma-s'). Vazio (\"\"): lista os padrões assimilados com versão, version_source, fonte oficial e os métodos que declaram cada um — a lista de trabalho da conferência de obsolescência."),
-        render: z.boolean().optional().describe("true: devolve o template do checklist em Markdown, em vez do relatório de cobertura."),
+        render: z.boolean().optional().describe("true: devolve o template do checklist em Markdown, em vez do relatório de cobertura. Padrão declarado por mais de um método pede projectPath ou methodologyId."),
         methodologyId: z.string().optional().describe("Id da metodologia em .claude/methodologies/ (ex.: 'prisma-sr'). Omitido: confere contra TODOS os métodos que declaram o padrão. Informado: só contra ele — e avisa se ele não declara o padrão."),
+        projectPath: z.string().optional().describe("Raiz do projeto (onde está o project_state.json). Informado: confere contra o método do projeto, com as respostas dele às condições do método."),
         repoRoot: z.string().optional().describe("Raiz do repositório. Omitido: resolve a partir do módulo, não do cwd."),
     },
     async (params) => {
@@ -2677,32 +2680,18 @@ server.tool(
             };
         }
 
-        const std = StandardsService.read(repoRoot, params.standardId);
+        const projectDir = params.projectPath ? resolveProjectDir(params.projectPath) : undefined;
         if (params.render) {
-            if (!std) {
-                return { content: [{ type: "text", text: `ERRO: padrão "${params.standardId}" não encontrado em .claude/standards/.` }] };
-            }
             // O template leva a conferência junto: contestado sai marcado, e a fração, a premissa
-            // e o limite vão no rodapé — é o documento que o pesquisador preenche e publica.
-            const rel = StandardCoverageService.conferir(repoRoot, params.standardId, params.methodologyId);
-            return {
-                content: [{
-                    type: "text", text: StandardsService.renderChecklist(std, {
-                        contestados: Object.fromEntries(rel.contestados.map((c) => [c.item, c.por])),
-                        rodape: [
-                            `**Fração conferida:** ${rel.fracao}`,
-                            `**Premissa da falsificação:** ${rel.premissa_da_falsificacao}`,
-                            `**Limite da conferência:** ${rel.limite}`,
-                        ],
-                    }),
-                }]
-            };
+            // e o limite vão no rodapé — é o documento que o pesquisador preenche e publica. É de
+            // UM método, porque o mapeamento é do método (DEBT-142).
+            return { content: [{ type: "text", text: StandardCoverageService.checklist(repoRoot, params.standardId, params.methodologyId, projectDir) }] };
         }
 
         // DEBT-140 — `checkCoverage` sozinho só via `covered_by` vazio: verde por construção, o
         // mesmo resultado para qualquer projeto. A conferência roda contra os métodos que
         // declaram o padrão, e a falsificação (DEBT-124) deixou de depender de alguém pedir.
-        const report = StandardCoverageService.conferir(repoRoot, params.standardId, params.methodologyId);
+        const report = StandardCoverageService.conferir(repoRoot, params.standardId, params.methodologyId, projectDir);
 
         return { content: [{ type: "text", text: JSON.stringify(report, null, 2) }] };
     }

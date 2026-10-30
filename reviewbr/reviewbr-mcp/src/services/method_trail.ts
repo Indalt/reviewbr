@@ -131,6 +131,81 @@ export function errosDaTrilha(phases: unknown, agentesDir?: string): string[] {
     return erros;
 }
 
+/**
+ * DEBT-142 — uma CONDIÇÃO que o método declara: a pergunta cuja resposta depende da pesquisa
+ * ("a avaliação crítica foi feita?", "que sistema de certeza da evidência?"). Decisão do
+ * pesquisador em 17/10/2026: "o método declara a condição, o projeto responde" — a regra
+ * continua sendo do método; o projeto só diz qual das opções vale para ele.
+ */
+export interface Condicao {
+    id: string;
+    pergunta: string;
+    /** Etapa da trilha em que o método faz a pergunta — onde o coordenador a apresenta. */
+    etapa: string;
+    /** As respostas possíveis, declaradas pelo método. */
+    opcoes: string[];
+    note: string;
+}
+
+/**
+ * As condições declaradas no manifest do método (`condicoes`), conferidas contra a trilha.
+ * Nunca lança: o que impede usar uma condição vai para `erros`. Manifest sem `condicoes` não
+ * declara condição alguma, e isso não é erro.
+ */
+export function lerCondicoes(repoRoot: string, methodId: string): { condicoes: Condicao[]; erros: string[] } {
+    const mp = path.join(repoRoot, ".claude", "methodologies", methodId, "manifest.json");
+    let man: any;
+    try { man = JSON.parse(fs.readFileSync(mp, "utf-8")); }
+    catch { return { condicoes: [], erros: [] }; }   // sem manifest legível, quem lê a trilha já diz por quê
+    if (man?.condicoes === undefined) return { condicoes: [], erros: [] };
+    if (!Array.isArray(man.condicoes)) return { condicoes: [], erros: ["'condicoes' precisa ser lista"] };
+
+    const etapas = lerTrilha(repoRoot, methodId).etapas;
+    const condicoes: Condicao[] = [];
+    const erros: string[] = [];
+    const ids = new Set<string>();
+    man.condicoes.forEach((c: any, i: number) => {
+        const id = texto(c?.id);
+        const rot = `condição ${i + 1}${id ? ` (${id})` : ""}`;
+        const antes = erros.length;
+        if (!id) erros.push(`${rot}: sem 'id'`);
+        else if (ids.has(id)) erros.push(`${rot}: id repetido`);
+        if (!texto(c?.pergunta)) erros.push(`${rot}: sem 'pergunta' — o que o pesquisador responde`);
+        const etapa = etapas.find((e) => e.id === texto(c?.etapa));
+        if (!etapa) erros.push(`${rot}: a etapa "${texto(c?.etapa)}" não existe na trilha do método`);
+        else if (!etapa.active) erros.push(`${rot}: a etapa ${etapa.id} não se aplica ao método — ninguém faria a pergunta`);
+        const opcoes = Array.isArray(c?.opcoes) ? c.opcoes.map(texto).filter(Boolean) : [];
+        if (opcoes.length < 2 || new Set(opcoes.map(normalizarFala)).size !== opcoes.length) {
+            erros.push(`${rot}: 'opcoes' precisa de duas ou mais respostas distintas`);
+        }
+        if (id) ids.add(id);
+        if (erros.length === antes) condicoes.push({ id, pergunta: texto(c.pergunta), etapa: etapa!.id, opcoes, note: texto(c.note) });
+    });
+    return { condicoes, erros };
+}
+
+/** Uma resposta do projeto a uma condição, como o pesquisador a deu (DEBT-142). */
+export interface RespostaDeCondicao {
+    condicao: string;
+    resposta: string;
+    contribuicao: string;
+    ts: string;
+}
+
+/**
+ * As respostas do projeto às condições do método — só as gravadas como decisão do pesquisador,
+ * com contribuição. A última resposta a cada condição vale: o registro é cumulativo, e mudar de
+ * resposta (o pesquisador decidiu fazer a avaliação crítica, afinal) é nova decisão, não edição.
+ */
+export function respostasDasCondicoes(projectDir: string): Map<string, RespostaDeCondicao> {
+    const r = new Map<string, RespostaDeCondicao>();
+    for (const d of ProjectStateService.read(projectDir)?.decisions ?? []) {
+        if (d.por !== "pesquisador" || !d.condicao?.id || !(d.contribuicao ?? "").trim()) continue;
+        r.set(d.condicao.id, { condicao: d.condicao.id, resposta: d.condicao.resposta, contribuicao: d.contribuicao!, ts: d.ts });
+    }
+    return r;
+}
+
 /** Lê a trilha de um método instalado. Nunca lança: o que impede ler vai para `erros`. */
 export function lerTrilha(repoRoot: string, methodId: string): Trilha {
     // `project_state.json` é lido sem validação e pode chegar sem `method`: sem esta guarda o
@@ -266,6 +341,10 @@ export function avancarPorArtefato(repoRoot: string, projectDir: string, artefat
  */
 const CARIMBO = /^(ok|okay|sim|s|pode|pode seguir|segue|siga|seguir|aprovado|aprovo|de acordo|concordo|certo|beleza|tudo bem|tudo certo|continue|continuar|prossiga|prosseguir|vai|manda ver|feito)$/;
 
+const RECUSA_CARIMBO =
+    "🚫 RV-04 — carimbo não é decisão. A contribuição precisa dizer, nas palavras do pesquisador, " +
+    "o que ele avaliou e o que decidiu; \"ok\" ou \"pode seguir\" não sustentam que houve supervisão humana.";
+
 function normalizarFala(t: string): string {
     return t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
 }
@@ -287,13 +366,18 @@ function artefatoExiste(projectDir: string, rel: string): boolean {
  * e decidido — carimbo é recusado. Se o artefato que encerra a etapa já está gravado, a fase
  * avança agora, como a tool da etapa faria com a decisão já registrada.
  *
+ * Com `condicao` (DEBT-142), grava a RESPOSTA do pesquisador a uma condição que o método declara
+ * — o caminho pelo qual "o projeto responde". A resposta tem de ser uma das opções do método, com
+ * a mesma exigência de contribuição; é gravada na etapa em que o método faz a pergunta, e não
+ * destrava nem avança a etapa: responder a condição não é decidir sobre a etapa.
+ *
  * O que esta função NÃO garante, e não pode: que as palavras sejam do pesquisador. Ela torna a
  * decisão visível, datada e atribuída; não impede quem tem acesso de escrever por ele.
  */
 export function registrarDecisaoDoPesquisador(
     repoRoot: string,
     projectDir: string,
-    entrada: { etapa: string; contribuicao: string; decisao?: string; agente?: string },
+    entrada: { etapa?: string; contribuicao: string; decisao?: string; agente?: string; condicao?: string; resposta?: string },
 ): { ok: boolean; mensagem: string } {
     const state = ProjectStateService.read(projectDir);
     if (!state) return { ok: false, mensagem: "Sem project_state.json: não há onde registrar a decisão." };
@@ -301,6 +385,10 @@ export function registrarDecisaoDoPesquisador(
     const trilha = lerTrilha(repoRoot, state.method);
     if (trilha.erros.length) {
         return { ok: false, mensagem: `A trilha do método "${state.method}" não pôde ser lida: ${trilha.erros.join("; ")}.` };
+    }
+    if (texto(entrada.condicao)) return responderCondicao(repoRoot, projectDir, state.method, entrada);
+    if (!texto(entrada.etapa)) {
+        return { ok: false, mensagem: "Informe a etapa sobre a qual o pesquisador decidiu — ou a condição que ele responde." };
     }
     const etapa = trilha.etapas.find((e) => e.id === texto(entrada.etapa));
     if (!etapa) {
@@ -315,13 +403,7 @@ export function registrarDecisaoDoPesquisador(
     }
 
     const contribuicao = texto(entrada.contribuicao);
-    if (!contribuicao || CARIMBO.test(normalizarFala(contribuicao))) {
-        return {
-            ok: false,
-            mensagem: "🚫 RV-04 — carimbo não é decisão. A contribuição precisa dizer, nas palavras do pesquisador, " +
-                "o que ele avaliou e o que decidiu; \"ok\" ou \"pode seguir\" não sustentam que houve supervisão humana.",
-        };
-    }
+    if (!contribuicao || CARIMBO.test(normalizarFala(contribuicao))) return { ok: false, mensagem: RECUSA_CARIMBO };
 
     ProjectStateService.logDecision(projectDir, {
         phase: etapa.id,
@@ -346,5 +428,57 @@ export function registrarDecisaoDoPesquisador(
         ok: true,
         mensagem: `✅ Decisão do pesquisador registrada na etapa ${etapa.id} — ${etapa.name}. ` +
             `O artefato que a encerra (${etapa.closes_with}) ainda não existe: a fase avança quando a tool da etapa o gravar.`,
+    };
+}
+
+/**
+ * A resposta do projeto a uma condição do método (DEBT-142). Confere NA ESCRITA: a condição
+ * existe no método, a resposta é uma das opções que ele declara, e a contribuição não é carimbo.
+ * Grava a opção como o método a escreve, não como chegou digitada.
+ */
+function responderCondicao(
+    repoRoot: string,
+    projectDir: string,
+    metodo: string,
+    entrada: { etapa?: string; contribuicao: string; decisao?: string; agente?: string; condicao?: string; resposta?: string },
+): { ok: boolean; mensagem: string } {
+    const { condicoes, erros } = lerCondicoes(repoRoot, metodo);
+    const id = texto(entrada.condicao);
+    const cond = condicoes.find((c) => c.id === id);
+    if (!cond) {
+        const porque = erros.length ? ` Condições ilegíveis no manifest: ${erros.join("; ")}.` : "";
+        return {
+            ok: false,
+            mensagem: `O método "${metodo}" não declara a condição "${id}". ` +
+                (condicoes.length ? `Condições declaradas: ${condicoes.map((c) => c.id).join(", ")}.` : "Ele não declara condição alguma.") + porque,
+        };
+    }
+    if (texto(entrada.etapa) && texto(entrada.etapa) !== cond.etapa) {
+        return { ok: false, mensagem: `A condição "${cond.id}" é perguntada pelo método na etapa ${cond.etapa}, não em ${texto(entrada.etapa)}.` };
+    }
+    const opcao = cond.opcoes.find((o) => normalizarFala(o) === normalizarFala(texto(entrada.resposta)));
+    if (!opcao) {
+        return {
+            ok: false,
+            mensagem: `"${texto(entrada.resposta)}" não é resposta da condição "${cond.id}" (${cond.pergunta}). ` +
+                `O método declara: ${cond.opcoes.map((o) => `"${o}"`).join(", ")}.`,
+        };
+    }
+    const contribuicao = texto(entrada.contribuicao);
+    if (!contribuicao || CARIMBO.test(normalizarFala(contribuicao))) return { ok: false, mensagem: RECUSA_CARIMBO };
+
+    ProjectStateService.logDecision(projectDir, {
+        phase: cond.etapa,
+        agent: texto(entrada.agente) || "coordinator",
+        decision: texto(entrada.decisao) || `${cond.pergunta} — ${opcao}`,
+        por: "pesquisador",
+        contribuicao,
+        condicao: { id: cond.id, resposta: opcao },
+    });
+    return {
+        ok: true,
+        mensagem: `✅ Resposta do pesquisador à condição "${cond.id}" registrada: ${opcao}. ` +
+            `Os itens que o método condiciona a ela seguem esta resposta em check_standard_coverage com o projectPath. ` +
+            `Não é a decisão sobre a etapa ${cond.etapa}: a etapa continua precisando dela para avançar.`,
     };
 }

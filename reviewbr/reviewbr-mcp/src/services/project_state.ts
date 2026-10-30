@@ -29,6 +29,12 @@ export interface ProjectDecision {
      * e não sustenta a afirmação de que houve supervisão humana (RAISE 1, rec. 4.1).
      */
     contribuicao?: string;
+    /**
+     * DEBT-142 — resposta do pesquisador a uma CONDIÇÃO que o método declara (ex.: "a avaliação
+     * crítica foi feita?"). É registro de decisão, com a mesma exigência de contribuição, mas NÃO
+     * é a decisão sobre a etapa: responder a condição não destrava a fase (`podeAvancar` a ignora).
+     */
+    condicao?: { id: string; resposta: string };
 }
 
 export interface ProjectState {
@@ -176,8 +182,11 @@ export class ProjectStateService {
         if (state.control_level === "fluido") {
             return { ok: true, motivo: `control_level 'fluido' declarado: avanço automático em ${faseQueEncerra}, sem decisão registrada.` };
         }
+        // A resposta a uma condição do método (DEBT-142) é decisão do pesquisador, mas sobre o item
+        // condicional, não sobre a etapa: contá-la aqui deixaria "não fizemos avaliação crítica"
+        // abrir a fase seguinte sem ninguém ter decidido sobre a etapa que se encerra.
         const d = state.decisions.find(
-            (x) => x.phase === faseQueEncerra && x.por === "pesquisador" && (x.contribuicao ?? "").trim().length > 0,
+            (x) => x.phase === faseQueEncerra && x.por === "pesquisador" && !x.condicao && (x.contribuicao ?? "").trim().length > 0,
         );
         if (!d) {
             return {

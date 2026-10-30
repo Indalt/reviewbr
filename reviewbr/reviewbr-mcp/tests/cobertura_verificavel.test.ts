@@ -4,6 +4,7 @@ import * as os from "node:os";
 import * as path from "node:path";
 import { StandardCoverageService, PREMISSA_DA_FALSIFICACAO } from "../src/services/standard_coverage.js";
 import { StandardsService } from "../src/services/standards.js";
+import { lerMapeamento } from "../src/services/method_mapping.js";
 
 const REPO = path.resolve(path.dirname(new URL(import.meta.url).pathname.slice(1)), "..", "..", "..");
 
@@ -20,29 +21,37 @@ const REPO = path.resolve(path.dirname(new URL(import.meta.url).pathname.slice(1
 const temporarios: string[] = [];
 afterAll(() => { for (const d of temporarios) fs.rmSync(d, { recursive: true, force: true }); });
 
-/** Repositório de brinquedo: um padrão de 8 linhas, um método que o declara, a trilha desse método. */
+/** Repositório de brinquedo: um padrão de 8 linhas, um método que o declara, a trilha e o mapeamento desse método. */
 function repo(titulosOficiais = true): string {
     const raiz = fs.mkdtempSync(path.join(os.tmpdir(), "cobertura-"));
     temporarios.push(raiz);
     const c = (p: string) => path.join(raiz, ".claude", p);
-    for (const d of ["agents", "standards", "methodologies/m1"]) fs.mkdirSync(c(d), { recursive: true });
+    for (const d of ["agents", "standards", "methodologies/m1/conformance"]) fs.mkdirSync(c(d), { recursive: true });
     for (const a of ["designer", "analyst"]) fs.writeFileSync(c(`agents/${a}.md`), `# ${a}\n`);
-    const item = (id: string, title: string, o: Record<string, unknown> = {}) => ({ id, section: "", title, covered_by: [], ...o });
+    const item = (id: string, title: string) => ({ id, section: "", title });
     fs.writeFileSync(c("standards/teste.json"), JSON.stringify({
         schemaVersion: 1, id: "TESTE", name: "Padrão Teste", version: "1", titulos_oficiais: titulosOficiais,
         items: [
-            item("1", "Registration", { covered_by: ["E1.1"] }),              // rótulo "Financiamento": deslocado para o 2
-            item("2", "Support", { covered_by: ["E1.2"] }),                   // corresponde, etapa com código
-            item("3", "Availability of data", { covered_by: ["E2.1"] }),      // corresponde, etapa só do agente
-            item("4", "Protocol amendments", { covered_by: ["E9.9"] }),       // ponteiro para subitem inexistente
-            item("5", "Peer review", { nao_coberto: "a trilha não tem campo para revisão por pares" }),
-            item("6", "Meta-analysis", { nao_se_aplica: "o método não faz metanálise" }),
-            item("7", "Limitations"),                                          // omissão silenciosa
-            item("8", "Supplementary material", { covered_by: ["SUP.1"] }),   // suplemento: sem etapa
+            item("1", "Registration"), item("2", "Support"), item("3", "Availability of data"), item("4", "Protocol amendments"),
+            item("5", "Peer review"), item("6", "Meta-analysis"), item("7", "Limitations"), item("8", "Supplementary material"),
+        ],
+    }));
+    // DEBT-142: o mapeamento é do método, não do padrão.
+    fs.writeFileSync(c("methodologies/m1/conformance/teste.json"), JSON.stringify({
+        schemaVersion: 1, standard: "teste",
+        items: [
+            { id: "1", covered_by: ["E1.1"] },              // rótulo "Financiamento": deslocado para o 2
+            { id: "2", covered_by: ["E1.2"] },              // corresponde, etapa com código
+            { id: "3", covered_by: ["E2.1"] },              // corresponde, etapa só do agente
+            { id: "4", covered_by: ["E9.9"] },              // ponteiro para subitem inexistente
+            { id: "5", nao_coberto: "a trilha não tem campo para revisão por pares" },
+            { id: "6", nao_se_aplica: "o método não faz metanálise" },
+            // 7: sem linha — omissão silenciosa
+            { id: "8", covered_by: ["SUP.1"] },             // suplemento: sem etapa
         ],
     }));
     fs.writeFileSync(c("standards/sem-dono.json"), JSON.stringify({
-        schemaVersion: 1, id: "SD", name: "Sem dono", titulos_oficiais: true, items: [item("1", "Title", { covered_by: ["E1.1"] })],
+        schemaVersion: 1, id: "SD", name: "Sem dono", titulos_oficiais: true, items: [item("1", "Title")],
     }));
     fs.writeFileSync(c("methodologies/m1/spec.md"), [
         "| Subitem | Campo | Descrição | Obrigatório | Item |", "|---|---|---|---|---|",
@@ -151,7 +160,8 @@ describe("o estado REAL dos padrões assimilados, medido", () => {
         for (const x of r.nao_coberto) expect(x.motivo, x.id).toMatch(/^(encaixe|parcial) — /);
         // controle positivo do que mudou: pela regra antiga ("covered_by não vazio") eram 26/26
         const std = StandardsService.read(REPO, "prisma-p")!;
-        expect(std.items.filter((i) => !i.has_subitems && i.covered_by.length > 0)).toHaveLength(26);
+        const mapa = lerMapeamento(REPO, "prisma-sr", "prisma-p").linhas;
+        expect(std.items.filter((i) => !i.has_subitems && (mapa.get(i.id)?.covered_by.length ?? 0) > 0)).toHaveLength(26);
     });
 
     it("PRISMA-P: declarado pelo prisma-sr (17/10/2026) — lacunas declaradas, sem omissão silenciosa", () => {
@@ -235,7 +245,7 @@ describe("o estado REAL dos padrões assimilados, medido", () => {
 
 describe("o checklist gerado mostra as declarações como tais", () => {
     it("[NÃO COBERTO] aparece com o motivo e os ponteiros parciais; não vira cobertura", () => {
-        const md = StandardsService.renderChecklist(StandardsService.read(REPO, "prisma-p")!);
+        const md = StandardCoverageService.checklist(REPO, "prisma-p");
         const linha4 = md.split("\n").find((l) => /^\| 4 \|/.test(l))!;
         expect(linha4).toMatch(/\*\*\[NÃO COBERTO\]\*\* encaixe/);
         expect(linha4).toMatch(/ponteiros atuais: F0\.1\.5/);   // encaixe: o ponteiro é o erro, não cobertura parcial
@@ -245,7 +255,7 @@ describe("o checklist gerado mostra as declarações como tais", () => {
 
     it("[NÃO SE APLICA] sai marcado N/A, não como pendência", () => {
         const raiz = repo();
-        const md = StandardsService.renderChecklist(StandardsService.read(raiz, "teste")!);
+        const md = StandardCoverageService.checklist(raiz, "teste");
         const linha6 = md.split("\n").find((l) => /^\| 6 \|/.test(l))!;
         expect(linha6).toMatch(/\[NÃO SE APLICA\]/);
         expect(linha6).toMatch(/\| N\/A \|$/);
@@ -270,13 +280,17 @@ describe("revisão de 09/10 — um método não contamina o número do outro", (
         expect(r.avisos.join(" ")).toMatch(/esqueleto/);
     });
 
-    it("dois métodos prontos: a fração sai por método, nunca somada", () => {
+    it("dois métodos prontos: a fração sai por método, cada um com o seu mapeamento e o seu denominador", () => {
         const raiz = repo();
         addMetodo(raiz, "m2", [{ id: "E1", name: "Desenho", role: "designer", closes_with: "protocol.md", producer_tools: [] }],
             "| Subitem | Campo | Descrição | Obrigatório | Item |\n|---|---|---|---|---|\n| E1.2 | Support recebido | x | ✅ | Item 2 |\n");
+        fs.mkdirSync(path.join(raiz, ".claude", "methodologies", "m2", "conformance"), { recursive: true });
+        fs.writeFileSync(path.join(raiz, ".claude", "methodologies", "m2", "conformance", "teste.json"),
+            JSON.stringify({ schemaVersion: 1, standard: "teste", items: [{ id: "2", covered_by: ["E1.2"] }] }));
         const r = StandardCoverageService.conferir(raiz, "teste");
         expect(r.declarado_por).toEqual(["m1", "m2"]);
-        expect(r.fracao).toMatch(/^m1 3\/7 · m2 \d+\/7$/);
+        // O [NÃO SE APLICA] do item 6 é do m1 (DEBT-142): no m2 o 6 fica no denominador.
+        expect(r.fracao).toBe("m1 3/7 · m2 1/8");
     });
 
     it("ponteiro para etapa que o método declara não se aplicar contesta a linha", () => {
@@ -286,10 +300,10 @@ describe("revisão de 09/10 — um método não contamina o número do outro", (
         man.phases.push({ id: "E3", name: "Apreciação crítica", active: false, note: "não se aplica a este desenho" });
         fs.writeFileSync(mp, JSON.stringify(man));
         fs.appendFileSync(path.join(raiz, ".claude", "methodologies", "m1", "spec.md"), "| E3.1 | Ferramenta de apreciação | x | ✅ | Item 3 |\n");
-        const sp = path.join(raiz, ".claude", "standards", "teste.json");
-        const std = JSON.parse(fs.readFileSync(sp, "utf-8"));
-        std.items.find((i: any) => i.id === "3").covered_by = ["E3.1"];
-        fs.writeFileSync(sp, JSON.stringify(std));
+        const ap = path.join(raiz, ".claude", "methodologies", "m1", "conformance", "teste.json");
+        const mapa = JSON.parse(fs.readFileSync(ap, "utf-8"));
+        mapa.items.find((i: any) => i.id === "3").covered_by = ["E3.1"];
+        fs.writeFileSync(ap, JSON.stringify(mapa));
         const c = StandardCoverageService.conferir(raiz, "teste").conferencia_por_metodo[0];
         expect(c.em_etapa_que_nao_se_aplica).toEqual([{ item: "3", subitem: "E3.1", etapa: "E3" }]);
         expect(c.contestados.map((x) => x.item)).toContain("3");
@@ -297,15 +311,11 @@ describe("revisão de 09/10 — um método não contamina o número do outro", (
     });
 
     it("o checklist gerado marca o contestado e leva fração, premissa e limite no rodapé", () => {
-        const raiz = repo();
-        const rel = StandardCoverageService.conferir(raiz, "teste");
-        const md = StandardsService.renderChecklist(StandardsService.read(raiz, "teste")!, {
-            contestados: Object.fromEntries(rel.contestados.map((c) => [c.item, c.por])),
-            rodape: [`**Fração conferida:** ${rel.fracao}`, `**Premissa da falsificação:** ${rel.premissa_da_falsificacao}`],
-        });
+        const md = StandardCoverageService.checklist(repo(), "teste");
         const linha1 = md.split("\n").find((l) => /^\| 1 \|/.test(l))!;
         expect(linha1).toMatch(/\*\*\[CONTESTADO\]\*\*/);
         expect(md).toMatch(/\*\*Fração conferida:\*\* 3\/7/);
         expect(md).toMatch(/derrotável/);
+        expect(md).toMatch(/\*\*Limite da conferência:\*\*/);
     });
 });

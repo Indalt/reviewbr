@@ -210,6 +210,10 @@ describe("metodologia — criar é EXTENSAO e passa pelo RV-11", () => {
         const dir = path.join(RAIZ, ".claude", "methodologies", "metodo-novo");
         expect(fs.existsSync(path.join(dir, "manifest.json"))).toBe(true);
         expect(fs.readFileSync(path.join(dir, "spec.md"), "utf-8")).toContain("[TBD]");
+        // DEBT-142: o mapeamento de cada padrão nasce no método, vazio e por declarar.
+        const mapa = JSON.parse(fs.readFileSync(path.join(dir, "conformance", "padrao-x.json"), "utf-8"));
+        expect(mapa).toMatchObject({ schemaVersion: 1, standard: "padrao-x", items: [] });
+        expect(mapa.note).toMatch(/\[TBD\]/);
     });
 
     it("RECUSA protocolo em rascunho — é o caminho fácil de contornar o gate", () => {
@@ -244,9 +248,9 @@ describe("metodologia — validar é a verificação que faltava para ALTERAÇÕ
         { id: "E1", name: "Desenho", role: "designer", closes_with: "protocol.md", producer_tools: ["plan_research_protocol"] },
         { id: "E2", name: "Campo", role: "designer", closes_with: "campo/notas.md", producer_tools: [] },
     ];
-    function manifesto(o: Record<string, unknown>) {
+    function manifesto(o: Record<string, unknown>, mapeamento: unknown = { schemaVersion: 1, standard: "padrao-x", items: [] }) {
         const dir = path.join(RAIZ, ".claude", "methodologies", "alvo");
-        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(path.join(dir, "conformance"), { recursive: true });
         fs.mkdirSync(path.join(RAIZ, ".claude", "agents"), { recursive: true });
         fs.writeFileSync(path.join(RAIZ, ".claude", "agents", "designer.md"), "# designer\n");
         fs.writeFileSync(path.join(dir, "spec.md"), "# spec\n");
@@ -254,11 +258,31 @@ describe("metodologia — validar é a verificação que faltava para ALTERAÇÕ
             id: "alvo", spec: "spec.md", conformance: { standards: ["padrao-x"] }, phases: TRILHA,
             invariants_always_on: ["RV-01"], gates: [{ rule: "RV-01", tool: "x" }], ...o
         }));
+        // DEBT-142: o mapeamento de cada padrão declarado é do método.
+        if (mapeamento) fs.writeFileSync(path.join(dir, "conformance", "padrao-x.json"), JSON.stringify(mapeamento));
     }
 
     it("aprova metodologia bem formada", () => {
         manifesto({});
         expect(MethodologyWriter.validar(RAIZ, "alvo").ok).toBe(true);
+    });
+
+    it("DEBT-142: reprova padrão declarado sem o mapeamento do método", () => {
+        manifesto({}, null);
+        const r = MethodologyWriter.validar(RAIZ, "alvo");
+        expect(r.ok).toBe(false);
+        expect(r.errors.join(" ")).toMatch(/"padrao-x" declarado sem o mapeamento do método \(\.claude\/methodologies\/alvo\/conformance\/padrao-x\.json\)/);
+    });
+
+    it("DEBT-142: reprova condição que o projeto não conseguiria responder, e item que depende de condição não declarada", () => {
+        manifesto(
+            { condicoes: [{ id: "feita", pergunta: "Foi feita?", etapa: "F9", opcoes: ["sim"] }] },
+            { schemaVersion: 1, standard: "padrao-x", items: [{ id: "1", covered_by: [], nao_coberto: "x", condicao: { id: "outra", aplica_se: ["sim"] } }] },
+        );
+        const erros = MethodologyWriter.validar(RAIZ, "alvo").errors.join(" ");
+        expect(erros).toMatch(/a etapa "F9" não existe na trilha/);
+        expect(erros).toMatch(/duas ou mais respostas distintas/);
+        expect(erros).toMatch(/depende da condição "outra", que o manifest de "alvo" não declara/);
     });
 
     it("DEBT-100: reprova trilha no formato antigo — mapa de interruptores não diz quais etapas existem", () => {

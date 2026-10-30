@@ -2,9 +2,12 @@ import { describe, it, expect } from "vitest";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
 import { StandardsService } from "../src/services/standards.js";
+import { lerMapeamento } from "../src/services/method_mapping.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(here, "../../..");
+/** O mapeamento é do método (DEBT-142): o do prisma-sr para cada padrão que ele declara. */
+const doPrismaSr = (padrao: string) => lerMapeamento(REPO_ROOT, "prisma-sr", padrao).linhas;
 
 describe("padrões em disco — PRISMA 2020 e PRISMA-S como dado", () => {
     it("os dois padrões existem e são legíveis", () => {
@@ -60,19 +63,19 @@ describe("padrões em disco — PRISMA 2020 e PRISMA-S como dado", () => {
 
 describe("cobertura — nenhum item do padrão fica órfão", () => {
     it("PRISMA 2020: conta as 42 linhas de checklist, e os subitens ainda estão descobertos", () => {
-        const r = StandardsService.checkCoverage(StandardsService.read(REPO_ROOT, "prisma-2020"), "prisma-2020");
+        const r = StandardsService.checkCoverage(StandardsService.read(REPO_ROOT, "prisma-2020"), "prisma-2020", doPrismaSr("prisma-2020"));
         expect(r.total).toBe(42);
         // Os 21 subitens não têm covered_by: a trilha do ReviewBR foi mapeada contra itens de
         // topo, nunca contra subitens. REPROVAR aqui é o comportamento correto — a lacuna
         // passa a ser visível em vez de presumida. Remapear é trabalho pendente (DEBT-014).
         expect(r.valid).toBe(false);
-        expect(r.orphans.length).toBeGreaterThanOrEqual(21);
+        expect(r.orphans.length).toBe(21);
     });
 
     it("PRISMA-S: nenhum item órfão — 9 com correspondência e 7 declarados [NÃO COBERTO] (DEBT-128)", () => {
         // Eram 16/16 enquanto o mapeamento seguia a numeração da trilha; refeito contra os
         // enunciados oficiais, o que a trilha não coleta ficou declarado, não encaixado.
-        const r = StandardsService.checkCoverage(StandardsService.read(REPO_ROOT, "prisma-s"), "prisma-s");
+        const r = StandardsService.checkCoverage(StandardsService.read(REPO_ROOT, "prisma-s"), "prisma-s", doPrismaSr("prisma-s"));
         expect(r.orphans).toEqual([]);
         expect(r.covered).toBe(9);
         expect(r.nao_coberto).toHaveLength(7);
@@ -83,21 +86,28 @@ describe("cobertura — nenhum item do padrão fica órfão", () => {
             {
                 schemaVersion: 1, id: "X", name: "Padrão X", version: "1", version_source: "", note: "",
                 items: [
-                    { id: "1", section: "S", title: "coberto", covered_by: ["F0.1.1"] },
-                    { id: "2", section: "S", title: "órfão", covered_by: [] }
+                    { id: "1", section: "S", title: "coberto" },
+                    { id: "2", section: "S", title: "órfão" }
                 ]
-            },
-            "X"
+            } as any,
+            "X",
+            new Map([["1", { id: "1", covered_by: ["F0.1.1"], nao_coberto: "", nao_se_aplica: "" }]]),
         );
         expect(r.valid).toBe(false);
         expect(r.orphans.map((o) => o.id)).toEqual(["2"]);
         expect(r.errors[0]).toMatch(/sem nenhum subitem da trilha/);
     });
 
+    it("sem mapeamento de método algum, toda linha é omissão — o padrão sozinho não cobre nada", () => {
+        const r = StandardsService.checkCoverage(StandardsService.read(REPO_ROOT, "prisma-s"), "prisma-s");
+        expect(r.orphans).toHaveLength(16);
+        expect(r.valid).toBe(false);
+    });
+
     it("REPROVA padrão ausente", () => {
         const r = StandardsService.checkCoverage(StandardsService.read(REPO_ROOT, "nao-existe"), "nao-existe");
         expect(r.valid).toBe(false);
-        expect(r.errors[0]).toMatch(/ausente ou ilegível/);
+        expect(r.errors[0]).toMatch(/ausente, ilegível/);
     });
 
     it("versão do PRISMA 2020 agora está CONFIRMADA contra a fonte oficial", () => {
@@ -108,9 +118,8 @@ describe("cobertura — nenhum item do padrão fica órfão", () => {
 });
 
 describe("consulta reversa — a pergunta que a spec sozinha não responde", () => {
-    it("diz quais subitens da trilha cobrem um item dado", () => {
-        const std = StandardsService.read(REPO_ROOT, "prisma-2020")!;
-        const item1 = std.items.find((i) => i.id === "1")!;
+    it("diz quais subitens da trilha cobrem um item dado — no mapeamento do método (DEBT-142)", () => {
+        const item1 = doPrismaSr("prisma-2020").get("1")!;
         expect(item1.covered_by.length).toBeGreaterThan(0);
         expect(item1.covered_by).toContain("F0.1.1");
     });
@@ -129,8 +138,8 @@ describe("checklist — gerado do dado, não escrito à mão", () => {
     it("marca visivelmente item sem cobertura, em vez de omiti-lo", () => {
         const md = StandardsService.renderChecklist({
             schemaVersion: 1, id: "X", name: "X", version: "1", version_source: "", note: "",
-            items: [{ id: "1", section: "S", title: "órfão", covered_by: [] }]
-        });
+            items: [{ id: "1", section: "S", title: "órfão" }]
+        } as any);
         expect(md).toContain("**[SEM COBERTURA]**");
     });
 

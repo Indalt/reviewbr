@@ -1,6 +1,7 @@
 import * as fs from "node:fs";
 import { Standard } from "./standards.js";
 import { textoDaSpec, ID_SUBITEM } from "./method_trail.js";
+import type { LinhaDoMapeamento } from "./method_mapping.js";
 
 /**
  * mapping_coherence — falsifica o mapeamento trilha ⟶ padrão.
@@ -284,19 +285,19 @@ export class MappingCoherenceService {
      * que `tests/integracao.test.ts` reprova — e que o sistema registra de si desde o
      * começo. Os dois continuam testáveis através daqui.
      */
-    static checarMetodologia(repoRoot: string, methodologyId: string, std: Standard | null): CoerenciaReport {
+    static checarMetodologia(repoRoot: string, methodologyId: string, std: Standard | null, mapa: Map<string, LinhaDoMapeamento>): CoerenciaReport {
         // A coluna "Item N" da spec numera o PRISMA 2020, e SÓ ele. Conferi-la contra outro
         // padrão compara numerações incomparáveis: o item 15 é "Certainty assessment" no
         // PRISMA 2020 e "Data synthesis" no PRISMA-P. Rodar assim acusou 12 suspeitos falsos
         // no mapeamento do PRISMA-P, todos por essa colisão de numeração.
         //
-        // O mapeamento dos outros padrões vive no `covered_by` do próprio arquivo do padrão,
+        // O mapeamento dos outros padrões vive no `covered_by` do MÉTODO (`mapa`, DEBT-142),
         // e é por ali que ele deve ser falsificado — não pela coluna da spec.
         //
         // A spec é lida SEGUINDO `extends` (DEBT-140): a do scoping só traz deltas, e lida
         // sozinha não tinha rótulo nenhum — a falsificação voltava limpa sem ter conferido nada.
         if (!std) return this.checar(std, []);
-        const doPadrao = this.paresDoCoveredBy(repoRoot, methodologyId, std);
+        const doPadrao = this.paresDoCoveredBy(repoRoot, methodologyId, std, mapa);
         if (std.id !== "PRISMA 2020" && std.name !== "PRISMA 2020") {
             return this.checar(std, doPadrao.pares, doPadrao.semRotulo);
         }
@@ -314,10 +315,11 @@ export class MappingCoherenceService {
     }
 
     /**
-     * Pares declarados pelo `covered_by` do próprio padrão, com o rótulo que a spec dá a
-     * cada subitem. É a fonte de mapeamento dos padrões que não são o PRISMA 2020.
+     * Pares declarados pelo `covered_by` do método, com o rótulo que a spec dá a cada subitem.
+     * É a fonte de mapeamento dos padrões que não são o PRISMA 2020. Percorre os itens na ordem
+     * do padrão, para os suspeitos saírem na ordem da norma.
      */
-    private static paresDoCoveredBy(repoRoot: string, methodologyId: string, std: Standard): { pares: ParDeclarado[]; semRotulo: string[] } {
+    private static paresDoCoveredBy(repoRoot: string, methodologyId: string, std: Standard, mapa: Map<string, LinhaDoMapeamento>): { pares: ParDeclarado[]; semRotulo: string[] } {
         const texto = textoDaSpec(repoRoot, methodologyId);
         if (!texto) return { pares: [], semRotulo: [] };
 
@@ -332,7 +334,7 @@ export class MappingCoherenceService {
         const semRotulo: string[] = [];
         for (const item of std.items) {
             if (item.has_subitems) continue;
-            for (const sub of item.covered_by) {
+            for (const sub of mapa.get(item.id)?.covered_by ?? []) {
                 const r = rotulo.get(sub);
                 if (r) pares.push({ subitem: sub, rotulo: r, item: item.id });
                 else semRotulo.push(`${sub} (item ${item.id}): a spec do método não dá rótulo a este subitem`);

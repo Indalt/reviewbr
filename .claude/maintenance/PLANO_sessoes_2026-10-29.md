@@ -83,7 +83,8 @@ Consequências para ler o disco sem se enganar:
 
 **Estado:** sessões 0 (29/10/2026) e 1 (30/10/2026) fechadas, cada uma com a carta na sua seção; a 1
 conferida pelo acompanhamento em 30/10. A sessão 2 virou três (2a, 2b, 2c), pela decisão do Vicente sobre o
-DEBT-149. Sessão 2a com prompt de abertura pronto, não iniciada.
+DEBT-149. Sessão 2a fechada em 30/10/2026, DIVIDIDA pela regra da janela: itens 1 e 2 feitos (DEBT-142
+resolvido no núcleo); o item 3 (DEBT-150, DEBT-008) passa à abertura da 2b. Carta na seção da 2a, a conferir.
 
 ### Modelo e esforço de cada sessão (calculado em 29/10/2026)
 
@@ -402,4 +403,67 @@ passa para a abertura da 2b.
 Fechamento: escreva a carta da sessão 2a no plano, logo abaixo deste prompt (modelo "Carta de sessão"),
 commit e push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. Workflow só com o custo
 projetado e aprovado por ele; a 75% estimados não comece passo novo.
+```
+
+## Sessão 2a — Declarações por método, o núcleo — 30/10/2026
+
+```
+Objetivo: mapeamento e declarações [NÃO COBERTO]/[NÃO SE APLICA] por método e o item condicional
+  (DEBT-142, núcleo); primeiros usos do mecanismo (DEBT-150, DEBT-008) se a janela permitisse.
+Entrada: decisões do Vicente de 17/10 ("cada metodologia com as suas regras"; "o método declara a
+  condição, o projeto responde") e de 29/10 ("só metodologia validada cientificamente").
+Saída verificável: padrões sem covered_by/nao_coberto/nao_se_aplica e mapeamento lido do método;
+  check_standard_coverage idêntico antes e depois, salvo o deliberado; condicional respondido pelo
+  projeto e fora do denominador, com teste; dois métodos no repositório de brinquedo; suíte verde,
+  build em dia, audit_system_debt válido.
+Modelo e esforço: Opus 5.5 · max · sem ultracode
+Tokens na abertura: 12% a 15% (--agora, piso; 1,41 M ponderado, quase todo do Cultura Líquida) ·
+  subagentes: 0 · projeção: 60–80%, só inline.
+--- fechamento ---
+Tokens no fechamento: 81% a 98% (--agora, piso; 9,32 M ponderado) · medido: principal 4,53 M ponderado
+  (180 mil de saída), subagentes 0; o Cultura Líquida somou ~4,8 M na mesma janela, em paralelo.
+  Medido em 72–88% com os itens 1 e 2 prontos e testados: pela regra de DIVISÃO, o item 3 passou à
+  abertura da 2b, e depois disso só se fechou o item 2.
+Feito:
+- DEBT-142 RESOLVIDO (núcleo). (1) .claude/standards/*.json só com a norma — o leitor RECUSA padrão
+  com mapeamento dentro; mapeamento e declarações em .claude/methodologies/<método>/conformance/
+  <padrão>.json (src/services/method_mapping.ts): prisma-sr com prisma-2020, prisma-s e prisma-p; o
+  scoping com prisma-scr e a sua cópia do prisma-s. Migração por script, conferida item a item; a nota
+  de cada padrão foi dividida entre norma e mapeamento sem perder texto. (2) Item condicional: o
+  manifest declara 'condicoes' (id, pergunta, etapa, opcoes); a linha do mapeamento, 'condicao'
+  {id, aplica_se}; o projeto responde por record_researcher_decision (condicao + resposta +
+  contribuição, carimbo recusado), e a resposta NÃO destrava a etapa; check_standard_coverage ganhou
+  projectPath — resposta fora de aplica_se tira o item do denominador como [NÃO SE APLICA], com motivo
+  e data; sem resposta, conta como declarado e é avisado. validate_methodology confere mapeamento e
+  condições; scaffold_methodology cria o esqueleto do mapeamento. Os 6 agentes da trilha e as skills
+  conduct-review, methodology-router, prisma-rigor-gates e synthesis-manuscript apontam o mapeamento
+  no método e o projectPath.
+- check_standard_coverage antes × depois, 15 relatórios e 15 checklists (.claude/maintenance/sessao_2a/:
+  retrato_antes.json, retrato_depois.json, diff_antes_depois.txt; scripts retrato_cobertura.mjs e
+  compara_retratos.mjs): IDÊNTICO em todo par padrão × método que o declara — 16/42, 12/26, 9/16 e
+  9/16, 12/22, como antes. Mudanças deliberadas, uma a uma: (a) três campos novos por método:
+  mapeamento, declaracoes, condicionais; (b) o texto do 'limite'; (c) a nota de cada padrão dividida —
+  o checklist ganha a linha "Nota sobre o mapeamento (<método>)"; (d) método que NÃO declara o padrão
+  deixa de ser conferido com o mapeamento de outro — prisma-2020 e prisma-p contra o scoping e
+  prisma-scr contra o prisma-sr passam de 16/42, 12/26 e 12/22 a 0/N; (e) o checklist do prisma-s sem
+  método escolhido recusa, porque dois métodos o declaram, e pede projectPath ou methodologyId; (f) a
+  mensagem de padrão ilegível passa a dizer "ou com mapeamento dentro".
+- DEBT-151 atualizado: carrega o ponto (2) do DEBT-142 (scoping como método único, sem extends) até a
+  2c. Achado novo: DEBT-152 (agentes e conduct-review ainda dizem que o PRISMA-S tem títulos fora da
+  fonte e que o PRISMA-ScR não tem mapeamento — frase velha desde a sessão 1, não mexida).
+- NÃO FEITO, pela divisão: o item 3 — DEBT-150 (itens 12 e 16 do PRISMA-ScR condicionais) e DEBT-008
+  (F7.3 declarada [NÃO COBERTO] por tool, gate de "certeza (GRADE/CERQual)" tirado da
+  prisma-rigor-gates, escolha GRADE / CERQual / não se aplica como condicional, assimilação na fila).
+  Seguem ABERTOS; o DEBT-150 já não está bloqueado. O mecanismo está pronto e testado para eles.
+Verificação: suíte 393/393 em 34 arquivos (era 372/33: +17 em tests/declaracao_por_metodo.test.ts,
+  +4 nos testes ajustados); build ok (tsc); audit_system_debt válido — 152 achados (56 abertos, 4 em
+  curso, 76 resolvidos, 16 recusados); validate_methodology segue reprovando os dois métodos só pelo
+  DEBT-003, de antes; nenhum projeto de reviewbr/projects/ tocado.
+Commit: ver git log ("sessão 2a") — push para origin/reorg/agentic-layer.
+Decisões do Vicente registradas: nenhuma nova — executadas as de 17/10 e 29/10, citadas na resolução.
+Para o acompanhamento: (1) a 2b abre pelo item 3 da 2a; com o falsificador estimado em ~100% de uma
+  janela, talvez caiba dar ao item 3 sessão própria. (2) Ao declarar a condição dos itens 12 e 16 do
+  scoping, escolher a etapa em que o método a pergunta: a F6, onde a avaliação crítica estaria, está
+  desligada no scoping, e a spec dele põe o "charting de qualidade opcional" na F5.
+Próxima sessão: 2b — começa pelo item 3 da 2a (DEBT-150, DEBT-008), depois o falsificador (DEBT-149).
 ```

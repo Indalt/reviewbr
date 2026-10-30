@@ -3,6 +3,7 @@ import * as path from "node:path";
 import { fileURLToPath } from "node:url";
 import { MappingCoherenceService } from "../src/services/mapping_coherence.js";
 import { StandardsService, Standard } from "../src/services/standards.js";
+import { lerMapeamento } from "../src/services/method_mapping.js";
 
 const MCP = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const REPO = path.resolve(MCP, "..", "..");
@@ -20,7 +21,7 @@ describe("DEBT-124 — o mapeamento é falsificado contra o título oficial", ()
         schemaVersion: 1, id: "teste", name: "PADRÃO DE TESTE", version: "1",
         version_source: "", note: "", structure_warning: "", items_are_top_level_only: false,
         items: itens.map((i) => ({
-            ...i, section: "", covered_by: [], has_subitems: false, is_subitem: false, parent: "",
+            ...i, section: "", has_subitems: false, is_subitem: false, parent: "",
         })),
     } as Standard);
 
@@ -94,7 +95,8 @@ describe("DEBT-124 — o mapeamento é falsificado contra o título oficial", ()
 describe("DEBT-045 — o deslocamento real do PRISMA 2020, medido", () => {
     it("o mapeamento da trilha contra o PRISMA 2020 ainda tem suspeitos", () => {
         const std = StandardsService.read(REPO, "prisma-2020");
-        const r = MappingCoherenceService.checarMetodologia(REPO, "prisma-sr", std);
+        // O covered_by é do método (DEBT-142): o do prisma-sr para o PRISMA 2020.
+        const r = MappingCoherenceService.checarMetodologia(REPO, "prisma-sr", std, lerMapeamento(REPO, "prisma-sr", "prisma-2020").linhas);
 
         // Quando o DEBT-045 for corrigido, este número cai a zero e o teste abaixo troca
         // para `toEqual([])`. Enquanto isso, trava o número: não pode AUMENTAR em silêncio.

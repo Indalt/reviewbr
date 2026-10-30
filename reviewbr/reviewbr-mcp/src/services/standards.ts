@@ -1,6 +1,7 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { z } from "zod";
+import { declaracaoDe, LinhaDoMapeamento } from "./method_mapping.js";
 
 /**
  * Standards — os padrões metodológicos como DADO consultável, em `.claude/standards/`.
@@ -18,6 +19,12 @@ import { z } from "zod";
  * PRISMA-S é usado por prisma-sr E por scoping-prisma-scr: mantê-lo num arquivo próprio
  * evita duas cópias que divergem.
  *
+ * O MAPEAMENTO NÃO MORA AQUI (DEBT-142): `covered_by` e as declarações [NÃO COBERTO] /
+ * [NÃO SE APLICA] são de cada método que declara o padrão, em
+ * `.claude/methodologies/<método>/conformance/<padrão>.json` (`method_mapping.ts`). O arquivo do
+ * padrão guarda só a norma — e o leitor RECUSA padrão que traga mapeamento: ponteiro esquecido
+ * aqui seria ignorado em silêncio, e quem o escreveu acharia que conta.
+ *
  * Os itens foram EXTRAÍDOS do mapeamento que a própria spec já continha — nada veio de
  * fonte externa, porque o rastreio ativo está fora de escopo (protocolo §4). Por isso o
  * campo `version` pode trazer `[A VERIFICAR]`: declarar a incerteza é melhor do que
@@ -28,27 +35,15 @@ export const StandardItemSchema = z.object({
     id: z.string().min(1),
     section: z.string().default(""),
     title: z.string().default(""),
-    /** Subitens da trilha (F0.1.1, F8.3.2…) que cobrem este item — a consulta reversa. */
-    covered_by: z.array(z.string()).default([]),
     /** true no item de topo que se desdobra em subitens por letra (ex.: 13 → 13a..13f). */
     has_subitems: z.boolean().default(false),
     /** true na LINHA de subitem; `parent` aponta o item de topo. */
     is_subitem: z.boolean().default(false),
-    parent: z.string().default(""),
-    /**
-     * DEBT-140 — DUAS declarações distintas, e confundi-las esconde a segunda.
-     *
-     * `nao_coberto`: o sistema AINDA NÃO implementa o que o item pede. É coberível no futuro,
-     * é fila de manutenção. O texto é o motivo. Um `covered_by` que só ENCAIXA o item num campo
-     * que não coleta o que ele pede (o 26/26 do PRISMA-P) é declarado aqui — e pode manter os
-     * ponteiros, que mostram onde mora a cobertura parcial.
-     *
-     * `nao_se_aplica`: o item nunca será coberto pela pesquisa que declara este padrão, e isso
-     * NÃO é falha. O próprio PRISMA prevê "não se aplica". O texto é o motivo.
-     */
-    nao_coberto: z.string().default(""),
-    nao_se_aplica: z.string().default("")
+    parent: z.string().default("")
 });
+
+/** Campos do MAPEAMENTO, que é do método (DEBT-142): no arquivo do padrão, o leitor os recusa. */
+const CAMPOS_DO_METODO = ["covered_by", "nao_coberto", "nao_se_aplica"];
 
 export const StandardSchema = z.object({
     schemaVersion: z.literal(1),
@@ -90,14 +85,6 @@ export const StandardSchema = z.object({
 export type Standard = z.infer<typeof StandardSchema>;
 export type StandardItem = z.infer<typeof StandardItemSchema>;
 
-/**
- * As declarações de ausência de uma linha (DEBT-140), lidas de forma robusta: item montado
- * fora do schema não traz os defaults, e campo ausente é "não declarado", não erro.
- */
-export function declaracaoDe(i: StandardItem): { naoCoberto: string; naoSeAplica: string } {
-    return { naoCoberto: (i.nao_coberto ?? "").trim(), naoSeAplica: (i.nao_se_aplica ?? "").trim() };
-}
-
 export interface Declaracao {
     id: string;
     title: string;
@@ -115,23 +102,30 @@ export interface CoverageReport {
     /** Linhas declaradas [NÃO SE APLICA] — nunca serão cobertas, e não é falha. */
     nao_se_aplica: Declaracao[];
     /** Linhas sem cobertura E sem declaração — omissão silenciosa, o que reprova. */
-    orphans: StandardItem[];
+    orphans: LinhaDoChecklist[];
     /** Versão não confirmada contra a fonte oficial. */
     version_unverified: boolean;
     valid: boolean;
     errors: string[];
 }
 
+/** O item do padrão com o que o método diz dele — a linha como o checklist a mostra. */
+export type LinhaDoChecklist = StandardItem & { covered_by: string[]; nao_coberto: string; nao_se_aplica: string };
+
 export class StandardsService {
     static standardsDir(repoRoot: string): string {
         return path.join(repoRoot, ".claude", "standards");
     }
 
+    /** null = ausente, ilegível, fora do schema ou com mapeamento dentro (que é do método — DEBT-142). */
     static read(repoRoot: string, standardId: string): Standard | null {
         const p = path.join(this.standardsDir(repoRoot), `${standardId}.json`);
         if (!fs.existsSync(p)) return null;
         try {
-            const parsed = StandardSchema.safeParse(JSON.parse(fs.readFileSync(p, "utf-8")));
+            const bruto = JSON.parse(fs.readFileSync(p, "utf-8"));
+            const itens: unknown[] = Array.isArray(bruto?.items) ? bruto.items : [];
+            if (itens.some((i) => i && typeof i === "object" && CAMPOS_DO_METODO.some((k) => k in (i as object)))) return null;
+            const parsed = StandardSchema.safeParse(bruto);
             return parsed.success ? parsed.data : null;
         } catch {
             return null;
@@ -193,22 +187,27 @@ export class StandardsService {
      * Isso depende do MÉTODO que declara o padrão — é `StandardCoverageService`. Esta função
      * olhava só `covered_by` vazio, e era assim que o PRISMA-P saía 26/26 com 14 linhas de
      * encaixe: verde por construção, o mesmo resultado para qualquer projeto.
+     *
+     * `mapa` é o mapeamento do MÉTODO (DEBT-142): linha sem entrada nele não tem cobertura nem
+     * declaração. Sem mapa — padrão que nenhum método declara —, toda linha é omissão.
      */
-    static checkCoverage(std: Standard | null, standardId: string): CoverageReport {
+    static checkCoverage(std: Standard | null, standardId: string, mapa: Map<string, LinhaDoMapeamento> = new Map()): CoverageReport {
         if (!std) {
             return {
                 standard: standardId, version: "", total: 0, covered: 0, nao_coberto: [], nao_se_aplica: [], orphans: [],
                 version_unverified: true, valid: false,
-                errors: [`Padrão "${standardId}" ausente ou ilegível em .claude/standards/.`]
+                errors: [`Padrão "${standardId}" ausente, ilegível ou com mapeamento dentro em .claude/standards/ (o mapeamento é do método — DEBT-142).`]
             };
         }
 
         // Um pai com subitens é cabeçalho: quem precisa de cobertura são suas LINHAS.
         const linhas = std.items.filter((i) => !i.has_subitems);
-        const nc = (i: StandardItem) => declaracaoDe(i).naoCoberto;
-        const na = (i: StandardItem) => declaracaoDe(i).naoSeAplica;
-        const orphans = linhas.filter((i) => i.covered_by.length === 0 && !nc(i) && !na(i));
-        const corresponde = linhas.filter((i) => i.covered_by.length > 0 && !nc(i) && !na(i));
+        const cb = (i: StandardItem) => mapa.get(i.id)?.covered_by ?? [];
+        const nc = (i: StandardItem) => declaracaoDe(mapa.get(i.id)).naoCoberto;
+        const na = (i: StandardItem) => declaracaoDe(mapa.get(i.id)).naoSeAplica;
+        const orphans = linhas.filter((i) => cb(i).length === 0 && !nc(i) && !na(i))
+            .map((i) => ({ ...i, covered_by: [], nao_coberto: "", nao_se_aplica: "" }));
+        const corresponde = linhas.filter((i) => cb(i).length > 0 && !nc(i) && !na(i));
         const errors: string[] = [];
 
         if (orphans.length > 0) {
@@ -253,9 +252,16 @@ export class StandardsService {
      * `conferencia` (DEBT-140): o template é o suplemento que o pesquisador preenche e publica.
      * Sem ela, item que a conferência CONTESTA sairia como cobertura limpa, sem a premissa sob a
      * qual o veredito foi dado. Com ela, o contestado sai marcado e a fração, a premissa e o
-     * limite vão no rodapé.
+     * limite vão no rodapé. A coluna "Coberto por" vem do mapeamento do MÉTODO (`linhas`,
+     * DEBT-142), e a nota dele vai ao pé, ao lado da nota da norma.
      */
-    static renderChecklist(std: Standard, conferencia?: { contestados?: Record<string, string>; rodape?: string[] }): string {
+    static renderChecklist(std: Standard, conferencia?: {
+        linhas?: Map<string, LinhaDoMapeamento>;
+        contestados?: Record<string, string>;
+        rodape?: string[];
+        notaDoMapeamento?: { metodo: string; texto: string };
+    }): string {
+        const mapa = conferencia?.linhas ?? new Map<string, LinhaDoMapeamento>();
         const linhas: string[] = [];
         linhas.push(`# Checklist de conformidade — ${std.name}`);
         linhas.push("");
@@ -298,17 +304,18 @@ export class StandardsService {
             }
             // DEBT-140: as duas declarações aparecem como tais — [NÃO SE APLICA] não é pendência,
             // e [NÃO COBERTO] não é cobertura, mesmo quando o item tem ponteiros parciais.
-            const { naoSeAplica: naoAplica, naoCoberto } = declaracaoDe(item);
+            const { naoSeAplica: naoAplica, naoCoberto } = declaracaoDe(mapa.get(item.id));
+            const ponteiros = mapa.get(item.id)?.covered_by ?? [];
             const cobertura = naoAplica
                 ? `**[NÃO SE APLICA]** ${naoAplica}`
                 : naoCoberto
                     // Só "parcial" mora nos ponteiros; em encaixe e deslocamento eles são o erro.
-                    ? `**[NÃO COBERTO]** ${naoCoberto}${item.covered_by.length
-                        ? (/^parcial/i.test(naoCoberto) ? ` (parcial em ${item.covered_by.join(", ")})` : ` (ponteiros atuais: ${item.covered_by.join(", ")})`)
+                    ? `**[NÃO COBERTO]** ${naoCoberto}${ponteiros.length
+                        ? (/^parcial/i.test(naoCoberto) ? ` (parcial em ${ponteiros.join(", ")})` : ` (ponteiros atuais: ${ponteiros.join(", ")})`)
                         : ""}`
                     : conferencia?.contestados?.[item.id]
-                        ? `**[CONTESTADO]** ${conferencia.contestados[item.id]} (ponteiros: ${item.covered_by.join(", ")})`
-                        : item.covered_by.length ? item.covered_by.join(", ") : "**[SEM COBERTURA]**";
+                        ? `**[CONTESTADO]** ${conferencia.contestados[item.id]} (ponteiros: ${ponteiros.join(", ")})`
+                        : ponteiros.length ? ponteiros.join(", ") : "**[SEM COBERTURA]**";
             const rotulo = item.is_subitem ? `&nbsp;&nbsp;${item.id}` : item.id;
             linhas.push(`| ${rotulo} | ${item.title} | ${cobertura.replace(/\|/g, "/")} | ${naoAplica ? "—" : "[TBD]"} | ${naoAplica ? "N/A" : "☐"} |`);
         }
@@ -323,6 +330,10 @@ export class StandardsService {
             linhas.push("---");
             linhas.push("");
             linhas.push(`**Nota sobre a origem dos itens:** ${std.note}`);
+        }
+        if (conferencia?.notaDoMapeamento?.texto) {
+            linhas.push("");
+            linhas.push(`**Nota sobre o mapeamento (${conferencia.notaDoMapeamento.metodo}):** ${conferencia.notaDoMapeamento.texto}`);
         }
         return linhas.join("\n") + "\n";
     }

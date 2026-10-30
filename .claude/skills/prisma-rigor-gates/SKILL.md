@@ -33,10 +33,11 @@ Cada fase tem subitens obrigatórios na spec do método (`.claude/methodologies/
 
 ## Camada 3 — Checklists de conformidade (suplementos obrigatórios)
 Antes de declarar a revisão pronta, **chame `check_standard_coverage`** para cada padrão do
-método, com `methodologyId` = o `method` do `project_state.json` — não confira "de olho": é a
-verificação determinística, a mesma classe de `validate_prisma_flow` (RV-05). Sem `methodologyId`
-a tool confere contra todos os métodos que declaram o padrão, e a fração sai por método. Ela confere quatro coisas contra a trilha dos métodos que
-declaram o padrão (DEBT-140): **(a)** o subitem apontado existe na spec; **(b)** o rótulo dele
+método, com `projectPath` = a raiz do projeto — o método é o do `project_state.json`, e as
+respostas do pesquisador às condições do método entram na conta — não confira "de olho": é a
+verificação determinística, a mesma classe de `validate_prisma_flow` (RV-05). Sem projeto
+a tool confere contra todos os métodos que declaram o padrão, e a fração sai por método. Ela confere quatro coisas contra a trilha e o
+mapeamento de cada método (DEBT-140, DEBT-142): **(a)** o subitem apontado existe na spec; **(b)** o rótulo dele
 não contradiz o item, por falsificação; **(c)** se alguma tool produz o artefato da etapa ou só o
 agente; **(d)** toda linha está coberta ou declarada `[NÃO COBERTO]` / `[NÃO SE APLICA]`.
 - **SUP.1 — PRISMA 2020**: `check_standard_coverage("prisma-2020")` — 27 itens (42 linhas
@@ -52,6 +53,9 @@ confunda as três situações de uma linha:
 - **`[NÃO COBERTO]`** — lacuna do sistema, declarada: o item vai ao checklist como não coberto
   pela trilha, e cobri-lo por conta própria ou declará-lo no manuscrito é decisão do pesquisador.
 - **`[NÃO SE APLICA]`** — não é falha: o item vai ao checklist como N/A, com o motivo.
+- **`condicionais`** — item cuja aplicabilidade depende da pesquisa: o método declara a condição,
+  e só a resposta do pesquisador (`record_researcher_decision`) o tira do denominador. Sem
+  resposta, conta como o método o declarou: pergunte, não presuma.
 
 `valid=false` **bloqueia** declarar o checklist completo. A `fracao` (ex.: 12/26) é o que se pode
 afirmar — nunca a arredonde para "coberto".

@@ -4,11 +4,15 @@ import * as path from "node:path";
 import { fileURLToPath } from "node:url";
 import { MappingCoherenceService } from "../src/services/mapping_coherence.js";
 import { StandardCoverageService } from "../src/services/standard_coverage.js";
-import { StandardsService, Standard } from "../src/services/standards.js";
+import { StandardsService } from "../src/services/standards.js";
+import { lerMapeamento, LinhaDoMapeamento } from "../src/services/method_mapping.js";
+import { textoDaSpec } from "../src/services/method_trail.js";
 
 const MCP = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const REPO = path.resolve(MCP, "..", "..");
 const cru = (id: string) => JSON.parse(fs.readFileSync(path.join(REPO, ".claude", "standards", `${id}.json`), "utf-8"));
+/** O mapeamento é do método que declara o padrão (DEBT-142). */
+const mapa = (metodo: string, padrao: string) => lerMapeamento(REPO, metodo, padrao).linhas;
 
 /**
  * DEBT-128 — os 16 títulos do PRISMA-S vinham da trilha do ReviewBR, não da norma, e o
@@ -43,25 +47,27 @@ describe("PRISMA-S — a norma, não a trilha (DEBT-128)", () => {
         expect(std.version_source).toMatch(/s13643-020-01542-z\/tables\/1/);
     });
 
-    it("a coluna 'Item PRISMA-S' da spec do prisma-sr declara o mesmo mapeamento que o covered_by", () => {
-        // As duas declarações não se verificam mutuamente (mapping_coherence.ts) — mas não podem
-        // divergir: a spec é o que o agente lê, o covered_by é o que a conferência lê.
-        const inverso = new Map<string, string[]>();
-        for (const it of std.items) for (const s of it.covered_by) (inverso.get(s) ?? inverso.set(s, []).get(s)!).push(it.id);
-        const spec = fs.readFileSync(path.join(REPO, ".claude", "methodologies", "prisma-sr", "spec.md"), "utf-8");
-        const naSpec = new Map<string, string[]>();
-        for (const l of spec.split(/\r?\n/)) {
-            const m = l.match(/^\|\s*(F[0-9][A-Za-z0-9_.-]*)\s*\|/);
-            if (!m) continue;
-            const celulas = l.split("|");
-            const ultima = celulas[celulas.length - 2];
-            const ss = [...ultima.matchAll(/\bS(\d+)\b/g)].map((x) => `S${x[1]}`);
-            expect(ultima, `${m[1]}: intervalo na coluna — escreva os itens um a um`).not.toMatch(/S\d+\s*[–-]\s*S\d+/);
-            if (ss.length) naSpec.set(m[1], ss);
-        }
-        const ordena = (mp: Map<string, string[]>) => [...mp].map(([k, v]) => `${k}:${[...v].sort().join(",")}`).sort();
-        expect(ordena(naSpec)).toEqual(ordena(inverso));
-    });
+    for (const metodo of ["prisma-sr", "scoping-prisma-scr"]) {
+        it(`a coluna 'Item PRISMA-S' da spec que o ${metodo} lê declara o mesmo mapeamento que o covered_by dele`, () => {
+            // As duas declarações não se verificam mutuamente (mapping_coherence.ts) — mas não podem
+            // divergir: a spec é o que o agente lê, o covered_by do método é o que a conferência lê.
+            // O scoping lê a spec do prisma-sr por `extends` e guarda a sua cópia do mapeamento (DEBT-142).
+            const inverso = new Map<string, string[]>();
+            for (const it of std.items) for (const s of mapa(metodo, "prisma-s").get(it.id)?.covered_by ?? []) (inverso.get(s) ?? inverso.set(s, []).get(s)!).push(it.id);
+            const naSpec = new Map<string, string[]>();
+            for (const l of textoDaSpec(REPO, metodo).split(/\r?\n/)) {
+                const m = l.match(/^\|\s*(F[0-9][A-Za-z0-9_.-]*)\s*\|/);
+                if (!m) continue;
+                const celulas = l.split("|");
+                const ultima = celulas[celulas.length - 2];
+                const ss = [...ultima.matchAll(/\bS(\d+)\b/g)].map((x) => `S${x[1]}`);
+                expect(ultima, `${m[1]}: intervalo na coluna — escreva os itens um a um`).not.toMatch(/S\d+\s*[–-]\s*S\d+/);
+                if (ss.length) naSpec.set(m[1], ss);
+            }
+            const ordena = (mp: Map<string, string[]>) => [...mp].map(([k, v]) => `${k}:${[...v].sort().join(",")}`).sort();
+            expect(ordena(naSpec)).toEqual(ordena(inverso));
+        });
+    }
 });
 
 /**
@@ -91,11 +97,10 @@ describe("controle positivo do falsificador no PRISMA-S (DEBT-149) — SEM PODER
         S16: ["F1.3.2.6", "F2.1.3.4", "F4.2.2", "F8.1.7"],
     };
     const oficial = StandardsService.read(REPO, "prisma-s")!;
-    const antigo: Standard = {
-        ...oficial,
-        items: oficial.items.map((i) => ({ ...i, covered_by: ANTIGO[i.id], nao_coberto: "", nao_se_aplica: "" })),
-    };
-    const r = MappingCoherenceService.checarMetodologia(REPO, "prisma-sr", antigo);
+    const antigo = new Map<string, LinhaDoMapeamento>(
+        Object.entries(ANTIGO).map(([id, cb]) => [id, { id, covered_by: cb, nao_coberto: "", nao_se_aplica: "" }]),
+    );
+    const r = MappingCoherenceService.checarMetodologia(REPO, "prisma-sr", oficial, antigo);
 
     it("acusa só 2 pares — e nenhum dos ponteiros de S11 ('Prior work') e S13 ('Dates of searches')", () => {
         expect(r.suspeitos.map((s) => `${s.subitem}→${s.item_declarado}:${s.item_sugerido}`))
@@ -105,7 +110,8 @@ describe("controle positivo do falsificador no PRISMA-S (DEBT-149) — SEM PODER
 
     it("dos 70 pares antigos, 58 mudaram no remapeamento — o falsificador viu 2", () => {
         let total = 0, mudaram = 0;
-        for (const it of oficial.items) for (const s of ANTIGO[it.id]) { total++; if (!it.covered_by.includes(s)) mudaram++; }
+        const atual = mapa("prisma-sr", "prisma-s");
+        for (const it of oficial.items) for (const s of ANTIGO[it.id]) { total++; if (!(atual.get(it.id)?.covered_by ?? []).includes(s)) mudaram++; }
         expect([total, mudaram]).toEqual([70, 58]);
     });
 });
@@ -132,9 +138,8 @@ describe("PRISMA-ScR — os 22 itens contra a trilha do scoping (DEBT-055)", () 
     });
 
     it("os condicionais 12 e 16 ('If done') ficam declarados até o item condicional existir (DEBT-142, DEBT-150)", () => {
-        const std = StandardsService.read(REPO, "prisma-scr")!;
         for (const id of ["12", "16"]) {
-            const it = std.items.find((i) => i.id === id)!;
+            const it = mapa("scoping-prisma-scr", "prisma-scr").get(id)!;
             expect(it.covered_by, id).toEqual([]);
             expect(it.nao_coberto, id).toMatch(/condicional/);
             expect(it.nao_coberto, id).toMatch(/DEBT-142/);

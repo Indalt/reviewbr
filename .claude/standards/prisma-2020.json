@@ -45,144 +45,73 @@
     },
     "note": "6 itens se desdobram em 21 linhas de subitem (2+6+2+4+4+3); os outros 21 itens rendem 1 linha cada. 21+21=42."
   },
-  "note": "Estrutura e titulos CONFIRMADOS contra a fonte oficial. O campo covered_by dos itens de topo foi herdado da extracao da spec do ReviewBR e esta SOB SUSPEITA: a spec mapeia registro de protocolo ao Item 15 (que e 'Certainty assessment') e desloca conflito/disponibilidade a partir do 25. Ver DEBT-012 e DEBT-014. Os subitens ainda nao tem covered_by: remapear a trilha contra a estrutura oficial e trabalho pendente.",
+  "note": "Estrutura e titulos CONFIRMADOS contra a fonte oficial. O mapeamento contra a trilha — covered_by e as declarações [NÃO COBERTO] / [NÃO SE APLICA] — é de cada método que declara o padrão, em .claude/methodologies/<método>/conformance/prisma-2020.json (DEBT-142, 30/10/2026).",
   "items_are_top_level_only": false,
   "items": [
     {
       "id": "1",
       "section": "Title",
       "title": "Title",
-      "covered_by": [
-        "F0.1.1",
-        "F0.1.3",
-        "F8.3.1"
-      ],
       "has_subitems": false
     },
     {
       "id": "2",
       "section": "Abstract",
       "title": "Abstract",
-      "covered_by": [
-        "F8.3.2"
-      ],
       "has_subitems": false
     },
     {
       "id": "3",
       "section": "Introduction",
       "title": "Rationale",
-      "covered_by": [
-        "F0.3.1",
-        "F0.3.2",
-        "F0.3.3",
-        "F0.3.4",
-        "F8.3.3"
-      ],
       "has_subitems": false
     },
     {
       "id": "4",
       "section": "Introduction",
       "title": "Objectives",
-      "covered_by": [
-        "F1.1.1",
-        "F1.1.2",
-        "F1.1.3",
-        "F8.3.4"
-      ],
       "has_subitems": false
     },
     {
       "id": "5",
       "section": "Methods",
       "title": "Eligibility criteria",
-      "covered_by": [
-        "F1.2.1",
-        "F1.2.3",
-        "F1.2.5",
-        "F1.2.7",
-        "F1.2.9",
-        "F1.3.1.1",
-        "F1.3.1.2",
-        "F1.3.1.3",
-        "F1.3.1.4",
-        "F1.3.1.5",
-        "F1.3.1.6",
-        "F1.3.1.7",
-        "F1.3.2.1",
-        "F1.3.2.2",
-        "F1.3.2.3",
-        "F1.3.2.4",
-        "F1.3.2.5",
-        "F1.3.2.6",
-        "F8.3.5"
-      ],
       "has_subitems": false
     },
     {
       "id": "6",
       "section": "Methods",
       "title": "Information sources",
-      "covered_by": [
-        "F8.3.6"
-      ],
       "has_subitems": false
     },
     {
       "id": "7",
       "section": "Methods",
       "title": "Search strategy",
-      "covered_by": [
-        "F1.2.2",
-        "F1.2.4",
-        "F1.2.6",
-        "F1.2.8",
-        "F1.2.10",
-        "F8.3.7"
-      ],
       "has_subitems": false
     },
     {
       "id": "8",
       "section": "Methods",
       "title": "Selection process",
-      "covered_by": [
-        "F4.1.2",
-        "F4.1.3",
-        "F4.1.5",
-        "F8.3.8"
-      ],
       "has_subitems": false
     },
     {
       "id": "9",
       "section": "Methods",
       "title": "Data collection process",
-      "covered_by": [
-        "F5.1.1",
-        "F5.1.2",
-        "F5.1.3",
-        "F5.1.4",
-        "F8.3.9"
-      ],
       "has_subitems": false
     },
     {
       "id": "10",
       "section": "Methods",
       "title": "Data items",
-      "covered_by": [
-        "F5.2.2.3",
-        "F8.3.10"
-      ],
       "has_subitems": true
     },
     {
       "id": "10a",
       "section": "Methods",
       "title": "Data items — 10a",
-      "covered_by": [],
       "parent": "10",
       "is_subitem": true
     },
@@ -190,7 +119,6 @@
       "id": "10b",
       "section": "Methods",
       "title": "Data items — 10b",
-      "covered_by": [],
       "parent": "10",
       "is_subitem": true
     },
@@ -198,48 +126,24 @@
       "id": "11",
       "section": "Methods",
       "title": "Study risk of bias assessment",
-      "covered_by": [
-        "F1.3.2.7",
-        "F6.1.1",
-        "F6.1.2",
-        "F6.1.3",
-        "F6.1.4",
-        "F6.1.5",
-        "F8.3.11"
-      ],
       "has_subitems": false
     },
     {
       "id": "12",
       "section": "Methods",
       "title": "Effect measures",
-      "covered_by": [
-        "F7.1.3",
-        "F7.1.4",
-        "F8.3.12"
-      ],
       "has_subitems": false
     },
     {
       "id": "13",
       "section": "Methods",
       "title": "Synthesis methods",
-      "covered_by": [
-        "F7.1.1",
-        "F7.1.2",
-        "F7.1.5",
-        "F7.1.6",
-        "F7.1.7",
-        "F7.1.8",
-        "F8.3.13"
-      ],
       "has_subitems": true
     },
     {
       "id": "13a",
       "section": "Methods",
       "title": "Synthesis methods — 13a",
-      "covered_by": [],
       "parent": "13",
       "is_subitem": true
     },
@@ -247,7 +151,6 @@
       "id": "13b",
       "section": "Methods",
       "title": "Synthesis methods — 13b",
-      "covered_by": [],
       "parent": "13",
       "is_subitem": true
     },
@@ -255,7 +158,6 @@
       "id": "13c",
       "section": "Methods",
       "title": "Synthesis methods — 13c",
-      "covered_by": [],
       "parent": "13",
       "is_subitem": true
     },
@@ -263,7 +165,6 @@
       "id": "13d",
       "section": "Methods",
       "title": "Synthesis methods — 13d",
-      "covered_by": [],
       "parent": "13",
       "is_subitem": true
     },
@@ -271,7 +172,6 @@
       "id": "13e",
       "section": "Methods",
       "title": "Synthesis methods — 13e",
-      "covered_by": [],
       "parent": "13",
       "is_subitem": true
     },
@@ -279,7 +179,6 @@
       "id": "13f",
       "section": "Methods",
       "title": "Synthesis methods — 13f",
-      "covered_by": [],
       "parent": "13",
       "is_subitem": true
     },
@@ -287,66 +186,24 @@
       "id": "14",
       "section": "Methods",
       "title": "Reporting bias assessment",
-      "covered_by": [
-        "F7.3.1",
-        "F7.3.2",
-        "F8.3.14"
-      ],
-      "has_subitems": false,
-      "nao_coberto": "deslocado — os ponteiros (F7.3.1, F7.3.2, F8.3.14) são de certeza da evidência (GRADE/CERQual), não de avaliação de viés de relato. Mapeamento documentado como errado no DEBT-045; remapear é o conserto, e ao remapear esta declaração sai."
+      "has_subitems": false
     },
     {
       "id": "15",
       "section": "Methods",
       "title": "Certainty assessment",
-      "covered_by": [
-        "F0.1.4",
-        "F0.1.5",
-        "F0.2.1",
-        "F0.2.2",
-        "F0.2.3",
-        "F0.2.4",
-        "F0.2.5",
-        "F8.3.15"
-      ],
-      "has_subitems": false,
-      "nao_coberto": "deslocado — os ponteiros (F0.1.4, F0.1.5, F0.2.1, F0.2.2, F0.2.3, F0.2.4, F0.2.5, F8.3.15) são de registro e protocolo, não de avaliação da certeza da evidência. Mapeamento documentado como errado no DEBT-045; remapear é o conserto, e ao remapear esta declaração sai."
+      "has_subitems": false
     },
     {
       "id": "16",
       "section": "Results",
       "title": "Study selection",
-      "covered_by": [
-        "F2.1.3.1",
-        "F3.1.6",
-        "F3.1.7",
-        "F3.1.8",
-        "F4.1.1",
-        "F4.1.4",
-        "F4.2.1",
-        "F4.2.2",
-        "F4.2.3",
-        "F4.2.4",
-        "F4.2.5",
-        "F8.1.1",
-        "F8.1.2",
-        "F8.1.3",
-        "F8.1.4",
-        "F8.1.5",
-        "F8.1.6",
-        "F8.1.7",
-        "F8.1.8",
-        "F8.1.9",
-        "F8.1.10",
-        "F8.3.16"
-      ],
       "has_subitems": true
     },
     {
       "id": "16a",
       "section": "Results",
       "title": "Study selection — 16a",
-      "covered_by": [],
       "parent": "16",
       "is_subitem": true
     },
@@ -354,7 +211,6 @@
       "id": "16b",
       "section": "Results",
       "title": "Study selection — 16b",
-      "covered_by": [],
       "parent": "16",
       "is_subitem": true
     },
@@ -362,62 +218,30 @@
       "id": "17",
       "section": "Results",
       "title": "Study characteristics",
-      "covered_by": [
-        "F5.2.1.1",
-        "F5.2.1.2",
-        "F5.2.1.3",
-        "F5.2.1.4",
-        "F5.2.1.5",
-        "F5.2.1.6",
-        "F5.2.1.7",
-        "F5.2.2.1",
-        "F5.2.2.2",
-        "F5.2.3.1",
-        "F5.2.3.2",
-        "F5.2.3.3",
-        "F8.3.17"
-      ],
       "has_subitems": false
     },
     {
       "id": "18",
       "section": "Results",
       "title": "Risk of bias in studies",
-      "covered_by": [
-        "F6.2.1",
-        "F6.2.2",
-        "F6.2.3",
-        "F8.3.18"
-      ],
       "has_subitems": false
     },
     {
       "id": "19",
       "section": "Results",
       "title": "Results of individual studies",
-      "covered_by": [
-        "F5.2.3.4",
-        "F5.2.3.5",
-        "F5.2.4.1",
-        "F5.2.4.2",
-        "F8.3.19"
-      ],
       "has_subitems": false
     },
     {
       "id": "20",
       "section": "Results",
       "title": "Results of syntheses",
-      "covered_by": [
-        "F8.3.20"
-      ],
       "has_subitems": true
     },
     {
       "id": "20a",
       "section": "Results",
       "title": "Results of syntheses — 20a",
-      "covered_by": [],
       "parent": "20",
       "is_subitem": true
     },
@@ -425,7 +249,6 @@
       "id": "20b",
       "section": "Results",
       "title": "Results of syntheses — 20b",
-      "covered_by": [],
       "parent": "20",
       "is_subitem": true
     },
@@ -433,7 +256,6 @@
       "id": "20c",
       "section": "Results",
       "title": "Results of syntheses — 20c",
-      "covered_by": [],
       "parent": "20",
       "is_subitem": true
     },
@@ -441,7 +263,6 @@
       "id": "20d",
       "section": "Results",
       "title": "Results of syntheses — 20d",
-      "covered_by": [],
       "parent": "20",
       "is_subitem": true
     },
@@ -449,40 +270,24 @@
       "id": "21",
       "section": "Results",
       "title": "Reporting biases",
-      "covered_by": [
-        "F7.2.1",
-        "F7.2.2",
-        "F7.2.3",
-        "F8.3.21"
-      ],
       "has_subitems": false
     },
     {
       "id": "22",
       "section": "Results",
       "title": "Certainty of evidence",
-      "covered_by": [
-        "F7.3.3",
-        "F7.3.4",
-        "F8.3.22"
-      ],
       "has_subitems": false
     },
     {
       "id": "23",
       "section": "Discussion",
       "title": "Discussion",
-      "covered_by": [
-        "F5.2.4.3",
-        "F8.3.23"
-      ],
       "has_subitems": true
     },
     {
       "id": "23a",
       "section": "Discussion",
       "title": "Discussion — 23a",
-      "covered_by": [],
       "parent": "23",
       "is_subitem": true
     },
@@ -490,7 +295,6 @@
       "id": "23b",
       "section": "Discussion",
       "title": "Discussion — 23b",
-      "covered_by": [],
       "parent": "23",
       "is_subitem": true
     },
@@ -498,7 +302,6 @@
       "id": "23c",
       "section": "Discussion",
       "title": "Discussion — 23c",
-      "covered_by": [],
       "parent": "23",
       "is_subitem": true
     },
@@ -506,7 +309,6 @@
       "id": "23d",
       "section": "Discussion",
       "title": "Discussion — 23d",
-      "covered_by": [],
       "parent": "23",
       "is_subitem": true
     },
@@ -514,20 +316,12 @@
       "id": "24",
       "section": "Other information",
       "title": "Registration and protocol",
-      "covered_by": [
-        "F0.1.6",
-        "F0.1.7",
-        "F0.1.8",
-        "F5.2.5.1",
-        "F8.3.24"
-      ],
       "has_subitems": true
     },
     {
       "id": "24a",
       "section": "Other information",
       "title": "Registration and protocol — 24a",
-      "covered_by": [],
       "parent": "24",
       "is_subitem": true
     },
@@ -535,7 +329,6 @@
       "id": "24b",
       "section": "Other information",
       "title": "Registration and protocol — 24b",
-      "covered_by": [],
       "parent": "24",
       "is_subitem": true
     },
@@ -543,7 +336,6 @@
       "id": "24c",
       "section": "Other information",
       "title": "Registration and protocol — 24c",
-      "covered_by": [],
       "parent": "24",
       "is_subitem": true
     },
@@ -551,37 +343,19 @@
       "id": "25",
       "section": "Other information",
       "title": "Support",
-      "covered_by": [
-        "F0.1.9",
-        "F5.2.5.2",
-        "F8.3.25"
-      ],
-      "has_subitems": false,
-      "nao_coberto": "deslocado — os ponteiros (F0.1.9, F5.2.5.2, F8.3.25) são de conflito de interesses, não de financiamento ou apoio. Mapeamento documentado como errado no DEBT-045; remapear é o conserto, e ao remapear esta declaração sai."
+      "has_subitems": false
     },
     {
       "id": "26",
       "section": "Other information",
       "title": "Competing interests",
-      "covered_by": [
-        "F5.2.5.3",
-        "F8.3.26",
-        "F8.4.1",
-        "F8.4.2",
-        "F8.4.3"
-      ],
-      "has_subitems": false,
-      "nao_coberto": "deslocado — os ponteiros (F5.2.5.3, F8.3.26, F8.4.1, F8.4.2, F8.4.3) são de disponibilidade de dados, não de conflito de interesses. Mapeamento documentado como errado no DEBT-045; remapear é o conserto, e ao remapear esta declaração sai."
+      "has_subitems": false
     },
     {
       "id": "27",
       "section": "Other information",
       "title": "Availability of data, code and other materials",
-      "covered_by": [
-        "F8.3.27"
-      ],
-      "has_subitems": false,
-      "nao_coberto": "deslocado — os ponteiros (F8.3.27) são de informações adicionais, não de disponibilidade de dados, código e materiais. Mapeamento documentado como errado no DEBT-045; remapear é o conserto, e ao remapear esta declaração sai."
+      "has_subitems": false
     }
   ]
 }
