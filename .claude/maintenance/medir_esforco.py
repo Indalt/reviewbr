@@ -60,10 +60,8 @@ TODOS = os.path.expanduser(r"~\.claude\projects")
 # par novo, recalcule e atualize os dois lugares.
 REGUA_5H = (9.5e6, 11.5e6)
 
-# Leitura EXATA do painel, quando existe: a barra de status global (~/.claude/statusline_uso.py,
-# configurada em 29/10/2026 com a aprovacao do Vicente) grava aqui o rate_limits que o Claude
-# Code lhe entrega. Documentado para Pro e Max; no Team, a conferir.
-USO_PAINEL = os.path.expanduser(r"~\.claude\uso_atual.json")
+# A leitura EXATA do painel (barra de status global, 29/10/2026) foi retirada em 30/10: no
+# Antigravity a barra nunca rodou. Vale a estimativa, que e piso (CONTINUAR.md §1).
 
 
 def respostas(f):
@@ -251,23 +249,6 @@ def agora(ate=None):
     print(f"\nTotal: {int(tot):,} ponderado -> estimativa {lo:.0f}% a {hi:.0f}% da janela de 5h"
           f" (regua {REGUA_5H[0]/1e6:.1f}-{REGUA_5H[1]/1e6:.1f} M; CONTINUAR.md §1).")
     print("Piso, nao teto: o uso no claude.ai (web/app) e em outra maquina nao aparece aqui.")
-    if ate is not None:
-        return
-    try:
-        with open(USO_PAINEL, encoding="utf-8") as fh:
-            p = json.load(fh)
-    except Exception:
-        p = None
-    if p is None:
-        print("\nPainel: sem leitura (a barra de status ainda nao gravou ~/.claude/uso_atual.json).")
-    elif not p.get("rate_limits_presente"):
-        print("\nPainel: a barra de status roda, mas o plano nao entrega rate_limits. Decisao de"
-              " 29/10: tirar o statusLine do settings global e ficar com a estimativa.")
-    else:
-        print(f"\nPainel (lido em {p.get('lido_em')} UTC): 5h {p.get('cinco_horas_pct')}%"
-              f" | semana {p.get('semanal_pct')}%  <- leitura exata; vale esta.")
-        print(f"Par de calibracao, se a leitura for recente: {p.get('cinco_horas_pct')}%"
-              f" <-> {int(tot):,} ponderado.")
 
 
 def main():

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-30T12:42:02.657Z",
+  "updatedAt": "2026-10-30T16:53:55.717Z",
   "findings": [
     {
       "id": "DEBT-001",
@@ -117,17 +117,17 @@
       "depende_de": []
     },
     {
+      "reproduction": "",
+      "location": ".claude/methodologies/prisma-sr/manifest.json (F7) e .claude/skills/synthesis-manuscript/SKILL.md",
+      "resolution": "",
+      "found_by": "revisao do ReviewBR — escopo metodologico do maintainer",
+      "found_at": "2026-09-24",
+      "context": "Gravidade atribuida em 03/10/2026: GRADE e CERQual citados na spec sem implementacao — a certeza da evidencia nao e avaliavel, e o manuscrito sairia sem ela.\n\nAGENDADO em 30/10/2026 (conferência da sessão 2a, chat de acompanhamento), em duas partes. (1) DECLARAR, na sessão 2b do PLANO_sessoes_2026-10-29, como a reclassificação de 18/10 propôs e a diretriz de 17/10 cobre ('se existe metodologia, vamos assimilar'): a F7.3 do prisma-sr declara a certeza da evidência [NÃO COBERTO] por tool (o agente propõe, o pesquisador decide); sai da prisma-rigor-gates (SKILL.md:31) a 'certeza (GRADE/CERQual)', que nenhum gate confere; o método declara a condição 'abordagem de certeza' (GRADE / CERQual / nenhuma), perguntada na F1, porque é método decidido a priori (RV-01). A resposta só tira item do denominador onde a FONTE faz o item depender dela: ler antes, na fonte oficial, os itens 15 e 22 do PRISMA 2020 e o 17 do PRISMA-P. (2) ASSIMILAR GRADE e CERQual, metodologias validadas ('assimilar só metodologia validada cientificamente', Vicente, 29/10/2026), nas sessões 7+ — este achado segue ABERTO até lá.",
       "id": "DEBT-008",
       "summary": "GRADE e CERQual citados na spec, sem implementacao",
       "change_type": "EXTENSAO",
       "evidence": "GRADE (5 mencoes) e CERQual (4 mencoes) aparecem como nomes na fase F7 (certeza da evidencia) e na skill synthesis-manuscript. Nao ha tool, servico nem template que conduza a avaliacao de certeza. A revisao pode declarar que usa GRADE sem que nada verifique.",
-      "reproduction": "",
-      "location": ".claude/methodologies/prisma-sr/manifest.json (F7) e .claude/skills/synthesis-manuscript/SKILL.md",
       "status": "ABERTO",
-      "resolution": "",
-      "found_by": "revisao do ReviewBR — escopo metodologico do maintainer",
-      "found_at": "2026-09-24",
-      "context": "Gravidade atribuida em 03/10/2026: GRADE e CERQual citados na spec sem implementacao — a certeza da evidencia nao e avaliavel, e o manuscrito sairia sem ela.",
       "gravidade": "SERIO",
       "destino": "METODOLOGIA_NOVA",
       "depende_de": []
@@ -2430,7 +2430,7 @@
       "resolution": "",
       "found_by": "sessão 1 (30/10/2026) — controle positivo do falsificador pedido no prompt de abertura",
       "found_at": "2026-10-30",
-      "context": "O prompt da sessão 1 previu o caso: 'se não acusar antes, ele não tem poder, e isso é achado a registrar (atenção: os rótulos da spec estão em português e os títulos oficiais, em inglês)'. NÃO CORRIGIDO NA SESSÃO 1: o prompt manda registrar, e dar poder ao falsificador é escolha de desenho que volta ao acompanhamento — comparar também o enunciado? equivalências por padrão? exigir controle positivo por padrão para afirmar com_poder? registrar o suspeito lido e descartado? Relação com o DEBT-145: a trava na escolha de método vai usar 'mapeamento contestado'.\n\nDECISÃO DO VICENTE (30/10/2026, no chat de acompanhamento): 'Dar poder já'. A opção escolhida, nas palavras apresentadas a ele: tudo da opção 'honestidade primeiro' — o falsificador só afirma com_poder se acusar um deslocamento plantado de propósito (controle positivo por padrão); suspeito lido e descartado fica registrado (quem, quando, por quê) e deixa de reprovar; a trava da escolha de método (DEBT-145) usa só omissão até o falsificador provar poder — e, na mesma sessão, a comparação passa a usar também o enunciado do item, não só o título, com equivalências português–inglês por padrão. CONSEQUÊNCIA HOJE: o PRISMA-ScR sai valid: false pelos 4 falsos positivos (F2.1.2.1→7, F2.2.5→7, F5.2.5.1→11, F8.1.5→14), e a prisma-rigor-gates (SKILL.md:56) faz valid=false bloquear a declaração do checklist completo na F8 — os dois projetos de escopo pararão ali até esta correção. Agendado como sessão 2b do PLANO_sessoes_2026-10-29, depois do núcleo do DEBT-142 (2a), porque o mapeamento passa a morar no método.",
+      "context": "O prompt da sessão 1 previu o caso: 'se não acusar antes, ele não tem poder, e isso é achado a registrar (atenção: os rótulos da spec estão em português e os títulos oficiais, em inglês)'. NÃO CORRIGIDO NA SESSÃO 1: o prompt manda registrar, e dar poder ao falsificador é escolha de desenho que volta ao acompanhamento — comparar também o enunciado? equivalências por padrão? exigir controle positivo por padrão para afirmar com_poder? registrar o suspeito lido e descartado? Relação com o DEBT-145: a trava na escolha de método vai usar 'mapeamento contestado'.\n\nDECISÃO DO VICENTE (30/10/2026, no chat de acompanhamento): 'Dar poder já'. A opção escolhida, nas palavras apresentadas a ele: tudo da opção 'honestidade primeiro' — o falsificador só afirma com_poder se acusar um deslocamento plantado de propósito (controle positivo por padrão); suspeito lido e descartado fica registrado (quem, quando, por quê) e deixa de reprovar; a trava da escolha de método (DEBT-145) usa só omissão até o falsificador provar poder — e, na mesma sessão, a comparação passa a usar também o enunciado do item, não só o título, com equivalências português–inglês por padrão. CONSEQUÊNCIA HOJE: o PRISMA-ScR sai valid: false pelos 4 falsos positivos (F2.1.2.1→7, F2.2.5→7, F5.2.5.1→11, F8.1.5→14), e a prisma-rigor-gates (SKILL.md:56) faz valid=false bloquear a declaração do checklist completo na F8 — os dois projetos de escopo pararão ali até esta correção. Agendado como sessão 2b do PLANO_sessoes_2026-10-29, depois do núcleo do DEBT-142 (2a), porque o mapeamento passa a morar no método.\n\nREAGENDADO em 30/10/2026, na conferência da sessão 2a (chat de acompanhamento): sessão 2c. O item 3 da 2a (DEBT-150, DEBT-008), que a regra da janela tirou dela, ganhou a 2b, porque esta correção sozinha ocupa uma janela inteira.",
       "gravidade": "SERIO",
       "destino": "FASE_1",
       "depende_de": []
@@ -2441,12 +2441,12 @@
       "change_type": "CONFORMIDADE",
       "evidence": "Mapeamento do DEBT-055 (30/10/2026), lido no checklist oficial (reviewbr/download/PRISMA-ScR-Fillable-Checklist_11Sept2019.pdf): item 12 'If done, provide a rationale for conducting a critical appraisal of included sources of evidence; describe the methods used and how this information was used in any data synthesis (if appropriate).' e item 16 'If done, present data on critical appraisal of included sources of evidence (see item 12).' O catálogo os registra como os 2 opcionais do PRISMA-ScR. A aplicabilidade depende do PROJETO, e o formato atual só tem duas declarações, ambas do padrão inteiro: [NÃO SE APLICA] diria que nunca se aplica (falso: se aplica quando a avaliação é feita) e [NÃO COBERTO] diz que o sistema ainda não implementa. A trilha do scoping desliga a F6 (manifest: 'Não se aplica a scoping'): não feita, o item não se aplica; feita, a trilha não tem onde registrá-la. Declarados [NÃO COBERTO], com covered_by vazio — ponteiro para a F6 desligada reprovaria a conferência (a).",
       "reproduction": "",
-      "location": ".claude/standards/prisma-scr.json (itens 12 e 16)",
+      "location": ".claude/methodologies/scoping-prisma-scr/conformance/prisma-scr.json (itens 12 e 16; o mapeamento saiu de .claude/standards/prisma-scr.json na sessão 2a, DEBT-142); .claude/methodologies/scoping-prisma-scr/manifest.json (condicoes)",
       "status": "ABERTO",
       "resolution": "",
       "found_by": "sessão 1 (30/10/2026) — mapeamento do PRISMA-ScR (DEBT-055)",
       "found_at": "2026-10-30",
-      "context": "O prompt da sessão 1: 'O item 12 do PRISMA-ScR (avaliação crítica, \"se feita\") pede item condicional, e o mecanismo de condição é o DEBT-142, da sessão 2. Se o formato atual não comportar, declare e registre — não invente o mecanismo aqui.' Quando o DEBT-142 existir: o método scoping-prisma-scr declara 12 e 16 condicionados a 'avaliação crítica feita'; o projeto responde; com 'não', saem do denominador; com 'sim', a trilha precisa de onde registrar a avaliação (hoje a F6 está desligada no método, e a spec do método diz que um charting de qualidade opcional 'é nota, não gate').",
+      "context": "O prompt da sessão 1: 'O item 12 do PRISMA-ScR (avaliação crítica, \"se feita\") pede item condicional, e o mecanismo de condição é o DEBT-142, da sessão 2. Se o formato atual não comportar, declare e registre — não invente o mecanismo aqui.' Quando o DEBT-142 existir: o método scoping-prisma-scr declara 12 e 16 condicionados a 'avaliação crítica feita'; o projeto responde; com 'não', saem do denominador; com 'sim', a trilha precisa de onde registrar a avaliação (hoje a F6 está desligada no método, e a spec do método diz que um charting de qualidade opcional 'é nota, não gate').\n\nDECIDIDO PELO ACOMPANHAMENTO em 30/10/2026 (conferência da sessão 2a, cuja carta levantou a questão da etapa): a condição é perguntada na F1, o protocolo. Fazer ou não avaliação crítica é método, decidido a priori como tudo o que o protocolo trava (RV-01); perguntar na F5 seria decidir depois de ver os dados, e a F6 está desligada no escopo. Com 'sim', as linhas de 12 e 16 apontam o subitem da trilha que registra a avaliação, se existir, ou ficam [NÃO COBERTO] com o motivo — sem ligar a F6 nem criar subitem; onde a trilha do escopo registra a avaliação é da sessão 2d (DEBT-151). Agendado na sessão 2b do PLANO_sessoes_2026-10-29; o mecanismo do DEBT-142 está pronto e testado desde a 2a.",
       "gravidade": "MENOR",
       "destino": "CONFORM_EXTERNA",
       "depende_de": [
@@ -2464,7 +2464,7 @@
       "resolution": "",
       "found_by": "sessão 1 (30/10/2026) — mapeamento do PRISMA-ScR (DEBT-055)",
       "found_at": "2026-10-30",
-      "context": "Achado de passagem, registrado e não executado (um assunto por sessão). Resolve-se no ponto (2) da leitura para execução do DEBT-142: 'o scoping-prisma-scr ... vira metodo completo, com spec e mapeamento proprios' — aí o PCC ganha subitens próprios, e o mapeamento do PRISMA-ScR passa a apontá-los. ATUALIZADO em 30/10/2026 (sessão 2a): o DEBT-142 foi resolvido no núcleo — mapeamento e declarações por método (o do scoping está em .claude/methodologies/scoping-prisma-scr/conformance/) e o item condicional —, e o ponto (2) dele passou a este achado: o scoping como método único, sem `extends`, com spec e mapeamento próprios (sessão 2c do PLANO_sessoes_2026-10-29.md).",
+      "context": "Achado de passagem, registrado e não executado (um assunto por sessão). Resolve-se no ponto (2) da leitura para execução do DEBT-142: 'o scoping-prisma-scr ... vira metodo completo, com spec e mapeamento proprios' — aí o PCC ganha subitens próprios, e o mapeamento do PRISMA-ScR passa a apontá-los. ATUALIZADO em 30/10/2026 (sessão 2a): o DEBT-142 foi resolvido no núcleo — mapeamento e declarações por método (o do scoping está em .claude/methodologies/scoping-prisma-scr/conformance/) e o item condicional —, e o ponto (2) dele passou a este achado: o scoping como método único, sem `extends`, com spec e mapeamento próprios (sessão 2c do PLANO_sessoes_2026-10-29.md). REAGENDADO em 30/10/2026, na conferência da sessão 2a (chat de acompanhamento): sessão 2d — o item 3 da 2a ganhou a 2b e o falsificador (DEBT-149) passou à 2c. A 2d também decide onde a trilha do escopo registra a avaliação crítica quando o projeto responde 'sim' à condição do DEBT-150.",
       "gravidade": "MENOR",
       "destino": "FASE_1",
       "depende_de": [
@@ -2472,17 +2472,17 @@
       ]
     },
     {
-      "reproduction": "grep -n 'hoje o PRISMA-S' .claude/agents/*.md; grep -n 'o PRISMA-ScR, DEBT-055' .claude/skills/conduct-review/SKILL.md; node -e \"console.log(require('./.claude/standards/prisma-s.json').titulos_oficiais)\" → true.",
-      "location": ".claude/agents/{analyst,designer,librarian,screener,extractor,reader}.md; .claude/skills/conduct-review/SKILL.md",
-      "resolution": "",
-      "found_by": "sessão 2a (maintainer, chat da sessão)",
-      "found_at": "2026-10-30",
-      "context": "Não corrigido na sessão 2a: fora do escopo (um assunto por sessão) e a janela já passara de 75%. Conserto: tirar os dois exemplos datados, mantendo a regra (padrão com titulos_oficiais: false não fundamenta; padrão sem mapeamento se diz assim).",
       "id": "DEBT-152",
       "summary": "Agentes e a skill conduct-review ainda dizem que o PRISMA-S tem títulos fora da fonte e que o PRISMA-ScR não tem mapeamento — os dois foram resolvidos na sessão 1 (DEBT-128, DEBT-055)",
       "change_type": "CORRECAO",
       "evidence": "Visto de passagem na sessão 2a (30/10/2026), ao apontar o mapeamento para o método (DEBT-142). analyst.md, designer.md, librarian.md, screener.md, extractor.md e reader.md: 'nem padrão com titulos_oficiais: false (hoje o PRISMA-S, DEBT-128: título e número não são os da fonte)'; conduct-review/SKILL.md, seção do porquê de cada etapa: 'inclusive quando o padrão ainda não tem mapeamento (o PRISMA-ScR, DEBT-055) ou tem títulos fora da fonte, caso em que a tool não dá fundamento algum (o PRISMA-S, DEBT-128)'. Desde 30/10 o prisma-s.json tem titulos_oficiais: true e o PRISMA-ScR está mapeado (orphans []). O agente segue a instrução e deixa de dar o fundamento que a tool já dá.",
+      "reproduction": "grep -n 'hoje o PRISMA-S' .claude/agents/*.md; grep -n 'o PRISMA-ScR, DEBT-055' .claude/skills/conduct-review/SKILL.md; node -e \"console.log(require('./.claude/standards/prisma-s.json').titulos_oficiais)\" → true.",
+      "location": ".claude/agents/{analyst,designer,librarian,screener,extractor,reader}.md; .claude/skills/conduct-review/SKILL.md",
       "status": "ABERTO",
+      "resolution": "",
+      "found_by": "sessão 2a (maintainer, chat da sessão)",
+      "found_at": "2026-10-30",
+      "context": "Não corrigido na sessão 2a: fora do escopo (um assunto por sessão) e a janela já passara de 75%. Conserto: tirar os dois exemplos datados, mantendo a regra (padrão com titulos_oficiais: false não fundamenta; padrão sem mapeamento se diz assim).",
       "gravidade": "MENOR",
       "destino": "AGENTE_SKILL",
       "depende_de": []
