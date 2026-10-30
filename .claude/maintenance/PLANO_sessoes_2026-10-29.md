@@ -71,16 +71,19 @@ Consequências para ler o disco sem se enganar:
 |---|---|---|---|---|
 | 0 | Fechar a troca de computador | commit seguro, `.gitignore`, `DECISOES_chat_a_conferir.md`, cópias antigas | decisão do Vicente sobre o que vai ao GitHub (público) | commit feito sem `.env`, conversas de outras aplicações nem o zip; `git status` limpo; arquivo a conferir resolvido ou recusado item a item |
 | 1 | Escopo e PRISMA-S | 1 (DEBT-055), 2 (DEBT-128) | sessão 0 | `check_standard_coverage` do PRISMA-ScR sem omissão silenciosa; PRISMA-S com `titulos_oficiais: true` e falsificação com poder |
-| 2 | Declarações por método | DEBT-142, 11 (DEBT-094), 10 (DEBT-008, registrar na fila) | sessão 1 | mapeamento e declarações lidos do método; item condicional respondido pelo projeto; testes |
+| 2a | Declarações por método — o núcleo | DEBT-142 (mapeamento e declarações por método; item condicional), DEBT-150, DEBT-008 (declarar; a assimilação vai à fila) | sessão 1 | mapeamento e declarações lidos do método; `check_standard_coverage` idêntico antes e depois, salvo o deliberado; item condicional respondido pelo projeto; testes |
+| 2b | Falsificador com poder | DEBT-149 — *"Dar poder já"* (Vicente, 30/10) | 2a | `com_poder` só com controle positivo plantado; suspeito lido e descartado registrado e fora da reprovação; comparação também com o enunciado, com equivalências português–inglês por padrão; acusa os deslocamentos conhecidos e não acusa os 4 falsos positivos do PRISMA-ScR |
+| 2c | Escopo como método completo e RAISE 3 | DEBT-142 ponto 2 (scoping com spec e mapeamento próprios), DEBT-151, 11 (DEBT-094) | 2b | `scoping-prisma-scr` sem `extends`, com o PCC em subitens próprios e o PRISMA-ScR mapeado neles; RAISE 3 declarado como condicional nos métodos que usam IA |
 | 3 | Funil e gates | 3 (DEBT-138), 4 (DEBT-070), DEBT-071/043/105 | — | export bloqueia funil divergente; manifests dizem a verdade sobre os gates |
 | 4 | Busca e triagem | 5 (DEBT-056), 6 (DEBT-021), 7 (DEBT-025) | — | log PRISMA-S gravado por código; saturação lê o disco; dedup com DOI/acentos e nível 4 só sinalizando |
 | 5 | Leitura e governança | 8 (DEBT-031), 9 (DEBT-018), 12 (DEBT-016), DEBT-141 | — | citação com página; trava só pelo `project_state.json`; aviso na tool de `targets`; atualização do catálogo sem apagar campos |
-| 6 | Sair do esqueleto PRISMA | DEBT-137 (agentes e skills descritos por F0–F8), DEBT-134 (protocolo exigido de todo projeto), DEBT-136 (tabela de tipos duplicada), tabela F0–F8 do `conduct-review` | sessão 2 | agentes descritos por papel; cada etapa do manifest diz que skill a executa; o que é do `prisma-sr` fica no `prisma-sr` |
+| 6 | Sair do esqueleto PRISMA | DEBT-137 (agentes e skills descritos por F0–F8), DEBT-134 (protocolo exigido de todo projeto), DEBT-136 (tabela de tipos duplicada), tabela F0–F8 do `conduct-review` | sessões 2a–2c | agentes descritos por papel; cada etapa do manifest diz que skill a executa; o que é do `prisma-sr` fica no `prisma-sr` |
 | 7+ | O resto da reclassificação | 19 declarações e consertos restantes; assimilação de métodos validados (JBI, GRADE/CERQual, exploratório…) | sessões 1–6 | um bloco por sessão, na ordem do arquivo de reclassificação |
 | depois | Fase de testes do sistema e análise do trabalho | sequência decidida pelo Vicente em 27/09 (DEC-42 do `DECISOES_chat_a_conferir.md`); critério de entrada registrado em 03/10 (`DECISOES_2026-10-03.md`), a reconferir ao chegar lá | sessões 1–7+ | a definir |
 
-**Estado:** sessões 0 (29/10/2026) e 1 (30/10/2026) fechadas, cada uma com a carta na sua seção. Sessão 2 a
-preparar no acompanhamento.
+**Estado:** sessões 0 (29/10/2026) e 1 (30/10/2026) fechadas, cada uma com a carta na sua seção; a 1
+conferida pelo acompanhamento em 30/10. A sessão 2 virou três (2a, 2b, 2c), pela decisão do Vicente sobre o
+DEBT-149. Sessão 2a com prompt de abertura pronto, não iniciada.
 
 ### Modelo e esforço de cada sessão (calculado em 29/10/2026)
 
@@ -95,7 +98,9 @@ janela de 5h, sem contar outro projeto aberto na mesma janela).
 | # | esforço | ultracode | custo estimado (janela de 5h) | por quê |
 |---|---|---|---|---|
 | 1 | max | não | 40–60% | leitura do checklist oficial e mapeamento contra a norma; o falsificador só confere em parte |
-| 2 | max | não na execução; revisão independente depois, se aprovada | 60–100% — pode virar duas janelas | DEBT-142 muda a arquitetura de declarações e é pré-requisito do DEBT-045/014 e da sessão 6 |
+| 2a | max | não | 60–80% | DEBT-142 muda onde mapeamento e declarações moram e é pré-requisito do DEBT-045/014 e da sessão 6 |
+| 2b | max | não | ~100% — uma janela inteira | o falsificador é o que impede o mapeamento de mentir; precisa provar poder com controle positivo |
+| 2c | max | não na execução; revisão independente depois, se aprovada | 60–100% | o escopo vira método completo: spec e mapeamento próprios |
 | 3 | max | não | 40–60% | funil e gates: o que o export bloqueia e o que os manifests dizem dos gates |
 | 4 | max | não | 40–60% | trilha de auditoria da busca (log PRISMA-S), critério de parada (saturação) e o que a dedup tira |
 | 5 | max | não | 40–60% | o DEBT-018 mexe na trava do protocolo, com cuidado de compatibilidade com projetos antigos |
@@ -325,4 +330,76 @@ Para o acompanhamento: o DEBT-149 pede decisão — dar poder à falsificação 
   24/09) cita o PRISMA-S nas linhas do RV-07 e do RV-08 pela numeração antiga; é histórico, não foi mexido.
 Próxima sessão: 2 — Declarações por método (DEBT-142, DEBT-094, DEBT-008); DEBT-150 e DEBT-151 esperam o
   DEBT-142.
+```
+
+**Conferência do acompanhamento (30/10/2026) — aceita.** Refeito, não lido da carta: suíte 372/372 em 33
+arquivos; build ok; `audit_system_debt` válido, 151 achados (56/4/75/16); DEBT-055 e DEBT-128 resolvidos citando
+as decisões; `prisma-s.json` com `titulos_oficiais: true`; `check_standard_coverage`: PRISMA-S válido, 9/16 nos
+dois métodos; PRISMA-ScR com `orphans: []` (nenhuma omissão silenciosa), 12/22 e `valid: false` pelos 4 falsos
+positivos, que a leitura da norma confirma como falsos (data da busca e busca manual são do item 7,
+financiamento do estudo é dado do item 11, `title_abstract_excluded` é seleção, item 14). Consequência que pesa
+na decisão: a `prisma-rigor-gates` (SKILL.md:56) faz `valid=false` bloquear a declaração do checklist completo na
+F8, e os dois projetos de escopo pararão ali até o DEBT-149. **Decisão do Vicente sobre o DEBT-149: *"Dar poder
+já"*** (registrada no achado) — vira a sessão 2b, depois do núcleo do DEBT-142.
+
+## Sessão 2a — prompt de abertura
+
+Preparado no chat de acompanhamento em 30/10/2026. Cole num chat novo, ajuste o seletor pela primeira linha e
+apague-a antes de enviar:
+
+```
+>>> APAGUE ESTA LINHA ANTES DE ENVIAR — seletor: Opus 5.5 · esforço max · sem ultracode <<<
+Sessão 2a do .claude/maintenance/PLANO_sessoes_2026-10-29.md — Declarações por método, o núcleo.
+Modelo e esforço: Opus 5.5, max, sem ultracode (anote na carta).
+
+Este é o chat da sessão 2a: execute só ela. Decisões, dúvidas e a próxima sessão ficam no chat de
+acompanhamento. Furo do plano (algo que este prompt e o plano não decidem): registre pela tool, feche o passo
+com segurança e pare com "FURO DO PLANO — levar ao acompanhamento", em até 3 linhas.
+
+Abertura, conferindo e não lembrando: leia neste plano o "Como trabalhar", a carta e a conferência da sessão 1
+e a seção da sessão 2a; rode a suíte (npx vitest run em reviewbr/reviewbr-mcp), git status, python
+.claude/maintenance/medir_esforco.py --agora e audit_system_debt (devolve ~150 mil caracteres: leia por script
+só valid, counts e os achados desta sessão). Não pergunte ao Vicente a porcentagem de uso.
+
+Já decidido, não perguntar de novo (Vicente, 17/10/2026, confirmado "ok"): "cada metodologia com as suas
+regras"; método que aplica partes de outro é método único; o item que depende da pesquisa: "o método declara a
+condição, o projeto responde". E "assimilar só metodologia validada cientificamente" (29/10).
+
+Escopo — o núcleo do DEBT-142 (leia a "LEITURA PARA EXECUÇÃO" no context dele):
+1. O mapeamento padrão → subitens e as declarações [NÃO COBERTO]/[NÃO SE APLICA] passam a ser POR MÉTODO; o
+   arquivo do padrão (.claude/standards/<id>.json) guarda só a norma (itens, títulos, enunciados, versão).
+2. Item condicional: o método declara o item com a sua condição; o projeto responde, com a resposta gravada
+   por tool como decisão do pesquisador (o caminho do record_researcher_decision, DEBT-143), nunca digitada
+   pelo agente; com a condição falsa, o item sai do denominador.
+3. Primeiros usos do mecanismo: o DEBT-150 (itens 12 e 16 do PRISMA-ScR, "If done") e o DEBT-008 — declarar
+   na F7.3 do prisma-sr que a certeza da evidência é [NÃO COBERTO] por tool, tirar da prisma-rigor-gates o gate
+   de "certeza (GRADE/CERQual)", que não existe, e fazer da escolha GRADE / CERQual / não se aplica um item
+   condicional; a assimilação de GRADE e CERQual vai à fila como METODOLOGIA_NOVA.
+Não é desta sessão: o falsificador (DEBT-149, sessão 2b) e o scoping como método completo, com o RAISE 3
+(DEBT-142 ponto 2, DEBT-151 e DEBT-094, sessão 2c).
+
+Armadilhas já conhecidas:
+1. Mudar ONDE o mapeamento mora não pode mudar O QUE ele diz. Antes de mexer, grave a saída do
+   check_standard_coverage de cada padrão assimilado, por método (standardId "" lista os padrões); depois da
+   migração ela tem de sair idêntica, salvo o que esta sessão muda de propósito, listado item a item.
+2. Os 4 suspeitos do PRISMA-ScR são falsos positivos do falsificador (DEBT-149, sessão 2b): não mexa no
+   mapeamento para calá-los. O valid: false do PRISMA-ScR continua até a 2b.
+3. Não toque nos projetos de pesquisa em reviewbr/projects/. Teste em repositório de brinquedo, inclusive o
+   caso do DEBT-142: dois métodos de trilhas diferentes declarando o mesmo padrão, sem um quebrar o outro.
+4. O validate_methodology reprova os dois métodos pelo DEBT-003, de antes; não é desta sessão.
+5. Toda alteração passa pelo gate RV-11 (validate_system_change, com addresses) e todo achado pela tool,
+   nunca pelo JSON à mão.
+
+Saída verificável: o arquivo do padrão sem covered_by, nao_coberto e nao_se_aplica, e o mapeamento e as
+declarações lidos do método; check_standard_coverage idêntico antes e depois, salvo as mudanças deliberadas,
+listadas; item condicional respondido pelo projeto e fora do denominador quando a condição é falsa, com teste;
+o teste dos dois métodos no repositório de brinquedo; DEBT-142 (núcleo) e DEBT-150 resolvidos; DEBT-008 com a
+declaração feita e a assimilação na fila; suíte verde, build em dia, audit_system_debt válido.
+
+Divisão: se a projeção passar de 75% da janela antes do item 3, feche com a carta no fim do item 2 — o item 3
+passa para a abertura da 2b.
+
+Fechamento: escreva a carta da sessão 2a no plano, logo abaixo deste prompt (modelo "Carta de sessão"),
+commit e push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. Workflow só com o custo
+projetado e aprovado por ele; a 75% estimados não comece passo novo.
 ```
