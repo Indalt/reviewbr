@@ -79,8 +79,8 @@ Consequências para ler o disco sem se enganar:
 | 7+ | O resto da reclassificação | 19 declarações e consertos restantes; assimilação de métodos validados (JBI, GRADE/CERQual, exploratório…) | sessões 1–6 | um bloco por sessão, na ordem do arquivo de reclassificação |
 | depois | Fase de testes do sistema e análise do trabalho | sequência decidida pelo Vicente em 27/09 (DEC-42 do `DECISOES_chat_a_conferir.md`); critério de entrada registrado em 03/10 (`DECISOES_2026-10-03.md`), a reconferir ao chegar lá | sessões 1–7+ | a definir |
 
-**Estado:** sessão 0 fechada em 29/10/2026 (carta no fim deste arquivo). Sessão 1 com prompt de abertura pronto,
-não iniciada.
+**Estado:** sessões 0 (29/10/2026) e 1 (30/10/2026) fechadas, cada uma com a carta na sua seção. Sessão 2 a
+preparar no acompanhamento.
 
 ### Modelo e esforço de cada sessão (calculado em 29/10/2026)
 
@@ -272,4 +272,57 @@ audit_system_debt válido; DEBT-055 e DEBT-128 fechados citando as decisões aci
 Fechamento: escreva a carta da sessão 1 no plano, logo abaixo deste prompt (modelo "Carta de sessão"),
 commit e push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. Workflow só com o custo
 projetado e aprovado por ele; a 75% estimados não comece passo novo.
+```
+
+## Sessão 1 — Escopo e PRISMA-S — 30/10/2026
+
+```
+Objetivo: mapear os 22 itens do PRISMA-ScR contra a trilha do scoping (DEBT-055) e assimilar os 16
+  enunciados oficiais do PRISMA-S, com falsificação e remapeamento (DEBT-128).
+Entrada: decisões do Vicente — perguntas 1, 3–9 e 12 "sim para todas" (29/10); "se existe metodologia,
+  vamos assimilar" (17/10) e "só metodologia validada cientificamente" (29/10).
+Saída verificável: check_standard_coverage do PRISMA-ScR sem omissão silenciosa; prisma-s.json com
+  titulos_oficiais: true; falsificador acusando S11 e S13 antes do remapeamento e nada depois — ou o achado
+  da falta de poder; suíte verde, build em dia, audit_system_debt válido; DEBT-055 e DEBT-128 fechados.
+Modelo e esforço: Opus 5.5 · max · sem ultracode
+Tokens na abertura: 17% a 20% da janela de 5h (--agora, piso; 1,94 M ponderado, 0,81 M deste chat e o resto
+  do projeto Cultura Líquida) · subagentes: 0 · projeção: 40–60%, só inline.
+--- fechamento ---
+Tokens no fechamento: 71% a 86% (--agora, piso; 8,13 M ponderado) · medido: principal 4,82 M ponderado
+  (198 mil de saída), subagentes 0; o Cultura Líquida somou 3,31 M na mesma janela. Esta sessão: ~4,0 M
+  (~39% de uma janela). Medido já no limiar de 75%: depois disso, só o fechamento.
+Feito:
+- DEBT-128 RESOLVIDO. prisma-s.json com os 16 tópicos, enunciados e seções oficiais, de duas fontes lidas
+  por inteiro e conferidas por script, sem divergência (checklist do OSF y765x e Tabela 1 do artigo de
+  2021); fonte no version_source; titulos_oficiais: true. Controle positivo ANTES do remapeamento, pela tool:
+  com_poder true, 14/16 e 2 suspeitos (F2.1.3.1→S12, F4.2.2→S16) — NÃO acusou S11 nem S13. Dos 70 pares
+  antigos, 58 mudaram no remapeamento e ele viu 2: sem poder → DEBT-149. Remapeamento contra os enunciados
+  e o E&E do artigo: covered_by e a coluna "Item PRISMA-S" da spec do prisma-sr (inverso exato, com teste
+  que reprova divergência); skill prisma-s-logging e agente librarian na numeração oficial. Depois: zero
+  suspeito, 9/16; lacunas declaradas — 2, 7, 9, 10 e 12 parciais; 11 (prior work) e 14 (peer review) sem
+  campo na trilha.
+- DEBT-055 RESOLVIDO. Os 22 itens do PRISMA-ScR mapeados contra a trilha do scoping, lendo o checklist
+  oficial, com o enunciado gravado: 14 com correspondência, 8 [NÃO COBERTO] (3, 6, 10, 11, 13 e 22 parciais;
+  12 e 16 condicionais, "If done"). check_standard_coverage: orphans [] — sem omissão silenciosa. Fração
+  12/22 e valid false só porque a falsificação contesta 4 pares que a leitura confirma (falsos positivos,
+  no DEBT-149).
+- Achados novos: DEBT-149 (falsificador sem poder no PRISMA-S e com falsos positivos no PRISMA-ScR;
+  com_poder sai só de titulos_oficiais — DECISAO_PESQ); DEBT-150 (itens 12 e 16 do PRISMA-ScR à espera do
+  item condicional; depende do DEBT-142); DEBT-151 (o template de protocolo do scoping dá outro sentido a
+  F1.3.1.2, F1.3.1.3 e F0.3.4, e o Contexto do PCC não tem subitem; depende do DEBT-142). O DEBT-145 passou
+  a depender também do DEBT-149: com "mapeamento contestado" como trava, o scoping seria recusado por falso
+  positivo.
+Verificação: suíte 372/372 em 33 arquivos (era 361/32: +10 em tests/prisma_s_scr_oficial.test.ts, +1 em
+  cobertura_verificavel); build ok (tsc); audit_system_debt válido — 151 achados (56 abertos, 4 em curso,
+  75 resolvidos, 16 recusados). validate_methodology segue reprovando os dois métodos pelo DEBT-003
+  (RV-03/04/06/07 sem gate), de antes desta sessão.
+Commit: d52c22a (o trabalho) + o commit desta carta; push para origin/reorg/agentic-layer.
+Decisões do Vicente registradas: nenhuma nova — executadas as de 17/10 e 29/10, citadas nas resoluções.
+Para o acompanhamento: o DEBT-149 pede decisão — dar poder à falsificação (comparar o enunciado?
+  equivalências por padrão? controle positivo por padrão para afirmar com_poder? registrar o suspeito lido e
+  descartado?) e se a trava do DEBT-145 usa contestação ou só omissão. A barra de status ainda não gravou
+  ~/.claude/uso_atual.json (o --agora segue sem leitura do painel). O MANIFESTO_conformidade.md (retrato de
+  24/09) cita o PRISMA-S nas linhas do RV-07 e do RV-08 pela numeração antiga; é histórico, não foi mexido.
+Próxima sessão: 2 — Declarações por método (DEBT-142, DEBT-094, DEBT-008); DEBT-150 e DEBT-151 esperam o
+  DEBT-142.
 ```
