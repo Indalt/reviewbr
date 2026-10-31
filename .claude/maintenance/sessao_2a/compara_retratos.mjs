@@ -1,12 +1,13 @@
 // Sessão 2a (DEBT-142) — compara dois retratos do check_standard_coverage (retrato_cobertura.mjs).
 // A comparação é SEMÂNTICA: ordem de chave não conta; o que conta é o que o relatório diz. Campos
 // acrescentados de propósito são listados à parte, não escondidos.
-// Uso: node compara_retratos.mjs <antes> <depois>   (rótulos dos arquivos retrato_<rótulo>.json)
+// Uso: node compara_retratos.mjs <antes> <depois>   (rótulos dos arquivos retrato_<rótulo>.json;
+// DIR=<pasta> os lê dela, como em retrato_cobertura.mjs)
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const aqui = path.dirname(fileURLToPath(import.meta.url));
+const aqui = process.env.DIR ? path.resolve(process.env.DIR) : path.dirname(fileURLToPath(import.meta.url));
 const ler = (r) => JSON.parse(fs.readFileSync(path.join(aqui, `retrato_${r}.json`), "utf-8"));
 const [ra, rb] = process.argv.slice(2);
 const A = ler(ra), B = ler(rb);

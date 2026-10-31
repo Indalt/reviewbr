@@ -568,3 +568,68 @@ Fechamento: escreva a carta da sessão 2b no plano, logo abaixo deste prompt (mo
 commit e push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. Workflow só com o custo
 projetado e aprovado por ele; a 75% estimados não comece passo novo.
 ```
+
+## Sessão 2b — Itens condicionais em uso — 31/10/2026
+
+```
+Objetivo: os primeiros usos do item condicional do DEBT-142 — avaliação crítica no escopo (DEBT-150) e
+  abordagem de certeza no prisma-sr (DEBT-008, a parte de declarar) — e tirar dos agentes e da
+  conduct-review as frases velhas (DEBT-152).
+Entrada: mecanismo do DEBT-142 pronto e testado (2a); decisões de 17/10 ("o método declara a condição, o
+  projeto responde"), de 29/10 ("só metodologia validada cientificamente") e do acompanhamento na
+  conferência da 2a (a condição é perguntada na F1, o protocolo).
+Saída verificável: no brinquedo, "não" tira 12 e 16 do denominador, "sim" e sem resposta os mantêm, com
+  teste; F7.3 declarada [NÃO COBERTO] por tool; prisma-rigor-gates sem a certeza; condição de certeza com
+  o efeito que a fonte manda, citada; check_standard_coverage antes × depois só com o deliberado; agentes
+  e conduct-review sem as frases velhas; suíte verde, build em dia, audit válido.
+Modelo e esforço: Opus 5.5 · max · sem ultracode
+Tokens na abertura: 1% a 2% (--agora, piso; 0,16 M ponderado) · subagentes: 0 · projeção: 40–60%, só inline.
+--- fechamento ---
+Tokens no fechamento: 30% a 37% (--agora, piso; ~3,5 M ponderado) · medido: principal ~3,1 M ponderado
+  (~110 mil de saída), subagentes 0. Sem divisão: 22% a 26% antes do item 3.
+Feito:
+- DEBT-150 RESOLVIDO. O manifest do scoping-prisma-scr declara a condição 'avaliacao_critica' (F1;
+  sim / não); no mapeamento do método, as linhas 12 e 16 do PRISMA-ScR dependem dela (aplica_se: sim),
+  com covered_by vazio e [NÃO COBERTO] cujo motivo diz que, com "sim", a trilha do escopo não tem onde
+  registrar a avaliação — onde registrar é do DEBT-151 (2d). F6 não ligada, subitem não criado, nenhum
+  código mudado.
+- DEBT-008, parte 1 (declarar) — segue ABERTO para a assimilação de GRADE e CERQual (7+). A F7.3 da spec
+  do prisma-sr declara a certeza [NÃO COBERTO] por tool (o agente propõe, o pesquisador decide); a
+  prisma-rigor-gates não lista mais a "certeza (GRADE/CERQual)" como gate; o manifest do prisma-sr
+  declara a condição 'abordagem_certeza' (F1; GRADE / CERQual / nenhuma). Lida a fonte
+  (sessao_2b/fontes_certeza.md, trechos verbatim conferidos por confere_citacoes.mjs, com URL e SHA-256):
+  os itens 15 e 22 do PRISMA 2020 valem para toda revisão sistemática (E&E n160: elemento essencial sem
+  "If…" se relata em todas) e o 17 do PRISMA-P manda declarar a falta com o motivo (E&E g7647) — a fonte
+  decide, e decide que a resposta NÃO tira item do denominador: nenhuma linha do mapeamento recebe a
+  condição. Junto, por ser a mesma declaração: a conduct-review deixou de dizer que toda resposta a
+  condição decide itens do padrão ("ou nenhum, quando a fonte não os condiciona").
+- DEBT-152 RESOLVIDO. Os 6 agentes e a conduct-review sem os exemplos datados (PRISMA-S "fora da fonte",
+  PRISMA-ScR "sem mapeamento"); a regra ficou nos 7 arquivos.
+- check_standard_coverage antes × depois (sessao_2b/retrato_antes.json, retrato_depois.json,
+  diff_antes_depois.txt; o antes saiu idêntico ao depois da 2a): 20 diferenças, todas no prisma-scr do
+  escopo e deliberadas — (a) o motivo de 12 e 16; (b) 'condicionais' passa de [] a 12 e 16, sem
+  resposta; (c) o aviso de condicional sem resposta; (d) no checklist, as linhas 12 e 16 e a nota do
+  mapeamento. Zero diferença em prisma-2020, prisma-p, prisma-s e raise-3, nos dois métodos: a condição
+  de certeza não mexe no denominador, como a fonte manda. Fração do escopo segue 12/22, e o valid: false
+  segue pelos 4 falsos positivos do DEBT-149.
+- Ferramenta de manutenção: retrato_cobertura.mjs e compara_retratos.mjs aceitam DIR= (pasta dos retratos).
+Verificação: suíte 400/400 em 35 arquivos (era 393/34: +7 em tests/condicionais_em_uso.test.ts, em
+  repositório de brinquedo com as declarações reais, com controle negativo; 1 teste reescrito em
+  prisma_s_scr_oficial.test.ts, que fixava 12 e 16 "até o item condicional existir"); build ok (tsc;
+  nenhum arquivo de src/ mudou); audit_system_debt válido — 152 achados (54 abertos, 4 em curso, 78
+  resolvidos, 16 recusados); validate_methodology segue reprovando os dois métodos só pelo DEBT-003, sem
+  reprovação nova; nenhum projeto de reviewbr/projects/ tocado.
+Commit: ver git log ("sessão 2b") — push para origin/reorg/agentic-layer.
+Decisões do Vicente registradas: nenhuma nova — executadas as de 17/10 e 29/10 e a do acompanhamento (30/10).
+Para o acompanhamento:
+  (1) Do pesquisador, no chat de cada projeto: os dois projetos de escopo respondem 'avaliacao_critica'
+      pela tool (record_researcher_decision). Os dois já passaram da F1 (bebidas_maca_do_coco na F4,
+      bebidas_maca_do_coco_global na F5): a resposta de agora vem depois do protocolo, e a contribuição
+      deve dizer o que ele decidiu. Até lá 12 e 16 contam como declarados, com aviso.
+  (2) Para a 2d (no DEBT-151): a F7.3 da spec-base, lida pelo escopo por extends, cita a condição
+      do prisma-sr, que o escopo não declara; o PRISMA-ScR não tem item de certeza — decidir se a F7.3
+      vale no escopo.
+  (3) Para as 7+ (no DEBT-008): a synthesis-manuscript põe a certeza sob "Se meta-análise"; a fonte a
+      pede de toda revisão, e o CERQual é de síntese qualitativa.
+Próxima sessão: 2c — falsificador com poder (DEBT-149).
+```

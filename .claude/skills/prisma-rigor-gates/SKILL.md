@@ -28,7 +28,7 @@ Cada fase tem subitens obrigatórios na spec do método (`.claude/methodologies/
 - **F3**: F3.1.1–F3.1.10 (método, critérios, contagens, pares, conflitos).
 - **F4**: F4.1.x + F4.2.x (contagens por fase) e F4.3 (motivos EX-01..EX-11 derivados de F1.3).
 - **F5**: F5.1.x (processo) + F5.2.x (todos os campos por estudo, incluindo origem RV-08).
-- **F6/F7** (se ativas): ferramenta, domínios, julgamentos; tipo de síntese, medida de efeito, heterogeneidade, certeza (GRADE/CERQual).
+- **F6/F7** (se ativas): ferramenta, domínios, julgamentos; tipo de síntese, medida de efeito, heterogeneidade. A certeza da evidência (F7.3) não é gate: nenhuma tool a confere — está declarada `[NÃO COBERTO]` por tool na spec do método; o agente propõe, o pesquisador decide (DEBT-008).
 - **F8**: F8.1.1–F8.1.10 (todos calculados), F8.2 (colunas obrigatórias da tabela), F8.3.1–F8.3.27 (seções do manuscrito), F8.4.x (disponibilidade).
 
 ## Camada 3 — Checklists de conformidade (suplementos obrigatórios)

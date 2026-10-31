@@ -18,6 +18,19 @@
       "prisma-p"
     ]
   },
+  "condicoes": [
+    {
+      "id": "abordagem_certeza",
+      "pergunta": "Com que abordagem a revisão vai avaliar a certeza (ou confiança) no corpo da evidência de cada desfecho?",
+      "etapa": "F1",
+      "opcoes": [
+        "GRADE",
+        "CERQual",
+        "nenhuma"
+      ],
+      "note": "Decidida a priori, no protocolo (RV-01), como pede o item 17 do PRISMA-P 2015 ('Describe how the strength of the body of evidence will be assessed (e.g., GRADE)'). NÃO tira item algum do denominador — lida a fonte em 31/10/2026: os itens 15 e 22 do PRISMA 2020 valem para toda revisão sistemática (E&E, Page et al., BMJ 2021;372:n160: elemento essencial que não começa por 'If…' se relata em todas) e o item 17 do PRISMA-P manda declarar a ausência com o motivo ('If no such assessments are planned, the authors should state this with a rationale for why not'; Shamseer et al., BMJ 2015;349:g7647). Por isso nenhuma linha do mapeamento depende desta condição. Com 'nenhuma', o protocolo e o manuscrito dizem que não haverá avaliação, e por quê. A avaliação em si é [NÃO COBERTO] por tool (spec, F7.3): GRADE e CERQual estão citados, não assimilados (DEBT-008) — o agente propõe, o pesquisador decide. Leitura com os trechos: .claude/maintenance/sessao_2b/fontes_certeza.md."
+    }
+  ],
   "question_frameworks": [
     "PICOS",
     "PECO",

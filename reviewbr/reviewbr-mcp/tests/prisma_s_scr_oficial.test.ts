@@ -137,12 +137,16 @@ describe("PRISMA-ScR — os 22 itens contra a trilha do scoping (DEBT-055)", () 
         expect(c.em_etapa_que_nao_se_aplica).toEqual([]);
     });
 
-    it("os condicionais 12 e 16 ('If done') ficam declarados até o item condicional existir (DEBT-142, DEBT-150)", () => {
+    // Até a sessão 2b ficavam só declarados, à espera do item condicional (DEBT-142). Agora dependem
+    // da condição do método; a resposta do projeto está em condicionais_em_uso.test.ts.
+    it("os condicionais 12 e 16 ('If done') dependem da condição 'avaliacao_critica' do método, sem ponteiro para a F6 (DEBT-150)", () => {
         for (const id of ["12", "16"]) {
             const it = mapa("scoping-prisma-scr", "prisma-scr").get(id)!;
             expect(it.covered_by, id).toEqual([]);
+            expect(it.condicao, id).toEqual({ id: "avaliacao_critica", aplica_se: ["sim"] });
             expect(it.nao_coberto, id).toMatch(/condicional/);
-            expect(it.nao_coberto, id).toMatch(/DEBT-142/);
+            // Com "sim", a trilha do escopo não tem onde registrar a avaliação: é do DEBT-151.
+            expect(it.nao_coberto, id).toMatch(/DEBT-151/);
         }
     });
 

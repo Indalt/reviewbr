@@ -18,6 +18,18 @@
       "prisma-s"
     ]
   },
+  "condicoes": [
+    {
+      "id": "avaliacao_critica",
+      "pergunta": "A revisão vai fazer avaliação crítica das fontes de evidência incluídas (qualidade metodológica ou risco de viés de cada fonte)?",
+      "etapa": "F1",
+      "opcoes": [
+        "sim",
+        "não"
+      ],
+      "note": "PRISMA-ScR, itens 12 e 16 ('If done'): no escopo a avaliação crítica é opcional, e os dois itens só se aplicam quando ela é feita. Fazer ou não é método, decidido a priori no protocolo (RV-01): por isso a pergunta é da F1, e não da F5 — seria decidir depois de ver os dados — nem da F6, desligada neste método. Com 'não', os itens 12 e 16 saem do denominador. Com 'sim', ficam [NÃO COBERTO]: a trilha do escopo não tem onde registrar a avaliação (a F6 está desligada e nenhum subitem a coleta); onde registrá-la é do DEBT-151. Decisão do pesquisador de 17/10/2026: 'o método declara a condição, o projeto responde' (DEBT-142; DEBT-150)."
+    }
+  ],
   "question_frameworks": [
     "PCC"
   ],

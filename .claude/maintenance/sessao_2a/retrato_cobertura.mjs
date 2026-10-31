@@ -1,7 +1,8 @@
 // Sessão 2a (DEBT-142) — retrato da saída do check_standard_coverage, por padrão e por método.
 // Armadilha 1 do prompt: mudar ONDE o mapeamento mora não pode mudar O QUE ele diz. Grava o retrato
 // antes e depois da migração; o diff tem de ser vazio, salvo as mudanças deliberadas, listadas.
-// Uso: node retrato_cobertura.mjs <rotulo>   → grava retrato_<rotulo>.json ao lado deste arquivo.
+// Uso: node retrato_cobertura.mjs <rotulo>   → grava retrato_<rotulo>.json ao lado deste arquivo
+// (DIR=<pasta> grava nela: a sessão 2b guarda os seus em sessao_2b/).
 // Reproduz o que o handler da tool faz (src/index.ts, check_standard_coverage), chamando o serviço
 // compilado (dist/) — o CLI --tool não registra as tools de manutenção.
 import * as fs from "node:fs";
@@ -51,7 +52,7 @@ for (const id of StandardsService.list(raiz)) {
         saida.render[`${id} | ${m}`] = render(id, m);
     }
 }
-const arq = path.join(aqui, `retrato_${rotulo}.json`);
+const arq = path.join(process.env.DIR ? path.resolve(process.env.DIR) : aqui, `retrato_${rotulo}.json`);
 fs.writeFileSync(arq, JSON.stringify(saida, null, 2) + "\n");
 console.log("gravado:", arq, "—", Object.keys(saida.conferir).length, "relatórios,", Object.keys(saida.render).length, "checklists");
 for (const [k, r] of Object.entries(saida.conferir)) console.log(k.padEnd(36), "valid", String(r.valid).padEnd(5), "fracao", r.fracao);

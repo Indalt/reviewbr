@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "standard": "prisma-scr",
-  "note": "MAPEADO em 30/10/2026 (DEBT-055) contra a trilha do scoping-prisma-scr — a spec do prisma-sr lida por `extends`, com os deltas do scoping —, no formato atual (antes do DEBT-142), item a item contra o enunciado. COBERTURA: 14/22 com correspondência declarada; 8 declarados [NÃO COBERTO] — 3, 6, 10, 11, 13 e 22 parciais; 12 e 16, condicionais ('If done'), à espera do item condicional (DEBT-142; pendência no DEBT-150), com ponteiros vazios porque a F6 está desligada no método. FALSIFICAÇÃO: contesta 4 pares — F2.1.2.1→7 e F2.2.5→7 (o rótulo traz 'busca' e o título do item 8 é só 'Search'), F5.2.5.1→11 (financiamento, que também está no 22) e F8.1.5→14 (a variável 'title_abstract_excluded' casa com o item 1, 'Title'). Lidos contra o enunciado, os quatro são falsos positivos: o item 7 pede 'the date the most recent search was executed'; periódicos folheados são fonte de informação; toda variável da F5.2 é item de dado; a contagem da triagem é do item 14. Por isso a conferência reporta 12/22, e não 14/22. Registrado no DEBT-149.",
+  "note": "MAPEADO em 30/10/2026 (DEBT-055) contra a trilha do scoping-prisma-scr — a spec do prisma-sr lida por `extends`, com os deltas do scoping —, no formato atual (antes do DEBT-142), item a item contra o enunciado. COBERTURA: 14/22 com correspondência declarada; 8 declarados [NÃO COBERTO] — 3, 6, 10, 11, 13 e 22 parciais; 12 e 16, condicionais ('If done'): dependem da condição 'avaliacao_critica' do método, perguntada na F1 (DEBT-150, 31/10/2026) — respondida 'não', saem do denominador; com 'sim' ou sem resposta, ficam [NÃO COBERTO], com ponteiros vazios porque a F6 está desligada no método. FALSIFICAÇÃO: contesta 4 pares — F2.1.2.1→7 e F2.2.5→7 (o rótulo traz 'busca' e o título do item 8 é só 'Search'), F5.2.5.1→11 (financiamento, que também está no 22) e F8.1.5→14 (a variável 'title_abstract_excluded' casa com o item 1, 'Title'). Lidos contra o enunciado, os quatro são falsos positivos: o item 7 pede 'the date the most recent search was executed'; periódicos folheados são fonte de informação; toda variável da F5.2 é item de dado; a contagem da triagem é do item 14. Por isso a conferência reporta 12/22, e não 14/22. Registrado no DEBT-149.",
   "items": [
     {
       "id": "1",
@@ -157,7 +157,13 @@
     {
       "id": "12",
       "covered_by": [],
-      "nao_coberto": "item condicional ('If done'), que o formato atual não comporta: o padrão não tem como receber do projeto se a avaliação crítica foi feita. A trilha do scoping desliga a F6 — não feita, o item não se aplica; feita, a trilha não tem onde registrá-la. O mecanismo é o do DEBT-142 (o método declara a condição, o projeto responde); sem ponteiro para a F6 desligada. Mapeamento de 30/10/2026 (DEBT-055; pendência registrada no DEBT-150)."
+      "nao_coberto": "condicional ('If done') — só se aplica com avaliação crítica feita: condição 'avaliacao_critica' do método, perguntada na F1. Feita, a trilha do escopo não tem onde registrá-la: a F6 está desligada no método e nenhum subitem ativo coleta a justificativa, os métodos e o uso da avaliação na síntese que o item pede — sem ponteiro para a F6 desligada; onde registrá-la é do DEBT-151. Respondida 'não', o item sai do denominador. Mapeamento de 30/10/2026 (DEBT-055); condição de 31/10/2026 (DEBT-150).",
+      "condicao": {
+        "id": "avaliacao_critica",
+        "aplica_se": [
+          "sim"
+        ]
+      }
     },
     {
       "id": "13",
@@ -209,7 +215,13 @@
     {
       "id": "16",
       "covered_by": [],
-      "nao_coberto": "item condicional ('If done'; é o resultado do item 12) — a mesma situação do item 12: não feita, não se aplica; feita, a trilha do scoping não tem onde registrá-la. Mecanismo do DEBT-142. Mapeamento de 30/10/2026 (DEBT-055; pendência registrada no DEBT-150)."
+      "nao_coberto": "condicional ('If done'; é o resultado do item 12) — segue a mesma condição, 'avaliacao_critica', perguntada na F1. Feita a avaliação, a trilha do escopo não tem onde registrar os dados dela: a F6 está desligada no método e nenhum subitem ativo os coleta; onde registrá-los é do DEBT-151. Respondida 'não', o item sai do denominador. Mapeamento de 30/10/2026 (DEBT-055); condição de 31/10/2026 (DEBT-150).",
+      "condicao": {
+        "id": "avaliacao_critica",
+        "aplica_se": [
+          "sim"
+        ]
+      }
     },
     {
       "id": "17",

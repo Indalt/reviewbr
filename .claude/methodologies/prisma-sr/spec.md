@@ -341,6 +341,8 @@ Um formulário por estudo incluído. Pilotado antes do uso.
 
 ### F7.3 — Certeza da Evidência
 
+> **[NÃO COBERTO] por tool (DEBT-008).** Nenhuma tool conduz nem confere a avaliação da certeza da evidência: GRADE e CERQual são citados aqui, não assimilados. O agente propõe o julgamento de cada desfecho, com a justificativa; o pesquisador decide. A abordagem é escolhida a priori, no protocolo: é a condição `abordagem_certeza` do manifest do `prisma-sr` (GRADE / CERQual / nenhuma), perguntada na F1 e respondida pelo pesquisador com `record_researcher_decision`. Com "nenhuma", F7.3.1 registra que não houve avaliação, e por quê — a resposta não tira item do denominador (a nota da condição, no `manifest.json`, cita a fonte).
+
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA |
 |---|---|---|---|---|
 | F7.3.1 | Sistema utilizado | GRADE / CERQual / N/A + justificativa | ✅ | Item 14 |
