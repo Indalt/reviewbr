@@ -192,5 +192,72 @@ em comum.
 
 ## C. Decisões antigas gravadas sem precisão
 
-Levantamento em curso desde 31/10, com 7 agentes em só leitura sobre o plano, os DECISOES e o backlog. As
-redações propostas e a conferência de fidelidade de cada uma serão acrescentadas aqui.
+**Como foi feito (31/10):** 4 agentes leram, só lendo, o plano, os DECISOES, os documentos de direção, o
+`maintainer.md` e os 40 achados do backlog que citam decisão do Vicente. Um quinto juntou tudo em uma linha por
+decisão. Dois agentes independentes conferiram cada redação proposta contra o registro e contra as transcrições
+originais das conversas.
+
+A lista completa, com a redação proposta, o que só o Vicente responde e o veredito da conferência, está em
+`revisao_decisoes_2026-10-31/lista_decisoes.md`. O resultado bruto está em `resultado_agentes.json`, na mesma
+pasta.
+
+**Números:**
+- 41 decisões gravadas sem precisão: 17 de fundação, 14 operacionais e 10 menores.
+- 31 superadas por decisão posterior.
+- Cerca de 105 já precisas.
+- Na conferência, 31 propostas foram ajustadas e 10 saíram fiéis.
+
+### C.1 Como a imprecisão aconteceu — quatro padrões
+
+1. **Resposta curta gravada como aprovação do conteúdo.** Um "sim", "ok" ou "sim para todas" respondia a outra
+   coisa (D11, D15, D29, D30). Exemplos:
+   - D11: o "sim" de 08/10 respondia "quer que eu registre isso como achado?" e foi gravado como aprovação do
+     desenho "agentes por papel".
+   - D29, D30 e D39: o "sim para todas" de 29/10 respondia às perguntas como foram feitas no chat, e não às
+     recomendações mais longas do `RECLASSIFICACAO_fila_2026-10-18.md`.
+2. **Leitura do agente que passou a valer como "já decidido" sem ser conferida** (D08, D10, D14 e D13, este no
+   ponto "perguntada na F1", que é do acompanhamento, de 30/10).
+3. **Citação cortada, ou pergunta gravada como afirmação** (D03, D12, D21, D25).
+4. **Datas trocadas:** falas de 08/10 gravadas como de 04/10 (D41: DEBT-037, 126, 127, 131, 132 e a DIRECAO §4).
+
+### C.2 O que pesa nas próximas sessões
+
+- **2c:** nenhuma decisão antiga a bloqueia. Só as duas decisões da parte B.
+- **2d (escopo como método completo):** **D14**. "Escopo sem `extends`, com spec própria" foi derivado pelo
+  agente da frase "cada metodologia com as suas regras", e ele nunca respondeu a esse ponto. Em 09/10 ele
+  tinha aceitado encarar cada método na sua completude "mesmo que no código sobre o método isso seja
+  repetido". Precisa de resposta antes de a 2d abrir.
+- **3 (funil e gates):** D29. O "sim" da pergunta 3 é bloquear a exportação quando o funil diverge.
+- **4 (busca e triagem):**
+  - D30: o código grava o log de busca PRISMA-S — construir já, ou só declarar e enfileirar?
+  - D39: o plano da sessão 4 inclui "dedup com DOI/acentos", que vem da recomendação do .md e vai além do
+    que ele aprovou.
+- **5 (leitura e governança):** D39 (perguntas 8 e 9) e D06 (o que é o RV-04 "estar no código", e os
+  "ensaios").
+- **6 (sair do esqueleto PRISMA), junto com A1–A4 e A7:**
+  - D17 e D09: o que a ferramenta mantém de comum a todo método — só o modo de agir, ou um método próprio
+    mais simples.
+  - D11: agentes por papel.
+  - D12: a lista da abertura do projeto oferece métodos e tipos.
+  - D13 e D02: campo em branco e "omissão declarada".
+  - D15: o critério da trava do DEBT-145.
+  - D10, D16, D01, D04 e D05: rigor, validação, protocolo, âncora científica e "assimilada completa".
+- **Fase de testes:** D18 (critério de entrada).
+
+### C.3 Para saber já
+
+- **Recusas a rever (D03).** Em 04/10, 14 achados foram recusados por um critério tirado de uma frase dele
+  cortada ("o reviewbr não prejudicando uma pesquisa", sem "não focar em uma pesquisa qualquer em particular").
+  Entre eles, o DEBT-041 e o DEBT-072 contrariam as decisões 5 e 3 dele de 27/09, e não há registro de que ele
+  tenha visto essa reversão. Pelo contexto que a conferência achou, o critério valia só para a classe
+  "exagero" da triagem daquele dia.
+- **Regra generalizada sem ele (D02).** A regra "omissão declarada é método, omissão silenciosa é falha" é
+  formulação do agente, de 03/10, sobre a busca sem projeto. Em 08/10 virou regra do modo de agir de toda
+  pesquisa sem passar por ele, e toca o A4 (campo em branco).
+- **"Não se aplica" pelo projeto (D13).** A recomendação de 17/10 deixava o próprio projeto declarar "não se
+  aplica". A paráfrase confirmada com "ok" a inverteu: hoje só o método declara a condição. Isso toca
+  diretamente o A4.
+- **Superada, mas não executada:** a citação do RAISE 1 continua em `maintainer.md:30`, embora a decisão 6 de
+  08/10 a tire do modo de agir.
+- **Correções só de fato,** que o acompanhamento faz depois do "ok" desta revisão sem reinterpretar nada: as
+  datas trocadas (D41).
