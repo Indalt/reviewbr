@@ -73,7 +73,7 @@ Consequências para ler o disco sem se enganar:
 | 1 | Escopo e PRISMA-S | 1 (DEBT-055), 2 (DEBT-128) | sessão 0 | `check_standard_coverage` do PRISMA-ScR sem omissão silenciosa; PRISMA-S com `titulos_oficiais: true` e falsificação com poder |
 | 2a | Declarações por método — o núcleo | DEBT-142 (mapeamento e declarações por método; item condicional); DEBT-150 e DEBT-008 passaram à 2b pela regra da janela | sessão 1 | mapeamento e declarações lidos do método; `check_standard_coverage` idêntico antes e depois, salvo o deliberado; item condicional respondido pelo projeto; testes |
 | 2b | Itens condicionais em uso | DEBT-150 (avaliação crítica no escopo), DEBT-008 (certeza da evidência: declarar; a assimilação vai às 7+), DEBT-152 (frases velhas em agentes e skill) | 2a | condição declarada pelo método, perguntada na F1 e respondida pelo projeto, com o efeito no denominador que a fonte manda, com teste; F7.3 declarada [NÃO COBERTO] por tool; `prisma-rigor-gates` sem a certeza que nenhum gate confere; agentes sem as frases velhas |
-| 2c | Falsificador com poder | DEBT-149 — *"Dar poder já"* (Vicente, 30/10) | 2b | `com_poder` só com controle positivo plantado; suspeito lido e descartado registrado e fora da reprovação; comparação também com o enunciado, com equivalências português–inglês por padrão; acusa os deslocamentos conhecidos e não acusa os 4 falsos positivos do PRISMA-ScR |
+| 2c | Falsificador com poder | DEBT-149 — decisão de 30/10: a conferência automática do mapeamento passa a dizer o que enxerga e é melhorada (redação no achado) | 2b | `com_poder` só com controle positivo plantado; suspeito lido e descartado registrado e fora da reprovação; comparação também com o enunciado, com equivalências português–inglês por padrão; acusa os deslocamentos conhecidos e não acusa os 4 falsos positivos do PRISMA-ScR |
 | 2d | Escopo como método completo e RAISE 3 | DEBT-151 (com o ponto 2 do DEBT-142: scoping com spec e mapeamento próprios), 11 (DEBT-094) | 2c | `scoping-prisma-scr` sem `extends`, com o PCC em subitens próprios e o PRISMA-ScR mapeado neles; RAISE 3 declarado como condicional nos métodos que usam IA |
 | 3 | Funil e gates | 3 (DEBT-138), 4 (DEBT-070), DEBT-071/043/105 | — | export bloqueia funil divergente; manifests dizem a verdade sobre os gates |
 | 4 | Busca e triagem | 5 (DEBT-056), 6 (DEBT-021), 7 (DEBT-025) | — | log PRISMA-S gravado por código; saturação lê o disco; dedup com DOI/acentos e nível 4 só sinalizando |
@@ -347,8 +347,9 @@ dois métodos; PRISMA-ScR com `orphans: []` (nenhuma omissão silenciosa), 12/22
 positivos, que a leitura da norma confirma como falsos (data da busca e busca manual são do item 7,
 financiamento do estudo é dado do item 11, `title_abstract_excluded` é seleção, item 14). Consequência que pesa
 na decisão: a `prisma-rigor-gates` (SKILL.md:56) faz `valid=false` bloquear a declaração do checklist completo na
-F8, e os dois projetos de escopo pararão ali até o DEBT-149. **Decisão do Vicente sobre o DEBT-149: *"Dar poder
-já"*** (registrada no achado) — vira a sessão 2b, depois do núcleo do DEBT-142.
+F8, e os dois projetos de escopo pararão ali até o DEBT-149. **Decisão do Vicente sobre o DEBT-149:** a
+conferência automática do mapeamento passa a dizer a verdade sobre o que enxerga e é melhorada na mesma sessão
+(redação precisa no achado, conferida por ele em 31/10) — vira a sessão 2b, depois do núcleo do DEBT-142.
 
 ## Sessão 2a — prompt de abertura
 
@@ -660,7 +661,8 @@ plantados, e há classe de erro sem âncora de palavra (o S13); com o controle p
 padrões ficará "sem poder" — e hoje "sem poder" é erro (`valid: false`, F8 bloqueada) e zera o fundamento por
 etapa. **Decisão pendente do Vicente:** o que "sem poder" faz depois da 2c — avisa (o relatório diz quanto a
 conferência enxerga; reprova só a evidência de erro: omissão, suspeito sem explicação, título fora da fonte) ou
-reprova (toda revisão para na F8 até haver poder). Esclarecido pelo acompanhamento, autor do texto da opção
-"Dar poder já": "por padrão" quer dizer por norma — cada padrão com as suas equivalências e o seu controle,
-tirado de deslocamento conhecido lido no enunciado oficial, nunca escolhido pelo próprio código. O prompt da
-2c entra aqui quando a decisão vier.
+reprova (toda revisão para na F8 até haver poder). A decisão de 30/10 ganhou redação precisa, conferida pelo
+Vicente em 31/10 e gravada no DEBT-149: "por padrão" quer dizer por norma, e o erro de teste é erro conhecido,
+lido no enunciado oficial, nunca escolhido pelo próprio código. Em 31/10 ele também questionou o dicionário
+como meio de conferir ("temos de ter alguma solução melhor que dicionário") — o item 4 da decisão volta a ele
+com alternativas. O prompt da 2c entra aqui quando as duas respostas vierem.
