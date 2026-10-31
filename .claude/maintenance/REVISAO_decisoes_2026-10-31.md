@@ -12,6 +12,22 @@
 
 ## A. Considerações e decisões do Vicente em 31/10/2026
 
+> **Vereditos dele, 31/10 (depois desta redação).** A1 a A6 e A8: "ok". O "Estado" de cada item abaixo é de
+> antes do veredito.
+>
+> **A7 corrigido por ele:** "ensinar não é o propósito. o propósito é aplicar com certeza científica e
+> publicável como um guia. o que eu disse é que há aprendizado quando se faz e quando um guia ajuda a escolher
+> dizendo o porquê". Texto a conferir:
+>
+> *O propósito do ReviewBR é aplicar a metodologia escolhida com certeza científica, de forma publicável,
+> funcionando como um guia. O aprendizado é consequência, não propósito: aprende-se ao fazer, e quando o guia
+> ajuda a escolher a metodologia dizendo o porquê.*
+>
+> **A9, novo, dele:** "Assimilar uma metodologia deve ser uma tarefa com transcrição precisa e descrição."
+>
+> **Pergunta dele, a responder na volta:** "quem verifica o verificador? o que de fato pode nos dar segurança
+> enquanto ferramenta?" (sobre o A5: script e agente erram).
+
 ### A1. O método do ReviewBR e as trilhas das metodologias
 
 **Estado:** o conteúdo foi aprovado ("ok"). Ele pediu um texto "descritivo e assertivo, para trazer a

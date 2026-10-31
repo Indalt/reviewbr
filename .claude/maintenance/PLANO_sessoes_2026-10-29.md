@@ -90,6 +90,17 @@ comentários do Vicente em 31/10 levaram a uma redefinição proposta da 2c, e a
 estão em redação precisa, a conferir, em `REVISAO_decisoes_2026-10-31.md`; o prompt espera as duas decisões da
 parte B desse arquivo.
 
+**PAUSA desde 31/10/2026:** o limite semanal está em 96%, pela leitura do próprio Vicente, e nenhuma sessão abre
+antes de ele renovar. Nada estava rodando na pausa: as duas corridas de agentes terminaram e o trabalho está
+commitado. Respostas dele já registradas no `REVISAO_decisoes_2026-10-31.md`: A1 a A6 e A8 "ok"; A7 corrigido;
+A9 novo. Ainda pendentes:
+- B1 e B2, que definem a 2c;
+- D14, antes da 2d;
+- a pergunta dele "quem verifica o verificador?".
+
+**Par de calibração da régua:** ele leu 74% da janela de 5h quando o `--agora` dava 85% a 103% (9,75 M
+ponderado, 31/10 11:43 UTC). A régua do `CONTINUAR.md` §1 superestima e deve ser recalculada na volta.
+
 ### Modelo e esforço de cada sessão (calculado em 29/10/2026)
 
 Modelo: **Opus 5.5 em todas** — *"nunca deixar de usar o opus pela complexidade das tarefas"* (Vicente, 25/09).
