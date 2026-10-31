@@ -125,7 +125,11 @@ reduz o que sobra para a sessão.
 3. **Toda sessão termina com commit.** O que não está commitado não existe para a próxima sessão. Nunca mais
    semanas de trabalho só no working tree.
 4. **Decisão do Vicente vai ao disco na hora**, pela tool (`record_system_finding` no achado, ou nesta carta),
-   com as palavras dele. Decisão que fica só no chat é o que gerou o `DECISOES_chat_a_conferir.md`.
+   **escrita em forma precisa e autoexplicativa**: o que foi decidido, o alcance e a consequência, com os termos
+   definidos, legível por quem não viu a conversa. A frase dele, ou o rótulo da opção que ele escolheu, vai junto
+   só como origem, nunca como o texto da decisão; quando a redação reinterpreta o que ele disse, ele a confere
+   antes de gravar (pedido dele, 31/10/2026: frase gravada "do jeito que eu disse", sem tratamento, gera
+   problema). Decisão que fica só no chat é o que gerou o `DECISOES_chat_a_conferir.md`.
 5. **Evidência dentro do repositório.** Sonda e reprodução de achado não ficam no scratchpad da sessão.
 6. **Fan-out só com saldo combinado** e com o resultado de cada agente gravado ao terminar; senão, trabalho
    inline. Duas mortes por limite (03/10 e 17/10) e uma interrupção (29/10) ensinaram isso.
