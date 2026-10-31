@@ -85,8 +85,10 @@ Consequências para ler o disco sem se enganar:
 **Estado:** sessões 0 (29/10/2026), 1, 2a (30/10/2026) e 2b (31/10/2026) fechadas, cada uma com a carta na sua
 seção e conferida pelo acompanhamento. A sessão 2 virou quatro: três pela decisão do Vicente sobre o DEBT-149, e
 a 2a fechou DIVIDIDA pela regra da janela — o item 3 dela ganhou a 2b; o falsificador é a 2c, e o escopo
-completo, a 2d. **2c em preparo:** o material medido está em `sessao_2c/preparo/` (LEIAME.md), e o prompt
-espera uma decisão do Vicente — o que "sem poder" faz depois da 2c (seção da 2c, no fim deste arquivo).
+completo, a 2d. **2c em preparo:** o material medido está em `sessao_2c/preparo/` (LEIAME.md). Os
+comentários do Vicente em 31/10 levaram a uma redefinição proposta da 2c, e as considerações dele daquele dia
+estão em redação precisa, a conferir, em `REVISAO_decisoes_2026-10-31.md`; o prompt espera as duas decisões da
+parte B desse arquivo.
 
 ### Modelo e esforço de cada sessão (calculado em 29/10/2026)
 
@@ -665,4 +667,8 @@ reprova (toda revisão para na F8 até haver poder). A decisão de 30/10 ganhou 
 Vicente em 31/10 e gravada no DEBT-149: "por padrão" quer dizer por norma, e o erro de teste é erro conhecido,
 lido no enunciado oficial, nunca escolhido pelo próprio código. Em 31/10 ele também questionou o dicionário
 como meio de conferir ("temos de ter alguma solução melhor que dicionário") — o item 4 da decisão volta a ele
-com alternativas. O prompt da 2c entra aqui quando as duas respostas vierem.
+com alternativas. Depois, ainda em 31/10, ele pôs em dúvida reverificar metodologia já validada e voltou o
+foco para a aplicação, isto é, para o estudo. Daí saiu uma redefinição proposta da 2c: a conferência por
+palavras sai da trava e vira ajuda na assimilação, e a transcrição de cada metodologia passa a ser conferida
+ao assimilar, por leitura documentada e revisada. Ela está em `REVISAO_decisoes_2026-10-31.md`, parte B, com
+duas decisões pendentes. O prompt da 2c entra aqui quando elas vierem.
