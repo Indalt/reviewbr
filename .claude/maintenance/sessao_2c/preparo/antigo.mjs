@@ -1,0 +1,13 @@
+import { pathToFileURL } from "node:url";
+import { execSync } from "node:child_process";
+const B = "C:/reviewbr/reviewbr/reviewbr-mcp/dist/services/";
+const imp = (f) => import(pathToFileURL(B + f).href);
+const { MappingCoherenceService } = await imp("mapping_coherence.js");
+const { StandardsService } = await imp("standards.js");
+const REPO = "C:/reviewbr";
+const old = JSON.parse(execSync("git -C C:/reviewbr show d64067d:.claude/standards/prisma-s.json").toString("utf-8"));
+const mapa = new Map(old.items.map((i) => [i.id, { id: i.id, covered_by: i.covered_by, nao_coberto: "", nao_se_aplica: "" }]));
+const std = StandardsService.read(REPO, "prisma-s");
+const r = MappingCoherenceService.checarMetodologia(REPO, "prisma-sr", std, mapa);
+console.log("pares", r.pares_conferidos, "susp", r.suspeitos.map((s) => `${s.subitem}→${s.item_declarado}:${s.item_sugerido}`));
+console.log("nao_conferidos", r.nao_conferidos);

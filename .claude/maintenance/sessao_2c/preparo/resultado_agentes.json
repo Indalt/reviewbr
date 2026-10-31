@@ -1,0 +1,1047 @@
+{
+ "fonte": {
+  "claims": [
+   {
+    "claim": "1a. PRISMA 2020 itens 15 e 22 sem 'If done'; pelo E&E (n160), elemento essencial sem 'If…' se relata em toda revisão sistemática",
+    "verdict": "CONFIRMADO",
+    "evidence": "Checklist do n71 (PMC8005924, linhas 258-259 e 306-307 do texto extraído) e o PDF oficial PRISMA_2020_checklist: item 15 'Describe any methods used to assess certainty (or confidence) in the body of evidence for an outcome.' e item 22 'Present assessments of certainty (or confidence)...for each outcome assessed.', ambos sem 'If'. E&E n160 (PMC8005925, linha 112): 'Essential elements should be reported in the main report or as supplementary material for all systematic reviews (except for those preceded by \"If…,\" which should only be reported where applicable).' Os elementos essenciais do item 15 sem 'If' são Specify the tool / Report the factors / decision rules / how many reviewers / processes with investigators / methods for reporting (#22); os com 'If' são If applicable / If any adaptations / If an automation tool / If standard phrases. O item 22 tem 3 elementos essenciais, nenhum com 'If'. Bate com fontes_certeza.md:40-51.",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8005925/ ; https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8005925/fullTextXML ; https://www.prisma-statement.org/s/PRISMA_2020_checklist-ab3g.pdf"
+   },
+   {
+    "claim": "1b. Consequência modelada: 'nenhuma' em abordagem_certeza não tira 15 e 22 do denominador; nenhuma linha do mapeamento do prisma-sr recebe a condição",
+    "verdict": "CONFIRMADO",
+    "evidence": "No repositório, grep por 'condicao' nos 3 arquivos de .claude/methodologies/prisma-sr/conformance/ (prisma-2020, prisma-p e prisma-s) dá 0 em cada um. 'abordagem_certeza' só aparece em prisma-sr/manifest.json:23 e spec.md:344. É uma inferência, e nenhuma fonte fala em denominador, mas é a leitura direta da regra 'for all systematic reviews' e não encontrei texto do PRISMA 2020 que torne os itens 15 e 22 inaplicáveis. Uma nuance, sem refutar: o mesmo E&E diz que relatar a ausência de um método é 'judgment of authors'. Uma revisão que responde 'nenhuma' fica com o item 15 sem como ser atendido pelos elementos essenciais, e quem pede a declaração da ausência com motivo é o PRISMA-P item 17, não o PRISMA 2020. fontes_certeza.md:53-56 já reconhece isso.",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8005925/fullTextXML"
+   },
+   {
+    "claim": "2. PRISMA-P item 17 (E&E Shamseer, BMJ 2015;349:g7647) manda declarar, com o motivo, que não haverá avaliação da força da evidência",
+    "verdict": "CONFIRMADO",
+    "evidence": "g7647 (eprint White Rose 91310, 'Version: Published Version', p.18, Explanation do item 17 'Confidence in cumulative estimate'): 'Authors should describe which approach they plan on using to summarize the confidence they have in the resulting body of evidence, ideally using an established and validated approach. ... If no such assessments are planned, the authors should state this with a rationale for why not.' O texto do checklist ('Describe how the strength of the body of evidence will be assessed (e.g., GRADE)') e a definição '(c) an assessment of the validity...(e.g., ...)' estão no statement da Syst Rev (PMC4320440), como o .md atribui. No g7647 a mesma frase vem com 'such as', não com 'e.g.'. bmj.com devolveu 403 para mim também, então a versão do editor não foi conferida direto; a cópia é a versão publicada depositada.",
+    "source_url": "https://eprints.whiterose.ac.uk/id/eprint/91310/1/bmj.g7647.full.pdf ; https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4320440/fullTextXML"
+   },
+   {
+    "claim": "3. PRISMA-ScR itens 12 e 16 são 'If done' no checklist oficial; com 'não' saem do denominador",
+    "verdict": "CONFIRMADO",
+    "evidence": "PDF reviewbr/download/PRISMA-ScR-Fillable-Checklist_11Sept2019.pdf, p.1, item 12 'Critical appraisal of individual sources of evidence§': 'If done, provide a rationale for conducting a critical appraisal...'. P.2, item 16: 'If done, present data on critical appraisal of included sources of evidence (see item 12).' O efeito 'não tira do denominador' é a leitura natural do 'If done', e o checklist não tem regra explícita de denominador. No repositório, prisma-scr.json:162/220 dá aos itens a condição 'avaliacao_critica', e tests/prisma_s_scr_oficial.test.ts:146 espera aplica_se ['sim'].",
+    "source_url": "C:/reviewbr/reviewbr/download/PRISMA-ScR-Fillable-Checklist_11Sept2019.pdf (Tricco et al., Ann Intern Med 2018;169:467-473, doi:10.7326/M18-0850)"
+   },
+   {
+    "claim": "4a. As citações verbatim de fontes_certeza.md batem com as fontes (confere_citacoes.mjs)",
+    "verdict": "CONFIRMADO",
+    "evidence": "Li o confere_citacoes.mjs antes de rodar: só lê os arquivos passados por argumento e imprime, sem gravar nada. Baixei as 4 fontes em scratchpad/wf_2c/v1_fonte/src, e os SHA-256 batem exatamente com a tabela de fontes_certeza.md:13-16 (c5e3b4a1…, c056a0fd…, c251b01d…, f418869a…). Os 14 trechos dão 'OK'. Ponto fraco do conferidor: ele concatena as fontes e não confere a atribuição. Rodei uma vez por fonte e cada trecho cai na fonte a que o .md o atribui: n71 tem os itens 15 e 22; n160 tem a regra dos elementos, a ausência e os elementos dos itens 15 e 22; PMC4320440 tem o checklist do item 17 e a definição (c); g7647 tem os dois trechos da Explanation. Os trechos com elisão '(…)' que o conferidor não cobre ('Report the factors considered', 'Describe the decision rules', 'Describe methods for reporting the results') conferi à mão no n160: estão nas linhas 950-968 do texto extraído.",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8005924/fullTextXML"
+   },
+   {
+    "claim": "4b. Conferência independente de um trecho por fonte numa cópia oficial distinta",
+    "verdict": "CONFIRMADO",
+    "evidence": "n160: a página do NCBI PMC (PMC8005925, via WebFetch) traz 'Essential elements should be reported in the main report or as supplementary material for all systematic reviews' e 'We leave these decisions to the judgment of authors.' O expanded checklist oficial do prisma-statement.org repete a regra quase verbatim: 'should be reported in the main report or as supplementary material for all systematic reviews (except for those preceded by \"If...\", which should only be reported where applicable)'. n71: o PDF oficial PRISMA_2020_checklist do prisma-statement.org tem os textos dos itens 15 e 22 idênticos. PMC4320440 e g7647: só as cópias Europe PMC e White Rose (bmj.com e BioMed Central não testados ou bloqueados com 403). O hash igual ao da sessão mostra que é a mesma cópia, não uma segunda fonte.",
+    "source_url": "https://www.prisma-statement.org/s/PRISMA_2020_expanded_checklist-w7ra.pdf"
+   },
+   {
+    "claim": "5. Existe regra geral do PRISMA 2020 que mande escrever 'não feito'/'não aplicável' no checklist em vez de omitir",
+    "verdict": "REFUTADO",
+    "evidence": "Não existe. O n71 (statement) não dá instrução de N/A. O checklist tem só a coluna 'Location where item is reported'. A página oficial prisma-statement.org/prisma-2020-checklist não tem orientação de N/A (WebFetch). No n71, 'applicable' aparece em três pontos: (i) 'The boxes in grey should only be completed if applicable; otherwise they should be removed from the flow diagram' (fluxograma, linha 438); (ii) o escopo, 'many items are applicable to systematic reviews with objectives other than evaluating interventions' (linha 94), que admite itens inaplicáveis por tipo de revisão sem nomear quais; (iii) 'if applicable, details of automation tools' dentro dos itens 8, 9 e 11. A regra geral está no E&E (n160, linha 112): os elementos essenciais valem 'for all systematic reviews (except for those preceded by \"If…\")'. Mais: os elementos são 'framed in terms of reporting the \"presence\" of a method ... rather than reporting on their absence ... We leave these decisions to the judgment of authors'. Os 'Not applicable' do n160 (linhas 1250-1299) são só uma tabela-exemplo de risco de viés.",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8005924/fullTextXML"
+   }
+  ],
+  "regra_geral_nao_aplicavel": "O PRISMA 2020 não manda escrever 'não feito' ou 'não aplicável' no checklist. O statement (n71) não tem regra de N/A por item; o checklist tem só a coluna 'Location where item is reported'. O único 'only completed if applicable; otherwise ... removed' do n71 é sobre as caixas cinzas do fluxograma. O escopo do n71 ainda admite que 'many items are applicable to systematic reviews with objectives other than evaluating interventions'. A regra geral está no E&E n160 (PMC8005925): 'Essential elements should be reported in the main report or as supplementary material for all systematic reviews (except for those preceded by \"If…,\" which should only be reported where applicable).' O mesmo trecho segue: 'The essential and additional elements are framed in terms of reporting the \"presence\" of a method or result ... rather than reporting on their absence. In some instances, however, reporting the absence of a method may be helpful ... We leave these decisions to the judgment of authors.' O expanded checklist oficial (prisma-statement.org/s/PRISMA_2020_expanded_checklist-w7ra.pdf) repete a primeira frase. Efeito sobre a afirmação 1: CONFIRMA a modelagem, porque 15 e 22 não têm 'If…' e valem para toda revisão sistemática, logo 'nenhuma' não os tira do denominador. Há um enfraquecimento lateral, que não muda a conclusão: o PRISMA 2020 não exige declarar a ausência (fica a juízo do autor). A obrigação de declarar 'nenhuma' com motivo vem do PRISMA-P item 17 (g7647), como o .md já diz. Na prática, uma revisão com 'nenhuma' não consegue atender o item 15 pelos elementos essenciais: é consequência da fonte, não erro de modelagem.",
+  "resumo": "A leitura de fonte da sessão 2b se sustenta. Os 4 arquivos que baixei de novo têm o SHA-256 idêntico ao da tabela de fontes_certeza.md. Os 14 trechos do confere_citacoes.mjs dão OK, e também quando rodo uma fonte por vez: cada trecho está na fonte a que o .md o atribui. O conferidor não confere a atribuição; isso é limitação, não erro. Li o script antes de rodar e ele não grava nada. Sobre os itens 15 e 22 do PRISMA 2020 sem 'If' e a regra 'for all systematic reviews' do E&E n160: confirmados no Europe PMC, no NCBI PMC e no checklist e no expanded checklist oficiais do prisma-statement.org. O PRISMA-P item 17 ('If no such assessments are planned, the authors should state this with a rationale for why not') foi confirmado na versão publicada depositada no White Rose. O bmj.com dá 403, então não houve conferência na página do editor. Os itens 12 e 16 do PRISMA-ScR são 'If done' no PDF oficial. No repositório, nenhum arquivo de conformance do prisma-sr tem 'condicao', e o prisma-scr usa 'avaliacao_critica' nos itens 12 e 16. Não existe regra geral no PRISMA 2020 para escrever N/A ou 'não feito': o E&E deixa o relato da ausência ao juízo do autor. Isso confirma a modelagem; quem obriga a declarar 'nenhuma' com motivo é o PRISMA-P, como o .md já registra. Nenhum defeito encontrado. Arquivos temporários ficaram em C:/Users/alqui/AppData/Local/Temp/claude/c--reviewbr/e5229a50-8b64-44b0-92d6-f34585b342d4/scratchpad/wf_2c/v1_fonte/src/."
+ },
+ "diff": {
+  "requisitos": [
+   {
+    "requisito": "Saída verificável 1 — no brinquedo, 'não' tira 12 e 16 do denominador; 'sim' e sem resposta os mantêm, com teste",
+    "status": "CUMPRIDO",
+    "evidence": "tests/condicionais_em_uso.test.ts:53-92 (sem resposta 12/22 + aviso; 'não' 12/20, nao_se_aplica [12,16], nao_coberto exatamente [3,6,10,11,13,22]; 'sim' 12/22, aplica [true,true]). Brinquedo = cópia real de .claude/{agents,standards,methodologies} em mkdtemp (linhas 22-28), logo declarações REAIS. Mutação feita por mim via dist em cópias de brinquedo (scratchpad wf_2c/v2_diff/mut.mjs), com 'não' gravado: real → 12/20 nsa [12,16]; sem condicao no 12 → 12/21; aplica_se [sim,não] → 12/22; manifest sem condicoes → gravação recusada, 12/22. As quatro quebras derrubariam as asserções."
+   },
+   {
+    "requisito": "Saída verificável 2 — F7.3 declarada [NÃO COBERTO] por tool",
+    "status": "CUMPRIDO",
+    "evidence": ".claude/methodologies/prisma-sr/spec.md:344 (blockquote '[NÃO COBERTO] por tool (DEBT-008)… o agente propõe…, o pesquisador decide'); coerente com manifest F7 producer_tools: []."
+   },
+   {
+    "requisito": "Saída verificável 3 — prisma-rigor-gates sem a certeza que nenhum gate confere",
+    "status": "CUMPRIDO",
+    "evidence": ".claude/skills/prisma-rigor-gates/SKILL.md:31: 'A certeza da evidência (F7.3) não é gate: nenhuma tool a confere'. grep GRADE/CERQual na skill: só essa linha."
+   },
+   {
+    "requisito": "Saída verificável 4 — condição de certeza declarada, com o efeito que a fonte manda, citada",
+    "status": "CUMPRIDO",
+    "evidence": "prisma-sr/manifest.json:21-33 ('abordagem_certeza', F1, GRADE/CERQual/nenhuma, note com as fontes); nenhuma linha de mapeamento tem condicao (teste :114-124). Baixei as 4 fontes: os SHA-256 batem com fontes_certeza.md:13-16, e confere_citacoes.mjs deu OK nos 14 trechos. 'If no such assessments are planned…' está no E&E g7647 dentro do item 17 (pdftotext, linhas 346-349). A leitura (15 e 22 sem 'If…'; o 17 pede declarar a falta) se sustenta."
+   },
+   {
+    "requisito": "Saída verificável 5 — check_standard_coverage antes × depois só com o deliberado",
+    "status": "CUMPRIDO",
+    "evidence": "Regerei o retrato com o dist (DIR=scratchpad): 'depois' × 'agora' = 0 diferença; antes × agora reproduz byte a byte o diff_antes_depois.txt; sessao_2a/retrato_depois × sessao_2b/retrato_antes = 0. As 20 diferenças são 4+4 (conferir prisma-scr todos/scoping) e 6+6 (render), só nos itens 12, 16, condicionais, avisos e nota. prisma-2020, prisma-p, prisma-s e raise-3 sem mudança."
+   },
+   {
+    "requisito": "Saída verificável 6 — agentes e conduct-review sem as frases velhas",
+    "status": "CUMPRIDO",
+    "evidence": "grep 'hoje o PRISMA-S|o PRISMA-ScR, DEBT-055|não tem mapeamento|sem mapeamento' em .claude/agents, skills, specs, manifests e README: zero. Sobra só 'títulos fora da fonte (titulos_oficiais: false)' em conduct-review/SKILL.md:61, que é a regra genérica, como pedido. A regra segue nos 6 agentes (analyst:36, designer:24, extractor:32, librarian:51, reader:40, screener:35)."
+   },
+   {
+    "requisito": "Saída verificável 7 — DEBT-150 e DEBT-152 resolvidos",
+    "status": "CUMPRIDO",
+    "evidence": "le_audit.mjs: DEBT-150 [RESOLVIDO], DEBT-152 [RESOLVIDO]. No transcript 8dac3009…jsonl, record_system_finding devolveu ok:true para DEBT-150, 152, 008 e 151 (03:08Z): foi pela tool, não pelo JSON à mão. O diff do system_debt.json toca só esses 4 achados e o updatedAt."
+   },
+   {
+    "requisito": "Saída verificável 8 — DEBT-008 aberto, com a declaração feita",
+    "status": "CUMPRIDO",
+    "evidence": "le_audit: DEBT-008 [ABERTO]; o context traz 'PARTE 1 (DECLARAR) FEITA…' e a pendência da synthesis-manuscript para as 7+."
+   },
+   {
+    "requisito": "Saída verificável 9 — suíte verde, build em dia, audit válido",
+    "status": "CUMPRIDO",
+    "evidence": "npx vitest run: 35 arquivos, 400/400. tsc --noEmit sai com 0. Último commit em src/ é 579e98c (2a); os dist/*.js têm mtime 31/10 00:05, depois do src. le_audit: valid true, 54/4/78/16, total 152."
+   },
+   {
+    "requisito": "Armadilha 2 / escopo — não remapear PRISMA 2020, não ligar F6, não criar subitem, não mexer em src/",
+    "status": "CUMPRIDO",
+    "evidence": "O --stat não tem conformance/prisma-2020.json nem src/. scoping manifest: F6 active false (inalterado). O diff da spec.md só acrescenta o blockquote da F7.3, sem linha de subitem nova."
+   },
+   {
+    "requisito": "Armadilha 5 — não tocar reviewbr/projects/",
+    "status": "CUMPRIDO",
+    "evidence": "find reviewbr/projects -newermt '2026-10-30 14:00' -type f → 0 arquivos."
+   },
+   {
+    "requisito": "Armadilha 6 — validate_methodology sem reprovação nova",
+    "status": "CUMPRIDO",
+    "evidence": "MethodologyWrites.validar pelo dist: prisma-sr e scoping-prisma-scr reprovam só por 'always_on sem gate: RV-03, RV-04, RV-06, RV-07 (DEBT-003)'."
+   },
+   {
+    "requisito": "Armadilha 7 — toda alteração pelo gate RV-11 com addresses",
+    "status": "CUMPRIDO",
+    "evidence": "Transcript 8dac3009: 5 validate_system_change (DEBT-150 CONFORMIDADE; DEBT-008 CORRECAO + CONFORMIDADE + CORRECAO da conduct-review; DEBT-152 CORRECAO), todos valid:true, entre 03:00 e 03:05Z."
+   },
+   {
+    "requisito": "Armadilha 4 — não calar os 4 suspeitos; valid:false do PRISMA-ScR segue",
+    "status": "CUMPRIDO",
+    "evidence": "Retrato 'agora': prisma-scr | scoping-prisma-scr valid false, fracao 12/22. Os pares contestados não mudaram."
+   },
+   {
+    "requisito": "Carta 'Feito' — retrato_cobertura/compara_retratos aceitam DIR=",
+    "status": "CUMPRIDO",
+    "evidence": "diff de sessao_2a/*.mjs; usei DIR= nas duas e funcionou."
+   },
+   {
+    "requisito": "Carta — 'nenhum projeto tocado', '+7 testes', '1 teste reescrito'",
+    "status": "CUMPRIDO",
+    "evidence": "7 it() em condicionais_em_uso.test.ts. prisma_s_scr_oficial.test.ts:142-153 troca DEBT-142 por condicao + DEBT-151, sem perder proteção: o 12/22 sem projeto continua guardado em :168."
+   },
+   {
+    "requisito": "Fechamento — commit e push",
+    "status": "CUMPRIDO",
+    "evidence": "git rev-parse HEAD == origin/reorg/agentic-layer == 4743e98; working tree limpo."
+   },
+   {
+    "requisito": "Divisão por projeção (75% antes do item 3)",
+    "status": "NAO_VERIFICAVEL",
+    "evidence": "Só a carta afirma ('22% a 26% antes do item 3'); não reconstruí a medição."
+   }
+  ],
+  "findings": [
+   {
+    "severity": "MENOR",
+    "file": ".claude/methodologies/prisma-sr/spec.md",
+    "line": 344,
+    "claim": "A F7.3 da spec-base, que o escopo herda por extends, diz que a abordagem de certeza é 'a condição abordagem_certeza do manifest do prisma-sr… respondida… com record_researcher_decision'. O scoping-prisma-scr não declara essa condição, e o servidor recusaria a resposta num projeto de escopo ('O método … não declara a condição').",
+    "evidence": "scoping manifest: condicoes só com avaliacao_critica; F7 active true; scoping/spec.md:21-22 não exclui a F7.3. method_trail.ts:445-454 recusa condição não declarada. Achado já registrado pela própria 2b no DEBT-151 ('ATUALIZADO em 31/10/2026 (sessão 2b)… a 2d decide se a F7.3 vale nele') e no item (2) da carta.",
+    "contradiz": "Nenhuma decisão; é texto herdado que não vale no escopo, declarado e agendado para a 2d"
+   },
+   {
+    "severity": "NOTA",
+    "file": ".claude/methodologies/prisma-sr/manifest.json",
+    "line": 23,
+    "claim": "Nenhum código lê 'abordagem_certeza' nem avisa se ela fica sem resposta. Nenhuma linha de mapeamento depende dela, então o aviso de condicional pendente do check_standard_coverage nunca a cita; submit_protocol_for_approval não confere condições. O 'perguntada na F1' fica só na conduta da conduct-review.",
+    "evidence": "lerCondicoes só é chamado em standard_coverage.ts:153 (via linhas condicionais) e maintenance_writes.ts:390 (validade). O aviso de pendência em standard_coverage.ts:438 percorre só 'condicionais' (itens). A conduct-review/SKILL.md:63 manda perguntar 'as condições do método nesta etapa'. Isso é coerente com o mecanismo da 2a: condição sem item é válida, e validate_methodology não a acusa. Hoje não há projeto prisma-sr em reviewbr/projects. Projeto que já passou da F1 não seria lembrado.",
+    "contradiz": "Não contradiz; a decisão diz 'perguntada na F1', não 'travada na F1'"
+   },
+   {
+    "severity": "NOTA",
+    "file": ".claude/skills/conduct-review/SKILL.md",
+    "line": 63,
+    "claim": "A instrução cobre só as condições da etapa que se abre ou se retoma. Os dois projetos de escopo, já em F4 e F5, só ficam sabendo de 'avaliacao_critica' pelo aviso do check_standard_coverage ('sem resposta do projeto … (record_researcher_decision)').",
+    "evidence": "project_state: bebidas_maca_do_coco F4, _global F5. A carta joga isso para o chat de cada projeto (item 1 do acompanhamento), sem resposta digitada pelo agente; está de acordo com a decisão de 17/10.",
+    "contradiz": ""
+   },
+   {
+    "severity": "NOTA",
+    "file": "reviewbr/reviewbr-mcp/tests/condicionais_em_uso.test.ts",
+    "line": 126,
+    "claim": "O 2º teste do DEBT-008 ('qualquer resposta deixa… a mesma fração') passa por construção: sem linha com condicao, aplicarRespostas não muda nada. Ele também não confere que a resposta foi lida (respostasDasCondicoes). Quem guarda de fato é o 1º teste (:114-124: nenhuma linha usa a condição).",
+    "evidence": "method_mapping.ts:155-156 ('if (!l.condicao) continue'). O teste só checa w.ok e a fração igual. Não é afirmação falsa, é redundância sem controle positivo.",
+    "contradiz": ""
+   },
+   {
+    "severity": "NOTA",
+    "file": ".claude/methodologies/prisma-sr/spec.md",
+    "line": 344,
+    "claim": "'[NÃO COBERTO] por tool' na F7.3 usa a mesma etiqueta da conferência com outro sentido. O checklist do PRISMA 2020 continua dando o item 22 como coberto por F7.3.3/F7.3.4, sem ressalva.",
+    "evidence": "retrato_depois render 'prisma-2020 | prisma-sr': '| 22 | Certainty of evidence | F7.3.3, F7.3.4, F8.3.22 | [TBD] | ☐ |'. Cobertura quer dizer que há campo na trilha, não que uma tool confere: não é falso, mas pode confundir quem lê.",
+    "contradiz": ""
+   },
+   {
+    "severity": "NOTA",
+    "file": ".claude/skills/synthesis-manuscript/SKILL.md",
+    "line": 16,
+    "claim": "Continua prendendo a certeza (GRADE/CERQual) a 'Se meta-análise', enquanto a spec e a fonte a pedem de toda revisão sistemática. Vem de antes da 2b.",
+    "evidence": "Registrado pela 2b no DEBT-008 (parte 2, sessões 7+) e no item (3) da carta.",
+    "contradiz": ""
+   },
+   {
+    "severity": "NOTA",
+    "file": "reviewbr/reviewbr-mcp/src/index.ts",
+    "line": 1575,
+    "claim": "A descrição da tool record_researcher_decision e a mensagem de responderCondicao (method_trail.ts:481-482) continuam dizendo que a resposta 'decide que itens condicionais do padrão se aplicam'. Para 'abordagem_certeza' o conjunto é vazio: é verdade só no vazio, sem a nuance que a conduct-review ganhou. src/ estava fora do escopo.",
+    "evidence": "conduct-review:63 ganhou 'ou nenhum, quando a fonte não os condiciona'; o texto da tool não mudou (nenhum arquivo de src/ no commit).",
+    "contradiz": ""
+   },
+   {
+    "severity": "NOTA",
+    "file": ".claude/methodologies/prisma-sr/spec.md",
+    "line": 348,
+    "claim": "Com 'nenhuma', a spec diz que F7.3.1 registra a ausência e o motivo, mas F7.3.2–F7.3.4 seguem '✅ obrigatório' sem dizer o que contêm nesse caso.",
+    "evidence": "spec.md:348-351. O efeito prático é pequeno: a certeza deixou de ser gate (prisma-rigor-gates:31).",
+    "contradiz": ""
+   }
+  ],
+  "resumo": "O commit 4743e98 entrega o que a 2b pedia. Os 9 itens da Saída verificável e as afirmações do 'Feito' conferem com evidência reproduzida. Defeito em que o sistema afirma o que não cumpre: nenhum novo. O único texto falso que a 2b criou é a F7.3 herdada pelo escopo citando uma condição do prisma-sr; a própria sessão o declarou e o registrou no DEBT-151, para a 2d. Conferido: retrato regerado pelo dist (0 diferença contra o depois; o diff antes × depois sai idêntico, 20 diferenças só no prisma-scr, todas deliberadas); suíte 400/400; tsc limpo; audit válido 54/4/78/16; validate_methodology só com o DEBT-003; nenhum arquivo de src/ nem de reviewbr/projects/ mudou (find: 0); gates RV-11 e achados gravados pela tool, segundo o transcript da 2b; HEAD igual à origin. Fontes: as 4 baixadas têm SHA-256 iguais aos declarados e as 14 citações verbatim dão OK; a frase do item 17 do PRISMA-P está mesmo no item 17. O teste do DEBT-150 usa as declarações reais e quebra nas 4 mutações que fiz. Resposta a (f): a condição sem item é coerente com o mecanismo da 2a, mas nenhuma tool a lê nem avisa quando falta; perguntá-la na F1 depende só da conduct-review:63. As demais notas são menores ou já estão registradas: 2º teste do DEBT-008 redundante, etiqueta [NÃO COBERTO] com dois sentidos, synthesis-manuscript no DEBT-008 e descrição da tool em src/. Arquivos temporários em C:/Users/alqui/AppData/Local/Temp/claude/c--reviewbr/e5229a50-8b64-44b0-92d6-f34585b342d4/scratchpad/wf_2c/v2_diff/."
+ },
+ "codigo": {
+  "pontos": [
+   {
+    "onde": "reviewbr/reviewbr-mcp/src/services/mapping_coherence.ts:70-83 (VAZIAS, termos)",
+    "o_que_faz": "Normaliza o texto: minúsculas, sem acento, sem pontuação ('_' vira espaço), e descarta termo de até 3 letras e palavra vazia. 'data' está em VAZIAS (é 'data' em português e em inglês). Não reduz plural: search, searches e searching são termos diferentes; o mesmo vale para strategy e strategies.",
+    "relevancia_2c": "É a causa direta de 2 dos 4 falsos positivos e da cegueira no S13. 'Data e hora da busca' perde 'data' e fica só com {hora, busca}. 'Dates of searches' fica com {dates, searches}, que 'busca'→'search' nunca alcança. Qualquer equivalência nova esbarra aqui."
+   },
+   {
+    "onde": "mapping_coherence.ts:91-152 (EQUIV, MAPA_EQUIV)",
+    "o_que_faz": "Tabela PT⟷EN única, global, de uso geral, montada com os títulos do PRISMA 2020. Não tem par para limits, restrictions, language, dates, records, deduplication, updates, peer review, citation, contacts, registries, filters nem vocabulary. Os comentários das linhas 139-143 registram que 'rationale'⟷'justificativa' foi tirado porque casava por homonímia.",
+    "relevancia_2c": "É o requisito (4). A tabela não é por padrão nem por método. Hoje ela não está no padrão: um campo novo no JSON do padrão seria descartado em silêncio pelo zod (veja standards.ts)."
+   },
+   {
+    "onde": "mapping_coherence.ts:155-163 (casam)",
+    "o_que_faz": "Basta UM termo em comum (direto ou por EQUIV) para o par casar.",
+    "relevancia_2c": "Com o enunciado, que tem dezenas de termos, a chance de casar com o item declarado sobe (a acusação some) e a de casar com outros itens também (a ambiguidade mata a acusação, porque o critério exige exatamente uma família)."
+   },
+   {
+    "onde": "mapping_coherence.ts:204-280 (checar)",
+    "o_que_faz": "Monta titulos = item.title. Se o rótulo casa com o título do item declarado, não há suspeita. Se não casa, procura as famílias (pai mais subitens, linha 220) de OUTROS itens com título que case. Com exatamente 1 família, o par vira suspeito. valid = suspeitos.length===0. Rótulo ou título sem termo vai para nao_conferidos.",
+    "relevancia_2c": "É o núcleo a mudar: a comparação com o enunciado e a supressão do suspeito descartado entram aqui ou logo depois. O Suspeito (linhas 45-53) não traz o texto comparado nem a origem do par (coluna da spec ou covered_by), e o descarte vai precisar dos dois."
+   },
+   {
+    "onde": "mapping_coherence.ts:288-315 (checarMetodologia) e 322-344 (paresDoCoveredBy)",
+    "o_que_faz": "Única entrada pública. Fora do PRISMA 2020, os pares vêm do covered_by do método, com o rótulo tirado da 2ª coluna da spec, seguindo o extends (textoDaSpec). No PRISMA 2020, junta a coluna 'Item N' da spec (paresDoTexto, linhas 178-195) e o covered_by, sem repetir pares.",
+    "relevancia_2c": "Os suspeitos do PRISMA 2020 vêm também de par que só existe na coluna da spec. F0.1.8→24, por exemplo, aponta o pai 24, cujos subitens 24a-c são órfãos. Um descarte guardado só no arquivo de mapeamento não alcança esses pares. A regra da integração 1 vale aqui: método estático público sem chamador em outro arquivo reprova."
+   },
+   {
+    "onde": "reviewbr/reviewbr-mcp/src/services/standard_coverage.ts:40-57 (PREMISSA_DA_FALSIFICACAO, LIMITE_DA_CONFERENCIA)",
+    "o_que_faz": "Os textos que vão no relatório e no rodapé do checklist. O LIMITE diz textualmente que a falsificação 'compara o rótulo com o TÍTULO do item, não com o enunciado'.",
+    "relevancia_2c": "Fica falso no momento em que o enunciado entrar na comparação. Os testes conferem só /derrotável/, /quem afirma é quem assimila/ e /não encaixe/ (cobertura_verificavel.test.ts:108-113), então a frase velha passaria verde."
+   },
+   {
+    "onde": "standard_coverage.ts:216-232 (conferência b)",
+    "o_que_faz": "Na linha 217: com_poder = std.titulos_oficiais === true (o DEBT-149 cita a linha 184, que mudou de lugar). Sem poder, grava o erro '(b) Falsificação SEM PODER', valid fica false e nada é contestado. Com poder, qualquer suspeito grava erro, inclusive suspeito em linha [NÃO COBERTO] (F5.2.5.1→11 no ScR). Só contesta se o item está em correspondencias e ainda não foi contestado; o primeiro que contesta fica (por isso F2.2.5→7 não aparece como contestador).",
+    "relevancia_2c": "É o ponto central dos requisitos (1) e (2). Hoje 'sem poder' REPROVA. Se o PRISMA-S ou o ScR perderem o com_poder pelo controle positivo, os dois métodos ficam valid:false e a F8 trava pela prisma-rigor-gates. O descarte tem de tirar o suspeito também deste push de erro (222-226), não só dos contestados."
+   },
+   {
+    "onde": "standard_coverage.ts:248-253 (itens_por_etapa)",
+    "o_que_faz": "O fundamento de cada etapa só sai com com_poder e item não contestado.",
+    "relevancia_2c": "com_poder acumula dois sentidos: 'título vem da fonte' (aqui) e 'o falsificador tem poder' (na b). Se o controle positivo derrubar o com_poder, itens_por_etapa fica {} para o PRISMA-S e o ScR, e a conduct-review perde o 'porquê da etapa'. Antes da 2c, é preciso separar os dois campos ou decidir esse efeito."
+   },
+   {
+    "onde": "standard_coverage.ts:266, 283-284, 432-436, 446-463 (fração, avisos, valid do topo)",
+    "o_que_faz": "corresponde = correspondencias sem os contestados. fracao = corresponde/(linhas − nao_se_aplica). O aviso 'afirmação de quem assimilou, não verificação' só aparece quando há método sem poder. No topo, valid = errors.length===0, juntando os erros de cada método.",
+    "relevancia_2c": "Com o suspeito descartado, a fração do ScR volta a 14/22 (e a 14/20 com 'não'). Com o com_poder falso, o aviso passa a aparecer no PRISMA-S e no ScR."
+   },
+   {
+    "onde": "standard_coverage.ts:59-107 (ConferenciaDoMetodo.falsificacao) e 109-125 (RelatorioCobertura)",
+    "o_que_faz": "O formato que o JSON da tool devolve: com_poder, motivo_sem_poder, pares_conferidos, suspeitos, nao_conferidos, contestados e fracao.",
+    "relevancia_2c": "Faltam campos para o controle positivo (o que foi plantado, de onde veio, quantos foram acusados, o limiar) e para o descartado (quem, quando, por quê). O retrato antes × depois vai mostrar essas mudanças de formato."
+   },
+   {
+    "onde": "standard_coverage.ts:473-498 (checklist) e reviewbr/reviewbr-mcp/src/services/standards.ts:258-321 (renderChecklist)",
+    "o_que_faz": "O contestado sai como **[CONTESTADO]**, com o porquê e os ponteiros. O rodapé traz fração, premissa e limite.",
+    "relevancia_2c": "Hoje não existe forma de mostrar 'suspeito descartado por X em Y: motivo'. Sem ela, o descarte some do suplemento que o pesquisador publica, e o rastro se apaga."
+   },
+   {
+    "onde": "standards.ts:34-43 (StandardItemSchema) e 120-133 (read)",
+    "o_que_faz": "O item tem id, section, title, has_subitems, is_subitem e parent. NÃO tem text: o zod remove a chave em silêncio. Medido no dist: StandardsService.read('prisma-scr').items[6].text === undefined, embora o JSON tenha o enunciado.",
+    "relevancia_2c": "Para comparar com o enunciado, é preciso pôr text no schema. O prisma-2020.json não tem text em item nenhum, então lá não há enunciado, e isso precisa ser declarado, não cair em silêncio na comparação só por título. O raise-3 tem text e campos extras (recommendation, tool_class, task). Equivalências por padrão no JSON do padrão também seriam descartadas pelo strip."
+   },
+   {
+    "onde": "standards.ts:63-70 (titulos_oficiais)",
+    "o_que_faz": "É a premissa declarada e vale false por padrão. Os 5 padrões estão com true.",
+    "relevancia_2c": "Hoje é a única fonte do com_poder. Pela decisão, título oficial passa a ser condição necessária, não suficiente."
+   },
+   {
+    "onde": "reviewbr/reviewbr-mcp/src/services/method_mapping.ts:41-56 (LinhaSchema, MapeamentoSchema) e 81-124 (lerMapeamento)",
+    "o_que_faz": "O mapeamento por método fica em .claude/methodologies/<m>/conformance/<p>.json. A linha tem id, covered_by, nao_coberto, nao_se_aplica e condicao opcional. O zod remove chave desconhecida. Só o scaffold_methodology escreve esse arquivo (maintenance_writes.ts:301-308, esqueleto). O validate_methodology o lê (maintenance_writes.ts:385).",
+    "relevancia_2c": "É o lugar natural do descarte (por método e por padrão). Mas um campo novo escrito à mão antes de entrar no schema seria ignorado sem erro. Não há tool que escreva descarte; o rastro de quem e quando dependeria de edição no JSON. Comparação: o respostasDasCondicoes (method_trail.ts:200-205) exige por:'pesquisador' e contribuição não vazia."
+   },
+   {
+    "onde": "reviewbr/reviewbr-mcp/src/services/method_trail.ts:285-308 (textoDaSpec, ID_SUBITEM, subitensDaSpec)",
+    "o_que_faz": "Lê a spec seguindo o extends (o scoping herda a do prisma-sr). O rótulo do subitem é a 2ª coluna da primeira tabela em que o id aparece.",
+    "relevancia_2c": "Há rótulo que é nome de variável ('title_abstract_excluded', 'url_item'), não descrição: é a raiz do falso positivo F8.1.5→14:1 e de outro novo que o enunciado cria (F8.2.6 'url_item'→16, por 'see item 12')."
+   },
+   {
+    "onde": "reviewbr/reviewbr-mcp/src/index.ts:2656-2697 (handler check_standard_coverage)",
+    "o_que_faz": "standardId vazio devolve panorama; render=true devolve checklist(); fora disso, conferir() em JSON. A descrição da tool (linha 2658) diz 'por falsificação contra o título oficial'.",
+    "relevancia_2c": "A descrição precisa mudar junto. A tool MCP aberta no chat roda o dist da abertura: medir sempre pelo dist recompilado."
+   },
+   {
+    "onde": "reviewbr/reviewbr-mcp/src/services/methods_for_type.ts:55-63 (pendencias) e 116-140 (escolherMetodo)",
+    "o_que_faz": "A escolha de método confere só a trilha e a spec. Não chama StandardCoverageService.",
+    "relevancia_2c": "A trava do DEBT-145 NÃO existe em código. Se entrar na 2c 'só por omissão': o prisma-sr seria recusado hoje (prisma-2020 tem 21 órfãos, DEBT-014) e o scoping passaria (prisma-scr e prisma-s sem órfão). O DEBT-145 ainda depende do DEBT-014."
+   }
+  ],
+  "consumidores": [
+   {
+    "onde": ".claude/skills/prisma-rigor-gates/SKILL.md:60 (o DEBT-149 cita :56, que mudou de lugar)",
+    "campo": "valid, fracao",
+    "efeito": "'valid=false bloqueia declarar o checklist completo.' É o que hoje trava a F8 dos dois projetos de escopo, pelo PRISMA-ScR valid:false."
+   },
+   {
+    "onde": ".claude/skills/prisma-rigor-gates/SKILL.md:48-49",
+    "campo": "premissa_da_falsificacao, limite, com_poder (implícito)",
+    "efeito": "Diz que a falsificação 'só vale com título oficial'. Fica falso quando o com_poder passar a exigir controle positivo e a comparação usar o enunciado."
+   },
+   {
+    "onde": ".claude/skills/synthesis-manuscript/SKILL.md:22",
+    "campo": "valid, fracao",
+    "efeito": "Gate 4 da F8: valid=false bloqueia declarar o suplemento completo."
+   },
+   {
+    "onde": ".claude/agents/analyst.md:23 e :27",
+    "campo": "valid",
+    "efeito": "Mesmo bloqueio no agente que fecha a revisão; a tool é descrita como 'o verificador do gate'."
+   },
+   {
+    "onde": ".claude/skills/conduct-review/SKILL.md:61",
+    "campo": "itens_por_etapa (depende de com_poder e contestados), titulos_oficiais",
+    "efeito": "O porquê de cada etapa sai de itens_por_etapa. Se o com_poder cair, o fundamento some, e o texto ainda atribui a ausência só a 'titulos_oficiais: false'."
+   },
+   {
+    "onde": ".claude/agents/maintainer.md:202 e :276; .claude/skills/system-audit/SKILL.md:119",
+    "campo": "relatório inteiro, panorama (titulos_oficiais)",
+    "efeito": "Varredura D e obsolescência; a tabela do maintainer descreve 'rótulo não contradiz (com a premissa)'."
+   },
+   {
+    "onde": "reviewbr/reviewbr-mcp/src/services/standards.ts:316-317 (renderChecklist)",
+    "campo": "contestados",
+    "efeito": "Marca **[CONTESTADO]** no suplemento publicado."
+   },
+   {
+    "onde": "reviewbr/reviewbr-mcp/src/registry/agent_orchestrator.ts:108",
+    "campo": "(tool)",
+    "efeito": "check_standard_coverage é governada para MAINTAINER e ANALYST."
+   },
+   {
+    "onde": ".claude/maintenance/sessao_2a/retrato_cobertura.mjs",
+    "campo": "valid, fracao, render",
+    "efeito": "Retrato antes × depois que a 2c vai usar para provar que o diff só tem o deliberado."
+   },
+   {
+    "onde": "reviewbr/reviewbr-mcp/src/services/methods_for_type.ts (escolherMetodo)",
+    "campo": "nenhum (a trava do DEBT-145 não existe)",
+    "efeito": "Nenhum hoje. Quando existir, decide se omissão e contestado travam a criação do projeto."
+   }
+  ],
+  "testes_que_fixam": [
+   {
+    "onde": "reviewbr/reviewbr-mcp/tests/prisma_s_scr_oficial.test.ts:79-117 (controle positivo do PRISMA-S — SEM PODER)",
+    "fixa": "Com o mapeamento ANTIGO (d64067d), checarMetodologia acusa só F2.1.3.1→S12:S15 e F4.2.2→S16:S15, nada de S11 e S13; 58 de 70 pares mudaram.",
+    "muda_na_2c": "O próprio teste diz que deve falhar e ser reescrito para EXIGIR a detecção dos ponteiros de S11 e S13. O mapa ANTIGO só existe transcrito neste teste: se o controle positivo usar esses dados em tempo de execução, eles precisam virar dado (fixture), não ficar presos ao teste."
+   },
+   {
+    "onde": "tests/prisma_s_scr_oficial.test.ts:189-197 (os 4 falsos positivos do PRISMA-ScR)",
+    "fixa": "com_poder true; suspeitos ['F2.1.2.1→7:8','F2.2.5→7:8','F5.2.5.1→11:22','F8.1.5→14:1']; contestados ['7','14']; fracao 12/22.",
+    "muda_na_2c": "Vira: nenhum dos 4 reprova (sumidos ou descartados com rastro), fração 14/22. O com_poder deixa de ser o literal true: passa a depender do controle, e o resultado pode ser false."
+   },
+   {
+    "onde": "tests/cobertura_verificavel.test.ts:89-93 e 102-106 (brinquedo)",
+    "fixa": "titulos_oficiais:true dá com_poder true; E1.1 'Financiamento'→1 sugere 2 e contesta o item 1; fração 3/7 e valid false.",
+    "muda_na_2c": "Hoje o padrão de brinquedo tem poder porque tem título oficial. Com o controle positivo, ele precisa de um plantio acusado, senão o com_poder fica false e, se 'sem poder' continuar sendo erro, as expectativas mudam."
+   },
+   {
+    "onde": "tests/cobertura_verificavel.test.ts:116-135 (sem título oficial)",
+    "fixa": "titulos_oficiais:false dá com_poder false, o erro /SEM PODER/, itens_por_etapa {}, nada contestado pela (b), fração 4/7 e o aviso 'afirmação de quem assimilou'.",
+    "muda_na_2c": "Se 'sem poder' deixar de reprovar (coerente com o requisito 3), o teste da linha 119 muda. A linha 127 amarra itens_por_etapa ao com_poder."
+   },
+   {
+    "onde": "tests/cobertura_verificavel.test.ts:166-188 (PRISMA-P e PRISMA-S reais)",
+    "fixa": "PRISMA-P: errors [] e valid true. PRISMA-S: todo com_poder true, zero suspeitos, fração 'prisma-sr 9/16 · scoping-prisma-scr 9/16', valid true.",
+    "muda_na_2c": "Medido: com o enunciado nos dois lados, o PRISMA-P ganha o suspeito F0.2.5 'Status'→2:8 e passaria a valid false. O PRISMA-S sem controle positivo aprovado ficaria com com_poder false."
+   },
+   {
+    "onde": "tests/cobertura_verificavel.test.ts:208-243 (PRISMA 2020 e itens_por_etapa)",
+    "fixa": "Contém F0.2.1→15:24 e F8.3.15→15:24; mais de 112 pares; itens_por_etapa do F2 com S1, S8 e S13 e do F3 com S15 e S16.",
+    "muda_na_2c": "itens_por_etapa depende do com_poder: o teste da linha 237 quebra se o PRISMA-S perder o poder."
+   },
+   {
+    "onde": "tests/mapping_coherence.test.ts:19-110",
+    "fixa": "checar e extrairPares chamados direto (são privados: o vitest não confere tipos). Acusa 'Financiamento'→24 sugerindo 25; não acusa granularidade; não acusa ambiguidade; DEBT-045 com no máximo 15 suspeitos, todos com sugestão.",
+    "muda_na_2c": "Se checar ganhar parâmetro (enunciado, descartes), as chamadas diretas precisam acompanhar. O teto de 15 suspeitos no PRISMA 2020 pode estourar com EQUIV nova ou com o enunciado (o PRISMA 2020 não tem texto)."
+   },
+   {
+    "onde": "tests/condicionais_em_uso.test.ts:52-90 e 128-139",
+    "fixa": "ScR: sem resposta 12/22; 'não' 12/20; 'sim' 12/22; PRISMA-S 9/16; prisma-sr com 16/42, 12/26 e 9/16.",
+    "muda_na_2c": "Saindo os 2 contestados falsos: 14/22, 14/20 e 14/22. O brinquedo copia .claude/agents, standards e methodologies, então descarte gravado no mapeamento real entra na cópia."
+   },
+   {
+    "onde": "tests/declaracao_por_metodo.test.ts:84-96 e 205-216; tests/trilha_como_dado.test.ts:207-208",
+    "fixa": "Padrão de brinquedo 'busca' (titulos_oficiais:true) com valid true, contestados [] e fração 2/2 ou 2/3.",
+    "muda_na_2c": "Ficam vermelhos se o com_poder exigir controle positivo e 'sem poder' continuar sendo erro."
+   },
+   {
+    "onde": "tests/integracao.test.ts:54-98 (integração 1) e 129-180 (integração 3)",
+    "fixa": "Método estático público sem chamador externo reprova; nenhum termo de tema em src/.",
+    "muda_na_2c": "Um serviço de controle positivo ou de descarte criado como público precisa de chamador em outro arquivo. As equivalências PT–EN não podem trazer termo de tema."
+   }
+  ],
+  "comportamento_atual": [
+   {
+    "padrao": "prisma-scr",
+    "metodo": "scoping-prisma-scr",
+    "valid": "false (único erro: o '(b) 4 mapeamento(s) suspeito(s)')",
+    "com_poder": "true",
+    "fracao": "12/22 (sem projeto; 12 e 16 condicionais sem resposta)",
+    "suspeitos": [
+     "F2.1.2.1 'Data e hora da busca' → 7 'Information sources*' (sugere 8 'Search') — contesta o 7",
+     "F2.2.5 'Busca manual em periódicos' → 7 (sugere 8) — o 7 já foi contestado",
+     "F5.2.5.1 'Financiamento do estudo' → 11 'Data items' (sugere 22 'Funding') — o 11 é [NÃO COBERTO], não contesta, mas reprova",
+     "F8.1.5 'title_abstract_excluded' → 14 'Selection of sources of evidence' (sugere 1 'Title') — contesta o 14"
+    ]
+   },
+   {
+    "padrao": "prisma-s",
+    "metodo": "prisma-sr",
+    "valid": "true",
+    "com_poder": "true",
+    "fracao": "9/16 (53 pares conferidos, 6 nao_conferidos)",
+    "suspeitos": [
+     "nenhum (no mapeamento ANTIGO, o mesmo código acusa só F2.1.3.1→S12:S15 e F4.2.2→S16:S15)"
+    ]
+   },
+   {
+    "padrao": "prisma-s",
+    "metodo": "scoping-prisma-scr",
+    "valid": "true",
+    "com_poder": "true",
+    "fracao": "9/16",
+    "suspeitos": [
+     "nenhum"
+    ]
+   },
+   {
+    "padrao": "prisma-p",
+    "metodo": "prisma-sr",
+    "valid": "true",
+    "com_poder": "true",
+    "fracao": "12/26 (72 pares, 9 nao_conferidos)",
+    "suspeitos": [
+     "nenhum"
+    ]
+   },
+   {
+    "padrao": "prisma-2020",
+    "metodo": "prisma-sr",
+    "valid": "false (21 órfãos do DEBT-014 + o erro da (b))",
+    "com_poder": "true",
+    "fracao": "16/42 (121 pares, 12 nao_conferidos; contestados [] porque os itens 15/24/25/26 são [NÃO COBERTO] ou pai)",
+    "suspeitos": [
+     "F0.1.4, F0.1.5, F0.2.1, F0.2.2, F0.2.3, F0.2.4, F8.3.15 → 15 (sugere 24)",
+     "F0.1.8, F5.2.5.1, F8.3.24 → 24 (sugere 25)",
+     "F0.1.9, F5.2.5.2, F8.3.25 → 25 (sugere 26)",
+     "F5.2.5.3, F8.3.26 → 26 (sugere 27)"
+    ]
+   },
+   {
+    "padrao": "raise-3",
+    "metodo": "(nenhum declara)",
+    "valid": "false",
+    "com_poder": "n/a",
+    "fracao": "0/55 declarado, sem método que o confira",
+    "suspeitos": []
+   },
+   {
+    "padrao": "PODER MEDIDO (plantio: cada subitem do mapeamento real posto em cada outro item, um por vez)",
+    "metodo": "prisma-sr / scoping",
+    "valid": "n/a",
+    "com_poder": "recall pelo título: PRISMA-S 30/885 (3,4%; só 2 de 43 subitens são acusáveis em algum plantio); PRISMA-ScR 357/2730 (13,1%; 17/124); PRISMA-P 284/1966 (14,4%; 9/72). Com o enunciado nos dois lados: 6,8% (4/43), 10,9% (14/123) e 7,7% (6/71). Quando acusa, a sugestão acerta em 100% dos casos.",
+    "fracao": "n/a",
+    "suspeitos": [
+     "Script: C:/Users/alqui/AppData/Local/Temp/claude/c--reviewbr/e5229a50-8b64-44b0-92d6-f34585b342d4/scratchpad/wf_2c/s1_codigo/poder_plantado.mjs"
+    ]
+   },
+   {
+    "padrao": "SIMULAÇÃO com enunciado (title := title + text), EQUIV atual",
+    "metodo": "vários",
+    "valid": "n/a",
+    "com_poder": "n/a",
+    "fracao": "n/a",
+    "suspeitos": [
+     "PRISMA-S ANTIGO: continua sem S11/S13; ganha F2.1.1.4 'Camada na estratégia'→S1:S13 (deslocamento real, o ponteiro foi retirado; sugestão errada)",
+     "ScR, enunciado nos 2 lados: somem F2.1.2.1 e F2.2.5; ficam F5.2.5.1→11:22 e F8.1.5→14:1; NOVOS falsos positivos F0.2.5 'Status'→5:6 ('publication status'), F2.1.2.7 'Filtros adicionais aplicados'→8:7 ('additional'), F8.2.6 'url_item'→15:16 ('see item 12')",
+     "ScR, enunciado só no item DECLARADO: somem os 2 do item 7, nenhum novo; ficam F5.2.5.1→11:22 e F8.1.5→14:1 (o 14 continua contestado)",
+     "PRISMA-P, enunciado nos 2 lados: novo F0.2.5 'Status'→2:8 (o PRISMA-P sairia de valid true para false)",
+     "Com EQUIV extra (idioma/idiomas→language, restricao→restrictions/limits) e enunciado nos 2 lados: o PRISMA-S ANTIGO acusa os 3 ponteiros de S11 (F1.3.1.6, F1.3.2.4, F2.1.2.3 → sugere S9); S13 continua invisível; o ScR ganha mais 2 falsos positivos (F5.2.1.6 'Idioma'→11:6, F8.2.7 'idioma'→15:6)",
+     "Scripts: experimento_enunciado.mjs, assimetrico.mjs e assimetrico_extra.mjs em C:/Users/alqui/AppData/Local/Temp/claude/c--reviewbr/e5229a50-8b64-44b0-92d6-f34585b342d4/scratchpad/wf_2c/s1_codigo/; retrato completo em .../s1_codigo/retrato_atual.json"
+    ]
+   }
+  ],
+  "pontos_de_mudanca": [
+   {
+    "requisito": "(1) com_poder só com controle positivo: acusar um deslocamento plantado de propósito",
+    "onde_mudar": "standard_coverage.ts:216-221 (troca o com_poder = titulos_oficiais); um novo pedaço em mapping_coherence.ts para rodar o plantio pelo mesmo checar; campos novos em ConferenciaDoMetodo.falsificacao (plantados, acusados, origem, limiar); a fonte dos plantios conhecidos (PRISMA 2020: os 15 do DEBT-045; PRISMA-S: o covered_by de d64067d, hoje só dentro do teste).",
+    "risco": "O sistema mente se o código escolher o plantio e ele sempre acertar. Medido: no PRISMA-S só 2 de 43 subitens são acusáveis em qualquer plantio; um controle que plante um deles dá com_poder true com recall de 3,4%. Defesa: o controle é recall sobre a população inteira de plantios, ou sobre deslocamentos registrados de fora (histórico), com o limiar e o denominador no relatório. O PRISMA-ScR e o PRISMA-P não têm histórico de deslocamento: só plantio sintético, e 13% ou 14% de recall precisa ser julgado, não arredondado para 'tem poder'. Efeito em cadeia: 'sem poder' hoje é ERRO (valid false) e zera itens_por_etapa. Sem decidir isso, o PRISMA-S e o ScR ficam vermelhos e a F8 dos dois métodos trava pela prisma-rigor-gates."
+   },
+   {
+    "requisito": "(2) suspeito lido e descartado fica registrado (quem, quando, por quê) e deixa de reprovar",
+    "onde_mudar": "method_mapping.ts LinhaSchema (campo de descarte por par: subitem, item_sugerido, por, em, motivo e uma impressão do rótulo e do texto comparados); checar() ou conferirContraMetodo, para tirar o descartado de suspeitos, do erro (b) (linhas 222-226) e dos contestados (227-231); renderChecklist, para mostrar 'descartado por X em Y: motivo'; uma tool ou caminho de escrita com gate RV-11.",
+    "risco": "(a) O rastro some se o descartado simplesmente sair do relatório: ele precisa continuar listado (ex.: suspeitos_descartados) e aparecer no checklist. (b) Qualquer um grava: hoje nenhuma tool escreve conformance/*.json, e campo escrito à mão antes de entrar no schema é removido em silêncio pelo zod. Exigir por:'pesquisador' e motivo não vazio, como o respostasDasCondicoes. (c) Descarte que não caduca: se o rótulo, o título, o enunciado ou o ponteiro mudar, o descarte velho não pode calar um suspeito novo; amarrar à chave subitem→item:sugerido mais o texto comparado. (d) Pares que só existem na coluna 'Item N' da spec (PRISMA 2020, ex.: F0.1.8→24) não estão no mapeamento: o descarte guardado lá não os alcança. (e) Suspeito em linha [NÃO COBERTO] (F5.2.5.1→11) reprova sem contestar: o descarte precisa cobrir esse caso também."
+   },
+   {
+    "requisito": "(3) a trava da escolha de método (DEBT-145) usa só omissão até o falsificador provar poder",
+    "onde_mudar": "methods_for_type.ts escolherMetodo e pendencias (hoje não consultam a cobertura); quem chama: StandardCoverageService.conferir por método.",
+    "risco": "Hoje não há trava; se a 2c a criar 'só omissão', o prisma-sr é recusado na hora (prisma-2020 com 21 órfãos, DEBT-014, que é dependência declarada do DEBT-145). Se a 2c não criar a trava, basta derrubar a dependência DEBT-149 do DEBT-145 pela tool (record_system_finding), sem afirmar uma trava que não existe. Mentira possível: um texto em agente ou skill dizer que a escolha 'confere a cobertura'."
+   },
+   {
+    "requisito": "(4a) comparar também o enunciado do item",
+    "onde_mudar": "standards.ts StandardItemSchema (pôr text opcional); mapping_coherence.ts checar (titulos vira título + enunciado, de forma assimétrica ou nos dois lados); os textos LIMITE e PREMISSA; a descrição da tool em index.ts:2658; prisma-rigor-gates:49.",
+    "risco": "Medido: o enunciado nos DOIS lados troca 2 falsos positivos por 3 novos no ScR, cria um no PRISMA-P (que muda de valid true para false) e baixa o recall (ScR de 13,1% para 10,9%, PRISMA-P de 14,4% para 7,7%), porque mais itens casam e a regra 'exatamente uma família' cala a acusação. No item DECLARADO só, tira os 2 falsos positivos do item 7 sem criar novos, mas não dá poder nenhum. O enunciado também ESCONDE deslocamento real: o texto do S13 tem 'search strategy', e então F8.3.7 'Métodos — Estratégia de busca' casa com o S13 declarado e nunca é acusado. O PRISMA 2020 não tem enunciado: declarar isso, não cair em silêncio no título só."
+   },
+   {
+    "requisito": "(4b) equivalências português–inglês 'por padrão'",
+    "onde_mudar": "mapping_coherence.ts EQUIV (global) ou um campo novo no padrão ou no método (precisa entrar no schema, senão o zod remove); termos() (VAZIAS com 'data'; falta tratar plural).",
+    "risco": "Tabela larga casa tudo com tudo: 'item', 'status', 'additional' e 'idioma' já produziram falsos positivos medidos (url_item→16, Status→6/8, Filtros adicionais→7, Idioma→6). Tirar 'data' de VAZIAS para pegar 'date' traz de volta a homografia com 'data' do inglês. Plural sem tratamento (search, searches, searching) faz o ganho depender da forma da palavra. A classe do S13 ('Vocabulários controlados' em 'Dates of searches') não tem âncora lexical em título nem em enunciado do PRISMA-S: nenhuma equivalência a pega sem casar por homonímia. O teste de integração 3 reprova termo de tema na tabela."
+   }
+  ],
+  "armadilhas": [
+   "'por padrão' é ambíguo na decisão gravada: pode ser 'equivalências POR PADRÃO normativo (cada padrão com a sua tabela)' ou 'por default'. O mesmo vale para 'controle positivo por padrão'. INCERTO: confirmar com o Vicente antes de desenhar onde a tabela mora.",
+   "com_poder hoje tem dois sentidos: (b) 'o falsificador vale' e itens_por_etapa 'o título é da fonte' (standard_coverage.ts:250). Mudar o primeiro sem separar o segundo apaga o porquê de cada etapa na conduct-review.",
+   "'Sem poder' é ERRO hoje (standard_coverage.ts:221) e deixa valid false. Se o controle positivo derrubar o com_poder do PRISMA-S ou do ScR, a prisma-rigor-gates (SKILL.md:60), a synthesis-manuscript:22 e o analyst:23 bloqueiam a F8 dos dois métodos. É preciso decidir de forma explícita se 'sem poder' é aviso (coerente com o requisito 3) ou erro.",
+   "O controle positivo não pode ser escolhido pelo próprio código entre os subitens que ele sabe acusar: só 2 de 43 do PRISMA-S, 17 de 124 do ScR e 9 de 72 do PRISMA-P são acusáveis. Exigir recall sobre a população de plantios ou sobre deslocamentos históricos, com o denominador no relatório.",
+   "O mapa ANTIGO do PRISMA-S (o controle de S11 e S13) existe só transcrito em tests/prisma_s_scr_oficial.test.ts:81-98; se a 2c usar esses dados em tempo de execução, eles têm de virar dado versionado. A meta 'acusar os deslocamentos conhecidos' NÃO é alcançável lexicalmente para F1.4.3 e F2.1.2.5 (vocabulário controlado no S13). Com o enunciado, o F8.3.7 fica ainda MAIS escondido, porque o texto do S13 tem 'search strategy'. Melhor pôr na meta quais pares conhecidos serão acusados do que prometer 'os deslocamentos conhecidos'.",
+   "Os 4 falsos positivos do ScR não são da mesma classe. Dois (item 7) somem com o enunciado no item declarado. F5.2.5.1→11:22 é ponteiro duplo legítimo (o F5.2.5.1 também está no covered_by do 22). F8.1.5→14:1 é homonímia de nome de variável ('title_abstract_excluded'). Os dois últimos pedem descarte registrado ou regra própria; não alargar a EQUIV para calá-los.",
+   "O suspeito em linha [NÃO COBERTO] reprova sem contestar (F5.2.5.1→11 no ScR; os 15 do PRISMA 2020 nos itens 15, 24, 25 e 26). Para o ScR voltar a valid true, os 4 precisam sair, não só os 2 contestados.",
+   "No PRISMA 2020, parte dos pares vem da coluna 'Item N' da spec, não do covered_by (ex.: F0.1.8→24, o pai). Descarte só no arquivo de mapeamento não alcança esses pares. O prisma-2020 continua valid false de qualquer jeito, pelos 21 órfãos (DEBT-014).",
+   "Zod remove chave desconhecida: text no padrão (já hoje: read() devolve item sem text), descarte e equivalência no mapeamento ou no padrão são ignorados em silêncio até entrarem no schema. Testar com controle positivo que o campo chega ao serviço.",
+   "A tool MCP do chat roda o dist da abertura. Medir antes × depois com node no dist recompilado (retrato_cobertura.mjs com DIR fora do repositório, ou em sessao_2c/). O build_frescor.test.ts reprova dist velho.",
+   "Os textos que mentiriam depois da mudança: LIMITE_DA_CONFERENCIA ('compara o rótulo com o TÍTULO... não com o enunciado', standard_coverage.ts:48-49), PREMISSA (40-44), o cabeçalho de mapping_coherence.ts:18-32, a descrição da tool (index.ts:2658) e prisma-rigor-gates/SKILL.md:49 ('só vale com título oficial'). Os testes só conferem /derrotável/ e /não encaixe/: a frase velha passa verde; acrescentar uma asserção negativa.",
+   "Testes que viram com certeza: prisma_s_scr_oficial (o bloco SEM PODER e os 4 falsos positivos, fração 12/22→14/22), condicionais_em_uso (12/22, 12/20 e 12/22 viram 14/xx), cobertura_verificavel e declaracao_por_metodo nos brinquedos com titulos_oficiais:true que esperam com_poder true e valid true, e mapping_coherence (chama checar e extrairPares privados; teto de 15 suspeitos no PRISMA 2020).",
+   "O descarte tem de caducar quando o rótulo, o texto comparado ou o ponteiro mudar. A chave só 'subitem→item' deixaria um descarte velho calar um deslocamento novo no mesmo par.",
+   "Não mexer no mapeamento para calar suspeito (ordem da 2b) e não tocar em reviewbr/projects/. A localização do DEBT-149 (standard_coverage.ts:184) e a citação SKILL.md:56 mudaram de lugar: hoje são as linhas 217 e 60."
+  ],
+  "resumo": "Medido no dist (em dia: 31/10 00:05, posterior ao src de 30/10). A conferência (b) compara o rótulo da spec só com item.title. Ela usa uma EQUIV global feita para o PRISMA 2020, sem reduzir plural e com 'data' entre as palavras vazias. com_poder é só titulos_oficiais (standard_coverage.ts:217). O enunciado (text) existe no JSON do PRISMA-S, ScR, P e RAISE, mas o zod o remove na leitura; o PRISMA 2020 não tem enunciado algum. Estado: o PRISMA-ScR (scoping) sai valid:false, com_poder true, fração 12/22, só pelos 4 falsos positivos (contestados 7 e 14; F5.2.5.1→11 reprova num item [NÃO COBERTO]). O PRISMA-S sai 9/16 e o PRISMA-P 12/26, os dois valid true e sem suspeito. O PRISMA 2020 sai 16/42, valid false (21 órfãos + 15 suspeitos do DEBT-045). Poder medido por plantio: recall de 3,4% no PRISMA-S, 13,1% no ScR e 14,4% no PRISMA-P; só 2 de 43 subitens do PRISMA-S são acusáveis em qualquer plantio. Um controle positivo que o código escolha sempre acertaria. Com o enunciado no item declarado, os 2 falsos positivos do item 7 somem sem criar novos, mas o poder não vem. Com o enunciado nos dois lados, aparecem falsos positivos novos (Status, url_item, Filtros adicionais), o PRISMA-P vira false e o recall cai. Equivalências idioma/restrição pegam os 3 ponteiros de S11; o S13 (vocabulário controlado) segue sem âncora lexical, e o enunciado do S13 esconde o F8.3.7. Consumidores de valid: prisma-rigor-gates:60, synthesis-manuscript:22 e analyst:23 (bloqueiam a F8). O itens_por_etapa depende do com_poder e alimenta a conduct-review:61. 'Sem poder' hoje é erro e zera o fundamento: separar os dois sentidos do com_poder e decidir se 'sem poder' reprova é pré-requisito da 2c. A trava do DEBT-145 não existe em código; 'só omissão' recusaria o prisma-sr hoje pelo DEBT-014. Nenhuma tool escreve descarte, e um campo novo seria removido pelo zod. Ambiguidade a confirmar com o Vicente: 'equivalências por padrão' (por norma ou por default). Artefatos em C:/Users/alqui/AppData/Local/Temp/claude/c--reviewbr/e5229a50-8b64-44b0-92d6-f34585b342d4/scratchpad/wf_2c/s1_codigo/ (retrato_atual.json, poder_plantado.mjs, experimento_enunciado.mjs, assimetrico.mjs, assimetrico_extra.mjs, rotulos.mjs)."
+ },
+ "controles": {
+  "padroes": [
+   {
+    "padrao": "prisma-2020 (declarado pelo prisma-sr)",
+    "itens": 27,
+    "enunciados": "NENHUM no padrão. As 48 entradas (27 itens e 21 subitens, que dão 42 linhas) só têm title, em inglês. O título dos subitens é derivado do item ('Data items — 10a') e não tem texto próprio. O texto oficial existe, fora do padrão, apenas para os itens 15 e 22, verbatim em .claude/maintenance/sessao_2b/fontes_certeza.md:24-26, 40 e 48 (n71/n160, PMC8005924/5, com SHA-256). O mapeamento não muda desde a2391e4 (diff vazio): os controles positivos estão no mapeamento VIVO.",
+    "itens_sem_enunciado": [
+     "todos: 1–27 e 10a, 10b, 13a–13f, 16a, 16b, 20a–20d, 23a–23d, 24a–24c (15 e 22 só em sessao_2b/fontes_certeza.md)"
+    ],
+    "controles_positivos": [
+     {
+      "subitem": "F0.1.4, F0.1.5, F0.2.1, F0.2.2, F0.2.3, F0.2.4, F8.3.15",
+      "rotulo": "Data de início do protocolo; Versão do protocolo; Plataforma de registro; Número de registro; URL do registro; Data do registro; Métodos — Registro e protocolo",
+      "apontava": "15 Certainty assessment",
+      "pertence": "24 Registration and protocol. É a família 24; o subitem 24a/b/c fica INCERTO",
+      "fonte_da_verdade": "DEBT-012 (confirmado contra a fonte oficial em 25/09), DEBT-045 e DEBT-124. O texto do item 15 está em fontes_certeza.md:24. O dist já acusa os 7 e sugere 24"
+     },
+     {
+      "subitem": "F0.2.5",
+      "rotulo": "Status",
+      "apontava": "15",
+      "pertence": "24",
+      "fonte_da_verdade": "DEBT-045 ('F0.2.1..F0.2.5, todos de registro de protocolo'). HOJE NÃO É ACUSADO: o rótulo não tem termo útil"
+     },
+     {
+      "subitem": "F7.3.1, F7.3.2, F8.3.14",
+      "rotulo": "Sistema utilizado (GRADE/CERQual); Domínios avaliados; Métodos — Certeza da evidência",
+      "apontava": "14 Reporting bias assessment",
+      "pertence": "15 Certainty assessment",
+      "fonte_da_verdade": "DEBT-045 e DEBT-124 ('o correto seria o item 15'). Item 15 verbatim: 'Specify the tool or system (and version) used to assess certainty' (fontes_certeza.md:40). NÃO SÃO ACUSADOS: F8.3.14 casa com 15 e com 22, dois candidatos, e F7.3.1/F7.3.2 não têm termo comparável"
+     },
+     {
+      "subitem": "F0.1.8, F8.3.24",
+      "rotulo": "Financiamento; Financiamento",
+      "apontava": "24",
+      "pertence": "25 Support",
+      "fonte_da_verdade": "DEBT-012, DEBT-045 e DEBT-124 (pelo título). Já acusados"
+     },
+     {
+      "subitem": "F0.1.9, F8.3.25",
+      "rotulo": "Conflito de interesses",
+      "apontava": "25 Support",
+      "pertence": "26 Competing interests",
+      "fonte_da_verdade": "DEBT-012 e DEBT-045. Já acusados"
+     },
+     {
+      "subitem": "F8.3.26",
+      "rotulo": "Disponibilidade de dados",
+      "apontava": "26",
+      "pertence": "27 Availability of data, code and other materials",
+      "fonte_da_verdade": "DEBT-012 e DEBT-045. Já acusado"
+     },
+     {
+      "subitem": "F8.4.1, F8.4.2, F8.4.3",
+      "rotulo": "Dados da revisão disponíveis; Código analítico disponível; Materiais suplementares",
+      "apontava": "26 Competing interests",
+      "pertence": "27",
+      "fonte_da_verdade": "DEBT-012 ('F5.2.5.3, F8.3.26, F8.4.1-3 aponta 26... é 27'). NÃO SÃO ACUSADOS: 'disponível/disponíveis' não leva a 'disponibilidade', e 'código' e 'materiais' não têm par no EQUIV"
+     },
+     {
+      "subitem": "F5.2.5.1, F5.2.5.2, F5.2.5.3",
+      "rotulo": "Financiamento do estudo; Conflito de interesses declarado; Disponibilidade de dados",
+      "apontava": "24, 25 e 26, respectivamente",
+      "pertence": "CONTESTADO. Pelo DEBT-012, 25/26/27, que é o que o dist sugere. Pela leitura da sessão 1 no PRISMA-ScR, são variáveis da extração, o que no PRISMA 2020 seria o item 10 (10b), cujo enunciado não está no repositório: INCERTO",
+      "fonte_da_verdade": "Que o item declarado está errado é seguro pelo título. Serve de controle para 'acusar', NÃO para 'sugerir'. Hoje são acusados"
+     },
+     {
+      "subitem": "F8.3.27",
+      "rotulo": "Informações adicionais",
+      "apontava": "27",
+      "pertence": "INCERTO: nenhum item do PRISMA 2020 por título",
+      "fonte_da_verdade": "DEBT-045 ('informações adicionais, não disponibilidade'). Não é acusado"
+     },
+     {
+      "rotulo": "Autores da revisão; Instituição responsável",
+      "subitem": "F0.1.6, F0.1.7",
+      "apontava": "24",
+      "pertence": "INCERTO. Nenhum achado os classifica",
+      "fonte_da_verdade": "Sem fonte. Não usar"
+     }
+    ],
+    "controles_negativos": [
+     {
+      "subitem": "F7.3.3, F7.3.4",
+      "rotulo": "Nível de certeza por desfecho; Justificativa por nível",
+      "item": "22 Certainty of evidence",
+      "por_que_esta_certo": "O item 22 verbatim pede 'Report the overall level of certainty... for each important outcome' e 'explanation of reasons for rating down (or rating up)'",
+      "fonte_da_verdade": ".claude/maintenance/sessao_2b/fontes_certeza.md:48 (n160, PMC8005925)"
+     },
+     {
+      "subitem": "F8.3.22",
+      "rotulo": "Resultados — Certeza",
+      "item": "22",
+      "por_que_esta_certo": "O título casa, e o item 22 é o resultado da certeza",
+      "fonte_da_verdade": "Título do padrão e fontes_certeza.md:26"
+     },
+     {
+      "subitem": "F8.3.1–F8.3.13",
+      "rotulo": "Seções do manuscrito, 1 a 13",
+      "item": "1–13",
+      "por_que_esta_certo": "No DEBT-124, 'os itens 1 a 13 casam'",
+      "fonte_da_verdade": "FRACO: é comparação de título feita por uma sessão, não leitura de enunciado"
+     }
+    ],
+    "lacunas_equiv": [
+     "risk ↔ risco (11 e 18)",
+     "code ↔ código; materials ↔ materiais (27)",
+     "information ↔ informação ('informacoes' está em VAZIAS; o singular fica sem par)",
+     "criteria ↔ critérios (5). Homônimo: 'Critério nível 1–4' da deduplicação",
+     "rationale ↔ justificativa: retirado de propósito, por homonímia (mapping_coherence.ts:139-143)",
+     "discussion/methods: o lado PT está em VAZIAS",
+     "plurais e flexões: biases, syntheses, results ('resultado'→'results' não existe; o EQUIV só tem results→resultado, assimétrico); disponível/disponíveis → availability"
+    ]
+   },
+   {
+    "padrao": "prisma-p (declarado pelo prisma-sr)",
+    "itens": 17,
+    "enunciados": "Campo text, em inglês, em 26 das 31 entradas (17 itens e 26 linhas). Faltam os 5 cabeçalhos com subitens, o que é coerente com a estrutura. A fonte é PMC4320440, transcrita verbatim (version_source).",
+    "itens_sem_enunciado": [
+     "1",
+     "3",
+     "5",
+     "11",
+     "15"
+    ],
+    "controles_positivos": [
+     {
+      "subitem": "F2.1.1.4",
+      "rotulo": "Camada na estratégia",
+      "apontava": "9 Information sources",
+      "pertence": "10 Search strategy, segundo a nota do mapeamento. INCERTO",
+      "fonte_da_verdade": "Só a nota do próprio .claude/methodologies/prisma-sr/conformance/prisma-p.json. Não há registro no backlog e o git não mostra a mudança, que é anterior a a2391e4: lá já está no 10. A 'verdade' foi dada pelo próprio falsificador, por casamento léxico estratégia↔strategy. O subitem mora em 'F2.1.1 — Identificação da Fonte' (spec.md:129-136), e o item 9 é defensável. É controle CIRCULAR"
+     }
+    ],
+    "controles_negativos": [
+     {
+      "subitem": "F0.2.1–F0.2.5",
+      "rotulo": "Plataforma, Número, URL, Data e Status do registro",
+      "item": "2 Registration",
+      "por_que_esta_certo": "O texto oficial pede 'name of the registry (e.g., PROSPERO) and registration number'",
+      "fonte_da_verdade": "prisma-p.json, texto do item 2, e a auditoria adversarial do DEBT-130 (12/26 honestos)"
+     },
+     {
+      "subitem": "F7.3.1, F7.3.2",
+      "rotulo": "Sistema utilizado; Domínios avaliados",
+      "item": "17 Confidence in cumulative evidence",
+      "por_que_esta_certo": "O texto oficial pede 'how the strength of the body of evidence will be assessed (e.g., GRADE)'. É o mesmo subitem que é positivo no PRISMA 2020: o controle é por item, não por subitem",
+      "fonte_da_verdade": "prisma-p.json, item 17, e DEBT-130"
+     },
+     {
+      "subitem": "F0.1.8",
+      "rotulo": "Financiamento",
+      "item": "5a, 5b",
+      "por_que_esta_certo": "O texto pede 'sources of financial or other support' e 'name for the review funder'",
+      "fonte_da_verdade": "prisma-p.json e DEBT-130"
+     },
+     {
+      "subitem": "F7.1.2",
+      "rotulo": "Critério para síntese quantitativa",
+      "item": "15a",
+      "por_que_esta_certo": "O texto pede 'criteria under which study data will be quantitatively synthesized'",
+      "fonte_da_verdade": "prisma-p.json e DEBT-130"
+     }
+    ],
+    "lacunas_equiv": [
+     "amendments ↔ emendas",
+     "authors ↔ autores; contact ↔ contato; contributions ↔ contribuições",
+     "funder/sponsor/role ↔ financiador/patrocinador/papel",
+     "confidence/cumulative ↔ confiança (17)",
+     "management/records ↔ gestão/registros (11a). Homônimo 'registro'",
+     "outcomes/prioritization ↔ desfechos/priorização (F1.2.7 tem 'Outcomes' literal no rótulo da 3ª coluna, que não é lida)",
+     "qualitative/quantitative ↔ qualitativa/quantitativa; analyses ↔ análises; meta(-bias) ↔ metaviés",
+     "update ↔ atualização; identification ↔ identificação",
+     "Classe 'encaixe' do DEBT-130: F0.1.5→1b, F0.1.6→3b, F0.1.5→4, F0.1.8/F0.1.9→5c, F1.3.2.5/F1.4.4→11a. Não é deslocamento: não usar nem como positivo nem como negativo"
+    ]
+   },
+   {
+    "padrao": "prisma-s (declarado pelo prisma-sr e, por cópia, pelo scoping-prisma-scr)",
+    "itens": 16,
+    "enunciados": "Campo text, em inglês, 16/16, do OSF y765x e da Tabela 1 do artigo, conferidos por script. O ANTIGO transcrito no teste (prisma_s_scr_oficial.test.ts:81-98) confere com git show d64067d. Os rótulos da spec não mudaram desde d64067d (196 iguais). Reconferi pelo dist: dos 70 pares antigos, 65 são conferidos, 5 não (F1.2.x) e 2 suspeitos. Classificação dos 58 mudados: 43 SEGUROS, porque o enunciado oficial do item declarado exclui o subitem (12 deles retirados, sem destino no PRISMA-S; 5 são F1.2.x, que o extrator não lê); 7 PLAUSÍVEIS, apoiados no E&E ou no PRISMA 2020, fora do repositório; 8 INCERTOS.",
+    "itens_sem_enunciado": [],
+    "controles_positivos": [
+     {
+      "subitem": "F2.1.2.3",
+      "rotulo": "Restrição de idioma aplicada",
+      "apontava": "S11 Prior work",
+      "pertence": "S9 Limits and restrictions",
+      "fonte_da_verdade": "SEGURO. Enunciados do S11 ('search strategies from other literature reviews...') e do S9 ('language'). DEBT-128 e DEBT-149"
+     },
+     {
+      "subitem": "F1.3.1.6, F1.3.2.4",
+      "rotulo": "Idiomas aceitos; Idioma",
+      "apontava": "S11",
+      "pertence": "Nenhum item do PRISMA-S (elegibilidade, PRISMA 2020 item 5): retirados",
+      "fonte_da_verdade": "SEGURO quanto ao erro (enunciado do S11). O retiro está na nota do mapeamento, sessão 1"
+     },
+     {
+      "subitem": "F1.4.3, F2.1.2.5",
+      "rotulo": "Vocabulários controlados definidos; Vocabulários controlados usados",
+      "apontava": "S13 Dates of searches",
+      "pertence": "S8 Full search strategies",
+      "fonte_da_verdade": "SEGURO. O S13 pede 'the date when the last search occurred'. DEBT-149"
+     },
+     {
+      "subitem": "F8.3.7",
+      "rotulo": "Métodos — Estratégia de busca",
+      "apontava": "S13",
+      "pertence": "S8, S9",
+      "fonte_da_verdade": "PLAUSÍVEL. Listado no DEBT-149, mas a data mora em F8.3.6 por causa do item 6 do PRISMA 2020, que não está no repositório"
+     },
+     {
+      "subitem": "F2.1.2.1",
+      "rotulo": "Data e hora da busca",
+      "apontava": "S9 Limits",
+      "pertence": "S13 (e S12)",
+      "fonte_da_verdade": "SEGURO pelos enunciados de S9 e S13"
+     },
+     {
+      "subitem": "F2.1.2.2",
+      "rotulo": "Abrangência cronológica aplicada",
+      "apontava": "S10 Search filters",
+      "pertence": "S9 ('date or time period')",
+      "fonte_da_verdade": "SEGURO pelos enunciados de S9 e S10"
+     },
+     {
+      "subitem": "F1.3.1.5",
+      "rotulo": "Período de publicação",
+      "apontava": "S10",
+      "pertence": "Nenhum: retirado",
+      "fonte_da_verdade": "SEGURO (S10 pede 'published search filters'). Nota do mapeamento"
+     },
+     {
+      "subitem": "F2.1.2.7",
+      "rotulo": "Filtros adicionais aplicados",
+      "apontava": "S14 Peer review",
+      "pertence": "S9",
+      "fonte_da_verdade": "SEGURO. O S14 é 'Describe any search peer review process'. ATENÇÃO: a descrição do subitem diz 'Revisado por pares'"
+     },
+     {
+      "subitem": "F1.2.2, F1.2.4, F1.2.6, F1.2.8, F1.2.10, F1.4.1, F1.4.2, F2.1.2.4, F2.1.2.6",
+      "rotulo": "Termos de busca — P/I/C/O/S; String por repositório; Operadores booleanos definidos; String exata executada; Termos livres usados",
+      "apontava": "S12 Updates",
+      "pertence": "S8 (F1.2.10 também S10)",
+      "fonte_da_verdade": "SEGURO. Enunciados do S12 ('methods used to update') e do S8 ('copied and pasted exactly as run'). Os 5 F1.2.x NÃO são conferíveis hoje: o rótulo lido é a letra P/I/C/O/S"
+     },
+     {
+      "subitem": "F2.1.3.1",
+      "rotulo": "Total de resultados brutos",
+      "apontava": "S12",
+      "pertence": "S15 Total Records",
+      "fonte_da_verdade": "SEGURO. Já acusado, com sugestão S15 correta"
+     },
+     {
+      "subitem": "F1.4.4, F2.1.3.2, F2.1.3.3",
+      "rotulo": "Aprovação do pesquisador; Formato de exportação; Identificador do arquivo exportado",
+      "apontava": "S12",
+      "pertence": "Nenhum: retirados",
+      "fonte_da_verdade": "SEGURO quanto ao erro (S12). Nota do mapeamento"
+     },
+     {
+      "subitem": "F1.4.5",
+      "rotulo": "Versão da string",
+      "apontava": "S12",
+      "pertence": "Nenhum: retirado",
+      "fonte_da_verdade": "PLAUSÍVEL: 'controle de alterações' não é método de atualização; leitura da sessão 1"
+     },
+     {
+      "subitem": "F1.3.2.5, F3.1.1, F3.1.2, F3.1.3, F3.1.4, F3.1.5, F3.1.9, F3.1.10",
+      "rotulo": "Duplicatas; Método de deduplicação; Critério nível 1–4; Registro de cada par; Conflitos para decisão manual",
+      "apontava": "S15 Total Records",
+      "pertence": "S16 Deduplication",
+      "fonte_da_verdade": "SEGURO pelos enunciados de S15 e S16"
+     },
+     {
+      "subitem": "F3.1.7, F3.1.8",
+      "rotulo": "Total de duplicatas removidas; Total após deduplicação",
+      "apontava": "S15",
+      "pertence": "Nenhum: o fluxograma do PRISMA 2020",
+      "fonte_da_verdade": "PLAUSÍVEL: o E&E do PRISMA-S foi citado pela sessão 1 e não está no repositório. O rótulo 'Total' casa lexicamente com o S15"
+     },
+     {
+      "subitem": "F1.3.2.6, F2.1.3.4, F4.2.2, F8.1.7",
+      "rotulo": "Texto completo indisponível; Registros não recuperados; Total não recuperado; fulltext_not_retrieved",
+      "apontava": "S16 Deduplication",
+      "pertence": "Nenhum item do PRISMA-S (PRISMA 2020 item 16): retirados",
+      "fonte_da_verdade": "SEGURO quanto ao erro (S16). F4.2.2 já é acusado, mas com sugestão ERRADA (S15)"
+     },
+     {
+      "subitem": "F2.2.6",
+      "rotulo": "Especialistas contatados",
+      "apontava": "S5 Citation searching",
+      "pertence": "S6 Contacts",
+      "fonte_da_verdade": "SEGURO. S6: 'contacting authors, experts'"
+     },
+     {
+      "subitem": "F2.2.7",
+      "rotulo": "Listas de referências verificadas",
+      "apontava": "S6 Contacts",
+      "pertence": "S5",
+      "fonte_da_verdade": "SEGURO. S5: 'browsing reference lists'"
+     },
+     {
+      "subitem": "F2.2.4",
+      "rotulo": "Rastreamento de citações",
+      "apontava": "S4 Online resources and browsing",
+      "pertence": "S5",
+      "fonte_da_verdade": "SEGURO pelo enunciado do S5"
+     },
+     {
+      "subitem": "F2.2.2, F2.2.3",
+      "rotulo": "Literatura cinzenta — strings; Literatura cinzenta — resultados",
+      "apontava": "S3 Study registries",
+      "pertence": "S4/S8; S15",
+      "fonte_da_verdade": "SEGURO. S3: 'List any study registries searched'"
+     },
+     {
+      "subitem": "F2.1.1.5, F2.1.1.6",
+      "rotulo": "Interface utilizada; Campos pesquisados",
+      "apontava": "S7 Other methods",
+      "pertence": "S1/S2 ('stating the platform'); S8",
+      "fonte_da_verdade": "SEGURO pelos enunciados"
+     },
+     {
+      "subitem": "F2.1.1.7, F2.1.1.4",
+      "rotulo": "Limitações de acesso; Camada na estratégia",
+      "apontava": "S8; S1",
+      "pertence": "Nenhum: retirados",
+      "fonte_da_verdade": "SEGURO quanto ao erro (S8, S1). Nota do mapeamento"
+     },
+     {
+      "subitem": "F2.1.2.9, F8.3.6 (em S8 e S9)",
+      "rotulo": "Notas de limitações; Métodos — Fontes de informação",
+      "apontava": "S8; S8 e S9",
+      "pertence": "Nenhum; F8.3.6 fica só em S1, S3–S6 e S13",
+      "fonte_da_verdade": "PLAUSÍVEL: leitura da sessão 1, sem citação própria"
+     },
+     {
+      "subitem": "F2.1.1.2 (S1, S2, S4), F8.3.6 (S2, S7), F2.2.1 (S3), F8.3.7 (S12, S14)",
+      "rotulo": "Tipo de fonte; Métodos — Fontes de informação; Literatura cinzenta — fontes; Métodos — Estratégia de busca",
+      "apontava": "S1/S2/S4; S2/S7; S3; S12/S14",
+      "pertence": "INCERTO",
+      "fonte_da_verdade": "Só a decisão da sessão 1. Registro de ensaio pode ser literatura cinzenta; a seção de estratégia do manuscrito pode relatar revisão por pares e atualização; S2 e S7 estão declarados parciais. Não usar"
+     }
+    ],
+    "controles_negativos": [
+     {
+      "subitem": "F2.1.2.4",
+      "rotulo": "String exata executada",
+      "item": "S8",
+      "por_que_esta_certo": "'copied and pasted exactly as run'",
+      "fonte_da_verdade": "Enunciado oficial (prisma-s.json) e remapeamento do DEBT-128"
+     },
+     {
+      "subitem": "F2.1.2.1",
+      "rotulo": "Data e hora da busca",
+      "item": "S13",
+      "por_que_esta_certo": "'provide the date when the last search occurred'",
+      "fonte_da_verdade": "Enunciado oficial e DEBT-128"
+     },
+     {
+      "subitem": "F2.2.6; F2.2.7; F2.2.4",
+      "rotulo": "Especialistas contatados; Listas de referências verificadas; Rastreamento de citações",
+      "item": "S6; S5; S5",
+      "por_que_esta_certo": "'contacting authors, experts'; 'browsing reference lists'; 'cited or citing references'",
+      "fonte_da_verdade": "Enunciado oficial e DEBT-128"
+     },
+     {
+      "subitem": "F2.1.1.5",
+      "rotulo": "Interface utilizada",
+      "item": "S1",
+      "por_que_esta_certo": "'stating the platform for each'",
+      "fonte_da_verdade": "Enunciado oficial"
+     },
+     {
+      "subitem": "F2.1.2.2, F2.1.2.3",
+      "rotulo": "Abrangência cronológica aplicada; Restrição de idioma aplicada",
+      "item": "S9",
+      "por_que_esta_certo": "'(e.g., date or time period, language...)'",
+      "fonte_da_verdade": "Enunciado oficial"
+     },
+     {
+      "subitem": "F2.1.3.1; F3.1.1",
+      "rotulo": "Total de resultados brutos; Método de deduplicação",
+      "item": "S15; S16",
+      "por_que_esta_certo": "'total number of records identified from each database'; 'processes and any software used to deduplicate'",
+      "fonte_da_verdade": "Enunciado oficial"
+     }
+    ],
+    "lacunas_equiv": [
+     "database(s) ↔ base(s); name ↔ nome; platform ↔ plataforma/interface (homônimo: 'Plataforma de registro', F0.2.1)",
+     "registries/records ↔ registro(s): homônimo triplo. O EQUIV só tem registro→registration, e 'registros' plural não casa",
+     "online resources/browsing/print ↔ busca manual/folhear",
+     "citation/citing/cited/references ↔ citações/referências",
+     "contacts/contacting/experts ↔ contato/contatados/especialistas",
+     "limits/restrictions ↔ limites/restrição (homônimo: 'Limitações de acesso', 'Notas de limitações')",
+     "filters ↔ filtros",
+     "prior work/previous reviews/reused ↔ trabalho prévio/revisões anteriores/reutilizar (F0.3.2 NÃO é S11)",
+     "updates/rerunning/alerts ↔ atualização/reexecução/alerta",
+     "dates/date ↔ data: homônimo de 'data' (EN 'dados'); os dois estão em VAZIAS",
+     "peer review ↔ revisão por pares",
+     "deduplication/deduplicate ↔ deduplicação/duplicatas",
+     "inflexão: busca→search não alcança searching/searches (S2, S5, S13); estrategia→strategy não alcança strategies (S8)",
+     "methods (S7) e multi; 'total' casa por identidade e não é lacuna"
+    ]
+   },
+   {
+    "padrao": "prisma-scr (declarado pelo scoping-prisma-scr)",
+    "itens": 22,
+    "enunciados": "Campo text, em inglês, 22/22, do PDF oficial (SHA 1b70ecd1…). Os títulos 7, 9, 10 e 12 levam símbolos de rodapé. Há títulos repetidos: 9 e 14 ('Selection of sources of evidence'), 13 e 18 ('Synthesis of results'). Os rótulos vêm da spec do prisma-sr, por extends. Pelo dist: 4 suspeitos e 11 não conferidos.",
+    "itens_sem_enunciado": [],
+    "controles_positivos": [
+     {
+      "subitem": "—",
+      "rotulo": "—",
+      "apontava": "—",
+      "pertence": "—",
+      "fonte_da_verdade": "NENHUM no material. O mapeamento é novo (sessão 1) e não tem histórico de deslocamento. Controle positivo aqui só plantado: INCERTO"
+     }
+    ],
+    "controles_negativos": [
+     {
+      "subitem": "F2.1.2.1",
+      "rotulo": "Data e hora da busca",
+      "item": "7 Information sources",
+      "por_que_esta_certo": "O item 7 pede 'as well as the date the most recent search was executed'. O falsificador sugere 8 porque busca→search e o título do 8 é só 'Search'",
+      "fonte_da_verdade": "Texto do item 7 em prisma-scr.json; nota do mapeamento; DEBT-149; conferência da sessão 1 (PLANO_sessoes:339-345)"
+     },
+     {
+      "subitem": "F2.2.5",
+      "rotulo": "Busca manual em periódicos",
+      "item": "7",
+      "por_que_esta_certo": "Periódico folheado é fonte de informação ('Describe all information sources'); o 8 é a estratégia ELETRÔNICA. No PRISMA-S, o mesmo subitem está no S4 ('print source purposefully... browsed (e.g., tables of contents)'), seção INFORMATION SOURCES",
+      "fonte_da_verdade": "Textos dos itens 7 e 8, DEBT-149 e conferência da sessão 1"
+     },
+     {
+      "subitem": "F5.2.5.1",
+      "rotulo": "Financiamento do estudo",
+      "item": "11 Data items (e também 22)",
+      "por_que_esta_certo": "Toda variável da F5.2 é item de dado ('List and define all variables'). O item sugerido (22) TAMBÉM está declarado e também está certo ('sources of funding for the included sources of evidence')",
+      "fonte_da_verdade": "Textos dos itens 11 e 22, DEBT-149 e conferência da sessão 1"
+     },
+     {
+      "subitem": "F8.1.5",
+      "rotulo": "title_abstract_excluded",
+      "item": "14 Selection of sources of evidence",
+      "por_que_esta_certo": "O 14 pede 'numbers of sources of evidence screened... with reasons for exclusions'. O nome da variável, em inglês, casa por identidade com o item 1 'Title'",
+      "fonte_da_verdade": "Texto do item 14, DEBT-149 e conferência da sessão 1"
+     },
+     {
+      "subitem": "F0.1.8; F5.2.5.1",
+      "rotulo": "Financiamento; Financiamento do estudo",
+      "item": "22 Funding",
+      "por_que_esta_certo": "'sources of funding for the scoping review' / 'for the included sources of evidence'",
+      "fonte_da_verdade": "Texto do item 22 e mapeamento do DEBT-055. O acompanhamento não conferiu par a par: força média"
+     },
+     {
+      "subitem": "F0.2.2",
+      "rotulo": "Número de registro",
+      "item": "5 Protocol and registration",
+      "por_que_esta_certo": "'including the registration number'",
+      "fonte_da_verdade": "Texto do item 5 e DEBT-055 (força média)"
+     },
+     {
+      "subitem": "F2.1.2.4; F2.1.2.2",
+      "rotulo": "String exata executada; Abrangência cronológica aplicada",
+      "item": "8; 7 e 8",
+      "por_que_esta_certo": "'full electronic search strategy... such that it could be repeated'; 'databases with dates of coverage' e 'including any limits used'",
+      "fonte_da_verdade": "Textos dos itens 7 e 8 e DEBT-055 (força média)"
+     }
+    ],
+    "lacunas_equiv": [
+     "critical appraisal ↔ avaliação crítica ('avaliacao' e 'assessment' estão em VAZIAS)",
+     "charting/charted ↔ mapeamento/extração ('dados'/'data' em VAZIAS: o item 10 fica só com 'charting')",
+     "structured summary ↔ resumo estruturado (o EQUIV só tem resumo→abstract)",
+     "summary ↔ síntese/resumo (19)",
+     "conclusions ↔ conclusões; limitations ↔ limitações (homônimo com as limitações de busca de F2.1.1.7/F2.1.2.9)",
+     "information ↔ informação; criteria ↔ critérios; rationale (removido); results ← resultado (assimétrico); within"
+    ]
+   },
+   {
+    "padrao": "raise-3",
+    "itens": 55,
+    "enunciados": "Campo text, em inglês, 55/55. NENHUM método o declara: o dist dá declarado_por [] e '0/55 declarado, sem método que o confira'. Não entra como controle.",
+    "itens_sem_enunciado": [],
+    "controles_positivos": [],
+    "controles_negativos": []
+   }
+  ],
+  "armadilhas": [
+   "Controle tirado do mapeamento conferido: o 'pertence' dos 58 do PRISMA-S e os negativos do PRISMA-S/ScR saem da mesma leitura da sessão 1 que o falsificador vai conferir. Só valem os pares em que o enunciado oficial, que está no repositório, sustenta o veredito (classe SEGURO). Os PLAUSÍVEIS dependem do E&E do PRISMA-S e do texto do PRISMA 2020, que não estão no repositório.",
+   "F2.1.1.4 do PRISMA-P (9→10): a verdade foi dada pelo próprio falsificador, por casamento léxico, sem registro no backlog nem no git, e o subitem é atributo da fonte (spec.md:129-136). É controle circular: premiaria o viés léxico.",
+   "F5.2.5.1/2/3 no PRISMA 2020: o item declarado está errado com certeza, mas o destino é contraditório entre o DEBT-012 (25/26/27) e a leitura da sessão 1 no ScR (variável da extração, que no PRISMA 2020 seria o 10b, sem texto no repositório). Exigir a acusação, não a sugestão.",
+   "Os positivos do PRISMA 2020 vivem no mapeamento ATUAL (não remapeado; DEBT-045 nas sessões 7+). Quando o remapeamento vier, somem; precisam ser congelados no teste, como o ANTIGO do PRISMA-S. No PRISMA 2020 o falsificador lê a coluna 'Item N' da spec E o covered_by (mapping_coherence.ts:301-314): duas fontes que concordam por construção.",
+   "Pares retirados (12 SEGUROS e 4 PLAUSÍVEIS do PRISMA-S, mais F8.3.27) não têm item de destino. A regra 'casa com exatamente UM outro' (mapping_coherence.ts:251) nunca os acusa, e F4.2.2→S16 é acusado hoje com sugestão errada (S15). Medir acusação e sugestão separadamente.",
+   "O rótulo efetivo de F1.2.x é a letra do PICOS (2ª coluna da tabela de 6 colunas, spec.md:72-83, lida em mapping_coherence.ts:329). Os 5 positivos F1.2.x do PRISMA-S e todos os pares F1.2.x ficam 'não conferidos'; um controle com eles mede o extrator, não o comparador. Também não conferíveis: F5.2.1.1, F8.3.23, F8.2.1 e F8.2.3.",
+   "Rótulos F8.1.x são nomes de variável em inglês snake_case e casam por identidade com títulos ingleses (title_abstract_excluded→'Title'). Os F8.2.x são snake_case em português.",
+   "Homônimos que um EQUIV ou uma comparação por enunciado vai acender: 'data' (date × dados, os dois em VAZIAS); 'registro' (record/registry/registration); 'limitações' (busca × Limitations da discussão); 'Plataforma de registro' × platform; a descrição de F2.1.2.7 traz 'Revisado por pares' (× S14); 'Critério nível N' (dedup) × Eligibility criteria; 'Justificativa', já removido.",
+   "Títulos gêmeos de método e resultado (ScR 9/14 e 13/18; PRISMA 2020 11/18, 13/20, 14/21, 15/22): pela regra de unicidade, F8.3.14→14 fica calado, e um deslocamento método↔resultado só aparece pelo enunciado, que o PRISMA 2020 não tem (0/48; só 15 e 22, fora do padrão, em sessao_2b/fontes_certeza.md).",
+   "Sem flexão nem plural, e o EQUIV é assimétrico (results→resultado sem a volta). Cuidado ao contar 'acusou' como poder quando quem casou foi uma identidade de palavra ('total', 'outcomes').",
+   "DEBT-151: no escopo, F1.3.1.2, F1.3.1.3 e F0.3.4 têm outro sentido no template (Conceito, Contexto, Objetivo). Controles do ScR com esses subitens são inválidos.",
+   "O PRISMA-S está copiado nos dois métodos: o mesmo par conta duas vezes no recall se a contagem for por método.",
+   "A classe 'encaixe/parcial' do DEBT-130 e as linhas parciais do PRISMA-S e do ScR não são deslocamento nem acerto pleno: fora dos dois conjuntos.",
+   "Os testes atuais fixam o 'SEM PODER' (prisma_s_scr_oficial.test.ts:105-116 e 161-169) e vão falhar quando houver poder. É reescrita esperada, não regressão.",
+   "Positivo do ScR não existe no material: plantar um deslocamento é desenho da 2c. Planta tirada do próprio mapeamento é mais fraca que um par histórico.",
+   "Conferir pelo dist (31/10 00:05, mais novo que o src), nunca pela tool MCP viva, que pode ser anterior às sessões 2a e 2b (nota do DEBT-140)."
+  ],
+  "resumo": "Fiz tudo só em leitura. Arquivos temporários em C:/Users/alqui/AppData/Local/Temp/claude/c--reviewbr/e5229a50-8b64-44b0-92d6-f34585b342d4/scratchpad/wf_2c/s2_controles/ (roda.mjs, antigo.mjs, pares_s.py, equiv.py).\n\nO que o dist mostra hoje:\n- PRISMA 2020: 15 suspeitos, todos deslocamentos de fato, embora o destino de F5.2.5.x seja contestado.\n- PRISMA-P e PRISMA-S: zero suspeito.\n- PRISMA-ScR: os 4 falsos positivos.\n- PRISMA-S com o mapeamento antigo: 2 de 58 acusados, e 5 pares nem conferidos (F1.2.x).\n\nControles positivos:\n- PRISMA-S: dos 58 pares mudados, 43 são seguros pelo enunciado oficial (12 deles retirados, sem destino no PRISMA-S; 5 não conferíveis), 7 plausíveis e 8 INCERTOS.\n- PRISMA 2020: 23 pares deslocados com fonte. O dist já acusa 15. Escapam F0.2.5, F7.3.1, F7.3.2, F8.3.14, F8.4.1, F8.4.2, F8.4.3 e F8.3.27, este com destino INCERTO.\n- PRISMA-P: F2.1.1.4 é circular, INCERTO.\n- PRISMA-ScR: nenhum positivo no material.\n\nControles negativos:\n- Os 4 falsos positivos do ScR, cada um sustentado pelo enunciado do repositório e pela conferência da sessão 1.\n- Pares sustentados por enunciado verbatim no PRISMA-S, no ScR, no PRISMA-P e no PRISMA 2020 (itens 15 e 22, em fontes_certeza.md).\n\nO que falta para comparar enunciados:\n- O PRISMA 2020 não tem nenhum enunciado no padrão. Os 21 subitens têm só título derivado do item.\n- O EQUIV não cobre nenhum conceito dos títulos do PRISMA-S, salvo 'search'. Também não trata flexão, plural nem os homônimos.\n- O raise-3 não é declarado por método nenhum."
+ }
+}

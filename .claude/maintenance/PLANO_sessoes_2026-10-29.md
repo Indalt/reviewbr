@@ -82,11 +82,11 @@ Consequências para ler o disco sem se enganar:
 | 7+ | O resto da reclassificação | 19 declarações e consertos restantes; assimilação de métodos validados (JBI, GRADE/CERQual, exploratório…) | sessões 1–6 | um bloco por sessão, na ordem do arquivo de reclassificação |
 | depois | Fase de testes do sistema e análise do trabalho | sequência decidida pelo Vicente em 27/09 (DEC-42 do `DECISOES_chat_a_conferir.md`); critério de entrada registrado em 03/10 (`DECISOES_2026-10-03.md`), a reconferir ao chegar lá | sessões 1–7+ | a definir |
 
-**Estado:** sessões 0 (29/10/2026), 1 e 2a (30/10/2026) fechadas, cada uma com a carta na sua seção e
-conferida pelo acompanhamento. A sessão 2 virou quatro: três pela decisão do Vicente sobre o DEBT-149, e a 2a
-fechou DIVIDIDA pela regra da janela (DEBT-142 resolvido no núcleo) — o item 3 dela ganhou sessão própria, a
-2b, porque o falsificador sozinho ocupa uma janela; ele passou à 2c, e o escopo completo à 2d. Prompt da 2b
-pronto, na seção dela.
+**Estado:** sessões 0 (29/10/2026), 1, 2a (30/10/2026) e 2b (31/10/2026) fechadas, cada uma com a carta na sua
+seção e conferida pelo acompanhamento. A sessão 2 virou quatro: três pela decisão do Vicente sobre o DEBT-149, e
+a 2a fechou DIVIDIDA pela regra da janela — o item 3 dela ganhou a 2b; o falsificador é a 2c, e o escopo
+completo, a 2d. **2c em preparo:** o material medido está em `sessao_2c/preparo/` (LEIAME.md), e o prompt
+espera uma decisão do Vicente — o que "sem poder" faz depois da 2c (seção da 2c, no fim deste arquivo).
 
 ### Modelo e esforço de cada sessão (calculado em 29/10/2026)
 
@@ -103,7 +103,7 @@ janela de 5h, sem contar outro projeto aberto na mesma janela).
 | 1 | max | não | 40–60% | leitura do checklist oficial e mapeamento contra a norma; o falsificador só confere em parte |
 | 2a | max | não | 60–80% (medido: 4,5 M ≈ 40–48% só com os itens 1 e 2; a janela foi a 81–98% com outro projeto em paralelo) | DEBT-142 muda onde mapeamento e declarações moram e é pré-requisito do DEBT-045/014 e da sessão 6 |
 | 2b | max | não | 40–60% | primeiro uso do item condicional nos dois métodos; a certeza da evidência pede a leitura da fonte antes de mexer no denominador |
-| 2c | max | não | ~100% — uma janela inteira | o falsificador é o que impede o mapeamento de mentir; precisa provar poder com controle positivo |
+| 2c | max | não | 100–150% — planejar duas janelas (o preparo de 31/10 achou zod tirando o enunciado, dois sentidos no `com_poder`, PRISMA 2020 sem enunciado e 6 arquivos de teste a reescrever) | o falsificador é o que impede o mapeamento de mentir; precisa provar poder com controle positivo |
 | 2d | max | não na execução; revisão independente depois, se aprovada | 60–100% | o escopo vira método completo: spec e mapeamento próprios |
 | 3 | max | não | 40–60% | funil e gates: o que o export bloqueia e o que os manifests dizem dos gates |
 | 4 | max | não | 40–60% | trilha de auditoria da busca (log PRISMA-S), critério de parada (saturação) e o que a dedup tira |
@@ -633,3 +633,30 @@ Para o acompanhamento:
       pede de toda revisão, e o CERQual é de síntese qualitativa.
 Próxima sessão: 2c — falsificador com poder (DEBT-149).
 ```
+
+**Conferência do acompanhamento (31/10/2026) — aceita.** Refeito, não lido da carta: suíte 400/400 em 35
+arquivos; build em dia (a 2b não mexeu em `src/`); `git status` limpo e igual ao origin; retrato do
+`check_standard_coverage` refeito contra o dist de hoje: 0 diferença do `sessao_2b/retrato_depois.json`; audit
+válido, 152 achados (54/4/78/16); nenhum arquivo de `reviewbr/projects/` alterado desde 30/10 13:58. Com dois
+agentes independentes (resultado em `sessao_2c/preparo/resultado_agentes.json`, chaves `fonte` e `diff`): a
+leitura de fonte se sustenta — as 4 fontes, baixadas de novo, têm o mesmo SHA-256, os 14 trechos conferem e
+cada um está na fonte a que é atribuído, e o PRISMA 2020 não tem regra geral de "não aplicável" que mude a
+modelagem; os 9 itens da saída verificável estão cumpridos, e o teste do DEBT-150 cai nas 4 mutações tentadas.
+Nenhum defeito novo. Uma MENOR já registrada pela própria 2b (a F7.3 herdada pelo escopo cita a condição do
+prisma-sr — DEBT-151, 2d) e cinco notas para a parte 2 do DEBT-008, gravadas nele (a condição de certeza não
+tem leitor nem aviso; texto da tool vago para condição sem item; etiqueta [NÃO COBERTO] com dois sentidos;
+F7.3.2–4 com "nenhuma"; um teste que passa por construção). **Do pesquisador**, no chat de cada projeto de
+escopo: responder `avaliacao_critica` pela tool, com o que o protocolo travado previu.
+
+## Sessão 2c — em preparo (31/10/2026)
+
+Material do acompanhamento, medido por 4 agentes em só leitura: `.claude/maintenance/sessao_2c/preparo/`
+(LEIAME.md, scripts e resultado bruto). O que muda o desenho: o falsificador acusa de 3% a 14% dos deslocamentos
+plantados, e há classe de erro sem âncora de palavra (o S13); com o controle positivo honesto, a maioria dos
+padrões ficará "sem poder" — e hoje "sem poder" é erro (`valid: false`, F8 bloqueada) e zera o fundamento por
+etapa. **Decisão pendente do Vicente:** o que "sem poder" faz depois da 2c — avisa (o relatório diz quanto a
+conferência enxerga; reprova só a evidência de erro: omissão, suspeito sem explicação, título fora da fonte) ou
+reprova (toda revisão para na F8 até haver poder). Esclarecido pelo acompanhamento, autor do texto da opção
+"Dar poder já": "por padrão" quer dizer por norma — cada padrão com as suas equivalências e o seu controle,
+tirado de deslocamento conhecido lido no enunciado oficial, nunca escolhido pelo próprio código. O prompt da
+2c entra aqui quando a decisão vier.
