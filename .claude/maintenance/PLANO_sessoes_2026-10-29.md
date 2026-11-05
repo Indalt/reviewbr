@@ -45,6 +45,37 @@
   consertar"*; DEC-M3 *"arquivar como superado"*; DEC-09 *"ja existe como mcp server, mas quero sim com
   node."* (`DEBT-147`). Resolução item a item no §7 do próprio arquivo.
 
+## Decisões de 31/10 a 05/11/2026 (registradas)
+
+Vale o texto aprovado em `REVISAO_decisoes_2026-10-31.md` (parte A, com os vereditos no topo, e parte B) e,
+para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cada uma.
+- **A1 a A9 (31/10 e 05/11).** O que cada uma trata:
+  - A1: o método do ReviewBR e as trilhas das metodologias.
+  - A2: o método do ReviewBR descrito como se descreve uma metodologia, com fundamentos na filosofia da ciência.
+  - A3: duas camadas, o método do ReviewBR e a metodologia escolhida. "Campo da trilha" é sempre campo da
+    metodologia escolhida.
+  - A4: campo vazio nem sempre é erro.
+  - A5: script e agente erram. O que produzem é revisado, e conferidor só vale como prova com teste de resposta
+    conhecida.
+  - A6: metodologia validada não se reverifica. Verifica-se a nossa transcrição dela, ao assimilar, e o estudo,
+    a cada uso.
+  - A7: o propósito do ReviewBR é aplicar a metodologia escolhida com certeza científica e de forma publicável,
+    como um guia; o simples uso educa o pesquisador.
+  - A8: estudo falso como controle na fase de testes.
+  - A9: assimilar é tarefa de transcrição precisa e descrição.
+- **B1 e B2 (05/11): a 2c redefinida.**
+  - A conferência por palavras sai da trava.
+  - A transcrição passa a ser conferida na assimilação, por leitura documentada, com conferidor testado e
+    segunda leitura independente.
+  - O Vicente revisa só as divergências.
+  - Redação no DEBT-149.
+- **D14 (04 e 05/11): a revisão de escopo.**
+  - Cada metodologia de revisão de escopo consolidada e validada pode ser assimilada como método próprio.
+    Pode haver mais de uma.
+  - Nenhuma herda a especificação do prisma-sr.
+  - Redação no DEBT-151.
+- **Regra de registro (31/10):** decisão vai ao disco em forma precisa (item 4 do "Como trabalhar").
+
 ## Contexto que desfaz ambiguidades: o sistema mudou DURANTE a troca de computador
 
 Registro pedido pelo Vicente em 29/10/2026. A manutenção do ReviewBR não parou durante a troca de PC, e por
@@ -73,32 +104,27 @@ Consequências para ler o disco sem se enganar:
 | 1 | Escopo e PRISMA-S | 1 (DEBT-055), 2 (DEBT-128) | sessão 0 | `check_standard_coverage` do PRISMA-ScR sem omissão silenciosa; PRISMA-S com `titulos_oficiais: true` e falsificação com poder |
 | 2a | Declarações por método — o núcleo | DEBT-142 (mapeamento e declarações por método; item condicional); DEBT-150 e DEBT-008 passaram à 2b pela regra da janela | sessão 1 | mapeamento e declarações lidos do método; `check_standard_coverage` idêntico antes e depois, salvo o deliberado; item condicional respondido pelo projeto; testes |
 | 2b | Itens condicionais em uso | DEBT-150 (avaliação crítica no escopo), DEBT-008 (certeza da evidência: declarar; a assimilação vai às 7+), DEBT-152 (frases velhas em agentes e skill) | 2a | condição declarada pelo método, perguntada na F1 e respondida pelo projeto, com o efeito no denominador que a fonte manda, com teste; F7.3 declarada [NÃO COBERTO] por tool; `prisma-rigor-gates` sem a certeza que nenhum gate confere; agentes sem as frases velhas |
-| 2c | Falsificador com poder | DEBT-149 — decisão de 30/10: a conferência automática do mapeamento passa a dizer o que enxerga e é melhorada (redação no achado) | 2b | `com_poder` só com controle positivo plantado; suspeito lido e descartado registrado e fora da reprovação; comparação também com o enunciado, com equivalências português–inglês por padrão; acusa os deslocamentos conhecidos e não acusa os 4 falsos positivos do PRISMA-ScR |
-| 2d | Escopo como método completo e RAISE 3 | DEBT-151 (com o ponto 2 do DEBT-142: scoping com spec e mapeamento próprios), 11 (DEBT-094) | 2c | `scoping-prisma-scr` sem `extends`, com o PCC em subitens próprios e o PRISMA-ScR mapeado neles; RAISE 3 declarado como condicional nos métodos que usam IA |
+| 2c | Conferência do mapeamento: fora da trava; leitura documentada | DEBT-149 — decisão de 05/11 (B1, B2), que substitui os pontos (1) e (4) da de 30/10 | 2b | suspeito da conferência por palavras não reprova, e o relatório diz o que ela é e quanto enxerga; o porquê de cada etapa não depende dela; PRISMA-ScR do escopo `valid: true` sem mexer no mapeamento; leitura documentada com conferidor testado; PRISMA-S do prisma-sr lido e relido de forma independente, com as divergências levadas ao Vicente |
+| M | Método do ReviewBR — descrição | A1–A3, A7, A9 (31/10–05/11); D09 e D17 da revisão de decisões | 2c (posição proposta pelo acompanhamento, a confirmar: antes da 2d e da 6, que dependem dela) | o método da ferramenta descrito como metodologia — objetivo, fundamentos na filosofia da ciência, princípios, etapas, critérios de validade e limites —, aprovado pelo Vicente |
+| 2d | Revisão de escopo como método próprio, e RAISE 3 | DEBT-151 — decisão de 05/11 (D14); 11 (DEBT-094, com o D07 da revisão de decisões respondido antes) | 2c (e M, se confirmada antes) | a primeira metodologia de revisão de escopo consolidada e validada assimilada como método próprio, com transcrição precisa e descrição, sem `extends`; o PRISMA-ScR mapeado na trilha nova por leitura documentada; caminho de migração dos dois projetos de escopo; RAISE 3 conforme a resposta ao D07 |
 | 3 | Funil e gates | 3 (DEBT-138), 4 (DEBT-070), DEBT-071/043/105 | — | export bloqueia funil divergente; manifests dizem a verdade sobre os gates |
 | 4 | Busca e triagem | 5 (DEBT-056), 6 (DEBT-021), 7 (DEBT-025) | — | log PRISMA-S gravado por código; saturação lê o disco; dedup com DOI/acentos e nível 4 só sinalizando |
 | 5 | Leitura e governança | 8 (DEBT-031), 9 (DEBT-018), 12 (DEBT-016), DEBT-141 | — | citação com página; trava só pelo `project_state.json`; aviso na tool de `targets`; atualização do catálogo sem apagar campos |
-| 6 | Sair do esqueleto PRISMA | DEBT-137 (agentes e skills descritos por F0–F8), DEBT-134 (protocolo exigido de todo projeto), DEBT-136 (tabela de tipos duplicada), tabela F0–F8 do `conduct-review` | sessões 2a–2d | agentes descritos por papel; cada etapa do manifest diz que skill a executa; o que é do `prisma-sr` fica no `prisma-sr` |
+| 6 | Sair do esqueleto PRISMA | DEBT-137 (agentes e skills descritos por F0–F8), DEBT-134 (protocolo exigido de todo projeto), DEBT-136 (tabela de tipos duplicada), tabela F0–F8 do `conduct-review` | sessões 2a–2d e M | agentes descritos por papel; cada etapa do manifest diz que skill a executa; o que é do `prisma-sr` fica no `prisma-sr` |
 | 7+ | O resto da reclassificação | 19 declarações e consertos restantes; assimilação de métodos validados (JBI, GRADE/CERQual, exploratório…) | sessões 1–6 | um bloco por sessão, na ordem do arquivo de reclassificação |
 | depois | Fase de testes do sistema e análise do trabalho | sequência decidida pelo Vicente em 27/09 (DEC-42 do `DECISOES_chat_a_conferir.md`); critério de entrada registrado em 03/10 (`DECISOES_2026-10-03.md`), a reconferir ao chegar lá | sessões 1–7+ | a definir |
 
 **Estado:** sessões 0 (29/10/2026), 1, 2a (30/10/2026) e 2b (31/10/2026) fechadas, cada uma com a carta na sua
-seção e conferida pelo acompanhamento. A sessão 2 virou quatro: três pela decisão do Vicente sobre o DEBT-149, e
-a 2a fechou DIVIDIDA pela regra da janela — o item 3 dela ganhou a 2b; o falsificador é a 2c, e o escopo
-completo, a 2d. **2c em preparo:** o material medido está em `sessao_2c/preparo/` (LEIAME.md). Os
-comentários do Vicente em 31/10 levaram a uma redefinição proposta da 2c, e as considerações dele daquele dia
-estão em redação precisa, a conferir, em `REVISAO_decisoes_2026-10-31.md`; o prompt espera as duas decisões da
-parte B desse arquivo.
+seção e conferida pelo acompanhamento. Entre 31/10 e 05/11 o Vicente aprovou as considerações A1–A9 e redefiniu
+a 2c (B1, B2) e a 2d (D14); ver "Decisões de 31/10 a 05/11/2026", acima. **Próxima: 2c, com o prompt pronto na
+seção dela.** Ela abre quando o limite semanal permitir: em 31/10 estava em 96%, e a leitura é dele.
 
-**PAUSA desde 31/10/2026:** o limite semanal está em 96%, pela leitura do próprio Vicente, e nenhuma sessão abre
-antes de ele renovar. Nada estava rodando na pausa: as duas corridas de agentes terminaram e o trabalho está
-commitado. Respostas dele já registradas no `REVISAO_decisoes_2026-10-31.md`: A1 a A6 e A8 "ok"; A7 corrigido;
-A9 novo. Em 04/11 ele também respondeu ao D14 ("revisão de escopo deve ter suas próprias metodologias"), e
-falta conferir o plural; corrigiu de novo o A7; e a pergunta "quem verifica o verificador?" foi respondida pelo
-acompanhamento. Ainda pendentes: B1 e B2, que definem a 2c.
+Fica a confirmar a proposta de descrever o método do ReviewBR (M) antes da 2d. Pendentes que não bloqueiam a 2c:
+- as 41 decisões da lista D01–D41 (`revisao_decisoes_2026-10-31/lista_decisoes.md`), cada uma antes da sessão
+  em que pesa;
+- o D07, antes da 2d.
 
-**Par de calibração da régua:** ele leu 74% da janela de 5h quando o `--agora` dava 85% a 103% (9,75 M
-ponderado, 31/10 11:43 UTC). A régua do `CONTINUAR.md` §1 superestima e deve ser recalculada na volta.
+A régua do `--agora` foi recalibrada em 05/11: 10,0–13,5 M (`CONTINUAR.md` §1, item 6).
 
 ### Modelo e esforço de cada sessão (calculado em 29/10/2026)
 
@@ -115,8 +141,9 @@ janela de 5h, sem contar outro projeto aberto na mesma janela).
 | 1 | max | não | 40–60% | leitura do checklist oficial e mapeamento contra a norma; o falsificador só confere em parte |
 | 2a | max | não | 60–80% (medido: 4,5 M ≈ 40–48% só com os itens 1 e 2; a janela foi a 81–98% com outro projeto em paralelo) | DEBT-142 muda onde mapeamento e declarações moram e é pré-requisito do DEBT-045/014 e da sessão 6 |
 | 2b | max | não | 40–60% | primeiro uso do item condicional nos dois métodos; a certeza da evidência pede a leitura da fonte antes de mexer no denominador |
-| 2c | max | não | 100–150% — planejar duas janelas (o preparo de 31/10 achou zod tirando o enunciado, dois sentidos no `com_poder`, PRISMA 2020 sem enunciado e 6 arquivos de teste a reescrever) | o falsificador é o que impede o mapeamento de mentir; precisa provar poder com controle positivo |
-| 2d | max | não na execução; revisão independente depois, se aprovada | 60–100% | o escopo vira método completo: spec e mapeamento próprios |
+| 2c | max | não; um agente para a segunda leitura independente, aprovado pela decisão B2 (05/11) | 70–110% — planejar até duas janelas | tira a conferência fraca da trava sem fazer o relatório mentir, e cria a leitura documentada que vai conferir toda transcrição |
+| M | max | não | 60–100% por janela, com muita participação do Vicente; planejar duas | é a descrição que fundamenta o resto; os fundamentos na filosofia da ciência são leitura e decisão dele |
+| 2d | max | não; um agente para a segunda leitura do PRISMA-ScR | 100–150% — planejar duas janelas | assimilar uma metodologia de escopo com transcrição precisa e descrição, e migrar os dois projetos |
 | 3 | max | não | 40–60% | funil e gates: o que o export bloqueia e o que os manifests dizem dos gates |
 | 4 | max | não | 40–60% | trilha de auditoria da busca (log PRISMA-S), critério de parada (saturação) e o que a dedup tira |
 | 5 | max | não | 40–60% | o DEBT-018 mexe na trava do protocolo, com cuidado de compatibilidade com projetos antigos |
@@ -681,4 +708,100 @@ com alternativas. Depois, ainda em 31/10, ele pôs em dúvida reverificar metodo
 foco para a aplicação, isto é, para o estudo. Daí saiu uma redefinição proposta da 2c: a conferência por
 palavras sai da trava e vira ajuda na assimilação, e a transcrição de cada metodologia passa a ser conferida
 ao assimilar, por leitura documentada e revisada. Ela está em `REVISAO_decisoes_2026-10-31.md`, parte B, com
-duas decisões pendentes. O prompt da 2c entra aqui quando elas vierem.
+duas decisões pendentes. As duas vieram em 05/11 (B1 aprovada; B2, opção (a)), e o prompt está logo abaixo.
+
+## Sessão 2c — prompt de abertura
+
+Preparado no chat de acompanhamento em 05/11/2026. Cole num chat novo, ajuste o seletor pela primeira linha e
+apague-a antes de enviar:
+
+```
+>>> APAGUE ESTA LINHA ANTES DE ENVIAR — seletor: Opus 5.5 · esforço max · sem ultracode <<<
+Sessão 2c do .claude/maintenance/PLANO_sessoes_2026-10-29.md — Conferência do mapeamento: fora da trava, e
+leitura documentada.
+Modelo e esforço: Opus 5.5, max, sem ultracode; um agente para a segunda leitura independente, aprovado pelo
+Vicente (decisão B2, 05/11). Anote na carta.
+
+Este é o chat da sessão 2c: execute só ela. Decisões, dúvidas e a próxima sessão ficam no chat de
+acompanhamento. Furo do plano (algo que este prompt e o plano não decidem): registre pela tool, feche o passo
+com segurança e pare com "FURO DO PLANO — levar ao acompanhamento", em até 3 linhas.
+
+Abertura, conferindo e não lembrando: leia neste plano o "Como trabalhar" (atenção ao item 4: decisão gravada
+em forma precisa), as "Decisões de 31/10 a 05/11/2026", a carta e a conferência da 2b e as seções da 2c; leia
+as partes A e B de .claude/maintenance/REVISAO_decisoes_2026-10-31.md (textos aprovados) e
+.claude/maintenance/sessao_2c/preparo/LEIAME.md — mapa feito por agentes em 31/10: confira antes de usar. Rode a
+suíte (npx vitest run em reviewbr/reviewbr-mcp), git status, python .claude/maintenance/medir_esforco.py
+--agora (régua recalibrada em 05/11) e node .claude/maintenance/sessao_2a/le_audit.mjs
+DEBT-149,DEBT-145,DEBT-151 (FULL=1 para o texto inteiro). Não pergunte ao Vicente a porcentagem de uso.
+
+Já decidido, não perguntar de novo — o DEBT-149 tem a redação precisa (decisão de 05/11, que substitui os
+pontos 1 e 4 da de 30/10):
+(a) a conferência por palavras deixa de travar o estudo: suspeito dela não torna valid false; o relatório diz
+    o que ela é e quanto enxerga, com a medida e a fonte da medida; ela vira ajuda para quem assimila;
+(b) a transcrição de cada metodologia é conferida na assimilação, por leitura documentada: cada ponteiro (campo
+    da trilha → item da norma) traz o trecho do texto oficial do item que o justifica, e um conferidor testado
+    com resposta conhecida confere que o trecho é literal e daquele item;
+(c) uma segunda leitura independente, por agente que não vê a primeira nem o mapeamento atual, é comparada com
+    ela: onde concordam, vale; as divergências vão ao Vicente;
+(d) ficam da decisão de 30/10: suspeito examinado registrado (quem, quando, com que trecho), agora na
+    assimilação; e a trava da escolha de método (DEBT-145) considera só item esquecido.
+Fundamento: A5, A6 e A9 de 31/10 (REVISAO, parte A).
+
+Escopo, em ordem:
+1. Tirar da trava. Em standard_coverage.ts, suspeito da conferência (b) deixa de entrar nos erros; valid passa
+   a depender de omissão, título da fonte, legibilidade do mapeamento e declarações. O com_poder deixa de
+   afirmar capacidade: o relatório diz o que a conferência é e quanto enxerga, citando a medição (data e
+   script; a de 31/10 está em sessao_2c/preparo/). O porquê de cada etapa (itens_por_etapa) passa a depender só
+   de título oficial. Atualize os textos que mentiriam (premissa e limite em standard_coverage.ts, cabeçalho de
+   mapping_coherence.ts, descrição da tool em index.ts) e os consumidores: prisma-rigor-gates (:48-49, :60),
+   synthesis-manuscript (:22), analyst (:23, :27), conduct-review (:61), maintainer.md e system-audit. Os 4
+   suspeitos do PRISMA-ScR deixam de reprovar sem mexer no mapeamento.
+2. A leitura documentada. O schema da linha de mapeamento ganha, por ponteiro, o trecho literal do texto
+   oficial do item declarado; o StandardItemSchema guarda o enunciado (text); um serviço confere a literalidade
+   (só normalização de espaço), com teste de resposta conhecida: trecho de outro item e trecho alterado
+   recusados, trecho literal aceito. Suspeito examinado na assimilação fica registrado no mapeamento (quem,
+   quando, com que trecho).
+3. Primeira aplicação: o PRISMA-S do prisma-sr (16 itens, cerca de 53 ponteiros), cuja trilha não muda.
+   Primeira leitura pela sessão, com os trechos. Segunda leitura por um agente que recebe só os textos oficiais
+   do PRISMA-S e os campos da trilha do prisma-sr — sem a primeira leitura e sem o mapeamento atual — e devolve
+   o seu mapeamento com trechos, gravado no repositório. Compare: onde as duas concordam, vale (se diferem do
+   mapeamento atual, a correção entra, listada na carta); onde divergem, mantenha o atual e liste a divergência
+   para o Vicente num arquivo da sessão. Projete o custo do agente na abertura e anote na carta.
+4. DEBT-145: registre pela tool que a trava, quando existir, considera só item esquecido; não construa a trava.
+Não é desta sessão: o PRISMA-ScR e a cópia do PRISMA-S no escopo (a trilha do escopo será refeita na 2d, decisão
+D14 de 05/11); o PRISMA-P e o PRISMA 2020 (este precisa antes dos enunciados oficiais e do remapeamento do
+DEBT-045); a descrição do método do ReviewBR (sessão M).
+
+Armadilhas já conhecidas:
+1. O zod remove chave desconhecida: prove com teste que o trecho e o enunciado chegam ao serviço.
+2. O com_poder tem hoje dois sentidos (a conferência vale × o título é da fonte): separe antes de mudar, ou o
+   porquê de cada etapa some.
+3. Testes que fixam o comportamento atual vão mudar — reescrita, não regressão: prisma_s_scr_oficial (bloco SEM
+   PODER e os 4 falsos positivos), condicionais_em_uso (12/22 → 14/22), cobertura_verificavel,
+   declaracao_por_metodo, trilha_como_dado e mapping_coherence. Texto novo ganha asserção negativa: a frase
+   velha não pode passar verde.
+4. Independência da segunda leitura: o agente não vê a primeira nem o mapeamento; se vir, a leitura não é
+   independente e não vale. Script e agente erram (A5): o conferidor de literalidade só vale como prova depois
+   do teste de resposta conhecida.
+5. Grave o check_standard_coverage de todo padrão, por método, antes e depois (sessao_2a/retrato_cobertura.mjs
+   e compara_retratos.mjs, com DIR= numa pasta da sessão); o diff só pode trazer o deliberado, listado. A tool
+   MCP deste chat roda o dist da abertura: confira pelo dist recompilado.
+6. O PRISMA 2020 segue valid: false pelos 21 itens esquecidos (DEBT-014): é esperado e não é desta sessão.
+7. Não toque nos projetos em reviewbr/projects/; teste em repositório de brinquedo.
+8. Toda alteração passa pelo gate RV-11 (validate_system_change, com addresses) e todo achado pela tool, nunca
+   pelo JSON à mão. Decisão do Vicente que surgir vai em forma precisa (item 4 do "Como trabalhar").
+
+Saída verificável: suspeito da conferência por palavras não reprova, com teste; relatório sem afirmar
+capacidade, com a medida citada; o porquê de cada etapa continua saindo para padrão com título oficial (e passa
+a incluir os itens que só estavam fora por suspeito); PRISMA-ScR do escopo valid: true sem mudar o mapeamento;
+trecho literal por ponteiro no schema, com o conferidor testado; PRISMA-S do prisma-sr com os trechos, a segunda
+leitura independente gravada, as concordâncias aplicadas e as divergências listadas para o Vicente; DEBT-145
+atualizado; check_standard_coverage antes × depois só com o deliberado; DEBT-149 resolvido; suíte verde, build
+em dia, audit válido.
+
+Divisão: se a projeção passar de 75% da janela antes do item 3, feche no fim do item 2; o item 3 abre a sessão
+seguinte, antes da M e da 2d.
+
+Fechamento: escreva a carta da sessão 2c no plano, logo abaixo deste prompt (modelo "Carta de sessão"), commit
+e push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. A 75% estimados não comece passo novo.
+```

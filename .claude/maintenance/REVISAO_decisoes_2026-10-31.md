@@ -9,6 +9,14 @@
 > - **Texto proposto**.
 > - **Origem**: as palavras dele, só como fonte.
 > - **Precisão do acompanhamento**: o que é acréscimo nosso, para ele aprovar ou cortar.
+>
+> **Atualização de 05/11/2026:** as partes A e B estão aprovadas:
+> - A1 a A6 e A8, em 31/10;
+> - A7 na terceira versão, B1, B2 e o D14, em 05/11. O D14 inclui o plural: "pode haver mais que uma"
+>   metodologia de escopo, e mantém a premissa de só assimilar a consolidada e validada cientificamente.
+>
+> Os textos aprovados valem como fundamento até a descrição do método do ReviewBR (sessão M) absorvê-los. A
+> redação precisa de B1 e B2 está no DEBT-149, e a do D14 no DEBT-151. A parte C continua a conferir.
 
 ## A. Considerações e decisões do Vicente em 31/10/2026
 
@@ -175,6 +183,10 @@ campos. Essa transcrição já teve erros: 58 ponteiros no PRISMA-S e 23 no PRIS
 e não por falha da norma. Ela se verifica uma vez, ao assimilar ou ao mudar, e não a cada estudo.
 
 ### A7. O propósito da ferramenta: apresentar, guiar, ensinar
+
+> **Substituído.** Vale a terceira versão, aprovada em 05/11 e reproduzida no topo da parte A: o propósito é
+> aplicar a metodologia escolhida com certeza científica e de forma publicável, como um guia; o simples uso
+> educa o pesquisador. O texto abaixo fica só como histórico.
 
 **Estado:** a conferir.
 

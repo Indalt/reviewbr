@@ -58,7 +58,9 @@ TODOS = os.path.expanduser(r"~\.claude\projects")
 # 5% com 0,52 M. A faixa de +-10% cobre o arredondamento da porcentagem lida. Os pares que
 # discordam (setembro e a manha de 29/10) e o porque estao no CONTINUAR.md §1. Ao ganhar um
 # par novo, recalcule e atualize os dois lugares.
-REGUA_5H = (9.5e6, 11.5e6)
+# Par de 31/10 11:43Z: 74% com 9,60 M (~13,0 M para 100%), janela quase toda cache_r. Faixa
+# alargada em 05/11 para cobrir os tres pares; hipotese do cache_r a 0,05 no CONTINUAR.md §1, item 6.
+REGUA_5H = (10.0e6, 13.5e6)
 
 # A leitura EXATA do painel (barra de status global, 29/10/2026) foi retirada em 30/10: no
 # Antigravity a barra nunca rodou. Vale a estimativa, que e piso (CONTINUAR.md §1).

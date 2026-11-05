@@ -68,7 +68,16 @@
 >    provavelmente porque a janela real da conta não coincide com a que o script reconstrói.
 > 4. **A estimativa é piso:** o uso no claude.ai (web e app) não deixa transcrito aqui. Onde a
 >    regra diz 85% lidos, use 75% estimados.
-> 5. **Semanal:** um par só (18% em 29/10/2026, logo depois de um reset), ainda sem régua.
+> 5. **Semanal:** um par só (18% em 29/10/2026, logo depois de um reset), ainda sem régua. Em
+>    31/10 ele leu 96% da semana, depois de 4 sessões e do acompanhamento em 3 dias, somados ao
+>    Cultura Líquida.
+> 6. **Par de 31/10/2026 (recalibração de 05/11):** ele leu **74%** da janela de 5h às 11:43Z,
+>    com 9,60 M ponderado na janela reconstruída. Isso dá ~13,0 M para 100%, acima dos dois pares
+>    pequenos (~10,4 M). A janela era quase toda leitura de cache: 47 M de cache_r, 4,70 M dos
+>    9,60 M. Com o cache_r a 0,05, como o comentário do script já sugere para o Opus 5.5, ela daria
+>    7,25 M e ~9,8 M para 100%, de acordo com os pares pequenos. Hipótese ainda não confirmada:
+>    falta saber a composição daqueles pares. Até confirmar, a faixa do `--agora` passou a
+>    **10,0–13,5 M**, cobrindo os três pares.
 
 Calibrada com dois pontos reais desta conta (Claude Team):
 
