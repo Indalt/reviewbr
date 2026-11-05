@@ -119,6 +119,15 @@ seção e conferida pelo acompanhamento. Entre 31/10 e 05/11 o Vicente aprovou a
 a 2c (B1, B2) e a 2d (D14); ver "Decisões de 31/10 a 05/11/2026", acima. **Próxima: 2c, com o prompt pronto na
 seção dela.** Ela abre quando o limite semanal permitir: em 31/10 estava em 96%, e a leitura é dele.
 
+**Parada de 05/11 (tarde): a 2c espera cinco decisões.**
+- O Vicente apontou que a D14 virou achado e sessão (a 2d) sem ser problema, e pediu solução para esse caso e
+  para os parecidos.
+- A triagem dos 58 abertos pelo teste da DIRECAO §9 está em `triagem_backlog_2026-11-05/TRIAGEM.md`. É proposta
+  sem contestação, e nada foi aplicado.
+- As cinco decisões pedidas estão lá:
+  - a decisão 3 muda o prompt da 2c: sai o item 4, e o DEBT-149 fecha no item 1;
+  - a decisão 2 tira a 2d do plano.
+
 Fica a confirmar a proposta de descrever o método do ReviewBR (M) antes da 2d. Pendentes que não bloqueiam a 2c:
 - as 41 decisões da lista D01–D41 (`revisao_decisoes_2026-10-31/lista_decisoes.md`), cada uma antes da sessão
   em que pesa;
