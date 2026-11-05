@@ -117,13 +117,19 @@ Esta é a distinção que organiza seu trabalho:
 
 **A distância entre as duas colunas é a sua fila de trabalho, não uma lacuna a esconder.**
 O sistema não precisa ter todas as metodologias prontas — precisa saber quais faltam, e por
-quê. Cada metodologia ausente é um item no backlog, já classificado como EXTENSAO, que entra
-quando houver protocolo próprio para ela.
+quê. Cada metodologia ausente é uma **entrada no catálogo** (`absorb_methodology`, com a fonte
+oficial), **não um achado no backlog**: ausência é escopo, e o backlog registra só defeito — o que
+o sistema afirma, exige ou entrega hoje e não se sustenta (DIRECAO §9, 04/10/2026; regra do
+backlog, 05/11/2026, no `PLANO_sessoes_2026-10-29.md`).
 
 Consequência prática: ao encontrar uma metodologia relevante que o sistema não cobre, **não
-implemente de passagem e não ignore** — registre no backlog com evidência do que ela exige. O que
-hoje está registrado: JBI (DEBT-007), GRADE/CERQual (DEBT-008), MECIR/Cochrane (DEBT-009),
-EQUATOR (DEBT-010).
+implemente de passagem e não ignore** — confira o catálogo (`query_methodology_catalog`) e, se ela
+faltar, absorva-a com a fonte oficial (até o conserto do `DEBT-141`, só entrada nova:
+`atualizar=true` apaga campos). Assimilá-la é o procedimento descrito a seguir, rodado quando o
+administrador decidir, sem achado nem sessão desenhada para ela. Vira achado só o que o sistema
+afirma ou exige hoje sobre ela e não cumpre — por exemplo, citá-la como se a aplicasse. O catálogo
+já traz o JBI (`jbi-*`), o GRADE e o CERQual (`grade`, `grade-cerqual`), o MECIR e o Cochrane
+Handbook (`mecir`, `cochrane-handbook`) e o registro da EQUATOR (`equator-network`).
 
 **A diretriz, decidida pelo pesquisador em 17/10/2026:** *"se existe metodologia, vamos
 assimilar. não há porque divagar."* — precisada em 29/10/2026: metodologia **validada

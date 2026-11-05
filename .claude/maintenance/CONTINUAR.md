@@ -78,6 +78,10 @@
 >    7,25 M e ~9,8 M para 100%, de acordo com os pares pequenos. Hipótese ainda não confirmada:
 >    falta saber a composição daqueles pares. Até confirmar, a faixa do `--agora` passou a
 >    **10,0–13,5 M**, cobrindo os três pares.
+> 7. **Par de 05/11/2026, à tarde:** ele leu **35%** da janela de 5h (e 33% da semana) por volta das 16:41Z; o
+>    `--agora` das 16:41Z deu 5,11 M ponderado (38–51% na régua), ~83% dele do Cultura Líquida, com subagentes.
+>    Isso dá ~14,6 M para 100%, acima da faixa. Com o cache_r a 0,05 (23,0 M de cache_r na janela), daria
+>    3,97 M e ~11,3 M para 100%, dentro da faixa: mais um ponto a favor da hipótese do item 6. A faixa não mudou.
 
 Calibrada com dois pontos reais desta conta (Claude Team):
 

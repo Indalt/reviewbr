@@ -1,9 +1,11 @@
 # Triagem do backlog: defeito × ausência — 05/11/2026
 
-> **Estado: proposta sem contestação. Nada foi aplicado ao backlog nem ao sistema.** Os 4 classificadores do
-> workflow `wf_69aa6db2-8ea` terminaram. Os 4 contestadores e o crítico não rodaram: o limite de 5h estourou,
-> porque o fan-out foi lançado sem custo combinado (regra 6 do "Como trabalhar" do plano; a régua não mede
-> subagente). Saída bruta: `classificadores.json`, gerado da journal do workflow.
+> **Estado (05/11, à tarde): as cinco decisões abaixo foram aprovadas pelo Vicente ("aplicar as decisões") e
+> aplicadas.** No backlog, só o DEBT-151 (decisão 2) e o fechamento do DEBT-149 (decisão 3). O resto da proposta
+> por achado não foi contestado: cada sessão o confere para os achados que toca (item 9 do "Como trabalhar" do
+> plano), e as 15 saídas esperam o Vicente. Os 4 classificadores do workflow `wf_69aa6db2-8ea` terminaram; os
+> contestadores e o crítico não rodaram, porque o limite de 5h estourou (fan-out lançado sem custo combinado,
+> contra a regra 6 do "Como trabalhar"). Saída bruta: `classificadores.json`.
 
 ## Por que
 
@@ -72,51 +74,44 @@ Aplicada, a proposta deixa cerca de 32 abertos (58 − 10 fundidos − 15 recusa
 4. **O DEBT-141 vem antes da rota "ausência vai ao catálogo".** A `absorb_methodology` com `atualizar=true` apaga
    campos. Até o conserto, só criar entrada nova.
 
-## Decisões pedidas ao Vicente (05/11/2026)
+## Decisões aprovadas pelo Vicente (05/11/2026, à tarde)
 
-1. **A regra do backlog**, em forma precisa (a conferir):
+Origem: "aplicar as decisões". Antes, sobre o caso: "as sessões trouxeram reflexões que entrar em debt sem impedir o
+plano de manutenção e sem acrescentar problemas que não existem"; "achei que fosse mais uma contaminação do prisma
+e por isso pontuei"; "a palavra prisma não é proibida e tem conjuntos de metodologias importantes que vão
+existir".
+
+1. **Regra do backlog.**
    > O backlog de manutenção (`system_debt.json`) registra só defeito: o que o sistema afirma, exige ou entrega
-   > hoje e não se sustenta (DIRECAO §9, 04/10). Não entram nele:
-   > - (a) metodologia ou norma consolidada e validada que o sistema ainda não tem. Ela fica no catálogo e é
-   >   assimilada pelo procedimento de manutenção quando o Vicente decidir, sem achado nem sessão desenhada
-   >   para ela;
-   > - (b) decisão do Vicente. Vai ao registro de decisões, e a agenda que dela decorre vai ao plano. O texto
-   >   do achado recebe só o que decide o conserto do defeito daquele achado;
-   > - (c) problema que só existiria no futuro.
+   > hoje e não se sustenta (DIRECAO §9, 04/10). Reflexão ou decisão do Vicente que aponta um defeito real entra
+   > no achado desse defeito, e só isso: não abre sessão nem agenda migração ou trabalho que o plano não tem. O
+   > princípio geral vai ao registro de decisões (e à descrição do método, sessão M), e a agenda, ao plano. Não
+   > entram no backlog: metodologia ou norma consolidada e validada que o sistema ainda não tem, que fica no
+   > catálogo e é assimilada pelo procedimento de manutenção quando o Vicente decidir, sem achado nem sessão
+   > desenhada para ela; e problema que só existiria no futuro. O sistema não assimila metodologia sozinho:
+   > cada assimilação é uma rodada de manutenção a partir da fonte oficial.
 
-   Consequências:
-   - corrigir o `maintainer.md:118-125`;
-   - precisar o item 4 do "Como trabalhar" do plano ("pela tool, no achado"), que levou a D14 para dentro do
-     DEBT-151.
+   Aplicada no item 4 do "Como trabalhar" do plano e no `maintainer.md` (gate RV-11 aprovado).
+2. **D14 e DEBT-151.**
+   > O método de revisão de escopo não herda da revisão sistemática o que é próprio dela: rótulos do PICOS,
+   > exclusão por desfecho, certeza da evidência. Herdar isso é contaminação do PRISMA — e a palavra, aqui,
+   > nomeia só isto: o ReviewBR usava o modelo da revisão sistemática como espelho do seu próprio modo de
+   > trabalhar. O PRISMA não é proibido: os seus conjuntos de metodologias são importantes e vão existir no
+   > sistema. A D14 não pede assimilar metodologia nova nem migrar projetos.
 
-   Correção ao que foi dito: o sistema não adiciona metodologia sozinho. Cada assimilação é uma rodada de
-   manutenção (esqueleto, spec a partir da fonte oficial, leitura documentada, `validate_methodology`). O que não
-   precisa existir é achado, sessão desenhada e migração.
-2. **DEBT-151 e sessão 2d.**
-   - O DEBT-151 fica só com o defeito de hoje:
-     - rótulos do PICOS nos campos do PCC;
-     - o Contexto sem subitem;
-     - o motivo EX-03 e a F7.3 valendo no escopo.
-   - A D14 vai ao registro de decisões e à sessão M.
-   - A 2d sai do plano. Assimilar o `jbi-scoping-review` volta para a 7+, quando o Vicente decidir.
-   - Nenhuma migração: os dois projetos de escopo seguem no método travado deles.
+   - O DEBT-151 ficou só com o defeito e vai para a sessão 6, ou antes, numa sessão curta, se os projetos de
+     escopo chegarem à triagem.
+   - A 2d saiu do plano. Assimilar o `jbi-scoping-review` é trabalho de catálogo, quando o Vicente decidir.
    - O RAISE (DEBT-094) espera a resposta ao D07.
-3. **Sessão 2c.**
-   - Sai o item 4, sobre o DEBT-145. O ponto "a trava considera só item esquecido" já está no DEBT-149 e vai ao
-     D15.
-   - O DEBT-149 fecha no item 1 da 2c: a conferência por palavras sai da trava, e o relatório fica honesto.
-   - Os itens 2 e 3 (leitura documentada) seguem na 2c, como decidido em B1 e B2. Contam como construção do
-     procedimento de assimilação, não como condição de fechar o achado.
-4. **Os outros 55 achados, antes de aplicar a proposta.** Três caminhos:
-   - (a) **recomendado, sem agente agora.** Cada sessão confere, na abertura, a proposta dos achados dela, e já
-     lê esse código para consertá-los. As 15 saídas, que nenhuma sessão toca, o Vicente decide pela lista
-     abaixo;
-   - (b) um contestador só para as 15 saídas, com custo combinado antes;
-   - (c) aplicar sem contestar. Não recomendado: em 04/10, 5 de 13 recusas eram achados reais.
-5. **A trava na entrada**, numa sessão curta depois da 2c.
-   - A `record_system_finding` recusa achado novo ou atualizado sem a "mentira de hoje" (arquivo:linha e o que a
-     contradiz). Isso transforma o teste em trava de escrita.
-   - O destino `METODOLOGIA_NOVA` deixa de ser usado para defeito.
+3. **2c.** O DEBT-149 fecha no item 1. A leitura documentada (itens 2 e 3) segue na 2c como construção do
+   procedimento de assimilação (B1, B2), sem prender o fechamento. Sai o item 4: a trava da escolha de método
+   (DEBT-145) é a D15.
+4. **Os outros 55.** Sem agente: cada sessão confere, na abertura, a proposta para os achados que vai tocar e a
+   aplica pela tool ao fechar, se ela se sustentar no código (item 9 do "Como trabalhar"). As 15 saídas esperam a
+   decisão do Vicente pela lista abaixo.
+5. **Sessão P, curta, depois da 2c: a porta do backlog.** A `record_system_finding` recusa achado novo ou
+   atualizado sem a "mentira de hoje" (arquivo:linha e o que a contradiz), com teste; o destino
+   `METODOLOGIA_NOVA` deixa de valer para defeito.
 
 ## Vistos de passagem, fora dos 58 (a conferir antes de registrar)
 
@@ -542,7 +537,7 @@ Aplicada, a proposta deixa cerca de 32 abertos (58 − 10 fundidos − 15 recusa
 - Sessão: 2c: o achado fecha com o B1(a). A leitura documentada continua no plano, como o Vicente decidiu, mas como procedimento e não como critério de fechamento; pode ficar numa janela própria.
 - Por quê: O núcleo é mentira: o relatório afirma um poder que não tem e trava por falso positivo. A leitura documentada é o modo de assimilar com rigor, que o Vicente quer em toda assimilação. Por isso é fundamento e procedimento, não dívida.
 
-**DEBT-151** (ABERTO, MENOR, destino FASE_1) — A trilha do scoping diz uma coisa e o template de protocolo do scoping diz outra sobre os mesmos subitens: F1.3.1.2, F1.3.1.3 e F0.3.4 têm um sentido na spec herdada…
+**DEBT-151** (ABERTO, MENOR, destino FASE_1) — O método de escopo herda do prisma-sr, por extends, o que é próprio da revisão sistemática: os mesmos subitens têm o sentido do PICOS na trilha e o do PCC no template…
 
 - Classe: MISTO · confiança: alta
 - Mentira de hoje: A trilha do escopo (a spec do prisma-sr, lida por extends) e o template do escopo dão sentidos diferentes aos mesmos ids. Na spec: 'Intervenção / Objeto' e 'Desfechos mínimos — ao menos um desfecho que o estudo deve reportar' (spec.md:92-93), com o motivo de exclusão EX-03 'Desfecho não reportado' ligado a F1.3.1.3 (spec.md:227), e 'Relevância para política ou prática' (spec.md:56). No template: 'Conceito', 'Contexto' (protocol_template.md:53-54) e 'Objetivo do mapeamento' (:29). O Contexto do PCC não tem subitem. Além disso, a F7.3 herdada (certeza da evidência, F7.3.1–4 obrigatórios, spec.md:348-351) vale no escopo, porque a F7 está ativa no manifest do escopo, embora o PRISMA-ScR não tenha item de certeza. E ela cita a condição abordagem_certeza (spec.md:344), que o manifest do escopo não declara (ele só declara avaliacao_critica).

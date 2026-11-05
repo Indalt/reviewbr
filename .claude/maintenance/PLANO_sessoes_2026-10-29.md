@@ -69,12 +69,30 @@ para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cad
     segunda leitura independente.
   - O Vicente revisa só as divergências.
   - Redação no DEBT-149.
-- **D14 (04 e 05/11): a revisão de escopo.**
-  - Cada metodologia de revisão de escopo consolidada e validada pode ser assimilada como método próprio.
-    Pode haver mais de uma.
-  - Nenhuma herda a especificação do prisma-sr.
-  - Redação no DEBT-151.
+- **D14 (04/11; corrigida em 05/11, à tarde): a revisão de escopo.**
+  - O método de escopo não herda da revisão sistemática o que é próprio dela: rótulos do PICOS, exclusão por
+    desfecho, certeza da evidência. Herdar isso é contaminação do PRISMA, no sentido de o ReviewBR usar o modelo
+    da revisão sistemática como espelho do seu modo de trabalhar. O PRISMA não é proibido: os seus conjuntos de
+    metodologias são importantes e vão existir no sistema.
+  - Não pede assimilar metodologia nova nem migrar projetos. O defeito que aponta é o do DEBT-151, na sessão 6;
+    a 2d saiu do plano.
+  - Redação aprovada no DEBT-151 e na REVISAO, parte A.
 - **Regra de registro (31/10):** decisão vai ao disco em forma precisa (item 4 do "Como trabalhar").
+- **Decisões de 05/11, à tarde.** Origem: o Vicente apontou que a D14 tinha virado achado e sessão sem ser
+  problema ("esse comentário não deveria gerar um debt 'empurrando com a barriga' problemas que não existem") e
+  aprovou as cinco decisões com "aplicar as decisões". Texto completo em `triagem_backlog_2026-11-05/TRIAGEM.md`.
+  - **Regra do backlog.** O backlog registra só defeito: o que o sistema afirma, exige ou entrega hoje e não se
+    sustenta (DIRECAO §9). Reflexão ou decisão do Vicente que aponta defeito real entra no achado desse defeito,
+    e só isso: não abre sessão nem agenda trabalho que o plano não tem. O princípio geral vai ao registro de
+    decisões, e a agenda, ao plano. Metodologia validada que falta fica no catálogo e é assimilada pelo
+    procedimento quando o Vicente decidir; o sistema não a assimila sozinho. Problema só futuro não se
+    registra. Aplicada no item 4 do "Como trabalhar" e no `maintainer.md` (gate RV-11).
+  - **2c.** O DEBT-149 fecha no item 1. A leitura documentada (itens 2 e 3) segue na 2c como construção do
+    procedimento de assimilação, sem prender o fechamento. Sai o item 4: a trava da escolha de método (DEBT-145)
+    é a D15.
+  - **Triagem.** A proposta para os 58 abertos não se aplica de uma vez: cada sessão a confere para os achados
+    que toca (item 9 do "Como trabalhar"). As 15 saídas esperam o Vicente.
+  - **Sessão P**, curta, depois da 2c: a porta do backlog (tabela de sessões).
 
 ## Contexto que desfaz ambiguidades: o sistema mudou DURANTE a troca de computador
 
@@ -104,34 +122,29 @@ Consequências para ler o disco sem se enganar:
 | 1 | Escopo e PRISMA-S | 1 (DEBT-055), 2 (DEBT-128) | sessão 0 | `check_standard_coverage` do PRISMA-ScR sem omissão silenciosa; PRISMA-S com `titulos_oficiais: true` e falsificação com poder |
 | 2a | Declarações por método — o núcleo | DEBT-142 (mapeamento e declarações por método; item condicional); DEBT-150 e DEBT-008 passaram à 2b pela regra da janela | sessão 1 | mapeamento e declarações lidos do método; `check_standard_coverage` idêntico antes e depois, salvo o deliberado; item condicional respondido pelo projeto; testes |
 | 2b | Itens condicionais em uso | DEBT-150 (avaliação crítica no escopo), DEBT-008 (certeza da evidência: declarar; a assimilação vai às 7+), DEBT-152 (frases velhas em agentes e skill) | 2a | condição declarada pelo método, perguntada na F1 e respondida pelo projeto, com o efeito no denominador que a fonte manda, com teste; F7.3 declarada [NÃO COBERTO] por tool; `prisma-rigor-gates` sem a certeza que nenhum gate confere; agentes sem as frases velhas |
-| 2c | Conferência do mapeamento: fora da trava; leitura documentada | DEBT-149 — decisão de 05/11 (B1, B2), que substitui os pontos (1) e (4) da de 30/10 | 2b | suspeito da conferência por palavras não reprova, e o relatório diz o que ela é e quanto enxerga; o porquê de cada etapa não depende dela; PRISMA-ScR do escopo `valid: true` sem mexer no mapeamento; leitura documentada com conferidor testado; PRISMA-S do prisma-sr lido e relido de forma independente, com as divergências levadas ao Vicente |
-| M | Método do ReviewBR — descrição | A1–A3, A7, A9 (31/10–05/11); D09 e D17 da revisão de decisões | 2c (posição proposta pelo acompanhamento, a confirmar: antes da 2d e da 6, que dependem dela) | o método da ferramenta descrito como metodologia — objetivo, fundamentos na filosofia da ciência, princípios, etapas, critérios de validade e limites —, aprovado pelo Vicente |
-| 2d | Revisão de escopo como método próprio, e RAISE 3 | DEBT-151 — decisão de 05/11 (D14); 11 (DEBT-094, com o D07 da revisão de decisões respondido antes) | 2c (e M, se confirmada antes) | a primeira metodologia de revisão de escopo consolidada e validada assimilada como método próprio, com transcrição precisa e descrição, sem `extends`; o PRISMA-ScR mapeado na trilha nova por leitura documentada; caminho de migração dos dois projetos de escopo; RAISE 3 conforme a resposta ao D07 |
+| 2c | Conferência do mapeamento: fora da trava; leitura documentada | DEBT-149 — decisão de 05/11 (B1, B2), que substitui os pontos (1) e (4) da de 30/10; fecha no item 1 (decisão de 05/11, à tarde) | 2b | suspeito da conferência por palavras não reprova, e o relatório diz o que ela é e quanto enxerga; o porquê de cada etapa não depende dela; PRISMA-ScR do escopo `valid: true` sem mexer no mapeamento; leitura documentada com conferidor testado; PRISMA-S do prisma-sr lido e relido de forma independente, com as divergências levadas ao Vicente |
+| P | A porta do backlog | regra do backlog e decisão 5 de 05/11, à tarde | 2c | a `record_system_finding` recusa achado novo ou atualizado sem a "mentira de hoje" (onde o sistema afirma ou exige, com arquivo:linha, e o que contradiz), com teste; o destino `METODOLOGIA_NOVA` deixa de valer para defeito, e os abertos com esse destino que são defeito (14, pela triagem de 05/11) recebem o destino certo; outras instruções que mandem registrar ausência como achado, se houver (o crítico da triagem não rodou), alinhadas à regra |
+| M | Método do ReviewBR — descrição | A1–A3, A7, A9 (31/10–05/11); D09 e D17 da revisão de decisões | 2c (posição proposta pelo acompanhamento, a confirmar: antes da 6, que depende dela) | o método da ferramenta descrito como metodologia — objetivo, fundamentos na filosofia da ciência, princípios, etapas, critérios de validade e limites —, aprovado pelo Vicente |
 | 3 | Funil e gates | 3 (DEBT-138), 4 (DEBT-070), DEBT-071/043/105 | — | export bloqueia funil divergente; manifests dizem a verdade sobre os gates |
 | 4 | Busca e triagem | 5 (DEBT-056), 6 (DEBT-021), 7 (DEBT-025) | — | log PRISMA-S gravado por código; saturação lê o disco; dedup com DOI/acentos e nível 4 só sinalizando |
 | 5 | Leitura e governança | 8 (DEBT-031), 9 (DEBT-018), 12 (DEBT-016), DEBT-141 | — | citação com página; trava só pelo `project_state.json`; aviso na tool de `targets`; atualização do catálogo sem apagar campos |
-| 6 | Sair do esqueleto PRISMA | DEBT-137 (agentes e skills descritos por F0–F8), DEBT-134 (protocolo exigido de todo projeto), DEBT-136 (tabela de tipos duplicada), tabela F0–F8 do `conduct-review` | sessões 2a–2d e M | agentes descritos por papel; cada etapa do manifest diz que skill a executa; o que é do `prisma-sr` fica no `prisma-sr` |
+| 6 | Sair do esqueleto PRISMA | DEBT-137 (agentes e skills descritos por F0–F8), DEBT-134 (protocolo exigido de todo projeto), DEBT-136 (tabela de tipos duplicada), tabela F0–F8 do `conduct-review`; DEBT-151 (o escopo herda do `prisma-sr` o que é da revisão sistemática; D14, 05/11; antes, numa sessão curta, se os projetos de escopo chegarem à triagem) | sessões 2a–2c, P e M | agentes descritos por papel; cada etapa do manifest diz que skill a executa; o que é do `prisma-sr` fica no `prisma-sr` |
 | 7+ | O resto da reclassificação | 19 declarações e consertos restantes; assimilação de métodos validados (JBI, GRADE/CERQual, exploratório…) | sessões 1–6 | um bloco por sessão, na ordem do arquivo de reclassificação |
 | depois | Fase de testes do sistema e análise do trabalho | sequência decidida pelo Vicente em 27/09 (DEC-42 do `DECISOES_chat_a_conferir.md`); critério de entrada registrado em 03/10 (`DECISOES_2026-10-03.md`), a reconferir ao chegar lá | sessões 1–7+ | a definir |
 
 **Estado:** sessões 0 (29/10/2026), 1, 2a (30/10/2026) e 2b (31/10/2026) fechadas, cada uma com a carta na sua
 seção e conferida pelo acompanhamento. Entre 31/10 e 05/11 o Vicente aprovou as considerações A1–A9 e redefiniu
-a 2c (B1, B2) e a 2d (D14); ver "Decisões de 31/10 a 05/11/2026", acima. **Próxima: 2c, com o prompt pronto na
-seção dela.** Ela abre quando o limite semanal permitir: em 31/10 estava em 96%, e a leitura é dele.
+a 2c (B1, B2); em 05/11, à tarde, corrigiu a D14, aprovou a regra do backlog e tirou a 2d do plano (ver
+"Decisões de 31/10 a 05/11/2026", acima, e `triagem_backlog_2026-11-05/TRIAGEM.md`). **Próxima: 2c, com o prompt
+ajustado na seção dela; depois, a P.** Em 05/11, por volta das 16:41 UTC, o Vicente leu 35% da janela de 5h e 33%
+do limite semanal.
 
-**Parada de 05/11 (tarde): a 2c espera cinco decisões.**
-- O Vicente apontou que a D14 virou achado e sessão (a 2d) sem ser problema, e pediu solução para esse caso e
-  para os parecidos.
-- A triagem dos 58 abertos pelo teste da DIRECAO §9 está em `triagem_backlog_2026-11-05/TRIAGEM.md`. É proposta
-  sem contestação, e nada foi aplicado.
-- As cinco decisões pedidas estão lá:
-  - a decisão 3 muda o prompt da 2c: sai o item 4, e o DEBT-149 fecha no item 1;
-  - a decisão 2 tira a 2d do plano.
-
-Fica a confirmar a proposta de descrever o método do ReviewBR (M) antes da 2d. Pendentes que não bloqueiam a 2c:
+Fica a confirmar a proposta de descrever o método do ReviewBR (M) antes da 6. Pendentes que não bloqueiam a 2c:
+- as 15 saídas propostas pela triagem de 05/11 (seção "Saem do backlog" do `TRIAGEM.md`), que esperam a decisão
+  do Vicente;
 - as 41 decisões da lista D01–D41 (`revisao_decisoes_2026-10-31/lista_decisoes.md`), cada uma antes da sessão
   em que pesa;
-- o D07, antes da 2d.
+- o D07, antes de tocar o RAISE (DEBT-094).
 
 A régua do `--agora` foi recalibrada em 05/11: 10,0–13,5 M (`CONTINUAR.md` §1, item 6).
 
@@ -151,8 +164,8 @@ janela de 5h, sem contar outro projeto aberto na mesma janela).
 | 2a | max | não | 60–80% (medido: 4,5 M ≈ 40–48% só com os itens 1 e 2; a janela foi a 81–98% com outro projeto em paralelo) | DEBT-142 muda onde mapeamento e declarações moram e é pré-requisito do DEBT-045/014 e da sessão 6 |
 | 2b | max | não | 40–60% | primeiro uso do item condicional nos dois métodos; a certeza da evidência pede a leitura da fonte antes de mexer no denominador |
 | 2c | max | não; um agente para a segunda leitura independente, aprovado pela decisão B2 (05/11) | 70–110% — planejar até duas janelas | tira a conferência fraca da trava sem fazer o relatório mentir, e cria a leitura documentada que vai conferir toda transcrição |
+| P | max | não | 20–40% | mexe no registro de achados, que é a trilha de auditoria da manutenção |
 | M | max | não | 60–100% por janela, com muita participação do Vicente; planejar duas | é a descrição que fundamenta o resto; os fundamentos na filosofia da ciência são leitura e decisão dele |
-| 2d | max | não; um agente para a segunda leitura do PRISMA-ScR | 100–150% — planejar duas janelas | assimilar uma metodologia de escopo com transcrição precisa e descrição, e migrar os dois projetos |
 | 3 | max | não | 40–60% | funil e gates: o que o export bloqueia e o que os manifests dizem dos gates |
 | 4 | max | não | 40–60% | trilha de auditoria da busca (log PRISMA-S), critério de parada (saturação) e o que a dedup tira |
 | 5 | max | não | 40–60% | o DEBT-018 mexe na trava do protocolo, com cuidado de compatibilidade com projetos antigos |
@@ -172,8 +185,9 @@ reduz o que sobra para a sessão.
    foi feito, testes, commit e a próxima sessão. Sessão sem saída verificável não começa.
 3. **Toda sessão termina com commit.** O que não está commitado não existe para a próxima sessão. Nunca mais
    semanas de trabalho só no working tree.
-4. **Decisão do Vicente vai ao disco na hora**, pela tool (`record_system_finding` no achado, ou nesta carta),
-   **escrita em forma precisa e autoexplicativa**: o que foi decidido, o alcance e a consequência, com os termos
+4. **Decisão do Vicente vai ao disco na hora**, no lugar certo (regra do backlog, 05/11: no achado, pela tool
+   `record_system_finding`, só a que aponta o defeito dele ou decide o conserto dele; o princípio geral, no
+   registro de decisões; a agenda, neste plano), **escrita em forma precisa e autoexplicativa**: o que foi decidido, o alcance e a consequência, com os termos
    definidos, legível por quem não viu a conversa. A frase dele, ou o rótulo da opção que ele escolheu, vai junto
    só como origem, nunca como o texto da decisão; quando a redação reinterpreta o que ele disse, ele a confere
    antes de gravar (pedido dele, 31/10/2026: frase gravada "do jeito que eu disse", sem tratamento, gera
@@ -184,6 +198,9 @@ reduz o que sobra para a sessão.
 7. **Um assunto por sessão.** Furo do plano encerra a sessão com registro, não com improviso.
 8. **Abrir e fechar conferindo, não lembrando:** testes verdes, build em dia, `git status` e `audit_system_debt`
    no começo e no fim.
+9. **Achado tocado, conferido contra a triagem de 05/11.** Na abertura, a sessão lê em
+   `triagem_backlog_2026-11-05/TRIAGEM.md` a proposta para os achados que vai tocar (ficar, enxugar, fundir) e,
+   ao fechar, a aplica pela tool se ela se sustentar no código. As 15 saídas propostas esperam o Vicente.
 
 ### Os dois chats, e como cada sessão abre e fecha
 
@@ -721,8 +738,8 @@ duas decisões pendentes. As duas vieram em 05/11 (B1 aprovada; B2, opção (a))
 
 ## Sessão 2c — prompt de abertura
 
-Preparado no chat de acompanhamento em 05/11/2026. Cole num chat novo, ajuste o seletor pela primeira linha e
-apague-a antes de enviar:
+Preparado no chat de acompanhamento em 05/11/2026 e ajustado à tarde pelas decisões da triagem do backlog. Cole
+num chat novo, ajuste o seletor pela primeira linha e apague-a antes de enviar:
 
 ```
 >>> APAGUE ESTA LINHA ANTES DE ENVIAR — seletor: Opus 5.5 · esforço max · sem ultracode <<<
@@ -735,13 +752,13 @@ Este é o chat da sessão 2c: execute só ela. Decisões, dúvidas e a próxima 
 acompanhamento. Furo do plano (algo que este prompt e o plano não decidem): registre pela tool, feche o passo
 com segurança e pare com "FURO DO PLANO — levar ao acompanhamento", em até 3 linhas.
 
-Abertura, conferindo e não lembrando: leia neste plano o "Como trabalhar" (atenção ao item 4: decisão gravada
-em forma precisa), as "Decisões de 31/10 a 05/11/2026", a carta e a conferência da 2b e as seções da 2c; leia
+Abertura, conferindo e não lembrando: leia neste plano o "Como trabalhar" (atenção aos itens 4 e 9: decisão
+gravada em forma precisa e no lugar certo; a triagem de 05/11), as "Decisões de 31/10 a 05/11/2026", a carta e a conferência da 2b e as seções da 2c; leia
 as partes A e B de .claude/maintenance/REVISAO_decisoes_2026-10-31.md (textos aprovados) e
 .claude/maintenance/sessao_2c/preparo/LEIAME.md — mapa feito por agentes em 31/10: confira antes de usar. Rode a
 suíte (npx vitest run em reviewbr/reviewbr-mcp), git status, python .claude/maintenance/medir_esforco.py
 --agora (régua recalibrada em 05/11) e node .claude/maintenance/sessao_2a/le_audit.mjs
-DEBT-149,DEBT-145,DEBT-151 (FULL=1 para o texto inteiro). Não pergunte ao Vicente a porcentagem de uso.
+DEBT-149 (FULL=1 para o texto inteiro). Não pergunte ao Vicente a porcentagem de uso.
 
 Já decidido, não perguntar de novo — o DEBT-149 tem a redação precisa (decisão de 05/11, que substitui os
 pontos 1 e 4 da de 30/10):
@@ -752,8 +769,10 @@ pontos 1 e 4 da de 30/10):
     com resposta conhecida confere que o trecho é literal e daquele item;
 (c) uma segunda leitura independente, por agente que não vê a primeira nem o mapeamento atual, é comparada com
     ela: onde concordam, vale; as divergências vão ao Vicente;
-(d) ficam da decisão de 30/10: suspeito examinado registrado (quem, quando, com que trecho), agora na
-    assimilação; e a trava da escolha de método (DEBT-145) considera só item esquecido.
+(d) fica da decisão de 30/10: suspeito examinado registrado (quem, quando, com que trecho), agora na
+    assimilação. A trava da escolha de método (DEBT-145) não é desta sessão (D15).
+Fechamento (decisão de 05/11, à tarde): o DEBT-149 fecha no item 1; os itens 2 e 3 constroem o procedimento de
+assimilação decidido em B1 e B2 e não prendem o fechamento.
 Fundamento: A5, A6 e A9 de 31/10 (REVISAO, parte A).
 
 Escopo, em ordem:
@@ -776,10 +795,10 @@ Escopo, em ordem:
    o seu mapeamento com trechos, gravado no repositório. Compare: onde as duas concordam, vale (se diferem do
    mapeamento atual, a correção entra, listada na carta); onde divergem, mantenha o atual e liste a divergência
    para o Vicente num arquivo da sessão. Projete o custo do agente na abertura e anote na carta.
-4. DEBT-145: registre pela tool que a trava, quando existir, considera só item esquecido; não construa a trava.
-Não é desta sessão: o PRISMA-ScR e a cópia do PRISMA-S no escopo (a trilha do escopo será refeita na 2d, decisão
-D14 de 05/11); o PRISMA-P e o PRISMA 2020 (este precisa antes dos enunciados oficiais e do remapeamento do
-DEBT-045); a descrição do método do ReviewBR (sessão M).
+Não é desta sessão: o PRISMA-ScR e a cópia do PRISMA-S no escopo (o escopo herda do prisma-sr o que é da revisão
+sistemática: DEBT-151, sessão 6, D14 corrigida em 05/11); o PRISMA-P e o PRISMA 2020 (este precisa antes dos
+enunciados oficiais e do remapeamento do DEBT-045); a descrição do método do ReviewBR (sessão M); a trava da
+escolha de método (DEBT-145, D15).
 
 Armadilhas já conhecidas:
 1. O zod remove chave desconhecida: prove com teste que o trecho e o enunciado chegam ao serviço.
@@ -804,12 +823,12 @@ Saída verificável: suspeito da conferência por palavras não reprova, com tes
 capacidade, com a medida citada; o porquê de cada etapa continua saindo para padrão com título oficial (e passa
 a incluir os itens que só estavam fora por suspeito); PRISMA-ScR do escopo valid: true sem mudar o mapeamento;
 trecho literal por ponteiro no schema, com o conferidor testado; PRISMA-S do prisma-sr com os trechos, a segunda
-leitura independente gravada, as concordâncias aplicadas e as divergências listadas para o Vicente; DEBT-145
-atualizado; check_standard_coverage antes × depois só com o deliberado; DEBT-149 resolvido; suíte verde, build
-em dia, audit válido.
+leitura independente gravada, as concordâncias aplicadas e as divergências listadas para o Vicente;
+check_standard_coverage antes × depois só com o deliberado; DEBT-149 resolvido no item 1, com a proposta da
+triagem de 05/11 conferida; suíte verde, build em dia, audit válido.
 
 Divisão: se a projeção passar de 75% da janela antes do item 3, feche no fim do item 2; o item 3 abre a sessão
-seguinte, antes da M e da 2d.
+seguinte, antes da P e da M.
 
 Fechamento: escreva a carta da sessão 2c no plano, logo abaixo deste prompt (modelo "Carta de sessão"), commit
 e push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. A 75% estimados não comece passo novo.

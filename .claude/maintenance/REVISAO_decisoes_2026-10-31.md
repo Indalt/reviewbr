@@ -16,7 +16,8 @@
 >   metodologia de escopo, e mantém a premissa de só assimilar a consolidada e validada cientificamente.
 >
 > Os textos aprovados valem como fundamento até a descrição do método do ReviewBR (sessão M) absorvê-los. A
-> redação precisa de B1 e B2 está no DEBT-149, e a do D14 no DEBT-151. A parte C continua a conferir.
+> redação precisa de B1 e B2 está no DEBT-149, e a do D14 no DEBT-151. A D14 foi corrigida em 05/11, à tarde: o
+> texto aprovado está na parte A, logo depois da redação anterior. A parte C continua a conferir.
 
 ## A. Considerações e decisões do Vicente em 31/10/2026
 
@@ -56,6 +57,18 @@
 >   que se apoia nelas?
 > - Consequência: a 2d deixa de ser "tirar o `extends`" e passa a ser assimilar a metodologia da revisão de
 >   escopo, com transcrição precisa e descrição (A9). Provavelmente são 2 sessões.
+>
+> **D14 corrigida e aprovada em 05/11, à tarde** — substitui a redação acima e a consequência dela (a 2d saiu
+> do plano). Origem: "achei que fosse mais uma contaminação do prisma e por isso pontuei"; "a palavra prisma não
+> é proibida e tem conjuntos de metodologias importantes que vão existir". Texto:
+>
+> *O método de revisão de escopo não herda da revisão sistemática o que é próprio dela: rótulos do PICOS,
+> exclusão por desfecho, certeza da evidência. Herdar isso é contaminação do PRISMA — e a palavra, aqui, nomeia
+> só isto: o ReviewBR usava o modelo da revisão sistemática como espelho do seu próprio modo de trabalhar. O
+> PRISMA não é proibido: os seus conjuntos de metodologias são importantes e vão existir no sistema. A D14 não
+> pede assimilar metodologia nova nem migrar projetos.*
+>
+> Consequência: o defeito que ela aponta é o do DEBT-151, consertado na sessão 6 (Sair do esqueleto PRISMA).
 >
 > **"Quem verifica o verificador?" — resposta do acompanhamento em 04/11:** nenhum verificador se certifica
 > sozinho. O que dá segurança à ferramenta:
@@ -291,6 +304,7 @@ pasta.
   agente da frase "cada metodologia com as suas regras", e ele nunca respondeu a esse ponto. Em 09/10 ele
   tinha aceitado encarar cada método na sua completude "mesmo que no código sobre o método isso seja
   repetido". Precisa de resposta antes de a 2d abrir.
+  **Respondida em 05/11, à tarde:** a 2d saiu do plano; ver a D14 corrigida, na parte A.
 - **3 (funil e gates):** D29. O "sim" da pergunta 3 é bloquear a exportação quando o funil diverge.
 - **4 (busca e triagem):**
   - D30: o código grava o log de busca PRISMA-S — construir já, ou só declarar e enfileirar?
