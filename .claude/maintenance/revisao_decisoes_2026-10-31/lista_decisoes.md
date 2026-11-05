@@ -93,6 +93,9 @@ fundamento: cada item espera o Vicente. Resultado bruto: `resultado_agentes.json
   para D07"); a pergunta segue aberta. O DEBT-094 saiu do backlog em 05/11 com três destinos: este D07; a
   validação da IA dentro da revisão (plano, 7+); e os itens de relato do RAISE, pelo procedimento, se este D07
   disser que ele vale.
+- **Perguntas do Vicente de 05/11/2026, à tarde, e respostas com fonte:** `d07_raise_fontes_2026-11-05.md`
+  (obrigatoriedade, o que é uso de IA, página de busca com IA, RAISE canônico). Ele condicionou a redação
+  proposta a respostas de qualidade; a redação ajustada está no arquivo, a conferir.
 
 ## D08 — Instalar método exigindo atualização do servidor MCP não é defeito (decisão 4 de 08/10)
 

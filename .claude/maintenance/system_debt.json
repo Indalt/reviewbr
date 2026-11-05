@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-05T17:37:44.880Z",
+  "updatedAt": "2026-11-05T20:28:21.701Z",
   "findings": [
     {
       "id": "DEBT-001",
@@ -2172,17 +2172,17 @@
       "depende_de": []
     },
     {
-      "reproduction": "1) sed -n '70,71p' src/services/protocol_gate.ts -> o proprio codigo declara o marcador [LOCKED] como heranca. 2) Criar projeto sem metodologia declarada e chamar qualquer tool de aquisicao com projectPath -> bloqueado por falta de protocolo travado, mesmo sem metodo que o exija. 3) grep 'post-hoc' src/services/methodology_auditor.ts -> o segundo auditor, que valida depois.",
-      "location": "src/services/protocol_gate.ts:73-118; src/services/protocol_auditor.ts; src/services/methodology_auditor.ts",
-      "resolution": "RECUSADO em 05/11/2026 pela regra do backlog (DIRECAO §9; PLANO_sessoes_2026-10-29.md, 'Decisões de 31/10 a 05/11/2026'): a exigência não alcança hoje ninguém indevidamente — tipo sem método assimilado é recusado (DEBT-121, resolvido), e os dois métodos instalados exigem protocolo; o depende_de DEBT-121, já resolvido, daria o achado por liberado em falso. O princípio (a auditoria de protocolo antes da busca vale para o método que exige protocolo) vai à descrição do método do ReviewBR (sessão M), para redação e aprovação do Vicente; o achado sai da lista da sessão 6. Proposta da triagem de 05/11 (.claude/maintenance/triagem_backlog_2026-11-05/TRIAGEM.md), confirmada pelo Vicente: 'saídas confirmadas' (05/11/2026).",
-      "found_by": "observacao do pesquisador em 08/10/2026 sobre heranca do PRISMA no modo de agir",
-      "found_at": "2026-10-08",
-      "context": "LEVANTADO PELO PESQUISADOR em 08/10/2026: 'o auditor tem a funcao de que? Se for apenas para protocolagem de metodologias que estao sendo seguidas, ele continua nestas. Para as outras talvez nao precise de auditoria, a nao ser que venham a assumir metodologia — mas nesse caso as pesquisas que nao assumiam metodologia vao passar pelos tramites dos metodos e nao precisaria ter uma auditoria antes, ja que teria uma depois.' E: 'parece que estas decisoes ainda sao heranca do nosso modo de agir baseado no PRISMA. Nestes casos nao precisamos assumir metodo PRISMA quando nao ha metodo do tipo PRISMA escolhido. Mas isso nao quer dizer que devemos abandonar o nosso modelo enquanto MODO DE AGIR do ReviewBR.' A DISTINCAO QUE ELE FAZ, e que o sistema nao faz: auditoria de PROTOCOLO (antes) so se aplica a projeto que ASSUMIU metodologia — e o protocolo e o artefato daquele metodo. Projeto sem metodologia declarada nao tem protocolo a auditar; se depois assumir um, passa pelos tramites do metodo naquele momento, e a auditoria post-hoc cobre o resto. Exigir protocolo travado de todo projeto e aplicar PRISMA a quem nao o escolheu. O QUE NAO MUDA, e ele foi explicito: o MODO DE AGIR do ReviewBR permanece — cada etapa para, grava artefato e nao avanca sem decisao registrada (RV-04). Isso vale para toda pesquisa, com metodo ou sem. O que nao vale para todas e a trava de PROTOCOLO. DEPENDE DO DEBT-121: so quando o runtime ler o manifest o sistema sabera se o metodo escolhido exige protocolo travado (prisma-sr exige; um metodo exploratorio pode nao exigir). Ate la, exigir de todos e o default conservador — mas e default, nao verdade metodologica, e precisa estar declarado como tal.",
       "id": "DEBT-134",
       "summary": "O ProtocolDesignAuditor e o ProtocolGate exigem protocolo travado de TODO projeto, inclusive dos que nao assumiram metodologia — e o aviso de busca exploratoria citava 'funil PRISMA' como se todo projeto fosse PRISMA",
       "change_type": "CORRECAO",
       "evidence": "HERANCA DO PRISMA EM TRES CAMADAS, apurada em 08/10/2026. (1) O aviso de busca exploratoria dizia literalmente 'nao entra no funil PRISMA' e 'nao sera contado no log PRISMA-S' — texto escrito em 04/10/2026 por mim, que trata todo projeto como PRISMA. CORRIGIDO na hora: o aviso agora diz 'nao entra no corpus de projeto nenhum e nao sera contado em nenhum registro de busca', sem citar metodo. (2) O ProtocolGate exige status LOCKED de QUALQUER projeto com projectPath, independentemente de o projeto declarar metodologia. (3) Ha DOIS auditores com funcoes distintas que o sistema nao separa no discurso: ProtocolDesignAuditor valida ANTES (criterios de elegibilidade, sintaxe de busca, processo de selecao — e o gate do RV-01), e MethodologyAuditorService valida DEPOIS ('post-hoc validation of an already-completed research project; acts as a mirror, not a paintbrush').",
+      "reproduction": "1) sed -n '70,71p' src/services/protocol_gate.ts -> o proprio codigo declara o marcador [LOCKED] como heranca. 2) Criar projeto sem metodologia declarada e chamar qualquer tool de aquisicao com projectPath -> bloqueado por falta de protocolo travado, mesmo sem metodo que o exija. 3) grep 'post-hoc' src/services/methodology_auditor.ts -> o segundo auditor, que valida depois.",
+      "location": "src/services/protocol_gate.ts:73-118; src/services/protocol_auditor.ts; src/services/methodology_auditor.ts",
       "status": "RECUSADO",
+      "resolution": "RECUSADO em 05/11/2026 pela regra do backlog (DIRECAO §9; PLANO_sessoes_2026-10-29.md, 'Decisões de 31/10 a 05/11/2026'): a exigência não alcança hoje ninguém indevidamente — tipo sem método assimilado é recusado (DEBT-121, resolvido), e os dois métodos instalados exigem protocolo; o depende_de DEBT-121, já resolvido, daria o achado por liberado em falso. O princípio (a auditoria de protocolo antes da busca vale para o método que exige protocolo) vai à descrição do método do ReviewBR (sessão M), para redação e aprovação do Vicente; o achado sai da lista da sessão 6. Proposta da triagem de 05/11 (.claude/maintenance/triagem_backlog_2026-11-05/TRIAGEM.md), confirmada pelo Vicente: 'saídas confirmadas' (05/11/2026).",
+      "found_by": "observacao do pesquisador em 08/10/2026 sobre heranca do PRISMA no modo de agir",
+      "found_at": "2026-10-08",
+      "context": "LEVANTADO PELO PESQUISADOR em 08/10/2026: 'o auditor tem a funcao de que? Se for apenas para protocolagem de metodologias que estao sendo seguidas, ele continua nestas. Para as outras talvez nao precise de auditoria, a nao ser que venham a assumir metodologia — mas nesse caso as pesquisas que nao assumiam metodologia vao passar pelos tramites dos metodos e nao precisaria ter uma auditoria antes, ja que teria uma depois.' E: 'parece que estas decisoes ainda sao heranca do nosso modo de agir baseado no PRISMA. Nestes casos nao precisamos assumir metodo PRISMA quando nao ha metodo do tipo PRISMA escolhido. Mas isso nao quer dizer que devemos abandonar o nosso modelo enquanto MODO DE AGIR do ReviewBR.' A DISTINCAO QUE ELE FAZ, e que o sistema nao faz: auditoria de PROTOCOLO (antes) so se aplica a projeto que ASSUMIU metodologia — e o protocolo e o artefato daquele metodo. Projeto sem metodologia declarada nao tem protocolo a auditar; se depois assumir um, passa pelos tramites do metodo naquele momento, e a auditoria post-hoc cobre o resto. Exigir protocolo travado de todo projeto e aplicar PRISMA a quem nao o escolheu. O QUE NAO MUDA, e ele foi explicito: o MODO DE AGIR do ReviewBR permanece — cada etapa para, grava artefato e nao avanca sem decisao registrada (RV-04). Isso vale para toda pesquisa, com metodo ou sem. O que nao vale para todas e a trava de PROTOCOLO. DEPENDE DO DEBT-121: so quando o runtime ler o manifest o sistema sabera se o metodo escolhido exige protocolo travado (prisma-sr exige; um metodo exploratorio pode nao exigir). Ate la, exigir de todos e o default conservador — mas e default, nao verdade metodologica, e precisa estar declarado como tal.",
       "gravidade": "SERIO",
       "destino": "DECISAO_PESQ",
       "depende_de": [
@@ -2486,6 +2486,24 @@
       "gravidade": "MENOR",
       "destino": "AGENTE_SKILL",
       "depende_de": []
+    },
+    {
+      "reproduction": "grep -n 'mandatorio\\|Obrigatória para qualquer\\|padrão contra o qual' .claude/catalog/methodologies.json → linhas 1220, 1238 e 1399. curl -s 'https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12603384/fullTextXML' | grep -o 'officially supports the aims of RAISE' → presente; o mesmo grep por 'mandatory' perto de RAISE → ausente. curl -sL -o r1.pdf https://osf.io/download/d5ajy/ && pdftotext -layout r1.pdf r1.txt && head -1 r1.txt → 'DRAFT FOR CONSULTATION AND REVISION Version 4. 23 September 2026'. Trechos literais em .claude/maintenance/revisao_decisoes_2026-10-31/d07_raise_fontes_2026-11-05.md.",
+      "location": ".claude/catalog/methodologies.json — entradas position-statement-ia-sintese-2025, declaracao-conjunta-ia-sintese-evidencia e raise (when_to_use); a entrada position-statement-ia-sintese-evidencia-2025 duplica o mesmo documento",
+      "resolution": "",
+      "found_by": "chat de acompanhamento, ao responder às perguntas do Vicente sobre o D07 (05/11/2026)",
+      "found_at": "2026-11-05",
+      "context": "O catálogo é o dado com que os agentes informam o pesquisador ('o fundamento já existe como dado', maintainer.md); afirmar obrigação que a fonte não impõe leva o pesquisador a supor dever que não tem e empurra o sistema a tratar o RAISE como canônico, contra a decisão de 08/10 (D07). O conserto é de texto no catálogo, pela absorb_methodology, depois do DEBT-141 (com atualizar=true ela apaga campos); as três entradas do mesmo documento viram uma. A frase 'É o padrão contra o qual o ReviewBR deve declarar seu uso de LLM' depende da resposta do Vicente ao D07 (d07_raise_fontes_2026-11-05.md).",
+      "id": "DEBT-153",
+      "summary": "O catálogo diz que a declaração conjunta de 2025 (Cochrane, Campbell, JBI, CEE) torna o RAISE obrigatório e que ela é 'obrigatória para qualquer revisão que use IA'; o texto oficial diz que as quatro organizações 'officially support the aims of RAISE', e o RAISE se declara rascunho para consulta. Há três entradas para o mesmo documento, que divergem entre si",
+      "change_type": "CORRECAO",
+      "evidence": "O catálogo afirma: .claude/catalog/methodologies.json:1399 (position-statement-ia-sintese-2025, what_it_is) 'torna o RAISE mandatorio para revisoes submetidas a seus periodicos. E a peca que transforma o RAISE de recomendacao em requisito editorial'; :1238 (declaracao-conjunta-ia-sintese-evidencia, when_to_use) 'Obrigatória para qualquer revisão que use IA em etapas de julgamento. É o padrão contra o qual o ReviewBR deve declarar seu uso de LLM'; :1220 (raise, when_to_use) 'É o padrão contra o qual o ReviewBR deve declarar seu uso de LLM'. A fonte diz: a declaração conjunta (Europe PMC, PMC12603384) — 'The group officially supports the aims of RAISE'; 'We recommend that the most up-to-date version of RAISE…'; não usa 'mandatory' nem 'required' para o RAISE. O RAISE 1 e o RAISE 3 se declaram 'DRAFT FOR CONSULTATION AND REVISION Version 4. 23 September 2026' e 'DRAFT Version 4.0: 23 September 2026'. A terceira entrada do mesmo documento (position-statement-ia-sintese-evidencia-2025) diz o certo ('as quatro organizações apoiam os objetivos das recomendações RAISE'): o catálogo diz duas coisas do mesmo texto.",
+      "status": "ABERTO",
+      "gravidade": "MENOR",
+      "destino": "FASE_1",
+      "depende_de": [
+        "DEBT-141"
+      ]
     }
   ]
 }
