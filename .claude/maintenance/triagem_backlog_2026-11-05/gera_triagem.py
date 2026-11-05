@@ -16,9 +16,11 @@ def limpa(t):
 CAB = """# Triagem do backlog: defeito × ausência — 05/11/2026
 
 > **Estado (05/11, à tarde): as cinco decisões abaixo foram aprovadas pelo Vicente ("aplicar as decisões") e
-> aplicadas.** No backlog, só o DEBT-151 (decisão 2) e o fechamento do DEBT-149 (decisão 3). O resto da proposta
-> por achado não foi contestado: cada sessão o confere para os achados que toca (item 9 do "Como trabalhar" do
-> plano), e as 15 saídas esperam o Vicente. Os 4 classificadores do workflow `wf_69aa6db2-8ea` terminaram; os
+> aplicadas.** No backlog: o DEBT-151 (decisão 2), o fechamento do DEBT-149 (decisão 3) e as 15 saídas,
+> confirmadas pelo Vicente ("saídas confirmadas") e gravadas como RECUSADO, com o destino de cada uma na resolution
+> — o aberto passou de 58 para 43. O resto da proposta (ficar, enxugar, fundir) não foi contestado: cada sessão o
+> confere para os achados que toca (item 9 do "Como trabalhar" do plano). Os 4 classificadores do workflow
+> `wf_69aa6db2-8ea` terminaram; os
 > contestadores e o crítico não rodaram, porque o limite de 5h estourou (fan-out lançado sem custo combinado,
 > contra a regra 6 do "Como trabalhar"). Saída bruta: `classificadores.json`.
 
@@ -122,8 +124,8 @@ existir".
    procedimento de assimilação (B1, B2), sem prender o fechamento. Sai o item 4: a trava da escolha de método
    (DEBT-145) é a D15.
 4. **Os outros 55.** Sem agente: cada sessão confere, na abertura, a proposta para os achados que vai tocar e a
-   aplica pela tool ao fechar, se ela se sustentar no código (item 9 do "Como trabalhar"). As 15 saídas esperam a
-   decisão do Vicente pela lista abaixo.
+   aplica pela tool ao fechar, se ela se sustentar no código (item 9 do "Como trabalhar"). As 15 saídas foram
+   confirmadas pelo Vicente e aplicadas (05/11).
 5. **Sessão P, curta, depois da 2c: a porta do backlog.** A `record_system_finding` recusa achado novo ou
    atualizado sem a "mentira de hoje" (arquivo:linha e o que a contradiz), com teste; o destino
    `METODOLOGIA_NOVA` deixa de valer para defeito.
@@ -138,6 +140,8 @@ existir".
 - A descrição do manifest do `prisma-sr` ("Trilha completa ... com rastreabilidade PRISMA 2020") afirma mais do
   que os 21 itens órfãos e os 5 deslocados sustentam. Não conferido.
 - Há um arquivo solto, `reviewbr/reviewbr-mcp/src/index.ts.tmp`. Conferido: existe.
+- `batch_llm_extract`: o registro de uso de IA lhe atribui o aviso C3 (`registry/ai_use.ts:78`), e ele não o
+  emite (só `index.ts:741` e `:2504` chamam a checagem). Visto pelo classificador do DEBT-015. Não conferido.
 - A DIRECAO termina na linha 469 com a primeira linha de uma tabela sem cabeçalho. A lista dos 12 que "sobram"
   no §11 não está no disco. Conferido.
 

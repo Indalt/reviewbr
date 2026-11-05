@@ -1,9 +1,11 @@
 # Triagem do backlog: defeito × ausência — 05/11/2026
 
 > **Estado (05/11, à tarde): as cinco decisões abaixo foram aprovadas pelo Vicente ("aplicar as decisões") e
-> aplicadas.** No backlog, só o DEBT-151 (decisão 2) e o fechamento do DEBT-149 (decisão 3). O resto da proposta
-> por achado não foi contestado: cada sessão o confere para os achados que toca (item 9 do "Como trabalhar" do
-> plano), e as 15 saídas esperam o Vicente. Os 4 classificadores do workflow `wf_69aa6db2-8ea` terminaram; os
+> aplicadas.** No backlog: o DEBT-151 (decisão 2), o fechamento do DEBT-149 (decisão 3) e as 15 saídas,
+> confirmadas pelo Vicente ("saídas confirmadas") e gravadas como RECUSADO, com o destino de cada uma na resolution
+> — o aberto passou de 58 para 43. O resto da proposta (ficar, enxugar, fundir) não foi contestado: cada sessão o
+> confere para os achados que toca (item 9 do "Como trabalhar" do plano). Os 4 classificadores do workflow
+> `wf_69aa6db2-8ea` terminaram; os
 > contestadores e o crítico não rodaram, porque o limite de 5h estourou (fan-out lançado sem custo combinado,
 > contra a regra 6 do "Como trabalhar"). Saída bruta: `classificadores.json`.
 
@@ -107,8 +109,8 @@ existir".
    procedimento de assimilação (B1, B2), sem prender o fechamento. Sai o item 4: a trava da escolha de método
    (DEBT-145) é a D15.
 4. **Os outros 55.** Sem agente: cada sessão confere, na abertura, a proposta para os achados que vai tocar e a
-   aplica pela tool ao fechar, se ela se sustentar no código (item 9 do "Como trabalhar"). As 15 saídas esperam a
-   decisão do Vicente pela lista abaixo.
+   aplica pela tool ao fechar, se ela se sustentar no código (item 9 do "Como trabalhar"). As 15 saídas foram
+   confirmadas pelo Vicente e aplicadas (05/11).
 5. **Sessão P, curta, depois da 2c: a porta do backlog.** A `record_system_finding` recusa achado novo ou
    atualizado sem a "mentira de hoje" (arquivo:linha e o que a contradiz), com teste; o destino
    `METODOLOGIA_NOVA` deixa de valer para defeito.
@@ -123,6 +125,8 @@ existir".
 - A descrição do manifest do `prisma-sr` ("Trilha completa ... com rastreabilidade PRISMA 2020") afirma mais do
   que os 21 itens órfãos e os 5 deslocados sustentam. Não conferido.
 - Há um arquivo solto, `reviewbr/reviewbr-mcp/src/index.ts.tmp`. Conferido: existe.
+- `batch_llm_extract`: o registro de uso de IA lhe atribui o aviso C3 (`registry/ai_use.ts:78`), e ele não o
+  emite (só `index.ts:741` e `:2504` chamam a checagem). Visto pelo classificador do DEBT-015. Não conferido.
 - A DIRECAO termina na linha 469 com a primeira linha de uma tabela sem cabeçalho. A lista dos 12 que "sobram"
   no §11 não está no disco. Conferido.
 
@@ -131,7 +135,7 @@ existir".
 
 ### Saem do backlog (RECUSAR) — 15
 
-**DEBT-007** (ABERTO, SERIO, destino CONFORM_EXTERNA) — JBI (Joanna Briggs Institute) citado mas nao implementado
+**DEBT-007** (RECUSADO, SERIO, destino CONFORM_EXTERNA) — JBI (Joanna Briggs Institute) citado mas nao implementado
 
 - Classe: AUSENCIA · confiança: alta
 - Mentira de hoje: Nenhuma. 'JBI' é uma das opções de instrumento que o protocolo declara na F6 do prisma-sr (manifest.json:131-138, com producer_tools vazio; spec.md:305). Nenhuma tool diz aplicá-lo e nenhum gate o confere. O método de escopo não cita o JBI. A única promessa ('PRISMA-ScR + Guia JBI', src/index.ts:253) é texto morto: assess_research_design só lê do META o rótulo, o registro e a descrição (index.ts:463-519). A tabela duplicada é o DEBT-136, sessão 6.
@@ -141,7 +145,7 @@ existir".
 - Sessão: Nenhuma para o achado. A assimilação do JBI segue na 7+ como trabalho de catálogo.
 - Por quê: É o caso-tipo do §9 da DIRECAO: metodologia conhecida registrada como dívida. Conferi a promessa que o context alega para o escopo, e ela não chega ao pesquisador.
 
-**DEBT-015** (ABERTO, SERIO, destino CONFORM_EXTERNA) — Das 40 tools, so 4 usam IA — e as 4 estao na triagem/extracao, sem verificacao deterministica por cima
+**DEBT-015** (RECUSADO, SERIO, destino CONFORM_EXTERNA) — Das 40 tools, so 4 usam IA — e as 4 estao na triagem/extracao, sem verificacao deterministica por cima
 
 - Classe: AUSENCIA · confiança: media
 - Mentira de hoje: Nenhuma nos trechos citados. screen_candidates se apresenta como 'Triagem por IA (Gemini)' (src/index.ts:698) e emite o aviso do RAISE 3 'EXIGE VALIDAÇÃO DENTRO DA REVISÃO' (index.ts:741; registry/ai_use.ts:198). O RAG se declara 'Retriever léxico BM25' (index.ts:1745), e o reader escreve [TBD] onde o corpus não responde, em vez de concluir ausência (reader.md:27). Nada afirma que a saída da IA foi conferida.
@@ -151,7 +155,7 @@ existir".
 - Sessão: Nenhuma marcada.
 - Por quê: O destino CONFORM_EXTERNA já é tratado como escopo pelo §11 da DIRECAO. A confiança é média porque vi de passagem que batch_llm_extract, que o extractor usa por padrão (extractor.md:17), não emite o aviso C3 que o registro lhe atribui (ai_use.ts:78; só index.ts:741 e :2504 chamam checarUsoDeIA). Não é mentira, porque nada afirma validação, mas entra na resposta ao D07.
 
-**DEBT-043** (ABERTO, MENOR, destino AGENTE_SKILL) — Nenhum teste cobre os invariantes RV-01..RV-08; a suite testa o RV-11 e a governanca
+**DEBT-043** (RECUSADO, MENOR, destino AGENTE_SKILL) — Nenhum teste cobre os invariantes RV-01..RV-08; a suite testa o RV-11 e a governanca
 
 - Classe: AUSENCIA · confiança: media
 - Mentira de hoje: Nenhuma. Nada afirma que o FlowComputer ou o caminho do handler do checkDesignGuardrail tenham teste, e o próprio achado registra que 4 dos 6 verificadores já têm.
@@ -161,7 +165,7 @@ existir".
 - Sessão: 3: já está listado lá e deixa de ser achado para virar item da saída verificável.
 - Por quê: Um teste que falta não mente nem prejudica: é o que falta ligar de uma correção em curso (§9), ou seja, escopo do trabalho. Confiança média porque a verificação de 04/10 o manteve, estreitado, mas por precisão e não por prejuízo.
 
-**DEBT-070** (ABERTO, MENOR, destino CONFORM_EXTERNA) — Nenhum gate é chamado por código: o campo `gates[].blocks` do manifest não é lido em lugar nenhum do runtime
+**DEBT-070** (RECUSADO, MENOR, destino CONFORM_EXTERNA) — Nenhum gate é chamado por código: o campo `gates[].blocks` do manifest não é lido em lugar nenhum do runtime
 
 - Classe: PRINCIPIO · confiança: alta
 - Mentira de hoje: Nenhuma própria. O que o achado ainda sustenta é que o runtime não lê o array gates, e isso é arquitetura. O DEBT-049 tratou o mesmo ponto e foi fechado em 04/10 por distinção de escopo; a regra de 09/10 dispensou essa arquitetura; e o Vicente respondeu SIM à pergunta 4 em 29/10 (gates conferidos só na instalação). Se cada entrada diz a verdade é assunto do DEBT-138, e o próprio achado reconhece que o gate do RV-05 roda por código.
@@ -171,7 +175,7 @@ existir".
 - Sessão: 3: sai da lista, e a frase vai com o DEBT-138
 - Por quê: 'Quando o runtime passar a ler o manifest, este achado fecha junto' é um adiamento à espera de uma arquitetura já dispensada. Mantê-lo prendia o DEBT-003 por dependência.
 
-**DEBT-094** (EM_CURSO, BLOQUEIA, destino CONFORM_EXTERNA) — RAISE 2026: o sistema descumpre os 6 itens do §4.9 e as 5 exigencias de triagem do RAISE 2
+**DEBT-094** (RECUSADO, BLOQUEIA, destino CONFORM_EXTERNA) — RAISE 2026: o sistema descumpre os 6 itens do §4.9 e as 5 exigencias de triagem do RAISE 2
 
 - Classe: AUSENCIA · confiança: media
 - Mentira de hoje: Nenhuma encontrada. Nenhum método declara o RAISE em conformance.standards (o grep nos manifests e nas pastas conformance dá zero). O sistema informa a categoria C3 na triagem por LLM (ai_use.ts:198; index.ts:741 e :2504) e não afirma validação. Parte da evidência de 25/09 está vencida: temperatura, modelo com alias resolvido, prompt e proveniência por decisão já foram feitos (DEBT-027/098/099). E o critério de fechamento escrito no próprio context, absorver no catálogo, já está cumprido.
@@ -181,7 +185,7 @@ existir".
 - Sessão: 2d: sai o item 11 (DEBT-094, RAISE 3). Fica só a pergunta D07, que é decisão, não conserto.
 - Por quê: O destino CONFORM_EXTERNA é escopo pelo §11. A confiança é média pelo histórico (BLOQUEIA, EM_CURSO) e porque a extração por LLM roda sem o aviso C3 (ver DEBT-015). Se o D07 tornar o RAISE 3 exigível, isso vira conformidade a fazer, não mentira de hoje.
 
-**DEBT-101** (EM_CURSO, SERIO, destino DECISAO_PESQ) — O alvo da triagem por IA nao e determinismo: e auditabilidade e variabilidade medida — como ja se exige de humanos
+**DEBT-101** (RECUSADO, SERIO, destino DECISAO_PESQ) — O alvo da triagem por IA nao e determinismo: e auditabilidade e variabilidade medida — como ja se exige de humanos
 
 - Classe: PRINCIPIO · confiança: alta
 - Mentira de hoje: Nenhuma. compararCorridas (screening_audit.ts:161) existe, mas nenhuma tool a chama, e nada afirma que o kappa entre corridas é medido ou relatado. O kappa da spec (F4.1.5, spec.md:207) é um campo que o pesquisador preenche quando a triagem é dupla.
@@ -191,7 +195,7 @@ existir".
 - Sessão: Nenhuma; a sessão M recebe o princípio.
 - Por quê: O próprio achado se define como 'PRINCÍPIO DE DESENHO', e o que falta é funcionalidade.
 
-**DEBT-106** (ABERTO, MENOR, destino METODOLOGIA_NOVA) — Os scripts de origem/codigo_origem/ têm caminhos absolutos da máquina antiga: TESSDATA_PREFIX=C:/Users/alqui/tessdata em 6 scripts e a pasta do projeto cajuína fixada em…
+**DEBT-106** (RECUSADO, MENOR, destino METODOLOGIA_NOVA) — Os scripts de origem/codigo_origem/ têm caminhos absolutos da máquina antiga: TESSDATA_PREFIX=C:/Users/alqui/tessdata em 6 scripts e a pasta do projeto cajuína fixada em…
 
 - Classe: ADIAMENTO · confiança: alta
 - Mentira de hoje: Nenhuma. Os scripts de origem/codigo_origem/ são registro de origem, não código do sistema. Nada em src/ os importa ou chama (o próprio achado conferiu), e o sistema não afirma rodá-los.
@@ -201,7 +205,7 @@ existir".
 - Sessão: Nenhuma.
 - Por quê: O próprio context diz 'só importa quando o DEBT-102 for implementado' e 'não corrigido agora: os scripts são registro de origem'. É adiamento puro; a reclassificação de 18/10 já dizia 'nada agora'.
 
-**DEBT-110** (ABERTO, MENOR, destino AGENTE_SKILL) — Não há etapa antes do F0: assess_research_design classifica o tipo de revisão e devolve requisitos, mas ninguém avalia se a pergunta é viável nem para quem o resultado…
+**DEBT-110** (RECUSADO, MENOR, destino AGENTE_SKILL) — Não há etapa antes do F0: assess_research_design classifica o tipo de revisão e devolve requisitos, mas ninguém avalia se a pergunta é viável nem para quem o resultado…
 
 - Classe: AUSENCIA · confiança: alta
 - Mentira de hoje: Nenhuma. A descrição de assess_research_design (src/index.ts) diz que a tool apresenta os métodos assimilados que servem ao tipo; não diz que avalia viabilidade. O próprio achado registra que 'nada quebra por não a ter'.
@@ -211,7 +215,7 @@ existir".
 - Sessão: Nenhuma.
 - Por quê: É o mesmo padrão que o Vicente apontou: um método heterodoxo montado como tarefa, quando as metodologias de revisão já trazem o passo.
 
-**DEBT-114** (ABERTO, SERIO, destino FASE_1) — O item 8 do PRISMA (Selection process) exige 4 declaracoes e o sistema tem campo para UMA: o catalogo declara o item coberto por 4 subitens, nenhum dos quais tem…
+**DEBT-114** (RECUSADO, SERIO, destino FASE_1) — O item 8 do PRISMA (Selection process) exige 4 declaracoes e o sistema tem campo para UMA: o catalogo declara o item coberto por 4 subitens, nenhum dos quais tem…
 
 - Classe: ADIAMENTO · confiança: alta
 - Mentira de hoje: Nenhuma. O próprio achado, reavaliado em 08/10, registra que três das quatro declarações do item 8 são de protocolo, e o protocol_auditor já as exige: ROTULOS_F41 (protocol_auditor.ts:72-76) reprova o travamento sem elas (DEBT-113). A quarta está na trilha de auditoria de IA. O resíduo (kappa, F4.1.5, só com triagem dupla) já está na spec, marcado 'se dupla' (spec.md:207), e o item 8 fica coberto por F4.1.2/F4.1.3 de qualquer forma.
@@ -221,7 +225,7 @@ existir".
 - Sessão: nenhuma
 - Por quê: O defeito foi consertado por outro achado, e o que sobra é uma conferência sem falha mostrada. A reclassificação de 18/10 já marcava 'não vale hoje — fechar'.
 
-**DEBT-132** (ABERTO, SERIO, destino FASE_1) — O modo de agir do ReviewBR: o que o sistema garante, o que apenas torna visivel, e o que nao protege — declarado para nao prometer o que nao cumpre
+**DEBT-132** (RECUSADO, SERIO, destino FASE_1) — O modo de agir do ReviewBR: o que o sistema garante, o que apenas torna visivel, e o que nao protege — declarado para nao prometer o que nao cumpre
 
 - Classe: PRINCIPIO · confiança: alta
 - Mentira de hoje: Nenhuma própria. A decisão de 04/10 (garante / torna visível / não protege) já está escrita nos fundamentos (maintainer.md:24-30), e nenhum texto voltado ao pesquisador promete proteção contra fraude (conferi a conduct-review e os READMEs). Os caminhos abertos que o achado lista têm achados próprios, abertos e com sessão: DEBT-018 ([LOCKED] lido pelo conteúdo, sessão 5), DEBT-138 (o export não recomputa o funil, sessão 3) e DEBT-060 (agentes com Write e Bash).
@@ -231,7 +235,7 @@ existir".
 - Sessão: M.
 - Por quê: É uma decisão registrada como achado. A tabela do maintainer.md só fica verdadeira quando o DEBT-018 e o DEBT-138 fecharem, e os dois já estão na fila.
 
-**DEBT-134** (ABERTO, SERIO, destino DECISAO_PESQ) — O ProtocolDesignAuditor e o ProtocolGate exigem protocolo travado de TODO projeto, inclusive dos que nao assumiram metodologia — e o aviso de busca exploratoria citava…
+**DEBT-134** (RECUSADO, SERIO, destino DECISAO_PESQ) — O ProtocolDesignAuditor e o ProtocolGate exigem protocolo travado de TODO projeto, inclusive dos que nao assumiram metodologia — e o aviso de busca exploratoria citava…
 
 - Classe: PRINCIPIO · confiança: media
 - Mentira de hoje: Nenhuma hoje. Todo projeto que se pode criar tem um método que exige protocolo travado: o prisma-sr serve só systematic_review e o scoping-prisma-scr só scoping_review (serves_research_types nos manifests), e tipo sem método assimilado é recusado (resolução do DEBT-121, 09/10). A parte (1) foi corrigida em 08/10. A própria reclassificação de 18/10 diz do conserto proposto: 'para os dois métodos atuais o comportamento não muda'.
@@ -241,7 +245,7 @@ existir".
 - Sessão: 6 (sai da lista) e M (a decisão)
 - Por quê: É exatamente o caso que o Vicente descreveu: preparar o sistema para um método que ainda não existe. Quando esse método for assimilado com rigor, a trava se ajusta na própria assimilação. Pela regra de 09/10, mudar código quando o administrador decide é fluxo de trabalho, não dívida.
 
-**DEBT-136** (ABERTO, SERIO, destino FASE_1) — A tabela de tipos de pesquisa continua DUPLICADA e divergente (o DEBT-122 consertou a frase derivada, nao a copia), e a z.enum de plan_research_protocol tem 6 valores…
+**DEBT-136** (RECUSADO, SERIO, destino FASE_1) — A tabela de tipos de pesquisa continua DUPLICADA e divergente (o DEBT-122 consertou a frase derivada, nao a copia), e a z.enum de plan_research_protocol tem 6 valores…
 
 - Classe: ADIAMENTO · confiança: media
 - Mentira de hoje: Nenhuma que chegue ao pesquisador hoje. O fallback com '44 subitens' saiu do index.ts: o campo prismaStandard da cópia (index.ts:246-288) não é lido em lugar nenhum. O fallback do project_init.ts:229-231 só dispara para método sem padrão declarado, e os dois instalados declaram. methodological_audit ficar fora da z.enum de plan_research_protocol (index.ts:1549) não promete nada: nenhum método serve a esse tipo, e o assess_research_design recusa com a mensagem honesta. O que a cópia ainda leva ao pesquisador ('Registro: OBRIGATÓRIO') é o DEBT-135, aberto.
@@ -251,7 +255,7 @@ existir".
 - Sessão: 6
 - Por quê: A mentira que justificava o achado saiu. Sobra duplicação de código e um limite que só pesa no futuro: pela regra de 09/10, precisar de mudança no código não é defeito, e a tarefa já está no plano.
 
-**DEBT-145** (ABERTO, SERIO, destino FASE_2) — A cobertura dos padroes vira TRAVA na escolha de metodo so depois que os mapeamentos forem corrigidos — ate la o sistema mostra a fracao e o que falta, e o pesquisador…
+**DEBT-145** (RECUSADO, SERIO, destino FASE_2) — A cobertura dos padroes vira TRAVA na escolha de metodo so depois que os mapeamentos forem corrigidos — ate la o sistema mostra a fracao e o que falta, e o pesquisador…
 
 - Classe: ADIAMENTO · confiança: alta
 - Mentira de hoje: Nenhuma. A trava não existe e nada diz que existe; check_standard_coverage mostra as lacunas quando é chamado. O passo intermediário, 'a escolha de método mostra a fração', não foi feito: metodosParaTipo devolve os padrões e as pendências da trilha, sem fração (methods_for_type.ts:55-90). Mas também não é afirmado. É uma decisão (D15) ainda não executada.
@@ -261,7 +265,7 @@ existir".
 - Sessão: 2c: sai da saída verificável o 'DEBT-145 atualizado'; o ponto (3) vai ao D15.
 - Por quê: O texto é literalmente 'quando X existir': adiamento de funcionalidade, não falha de hoje.
 
-**DEBT-146** (ABERTO, MENOR, destino AGENTE_SKILL) — Nenhum teste trava o corpo dos agentes ('Ferramentas (contrato de papel)') contra o frontmatter: as correções do DEBT-061 e do DEBT-065 podem regredir sem nada reprovar
+**DEBT-146** (RECUSADO, MENOR, destino AGENTE_SKILL) — Nenhum teste trava o corpo dos agentes ('Ferramentas (contrato de papel)') contra o frontmatter: as correções do DEBT-061 e do DEBT-065 podem regredir sem nada reprovar
 
 - Classe: ADIAMENTO · confiança: alta
 - Mentira de hoje: Nenhuma. O próprio achado diz que corpo e frontmatter foram sincronizados em 26/09 (DEBT-065, resolvido) e que 'o risco é regressão silenciosa, não defeito apurado hoje'.
@@ -271,7 +275,7 @@ existir".
 - Sessão: 6
 - Por quê: Teste de regressão de uma correção já feita é o que falta ligar de uma correção em curso (§9), não achado. Foi registrado em 29/10 por causa da DEC-43, que é de 27/09 e anterior a esse critério. Pôr o teste na sessão 6 é decisão do Vicente.
 
-**DEBT-147** (ABERTO, MENOR, destino DECISAO_PESQ) — Requisito do Vicente: abrir a pasta numa IDE com IA e o ReviewBR funcionar, com o Node como pré-requisito — hoje o clone só funciona depois de npm install e npm run build
+**DEBT-147** (RECUSADO, MENOR, destino DECISAO_PESQ) — Requisito do Vicente: abrir a pasta numa IDE com IA e o ReviewBR funcionar, com o Node como pré-requisito — hoje o clone só funciona depois de npm install e npm run build
 
 - Classe: PRINCIPIO · confiança: alta
 - Mentira de hoje: Nenhuma. .claude/README.md:28-31 manda rodar 'npm install && npm run build' antes de usar, e nenhum texto diz que a pasta funciona sem instalação.

@@ -93,6 +93,9 @@ para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cad
   - **Triagem.** A proposta para os 58 abertos não se aplica de uma vez: cada sessão a confere para os achados
     que toca (item 9 do "Como trabalhar"). As 15 saídas esperam o Vicente.
   - **Sessão P**, curta, depois da 2c: a porta do backlog (tabela de sessões).
+  - **Confirmações de 05/11, à tarde** ("saídas confirmadas. ok para posição M. Ok para D07"): as 15 saídas da
+    triagem aplicadas (RECUSADO, com o destino de cada uma na resolution); a M fica antes da 6; o D07 é
+    respondido antes de mexer no RAISE. A pergunta do D07 (quando o RAISE vale num projeto) segue aberta.
 
 ## Contexto que desfaz ambiguidades: o sistema mudou DURANTE a troca de computador
 
@@ -124,12 +127,12 @@ Consequências para ler o disco sem se enganar:
 | 2b | Itens condicionais em uso | DEBT-150 (avaliação crítica no escopo), DEBT-008 (certeza da evidência: declarar; a assimilação vai às 7+), DEBT-152 (frases velhas em agentes e skill) | 2a | condição declarada pelo método, perguntada na F1 e respondida pelo projeto, com o efeito no denominador que a fonte manda, com teste; F7.3 declarada [NÃO COBERTO] por tool; `prisma-rigor-gates` sem a certeza que nenhum gate confere; agentes sem as frases velhas |
 | 2c | Conferência do mapeamento: fora da trava; leitura documentada | DEBT-149 — decisão de 05/11 (B1, B2), que substitui os pontos (1) e (4) da de 30/10; fecha no item 1 (decisão de 05/11, à tarde) | 2b | suspeito da conferência por palavras não reprova, e o relatório diz o que ela é e quanto enxerga; o porquê de cada etapa não depende dela; PRISMA-ScR do escopo `valid: true` sem mexer no mapeamento; leitura documentada com conferidor testado; PRISMA-S do prisma-sr lido e relido de forma independente, com as divergências levadas ao Vicente |
 | P | A porta do backlog | regra do backlog e decisão 5 de 05/11, à tarde | 2c | a `record_system_finding` recusa achado novo ou atualizado sem a "mentira de hoje" (onde o sistema afirma ou exige, com arquivo:linha, e o que contradiz), com teste; o destino `METODOLOGIA_NOVA` deixa de valer para defeito, e os abertos com esse destino que são defeito (14, pela triagem de 05/11) recebem o destino certo; outras instruções que mandem registrar ausência como achado, se houver (o crítico da triagem não rodou), alinhadas à regra |
-| M | Método do ReviewBR — descrição | A1–A3, A7, A9 (31/10–05/11); D09 e D17 da revisão de decisões | 2c (posição proposta pelo acompanhamento, a confirmar: antes da 6, que depende dela) | o método da ferramenta descrito como metodologia — objetivo, fundamentos na filosofia da ciência, princípios, etapas, critérios de validade e limites —, aprovado pelo Vicente |
-| 3 | Funil e gates | 3 (DEBT-138), 4 (DEBT-070), DEBT-071/043/105 | — | export bloqueia funil divergente; manifests dizem a verdade sobre os gates |
+| M | Método do ReviewBR — descrição | A1–A3, A7, A9 (31/10–05/11); D09 e D17 da revisão de decisões; os princípios que saíram do backlog em 05/11, para redação e aprovação do Vicente: o alvo da triagem por IA (DEBT-101, D01), o modo de agir (DEBT-132) e a auditoria de protocolo por método (DEBT-134) | 2c (antes da 6, que depende dela; posição confirmada pelo Vicente em 05/11) | o método da ferramenta descrito como metodologia — objetivo, fundamentos na filosofia da ciência, princípios, etapas, critérios de validade e limites —, aprovado pelo Vicente |
+| 3 | Funil e gates | 3 (DEBT-138), 4 (a decisão de 29/10 sobre gates, que vai no conserto do DEBT-138; o DEBT-070 saiu do backlog em 05/11), DEBT-071/105 | — | export bloqueia funil divergente; manifests dizem a verdade sobre os gates; teste do FlowComputer e do caminho do handler do checkDesignGuardrail (do DEBT-043, que saiu do backlog em 05/11) |
 | 4 | Busca e triagem | 5 (DEBT-056), 6 (DEBT-021), 7 (DEBT-025) | — | log PRISMA-S gravado por código; saturação lê o disco; dedup com DOI/acentos e nível 4 só sinalizando |
 | 5 | Leitura e governança | 8 (DEBT-031), 9 (DEBT-018), 12 (DEBT-016), DEBT-141 | — | citação com página; trava só pelo `project_state.json`; aviso na tool de `targets`; atualização do catálogo sem apagar campos |
-| 6 | Sair do esqueleto PRISMA | DEBT-137 (agentes e skills descritos por F0–F8), DEBT-134 (protocolo exigido de todo projeto), DEBT-136 (tabela de tipos duplicada), tabela F0–F8 do `conduct-review`; DEBT-151 (o escopo herda do `prisma-sr` o que é da revisão sistemática; D14, 05/11; antes, numa sessão curta, se os projetos de escopo chegarem à triagem) | sessões 2a–2c, P e M | agentes descritos por papel; cada etapa do manifest diz que skill a executa; o que é do `prisma-sr` fica no `prisma-sr` |
-| 7+ | O resto da reclassificação | 19 declarações e consertos restantes; assimilação de métodos validados (JBI, GRADE/CERQual, exploratório…) | sessões 1–6 | um bloco por sessão, na ordem do arquivo de reclassificação |
+| 6 | Sair do esqueleto PRISMA | DEBT-137 (agentes e skills descritos por F0–F8), a cópia da tabela de tipos e a enum do `plan_research_protocol` (do DEBT-136, que saiu do backlog em 05/11), tabela F0–F8 do `conduct-review`; DEBT-151 (o escopo herda do `prisma-sr` o que é da revisão sistemática; D14, 05/11; antes, numa sessão curta, se os projetos de escopo chegarem à triagem) | sessões 2a–2c, P e M | agentes descritos por papel, com teste que compara a seção "Ferramentas (contrato de papel)" de cada agente com o frontmatter (do DEBT-146, que saiu do backlog em 05/11); cada etapa do manifest diz que skill a executa; o que é do `prisma-sr` fica no `prisma-sr` |
+| 7+ | O resto da reclassificação | 19 declarações e consertos restantes; assimilação de métodos validados (JBI, GRADE/CERQual, exploratório…); funcionalidades que saíram do backlog em 05/11, quando o Vicente pedir: validação da IA dentro da revisão (do DEBT-015, DEBT-094 e DEBT-101), a trava da escolha de método (do DEBT-145, depois do DEBT-014 e do DEBT-045), o OCR (DEBT-102, com os caminhos fixos do DEBT-106 como parâmetro) e a forma de abrir o ReviewBR numa IDE com IA (do DEBT-147, D31) | sessões 1–6 | um bloco por sessão, na ordem do arquivo de reclassificação |
 | depois | Fase de testes do sistema e análise do trabalho | sequência decidida pelo Vicente em 27/09 (DEC-42 do `DECISOES_chat_a_conferir.md`); critério de entrada registrado em 03/10 (`DECISOES_2026-10-03.md`), a reconferir ao chegar lá | sessões 1–7+ | a definir |
 
 **Estado:** sessões 0 (29/10/2026), 1, 2a (30/10/2026) e 2b (31/10/2026) fechadas, cada uma com a carta na sua
@@ -139,12 +142,11 @@ a 2c (B1, B2); em 05/11, à tarde, corrigiu a D14, aprovou a regra do backlog e 
 ajustado na seção dela; depois, a P.** Em 05/11, por volta das 16:41 UTC, o Vicente leu 35% da janela de 5h e 33%
 do limite semanal.
 
-Fica a confirmar a proposta de descrever o método do ReviewBR (M) antes da 6. Pendentes que não bloqueiam a 2c:
-- as 15 saídas propostas pela triagem de 05/11 (seção "Saem do backlog" do `TRIAGEM.md`), que esperam a decisão
-  do Vicente;
+A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
+não bloqueiam a 2c:
 - as 41 decisões da lista D01–D41 (`revisao_decisoes_2026-10-31/lista_decisoes.md`), cada uma antes da sessão
   em que pesa;
-- o D07, antes de tocar o RAISE (DEBT-094).
+- o D07 (quando o RAISE vale num projeto), respondido antes de mexer no RAISE.
 
 A régua do `--agora` foi recalibrada em 05/11: 10,0–13,5 M (`CONTINUAR.md` §1, item 6).
 
@@ -200,7 +202,7 @@ reduz o que sobra para a sessão.
    no começo e no fim.
 9. **Achado tocado, conferido contra a triagem de 05/11.** Na abertura, a sessão lê em
    `triagem_backlog_2026-11-05/TRIAGEM.md` a proposta para os achados que vai tocar (ficar, enxugar, fundir) e,
-   ao fechar, a aplica pela tool se ela se sustentar no código. As 15 saídas propostas esperam o Vicente.
+   ao fechar, a aplica pela tool se ela se sustentar no código. As 15 saídas foram aplicadas em 05/11.
 
 ### Os dois chats, e como cada sessão abre e fecha
 

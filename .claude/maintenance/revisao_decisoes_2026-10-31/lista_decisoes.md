@@ -89,6 +89,10 @@ fundamento: cada item espera o Vicente. Resultado bruto: `resultado_agentes.json
 - **Só o Vicente responde:** Quando o RAISE passa a ser exigido de um projeto: pela norma do método ou pelo uso de IA? O mapa ai_use aplicado a todas as tools é compatível com “não canônico”? A frase da credibilidade pede alguma conferência do produto da pesquisa?
 - **Superada por:** Em parte, no gatilho, pela pergunta 11 de 29/10 (PLANO:13 e :77). Ele não a respondeu diretamente.
 - **Conferência de fidelidade:** AJUSTAR — 27fac9ba L8791, L8803/L8806 ("B") e L12344 conferem, e a data 04/10 no DEBT-131 está errada. A descrição da opção (b) em L8803 era: "o RAISE 3 entra em conformance.standards como qualquer padrão, e governa o uso de IA naquela revisão". O "não tornar canônico" respondeu (L12341) a "credibilidade de pesquisa com IA se constrói declarando o que a IA fez, que é o RAISE 3 já assimilado e já instrumentado por tarefa e classe de ferramenta". Ou seja, mirava diretamente o mapa por tarefa e tool, e a proposta trata isso só como leitura. Tirar a citação do RAISE 1 de maintainer.md:30 foi tradução do agente (L12394 e §3.6), não decisão dele. A citação continua lá (conferido). A pergunta 11 foi dada como respondida pelo agente em 29/10 (9e138b39 L2439), e ele não comentou.
+- **Registro de 05/11/2026, à tarde:** o Vicente confirmou que o D07 é respondido antes de mexer no RAISE ("Ok
+  para D07"); a pergunta segue aberta. O DEBT-094 saiu do backlog em 05/11 com três destinos: este D07; a
+  validação da IA dentro da revisão (plano, 7+); e os itens de relato do RAISE, pelo procedimento, se este D07
+  disser que ele vale.
 
 ## D08 — Instalar método exigindo atualização do servidor MCP não é defeito (decisão 4 de 08/10)
 
