@@ -96,6 +96,11 @@ para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cad
   - **Confirmações de 05/11, à tarde** ("saídas confirmadas. ok para posição M. Ok para D07"): as 15 saídas da
     triagem aplicadas (RECUSADO, com o destino de cada uma na resolution); a M fica antes da 6; o D07 é
     respondido antes de mexer no RAISE. A pergunta do D07 (quando o RAISE vale num projeto) segue aberta.
+  - **D07, decidido em 05/11, à tarde.** Todo projeto declara onde e como a IA foi usada, e, quando a
+    metodologia, a norma de relato ou o periódico exigem mais, todas as informações que se pede ("Levamos as
+    metodologias a sério"). O RAISE não é norma canônica; entra como norma quando o método ou o destino o
+    exigem. Texto em `lista_decisoes.md` (D07) e em `d07_raise_fontes_2026-11-05.md`. Ficam a conferir o mapa
+    de uso de IA das tools e a citação do RAISE 1 no `maintainer.md`.
 
 ## Contexto que desfaz ambiguidades: o sistema mudou DURANTE a troca de computador
 
@@ -132,7 +137,7 @@ Consequências para ler o disco sem se enganar:
 | 4 | Busca e triagem | 5 (DEBT-056), 6 (DEBT-021), 7 (DEBT-025) | — | log PRISMA-S gravado por código; saturação lê o disco; dedup com DOI/acentos e nível 4 só sinalizando |
 | 5 | Leitura e governança | 8 (DEBT-031), 9 (DEBT-018), 12 (DEBT-016), DEBT-141 | — | citação com página; trava só pelo `project_state.json`; aviso na tool de `targets`; atualização do catálogo sem apagar campos |
 | 6 | Sair do esqueleto PRISMA | DEBT-137 (agentes e skills descritos por F0–F8), a cópia da tabela de tipos e a enum do `plan_research_protocol` (do DEBT-136, que saiu do backlog em 05/11), tabela F0–F8 do `conduct-review`; DEBT-151 (o escopo herda do `prisma-sr` o que é da revisão sistemática; D14, 05/11; antes, numa sessão curta, se os projetos de escopo chegarem à triagem) | sessões 2a–2c, P e M | agentes descritos por papel, com teste que compara a seção "Ferramentas (contrato de papel)" de cada agente com o frontmatter (do DEBT-146, que saiu do backlog em 05/11); cada etapa do manifest diz que skill a executa; o que é do `prisma-sr` fica no `prisma-sr` |
-| 7+ | O resto da reclassificação | 19 declarações e consertos restantes; assimilação de métodos validados (JBI, GRADE/CERQual, exploratório…); funcionalidades que saíram do backlog em 05/11, quando o Vicente pedir: validação da IA dentro da revisão (do DEBT-015, DEBT-094 e DEBT-101), a trava da escolha de método (do DEBT-145, depois do DEBT-014 e do DEBT-045), o OCR (DEBT-102, com os caminhos fixos do DEBT-106 como parâmetro) e a forma de abrir o ReviewBR numa IDE com IA (do DEBT-147, D31) | sessões 1–6 | um bloco por sessão, na ordem do arquivo de reclassificação |
+| 7+ | O resto da reclassificação | 19 declarações e consertos restantes; assimilação de métodos validados (JBI, GRADE/CERQual, exploratório…); funcionalidades que saíram do backlog em 05/11, quando o Vicente pedir: validação da IA dentro da revisão (do DEBT-015, DEBT-094 e DEBT-101), a trava da escolha de método (do DEBT-145, depois do DEBT-014 e do DEBT-045), o OCR (DEBT-102, com os caminhos fixos do DEBT-106 como parâmetro) e a forma de abrir o ReviewBR numa IDE com IA (do DEBT-147, D31); a declaração de uso de IA de todo projeto — onde e como foi usada e, quando exigido, tudo o que se pede (D07, 05/11) —, pronta antes de algum projeto chegar ao relato (F8) | sessões 1–6 | um bloco por sessão, na ordem do arquivo de reclassificação |
 | depois | Fase de testes do sistema e análise do trabalho | sequência decidida pelo Vicente em 27/09 (DEC-42 do `DECISOES_chat_a_conferir.md`); critério de entrada registrado em 03/10 (`DECISOES_2026-10-03.md`), a reconferir ao chegar lá | sessões 1–7+ | a definir |
 
 **Estado:** sessões 0 (29/10/2026), 1, 2a (30/10/2026) e 2b (31/10/2026) fechadas, cada uma com a carta na sua
@@ -146,7 +151,8 @@ A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações 
 não bloqueiam a 2c:
 - as 41 decisões da lista D01–D41 (`revisao_decisoes_2026-10-31/lista_decisoes.md`), cada uma antes da sessão
   em que pesa;
-- o D07 (quando o RAISE vale num projeto), respondido antes de mexer no RAISE.
+- no D07, decidido em 05/11: o mapa de uso de IA das tools (bloquear o não aceitável e exigir validação, ou só
+  avisar) e a citação do RAISE 1 no `maintainer.md`.
 
 A régua do `--agora` foi recalibrada em 05/11: 10,0–13,5 M (`CONTINUAR.md` §1, item 6).
 

@@ -12,6 +12,30 @@ A redação proposta está no D07 de `lista_decisoes.md`.
 As respostas abaixo se apoiam só nos trechos citados no fim, tirados das fontes oficiais em 05/11. Onde a fonte
 não diz, a resposta diz que não diz.
 
+## Decisão do Vicente
+
+**D07 — decidido em 05/11/2026, à tarde.** Todo projeto conduzido com o ReviewBR declara, no relato, onde a
+IA foi usada e como. Quando a metodologia escolhida, a norma de relato ou o periódico de destino exigem mais —
+por exemplo, os itens de relato do RAISE 1 (4.9), os da declaração conjunta de Cochrane, Campbell, JBI e CEE
+(2.3a a 2.3e) ou a política do ICMJE —, o projeto declara todas as informações exigidas. O RAISE não é norma
+canônica do ReviewBR: não é a norma de conformidade de todo projeto, e entra como norma quando a metodologia ou o
+destino de publicação o exigem. Consequência: o sistema fornece, para todo projeto, o registro de onde e como a
+IA foi usada, por etapa e por tool, e o texto da declaração no relato; e, quando exigido, os campos completos.
+Origem, nas palavras dele: "todas as pesquisas que usam o reviewbr devem declarar onde foi usado IA, como, e
+quando exigido, todas as informações que se pede. Levamos as metodologias a sério"; antes, "a redação proposta
+em 08/10 é certa se o questionamento acima for respondido com qualidade" (respostas em
+`d07_raise_fontes_2026-11-05.md`).
+
+A conferir:
+1. o mapa de uso de IA das tools (`registry/ai_use.ts`):
+   - (a) fica como política do próprio sistema para as suas tools, bloqueando o uso que o RAISE 3 dá como não
+     aceitável e exigindo validação onde ele a exige;
+   - (b) passa a só avisar;
+2. a citação do RAISE 1 no `maintainer.md:30`. Proposta do acompanhamento: fica, porque citar a recomendação como
+   fonte do princípio da responsabilidade do autor não a torna norma de todo projeto;
+3. a consequência da frase "credibilidade também se sustenta a partir do que as pesquisas produzem" vai à sessão
+   M.
+
 ## Fontes consultadas em 05/11/2026
 
 | fonte | versão | como foi lida |

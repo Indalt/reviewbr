@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-05T20:28:21.701Z",
+  "updatedAt": "2026-11-05T21:07:15.327Z",
   "findings": [
     {
       "id": "DEBT-001",
@@ -2493,7 +2493,7 @@
       "resolution": "",
       "found_by": "chat de acompanhamento, ao responder às perguntas do Vicente sobre o D07 (05/11/2026)",
       "found_at": "2026-11-05",
-      "context": "O catálogo é o dado com que os agentes informam o pesquisador ('o fundamento já existe como dado', maintainer.md); afirmar obrigação que a fonte não impõe leva o pesquisador a supor dever que não tem e empurra o sistema a tratar o RAISE como canônico, contra a decisão de 08/10 (D07). O conserto é de texto no catálogo, pela absorb_methodology, depois do DEBT-141 (com atualizar=true ela apaga campos); as três entradas do mesmo documento viram uma. A frase 'É o padrão contra o qual o ReviewBR deve declarar seu uso de LLM' depende da resposta do Vicente ao D07 (d07_raise_fontes_2026-11-05.md).",
+      "context": "O catálogo é o dado com que os agentes informam o pesquisador ('o fundamento já existe como dado', maintainer.md); afirmar obrigação que a fonte não impõe leva o pesquisador a supor dever que não tem e empurra o sistema a tratar o RAISE como canônico, contra a decisão de 08/10 (D07). O conserto é de texto no catálogo, pela absorb_methodology, depois do DEBT-141 (com atualizar=true ela apaga campos); as três entradas do mesmo documento viram uma. A frase 'É o padrão contra o qual o ReviewBR deve declarar seu uso de LLM' se corrige pela decisão D07 de 05/11/2026, à tarde (revisao_decisoes_2026-10-31/lista_decisoes.md): todo projeto declara onde e como a IA foi usada; o RAISE é referência do que declarar e norma só quando a metodologia, a norma de relato ou o periódico de destino o exigem.",
       "id": "DEBT-153",
       "summary": "O catálogo diz que a declaração conjunta de 2025 (Cochrane, Campbell, JBI, CEE) torna o RAISE obrigatório e que ela é 'obrigatória para qualquer revisão que use IA'; o texto oficial diz que as quatro organizações 'officially support the aims of RAISE', e o RAISE se declara rascunho para consulta. Há três entradas para o mesmo documento, que divergem entre si",
       "change_type": "CORRECAO",
