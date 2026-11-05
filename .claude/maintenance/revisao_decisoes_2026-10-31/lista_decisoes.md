@@ -108,15 +108,15 @@ fundamento: cada item espera o Vicente. Resultado bruto: `resultado_agentes.json
   em 08/10 é certa se o questionamento acima for respondido com qualidade" (respostas em
   `d07_raise_fontes_2026-11-05.md`).
   
-  A conferir:
-  1. o mapa de uso de IA das tools (`registry/ai_use.ts`):
-     - (a) fica como política do próprio sistema para as suas tools, bloqueando o uso que o RAISE 3 dá como não
-       aceitável e exigindo validação onde ele a exige;
-     - (b) passa a só avisar;
-  2. a citação do RAISE 1 no `maintainer.md:30`. Proposta do acompanhamento: fica, porque citar a recomendação como
-     fonte do princípio da responsabilidade do autor não a torna norma de todo projeto;
-  3. a consequência da frase "credibilidade também se sustenta a partir do que as pesquisas produzem" vai à sessão
-     M.
+  Decidido também em 05/11, à tarde ("1 sim, 2 fica"; o 1 veio escrito "aim" e foi lido como "sim"):
+  1. o mapa de uso de IA das tools (`registry/ai_use.ts`) fica como política do próprio sistema para as suas
+     ferramentas: bloqueia o uso que o RAISE 3 dá como não aceitável e exige validação dentro da revisão onde ele a
+     exige. Isso governa as tools do sistema e não torna o RAISE norma de conformidade do projeto;
+  2. a citação do RAISE 1 no `maintainer.md:30` fica: citar a recomendação como fonte do princípio da
+     responsabilidade do autor não a torna norma de todo projeto.
+  
+  Fica a conferir: a consequência da frase "credibilidade também se sustenta a partir do que as pesquisas
+  produzem", que vai à sessão M.
 
 ## D08 — Instalar método exigindo atualização do servidor MCP não é defeito (decisão 4 de 08/10)
 

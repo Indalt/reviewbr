@@ -99,8 +99,9 @@ para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cad
   - **D07, decidido em 05/11, à tarde.** Todo projeto declara onde e como a IA foi usada, e, quando a
     metodologia, a norma de relato ou o periódico exigem mais, todas as informações que se pede ("Levamos as
     metodologias a sério"). O RAISE não é norma canônica; entra como norma quando o método ou o destino o
-    exigem. Texto em `lista_decisoes.md` (D07) e em `d07_raise_fontes_2026-11-05.md`. Ficam a conferir o mapa
-    de uso de IA das tools e a citação do RAISE 1 no `maintainer.md`.
+    exigem. Texto em `lista_decisoes.md` (D07) e em `d07_raise_fontes_2026-11-05.md`. O mapa de uso de IA
+    das tools fica como política do sistema para as suas ferramentas (bloqueia o não aceitável e exige
+    validação onde o RAISE 3 exige), e a citação do RAISE 1 no `maintainer.md` fica ("1 sim, 2 fica", 05/11).
 
 ## Contexto que desfaz ambiguidades: o sistema mudou DURANTE a troca de computador
 
@@ -150,9 +151,7 @@ do limite semanal.
 A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
 não bloqueiam a 2c:
 - as 41 decisões da lista D01–D41 (`revisao_decisoes_2026-10-31/lista_decisoes.md`), cada uma antes da sessão
-  em que pesa;
-- no D07, decidido em 05/11: o mapa de uso de IA das tools (bloquear o não aceitável e exigir validação, ou só
-  avisar) e a citação do RAISE 1 no `maintainer.md`.
+  em que pesa.
 
 A régua do `--agora` foi recalibrada em 05/11: 10,0–13,5 M (`CONTINUAR.md` §1, item 6).
 
