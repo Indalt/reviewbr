@@ -27,6 +27,42 @@
 >
 > **Pergunta dele, a responder na volta:** "quem verifica o verificador? o que de fato pode nos dar segurança
 > enquanto ferramenta?" (sobre o A5: script e agente erram).
+>
+> **Respostas dele em 04/11.**
+>
+> **A7, segunda correção:** "o texto do a7 fala sobre prioridade. quando tratei isso quis dizer que o simples uso
+> do reviewbr educa o pesquisador". Texto a conferir:
+>
+> *O propósito do ReviewBR é aplicar a metodologia escolhida com certeza científica e de forma publicável,
+> funcionando como um guia. O simples uso do ReviewBR educa o pesquisador: ele aprende ao fazer, e aprende
+> quando o guia o ajuda a escolher a metodologia dizendo o porquê.*
+>
+> **D14:** "revisão de escopo deve ter suas próprias metodologias". Redação a conferir:
+>
+> *A revisão de escopo é um método próprio, com especificação, trilha e mapeamento próprios, sem herdar a
+> especificação do prisma-sr. A trilha dela vem das metodologias da própria revisão de escopo, e não da revisão
+> sistemática. As fontes reconhecidas são o manual do JBI e o arcabouço de Arksey e O'Malley, com os
+> aprimoramentos de Levac e colegas. O PRISMA-ScR é a norma de relato que ela declara.*
+>
+> - A conferir: "metodologias", no plural. Cada fonte vira um método do catálogo, ou há um só método de escopo
+>   que se apoia nelas?
+> - Consequência: a 2d deixa de ser "tirar o `extends`" e passa a ser assimilar a metodologia da revisão de
+>   escopo, com transcrição precisa e descrição (A9). Provavelmente são 2 sessões.
+>
+> **"Quem verifica o verificador?" — resposta do acompanhamento em 04/11:** nenhum verificador se certifica
+> sozinho. O que dá segurança à ferramenta:
+> 1. **Teste com resposta conhecida** antes de usar um conferidor como prova: um erro que ele tem de pegar e um
+>    acerto que ele não pode acusar.
+> 2. **Independência:** quem confere não é quem produziu. Duas leituras independentes que concordam valem mais
+>    que uma.
+> 3. **Evidência à vista:** toda conclusão cita o trecho, o arquivo e a fonte, e qualquer pessoa pode refazer a
+>    conferência.
+> 4. **Simplicidade:** o conferidor é simples o bastante para uma pessoa lê-lo inteiro. Heurística e IA servem
+>    de alerta, não de prova.
+> 5. **Decisão final de uma pessoa,** que olha onde as conferências independentes divergem ou onde um teste
+>    falhou.
+>
+> **B1 e B2:** continuam pendentes. Ele não achou a parte B e pediu um resumo, dado no chat de 04/11.
 
 ### A1. O método do ReviewBR e as trilhas das metodologias
 

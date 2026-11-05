@@ -93,10 +93,9 @@ parte B desse arquivo.
 **PAUSA desde 31/10/2026:** o limite semanal está em 96%, pela leitura do próprio Vicente, e nenhuma sessão abre
 antes de ele renovar. Nada estava rodando na pausa: as duas corridas de agentes terminaram e o trabalho está
 commitado. Respostas dele já registradas no `REVISAO_decisoes_2026-10-31.md`: A1 a A6 e A8 "ok"; A7 corrigido;
-A9 novo. Ainda pendentes:
-- B1 e B2, que definem a 2c;
-- D14, antes da 2d;
-- a pergunta dele "quem verifica o verificador?".
+A9 novo. Em 04/11 ele também respondeu ao D14 ("revisão de escopo deve ter suas próprias metodologias"), e
+falta conferir o plural; corrigiu de novo o A7; e a pergunta "quem verifica o verificador?" foi respondida pelo
+acompanhamento. Ainda pendentes: B1 e B2, que definem a 2c.
 
 **Par de calibração da régua:** ele leu 74% da janela de 5h quando o `--agora` dava 85% a 103% (9,75 M
 ponderado, 31/10 11:43 UTC). A régua do `CONTINUAR.md` §1 superestima e deve ser recalculada na volta.
