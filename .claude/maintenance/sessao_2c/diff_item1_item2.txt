@@ -1,0 +1,483 @@
+
+## conferir prisma-2020 | (todos)
+  .orphans[0].text: ACRESCENTADO
+  .orphans[1].text: ACRESCENTADO
+  .orphans[2].text: ACRESCENTADO
+  .orphans[3].text: ACRESCENTADO
+  .orphans[4].text: ACRESCENTADO
+  .orphans[5].text: ACRESCENTADO
+  .orphans[6].text: ACRESCENTADO
+  .orphans[7].text: ACRESCENTADO
+  .orphans[8].text: ACRESCENTADO
+  .orphans[9].text: ACRESCENTADO
+  .orphans[10].text: ACRESCENTADO
+  .orphans[11].text: ACRESCENTADO
+  .orphans[12].text: ACRESCENTADO
+  .orphans[13].text: ACRESCENTADO
+  .orphans[14].text: ACRESCENTADO
+  .orphans[15].text: ACRESCENTADO
+  .orphans[16].text: ACRESCENTADO
+  .orphans[17].text: ACRESCENTADO
+  .orphans[18].text: ACRESCENTADO
+  .orphans[19].text: ACRESCENTADO
+  .orphans[20].text: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[0].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[1].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[2].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[3].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[4].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[5].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[6].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[7].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[8].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[9].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[10].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[11].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[12].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[13].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[14].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir prisma-2020 | prisma-sr
+  .orphans[0].text: ACRESCENTADO
+  .orphans[1].text: ACRESCENTADO
+  .orphans[2].text: ACRESCENTADO
+  .orphans[3].text: ACRESCENTADO
+  .orphans[4].text: ACRESCENTADO
+  .orphans[5].text: ACRESCENTADO
+  .orphans[6].text: ACRESCENTADO
+  .orphans[7].text: ACRESCENTADO
+  .orphans[8].text: ACRESCENTADO
+  .orphans[9].text: ACRESCENTADO
+  .orphans[10].text: ACRESCENTADO
+  .orphans[11].text: ACRESCENTADO
+  .orphans[12].text: ACRESCENTADO
+  .orphans[13].text: ACRESCENTADO
+  .orphans[14].text: ACRESCENTADO
+  .orphans[15].text: ACRESCENTADO
+  .orphans[16].text: ACRESCENTADO
+  .orphans[17].text: ACRESCENTADO
+  .orphans[18].text: ACRESCENTADO
+  .orphans[19].text: ACRESCENTADO
+  .orphans[20].text: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[0].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[1].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[2].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[3].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[4].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[5].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[6].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[7].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[8].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[9].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[10].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[11].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[12].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[13].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[14].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir prisma-2020 | scoping-prisma-scr
+  .orphans[0].text: ACRESCENTADO
+  .orphans[1].text: ACRESCENTADO
+  .orphans[2].text: ACRESCENTADO
+  .orphans[3].text: ACRESCENTADO
+  .orphans[4].text: ACRESCENTADO
+  .orphans[5].text: ACRESCENTADO
+  .orphans[6].text: ACRESCENTADO
+  .orphans[7].text: ACRESCENTADO
+  .orphans[8].text: ACRESCENTADO
+  .orphans[9].text: ACRESCENTADO
+  .orphans[10].text: ACRESCENTADO
+  .orphans[11].text: ACRESCENTADO
+  .orphans[12].text: ACRESCENTADO
+  .orphans[13].text: ACRESCENTADO
+  .orphans[14].text: ACRESCENTADO
+  .orphans[15].text: ACRESCENTADO
+  .orphans[16].text: ACRESCENTADO
+  .orphans[17].text: ACRESCENTADO
+  .orphans[18].text: ACRESCENTADO
+  .orphans[19].text: ACRESCENTADO
+  .orphans[20].text: ACRESCENTADO
+  .orphans[21].text: ACRESCENTADO
+  .orphans[22].text: ACRESCENTADO
+  .orphans[23].text: ACRESCENTADO
+  .orphans[24].text: ACRESCENTADO
+  .orphans[25].text: ACRESCENTADO
+  .orphans[26].text: ACRESCENTADO
+  .orphans[27].text: ACRESCENTADO
+  .orphans[28].text: ACRESCENTADO
+  .orphans[29].text: ACRESCENTADO
+  .orphans[30].text: ACRESCENTADO
+  .orphans[31].text: ACRESCENTADO
+  .orphans[32].text: ACRESCENTADO
+  .orphans[33].text: ACRESCENTADO
+  .orphans[34].text: ACRESCENTADO
+  .orphans[35].text: ACRESCENTADO
+  .orphans[36].text: ACRESCENTADO
+  .orphans[37].text: ACRESCENTADO
+  .orphans[38].text: ACRESCENTADO
+  .orphans[39].text: ACRESCENTADO
+  .orphans[40].text: ACRESCENTADO
+  .orphans[41].text: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[0].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[1].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[2].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[3].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[4].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[5].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[6].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[7].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[8].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[9].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[10].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[11].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[12].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[13].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[14].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir prisma-p | (todos)
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir prisma-p | prisma-sr
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir prisma-p | scoping-prisma-scr
+  .orphans[0].text: ACRESCENTADO
+  .orphans[1].text: ACRESCENTADO
+  .orphans[2].text: ACRESCENTADO
+  .orphans[3].text: ACRESCENTADO
+  .orphans[4].text: ACRESCENTADO
+  .orphans[5].text: ACRESCENTADO
+  .orphans[6].text: ACRESCENTADO
+  .orphans[7].text: ACRESCENTADO
+  .orphans[8].text: ACRESCENTADO
+  .orphans[9].text: ACRESCENTADO
+  .orphans[10].text: ACRESCENTADO
+  .orphans[11].text: ACRESCENTADO
+  .orphans[12].text: ACRESCENTADO
+  .orphans[13].text: ACRESCENTADO
+  .orphans[14].text: ACRESCENTADO
+  .orphans[15].text: ACRESCENTADO
+  .orphans[16].text: ACRESCENTADO
+  .orphans[17].text: ACRESCENTADO
+  .orphans[18].text: ACRESCENTADO
+  .orphans[19].text: ACRESCENTADO
+  .orphans[20].text: ACRESCENTADO
+  .orphans[21].text: ACRESCENTADO
+  .orphans[22].text: ACRESCENTADO
+  .orphans[23].text: ACRESCENTADO
+  .orphans[24].text: ACRESCENTADO
+  .orphans[25].text: ACRESCENTADO
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir prisma-s | (todos)
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_metodo[1].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir prisma-s | prisma-sr
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir prisma-s | scoping-prisma-scr
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir prisma-scr | (todos)
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[0].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[1].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[2].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[3].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir prisma-scr | prisma-sr
+  .orphans[0].text: ACRESCENTADO
+  .orphans[1].text: ACRESCENTADO
+  .orphans[2].text: ACRESCENTADO
+  .orphans[3].text: ACRESCENTADO
+  .orphans[4].text: ACRESCENTADO
+  .orphans[5].text: ACRESCENTADO
+  .orphans[6].text: ACRESCENTADO
+  .orphans[7].text: ACRESCENTADO
+  .orphans[8].text: ACRESCENTADO
+  .orphans[9].text: ACRESCENTADO
+  .orphans[10].text: ACRESCENTADO
+  .orphans[11].text: ACRESCENTADO
+  .orphans[12].text: ACRESCENTADO
+  .orphans[13].text: ACRESCENTADO
+  .orphans[14].text: ACRESCENTADO
+  .orphans[15].text: ACRESCENTADO
+  .orphans[16].text: ACRESCENTADO
+  .orphans[17].text: ACRESCENTADO
+  .orphans[18].text: ACRESCENTADO
+  .orphans[19].text: ACRESCENTADO
+  .orphans[20].text: ACRESCENTADO
+  .orphans[21].text: ACRESCENTADO
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir prisma-scr | scoping-prisma-scr
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[0].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[1].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[2].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].conferencia_por_palavras.suspeitos[3].examinado: ACRESCENTADO
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir raise-3 | (todos)
+  .orphans[0].text: ACRESCENTADO
+  .orphans[1].text: ACRESCENTADO
+  .orphans[2].text: ACRESCENTADO
+  .orphans[3].text: ACRESCENTADO
+  .orphans[4].text: ACRESCENTADO
+  .orphans[5].text: ACRESCENTADO
+  .orphans[6].text: ACRESCENTADO
+  .orphans[7].text: ACRESCENTADO
+  .orphans[8].text: ACRESCENTADO
+  .orphans[9].text: ACRESCENTADO
+  .orphans[10].text: ACRESCENTADO
+  .orphans[11].text: ACRESCENTADO
+  .orphans[12].text: ACRESCENTADO
+  .orphans[13].text: ACRESCENTADO
+  .orphans[14].text: ACRESCENTADO
+  .orphans[15].text: ACRESCENTADO
+  .orphans[16].text: ACRESCENTADO
+  .orphans[17].text: ACRESCENTADO
+  .orphans[18].text: ACRESCENTADO
+  .orphans[19].text: ACRESCENTADO
+  .orphans[20].text: ACRESCENTADO
+  .orphans[21].text: ACRESCENTADO
+  .orphans[22].text: ACRESCENTADO
+  .orphans[23].text: ACRESCENTADO
+  .orphans[24].text: ACRESCENTADO
+  .orphans[25].text: ACRESCENTADO
+  .orphans[26].text: ACRESCENTADO
+  .orphans[27].text: ACRESCENTADO
+  .orphans[28].text: ACRESCENTADO
+  .orphans[29].text: ACRESCENTADO
+  .orphans[30].text: ACRESCENTADO
+  .orphans[31].text: ACRESCENTADO
+  .orphans[32].text: ACRESCENTADO
+  .orphans[33].text: ACRESCENTADO
+  .orphans[34].text: ACRESCENTADO
+  .orphans[35].text: ACRESCENTADO
+  .orphans[36].text: ACRESCENTADO
+  .orphans[37].text: ACRESCENTADO
+  .orphans[38].text: ACRESCENTADO
+  .orphans[39].text: ACRESCENTADO
+  .orphans[40].text: ACRESCENTADO
+  .orphans[41].text: ACRESCENTADO
+  .orphans[42].text: ACRESCENTADO
+  .orphans[43].text: ACRESCENTADO
+  .orphans[44].text: ACRESCENTADO
+  .orphans[45].text: ACRESCENTADO
+  .orphans[46].text: ACRESCENTADO
+  .orphans[47].text: ACRESCENTADO
+  .orphans[48].text: ACRESCENTADO
+  .orphans[49].text: ACRESCENTADO
+  .orphans[50].text: ACRESCENTADO
+  .orphans[51].text: ACRESCENTADO
+  .orphans[52].text: ACRESCENTADO
+  .orphans[53].text: ACRESCENTADO
+  .orphans[54].text: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir raise-3 | prisma-sr
+  .orphans[0].text: ACRESCENTADO
+  .orphans[1].text: ACRESCENTADO
+  .orphans[2].text: ACRESCENTADO
+  .orphans[3].text: ACRESCENTADO
+  .orphans[4].text: ACRESCENTADO
+  .orphans[5].text: ACRESCENTADO
+  .orphans[6].text: ACRESCENTADO
+  .orphans[7].text: ACRESCENTADO
+  .orphans[8].text: ACRESCENTADO
+  .orphans[9].text: ACRESCENTADO
+  .orphans[10].text: ACRESCENTADO
+  .orphans[11].text: ACRESCENTADO
+  .orphans[12].text: ACRESCENTADO
+  .orphans[13].text: ACRESCENTADO
+  .orphans[14].text: ACRESCENTADO
+  .orphans[15].text: ACRESCENTADO
+  .orphans[16].text: ACRESCENTADO
+  .orphans[17].text: ACRESCENTADO
+  .orphans[18].text: ACRESCENTADO
+  .orphans[19].text: ACRESCENTADO
+  .orphans[20].text: ACRESCENTADO
+  .orphans[21].text: ACRESCENTADO
+  .orphans[22].text: ACRESCENTADO
+  .orphans[23].text: ACRESCENTADO
+  .orphans[24].text: ACRESCENTADO
+  .orphans[25].text: ACRESCENTADO
+  .orphans[26].text: ACRESCENTADO
+  .orphans[27].text: ACRESCENTADO
+  .orphans[28].text: ACRESCENTADO
+  .orphans[29].text: ACRESCENTADO
+  .orphans[30].text: ACRESCENTADO
+  .orphans[31].text: ACRESCENTADO
+  .orphans[32].text: ACRESCENTADO
+  .orphans[33].text: ACRESCENTADO
+  .orphans[34].text: ACRESCENTADO
+  .orphans[35].text: ACRESCENTADO
+  .orphans[36].text: ACRESCENTADO
+  .orphans[37].text: ACRESCENTADO
+  .orphans[38].text: ACRESCENTADO
+  .orphans[39].text: ACRESCENTADO
+  .orphans[40].text: ACRESCENTADO
+  .orphans[41].text: ACRESCENTADO
+  .orphans[42].text: ACRESCENTADO
+  .orphans[43].text: ACRESCENTADO
+  .orphans[44].text: ACRESCENTADO
+  .orphans[45].text: ACRESCENTADO
+  .orphans[46].text: ACRESCENTADO
+  .orphans[47].text: ACRESCENTADO
+  .orphans[48].text: ACRESCENTADO
+  .orphans[49].text: ACRESCENTADO
+  .orphans[50].text: ACRESCENTADO
+  .orphans[51].text: ACRESCENTADO
+  .orphans[52].text: ACRESCENTADO
+  .orphans[53].text: ACRESCENTADO
+  .orphans[54].text: ACRESCENTADO
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## conferir raise-3 | scoping-prisma-scr
+  .orphans[0].text: ACRESCENTADO
+  .orphans[1].text: ACRESCENTADO
+  .orphans[2].text: ACRESCENTADO
+  .orphans[3].text: ACRESCENTADO
+  .orphans[4].text: ACRESCENTADO
+  .orphans[5].text: ACRESCENTADO
+  .orphans[6].text: ACRESCENTADO
+  .orphans[7].text: ACRESCENTADO
+  .orphans[8].text: ACRESCENTADO
+  .orphans[9].text: ACRESCENTADO
+  .orphans[10].text: ACRESCENTADO
+  .orphans[11].text: ACRESCENTADO
+  .orphans[12].text: ACRESCENTADO
+  .orphans[13].text: ACRESCENTADO
+  .orphans[14].text: ACRESCENTADO
+  .orphans[15].text: ACRESCENTADO
+  .orphans[16].text: ACRESCENTADO
+  .orphans[17].text: ACRESCENTADO
+  .orphans[18].text: ACRESCENTADO
+  .orphans[19].text: ACRESCENTADO
+  .orphans[20].text: ACRESCENTADO
+  .orphans[21].text: ACRESCENTADO
+  .orphans[22].text: ACRESCENTADO
+  .orphans[23].text: ACRESCENTADO
+  .orphans[24].text: ACRESCENTADO
+  .orphans[25].text: ACRESCENTADO
+  .orphans[26].text: ACRESCENTADO
+  .orphans[27].text: ACRESCENTADO
+  .orphans[28].text: ACRESCENTADO
+  .orphans[29].text: ACRESCENTADO
+  .orphans[30].text: ACRESCENTADO
+  .orphans[31].text: ACRESCENTADO
+  .orphans[32].text: ACRESCENTADO
+  .orphans[33].text: ACRESCENTADO
+  .orphans[34].text: ACRESCENTADO
+  .orphans[35].text: ACRESCENTADO
+  .orphans[36].text: ACRESCENTADO
+  .orphans[37].text: ACRESCENTADO
+  .orphans[38].text: ACRESCENTADO
+  .orphans[39].text: ACRESCENTADO
+  .orphans[40].text: ACRESCENTADO
+  .orphans[41].text: ACRESCENTADO
+  .orphans[42].text: ACRESCENTADO
+  .orphans[43].text: ACRESCENTADO
+  .orphans[44].text: ACRESCENTADO
+  .orphans[45].text: ACRESCENTADO
+  .orphans[46].text: ACRESCENTADO
+  .orphans[47].text: ACRESCENTADO
+  .orphans[48].text: ACRESCENTADO
+  .orphans[49].text: ACRESCENTADO
+  .orphans[50].text: ACRESCENTADO
+  .orphans[51].text: ACRESCENTADO
+  .orphans[52].text: ACRESCENTADO
+  .orphans[53].text: ACRESCENTADO
+  .orphans[54].text: ACRESCENTADO
+  .conferencia_por_metodo[0].leitura_documentada: ACRESCENTADO
+  .conferencia_por_palavras: "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…  →  "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial do item, termo a termo, por uma tabela fixa de equival…
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+
+## render prisma-2020 | (todos)
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-2020 | prisma-sr
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-2020 | scoping-prisma-scr
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-p | (todos)
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-p | prisma-sr
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-p | scoping-prisma-scr
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-s | prisma-sr
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-s | scoping-prisma-scr
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-scr | (todos)
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-scr | prisma-sr
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-scr | scoping-prisma-scr
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render raise-3 | (todos)
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render raise-3 | prisma-sr
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render raise-3 | scoping-prisma-scr
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+423 diferença(s).

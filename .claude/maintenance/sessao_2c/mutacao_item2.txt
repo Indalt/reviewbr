@@ -1,0 +1,9 @@
+zod remove o enunciado                     PEGA — 13 teste(s) caíram
+zod remove os trechos                      PEGA — 7 teste(s) caíram
+zod remove os exames                       PEGA — 2 teste(s) caíram
+conferidor aceita tudo                     PEGA — 4 teste(s) caíram
+conferidor ignora maiúscula                PEGA — 1 teste(s) caíram
+conferidor aceita trecho de qualquer item  PEGA — 3 teste(s) caíram
+normalização tira pontuação                PEGA — 1 teste(s) caíram
+exame não caduca com o rótulo              PEGA — 1 teste(s) caíram
+trecho recusado não reprova                PEGA — 2 teste(s) caíram

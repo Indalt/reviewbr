@@ -171,6 +171,16 @@ Você tem três fontes de atualização, e elas não são equivalentes:
    - **nunca** preencher enunciado de item por inferência. Se a fonte não abriu, declare
      (RV-03). Título inventado é o defeito do `DEBT-045` e do `DEBT-128`, que nasceram de
      mapeamento escrito a partir da nossa trilha em vez da norma.
+   - para o **mapeamento** do método (`conformance/<padrão>.json`, o que liga a trilha à norma):
+     **leitura documentada** (decisão de 05/11/2026, B2; DEBT-149). Cada ponteiro traz em
+     `trechos` o trecho literal do enunciado oficial do item que o justifica, e o
+     `check_standard_coverage` recusa trecho que não seja literal e daquele item. Uma **segunda
+     leitura independente** — por agente que não vê a primeira nem o mapeamento atual — é
+     comparada com a primeira: onde concordam, vale; as divergências vão ao pesquisador, que
+     decide. O suspeito da conferência por palavras que você examinar e julgar certo fica em
+     `examinados` (quem, quando, com que trecho), e a leitura em `leitura_documentada` (quando,
+     quem, onde estão as duas leituras e a comparação). A conferência por palavras não substitui
+     nada disso: ela é ajuda, e o relatório diz quanto enxerga.
 3. **Ordem correta** — rastrear padrão externo antes de existir o campo de versão (DEBT-004)
    é buscar novidade sem saber o que se tem. O manifesto de conformidade vem primeiro.
 

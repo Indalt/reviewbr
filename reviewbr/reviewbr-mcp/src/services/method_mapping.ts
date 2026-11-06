@@ -45,6 +45,14 @@ import { lerCondicoes, Condicao, RespostaDeCondicao } from "./method_trail.js";
  * pares medidos (`impressaoDosPares`). O relatório da cobertura a cita, e diz quando o mapeamento
  * mudou depois dela — medida de outro mapeamento não é medida deste. Decisão de 05/11/2026: a
  * conferência por palavras não trava o estudo; o relatório diz o que ela é e quanto enxerga.
+ *
+ * A LEITURA DOCUMENTADA (DEBT-149, B2)
+ * ------------------------------------
+ * A transcrição se confere ao assimilar, lendo a norma: em cada linha, `trechos` dá, por ponteiro,
+ * o trecho literal do enunciado oficial do item que o justifica, e `examinados` registra o suspeito
+ * da conferência por palavras lido e julgado certo (quem, quando, com que trecho). No mapeamento,
+ * `leitura_documentada` diz quem fez a leitura, quando, e onde está o registro das duas leituras
+ * independentes e da comparação. Quem confere os trechos é `leitura_documentada.ts`.
  */
 
 /**
@@ -77,6 +85,8 @@ const MedidaDaConferenciaSchema = z.object({
 
 export type MedidaDaConferencia = z.infer<typeof MedidaDaConferenciaSchema>;
 
+const DATA = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
+
 const LinhaSchema = z.object({
     id: z.string().min(1),
     /** Subitens da trilha DESTE método que cobrem o item — a consulta reversa. */
@@ -84,6 +94,23 @@ const LinhaSchema = z.object({
     nao_coberto: z.string().default(""),
     nao_se_aplica: z.string().default(""),
     condicao: z.object({ id: z.string().min(1), aplica_se: z.array(z.string().min(1)).min(1) }).optional(),
+    /**
+     * Leitura documentada (DEBT-149, B2): por ponteiro de `covered_by`, o trecho LITERAL do
+     * enunciado oficial do item que o justifica. Quem confere é `leitura_documentada.ts`.
+     */
+    trechos: z.record(z.string().min(1), z.string().min(1)).optional(),
+    /**
+     * Suspeitos da conferência por palavras examinados na assimilação e julgados certos: quem
+     * examinou, quando, com que trecho do enunciado do item declarado. O `rotulo` é o do subitem
+     * no dia do exame: se a spec o muda, o exame caduca e o suspeito volta a pedir leitura.
+     */
+    examinados: z.array(z.object({
+        subitem: z.string().min(1),
+        rotulo: z.string().min(1),
+        por: z.string().min(1),
+        em: DATA,
+        trecho: z.string().min(1),
+    })).optional(),
 });
 
 const MapeamentoSchema = z.object({
@@ -92,6 +119,12 @@ const MapeamentoSchema = z.object({
     standard: z.string().min(1),
     note: z.string().default(""),
     conferencia_por_palavras: MedidaDaConferenciaSchema.optional(),
+    /**
+     * A leitura documentada deste mapeamento (DEBT-149, B2): quando, por quem, e o registro — o
+     * arquivo com as duas leituras independentes, a comparação e as divergências levadas ao
+     * pesquisador. Os trechos moram em cada linha (`trechos`).
+     */
+    leitura_documentada: z.object({ em: DATA, por: z.string().min(1), registro: z.string().min(1) }).optional(),
     items: z.array(LinhaSchema).default([]),
 });
 
@@ -108,6 +141,8 @@ export interface Mapeamento {
     linhas: Map<string, LinhaDoMapeamento>;
     /** Quanto a conferência por palavras enxerga neste mapeamento, se foi medido. */
     medida: MedidaDaConferencia | null;
+    /** Quando e por quem a leitura documentada foi feita, e onde está o registro dela. */
+    leitura: { em: string; por: string; registro: string } | null;
     erros: string[];
 }
 
@@ -133,7 +168,7 @@ export function arquivoDoMapeamento(metodo: string, padrao: string): string {
  */
 export function lerMapeamento(repoRoot: string, metodo: string, padrao: string, std?: Standard | null): Mapeamento {
     const arquivo = arquivoDoMapeamento(metodo, padrao);
-    const base: Mapeamento = { metodo, padrao, arquivo, existe: false, note: "", linhas: new Map(), medida: null, erros: [] };
+    const base: Mapeamento = { metodo, padrao, arquivo, existe: false, note: "", linhas: new Map(), medida: null, leitura: null, erros: [] };
     const p = path.join(repoRoot, arquivo);
     if (!fs.existsSync(p)) return base;
 
@@ -173,7 +208,11 @@ export function lerMapeamento(repoRoot: string, metodo: string, padrao: string, 
             if (l.nao_se_aplica.trim()) erros.push(`mapeamento ${arquivo}: o item ${l.id} é condicional e declarado [NÃO SE APLICA] ao mesmo tempo`);
         }
     }
-    return { ...base, existe: true, note: lido.data.note, linhas, medida: lido.data.conferencia_por_palavras ?? null, erros };
+    return {
+        ...base, existe: true, note: lido.data.note, linhas, erros,
+        medida: lido.data.conferencia_por_palavras ?? null,
+        leitura: lido.data.leitura_documentada ?? null,
+    };
 }
 
 /** As declarações de ausência de uma linha, lidas de forma robusta: linha ausente é "não declarada". */

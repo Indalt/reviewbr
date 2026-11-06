@@ -35,6 +35,13 @@ export const StandardItemSchema = z.object({
     id: z.string().min(1),
     section: z.string().default(""),
     title: z.string().default(""),
+    /**
+     * O enunciado oficial do item, verbatim. É contra ele que a leitura documentada confere o
+     * trecho de cada ponteiro (DEBT-149, B2). Vazio = enunciado ainda não transcrito da fonte
+     * (o PRISMA 2020, hoje): trecho atribuído a item sem enunciado é recusado. Até 05/11/2026 o
+     * zod o removia na leitura, e nada o usava.
+     */
+    text: z.string().default(""),
     /** true no item de topo que se desdobra em subitens por letra (ex.: 13 → 13a..13f). */
     has_subitems: z.boolean().default(false),
     /** true na LINHA de subitem; `parent` aponta o item de topo. */

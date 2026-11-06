@@ -2,6 +2,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { StandardsService, Standard, CoverageReport } from "./standards.js";
 import { MappingCoherenceService, Suspeito } from "./mapping_coherence.js";
+import { conferirLeitura, LeituraConferida } from "./leitura_documentada.js";
 import { lerTrilha, subitensDaSpec, etapaDoSubitem, errosDaTrilha, lerCondicoes, respostasDasCondicoes, RespostaDeCondicao } from "./method_trail.js";
 import { lerMapeamento, aplicarRespostas, declaracaoDe, impressaoDosPares, ItemCondicional, LinhaDoMapeamento, Mapeamento, MedidaDaConferencia } from "./method_mapping.js";
 import { ProjectStateService } from "./project_state.js";
@@ -53,12 +54,17 @@ export const CONFERENCIA_POR_PALAVRAS =
     "só) — a assinatura de um deslocamento. É premissa derrotável: duas coisas podem se parecer sem haver " +
     "deslocamento, e o deslocamento sem palavra em comum passa calado. Por isso o suspeito é pedido de leitura " +
     "a quem assimila a metodologia: não reprova, não contesta a linha e não tira item do porquê da etapa " +
-    "(DEBT-149, decisão de 05/11/2026). Quanto ela enxerga em cada mapeamento, com a medida e a fonte, está em " +
+    "(DEBT-149, decisão de 05/11/2026). O suspeito examinado na assimilação fica registrado no mapeamento — quem, " +
+    "quando, com que trecho do enunciado — e sai dos pendentes enquanto o rótulo do subitem não muda. Quanto ela " +
+    "enxerga em cada mapeamento, com a medida e a fonte, está em " +
     "conferencia_por_metodo[].conferencia_por_palavras.quanto_enxerga.";
 
 export const LIMITE_DA_CONFERENCIA =
     "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, " +
-    "e não a cada estudo (DEBT-149, decisão de 05/11/2026). O que se confere aqui é mecânico: (a) o ponteiro existe " +
+    "e não a cada estudo (DEBT-149, decisão de 05/11/2026) — por leitura documentada, quando o mapeamento a traz: cada " +
+    "ponteiro com o trecho do enunciado oficial do item que o justifica, conferido aqui só como literal e daquele item, " +
+    "e uma segunda leitura independente comparada com a primeira (`leitura_documentada`). O que se confere aqui é " +
+    "mecânico: (a) o ponteiro existe " +
     "na spec do método e cai numa etapa que se aplica a ele; (d) cada linha está coberta ou declarada — " +
     "[NÃO COBERTO], a fila de manutenção, ou [NÃO SE APLICA]. O encaixe (item apontado para campo que não coleta " +
     "o que ele pede) só aparece se quem assimila o declarar [NÃO COBERTO]. A fração conta a correspondência " +
@@ -73,6 +79,22 @@ export const LIMITE_DA_CONFERENCIA =
 
 const dataBR = (iso: string) => iso.split("-").reverse().join("/");
 const pct = (n: number, de: number) => (100 * n / de).toFixed(1).replace(".", ",");
+
+/** A leitura documentada de um mapeamento, em uma frase: quantos ponteiros, quantos aceitos, quem, quando, onde. */
+function textoDaLeitura(l: LeituraConferida, registro: { em: string; por: string; registro: string } | null): string {
+    if (l.estado === "ausente") {
+        return "Sem leitura documentada: nenhum ponteiro deste mapeamento traz trecho do enunciado oficial — a transcrição " +
+            "não foi conferida trecho a trecho.";
+    }
+    const quem = registro
+        ? ` Feita em ${dataBR(registro.em)} por ${registro.por}; registro: ${registro.registro}.`
+        : " Sem o registro de quem a fez, quando e onde (leitura_documentada, no mapeamento).";
+    const recusados = l.recusados.length ? `; ${l.recusados.length} trecho(s) recusado(s) — ver recusados` : "";
+    const quantos = l.estado === "parcial"
+        ? `Leitura documentada PARCIAL: ${l.com_trecho} de ${l.ponteiros} ponteiros trazem trecho do enunciado oficial (os demais em sem_trecho)`
+        : `Leitura documentada: os ${l.ponteiros} ponteiros trazem trecho do enunciado oficial`;
+    return `${quantos}; ${l.aceitos} conferido(s) literal(is) e do item declarado${recusados}.${quem}`;
+}
 
 /**
  * Quanto a conferência por palavras enxerga num mapeamento, em uma frase com a medida e a fonte.
@@ -119,10 +141,18 @@ export interface ConferenciaDoMetodo {
         /** A medida gravada no mapeamento do método; `do_mapeamento_atual` false = de antes da última mudança dele. */
         medida: (MedidaDaConferencia & { do_mapeamento_atual: boolean }) | null;
         pares_conferidos: number;
-        /** Pedido de leitura a quem assimila. */
-        suspeitos: Suspeito[];
+        /**
+         * Pedido de leitura a quem assimila. `examinado`: o suspeito já foi lido na assimilação e
+         * julgado certo, com trecho do enunciado registrado no mapeamento (quem, quando).
+         */
+        suspeitos: Array<Suspeito & { examinado: { por: string; em: string } | null }>;
         nao_conferidos: string[];
     };
+    /**
+     * A leitura documentada da transcrição (DEBT-149, B2): o trecho do enunciado oficial de cada
+     * ponteiro, conferido literal e do item declarado; e quem a fez, quando, e onde está o registro.
+     */
+    leitura_documentada: LeituraConferida & { registro: { em: string; por: string; registro: string } | null; texto: string };
     /** (c) quem produz o artefato das etapas que cobrem cada linha. */
     producao: {
         /** todas as etapas da linha têm tool produtora */
@@ -269,6 +299,18 @@ function conferirContraMetodo(
     const coer = MappingCoherenceService.checarMetodologia(repoRoot, metodo, std, efetivas);
     const enxerga = quantoEnxerga(mapa.medida, impressaoDosPares(mapa.linhas));
 
+    // A leitura documentada (DEBT-149, B2): trecho recusado é erro do dado — o mapeamento afirma que
+    // a norma diz o que ela não diz, ou atribui a um item o que é de outro.
+    const leitura = conferirLeitura(std, mapa);
+    if (leitura.recusados.length) {
+        erros.push(
+            `(leitura documentada) ${leitura.recusados.length} trecho(s) recusado(s) pelo conferidor de literalidade: ` +
+            leitura.recusados.map((r) => `${r.item}→${r.subitem} (${r.motivo})`).join("; ") + "."
+        );
+    }
+    // Suspeito examinado na assimilação: o mesmo par, com o rótulo de então — rótulo mudado, exame caduco.
+    const examinado = (s: Suspeito) => leitura.examinados.find((e) => e.subitem === s.subitem && e.item === s.item_declarado && e.rotulo === s.rotulo);
+
     // (c) — a etapa de cada subitem, e se alguma tool grava o artefato dela.
     const existentes = new Set(AgentOrchestrator.getGovernedTools());
     const comCodigo = (ids: string[]) => ids.some((t) => existentes.has(t));
@@ -315,9 +357,13 @@ function conferirContraMetodo(
                 quanto_enxerga: enxerga.texto,
                 medida: mapa.medida ? { ...mapa.medida, do_mapeamento_atual: enxerga.do_mapeamento_atual } : null,
                 pares_conferidos: coer.pares_conferidos,
-                suspeitos: coer.suspeitos,
+                suspeitos: coer.suspeitos.map((s) => {
+                    const e = examinado(s);
+                    return { ...s, examinado: e ? { por: e.por, em: e.em } : null };
+                }),
                 nao_conferidos: coer.nao_conferidos,
             },
+            leitura_documentada: { ...leitura, registro: mapa.leitura, texto: textoDaLeitura(leitura, mapa.leitura) },
             producao: { por_codigo, parcial, so_por_agente, sem_etapa, etapas_sem_codigo },
             corresponde,
             fracao: `${corresponde}/${linhas.length - d.nao_se_aplica.length}`,
@@ -479,11 +525,22 @@ export class StandardCoverageService {
         // (b) vai aos avisos, não aos erros: pedido de leitura a quem assimila (DEBT-149).
         for (const c of conferencias) {
             const { suspeitos, medida } = c.conferencia_por_palavras;
-            if (suspeitos.length) {
+            const pendentes = suspeitos.filter((s) => !s.examinado);
+            const vistos = suspeitos.filter((s) => s.examinado);
+            if (pendentes.length) {
                 avisos.push(
-                    `[${c.metodologia}] ${suspeitos.length} par(es) suspeito(s) pela conferência por palavras — pedido de leitura a quem ` +
-                    `assimila, que não reprova nem contesta: ${suspeitos.map((s) => `${s.subitem}→${s.item_declarado} (sugere ${s.item_sugerido})`).join(", ")}.`
+                    `[${c.metodologia}] ${pendentes.length} par(es) suspeito(s) pela conferência por palavras — pedido de leitura a quem ` +
+                    `assimila, que não reprova nem contesta: ${pendentes.map((s) => `${s.subitem}→${s.item_declarado} (sugere ${s.item_sugerido})`).join(", ")}.`
                 );
+            }
+            if (vistos.length) {
+                avisos.push(
+                    `[${c.metodologia}] ${vistos.length} suspeito(s) já examinado(s) na assimilação, com trecho do enunciado registrado no mapeamento: ` +
+                    vistos.map((s) => `${s.subitem}→${s.item_declarado} (${s.examinado!.por}, ${dataBR(s.examinado!.em)})`).join(", ") + "."
+                );
+            }
+            if (c.leitura_documentada.estado === "parcial") {
+                avisos.push(`[${c.metodologia}] Leitura documentada parcial: ${c.leitura_documentada.sem_trecho.length} ponteiro(s) sem trecho do enunciado — ${c.leitura_documentada.sem_trecho.join(", ")}.`);
             }
             if (medida && !medida.do_mapeamento_atual) {
                 avisos.push(`[${c.metodologia}] A medida da conferência por palavras é de antes da última mudança do mapeamento: refaça-a (${medida.script}).`);
