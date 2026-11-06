@@ -3,7 +3,7 @@ import * as path from "node:path";
 import { StandardsService, Standard, CoverageReport } from "./standards.js";
 import { MappingCoherenceService, Suspeito } from "./mapping_coherence.js";
 import { lerTrilha, subitensDaSpec, etapaDoSubitem, errosDaTrilha, lerCondicoes, respostasDasCondicoes, RespostaDeCondicao } from "./method_trail.js";
-import { lerMapeamento, aplicarRespostas, declaracaoDe, ItemCondicional, LinhaDoMapeamento, Mapeamento } from "./method_mapping.js";
+import { lerMapeamento, aplicarRespostas, declaracaoDe, impressaoDosPares, ItemCondicional, LinhaDoMapeamento, Mapeamento, MedidaDaConferencia } from "./method_mapping.js";
 import { ProjectStateService } from "./project_state.js";
 import { MethodologyCatalogService } from "./methodology_catalog.js";
 import { AgentOrchestrator } from "../registry/agent_orchestrator.js";
@@ -20,9 +20,17 @@ import { AgentOrchestrator } from "../registry/agent_orchestrator.js";
  * AS QUATRO CONFERÊNCIAS
  * ----------------------
  *   (a) o subitem apontado EXISTE na spec do método, numa etapa que SE APLICA a ele .... mecânica
- *   (b) o rótulo do subitem NÃO CONTRADIZ o item ............................ por falsificação
+ *   (b) o rótulo do subitem comparado, por palavras, com o título do item .... ajuda, não trava
  *   (c) alguma tool PRODUZ o artefato das etapas que cobrem a linha ........... parcial: por etapa
  *   (d) a ausência está DECLARADA, não preenchida com encaixe ................ mecânica (`checkCoverage`)
+ *
+ * (b) NÃO ENTRA NO VEREDITO (DEBT-149, decisão de 05/11/2026). Medida por trocas propositais, a
+ * conferência por palavras percebe poucas — 3,4% no PRISMA-S —, e acusava como erro pares que a
+ * leitura do enunciado confirma: travava estudo por falso positivo e afirmava capacidade que não
+ * tem. O suspeito dela vai como pedido de leitura a quem assimila; o relatório diz o que ela é e
+ * quanto enxerga, com a medida e a fonte (gravadas no mapeamento do método). `valid` depende de
+ * omissão, título da fonte, legibilidade do mapeamento (inclui (a)) e declarações. Que o
+ * mapeamento esteja CERTO se confere na assimilação, lendo a norma — não a cada estudo.
  *
  * As quatro dependem do MÉTODO: o mapeamento é dele (DEBT-142, `method_mapping.ts`), os ids de
  * `covered_by` são subitens da trilha dele, e quem os define é a spec dele. Por isso a conferência
@@ -32,29 +40,66 @@ import { AgentOrchestrator } from "../registry/agent_orchestrator.js";
  * scaffold que o declare é relatado à parte. Com o PROJETO, o método é o dele e as respostas às
  * condições do método entram na conta: item condicional fora de `aplica_se` sai do denominador.
  *
- * O QUE NÃO É MECANIZÁVEL vai escrito AO LADO do resultado (`limite`), e a PREMISSA da
- * falsificação também (`premissa_da_falsificacao`): quem lê o veredito precisa saber sob que
- * premissa ele foi dado. O sistema falsifica; quem afirma é quem assimila.
+ * O QUE NÃO É MECANIZÁVEL vai escrito AO LADO do resultado (`limite`), e o que a conferência por
+ * palavras é também (`conferencia_por_palavras`): quem lê o veredito precisa saber o que foi
+ * conferido e o que não foi.
  */
 
-export const PREMISSA_DA_FALSIFICACAO =
-    "Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, " +
-    "e que casa com exatamente UM outro item do mesmo padrão (item e seus subitens contam como um só), é " +
-    "tratado como DESLOCAMENTO. É premissa derrotável: duas coisas podem se parecer sem haver " +
-    "deslocamento — o suspeito é pedido de leitura, não prova de erro.";
+export const CONFERENCIA_POR_PALAVRAS =
+    "Conferência por palavras (b): compara o rótulo que a trilha do método dá ao subitem com o TÍTULO oficial " +
+    "do item, termo a termo, por uma tabela fixa de equivalências português–inglês feita para os títulos do " +
+    "PRISMA 2020 (mapping_coherence.ts). Acusa o par só quando o rótulo não tem termo em comum com o item que " +
+    "declara cobrir e casa com exatamente UM outro item do mesmo padrão (item e seus subitens contam como um " +
+    "só) — a assinatura de um deslocamento. É premissa derrotável: duas coisas podem se parecer sem haver " +
+    "deslocamento, e o deslocamento sem palavra em comum passa calado. Por isso o suspeito é pedido de leitura " +
+    "a quem assimila a metodologia: não reprova, não contesta a linha e não tira item do porquê da etapa " +
+    "(DEBT-149, decisão de 05/11/2026). Quanto ela enxerga em cada mapeamento, com a medida e a fonte, está em " +
+    "conferencia_por_metodo[].conferencia_por_palavras.quanto_enxerga.";
 
 export const LIMITE_DA_CONFERENCIA =
-    "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema " +
-    "falsifica, quem afirma é quem assimila. A falsificação compara o rótulo com o TÍTULO do item, não " +
-    "com o enunciado; acha deslocamento (rótulo apontando o item vizinho), não encaixe (item apontado " +
-    "para campo que não coleta o que ele pede) — encaixe só aparece se quem assimila o declarar " +
-    "[NÃO COBERTO]. Ponteiro que a falsificação não leu fica em `nao_conferidos`, sem verificação. " +
+    "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, " +
+    "e não a cada estudo (DEBT-149, decisão de 05/11/2026). O que se confere aqui é mecânico: (a) o ponteiro existe " +
+    "na spec do método e cai numa etapa que se aplica a ele; (d) cada linha está coberta ou declarada — " +
+    "[NÃO COBERTO], a fila de manutenção, ou [NÃO SE APLICA]. O encaixe (item apontado para campo que não coleta " +
+    "o que ele pede) só aparece se quem assimila o declarar [NÃO COBERTO]. A fração conta a correspondência " +
+    "DECLARADA pelo mapeamento do método e não contestada por (a): é afirmação de quem assimilou, conferida só no " +
+    "que é mecânico. A conferência por palavras (b) é ajuda para quem assimila e não entra no veredito. " +
     "A conferência (c) é por ETAPA, não por campo: a linha só conta como produzida por código quando " +
     "TODAS as etapas que a cobrem têm tool produtora; com só algumas, é `parcial`. " +
     "O mapeamento e as declarações são do MÉTODO (.claude/methodologies/<método>/conformance/): " +
     "[NÃO SE APLICA] vale para toda pesquisa daquele método. O que depende da pesquisa é item condicional — " +
     "o método declara a condição, o projeto responde —, e a resposta só entra na conta com o projectPath; " +
     "sem ela, o item conta como o método o declarou e vai listado em `condicionais`.";
+
+const dataBR = (iso: string) => iso.split("-").reverse().join("/");
+const pct = (n: number, de: number) => (100 * n / de).toFixed(1).replace(".", ",");
+
+/**
+ * Quanto a conferência por palavras enxerga num mapeamento, em uma frase com a medida e a fonte.
+ * Medida feita sobre outro conjunto de pares — o mapeamento mudou depois dela — é dita assim, e não
+ * vale como medida deste.
+ */
+function quantoEnxerga(medida: MedidaDaConferencia | null, atual: { pares: number; impressao: string }): { texto: string; do_mapeamento_atual: boolean } {
+    if (!medida) {
+        return {
+            texto: "Sem medida neste mapeamento: não se sabe quanto a conferência por palavras enxerga aqui — o suspeito e a " +
+                "ausência de suspeito não dizem, sozinhos, nada sobre o mapeamento.",
+            do_mapeamento_atual: false,
+        };
+    }
+    const atualiza = medida.impressao === atual.impressao && medida.pares_medidos === atual.pares;
+    const numeros = [
+        medida.trocas ? `percebeu ${medida.trocas.percebidas} de ${medida.trocas.plantadas} trocas propositais ` +
+            `(${pct(medida.trocas.percebidas, medida.trocas.plantadas)}%) — cada subitem mapeado posto, numa cópia, em cada outro item` : "",
+        medida.erros_conhecidos ? `nos erros reais conhecidos, ${medida.erros_conhecidos.percebidos} de ${medida.erros_conhecidos.total} ` +
+            `(${medida.erros_conhecidos.fonte})` : "",
+    ].filter(Boolean).join("; ");
+    const sobre = atualiza
+        ? `sobre este mapeamento (${medida.pares_medidos} pares)`
+        : `sobre uma versão ANTERIOR deste mapeamento (${medida.pares_medidos} pares então, ${atual.pares} hoje, e os pares mudaram) — ` +
+            `não vale como medida do de hoje; refaça-a com o script`;
+    return { texto: `Medida em ${dataBR(medida.medida_em)} por ${medida.script}, ${sobre}: ${numeros}.`, do_mapeamento_atual: atualiza };
+}
 
 export interface ConferenciaDoMetodo {
     metodologia: string;
@@ -64,11 +109,17 @@ export interface ConferenciaDoMetodo {
     subitens_inexistentes: Array<{ item: string; subitem: string }>;
     /** (a) ponteiros para subitem de etapa que o método declara NÃO se aplicar a ele. */
     em_etapa_que_nao_se_aplica: Array<{ item: string; subitem: string; etapa: string }>;
-    /** (b) falsificação do rótulo contra o título oficial. */
-    falsificacao: {
-        com_poder: boolean;
-        motivo_sem_poder: string;
+    /**
+     * (b) a conferência por palavras — ajuda para quem assimila; não reprova, não contesta e não
+     * tira item do porquê da etapa (DEBT-149, decisão de 05/11/2026).
+     */
+    conferencia_por_palavras: {
+        /** Quanto ela enxerga neste mapeamento, com a medida e a fonte — ou que não há medida. */
+        quanto_enxerga: string;
+        /** A medida gravada no mapeamento do método; `do_mapeamento_atual` false = de antes da última mudança dele. */
+        medida: (MedidaDaConferencia & { do_mapeamento_atual: boolean }) | null;
         pares_conferidos: number;
+        /** Pedido de leitura a quem assimila. */
         suspeitos: Suspeito[];
         nao_conferidos: string[];
     };
@@ -91,10 +142,10 @@ export interface ConferenciaDoMetodo {
     fracao: string;
     contestados: Array<{ item: string; por: string }>;
     /**
-     * Que itens do padrão cada etapa atende, NESTE método — só correspondência não contestada.
-     * É a fonte do "porquê da etapa" que os agentes explicam (DEBT-126): ancorar o porquê na
-     * coluna "Item" da spec ensinaria pares deslocados e, num método de escopo, a numeração
-     * do PRISMA 2020 em vez da do padrão que o método declara.
+     * Que itens do padrão cada etapa atende, NESTE método — só correspondência não contestada por
+     * (a), e só com títulos da fonte oficial. É a fonte do "porquê da etapa" que os agentes
+     * explicam (DEBT-126): ancorar o porquê na coluna "Item" da spec ensinaria pares deslocados e,
+     * num método de escopo, a numeração do PRISMA 2020 em vez da do padrão que o método declara.
      */
     itens_por_etapa: Record<string, string[]>;
     erros: string[];
@@ -110,7 +161,7 @@ export interface RelatorioCobertura extends CoverageReport {
     standard_id: string;
     /** Correspondências não contestadas — o menor número entre os métodos conferidos. */
     corresponde: number;
-    /** Correspondências declaradas que (a) ou (b) contestaram, com o porquê e o método. */
+    /** Correspondências declaradas que (a) contestou, com o porquê e o método. (b) não contesta. */
     contestados: Array<{ item: string; por: string }>;
     /** Um método: "12/26". Vários: a fração de cada um — nunca uma soma que misture trilhas. */
     fracao: string;
@@ -119,7 +170,8 @@ export interface RelatorioCobertura extends CoverageReport {
     /** Esqueletos do scaffold (trilha por declarar ou spec sem subitens) que o declaram. */
     declarado_por_esqueleto: string[];
     conferencia_por_metodo: ConferenciaDoMetodo[];
-    premissa_da_falsificacao: string;
+    /** O que a conferência por palavras (b) é, e por que não entra no veredito. */
+    conferencia_por_palavras: string;
     limite: string;
     avisos: string[];
 }
@@ -212,24 +264,10 @@ function conferirContraMetodo(
         );
     }
 
-    // (b) — falsificação, com a premissa conferida antes de valer.
+    // (b) — a conferência por palavras: ajuda para quem assimila. O suspeito dela não vai aos erros
+    // nem contesta a linha (DEBT-149, decisão de 05/11/2026); o relatório diz quanto ela enxerga.
     const coer = MappingCoherenceService.checarMetodologia(repoRoot, metodo, std, efetivas);
-    const com_poder = std.titulos_oficiais === true;
-    const motivo_sem_poder = com_poder ? "" :
-        "Os títulos dos itens deste padrão não foram transcritos da fonte oficial (ver a nota do padrão). " +
-        "Comparar o rótulo com eles não falsifica nada: o suspeito e a ausência de suspeito são igualmente inconclusivos.";
-    if (!com_poder) erros.push(`(b) Falsificação SEM PODER em ${std.name}: ${motivo_sem_poder}`);
-    else if (coer.suspeitos.length) {
-        erros.push(
-            `(b) ${coer.suspeitos.length} mapeamento(s) suspeito(s): o rótulo não tem conceito em comum com o item que ` +
-            `declara cobrir e casa com outro — ${coer.suspeitos.map((s) => `${s.subitem}→${s.item_declarado} (sugere ${s.item_sugerido})`).join(", ")}.`
-        );
-        for (const s of coer.suspeitos) {
-            if (correspondencias.some((i) => i.id === s.item_declarado) && !contestados.has(s.item_declarado)) {
-                contestados.set(s.item_declarado, `${s.subitem} "${s.rotulo}" casa com o item ${s.item_sugerido}`);
-            }
-        }
-    }
+    const enxerga = quantoEnxerga(mapa.medida, impressaoDosPares(mapa.linhas));
 
     // (c) — a etapa de cada subitem, e se alguma tool grava o artefato dela.
     const existentes = new Set(AgentOrchestrator.getGovernedTools());
@@ -245,9 +283,10 @@ function conferirContraMetodo(
         else if (etapas.every((e) => comCodigo(e.producer_tools))) por_codigo.push(i.id);
         else if (etapas.some((e) => comCodigo(e.producer_tools))) parcial.push(i.id);
         else so_por_agente.push(i.id);
-        // Fundamento só de título conferido com a fonte: com títulos fora da fonte (PRISMA-S,
-        // DEBT-128) o "porquê" ensinaria ao pesquisador um item com nome e número errados.
-        if (!contestados.has(i.id) && com_poder) {
+        // Fundamento só de título conferido com a fonte: com títulos fora da fonte (o PRISMA-S até
+        // o DEBT-128) o "porquê" ensinaria ao pesquisador um item com nome e número errados. Só o
+        // título decide — o suspeito da conferência por palavras não tira item daqui (DEBT-149).
+        if (!contestados.has(i.id) && std.titulos_oficiais === true) {
             for (const e of etapas) (itens_por_etapa[e.id] ??= []).push(i.id);
         }
     }
@@ -272,8 +311,9 @@ function conferirContraMetodo(
             declara_o_padrao: declara,
             subitens_inexistentes,
             em_etapa_que_nao_se_aplica,
-            falsificacao: {
-                com_poder, motivo_sem_poder,
+            conferencia_por_palavras: {
+                quanto_enxerga: enxerga.texto,
+                medida: mapa.medida ? { ...mapa.medida, do_mapeamento_atual: enxerga.do_mapeamento_atual } : null,
                 pares_conferidos: coer.pares_conferidos,
                 suspeitos: coer.suspeitos,
                 nao_conferidos: coer.nao_conferidos,
@@ -383,8 +423,8 @@ export class StandardCoverageService {
      * Confere a cobertura de um padrão nos quatro pontos. Com `methodologyId`, contra aquele
      * método; sem ele, contra TODOS os métodos prontos que declaram o padrão, cada um com o seu
      * mapeamento e a sua fração. Com `projectDir`, contra o método do projeto, com as respostas
-     * dele às condições do método (DEBT-142). A falsificação deixou de ser opcional: verificação
-     * que depende de alguém lembrar de pedir decai.
+     * dele às condições do método (DEBT-142). A conferência por palavras roda sempre — ajuda que
+     * depende de alguém lembrar de pedir decai —, mas fora do veredito (DEBT-149).
      */
     static conferir(repoRoot: string, standardId: string, methodologyId?: string, projectDir?: string): RelatorioCobertura {
         const std = StandardsService.read(repoRoot, standardId);
@@ -405,7 +445,7 @@ export class StandardCoverageService {
             declarado_por: prontos,
             declarado_por_esqueleto: esqueletos,
             conferencia_por_metodo: [],
-            premissa_da_falsificacao: PREMISSA_DA_FALSIFICACAO,
+            conferencia_por_palavras: CONFERENCIA_POR_PALAVRAS,
             limite: LIMITE_DA_CONFERENCIA,
             avisos: [],
         };
@@ -413,6 +453,13 @@ export class StandardCoverageService {
 
         const avisos: string[] = [];
         const errors = [...projeto.erros, ...d.errors];
+        if (std.titulos_oficiais !== true) {
+            errors.push(
+                `Os títulos dos itens de ${std.name} não foram transcritos da fonte oficial (titulos_oficiais: false; ver a nota ` +
+                `do padrão): o porquê de cada etapa não sai — ensinaria ao pesquisador item com nome e número errados —, e a ` +
+                `conferência por palavras compara o rótulo com o que não é a norma.`
+            );
+        }
         if (esqueletos.length) {
             avisos.push(
                 `Declarado também por esqueleto(s) do scaffold — ${esqueletos.join(", ")} —, que não entram na conta: ` +
@@ -429,11 +476,21 @@ export class StandardCoverageService {
 
         for (const c of conferencias) errors.push(...c.erros.map((e) => `[${c.metodologia}] ${e}`));
 
-        if (conferencias.some((c) => !c.falsificacao.com_poder)) {
-            avisos.push("A fração conta correspondências DECLARADAS que a falsificação não tem como contestar neste padrão: é afirmação de quem assimilou, não verificação.");
+        // (b) vai aos avisos, não aos erros: pedido de leitura a quem assimila (DEBT-149).
+        for (const c of conferencias) {
+            const { suspeitos, medida } = c.conferencia_por_palavras;
+            if (suspeitos.length) {
+                avisos.push(
+                    `[${c.metodologia}] ${suspeitos.length} par(es) suspeito(s) pela conferência por palavras — pedido de leitura a quem ` +
+                    `assimila, que não reprova nem contesta: ${suspeitos.map((s) => `${s.subitem}→${s.item_declarado} (sugere ${s.item_sugerido})`).join(", ")}.`
+                );
+            }
+            if (medida && !medida.do_mapeamento_atual) {
+                avisos.push(`[${c.metodologia}] A medida da conferência por palavras é de antes da última mudança do mapeamento: refaça-a (${medida.script}).`);
+            }
         }
-        const naoConf = conferencias.reduce((n, c) => n + c.falsificacao.nao_conferidos.length, 0);
-        if (naoConf) avisos.push(`${naoConf} ponteiro(s) ficaram sem falsificação — ver nao_conferidos.`);
+        const naoConf = conferencias.reduce((n, c) => n + c.conferencia_por_palavras.nao_conferidos.length, 0);
+        if (naoConf) avisos.push(`${naoConf} ponteiro(s) a conferência por palavras não comparou — ver conferencia_por_palavras.nao_conferidos.`);
         // Item condicional sem resposta conta como o método o declarou: a fração não é a final.
         const pendentes = conferencias.flatMap((c) => c.condicionais.filter((x) => x.resposta === null).map((x) => `${x.item} (${x.condicao})`));
         if (pendentes.length) {
@@ -468,7 +525,7 @@ export class StandardCoverageService {
      * O template do checklist de conformidade — o suplemento que o pesquisador preenche e
      * publica. É de UM método, porque o mapeamento é do método (DEBT-142): o do projeto, o
      * informado ou o único que declara o padrão; com vários e nenhum escolhido, recusa e diz
-     * quais. Leva junto a conferência — contestado marcado; fração, premissa e limite no rodapé.
+     * quais. Leva junto a conferência — contestado por (a) marcado; fração e limite no rodapé.
      */
     static checklist(repoRoot: string, standardId: string, methodologyId?: string, projectDir?: string): string {
         const std = StandardsService.read(repoRoot, standardId);
@@ -488,9 +545,10 @@ export class StandardCoverageService {
         return StandardsService.renderChecklist(std, {
             linhas: doMetodo?.efetivas,
             contestados: Object.fromEntries(rel.contestados.map((c) => [c.item, c.por])),
+            // A conferência por palavras não vai ao rodapé: o suspeito dela não marca linha do
+            // checklist que o pesquisador publica, e o que ela é está no relatório (DEBT-149).
             rodape: [
-                `**Fração conferida:** ${rel.fracao}`,
-                `**Premissa da falsificação:** ${rel.premissa_da_falsificacao}`,
+                `**Fração:** ${rel.fracao} — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).`,
                 `**Limite da conferência:** ${rel.limite}`,
             ],
             notaDoMapeamento: doMetodo?.mapa.note ? { metodo: metodo!, texto: doMetodo.mapa.note } : undefined,

@@ -2,6 +2,16 @@
   "schemaVersion": 1,
   "standard": "prisma-p",
   "note": "COBERTURA HONESTA: 12/26 (DEBT-140). As linhas apontam subitens da trilha do prisma-sr, e a auditoria de 08/10/2026 (DEBT-130) achou 6 encaixes (1b, 3b, 4, 5c, 11a, 12) e 8 parciais (3a, 8, 9, 10, 11c, 13, 14, 16): as 14 estao declaradas [NAO COBERTO] item a item, com o motivo, e os ponteiros ficam onde mora a cobertura parcial. O falsificador do DEBT-124 NAO PODE achar encaixe — compara o rotulo com o titulo, nao com o enunciado, e so acusa rotulo que casa com outro item —, entao o zero suspeito deste padrao nao e garantia de nada (foi ele, ainda assim, que pegou o unico deslocamento real: F2.1.1.4 estava no item 9 e pertence ao 10). DECLARADO PELO prisma-sr desde 17/10/2026 (decisao do pesquisador; pendencia do §5 de ESPECIFICACAO_vestir_metodos.md resolvida): e a norma do protocolo da revisao sistematica.",
+  "conferencia_por_palavras": {
+    "medida_em": "2026-10-31",
+    "script": ".claude/maintenance/sessao_2c/preparo/poder_plantado.mjs",
+    "pares_medidos": 81,
+    "impressao": "4d349aaece2da2079716962c5c39e7c6b1bbe729b6af3c86f744a8d90c34aa3b",
+    "trocas": {
+      "plantadas": 1966,
+      "percebidas": 284
+    }
+  },
   "items": [
     {
       "id": "1a",

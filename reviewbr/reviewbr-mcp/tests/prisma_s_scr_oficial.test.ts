@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import { MappingCoherenceService } from "../src/services/mapping_coherence.js";
 import { StandardCoverageService } from "../src/services/standard_coverage.js";
 import { StandardsService } from "../src/services/standards.js";
-import { lerMapeamento, LinhaDoMapeamento } from "../src/services/method_mapping.js";
+import { lerMapeamento, impressaoDosPares, LinhaDoMapeamento } from "../src/services/method_mapping.js";
 import { textoDaSpec } from "../src/services/method_trail.js";
 
 const MCP = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -72,11 +72,12 @@ describe("PRISMA-S — a norma, não a trilha (DEBT-128)", () => {
 
 /**
  * DEBT-149 — o controle positivo que o prompt da sessão 1 pediu: com os títulos oficiais e o
- * mapeamento ANTIGO, o falsificador devia acusar os ponteiros de S11 e S13, que o DEBT-128 já
- * mostrara deslocados. Não acusa. Este teste fixa o que ele faz hoje; quando o falsificador
- * ganhar poder, ele deve passar a falhar, e então ser reescrito para exigir a detecção.
+ * mapeamento ANTIGO, a conferência por palavras devia acusar os ponteiros de S11 e S13, que o
+ * DEBT-128 já mostrara deslocados. Não acusa. Desde 05/11/2026 ela não trava (decisão B1): este
+ * bloco é a FONTE da medida 'erros_conhecidos' que o mapeamento do prisma-sr grava e o relatório
+ * cita (2 de 58). Se a conferência mudar, o teste e a medida mudam juntos.
  */
-describe("controle positivo do falsificador no PRISMA-S (DEBT-149) — SEM PODER", () => {
+describe("o que a conferência por palavras percebe no PRISMA-S antigo (DEBT-149) — a medida que o relatório cita", () => {
     // covered_by de antes do remapeamento (git show d64067d:.claude/standards/prisma-s.json).
     const ANTIGO: Record<string, string[]> = {
         S1: ["F2.1.1.1", "F2.1.1.2", "F2.1.1.3", "F2.1.1.4", "F8.3.6"],
@@ -108,11 +109,18 @@ describe("controle positivo do falsificador no PRISMA-S (DEBT-149) — SEM PODER
         expect(r.suspeitos.filter((s) => s.item_declarado === "S11" || s.item_declarado === "S13")).toEqual([]);
     });
 
-    it("dos 70 pares antigos, 58 mudaram no remapeamento — o falsificador viu 2", () => {
+    it("dos 70 pares antigos, 58 mudaram no remapeamento — a conferência viu 2", () => {
         let total = 0, mudaram = 0;
         const atual = mapa("prisma-sr", "prisma-s");
         for (const it of oficial.items) for (const s of ANTIGO[it.id]) { total++; if (!(atual.get(it.id)?.covered_by ?? []).includes(s)) mudaram++; }
         expect([total, mudaram]).toEqual([70, 58]);
+    });
+
+    it("a medida gravada no mapeamento do prisma-sr é a que este bloco mede: 2 de 58", () => {
+        const medida = lerMapeamento(REPO, "prisma-sr", "prisma-s").medida!;
+        // O número gravado é o que a conferência acusa no mapeamento antigo, medido aqui.
+        expect(medida.erros_conhecidos).toMatchObject({ total: 58, percebidos: r.suspeitos.length });
+        expect(medida.erros_conhecidos?.fonte).toMatch(/tests\/prisma_s_scr_oficial\.test\.ts/);
     });
 });
 
@@ -158,13 +166,23 @@ describe("PRISMA-ScR — os 22 itens contra a trilha do scoping (DEBT-055)", () 
         expect(itens.find((i) => i.id === "12")!.text).toMatch(/^If done, provide a rationale for conducting a critical appraisal/);
     });
 
-    it("a falsificação contesta 4 pares que a leitura do enunciado confirma — falsos positivos do DEBT-149", () => {
-        // Fixa o comportamento de hoje: quando o falsificador parar de contestar o que está certo,
-        // este teste deve falhar e ser reescrito — e a fração voltar a 14/22.
-        expect(c.falsificacao.com_poder).toBe(true);
-        expect(c.falsificacao.suspeitos.map((s) => `${s.subitem}→${s.item_declarado}:${s.item_sugerido}`))
+    it("a conferência por palavras acusa 4 pares que a leitura do enunciado confirma — e não reprova mais: 14/22, valid true (DEBT-149)", () => {
+        // Até a 2c, os 4 falsos positivos reprovavam o padrão e contestavam 7 e 14 (12/22): os dois
+        // projetos de escopo paravam na F8. Desde 05/11/2026 o suspeito é pedido de leitura.
+        expect(c.conferencia_por_palavras.suspeitos.map((s) => `${s.subitem}→${s.item_declarado}:${s.item_sugerido}`))
             .toEqual(["F2.1.2.1→7:8", "F2.2.5→7:8", "F5.2.5.1→11:22", "F8.1.5→14:1"]);
-        expect(r.contestados.map((x) => x.item)).toEqual(["7", "14"]);
-        expect(r.fracao).toBe("12/22");
+        expect(r.contestados).toEqual([]);
+        expect(r.errors).toEqual([]);
+        expect(r.valid).toBe(true);
+        expect(r.fracao).toBe("14/22");
+        expect(r.avisos.join(" ")).toMatch(/\[scoping-prisma-scr\] 4 par\(es\) suspeito\(s\) pela conferência por palavras — pedido de leitura/);
+        // ... e o porquê da etapa volta a ter os itens 7 e 14.
+        expect(Object.values(c.itens_por_etapa).flat()).toEqual(expect.arrayContaining(["7", "14"]));
+    });
+
+    it("sem mexer no mapeamento: os pares são os mesmos que a medida de 31/10/2026 mediu", () => {
+        const m = lerMapeamento(REPO, "scoping-prisma-scr", "prisma-scr");
+        expect(impressaoDosPares(m.linhas)).toEqual({ pares: 134, impressao: "3fc9adcac6705cda1f56086f27c765e1c13238d7936ecff36103b38d6cda4e39" });
+        expect(m.medida?.impressao).toBe("3fc9adcac6705cda1f56086f27c765e1c13238d7936ecff36103b38d6cda4e39");
     });
 });

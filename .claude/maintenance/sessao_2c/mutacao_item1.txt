@@ -1,0 +1,5 @@
+suspeito volta aos erros                 PEGA — 6 teste(s) caíram
+suspeito volta a contestar               PEGA — 15 teste(s) caíram
+suspeito volta a tirar item do porquê    PEGA — 3 teste(s) caíram
+medida nunca envelhece                   PEGA — 2 teste(s) caíram
+zod remove a medida                      PEGA — 12 teste(s) caíram

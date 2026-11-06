@@ -1,5 +1,6 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { createHash } from "node:crypto";
 import { z } from "zod";
 import type { Standard } from "./standards.js";
 import { lerCondicoes, Condicao, RespostaDeCondicao } from "./method_trail.js";
@@ -36,7 +37,45 @@ import { lerCondicoes, Condicao, RespostaDeCondicao } from "./method_trail.js";
  * projeto responde por `record_researcher_decision`; com resposta fora de `aplica_se`, a linha sai
  * do denominador como [NÃO SE APLICA], com o motivo e a data. Sem resposta vale o que o método
  * declarou — o que não foi respondido não se presume respondido.
+ *
+ * QUANTO A CONFERÊNCIA POR PALAVRAS ENXERGA (DEBT-149)
+ * ----------------------------------------------------
+ * `conferencia_por_palavras` guarda a MEDIDA, feita por script, de quanto a conferência por
+ * palavras (mapping_coherence.ts) percebe neste mapeamento: a data, o script, e a impressão dos
+ * pares medidos (`impressaoDosPares`). O relatório da cobertura a cita, e diz quando o mapeamento
+ * mudou depois dela — medida de outro mapeamento não é medida deste. Decisão de 05/11/2026: a
+ * conferência por palavras não trava o estudo; o relatório diz o que ela é e quanto enxerga.
  */
+
+/**
+ * A medida de quanto a conferência por palavras enxerga num mapeamento. Sem número, não é medida:
+ * traz as trocas propositais, os erros reais conhecidos, ou os dois.
+ */
+const MedidaDaConferenciaSchema = z.object({
+    /** Data da medida, AAAA-MM-DD. */
+    medida_em: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    /** O script que mediu, relativo à raiz do repositório: quem quiser refaz. */
+    script: z.string().min(1),
+    /** Pares (item, subitem) do covered_by no dia da medida, e a impressão deles (`impressaoDosPares`). */
+    pares_medidos: z.number().int().nonnegative(),
+    impressao: z.string().regex(/^[0-9a-f]{64}$/),
+    /** Trocas propositais: cada subitem mapeado posto, numa cópia, em cada outro item, uma de cada vez. */
+    trocas: z.object({ plantadas: z.number().int().positive(), percebidas: z.number().int().nonnegative() }).optional(),
+    /**
+     * Erros reais conhecidos — de uma versão deste mapeamento, achados lendo a norma — e quantos a
+     * conferência percebeu. A fonte diz de que versão e onde se confere.
+     */
+    erros_conhecidos: z.object({
+        total: z.number().int().positive(),
+        percebidos: z.number().int().nonnegative(),
+        fonte: z.string().min(1),
+    }).optional(),
+})
+    .refine((m) => m.trocas || m.erros_conhecidos, { message: "medida sem número: traga trocas, erros_conhecidos ou os dois" })
+    .refine((m) => !m.trocas || m.trocas.percebidas <= m.trocas.plantadas, { message: "mais trocas percebidas que plantadas" })
+    .refine((m) => !m.erros_conhecidos || m.erros_conhecidos.percebidos <= m.erros_conhecidos.total, { message: "mais erros percebidos que conhecidos" });
+
+export type MedidaDaConferencia = z.infer<typeof MedidaDaConferenciaSchema>;
 
 const LinhaSchema = z.object({
     id: z.string().min(1),
@@ -52,6 +91,7 @@ const MapeamentoSchema = z.object({
     /** Id do padrão — o nome do arquivo em `.claude/standards/`, sem `.json`. */
     standard: z.string().min(1),
     note: z.string().default(""),
+    conferencia_por_palavras: MedidaDaConferenciaSchema.optional(),
     items: z.array(LinhaSchema).default([]),
 });
 
@@ -66,7 +106,20 @@ export interface Mapeamento {
     note: string;
     /** Por id do item do padrão. Item sem linha = sem mapeamento = omissão, se o método declara o padrão. */
     linhas: Map<string, LinhaDoMapeamento>;
+    /** Quanto a conferência por palavras enxerga neste mapeamento, se foi medido. */
+    medida: MedidaDaConferencia | null;
     erros: string[];
+}
+
+/**
+ * A impressão dos pares de um mapeamento: SHA-256 das linhas "item<TAB>subitem" de todo
+ * `covered_by`, em ordem. Muda quando um ponteiro entra, sai ou troca de item — e é assim que o
+ * relatório sabe se a medida da conferência por palavras é deste mapeamento ou de um anterior.
+ * Não capta mudança de rótulo na spec, de título no padrão nem da tabela de equivalências.
+ */
+export function impressaoDosPares(linhas: Map<string, LinhaDoMapeamento>): { pares: number; impressao: string } {
+    const pares = [...linhas.values()].flatMap((l) => l.covered_by.map((s) => `${l.id}\t${s}`)).sort();
+    return { pares: pares.length, impressao: createHash("sha256").update(pares.join("\n"), "utf8").digest("hex") };
 }
 
 export function arquivoDoMapeamento(metodo: string, padrao: string): string {
@@ -80,7 +133,7 @@ export function arquivoDoMapeamento(metodo: string, padrao: string): string {
  */
 export function lerMapeamento(repoRoot: string, metodo: string, padrao: string, std?: Standard | null): Mapeamento {
     const arquivo = arquivoDoMapeamento(metodo, padrao);
-    const base: Mapeamento = { metodo, padrao, arquivo, existe: false, note: "", linhas: new Map(), erros: [] };
+    const base: Mapeamento = { metodo, padrao, arquivo, existe: false, note: "", linhas: new Map(), medida: null, erros: [] };
     const p = path.join(repoRoot, arquivo);
     if (!fs.existsSync(p)) return base;
 
@@ -120,7 +173,7 @@ export function lerMapeamento(repoRoot: string, metodo: string, padrao: string, 
             if (l.nao_se_aplica.trim()) erros.push(`mapeamento ${arquivo}: o item ${l.id} é condicional e declarado [NÃO SE APLICA] ao mesmo tempo`);
         }
     }
-    return { ...base, existe: true, note: lido.data.note, linhas, erros };
+    return { ...base, existe: true, note: lido.data.note, linhas, medida: lido.data.conferencia_por_palavras ?? null, erros };
 }
 
 /** As declarações de ausência de uma linha, lidas de forma robusta: linha ausente é "não declarada". */

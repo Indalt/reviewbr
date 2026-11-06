@@ -1,0 +1,255 @@
+
+## conferir prisma-2020 | (todos)
+  .errors: ["21 item(ns) do PRISMA 2020 sem nenhum subitem da trilha que os cubra e sem declaração [NÃO COBERTO] ou [NÃO SE APLICA]: 10a, 10b, 13a, 13b, 13c, 13d, 13e, 13f…  →  ["21 item(ns) do PRISMA 2020 sem nenhum subitem da trilha que os cubra e sem declaração [NÃO COBERTO] ou [NÃO SE APLICA]: 10a, 10b, 13a, 13b, 13c, 13d, 13e, 13f…
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].erros: ["(b) 15 mapeamento(s) suspeito(s): o rótulo não tem conceito em comum com o item que declara cobrir e casa com outro — F0.1.4→15 (sugere 24), F0.1.5→15 (sugere…  →  []
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .avisos: ["12 ponteiro(s) ficaram sem falsificação — ver nao_conferidos."]  →  ["[prisma-sr] 15 par(es) suspeito(s) pela conferência por palavras — pedido de leitura a quem assimila, que não reprova nem contesta: F0.1.4→15 (sugere 24), F0.…
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir prisma-2020 | prisma-sr
+  .errors: ["21 item(ns) do PRISMA 2020 sem nenhum subitem da trilha que os cubra e sem declaração [NÃO COBERTO] ou [NÃO SE APLICA]: 10a, 10b, 13a, 13b, 13c, 13d, 13e, 13f…  →  ["21 item(ns) do PRISMA 2020 sem nenhum subitem da trilha que os cubra e sem declaração [NÃO COBERTO] ou [NÃO SE APLICA]: 10a, 10b, 13a, 13b, 13c, 13d, 13e, 13f…
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].erros: ["(b) 15 mapeamento(s) suspeito(s): o rótulo não tem conceito em comum com o item que declara cobrir e casa com outro — F0.1.4→15 (sugere 24), F0.1.5→15 (sugere…  →  []
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .avisos: ["12 ponteiro(s) ficaram sem falsificação — ver nao_conferidos."]  →  ["[prisma-sr] 15 par(es) suspeito(s) pela conferência por palavras — pedido de leitura a quem assimila, que não reprova nem contesta: F0.1.4→15 (sugere 24), F0.…
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir prisma-2020 | scoping-prisma-scr
+  .errors: ["42 item(ns) do PRISMA 2020 sem nenhum subitem da trilha que os cubra e sem declaração [NÃO COBERTO] ou [NÃO SE APLICA]: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10a, 10b, 1…  →  ["42 item(ns) do PRISMA 2020 sem nenhum subitem da trilha que os cubra e sem declaração [NÃO COBERTO] ou [NÃO SE APLICA]: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10a, 10b, 1…
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].erros: ["(b) 15 mapeamento(s) suspeito(s): o rótulo não tem conceito em comum com o item que declara cobrir e casa com outro — F0.1.4→15 (sugere 24), F0.1.5→15 (sugere…  →  ["\"scoping-prisma-scr\" não declara \"prisma-2020\" em conformance.standards: a conferência foi feita a pedido, mas nenhuma pesquisa conduzida por este método …
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .avisos: ["2 ponteiro(s) ficaram sem falsificação — ver nao_conferidos."]  →  ["[scoping-prisma-scr] 15 par(es) suspeito(s) pela conferência por palavras — pedido de leitura a quem assimila, que não reprova nem contesta: F0.1.4→15 (sugere…
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir prisma-p | (todos)
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .avisos: ["9 ponteiro(s) ficaram sem falsificação — ver nao_conferidos."]  →  ["9 ponteiro(s) a conferência por palavras não comparou — ver conferencia_por_palavras.nao_conferidos."]
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir prisma-p | prisma-sr
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .avisos: ["9 ponteiro(s) ficaram sem falsificação — ver nao_conferidos."]  →  ["9 ponteiro(s) a conferência por palavras não comparou — ver conferencia_por_palavras.nao_conferidos."]
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir prisma-p | scoping-prisma-scr
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir prisma-s | (todos)
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .conferencia_por_metodo[1].falsificacao: REMOVIDO
+  .conferencia_por_metodo[1].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .avisos: ["12 ponteiro(s) ficaram sem falsificação — ver nao_conferidos."]  →  ["12 ponteiro(s) a conferência por palavras não comparou — ver conferencia_por_palavras.nao_conferidos."]
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir prisma-s | prisma-sr
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .avisos: ["6 ponteiro(s) ficaram sem falsificação — ver nao_conferidos."]  →  ["6 ponteiro(s) a conferência por palavras não comparou — ver conferencia_por_palavras.nao_conferidos."]
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir prisma-s | scoping-prisma-scr
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .avisos: ["6 ponteiro(s) ficaram sem falsificação — ver nao_conferidos."]  →  ["6 ponteiro(s) a conferência por palavras não comparou — ver conferencia_por_palavras.nao_conferidos."]
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir prisma-scr | (todos)
+  .covered: 12  →  14
+  .valid: false  →  true
+  .errors: ["[scoping-prisma-scr] (b) 4 mapeamento(s) suspeito(s): o rótulo não tem conceito em comum com o item que declara cobrir e casa com outro — F2.1.2.1→7 (sugere 8…  →  []
+  .corresponde: 12  →  14
+  .contestados: [{"item":"7","por":"[scoping-prisma-scr] F2.1.2.1 \"Data e hora da busca\" casa com o item 8"},{"item":"14","por":"[scoping-prisma-scr] F8.1.5 \"title_abstract_…  →  []
+  .fracao: "12/22"  →  "14/22"
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].corresponde: 12  →  14
+  .conferencia_por_metodo[0].fracao: "12/22"  →  "14/22"
+  .conferencia_por_metodo[0].contestados: [{"item":"7","por":"F2.1.2.1 \"Data e hora da busca\" casa com o item 8"},{"item":"14","por":"F8.1.5 \"title_abstract_excluded\" casa com o item 1"}]  →  []
+  .conferencia_por_metodo[0].itens_por_etapa.F8: ["1","2","4","5","8","9","15","17","18","19","20","21"]  →  ["1","2","4","5","7","8","9","14","15","17","18","19","20","21"]
+  .conferencia_por_metodo[0].itens_por_etapa.F2: ["8"]  →  ["7","8"]
+  .conferencia_por_metodo[0].itens_por_etapa.F4: ["9"]  →  ["9","14"]
+  .conferencia_por_metodo[0].erros: ["(b) 4 mapeamento(s) suspeito(s): o rótulo não tem conceito em comum com o item que declara cobrir e casa com outro — F2.1.2.1→7 (sugere 8), F2.2.5→7 (sugere 8…  →  []
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .avisos: ["11 ponteiro(s) ficaram sem falsificação — ver nao_conferidos.","Item(ns) condicional(is) sem resposta — sem projectPath: 12 (avaliacao_critica), 16 (avaliacao…  →  ["[scoping-prisma-scr] 4 par(es) suspeito(s) pela conferência por palavras — pedido de leitura a quem assimila, que não reprova nem contesta: F2.1.2.1→7 (sugere…
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir prisma-scr | prisma-sr
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir prisma-scr | scoping-prisma-scr
+  .covered: 12  →  14
+  .valid: false  →  true
+  .errors: ["[scoping-prisma-scr] (b) 4 mapeamento(s) suspeito(s): o rótulo não tem conceito em comum com o item que declara cobrir e casa com outro — F2.1.2.1→7 (sugere 8…  →  []
+  .corresponde: 12  →  14
+  .contestados: [{"item":"7","por":"[scoping-prisma-scr] F2.1.2.1 \"Data e hora da busca\" casa com o item 8"},{"item":"14","por":"[scoping-prisma-scr] F8.1.5 \"title_abstract_…  →  []
+  .fracao: "12/22"  →  "14/22"
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].corresponde: 12  →  14
+  .conferencia_por_metodo[0].fracao: "12/22"  →  "14/22"
+  .conferencia_por_metodo[0].contestados: [{"item":"7","por":"F2.1.2.1 \"Data e hora da busca\" casa com o item 8"},{"item":"14","por":"F8.1.5 \"title_abstract_excluded\" casa com o item 1"}]  →  []
+  .conferencia_por_metodo[0].itens_por_etapa.F8: ["1","2","4","5","8","9","15","17","18","19","20","21"]  →  ["1","2","4","5","7","8","9","14","15","17","18","19","20","21"]
+  .conferencia_por_metodo[0].itens_por_etapa.F2: ["8"]  →  ["7","8"]
+  .conferencia_por_metodo[0].itens_por_etapa.F4: ["9"]  →  ["9","14"]
+  .conferencia_por_metodo[0].erros: ["(b) 4 mapeamento(s) suspeito(s): o rótulo não tem conceito em comum com o item que declara cobrir e casa com outro — F2.1.2.1→7 (sugere 8), F2.2.5→7 (sugere 8…  →  []
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .avisos: ["11 ponteiro(s) ficaram sem falsificação — ver nao_conferidos.","Item(ns) condicional(is) sem resposta — sem projectPath: 12 (avaliacao_critica), 16 (avaliacao…  →  ["[scoping-prisma-scr] 4 par(es) suspeito(s) pela conferência por palavras — pedido de leitura a quem assimila, que não reprova nem contesta: F2.1.2.1→7 (sugere…
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir raise-3 | (todos)
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir raise-3 | prisma-sr
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .conferencia_por_palavras: ACRESCENTADO
+
+## conferir raise-3 | scoping-prisma-scr
+  .conferencia_por_metodo[0].falsificacao: REMOVIDO
+  .conferencia_por_metodo[0].conferencia_por_palavras: ACRESCENTADO
+  .premissa_da_falsificacao: REMOVIDO
+  .limite: "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimila. A falsificação compara …  →  "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-149, decisão de 05/11/2026…
+  .conferencia_por_palavras: ACRESCENTADO
+
+## render prisma-2020 | (todos)
+  - **Fração conferida:** 16/42
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 16/42 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-2020 | prisma-sr
+  - **Fração conferida:** 16/42
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 16/42 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-2020 | scoping-prisma-scr
+  - **Fração conferida:** 0/42
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 0/42 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-p | (todos)
+  - **Fração conferida:** 12/26
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 12/26 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-p | prisma-sr
+  - **Fração conferida:** 12/26
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 12/26 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-p | scoping-prisma-scr
+  - **Fração conferida:** 0/26
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 0/26 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-s | prisma-sr
+  - **Fração conferida:** 9/16
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 9/16 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-s | scoping-prisma-scr
+  - **Fração conferida:** 9/16
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 9/16 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-scr | (todos)
+  - | 7 | Information sources* | **[CONTESTADO]** [scoping-prisma-scr] F2.1.2.1 "Data e hora da busca" casa com o item 8 (ponteiros: F2.1.1.1, F2.1.1.2, F2.1.1.3, F…
+  - | 14 | Selection of sources of evidence | **[CONTESTADO]** [scoping-prisma-scr] F8.1.5 "title_abstract_excluded" casa com o item 1 (ponteiros: F4.1.1, F4.1.4, F…
+  - **Fração conferida:** 12/22
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + | 7 | Information sources* | F2.1.1.1, F2.1.1.2, F2.1.1.3, F2.1.2.1, F2.1.2.2, F2.2.1, F2.2.4, F2.2.5, F2.2.6, F2.2.7, F8.3.6 | [TBD] | ☐ |
+  + | 14 | Selection of sources of evidence | F4.1.1, F4.1.4, F4.2.1, F4.2.2, F4.2.3, F4.2.4, F4.2.5, F8.1.1, F8.1.2, F8.1.3, F8.1.4, F8.1.5, F8.1.6, F8.1.7, F8.1.8…
+  + **Fração:** 14/22 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-scr | prisma-sr
+  - **Fração conferida:** 0/22
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 0/22 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render prisma-scr | scoping-prisma-scr
+  - | 7 | Information sources* | **[CONTESTADO]** [scoping-prisma-scr] F2.1.2.1 "Data e hora da busca" casa com o item 8 (ponteiros: F2.1.1.1, F2.1.1.2, F2.1.1.3, F…
+  - | 14 | Selection of sources of evidence | **[CONTESTADO]** [scoping-prisma-scr] F8.1.5 "title_abstract_excluded" casa com o item 1 (ponteiros: F4.1.1, F4.1.4, F…
+  - **Fração conferida:** 12/22
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + | 7 | Information sources* | F2.1.1.1, F2.1.1.2, F2.1.1.3, F2.1.2.1, F2.1.2.2, F2.2.1, F2.2.4, F2.2.5, F2.2.6, F2.2.7, F8.3.6 | [TBD] | ☐ |
+  + | 14 | Selection of sources of evidence | F4.1.1, F4.1.4, F4.2.1, F4.2.2, F4.2.3, F4.2.4, F4.2.5, F8.1.1, F8.1.2, F8.1.3, F8.1.4, F8.1.5, F8.1.6, F8.1.7, F8.1.8…
+  + **Fração:** 14/22 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render raise-3 | (todos)
+  - **Fração conferida:** 0/55 declarado, sem método que o confira
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 0/55 declarado, sem método que o confira — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver…
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render raise-3 | prisma-sr
+  - **Fração conferida:** 0/55
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 0/55 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+## render raise-3 | scoping-prisma-scr
+  - **Fração conferida:** 0/55
+  - **Premissa da falsificação:** Um rótulo da trilha que não tem conceito em comum com o título oficial do item que declara cobrir, e que casa com exatamente UM ou…
+  - **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, e é humana — o sistema falsifica, quem afirma é quem assimil…
+  + **Fração:** 0/55 — correspondência declarada pelo mapeamento do método e não contestada, conferida só no que é mecânico (ver o limite).
+  + **Limite da conferência:** A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, e não a cada estudo (DEBT-…
+
+195 diferença(s).

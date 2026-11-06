@@ -2,6 +2,16 @@
   "schemaVersion": 1,
   "standard": "prisma-scr",
   "note": "MAPEADO em 30/10/2026 (DEBT-055) contra a trilha do scoping-prisma-scr — a spec do prisma-sr lida por `extends`, com os deltas do scoping —, no formato atual (antes do DEBT-142), item a item contra o enunciado. COBERTURA: 14/22 com correspondência declarada; 8 declarados [NÃO COBERTO] — 3, 6, 10, 11, 13 e 22 parciais; 12 e 16, condicionais ('If done'): dependem da condição 'avaliacao_critica' do método, perguntada na F1 (DEBT-150, 31/10/2026) — respondida 'não', saem do denominador; com 'sim' ou sem resposta, ficam [NÃO COBERTO], com ponteiros vazios porque a F6 está desligada no método. FALSIFICAÇÃO: contesta 4 pares — F2.1.2.1→7 e F2.2.5→7 (o rótulo traz 'busca' e o título do item 8 é só 'Search'), F5.2.5.1→11 (financiamento, que também está no 22) e F8.1.5→14 (a variável 'title_abstract_excluded' casa com o item 1, 'Title'). Lidos contra o enunciado, os quatro são falsos positivos: o item 7 pede 'the date the most recent search was executed'; periódicos folheados são fonte de informação; toda variável da F5.2 é item de dado; a contagem da triagem é do item 14. Por isso a conferência reporta 12/22, e não 14/22. Registrado no DEBT-149.",
+  "conferencia_por_palavras": {
+    "medida_em": "2026-10-31",
+    "script": ".claude/maintenance/sessao_2c/preparo/poder_plantado.mjs",
+    "pares_medidos": 134,
+    "impressao": "3fc9adcac6705cda1f56086f27c765e1c13238d7936ecff36103b38d6cda4e39",
+    "trocas": {
+      "plantadas": 2730,
+      "percebidas": 357
+    }
+  },
   "items": [
     {
       "id": "1",

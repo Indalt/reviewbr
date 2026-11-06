@@ -2655,7 +2655,7 @@ server.tool(
 
 server.tool(
     "check_standard_coverage",
-    "Confere a cobertura de um padrão metodológico (.claude/standards/) em QUATRO pontos (DEBT-140): (a) cada subitem apontado existe na spec do método; (b) o rótulo do subitem não contradiz o item — por falsificação contra o título oficial, com a PREMISSA declarada no resultado; (c) se alguma tool produz o artefato da etapa do subitem ou só o agente; (d) toda linha ou é coberta, ou declarada [NÃO COBERTO] (fila de manutenção) ou [NÃO SE APLICA] (não é falha) — omissão silenciosa REPROVA. O mapeamento e as declarações são do MÉTODO (.claude/methodologies/<método>/conformance/<padrão>.json, DEBT-142). Roda contra os métodos que DECLARAM o padrão em conformance.standards, cada um com o seu mapeamento, e diz quando nenhum declara. Com projectPath, confere contra o método do projeto e aplica as respostas dele às condições do método: item condicional respondido fora do que o método exige sai do denominador. Devolve a fração honesta (ex.: 12/26), o que foi contestado, os itens condicionais e o LIMITE do que a máquina não julga. Com render=true, emite o template do checklist de conformidade do método.",
+    "Confere a cobertura de um padrão metodológico (.claude/standards/) em QUATRO pontos (DEBT-140): (a) cada subitem apontado existe na spec do método, numa etapa que se aplica; (b) a conferência por palavras compara o rótulo do subitem com o título oficial do item — é ajuda para quem assimila a metodologia, não trava: o suspeito dela não reprova nem contesta, e o relatório diz o que ela é e quanto enxerga, com a medida e a fonte (DEBT-149); (c) se alguma tool produz o artefato da etapa do subitem ou só o agente; (d) toda linha ou é coberta, ou declarada [NÃO COBERTO] (fila de manutenção) ou [NÃO SE APLICA] (não é falha) — omissão silenciosa REPROVA. Não julga se o mapeamento está certo: isso se confere ao assimilar a metodologia, lendo a norma. O mapeamento e as declarações são do MÉTODO (.claude/methodologies/<método>/conformance/<padrão>.json, DEBT-142). Roda contra os métodos que DECLARAM o padrão em conformance.standards, cada um com o seu mapeamento, e diz quando nenhum declara. Com projectPath, confere contra o método do projeto e aplica as respostas dele às condições do método: item condicional respondido fora do que o método exige sai do denominador. Devolve a fração honesta (ex.: 12/26), o que foi contestado, os itens condicionais e o LIMITE do que a máquina não julga. Com render=true, emite o template do checklist de conformidade do método.",
     {
         standardId: z.string().describe("Id do padrão, como o nome do arquivo sem .json (ex.: 'prisma-2020', 'prisma-s'). Vazio (\"\"): lista os padrões assimilados com versão, version_source, fonte oficial e os métodos que declaram cada um — a lista de trabalho da conferência de obsolescência."),
         render: z.boolean().optional().describe("true: devolve o template do checklist em Markdown, em vez do relatório de cobertura. Padrão declarado por mais de um método pede projectPath ou methodologyId."),
@@ -2682,15 +2682,15 @@ server.tool(
 
         const projectDir = params.projectPath ? resolveProjectDir(params.projectPath) : undefined;
         if (params.render) {
-            // O template leva a conferência junto: contestado sai marcado, e a fração, a premissa
-            // e o limite vão no rodapé — é o documento que o pesquisador preenche e publica. É de
+            // O template leva a conferência junto: contestado por (a) sai marcado, e a fração e o
+            // limite vão no rodapé — é o documento que o pesquisador preenche e publica. É de
             // UM método, porque o mapeamento é do método (DEBT-142).
             return { content: [{ type: "text", text: StandardCoverageService.checklist(repoRoot, params.standardId, params.methodologyId, projectDir) }] };
         }
 
         // DEBT-140 — `checkCoverage` sozinho só via `covered_by` vazio: verde por construção, o
         // mesmo resultado para qualquer projeto. A conferência roda contra os métodos que
-        // declaram o padrão, e a falsificação (DEBT-124) deixou de depender de alguém pedir.
+        // declaram o padrão; a por palavras (DEBT-124) roda sempre, fora do veredito (DEBT-149).
         const report = StandardCoverageService.conferir(repoRoot, params.standardId, params.methodologyId, projectDir);
 
         return { content: [{ type: "text", text: JSON.stringify(report, null, 2) }] };

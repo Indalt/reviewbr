@@ -123,6 +123,11 @@ query_methodology_catalog →  panorama do catálogo
 Três achados possíveis: item do padrão sem nenhum subitem da trilha que o cubra; metodologia
 implementada sem o padrão como dado; versão não confirmada contra a fonte.
 
+O suspeito da conferência por palavras (nos `avisos`) **não é achado**: é pedido de leitura. Leia o
+enunciado do item; achado é só o ponteiro que a leitura mostra errado. E zero suspeito não prova
+acerto — o relatório diz quanto ela enxerga em cada mapeamento (`quanto_enxerga`), e no PRISMA-S
+ela percebe 3,4% das trocas propositais (DEBT-149).
+
 ---
 
 ## Registro dos achados

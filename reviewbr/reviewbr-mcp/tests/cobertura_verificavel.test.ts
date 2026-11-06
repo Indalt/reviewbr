@@ -2,7 +2,7 @@ import { describe, it, expect, afterAll } from "vitest";
 import * as fs from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
-import { StandardCoverageService, PREMISSA_DA_FALSIFICACAO } from "../src/services/standard_coverage.js";
+import { StandardCoverageService, CONFERENCIA_POR_PALAVRAS } from "../src/services/standard_coverage.js";
 import { StandardsService } from "../src/services/standards.js";
 import { lerMapeamento } from "../src/services/method_mapping.js";
 
@@ -13,9 +13,10 @@ const REPO = path.resolve(path.dirname(new URL(import.meta.url).pathname.slice(1
  * estava vazio, e `covered_by` é dado fixo — a resposta era a mesma para qualquer projeto. Foi
  * assim que o PRISMA-P saiu 26/26 quando o honesto é 12/26.
  *
- * Agora quatro conferências: (a) o subitem existe na spec do método; (b) o rótulo não contradiz
- * o item, por falsificação com a premissa declarada; (c) alguma tool produz o artefato da etapa;
- * (d) a ausência está declarada — [NÃO COBERTO] ou [NÃO SE APLICA] —, nunca silenciosa.
+ * Agora quatro conferências: (a) o subitem existe na spec do método; (b) a conferência por
+ * palavras, que desde 05/11/2026 é ajuda para quem assimila e não trava (DEBT-149 — o detalhe está
+ * em conferencia_por_palavras.test.ts); (c) alguma tool produz o artefato da etapa; (d) a ausência
+ * está declarada — [NÃO COBERTO] ou [NÃO SE APLICA] —, nunca silenciosa.
  */
 
 const temporarios: string[] = [];
@@ -86,10 +87,11 @@ describe("o verificador deixou de ser verde por construção", () => {
         expect(r.contestados.map((c) => c.item)).toContain("4");
     });
 
-    it("(b) rótulo que casa com OUTRO item é suspeito — e a correspondência é contestada", () => {
-        expect(m1.falsificacao.com_poder).toBe(true);
-        expect(m1.falsificacao.suspeitos.map((s) => `${s.subitem}→${s.item_declarado}:${s.item_sugerido}`)).toEqual(["E1.1→1:2"]);
-        expect(r.contestados.map((c) => c.item)).toContain("1");
+    it("(b) rótulo que casa com OUTRO item é suspeito — pedido de leitura, que não contesta a correspondência (DEBT-149)", () => {
+        expect(m1.conferencia_por_palavras.suspeitos.map((s) => `${s.subitem}→${s.item_declarado}:${s.item_sugerido}`)).toEqual(["E1.1→1:2"]);
+        expect(r.contestados.map((c) => c.item)).not.toContain("1");
+        expect(r.errors.join(" ")).not.toMatch(/E1\.1/);
+        expect(r.avisos.join(" ")).toMatch(/E1\.1→1 \(sugere 2\)/);
     });
 
     it("(c) diz quem produz: tool da etapa, só o agente, ou etapa nenhuma", () => {
@@ -99,39 +101,42 @@ describe("o verificador deixou de ser verde por construção", () => {
         expect(m1.producao.etapas_sem_codigo).toEqual([{ etapa: "E2", artefato: "x/relatorio.md" }]);
     });
 
-    it("a fração é a honesta: só correspondência não contestada, sobre as linhas que se aplicam", () => {
-        // 8 linhas, 1 não se aplica → 7. Declaradas cobertas: 1,2,3,4,8; contestadas 1 e 4 → 3.
-        expect(r.fracao).toBe("3/7");
+    it("a fração é a honesta: só correspondência não contestada por (a), sobre as linhas que se aplicam", () => {
+        // 8 linhas, 1 não se aplica → 7. Declaradas cobertas: 1,2,3,4,8; contestada só a 4 (ponteiro
+        // para subitem inexistente) → 4. O suspeito do 1 não contesta (DEBT-149).
+        expect(r.fracao).toBe("4/7");
+        // Reprova pela omissão do 7 e pelo ponteiro inexistente do 4 — não pelo suspeito.
         expect(r.valid).toBe(false);
+        expect(r.errors).toHaveLength(2);
     });
 
-    it("a PREMISSA e o LIMITE vão escritos onde o resultado é lido", () => {
-        expect(r.premissa_da_falsificacao).toBe(PREMISSA_DA_FALSIFICACAO);
-        expect(r.premissa_da_falsificacao).toMatch(/derrotável/);
-        expect(r.limite).toMatch(/quem afirma é quem assimila/);
-        expect(r.limite).toMatch(/não encaixe/);
+    it("o que a conferência por palavras é, e o LIMITE, vão escritos onde o resultado é lido", () => {
+        expect(r.conferencia_por_palavras).toBe(CONFERENCIA_POR_PALAVRAS);
+        expect(r.conferencia_por_palavras).toMatch(/derrotável/);
+        expect(r.limite).toMatch(/A máquina não julga se o mapeamento está CERTO/);
+        expect(r.limite).toMatch(/O encaixe .* só aparece se quem assimila o declarar \[NÃO COBERTO\]/);
+        expect(r.limite).toMatch(/é afirmação de quem assimilou, conferida só no que é mecânico/);
     });
 });
 
-describe("(b) sem título oficial, a falsificação não tem poder — e isso é dito", () => {
+describe("sem título oficial, a etapa não ganha fundamento — e o padrão reprova pelo título", () => {
     const r = StandardCoverageService.conferir(repo(false), "teste");
 
-    it("o padrão reprova por falsificação SEM PODER, mesmo que o suspeito existisse", () => {
-        expect(r.conferencia_por_metodo[0].falsificacao.com_poder).toBe(false);
-        expect(r.errors.join(" ")).toMatch(/SEM PODER/);
+    it("o padrão reprova porque os títulos não são da fonte oficial — e só diz isso uma vez", () => {
+        expect(r.errors.filter((e) => /não foram transcritos da fonte oficial/.test(e))).toHaveLength(1);
+        expect(r.errors.join(" ")).not.toMatch(/SEM PODER/);
     });
 
-    it("sem título oficial a etapa não ganha fundamento; com ele, ganha (controle)", () => {
+    it("sem título oficial a etapa não ganha fundamento; com ele, ganha (controle), inclusive o item que só o suspeito tirava", () => {
         // Era o PRISMA-S que exercia este ramo, até ganhar os títulos oficiais (DEBT-128).
         expect(r.conferencia_por_metodo[0].itens_por_etapa).toEqual({});
         expect(StandardCoverageService.conferir(repo(), "teste").conferencia_por_metodo[0].itens_por_etapa)
-            .toEqual({ E1: ["2"], E2: ["3"] });
+            .toEqual({ E1: ["1", "2"], E2: ["3"] });
     });
 
-    it("suspeito sem poder não contesta — mas a fração passa a ser afirmação, e o aviso diz isso", () => {
+    it("título fora da fonte não muda a fração: o que contesta é só (a)", () => {
         expect(r.contestados.map((c) => c.item)).toEqual(["4"]);
         expect(r.fracao).toBe("4/7");
-        expect(r.avisos.join(" ")).toMatch(/afirmação de quem assimilou, não verificação/);
     });
 });
 
@@ -175,26 +180,26 @@ describe("o estado REAL dos padrões assimilados, medido", () => {
     });
 
     it("PRISMA-S: títulos oficiais e mapeamento refeito (DEBT-128) — 9/16, as lacunas declaradas", () => {
-        // Até 30/10/2026 os títulos vinham da trilha e a falsificação não tinha poder. O zero
-        // suspeito de agora NÃO prova acerto: neste padrão o falsificador quase não tem poder
-        // (DEBT-149) — o controle positivo está em prisma_s_scr_oficial.test.ts.
+        // Até 30/10/2026 os títulos vinham da trilha. O zero suspeito de agora NÃO prova acerto:
+        // neste padrão a conferência por palavras percebe 3,4% das trocas propositais (DEBT-149),
+        // e o relatório diz isso — a medida está em conferencia_por_palavras.test.ts.
         const r = StandardCoverageService.conferir(REPO, "prisma-s");
         expect(r.declarado_por).toEqual(["prisma-sr", "scoping-prisma-scr"]);
-        expect(r.conferencia_por_metodo.every((c) => c.falsificacao.com_poder)).toBe(true);
-        expect(r.conferencia_por_metodo.flatMap((c) => c.falsificacao.suspeitos)).toEqual([]);
+        expect(r.conferencia_por_metodo.every((c) => /\(3,4%\)/.test(c.conferencia_por_palavras.quanto_enxerga))).toBe(true);
+        expect(r.conferencia_por_metodo.flatMap((c) => c.conferencia_por_palavras.suspeitos)).toEqual([]);
         expect(r.orphans).toEqual([]);
         expect(r.nao_coberto.map((x) => x.id)).toEqual(["S2", "S7", "S9", "S10", "S11", "S12", "S14"]);
         expect(r.fracao).toBe("prisma-sr 9/16 · scoping-prisma-scr 9/16");
         expect(r.valid).toBe(true);
     });
 
-    it("scoping herda a spec-base: os subitens existem e a falsificação tem rótulo a conferir", () => {
+    it("scoping herda a spec-base: os subitens existem e a conferência por palavras tem rótulo a comparar", () => {
         // Antes, a spec do scoping era lida sozinha (só deltas): zero pares, e a conferência
         // voltava limpa por não ter conferido nada.
         const r = StandardCoverageService.conferir(REPO, "prisma-s", "scoping-prisma-scr");
         const c = r.conferencia_por_metodo[0];
         expect(c.subitens_inexistentes).toEqual([]);
-        expect(c.falsificacao.pares_conferidos).toBeGreaterThan(0);
+        expect(c.conferencia_por_palavras.pares_conferidos).toBeGreaterThan(0);
     });
 
     it("PRISMA 2020: os 5 deslocados do DEBT-045 declarados [NÃO COBERTO]; a fração é 16/42, não 42/42", () => {
@@ -205,18 +210,24 @@ describe("o estado REAL dos padrões assimilados, medido", () => {
         expect(r.fracao).toBe("16/42");
     });
 
-    it("PRISMA 2020: a falsificação enxerga o deslocamento rumo a item COM subitens (família pai+filhos)", () => {
+    it("PRISMA 2020: segue valid false pelos 21 órfãos do DEBT-014 — e só por eles, não pelos suspeitos", () => {
+        const r = StandardCoverageService.conferir(REPO, "prisma-2020");
+        expect(r.valid).toBe(false);
+        expect(r.errors).toEqual([expect.stringMatching(/^21 item\(ns\) do PRISMA 2020 sem nenhum subitem da trilha/)]);
+    });
+
+    it("PRISMA 2020: a conferência por palavras enxerga o deslocamento rumo a item COM subitens (família pai+filhos)", () => {
         // Os 21 subitens repetem o título do pai; antes, pai e filhos contavam como candidatos
         // distintos e o critério "exatamente UM outro item" nunca disparava rumo ao 24.
         const c = StandardCoverageService.conferir(REPO, "prisma-2020").conferencia_por_metodo[0];
-        const pares = c.falsificacao.suspeitos.map((s) => `${s.subitem}→${s.item_declarado}:${s.item_sugerido}`);
+        const pares = c.conferencia_por_palavras.suspeitos.map((s) => `${s.subitem}→${s.item_declarado}:${s.item_sugerido}`);
         expect(pares).toContain("F0.2.1→15:24");
         expect(pares).toContain("F8.3.15→15:24");
     });
 
-    it("PRISMA 2020: a falsificação lê também o covered_by — ponteiro não lido vai para nao_conferidos", () => {
+    it("PRISMA 2020: a conferência por palavras lê também o covered_by — ponteiro não lido vai para nao_conferidos", () => {
         const c = StandardCoverageService.conferir(REPO, "prisma-2020").conferencia_por_metodo[0];
-        expect(c.falsificacao.pares_conferidos).toBeGreaterThan(112); // só a coluna da spec dava 112
+        expect(c.conferencia_por_palavras.pares_conferidos).toBeGreaterThan(112); // só a coluna da spec dava 112
     });
 
     it("(c) é parcial quando só algumas etapas da linha têm código — o manuscrito (F8) não tem", () => {
@@ -276,7 +287,7 @@ describe("revisão de 09/10 — um método não contamina o número do outro", (
         const r = StandardCoverageService.conferir(raiz, "teste");
         expect(r.declarado_por).toEqual(["m1"]);
         expect(r.declarado_por_esqueleto).toEqual(["esq"]);
-        expect(r.fracao).toBe("3/7");
+        expect(r.fracao).toBe("4/7");
         expect(r.avisos.join(" ")).toMatch(/esqueleto/);
     });
 
@@ -290,7 +301,7 @@ describe("revisão de 09/10 — um método não contamina o número do outro", (
         const r = StandardCoverageService.conferir(raiz, "teste");
         expect(r.declarado_por).toEqual(["m1", "m2"]);
         // O [NÃO SE APLICA] do item 6 é do m1 (DEBT-142): no m2 o 6 fica no denominador.
-        expect(r.fracao).toBe("m1 3/7 · m2 1/8");
+        expect(r.fracao).toBe("m1 4/7 · m2 1/8");
     });
 
     it("ponteiro para etapa que o método declara não se aplicar contesta a linha", () => {
@@ -310,12 +321,13 @@ describe("revisão de 09/10 — um método não contamina o número do outro", (
         expect(c.producao.so_por_agente).not.toContain("3");
     });
 
-    it("o checklist gerado marca o contestado e leva fração, premissa e limite no rodapé", () => {
+    it("o checklist gerado marca o contestado por (a) e leva fração e limite no rodapé — não o suspeito", () => {
         const md = StandardCoverageService.checklist(repo(), "teste");
-        const linha1 = md.split("\n").find((l) => /^\| 1 \|/.test(l))!;
-        expect(linha1).toMatch(/\*\*\[CONTESTADO\]\*\*/);
-        expect(md).toMatch(/\*\*Fração conferida:\*\* 3\/7/);
-        expect(md).toMatch(/derrotável/);
+        const linha = (id: string) => md.split("\n").find((l) => new RegExp(`^\\| ${id} \\|`).test(l))!;
+        expect(linha("4")).toMatch(/\*\*\[CONTESTADO\]\*\* \[m1\] subitem E9\.9 não existe na spec de m1/);
+        expect(linha("1")).not.toMatch(/CONTESTADO/);     // o suspeito da conferência por palavras não marca linha
+        expect(md).toMatch(/\*\*Fração:\*\* 4\/7 — correspondência declarada pelo mapeamento do método e não contestada/);
         expect(md).toMatch(/\*\*Limite da conferência:\*\*/);
+        expect(md).not.toMatch(/Premissa da falsificação|Fração conferida/);
     });
 });

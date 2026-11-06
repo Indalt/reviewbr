@@ -36,18 +36,23 @@ Antes de declarar a revisão pronta, **chame `check_standard_coverage`** para ca
 método, com `projectPath` = a raiz do projeto — o método é o do `project_state.json`, e as
 respostas do pesquisador às condições do método entram na conta — não confira "de olho": é a
 verificação determinística, a mesma classe de `validate_prisma_flow` (RV-05). Sem projeto
-a tool confere contra todos os métodos que declaram o padrão, e a fração sai por método. Ela confere quatro coisas contra a trilha e o
-mapeamento de cada método (DEBT-140, DEBT-142): **(a)** o subitem apontado existe na spec; **(b)** o rótulo dele
-não contradiz o item, por falsificação; **(c)** se alguma tool produz o artefato da etapa ou só o
-agente; **(d)** toda linha está coberta ou declarada `[NÃO COBERTO]` / `[NÃO SE APLICA]`.
+a tool confere contra todos os métodos que declaram o padrão, e a fração sai por método. Ela olha quatro coisas na trilha e no
+mapeamento de cada método (DEBT-140, DEBT-142): **(a)** o subitem apontado existe na spec e cai numa
+etapa que se aplica; **(b)** a conferência por palavras compara o rótulo do subitem com o título do
+item — é ajuda para quem assimila a metodologia e não entra no veredito (DEBT-149); **(c)** se
+alguma tool produz o artefato da etapa ou só o agente; **(d)** toda linha está coberta ou declarada
+`[NÃO COBERTO]` / `[NÃO SE APLICA]`.
 - **SUP.1 — PRISMA 2020**: `check_standard_coverage("prisma-2020")` — 27 itens (42 linhas
   contando subitens a/b/c).
 - **SUP.2 — PRISMA-S**: `check_standard_coverage("prisma-s")` — 16 itens (S1–S16).
 - Demais suplementos do `manifest.json` (`supplement_search_prisma_s.md`, `dedupe_report.md`, `screening_report.md`, `change_log.md`, `audit_summary.md`, ...).
 
-**Leia o veredito com a premissa e o limite que vêm junto** (`premissa_da_falsificacao`,
-`limite`): a falsificação acha deslocamento, não encaixe, e só vale com título oficial. E não
-confunda as três situações de uma linha:
+**Leia o veredito com o limite que vem junto** (`limite`): a tool confere o que é mecânico, não se o
+mapeamento está certo — isso se confere ao assimilar a metodologia, lendo a norma. O suspeito da
+conferência por palavras (`conferencia_por_palavras`, nos `avisos`) não reprova nem contesta: é
+pedido de leitura ao `maintainer`, não pendência do pesquisador, e o relatório diz quanto ela
+enxerga em cada mapeamento (`quanto_enxerga`, com a medida e a fonte). E não confunda as três
+situações de uma linha:
 - **`orphans`** — sem cobertura e sem declaração: omissão silenciosa, **impede a finalização**.
   Reporte ao pesquisador em vez de gerar o suplemento como se estivesse completo.
 - **`[NÃO COBERTO]`** — lacuna do sistema, declarada: o item vai ao checklist como não coberto
@@ -57,8 +62,10 @@ confunda as três situações de uma linha:
   e só a resposta do pesquisador (`record_researcher_decision`) o tira do denominador. Sem
   resposta, conta como o método o declarou: pergunte, não presuma.
 
-`valid=false` **bloqueia** declarar o checklist completo. A `fracao` (ex.: 12/26) é o que se pode
-afirmar — nunca a arredonde para "coberto".
+`valid=false` **bloqueia** declarar o checklist completo — por omissão silenciosa, título fora da
+fonte oficial, mapeamento ilegível ou ponteiro para subitem que não existe ou etapa desligada, ou
+declaração dupla; nunca por suspeito da conferência por palavras. A `fracao` (ex.: 12/26) é o que se
+pode afirmar — nunca a arredonde para "coberto".
 
 ## Regra de ouro
 Um gate **vermelho para tudo**. Nunca contorne: corrija o insumo e re-rode a verificação, ou leve a decisão ao pesquisador. Foi a ausência de um agente que **chamasse** essas verificações no momento certo (não a ausência delas) que travou o sistema antigo — `validate_prisma_flow` (RV-05) já existia e nunca era chamada.

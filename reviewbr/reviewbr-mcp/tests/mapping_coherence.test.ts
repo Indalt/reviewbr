@@ -13,10 +13,11 @@ const REPO = path.resolve(MCP, "..", "..");
  * Mapeamento apontando o item errado volta verde, e foi assim que o deslocamento do
  * DEBT-045 ficou invisível.
  *
- * O princípio: o sistema NÃO consegue gerar o mapeamento certo (é julgamento, sem referente
- * externo) mas CONSEGUE provar que um proposto está errado. Falsificação é automatizável.
+ * A conferência por palavras compara o rótulo com o título oficial e acusa o rótulo que casa com
+ * outro item. Ela NÃO prova erro nem acerto — medida, percebe poucas trocas (DEBT-149) — e, desde
+ * 05/11/2026, é ajuda para quem assimila: o suspeito não torna o relatório inválido.
  */
-describe("DEBT-124 — o mapeamento é falsificado contra o título oficial", () => {
+describe("DEBT-124 — a conferência por palavras compara o rótulo com o título oficial", () => {
     const padrao = (itens: Array<{ id: string; title: string }>): Standard => ({
         schemaVersion: 1, id: "teste", name: "PADRÃO DE TESTE", version: "1",
         version_source: "", note: "", structure_warning: "", items_are_top_level_only: false,
@@ -33,9 +34,11 @@ describe("DEBT-124 — o mapeamento é falsificado contra o título oficial", ()
         const r = MappingCoherenceService.checar(std, [
             { subitem: "F8.3.24", rotulo: "Financiamento", item: "24" },
         ]);
-        expect(r.valid).toBe(false);
         expect(r.suspeitos).toHaveLength(1);
         expect(r.suspeitos[0].item_sugerido).toBe("25"); // "Support" ⟷ "Financiamento"
+        // O suspeito é pedido de leitura, não erro (DEBT-149): a comparação rodou e é válida.
+        expect(r.valid).toBe(true);
+        expect(r.errors).toEqual([]);
     });
 
     it("NÃO acusa subitem mais granular que o item — o falso positivo que matou a v1", () => {
@@ -71,7 +74,7 @@ describe("DEBT-124 — o mapeamento é falsificado contra o título oficial", ()
         expect(r.nao_conferidos[0]).toMatch(/não existe/);
     });
 
-    it("padrão ausente REPROVA — não há título oficial contra o que conferir", () => {
+    it("padrão ausente: a comparação não roda, e isso é dito — não há título oficial contra o que comparar", () => {
         const r = MappingCoherenceService.checar(null, []);
         expect(r.valid).toBe(false);
         expect(r.errors[0]).toMatch(/ausente ou ilegível/);

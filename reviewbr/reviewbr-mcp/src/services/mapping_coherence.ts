@@ -4,35 +4,51 @@ import { textoDaSpec, ID_SUBITEM } from "./method_trail.js";
 import type { LinhaDoMapeamento } from "./method_mapping.js";
 
 /**
- * mapping_coherence — falsifica o mapeamento trilha ⟶ padrão.
+ * mapping_coherence — a conferência POR PALAVRAS do mapeamento trilha ⟶ padrão.
  *
  * POR QUE EXISTE
  * --------------
  * `checkCoverage` (standards.ts) verifica se `covered_by` está VAZIO. Um `covered_by`
  * preenchido com o item ERRADO devolve `valid: true` — e foi assim que seis itens do
- * PRISMA 2020 ficaram deslocados e reportados como cobertos (DEBT-045/DEBT-124). O
- * pesquisador atento não percebe, porque o sistema diz verde.
+ * PRISMA 2020 ficaram deslocados e reportados como cobertos (DEBT-045/DEBT-124).
  *
- * O PRINCÍPIO
+ * O QUE ELA É
  * -----------
- * O sistema **não consegue gerar** o mapeamento certo: `covered_by` é julgamento, não tem
- * referente externo. Mas **consegue provar que um mapeamento proposto está errado**,
- * comparando o rótulo que a trilha dá ao subitem com o título oficial do item do padrão.
- * Falsificação é automatizável; geração não é. É o que torna defensável qualquer
- * automação futura da assimilação de metodologias.
+ * Compara o rótulo que a trilha dá ao subitem (em português) com o TÍTULO oficial do item
+ * (em inglês), termo a termo, pela tabela EQUIV abaixo — feita para os títulos do PRISMA
+ * 2020. Acusa o par só quando o rótulo não casa com o item que declara cobrir e casa com
+ * exatamente UM outro item do padrão: a assinatura do deslocamento do DEBT-045 (o rótulo
+ * apontando o item vizinho).
  *
- * NÃO CORRIGE — SINALIZA. A correção é do pesquisador (RV-04). O que a verificação
- * entrega é o par divergente e, quando acha, o item cujo título de fato casa.
+ * QUANTO ELA ENXERGA — POUCO, E MEDIDO (DEBT-149)
+ * ----------------------------------------------
+ * Em 31/10/2026, por trocas propositais (cada subitem mapeado posto, numa cópia, em cada
+ * outro item; `.claude/maintenance/sessao_2c/preparo/poder_plantado.mjs`), percebeu 3,4% no
+ * PRISMA-S, 13,1% no PRISMA-ScR e 14,4% no PRISMA-P; nos erros reais conhecidos, 2 de 58 no
+ * PRISMA-S antigo e 15 de 23 no PRISMA 2020 — a diferença é a tabela EQUIV. Deslocamento sem
+ * palavra em comum (vocabulário controlado apontado para "Dates of searches", no PRISMA-S
+ * antigo) nenhuma comparação de palavras pega, e ela também acusa par certo (os 4 do
+ * PRISMA-ScR que a leitura do enunciado confirma). A medida de cada mapeamento é dado do
+ * método (`conferencia_por_palavras` no mapeamento) e o relatório da cobertura a cita.
+ *
+ * O QUE ELA NÃO É
+ * ---------------
+ * Nem prova de erro nem prova de acerto: o suspeito é pedido de leitura, e a ausência de
+ * suspeito não diz que o mapeamento está certo. Por isso, desde 05/11/2026 (DEBT-149), ela é
+ * AJUDA PARA QUEM ASSIMILA a metodologia e não trava o estudo: o suspeito não reprova, não
+ * contesta a linha e não tira item do porquê da etapa. Que o mapeamento esteja certo se
+ * confere na assimilação, lendo a norma. NÃO CORRIGE — SINALIZA: entrega o par e, quando
+ * acha, o item cujo título casa.
  *
  * O CRUZAMENTO QUE TEM VALOR, E O QUE NÃO TEM
  * -------------------------------------------
  * A spec declara o mapeamento DUAS vezes: na coluna "Item N" das tabelas e no `covered_by`
- * do padrão. Elas concordam 100% — são a mesma declaração escrita duas vezes e **não se
- * verificam mutuamente**. O único cruzamento com poder de falsificação é contra o TÍTULO
- * OFICIAL do item, que vem da norma e não de nós.
+ * do método. Elas concordam — são a mesma declaração escrita duas vezes e **não se
+ * verificam mutuamente**. O que vem de fora é o TÍTULO OFICIAL do item, da norma e não de
+ * nós; é contra ele que esta conferência compara.
  *
- * SEM LLM E SEM REDE: comparação determinística de termos. Um verificador que dependesse
- * de modelo reintroduziria o julgamento que o achado existe para controlar.
+ * SEM LLM E SEM REDE: comparação determinística de termos. Uma conferência que dependesse
+ * de modelo reintroduziria o julgamento que ela existe para ajudar a controlar.
  */
 
 /** Um par (subitem da trilha, item do padrão) que a spec declara. */
@@ -58,6 +74,7 @@ export interface CoerenciaReport {
     suspeitos: Suspeito[];
     /** Pares sem termo comparável (rótulo ou título vazio) — declarados, não escondidos. */
     nao_conferidos: string[];
+    /** A comparação pôde rodar (há padrão legível)? Suspeito NÃO a torna false (DEBT-149). */
     valid: boolean;
     errors: string[];
 }
@@ -195,11 +212,11 @@ export class MappingCoherenceService {
     }
 
     /**
-     * Confere cada par declarado contra o título oficial do item.
+     * Compara cada par declarado com o título oficial do item.
      *
-     * `valid` é false quando há suspeito: mapeamento que aponta item cujo título não tem
-     * conceito em comum com o rótulo. Não é prova de erro — é prova de que alguém precisa
-     * olhar. A decisão é do pesquisador.
+     * O suspeito — rótulo que não casa com o item declarado e casa com exatamente um outro —
+     * é pedido de leitura a quem assimila, não erro: `valid` só é false quando não há padrão
+     * contra o que comparar (DEBT-149, decisão de 05/11/2026).
      */
     private static checar(std: Standard | null, pares: ParDeclarado[], semLeitura: string[] = []): CoerenciaReport {
         if (!std) {
@@ -261,21 +278,13 @@ export class MappingCoherenceService {
             });
         }
 
-        const errors = suspeitos.length > 0
-            ? [
-                `${suspeitos.length} mapeamento(s) SUSPEITO(s) em ${std.name}: o rótulo da trilha não tem ` +
-                `conceito em comum com o título oficial do item que ele declara cobrir. ` +
-                `checkCoverage reporta esses itens como COBERTOS — é a falha que o DEBT-124 registra.`,
-            ]
-            : [];
-
         return {
             standard: std.name,
             pares_conferidos: pares.length - (naoConferidos.length - semLeitura.length),
             suspeitos,
             nao_conferidos: naoConferidos,
-            valid: suspeitos.length === 0,
-            errors,
+            valid: true,
+            errors: [],
         };
     }
 

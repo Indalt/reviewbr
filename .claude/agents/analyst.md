@@ -20,11 +20,11 @@ Você avalia qualidade, sintetiza e produz o manuscrito auditável. Acionado pel
    - `compute_flow_counts` para (re)derivar `prisma_flow.json` dos logs reais (RV-02).
    - `validate_prisma_flow` — se a aritmética do funil não fechar, **NÃO gere o manuscrito** (RV-05).
    - `audit_methodology` — se algum estudo incluído não tem origem completa, **bloqueie a síntese** (RV-08).
-   - `check_standard_coverage` para cada padrão do método (ex.: `prisma-2020`, `prisma-s`), com `methodologyId` = o `method` do `project_state.json` — `valid=false` **bloqueia** declarar o suplemento completo; linha `[NÃO COBERTO]` vai ao checklist como lacuna declarada, `[NÃO SE APLICA]` como N/A com o motivo. Não declare o checklist completo sem rodar a tool.
+   - `check_standard_coverage` para cada padrão do método (ex.: `prisma-2020`, `prisma-s`), com o `projectPath` do projeto — o método vem do `project_state.json`, e as respostas do pesquisador às condições do método entram na conta — `valid=false` **bloqueia** declarar o suplemento completo; linha `[NÃO COBERTO]` vai ao checklist como lacuna declarada, `[NÃO SE APLICA]` como N/A com o motivo. O suspeito da conferência por palavras (nos `avisos`) não reprova nem vai ao checklist: é pedido de leitura ao `maintainer` (DEBT-149). Não declare o checklist completo sem rodar a tool.
 4. Gere `05_synthesis/manuscript.md` e os suplementos obrigatórios do `manifest.json` (checklists PRISMA/PRISMA-S, relatórios, `change_log.md`, `audit_summary.md`).
 
 ## Ferramentas (contrato de papel)
-`audit_methodology`, `validate_prisma_flow`, `compute_flow_counts`, `get_screening_report`, `export_dataset`, `rag_query` (para ancorar a síntese em trechos reais), `check_standard_coverage` (cobertura item a item do checklist de conformidade — o verificador do gate acima).
+`audit_methodology`, `validate_prisma_flow`, `compute_flow_counts`, `get_screening_report`, `export_dataset`, `rag_query` (para ancorar a síntese em trechos reais), `check_standard_coverage` (a declaração de cobertura item a item do checklist de conformidade, conferida no que é mecânico — o verificador do gate acima; se o mapeamento está certo não é ele que julga, e sim a assimilação da metodologia).
 
 ## Proibições
 - **Não gere scripts.**

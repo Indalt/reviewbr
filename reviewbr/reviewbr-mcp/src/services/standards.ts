@@ -61,11 +61,12 @@ export const StandardSchema = z.object({
     structure_warning: z.string().default(""),
     items_are_top_level_only: z.boolean().default(false),
     /**
-     * DEBT-140 — a PREMISSA da falsificação do mapeamento. `mapping_coherence` compara o
-     * rótulo da trilha com o título do item; isso só falsifica alguma coisa se o título veio
-     * da FONTE OFICIAL. Título extraído da própria trilha (o caso do PRISMA-S, DEBT-128) faz a
-     * comparação circular: nem o suspeito nem a ausência dele dizem algo. `false` por padrão —
-     * o que não foi conferido contra a fonte não se presume conferido.
+     * DEBT-140/DEBT-149 — os títulos vêm da FONTE OFICIAL? Deles depende o porquê de cada etapa
+     * (`itens_por_etapa`): com título tirado da própria trilha (o caso do PRISMA-S até o
+     * DEBT-128), ele ensinaria ao pesquisador item com nome e número errados. E a conferência por
+     * palavras compara o rótulo da trilha com o título — contra título da trilha, é circular.
+     * `false` por padrão — o que não foi conferido contra a fonte não se presume conferido —, e
+     * com `false` o relatório de cobertura reprova.
      */
     titulos_oficiais: z.boolean().default(false),
     /**

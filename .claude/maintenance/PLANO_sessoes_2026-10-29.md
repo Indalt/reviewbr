@@ -841,3 +841,126 @@ seguinte, antes da P e da M.
 Fechamento: escreva a carta da sessão 2c no plano, logo abaixo deste prompt (modelo "Carta de sessão"), commit
 e push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. A 75% estimados não comece passo novo.
 ```
+
+## Sessão 2c — Conferência do mapeamento: fora da trava (parte 1, item 1) — 05/11/2026
+
+```
+Objetivo: tirar da trava a conferência por palavras (DEBT-149, ponto (a) da decisão de 05/11). O
+  suspeito dela não reprova; o relatório diz o que ela é e quanto enxerga, com a medida e a fonte; e
+  o porquê de cada etapa depende só de título oficial.
+Entrada: decisões de 05/11 — B1, B2 e a 3 da triagem (o DEBT-149 fecha no item 1); preparo de 31/10
+  (sessao_2c/preparo/), conferido na abertura: as três medidas refeitas deram o mesmo número.
+Saída verificável (desta parte):
+  - suspeito não reprova, com teste;
+  - relatório sem afirmar capacidade, com a medida citada;
+  - porquê de cada etapa com os itens que só o suspeito tirava;
+  - PRISMA-ScR do escopo valid: true sem mexer nos pares;
+  - check_standard_coverage antes × depois só com o deliberado;
+  - DEBT-149 resolvido, com a proposta da triagem conferida;
+  - suíte verde, build em dia, audit válido.
+Modelo e esforço: Opus 5.5 · max · sem ultracode.
+  - O aviso automático de "ultracode" saiu da palavra em "sem ultracode" e não foi seguido: nenhum
+    workflow.
+  - O agente da segunda leitura (B2) não rodou: o item 3 passou à parte 2. Custo projetado: ele
+    recebe os 16 enunciados (~2 mil tokens) e os campos da trilha do prisma-sr (~9 mil) e devolve
+    ~59 ponteiros com trechos — 0,6 a 1,5 M ponderado, 5% a 15% de uma janela.
+Tokens na abertura: 31% a 42% (--agora, piso; 4,18 M ponderado, dos quais 3,12 M de outro projeto na
+  mesma janela, gastos antes da abertura) · subagentes: 0 · projeção da sessão: 70% a 110% (plano),
+  acima do que restava.
+--- fechamento ---
+Tokens no fechamento: 56% a 76% (--agora, piso; 7,6 M ponderado, medido antes desta carta) ·
+  medido: principal ~4,5 M ponderado (~160 mil de saída), subagentes 0.
+Divisão: a sessão fechou no fim do item 1, pela regra da janela (§Tokens, regras 2 e 3).
+  - No fim do item 1, o --agora dava 54% a 73%. O item 2, projetado em 2 a 3 M, não cabia com a
+    folga de 15%.
+  - O prompt previa dividir antes do item 3. Dividiu-se antes do item 2, porque a janela abriu com
+    31% a 42% já gastos por outro projeto.
+  - O item 1 é o fechamento do DEBT-149; os itens 2 e 3 não o prendem (decisão de 05/11, à tarde).
+Feito:
+- DEBT-149 RESOLVIDO (item 1), em standard_coverage.ts:
+  - O suspeito da conferência por palavras saiu dos erros e da contestação. Vai aos avisos, como
+    pedido de leitura a quem assimila.
+  - valid depende de: omissão; título fora da fonte (erro próprio, uma vez por padrão); legibilidade
+    do mapeamento, o que inclui a conferência (a) — ponteiro para subitem inexistente ou para etapa
+    desligada; e declaração dupla.
+  - com_poder e motivo_sem_poder saíram. O campo falsificacao virou conferencia_por_palavras
+    (quanto_enxerga, medida, pares, suspeitos, não comparados); premissa_da_falsificacao virou
+    conferencia_por_palavras (o que ela é); o limite foi reescrito.
+  - itens_por_etapa depende só de titulos_oficiais e da conferência (a).
+- A medida mora no mapeamento de cada método: campo novo conferencia_por_palavras, no schema
+  (method_mapping.ts). Traz data, script, pares medidos, impressão SHA-256 dos pares e as trocas
+  e/ou os erros conhecidos. Se o mapeamento muda depois da medida, o relatório diz isso e pede para
+  refazê-la. Gravada nos 5 mapeamentos declarados por sessao_2c/grava_medidas.mjs, que confere a
+  impressão antes de gravar:
+  - PRISMA-S do prisma-sr: 30/885 trocas (3,4%) e 2/58 nos erros reais;
+  - PRISMA-P: 284/1.966 (14,4%);
+  - PRISMA-ScR: 357/2.730 (13,1%);
+  - PRISMA 2020: 15/23 nos erros reais — 3 de destino contestado e 1 incerto; sem eles, 12/19;
+  - PRISMA-S do escopo: 30/885, medida em 05/11 por sessao_2c/mede_conferencia_por_palavras.mjs.
+  As três de 31/10 (PRISMA-S do prisma-sr, PRISMA-P e PRISMA-ScR) foram refeitas na abertura, com o
+  mesmo resultado, e o script de 05/11 as reproduz.
+- Textos que mentiriam:
+  - cabeçalho de mapping_coherence.ts: o que ela é, quanto enxerga, o que não é;
+  - o valid do relatório da conferência por palavras só cai quando não há padrão;
+  - docstring de titulos_oficiais; descrição da tool em index.ts; rodapé do checklist, sem a premissa.
+- Consumidores:
+  - prisma-rigor-gates, Camada 3, inclusive o que torna valid false;
+  - synthesis-manuscript, F8, item 4;
+  - analyst.md, F8 e ferramentas;
+  - conduct-review:61;
+  - maintainer.md, tabela de consulta;
+  - system-audit, Varredura D: suspeito não é achado.
+  Junto, por ser a mesma frase: o analyst passa a chamar a tool com o projectPath, como a
+  synthesis-manuscript que ele carrega. Com methodologyId, as respostas do projeto às condições não
+  entravam.
+- check_standard_coverage antes × depois: sessao_2c/retrato_antes.json (idêntico ao depois da 2b),
+  retrato_depois_item1.json e diff_antes_depois_item1.txt. São 195 diferenças, todas deliberadas:
+  (a) nos 15 relatórios, falsificacao → conferencia_por_palavras, premissa → o que ela é, e o limite;
+  (b) avisos: o dos não comparados reescrito; os suspeitos do PRISMA 2020 e do ScR como pedido de
+      leitura;
+  (c) o rodapé dos 14 checklists;
+  (d) PRISMA 2020: some o erro dos 15 suspeitos; segue valid: false só pelos 21 órfãos (DEBT-014),
+      com 16/42;
+  (e) PRISMA-ScR do escopo: valid false → true; 12/22 → 14/22; contestados [7, 14] → [];
+      itens_por_etapa ganha o 7 (F2, F8) e o 14 (F4, F8); as linhas 7 e 14 do checklist saem sem
+      [CONTESTADO]. Pares e declarações do mapeamento do escopo não mudaram: a impressão é 3fc9adca…,
+      a da medida de 31/10, com teste; o arquivo ganhou só a medida.
+  PRISMA-S, PRISMA-P e RAISE 3: só (a), (b) e (c).
+Verificação:
+  - Suíte 422/422 em 36 arquivos (era 400/35): +19 testes no arquivo novo
+    tests/conferencia_por_palavras.test.ts, +1 em cobertura_verificavel, +2 em prisma_s_scr_oficial.
+  - Reescritos, não regressão, os testes que fixavam o comportamento velho: cobertura_verificavel,
+    prisma_s_scr_oficial, condicionais_em_uso (12/22 → 14/22 e 12/20 → 14/20) e mapping_coherence.
+    declaracao_por_metodo e trilha_como_dado não precisaram mudar.
+  - Asserção negativa contra com_poder, SEM PODER, premissa_da_falsificacao e "o sistema falsifica".
+  - Mutação (sessao_2c/mutacao_item1.mjs, saída em mutacao_item1.txt): as 5 voltas ao comportamento
+    velho derrubam testes — suspeito nos erros (6), suspeito contestando (15), suspeito tirando item
+    do porquê (3), medida que nunca envelhece (2), zod removendo a medida (12).
+  - Build em dia (tsc). Gate RV-11 aprovado (CORRECAO, addresses DEBT-149).
+  - audit_system_debt válido: 153 achados (41 abertos, 2 em curso, 79 resolvidos, 31 recusados).
+  - Nenhum arquivo de reviewbr/projects/ alterado.
+Commit: ver git log ("sessão 2c, parte 1") — push para origin/reorg/agentic-layer.
+Decisões do Vicente registradas: nenhuma nova — executadas a B1(a) e a decisão 3 da triagem (05/11).
+Para o acompanhamento:
+  (1) A parte 2 (itens 2 e 3) abre numa janela nova, antes da P e da M. O prompt da 2c vale para
+      ela, tirando o item 1. O registro do B2 no maintainer.md e na RV-11 fica para lá.
+  (2) Escolhas desta sessão, a conferir:
+      - A medida mora no mapeamento do método, não no padrão: depende dos pares e dos rótulos do
+        método.
+      - O PRISMA 2020 ficou só com os erros reais. O plantio de hoje dá 640/5.299 (12,1%), mas o
+        mapeamento dele tem ponteiros errados conhecidos (DEBT-045), e plantar a partir deles
+        contamina a medida.
+      - Os erros de (a) ficaram em "legibilidade do mapeamento".
+  (3) Furo previsto para o item 3, a decidir no prompt da parte 2:
+      - Se as duas leituras concordarem numa correção do PRISMA-S do prisma-sr, a coluna "Item
+        PRISMA-S" da spec do prisma-sr muda junto (teste em prisma_s_scr_oficial).
+      - O escopo lê essa spec por extends e guarda a sua cópia do mapeamento, que não é da 2c.
+        Copiar a correção para a cópia ou não? O mesmo teste reprova a divergência.
+      - A medida do prisma-sr × PRISMA-S terá de ser refeita (mede_conferencia_por_palavras.mjs e
+        grava_medidas.mjs). O teste dos mapeamentos reais reprova até lá, de propósito.
+  (4) A tool MCP deste chat roda o dist da abertura: o check_standard_coverage do chat mostra o
+      comportamento velho até o servidor reiniciar. O dist em disco é o novo.
+  (5) Do pesquisador: nada novo. Os dois projetos de escopo deixam de parar na F8 pelos 4 falsos
+      positivos. Segue a pendência da 2b: responder avaliacao_critica.
+Próxima sessão: 2c, parte 2 (itens 2 e 3); depois, a P.
+```

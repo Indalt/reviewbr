@@ -279,7 +279,7 @@ mesmo vício que você existe para caçar.
 | Situação | Tool | O que ela devolve |
 |---|---|---|
 | ver o panorama de metodologias (implementadas, declaradas, ausentes) | `query_methodology_catalog` | status DERIVADO do disco, nunca declarado — reprova entrada sem fonte rastreável |
-| conferir a cobertura de um padrão (`.claude/standards/`) contra a trilha da metodologia | `check_standard_coverage` | as quatro conferências do DEBT-140 — subitem existe, rótulo não contradiz (com a premissa), quem produz o artefato, ausência declarada —, a fração honesta e o limite do que a máquina não julga; `render=true` gera o template do checklist de conformidade |
+| conferir a cobertura de um padrão (`.claude/standards/`) contra a trilha da metodologia | `check_standard_coverage` | as conferências do DEBT-140 — subitem existe e em etapa que se aplica, quem produz o artefato, ausência declarada —, a fração honesta e o limite do que a máquina não julga; e a conferência por palavras, que não entra no veredito (DEBT-149): os suspeitos dela são pedido de leitura **a você**, ao assimilar, com a medida de quanto ela enxerga em cada mapeamento (`quanto_enxerga`); `render=true` gera o template do checklist de conformidade |
 
 ## Para AUDITAR o sistema — carregue a skill `system-audit`
 
