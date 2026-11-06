@@ -33,8 +33,23 @@ Decidido também em 05/11, à tarde ("1 sim, 2 fica"; o 1 veio escrito "aim" e f
 2. a citação do RAISE 1 no `maintainer.md:30` fica: citar a recomendação como fonte do princípio da
    responsabilidade do autor não a torna norma de todo projeto.
 
-Fica a conferir: a consequência da frase "credibilidade também se sustenta a partir do que as pesquisas
-produzem", que vai à sessão M.
+**Critério de credibilidade.** É a reformulação da frase de 08/10 "credibilidade também se sustenta a partir do
+que as pesquisas produzem", pedida pelo Vicente em 05/11: "ignore a frase ou a reformule para se adequar a
+critérios científicos que foi pensado".
+
+A credibilidade de uma pesquisa feita com o ReviewBR não vem só de declarar o uso de IA. Vem também de o produto
+poder ser conferido por quem lê:
+- protocolo travado antes da busca (RV-01);
+- números que emergem do processo e podem ser recomputados (RV-02, RV-05);
+- nada inventado onde falta dado (RV-03);
+- decisões registradas com autor, data e fundamento (RV-04);
+- origem de cada dado rastreável até a fonte (RV-08);
+- aplicação da metodologia conferida a cada uso (A6).
+
+O pesquisador responde pelo resultado. Onde o sistema ainda não confere isso por código, o backlog registra, nos
+achados abertos dos invariantes.
+
+A redação é do acompanhamento. O Vicente a confere na descrição do método (sessão M).
 
 ## Fontes consultadas em 05/11/2026
 
