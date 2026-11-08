@@ -128,6 +128,18 @@ para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cad
       objetivos. se não vai fazer avaliação crítica preenche com não. se o método não tem em seu protocolo não
       responde"; correção dele: "os objetivos do projeto de pesquisa. Não precisa fazer novas definições para uma
       metodologia específica já que temos a diretriz para todas".
+  - **Como a manutenção segue (08/11).** Redação do acompanhamento, a conferir pelo Vicente no chat novo.
+    - A abertura de compreensão de outubro e novembro, que mudou a natureza do ReviewBR e abriu muitas frentes,
+      não se repete nas próximas manutenções.
+    - A manutenção passa a buscar clareza, limpeza e redução ao necessário.
+    - Cada sessão faz uma tarefa simples e específica a uma função do ReviewBR, com começo, meio e fim, numa
+      janela quando possível.
+    - Não se abre frente nova sem que um defeito (regra do backlog) ou uma decisão do Vicente a peça.
+    - Das decisões D01 a D41, vai a cada sessão só a que pesa nela.
+    - Origem, nas palavras dele: "além de mudar a natureza do reviewbr que nos levou a abrir muitas frentes de
+      trabalho não serão assim para as próximas manutenções. uma das funções da manutenção é ter clareza, limpeza
+      e redução ao necessário após a grande abertura de compreensão que fizemos para que as tarefas de manutenção
+      fiquem simples e específicas para as funções do reviewbr com abertura de sessões com começo meio e fim".
 
 ## Contexto que desfaz ambiguidades: o sistema mudou DURANTE a troca de computador
 
