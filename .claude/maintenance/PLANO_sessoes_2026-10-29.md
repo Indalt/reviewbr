@@ -1170,3 +1170,111 @@ verde e build em dia.
 Fechamento: escreva a carta da sessão P no plano, logo abaixo deste prompt (modelo "Carta de sessão"), commit e
 push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. A 75% estimados não comece passo novo.
 ```
+
+## Sessão P — A porta do backlog — 08/11/2026
+
+```
+Objetivo: a record_system_finding recusa achado aberto sem a "mentira de hoje" e o destino
+  METODOLOGIA_NOVA para defeito; os 14 abertos com esse destino recebem o do conserto; os textos
+  que fabricavam o problema ficam alinhados à regra do backlog.
+Entrada: a regra do backlog e a decisão 5 (05/11, à tarde); a 2c fechada e conferida (08/11).
+  Lidos na abertura: "Como trabalhar" (4 e 9), as decisões de 31/10 a 05/11, a carta da 2c,
+  o TRIAGEM.md (o teste, "O que a varredura achou", as propostas dos 14) e a DIRECAO §9–§11.
+  Conferido: suíte 440/440 em 37 arquivos, git limpo, audit válido com 14 abertos em
+  METODOLOGIA_NOVA.
+Saída verificável: a do prompt — nenhum aberto com METODOLOGIA_NOVA, cada troca listada; a
+  trava nos testes de resposta conhecida, com mutação que a derruba; audit válido, com o aviso
+  e a contagem; textos alinhados, com asserção negativa; suíte verde e build em dia.
+Modelo e esforço: Opus 5.5 · max · sem subagente nem workflow.
+Tokens na abertura (08/11, ~20:05 UTC): 1% (--agora, piso; 0,15 M ponderado) · o Vicente
+  informou 0% da janela de 5h e 84% do semanal (par de calibração) · subagentes: 0 ·
+  projeção: 20% a 40% (plano).
+--- fechamento ---
+Tokens no fechamento: 22% a 30% (--agora, piso; 2,96 M ponderado, medido antes desta carta) ·
+  medido: principal ~138 mil de saída, subagentes 0.
+Feito:
+- Item 1 (commit 6b2b766) — os 14 trocados pela tool, depois do gate RV-11 (CORRECAO). Só o
+  destino mudou: compara_backlog.mjs dá 14 campos alterados, todos destino.
+  - Critério: o destino diz para onde vai o conserto. O código só listava os valores. O sentido
+    de FASE_1 ("parar de mentir") vem do PLANO_usabilidade.md, de 25/09; o de AGENTE_SKILL, do
+    nome e do uso de 27/09. A sessão da coluna do TRIAGEM.md desempata.
+  - AGENTE_SKILL (3):
+    · DEBT-002: a mentira está na prisma-rigor-gates (sessão 3, proposta);
+    · DEBT-008: texto de skill, de spec e da descrição de uma tool (a 6, por exemplo);
+    · DEBT-060: a prosa e o frontmatter dos agentes (família do DEBT-018; o teste de
+      frontmatter é da 6).
+  - FASE_1 (11):
+    · DEBT-025: dedupe.ts (sessão 4, pergunta 7 de 29/10);
+    · DEBT-026: é o item 5 da "Fase 1", e o EXECUCAO_checklist.md, item 12, já pedia esta troca
+      em 03/10. A mentira inclui o covered_by do PRISMA 2020 e do ScR, mas o conserto que o
+      achado pede hoje é de código; reduzi-lo às declarações é proposta da triagem, da sessão dele;
+    · DEBT-030: rastro nas 4 tools do lote (7+, ou a 4);
+    · DEBT-039: funde no DEBT-138, que é FASE_1 (sessão 3);
+    · DEBT-042: ProtocolGuard (sessão 5, com o DEBT-018 e o DEBT-133);
+    · DEBT-058 e DEBT-087: a mesma tool de snowball (sessão 4);
+    · DEBT-062 e DEBT-090 (que funde nele): consentimento do BYOS (7+ ou 5);
+    · DEBT-071: compute_flow_counts (sessão 3);
+    · DEBT-089: retrieve_fulltexts trunca o corpus (7+, com prioridade).
+  - O resto da proposta da triagem (enxugar, fundir) fica para a sessão de cada um.
+- Item 2 (commit a6bf83b) — a porta:
+  - Campo mentira_de_hoje: arquivo, linha, diz, nao_se_sustenta.
+  - O BacklogWriter recusa achado que fica ABERTO ou EM_CURSO, olhando o registro já mesclado
+    (DEBT-107), sem o campo completo ou sem conferência no disco:
+    · caminho relativo e dentro da raiz;
+    · o arquivo existe e tem a linha (CRLF contado como no editor).
+    A mensagem diz o que falta e cita a regra. METODOLOGIA_NOVA em aberto é recusado; fechar
+    exige só a resolução. A mentira se mescla campo a campo: mandar só a linha que andou não
+    apaga o resto, nem num fechamento.
+  - O audit_system_debt avisa (warnings, sem_mentira_de_hoje) e reprova aberto com
+    METODOLOGIA_NOVA.
+  - As descrições das duas tools em index.ts e o comentário do destino no schema: o destino
+    não define escopo.
+  - Limite declarado: a tool não confere que o texto de "diz" esteja na linha.
+- Item 3 (commit 1fbe6ad) — os textos:
+  - system-audit: achado é só defeito de hoje, com a mentira de hoje; EXTENSAO é o tipo do
+    conserto, não "capacidade nunca prometida"; [NÃO COBERTO] declarado não é achado.
+  - maintainer.md: a correção de 05/11 (:118-132) conferida e mantida, com asserção. Alinhados
+    os resíduos: versão nova de padrão no 1a, destino como agenda no item 6 da rota, furo do
+    plano registrado como achado, e o que a tool recusa e a auditoria reprova.
+  - DIRECAO §11 e o bloco do DEBT-110 na PASSAGEM: nota datada; o texto histórico ficou.
+  - Sem mudança: o PROTOCOLO_revisao_reviewbr.md (o §3.2 fala de defeito achado fora do escopo
+    do trabalho) e os outros 7 agentes, que não falam do backlog (com teste).
+Verificação:
+  - Suíte 474/474 em 38 arquivos (era 440/37): +34 em tests/porta_do_backlog.test.ts. Lá estão
+    os 7 testes de resposta conhecida do prompt, o merge, o disco, o aviso, o backlog real e os
+    textos. Reescrito, não regressão: o fixture achado() de maintenance_writes.test.ts ganhou a
+    mentira de hoje.
+  - Mutação (sessao_p/mutacao_porta.mjs; saída em mutacao_porta.txt): as 20 derrubam testes,
+    15 no código e 5 nos textos (cada frase velha devolvida).
+  - Pelo dist (sessao_p/porta_pelo_dist.mjs): antes do build, 5 dos 8 casos passavam pela porta,
+    inclusive a ausência "falta o JBI" com METODOLOGIA_NOVA; depois, os 8 como esperado.
+  - audit_system_debt (dist, le_audit.mjs) válido: 153 achados (41 abertos, 2 em curso, 79
+    resolvidos, 31 recusados); by_destino FASE_1 23, CONFORM_EXTERNA 12, AGENTE_SKILL 6,
+    DECISAO_PESQ 1, DIAGNOSTICO 1. O aviso conta 43 abertos sem a mentira de hoje — todos.
+  - Gates RV-11: três, CORRECAO (itens 1, 2 e 3). Build em dia (tsc). Nenhum arquivo de
+    reviewbr/projects/ alterado.
+Commit: 6b2b766, a6bf83b, 1fbe6ad e o desta carta ("sessão P") — push para
+  origin/reorg/agentic-layer.
+Decisões do Vicente registradas: nenhuma nova — executadas a regra do backlog e a decisão 5.
+Para o acompanhamento:
+  (1) Escolhas desta sessão, a conferir:
+      - O audit também reprova aberto com METODOLOGIA_NOVA; o prompt pedia só a recusa na
+        escrita. Sem isso, edição à mão passaria. Hoje não há nenhum.
+      - O critério dos destinos, acima.
+      - A mentira de hoje é um lugar só; os outros vão na evidência.
+  (2) Os 43 abertos estão sem a mentira de hoje. A primeira escrita de cada um em ABERTO ou
+      EM_CURSO pede o campo, inclusive passar a EM_CURSO na abertura de uma sessão; fechar não
+      pede. A triagem traz uma proposta para cada, não contestada (A5).
+  (3) O plano diz em "Os dois chats" (:253-254) "Diante de um furo do plano, registra o achado"
+      — a frase que saiu do maintainer.md. O texto é do acompanhamento.
+  (4) A descrição da check_standard_coverage chama o [NÃO COBERTO] de "(fila de manutenção)". Se
+      "fila" for o backlog, a frase contraria a regra: item declarado não é achado. Não estava na
+      lista do item 3; fica a pergunta.
+  (5) O BacklogWriter regrava o arquivo inteiro e muda a ordem das chaves do último achado
+      gravado. O dado não muda, mas o diff do git mostra linhas mexidas (no item 1, DEBT-090 e
+      DEBT-149). Para conferir uma troca, use sessao_p/compara_backlog.mjs, que compara campo a
+      campo.
+  (6) A tool MCP deste chat roda o dist da abertura e grava sem a porta até o servidor
+      reiniciar. O dist em disco é o novo.
+Próxima sessão: M.
+```
