@@ -2,7 +2,10 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { z } from "zod";
 import { ChangeType } from "./change_validator.js";
-import { SystemDebtService, DebtFindingSchema, SystemDebtSchema } from "./system_debt.js";
+import {
+    SystemDebtService, DebtFindingSchema, SystemDebtSchema, REGRA_DO_BACKLOG, DESTINO_SO_HISTORICO,
+    naFila, faltasDaMentira, conferirMentiraNoDisco
+} from "./system_debt.js";
 import { MethodologyCatalogService, CatalogEntrySchema, CatalogSchema } from "./methodology_catalog.js";
 import { errosDaTrilha, lerCondicoes } from "./method_trail.js";
 import { lerMapeamento, arquivoDoMapeamento } from "./method_mapping.js";
@@ -55,6 +58,11 @@ export class BacklogWriter {
      * Valida no momento da escrita as mesmas regras que `audit_system_debt` cobra depois:
      * id único (ou atualização explícita), CORRECAO com reprodução, saída da fila com
      * justificativa. Recusar aqui é mais barato que descobrir no gate.
+     *
+     * E é a PORTA do backlog (regra do backlog e decisão 5, 05/11/2026): achado que fica ABERTO
+     * ou EM_CURSO só entra com a mentira de hoje — onde o sistema afirma ou exige (arquivo e
+     * linha, conferidos no disco), o que diz ali e o que mostra que não se sustenta — e nunca com
+     * o destino METODOLOGIA_NOVA. Fechar (RESOLVIDO, RECUSADO) segue exigindo só a resolução.
      */
     static registrar(repoRoot: string, bruto: unknown, atualizar = false): Escrita {
         const entrada = (bruto ?? {}) as Record<string, unknown>;
@@ -103,7 +111,14 @@ export class BacklogWriter {
             if (base.found_by?.trim()) delete entradaSegura.found_by;
             if (base.found_at?.trim()) delete entradaSegura.found_at;
         }
-        const parsed = NovoAchadoSchema.safeParse({ ...base, ...entradaSegura });
+        const mesclado: any = { ...base, ...entradaSegura };
+        // A mentira de hoje também é MERGE: corrigir só a linha que andou não pode apagar o
+        // arquivo, o que diz e o que contradiz — nem num fechamento, que não a confere.
+        const mBase = base.mentira_de_hoje, mNova = entradaSegura.mentira_de_hoje;
+        if (mBase && typeof mBase === "object" && mNova && typeof mNova === "object" && !Array.isArray(mNova)) {
+            mesclado.mentira_de_hoje = { ...mBase, ...mNova };
+        }
+        const parsed = NovoAchadoSchema.safeParse(mesclado);
         if (!parsed.success) {
             return { ok: false, errors: parsed.error.issues.map((x) => `${x.path.join(".") || "(raiz)"}: ${x.message}`) };
         }
@@ -123,6 +138,37 @@ export class BacklogWriter {
                 `Achado ficando ${f.status} sem 'resolution'. Um achado só sai da fila com a ` +
                 "decisão registrada — senão o registro vira esquecimento organizado."
             );
+        }
+        // A porta: o que fica na fila tem de ser defeito de hoje, com o lugar onde o sistema
+        // o afirma. Vale para o registro MESCLADO — atualizar um aberto antigo sem a mentira de
+        // hoje é recusado, e é assim que os de antes da regra a recebem (DEBT-107: o merge vem
+        // antes da validação).
+        if (naFila(f.status)) {
+            if (f.destino.trim() === DESTINO_SO_HISTORICO) {
+                errors.push(
+                    `Destino ${DESTINO_SO_HISTORICO} não vale para achado ${f.status} (decisão 5, 05/11/2026): ` +
+                    "metodologia que falta não é achado — fica no catálogo e é assimilada pelo procedimento de " +
+                    "manutenção quando o pesquisador decidir; defeito vai ao destino do seu conserto (FASE_1, " +
+                    "AGENTE_SKILL, CONFORM_EXTERNA…). Nos achados fechados ele segue válido, como histórico."
+                );
+            }
+            const faltas = faltasDaMentira(f.mentira_de_hoje);
+            if (faltas.length) {
+                errors.push(
+                    `Achado ${f.status} sem a "mentira de hoje" completa — falta: ${faltas.join(", ")}. ` +
+                    "Informe mentira_de_hoje: arquivo (caminho relativo à raiz do repositório) e linha onde o " +
+                    "sistema afirma ou exige, diz (o que ele diz ali) e nao_se_sustenta (o que mostra que não se " +
+                    "sustenta). " + REGRA_DO_BACKLOG
+                );
+            } else {
+                const disco = conferirMentiraNoDisco(repoRoot, f.mentira_de_hoje!);
+                if (disco.length) {
+                    errors.push(
+                        `A mentira de hoje não se confere no disco: ${disco.join(" ")} Ela aponta onde o sistema ` +
+                        "afirma ou exige HOJE (regra do backlog, 05/11/2026; DIRECAO §9)."
+                    );
+                }
+            }
         }
         if (!f.found_at.trim()) f.found_at = agora().slice(0, 10);
         if (errors.length) return { ok: false, errors };

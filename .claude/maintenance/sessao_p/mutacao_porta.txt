@@ -1,0 +1,15 @@
+porta desligada                          PEGA — 11 teste(s) caíram
+porta também no fechamento               PEGA — 4 teste(s) caíram
+porta olha a entrada, não o mesclado     PEGA — 4 teste(s) caíram
+não confere o disco                      PEGA — 5 teste(s) caíram
+METODOLOGIA_NOVA aceita em aberto        PEGA — 1 teste(s) caíram
+merge raso da mentira de hoje            PEGA — 2 teste(s) caíram
+linha além do fim aceita (fronteira)     PEGA — 2 teste(s) caíram
+caminho absoluto aceito                  PEGA — 1 teste(s) caíram
+caminho fora da raiz aceito              PEGA — 1 teste(s) caíram
+CRLF conta linha a mais                  PEGA — 1 teste(s) caíram
+zod remove a mentira de hoje             PEGA — 23 teste(s) caíram
+audit: aviso vira erro                   PEGA — 6 teste(s) caíram
+audit: incompleta não conta              PEGA — 1 teste(s) caíram
+audit: METODOLOGIA_NOVA aberto passa     PEGA — 1 teste(s) caíram
+descrição da tool volta à velha          PEGA — 1 teste(s) caíram

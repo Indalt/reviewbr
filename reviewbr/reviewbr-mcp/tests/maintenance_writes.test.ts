@@ -25,9 +25,13 @@ function novaRaiz() {
 beforeEach(() => { RAIZ = novaRaiz(); });
 afterAll(() => { for (const d of criados) { try { fs.rmSync(d, { recursive: true, force: true }); } catch { } } });
 
+// Desde a sessão P (08/11/2026), achado ABERTO ou EM_CURSO só entra com a mentira de hoje
+// (regra do backlog, 05/11). O `protocolo.md` do repositório de brinquedo tem 1 linha.
 const achado = (o: Record<string, unknown> = {}) => ({
     id: "T-1", summary: "algo", change_type: "EXTENSAO", evidence: "promete A, faz B",
-    status: "ABERTO", destino: "FASE_1", ...o
+    status: "ABERTO", destino: "FASE_1",
+    mentira_de_hoje: { arquivo: "protocolo.md", linha: 1, diz: "promete A", nao_se_sustenta: "faz B" },
+    ...o
 });
 const entrada = (o: Record<string, unknown> = {}) => ({
     id: "m1", name: "M1", kind: "review_method", what_it_is: "o que é",

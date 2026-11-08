@@ -25,6 +25,98 @@ export type DebtStatus =
     | "RESOLVIDO"   // corrigido, com referência à correção
     | "RECUSADO";   // decidido não corrigir, COM justificativa
 
+/**
+ * A REGRA DO BACKLOG (decidida pelo pesquisador em 05/11/2026, à tarde; DIRECAO §9, 04/10/2026):
+ * o backlog registra só DEFEITO — o que o sistema afirma, exige ou entrega hoje e não se
+ * sustenta. Metodologia ou norma que falta fica no catálogo; decisão do pesquisador vai ao
+ * registro de decisões, e a agenda, ao plano; problema só futuro não se registra.
+ *
+ * Por que virou campo: o `record_system_finding` aceitava achado sem perguntar onde o sistema
+ * afirma ou exige algo hoje, e ausência e decisão entraram na fila como achado (triagem de
+ * 05/11, "O que a varredura achou", 1). Do outro lado, defeitos de hoje esperavam com o destino
+ * METODOLOGIA_NOVA, e a DIRECAO §11 (08/10) contou como escopo, só pelo destino, 23 achados que
+ * travavam. A pergunta passa a ser feita na escrita: onde está a afirmação, o que ela diz, e o
+ * que mostra que não se sustenta.
+ */
+export const REGRA_DO_BACKLOG =
+    "O backlog registra só defeito: o que o sistema afirma, exige ou entrega hoje e não se sustenta " +
+    "(regra do backlog, 05/11/2026; DIRECAO §9). Ausência não é achado: metodologia ou norma que falta " +
+    "vai ao catálogo (absorb_methodology); decisão do pesquisador, ao registro de decisões; agenda, ao " +
+    "plano; problema só futuro não se registra.";
+
+/**
+ * A "mentira de hoje" de um achado: ONDE o sistema afirma ou exige, O QUE diz ali, e O QUE
+ * mostra que não se sustenta. Os padrões vazios existem só para a mensagem dizer o que falta,
+ * campo a campo; a exigência é da escrita (`BacklogWriter`) e o aviso, da auditoria.
+ */
+export const MentiraDeHojeSchema = z.object({
+    /** Caminho do arquivo onde o sistema afirma ou exige, relativo à raiz do repositório. */
+    arquivo: z.string().default(""),
+    /** Linha desse arquivo, a partir de 1. */
+    linha: z.number().int().default(0),
+    /** O que o sistema diz ali. */
+    diz: z.string().default(""),
+    /** O que mostra que não se sustenta: o código, a medida, a reprodução. */
+    nao_se_sustenta: z.string().default("")
+});
+
+export type MentiraDeHoje = z.infer<typeof MentiraDeHojeSchema>;
+
+/** ABERTO e EM_CURSO: o achado está na fila, e é aí que a mentira de hoje é exigida. */
+export function naFila(status: string): boolean {
+    return status === "ABERTO" || status === "EM_CURSO";
+}
+
+/**
+ * O destino que deixou de valer para defeito (decisão 5, 05/11/2026). Defeito vai ao destino
+ * do seu conserto; metodologia que falta não é achado. Nos fechados ele segue válido, como
+ * histórico do que foi decidido com ele.
+ */
+export const DESTINO_SO_HISTORICO = "METODOLOGIA_NOVA";
+
+/** Os campos que faltam à mentira de hoje — vazio quando está completa. Não olha o disco. */
+export function faltasDaMentira(m: MentiraDeHoje | undefined): string[] {
+    if (!m) return ["mentira_de_hoje (arquivo, linha, diz, nao_se_sustenta)"];
+    const faltas: string[] = [];
+    if (!m.arquivo.trim()) faltas.push("arquivo");
+    if (!(m.linha >= 1)) faltas.push("linha (a partir de 1)");
+    if (!m.diz.trim()) faltas.push("diz");
+    if (!m.nao_se_sustenta.trim()) faltas.push("nao_se_sustenta");
+    return faltas;
+}
+
+/**
+ * Confere a mentira de hoje no disco: o caminho é relativo à raiz do repositório e fica
+ * dentro dela, o arquivo existe e tem a linha. NÃO confere que o texto de `diz` esteja na
+ * linha: isso é leitura de quem registra, e a máquina não a julga.
+ */
+export function conferirMentiraNoDisco(repoRoot: string, m: MentiraDeHoje): string[] {
+    const arquivo = m.arquivo.trim();
+    if (path.isAbsolute(arquivo) || /^[a-zA-Z]:/.test(arquivo)) {
+        return [`mentira_de_hoje.arquivo "${arquivo}" é caminho absoluto: use o caminho relativo à raiz do repositório.`];
+    }
+    const raiz = path.resolve(repoRoot);
+    const alvo = path.resolve(raiz, arquivo);
+    const rel = path.relative(raiz, alvo);
+    if (rel === ".." || rel.startsWith(".." + path.sep) || path.isAbsolute(rel)) {
+        return [`mentira_de_hoje.arquivo "${arquivo}" sai da raiz do repositório.`];
+    }
+    if (!fs.existsSync(alvo)) {
+        const dica = /:\d+(-\d+)?$/.test(arquivo) ? " A linha vai no campo 'linha', não no caminho." : "";
+        return [`mentira_de_hoje.arquivo "${arquivo}" não existe no repositório.${dica}`];
+    }
+    if (!fs.statSync(alvo).isFile()) {
+        return [`mentira_de_hoje.arquivo "${arquivo}" não é arquivo.`];
+    }
+    const texto = fs.readFileSync(alvo, "utf-8");
+    const partes = texto.split(/\r\n|\n|\r/);
+    const linhas = texto === "" ? 0 : (partes[partes.length - 1] === "" ? partes.length - 1 : partes.length);
+    if (m.linha > linhas) {
+        return [`mentira_de_hoje.linha ${m.linha} passa do fim de "${arquivo}", que tem ${linhas} linha(s).`];
+    }
+    return [];
+}
+
 export const DebtFindingSchema = z.object({
     /** Identificador estável, usado para referenciar o achado entre sessões. */
     id: z.string().min(1),
@@ -73,15 +165,26 @@ export const DebtFindingSchema = z.object({
     gravidade: z.string().default(""),
 
     /**
-     * Para onde este achado vai. Sem isto, achado nasce órfão — e foi assim que 57 dos 85
-     * abertos sumiram do radar sem decisão. Valores usados:
-     * FASE_1 | FASE_2 | CONFORM_EXTERNA | METODOLOGIA_NOVA | AGENTE_SKILL | DECISAO_PESQ |
-     * BLOQUEADO | DIAGNOSTICO
+     * Para onde o CONSERTO deste achado vai. Sem isto, achado nasce órfão — e foi assim que 57
+     * dos 85 abertos sumiram do radar sem decisão. O destino NÃO define escopo nem agenda: se
+     * algo é achado decide o teste da DIRECAO §9 (a mentira de hoje), e o que cada sessão
+     * conserta, o plano (PLANO_sessoes_2026-10-29.md). Valores:
+     * FASE_1 | FASE_2 | CONFORM_EXTERNA | AGENTE_SKILL | DECISAO_PESQ | BLOQUEADO | DIAGNOSTICO,
+     * e METODOLOGIA_NOVA só em achado FECHADO, como histórico (decisão 5, 05/11/2026): metodologia
+     * que falta não é achado, fica no catálogo. FASE_1 e FASE_2 vêm das fases do
+     * PLANO_usabilidade.md (25/09/2026): "parar de mentir" e "impedir que a classe volte".
      */
     destino: z.string().default(""),
 
     /** Ids que precisam ser corrigidos ANTES deste. Corrigir fora de ordem gera retrabalho. */
-    depende_de: z.array(z.string()).default([])
+    depende_de: z.array(z.string()).default([]),
+
+    /**
+     * Onde o sistema afirma ou exige hoje o que não se sustenta (regra do backlog, 05/11/2026).
+     * Exigida na escrita de achado ABERTO ou EM_CURSO; fechar não a exige. Os abertos de antes
+     * da regra a recebem quando a sessão deles os tocar — até lá, a auditoria os AVISA.
+     */
+    mentira_de_hoje: MentiraDeHojeSchema.optional()
 });
 
 export type DebtFinding = z.infer<typeof DebtFindingSchema>;
@@ -110,6 +213,10 @@ export interface DebtAudit {
     sem_destino: string[];
     /** Abertos cujo `depende_de` aponta para achado ainda não resolvido. */
     bloqueados_por_dependencia: Array<{ id: string; espera: string[] }>;
+    /** Abertos sem a mentira de hoje completa (regra do backlog, 05/11/2026). AVISO, não erro. */
+    sem_mentira_de_hoje: string[];
+    /** O que pede atenção sem reprovar o backlog. */
+    warnings: string[];
 }
 
 export class SystemDebtService {
@@ -191,6 +298,10 @@ export class SystemDebtService {
      * NÃO reprova por existirem achados ABERTOS: fila com item aberto é estado normal.
      * O gate cobra que cada item tenha DECISÃO registrada quando sai, não que a fila
      * esteja vazia.
+     *
+     * Também reprova achado aberto com o destino METODOLOGIA_NOVA (decisão 5, 05/11/2026) e
+     * AVISA, sem reprovar, os abertos sem a mentira de hoje: os de antes da regra a recebem
+     * quando a sessão deles os tocar, e a escrita já não os aceita em ABERTO ou EM_CURSO sem ela.
      */
     static audit(debt: SystemDebt | null): DebtAudit {
         const counts: Record<DebtStatus, number> = { ABERTO: 0, EM_CURSO: 0, RESOLVIDO: 0, RECUSADO: 0 };
@@ -202,7 +313,8 @@ export class SystemDebtService {
                 counts,
                 open: [],
                 total: 0,
-                by_destino: {}, by_gravidade: {}, sem_destino: [], bloqueados_por_dependencia: []
+                by_destino: {}, by_gravidade: {}, sem_destino: [], bloqueados_por_dependencia: [],
+                sem_mentira_de_hoje: [], warnings: []
             };
         }
 
@@ -241,11 +353,16 @@ export class SystemDebtService {
         const by_gravidade: Record<string, number> = {};
         const sem_destino: string[] = [];
         const bloqueados_por_dependencia: Array<{ id: string; espera: string[] }> = [];
+        const sem_mentira_de_hoje: string[] = [];
+        const destinoSoHistorico: string[] = [];
+        const warnings: string[] = [];
 
         for (const f of abertos) {
             const d = f.destino.trim() || "(sem destino)";
             by_destino[d] = (by_destino[d] ?? 0) + 1;
             if (!f.destino.trim()) sem_destino.push(f.id);
+            if (f.destino.trim() === DESTINO_SO_HISTORICO) destinoSoHistorico.push(f.id);
+            if (faltasDaMentira(f.mentira_de_hoje).length) sem_mentira_de_hoje.push(f.id);
 
             const g = f.gravidade.trim() || "(sem gravidade)";
             by_gravidade[g] = (by_gravidade[g] ?? 0) + 1;
@@ -263,13 +380,32 @@ export class SystemDebtService {
             );
         }
 
+        if (destinoSoHistorico.length) {
+            errors.push(
+                `${destinoSoHistorico.length} achado(s) aberto(s) com o destino ${DESTINO_SO_HISTORICO}: ${destinoSoHistorico.join(", ")}. ` +
+                "Esse destino deixou de valer para defeito (decisão 5, 05/11/2026): defeito vai ao destino do seu " +
+                "conserto, e metodologia que falta não é achado — fica no catálogo. Nos fechados ele segue como histórico."
+            );
+        }
+
+        if (sem_mentira_de_hoje.length) {
+            warnings.push(
+                `${sem_mentira_de_hoje.length} achado(s) aberto(s) sem a "mentira de hoje" (arquivo, linha, diz, ` +
+                `nao_se_sustenta): ${sem_mentira_de_hoje.slice(0, 10).join(", ")}` +
+                (sem_mentira_de_hoje.length > 10 ? ` … e mais ${sem_mentira_de_hoje.length - 10} (lista em sem_mentira_de_hoje).` : ".") +
+                " Não reprova: cada um a recebe quando a sessão dele o tocar, porque a record_system_finding " +
+                "não grava achado ABERTO ou EM_CURSO sem ela. " + REGRA_DO_BACKLOG
+            );
+        }
+
         return {
             valid: errors.length === 0,
             errors,
             counts,
             open: abertos,
             total: debt.findings.length,
-            by_destino, by_gravidade, sem_destino, bloqueados_por_dependencia
+            by_destino, by_gravidade, sem_destino, bloqueados_por_dependencia,
+            sem_mentira_de_hoje, warnings
         };
     }
 }

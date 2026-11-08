@@ -1,0 +1,10 @@
+DIFERE ausência gravada como achado (o caso da triagem)   esperado recusa, obtido aceita
+DIFERE sem o campo                                        esperado recusa, obtido aceita
+DIFERE arquivo inexistente                                esperado recusa, obtido aceita
+DIFERE linha além do fim                                  esperado recusa, obtido aceita
+ok   campo completo                                     esperado aceita, obtido aceita
+ok   fechar sem o campo                                 esperado aceita, obtido aceita
+DIFERE METODOLOGIA_NOVA em aberto                         esperado recusa, obtido aceita
+ok   METODOLOGIA_NOVA em fechado                        esperado aceita, obtido aceita
+audit do brinquedo: valid true; sem_mentira_de_hoje undefined; warnings (campo ausente)
+5 caso(s) diferem do esperado.
