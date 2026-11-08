@@ -213,7 +213,7 @@ janela de 5h, sem contar outro projeto aberto na mesma janela).
 | 6 | max | não na execução; revisão independente depois, recomendada | 70–100%+ — planejar duas janelas | mudança de direção em agentes, skills e manifests: risco de deriva e de quebrar o `prisma-sr` |
 | 7+ | high nas 19 declarações; max nos consertos e na assimilação de método validado | só na assimilação, para varrer fontes oficiais, com custo aprovado | um bloco por janela | declarar é mecânico; assimilar é ler norma |
 | testes | high para rodar; max para analisar | não | a definir | rodar é conferir; analisar é julgar |
-| acompanhamento | high | não | — | conferência e redação curta; o contexto deste chat já é longo e cada volta custa caro |
+| acompanhamento | max (desde 08/11; era high) | não; agentes em paralelo só com custo aprovado | — | as decisões que ele grava viram fundamento, e erro ali se propaga (a D14 virou sessão em 05/11); o custo se controla com chat novo e contexto curto, não com esforço menor |
 
 Uma sessão por janela de 5h, começando com a janela nova; trabalho pesado em outro projeto na mesma janela
 reduz o que sobra para a sessão.
@@ -273,10 +273,9 @@ sozinha no chat novo, e ele lê a versão atual do servidor. Ajuste o seletor pe
 enviar.
 
 ```
->>> APAGUE ESTA LINHA ANTES DE ENVIAR — seletor: Opus 5.5 · esforço high <<<
+>>> APAGUE ESTA LINHA ANTES DE ENVIAR — seletor: Opus 5.5 · esforço max <<<
 Chat de acompanhamento da manutenção do ReviewBR — novo, a partir de 08/11/2026.
-Modelo e esforço: Opus 5.5, high (max só para preparar prompt de sessão grande); nenhum subagente nem workflow
-sem custo combinado com o Vicente.
+Modelo e esforço: Opus 5.5, max; nenhum subagente nem workflow sem custo combinado com o Vicente.
 
 O seu papel ("Os dois chats", no plano): preparar o prompt de cada sessão e entregá-lo aqui, pronto para copiar;
 registrar na hora as decisões do Vicente, em forma precisa; conferir, sem lembrar, o fechamento de cada sessão
