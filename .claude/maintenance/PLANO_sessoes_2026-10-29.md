@@ -160,6 +160,7 @@ Consequências para ler o disco sem se enganar:
 | 2c | Conferência do mapeamento: fora da trava; leitura documentada | DEBT-149 — decisão de 05/11 (B1, B2), que substitui os pontos (1) e (4) da de 30/10; fecha no item 1 (decisão de 05/11, à tarde) | 2b | suspeito da conferência por palavras não reprova, e o relatório diz o que ela é e quanto enxerga; o porquê de cada etapa não depende dela; PRISMA-ScR do escopo `valid: true` sem mexer no mapeamento; leitura documentada com conferidor testado; PRISMA-S do prisma-sr lido e relido de forma independente, com as divergências levadas ao Vicente |
 | P | A porta do backlog | regra do backlog e decisão 5 de 05/11, à tarde | 2c | a `record_system_finding` recusa achado novo ou atualizado sem a "mentira de hoje" (onde o sistema afirma ou exige, com arquivo:linha, e o que contradiz), com teste; o destino `METODOLOGIA_NOVA` deixa de valer para defeito, e os abertos com esse destino que são defeito (14, pela triagem de 05/11) recebem o destino certo; outras instruções que mandem registrar ausência como achado, se houver (o crítico da triagem não rodou), alinhadas à regra |
 | M | Método do ReviewBR — descrição | A1–A3, A7, A9 (31/10–05/11); D09 e D17 da revisão de decisões; os princípios que saíram do backlog em 05/11, para redação e aprovação do Vicente: o alvo da triagem por IA (DEBT-101, D01), o modo de agir (DEBT-132) e a auditoria de protocolo por método (DEBT-134); o critério de credibilidade do D07, reformulado em 05/11; as três perguntas da 2c (08/11): o que é cobrir um item da norma, se a leitura documentada confere também o que a ferramenta garante por código, e se o gate RV-11 exige leitura documentada quando um mapeamento muda — as 36 divergências do PRISMA-S se decidem depois delas; o princípio de 08/11 (opcional e obrigatório seguem a metodologia) | 2c (antes da 6, que depende dela; posição confirmada pelo Vicente em 05/11) | o método da ferramenta descrito como metodologia — objetivo, fundamentos na filosofia da ciência, princípios, etapas, critérios de validade e limites —, aprovado pelo Vicente |
+| V | Divergências do PRISMA-S aplicadas | decisão (a) de 08/11; a decisão do Vicente sobre as 36, tomada no acompanhamento pelo arquivo `sessao_2c/divergencias_prisma_s.md` | M | o que ele aceitar entra no mapeamento do prisma-sr e na cópia do escopo (decisão de 08/11), com trecho por ponteiro, teste, a coluna da spec acompanhando e a medida da conferência por palavras refeita; o que ele recusar fica registrado no arquivo |
 | 3 | Funil e gates | 3 (DEBT-138), 4 (a decisão de 29/10 sobre gates, que vai no conserto do DEBT-138; o DEBT-070 saiu do backlog em 05/11), DEBT-071/105 | — | export bloqueia funil divergente; manifests dizem a verdade sobre os gates; teste do FlowComputer e do caminho do handler do checkDesignGuardrail (do DEBT-043, que saiu do backlog em 05/11) |
 | 4 | Busca e triagem | 5 (DEBT-056), 6 (DEBT-021), 7 (DEBT-025) | — | log PRISMA-S gravado por código; saturação lê o disco; dedup com DOI/acentos e nível 4 só sinalizando |
 | 5 | Leitura e governança | 8 (DEBT-031), 9 (DEBT-018), 12 (DEBT-016), DEBT-141 | — | citação com página; trava só pelo `project_state.json`; aviso na tool de `targets`; atualização do catálogo sem apagar campos |
@@ -174,7 +175,8 @@ a 2c (B1, B2); em 05/11, à tarde, corrigiu a D14, aprovou a regra do backlog e 
 conferida pelo acompanhamento em 08/11: suíte 440/440 em 37 arquivos, audit válido, DEBT-149 resolvido, PRISMA-S
 9/16 nos dois métodos, PRISMA-ScR do escopo 14/22 e valid. A P fechou em 08/11 e foi conferida no mesmo dia: suíte
 474/474 em 38 arquivos, audit válido, nenhum aberto com METODOLOGIA_NOVA, e a porta conferida à parte, pelo dist,
-numa cópia do backlog (8 casos). **Próxima: M, com o prompt na seção dela.** As 36 divergências do PRISMA-S (`sessao_2c/divergencias_prisma_s.md`) esperam a M, e a M responde às
+numa cópia do backlog (8 casos). **Próxima: M, com o prompt na seção dela; depois, o Vicente decide as 36
+divergências do PRISMA-S no acompanhamento, e a V as aplica.** As 36 divergências do PRISMA-S (`sessao_2c/divergencias_prisma_s.md`) esperam a M, e a M responde às
 três perguntas da 2c (decisões de 08/11).
 
 A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
@@ -204,6 +206,7 @@ janela de 5h, sem contar outro projeto aberto na mesma janela).
 | 2c | max | não; um agente para a segunda leitura independente, aprovado pela decisão B2 (05/11) | 70–110% — planejar até duas janelas | tira a conferência fraca da trava sem fazer o relatório mentir, e cria a leitura documentada que vai conferir toda transcrição |
 | P | max | não | 20–40% | mexe no registro de achados, que é a trilha de auditoria da manutenção |
 | M | max | não | 60–100% por janela, com muita participação do Vicente; planejar duas | é a descrição que fundamenta o resto; os fundamentos na filosofia da ciência são leitura e decisão dele |
+| V | max | não | 20–40% | mexe em mapeamento de norma oficial, com teste e medida |
 | 3 | max | não | 40–60% | funil e gates: o que o export bloqueia e o que os manifests dizem dos gates |
 | 4 | max | não | 40–60% | trilha de auditoria da busca (log PRISMA-S), critério de parada (saturação) e o que a dedup tira |
 | 5 | max | não | 40–60% | o DEBT-018 mexe na trava do protocolo, com cuidado de compatibilidade com projetos antigos |
@@ -261,6 +264,59 @@ decisoes para as sessoes me ajudando com a criacao do prompt de cada sessao"* (V
 O ciclo: (1) no acompanhamento, "prepara a sessão N" — o prompt sai em `## Sessão N — prompt de abertura`;
 (2) num chat novo, cola-se o prompt; (3) a sessão fecha com a carta; (4) no acompanhamento, "fecha a sessão N" —
 confere a carta e prepara a N+1. A sessão começa de preferência numa janela de 5h nova.
+
+### Abrir um chat de acompanhamento novo
+
+Quando o chat de acompanhamento ficar caro, ou rodar uma versão antiga do servidor MCP, abra outro com o prompt
+abaixo (preparado em 08/11/2026). Nada se perde: o estado está no disco e no git, a memória do projeto carrega
+sozinha no chat novo, e ele lê a versão atual do servidor. Ajuste o seletor pela primeira linha e apague-a antes de
+enviar.
+
+```
+>>> APAGUE ESTA LINHA ANTES DE ENVIAR — seletor: Opus 5.5 · esforço high <<<
+Chat de acompanhamento da manutenção do ReviewBR — novo, a partir de 08/11/2026.
+Modelo e esforço: Opus 5.5, high (max só para preparar prompt de sessão grande); nenhum subagente nem workflow
+sem custo combinado com o Vicente.
+
+O seu papel ("Os dois chats", no plano): preparar o prompt de cada sessão e entregá-lo aqui, pronto para copiar;
+registrar na hora as decisões do Vicente, em forma precisa; conferir, sem lembrar, o fechamento de cada sessão
+quando ele disser "fecha a sessão N"; e dizer o próximo passo. Você não executa sessão.
+
+Abertura — leia, nesta ordem, sem confiar em memória de conversa:
+1. .claude/maintenance/PLANO_sessoes_2026-10-29.md: "O que este chat cravou"; "Decisões de 31/10 a 05/11/2026",
+   inteiras (vão até 08/11); "Sessões", com a linha "Estado" e os pendentes; "Modelo e esforço"; "Como
+   trabalhar" (itens 1 a 9); "Os dois chats"; "Tokens"; "Carta de sessão"; as conferências da 2c e da P e o prompt
+   da M, no fim do arquivo.
+2. .claude/maintenance/REVISAO_decisoes_2026-10-31.md — partes A e B aprovadas; a parte C, a conferir — e
+   .claude/maintenance/revisao_decisoes_2026-10-31/lista_decisoes.md: cada decisão D01 a D41 vai ao Vicente antes
+   da sessão em que pesa.
+3. .claude/maintenance/triagem_backlog_2026-11-05/TRIAGEM.md: a regra do backlog e a proposta por achado, que
+   cada sessão confere para os achados que toca.
+4. Rode git status e git log -10, node .claude/maintenance/sessao_2a/le_audit.mjs e python
+   .claude/maintenance/medir_esforco.py --agora.
+
+Regras que valem aqui (estão no plano e na memória; a lista é só lembrete):
+- Decisão do Vicente vai ao disco na hora, em forma precisa: o quê, alcance e consequência, com os termos
+  definidos. A frase dele vai só como origem; redação que reinterpreta, ele confere antes. Princípio geral fica
+  geral.
+- Regra do backlog (05/11): achado é só defeito — o que o sistema afirma, exige ou entrega hoje e não se sustenta.
+  Metodologia que falta vai ao catálogo; decisão, ao registro de decisões; agenda, ao plano. A
+  record_system_finding exige a mentira de hoje (arquivo, linha, diz, nao_se_sustenta).
+- Não pergunte ao Vicente a porcentagem de uso: meça. A régua não vê subagente; em 05/11 um workflow de 9
+  agentes, lançado sem custo combinado, estourou a janela.
+- Prompt de sessão: a primeira linha diz modelo e esforço, e ele a apaga; sem a palavra do modo de orquestração de
+  agentes; furo do plano vai à carta; uma sessão por janela; a 75% estimados não se começa passo novo; toda sessão
+  termina com commit e push.
+- Só o sistema vai ao GitHub público: nunca .env, conversas de outras aplicações, os projetos de pesquisa em
+  reviewbr/projects/, o plugin Bio Research ou configuração local. Não abra antigravity_conversas_export/.
+- A manutenção não toca reviewbr/projects/; decisão de pesquisa se responde no chat de cada projeto.
+
+Onde estamos em 08/11/2026: sessões 0, 1, 2a, 2b, 2c e P fechadas e conferidas. Próxima: M (descrição do método do
+ReviewBR), com o prompt no fim do plano. Depois da M, o Vicente decide aqui as 36 divergências do PRISMA-S
+(.claude/maintenance/sessao_2c/divergencias_prisma_s.md), e a sessão V as aplica; depois vêm 3, 4, 5, 6 e 7+.
+Pendências e alertas: na linha "Estado" do plano. Terminada a leitura, diga ao Vicente, em até 5 linhas, o estado
+e o próximo passo, e espere.
+```
 
 ### Tokens — registro, acompanhamento e projeção (para não perder trabalho no limite)
 
