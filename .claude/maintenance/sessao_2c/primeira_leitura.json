@@ -1,0 +1,180 @@
+{
+  "leitura": "primeira",
+  "por": "sessão 2c (Claude Opus 5.5), no chat da sessão",
+  "em": "2026-11-06",
+  "fonte": "enunciados oficiais do PRISMA-S em .claude/standards/prisma-s.json e campos da trilha em .claude/methodologies/prisma-sr/spec.md; não é independente do mapeamento de 30/10, que a sessão leu na abertura",
+  "criterio": "um ponteiro só quando o campo registra (ou é o lugar do relato de) o que o enunciado pede; na dúvida, não aponta. Campos do protocolo (F1.2, F1.3, F1.4) não registram o que foi executado: não servem aos itens que pedem a busca como executada. Seções do manuscrito (F8.3) e suplementos (SUP) entram quando são o lugar do relato de algo que a trilha coleta.",
+  "itens": [
+    {
+      "item": "S1",
+      "ponteiros": [
+        { "subitem": "F2.1.1.1", "trecho": "Name each individual database searched", "porque": "nome completo e sigla de cada fonte" },
+        { "subitem": "F2.1.1.5", "trecho": "stating the platform for each", "porque": "interface usada em cada fonte" },
+        { "subitem": "F8.3.6", "trecho": "Name each individual database searched, stating the platform for each", "porque": "seção do manuscrito que relata as fontes" },
+        { "subitem": "SUP.3", "trecho": "stating the platform for each", "porque": "suplemento da busca traz as interfaces" },
+        { "subitem": "SUP.4", "trecho": "Name each individual database searched", "porque": "suplemento com todas as fontes" }
+      ],
+      "cobertura": "completa",
+      "falta": ""
+    },
+    {
+      "item": "S2",
+      "ponteiros": [
+        { "subitem": "F2.1.1.5", "trecho": "state the name of the platform", "porque": "interface usada na fonte" },
+        { "subitem": "F2.1.1.1", "trecho": "listing all of the databases searched", "porque": "nome de cada fonte" },
+        { "subitem": "F8.3.6", "trecho": "state the name of the platform, listing all of the databases searched", "porque": "seção do manuscrito que relata as fontes" },
+        { "subitem": "SUP.3", "trecho": "state the name of the platform", "porque": "suplemento da busca traz as interfaces" }
+      ],
+      "cobertura": "parcial",
+      "falta": "a trilha tem uma entrada por fonte e não tem onde declarar que várias bases foram buscadas de uma vez numa mesma plataforma, nem listar sob ela as bases buscadas"
+    },
+    {
+      "item": "S3",
+      "ponteiros": [
+        { "subitem": "F2.1.1.1", "trecho": "List any study registries searched", "porque": "nome de cada fonte, inclusive registro" },
+        { "subitem": "F2.1.1.2", "trecho": "study registries", "porque": "o tipo 'Registro' distingue os registros de estudos" },
+        { "subitem": "F8.3.6", "trecho": "List any study registries searched", "porque": "seção do manuscrito que relata as fontes" },
+        { "subitem": "SUP.4", "trecho": "List any study registries searched", "porque": "suplemento com todas as fontes" }
+      ],
+      "cobertura": "completa",
+      "falta": ""
+    },
+    {
+      "item": "S4",
+      "ponteiros": [
+        { "subitem": "F2.2.1", "trecho": "Describe any online or print source purposefully searched or browsed", "porque": "fontes de literatura cinzenta consultadas" },
+        { "subitem": "F2.2.2", "trecho": "and how this was done", "porque": "strings usadas em cada fonte cinzenta" },
+        { "subitem": "F2.2.5", "trecho": "tables of contents", "porque": "periódicos e volumes folheados à mão" },
+        { "subitem": "F8.3.6", "trecho": "Describe any online or print source purposefully searched or browsed", "porque": "seção do manuscrito que relata as fontes" },
+        { "subitem": "SUP.4", "trecho": "Describe any online or print source purposefully searched or browsed", "porque": "suplemento com todas as fontes" }
+      ],
+      "cobertura": "completa",
+      "falta": ""
+    },
+    {
+      "item": "S5",
+      "ponteiros": [
+        { "subitem": "F2.2.4", "trecho": "describe any methods used for locating cited/citing references", "porque": "rastreamento de citações: de que estudos, com que ferramenta" },
+        { "subitem": "F2.2.7", "trecho": "browsing reference lists", "porque": "listas de referências verificadas" },
+        { "subitem": "F8.3.6", "trecho": "Indicate whether cited references or citing references were examined", "porque": "seção do manuscrito que relata as fontes" }
+      ],
+      "cobertura": "completa",
+      "falta": ""
+    },
+    {
+      "item": "S6",
+      "ponteiros": [
+        { "subitem": "F2.2.6", "trecho": "sought by contacting authors, experts, manufacturers, or others", "porque": "especialistas contatados, com data e resposta" },
+        { "subitem": "F8.3.6", "trecho": "Indicate whether additional studies or data were sought by contacting authors, experts, manufacturers, or others", "porque": "seção do manuscrito que relata as fontes" }
+      ],
+      "cobertura": "completa",
+      "falta": ""
+    },
+    {
+      "item": "S7",
+      "ponteiros": [
+        { "subitem": "F2.1.1.1", "trecho": "additional information sources", "porque": "nome da fonte de tipo 'Outro'" },
+        { "subitem": "F2.1.1.2", "trecho": "additional information sources", "porque": "tipo de fonte 'Outro'" },
+        { "subitem": "F8.3.6", "trecho": "Describe any additional information sources or search methods used.", "porque": "seção do manuscrito que relata as fontes" },
+        { "subitem": "SUP.4", "trecho": "additional information sources", "porque": "suplemento com todas as fontes" }
+      ],
+      "cobertura": "parcial",
+      "falta": "a trilha registra outra FONTE, mas não tem campo para outro MÉTODO de busca além dos de F2.2"
+    },
+    {
+      "item": "S8",
+      "ponteiros": [
+        { "subitem": "F2.1.2.4", "trecho": "copied and pasted exactly as run", "porque": "string exata executada, copiada literalmente" },
+        { "subitem": "F2.1.1.6", "trecho": "the search strategies for each database and information source", "porque": "campos pesquisados, parte da estratégia executada" },
+        { "subitem": "F2.1.2.5", "trecho": "the search strategies for each database and information source", "porque": "vocabulários controlados usados na execução" },
+        { "subitem": "F2.1.2.6", "trecho": "the search strategies for each database and information source", "porque": "termos livres usados na execução" },
+        { "subitem": "F2.2.2", "trecho": "the search strategies for each database and information source", "porque": "strings usadas nas fontes cinzentas" },
+        { "subitem": "F8.3.7", "trecho": "Include the search strategies for each database and information source", "porque": "seção do manuscrito da estratégia de busca" },
+        { "subitem": "SUP.3", "trecho": "copied and pasted exactly as run", "porque": "suplemento da busca traz as strings" }
+      ],
+      "cobertura": "completa",
+      "falta": ""
+    },
+    {
+      "item": "S9",
+      "ponteiros": [
+        { "subitem": "F2.1.2.2", "trecho": "date or time period", "porque": "abrangência cronológica aplicada na fonte" },
+        { "subitem": "F2.1.2.3", "trecho": "language", "porque": "restrição de idioma aplicada na fonte" },
+        { "subitem": "F2.1.2.7", "trecho": "describe any limits or restrictions applied to a search", "porque": "filtros adicionais aplicados na fonte" },
+        { "subitem": "F8.3.7", "trecho": "Specify that no limits were used, or describe any limits or restrictions applied to a search", "porque": "seção do manuscrito da estratégia de busca" },
+        { "subitem": "SUP.3", "trecho": "describe any limits or restrictions applied to a search", "porque": "suplemento da busca traz os filtros" }
+      ],
+      "cobertura": "parcial",
+      "falta": "a justificativa de cada limite, que o item pede e nenhum campo da busca registra; os critérios de elegibilidade (F1.3) não são limites aplicados à busca"
+    },
+    {
+      "item": "S10",
+      "ponteiros": [
+        { "subitem": "F1.2.10", "trecho": "Indicate whether published search filters were used", "porque": "termos de filtro de tipo de estudo" },
+        { "subitem": "F8.3.7", "trecho": "Indicate whether published search filters were used", "porque": "seção do manuscrito da estratégia de busca" }
+      ],
+      "cobertura": "parcial",
+      "falta": "se o filtro usado é publicado (original ou adaptado) e a citação dele"
+    },
+    {
+      "item": "S11",
+      "ponteiros": [],
+      "cobertura": "nenhuma",
+      "falta": "a trilha não pergunta se estratégias de outras revisões foram adaptadas ou reaproveitadas, nem pede a citação delas; F0.3.2 cita revisões anteriores como justificativa da revisão, não como origem da estratégia"
+    },
+    {
+      "item": "S12",
+      "ponteiros": [
+        { "subitem": "F2.1.2.8", "trecho": "rerunning searches", "porque": "rodadas de busca enumeradas" },
+        { "subitem": "F8.3.7", "trecho": "Report the methods used to update the search(es)", "porque": "seção do manuscrito da estratégia de busca" }
+      ],
+      "cobertura": "parcial",
+      "falta": "o método de atualização (reexecução, alerta por e-mail), a frequência e o que mudou de uma rodada a outra"
+    },
+    {
+      "item": "S13",
+      "ponteiros": [
+        { "subitem": "F2.1.2.1", "trecho": "provide the date when the last search occurred", "porque": "data e hora de cada execução" },
+        { "subitem": "F8.3.6", "trecho": "provide the date when the last search occurred", "porque": "seção do manuscrito das fontes, onde a data da última busca é relatada" },
+        { "subitem": "SUP.3", "trecho": "provide the date when the last search occurred", "porque": "suplemento da busca traz as datas" }
+      ],
+      "cobertura": "completa",
+      "falta": ""
+    },
+    {
+      "item": "S14",
+      "ponteiros": [],
+      "cobertura": "nenhuma",
+      "falta": "a trilha registra só a aprovação da string pelo próprio pesquisador (F1.4.4); não pergunta se houve revisão por pares da busca, por quem nem como"
+    },
+    {
+      "item": "S15",
+      "ponteiros": [
+        { "subitem": "F2.1.3.1", "trecho": "the total number of records identified from each database", "porque": "total bruto de cada fonte" },
+        { "subitem": "F2.2.3", "trecho": "other information sources", "porque": "registros por fonte cinzenta" },
+        { "subitem": "F3.1.6", "trecho": "Document the total number of records identified", "porque": "soma dos brutos antes da deduplicação" },
+        { "subitem": "F8.1.1", "trecho": "Document the total number of records identified", "porque": "total identificado nas bases, no fluxograma" },
+        { "subitem": "F8.1.2", "trecho": "other information sources", "porque": "total de outras fontes, no fluxograma" },
+        { "subitem": "F8.3.16", "trecho": "Document the total number of records identified from each database and other information sources.", "porque": "seção de resultados da seleção" },
+        { "subitem": "SUP.3", "trecho": "the total number of records identified from each database", "porque": "suplemento da busca traz as contagens" }
+      ],
+      "cobertura": "completa",
+      "falta": ""
+    },
+    {
+      "item": "S16",
+      "ponteiros": [
+        { "subitem": "F3.1.1", "trecho": "Describe the processes and any software used to deduplicate records", "porque": "método de deduplicação: algoritmo ou critérios" },
+        { "subitem": "F3.1.2", "trecho": "the processes and any software used to deduplicate records", "porque": "critério nível 1 do processo" },
+        { "subitem": "F3.1.3", "trecho": "the processes and any software used to deduplicate records", "porque": "critério nível 2 do processo" },
+        { "subitem": "F3.1.4", "trecho": "the processes and any software used to deduplicate records", "porque": "critério nível 3 do processo" },
+        { "subitem": "F3.1.5", "trecho": "the processes and any software used to deduplicate records", "porque": "critério nível 4 do processo" },
+        { "subitem": "F3.1.10", "trecho": "Describe the processes", "porque": "resolução manual dos conflitos, parte do processo" },
+        { "subitem": "SUP.5", "trecho": "Describe the processes and any software used to deduplicate records", "porque": "relatório de deduplicação: regras, contagens, pares, conflitos" }
+      ],
+      "cobertura": "completa",
+      "falta": ""
+    }
+  ],
+  "observacoes": "Diferenças desta leitura para o mapeamento de 30/10, a conferir contra a segunda: tira F2.1.1.3 (URL) de S1 e S3; tira de S8 os campos do protocolo (F1.2.2/4/6/8/10, F1.4.1–3) e F2.1.2.8; tira F2.1.2.1 de S12; tira F1.3.2.5 e F3.1.9 de S16; acrescenta seções do manuscrito (F8.3.6 em S2 e S7; F8.3.7 em S10 e S12) e os suplementos SUP.3, SUP.4 e SUP.5 onde a spec os declara lugar do relato. Coberturas iguais às declarações de 30/10."
+}

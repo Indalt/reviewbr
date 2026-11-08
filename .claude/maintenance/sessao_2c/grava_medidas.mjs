@@ -17,9 +17,12 @@ const { lerMapeamento, impressaoDosPares } = await import(pathToFileURL(path.joi
 
 const PLANTIO_31_10 = { medida_em: "2026-10-31", script: ".claude/maintenance/sessao_2c/preparo/poder_plantado.mjs" };
 const MEDIDAS = [
+    // Refeita em 08/11/2026: a leitura documentada (item 3) mudou os pares. A de 31/10 (59 pares,
+    // impressão 56c1caf0…, 30 de 885) era do mapeamento de 30/10.
     ["prisma-sr", "prisma-s", {
-        ...PLANTIO_31_10, pares_medidos: 59, impressao: "56c1caf0dd658965605d6bd653e5f726e2e7f7481b078c6b215fc58324ec78ec",
-        trocas: { plantadas: 885, percebidas: 30 },
+        medida_em: "2026-11-08", script: ".claude/maintenance/sessao_2c/mede_conferencia_por_palavras.mjs",
+        pares_medidos: 55, impressao: "e61343d536be35b4c41fbe2186a6a737585f3e9b0a50f9ee8f98bdb07e045008",
+        trocas: { plantadas: 825, percebidas: 30 },
         erros_conhecidos: {
             total: 58, percebidos: 2,
             fonte: "os 58 dos 70 pares do mapeamento anterior a 30/10/2026 que o remapeamento contra os enunciados mudou (DEBT-128); " +
@@ -44,10 +47,11 @@ const MEDIDAS = [
         ...PLANTIO_31_10, pares_medidos: 134, impressao: "3fc9adcac6705cda1f56086f27c765e1c13238d7936ecff36103b38d6cda4e39",
         trocas: { plantadas: 2730, percebidas: 357 },
     }],
+    // Refeita em 08/11/2026: a cópia recebeu as correções de ponteiro do prisma-sr (decisão de 08/11).
     ["scoping-prisma-scr", "prisma-s", {
-        medida_em: "2026-11-05", script: ".claude/maintenance/sessao_2c/mede_conferencia_por_palavras.mjs",
-        pares_medidos: 59, impressao: "56c1caf0dd658965605d6bd653e5f726e2e7f7481b078c6b215fc58324ec78ec",
-        trocas: { plantadas: 885, percebidas: 30 },
+        medida_em: "2026-11-08", script: ".claude/maintenance/sessao_2c/mede_conferencia_por_palavras.mjs",
+        pares_medidos: 55, impressao: "e61343d536be35b4c41fbe2186a6a737585f3e9b0a50f9ee8f98bdb07e045008",
+        trocas: { plantadas: 825, percebidas: 30 },
     }],
 ];
 

@@ -51,12 +51,15 @@ describe("PRISMA-S — a norma, não a trilha (DEBT-128)", () => {
         it(`a coluna 'Item PRISMA-S' da spec que o ${metodo} lê declara o mesmo mapeamento que o covered_by dele`, () => {
             // As duas declarações não se verificam mutuamente (mapping_coherence.ts) — mas não podem
             // divergir: a spec é o que o agente lê, o covered_by do método é o que a conferência lê.
-            // O scoping lê a spec do prisma-sr por `extends` e guarda a sua cópia do mapeamento (DEBT-142).
+            // O scoping lê a spec do prisma-sr por `extends` e guarda a sua cópia do mapeamento (DEBT-142);
+            // desde 08/11/2026 a cópia segue as correções da leitura documentada do prisma-sr (sessão 2c).
+            // Os suplementos (SUP) entram desde a 2c, porque as duas leituras os apontaram; "Todos" (o
+            // próprio checklist) não é ponteiro.
             const inverso = new Map<string, string[]>();
             for (const it of std.items) for (const s of mapa(metodo, "prisma-s").get(it.id)?.covered_by ?? []) (inverso.get(s) ?? inverso.set(s, []).get(s)!).push(it.id);
             const naSpec = new Map<string, string[]>();
             for (const l of textoDaSpec(REPO, metodo).split(/\r?\n/)) {
-                const m = l.match(/^\|\s*(F[0-9][A-Za-z0-9_.-]*)\s*\|/);
+                const m = l.match(/^\|\s*(F[0-9][A-Za-z0-9_.-]*|SUP\.[0-9]+)\s*\|/);
                 if (!m) continue;
                 const celulas = l.split("|");
                 const ultima = celulas[celulas.length - 2];
@@ -109,11 +112,13 @@ describe("o que a conferência por palavras percebe no PRISMA-S antigo (DEBT-149
         expect(r.suspeitos.filter((s) => s.item_declarado === "S11" || s.item_declarado === "S13")).toEqual([]);
     });
 
-    it("dos 70 pares antigos, 58 mudaram no remapeamento — a conferência viu 2", () => {
-        let total = 0, mudaram = 0;
+    it("dos 70 pares antigos, 58 mudaram no remapeamento de 30/10 e 1 mais na leitura documentada de 06/11 — a conferência viu 2", () => {
+        let total = 0; const fora: string[] = [];
         const atual = mapa("prisma-sr", "prisma-s");
-        for (const it of oficial.items) for (const s of ANTIGO[it.id]) { total++; if (!(atual.get(it.id)?.covered_by ?? []).includes(s)) mudaram++; }
-        expect([total, mudaram]).toEqual([70, 58]);
+        for (const it of oficial.items) for (const s of ANTIGO[it.id]) { total++; if (!(atual.get(it.id)?.covered_by ?? []).includes(s)) fora.push(`${it.id}→${s}`); }
+        // 58 saíram em 30/10 (DEBT-128); S1→F2.1.1.3 saiu em 06/11, quando as duas leituras concordaram (sessão 2c).
+        expect([total, fora.length]).toEqual([70, 59]);
+        expect(fora).toContain("S1→F2.1.1.3");
     });
 
     it("a medida gravada no mapeamento do prisma-sr é a que este bloco mede: 2 de 58", () => {

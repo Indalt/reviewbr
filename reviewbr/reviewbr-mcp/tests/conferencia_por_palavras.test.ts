@@ -173,11 +173,11 @@ describe("sem título oficial, o porquê da etapa não sai e o relatório reprov
 
 describe("os mapeamentos reais: cada padrão declarado tem a medida dele, do mapeamento de hoje", () => {
     const DECLARADOS: Array<[string, string, RegExp]> = [
-        ["prisma-sr", "prisma-s", /percebeu 30 de 885 trocas propositais \(3,4%\).*nos erros reais conhecidos, 2 de 58/],
+        ["prisma-sr", "prisma-s", /percebeu 30 de 825 trocas propositais \(3,6%\).*nos erros reais conhecidos, 2 de 58/],
         ["prisma-sr", "prisma-p", /percebeu 284 de 1966 trocas propositais \(14,4%\)/],
         ["prisma-sr", "prisma-2020", /nos erros reais conhecidos, 15 de 23 .*sem esses, 12 de 19/],
         ["scoping-prisma-scr", "prisma-scr", /percebeu 357 de 2730 trocas propositais \(13,1%\)/],
-        ["scoping-prisma-scr", "prisma-s", /percebeu 30 de 885 trocas propositais \(3,4%\)/],
+        ["scoping-prisma-scr", "prisma-s", /percebeu 30 de 825 trocas propositais \(3,6%\)/],
     ];
     for (const [m, p, numeros] of DECLARADOS) {
         it(`${m} × ${p}: a medida é do mapeamento de hoje e sai no relatório, com data e script`, () => {

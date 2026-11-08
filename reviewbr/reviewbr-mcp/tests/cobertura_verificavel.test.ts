@@ -181,11 +181,11 @@ describe("o estado REAL dos padrões assimilados, medido", () => {
 
     it("PRISMA-S: títulos oficiais e mapeamento refeito (DEBT-128) — 9/16, as lacunas declaradas", () => {
         // Até 30/10/2026 os títulos vinham da trilha. O zero suspeito de agora NÃO prova acerto:
-        // neste padrão a conferência por palavras percebe 3,4% das trocas propositais (DEBT-149),
+        // neste padrão a conferência por palavras percebe 3,6% das trocas propositais (DEBT-149),
         // e o relatório diz isso — a medida está em conferencia_por_palavras.test.ts.
         const r = StandardCoverageService.conferir(REPO, "prisma-s");
         expect(r.declarado_por).toEqual(["prisma-sr", "scoping-prisma-scr"]);
-        expect(r.conferencia_por_metodo.every((c) => /\(3,4%\)/.test(c.conferencia_por_palavras.quanto_enxerga))).toBe(true);
+        expect(r.conferencia_por_metodo.every((c) => /\(3,6%\)/.test(c.conferencia_por_palavras.quanto_enxerga))).toBe(true);
         expect(r.conferencia_por_metodo.flatMap((c) => c.conferencia_por_palavras.suspeitos)).toEqual([]);
         expect(r.orphans).toEqual([]);
         expect(r.nao_coberto.map((x) => x.id)).toEqual(["S2", "S7", "S9", "S10", "S11", "S12", "S14"]);

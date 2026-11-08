@@ -146,6 +146,35 @@ describe("o mesmo conferidor contra os enunciados REAIS do PRISMA-S", () => {
     });
 });
 
+describe("a primeira aplicação: o PRISMA-S do prisma-sr (sessão 2c, item 3)", () => {
+    const sessao = path.join(REPO, ".claude", "maintenance", "sessao_2c");
+    const ler = (f: string) => JSON.parse(fs.readFileSync(path.join(sessao, f), "utf-8"));
+
+    it("todo ponteiro traz trecho literal do enunciado do item, aceito pelo conferidor, e o relatório diz quem leu, quando e onde", () => {
+        const l = StandardCoverageService.conferir(REPO, "prisma-s", "prisma-sr").conferencia_por_metodo[0].leitura_documentada;
+        expect([l.estado, l.ponteiros, l.aceitos, l.recusados]).toEqual(["completa", 55, 55, []]);
+        expect(l.registro?.em).toBe("2026-11-06");
+        expect(fs.existsSync(path.join(REPO, l.registro!.registro)), "o registro citado existe").toBe(true);
+        expect(l.texto).toMatch(/^Leitura documentada: os 55 ponteiros trazem trecho do enunciado oficial; 55 conferido\(s\) literal\(is\) e do item declarado\. Feita em 06\/11\/2026/);
+    });
+
+    it("as duas leituras estão no repositório, e a segunda só leu a sua entrada — a independência fica provada pela transcrição", () => {
+        const [a, b] = [ler("primeira_leitura.json"), ler("segunda_leitura.json")];
+        expect([a.itens.length, b.itens.length]).toEqual([16, 16]);
+        expect(b.independencia.so_leu_a_entrada).toBe(true);
+        expect(b.independencia.chamadas_de_ferramenta).toEqual([expect.stringMatching(/^Read .*segunda_leitura_entrada\.md$/)]);
+        // A entrada da segunda leitura não traz o mapeamento: nenhum número de item na parte da trilha.
+        const entrada = fs.readFileSync(path.join(sessao, "segunda_leitura_entrada.md"), "utf-8");
+        expect(entrada.slice(entrada.indexOf("# Campos da trilha"))).not.toMatch(/\bS\d{1,2}\b|\bItem \d/);
+    });
+
+    it("a cópia do escopo tem os mesmos ponteiros do prisma-sr, sem trechos (decisão de 08/11/2026)", () => {
+        const [sr, esc] = ["prisma-sr", "scoping-prisma-scr"].map((m) => lerMapeamento(REPO, m, "prisma-s").linhas);
+        expect([...esc].map(([id, l]) => [id, l.covered_by])).toEqual([...sr].map(([id, l]) => [id, l.covered_by]));
+        expect(StandardCoverageService.conferir(REPO, "prisma-s", "scoping-prisma-scr").conferencia_por_metodo[0].leitura_documentada.estado).toBe("ausente");
+    });
+});
+
 describe("leitura parcial ou ausente: dita, sem reprovar", () => {
     it("parcial: o relatório diz quantos ponteiros têm trecho e avisa quais não têm", () => {
         const r = conferir(brinquedo({ trechos: { "1": TRECHOS["1"], "2": TRECHOS["2"] } }));

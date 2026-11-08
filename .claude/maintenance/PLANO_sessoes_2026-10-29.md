@@ -964,3 +964,105 @@ Para o acompanhamento:
       positivos. Segue a pendência da 2b: responder avaliacao_critica.
 Próxima sessão: 2c, parte 2 (itens 2 e 3); depois, a P.
 ```
+
+## Sessão 2c — parte 2: leitura documentada (itens 2 e 3) — 06/11 a 08/11/2026
+
+```
+Objetivo: construir a leitura documentada (item 2) e aplicá-la ao PRISMA-S do prisma-sr (item 3).
+Entrada: a parte 1 (0421dc9); a decisão B2 de 05/11; o "pode seguir" do Vicente em 06/11, neste mesmo
+  chat (ele leu 0% da janela de 5h e 50% do semanal).
+Saída verificável:
+  - trecho literal por ponteiro no schema, com o conferidor testado com resposta conhecida;
+  - o PRISMA-S do prisma-sr com os trechos, a segunda leitura independente gravada, as concordâncias
+    aplicadas e as divergências listadas para o Vicente;
+  - check_standard_coverage antes × depois só com o deliberado;
+  - suíte verde, build em dia, audit válido.
+Modelo e esforço: Opus 5.5 · max · sem ultracode; um agente, para a segunda leitura, como aprovado em B2.
+Tokens na abertura (06/11, 06:10 UTC): 0% da janela de 5h e 50% do semanal, lidos pelo Vicente no
+  painel; --agora 4% a 5% (par de calibração) · projeção: 2,5 a 4 M ponderado, agente 0,3 a 0,5 M.
+--- fechamento ---
+Tokens no fechamento (08/11, 14:00 UTC, outra janela): 26% a 35% (--agora, piso; 3,5 M, dos quais
+  1,8 M de outro projeto) · medido: principal ~1,8 M nesta janela; o agente gastou 137 mil tokens
+  (notificação: 2 chamadas de ferramenta, 11,6 min). Sem divisão.
+Feito:
+- Item 2 (commit d7cc06e) — a leitura documentada, no schema e no relatório:
+  - o padrão guarda o enunciado oficial (text), que o zod removia;
+  - a linha do mapeamento ganha trechos (por ponteiro, o trecho literal do enunciado do item) e
+    examinados (o suspeito da conferência por palavras lido na assimilação: quem, quando, rótulo de
+    então, trecho);
+  - o mapeamento ganha leitura_documentada (quando, quem, onde está o registro);
+  - o conferidor (leitura_documentada.ts) aceita só trecho literal — normaliza só o espaço — e do
+    item declarado. Trecho recusado reprova, como erro do dado; leitura parcial avisa; suspeito
+    examinado sai dos pendentes enquanto o rótulo do subitem não muda;
+  - o maintainer.md ganhou o procedimento (leitura documentada, segunda leitura independente,
+    divergências ao pesquisador).
+- Item 3 — a primeira aplicação, no PRISMA-S do prisma-sr:
+  - Entrada da segunda leitura (sessao_2c/segunda_leitura_entrada.md, por prepara_segunda_leitura.mjs):
+    os 16 enunciados e os 207 campos da trilha, sem coluna de mapeamento. O script confere que nenhum
+    número de item sobra na parte da trilha.
+  - A segunda leitura foi independente: a transcrição do agente tem 2 chamadas, o Read da entrada e
+    a entrega. Gravada em sessao_2c/segunda_leitura.json por grava_segunda_leitura.mjs, tirada da
+    transcrição, com o SHA-256 da mensagem: 37 ponteiros, todos os trechos aceitos.
+  - Primeira leitura (sessao_2c/primeira_leitura.json), gravada antes de ver a segunda: 60 ponteiros,
+    todos aceitos.
+  - Comparação com o mapeamento de 30/10, que tinha 59 ponteiros (compara_leituras.mjs; base presa
+    em mapeamento_prisma_s_antes_da_leitura.json): as leituras concordam em 34 ponteiros, e há 22
+    correções aplicadas.
+    · Saem 13: F2.1.1.3 de S1 e S3; de S8, F1.2.2, F1.2.4, F1.2.6, F1.2.8, F1.2.10, F1.4.1–3 e
+      F2.1.2.8; F2.1.2.1 de S12; F3.1.9 de S16.
+    · Entram 9: SUP.4 em S1, S3, S4 e S7; SUP.3 em S8, S9, S13 e S15; SUP.5 em S16.
+  - 36 divergências (29 de ponteiro, 7 de cobertura) ficaram como em 30/10. Estão para o Vicente,
+    por tema, em sessao_2c/divergencias_prisma_s.md: 13 de seções do manuscrito (F8.3), 2 de
+    suplemento, 14 de campos de coleta, e 7 coberturas — em 5 itens a segunda leitura julga parcial o
+    que o mapeamento declara completo.
+  - Resultado: 55 ponteiros, todos com trecho aceito; leitura registrada (06/11). Fração segue 9/16;
+    o porquê da F1 deixa de citar o S8.
+  - A spec acompanha: 12 linhas F (atualiza_coluna_spec.mjs) e 3 células da tabela de suplementos
+    (SUP.2, o próprio checklist, passa a "Todos", como o SUP.1). O teste da coluna passou a cobrir os
+    SUP.
+  - A cópia do escopo recebeu os mesmos ponteiros, sem trechos (copia_para_escopo.mjs, que conferiu
+    antes que ela era cópia do mapeamento de 30/10), por decisão do Vicente (abaixo).
+  - A medida da conferência por palavras foi refeita nos dois: 30 de 825 trocas (3,6%), 08/11.
+- Dois erros meus, achados e consertados na sessão:
+  - a nota do mapeamento dizia "30 ponteiros e 6 coberturas" — são 29 e 7;
+  - rodar de novo a comparação contra o mapeamento já corrigido gravou "0 correções". Refeita contra
+    a base presa, ela reproduz as 22 correções e as 36 divergências, e o mapeamento é exatamente o
+    resultado dela, nos ponteiros e nos trechos.
+Verificação:
+  - Suíte 440/440 em 37 arquivos (era 422/36 no fim da parte 1): +15 em
+    tests/leitura_documentada.test.ts, que tem os testes de resposta conhecida (literal aceito; de
+    outro item e alterado recusados; zod) e +3 testes da aplicação; reescritos os que fixavam a medida
+    de 31/10, a contagem de 58 (hoje 59, com S1→F2.1.1.3) e a coluna da spec.
+  - Mutação (sessao_2c/mutacao_item2.mjs; saída em mutacao_item2.txt): as 9 derrubam testes.
+  - check_standard_coverage, item 1 → item 2: 423 diferenças, sem mudar veredito — enunciado nos
+    órfãos, examinado por suspeito, leitura_documentada por método, os textos.
+  - check_standard_coverage, item 2 → item 3: 99 diferenças, só nos relatórios do PRISMA-S.
+  - Diffs em sessao_2c/diff_item1_item2.txt e diff_item2_item3.txt.
+  - Gates RV-11: EXTENSAO (item 2, protocolo = este plano) e CONFORMIDADE (item 3, PRISMA-S 2021).
+  - audit_system_debt válido (153: 41 abertos, 2 em curso, 79 resolvidos, 31 recusados). Nenhum
+    arquivo de reviewbr/projects/ alterado.
+Commit: ver git log ("sessão 2c, parte 2") — push para origin/reorg/agentic-layer.
+Decisões do Vicente registradas:
+  08/11/2026 — a cópia do PRISMA-S no escopo segue as correções da leitura documentada do prisma-sr.
+  - O quê: a cópia do mapeamento PRISMA-S do scoping-prisma-scr recebe as mesmas correções de
+    ponteiro que a leitura documentada aplicou ao do prisma-sr (13 saem, 9 entram), sem trechos e sem
+    leitura documentada própria.
+  - Alcance: só os ponteiros dessa cópia. As declarações [NÃO COBERTO] dela não mudam, e o
+    PRISMA-ScR não é tocado.
+  - Por quê: a trilha do escopo é a spec do prisma-sr lida por extends, e a coluna "Item PRISMA-S"
+    dessa spec é a mesma para os dois métodos. Sem a cópia, o agente do escopo leria na spec ponteiros
+    que a conferência dele não usa.
+  - Consequência: a fração do escopo segue 9/16. A leitura documentada do escopo fica para quando ele
+    tiver trilha própria (DEBT-151, sessão 6).
+  - Origem: resposta "Copiar os ponteiros (Recomendado)" à pergunta da sessão, em 08/11/2026.
+Para o acompanhamento:
+  (1) Do Vicente: as 36 divergências, em sessao_2c/divergencias_prisma_s.md.
+      - As 13 de seção do manuscrito se decidem de uma vez: a seção F8.3 conta como lugar do relato?
+      - Se ele aceitar as 5 coberturas parciais da segunda leitura (S1, S4, S5, S6, S15), cada uma
+        vira [NÃO COBERTO] parcial, e a fração do PRISMA-S cai.
+  (2) O "na RV-11" da triagem ficou no maintainer.md, como procedimento. O gate validate_system_change
+      não exige leitura documentada em mudança de mapeamento; exigir é decisão, não defeito.
+  (3) O procedimento está pronto para o PRISMA-P e para o PRISMA 2020. Este precisa antes dos
+      enunciados oficiais, que o conferidor exige.
+Próxima sessão: P (a porta do backlog).
+```

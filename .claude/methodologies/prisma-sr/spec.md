@@ -72,15 +72,15 @@ Fechado após F0. Nenhum critério pode ser alterado após início da busca sem 
 | Subitem | Elemento | Campo | Descrição | Obrigatório | Item PRISMA |
 |---|---|---|---|---|---|
 | F1.2.1 | P | População/Problema | Definição precisa da população ou problema | ✅ | Item 5 |
-| F1.2.2 | P | Termos de busca — P | MeSH + DeCS + termos livres pt/en/es | ✅ | Item 7 / S8 |
+| F1.2.2 | P | Termos de busca — P | MeSH + DeCS + termos livres pt/en/es | ✅ | Item 7 |
 | F1.2.3 | I | Intervenção/Exposição | O que foi feito, aplicado ou estudado | ✅ | Item 5 |
-| F1.2.4 | I | Termos de busca — I | MeSH + DeCS + termos livres pt/en/es | ✅ | Item 7 / S8 |
+| F1.2.4 | I | Termos de busca — I | MeSH + DeCS + termos livres pt/en/es | ✅ | Item 7 |
 | F1.2.5 | C | Comparador | Grupo controle, comparação ou "N/A + justificativa" | ✅ | Item 5 |
-| F1.2.6 | C | Termos de busca — C | Se aplicável | ⚠️ se aplicável | Item 7 / S8 |
+| F1.2.6 | C | Termos de busca — C | Se aplicável | ⚠️ se aplicável | Item 7 |
 | F1.2.7 | O | Outcomes/Desfechos | Listar TODOS os desfechos primários e secundários | ✅ | Item 5 |
-| F1.2.8 | O | Termos de busca — O | Se incluídos na string | ⚠️ se aplicável | Item 7 / S8 |
+| F1.2.8 | O | Termos de busca — O | Se incluídos na string | ⚠️ se aplicável | Item 7 |
 | F1.2.9 | S | Tipo de Estudo | Delineamentos elegíveis | ✅ | Item 5 |
-| F1.2.10| S | Termos de busca — S | Filtros de tipo de estudo | ⚠️ se aplicável | Item 7 / S8 / S10 |
+| F1.2.10| S | Termos de busca — S | Filtros de tipo de estudo | ⚠️ se aplicável | Item 7 / S10 |
 
 ### F1.3 — Critérios de Elegibilidade Completos
 
@@ -114,9 +114,9 @@ O sistema gera as strings a partir do F1.2. O pesquisador revisa e aprova antes 
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA-S |
 |---|---|---|---|---|
-| F1.4.1 | String por repositório | Gerada pelo sistema com base no PICOS | ✅ | S8 |
-| F1.4.2 | Operadores booleanos definidos | AND / OR / NOT / proximidade | ✅ | S8 |
-| F1.4.3 | Vocabulários controlados definidos | MeSH / DeCS / Emtree / Nenhum | ✅ | S8 |
+| F1.4.1 | String por repositório | Gerada pelo sistema com base no PICOS | ✅ | — |
+| F1.4.2 | Operadores booleanos definidos | AND / OR / NOT / proximidade | ✅ | — |
+| F1.4.3 | Vocabulários controlados definidos | MeSH / DeCS / Emtree / Nenhum | ✅ | — |
 | F1.4.4 | Aprovação do pesquisador | Data e confirmação explícita | ✅ | — |
 | F1.4.5 | Versão da string | Número de versão para controle de alterações | ✅ | — |
 
@@ -132,7 +132,7 @@ Executado pelo MCP sob orquestração do sistema. Uma entrada por fonte/reposit�
 |---|---|---|---|---|
 | F2.1.1.1 | Nome da fonte | Nome completo e sigla | ✅ | S1 / S2 / S3 / S7 |
 | F2.1.1.2 | Tipo de fonte | Base bibliográfica / Registro / Repositório institucional / Literatura cinzenta / Outro | ✅ | S3 / S7 |
-| F2.1.1.3 | URL base | Endereço de acesso | ✅ | S1 / S3 |
+| F2.1.1.3 | URL base | Endereço de acesso | ✅ | — |
 | F2.1.1.4 | Camada na estratégia | Camada 1 / 2 / 3 / 4 / 5 | ✅ | — |
 | F2.1.1.5 | Interface utilizada | Web / API / OAI-PMH + versão se disponível | ✅ | S1 / S2 |
 | F2.1.1.6 | Campos pesquisados | Título / Resumo / Assunto / Texto completo / Todos | ✅ | S8 |
@@ -142,14 +142,14 @@ Executado pelo MCP sob orquestração do sistema. Uma entrada por fonte/reposit�
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA-S |
 |---|---|---|---|---|
-| F2.1.2.1 | Data e hora da busca | ISO8601 completo | ✅ | S12 / S13 |
+| F2.1.2.1 | Data e hora da busca | ISO8601 completo | ✅ | S13 |
 | F2.1.2.2 | Abrangência cronológica aplicada | Datas de início e fim do filtro | ✅ | S9 |
 | F2.1.2.3 | Restrição de idioma aplicada | Idiomas filtrados na fonte | ✅ | S9 |
 | F2.1.2.4 | String exata executada | Copiar literalmente — sem parafrasear | ✅ | S8 |
 | F2.1.2.5 | Vocabulários controlados usados | MeSH / DeCS / Emtree / Outros / Nenhum | ✅ | S8 |
 | F2.1.2.6 | Termos livres usados | Lista de todos termos não controlados | ✅ | S8 |
 | F2.1.2.7 | Filtros adicionais aplicados | Tipo de doc / Idioma / Período / Revisado por pares | ✅ | S9 |
-| F2.1.2.8 | Iterações de busca | Se houve mais de uma rodada — enumerar todas | ✅ | S8 / S12 |
+| F2.1.2.8 | Iterações de busca | Se houve mais de uma rodada — enumerar todas | ✅ | S12 |
 | F2.1.2.9 | Notas de limitações | Timeout / Truncamento / Bloqueio / Resultado parcial | ✅ | — |
 
 #### F2.1.3 — Resultados da Fonte
@@ -189,7 +189,7 @@ Executada pelo sistema sobre os dados brutos entregues pelo MCP.
 | F3.1.6 | Total antes da deduplicação | Soma de todos os brutos por fonte | ✅ | S15 / Item 16 |
 | F3.1.7 | Total de duplicatas removidas | Por critério aplicado | ✅ | Item 16 |
 | F3.1.8 | Total após deduplicação | Encaminhado para triagem | ✅ | Item 16 |
-| F3.1.9 | Registro de cada par | ID mantido + ID removido + critério + fontes | ✅ | S16 |
+| F3.1.9 | Registro de cada par | ID mantido + ID removido + critério + fontes | ✅ | — |
 | F3.1.10 | Conflitos para decisão manual | Casos não resolvidos automaticamente | ✅ | S16 |
 
 ## F4 — TRIAGEM
@@ -431,9 +431,9 @@ Colunas obrigatórias do study_characteristics_table.csv
 | Subitem | Arquivo | Conteúdo | Itens cobertos |
 |---|---|---|---|
 | SUP.1 | prisma_checklist_filled.md | 27 itens PRISMA 2020 com status e evidência | Todos |
-| SUP.2 | prisma_s_checklist_filled.md | 16 itens PRISMA-S com status e evidência | S1–S16 |
-| SUP.3 | supplement_search_prisma_s.md | Strings + interfaces + filtros + datas + contagens | S1 / S2 / S8–S10 / S13 / S15 |
-| SUP.4 | supplement_sources_registry.md | Todas as fontes com URLs e evidências | S1–S7 |
+| SUP.2 | prisma_s_checklist_filled.md | 16 itens PRISMA-S com status e evidência | Todos |
+| SUP.3 | supplement_search_prisma_s.md | Strings + interfaces + filtros + datas + contagens | S8 / S9 / S13 / S15 |
+| SUP.4 | supplement_sources_registry.md | Todas as fontes com URLs e evidências | S1 / S3 / S4 / S7 |
 | SUP.5 | dedupe_report.md | Regras + contagens + pares + conflitos | S16 |
 | SUP.6 | screening_report.md | Processo + contagens + motivos + não recuperados | Item 16 |
 | SUP.7 | study_characteristics_table.csv | Tabela mínima de estudos incluídos | Item 17 |
