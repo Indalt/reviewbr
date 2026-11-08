@@ -114,18 +114,20 @@ para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cad
       que a ferramenta garante por código e pelos invariantes RV, e não só contra os campos da trilha
       (procedimento de assimilação, no `maintainer.md`; vale para o PRISMA-P e o PRISMA 2020); (3) se o gate
       RV-11 (`validate_system_change`) passa a exigir leitura documentada quando um mapeamento muda.
-  - **Opcional e obrigatório seguem a metodologia (08/11).** Redação do acompanhamento, a conferir na M.
+  - **Opcional e obrigatório seguem a metodologia (08/11).** Redação do acompanhamento, corrigida pelo Vicente
+    em 08/11; vai à descrição do método (M).
     - O ReviewBR segue o que cada metodologia diz: o que ela torna obrigatório é obrigatório, e o que torna
       opcional é opcional. Vale para todas.
-    - Opcional não deixa o protocolo em branco: o protocolo registra a escolha, conforme os objetivos da
-      revisão. No escopo, quem não vai fazer avaliação crítica responde "não" à condição avaliacao_critica.
+    - Opcional não deixa o protocolo em branco: o protocolo registra a escolha, conforme os objetivos do projeto
+      de pesquisa.
     - Pergunta que o protocolo do método não tem não é feita ao projeto.
     - Contradições de hoje, já no backlog: o DEBT-151 (o escopo herda do prisma-sr a certeza da evidência e a
       exclusão por desfecho) e o DEBT-135 (registro de protocolo exigido sem norma que o exija).
     - Origem, nas palavras dele: "sobre f1 não é obrigatório como diz o método de escopo e isso vale para todas
       as metodologias. seguimos o que elas dizem. o que não quer que não se preenche os protocolos com os
       objetivos. se não vai fazer avaliação crítica preenche com não. se o método não tem em seu protocolo não
-      responde".
+      responde"; correção dele: "os objetivos do projeto de pesquisa. Não precisa fazer novas definições para uma
+      metodologia específica já que temos a diretriz para todas".
 
 ## Contexto que desfaz ambiguidades: o sistema mudou DURANTE a troca de computador
 
