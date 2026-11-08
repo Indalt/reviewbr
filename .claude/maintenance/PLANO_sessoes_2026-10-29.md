@@ -172,12 +172,13 @@ seção e conferida pelo acompanhamento. Entre 31/10 e 05/11 o Vicente aprovou a
 a 2c (B1, B2); em 05/11, à tarde, corrigiu a D14, aprovou a regra do backlog e tirou a 2d do plano (ver
 "Decisões de 31/10 a 05/11/2026", acima, e `triagem_backlog_2026-11-05/TRIAGEM.md`). A 2c fechou (parte 1 em 05/11; parte 2 de 06 a 08/11) e foi
 conferida pelo acompanhamento em 08/11: suíte 440/440 em 37 arquivos, audit válido, DEBT-149 resolvido, PRISMA-S
-9/16 nos dois métodos, PRISMA-ScR do escopo 14/22 e valid. **Próxima: P, com o prompt na seção dela; depois, a
-M.** As 36 divergências do PRISMA-S (`sessao_2c/divergencias_prisma_s.md`) esperam a M, e a M responde às
+9/16 nos dois métodos, PRISMA-ScR do escopo 14/22 e valid. A P fechou em 08/11 e foi conferida no mesmo dia: suíte
+474/474 em 38 arquivos, audit válido, nenhum aberto com METODOLOGIA_NOVA, e a porta conferida à parte, pelo dist,
+numa cópia do backlog (8 casos). **Próxima: M, com o prompt na seção dela.** As 36 divergências do PRISMA-S (`sessao_2c/divergencias_prisma_s.md`) esperam a M, e a M responde às
 três perguntas da 2c (decisões de 08/11).
 
 A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
-não bloqueiam a P:
+não bloqueiam a M:
 - as 41 decisões da lista D01–D41 (`revisao_decisoes_2026-10-31/lista_decisoes.md`), cada uma antes da sessão
   em que pesa;
 - do pesquisador, em cada projeto de escopo: responder a condição avaliacao_critica (pendência da 2b), conforme o
@@ -237,7 +238,10 @@ reduz o que sobra para a sessão.
    no começo e no fim.
 9. **Achado tocado, conferido contra a triagem de 05/11.** Na abertura, a sessão lê em
    `triagem_backlog_2026-11-05/TRIAGEM.md` a proposta para os achados que vai tocar (ficar, enxugar, fundir) e,
-   ao fechar, a aplica pela tool se ela se sustentar no código. As 15 saídas foram aplicadas em 05/11.
+   ao fechar, a aplica pela tool se ela se sustentar no código. As 15 saídas foram aplicadas em 05/11. Desde a
+   sessão P (08/11), gravar achado aberto — inclusive passá-lo a EM_CURSO — exige a mentira de hoje dele,
+   conferida na linha (a triagem traz uma proposta para cada, não contestada). Para conferir uma troca no
+   backlog, use `sessao_p/compara_backlog.mjs`: o BacklogWriter regrava o arquivo e reordena chaves.
 
 ### Os dois chats, e como cada sessão abre e fecha
 
@@ -250,8 +254,9 @@ decisoes para as sessoes me ajudando com a criacao do prompt de cada sessao"* (V
   prepara a próxima. Não executa sessão. Se ele se perder ou ficar caro demais, qualquer chat novo assume o papel
   lendo este arquivo.
 - **Chat da sessão.** Um chat novo por sessão, aberto com o prompt preparado no acompanhamento. Executa só a sua
-  sessão, escreve a carta logo abaixo do prompt, commita, faz push e para. Diante de um furo do plano, registra o
-  achado, fecha o passo com segurança e devolve o assunto ao acompanhamento.
+  sessão, escreve a carta logo abaixo do prompt, commita, faz push e para. Diante de um furo do plano, anota-o na
+  carta (defeito vai pela tool, com a mentira de hoje), fecha o passo com segurança e devolve o assunto ao
+  acompanhamento.
 
 O ciclo: (1) no acompanhamento, "prepara a sessão N" — o prompt sai em `## Sessão N — prompt de abertura`;
 (2) num chat novo, cola-se o prompt; (3) a sessão fecha com a carta; (4) no acompanhamento, "fecha a sessão N" —
@@ -1277,4 +1282,111 @@ Para o acompanhamento:
   (6) A tool MCP deste chat roda o dist da abertura e grava sem a porta até o servidor
       reiniciar. O dist em disco é o novo.
 Próxima sessão: M.
+```
+
+## Sessão P — conferência do acompanhamento (08/11/2026)
+
+- Conferido, não lembrado: os quatro commits, com push; git limpo; suíte 474/474 em 38 arquivos; audit válido, sem
+  METODOLOGIA_NOVA em aberto e com o aviso dos 43 abertos sem a mentira de hoje.
+- A porta, conferida à parte pelo dist numa cópia do backlog, com script do acompanhamento e não o da sessão:
+  - recusa: aberto sem a mentira; arquivo inexistente; linha além do fim; caminho fora da raiz; METODOLOGIA_NOVA
+    em aberto; atualização de aberto sem a mentira;
+  - aceita: mentira válida; fechamento sem ela.
+- Respostas ao "Para o acompanhamento" da P:
+  (1) as três escolhas ficam: o audit reprovar METODOLOGIA_NOVA em aberto; o critério dos destinos; a mentira de
+      hoje num lugar só;
+  (2) e (5) entraram no item 9 do "Como trabalhar";
+  (3) corrigido em "Os dois chats": furo do plano vai à carta;
+  (4) "[NÃO COBERTO] (fila de manutenção)", na descrição da check_standard_coverage, quer dizer escopo — o que
+      falta construir —, não o backlog. Não é mentira; a palavra pode ficar mais clara quando uma sessão mexer
+      nessa descrição;
+  (6) este chat de acompanhamento roda o dist antigo: gravar achado por ele passaria sem a porta. Achado novo, daqui
+      em diante, por um chat aberto depois de 08/11.
+
+## Sessão M — prompt de abertura
+
+Preparado no chat de acompanhamento em 08/11/2026, depois da conferência da P. Cole num chat novo, ajuste o seletor
+pela primeira linha e apague-a antes de enviar.
+
+```
+>>> APAGUE ESTA LINHA ANTES DE ENVIAR — seletor: Opus 5.5 · esforço max <<<
+Sessão M do .claude/maintenance/PLANO_sessoes_2026-10-29.md — Método do ReviewBR: descrição.
+Modelo e esforço: Opus 5.5, max; nenhum subagente nem workflow. Anote na carta.
+
+Este é o chat da sessão M: execute só ela. As decisões que são o objeto desta sessão (listadas abaixo) o Vicente
+toma aqui; as outras, e a próxima sessão, ficam no chat de acompanhamento. Furo do plano (algo que este prompt e o
+plano não decidem): anote na carta, feche o passo com segurança e pare com "FURO DO PLANO — levar ao
+acompanhamento", em até 3 linhas. Defeito achado de passagem vai pela tool, com a "mentira de hoje".
+
+O que esta sessão é: descrever o método da própria ferramenta como se descreve uma metodologia — objetivo,
+fundamentos na filosofia da ciência, princípios, etapas, critérios de validade e limites —, com aprovação do
+Vicente seção por seção. Não muda código, skill, agente nem manifest: o que a descrição pedir de mudança no
+sistema vai ao plano, como agenda; defeito, pela tool.
+
+Abertura, conferindo e não lembrando: leia neste plano o "Como trabalhar" (itens 4 e 9) e as "Decisões de 31/10 a
+05/11/2026" inteiras, inclusive as de 05/11 à tarde e as de 08/11; a parte A de
+.claude/maintenance/REVISAO_decisoes_2026-10-31.md (A1 a A9, com os vereditos, e a resposta a "quem verifica o
+verificador?"); em .claude/maintenance/revisao_decisoes_2026-10-31/lista_decisoes.md, D01, D07, D09, D14 e D17;
+.claude/maintenance/revisao_decisoes_2026-10-31/d07_raise_fontes_2026-11-05.md (a resposta 4); o modo de agir em
+.claude/agents/maintainer.md (linhas 14 a 30); e a carta da 2c, parte 2. Rode git status, python
+.claude/maintenance/medir_esforco.py --agora e node .claude/maintenance/sessao_2a/le_audit.mjs. Não pergunte ao
+Vicente a porcentagem de uso.
+
+O documento: .claude/METODO_ReviewBR.md, novo. As referências a ele em agentes e skills são da sessão 6.
+
+Já decidido — entra no documento como está, em forma precisa e citando a origem; não perguntar de novo:
+- A1 a A9 (31/10 a 05/11), no texto aprovado da parte A.
+- O princípio de 08/11, já corrigido por ele: o ReviewBR segue o que cada metodologia diz sobre o que é
+  obrigatório e o que é opcional, e isso vale para todas; opcional não deixa o protocolo em branco — o protocolo
+  registra a escolha conforme os objetivos do projeto de pesquisa; pergunta que o protocolo do método não tem não
+  é feita.
+- A D14: um método não herda de outro o que é próprio dele, e o ReviewBR não usa o modelo da revisão sistemática
+  como espelho do seu modo de trabalhar; o PRISMA não é proibido.
+- O D07: todo projeto declara onde e como usou IA e, quando exigido, tudo o que se pede; o RAISE não é norma
+  canônica; o mapa de uso de IA das tools é política do próprio sistema para as suas ferramentas.
+
+Para decidir aqui, com o Vicente, em forma precisa (item 4 do "Como trabalhar"):
+1. As três perguntas da 2c (decisão de 08/11):
+   (a) o que é "cobrir um item da norma" no método do ReviewBR — coletar a informação (campo da trilha), relatá-la
+       (seção do manuscrito, suplemento) ou garanti-la por código (o que a ferramenta grava sozinha);
+   (b) se a leitura documentada confere a norma também contra o que a ferramenta garante por código e pelos
+       invariantes RV, e não só contra os campos da trilha;
+   (c) se o gate RV-11 passa a exigir leitura documentada quando um mapeamento muda.
+2. D01, D09 e D17, que pesam aqui e ainda estão a conferir: leve a ele a redação proposta de cada um, na lista de
+   decisões, antes de usá-los.
+3. Os princípios que saíram do backlog em 05/11: o alvo da triagem por IA — auditabilidade e variabilidade medida,
+   não determinismo (DEBT-101, D01); o modo de agir — o que o sistema garante, o que torna visível e o que não
+   protege (DEBT-132, maintainer.md); e a auditoria de protocolo por método (DEBT-134).
+4. O critério de credibilidade do D07, redigido pelo acompanhamento: ele o confere aqui.
+5. O que o RAISE 3 dá como não aceitável — síntese agêntica de ponta a ponta e síntese de resultados entre
+   estudos por LLM — e como o método do ReviewBR fica fora disso: onde o pesquisador decide, e quem sintetiza.
+6. Os fundamentos na filosofia da ciência (A2) são leitura e decisão dele. Apresente três ou quatro referências
+   candidatas, cada uma com duas ou três linhas neutras, a fonte completa e o que no ReviewBR ela sustentaria; ele
+   escolhe. Não escreva a seção antes da escolha dele.
+
+Como trabalhar nesta sessão:
+- Uma seção por vez: você propõe o texto, o Vicente aprova ou corrige, e a seção entra no documento com a data e
+  a origem. A pergunta a ele define os termos e diz a consequência.
+- O que já está decidido entra como está; o que é proposta sua fica marcado como proposta até ele aprovar.
+- Não invente fundamento nem cite fonte que você não leu; ao citar uma, dê a referência completa.
+
+Armadilhas já conhecidas:
+1. Pôr no documento obrigação que nenhuma metodologia impõe (o DEBT-135 é um caso no sistema).
+2. Gravar resposta curta dele como aprovação de texto longo: a aprovação vale para o texto que ele leu.
+3. Prometer o que o sistema não cumpre: onde o código ainda não garante, diga, e aponte o achado aberto.
+4. Princípio geral fica geral: nada de regra ou exemplo de uma metodologia específica quando a diretriz vale para
+   todas (correção dele, 08/11).
+5. Não toque nos projetos em reviewbr/projects/ nem no código.
+
+Saída verificável: .claude/METODO_ReviewBR.md com as seções objetivo, fundamentos, princípios, etapas, critérios de
+validade e limites, cada uma aprovada pelo Vicente (data e origem); as três perguntas da 2c, D01, D09 e D17
+respondidos em forma precisa e gravados no plano; os três princípios do backlog redigidos e aprovados; o critério
+de credibilidade conferido; a posição sobre o RAISE 3 escrita; a agenda que surgir, no plano; git limpo e audit
+válido.
+
+Divisão: a sessão foi planejada para duas janelas. Se a projeção passar de 75%, feche no fim da seção em curso; a
+próxima janela retoma pela carta.
+
+Fechamento: escreva a carta da sessão M no plano, logo abaixo deste prompt (modelo "Carta de sessão"), commit e
+push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. A 75% estimados não comece passo novo.
 ```
