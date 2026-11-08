@@ -145,14 +145,19 @@ Consequências para ler o disco sem se enganar:
 **Estado:** sessões 0 (29/10/2026), 1, 2a (30/10/2026) e 2b (31/10/2026) fechadas, cada uma com a carta na sua
 seção e conferida pelo acompanhamento. Entre 31/10 e 05/11 o Vicente aprovou as considerações A1–A9 e redefiniu
 a 2c (B1, B2); em 05/11, à tarde, corrigiu a D14, aprovou a regra do backlog e tirou a 2d do plano (ver
-"Decisões de 31/10 a 05/11/2026", acima, e `triagem_backlog_2026-11-05/TRIAGEM.md`). **Próxima: 2c, com o prompt
-ajustado na seção dela; depois, a P.** Em 05/11, por volta das 16:41 UTC, o Vicente leu 35% da janela de 5h e 33%
-do limite semanal.
+"Decisões de 31/10 a 05/11/2026", acima, e `triagem_backlog_2026-11-05/TRIAGEM.md`). A 2c fechou (parte 1 em 05/11; parte 2 de 06 a 08/11) e foi
+conferida pelo acompanhamento em 08/11: suíte 440/440 em 37 arquivos, audit válido, DEBT-149 resolvido, PRISMA-S
+9/16 nos dois métodos, PRISMA-ScR do escopo 14/22 e valid. **Próxima: P, com o prompt na seção dela; depois, a
+M.** As 36 divergências do PRISMA-S (`sessao_2c/divergencias_prisma_s.md`) esperam a M, se o Vicente confirmar;
+a 2c levou à M duas perguntas: o que é cobrir um item da norma no método do ReviewBR, e se a leitura documentada
+lê também o modo de agir da ferramenta.
 
 A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
-não bloqueiam a 2c:
+não bloqueiam a P:
+- a confirmação de que as 36 divergências esperam a M, e as duas perguntas da 2c para a M;
 - as 41 decisões da lista D01–D41 (`revisao_decisoes_2026-10-31/lista_decisoes.md`), cada uma antes da sessão
-  em que pesa.
+  em que pesa;
+- do pesquisador, em cada projeto de escopo: responder a condição avaliacao_critica (pendência da 2b).
 
 A régua do `--agora` foi recalibrada em 05/11: 10,0–13,5 M (`CONTINUAR.md` §1, item 6).
 
@@ -1065,4 +1070,79 @@ Para o acompanhamento:
   (3) O procedimento está pronto para o PRISMA-P e para o PRISMA 2020. Este precisa antes dos
       enunciados oficiais, que o conferidor exige.
 Próxima sessão: P (a porta do backlog).
+```
+
+## Sessão P — prompt de abertura
+
+Preparado no chat de acompanhamento em 08/11/2026, depois da conferência da 2c. Cole num chat novo, ajuste o
+seletor pela primeira linha e apague-a antes de enviar. O prompt não traz a palavra do modo de orquestração de
+agentes: na 2c, ela disparou o aviso do modo mesmo precedida de "sem" (carta da 2c, parte 1).
+
+```
+>>> APAGUE ESTA LINHA ANTES DE ENVIAR — seletor: Opus 5.5 · esforço max <<<
+Sessão P do .claude/maintenance/PLANO_sessoes_2026-10-29.md — A porta do backlog.
+Modelo e esforço: Opus 5.5, max; nenhum subagente nem workflow. Anote na carta.
+
+Este é o chat da sessão P: execute só ela. Decisões, dúvidas e a próxima sessão ficam no chat de
+acompanhamento. Furo do plano (algo que este prompt e o plano não decidem): anote na carta, feche o passo com
+segurança e pare com "FURO DO PLANO — levar ao acompanhamento", em até 3 linhas. Defeito achado de passagem vai
+pela tool, com a "mentira de hoje" (regra do backlog, 05/11).
+
+Abertura, conferindo e não lembrando: leia neste plano o "Como trabalhar" (itens 4 e 9), as "Decisões de 31/10
+a 05/11/2026" (a regra do backlog e a decisão 5, de 05/11 à tarde) e a carta da 2c (partes 1 e 2); em
+.claude/maintenance/triagem_backlog_2026-11-05/TRIAGEM.md, o teste, a seção "O que a varredura achou" e as
+propostas para os achados com destino METODOLOGIA_NOVA; e os §9 a §11 da DIRECAO_ferramenta_que_veste_metodos.md.
+Rode a suíte (npx vitest run em reviewbr/reviewbr-mcp), git status, python .claude/maintenance/medir_esforco.py
+--agora e node .claude/maintenance/sessao_2a/le_audit.mjs (com os ids e FULL=1 para o texto inteiro). Não
+pergunte ao Vicente a porcentagem de uso.
+
+Já decidido, não perguntar de novo:
+- Regra do backlog (05/11): o backlog registra só defeito — o que o sistema afirma, exige ou entrega hoje e não
+  se sustenta (DIRECAO §9). Metodologia ou norma que falta fica no catálogo; decisão do Vicente vai ao registro
+  de decisões, e a agenda, ao plano; problema só futuro não se registra.
+- Decisão 5 (05/11): a tool que registra achado passa a recusar o que não traz a "mentira de hoje", e o destino
+  METODOLOGIA_NOVA deixa de valer para defeito.
+
+Escopo, em ordem:
+1. Destinos. Os 14 achados abertos com destino METODOLOGIA_NOVA têm, pela triagem de 05/11, defeito de hoje (só
+   a parte 2 do DEBT-008 é assimilação; a proposta da triagem a tira do achado, mas isso é da sessão que o
+   consertar). Para cada um, escolha o destino pelo significado dos destinos no código do backlog e pela sessão
+   que o conserta (coluna "Sessão" do TRIAGEM.md), e grave pela tool. Só o destino muda; o resto da proposta da
+   triagem fica para a sessão de cada achado (item 9 do "Como trabalhar").
+2. A trava de escrita. Na record_system_finding e no serviço que ela chama, achado novo ou atualizado em ABERTO
+   ou EM_CURSO passa a exigir a "mentira de hoje": onde o sistema afirma ou exige (caminho relativo à raiz do
+   repositório e linha, conferidos no disco: o arquivo existe e tem a linha), o que ele diz ali e o que mostra
+   que não se sustenta. Sem isso, a escrita é recusada com mensagem que diz o que falta e cita a regra. Fechar
+   achado (RESOLVIDO, RECUSADO) segue exigindo só a resolução. METODOLOGIA_NOVA passa a ser recusado como destino
+   de achado aberto; nos fechados segue válido, como histórico. O audit_system_debt lista como aviso, não erro,
+   os abertos ainda sem a "mentira de hoje": eles a recebem quando a sessão deles os tocar.
+3. Os textos que fabricam o problema. Alinhe à regra as instruções que mandam registrar ausência como achado ou
+   tratam destino como escopo: a descrição da record_system_finding em index.ts, a system-audit (SKILL.md), os
+   agentes em .claude/agents/, e PASSAGEM.md e PROTOCOLO_revisao_reviewbr.md, se disserem isso. No §11 da DIRECAO,
+   que deu 23 achados "travando" por escopo só pelo destino, basta uma nota datada: o destino não define escopo,
+   e o teste é o do §9. O documento é histórico; não o reescreva. O maintainer.md foi corrigido em 05/11:
+   confira, não refaça.
+
+Armadilhas já conhecidas:
+1. Ordem: o item 1 vem antes do item 2. Trocar o destino depois de ligar a trava exigiria agora a "mentira de
+   hoje" dos 14. A triagem traz uma para cada, mas é proposta não contestada (A5), e conferi-las não é desta
+   sessão.
+2. O BacklogWriter mescla antes de validar (DEBT-107): a trava vale para o registro mesclado, e o teste prova
+   isso. Testes de resposta conhecida: sem o campo, recusa; arquivo inexistente, recusa; linha além do fim,
+   recusa; campo completo, aceita; fechar sem o campo, aceita; METODOLOGIA_NOVA em aberto, recusa; em fechado,
+   aceita.
+3. Testes que fixam a descrição da tool, o enum de destinos ou o texto de skill e agente vão mudar: reescrita, não
+   regressão. Texto novo ganha asserção negativa — a frase velha não pode passar verde.
+4. A tool MCP deste chat roda o dist da abertura: confira pelo dist recompilado (node, como o le_audit.mjs).
+5. Não toque nos projetos em reviewbr/projects/.
+6. Toda alteração passa pelo gate RV-11 (validate_system_change). Decisão do Vicente que surgir vai em forma
+   precisa (item 4 do "Como trabalhar").
+
+Saída verificável: nenhum achado aberto com destino METODOLOGIA_NOVA, com cada troca listada na carta; a trava
+recusando e aceitando como nos testes de resposta conhecida, e um teste de mutação que a derruba; audit válido,
+com o aviso e a contagem dos abertos sem "mentira de hoje"; os textos alinhados, com asserção negativa; suíte
+verde e build em dia.
+
+Fechamento: escreva a carta da sessão P no plano, logo abaixo deste prompt (modelo "Carta de sessão"), commit e
+push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. A 75% estimados não comece passo novo.
 ```
