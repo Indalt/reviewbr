@@ -1,5 +1,8 @@
 # Divergências entre as duas leituras documentadas do PRISMA-S do prisma-sr
 
+> **Decisão de 08/11/2026 ("a sim"):** estas divergências são decididas pelo Vicente depois da sessão M, de
+> uma vez. Até lá vale, em cada ponto, o mapeamento de 30/10.
+
 Sessão 2c, item 3 (decisão de 05/11/2026, B2). Primeira leitura: sessão 2c (Claude Opus 5.5), no chat da sessão, 2026-11-06. Segunda leitura: agente independente (general-purpose, Claude Opus 5.5), aprovado na decisão B2 de 05/11/2026, 2026-11-06.
 Onde as duas concordam, vale (correções aplicadas, abaixo). Onde divergem, ficou o mapeamento atual — e a decisão é sua.
 Os trechos são do enunciado oficial do item (.claude/standards/prisma-s.json), conferidos literais pelo conferidor.

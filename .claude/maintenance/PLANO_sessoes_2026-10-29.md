@@ -103,6 +103,17 @@ para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cad
     das tools fica como política do sistema para as suas ferramentas (bloqueia o não aceitável e exige
     validação onde o RAISE 3 exige), e a citação do RAISE 1 no `maintainer.md` fica ("1 sim, 2 fica", 05/11). A frase da
     credibilidade virou critério científico, redigido pelo acompanhamento a pedido dele, a conferir na M.
+  - **Respostas à 2c, 08/11** ("a sim, b sim").
+    - (a) As 36 divergências da leitura documentada do PRISMA-S do prisma-sr
+      (`sessao_2c/divergencias_prisma_s.md`) são decididas pelo Vicente depois da sessão M, de uma vez, porque
+      duas classes delas dependem de definições da M. Até lá vale, em cada ponto, o mapeamento de 30/10, e nada
+      trava.
+    - (b) A M responde a três perguntas da 2c: (1) o que é "cobrir um item da norma" no método do ReviewBR —
+      coletar a informação (campo da trilha), relatá-la (seção do manuscrito, suplemento) ou garanti-la por
+      código (o que a ferramenta grava sozinha); (2) se a leitura documentada confere a norma também contra o
+      que a ferramenta garante por código e pelos invariantes RV, e não só contra os campos da trilha
+      (procedimento de assimilação, no `maintainer.md`; vale para o PRISMA-P e o PRISMA 2020); (3) se o gate
+      RV-11 (`validate_system_change`) passa a exigir leitura documentada quando um mapeamento muda.
 
 ## Contexto que desfaz ambiguidades: o sistema mudou DURANTE a troca de computador
 
@@ -134,7 +145,7 @@ Consequências para ler o disco sem se enganar:
 | 2b | Itens condicionais em uso | DEBT-150 (avaliação crítica no escopo), DEBT-008 (certeza da evidência: declarar; a assimilação vai às 7+), DEBT-152 (frases velhas em agentes e skill) | 2a | condição declarada pelo método, perguntada na F1 e respondida pelo projeto, com o efeito no denominador que a fonte manda, com teste; F7.3 declarada [NÃO COBERTO] por tool; `prisma-rigor-gates` sem a certeza que nenhum gate confere; agentes sem as frases velhas |
 | 2c | Conferência do mapeamento: fora da trava; leitura documentada | DEBT-149 — decisão de 05/11 (B1, B2), que substitui os pontos (1) e (4) da de 30/10; fecha no item 1 (decisão de 05/11, à tarde) | 2b | suspeito da conferência por palavras não reprova, e o relatório diz o que ela é e quanto enxerga; o porquê de cada etapa não depende dela; PRISMA-ScR do escopo `valid: true` sem mexer no mapeamento; leitura documentada com conferidor testado; PRISMA-S do prisma-sr lido e relido de forma independente, com as divergências levadas ao Vicente |
 | P | A porta do backlog | regra do backlog e decisão 5 de 05/11, à tarde | 2c | a `record_system_finding` recusa achado novo ou atualizado sem a "mentira de hoje" (onde o sistema afirma ou exige, com arquivo:linha, e o que contradiz), com teste; o destino `METODOLOGIA_NOVA` deixa de valer para defeito, e os abertos com esse destino que são defeito (14, pela triagem de 05/11) recebem o destino certo; outras instruções que mandem registrar ausência como achado, se houver (o crítico da triagem não rodou), alinhadas à regra |
-| M | Método do ReviewBR — descrição | A1–A3, A7, A9 (31/10–05/11); D09 e D17 da revisão de decisões; os princípios que saíram do backlog em 05/11, para redação e aprovação do Vicente: o alvo da triagem por IA (DEBT-101, D01), o modo de agir (DEBT-132) e a auditoria de protocolo por método (DEBT-134); o critério de credibilidade do D07, reformulado em 05/11 | 2c (antes da 6, que depende dela; posição confirmada pelo Vicente em 05/11) | o método da ferramenta descrito como metodologia — objetivo, fundamentos na filosofia da ciência, princípios, etapas, critérios de validade e limites —, aprovado pelo Vicente |
+| M | Método do ReviewBR — descrição | A1–A3, A7, A9 (31/10–05/11); D09 e D17 da revisão de decisões; os princípios que saíram do backlog em 05/11, para redação e aprovação do Vicente: o alvo da triagem por IA (DEBT-101, D01), o modo de agir (DEBT-132) e a auditoria de protocolo por método (DEBT-134); o critério de credibilidade do D07, reformulado em 05/11; as três perguntas da 2c (08/11): o que é cobrir um item da norma, se a leitura documentada confere também o que a ferramenta garante por código, e se o gate RV-11 exige leitura documentada quando um mapeamento muda — as 36 divergências do PRISMA-S se decidem depois delas | 2c (antes da 6, que depende dela; posição confirmada pelo Vicente em 05/11) | o método da ferramenta descrito como metodologia — objetivo, fundamentos na filosofia da ciência, princípios, etapas, critérios de validade e limites —, aprovado pelo Vicente |
 | 3 | Funil e gates | 3 (DEBT-138), 4 (a decisão de 29/10 sobre gates, que vai no conserto do DEBT-138; o DEBT-070 saiu do backlog em 05/11), DEBT-071/105 | — | export bloqueia funil divergente; manifests dizem a verdade sobre os gates; teste do FlowComputer e do caminho do handler do checkDesignGuardrail (do DEBT-043, que saiu do backlog em 05/11) |
 | 4 | Busca e triagem | 5 (DEBT-056), 6 (DEBT-021), 7 (DEBT-025) | — | log PRISMA-S gravado por código; saturação lê o disco; dedup com DOI/acentos e nível 4 só sinalizando |
 | 5 | Leitura e governança | 8 (DEBT-031), 9 (DEBT-018), 12 (DEBT-016), DEBT-141 | — | citação com página; trava só pelo `project_state.json`; aviso na tool de `targets`; atualização do catálogo sem apagar campos |
@@ -148,16 +159,15 @@ a 2c (B1, B2); em 05/11, à tarde, corrigiu a D14, aprovou a regra do backlog e 
 "Decisões de 31/10 a 05/11/2026", acima, e `triagem_backlog_2026-11-05/TRIAGEM.md`). A 2c fechou (parte 1 em 05/11; parte 2 de 06 a 08/11) e foi
 conferida pelo acompanhamento em 08/11: suíte 440/440 em 37 arquivos, audit válido, DEBT-149 resolvido, PRISMA-S
 9/16 nos dois métodos, PRISMA-ScR do escopo 14/22 e valid. **Próxima: P, com o prompt na seção dela; depois, a
-M.** As 36 divergências do PRISMA-S (`sessao_2c/divergencias_prisma_s.md`) esperam a M, se o Vicente confirmar;
-a 2c levou à M duas perguntas: o que é cobrir um item da norma no método do ReviewBR, e se a leitura documentada
-lê também o modo de agir da ferramenta.
+M.** As 36 divergências do PRISMA-S (`sessao_2c/divergencias_prisma_s.md`) esperam a M, e a M responde às
+três perguntas da 2c (decisões de 08/11).
 
 A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
 não bloqueiam a P:
-- a confirmação de que as 36 divergências esperam a M, e as duas perguntas da 2c para a M;
 - as 41 decisões da lista D01–D41 (`revisao_decisoes_2026-10-31/lista_decisoes.md`), cada uma antes da sessão
   em que pesa;
-- do pesquisador, em cada projeto de escopo: responder a condição avaliacao_critica (pendência da 2b).
+- do pesquisador, em cada projeto de escopo: responder a condição avaliacao_critica (pendência da 2b), conforme o
+  protocolo travado de cada um.
 
 A régua do `--agora` foi recalibrada em 05/11: 10,0–13,5 M (`CONTINUAR.md` §1, item 6).
 
