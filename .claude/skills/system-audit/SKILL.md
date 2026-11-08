@@ -7,10 +7,11 @@ description: Procedimento de AUDITORIA do próprio ReviewBR (Frente 2). Use para
 
 Esta skill responde a **uma** pergunta: *o sistema faz o que declara fazer?*
 
-Ela produz **diagnóstico**, não correção. Todo achado entra no backlog com tipo declarado
-(RV-11) e espera decisão. Corrigir durante a varredura é a deriva que o protocolo existe
-para impedir — e contamina a própria auditoria, porque o que você corrige deixa de ser
-medido.
+Ela produz **diagnóstico**, não correção. Achado é só **defeito de hoje** — o que o sistema
+afirma, exige ou entrega e não se sustenta (regra do backlog, 05/11/2026; DIRECAO §9) — e entra
+no backlog com o lugar onde o sistema o diz e o tipo declarado (RV-11), e espera decisão.
+Corrigir durante a varredura é a deriva que o protocolo existe para impedir — e contamina a
+própria auditoria, porque o que você corrige deixa de ser medido.
 
 ## Regra zero — apure o denominador, nunca o herde
 
@@ -120,8 +121,11 @@ check_standard_coverage  →  para cada padrão em .claude/standards/
 query_methodology_catalog →  panorama do catálogo
 ```
 
-Três achados possíveis: item do padrão sem nenhum subitem da trilha que o cubra; metodologia
-implementada sem o padrão como dado; versão não confirmada contra a fonte.
+Achados possíveis — sempre o que o sistema afirma e não sustenta: item que o método omite em
+silêncio (nem coberto nem declarado; o relatório reprova); metodologia que declara o padrão em
+`conformance.standards` sem o padrão como dado; versão que o relatório dá como conferida sem que
+a fonte tenha sido lida. Item declarado `[NÃO COBERTO]` não é achado: é o sistema dizendo a
+lacuna, que já está registrada como dado no mapeamento do método.
 
 O suspeito da conferência por palavras (nos `avisos`) **não é achado**: é pedido de leitura. Leia o
 enunciado do item; achado é só o ponteiro que a leitura mostra errado. E zero suspeito não prova
@@ -132,14 +136,27 @@ ela percebe 3,4% das trocas propositais (DEBT-149).
 
 ## Registro dos achados
 
+**Achado é só defeito de hoje:** o que o sistema afirma, exige ou entrega hoje e não se sustenta
+(regra do backlog, 05/11/2026; DIRECAO §9). Ausência não é achado: metodologia ou norma que falta
+vai ao catálogo (`absorb_methodology`, com a fonte oficial); decisão do pesquisador, ao registro
+de decisões; agenda, ao plano; problema que só existiria no futuro não se registra. Classificar
+também não é achar: tool que DECIDE, RV `[AUSENTE]` ou item sem cobertura viram achado só onde o
+sistema afirma ou exige o contrário.
+
 Todo achado entra pela tool **`record_system_finding`** — nunca por edição do JSON. Ela valida
-antes de gravar; a edição manual contorna a verificação. Tipo **sempre** declarado:
+antes de gravar; a edição manual contorna a verificação. Achado aberto leva a **mentira de
+hoje** (`mentira_de_hoje`): o arquivo, relativo à raiz do repositório, e a linha onde o sistema
+afirma ou exige — a tool confere que existem —, o que ele diz ali e o que mostra que não se
+sustenta. Sem ela, a tool recusa. O `destino` diz para onde vai o conserto, não se algo é achado
+nem quando se trabalha nele. Tipo **sempre** declarado — é o tipo do conserto:
 
 | Tipo | Quando | Exige |
 |---|---|---|
 | **CORRECAO** | o sistema promete e não cumpre | falha documentada **e reproduzível** |
-| **CONFORMIDADE** | diverge de padrão externo | padrão, **versão** e item afetado |
-| **EXTENSAO** | falta capacidade que nunca foi prometida | protocolo próprio |
+| **CONFORMIDADE** | o que o sistema declara de um padrão externo diverge do padrão | padrão, **versão** e item afetado |
+| **EXTENSAO** | consertar o defeito exige capacidade nova | protocolo próprio |
+
+Capacidade que o sistema nunca prometeu não é achado de tipo nenhum: é escopo (DIRECAO §9).
 
 Classificar na descoberta é mais fiel que classificar meses depois, de memória. E o campo
 `reproduction` não é burocracia: é o que distingue defeito real de impressão.
@@ -155,7 +172,7 @@ A auditoria fecha quando, para o denominador apurado **nesta** corrida:
 - [ ] todo agente foi conferido nas três frentes (prosa × frontmatter × mapa)
 - [ ] toda metodologia passou por `validate_methodology`
 - [ ] todo padrão tem relatório de cobertura
-- [ ] todo achado está no backlog, tipado, com evidência — e `audit_system_debt` passa
+- [ ] todo achado está no backlog, tipado, com evidência e a mentira de hoje — e `audit_system_debt` passa
 - [ ] **nenhuma linha de código foi alterada**
 
 O último item é o mais fácil de violar e o que mais compromete o resultado.

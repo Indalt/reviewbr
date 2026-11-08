@@ -220,8 +220,10 @@ sessão nova, nesta ordem:
    métodos que o declaram. Para cada um, vá à fonte (`WebFetch`; para guideline de relato, a
    EQUATOR Network é o registro central) e confira se há versão nova, errata ou extensão que o
    substitua. **Relate em uma linha por padrão:** confere · mudou · não foi possível conferir, e
-   por quê. Mudou → `record_system_finding` do tipo CONFORMIDADE, com padrão, versão e item
-   afetado. A fonte não abriu → declare; não presuma que nada mudou.
+   por quê. Mudou → vira `record_system_finding`, do tipo CONFORMIDADE, o que o sistema afirma
+   ou exige hoje e a versão nova desmente, com padrão, versão, item afetado e a mentira de hoje;
+   a versão nova em si é norma que o sistema ainda não tem, e assimilá-la é o procedimento acima,
+   quando o administrador decidir. A fonte não abriu → declare; não presuma que nada mudou.
 1b. **Ferramentas de IA para pesquisa e infraestrutura brasileira** (`DEBT-144`, decidido em
    17/10/2026). Olhe também o que muda no ambiente em que o pesquisador trabalha: ferramentas de
    IA para pesquisa e o que a CAPES disponibiliza no Portal de Periódicos. **Não é definidor** —
@@ -236,9 +238,10 @@ sessão nova, nesta ordem:
    de corrigir qualquer coisa.** Corrigir na ordem errada gera retrabalho, e a tabela existe
    para você não descobrir a dependência depois de já ter consertado o lado errado.
 5. **`.claude/maintenance/PLANO_usabilidade.md`** — o que entra agora, o que espera e por quê.
-6. **`.claude/maintenance/COBERTURA_achados.md`** — o destino declarado de **todo** achado
-   aberto. Se você for escolher no que trabalhar, escolha daqui: é o único lugar onde nenhum
-   achado está órfão.
+6. **`.claude/maintenance/COBERTURA_achados.md`** — onde está o destino de cada achado aberto
+   (hoje derivado: `by_destino` do `audit_system_debt`). O destino diz para onde vai o conserto;
+   não define escopo nem agenda: se algo é achado decide o teste da DIRECAO §9, e no que se
+   trabalha, o plano (`PLANO_sessoes_2026-10-29.md`).
 7. **`.claude/maintenance/RETOMAR.md`** — resumo curto do estado, se preferir começar por ele.
 
 Só então decida o que fazer. **Nunca reconstrua o estado de memória ou por leitura de
@@ -249,11 +252,15 @@ conversa** — se algo não está no disco, não está decidido.
 Encontrar um problema no meio de outro trabalho é rotina. O que não pode é nem corrigir na
 hora (deriva) nem esquecer (arquivo morto). O caminho é:
 
-1. **`record_system_finding`** — registre com id estável, tipo já classificado, evidência e
-   reprodução. Classificar na descoberta é mais fiel que classificar meses depois, de memória.
+1. **`record_system_finding`** — se for defeito de hoje (o sistema afirma, exige ou entrega o
+   que não se sustenta), registre com id estável, tipo já classificado, evidência, reprodução e
+   a **mentira de hoje**: o arquivo e a linha onde o sistema o afirma ou exige, o que diz ali e o
+   que mostra que não se sustenta. Ausência e decisão não são achado (regra do backlog, acima).
+   Classificar na descoberta é mais fiel que classificar meses depois, de memória.
    **Use a tool, não edite `system_debt.json` à mão:** a tool valida id duplicado, CORRECAO sem
-   reprodução e saída sem justificativa **antes** de gravar. Editar o JSON direto contorna essa
-   verificação, e um campo errado faz o backlog inteiro voltar como "ausente".
+   reprodução, achado aberto sem a mentira de hoje (arquivo e linha conferidos no disco) ou com o
+   destino METODOLOGIA_NOVA, e saída sem justificativa **antes** de gravar. Editar o JSON direto
+   contorna essa verificação, e um campo errado faz o backlog inteiro voltar como "ausente".
 2. **Siga o trabalho em curso.** O achado está guardado; não interrompa.
 3. **Quando for tratá-lo** — `record_system_finding` com `atualizar=true` e `status: EM_CURSO`;
    depois submeta a alteração a `validate_system_change` e corrija. **Declare `addresses` na
@@ -267,8 +274,11 @@ hora (deriva) nem esquecer (arquivo morto). O caminho é:
    `RECUSADO`, e `resolution` preenchida. Recusar é legítimo; recusar em silêncio, não.
 
 O gate `audit_system_debt` reprova se alguém sair da fila sem justificativa, se um achado de
-tipo CORRECAO não tiver reprodução, ou se houver id duplicado. **Fila com item aberto é
-estado normal e não reprova** — o gate cobra decisão registrada na saída, não fila vazia.
+tipo CORRECAO não tiver reprodução, se houver id duplicado, ou se um achado aberto estiver sem
+destino ou com o destino METODOLOGIA_NOVA. Os abertos sem a mentira de hoje ele **avisa**, sem
+reprovar: são de antes da regra, e cada um a recebe quando a sessão dele o tocar. **Fila com
+item aberto é estado normal e não reprova** — o gate cobra decisão registrada na saída, não
+fila vazia.
 
 ## Suas ferramentas de ESCRITA — e quando cada uma entra
 
@@ -276,7 +286,7 @@ Até 25/09/2026 você só tinha tools de leitura, e a prosa mandava editar JSON 
 
 | Situação | Tool | O que ela recusa |
 |---|---|---|
-| achou um problema | `record_system_finding` | CORRECAO sem reprodução; id duplicado; saída sem justificativa |
+| achou um defeito de hoje | `record_system_finding` | achado aberto sem a mentira de hoje (arquivo e linha conferidos no disco) ou com destino METODOLOGIA_NOVA; CORRECAO sem reprodução; id duplicado; saída sem justificativa |
 | conheceu metodologia nova | `absorb_methodology` | entrada sem `source_url` **externo** — fonte interna não vale |
 | vai criar metodologia | `scaffold_methodology` | protocolo em rascunho ou inexistente; padrão sem dado |
 | alterou uma metodologia | `validate_methodology` | invariante `always_on` sem gate; sem `conformance.standards` |
@@ -340,8 +350,10 @@ pegar.
    | e | documento novo em `.claude/maintenance/` **citado** por um da rota | `tests/integracao.test.ts` reprova documento inalcançável |
    | f | se parou no meio, diga **onde** e **por quê** | trabalho pela metade registrado vale mais que trabalho inteiro perdido |
 
-   **Furo do plano** — algo que o plano em disco não decide: pare, registre o achado, e leve
-   ao pesquisador. Não decida por ele (RV-04); não contorne para seguir.
+   **Furo do plano** — algo que o plano em disco não decide: pare, registre o furo no plano (na
+   carta da sessão) e leve ao pesquisador; se ele revelar defeito de hoje, o defeito vai pela
+   `record_system_finding`, com a mentira de hoje. Não decida por ele (RV-04); não contorne para
+   seguir.
 
 7. **Quando a manutenção termina, começa a fase de testes — e ela não é sua.** Quem conduz a
    revisão real ponta a ponta é o pesquisador, com o sistema. Você volta com o que ela

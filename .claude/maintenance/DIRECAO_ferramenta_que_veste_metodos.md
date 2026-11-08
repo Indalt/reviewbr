@@ -466,4 +466,10 @@ sistema afirmar o que não cumpre. Dos 35 que os verificadores marcaram como tra
 destino `METODOLOGIA_NOVA` ou `CONFORM_EXTERNA`** — que é **escopo**, e o pesquisador já decidiu
 que escopo não é achado (§9). Sobram **12**.
 
+> **Nota de 08/11/2026 (sessão P):** o destino não define escopo. Ele diz para onde vai o
+> conserto; se um achado é defeito decide o teste do §9 — o sistema afirma, exige ou entrega
+> hoje o que não se sustenta. A contagem acima tomou o destino por escopo: a triagem de
+> 05/11/2026 achou defeito de hoje em 14 dos 15 abertos com `METODOLOGIA_NOVA`
+> (`triagem_backlog_2026-11-05/TRIAGEM.md`). O parágrafo fica como foi escrito, como histórico.
+
 | `DEBT-124` | `checkCoverage` verifica existência, nunca correção: mapeamento errado volta verde | BLOQUEIA |

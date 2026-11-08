@@ -13,3 +13,8 @@ audit: aviso vira erro                   PEGA — 6 teste(s) caíram
 audit: incompleta não conta              PEGA — 1 teste(s) caíram
 audit: METODOLOGIA_NOVA aberto passa     PEGA — 1 teste(s) caíram
 descrição da tool volta à velha          PEGA — 1 teste(s) caíram
+texto: EXTENSAO volta a ser ausência     PEGA — 1 teste(s) caíram
+texto: tabela do maintainer volta à velha PEGA — 1 teste(s) caíram
+texto: destino volta a ser agenda        PEGA — 1 teste(s) caíram
+texto: DIRECAO sem a nota                PEGA — 1 teste(s) caíram
+texto: PASSAGEM sem a nota               PEGA — 1 teste(s) caíram

@@ -36,6 +36,10 @@
 > **A ordem de execução, o estado de cada passo e os furos do plano estão em
 > `EXECUCAO_checklist.md`.** É por ele que a execução se retoma.
 
+> **Nota de 08/11/2026 (sessão P):** este bloco está superado. O `DEBT-110` foi RECUSADO em
+> 05/11/2026 pela regra do backlog: a etapa que falta antes do F0 é ausência, e ausência não é
+> achado — proposta de extensão não entra no backlog (DIRECAO §9). O bloco fica como histórico.
+>
 > **Registrada como `DEBT-110` em 03/10/2026 — proposta de extensão aprovada para a fila em
 > 02/10.** Não registre de novo: está no backlog (`ABERTO`, destino `AGENTE_SKILL`). Na origem
 > ela ficou pendente porque o MCP `reviewbr` não conectou (`CONNECTION_CLOSED`). O plugin segue

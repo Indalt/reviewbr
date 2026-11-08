@@ -13,6 +13,10 @@ const aqui = path.dirname(fileURLToPath(import.meta.url));
 const MCP = path.resolve(aqui, "..", "..", "..", "reviewbr", "reviewbr-mcp");
 const svc = (f) => path.join(MCP, "src", "services", f);
 const [MW, SD, IX] = [svc("maintenance_writes.ts"), svc("system_debt.ts"), path.join(MCP, "src", "index.ts")];
+// item 3: os textos — a frase velha volta, e a asserção negativa tem de cair
+const CL = path.resolve(aqui, "..", "..");
+const [SK, MT, DI, PA] = [path.join(CL, "skills", "system-audit", "SKILL.md"), path.join(CL, "agents", "maintainer.md"),
+    path.join(CL, "maintenance", "DIRECAO_ferramenta_que_veste_metodos.md"), path.join(CL, "maintenance", "PASSAGEM.md")];
 const TESTES = ["tests/porta_do_backlog.test.ts", "tests/maintenance_writes.test.ts", "tests/system_debt.test.ts"];
 const sha = (t) => createHash("sha256").update(t).digest("hex");
 
@@ -32,6 +36,11 @@ const MUTACOES = [
     ["audit: incompleta não conta", SD, "            if (faltasDaMentira(f.mentira_de_hoje).length) sem_mentira_de_hoje.push(f.id);", "            if (!f.mentira_de_hoje) sem_mentira_de_hoje.push(f.id);"],
     ["audit: METODOLOGIA_NOVA aberto passa", SD, "            if (f.destino.trim() === DESTINO_SO_HISTORICO) destinoSoHistorico.push(f.id);", ""],
     ["descrição da tool volta à velha", IX, "METODOLOGIA_NOVA so em achado fechado, como historico", "METODOLOGIA_NOVA"],
+    ["texto: EXTENSAO volta a ser ausência", SK, "| **EXTENSAO** | consertar o defeito exige capacidade nova | protocolo próprio |", "| **EXTENSAO** | falta capacidade que nunca foi prometida | protocolo próprio |"],
+    ["texto: tabela do maintainer volta à velha", MT, "| achou um defeito de hoje | `record_system_finding` | achado aberto sem a mentira de hoje (arquivo e linha conferidos no disco) ou com destino METODOLOGIA_NOVA; CORRECAO sem reprodução; id duplicado; saída sem justificativa |", "| achou um problema | `record_system_finding` | CORRECAO sem reprodução; id duplicado; saída sem justificativa |"],
+    ["texto: destino volta a ser agenda", MT, "   trabalha, o plano (`PLANO_sessoes_2026-10-29.md`).", "   trabalha, o plano (`PLANO_sessoes_2026-10-29.md`). Se você for escolher no que trabalhar, escolha daqui."],
+    ["texto: DIRECAO sem a nota", DI, "> **Nota de 08/11/2026 (sessão P):** o destino não define escopo. Ele diz para onde vai o", "> Ele diz para onde vai o"],
+    ["texto: PASSAGEM sem a nota", PA, "> **Nota de 08/11/2026 (sessão P):** este bloco está superado. O `DEBT-110` foi RECUSADO em", "> O `DEBT-110` foi RECUSADO em"],
 ];
 
 for (const [nome, arq, de0, para0] of MUTACOES) {

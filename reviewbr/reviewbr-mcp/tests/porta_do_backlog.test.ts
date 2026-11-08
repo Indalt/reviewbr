@@ -318,3 +318,71 @@ describe("a descrição das tools diz a regra — a frase velha não passa", () 
         expect(d).toMatch(/tem o destino METODOLOGIA_NOVA \(decisão 5, 05\/11\/2026\)/);
     });
 });
+
+/**
+ * Item 3 da sessão P — os textos que mandavam registrar ausência como achado ou tratavam o
+ * destino como escopo. Texto novo com asserção negativa: a frase velha não pode passar verde.
+ * Os documentos históricos (DIRECAO, PASSAGEM) ganham nota datada e não são reescritos.
+ */
+describe("os textos que fabricavam o problema — alinhados à regra do backlog", () => {
+    // sem CRLF e sem o "> " das citações, para a frase não depender de onde a linha quebra
+    const ler = (...p: string[]) => fs.readFileSync(path.join(CLAUDE, ...p), "utf-8").replace(/\r\n/g, "\n").replace(/^>[ \t]?/gm, "");
+    const plano = (t: string) => t.replace(/\s+/g, " ");
+
+    it("system-audit: achado é só defeito de hoje, com a mentira de hoje; EXTENSAO não é 'capacidade nunca prometida'", () => {
+        const s = plano(ler("skills", "system-audit", "SKILL.md"));
+        expect(s).toMatch(/Achado é só defeito de hoje:\*\* o que o sistema afirma, exige ou entrega hoje e não se sustenta/);
+        expect(s).toMatch(/Ausência não é achado: metodologia ou norma que falta vai ao catálogo/);
+        expect(s).toMatch(/Achado aberto leva a \*\*mentira de hoje\*\* \(`mentira_de_hoje`\)/);
+        expect(s).toMatch(/O `destino` diz para onde vai o conserto, não se algo é achado/);
+        expect(s).toMatch(/\| \*\*EXTENSAO\*\* \| consertar o defeito exige capacidade nova \|/);
+        expect(s).toMatch(/Item declarado `\[NÃO COBERTO\]` não é achado/);
+        // as frases velhas
+        expect(s).not.toContain("falta capacidade que nunca foi prometida");
+        expect(s).not.toContain("Três achados possíveis: item do padrão sem nenhum subitem da trilha que o cubra");
+        expect(s).not.toContain("Todo achado entra no backlog com tipo declarado (RV-11) e espera decisão");
+    });
+
+    it("maintainer: a tabela e o caminho do achado dizem o que a tool recusa hoje; destino não é agenda", () => {
+        const m = plano(ler("agents", "maintainer.md"));
+        // a correção de 05/11 continua lá (conferida, não refeita)
+        expect(m).toMatch(/Cada metodologia ausente é uma \*\*entrada no catálogo\*\* \(`absorb_methodology`, com a fonte oficial\), \*\*não um achado no backlog\*\*/);
+        expect(m).toMatch(/\| achou um defeito de hoje \| `record_system_finding` \| achado aberto sem a mentira de hoje \(arquivo e linha conferidos no disco\) ou com destino METODOLOGIA_NOVA;/);
+        expect(m).toMatch(/registre com id estável, tipo já classificado, evidência, reprodução e a \*\*mentira de hoje\*\*/);
+        expect(m).toMatch(/O destino diz para onde vai o conserto; não define escopo nem agenda/);
+        expect(m).toMatch(/Os abertos sem a mentira de hoje ele \*\*avisa\*\*, sem reprovar/);
+        expect(m).toMatch(/registre o furo no plano \(na carta da sessão\)/);
+        // as frases velhas
+        expect(m).not.toContain("| achou um problema | `record_system_finding` | CORRECAO sem reprodução; id duplicado; saída sem justificativa |");
+        expect(m).not.toContain("Se você for escolher no que trabalhar, escolha daqui");
+        expect(m).not.toContain("Mudou → `record_system_finding` do tipo CONFORMIDADE, com padrão, versão e item afetado.");
+        expect(m).not.toContain("pare, registre o achado, e leve ao pesquisador");
+    });
+
+    it("DIRECAO §11 ganha a nota datada e segue como foi escrito", () => {
+        const d = plano(ler("maintenance", "DIRECAO_ferramenta_que_veste_metodos.md"));
+        const original = "que é **escopo**, e o pesquisador já decidiu que escopo não é achado (§9). Sobram **12**.";
+        const nota = "**Nota de 08/11/2026 (sessão P):** o destino não define escopo.";
+        expect(d).toContain(original); // histórico: não reescrito
+        expect(d).toContain(nota);
+        expect(d.indexOf(nota)).toBeGreaterThan(d.indexOf(original));
+        expect(d).toMatch(/se um achado é defeito decide o teste do §9/);
+    });
+
+    it("PASSAGEM: o bloco do DEBT-110 abre com a nota de que está superado", () => {
+        const p = plano(ler("maintenance", "PASSAGEM.md"));
+        const nota = "**Nota de 08/11/2026 (sessão P):** este bloco está superado. O `DEBT-110` foi RECUSADO em 05/11/2026";
+        const velho = "Não registre de novo: está no backlog (`ABERTO`, destino `AGENTE_SKILL`).";
+        expect(p).toContain(nota);
+        expect(p.indexOf(nota)).toBeLessThan(p.indexOf(velho));
+        // e o backlog confirma o que a nota diz
+        expect(SystemDebtService.read(REPO)!.findings.find((x) => x.id === "DEBT-110")!.status).toBe("RECUSADO");
+    });
+
+    it("nenhum outro agente manda registrar achado no backlog", () => {
+        for (const a of ["analyst", "designer", "extractor", "librarian", "reader", "scout", "screener"]) {
+            const t = ler("agents", `${a}.md`);
+            expect(t, a).not.toMatch(/record_system_finding|system_debt|METODOLOGIA_NOVA/);
+        }
+    });
+});
