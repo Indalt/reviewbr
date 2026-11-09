@@ -129,7 +129,7 @@ para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cad
       responde"; correção dele: "os objetivos do projeto de pesquisa. Não precisa fazer novas definições para uma
       metodologia específica já que temos a diretriz para todas".
   - **Direção da manutenção (08/11, precisada em 09/11): onde estamos e para onde vamos.** "Direção" no sentido
-    de rumo. Redação do acompanhamento a partir da explicação dele, a conferir.
+    de rumo. Redação do acompanhamento a partir da explicação dele, conferida por ele em 09/11 ("ok").
     - Onde estamos: a grande abertura de compreensão está feita. A natureza do ReviewBR que saiu dela está nas
       diretrizes registradas e não muda. Ela deixou muitas frentes de trabalho abertas, no plano e no backlog.
     - Para onde vamos: para a finalização dessas frentes de trabalho.
