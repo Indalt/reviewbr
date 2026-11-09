@@ -140,6 +140,24 @@ para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cad
       trabalho não serão assim para as próximas manutenções. uma das funções da manutenção é ter clareza, limpeza
       e redução ao necessário após a grande abertura de compreensão que fizemos para que as tarefas de manutenção
       fiquem simples e específicas para as funções do reviewbr com abertura de sessões com começo meio e fim".
+  - **D04 coberta; D05, D10 e D16 fora da M (08/11).**
+    - A D04 (âncora científica de cada metodologia e isenção da ferramenta: o sistema não assume cultura
+      epistemológica além do que o método exige) está coberta e não volta à discussão. Não contradiz a A2, porque
+      as duas tratam de camadas diferentes (A3): os fundamentos na filosofia da ciência (A2) são do método da
+      própria ferramenta; a D04 trata da metodologia do projeto, e ali o princípio de 08/11 já diz o mesmo —
+      segue-se o que o método pede, e não se pergunta nada além do protocolo dele.
+    - Consequência: a M leva a D04 entre o "já decidido", sem pergunta.
+    - A M não leva ao Vicente a D05 ("assimilada completa"), a D10 ("o rigor que eles pedem") nem a D16 ("validada
+      cientificamente"), salvo se o texto dela tocar nesses pontos; aí leva a redação proposta da lista antes de
+      usá-la.
+    - Origem, nas palavras dele: "D04, sim, mas só para registrar que já está coberta. Sem abrir discussão nova.
+      Não há contradição com a A2, porque são camadas diferentes"; "D05, D10 e D16, não. A M só as leva a você se
+      o texto dela tocar nesses pontos".
+  - **Página única depois da M (08/11).** Depois da M e antes da V, o acompanhamento reescreve numa página só as
+    sessões que faltam (V, 3, 4, 5, 6, 7+), uma função do ReviewBR por sessão: a sessão que hoje junta funções
+    diferentes se divide (as 3, 4 e 5 juntam de duas a quatro; a 4, por exemplo, log de busca, saturação e
+    dedup). O resto do plano vira histórico, e cada sessão passa a ler só essa página. Origem: proposta do
+    acompanhamento, aprovada por ele com "Sim, uma função por sessão" (08/11).
 
 ## Contexto que desfaz ambiguidades: o sistema mudou DURANTE a troca de computador
 
@@ -189,7 +207,8 @@ conferida pelo acompanhamento em 08/11: suíte 440/440 em 37 arquivos, audit vá
 474/474 em 38 arquivos, audit válido, nenhum aberto com METODOLOGIA_NOVA, e a porta conferida à parte, pelo dist,
 numa cópia do backlog (8 casos). **Próxima: M, com o prompt na seção dela; depois, o Vicente decide as 36
 divergências do PRISMA-S no acompanhamento, e a V as aplica.** As 36 divergências do PRISMA-S (`sessao_2c/divergencias_prisma_s.md`) esperam a M, e a M responde às
-três perguntas da 2c (decisões de 08/11).
+três perguntas da 2c (decisões de 08/11). Depois da M e antes da V, o acompanhamento reescreve numa página só as
+sessões que faltam, uma função por sessão (decisão de 08/11, "Página única depois da M").
 
 A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
 não bloqueiam a M:
@@ -1372,8 +1391,9 @@ Próxima sessão: M.
 
 ## Sessão M — prompt de abertura
 
-Preparado no chat de acompanhamento em 08/11/2026, depois da conferência da P. Cole num chat novo, ajuste o seletor
-pela primeira linha e apague-a antes de enviar.
+Preparado no chat de acompanhamento em 08/11/2026, depois da conferência da P, e ajustado no mesmo dia pelas
+respostas do Vicente sobre D04, D05, D10 e D16. Cole num chat novo, ajuste o seletor pela primeira linha e apague-a
+antes de enviar.
 
 ```
 >>> APAGUE ESTA LINHA ANTES DE ENVIAR — seletor: Opus 5.5 · esforço max <<<
@@ -1411,6 +1431,9 @@ Já decidido — entra no documento como está, em forma precisa e citando a ori
   como espelho do seu modo de trabalhar; o PRISMA não é proibido.
 - O D07: todo projeto declara onde e como usou IA e, quando exigido, tudo o que se pede; o RAISE não é norma
   canônica; o mapa de uso de IA das tools é política do próprio sistema para as suas ferramentas.
+- A D04, coberta (08/11): a âncora científica e a isenção da ferramenta tratam da metodologia do projeto, onde o
+  princípio de 08/11 já diz o mesmo; os fundamentos na filosofia da ciência (A2) são do método da própria
+  ferramenta. São camadas diferentes (A3): não há contradição, e não se abre discussão sobre ela.
 
 Para decidir aqui, com o Vicente, em forma precisa (item 4 do "Como trabalhar"):
 1. As três perguntas da 2c (decisão de 08/11):
@@ -1420,7 +1443,8 @@ Para decidir aqui, com o Vicente, em forma precisa (item 4 do "Como trabalhar"):
        invariantes RV, e não só contra os campos da trilha;
    (c) se o gate RV-11 passa a exigir leitura documentada quando um mapeamento muda.
 2. D01, D09 e D17, que pesam aqui e ainda estão a conferir: leve a ele a redação proposta de cada um, na lista de
-   decisões, antes de usá-los.
+   decisões, antes de usá-los. D05, D10 e D16 não são desta sessão (08/11): só vão a ele se o texto da M tocar
+   nesses pontos, com a redação proposta da lista, antes de usá-la.
 3. Os princípios que saíram do backlog em 05/11: o alvo da triagem por IA — auditabilidade e variabilidade medida,
    não determinismo (DEBT-101, D01); o modo de agir — o que o sistema garante, o que torna visível e o que não
    protege (DEBT-132, maintainer.md); e a auditoria de protocolo por método (DEBT-134).
