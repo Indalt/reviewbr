@@ -128,18 +128,27 @@ para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cad
       objetivos. se não vai fazer avaliação crítica preenche com não. se o método não tem em seu protocolo não
       responde"; correção dele: "os objetivos do projeto de pesquisa. Não precisa fazer novas definições para uma
       metodologia específica já que temos a diretriz para todas".
-  - **Como a manutenção segue (08/11).** Redação do acompanhamento, a conferir pelo Vicente no chat novo.
-    - A abertura de compreensão de outubro e novembro, que mudou a natureza do ReviewBR e abriu muitas frentes,
-      não se repete nas próximas manutenções.
-    - A manutenção passa a buscar clareza, limpeza e redução ao necessário.
-    - Cada sessão faz uma tarefa simples e específica a uma função do ReviewBR, com começo, meio e fim, numa
-      janela quando possível.
-    - Não se abre frente nova sem que um defeito (regra do backlog) ou uma decisão do Vicente a peça.
-    - Das decisões D01 a D41, vai a cada sessão só a que pesa nela.
-    - Origem, nas palavras dele: "além de mudar a natureza do reviewbr que nos levou a abrir muitas frentes de
-      trabalho não serão assim para as próximas manutenções. uma das funções da manutenção é ter clareza, limpeza
-      e redução ao necessário após a grande abertura de compreensão que fizemos para que as tarefas de manutenção
-      fiquem simples e específicas para as funções do reviewbr com abertura de sessões com começo meio e fim".
+  - **Direção da manutenção (08/11, precisada em 09/11): onde estamos e para onde vamos.** "Direção" no sentido
+    de rumo. Redação do acompanhamento a partir da explicação dele, a conferir.
+    - Onde estamos: a grande abertura de compreensão está feita. A natureza do ReviewBR que saiu dela está nas
+      diretrizes registradas e não muda. Ela deixou muitas frentes de trabalho abertas, no plano e no backlog.
+    - Para onde vamos: para a finalização dessas frentes de trabalho.
+    - Como:
+      - frente nova só abre se um defeito (regra do backlog) ou uma decisão do Vicente a pedir;
+      - cada sessão faz uma tarefa simples e específica de uma função do ReviewBR, com começo, meio e fim, numa
+        janela quando possível;
+      - das decisões D01 a D41, vai a cada sessão só a que pesa nela;
+      - uma das funções da manutenção é dar clareza, limpeza e redução ao necessário.
+    - Origem, nas palavras dele (08/11): "além de mudar a natureza do reviewbr que nos levou a abrir muitas frentes
+      de trabalho não serão assim para as próximas manutenções. uma das funções da manutenção é ter clareza,
+      limpeza e redução ao necessário após a grande abertura de compreensão que fizemos para que as tarefas de
+      manutenção fiquem simples e específicas para as funções do reviewbr com abertura de sessões com começo meio
+      e fim". Correções dele no chat novo: "A função do reviewbr continua a ser apoio para pesquisa com atividade
+      principal especializado em metodologias cientificas podendo assimilar as que vão surgindo. Isso não mudou e
+      temos registros da diretriz. Também não deixa de ser uma aplicação para condução de projeto de pesquisa que
+      indica metodologia mais adequada para o projeto. Ou seja, nada da natureza nova muda" (08/11); "Direção foi
+      escrito com o sentido topológico, ok? onde estamos e para onde vamos. E vamos para a finalização das frentes
+      de trabalho" (09/11).
   - **D04 coberta; D05, D10 e D16 fora da M (08/11).**
     - A D04 (âncora científica de cada metodologia e isenção da ferramenta: o sistema não assume cultura
       epistemológica além do que o método exige) está coberta e não volta à discussão. Não contradiz a A2, porque
