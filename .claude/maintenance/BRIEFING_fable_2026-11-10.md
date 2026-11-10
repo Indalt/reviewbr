@@ -38,6 +38,10 @@ metodologias.
 4. **Avaliação e limpeza dos trabalhos que ainda estão por fazer.**
 5. **Uma lógica simples de manutenção e de assimilação de metodologias novas.**
 
+**Como avaliar (acrescentado por ele em 10/11):** as avaliações das tarefas 2 a 4 são feitas com reflexão
+crítica — não como listagem nem como aceite do que está registrado. Origem: "as avaliações devem ser feitas com
+reflexões críticas".
+
 Onde está o material (ponteiros, não leitura): `PLANO_sessoes_2026-10-29.md` (tabela de sessões, linha "Estado",
 decisões de 31/10 a 09/11); `triagem_backlog_2026-11-05/TRIAGEM.md` (proposta por achado); `system_debt.json` via
 `node .claude/maintenance/sessao_2a/le_audit.mjs`; `revisao_decisoes_2026-10-31/lista_decisoes.md` (D01–D41);
