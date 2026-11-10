@@ -167,6 +167,12 @@ para B1, B2 e D14, a redação precisa no achado. Aqui fica só o assunto de cad
     diferentes se divide (as 3, 4 e 5 juntam de duas a quatro; a 4, por exemplo, log de busca, saturação e
     dedup). O resto do plano vira histórico, e cada sessão passa a ler só essa página. Origem: proposta do
     acompanhamento, aprovada por ele com "Sim, uma função por sessão" (08/11).
+  - **Anotação de 10/11 — sessão de leitura e organização (Fable 5.1, esforço máximo).** As ideias dele,
+    organizadas sem avaliação nem leitura do projeto, estão em `BRIEFING_fable_2026-11-10.md`: a trajetória do
+    ReviewBR (revisão sistemática automatizada → apoio à pesquisa → apoio à pesquisa especializado em metodologias
+    validadas, com assimilação de novas), as cinco tarefas pedidas (busca no catálogo da Anthropic; análise dos
+    trabalhos; limpeza do feito; avaliação e limpeza do que falta; lógica simples de manutenção e assimilação) e a
+    ideia de um sistema plugável que ajude a formular perguntas. Não decide a posição em relação à M.
 
 ## Contexto que desfaz ambiguidades: o sistema mudou DURANTE a troca de computador
 
@@ -217,7 +223,9 @@ conferida pelo acompanhamento em 08/11: suíte 440/440 em 37 arquivos, audit vá
 numa cópia do backlog (8 casos). **Próxima: M, com o prompt na seção dela; depois, o Vicente decide as 36
 divergências do PRISMA-S no acompanhamento, e a V as aplica.** As 36 divergências do PRISMA-S (`sessao_2c/divergencias_prisma_s.md`) esperam a M, e a M responde às
 três perguntas da 2c (decisões de 08/11). Depois da M e antes da V, o acompanhamento reescreve numa página só as
-sessões que faltam, uma função por sessão (decisão de 08/11, "Página única depois da M").
+sessões que faltam, uma função por sessão (decisão de 08/11, "Página única depois da M"). Em 10/11 o Vicente
+anotou uma sessão de leitura e organização com o Fable 5.1 (`BRIEFING_fable_2026-11-10.md`); a posição dela em
+relação à M, ele define nela.
 
 A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
 não bloqueiam a M:
