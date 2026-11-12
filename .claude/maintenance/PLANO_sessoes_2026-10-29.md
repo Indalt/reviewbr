@@ -221,14 +221,17 @@ conferida pelo acompanhamento em 08/11: suíte 440/440 em 37 arquivos, audit vá
 9/16 nos dois métodos, PRISMA-ScR do escopo 14/22 e valid. A P fechou em 08/11 e foi conferida no mesmo dia: suíte
 474/474 em 38 arquivos, audit válido, nenhum aberto com METODOLOGIA_NOVA, e a porta conferida à parte, pelo dist,
 numa cópia do backlog (8 casos). **Próxima: M, com o prompt na seção dela; depois, o Vicente decide as 36
-divergências do PRISMA-S no acompanhamento, e a V as aplica.** As 36 divergências do PRISMA-S (`sessao_2c/divergencias_prisma_s.md`) esperam a M, e a M responde às
+divergências do PRISMA-S no acompanhamento, e a V as aplica.** (Superado em 12/11: ver o fim deste parágrafo.) As 36 divergências do PRISMA-S (`sessao_2c/divergencias_prisma_s.md`) esperam a M, e a M responde às
 três perguntas da 2c (decisões de 08/11). Depois da M e antes da V, o acompanhamento reescreve numa página só as
 sessões que faltam, uma função por sessão (decisão de 08/11, "Página única depois da M"). Em 10/11 o Vicente
 anotou uma sessão de leitura e organização com o Fable 5.1 (`BRIEFING_fable_2026-11-10.md`); a posição dela em
 relação à M, ele define nela. Essa sessão começou em 11/11, com o Fable 5.2 em esforço high (correção dele no
 briefing), e grava em `ORGANIZACAO_2026-11-11.md`: o que foi feito, os 32 defeitos distintos que faltam (em oito
 sessões, uma função do ReviewBR em cada) e as propostas de limpeza. Nada ali está decidido: as propostas esperam
-o Vicente na parte 10 do arquivo.
+o Vicente na parte 10 do arquivo. Em 12/11 ele decidiu que as sessões de conserto vêm antes da M e mandou gravar
+as 11 saídas do backlog (dez duplicatas fundidas e o DEBT-102 resolvido: os abertos passaram de 43 a 32). **A M
+não é mais a próxima sessão.** A ordem das sessões que faltam, a M reformulada e a página única estão propostas na
+parte 5 do `ORGANIZACAO_2026-11-11.md` e esperam a decisão dele (parte 10.2 do mesmo arquivo).
 
 A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
 não bloqueiam a M:
@@ -1500,4 +1503,28 @@ próxima janela retoma pela carta.
 
 Fechamento: escreva a carta da sessão M no plano, logo abaixo deste prompt (modelo "Carta de sessão"), commit e
 push, e responda ao Vicente em até 5 linhas, com a decisão primeiro. A 75% estimados não comece passo novo.
+```
+
+## Sessão de organização — leitura, análise e limpeza — 11 e 12/11/2026
+
+```
+Objetivo: ler o estado da manutenção, dizer o que foi feito e o que falta de verdade, limpar o que já estava
+  decidido e propor a ordem do que resta (BRIEFING_fable_2026-11-10.md).
+Entrada: o briefing de 10/11, com a correção do Vicente (Fable 5.2, high); teto de 50% da cota semanal para a
+  sessão inteira.
+Saída verificável: ORGANIZACAO_2026-11-11.md com as partes 1 a 12; audit válido; abertos menor ou igual a 43.
+Modelo e esforço: Fable 5.2 · high · sem subagente nem workflow.
+Tokens na abertura: medidor global em 96% da semana (soma de 7 dias corridos; não enxerga a virada da semana)
+  · projeção da sessão: 62 c, cerca de 27% da semana (unidade c do medidor de ~/.claude/uso/).
+--- fechamento ---
+Tokens no fechamento: 11,5 c, cerca de 5,1% da semana e 30% da janela de 5 h (medido na transcrição).
+Feito: dez duplicatas fundidas (DEBT-012, 036, 039, 040, 054, 063, 085, 090, 091, 105) e DEBT-102 RESOLVIDO;
+  abertos de 43 para 32. Nenhum código, agente, skill ou manifest alterado.
+Verificação: suíte 474/474 em 38 arquivos; audit_system_debt válido (32 abertos, 0 em curso, 80 resolvidos,
+  41 recusados); sessao_p/compara_backlog.mjs mostra só status e resolution alterados, e só nesses 11.
+Commit: o que traz esta carta.
+Decisões do Vicente registradas: os consertos vêm antes da M; gravar as 11 saídas do backlog
+  (ORGANIZACAO_2026-11-11.md, parte 10.1).
+Pendente: as seis decisões da parte 10.2 do mesmo arquivo. A próxima sessão é a que ele definir pela fila
+  proposta na parte 5.4 (a primeira da proposta é a A: texto completo e leitura, com o DEBT-089).
 ```

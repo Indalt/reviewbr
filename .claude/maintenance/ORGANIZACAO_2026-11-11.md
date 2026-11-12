@@ -4,23 +4,26 @@
 > `BRIEFING_fable_2026-11-10.md` (Fable 5.2, esforço high). Diz o que foi feito, o que falta de verdade e o que
 > sai da fila. É escrito bloco a bloco; cada bloco fecha com commit.
 >
-> **Estado: blocos 1 e 2 de 3 feitos (11/11).** Falta o bloco 3: as decisões do Vicente (parte 10) e a limpeza
-> que ele aprovar. Nada aqui está decidido: as propostas esperam o Vicente na parte 10.
+> **Estado (12/11): leitura, análise e limpeza do backlog feitas.** Duas decisões do Vicente estão gravadas na
+> parte 10.1. O resto é proposta e espera as seis decisões da parte 10.2.
 >
 > **Regras desta sessão.** Não cria achado, sessão nem frente. O número de achados abertos só pode cair. O que
 > aparecer de passagem vira uma linha na parte 11, sem avaliação.
 
 ## 1. Resumo
 
-- **A fila não é infinita.** São 32 defeitos distintos: 17 consertos de código, 13 correções de texto e 2
-  mapeamentos de norma. Os 43 abertos do backlog incluem 10 duplicatas e 1 já consertado.
+- **A fila não é infinita.** São 32 defeitos distintos: 18 consertos de código, 12 correções de texto e 2
+  mapeamentos de norma. O backlog mostrava 43 abertos por causa de 10 duplicatas e de 1 já consertado; em 12/11
+  passou a 32 (parte 6.1).
 - **O backlog parou de crescer.** Achados registrados por mês: 102 em setembro, 50 em outubro, 1 em novembro. A
   regra do backlog (05/11) e a porta da sessão P (08/11) funcionam.
 - **O que cresce é a camada em volta dos consertos**: rodadas de triagem não aplicadas, perguntas empurradas para
   a sessão M e o balde "7+" (parte 4).
-- **Dos 32 defeitos, 26 não dependem da sessão M.** Hoje a M (duas janelas, sem tocar em código) está na frente
-  de todos eles.
-- **Proposta:** oito sessões, uma função do ReviewBR em cada, com todo defeito aberto numa delas (parte 5).
+- **Nenhum dos 32 defeitos depende da sessão M.** As definições que o mapeamento das normas pede cabem na
+  abertura da sessão que as usa (parte 5.2).
+- **Decidido em 12/11:** os consertos vêm antes da M, e as 11 saídas do backlog foram gravadas (parte 10.1).
+- **Proposto, a decidir:** oito sessões de conserto, uma função do ReviewBR em cada; depois a M, reformulada; depois
+  a fase de testes (partes 5.4 e 10.2).
 
 ## 2. A trajetória do briefing confere com o que está gravado
 
@@ -47,8 +50,8 @@ Três pontos em que o registro é mais preciso que o briefing:
 
 ## 3. O que foi feito
 
-- **Backlog:** 153 achados registrados. 79 resolvidos, 31 recusados, 43 abertos (41 abertos e 2 em curso).
-  Audit válido.
+- **Backlog em 11/11, antes da limpeza da parte 6.1:** 153 achados registrados. 79 resolvidos, 31 recusados,
+  43 abertos (41 abertos e 2 em curso). Audit válido.
 - **Sessões fechadas de 29/10 a 08/11:** 0 (troca de computador), 1 (escopo e PRISMA-S), 2a (declarações por
   método), 2b (itens condicionais), 2c (conferência do mapeamento e leitura documentada), P (porta do backlog).
   Suíte em 474 de 474 testes, 38 arquivos.
@@ -79,48 +82,164 @@ Quatro mecanismos, todos fora do backlog:
 Conferi no código de hoje cinco dos defeitos de maior dano (DEBT-089, 133, 135, 139 e 141): os cinco seguem
 vivos, nas linhas que a triagem de 05/11 aponta.
 
-## 5. O que falta de verdade — 32 defeitos em oito sessões
+## 5. O que falta — as oito sessões analisadas pelos critérios (12/11)
 
-Critério de ordem: o da DIRECAO §10 — o que mais prejudica uma pesquisa conduzida hoje vem primeiro (perder
-dado elegível, publicar algo falso, decidir errado). "(+NNN)" é duplicata que se funde no achado (parte 6).
-Tipo do conserto: **C** código com teste; **T** texto (declarar a verdade); **M** mapeamento contra a norma.
+Em 12/11 o Vicente pediu que as oito sessões propostas fossem analisadas pelos critérios desta sessão, incluindo
+a ideia de página única, e que se visse se a M e as sessões programadas depois dela precisam ser reformuladas.
+Os critérios são três perguntas por achado:
 
-| # | função do ReviewBR | achados | tipo | depende da M? |
+1. O sistema mente hoje nisto?
+2. Isso pesa numa pesquisa conduzida hoje (perder dado elegível, publicar algo falso, decidir errado)?
+3. Há conserto menor — declarar a verdade em vez de construir?
+
+Vereditos: **FAZER** (código com teste), **DECLARAR** (texto ou dado), **MAPEAR** (leitura da norma). "(+NNN)" é
+duplicata já fundida no achado (parte 6.1).
+
+### 5.1 Achado por achado
+
+**A — Texto completo e leitura**
+
+| achado | o que mente hoje | pesa numa pesquisa? | conserto | veredito |
 |---|---|---|---|---|
-| A | Texto completo e leitura | 089 · 062 (+090) · 031 | C C C | não |
-| B | Registro da busca | 056 (+091) · 139 (+085) · 087 · 093 · 030 · 058 · 077 | C C C C C T T | não |
-| C | Triagem e deduplicação | 021 · 025 · 112 · 026 | C C C T | não |
-| D | Funil e gates | 138 (+039, +040) · 071 (+105) · 003 (+036) · 002 · 066 (+063) | C C T T T | não |
-| E | Trava do protocolo | 018 · 133 · 042 · 060 | C C C T | não |
-| F | Ferramentas da manutenção | 141 · 016 · 153 | C T T | não |
-| G | Papéis e métodos fora do esqueleto PRISMA | 137 · 151 · 135 · 008 | T T T T | sim (decisão de 05/11) |
-| H | Mapeamento das normas | 045 (+012) · 014 (+054) · as 36 divergências do PRISMA-S | M M | sim (as três perguntas da 2c) |
+| 089 | `retrieve_fulltexts` regrava o dataset de entrada a cada lote de 10 (`index.ts:1228`) | sim: se o processo cair, os incluídos ainda não processados somem | gravar em arquivo próprio, ou só ao final | FAZER — o primeiro de todos |
+| 062 (+090) | o "sim explícito" do pesquisador para a rota BYOS só existe na descrição da tool | sim, na responsabilidade do pesquisador; não nos números | parâmetro de consentimento, gravado no log | FAZER, pequeno; sai se a rota for retirada (10.2, item 6) |
+| 031 | a skill de leitura exige citação com página, e o `rag_query` não devolve página | sim: o agente é obrigado a citar um dado que não tem | menor: citar estudo e trecho literal. Decidido em 29/10: guardar a página na extração | FAZER, como decidido |
 
-Observações por linha, só onde há algo a dizer:
+**B — Registro da busca**
 
-- **A.** O 089 é o único defeito aberto que pode apagar dado de um projeto em andamento. O DEBT-102 fecha
-  aqui como RESOLVIDO (a guarda contra texto vazio já existe; o OCR é funcionalidade, não defeito).
-- **B.** O 058 (snowball "para trás" anunciado e nunca executado) e o 077 se consertam dizendo o que a tool faz,
-  sem construir o que falta. O 030 a sessão confere: registrar por código ou declarar.
-- **D.** É a antiga sessão 3. Os três de texto são uma passada só nos dois manifests e na skill de gates.
-- **F.** O 141 vem antes de qualquer atualização do catálogo: hoje `absorb_methodology` com `atualizar=true`
-  apaga os campos não reenviados.
-- **G.** É a antiga sessão 6, reduzida aos quatro textos. As correções são de descrição: cada skill e cada
-  agente passa a dizer o que cobre hoje.
-- **H.** Junta o remapeamento do PRISMA 2020 (hoje declarado "deslocado", o que é verdade) com a antiga sessão
-  V. É o único trabalho que pede leitura de norma e decisão item a item do Vicente.
+| achado | o que mente hoje | pesa numa pesquisa? | conserto | veredito |
+|---|---|---|---|---|
+| 056 (+091) | o log "obrigatório" do PRISMA-S é um CSV digitado pelo agente; nenhum código o grava nem confere | sim: o log publicado pode não ser o que foi executado | decidido em 29/10: o código grava | FAZER |
+| 139 (+085) | com caminho absoluto, o log e o relatório somem e a tool responde sucesso | sim | duas linhas (`resolveProjectDir`) e um teste | FAZER, junto do 056 |
+| 087 | o snowball devolve registros e não os grava; o funil conta "outros métodos" como zero | sim: número publicado errado | gravar em `01_raw/other_records.json` | FAZER |
+| 093 | três tools de busca só gravam em `01_raw` se o projeto estiver no SQLite; senão, calam | sim: registro perdido sem aviso | tirar a condição ou avisar | FAZER |
+| 058 | o `librarian.md` manda "puxar referências"; a tool só busca citações | pouco | uma frase no agente e a direção na saída | DECLARAR |
+| 077 | `heal_repositories` diz "todos ativos e operantes" sem testar nenhum | pouco | trocar a frase | DECLARAR |
+
+**C — Triagem, deduplicação e tools em lote**
+
+| achado | o que mente hoje | pesa numa pesquisa? | conserto | veredito |
+|---|---|---|---|---|
+| 021 | a skill manda decidir a parada pela saturação; o relatório lê um campo que nenhuma tool grava | sim: decide-se parar sobre um universo vazio | decidido em 29/10: ler a triagem do disco | FAZER |
+| 025 | a skill promete 4 níveis de deduplicação; o código faz 2 e erra em DOI com prefixo e em acento | sim: muda número publicado | decidido em 29/10 | FAZER |
+| 112 | a segunda corrida de triagem apaga a primeira sem registro | sim: decisão de inclusão sem trilha | registrar a substituição antes de sobrescrever | FAZER |
+| 030 | quatro tools em lote, duas delas decidindo por IA, não deixam rastro | sim: o uso de IA do projeto não fica declarável (D07) | chamar o registro que já existe | FAZER |
+| 026 | exclusão "por motivo padronizado" consta como atendida; os códigos EX não existem no código | sim, no checklist | declarar `[NÃO COBERTO]` por método | DECLARAR |
+
+**D — Funil e gates**
+
+| achado | o que mente hoje | pesa numa pesquisa? | conserto | veredito |
+|---|---|---|---|---|
+| 138 (+039, +040) | os manifests dizem que dois gates barram; o código só avisa | sim: funil divergente chega à exportação | decidido em 29/10: a exportação recalcula e bloqueia | FAZER |
+| 071 (+105) | a validação do funil é circular, e a checagem cruzada não impede a gravação | sim | a checagem cruzada entra no `valid`; teste | FAZER |
+| 003 (+036) | os manifests declaram 8 invariantes sempre ativos e só 4 têm gate; o validador do próprio sistema reprova os dois métodos | não nos números; sim no que o método afirma de si | cada invariante aponta o seu gate ou se declara conduta | DECLARAR |
+| 002 | a skill de gates promete verificação determinística para RV-03, RV-06 e RV-07, que são conduta | idem | declarar | DECLARAR |
+| 066 (+063) | a skill promete conferência de completude de subitem, que não existe | idem | declarar | DECLARAR |
+
+**E — Trava do protocolo**
+
+| achado | o que mente hoje | pesa numa pesquisa? | conserto | veredito |
+|---|---|---|---|---|
+| 018 | em projeto sem estado, trocar `[DRAFT]` por `[LOCKED]` no markdown libera a busca | sim: o manuscrito afirma protocolo travado que nunca foi aprovado | decidido em 29/10: o estado é a fonte única | FAZER |
+| 133 | a aprovação grava `[LOCKED]` no arquivo antes do estado; se o estado falhar, as duas fontes divergem | sim, enquanto o 018 existir | inverter a ordem | FAZER, no mesmo conserto do 018 |
+| 042 | replanejar no caminho de um projeto travado zera o protocolo e as decisões | sim: destrói protocolo aprovado | a guarda confere o caminho | FAZER |
+| 060 | "não gere scripts" e "não busque" valem só em prosa; o frontmatter dos agentes dá Bash, Write e busca | pouco nos números; é trava que depende de convencer o agente | tirar do frontmatter o que o papel não usa, ou dizer que é conduta | DECLARAR |
+
+**F — Ferramentas da manutenção**
+
+| achado | o que mente hoje | pesa numa pesquisa? | conserto | veredito |
+|---|---|---|---|---|
+| 141 | `absorb_methodology` com `atualizar=true` responde ok e apaga campos | não numa pesquisa; sim em toda atualização do catálogo | mesclar antes de validar, como o backlog já faz | FAZER |
+| 016 | `validate_system_change` diz que valida a alteração e só confere a prosa da proposta | não | o aviso decidido em 29/10 | DECLARAR |
+| 153 | o catálogo diz que o RAISE é obrigatório; o texto oficial diz que as organizações apoiam os objetivos dele | sim, se um projeto consultar o catálogo sobre uso de IA | corrigir a entrada, depois do 141 | DECLARAR |
+
+**G — Textos que prendem o sistema à revisão sistemática**
+
+| achado | o que mente hoje | pesa numa pesquisa? | conserto | veredito |
+|---|---|---|---|---|
+| 135 | o sistema mostra "Registro: OBRIGATÓRIO (PROSPERO)" a toda revisão sistemática; nenhuma norma assimilada exige | sim: exige do pesquisador o que a metodologia não pede | tirar o OBRIGATÓRIO; campo de declaração no protocolo | FAZER, pequeno |
+| 137 | skills de nome genérico dizem servir qualquer método; o conteúdo é a trilha do `prisma-sr` | pouco | a descrição diz o que cobre hoje | DECLARAR |
+| 151 | o escopo herda rótulos do PICOS, a exclusão por desfecho e a certeza da evidência | sim, na triagem de um projeto de escopo | texto e manifest na camada do escopo | DECLARAR |
+| 008 | textos amarram GRADE e CERQual à metanálise, contra a fonte | sim, no relato | corrigir os quatro textos | DECLARAR |
+
+**H — Mapeamento das normas**
+
+| achado | o que mente hoje | pesa numa pesquisa? | conserto | veredito |
+|---|---|---|---|---|
+| 045 (+012) | a spec que o `analyst` lê numera errado seis itens do PRISMA 2020; o mapeamento já os declara "deslocado" | sim: o checklist do manuscrito pode citar o item errado | corrigir a spec e os seis ponteiros | MAPEAR |
+| 014 (+054) | 21 subitens do PRISMA 2020 nunca foram mapeados, e a skill diz que órfão impede a finalização | sim: toda revisão `prisma-sr` para na F8 | menor e imediato: declarar os 21 `[NÃO COBERTO]` como lacuna do sistema; completo: mapear | DECLARAR já, na sessão D; MAPEAR aqui |
+| 36 divergências do PRISMA-S | — | — | uma definição e 21 decisões (parte 7.2) | decisão do Vicente |
+
+**O que a análise mudou na proposta do bloco 1:**
+
+- **Nenhum achado sai.** Os 32 mentem hoje. Cinco foram conferidos no código nesta sessão; os outros trazem a
+  linha conferida na triagem de 05/11.
+- **A sessão G não depende da M.** Os quatro consertos dela são de texto. O que dependia da M era a arquitetura
+  da antiga sessão 6, que é construção, não defeito (5.2).
+- **O 030 passou da B para a C:** as quatro tools são de triagem e extração em lote, não de busca.
+- **A declaração do 014 sobe para a D:** é o que hoje faz toda revisão sistemática parar na F8, e se conserta
+  declarando.
+- **Em 12 dos 32 o conserto menor basta** (DECLARAR). Em 3 havia conserto menor e o Vicente já decidiu
+  construir (021, 031 e 056, em 29/10): vale a decisão.
+
+### 5.2 A M e as sessões programadas, reformuladas
+
+| no plano de hoje | passa a ser | por quê |
+|---|---|---|
+| **M** — duas janelas, antes de tudo | **a última antes dos testes**, numa janela. Redige o `METODO_ReviewBR.md` com o que já está decidido (A1 a A9, o princípio de 08/11, D04, D07, D14) e leva ao Vicente só as escolhas dele: os fundamentos na filosofia da ciência, os três princípios vindos do backlog, a posição sobre o RAISE 3, o critério de credibilidade, D01 e D09 | Descrever o método antes dos consertos obriga o texto a ressalvar cada defeito aberto (é a armadilha 3 do próprio prompt da M). Depois deles, o texto descreve o que o sistema faz. |
+| as três perguntas da 2c, dentro da M | abertura da sessão H | São definições sobre mapeamento; quem as usa é a H. |
+| **V** — aplicar as divergências do PRISMA-S | dentro da H | Mesmo trabalho, na mesma norma. |
+| **3** — funil e gates | D | Igual, mais os três textos que estavam no "7+" e a declaração do 014. |
+| **4** — busca e triagem | B e C | São duas funções. |
+| **5** — leitura e governança | A, E e F | São três funções. |
+| **6** — sair do esqueleto PRISMA, duas janelas | G, com quatro textos. A parte de arquitetura (agentes descritos por papel; cada etapa do manifest diz que skill a executa) sai da fila | É construção, não defeito. Passa a ser necessária quando a primeira metodologia nova for assimilada, e entra como parte dessa assimilação. A D17 vai com a G. |
+| **7+** | deixa de existir | Os defeitos dele estão em A a H; assimilação e funcionalidades ficam para quando o Vicente pedir. |
+| fase de testes | igual, depois da M | — |
+
+### 5.3 A página única, pelos mesmos critérios
+
+- **O problema que ela resolve existe.** Uma sessão nova lê hoje um plano de 1.500 linhas, e o `maintainer.md`
+  manda ler 13 documentos.
+- **O risco dela também.** O plano chegou a 1.500 linhas por acréscimo. Uma página que liste achados com os
+  seus detalhes repete o backlog e envelhece do mesmo jeito.
+- **O que ela precisa ter é só o que o backlog não tem:** a ordem das sessões, que achados vão em cada uma e
+  as três perguntas. O resto já sai do `audit_system_debt`, que é derivado do dado.
+- **Proposta:** um arquivo próprio, de uma tela, com a tabela da parte 5.4 e nada mais. Decisão e carta não
+  entram nele. Cada linha serve de prompt de abertura da sessão: os achados, "abrir e fechar conferindo" e
+  "aplicar a proposta da triagem de 05/11 para estes achados". Este arquivo fica como a análise que a justifica.
+
+### 5.4 A fila proposta
+
+| ordem | sessão | função do ReviewBR | achados |
+|---|---|---|---|
+| 1 | A | Texto completo e leitura | 089 · 062 · 031 |
+| 2 | B | Registro da busca | 056 · 139 · 087 · 093 · 058 · 077 |
+| 3 | C | Triagem, deduplicação e tools em lote | 021 · 025 · 112 · 030 · 026 |
+| 4 | D | Funil e gates | 138 · 071 · 003 · 002 · 066 · a declaração do 014 |
+| 5 | E | Trava do protocolo | 018 · 133 · 042 · 060 |
+| 6 | F | Ferramentas da manutenção | 141 · 016 · 153 · a rota do `maintainer.md` (parte 8.3) |
+| 7 | G | Textos que prendem o sistema à revisão sistemática | 135 · 137 · 151 · 008 |
+| 8 | H | Mapeamento das normas, com o Vicente | 045 · 014 · as 36 divergências do PRISMA-S |
+| 9 | M | Descrição do método, com o Vicente | — |
+| 10 | — | Fase de testes | — |
+
+A ordem de A a E segue o dano a uma pesquisa de hoje: primeiro o que apaga dado, depois o que muda número
+publicado, depois o que afirma uma trava que não existe. Cada sessão de A a G cabe numa janela de 5 h; a H pode
+pedir duas.
 
 **O que não é fila** (regra do backlog, 05/11): assimilar metodologia validada (JBI, GRADE, CERQual,
-instrumentos de risco de viés), OCR, validação da IA dentro da revisão, trava da escolha de método e a forma de
-abrir o ReviewBR numa IDE. Acontecem quando o Vicente pedir. A fase de testes vem depois das oito sessões, como
-decidido em 27/09.
+instrumentos de risco de viés), OCR, validação da IA dentro da revisão, trava da escolha de método, a forma de
+abrir o ReviewBR numa IDE e a arquitetura da antiga sessão 6. Acontecem quando o Vicente pedir.
 
-## 6. Limpeza proposta
+## 6. Limpeza
 
-### 6.1 Backlog — 43 abertos passam a 32, sem tocar em código
+### 6.1 Backlog — aplicado em 12/11: 43 abertos passaram a 32, sem tocar em código
 
-Onze gravações pela `record_system_finding`. As dez fusões são da triagem de 05/11 (e já estavam na
-reclassificação de 18/10); nenhuma foi contestada nem aplicada.
+Onze gravações pela `record_system_finding`, por decisão do Vicente (parte 10.1). As dez fusões são da triagem
+de 05/11 (e já estavam na reclassificação de 18/10); nenhuma tinha sido contestada nem aplicada.
+
+Conferido depois de gravar: `audit_system_debt` válido, com 32 abertos, nenhum em curso, 80 resolvidos e 41
+recusados; `sessao_p/compara_backlog.mjs` mostra só `status` e `resolution` alterados, e só nesses 11.
 
 | sai | fica em | por quê |
 |---|---|---|
@@ -135,8 +254,9 @@ reclassificação de 18/10); nenhuma foi contestada nem aplicada.
 | DEBT-090 | DEBT-062 | mesma restrição que só existe na descrição da tool |
 | DEBT-102 | RESOLVIDO | a guarda contra texto vazio existe; o OCR vai para "quando o Vicente pedir" |
 
-Cada duplicata sai como RECUSADO, com a resolution apontando o achado que fica. O achado que fica recebe o
-conteúdo quando a sessão dele abrir (a porta exige a "mentira de hoje", que a triagem já propõe para cada um).
+Cada duplicata saiu como RECUSADO, com a resolution apontando o achado que fica e o que a sessão dele precisa
+levar. O achado que fica recebe esse conteúdo quando a sessão dele abrir (a porta exige a "mentira de hoje",
+que a triagem já propõe para cada um).
 
 ### 6.2 Documentos — nada se move nesta sessão
 
@@ -174,14 +294,14 @@ A lista de 31/10 traz 41 decisões gravadas sem precisão, cada uma com uma reda
 | destino | decisões | quantas |
 |---|---|---|
 | já decididas ou cobertas | D04, D07, D14 | 3 |
-| parte curta da M | D01, D09, D17 | 3 |
+| sessão M | D01, D09 | 2 |
 | sessão A | D23, D39 (pergunta 8) | 2 |
 | sessão B | D02, D20, D30 | 3 |
 | sessão C | D19, D24, D35, D37, D39 (pergunta 7) | 5 |
 | sessão D | D29, D36 | 2 |
 | sessão E | D06, D39 (pergunta 9) | 2 |
 | sessão F | D03, D05, D08, D16, D21, D22 | 6 |
-| sessão G | D10, D11, D12, D13, D26 | 5 |
+| sessão G | D10, D11, D12, D13, D17, D26 | 6 |
 | sessão H | D15, D27 | 2 |
 | nenhuma sessão: só se o assunto voltar | D18, D25, D28, D31, D32, D33, D34, D38, D40, D41 | 10 |
 
@@ -238,7 +358,7 @@ Três regras já decididas valem em todos os passos: o que a metodologia torna o
 torna opcional é opcional (08/11); um método não herda de outro o que é próprio dele (D14); pergunta que o
 protocolo do método não tem não é feita ao projeto.
 
-Duas pendências de definição, ambas na parte curta da M: se a leitura documentada confere também o que a
+Duas pendências de definição, ambas para a abertura da sessão H: se a leitura documentada confere também o que a
 ferramenta garante por código, e se o gate RV-11 a exige quando um mapeamento muda.
 
 ### 8.3 Onde o procedimento de hoje pesa mais que o necessário
@@ -304,21 +424,37 @@ Fontes: [política do diretório](https://support.claude.com/en/articles/1314535
 [Scholar Gateway](https://claude.com/connectors/scholar-gateway) ·
 [Bio Research](https://claude.com/plugins/bio-research)
 
-## 10. Decisões para o Vicente — bloco 3
+## 10. Decisões do Vicente
 
-Nenhuma foi tomada. Cada uma diz o que muda se a resposta for sim.
+### 10.1 Tomadas em 12/11/2026
 
-1. **Posição em relação à M.** As sessões A a F (26 defeitos) passam à frente da M, que fica antes só de G e H?
-2. **A M se divide?** Uma parte curta responde às três perguntas da 2c e a D01, D09 e D17, e destrava a
-   sessão H. A descrição completa do método (A2), com os fundamentos na filosofia da ciência, segue no ritmo da
-   leitura do Vicente, sem prender nenhum conserto.
-3. **Esta página é a "página única" decidida em 08/11?** Se sim, as sessões passam a ler só ela, e o
-   `PLANO_sessoes_2026-10-29.md` vira histórico.
-4. **O balde "7+" deixa de existir?** Os defeitos dele já estão nas linhas A a H; o resto vira "quando o
-   Vicente pedir".
-5. **Aplicar a limpeza do backlog** (parte 6.1): 43 abertos passam a 32.
-6. **A rota de leitura do `maintainer.md` cai para três passos** (parte 8.3), na sessão F?
-7. **A rota para o Sci-Hub fica no repositório público?** Só a pergunta; não há prazo (parte 9.3).
+1. **Os consertos vêm antes da sessão M.** As seis sessões de conserto que não dependem da descrição do método
+   (A a F: texto completo, registro da busca, triagem, funil, trava do protocolo e ferramentas da manutenção)
+   passam à frente da M. Consequência: a M deixa de ser a próxima sessão do plano. Origem, nas palavras dele:
+   "sim, consertos antes. com tantas mudanças veja se a própria sessão 'M' e as subsequentes programadas
+   precisam ser reformuladas".
+2. **As 11 saídas do backlog foram gravadas**: dez duplicatas fundidas e o DEBT-102 fechado como resolvido. Os
+   abertos passaram de 43 a 32 (parte 6.1). Origem: a opção "Sim, gravar agora".
+3. **Dois pedidos de análise, atendidos na parte 5.** Ver se a M e as sessões seguintes precisam ser
+   reformuladas (5.2); analisar as oito sessões pelos critérios desta sessão, incluindo a página única (5.1 e
+   5.3). Origem: a frase acima e "as 8 sessões precisam ser analisadas com os critérios definidos nesta sessão
+   incluindo a ideia de página única". Sobre dividir a M, ele respondeu "respondi na ordem da M".
+
+### 10.2 A decidir
+
+Cada item diz o que muda se a resposta for sim.
+
+1. **A fila da parte 5.4 vale como a ordem das sessões?** Inclui três coisas que a decisão de 12/11 não cobre:
+   a G antes da M, o DEBT-030 na sessão C e a declaração do DEBT-014 na sessão D.
+2. **A M reformulada** (5.2): última antes dos testes, numa janela, só com as escolhas do Vicente; as três
+   perguntas da 2c passam à abertura da sessão H.
+3. **A arquitetura da antiga sessão 6 sai da fila** e espera a primeira metodologia nova? Altera o alcance da
+   direção de 29/10 ("sair do esqueleto PRISMA"): os quatro textos se corrigem agora, e a reconstrução dos
+   agentes por papel, só quando houver uma terceira metodologia.
+4. **A página única** (5.3): um arquivo de uma tela com a tabela da 5.4; o `PLANO_sessoes_2026-10-29.md` vira
+   histórico; o balde "7+" deixa de existir.
+5. **A rota de leitura do `maintainer.md` cai para três passos** (parte 8.3), na sessão F?
+6. **A rota para o Sci-Hub fica no repositório público?** Só a pergunta; não há prazo (parte 9.3).
 
 ## 11. Visto de passagem — não avaliado
 
@@ -334,6 +470,7 @@ inteira: 113 c (50% da semana).
 | cálculo e plano | 3,5 c | 2,6 c | 2,6 c |
 | 1 — leitura e diagnóstico | 21 c | 2,5 c | 5,1 c (2,2% da semana; 13% da janela de 5 h) |
 | 2 — decisões, lógica de manutenção e catálogo | 19 c | 2,3 c | 7,4 c (3,3% da semana; 20% da janela de 5 h) |
+| 3 — decisões do Vicente, análise das oito sessões e limpeza do backlog | 8 c | 4,1 c | 11,5 c (5,1% da semana; 30% da janela de 5 h) |
 
 Sinal sobre a virada da semana: a última leitura declarada era 99% (10/11). Esta sessão já gastou o
 equivalente a 2% da semana sem corte, o que indica que a semana virou em 11/11 por volta das 23h30.
