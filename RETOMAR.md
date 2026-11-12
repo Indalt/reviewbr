@@ -6,17 +6,12 @@
 "Visto de passagem" da `.claude/maintenance/FILA.md`, sem avaliação. A conferência dos três pontos (item 1 × D05 e
 D16, item 5, item 6), com os fatos lidos no disco, está no commit `cc47fa1` deste arquivo.
 
-**Falta, para marcar a linha 9 como feita** (seção 7 do METODO):
-1. os outros fundamentos canônicos: ele pediu para incluir; há três candidatas do agente, e a escolha é dele;
-2. o texto das etapas (seção 4), que segue como proposta;
-3. duas leituras a confirmar: no P6, se a declaração simples de uso de IA continua para todo projeto; no P10, se
-   "variação medida" passa a ser a concordância entre a IA e o pesquisador numa amostra do projeto.
+**Falta, para marcar a linha 9 como feita:** só o texto das etapas (seção 4 do METODO). A primeira versão não foi
+aprovada; a segunda parte da NBR 15287:2011 (item 4.2.2) e da recomendação do ICMJE e espera a leitura dele:
+aprovar, corrigir ou pedir outras fontes. Não foram lidas a NBR 14724, a NBR 6022 (só por resumo de busca) nem
+normas de outras áreas.
 
-Fora do METODO, sem resposta dele: se a varredura que reprova rota de LLM sem tool mapeada sai junto com o mapa de
-uso de IA. Ele perguntou se esse teste era a camada de segurança dos fundamentos; não é (o teste olha o código do
-ReviewBR, e a camada dos fundamentos é a da seção 2 do METODO).
-
-**Próximo passo:** levar a ele os itens acima; com as respostas, tirar as marcas do METODO, esvaziar a seção 7,
+**Próximo passo:** com a resposta dele sobre as etapas, tirar a marca de proposta da seção 4, esvaziar a seção 7,
 marcar a linha 9 na FILA com data e commit e apagar este arquivo.
 
 ## Respostas do Vicente, 12/11/2026 — primeira rodada (literais; são a origem, não o texto final)
@@ -63,3 +58,20 @@ A numeração é a da resposta que ele leu: 1 = item 1 × D05 e D16; 2 = item 5;
 - "4.2 aprovo modo de agir"
 - "4.3 aprovo com a ressalva de se analisar como as melhores ferramentas de apoio a pesquisa agem nesse caso"
 - "4.4 ok"
+
+## Respostas do Vicente, 12/11/2026 — terceira rodada (literais)
+
+- "3.1 a ia nao escolhe, sugere de acordo com o projeto de pesquisa, objeto, publicacao."
+- "3.3 tem de ter uma tool para avaliar as metodologias ques tao mapeadas e as que vao ser incluidas. pode ser uma
+  tool ja existente que lida com as metodologias mapeadas. ok. o teste de segurança do reviewbr para nao criar
+  tools para burlar pesquisa deve ser mantido e registrar quando há tentativa de burlar."
+- "pode adicionar os canonicos e expandir o maximo possivel sem duplicar. essa camada de segurança nao é apenas
+  para impedir, mas pode ter metodo que nao declara os fundamentos e que tem validacao comprovada. a tool deve ser
+  capaz de trazer a fundamentacao canonica apenas como informativo. parece contraditorio? temo que essa camada de
+  segurança nos limites muito."
+- "resposta 3.4 confirmo a declaracao, mas pesquisa exploratoria pode ganhar quando tem metodologia? nao basta
+  sugerir? a exploratoria deve ser registrada quando um projeto de pesquisa é travado, entao, por padrao, registra
+  e quando nao vira projeto com protocolo esse registro se torna apenas informativo e nao precisa ser lido."
+- "4. nao sei se esse é um modo de agir legitimo de todo o pesquisador, sugeri por intuicao. Vamos buscar ter as
+  etapas necessarios de toda a publicacao relevante ou o que se pede para ABNT ou regras internacionais."
+- "4.3 concordo pode trocar concordancia entre a IA e o pesquisador."

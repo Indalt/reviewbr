@@ -70,8 +70,9 @@ fundamento: cada item espera o Vicente. Resultado bruto: `resultado_agentes.json
 - **Só o Vicente responde:** Um método com lacunas [NÃO COBERTO] declaradas é “completo e funcional” no sentido dele? Metodologia não assimilada pode ser usada num projeto, e com que limites? A data deve ser corrigida para 08/10?
 - **Conferência de fidelidade:** AJUSTAR — As falas são de 08/10, mas em linhas um pouco diferentes: L8137, não 8136, e L8321, não 8320. Faltam duas falas que fazem parte da regra. Em L8270 (08/10 13:56Z): "as ferramentas sao sempre completas e funcionais. resumir para educar ou para informar nao é proibido". Em L8443 (08/10 14:19Z): "nao deve haver metodologia assimilada sem estar validada externamente e completa". A DIRECAO data esta última de 04/10, o que está errado. No contexto, "completas" respondia à proposta do agente (L8134 e L8259) de um grau PARCIAL que "executa o funil" sem assinar conformidade. O agente então tornou binária a trava da spec com campo pendente. A DIRECAO define "completa" como "sem campo por preencher, sem gate vazio, sem padrão declarado e ausente". A proposta omite "sem gate vazio" e põe como condição (3) a prática de [NÃO COBERTO], que é de 18/10 e não dele.
 - **Alcance escrito em 12/11/2026:** a decisão não muda. "Só entra metodologia validada" vale para a trilha
-  executável e para a sugestão sem alerta, não para a entrada no catálogo, que é mapa: metodologia sem validação
-  ou sem fundamentos declarados fica nele com alerta ao pesquisador. Texto em `.claude/METODO_ReviewBR.md`, seção 2.
+  executável, não para a entrada no catálogo, que é mapa: metodologia sem validação fica nele com alerta ao
+  pesquisador; a validada que não declara fundamentos usa-se normalmente, e a falta é só informada. Texto em
+  `.claude/METODO_ReviewBR.md`, seção 2.
 
 ## D06 — RV-04 imposto pelo código (decisão do pesquisador em toda etapa) e a exceção dos “ensaios”
 
@@ -269,8 +270,7 @@ fundamento: cada item espera o Vicente. Resultado bruto: `resultado_agentes.json
 - **Conferência de fidelidade:** AJUSTAR — 9e138b39 L1726 (item 1), L1729, L1808 e L1815, e 9e138b39 L2439/L2442 (29/10), conferem. A frase principal da proposta, "cobre uma necessidade do sistema… em vez de criar regra própria", adota a leitura (b) como texto da decisão, e isso não está nas falas. O que foi confirmado em 17/10 foi a paráfrase do agente (L1808): "Assimilar toda metodologia que existe… cada tipo de pesquisa precisa do seu método, e o pesquisador recebe ajuda para escolher". Também o item 4: "tem de ter método para cada proposição e ajuda para escolher método". Em 29/10 ele disse "acredito que isso já tenha sido dito". A fala anterior é de 08/10: L8321, "só entra metodologia validada e em cada uma tem de haver a demonstração da validação", e L8443, "validada externamente e completa". O agente a atribuiu a 04/10 (L2474; maintainer.md:129). Esse antecedente dá um sentido candidato para "validada" que a lista de critérios da proposta não traz.
 - **Alcance escrito em 12/11/2026:** a decisão não muda. "Validada" quer dizer demonstração externa apontada na
   entrada do catálogo: publicação do método com revisão por pares, ou adoção por organização reconhecida da área
-  (Cochrane, JBI, EQUATOR e afins). A restrição vale para a trilha executável e para a sugestão sem alerta, não para
-  a entrada no mapa. Texto em `.claude/METODO_ReviewBR.md`, seção 2.
+  (Cochrane, JBI, EQUATOR e afins). A restrição vale para a trilha executável, não para a entrada no mapa. Texto em `.claude/METODO_ReviewBR.md`, seção 2.
 
 ## D17 — F0–F8 é a trilha do prisma-sr, não a estrutura da ferramenta (direção de 29/10)
 

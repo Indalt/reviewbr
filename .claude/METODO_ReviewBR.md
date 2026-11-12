@@ -1,7 +1,7 @@
 # Método do ReviewBR
 
 > **Estado em 12/11/2026:** texto da linha 9 da `.claude/maintenance/FILA.md` (sessão M). O Vicente respondeu às
-> seis escolhas em 12/11/2026 e, no mesmo dia, aos textos propostos na conferência delas.
+> seis escolhas em 12/11/2026 e, no mesmo dia, em duas rodadas, aos textos propostos na conferência delas.
 > - **Decidido:** vale. Traz a data e a origem. Não se reabre.
 > - **[PROPOSTA]:** redação do agente. Não vale até o Vicente aprovar o texto que leu.
 > - **Hoje:** fato conferido no sistema em 12/11/2026. Não é decisão.
@@ -41,6 +41,20 @@ da seção 2. Origem: "pode ser um sistema para pesquisa de uma forma geral se p
 existentes" (25/09); "Qualquer uma do catálogo, e temos ferramentas para que novas metodologias possam ser
 catalogadas" (12/11).
 
+**Decidido (12/11/2026). A IA sugere a metodologia; não escolhe.** A sugestão é feita de acordo com o projeto de
+pesquisa, o objeto e a publicação pretendida. A escolha é do pesquisador. Origem: "a ia nao escolhe, sugere de
+acordo com o projeto de pesquisa, objeto, publicacao".
+
+**Decidido (12/11/2026). A busca exploratória é registrada por padrão.**
+- A exploração não exige metodologia: o ReviewBR sugere uma, e isso basta.
+- Quando da exploração nasce um projeto com protocolo, o registro dela passa a fazer parte do projeto no momento em
+  que o protocolo é travado.
+- Quando não nasce, o registro fica só como informação e não precisa ser lido.
+
+Origem: "a exploratoria deve ser registrada quando um projeto de pesquisa é travado, entao, por padrao, registra e
+quando nao vira projeto com protocolo esse registro se torna apenas informativo e nao precisa ser lido". Hoje: a
+busca sem projeto não grava nada no log de busca (`registrarBusca`, no `index.ts`).
+
 ## 2. Fundamentos
 
 **Decidido (A2, aprovada em 31/10/2026).** O método do ReviewBR é descrito como se descreve uma metodologia
@@ -53,37 +67,44 @@ a adota e o que ela não alcança.
 o P2: segue-se o que a metodologia pede, e não se pergunta nada além do protocolo dela. São camadas diferentes, e
 não há contradição.
 
-**Decidido (12/11/2026). Os fundamentos são uma camada de segurança.**
+**Decidido (12/11/2026). Os fundamentos são uma camada de segurança que informa; não é feita só para impedir.**
 - Fundamento não é metodologia: é a base científica com que uma metodologia é vista, para o ReviewBR poder
   sugeri-la a um projeto.
 - O ReviewBR tem os seus fundamentos científicos, os canônicos (lista abaixo), e a lista pode crescer.
-- Cada metodologia deve declarar os seus fundamentos. A entrada do catálogo aponta onde, como aponta a própria
-  metodologia: fonte oficial e data de leitura (P4).
-- O catálogo é um mapa: pode listar toda metodologia que existe e tem fonte oficial. Cada entrada diz duas coisas:
-  - se a metodologia é **legitimada**: declara os fundamentos em que se apoia;
+- O catálogo é um mapa: pode listar toda metodologia que existe e tem fonte oficial. Uma tool avalia as
+  metodologias já mapeadas e as que vão entrar, e informa duas coisas de cada uma:
   - se é **validada**: tem demonstração externa, apontada na entrada — publicação do método com revisão por
-    pares, ou adoção por organização reconhecida da área (Cochrane, JBI, EQUATOR e afins).
-- A metodologia a que falta uma das duas fica no catálogo com um alerta ao pesquisador: ela existe, e não está
-  legitimada ou não tem validação. Que falta mesmo, confere-se antes de afirmar. O ReviewBR sugere outra mais
-  adequada quando a troca não descaracteriza o projeto, isto é, não muda a pergunta nem o objeto da pesquisa
-  (definição do agente, a conferir na leitura).
-- Trilha executável, só para metodologia validada. A D05 (08/10) e a D16 (29/10) não mudam; ganham alcance
-  escrito: "só entra metodologia validada" vale para a trilha executável e para a sugestão sem alerta, não para a
-  entrada no mapa.
-- Esta camada é incorporada às tools que mapeiam as metodologias.
+    pares, ou adoção por organização reconhecida da área (Cochrane, JBI, EQUATOR e afins);
+  - se é **legitimada**: declara os fundamentos em que se apoia, e a entrada aponta onde (fonte oficial e data de
+    leitura, P4).
+- **Validada que não declara fundamentos:** usa-se normalmente. A tool diz que ela não os declara e traz, só como
+  informação, os fundamentos canônicos do ReviewBR que se ligam ao que ela pede. Não é impedimento nem condição de
+  uso.
+- **Sem validação comprovada:** fica no catálogo com alerta ao pesquisador. Que falta mesmo, confere-se antes de
+  afirmar. O ReviewBR sugere outra mais adequada quando a troca não descaracteriza o projeto, isto é, não muda a
+  pergunta nem o objeto da pesquisa (definição do agente, a conferir na leitura).
+- **O único impedimento é o que já existia:** trilha executável, só para metodologia validada. A D05 (08/10) e a
+  D16 (29/10) não mudam; ganham alcance escrito: "só entra metodologia validada" vale para a trilha executável, não
+  para a entrada no mapa. A camada dos fundamentos não acrescenta bloqueio.
+- A avaliação fica numa tool, que pode ser uma das que já lidam com as metodologias mapeadas.
 
 Origem: "fundamentos metodologicos, epistemologias, não são metodologias em si"; "o reviewbr tem essa camada de
 segurança que deve ser incorporada as tools responsaveis por mapear as metodologias. se uma metodologia nao declara
 seus fundamentos pode-se informar que a metodologia nao é legitimada (…) sabemos que existe, nao tem validacao (se
 nao tiver mesmo e isso tem de ser conferido) e sugerir outra metodologia mais adequada se o projeto nao é
 descaracterizado. os fundamentos cientificos do reviewbr sao os canonicos e podemos incluir mais se necessario";
-"confirmo o que falta confirmar" (12/11).
+"confirmo o que falta confirmar"; "essa camada de segurança nao é apenas para impedir, mas pode ter metodo que nao
+declara os fundamentos e que tem validacao comprovada. a tool deve ser capaz de trazer a fundamentacao canonica
+apenas como informativo"; "tem de ter uma tool para avaliar as metodologias ques tao mapeadas e as que vao ser
+incluidas. pode ser uma tool ja existente que lida com as metodologias mapeadas" (12/11).
 
 Hoje: o catálogo tem 106 entradas, com o campo `confidence` (67 alta, 34 média, 5 baixa) e sem campo de
-fundamentos nem de validação. Nenhuma tool emite o alerta.
+fundamentos nem de validação. Nenhuma tool faz essa avaliação.
 
-**Decidido (12/11/2026). Os canônicos — lista inicial.** São quatro linhas, e nenhuma é a única (A2). De cada uma,
-o que sustenta no ReviewBR e o que não alcança:
+**Decidido (12/11/2026). Os canônicos.** São doze, e nenhum é a base única (A2). De cada um, o que sustenta no
+ReviewBR e o que não alcança. Os quatro primeiros foram aprovados um a um. Os oito seguintes foram escolhidos e
+redigidos pelo agente, a pedido dele ("pode adicionar os canonicos e expandir o maximo possivel sem duplicar"):
+cada um cobre o que os anteriores não alcançam, e ele os confere na leitura. A lista pode crescer.
 - **Popper, Karl R.** *The Logic of Scientific Discovery.* Londres: Hutchinson, 1959 (original: *Logik der
   Forschung*, Viena: Springer, 1935). Uma hipótese é científica se pode ser refutada por um teste fixado antes.
   Sustenta: o protocolo fixado antes da busca e o vocabulário que o sistema já usa ("o sistema falsifica, quem
@@ -101,12 +122,45 @@ o que sustenta no ReviewBR e o que não alcança:
   o zero que só vale com controle e o estudo falso como controle (A8). Não alcança: nasce da inferência
   experimental e estatística.
 
-Origem: "o que falta: aprovar e incluir outros fundamentos canonicos" (12/11). Conferência das referências em
-12/11/2026: editora e ano dos quatro livros, pelo catálogo da Open Library (o original de Popper aparece lá com
-1935; o rascunho dizia 1934). Não foram conferidos o intervalo de páginas do capítulo de Merton nem a data de
-1942. As obras não foram lidas nesta sessão: o resumo de cada uma é do agente.
+- **Kuhn, Thomas S.** *The Structure of Scientific Revolutions.* Chicago: University of Chicago Press, 1962. Cada
+  tradição de pesquisa tem os seus padrões do que é um bom trabalho. Sustenta: as trilhas são das metodologias, e
+  um método não herda de outro o que é próprio dele (P1, P3). Não alcança: não dá critério para comparar tradições.
+- **Bachelard, Gaston.** *La formation de l'esprit scientifique.* Paris: Vrin, 1938. O objeto de pesquisa não está
+  dado: é construído contra a primeira impressão. Sustenta: a exploração antes de formular o objeto, e o guia que
+  diz o porquê (A7). Não alcança: não dá procedimento.
+- **Bloch, Marc.** *Apologie pour l'histoire ou Métier d'historien.* Paris: Armand Colin, 1949. A crítica das
+  fontes: todo testemunho é conferido, e a fonte é citada para que outro a confira. Sustenta: a origem rastreável
+  e a citação com página, na pesquisa documental e histórica. Não alcança: a pesquisa experimental.
+- **Campbell, Donald T.; Stanley, Julian C.** *Experimental and Quasi-Experimental Designs for Research.* Chicago:
+  Rand McNally, 1966. As ameaças à validade interna e externa de um estudo. Sustenta: é o estudo que passa por
+  testes (A6), e a avaliação de risco de viés. Não alcança: a pesquisa que não busca causa.
+- **Lincoln, Yvonna S.; Guba, Egon G.** *Naturalistic Inquiry.* Beverly Hills: Sage, 1985. Os critérios de confiança
+  da pesquisa qualitativa (credibilidade, transferibilidade, dependência, confirmabilidade) e a trilha de
+  auditoria. Sustenta: a decisão registrada e a origem rastreável na pesquisa qualitativa. Não alcança: a pesquisa
+  experimental.
+- **Munafò, Marcus R. et al.** "A manifesto for reproducible science." *Nature Human Behaviour*, v. 1, 0021, 2017.
+  Medidas contra o resultado que não se reproduz: pré-registro, transparência, métodos e dados abertos. Sustenta:
+  o protocolo antes da busca e os números recomputáveis. Não alcança: é programa de prática, não teoria do
+  conhecimento.
+- **Wilkinson, Mark D. et al.** "The FAIR Guiding Principles for scientific data management and stewardship."
+  *Scientific Data*, v. 3, 160018, 2016. Dado de pesquisa localizável, acessível, interoperável e reutilizável.
+  Sustenta: a persistência, a origem de cada registro e a exportação. Não alcança: não trata da qualidade do dado.
+- **Singapore Statement on Research Integrity.** 2nd World Conference on Research Integrity, Singapura, 21 a 24 de
+  julho de 2010. Princípios de integridade: honestidade, responsabilidade, lealdade entre pares e boa guarda da
+  pesquisa. Sustenta: o pesquisador responde pelo resultado, e nada é inventado onde falta dado (RV-03). Não
+  alcança: é declaração de princípios, não método.
 
-Os outros fundamentos que ele pediu para incluir estão na seção 7, item 1.
+Origem: "o que falta: aprovar e incluir outros fundamentos canonicos"; "pode adicionar os canonicos e expandir o
+maximo possivel sem duplicar" (12/11).
+
+Conferência das referências em 12/11/2026. Nenhuma obra foi lida nesta sessão: o resumo de cada uma é do agente.
+- Editora e ano conferidos no catálogo da Open Library: Popper (o original aparece lá com 1935; o rascunho dizia
+  1934), Merton, Longino, Mayo, Bachelard, Bloch, Campbell e Stanley, Lincoln e Guba.
+- Conferidos na Crossref: Munafò (DOI 10.1038/s41562-016-0021) e Wilkinson (DOI 10.1038/sdata.2016.18).
+- Singapore Statement: título, conferência e datas conferidos em `https://www.wcrif.org/guidance/singapore-statement`;
+  os quatro princípios, não.
+- Não conferidos: o ano de Kuhn (a Open Library traz 1955 e 1962), as páginas do capítulo de Merton e a data de
+  1942.
 
 ## 3. Princípios
 
@@ -150,8 +204,11 @@ pesquisa e à publicação: contagem, trava, registro, deduplicação e persist�
 - **Alterado em 12/11/2026 — o registro segue a metodologia.** O sistema tem de ter o registro do uso de IA quando
   a metodologia escolhida o torna obrigatório, e no que ela obriga. Substitui, na consequência escrita em 05/11, "o
   sistema fornece, para todo projeto, o registro (…) por etapa e por tool". Origem: "tem de ter registro quando é
-  obrigatorio por metodologia escolhida no que a metodologia obriga". Leitura do agente, a conferir por ele: a
-  declaração simples de todo projeto (primeiro item, frase dele de 05/11) continua.
+  obrigatorio por metodologia escolhida no que a metodologia obriga". A declaração simples de todo projeto
+  (primeiro item) continua: "confirmo a declaracao" (12/11).
+- **Decidido em 12/11/2026 — a proteção contra IA não declarada fica.** Ao sair o mapa, continua o teste que
+  reprova a tool que aciona IA sem declará-la, e a tentativa passa a ser registrada. Origem: "o teste de segurança
+  do reviewbr para nao criar tools para burlar pesquisa deve ser mantido e registrar quando há tentativa de burlar".
 
 Origem de 05/11: "todas as pesquisas que usam o reviewbr devem declarar onde foi usado IA, como, e quando exigido,
 todas as informações que se pede. Levamos as metodologias a sério".
@@ -162,7 +219,9 @@ Hoje:
   parâmetros e resultado por item); as decisões gravadas do pesquisador;
 - não achei, por busca de texto, tool, skill ou agente que monte o registro por etapa nem o texto da declaração
   para o relato;
-- o mapa continua no código, com o aviso do RAISE 3 em duas tools e um teste próprio.
+- o mapa continua no código, com o aviso do RAISE 3 em duas tools e um teste próprio. Esse teste reprova, na
+  suíte, o serviço que aciona IA sem tool declarada; em uso, a tool que aciona IA sem estar no mapa é negada. Nem
+  um nem outro grava a tentativa.
 
 **P7. Script e agente erram: o que produzem é revisado** (A5, aprovada em 31/10/2026). Resultado produzido por
 script ou por agente não funda decisão sem que o que ele produziu seja revisado. Script que confere alguma coisa só
@@ -197,16 +256,16 @@ entra no funil sem protocolo travado".
 12/11/2026, com ressalva). A ciência não exige que dois avaliadores humanos concordem: exige medir quanto discordam
 e que um terceiro resolva. Da IA que faz esse papel (triagem, extração) o ReviewBR exige: cada decisão registrada
 com modelo e versão, data, prompt, entrada e saída; as discordâncias levadas ao pesquisador. Não exige que a IA dê
-sempre a mesma resposta. A variação medida e relatada é exigida quando a metodologia ou o destino de publicação a
-exigem (P2). Origem: "aprovo com a ressalva de se analisar como as melhores ferramentas de apoio a pesquisa agem
-nesse caso" (12/11).
+sempre a mesma resposta. A concordância entre a IA e o pesquisador, medida numa amostra do próprio projeto e
+relatada, é exigida quando a metodologia ou o destino de publicação a exigem (P2). Origem: "aprovo com a ressalva de se analisar como as melhores ferramentas de apoio a pesquisa agem
+nesse caso"; "concordo pode trocar concordancia entre a IA e o pesquisador" (12/11).
 
 Hoje: o registro existe na triagem pelo `screen_candidates`, e há uma função que compara duas corridas
 (concordância e kappa de Cohen); nenhuma tool roda a triagem duas vezes nem relata a concordância. A validação da
 IA dentro da revisão está em "O que não é fila".
 
-A ressalva — primeira conferência, em 12/11/2026. Li o resumo que a busca na web devolveu, e não as páginas; quase
-tudo é material do fabricante. Não fecha a análise que ele pediu.
+A ressalva — conferência de 12/11/2026, que deu a redação acima. Li o resumo que a busca na web devolveu, e não as
+páginas; quase tudo é material do fabricante.
 - Nested Knowledge (Robot Screener): a IA entra só como segundo revisor, em triagem dupla; um revisor humano e um
   árbitro humano decidem; a ferramenta dá, por projeto, a revocação e a precisão da IA.
 - DistillerSR: as decisões da IA ficam numa conta de revisor separada, e entram no relatório de conflitos e no
@@ -238,24 +297,42 @@ método assimilado é recusado e os dois métodos instalados exigem protocolo.
 
 ## 4. Etapas
 
-**[PROPOSTA]** Montadas só com o que já está decidido; a origem vai em cada etapa. Pelo P1, são mais simples do que
-a trilha de qualquer metodologia e não repetem as etapas de nenhuma.
+**[PROPOSTA — segunda versão, 12/11/2026].** A primeira versão foi montada pelo agente só com o que já estava
+decidido, e o Vicente não a aprovou: "nao sei se esse é um modo de agir legitimo de todo o pesquisador, sugeri por
+intuicao. Vamos buscar ter as etapas necessarios de toda a publicacao relevante ou o que se pede para ABNT ou
+regras internacionais". Esta versão parte do que as normas pedem de um projeto e de um relato. As normas dizem o
+que o projeto e o relato têm de conter; a ordem em etapas é leitura do agente.
 
-1. **Exploração (opcional).** Busca sem projeto, para entender o campo e formular o objeto. Não entra no corpus de
-   projeto nenhum; o log é mantido (12/11).
-2. **Escolha da metodologia.** O ReviewBR sugere a mais adequada a partir das entradas, dizendo o porquê (A7, 12/11),
-   com o alerta quando a metodologia não é legitimada ou validada (seção 2); o pesquisador escolhe. O protocolo
-   grava o método, a fonte oficial e a data de leitura (FILA, linha 8, item 5).
-3. **Protocolo da metodologia.** Pede o que ela torna obrigatório, registra a escolha no que é opcional e não faz
-   pergunta que o protocolo dela não tem (P2). Auditoria e trava antes da busca quando ela as exige (P11).
-4. **Execução da trilha da metodologia,** etapa por etapa, no modo de agir (P9), com o controle por código (P5) e o
-   registro do uso de IA no que a metodologia obriga (P6).
-5. **Relato,** pela norma de relato da metodologia, com o formulário oficial preenchido pelo pesquisador (FILA,
-   linha 8, item 3), e com a declaração de onde e como a IA foi usada (P6).
+| etapa | o que a norma pede | o que o ReviewBR faz |
+|---|---|---|
+| 1. Tema e problema | o projeto expõe o tema e o problema a ser abordado (NBR 15287, 4.2.2) | busca exploratória, registrada por padrão (seção 1); ajuda a formular o objeto |
+| 2. Projeto de pesquisa | hipótese, quando couber; objetivos; justificativa; referencial teórico; metodologia; recursos e cronograma (NBR 15287, 4.2.2) | sugere a metodologia de acordo com o projeto, o objeto e a publicação, dizendo o porquê; o pesquisador escolhe; o protocolo grava o método, a fonte e a data de leitura |
+| 3. Protocolo da metodologia | o que a metodologia escolhida torna obrigatório | pede só isso e registra a escolha no que é opcional (P2); auditoria e trava antes da busca quando ela as exige (P11) |
+| 4. Execução | os métodos e os resultados que o relato vai descrever (ICMJE: a estrutura do artigo reflete o processo da descoberta científica) | conduz a trilha da metodologia, etapa por etapa, no modo de agir (P9), com o controle por código (P5) |
+| 5. Relato | artigo de pesquisa original: introdução, métodos, resultados e discussão; outros tipos podem pedir outro formato (ICMJE). Artigo pela ABNT: introdução, desenvolvimento e considerações finais (NBR 6022). A norma de relato da metodologia (rede EQUATOR) | entrega o que a norma de relato pede; o pesquisador preenche o formulário oficial (FILA, linha 8, item 3) |
+| 6. Publicação | o que o periódico ou a instituição de destino exige | a declaração de onde e como a IA foi usada, e o registro no que a metodologia obriga (P6) |
+
+Fontes, lidas em 12/11/2026:
+- ABNT NBR 15287:2011, *Informação e documentação — Projeto de pesquisa — Apresentação*, 2ª edição, válida a partir
+  de 17/04/2011, item 4.2.2. Lida numa cópia em
+  `https://www.enfam.jus.br/wp-content/uploads/backup_covid/2020/07/NBR-15287_2011.pdf`, não no catálogo da ABNT,
+  que é pago.
+- ICMJE, *Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical
+  Journals*, seção "Preparing a Manuscript for Submission", em
+  `https://www.icmje.org/recommendations/browse/manuscript-preparation/preparing-for-submission.html`. A página não
+  traz a data da última revisão.
+- ABNT NBR 6022:2018 (artigo em publicação periódica): só pelo resumo da busca na web, em guias de bibliotecas
+  universitárias. A norma não foi lida.
+
+Não foram lidas: a NBR 14724 (trabalhos acadêmicos), normas de relato de outras áreas (por exemplo, as da APA) e
+regras de agências de fomento. As duas fontes lidas são uma norma brasileira de apresentação e uma recomendação da
+área médica: pesquisa de outras áreas pode pedir outra coisa.
 
 Hoje:
 - só duas metodologias têm trilha executável (`prisma-sr` e `scoping-prisma-scr`); as demais entradas do catálogo
   apontam a fonte;
+- nenhuma tool pede ao pesquisador os elementos do projeto de pesquisa da etapa 2 (justificativa, referencial
+  teórico, recursos, cronograma); o protocolo pede o que a metodologia pede;
 - nenhuma tool lê o `MAPA.md`: a sugestão vem do `assess_research_design`, por palavra-chave e sem IA, pelos
   métodos que servem ao tipo de pesquisa (`serves_research_types`). O protocolo grava a escolha; a sugestão não
   fica gravada;
@@ -341,26 +418,5 @@ classificação pode mudar.
 
 ## 7. O que falta
 
-**1. Outros fundamentos canônicos (seção 2).** Ele pediu para incluir outros; quais, é escolha dele. Candidatas do
-agente, dadas de memória e não lidas nesta sessão, cada uma para o que as quatro não alcançam:
-- **Kuhn, Thomas S.** *The Structure of Scientific Revolutions.* Chicago: University of Chicago Press, 1962. Cada
-  tradição de pesquisa tem os seus padrões do que é um bom trabalho. Sustentaria: as trilhas são das metodologias
-  e um método não herda de outro (P1, P3). Não alcança: não dá critério para comparar tradições. O ano não foi
-  conferido (a Open Library traz 1955 e 1962).
-- **Lincoln, Yvonna S.; Guba, Egon G.** *Naturalistic Inquiry.* Beverly Hills: Sage, 1985. Critérios de confiança
-  da pesquisa qualitativa (credibilidade, transferibilidade, dependência, confirmabilidade) e a trilha de
-  auditoria. Sustentaria: a decisão registrada e a origem rastreável numa pesquisa qualitativa, que Popper e Mayo
-  não alcançam. Não alcança: a pesquisa experimental. Autores, editora e ano conferidos na Open Library; a cidade,
-  não.
-- **Munafò, Marcus R. et al.** "A manifesto for reproducible science." *Nature Human Behaviour*, v. 1, 0021, 2017.
-  Medidas contra o resultado que não se reproduz: pré-registro, transparência, dados e métodos abertos.
-  Sustentaria: o protocolo antes da busca e os números recomputáveis. Não alcança: é programa de prática, não
-  teoria do conhecimento. Referência conferida na Crossref (DOI 10.1038/s41562-016-0021).
-
-**2. Etapas (seção 4).** O texto segue como proposta: aprovar ou corrigir.
-
-**3. Duas leituras a confirmar.**
-- P6: a declaração simples de uso de IA continua valendo para todo projeto, e só o registro por etapa e por tool
-  passa a seguir o que a metodologia obriga?
-- P10: "variação medida" passa a dizer "concordância entre a IA e o pesquisador numa amostra do próprio projeto",
-  como fazem as ferramentas conferidas?
+**Etapas (seção 4).** A segunda versão, apoiada na NBR 15287 e na recomendação do ICMJE, espera a leitura do
+Vicente: aprovar, corrigir ou pedir outras fontes. É o único texto deste documento que ainda é proposta.
