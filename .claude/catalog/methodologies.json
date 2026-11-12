@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-12T10:50:03.768Z",
+  "updatedAt": "2026-11-12T11:12:14.581Z",
   "source_note": "Construido em 24-25/09/2026 a partir de consulta as FONTES OFICIAIS (9 frentes de pesquisa, 60 entradas brutas). Cada entrada traz source_url. O campo status_in_system NAO esta aqui: e derivado do disco em tempo de consulta (principio do RV-02). Entradas com [A VERIFICAR] em algum campo sao sinalizadas por 'unverified' no relatorio.",
   "entries": [
     {
@@ -1228,24 +1228,6 @@
       "methodology_dir": ""
     },
     {
-      "id": "declaracao-conjunta-ia-sintese-evidencia",
-      "name": "Declaração conjunta Cochrane/Campbell/JBI/CEE",
-      "full_name": "Position Statement on Artificial Intelligence (AI) Use in Evidence Synthesis across Cochrane, the Campbell Collaboration, JBI, and the Collaboration for Environmental Evidence",
-      "kind": "policy",
-      "version": "2025",
-      "version_year": "2025",
-      "what_it_is": "Mesmo documento da entrada position-statement-ia-sintese-evidencia-2025: a declaração conjunta de 2025 da Cochrane, da Campbell, do JBI e da CEE, publicada nos quatro periódicos com DOIs distintos (aqui, a edição da Campbell Systematic Reviews). Esta entrada não tem conteúdo próprio: vale o que está lá.",
-      "when_to_use": "Não usar esta entrada; consultar position-statement-ia-sintese-evidencia-2025. A declaração apoia os objetivos do RAISE e não o torna obrigatório.",
-      "requires": "Ver position-statement-ia-sintese-evidencia-2025.",
-      "item_count": "Ver position-statement-ia-sintese-evidencia-2025.",
-      "related_standards": "position-statement-ia-sintese-evidencia-2025",
-      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12603384/",
-      "confidence": "alta",
-      "notes": "Campbell Systematic Reviews. 2025;21(4):e70074, DOI 10.1002/cl2.70074. Publicada em espelho na Cochrane Library (ED000178) e em outros periódicos das quatro organizações. [absorvida em 25/09/2026 pela pesquisa de diretrizes de IA em pesquisa] [12/11/2026, DEBT-153: o when_to_use dizia 'Obrigatória para qualquer revisão que use IA em etapas de julgamento. É o padrão contra o qual o ReviewBR deve declarar seu uso de LLM', e o requires e o item_count divergiam da entrada do mesmo documento; a fonte diz que as quatro organizações apoiam os objetivos do RAISE. A entrada passou a apontar para position-statement-ia-sintese-evidencia-2025. A absorb_methodology não remove entrada.]",
-      "standard_file": "",
-      "methodology_dir": ""
-    },
-    {
       "id": "cangaru",
       "name": "CANGARU",
       "full_name": "ChatGPT, Generative Artificial Intelligence and Natural Large Language Models for Accountable Reporting and Use Guidelines",
@@ -1386,24 +1368,6 @@
       "source_url": "https://taylorandfrancis.com/our-policies/ai-policy/",
       "confidence": "alta",
       "notes": "Página oficial lida diretamente. Ponto operacionalmente importante e distinto das demais editoras: a T&F exige explicitamente NOME COMPLETO E NÚMERO DE VERSÃO da ferramenta. A página não traz data de atualização visível. [absorvida em 25/09/2026 pela pesquisa de diretrizes de IA em pesquisa]",
-      "standard_file": "",
-      "methodology_dir": ""
-    },
-    {
-      "id": "position-statement-ia-sintese-2025",
-      "name": "Position Statement on AI Use in Evidence Synthesis",
-      "full_name": "Position statement on artificial intelligence (AI) use in evidence synthesis across Cochrane, the Campbell Collaboration, JBI and the Collaboration for Environmental Evidence 2025",
-      "kind": "policy",
-      "version": "2025",
-      "version_year": "2025",
-      "what_it_is": "Mesmo documento da entrada position-statement-ia-sintese-evidencia-2025: a declaração conjunta de 2025 da Cochrane, da Campbell, do JBI e da CEE, publicada nos quatro periódicos com DOIs distintos. Esta entrada não tem conteúdo próprio: vale o que está lá.",
-      "when_to_use": "Não usar esta entrada; consultar position-statement-ia-sintese-evidencia-2025. A declaração apoia os objetivos do RAISE e não o torna obrigatório.",
-      "requires": "Ver position-statement-ia-sintese-evidencia-2025.",
-      "item_count": "Ver position-statement-ia-sintese-evidencia-2025.",
-      "related_standards": "position-statement-ia-sintese-evidencia-2025",
-      "source_url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.ED000178/full",
-      "confidence": "alta",
-      "notes": "DOI 10.1002/14651858.ED000178, PMID 41174758, publicado em novembro de 2025. [absorvida em 25/09/2026 pela pesquisa de diretrizes de IA em pesquisa] [12/11/2026, DEBT-153: o what_it_is dizia que a declaração 'torna o RAISE mandatorio para revisoes submetidas a seus periodicos' e é 'a peca que transforma o RAISE de recomendacao em requisito editorial'; a fonte (PMC12603384) diz 'The group officially supports the aims of RAISE' e não usa 'mandatory' nem 'required'. A entrada passou a apontar para position-statement-ia-sintese-evidencia-2025. A absorb_methodology não remove entrada.]",
       "standard_file": "",
       "methodology_dir": ""
     },
@@ -1871,7 +1835,7 @@
       "related_standards": "RAISE 1, 2 e 3; PRISMA 2020; ROSES; MECIR; JBI Manual for Evidence Synthesis",
       "source_url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.ED000178/full",
       "confidence": "alta",
-      "notes": "Texto lido na íntegra via PMC (https://pmc.ncbi.nlm.nih.gov/articles/PMC12594113/ e https://pmc.ncbi.nlm.nih.gov/articles/PMC12603384/). Publicado com DOIs distintos em cada periódico: Cochrane 10.1002/14651858.ED000178; Campbell 10.1002/cl2.70074; JBI Evidence Synthesis 10.11124/JBIES-25-00480; Environmental Evidence 10.1186/s13750-025-00374-5. Autoria encabeçada por Ella Flemyng (Cochrane), pelo Grupo de Métodos de IA conjunto das quatro organizações. Como saiu também em JBI Evidence Synthesis, esta É a posição oficial do JBI — não foi localizada política separada do JBI sobre IA. [absorvida em 25/09/2026 pela pesquisa de diretrizes de IA em pesquisa] [12/11/2026, DEBT-153: entrada de referência deste documento; declaracao-conjunta-ia-sintese-evidencia e position-statement-ia-sintese-2025 são o mesmo texto e apontam para cá. Conferido no Europe PMC (PMC12603384, fullTextXML) em 12/11/2026: 'The group officially supports the aims of RAISE'; o texto não usa 'mandatory' nem 'required'. O when_to_use dizia 'padrão mínimo de declaração de uso de IA em qualquer revisão que pretenda ser tratada como confiável'; corrigido pela decisão D07.]",
+      "notes": "Texto lido na íntegra via PMC (https://pmc.ncbi.nlm.nih.gov/articles/PMC12594113/ e https://pmc.ncbi.nlm.nih.gov/articles/PMC12603384/). Publicado com DOIs distintos em cada periódico: Cochrane 10.1002/14651858.ED000178 (PMID 41174758); Campbell 10.1002/cl2.70074 (Campbell Systematic Reviews 2025;21(4):e70074); JBI Evidence Synthesis 10.11124/JBIES-25-00480; Environmental Evidence 10.1186/s13750-025-00374-5. Autoria encabeçada por Ella Flemyng (Cochrane), pelo Grupo de Métodos de IA conjunto das quatro organizações. Como saiu também em JBI Evidence Synthesis, esta É a posição oficial do JBI — não foi localizada política separada do JBI sobre IA. [absorvida em 25/09/2026 pela pesquisa de diretrizes de IA em pesquisa] [12/11/2026, DEBT-153: única entrada deste documento. As entradas position-statement-ia-sintese-2025 e declaracao-conjunta-ia-sintese-evidencia eram o mesmo texto e foram apagadas do catálogo em 12/11/2026, com autorização do Vicente; o PMID e a referência da Campbell vieram delas. Conferido no Europe PMC (PMC12603384, fullTextXML) em 12/11/2026: 'The group officially supports the aims of RAISE'; o texto não usa 'mandatory' nem 'required'. O when_to_use dizia 'padrão mínimo de declaração de uso de IA em qualquer revisão que pretenda ser tratada como confiável'; corrigido pela decisão D07.]",
       "standard_file": "",
       "methodology_dir": ""
     },

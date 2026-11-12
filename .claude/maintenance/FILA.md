@@ -30,6 +30,14 @@
 - **Metodologia e norma se apontam, não se copiam.** O ReviewBR guarda a fonte oficial e a data em que ela foi
   lida, e mantém um mapa central para sugerir ao pesquisador a metodologia mais adequada. Não se transcreve
   norma nova nem se confere mapeamento item a item. As cinco normas já transcritas ficam como ajuda, sem crescer.
+  - **Para que serve o mapa** (Vicente, 12/11/2026, ao autorizar apagar duplicatas do catálogo): quando um projeto
+    de pesquisa começa, o ReviewBR sugere a metodologia mais adequada a partir do que o pesquisador deu de entrada,
+    incluindo a pesquisa exploratória. O log da pesquisa exploratória é mantido, como referência para entender o
+    projeto mais depressa e guiar o pesquisador no projeto iniciado, depois de formulado o objeto e desenhado o
+    projeto. Por isso o catálogo tem uma entrada por documento: duplicata se apaga.
+    Origem: "apagar as duplicatas se mantiver a ideia de ter as entradas de metodologias como um mapa e quando um
+    projeto de pesquisa for iniciado sugerir a melhor metodologia de acordo com o conjunto de informações que foi
+    dado nos inputs".
 - **O controle por código vale em todo o ReviewBR**, da busca exploratória à formulação do objeto de pesquisa e
   à publicação: contagem, trava, registro, deduplicação e persistência não se simplificam.
 
@@ -127,6 +135,6 @@ Vicente pedir.
   re-inicialização é recusada, a linha nova fica no banco.
 - (linha 5) `data_mining/caju_beverages` (protocol.md `[LOCKED]`, sem `project_state.json`) é o único projeto do
   repositório que perdeu a busca com a trava só pelo estado; `plan_research_protocol` também recusa o caminho dele.
-- (linha 6) A `absorb_methodology` não remove entrada: `position-statement-ia-sintese-2025` e
-  `declaracao-conjunta-ia-sintese-evidencia` seguem no catálogo, apontando para
-  `position-statement-ia-sintese-evidencia-2025`, e o panorama lista as três.
+- (linha 6) A `absorb_methodology` não remove entrada. As duas duplicatas da declaração conjunta de 2025
+  (`position-statement-ia-sintese-2025` e `declaracao-conjunta-ia-sintese-evidencia`) foram apagadas editando o
+  arquivo, com autorização do Vicente em 12/11/2026; o catálogo tem 106 entradas.
