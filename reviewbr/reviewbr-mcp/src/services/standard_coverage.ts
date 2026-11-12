@@ -60,6 +60,10 @@ export const CONFERENCIA_POR_PALAVRAS =
     "conferencia_por_metodo[].conferencia_por_palavras.quanto_enxerga.";
 
 export const LIMITE_DA_CONFERENCIA =
+    "O mapeamento é do ReviewBR e não foi conferido contra a fonte, item a item (decisão de 12/11/2026: norma se " +
+    "aponta, não se copia): é ajuda para achar na trilha o que a norma pede, não atestado de conformidade. O relato " +
+    "de conformidade é o da norma — o pesquisador preenche o formulário oficial da norma, e este relatório não o " +
+    "substitui. " +
     "A máquina não julga se o mapeamento está CERTO: isso é leitura da norma, feita ao assimilar a metodologia, " +
     "e não a cada estudo (DEBT-149, decisão de 05/11/2026) — por leitura documentada, quando o mapeamento a traz: cada " +
     "ponteiro com o trecho do enunciado oficial do item que o justifica, conferido aqui só como literal e daquele item, " +

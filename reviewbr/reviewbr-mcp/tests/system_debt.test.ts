@@ -195,7 +195,7 @@ describe("backlog real em disco — o que uma sessão nova encontra", () => {
         expect(audit.valid).toBe(true);
     });
 
-    it("a fila tem saída, não é decorativa: há achado ABERTO de CORRECAO com reprodução", () => {
+    it("a fila tem saída, não é decorativa: há achado que saiu dela, e nenhum CORRECAO aberto fica sem reprodução", () => {
         // Antes este teste fixava o DEBT-001 como ABERTO e exigia uma string da reprodução
         // dele. Usar um achado VIVO como fixture faz o fechamento legítimo de um achado
         // quebrar a suíte — foi o que aconteceu quando o DEBT-001 foi recusado em 04/10/2026,
@@ -205,7 +205,9 @@ describe("backlog real em disco — o que uma sessão nova encontra", () => {
         const correcoes = real.findings.filter(
             (f) => f.status === "ABERTO" && f.change_type === ChangeType.CORRECAO,
         );
-        expect(correcoes.length).toBeGreaterThan(0);
+        // Fila vazia é estado legítimo (12/11/2026: a FILA fechou os 32 achados abertos). A saída
+        // se afirma pelos que saíram dela com decisão registrada, não por haver aberto.
+        expect(real.findings.filter((f) => f.status === "RESOLVIDO" && f.resolution?.trim()).length).toBeGreaterThan(0);
         // CORRECAO sem reprodução é o que o próprio gate recusa (RV-11): nenhuma pode escapar.
         expect(correcoes.filter((f) => !f.reproduction?.trim()).map((f) => f.id)).toEqual([]);
     });

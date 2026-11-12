@@ -117,6 +117,12 @@ describe("o verificador deixou de ser verde por construção", () => {
         expect(r.limite).toMatch(/O encaixe .* só aparece se quem assimila o declarar \[NÃO COBERTO\]/);
         expect(r.limite).toMatch(/é afirmação de quem assimilou, conferida só no que é mecânico/);
     });
+
+    // FILA linha 8, item 3 (decisão de 12/11/2026: norma se aponta, não se copia).
+    it("o relatório diz que o mapeamento é do sistema, não conferido contra a fonte, e que o relato é o formulário oficial", () => {
+        expect(r.limite).toMatch(/O mapeamento é do ReviewBR e não foi conferido contra a fonte/);
+        expect(r.limite).toMatch(/o pesquisador preenche o formulário oficial da norma/);
+    });
 });
 
 describe("sem título oficial, a etapa não ganha fundamento — e o padrão reprova pelo título", () => {

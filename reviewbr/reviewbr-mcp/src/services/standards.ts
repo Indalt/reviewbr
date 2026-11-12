@@ -277,6 +277,8 @@ export class StandardsService {
         if (std.version_source) linhas.push(`**Origem da versão:** ${std.version_source}`);
         linhas.push("");
         linhas.push("> Gerado a partir de `.claude/standards/` — não edite a estrutura à mão.");
+        linhas.push("> É ajuda do ReviewBR: o mapeamento da trilha não foi conferido contra a fonte. O relato de " +
+            "conformidade é o formulário oficial da norma, preenchido pelo pesquisador.");
         linhas.push("> Preencha a coluna **Evidência**: o arquivo e a seção que cumprem o item.");
         linhas.push("> Item sem evidência é pendência e **impede a finalização** da revisão.");
         if (std.items_are_top_level_only || std.structure_warning) {
