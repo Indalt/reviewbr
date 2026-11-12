@@ -42,7 +42,7 @@
 | 2 | B — Registro da busca | 056 · 139 · 087 · 093 | 058 · 077 | **feita em 12/11/2026** (commit `bf9e156`) |
 | 3 | C — Triagem, deduplicação e tools em lote | 021 · 025 · 112 · 030 | 026 | **feita em 12/11/2026** (commit `6456a4a`) |
 | 4 | D — Funil e gates | 138 · 071 | 003 · 002 · 066 · os 21 subitens do 014 como `[NÃO COBERTO]` | **feita em 12/11/2026** (commit `83bf50f`) |
-| 5 | E — Trava do protocolo | 018 · 133 (mesmo conserto) · 042 | 060 | **feita em 12/11/2026** |
+| 5 | E — Trava do protocolo | 018 · 133 (mesmo conserto) · 042 | 060 | **feita em 12/11/2026** (commit `4a2c082`) |
 | 6 | F — Ferramentas da manutenção | 141 | 016 · 153 (depois do 141) | a fazer |
 | 7 | G — Textos que prendem o sistema à revisão sistemática | 135 | 137 · 151 · 008 | a fazer |
 | 8 | H — Normas por ponteiro | ver abaixo | 045 · ver abaixo | a fazer, depois da linha 6 |
