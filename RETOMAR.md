@@ -4,7 +4,9 @@
 seção 7 com 6 perguntas. O Vicente respondeu às 6 em 12/11/2026 (abaixo, literal) e pediu uma sessão com Fable
 para a verificação holística.
 
-**Falta:** a sessão abaixo.
+**Falta:** a sessão abaixo. Os três pontos que o prompt manda conferir (item 1 × D05 e D16; item 5; item 6) já
+foram conferidos em 12/11/2026: ver "Conferência dos três pontos", no fim. Faltam as respostas do Vicente aos
+textos propostos lá, a lista dos fundamentos (item 1) e os três princípios (item 4).
 
 ## Respostas do Vicente, 12/11/2026 (literais; são a origem, não o texto final)
 
@@ -109,3 +111,93 @@ Fechamento: METODO com as seções aprovadas, sem as marcas [PROPOSTA]/[PENDENTE
  com o que falta; RETOMAR.md atualizado ou apagado; audit válido; commit e push. Resposta a ele em até 5 linhas,
  com a decisão primeiro.
 ```
+
+## Conferência dos três pontos — Fable, 12/11/2026
+
+Os fatos abaixo foram conferidos no disco. **Os textos propostos não valem até o Vicente aprovar.** Nada foi
+escrito no `METODO_ReviewBR.md`, na `FILA.md` nem no código.
+
+### Item 1 × D05 e D16
+
+Conferido:
+- D05 (08/10): "só entra metodologia validada e em cada uma tem de haver a demonstração da validação". Na mesma
+  fala: "para que eu ou qualquer pessoa possa usar uma metodologia nova ou não assimilada precisamos de algum tipo
+  de resumo dela e do local onde ela existe completa". "Entra" respondia à proposta de um grau PARCIAL de trilha
+  executável. A DIRECAO §4 gravou: o catálogo guarda o resumo e o local, "e isso não é metodologia pela metade, é
+  informação".
+- D16 (29/10): assimila-se só metodologia validada cientificamente. O critério de "validada" ficou [A CONFERIR].
+- A colisão só existe se "entra" for lido como "entra no catálogo". Desde o P4 (12/11), assimilar norma nova é
+  fonte oficial mais entrada no catálogo, e por isso as duas leituras passaram a se confundir.
+- Hoje o catálogo tem 106 entradas com o campo `confidence` (67 alta, 34 média, 5 baixa). Não tem campo de
+  validação nem de fundamentos. Não conferi o que `confidence` mede.
+
+Texto proposto:
+> O catálogo é um mapa: pode listar toda metodologia que existe e tem fonte oficial. Cada entrada diz, apontando a
+> fonte, se a metodologia declara os seus fundamentos (legitimada) e se tem validação externa demonstrada
+> (validada). Metodologia a que falta uma das duas fica no catálogo com o alerta ao pesquisador, e o ReviewBR
+> sugere outra mais adequada quando a troca não descaracteriza o projeto. Trilha executável, só para metodologia
+> validada. Consequência: a D05 e a D16 não mudam; ganham alcance escrito — "só entra" vale para a trilha
+> executável e para a sugestão sem alerta, não para a entrada no mapa.
+
+Termos a confirmar com ele:
+- **legitimada:** a metodologia declara os fundamentos em que se apoia, e a entrada do catálogo aponta onde;
+- **validada:** há demonstração externa, apontada na entrada — publicação do método com revisão por pares ou
+  adoção por organização reconhecida da área (Cochrane, JBI, EQUATOR e afins);
+- **descaracterizar o projeto:** a troca de metodologia muda a pergunta ou o objeto de pesquisa.
+
+### Item 5 — critério de credibilidade e "quem verifica o verificador?"
+
+Conferido (skill `prisma-rigor-gates`, tabela dos invariantes):
+- por tool: RV-01 (`submit_protocol_for_approval`), RV-02 (`compute_flow_counts`, `export_dataset`), RV-05
+  (`validate_prisma_flow`);
+- RV-04: a decisão é gravada por tool; a trava de avanço só vale sob o nível "estrito";
+- RV-08: conferido só na exportação; a síntese não é barrada;
+- RV-03: conduta dos agentes, sem tool;
+- aplicação da metodologia (A6): o `check_standard_coverage` relata o mapeamento do sistema, não conferido contra
+  a fonte; o pesquisador preenche o formulário oficial (FILA, linha 8, item 3);
+- a frase "onde o sistema ainda não confere isso por código, o backlog registra" deixou de valer: o backlog tem
+  0 achados abertos em 12/11, e o que não é conferido por código está declarado na skill;
+- o critério e a A8 dizem "protocolo travado antes da busca" sem ressalva. O P2 (08/11, decidido) já diz que o
+  obrigatório segue a metodologia. Hoje não há diferença prática: os dois métodos instalados exigem protocolo;
+- nem o critério nem a resposta sobre o verificador foram aprovados por ele como texto;
+- "duas leituras independentes que concordam valem mais que uma" (verificador, item 2): desde 12/11 a segunda
+  leitura de norma não é exigida (P4), e nenhuma tool roda a triagem duas vezes.
+
+Texto proposto (três ajustes; o resto fica como está no METODO, seção 5):
+1. no critério e na A8: "protocolo travado antes da busca, quando a metodologia o exige (RV-01, P2)";
+2. no fim do critério: "Onde o sistema não confere isso por código, a skill `prisma-rigor-gates` o declara";
+3. no verificador, item 2: fica "independência: quem confere não é quem produziu"; sai a oração das duas leituras.
+
+### Item 6 — mapa de uso de IA e agente `analyst`
+
+Conferido:
+- o mapa (`registry/ai_use.ts`) não registra uso: classifica 10 tools pelas categorias do RAISE 3 e devolve uma
+  mensagem. É chamado por duas tools (`screen_candidates` e `batch_db_screen`). Nunca bloqueou: nenhuma entrada
+  tem a categoria "não aceitável";
+- o registro do uso de IA existe sem o mapa: `03_screening/ia_audit/` (`screen_candidates`: modelo, versão,
+  temperatura, prompt e saída por decisão); `logs/lote/` e a tabela `audit_logs` (`batch_db_screen`,
+  `batch_llm_extract`, `translate_document`, `batch_keyword_screen`: parâmetros e resultado por item; não conferi
+  se guardam modelo e versão); as decisões do pesquisador (`record_researcher_decision`);
+- dependem do mapa: a mensagem do RAISE nas duas tools (o único lugar em que o sistema diz ao pesquisador "exige
+  validação dentro da revisão"); o `tests/ai_use.test.ts`, que inclui a varredura que reprova quando um serviço
+  aciona LLM sem tool mapeada; a resolução do DEBT-117 (04/10), que se apoia nele; a skill `system-audit`;
+- o P6 promete o registro "por etapa e por tool" e o texto da declaração no relato. Por busca de texto, não achei
+  tool, skill, agente ou spec que monte um ou outro, com mapa ou sem. O trabalho do próprio agente (por exemplo, a
+  síntese do `analyst`) não deixa registro de uso de IA: o mapa cobre tools;
+- RAISE 3, rascunho v4.0 de 23/09/2026, Tabela 2 (`.claude/standards/raise-3.json`, linhas T32, T35 e T44): dá
+  como não aceitável a síntese de resultados entre estudos por LLM e a síntese por agentes de ponta a ponta, "with
+  or without human input/refinement at each stage".
+
+Texto proposto:
+> O mapa de uso de IA (`registry/ai_use.ts`) é abandonado: o ReviewBR deixa de classificar as suas tools pelas
+> categorias do RAISE 3. Isto muda o item 1 da decisão de 05/11/2026 ("o mapa fica como política do sistema"). O
+> P6 continua: todo projeto declara onde e como a IA foi usada, e o registro vem dos logs de execução das tools e
+> das decisões registradas do pesquisador. O que o agente `analyst` propõe e o pesquisador aprova é decisão do
+> pesquisador: fica registrada (RV-04) e é declarada no relato como proposta por IA e aprovada por ele (P6, P7).
+> Limite: quando a metodologia, a norma de relato ou o periódico exigem o RAISE, o ReviewBR informa ao pesquisador
+> que o RAISE 3 dá como não aceitável a síntese de resultados entre estudos feita por LLM e a síntese por agentes
+> de ponta a ponta, com ou sem intervenção humana em cada etapa. Nesse projeto a aprovação dele não muda a
+> classificação, e a síntese entre estudos é feita pelo pesquisador ou por método estatístico.
+
+Escolha que o texto não resolve: ao tirar o mapa do código, a varredura que acusa rota de LLM sem registro sai
+junto ou fica. Vai ao "Visto de passagem" como ele responder.
