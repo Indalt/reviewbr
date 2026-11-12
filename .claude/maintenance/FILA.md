@@ -138,3 +138,7 @@ Vicente pedir.
 - (linha 6) A `absorb_methodology` não remove entrada. As duas duplicatas da declaração conjunta de 2025
   (`position-statement-ia-sintese-2025` e `declaracao-conjunta-ia-sintese-evidencia`) foram apagadas editando o
   arquivo, com autorização do Vicente em 12/11/2026; o catálogo tem 106 entradas.
+- (linha 7) Os `protocol_template.md` dos métodos têm a F0.2 com campos próprios (`[TBD]`), e nenhum código os lê
+  para gerar o protocolo; o auditor confere a linha `**Registro:**` do protocolo que o `project_init` gera.
+- (linha 7) O servidor do ReviewBR aberto antes do build de 12/11 segue com o texto antigo (registro
+  "OBRIGATÓRIO") até ser reiniciado.

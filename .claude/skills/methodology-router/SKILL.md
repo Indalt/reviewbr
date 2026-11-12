@@ -1,6 +1,6 @@
 ---
 name: methodology-router
-description: Roteia a revisão para a metodologia correta e informa quais fases estão ativas e quais gates aplicar. Use ao iniciar um projeto ou ao decidir quais etapas rodar, para carregar o manifest.json e o spec.md do método escolhido (revisão sistemática, de escopo, narrativa, etc.). Garante agnosticismo metodológico sem perder rigor.
+description: Roteia a revisão para a metodologia correta e informa quais fases estão ativas e quais gates aplicar. Use ao iniciar um projeto ou ao decidir quais etapas rodar, para carregar o manifest.json e o spec.md do método escolhido. Hoje há dois métodos assimilados: prisma-sr (revisão sistemática e exploratória) e scoping-prisma-scr (escopo, que herda a trilha do prisma-sr por extends); não há método narrativo. O método é dado, mas parte do sistema ainda tem a forma do prisma-sr — o corpo desta skill diz qual.
 ---
 
 # Methodology Router — seletor de metodologia plugável

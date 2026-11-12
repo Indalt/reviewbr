@@ -22,6 +22,13 @@ Os campos de termos de busca (F1.2) derivam do PCC. Critérios de elegibilidade 
 - **F7 (Síntese): sem meta-análise.** A síntese é **descritiva/narrativa e por mapeamento** (charting): categorias, frequências, mapas de evidência. Sem medida de efeito, pooling ou heterogeneidade.
 - **F0.2 (Registro): opcional.** Registro (OSF/PROSPERO) é recomendado mas não obrigatório para scoping; se ausente, documente o motivo (não é `[TBD]` de bloqueio).
 
+## O que a spec-base diz e não vale neste método (DEBT-151; decisão D14, 05/11/2026)
+A revisão de escopo não herda da revisão sistemática o que é próprio dela. Lida por `extends`, a spec-base diz quatro coisas que aqui não valem:
+- **Mesmo id, outro sentido.** Na spec-base, F1.3.1.2 é "Intervenção / Objeto", F1.3.1.3 é "Desfechos mínimos" e F0.3.4 é "Relevância para política ou prática". Neste método valem os sentidos do `protocol_template.md`: F1.3.1.2 = **Conceito**, F1.3.1.3 = **Contexto**, F0.3.4 = **Objetivo do mapeamento**. As tools que mostram o rótulo de um subitem leem a spec-base e mostram o rótulo dela; o que o pesquisador preenche é o do template.
+- **O Contexto do PCC não tem subitem em F1.2.** Os campos de termos de busca da spec-base (F1.2.1–F1.2.10) são os do PICOS; o template põe o PCC numa tabela sem ids. O Contexto tem id só como critério de elegibilidade (F1.3.1.3).
+- **EX-03 ("Desfecho não reportado") não se aplica.** A revisão de escopo não exige desfecho; não exclua registro por esse motivo.
+- **F7.3 (certeza da evidência) não se aplica.** O PRISMA-ScR não tem item de certeza da evidência, e este manifest não declara a condição `abordagem_certeza`; F7.3.1–F7.3.4 não se preenchem. A F7 segue ativa só para a síntese descritiva e por mapeamento.
+
 ## Extração (F5) = "charting"
 A tabela de características vira uma **tabela de charting**: além das colunas-base, priorize as dimensões do mapeamento (ex.: tipo de conceito, contexto, tipo de fonte). Origem obrigatória (RV-08) permanece.
 

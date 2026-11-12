@@ -182,8 +182,25 @@ export class ProtocolDesignAuditor {
             );
         }
 
+        // Registro do protocolo — DECLARADO, nunca imposto (DEBT-135). Qualquer das duas respostas
+        // passa ("registrado em X sob nº Y" ou "não registrado"); o que BLOQUEIA é a omissão, como
+        // em F0.3 e F4.1, e também fora do score. O rótulo precisa abrir a linha: o template antigo
+        // dizia "**Status:** Pendente de registro no PROSPERO", que não declara nada.
+        const registroSec = this.extractSection(content, "Registro de Protocolo");
+        const mRegistro = registroSec.match(/^\s*(?:[-*]\s+)?\*{0,2}Registro\*{0,2}\s*:\s*\*{0,2}\s*(.*)$/m);
+        const registro = mRegistro ? mRegistro[1].trim() : "";
+        const registroFaltando = registro.length < 5 || this.temTBD(registro);
+        if (registroFaltando) {
+            errors.push(
+                `🚫 Registro do protocolo não declarado. Escreva, na seção "Registro de Protocolo", ` +
+                `**Registro:** "registrado em <plataforma> sob nº <número>" ou "não registrado". As duas ` +
+                `respostas são válidas — o PRISMA 2020, item 24a, pede informar o registro ou declarar que ` +
+                `a revisão não foi registrada —; o que não pode é a omissão.`
+            );
+        }
+
         return {
-            valid: score === maxScore && f03Faltando.length === 0 && f41Faltando.length === 0,
+            valid: score === maxScore && f03Faltando.length === 0 && f41Faltando.length === 0 && !registroFaltando,
             score,
             maxScore,
             errors,

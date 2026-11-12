@@ -1,6 +1,6 @@
 ---
 name: conduct-review
-description: Orquestra, controla E comunica uma revisão de literatura de ponta a ponta (o "coordenador"). Use quando o pesquisador quiser CONDUZIR, CONTINUAR, RETOMAR ou SABER O ESTADO de uma revisão sistemática, de escopo ou outro método. Dirige o fluxo acionando os subagentes especialistas, roda os gates de rigor entre fases, respeita um nível de controle configurável (anti-deriva) e é a interface viva do que está sendo produzido. Não use para busca avulsa/exploratória (use o agente scout).
+description: Orquestra, controla E comunica uma revisão de literatura de ponta a ponta (o "coordenador"). Use quando o pesquisador quiser CONDUZIR, CONTINUAR, RETOMAR ou SABER O ESTADO de uma revisão conduzida por um método assimilado — hoje só o prisma-sr (revisão sistemática e exploratória) e o scoping-prisma-scr (escopo, que herda a trilha do prisma-sr); a tabela de etapas desta skill é a trilha F0–F8 do prisma-sr, e não há método narrativo nem outro implementado. Dirige o fluxo acionando os subagentes especialistas, roda os gates de rigor entre fases, respeita um nível de controle configurável (anti-deriva) e é a interface viva do que está sendo produzido. Não use para busca avulsa/exploratória (use o agente scout).
 ---
 
 # Conduct Review — Orquestrador, controle e interface da revisão

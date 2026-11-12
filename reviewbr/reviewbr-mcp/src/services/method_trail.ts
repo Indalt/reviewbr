@@ -478,7 +478,8 @@ function responderCondicao(
     return {
         ok: true,
         mensagem: `✅ Resposta do pesquisador à condição "${cond.id}" registrada: ${opcao}. ` +
-            `Os itens que o método condiciona a ela seguem esta resposta em check_standard_coverage com o projectPath. ` +
+            `Se o método condiciona itens do padrão a ela, eles seguem esta resposta em check_standard_coverage com o projectPath; ` +
+            `a note da condição no manifest diz se condiciona algum. ` +
             `Não é a decisão sobre a etapa ${cond.etapa}: a etapa continua precisando dela para avançar.`,
     };
 }

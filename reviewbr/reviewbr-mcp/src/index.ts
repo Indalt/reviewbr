@@ -210,7 +210,6 @@ async function checkDesignGuardrail(projectId?: number, projectPath?: string): P
 interface ResearchTypeMeta {
     label: string;
     prismaStandard: string;
-    requiresRegistration: boolean;
     registrationPlatform: string;
     description: string;
 }
@@ -242,49 +241,42 @@ function getResearchTypeMeta(researchType: string): ResearchTypeMeta {
         systematic_review: {
             label: "Revisão Sistemática",
             prismaStandard: "PRISMA 2020 (27 itens, 44 subitens) + PRISMA-S (16 itens) + PRISMA-P (protocolo)",
-            requiresRegistration: true,
             registrationPlatform: "PROSPERO (saúde) ou OSF Registries (outros domínios)",
             description: "Revisão que responde a uma pergunta focada usando metodologia pré-definida, reprodutível e transparente."
         },
         scoping_review: {
             label: "Revisão de Escopo (Scoping Review)",
             prismaStandard: "PRISMA-ScR (Extensão para Scoping Reviews) + Guia JBI",
-            requiresRegistration: false,
             registrationPlatform: "Opcional: OSF Registries",
             description: "Mapeia a extensão e natureza da literatura, identifica lacunas e conceitos-chave."
         },
         integrative_review: {
             label: "Revisão Integrativa",
             prismaStandard: "PRISMA 2020 adaptado (Whittemore & Knafl)",
-            requiresRegistration: false,
             registrationPlatform: "Opcional: PROSPERO ou OSF",
             description: "Combina evidências experimentais e não-experimentais para compreensão abrangente."
         },
         meta_analysis: {
             label: "Meta-Análise",
             prismaStandard: "PRISMA 2020 (27 itens, 44 subitens) + PRISMA-S + Diretrizes de síntese estatística",
-            requiresRegistration: true,
-            registrationPlatform: "PROSPERO (obrigatório)",
+            registrationPlatform: "PROSPERO (saúde) ou OSF Registries (outros domínios)",
             description: "Síntese quantitativa usando métodos estatísticos (forest plot, I², heterogeneidade)."
         },
         rapid_review: {
             label: "Revisão Rápida",
             prismaStandard: "PRISMA 2020 simplificado + Diretrizes Cochrane para Rapid Reviews",
-            requiresRegistration: false,
             registrationPlatform: "Opcional: OSF",
             description: "Metodologia simplificada para prazos curtos. Risco de viés documentado."
         },
         exploratory: {
             label: "Pesquisa Exploratória / Básica",
             prismaStandard: "Sem PRISMA formal — protocolo de busca livre documentado",
-            requiresRegistration: false,
             registrationPlatform: "N/A",
             description: "Busca bibliográfica sem metodologia sistemática formal."
         },
         methodological_audit: {
             label: "Auditoria Metodológica (Post-Hoc)",
             prismaStandard: "PRISMA 2020 + PRISMA-S (Validação Passiva — Somente Leitura)",
-            requiresRegistration: false,
             registrationPlatform: "N/A",
             description: "Validação retroativa de pesquisa já concluída. O sistema NÃO gera novos dados."
         }
@@ -512,7 +504,9 @@ server.tool(
         sections.push(`### 📋 Sobre o tipo de pesquisa\n`);
         sections.push(`> Esta seção descreve o TIPO. O que se executa é a trilha do método acima: onde as duas divergirem, vale a trilha.\n`);
         sections.push(`- **Tipo:** ${meta.label}`);
-        sections.push(`- **Registro:** ${meta.requiresRegistration ? `⚠️ OBRIGATÓRIO (${meta.registrationPlatform})` : `Opcional (${meta.registrationPlatform})`}`);
+        // Registro é DECLARADO, nunca imposto (DEBT-135): o PRISMA 2020, item 24a, pede informar o
+        // registro ou declarar que não houve, e o Vicente decidiu em 08/10/2026 que não é pré-condição.
+        sections.push(`- **Registro:** ${ProjectInitService.textoRegistro(meta.registrationPlatform)}`);
         sections.push(`- **Descrição:** ${meta.description}\n`);
 
         // Design recommendations
@@ -554,7 +548,7 @@ server.tool(
         sections.push(`1. **Tipo:** ${meta.label} (${detectedType})`);
         sections.push(`2. **Método(s) que servem:** ${metodos.map((m) => `${m.id} (${m.padroes.join(" + ") || "sem padrão declarado"})`).join("; ")}`);
         sections.push(`3. **Processo de triagem (F4.1.2):** ${designAdvice.suggestScreeningProcess}`);
-        sections.push(`4. **Registro:** ${meta.requiresRegistration ? "OBRIGATÓRIO antes da busca" : "Opcional"}`);
+        sections.push(`4. **Registro:** declarado no protocolo — registrado (plataforma e número) ou não registrado; nenhuma das duas reprova`);
         sections.push(`5. **Meta-análise:** ${designAdvice.suggestMetaAnalysis ? "Sim" : "Não"}`);
         sections.push(`6. **Limitações:** ${capabilities.cannot.length > 0 ? capabilities.cannot.join("; ") : "Nenhuma crítica identificada"}`);
 
@@ -1643,7 +1637,7 @@ server.tool(
 
 server.tool(
     "record_researcher_decision",
-    "Grava a DECISÃO DO PESQUISADOR sobre uma etapa da trilha (RV-04) — é o que destrava a etapa seguinte sob control_level 'estrito'. Exige a contribuição específica dele, nas palavras dele: 'ok', 'pode seguir', 'aprovado' são recusados, porque carimbo não é supervisão. Confere que a etapa existe na trilha do método do projeto. Se o artefato que encerra a etapa já foi gravado, a fase avança agora. Com 'condicao' e 'resposta', grava a RESPOSTA dele a uma condição que o método declara (manifest 'condicoes', DEBT-142): a resposta tem de ser uma das opções do método, decide que itens condicionais do padrão se aplicam ao projeto e NÃO destrava a etapa. NÃO escreva a contribuição nem a resposta pelo pesquisador.",
+    "Grava a DECISÃO DO PESQUISADOR sobre uma etapa da trilha (RV-04) — é o que destrava a etapa seguinte sob control_level 'estrito'. Exige a contribuição específica dele, nas palavras dele: 'ok', 'pode seguir', 'aprovado' são recusados, porque carimbo não é supervisão. Confere que a etapa existe na trilha do método do projeto. Se o artefato que encerra a etapa já foi gravado, a fase avança agora. Com 'condicao' e 'resposta', grava a RESPOSTA dele a uma condição que o método declara (manifest 'condicoes', DEBT-142): a resposta tem de ser uma das opções do método, decide que itens condicionais do padrão se aplicam ao projeto — ou nenhum, quando a fonte não os condiciona (a note da condição no manifest diz qual é o caso; abordagem_certeza não condiciona item algum) — e NÃO destrava a etapa. NÃO escreva a contribuição nem a resposta pelo pesquisador.",
     {
         projectPath: z.string().describe("Raiz do projeto (onde está o project_state.json)"),
         etapa: z.string().optional().describe("Id da etapa na trilha do método do projeto (ex.: 'F3') — a etapa sobre a qual ele decidiu. Com 'condicao', dispensável: a etapa é a da condição."),

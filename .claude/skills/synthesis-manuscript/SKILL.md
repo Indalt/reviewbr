@@ -1,6 +1,6 @@
 ---
 name: synthesis-manuscript
-description: Procedimento de risco de viés, síntese e geração do manuscrito e suplementos (fases F6/F7/F8), com os gates de integridade finais. Use ao fechar uma revisão para avaliar qualidade, sintetizar achados ancorados, validar o fluxograma e produzir o relatório final auditável. Carregada pelo agente analyst.
+description: Procedimento de risco de viés, síntese e geração do manuscrito e suplementos (fases F6/F7/F8), com os gates de integridade finais. É o procedimento da trilha do prisma-sr (e do escopo, que a herda): manuscrito nas seções F8.3.1–F8.3.27 e checklists PRISMA preenchidos; outro método não tem procedimento próprio aqui. Use ao fechar uma revisão para avaliar qualidade, sintetizar achados ancorados, validar o fluxograma e produzir o relatório final auditável. Carregada pelo agente analyst.
 ---
 
 # Synthesis & Manuscript — fechamento auditável da revisão
@@ -13,7 +13,8 @@ Ferramenta declarada no protocolo (RoB2/ROBINS-I/Newcastle-Ottawa/JBI). Julgamen
 ## F7 — Síntese
 - Tipo: quantitativa / qualitativa / narrativa / mista.
 - **Ancoragem obrigatória**: cada afirmação vem de `evidence_synthesis.md` e da tabela de características — **não alucine**. Use `rag_query` para reconferir trechos.
-- Se meta-análise: medida de efeito (RR/OR/MD/SMD), modelo de pooling (fixo/aleatório), heterogeneidade (I²/Q), viés de relato (funil/Egger), certeza (GRADE/CERQual).
+- Se meta-análise: medida de efeito (RR/OR/MD/SMD), modelo de pooling (fixo/aleatório), heterogeneidade (I²/Q), viés de relato (funil/Egger).
+- **Certeza da evidência (F7.3), em toda revisão, com ou sem meta-análise:** pela abordagem que o protocolo escolheu na condição `abordagem_certeza` — GRADE para desfechos de síntese quantitativa, CERQual para achados de síntese qualitativa — ou, com "nenhuma", a declaração de que não houve avaliação e por quê. Nenhuma tool conduz nem confere a avaliação: o agente propõe, o pesquisador decide.
 
 ## F8 — Gates de integridade (rodar ANTES de exportar; qualquer vermelho para tudo)
 1. `compute_flow_counts` → (re)deriva `prisma_flow.json` dos logs reais (RV-02).

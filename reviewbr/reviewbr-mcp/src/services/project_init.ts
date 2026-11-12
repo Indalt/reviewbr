@@ -93,7 +93,6 @@ export interface ProjectConfig {
         maxDate: string;
     };
     languages?: string[];
-    registrationRequired?: boolean;
     /**
      * @deprecated Nunca foi lido. O campo colapsava três coisas distintas: cegamento de
      * avaliador (ocultar autor/periódico — NÃO implementado: o prompt de triagem envia
@@ -125,56 +124,48 @@ export interface ProjectInitResult {
 const RESEARCH_TYPE_META: Record<ResearchType, {
     label: string;
     prismaStandard: string;
-    requiresRegistration: boolean;
     registrationPlatform: string;
     description: string;
 }> = {
     systematic_review: {
         label: "Revisão Sistemática",
         prismaStandard: "PRISMA 2020 (27 itens) + PRISMA-S (16 itens)",
-        requiresRegistration: true,
         registrationPlatform: "PROSPERO (https://www.crd.york.ac.uk/prospero/)",
         description: "Revisão rigorosa com metodologia pré-definida, busca exaustiva, e síntese quantitativa ou qualitativa."
     },
     scoping_review: {
         label: "Revisão de Escopo",
         prismaStandard: "PRISMA-ScR (22 itens)",
-        requiresRegistration: false,
         registrationPlatform: "Opcional: OSF Registries (https://osf.io/registries)",
         description: "Mapeamento da literatura para identificar conceitos-chave, lacunas, e extensão da evidência."
     },
     integrative_review: {
         label: "Revisão Integrativa",
         prismaStandard: "PRISMA 2020 (adaptado) + Whittemore & Knafl framework",
-        requiresRegistration: false,
         registrationPlatform: "Opcional: PROSPERO ou OSF",
         description: "Combina evidências de estudos experimentais e não-experimentais para compreensão abrangente de um fenômeno."
     },
     meta_analysis: {
         label: "Meta-Análise",
         prismaStandard: "PRISMA 2020 (27 itens) + PRISMA-S + Diretrizes de meta-análise estatística",
-        requiresRegistration: true,
         registrationPlatform: "PROSPERO (https://www.crd.york.ac.uk/prospero/)",
         description: "Síntese estatística quantitativa de resultados de múltiplos estudos."
     },
     rapid_review: {
         label: "Revisão Rápida",
         prismaStandard: "PRISMA 2020 (simplificado) — documentar atalhos metodológicos",
-        requiresRegistration: false,
         registrationPlatform: "N/A",
         description: "Revisão acelerada com etapas simplificadas para responder urgências de saúde pública ou políticas."
     },
     exploratory: {
         label: "Pesquisa Exploratória / Básica",
         prismaStandard: "Sem PRISMA — protocolo de busca livre documentado",
-        requiresRegistration: false,
         registrationPlatform: "N/A",
         description: "Busca bibliográfica sem metodologia sistemática formal."
     },
     methodological_audit: {
         label: "Auditoria Metodológica (Post-Hoc)",
         prismaStandard: "PRISMA 2020 + PRISMA-S (Validação Passiva — Somente Leitura)",
-        requiresRegistration: false,
         registrationPlatform: "N/A",
         description: "Validação retroativa de pesquisa já concluída. O sistema NÃO busca, baixa ou gera novos dados. Apenas diagnostica a conformidade metodológica do material submetido pelo pesquisador."
     }
@@ -301,7 +292,7 @@ export class ProjectInitService {
             protocolPath,
             researchType: config.researchType,
             prismaStandard,
-            registrationAdvice: meta.requiresRegistration ? "Required" : "Optional",
+            registrationAdvice: ProjectInitService.textoRegistro(meta.registrationPlatform),
             searchStrategy: this.getSearchStrategy(config),
             folderStructure: folders,
             warnings,
@@ -411,9 +402,7 @@ ${trilhaTexto}
 
 ## Registro de Protocolo
 
-${meta.requiresRegistration
-                ? `**Status:** Pendente de registro no ${meta.registrationPlatform}`
-                : `**Status:** Registro ${config.registrationRequired ? "planejado" : "não obrigatório"} (${meta.registrationPlatform})`}
+**Registro:** [PREENCHIMENTO OBRIGATÓRIO: "registrado em <plataforma> sob nº <número>" ou "não registrado". As duas respostas são válidas: o PRISMA 2020, item 24a, pede informar o registro ou declarar que a revisão não foi registrada. Plataformas possíveis: ${meta.registrationPlatform}.]
 
 ## Auditoria PRISMA
 
@@ -470,6 +459,18 @@ Checklist ${prismaStandard} será preenchido ao final do estudo.
     /**
      * Returns the questions the coordinator should ask before starting a project.
      */
+    /**
+     * O que o sistema diz ao pesquisador sobre o registro do protocolo. Registro é DECLARADO,
+     * nunca imposto (DEBT-135): o PRISMA 2020, item 24a, pede "fornecer as informações de
+     * registro da revisão, incluindo nome do registro e número de registro, OU declarar que a
+     * revisão não foi registrada", e o Vicente decidiu em 08/10/2026 que registro não é
+     * pré-condição da pesquisa. Vale para todo tipo e todo domínio.
+     */
+    static textoRegistro(plataformas: string): string {
+        return "declarar no protocolo — \"registrado em <plataforma> sob nº <número>\" ou \"não registrado\"; " +
+            `nenhuma das duas reprova (PRISMA 2020, item 24a). Plataformas possíveis: ${plataformas}`;
+    }
+
     static getProjectQuestions(): string {
         return `## Perguntas Obrigatórias para Planejamento
 
@@ -501,10 +502,10 @@ Checklist ${prismaStandard} será preenchido ao final do estudo.
    - Português, Inglês, Espanhol (padrão)
    - Outros
 
-7. **Necessita registro de protocolo?**
-   - PROSPERO (obrigatório para SR/MA)
-   - OSF Registries (opcional)
-   - Não
+7. **O protocolo será registrado?** (declaração, não exigência — PRISMA 2020, item 24a)
+   - Registrado em <plataforma> sob nº <número> (PROSPERO, para saúde; OSF Registries, para outros domínios)
+   - Não registrado
+   As duas respostas são válidas; o protocolo só não pode ficar sem dizer qual.
 
 8. **Processo de triagem (PRISMA 2020 item 8)?**
    - Individual (um triador aplica os critérios a cada registro)

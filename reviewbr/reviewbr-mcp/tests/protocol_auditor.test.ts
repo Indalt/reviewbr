@@ -39,6 +39,9 @@ Orienta a recomendação técnica que a revisão se propõe a informar.
    - **F4.1.2 Processo de triagem:** Duplo independente, com desempate por terceiro revisor
    - **F4.1.3 Ferramenta utilizada:** ReviewBR MCP, triagem assistida com conferência humana
    - **Resolução de discordâncias:** Terceiro revisor decide; concordância reportada
+
+## Registro de Protocolo
+**Registro:** não registrado
 `;
 
 const troca = (sec: string, novo: string) =>

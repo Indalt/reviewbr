@@ -134,7 +134,7 @@
       "producer_tools": [],
       "active": true,
       "allow_meta_analysis": false,
-      "note": "Síntese descritiva/narrativa; sem pooling quantitativo"
+      "note": "Síntese descritiva/narrativa; sem pooling quantitativo. Sem F7.3 (certeza da evidência): o PRISMA-ScR não tem item de certeza, e a condição abordagem_certeza não é deste método (DEBT-151, D14)"
     },
     {
       "id": "F8",

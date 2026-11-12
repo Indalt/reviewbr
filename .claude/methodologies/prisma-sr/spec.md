@@ -40,11 +40,11 @@ Executado antes de qualquer busca. Protocolo deve ser fechado e registrado antes
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA |
 |---|---|---|---|---|
-| F0.2.1 | Plataforma de registro | PROSPERO / OSF / INPLASY / Research Registry | ✅ | Item 15 |
-| F0.2.2 | Número de registro | CRD... / osf.io/... / INPLASY... | ✅ | Item 15 |
-| F0.2.3 | URL do registro | Link público do protocolo registrado | ✅ | Item 15 |
-| F0.2.4 | Data do registro | Deve ser anterior ao início da busca | ✅ | Item 15 |
-| F0.2.5 | Status | Registrado / Em processo / Não aplicável + justificativa | ✅ | Item 15 |
+| F0.2.1 | Plataforma de registro | PROSPERO / OSF / INPLASY / Research Registry | se registrado | Item 15 |
+| F0.2.2 | Número de registro | CRD... / osf.io/... / INPLASY... | se registrado | Item 15 |
+| F0.2.3 | URL do registro | Link público do protocolo registrado | se registrado | Item 15 |
+| F0.2.4 | Data do registro | Deve ser anterior ao início da busca | se registrado | Item 15 |
+| F0.2.5 | Status | Registrado / Em processo / Não registrado. Declarar é o obrigatório; registrar não é (DEBT-135; decisão de 08/10/2026) | ✅ | Item 15 |
 
 ### F0.3 — Justificativa e Contexto
 
@@ -346,7 +346,7 @@ Um formulário por estudo incluído. Pilotado antes do uso.
 
 ### F7.3 — Certeza da Evidência
 
-> **[NÃO COBERTO] por tool (DEBT-008).** Nenhuma tool conduz nem confere a avaliação da certeza da evidência: GRADE e CERQual são citados aqui, não assimilados. O agente propõe o julgamento de cada desfecho, com a justificativa; o pesquisador decide. A abordagem é escolhida a priori, no protocolo: é a condição `abordagem_certeza` do manifest do `prisma-sr` (GRADE / CERQual / nenhuma), perguntada na F1 e respondida pelo pesquisador com `record_researcher_decision`. Com "nenhuma", F7.3.1 registra que não houve avaliação, e por quê — a resposta não tira item do denominador (a nota da condição, no `manifest.json`, cita a fonte).
+> **Sem tool (DEBT-008).** Nenhuma tool conduz nem confere a avaliação da certeza da evidência — o que é diferente da etiqueta `[NÃO COBERTO]` da conformidade, que quer dizer "sem campo na trilha": os itens 14 e 22 do PRISMA 2020 têm campo aqui (F7.3.1–F7.3.4). GRADE e CERQual são citados aqui, não assimilados. O agente propõe o julgamento de cada desfecho, com a justificativa; o pesquisador decide. A abordagem é escolhida a priori, no protocolo: é a condição `abordagem_certeza` do manifest do `prisma-sr` (GRADE / CERQual / nenhuma), perguntada na F1 e respondida pelo pesquisador com `record_researcher_decision`. Com "nenhuma", F7.3.1 registra que não houve avaliação, e por quê, e F7.3.2–F7.3.4 registram "não se aplica — sem avaliação de certeza (F7.3.1)"; o PRISMA-P, item 17, pede só declarar a ausência com o motivo. A resposta não tira item do denominador (a nota da condição, no `manifest.json`, cita a fonte).
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA |
 |---|---|---|---|---|
