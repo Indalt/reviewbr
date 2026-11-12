@@ -39,7 +39,11 @@ export const ChangeProposalSchema = z.object({
     /** Tipo declarado. Sem default e sem fallback: omitir é reprovar. */
     change_type: z.nativeEnum(ChangeType),
 
-    /** Arquivos/artefatos tocados. Vazio é permitido só para proposta puramente documental. */
+    /**
+     * Arquivos/artefatos tocados, como o proponente os declara. NENHUM código os confere: nem
+     * a existência no disco, nem a correspondência com o que foi alterado (DEBT-016). A
+     * conferência real é extensão, na fila decidida em 29/10; até lá, a tool avisa na descrição.
+     */
     targets: z.array(z.string()).default([]),
 
     /**

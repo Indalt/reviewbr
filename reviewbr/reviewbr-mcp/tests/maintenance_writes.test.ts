@@ -191,6 +191,31 @@ describe("catálogo — absorver exige fonte externa", () => {
         expect(r.errors.length).toBe(2);
     });
 
+    // DEBT-141: o schema preenchia os ausentes com "" ANTES da mescla, e a atualização
+    // apagava o que não foi reenviado, respondendo ok:true. Mesma classe do DEBT-107.
+    it("atualizar=true é MERGE: campo não reenviado continua gravado (DEBT-141)", () => {
+        expect(CatalogWriter.absorver(RAIZ, entrada({ notes: "NOTA", full_name: "Nome", version: "v1" })).ok).toBe(true);
+        const { kind: _k, ...semKind } = entrada();
+        const r = CatalogWriter.absorver(RAIZ, { ...semKind, standard_file: "padrao-x" }, true);
+        expect(r.ok).toBe(true);
+        const e = MethodologyCatalogService.read(RAIZ)!.entries[0];
+        expect(e.standard_file).toBe("padrao-x"); // controle positivo: o enviado foi gravado
+        expect(e.notes).toBe("NOTA");
+        expect(e.full_name).toBe("Nome");
+        expect(e.version).toBe("v1");
+        expect(e.kind).toBe("review_method");
+    });
+
+    it("atualizar=true aceita só o id e o campo corrigido", () => {
+        CatalogWriter.absorver(RAIZ, entrada());
+        const r = CatalogWriter.absorver(RAIZ, { id: "m1", when_to_use: "quando usar, corrigido" }, true);
+        expect(r.ok).toBe(true);
+        const e = MethodologyCatalogService.read(RAIZ)!.entries[0];
+        expect(e.when_to_use).toBe("quando usar, corrigido");
+        expect(e.source_url).toBe("https://exemplo.org/m1");
+        expect(e.what_it_is).toBe("o que é");
+    });
+
     it("NÃO grava status no arquivo — ele continua derivado do disco (RV-02)", () => {
         CatalogWriter.absorver(RAIZ, entrada({ methodology_dir: "existente" }));
         const bruto = fs.readFileSync(MethodologyCatalogService.catalogPath(RAIZ), "utf-8");

@@ -2666,10 +2666,10 @@ server.tool(
 
 server.tool(
     "validate_system_change",
-    "Valida uma alteração do PRÓPRIO ReviewBR contra a Regra RV-11: toda alteração declara seu TIPO (CORRECAO | CONFORMIDADE | EXTENSAO) e satisfaz o requisito daquele tipo — correção exige falha documentada e reproduzível; conformidade exige padrão, versão e item; extensão exige protocolo próprio travado. Submissão sem tipo declarado é REPROVADA. Verificação determinística: não infere o tipo a partir do conteúdo (RV-06).",
+    "Valida a PROPOSTA de uma alteração do PRÓPRIO ReviewBR contra a Regra RV-11: toda alteração declara seu TIPO (CORRECAO | CONFORMIDADE | EXTENSAO) e satisfaz o requisito daquele tipo — correção exige falha documentada e reproduzível; conformidade exige padrão, versão e item; extensão exige protocolo próprio travado. Submissão sem tipo declarado é REPROVADA. Verificação determinística: não infere o tipo a partir do conteúdo (RV-06). O que ela confere é o texto declarado: se os campos exigidos pelo tipo estão preenchidos e, com addresses[], a ordem de correção no backlog. NÃO lê o diff nem os arquivos alterados: uma proposta bem preenchida passa ainda que a alteração escrita seja outra, e protocol_locked é aceito como declarado. Os targets[] são registrados e NÃO são conferidos — nem a existência no disco, nem a correspondência com o que foi alterado.",
     {
         proposal: z.string().describe(
-            "JSON da proposta. Campos: summary (obrigatório), change_type ('CORRECAO'|'CONFORMIDADE'|'EXTENSAO', obrigatório), targets[]; " +
+            "JSON da proposta. Campos: summary (obrigatório), change_type ('CORRECAO'|'CONFORMIDADE'|'EXTENSAO', obrigatório), targets[] (aceito e não conferido no disco); " +
             "para CORRECAO: documented_failure, reproduction; " +
             "para CONFORMIDADE: standard, standard_version, standard_item; " +
             "para EXTENSAO: protocol_path, protocol_locked; " +
@@ -2895,7 +2895,7 @@ server.tool(
     "ABSORVE uma metodologia no catalogo (.claude/catalog/) — o 'conhecer sem implementar'. Exige source_url EXTERNO (http/https) da fonte oficial consultada: entrada sem fonte rastreavel e palpite, nao catalogo. O status no sistema NAO e escrito: continua derivado do disco a cada consulta (RV-02).",
     {
         entry: z.string().describe("JSON da entrada: id, name, kind, version, what_it_is, when_to_use, requires, source_url (obrigatorio, http); opcionais full_name, version_year, item_count, related_standards, confidence, notes, standard_file, methodology_dir."),
-        atualizar: z.boolean().optional().describe("true para alterar entrada existente."),
+        atualizar: z.boolean().optional().describe("true para alterar entrada existente. E merge: basta mandar o id e os campos a mudar; os nao enviados ficam como estao gravados."),
         repoRoot: z.string().optional(),
     },
     async (p) => {

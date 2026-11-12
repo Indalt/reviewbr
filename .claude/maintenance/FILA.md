@@ -127,3 +127,6 @@ Vicente pedir.
   re-inicialização é recusada, a linha nova fica no banco.
 - (linha 5) `data_mining/caju_beverages` (protocol.md `[LOCKED]`, sem `project_state.json`) é o único projeto do
   repositório que perdeu a busca com a trava só pelo estado; `plan_research_protocol` também recusa o caminho dele.
+- (linha 6) A `absorb_methodology` não remove entrada: `position-statement-ia-sintese-2025` e
+  `declaracao-conjunta-ia-sintese-evidencia` seguem no catálogo, apontando para
+  `position-statement-ia-sintese-evidencia-2025`, e o panorama lista as três.

@@ -201,7 +201,28 @@ export class CatalogWriter {
      * o sistema recusa.
      */
     static absorver(repoRoot: string, bruto: unknown, atualizar = false): Escrita {
-        const parsed = CatalogEntrySchema.safeParse(bruto);
+        // Mesma proteção do backlog: catálogo ilegível não é catálogo vazio.
+        const sonda = MethodologyCatalogService.probe(repoRoot);
+        if (sonda.status === "ILEGIVEL") {
+            return {
+                ok: false,
+                errors: [
+                    `RECUSADO: o catálogo existe em disco e está ILEGÍVEL — ${sonda.detail}`,
+                    "Gravar agora apagaria todas as metodologias já absorvidas. Corrija o arquivo antes."
+                ]
+            };
+        }
+        const cat = sonda.catalog ?? { schemaVersion: 1 as const, updatedAt: "", source_note: "", entries: [] };
+        const objeto = !!bruto && typeof bruto === "object" && !Array.isArray(bruto);
+        const id = objeto ? (bruto as any).id : undefined;
+        const i = typeof id === "string" ? cat.entries.findIndex((x) => x.id === id) : -1;
+
+        // ATUALIZAÇÃO É MERGE, NUNCA SUBSTITUIÇÃO (DEBT-141). O schema preenche com "" todo
+        // campo ausente; validar antes de mesclar fazia a atualização apagar o que não foi
+        // reenviado, e a tool respondia ok:true. Mescla-se com a entrada gravada ANTES de
+        // validar, como o BacklogWriter faz desde o DEBT-107.
+        const base = atualizar && i >= 0 ? cat.entries[i] : {};
+        const parsed = CatalogEntrySchema.safeParse(objeto ? { ...base, ...(bruto as object) } : bruto);
         if (!parsed.success) {
             return { ok: false, errors: parsed.error.issues.map((i) => `${i.path.join(".") || "(raiz)"}: ${i.message}`) };
         }
@@ -219,24 +240,11 @@ export class CatalogWriter {
         }
         if (!e.confidence.trim()) e.confidence = "media";
 
-        // Mesma proteção do backlog: catálogo ilegível não é catálogo vazio.
-        const sonda = MethodologyCatalogService.probe(repoRoot);
-        if (sonda.status === "ILEGIVEL") {
-            return {
-                ok: false,
-                errors: [
-                    `RECUSADO: o catálogo existe em disco e está ILEGÍVEL — ${sonda.detail}`,
-                    "Gravar agora apagaria todas as metodologias já absorvidas. Corrija o arquivo antes."
-                ]
-            };
-        }
-        const cat = sonda.catalog ?? { schemaVersion: 1 as const, updatedAt: "", source_note: "", entries: [] };
-        const i = cat.entries.findIndex((x) => x.id === e.id);
         if (i >= 0 && !atualizar) errors.push(`Já existe entrada "${e.id}" no catálogo. Para alterá-la, passe atualizar=true.`);
         if (i < 0 && atualizar) errors.push(`Nenhuma entrada "${e.id}" para atualizar.`);
         if (errors.length) return { ok: false, errors };
 
-        if (i >= 0) cat.entries[i] = { ...cat.entries[i], ...e };
+        if (i >= 0) cat.entries[i] = e;
         else cat.entries.push(e);
         cat.updatedAt = agora();
 
