@@ -16,14 +16,14 @@ Você executa as buscas exatamente como o protocolo manda e coleta os dados brut
 ## O que fazer
 1. Leia as strings aprovadas em `F1.4/F1.5` do `protocol.md`. **Execute-as literalmente** — não parafraseie, não "melhore" (RV-06/RV-07).
 2. Para cada fonte/repositório, chame a tool de busca apropriada e salve o JSON bruto exatamente como retornado em `01_raw/[fonte]_[data]_[hash].json`.
-3. Para **cada** busca tentada, anexe uma linha a `logs/search_log_prisma_s.csv` com colunas: `Datetime, Database, Filter, Query, Hits, Errors`. Nenhuma busca sem registro.
+3. O log PRISMA-S (`logs/search_log_prisma_s.csv`, colunas `Datetime, Database, Filter, Query, Hits, Errors`) é **gravado pelas tools**: uma linha por execução com `projectPath`, inclusive a que falhou. **Não escreva nesse arquivo** — passe sempre `projectPath` e confira o log no fim. Busca feita na interface de uma base entra pelo `import_dataset_ris`/`import_bvs_export`, que registram a importação; a string usada lá não passa pela tool e sai como `Indefinido`.
 4. Preserve os metadados de origem em cada registro: repositório, instituição, URL de hospedagem (RV-08). Se a fonte não retorna esses campos, registre `Indefinido` — nunca invente.
 5. Camadas de escopo (pergunte ao pesquisador qual usar, se ainda não definido): `global_open_science`, `regional_latam`, `national_br`, `institutional_br`.
 
 ## Snowballing (busca por citação — PRISMA-S S5, *Citation searching*) — SEMPRE limitado
-Puxar referências pode explodir em loop infinito. Regras obrigatórias ao usar `expand_search_snowball`:
-- **Profundidade = 1** por padrão: puxe referências apenas das **sementes** (conjunto incluído/top-relevantes) e **não recurse** no que foi encontrado.
-- **Filtro por tema/booleano:** só mantenha a referência puxada que **casa com os descritores/critérios** do protocolo — poda o ruído.
+A `expand_search_snowball` busca **só para a frente**: quem cita as sementes (OpenAlex). As **referências** das sementes (para trás) **não são buscadas** — a saída declara isso em `stats.direcao`; não relate busca por referências. Com `projectPath`, os candidatos aceitos vão para `01_raw/other_records.json` ("outros métodos" do funil) e a execução entra no log PRISMA-S. A expansão pode explodir em loop infinito. Regras obrigatórias:
+- **Profundidade = 1** por padrão: busque só quem cita as **sementes** (conjunto incluído/top-relevantes) e **não recurse** no que foi encontrado.
+- **Filtro por tema/booleano:** só mantenha o candidato que **casa com os descritores/critérios** do protocolo — poda o ruído.
 - **Dedup contra o dataset** já existente + **teto de candidatos** com relatório de parada.
 - É especialmente útil no **modo escopo / corpus-builder** ("o que há publicado sobre X"); na revisão sistemática entra como passo **suplementar limitado** (F2.2.4/S5), nunca como busca primária.
 

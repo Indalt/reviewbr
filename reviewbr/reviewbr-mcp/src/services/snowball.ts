@@ -67,10 +67,8 @@ export class SnowballService {
                     const work = await this.resolveWork(seed);
                     if (!work) continue;
 
-                    // Backward snowballing (referências) NÃO é implementado aqui — segue
-                    // como estava (só forward/citações). Fora do escopo do DEBT-059, que é
-                    // sobre as 4 salvaguardas de profundidade/filtro/dedup/teto, não sobre
-                    // adicionar a direção "para trás".
+                    // Backward snowballing (referências) NÃO existe: só forward/citações.
+                    // A saída declara isso em stats.direcao (DEBT-058).
                     const citations = await this.fetchCitations(work.id);
                     fetchedThisLevel += citations.length;
 
@@ -103,6 +101,9 @@ export class SnowballService {
         return {
             newCandidates,
             stats: {
+                // DEBT-058: a direção vai na saída. Só "para a frente" existe: quem cita as
+                // sementes (filtro cites: do OpenAlex). As referências delas não são buscadas.
+                direcao: "para a frente: quem cita as sementes (OpenAlex cites:). Referências das sementes (para trás): não buscadas.",
                 seeds: seeds.length,
                 new_found: newCandidates.length,
                 depth,

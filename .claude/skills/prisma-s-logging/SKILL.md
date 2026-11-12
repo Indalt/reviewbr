@@ -7,11 +7,16 @@ description: Procedimento de registro PRISMA-S da busca (fase F2). Use ao execut
 
 Toda busca deixa rastro reprodutível. Sem registro, a busca não aconteceu (para fins de auditoria).
 
-## Log obrigatório: `logs/search_log_prisma_s.csv`
-Uma linha por busca tentada, em **cada** fonte. Colunas mínimas:
-`Datetime` (ISO8601), `Database`, `Filter`, `Query` (string **exata**, sem parafrasear), `Hits`, `Errors`.
-- Se a busca falhou/truncou/deu timeout: registre em `Errors`, não omita (RV-06).
-- Contagem desconhecida = `Indefinido`, nunca um chute.
+## Log obrigatório: `logs/search_log_prisma_s.csv` — gravado pelo código
+Quem grava é a tool, não o agente (decisão de 29/10/2026): cada execução de `search_*`, `harvest_records`,
+`expand_search_snowball`, `import_dataset_ris` e `import_bvs_export` **com `projectPath`** anexa uma linha, também
+quando a busca falha. Sem `projectPath` não há linha (exploratório, RV-01). **Não escreva nesse arquivo** — confira-o.
+Colunas: `Datetime` (ISO8601), `Database` (fonte, com a tool entre parênteses), `Filter` (os parâmetros da execução,
+menos a string e o projeto), `Query` (string **exata**), `Hits`, `Errors`.
+- `Hits` = registros que a execução devolveu. Busca que não terminou: `Indefinido`, com o motivo em `Errors`.
+- Truncamento vai em `Errors`: a fonte declarou mais do que veio, ou a coleta parou no teto.
+- `Query` = `Indefinido` na importação de export (RIS, BVS): a string usada na interface da base não passa pela tool.
+- `logs/search_history.json` segue como registro bruto de cada chamada; o que a norma pede é o CSV.
 
 ## Metadados de origem por registro (RV-08)
 Cada registro salvo em `01_raw/` deve preservar: `provenanceSource` (URL da API/OAI-PMH), `searchQueryUsed`, `extractionDate` (ISO), e quando houver: repositório, instituição, URL de hospedagem. Faltando: `Indefinido`/`[TBD]`.

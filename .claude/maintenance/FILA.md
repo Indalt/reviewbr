@@ -39,7 +39,7 @@
 |---|---|---|---|---|
 | 0 | Limpeza dos documentos e rota do `maintainer.md` | — | — | **feita em 12/11/2026** |
 | 1 | A — Texto completo e leitura | 089 (primeiro) · 062 · 031 | — | **feita em 12/11/2026** (commit `71ce06b`) |
-| 2 | B — Registro da busca | 056 · 139 · 087 · 093 | 058 · 077 | a fazer |
+| 2 | B — Registro da busca | 056 · 139 · 087 · 093 | 058 · 077 | **feita em 12/11/2026** |
 | 3 | C — Triagem, deduplicação e tools em lote | 021 · 025 · 112 · 030 | 026 | a fazer |
 | 4 | D — Funil e gates | 138 · 071 | 003 · 002 · 066 · os 21 subitens do 014 como `[NÃO COBERTO]` | a fazer |
 | 5 | E — Trava do protocolo | 018 · 133 (mesmo conserto) · 042 | 060 | a fazer |
@@ -103,3 +103,11 @@ Vicente pedir.
   tratar `projectPath` absoluto.
 - (linha 1) Pelo Git Bash com a unidade em minúscula (`c:/`), o `npx vitest run` acusa "No test suite found" em
   todo arquivo; pelo PowerShell em `C:\` a suíte roda.
+- (linha 2) `snowball.ts:147` (`fetchCitations`) pede só a primeira página de `filter=cites:`, sem `per_page` nem
+  paginação, e trata a resposta de erro do `fetchJson` (`__error`) como lista vazia.
+- (linha 2) `harvest_records` não grava em `01_raw` nem com `projectPath`; a descrição do parâmetro diz "Sem ele,
+  a coleta é exploratória e nada é persistido". Desde a linha 2 a coleta entra no log PRISMA-S.
+- (linha 2) `librarian.md` passo 2 manda o agente salvar o JSON bruto em `01_raw/[fonte]_[data]_[hash].json`; as
+  tools de busca já gravam em `01_raw`.
+- (linha 2) `data.ts:333` grava `provenanceSource: "Local File Import"` quando a origem do RIS vem vazia; o
+  comentário de `data.ts:156` diz que a origem fica vazia nesse caso.

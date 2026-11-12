@@ -16,11 +16,17 @@ export class RepositoryHealerService {
         }
 
         const brokenRepos = catalog.filter(r => !r.access?.oaiPmh?.available || !r.access?.oaiPmh?.endpoint);
+        // DEBT-077: a tool só examina os repositórios MARCADOS como inativos. Os marcados como
+        // ativos não recebem nenhum pedido de rede — a frase não pode afirmar que estão operantes.
+        const naoTestados = catalog.length - brokenRepos.length;
+        const escopo = `Escopo: só os repositórios marcados como inativos no catálogo são examinados. ` +
+            `Os ${naoTestados} marcados como ativos NÃO foram testados — esta tool não detecta endpoint que parou depois de marcado.`;
         if (brokenRepos.length === 0) {
-            return "✅ **Diagnóstico:** Todos os repositórios OAI-PMH no catálogo estão ativos e operantes. Nada a consertar.";
+            return `**Diagnóstico:** nenhum repositório está marcado como inativo no catálogo; nada foi examinado. ${escopo}`;
         }
 
         let report = `## 🛠️ Auto-Healer OAI-PMH Report\n\n`;
+        report += `${escopo}\n\n`;
         report += `Iniciando varredura em **${brokenRepos.length} repositórios inativos** para descoberta profunda de Endpoints via HTML Scraping.\n\n`;
 
         let fixedCount = 0;

@@ -43,6 +43,7 @@ import { MethodologyAuditorService } from "./services/methodology_auditor.js";
 import { ProtocolDesignAuditor } from "./services/protocol_auditor.js";
 import { ScreeningMetricsService } from "./services/screening_metrics.js";
 import { ScihubBridgeService, conferirPedidoByos } from "./services/scihub_bridge.js";
+import { registrarBuscaPrismaS, registrarHistorico, type BuscaExecutada } from "./services/search_log.js";
 import { RepositoryHealerService } from "./services/repository_healer.js";
 import { AgentOrchestrator } from "./registry/agent_orchestrator.js";
 import { config } from "./config.js";
@@ -104,24 +105,45 @@ function guardedHandler(_toolName: string, handler: (params: any) => Promise<any
  */
 async function logToLocalProject(projectPath: string, toolName: string, data: any) {
     try {
-        const logDir = path.join(process.cwd(), projectPath, "logs");
-        if (!fs.existsSync(logDir)) fs.mkdirSync(logDir, { recursive: true });
-        const logPath = path.join(logDir, "search_history.json");
-        const logEntry = {
-            timestamp: new Date().toISOString(),
-            tool: toolName,
-            ...data
-        };
-        let history = [];
-        if (fs.existsSync(logPath)) {
-            try {
-                history = JSON.parse(fs.readFileSync(logPath, "utf-8"));
-            } catch (e) { history = []; }
-        }
-        history.push(logEntry);
-        fs.writeFileSync(logPath, JSON.stringify(history, null, 2));
+        // DEBT-139: resolveProjectDir trata projectPath absoluto. path.join(cwd, absoluto) dava
+        // 'C:\reviewbr\C:\projeto\logs', o mkdir lançava e este catch engolia: o log sumia.
+        registrarHistorico(resolveProjectDir(projectPath), toolName, data);
     } catch (e) {
         console.error("Local logging error:", e);
+    }
+}
+
+/**
+ * DEBT-056: toda execução de busca sob projeto grava a sua linha em
+ * logs/search_log_prisma_s.csv (e a entrada bruta em logs/search_history.json) — inclusive a
+ * que falhou. Sem projeto, nada (exploratório, RV-01). Devolve aviso, em vez de engolir, quando
+ * a gravação falha: busca sem registro não pode responder como se tivesse sido registrada.
+ */
+async function registrarBusca(projectPath: string | undefined, b: BuscaExecutada): Promise<string> {
+    if (!projectPath) return "";
+    try {
+        const dir = resolveProjectDir(projectPath);
+        registrarHistorico(dir, b.tool, { query: b.query, found: b.hits, totalFound: b.totalDeclarado, errors: b.erros, params: b.filtros });
+        registrarBuscaPrismaS(dir, b);
+        return "";
+    } catch (e: any) {
+        console.error("Search log error:", e);
+        return `\n\n⚠️ Busca executada, mas o log PRISMA-S (logs/search_log_prisma_s.csv) NÃO foi gravado: ${e?.message ?? e}`;
+    }
+}
+
+/**
+ * DEBT-093 e DEBT-087: grava em 01_raw sempre que houver projectPath — a fonte da verdade é o
+ * disco, não a linha do SQLite — e devolve o que gravou, ou por que não gravou, em vez de calar.
+ */
+function gravarBrutos(projectPath: string | undefined, records: any[], kind: "database" | "other"): string {
+    if (!projectPath) return "";
+    const rel = kind === "other" ? "01_raw/other_records.json" : "01_raw/database_records.json";
+    try {
+        const raw = appendRawRecords(projectPath, records, kind);
+        return `${rel}: ${raw.added} novo(s) de ${records.length} (total no arquivo: ${raw.total}).`;
+    } catch (e: any) {
+        return `⚠️ ${records.length} registro(s) NÃO gravados em ${rel} (${e?.message ?? e}). O funil PRISMA não vai contá-los até isso ser corrigido.`;
     }
 }
 
@@ -606,7 +628,6 @@ server.tool(
 
         if (projectId) {
             await dbService.insertRecords(projectId, "optimized_search", results);
-            if (params.projectPath) appendRawRecords(params.projectPath, results, "database");
             await dbService.lockProject(projectId);
             await dbService.logAuditEvent({
                 project_id: projectId,
@@ -617,13 +638,11 @@ server.tool(
             });
         }
 
-        if (params.projectPath) {
-            await logToLocalProject(params.projectPath, "search_papers_optimized", {
-                query: params.query,
-                found: results.length,
-                errors
-            });
-        }
+        // DEBT-093: a fonte da verdade é o disco — grava com projectPath, haja ou não linha no SQLite.
+        const raw01 = gravarBrutos(params.projectPath, results, "database");
+        const avisoLog = await registrarBusca(params.projectPath, {
+            tool: "search_papers_optimized", query: params.query, filtros: params, hits: results.length, erros: errors,
+        });
 
         return declararModo(params.projectPath, {
             content: [{
@@ -631,8 +650,9 @@ server.tool(
                 text: JSON.stringify({
                     count: results.length,
                     errors: errors,
+                    ...(raw01 ? { raw01 } : {}),
                     results: results
-                }, null, 2)
+                }, null, 2) + avisoLog
             }]
         });
     }
@@ -847,11 +867,11 @@ server.tool(
 
 server.tool(
     "expand_search_snowball",
-    "Expande a busca via Snowballing (Citações via OpenAlex), com as 4 salvaguardas obrigatórias da skill do librarian: profundidade limitada (padrão 1, sem recursão), filtro por descritores do protocolo, dedup contra o dataset já existente do projeto e teto de candidatos com relatório de parada.",
+    "Expande a busca via Snowballing SÓ PARA A FRENTE: busca no OpenAlex quem cita as sementes; as referências das sementes (para trás) NÃO são buscadas (stats.direcao declara isso). Com projectPath, os candidatos aceitos vão para 01_raw/other_records.json e a execução vai ao log PRISMA-S. Tem as 4 salvaguardas obrigatórias da skill do librarian: profundidade limitada (padrão 1, sem recursão), filtro por descritores do protocolo, dedup contra o dataset já existente do projeto e teto de candidatos com relatório de parada.",
     {
         dataset: z.string().describe("JSON string com sementes (SearchResult[])"),
         projectId: z.number().optional(),
-        projectPath: z.string().optional().describe("Projeto sob o qual a operação é feita. Sem ele é exploratório e nada persiste (RV-01). Também usado para ler o dataset já existente (dedup real) quando informado."),
+        projectPath: z.string().optional().describe("Projeto sob o qual a operação é feita. Com ele, os candidatos aceitos são gravados em 01_raw/other_records.json ('outros métodos' do funil PRISMA), a execução entra em logs/search_log_prisma_s.csv e o dataset já existente é lido para o dedup. Sem ele é exploratório e nada persiste (RV-01)."),
         depth: z.number().optional().describe("Níveis de expansão. Padrão 1 (só citações das sementes, sem recursar)."),
         filterKeywords: z.array(z.string()).optional().describe("Descritores/critérios do protocolo: um candidato só é aceito se título+descrição contiver ao menos um termo. Omitido = filtro não aplicado (declarado em stats.filter_applied)."),
         maxCandidates: z.number().optional().describe("Teto de candidatos aceitos. Padrão 200."),
@@ -874,10 +894,22 @@ server.tool(
             maxCandidates: params.maxCandidates,
             existingDataset,
         });
+
+        // DEBT-087: com projectPath, os candidatos aceitos são o braço "outros métodos" do funil
+        // (flow_computer conta 01_raw/other_records.json). Antes, nada persistia.
+        const raw01 = gravarBrutos(params.projectPath, result.newCandidates, "other");
+        const sementes = (Array.isArray(seeds) ? seeds : []).map((s: any) => s?.doi || s?.identifier || s?.title).filter(Boolean);
+        const avisoLog = await registrarBusca(params.projectPath, {
+            tool: "expand_search_snowball",
+            query: `cites: ${sementes.join("; ")}`,
+            filtros: { direcao: result.stats.direcao, depth: params.depth, filterKeywords: params.filterKeywords, maxCandidates: params.maxCandidates },
+            hits: result.newCandidates.length,
+            erros: result.stats.capped ? result.stats.stop_reason : undefined,
+        });
         return {
             content: [{
                 type: "text",
-                text: JSON.stringify(result, null, 2)
+                text: JSON.stringify(raw01 ? { ...result, raw01 } : result, null, 2) + avisoLog
             }]
         };
     }
@@ -1004,10 +1036,20 @@ server.tool(
             }
         }
 
+        // DEBT-056 (com o DEBT-091): a importação também é execução de busca e entra no log.
+        // A string usada na interface da base não passa por aqui: Query fica Indefinido.
+        const origens = [...new Set(results.map((r: any) => r?.audit?.provenanceSource).filter(Boolean))];
+        const avisoLog = await registrarBusca(params.projectPath, {
+            tool: "import_dataset_ris",
+            database: `Export RIS importado: ${params.sourceName?.trim() || origens.join(" | ") || "origem Indefinida"}`,
+            filtros: { sourceName: params.sourceName },
+            hits: results.length,
+        });
+
         return {
             content: [{
                 type: "text",
-                text: JSON.stringify(results, null, 2) + rawWriteNote
+                text: JSON.stringify(results, null, 2) + rawWriteNote + avisoLog
             }]
         };
     }
@@ -1062,10 +1104,15 @@ server.tool(
             }
         }
 
+        // DEBT-056: a importação também entra no log PRISMA-S; a string da BVS não passa por aqui.
+        const avisoLog = await registrarBusca(params.projectPath, {
+            tool: "import_bvs_export", filtros: { filePath: params.filePath }, hits: results.length,
+        });
+
         return {
             content: [{
                 type: "text",
-                text: `Sucesso: ${results.length} registros importados da BVS para o projeto ${projectId || "(sem ID)"}.${rawWriteNote}`
+                text: `Sucesso: ${results.length} registros importados da BVS para o projeto ${projectId || "(sem ID)"}.${rawWriteNote}${avisoLog}`
             }]
         };
     }
@@ -1089,7 +1136,11 @@ server.tool(
         });
 
         if (error) {
-            return { content: [{ type: "text", text: `Erro na busca PubMed: ${error}` }] };
+            // DEBT-056: busca que falhou também deixa linha no log (Hits Indefinido, erro em Errors).
+            const avisoErro = await registrarBusca(params.projectPath, {
+                tool: "search_pubmed", query: params.query, filtros: params, hits: null, erros: error,
+            });
+            return { content: [{ type: "text", text: `Erro na busca PubMed: ${error}${avisoErro}` }] };
         }
 
         // Resolve project for audit
@@ -1101,7 +1152,6 @@ server.tool(
 
         if (projectId) {
             await dbService.insertRecords(projectId, "pubmed", results);
-            if (params.projectPath) appendRawRecords(params.projectPath, results, "database");
             await dbService.lockProject(projectId);
             await dbService.logAuditEvent({
                 project_id: projectId,
@@ -1112,16 +1162,17 @@ server.tool(
             });
         }
 
-        if (params.projectPath) {
-            await logToLocalProject(params.projectPath, "search_pubmed", {
-                query: params.query,
-                found: results.length
-            });
-        }
+        // DEBT-093: a fonte da verdade é o disco — grava com projectPath, haja ou não linha no SQLite.
+        const raw01 = gravarBrutos(params.projectPath, results, "database");
+        const avisoLog = await registrarBusca(params.projectPath, {
+            tool: "search_pubmed", query: params.query, filtros: params, hits: results.length,
+        });
 
         const summary = [
             `## Resultados PubMed: "${params.query}"`,
             `**Encontrados:** ${results.length}`,
+            raw01 ? `**Gravação:** ${raw01}` : "",
+            avisoLog.trim(),
             "",
             ...results.map((r, i) => [
                 `### ${i + 1}. ${r.title}`,
@@ -1317,7 +1368,6 @@ server.tool(
 
         if (projectId) {
             await dbService.insertRecords(projectId, "repository", allResults);
-            if (params.projectPath) appendRawRecords(params.projectPath, allResults, "database");
             await dbService.lockProject(projectId);
             await dbService.logAuditEvent({
                 project_id: projectId,
@@ -1328,18 +1378,20 @@ server.tool(
             });
         }
 
-        if (params.projectPath) {
-            await logToLocalProject(params.projectPath, "search_repository", {
-                query: params.query,
-                found: allResults.length,
-                errors
-            });
-        }
+        // DEBT-093: a fonte da verdade é o disco — grava com projectPath, haja ou não linha no SQLite.
+        const raw01 = gravarBrutos(params.projectPath, allResults, "database");
+        const avisoLog = await registrarBusca(params.projectPath, {
+            tool: "search_repository", query: params.query,
+            filtros: { ...params, repositoriosConsultados: repos.map((r) => r.id) },
+            hits: allResults.length, erros: errors,
+        });
 
         const summary = [
             `## Resultados da Busca: "${params.query}"`,
             `**Repositórios consultados:** ${repos.length}`,
             `**Resultados encontrados:** ${allResults.length}`,
+            raw01 ? `**Gravação:** ${raw01}` : "",
+            avisoLog.trim(),
             errors.length > 0 ? `**Erros:** ${errors.length}\n${errors.map((e) => `- ${e}`).join("\n")}` : "",
             "",
             ...allResults.map((r, i) => [
@@ -1422,18 +1474,31 @@ server.tool(
             return { content: [{ type: "text", text: `Repositório ${params.repositoryId} não tem OAI-PMH disponível. Use search_repository como alternativa.` }] };
         }
 
+        // DEBT-056 (com o DEBT-091): a coleta entra no log PRISMA-S, também quando falha.
+        const linhaLog = { tool: "harvest_records", database: `OAI-PMH: ${repo.repository.name} [${params.repositoryId}]`, query: "(nenhuma: coleta OAI-PMH ListRecords)", filtros: params };
         const oai = strategy.getOaiClient();
-        const records = await oai.listAllRecords(repo.access.oaiPmh.endpoint, {
-            set: params.set,
-            from: params.dateFrom,
-            until: params.dateUntil,
-            metadataPrefix: params.metadataPrefix,
-            maxRecords: params.maxRecords,
+        let records;
+        try {
+            records = await oai.listAllRecords(repo.access.oaiPmh.endpoint, {
+                set: params.set,
+                from: params.dateFrom,
+                until: params.dateUntil,
+                metadataPrefix: params.metadataPrefix,
+                maxRecords: params.maxRecords,
+            });
+        } catch (e: any) {
+            const avisoErro = await registrarBusca(params.projectPath, { ...linhaLog, hits: null, erros: e?.message ?? String(e) });
+            return { content: [{ type: "text", text: `Falha no harvest de ${params.repositoryId}: ${e?.message ?? e}${avisoErro}` }] };
+        }
+        const avisoLog = await registrarBusca(params.projectPath, {
+            ...linhaLog, hits: records.length,
+            erros: records.length >= params.maxRecords ? `parou no teto maxRecords=${params.maxRecords}; pode haver mais registros` : undefined,
         });
 
         const summary = [
             `## Harvest: ${repo.repository.name}`,
             `**Registros coletados:** ${records.length}`,
+            avisoLog.trim(),
             "",
             ...records.slice(0, 20).map((r, i) => [
                 `### ${i + 1}. ${r.metadata.title[0] ?? "(sem título)"}`,
@@ -1830,6 +1895,7 @@ const openAlexHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
+    let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
 
     // Resolve project for audit
     let projectId = params.projectId;
@@ -1843,7 +1909,9 @@ const openAlexHandler = async (params: any) => {
     });
 
     if (error) {
-        return { content: [{ type: "text", text: `⚠️ **OpenAlex — lacuna de cobertura (não silenciosa):** ${error}` }] };
+        // DEBT-056: busca que falhou também deixa linha no log (Hits Indefinido, erro em Errors).
+        const avisoErro = await registrarBusca(params.projectPath, { tool: "search_openalex", query: params.query, filtros: params, hits: null, erros: error });
+        return { content: [{ type: "text", text: `⚠️ **OpenAlex — lacuna de cobertura (não silenciosa):** ${error}${avisoErro}` }] };
     }
 
     // Audit results
@@ -1857,11 +1925,8 @@ const openAlexHandler = async (params: any) => {
 
     // Local User Log & File Save
     if (params.projectPath) {
-        await logToLocalProject(params.projectPath, "search_openalex", {
-            query: params.query,
-            found: results.length,
-            totalFound,
-            params
+        avisoLog = await registrarBusca(params.projectPath, { // DEBT-056
+            tool: "search_openalex", query: params.query, filtros: params, hits: results.length, totalDeclarado: totalFound,
         });
 
         // Auto-save result set to 01_raw (DEBT-084: caminho absoluto tratado, falha visível)
@@ -1892,6 +1957,7 @@ const openAlexHandler = async (params: any) => {
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
         rawSaveError ?? "",
+        avisoLog.trim(),
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -1901,6 +1967,7 @@ const crossrefHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
+    let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
 
     // Resolve project for audit
     let projectId = params.projectId;
@@ -1924,11 +1991,8 @@ const crossrefHandler = async (params: any) => {
 
     // Local User Log & File Save
     if (params.projectPath) {
-        await logToLocalProject(params.projectPath, "search_crossref", {
-            query: params.query,
-            found: results.length,
-            totalFound,
-            params
+        avisoLog = await registrarBusca(params.projectPath, { // DEBT-056
+            tool: "search_crossref", query: params.query, filtros: params, hits: results.length, totalDeclarado: totalFound,
         });
 
         // Auto-save result set to 01_raw (DEBT-084: caminho absoluto tratado, falha visível)
@@ -1959,6 +2023,7 @@ const crossrefHandler = async (params: any) => {
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
         rawSaveError ?? "",
+        avisoLog.trim(),
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -1968,6 +2033,7 @@ const scieloHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
+    let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
 
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
@@ -1982,7 +2048,9 @@ const scieloHandler = async (params: any) => {
     });
 
     if (error) {
-        return { content: [{ type: "text", text: `⚠️ **SciELO (via OpenAlex) — lacuna de cobertura:** ${error}` }] };
+        // DEBT-056: busca que falhou também deixa linha no log (Hits Indefinido, erro em Errors).
+        const avisoErro = await registrarBusca(params.projectPath, { tool: "search_scielo", query: params.query, filtros: params, hits: null, erros: error });
+        return { content: [{ type: "text", text: `⚠️ **SciELO (via OpenAlex) — lacuna de cobertura:** ${error}${avisoErro}` }] };
     }
 
     results.forEach(r => {
@@ -1999,11 +2067,8 @@ const scieloHandler = async (params: any) => {
     });
 
     if (params.projectPath) {
-        await logToLocalProject(params.projectPath, "search_scielo", {
-            query: params.query,
-            found: results.length,
-            totalFound,
-            params
+        avisoLog = await registrarBusca(params.projectPath, { // DEBT-056
+            tool: "search_scielo", query: params.query, filtros: params, hits: results.length, totalDeclarado: totalFound,
         });
 
         try {
@@ -2032,6 +2097,7 @@ const scieloHandler = async (params: any) => {
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
         rawSaveError ?? "",
+        avisoLog.trim(),
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -2041,6 +2107,7 @@ const semanticScholarHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
+    let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
 
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
@@ -2063,11 +2130,8 @@ const semanticScholarHandler = async (params: any) => {
     }
 
     if (params.projectPath) {
-        await logToLocalProject(params.projectPath, "search_semanticscholar", {
-            query: params.query,
-            found: results.length,
-            totalFound,
-            params
+        avisoLog = await registrarBusca(params.projectPath, { // DEBT-056
+            tool: "search_semanticscholar", query: params.query, filtros: params, hits: results.length, totalDeclarado: totalFound,
         });
 
         if (projectId) { // Only save raw files if it is not a preview run
@@ -2098,6 +2162,7 @@ const semanticScholarHandler = async (params: any) => {
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
         rawSaveError ?? "",
+        avisoLog.trim(),
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -2107,6 +2172,7 @@ const coreHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
+    let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
 
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
@@ -2129,11 +2195,8 @@ const coreHandler = async (params: any) => {
     }
 
     if (params.projectPath) {
-        await logToLocalProject(params.projectPath, "search_core", {
-            query: params.query,
-            found: results.length,
-            totalFound,
-            params
+        avisoLog = await registrarBusca(params.projectPath, { // DEBT-056
+            tool: "search_core", query: params.query, filtros: params, hits: results.length, totalDeclarado: totalFound,
         });
 
         if (projectId) {
@@ -2164,6 +2227,7 @@ const coreHandler = async (params: any) => {
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
         rawSaveError ?? "",
+        avisoLog.trim(),
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -2173,6 +2237,7 @@ const europePmcHandler = async (params: any) => {
     const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
+    let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
 
     let projectId = params.projectId;
     if (!projectId && params.projectPath) {
@@ -2195,11 +2260,8 @@ const europePmcHandler = async (params: any) => {
     }
 
     if (params.projectPath) {
-        await logToLocalProject(params.projectPath, "search_europe_pmc", {
-            query: params.query,
-            found: results.length,
-            totalFound,
-            params
+        avisoLog = await registrarBusca(params.projectPath, { // DEBT-056
+            tool: "search_europe_pmc", query: params.query, filtros: params, hits: results.length, totalDeclarado: totalFound,
         });
 
         if (projectId) {
@@ -2231,6 +2293,7 @@ const europePmcHandler = async (params: any) => {
         ].filter(Boolean).join("\n")),
         results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
         rawSaveError ?? "",
+        avisoLog.trim(),
     ].join("\n");
 
     return { content: [{ type: "text", text: summary }] };
@@ -2353,7 +2416,8 @@ server.tool(
         // Save the conformity report to disk if projectPath is provided
         if (params.projectPath) {
             try {
-                const reportDir = path.join(process.cwd(), params.projectPath, "audit_report");
+                // DEBT-139: resolveProjectDir trata projectPath absoluto (path.join sobre o cwd perdia o relatório).
+                const reportDir = path.join(resolveProjectDir(params.projectPath), "audit_report");
                 if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir, { recursive: true });
                 const reportPath = path.join(reportDir, "conformity_report.md");
                 fs.writeFileSync(reportPath, report.markdownReport, "utf-8");
