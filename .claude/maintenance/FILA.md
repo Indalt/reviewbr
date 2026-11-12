@@ -54,7 +54,7 @@
 | 6 | F — Ferramentas da manutenção | 141 | 016 · 153 (depois do 141) | **feita em 12/11/2026** (commit `c436b28`) |
 | 7 | G — Textos que prendem o sistema à revisão sistemática | 135 | 137 · 151 · 008 | **feita em 12/11/2026** (commit `6cf7ae8`) |
 | 8 | H — Normas por ponteiro | ver abaixo | 045 · ver abaixo | **feita em 12/11/2026** (commits `fe53fb8`, `36e687a`, `c0cefbf`, `e61d713`) |
-| 9 | M — Descrição do método, com o Vicente | — | — | depois da H |
+| 9 | M — Descrição do método, com o Vicente | — | — | **em curso:** rascunho em 12/11/2026 (`.claude/METODO_ReviewBR.md`); faltam as 6 escolhas do Vicente, na seção 7 dele |
 | 10 | Fase de testes | — | — | depois da M |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
@@ -155,3 +155,5 @@ Vicente pedir.
   leitura das 106 entradas. Origem: "absorb_methodology deve manter o catalogo atualizado sempre que for
   utilizado. verificar se a metodologia escolhida sofreu alteracoes ou atualizacoes antes de ser sugerida. Essa
   tool também deve ficar responsável por detalhar o mapa (…)"; "se nao teve duplicidade muda-se a decisao de 09/10".
+- (linha 9) Nenhuma tool do `registry/ai_use.ts` tem a categoria C5 ("não aceitável"); a síntese entre estudos (F7)
+  está com o agente `analyst`, que o mapa de uso de IA não cobre.
