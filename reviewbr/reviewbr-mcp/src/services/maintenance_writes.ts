@@ -240,6 +240,18 @@ export class CatalogWriter {
         }
         if (!e.confidence.trim()) e.confidence = "media";
 
+        // Data de leitura da fonte (FILA linha 8, item 5): entrada NOVA a exige; a antiga, sem
+        // ela, segue podendo ser corrigida — a data não se inventa.
+        if (e.read_at.trim() && !/^\d{4}-\d{2}-\d{2}$/.test(e.read_at.trim())) {
+            errors.push(`'read_at' é a data em que a fonte foi lida, no formato AAAA-MM-DD; veio "${e.read_at}".`);
+        }
+        if (i < 0 && !e.read_at.trim()) {
+            errors.push(
+                "Entrada nova exige 'read_at': a data (AAAA-MM-DD) em que a fonte oficial foi lida. Metodologia se " +
+                "aponta, não se copia (decisão de 12/11/2026): o catálogo guarda a fonte e a data da leitura."
+            );
+        }
+
         if (i >= 0 && !atualizar) errors.push(`Já existe entrada "${e.id}" no catálogo. Para alterá-la, passe atualizar=true.`);
         if (i < 0 && atualizar) errors.push(`Nenhuma entrada "${e.id}" para atualizar.`);
         if (errors.length) return { ok: false, errors };

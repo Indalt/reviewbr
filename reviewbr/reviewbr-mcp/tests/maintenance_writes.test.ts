@@ -35,7 +35,8 @@ const achado = (o: Record<string, unknown> = {}) => ({
 });
 const entrada = (o: Record<string, unknown> = {}) => ({
     id: "m1", name: "M1", kind: "review_method", what_it_is: "o que é",
-    when_to_use: "quando usar", requires: "o que exige", source_url: "https://exemplo.org/m1", ...o
+    when_to_use: "quando usar", requires: "o que exige", source_url: "https://exemplo.org/m1",
+    read_at: "2026-11-12", ...o
 });
 
 describe("backlog — escrita validada ANTES de gravar", () => {

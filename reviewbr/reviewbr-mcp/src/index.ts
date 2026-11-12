@@ -2888,7 +2888,7 @@ server.tool(
     "absorb_methodology",
     "ABSORVE uma metodologia no catalogo (.claude/catalog/) — o 'conhecer sem implementar'. Exige source_url EXTERNO (http/https) da fonte oficial consultada: entrada sem fonte rastreavel e palpite, nao catalogo. O status no sistema NAO e escrito: continua derivado do disco a cada consulta (RV-02).",
     {
-        entry: z.string().describe("JSON da entrada: id, name, kind, version, what_it_is, when_to_use, requires, source_url (obrigatorio, http); opcionais full_name, version_year, item_count, related_standards, confidence, notes, standard_file, methodology_dir."),
+        entry: z.string().describe("JSON da entrada: id, name, kind, version, what_it_is, when_to_use, requires, source_url (obrigatorio, http), read_at (AAAA-MM-DD: a data em que a fonte oficial foi lida; obrigatoria em entrada nova); opcionais full_name, version_year, item_count, related_standards, confidence, notes, standard_file, methodology_dir."),
         atualizar: z.boolean().optional().describe("true para alterar entrada existente. E merge: basta mandar o id e os campos a mudar; os nao enviados ficam como estao gravados."),
         repoRoot: z.string().optional(),
     },

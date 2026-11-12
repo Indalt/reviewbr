@@ -52,6 +52,13 @@ export const CatalogEntrySchema = z.object({
     related_standards: z.string().default(""),
     /** URL da fonte oficial consultada. Sem fonte, a entrada não é conhecimento — é palpite. */
     source_url: z.string().default(""),
+    /**
+     * Data em que a fonte oficial foi lida (AAAA-MM-DD). Metodologia se aponta, não se copia
+     * (decisão de 12/11/2026): o catálogo guarda a fonte e a data da leitura, e o protocolo do
+     * projeto que escolhe o método grava as duas. Vazio nas entradas de antes da regra: a data
+     * não se inventa.
+     */
+    read_at: z.string().default(""),
     confidence: z.string().default(""),
     notes: z.string().default(""),
     /** Id do arquivo em .claude/standards/, quando o padrão já estiver como dado. */
@@ -113,6 +120,15 @@ export class MethodologyCatalogService {
             };
         }
         return { status: "OK", catalog: parsed.data };
+    }
+
+    /**
+     * A fonte do método implementado: a entrada do catálogo cuja `methodology_dir` é o método.
+     * É o que o protocolo grava quando o projeto escolhe o método (FILA linha 8, item 5).
+     */
+    static fonteDoMetodo(repoRoot: string, method: string): { id: string; source_url: string; read_at: string } | null {
+        const e = this.read(repoRoot)?.entries.find((x) => x.methodology_dir === method);
+        return e ? { id: e.id, source_url: e.source_url, read_at: e.read_at } : null;
     }
 
     static read(repoRoot: string): Catalog | null {

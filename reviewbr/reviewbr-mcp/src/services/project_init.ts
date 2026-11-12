@@ -21,6 +21,7 @@ import { protocoloTravadoNoDisco } from "../utils/protocol_guard.js";
 import { escolherMetodo } from "./methods_for_type.js";
 import { lerTrilha, etapaInicial, Etapa } from "./method_trail.js";
 import { StandardsService } from "./standards.js";
+import { MethodologyCatalogService } from "./methodology_catalog.js";
 import { fileURLToPath } from "node:url";
 
 /** Mapeia o tipo de pesquisa do MCP para o método/framework da camada de metodologia (.claude). */
@@ -270,7 +271,8 @@ export class ProjectInitService {
         }
 
         // Protocolo na RAIZ com marcador [DRAFT] (o gate RV-01 e o guardrail leem isto)
-        const protocol = this.generateProtocol(config, meta, prismaStandard, metodo.method, trilha.etapas);
+        const protocol = this.generateProtocol(config, meta, prismaStandard, metodo.method, trilha.etapas,
+            MethodologyCatalogService.fonteDoMetodo(repoRoot(), metodo.method));
         const protocolPath = path.join(projectPath, "protocol.md");
         fs.writeFileSync(protocolPath, protocol, "utf8");
 
@@ -310,7 +312,13 @@ export class ProjectInitService {
         /** Método assumido e a trilha dele, lida do manifest (DEBT-100). */
         method: string,
         etapas: Etapa[],
+        /** A fonte do método no catálogo, com a data de leitura (FILA linha 8, item 5). */
+        fonte: { id: string; source_url: string; read_at: string } | null = null,
     ): string {
+        const linhaMetodo = fonte
+            ? `**Método:** \`${method}\` — fonte: ${fonte.source_url} (entrada \`${fonte.id}\` do catálogo, ` +
+              `${fonte.read_at ? `lida em ${fonte.read_at}` : "sem data de leitura no catálogo"})`
+            : `**Método:** \`${method}\` — [sem entrada no catálogo]`;
         const dateRange = config.dateRestriction
             ? `${config.dateRestriction.minDate} a ${config.dateRestriction.maxDate}`
             : "Sem restrição temporal";
@@ -347,6 +355,7 @@ ${config.pico.intervention ? `| **Intervenção (I)** | ${config.pico.interventi
 > Preencha as seções com [PREENCHIMENTO OBRIGATÓRIO] e solicite a aprovação.
 
 **Tipo de pesquisa:** ${meta.label}
+${linhaMetodo}
 **PRISMA aplicável:** ${prismaStandard}
 **Data do protocolo:** ${new Date().toISOString().split("T")[0]}
 
