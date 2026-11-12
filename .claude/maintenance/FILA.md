@@ -53,7 +53,7 @@
 | 5 | E — Trava do protocolo | 018 · 133 (mesmo conserto) · 042 | 060 | **feita em 12/11/2026** (commit `4a2c082`) |
 | 6 | F — Ferramentas da manutenção | 141 | 016 · 153 (depois do 141) | **feita em 12/11/2026** (commit `c436b28`) |
 | 7 | G — Textos que prendem o sistema à revisão sistemática | 135 | 137 · 151 · 008 | **feita em 12/11/2026** (commit `6cf7ae8`) |
-| 8 | H — Normas por ponteiro | ver abaixo | 045 · ver abaixo | a fazer, depois da linha 6 |
+| 8 | H — Normas por ponteiro | ver abaixo | 045 · ver abaixo | **feita em 12/11/2026** (commits `fe53fb8`, `36e687a`, `c0cefbf`, `e61d713`) |
 | 9 | M — Descrição do método, com o Vicente | — | — | depois da H |
 | 10 | Fase de testes | — | — | depois da M |
 
