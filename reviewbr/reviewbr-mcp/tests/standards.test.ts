@@ -62,14 +62,15 @@ describe("padrões em disco — PRISMA 2020 e PRISMA-S como dado", () => {
 });
 
 describe("cobertura — nenhum item do padrão fica órfão", () => {
-    it("PRISMA 2020: conta as 42 linhas de checklist, e os subitens ainda estão descobertos", () => {
+    it("PRISMA 2020: conta as 42 linhas de checklist, e os 21 subitens sem mapeamento estão declarados", () => {
         const r = StandardsService.checkCoverage(StandardsService.read(REPO_ROOT, "prisma-2020"), "prisma-2020", doPrismaSr("prisma-2020"));
         expect(r.total).toBe(42);
         // Os 21 subitens não têm covered_by: a trilha do ReviewBR foi mapeada contra itens de
-        // topo, nunca contra subitens. REPROVAR aqui é o comportamento correto — a lacuna
-        // passa a ser visível em vez de presumida. Remapear é trabalho pendente (DEBT-014).
-        expect(r.valid).toBe(false);
-        expect(r.orphans.length).toBe(21);
+        // topo. Até 12/11/2026 eram órfãos e reprovavam; desde então estão declarados
+        // [NÃO COBERTO], sem remapeamento item a item (DEBT-014; norma se aponta, não se copia).
+        expect(r.orphans).toEqual([]);
+        expect(r.nao_coberto.filter((x) => /DEBT-014/.test(x.motivo))).toHaveLength(21);
+        expect(r.valid).toBe(true);
     });
 
     it("PRISMA-S: nenhum item órfão — 9 com correspondência e 7 declarados [NÃO COBERTO] (DEBT-128)", () => {

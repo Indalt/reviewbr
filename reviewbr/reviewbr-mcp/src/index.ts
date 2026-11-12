@@ -977,12 +977,13 @@ server.tool(
             const projectDir = path.isAbsolute(params.projectPath)
                 ? params.projectPath
                 : path.join(process.cwd(), params.projectPath);
-            const gate = new PrismaFlowValidator().checkExportGate(projectDir);
+            // DEBT-138: o export recalcula o funil e bloqueia divergência (decisão de 29/10/2026).
+            const gate = new FlowComputer().checkExportGate(projectDir);
             if (gate.blocked) {
                 return {
                     content: [{
                         type: "text",
-                        text: "🚫 EXPORT BLOQUEADO — RV-05 (aritmética do funil).\n\n"
+                        text: "🚫 EXPORT BLOQUEADO — RV-02/RV-05 (funil recalculado dos artefatos).\n\n"
                             + gate.reason + "\n\n" + gate.errors.join("\n")
                     }]
                 };
@@ -1800,7 +1801,7 @@ server.tool(
 
 server.tool(
     "compute_flow_counts",
-    "Deriva o Fluxograma PRISMA (F8.1) a partir dos ARTEFATOS reais do projeto (Regra RV-02: os números emergem do processo, nunca são digitados). Conta os arquivos canônicos, aplica as identidades PRISMA, valida a aritmética (RV-05), faz checagem cruzada de 'included' e sinaliza edições manuais no prisma_flow.json. Grava o arquivo recomputado quando write=true.",
+    "Deriva o Fluxograma PRISMA (F8.1) a partir dos ARTEFATOS reais do projeto (Regra RV-02: os números emergem do processo, nunca são digitados). Conta os arquivos canônicos, aplica as identidades PRISMA e REPROVA quando os artefatos não fecham: included.json diferente do included calculado, ou identidade que daria negativa. Sinaliza edições manuais no prisma_flow.json e grava o arquivo recomputado quando write=true (mesmo reprovado); quem barra é o export_dataset, que recalcula o funil e bloqueia divergência.",
     {
         projectPath: z.string().describe("Caminho (absoluto ou relativo ao cwd) da raiz do projeto de revisão"),
         write: z.boolean().optional().describe("Se true (padrão), grava o prisma_flow.json recomputado; se false, apenas retorna o cálculo"),
@@ -1817,13 +1818,20 @@ server.tool(
         const computer = new FlowComputer();
         const result = computer.compute(projectDir);
 
+        // Grava mesmo reprovado (cautela de 18/10, DEBT-039): não gravar deixaria no lugar o arquivo
+        // anterior, talvez digitado. Quem barra é o export, que recalcula e compara (DEBT-138).
         const shouldWrite = params.write !== false;
         if (shouldWrite) computer.writeFlow(projectDir, result.computed);
+
+        // DEBT-071: a validação agora reprova de verdade — e a resposta diz isso em cima, não num campo.
+        const veredito = result.validation.valid
+            ? "✅ Funil derivado dos artefatos e conferido (RV-02/RV-05)."
+            : `🚫 FUNIL REPROVADO: os artefatos não fecham. O export_dataset fica bloqueado até isso ser corrigido.\n- ${result.validation.errors.join("\n- ")}`;
 
         return {
             content: [{
                 type: "text",
-                text: JSON.stringify({
+                text: veredito + "\n\n" + JSON.stringify({
                     ...result,
                     written: shouldWrite ? "prisma_flow.json atualizado" : "não gravado (write=false)",
                 }, null, 2),

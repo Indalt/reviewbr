@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "standard": "prisma-2020",
-  "note": "O campo covered_by dos itens de topo foi herdado da extracao da spec do ReviewBR e esta SOB SUSPEITA: a spec mapeia registro de protocolo ao Item 15 (que e 'Certainty assessment') e desloca conflito/disponibilidade a partir do 25. Ver DEBT-012 e DEBT-014. Os subitens ainda nao tem covered_by: remapear a trilha contra a estrutura oficial e trabalho pendente.",
+  "note": "O campo covered_by dos itens de topo foi herdado da extracao da spec do ReviewBR e esta SOB SUSPEITA: a spec mapeia registro de protocolo ao Item 15 (que e 'Certainty assessment') e desloca conflito/disponibilidade a partir do 25. Ver DEBT-012 e DEBT-014. Os 21 subitens nao tem covered_by: estao declarados [NÃO COBERTO] desde 12/11/2026 (DEBT-014), sem remapeamento item a item (decisao de 12/11/2026: norma se aponta, nao se copia).",
   "conferencia_por_palavras": {
     "medida_em": "2026-10-31",
     "script": ".claude/maintenance/sessao_2c/preparo/roda.mjs",
@@ -115,6 +115,16 @@
       ]
     },
     {
+      "id": "10a",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (10), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "10b",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (10), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
       "id": "11",
       "covered_by": [
         "F1.3.2.7",
@@ -145,6 +155,36 @@
         "F7.1.8",
         "F8.3.13"
       ]
+    },
+    {
+      "id": "13a",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (13), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "13b",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (13), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "13c",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (13), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "13d",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (13), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "13e",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (13), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "13f",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (13), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
     },
     {
       "id": "14",
@@ -198,6 +238,16 @@
       "nao_coberto": "parcial — F4.1.4 e F4.2.4 pedem a exclusão por motivo padronizado (tabela de frequências), e o 16b pede citar os excluídos com o motivo; nenhuma tool atribui, grava ou agrega o código EX-01..EX-11: a triagem guarda o motivo em texto livre (reasoning). Declarado em 12/11/2026 (DEBT-026). O 16 é cabeçalho: a contagem do check_standard_coverage é a do 16a e do 16b, que seguem sem mapeamento (DEBT-014)."
     },
     {
+      "id": "16a",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (16), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "16b",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (16), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014). O 16b também depende do código EX de exclusão, que nenhuma tool grava (DEBT-026)."
+    },
+    {
       "id": "17",
       "covered_by": [
         "F5.2.1.1",
@@ -241,6 +291,26 @@
       ]
     },
     {
+      "id": "20a",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (20), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "20b",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (20), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "20c",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (20), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "20d",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (20), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
       "id": "21",
       "covered_by": [
         "F7.2.1",
@@ -265,6 +335,26 @@
       ]
     },
     {
+      "id": "23a",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (23), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "23b",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (23), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "23c",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (23), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "23d",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (23), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
       "id": "24",
       "covered_by": [
         "F0.1.6",
@@ -273,6 +363,21 @@
         "F5.2.5.1",
         "F8.3.24"
       ]
+    },
+    {
+      "id": "24a",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (24), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "24b",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (24), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
+    },
+    {
+      "id": "24c",
+      "covered_by": [],
+      "nao_coberto": "sem mapeamento próprio: a trilha foi mapeada só no item de topo (24), cujos ponteiros não dizem a qual subitem servem. Não se remapeia item a item (decisão de 12/11/2026: norma se aponta, não se copia). Declarado em 12/11/2026 (DEBT-014)."
     },
     {
       "id": "25",

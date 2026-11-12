@@ -169,32 +169,43 @@
     "RV-07",
     "RV-08"
   ],
+  "_gates_note": "Os gates são declaração, conferida na instalação pelo validate_methodology; o runtime não lê este array (decisão do Vicente de 29/10/2026). Cada 'blocks' diz o que o código bloqueia hoje e onde; invariante sem gate fica em invariants_sem_gate, declarado [NÃO COBERTO] com o motivo (DEBT-003, DEBT-138, 12/11/2026).",
   "gates": [
     {
       "phase": "F1",
       "rule": "RV-01",
       "tool": "submit_protocol_for_approval",
-      "blocks": "spawn do librarian se protocolo não estiver [LOCKED] ou tiver campos [TBD] obrigatórios"
+      "blocks": "as tools de busca e aquisição (ProtocolGate) enquanto o protocolo não estiver [LOCKED]; o submit_protocol_for_approval não trava protocolo com campo obrigatório [TBD]"
     },
     {
-      "phase": "F4",
+      "phase": "F8",
       "rule": "RV-02",
-      "tool": "compute_flow_counts",
-      "blocks": "escrita manual de contagens no prisma_flow.json"
+      "tool": "export_dataset",
+      "blocks": "o export, quando o prisma_flow.json diverge do funil recalculado dos artefatos ou os artefatos não fecham (o compute_flow_counts deriva o funil e reprova, mas grava; quem barra é o export)"
+    },
+    {
+      "rule": "RV-04",
+      "tool": "record_researcher_decision",
+      "blocks": "sob control_level 'estrito', o avanço da etapa sem decisão registrada do pesquisador sobre a etapa que se encerra (ProjectStateService.podeAvancar)"
     },
     {
       "phase": "F8",
       "rule": "RV-05",
       "tool": "validate_prisma_flow",
-      "blocks": "export/manuscrito se a aritmética do funil não fechar"
+      "blocks": "o export (export_dataset) se a aritmética do prisma_flow.json não fechar; o manuscrito, escrito pelo agente, não é barrado por tool"
     },
     {
       "phase": "F8",
       "rule": "RV-08",
-      "tool": "audit_methodology",
-      "blocks": "síntese se algum estudo incluído não tiver fonte_repositorio/url_hospedagem"
+      "tool": "export_dataset",
+      "blocks": "o export se algum registro não tiver origem rastreável (fonte e URL); a síntese não é barrada — o audit_methodology só diagnostica"
     }
   ],
+  "invariants_sem_gate": {
+    "RV-03": "[NÃO COBERTO] conduta dos agentes: nenhuma tool confere que campo ausente virou [TBD] em vez de valor inventado. Há conferências parciais em pontos específicos (o auditor do protocolo reprova [TBD] obrigatório; o export reprova registro sem origem), não do invariante.",
+    "RV-06": "[NÃO COBERTO] conduta: o agent_orchestrator confere só que toda tool tem um papel dono; nada confere que a tool executa em vez de decidir.",
+    "RV-07": "[NÃO COBERTO] conduta: nenhuma tool confere a string executada contra a F1.4 do protocolo. O log PRISMA-S (logs/search_log_prisma_s.csv) grava a string exata de cada busca, para a conferência humana."
+  },
   "required_supplements": [
     "prisma_checklist_filled.md",
     "prisma_s_checklist_filled.md",

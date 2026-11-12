@@ -76,23 +76,30 @@ export class FlowComputer {
         const fulltext_not_retrieved = countOrZero("03_screening/fulltext_not_retrieved.json", "fulltext_not_retrieved");
         const fulltext_excluded = countOrZero("03_screening/excluded_fulltext.json", "fulltext_excluded");
 
-        // Campos COMPUTADOS por identidade PRISMA (F8.1)
+        // Campos COMPUTADOS por identidade PRISMA (F8.1). O Math.max(0, …) impede número negativo no
+        // fluxograma, mas identidade negativa é artefato que não fecha: ela vai para `negativas` e
+        // reprova a validação (DEBT-071), em vez de sumir no zero.
+        const negativas: string[] = [];
+        const naoNegativo = (campo: string, v: number, conta: string): number => {
+            if (v < 0) negativas.push(`${campo} daria ${v} (${conta}): os artefatos não fecham — o Math.max escondia isso como 0.`);
+            return Math.max(0, v);
+        };
         const rawTotal = identified_db + identified_other;
         const screened = afterDedup ?? rawTotal;
         if (afterDedup === null) missing.push("02_deduplicated/dataset.json");
-        const duplicates_removed = Math.max(0, rawTotal - screened);
+        const duplicates_removed = naoNegativo("duplicates_removed", rawTotal - screened, `${rawTotal} brutos − ${screened} após a dedup`);
         provenance.duplicates_removed = `calculado: (identified_db + identified_other) − após_dedup = ${rawTotal} − ${screened}`;
         provenance.screened = afterDedup !== null
             ? `contado de 02_deduplicated/dataset.json (${screened})`
             : `sem dataset dedup → assumido = bruto (${screened})`;
 
-        const retrieved_fulltext = Math.max(0, screened - title_abstract_excluded);
+        const retrieved_fulltext = naoNegativo("retrieved_fulltext", screened - title_abstract_excluded, `${screened} triados − ${title_abstract_excluded} excluídos na TA`);
         provenance.retrieved_fulltext = `calculado (F8.1.6): screened − title_abstract_excluded = ${screened} − ${title_abstract_excluded}`;
 
-        const fulltext_assessed = Math.max(0, retrieved_fulltext - fulltext_not_retrieved);
+        const fulltext_assessed = naoNegativo("fulltext_assessed", retrieved_fulltext - fulltext_not_retrieved, `${retrieved_fulltext} recuperados − ${fulltext_not_retrieved} não recuperados`);
         provenance.fulltext_assessed = `calculado (F8.1.8): retrieved_fulltext − fulltext_not_retrieved = ${retrieved_fulltext} − ${fulltext_not_retrieved}`;
 
-        const included = Math.max(0, fulltext_assessed - fulltext_excluded);
+        const included = naoNegativo("included", fulltext_assessed - fulltext_excluded, `${fulltext_assessed} avaliados − ${fulltext_excluded} excluídos no texto completo`);
         provenance.included = `calculado (F8.1.10): fulltext_assessed − fulltext_excluded = ${fulltext_assessed} − ${fulltext_excluded}`;
 
         const computed: PrismaFlowData = {
@@ -130,8 +137,46 @@ export class FlowComputer {
             } catch { /* ignore parse errors */ }
         }
 
-        const validation = this.validator.validate(computed);
+        // DEBT-071 — a aritmética conferida aqui é a mesma que produziu os números: sozinha, sempre
+        // verde. O que torna a validação independente são as duas conferências que não saem das
+        // identidades: o included.json contado contra o included calculado, e as identidades que
+        // dariam negativo. As duas reprovam.
+        const aritmetica = this.validator.validate(computed);
+        const errors = [...aritmetica.errors, ...negativas];
+        if (includedCrossCheck.matches === false) {
+            errors.push(`included calculado (${included}) ≠ registros em 03_screening/included.json (${countedIncluded}): os artefatos do funil discordam entre si.`);
+        }
+        const validation = { valid: errors.length === 0, errors };
         return { computed, provenance, missing, validation, manualEditWarnings, includedCrossCheck };
+    }
+
+    /**
+     * DEBT-138 — gate do export (decisão de 29/10/2026: o export recalcula o funil e bloqueia
+     * divergência). Antes, o export só conferia a aritmética do prisma_flow.json: um arquivo
+     * digitado à mão que fechasse passava. Agora: (1) o arquivo, se existir, precisa ser legível e
+     * fechar (PrismaFlowValidator, RV-05); (2) o funil recalculado dos artefatos precisa fechar
+     * (DEBT-071); (3) o arquivo, se existir, precisa ser igual ao recalculado (RV-02).
+     */
+    public checkExportGate(projectDir: string): { blocked: boolean; reason?: string; errors: string[] } {
+        const doArquivo = this.validator.checkExportGate(projectDir);
+        if (doArquivo.blocked) return doArquivo;
+        const r = this.compute(projectDir);
+        if (!r.validation.valid) {
+            return {
+                blocked: true,
+                reason: "O funil recalculado dos artefatos não fecha (RV-02/RV-05). Corrija os artefatos de 01_raw a 03_screening e rode 'compute_flow_counts'.",
+                errors: r.validation.errors,
+            };
+        }
+        if (r.manualEditWarnings.length > 0) {
+            return {
+                blocked: true,
+                reason: "prisma_flow.json diverge do funil recalculado dos artefatos (RV-02: as contagens emergem do processo). " +
+                    "Edição à mão ou artefato mudado depois do cálculo: rode 'compute_flow_counts'.",
+                errors: r.manualEditWarnings,
+            };
+        }
+        return { blocked: false, errors: [] };
     }
 
     /** Grava o prisma_flow.json recomputado (somente os 10 campos canônicos). */

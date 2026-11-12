@@ -409,12 +409,25 @@ export class MethodologyWriter {
                 errors.push(`Gate ${g.rule} declarado na etapa "${g.phase}", que não existe na trilha do método.`);
             }
         }
+        // DEBT-003 — cada invariante 'always_on' tem gate que o ative OU declaração [NÃO COBERTO]
+        // com o motivo em `invariants_sem_gate` (proposta de 18/10/2026, aplicada em 12/11/2026).
+        // Declarar não é verificar: é o manifest dizer a verdade sobre o que o sistema confere.
         const comGate = new Set(gates.map((g) => g.rule));
-        const semGate = inv.filter((r) => !comGate.has(r));
+        const semGateDeclarado: Record<string, unknown> =
+            man.invariants_sem_gate && typeof man.invariants_sem_gate === "object" ? man.invariants_sem_gate : {};
+        for (const [rv, motivo] of Object.entries(semGateDeclarado)) {
+            if (!inv.includes(rv)) errors.push(`invariants_sem_gate declara ${rv}, que não está em invariants_always_on.`);
+            if (comGate.has(rv)) errors.push(`${rv} tem gate e também está em invariants_sem_gate: as duas declarações se contradizem.`);
+            if (typeof motivo !== "string" || !/\[NÃO COBERTO\]/.test(motivo) || motivo.replace(/\[NÃO COBERTO\]/, "").trim().length < 20) {
+                errors.push(`invariants_sem_gate.${rv} precisa dizer [NÃO COBERTO] e o motivo — o que o sistema não confere e por quê.`);
+            }
+        }
+        const semGate = inv.filter((r) => !comGate.has(r) && !(r in semGateDeclarado));
         if (semGate.length) {
             errors.push(
                 `Invariante(s) declarado(s) 'always_on' sem gate que os ative: ${semGate.join(", ")}. ` +
-                "É a falha que o sistema registra de si: regra declarada que ninguém chama (DEBT-003)."
+                "É a falha que o sistema registra de si: regra declarada que ninguém chama (DEBT-003). " +
+                "Ou o gate existe, ou o invariante vai para invariants_sem_gate como [NÃO COBERTO], com o motivo."
             );
         }
 

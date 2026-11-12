@@ -204,16 +204,21 @@ describe("o estado REAL dos padrões assimilados, medido", () => {
 
     it("PRISMA 2020: os 5 deslocados do DEBT-045 declarados [NÃO COBERTO]; a fração é 16/42, não 42/42", () => {
         const r = StandardCoverageService.conferir(REPO, "prisma-2020");
-        expect(r.orphans.length).toBe(21);
-        expect(r.nao_coberto.map((x) => x.id).sort()).toEqual(["14", "15", "25", "26", "27"]);
-        for (const x of r.nao_coberto) expect(x.motivo, x.id).toMatch(/DEBT-045/);
+        const deslocados = r.nao_coberto.filter((x) => /DEBT-045/.test(x.motivo)).map((x) => x.id).sort();
+        expect(deslocados).toEqual(["14", "15", "25", "26", "27"]);
         expect(r.fracao).toBe("16/42");
     });
 
-    it("PRISMA 2020: segue valid false pelos 21 órfãos do DEBT-014 — e só por eles, não pelos suspeitos", () => {
+    it("PRISMA 2020: os 21 subitens sem mapeamento estão declarados [NÃO COBERTO] (DEBT-014) — valid true, e os suspeitos não reprovam", () => {
+        // Até 12/11/2026 eram 21 órfãos e o padrão reprovava: toda revisão prisma-sr parava na F8
+        // por omissão do mapeamento do sistema. Declarados, vão ao checklist como não cobertos.
         const r = StandardCoverageService.conferir(REPO, "prisma-2020");
-        expect(r.valid).toBe(false);
-        expect(r.errors).toEqual([expect.stringMatching(/^21 item\(ns\) do PRISMA 2020 sem nenhum subitem da trilha/)]);
+        expect(r.orphans).toEqual([]);
+        const subitens = r.nao_coberto.filter((x) => /DEBT-014/.test(x.motivo)).map((x) => x.id);
+        expect(subitens).toHaveLength(21);
+        expect(subitens).toEqual(expect.arrayContaining(["10a", "13f", "16b", "20d", "23d", "24c"]));
+        expect(r.errors).toEqual([]);
+        expect(r.valid).toBe(true);
     });
 
     it("PRISMA 2020: a conferência por palavras enxerga o deslocamento rumo a item COM subitens (família pai+filhos)", () => {

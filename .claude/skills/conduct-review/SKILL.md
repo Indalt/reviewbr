@@ -84,7 +84,7 @@ Visão escaneável (lista/tabela curta), nunca despejo de arquivos brutos.
 | `01_raw/` populado, `02_deduplicated/` vazio | Agent → **screener** (F3/F4) | **RV-02**: `compute_flow_counts` |
 | triagem concluída, `04_extraction/` vazio | Agent → **extractor** (F5) | **RV-08**: origem completa por estudo |
 | extração pronta, sem `evidence_synthesis.md` | Agent → **reader** (F5.5, RAG) | cobertura dos objetivos |
-| leitura pronta | Agent → **analyst** (F6/F7/F8) | **RV-05**: `validate_prisma_flow`; **RV-08**: `audit_methodology`; completude PRISMA/PRISMA-S |
+| leitura pronta | Agent → **analyst** (F6/F7/F8) | **RV-02/RV-05**: `export_dataset` recalcula o funil e barra divergência (`validate_prisma_flow` confere a aritmética); **RV-08**: `export_dataset` barra registro sem origem; completude PRISMA/PRISMA-S (conferência do agente; `check_standard_coverage` confere a trilha) |
 
 Consulte o `manifest.json` do método via `methodology-router` para saber quais fases estão ativas (scoping desliga F6/meta-análise). Os **invariantes RV nunca são desligados**; a skill `prisma-rigor-gates` verifica **todas as regras E subregras** (RV + subitens Fx.y.z + checklists PRISMA/PRISMA-S).
 
