@@ -38,7 +38,7 @@
 | ordem | sessão | FAZER | DECLARAR | estado |
 |---|---|---|---|---|
 | 0 | Limpeza dos documentos e rota do `maintainer.md` | — | — | **feita em 12/11/2026** |
-| 1 | A — Texto completo e leitura | 089 (primeiro) · 062 · 031 | — | **feita em 12/11/2026** |
+| 1 | A — Texto completo e leitura | 089 (primeiro) · 062 · 031 | — | **feita em 12/11/2026** (commit `71ce06b`) |
 | 2 | B — Registro da busca | 056 · 139 · 087 · 093 | 058 · 077 | a fazer |
 | 3 | C — Triagem, deduplicação e tools em lote | 021 · 025 · 112 · 030 | 026 | a fazer |
 | 4 | D — Funil e gates | 138 · 071 | 003 · 002 · 066 · os 21 subitens do 014 como `[NÃO COBERTO]` | a fazer |
