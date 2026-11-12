@@ -25,11 +25,19 @@
    declarado.
 8. **Resposta ao Vicente em até 5 linhas, com a decisão primeiro.**
 
+## Dois princípios decididos em 12/11/2026
+
+- **Metodologia e norma se apontam, não se copiam.** O ReviewBR guarda a fonte oficial e a data em que ela foi
+  lida, e mantém um mapa central para sugerir ao pesquisador a metodologia mais adequada. Não se transcreve
+  norma nova nem se confere mapeamento item a item. As cinco normas já transcritas ficam como ajuda, sem crescer.
+- **O controle por código vale em todo o ReviewBR**, da busca exploratória à formulação do objeto de pesquisa e
+  à publicação: contagem, trava, registro, deduplicação e persistência não se simplificam.
+
 ## Fila
 
 | ordem | sessão | FAZER | DECLARAR | estado |
 |---|---|---|---|---|
-| 0 | Limpeza dos documentos e rota do `maintainer.md` | lista fechada em `ORGANIZACAO_2026-11-11.md`, parte 6.3 | — | espera o Vicente confirmar a lista |
+| 0 | Limpeza dos documentos e rota do `maintainer.md` | — | — | **feita em 12/11/2026** |
 | 1 | A — Texto completo e leitura | 089 (primeiro) · 062 · 031 | — | a fazer |
 | 2 | B — Registro da busca | 056 · 139 · 087 · 093 | 058 · 077 | a fazer |
 | 3 | C — Triagem, deduplicação e tools em lote | 021 · 025 · 112 · 030 | 026 | a fazer |
@@ -37,23 +45,49 @@
 | 5 | E — Trava do protocolo | 018 · 133 (mesmo conserto) · 042 | 060 | a fazer |
 | 6 | F — Ferramentas da manutenção | 141 | 016 · 153 (depois do 141) | a fazer |
 | 7 | G — Textos que prendem o sistema à revisão sistemática | 135 | 137 · 151 · 008 | a fazer |
-| 8 | H — Mapeamento das normas | — | — | **não começar**: espera a decisão do Vicente sobre a parte 13 do `ORGANIZACAO_2026-11-11.md` |
+| 8 | H — Normas por ponteiro | ver abaixo | 045 · ver abaixo | a fazer, depois da linha 6 |
 | 9 | M — Descrição do método, com o Vicente | — | — | depois da H |
 | 10 | Fase de testes | — | — | depois da M |
 
-Os números são ids `DEBT-NNN`. Cada linha de 1 a 7 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
-da outra nem da linha 0; a ordem é a do dano a uma pesquisa em andamento.
+Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
+da outra; a ordem é a do dano a uma pesquisa em andamento.
 
 Decisões de 29/10 que valem nos consertos: 021 (a saturação lê a triagem do disco), 025 (similaridade de 90%
 ou mais só sinaliza o par), 031 (a página é guardada na extração), 056 (o código grava o log de busca), 018 (a
 trava vale só pelo `project_state.json`), 138 (a exportação recalcula o funil e bloqueia divergência), 016 (aviso
 na tool sobre `targets`).
 
+### Linha 8 — o que a H faz, e só isto
+
+1. **DEBT-045:** corrigir, na spec do `prisma-sr`, os números de item do PRISMA 2020 que o `analyst` lê para
+   escrever o relato. Sem remapeamento.
+2. **DEBT-014:** fecha na linha 4, com a declaração. Aqui, só se ainda estiver aberto. Sem mapear os 21
+   subitens.
+3. **Relatório do `check_standard_coverage`:** passa a dizer que o mapeamento é do sistema, não foi conferido
+   contra a fonte, e que o pesquisador preenche o formulário oficial da norma.
+4. **`sessao_2c/divergencias_prisma_s.md`:** fica como está. As 36 divergências não se decidem item a item, e o
+   mapeamento de 30/10 segue valendo como ajuda.
+5. **Data de leitura:** a entrada do catálogo guarda a data em que a fonte foi lida; quando um projeto escolhe o
+   método, o protocolo dele grava o método, a fonte e essa data.
+6. **Mapa de uma página:** um arquivo gerado do catálogo, com uma linha por metodologia (nome, quando usar,
+   fonte, data de leitura). Não se escreve à mão.
+7. **`maintainer.md`:** a assimilação passa a dois passos (fonte oficial; entrada no catálogo com a data), e a
+   leitura documentada deixa de ser exigida para norma nova.
+
+A linha 9 (M) redige o `METODO_ReviewBR.md` com o que já está decidido e leva ao Vicente só as escolhas dele. As
+três perguntas da sessão 2c deixaram de ser necessárias.
+
 ## O que não é fila
 
-Assimilar metodologia, OCR, validação da IA dentro da revisão, trava da escolha de método, abrir o ReviewBR
-numa IDE, a arquitetura de agentes por papel. Acontecem quando o Vicente pedir.
+Trilha executável para metodologia nova, OCR, validação da IA dentro da revisão, trava da escolha de método,
+abrir o ReviewBR numa IDE, a arquitetura de agentes por papel, a rota para o Sci-Hub. Acontecem quando o
+Vicente pedir.
 
 ## Visto de passagem — não avaliado
 
 - `reviewbr/reviewbr-mcp/src/index.ts.tmp` segue no disco.
+- Cinco skills dizem a que agente pertencem, e nenhum desses cinco agentes nomeia a sua skill: `reader` e
+  `evidence-reading`, `extractor` e `extraction-form`, `librarian` e `prisma-s-logging`, `screener` e
+  `screening-rules`, `analyst` e `synthesis-manuscript`.
+- `reviewbr/projects/` tem cerca de 380 arquivos rastreados no repositório público.
+- `PASSAGEM.md` ficou na pasta da manutenção porque `tests/porta_do_backlog.test.ts` lê o texto dele.

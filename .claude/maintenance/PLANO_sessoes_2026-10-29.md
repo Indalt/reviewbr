@@ -233,7 +233,10 @@ as 11 saídas do backlog (dez duplicatas fundidas e o DEBT-102 resolvido: os abe
 não é mais a próxima sessão.** A ordem das sessões que faltam, a M reformulada e a página única estão propostas na
 parte 5 do `ORGANIZACAO_2026-11-11.md` e esperam a decisão dele (parte 10.2 do mesmo arquivo). Mais tarde, no mesmo dia, ele aprovou os vereditos por achado, a M
 reformulada, a página única e a fila: **a tabela de sessões acima (M, V, 3, 4, 5, 6 e 7+) está substituída pela
-`FILA.md`, que passa a ser a leitura de toda sessão.** Este plano fica como registro das decisões e das cartas.
+`FILA.md`, que passa a ser a leitura de toda sessão.** Este plano fica como registro das decisões e das cartas. Ainda em 12/11 ele confirmou que metodologia e
+norma se apontam, com a data de leitura, em vez de se copiarem, e mandou mover os documentos antigos para
+`old/12.11.26/`; a rota do `maintainer.md` passou a três passos (linha 0 da fila, feita). As decisões estão no
+`ORGANIZACAO_2026-11-11.md`, parte 10.1.
 
 A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
 não bloqueiam a M:

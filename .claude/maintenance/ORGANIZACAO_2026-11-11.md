@@ -4,8 +4,9 @@
 > `BRIEFING_fable_2026-11-10.md` (Fable 5.2, esforço high). Diz o que foi feito, o que falta de verdade e o que
 > sai da fila. É escrito bloco a bloco; cada bloco fecha com commit.
 >
-> **Estado (12/11): sessão encerrada.** As decisões do Vicente estão na parte 10.1, e a fila que elas
-> aprovaram virou a `FILA.md`, que é o que as próximas sessões leem. Esperam ele três decisões (parte 10.2).
+> **Estado (12/11): sessão encerrada.** As decisões do Vicente estão na parte 10.1. A fila que elas aprovaram
+> é a `FILA.md`, que é o que as próximas sessões leem; a linha 0 dela (limpeza) já foi feita. Restam duas
+> confirmações pequenas (parte 10.2).
 >
 > **Regras desta sessão.** Não cria achado, sessão nem frente. O número de achados abertos só pode cair. O que
 > aparecer de passagem vira uma linha na parte 11, sem avaliação.
@@ -23,8 +24,11 @@
   abertura da sessão que as usa (parte 5.2).
 - **Decidido em 12/11:** os consertos vêm antes da M; as 11 saídas do backlog foram gravadas; a fila de dez
   linhas da parte 5.4 substitui as sessões programadas e está na `FILA.md` (parte 10.1).
-- **A decidir:** a simplificação da camada de metodologias (parte 13), a lista de limpeza dos documentos
-  (parte 6.3) e a rota para o Sci-Hub (parte 10.2).
+- **Também decidido em 12/11:** metodologia e norma se apontam, com data de leitura, em vez de se copiarem
+  (parte 13); os documentos antigos foram para `old/12.11.26/` e a rota do `maintainer.md` caiu para três
+  passos (parte 6.3).
+- **Agentes e skills** estão coerentes com os papéis; o ponto fraco é que cinco agentes não nomeiam a sua
+  skill (parte 14).
 
 ## 2. A trajetória do briefing confere com o que está gravado
 
@@ -285,35 +289,32 @@ Exemplo de parte vencida: a DIRECAO §1 diz que há 3 normas assimiladas e que n
 são 5 normas, e desde a sessão 2a o mapeamento e as declarações são lidos do método. Documento vencido na rota
 de leitura é fonte de achado repetido.
 
-### 6.3 Lista fechada da limpeza — linha 0 da `FILA.md`, a confirmar pelo Vicente
+### 6.3 Limpeza dos documentos — feita em 12/11 (linha 0 da `FILA.md`)
 
-Pedido dele em 12/11: "tem muito lixo que precisa ser apagado", e o agente de manutenção tem de poder ser
-executado por um modelo de menor poder seguindo as regras. A classificação abaixo foi feita pela data, pelo que
-substituiu cada documento e por quem o cita. **Não li o conteúdo de cada um.** Tudo o que sair continua no
-histórico do git.
+Pedido do Vicente em 12/11: tirar o que não tem função e deixar o agente de manutenção executável por um modelo
+de menor poder. Ele mandou mover em vez de apagar. A classificação foi feita pela data, pelo que substituiu
+cada documento e por quem o cita; **não li o conteúdo de cada um.**
 
-1. **Registros de decisão do Vicente não se apagam: vão para `.claude/maintenance/historico/`** e deixam de ser
-   leitura de sessão. São `DECISOES_2026-09-27.md`, `DECISOES_2026-10-03.md`,
-   `DECISOES_2026-10-03b_reverificacao.md`, `DECISOES_2026-10-08.md` e `DECISOES_chat_a_conferir.md`.
-2. **Apagar — nenhum código, teste, agente ou skill os cita** (conferido em 11/11): `CONFORMIDADE_raise.md`,
-   `DIAGNOSTICO_frente_2.md`, `RECLASSIFICACAO_fila_2026-10-18.md` e `.json`, `TRANSICAO_PC_2026-10-02.md`,
-   `achados_2026-10-03_brutos.json`, `verificacao_abertos_2026-10-08.json`,
-   `verificacao_recusas_2026-10-04.json`, `confere_decisoes_chat.py`, `gera_decisoes.pl`,
-   `BRIEFING_fable_2026-11-10.md`.
-3. **Apagar depois de trocar a rota do `maintainer.md`** (hoje ele manda ler estes): `COBERTURA_achados.md`,
-   `CONTINUAR.md`, `EXECUCAO_checklist.md`, `ORDEM_correcoes.md`, `PASSAGEM.md`, `RETOMAR.md`. Teste que cite
-   um deles pelo nome é ajustado na mesma sessão.
-4. **A rota do `maintainer.md`** (seção "Ao ser acionado em sessão nova") passa a três passos: ler a
-   `FILA.md`; rodar `audit_system_debt`; quando o Vicente pedir, conferir a versão das normas assimiladas. No
-   fechamento, sai a atualização do `EXECUCAO_checklist.md` e entra "marcar a linha na `FILA.md`".
-5. **Ficam, sem avaliação nesta sessão:** `MANIFESTO_conformidade.md`, `ESPECIFICACAO_vestir_metodos.md`,
-   `PLANO_usabilidade.md`, `PROTOCOLO_revisao_reviewbr.md`, `DIRECAO_ferramenta_que_veste_metodos.md`,
-   `REVISAO_decisoes_2026-10-31.md` (traz o texto aprovado de A1 a A9, que a M usa), as pastas das sessões e
-   `origem/`. O `PLANO_sessoes_2026-10-29.md` fica como registro das decisões e das cartas.
-
-Pronto quando: a suíte está verde; a seção de abertura do `maintainer.md` cabe em 15 linhas; `ls` da raiz de
-`.claude/maintenance/` mostra só o que os itens 4 e 5 e a `FILA.md` nomeiam, mais `ORGANIZACAO_2026-11-11.md`,
-`system_debt.json` e `medir_esforco.py`.
+- **21 arquivos movidos para `old/12.11.26/`.** A pasta `old/` está fora do git: os arquivos saem do repositório
+  público, continuam no disco e no histórico do git.
+  - Sem citação em código, teste, agente ou skill: `CONFORMIDADE_raise.md`, `DIAGNOSTICO_frente_2.md`,
+    `RECLASSIFICACAO_fila_2026-10-18.md` e `.json`, `TRANSICAO_PC_2026-10-02.md`,
+    `achados_2026-10-03_brutos.json`, `verificacao_abertos_2026-10-08.json`,
+    `verificacao_recusas_2026-10-04.json`, `confere_decisoes_chat.py`, `gera_decisoes.pl`,
+    `BRIEFING_fable_2026-11-10.md`, `DECISOES_2026-10-08.md`, `DECISOES_chat_a_conferir.md`.
+  - Que estavam na rota do `maintainer.md`: `COBERTURA_achados.md`, `CONTINUAR.md`, `EXECUCAO_checklist.md`,
+    `ORDEM_correcoes.md`, `RETOMAR.md`, `DECISOES_2026-09-27.md`, `DECISOES_2026-10-03.md`,
+    `DECISOES_2026-10-03b_reverificacao.md`.
+- **A rota do `maintainer.md` caiu de 13 documentos para três passos:** ler a `FILA.md`; rodar
+  `audit_system_debt`; só quando o Vicente pedir, conferir a versão das normas e o ambiente de IA. No
+  fechamento, a sessão marca a linha na `FILA.md`. A alteração passou pelo gate `validate_system_change`
+  (CORRECAO, válida).
+- **Ficaram, sem avaliação:** `MANIFESTO_conformidade.md`, `ESPECIFICACAO_vestir_metodos.md`,
+  `PLANO_usabilidade.md`, `PROTOCOLO_revisao_reviewbr.md`, `DIRECAO_ferramenta_que_veste_metodos.md`,
+  `REVISAO_decisoes_2026-10-31.md` (traz o texto aprovado de A1 a A9, que a M usa), as pastas das sessões e
+  `origem/`. O `PASSAGEM.md` ficou porque um teste lê o texto dele. O `PLANO_sessoes_2026-10-29.md` fica como
+  registro das decisões e das cartas.
+- **Conferido:** suíte em 474 de 474, audit válido.
 
 ## 7. As 41 decisões e as 36 divergências não são fila
 
@@ -340,6 +341,8 @@ A D39 aparece em três sessões porque junta três perguntas. Nenhuma sessão ab
 conferir, e dez decisões não pedem nada de ninguém.
 
 ### 7.2 As 36 divergências do PRISMA-S
+
+> Superado pela decisão 7 de 12/11 (parte 10.1): as divergências não se decidem item a item.
 
 Pelos temas do próprio arquivo, são uma definição e 21 decisões:
 
@@ -370,6 +373,9 @@ Nada aqui é regra nova. É o que já está decidido, reduzido ao que se usa.
 4. **A fila é o `audit_system_debt`.** Nenhum outro documento é fila.
 
 ### 8.2 Assimilação de metodologia — seis passos
+
+> Substituído pela decisão 7 de 12/11 (parte 10.1): a assimilação passa a dois passos, fonte oficial e entrada
+> no catálogo com a data de leitura. O que segue fica como registro do procedimento anterior.
 
 O fundamento científico: a validade de uma metodologia vem da literatura que a publica, não da ferramenta. O
 ReviewBR não julga mérito; confere que a transcrição é fiel (A6, A9). O fundamento lógico: a máquina não sabe
@@ -468,24 +474,33 @@ Fontes: [política do diretório](https://support.claude.com/en/articles/1314535
 4. **A M e as sessões programadas ficam reformuladas** como na parte 5.2: a M é a última antes dos testes; a V
    entra na H; as sessões 3, 4 e 5 viram D, B e C, A, E e F; a sessão 6 vira a G, só com os quatro textos, e a
    arquitetura de agentes por papel sai da fila; o "7+" deixa de existir. Origem: "5.2 ok".
-5. **A página única vale como proposta** (parte 5.3): é a `FILA.md`, e o plano vira registro histórico. Origem:
-   "5.3 ok para proposta".
-6. **A fila de dez linhas substitui as sessões programadas.** Ele perguntou: "as sessões que estavam
-   programadas (debt) são substituídas pelas 10 propostas?". Sim: os 32 achados abertos estão, cada um, numa
-   linha de A a H, e nenhum ficou de fora. Origem: "5.4 ok".
-7. **Documentos antigos sem função se apagam, e o agente de manutenção tem de ser executável por um modelo de
-   menor poder.** Virou a linha 0 da fila; a lista está na parte 6.3 e espera a confirmação dele. Origem: "a
-   ideia dessa revisão era entender se estamos fazendo um trabalho limpo para que ao final tenhamos a
-   existência do agente de manutenção capaz de ser executado e que mesmo que um modelo de IA com menor poder
-   seja capaz de seguir as regras [...] Acho que tem muito lixo que precisa ser apagado".
-8. **O Fable para aqui; quem executa é o Opus, pela `FILA.md`.** Origem: "devemos parar de usar o fable e que
-   todas as decisões e avaliações sejam mapeadas para que o opus possa executar".
+5. **A página única é a `FILA.md`**, e o plano vira registro histórico. Origem: "5.3 ok para proposta".
+6. **A fila de dez linhas substitui as sessões programadas.** Os 32 achados abertos estão, cada um, numa linha
+   de A a H. Origem: "5.4 ok".
+7. **Metodologia e norma se apontam, não se copiam** (parte 13). O ReviewBR guarda a fonte oficial e a data de
+   leitura e mantém um mapa central para sugerir a metodologia mais adequada. Alcance: norma nova não se
+   transcreve; as cinco já transcritas ficam como ajuda; as 36 divergências do PRISMA-S não se decidem item a
+   item; as três perguntas da sessão 2c deixam de ser necessárias. Consequência: a sessão H passa a ser a lista
+   fechada da `FILA.md`. Ficam substituídas, no que tratam de norma nova, "assimilada completa, ou não é"
+   (04/10), a leitura documentada com segunda leitura (B2, 05/11) e "implementar o padrão, não apagar a menção"
+   (04/10). Origem: "confirmo a simplificação e estou de acordo com o limite não vale para o funil".
+8. **O controle por código vale em todo o ReviewBR**, da busca exploratória à formulação do objeto de pesquisa
+   e à publicação, e não só no funil: é o limite da decisão 7. Origem: "o controle vale para todo o reviewbr,
+   das buscas exploratórias a formulação do objeto de pesquisa a publicação". **Leitura a conferir por ele:**
+   hoje a busca exploratória, sem projeto, não grava nada (DIRECAO §6; D02). Se a frase pede registro também
+   nela, isso é construção e fica para quando ele pedir; nada foi aberto por causa dela.
+9. **Os documentos antigos foram movidos, não apagados**, para `old/12.11.26/` (parte 6.3). Origem: "pode mover
+   para o diretório old com subpasta 12.11.26 ao invés de apagar os arquivos".
+10. **A rota para o Sci-Hub fica como está, sem prazo e sem ação.** Origem: "rota para o scihub fica sem prazo
+    e sem ação".
+11. **O Opus executa pela `FILA.md`.** O Fable seguiu só até fechar este mapeamento. Origem: "o fable continua
+    porque precisa mapear e ter certeza das decisões".
 
 ### 10.2 A decidir
 
-1. **A simplificação da camada de metodologias** (parte 13). Decide o que a sessão H faz.
-2. **A lista de limpeza** (parte 6.3). Decide a linha 0.
-3. **A rota para o Sci-Hub fica no repositório público?** Sem prazo (parte 9.3).
+1. **A leitura da decisão 8**, sobre a busca exploratória.
+2. **Os cinco agentes passam a nomear a sua skill?** Está em "Visto de passagem" na `FILA.md`; se sim, entra
+   como texto na sessão G (parte 14.2).
 
 ## 11. Visto de passagem — não avaliado
 
@@ -510,7 +525,10 @@ equivalente a 2% da semana sem corte, o que indica que a semana virou em 11/11 p
 e 18% da cota semanal do Fable, que tem medidor próprio. A régua da tabela estava baixa. Valem: 0,67% da semana
 por c, janela de 5 h ≈ 26 c e cota semanal do Fable ≈ 74 c. O teto pedido, 50% da cota do Fable, é ≈ 37 c.
 
-## 13. Simplificar a camada de metodologias — ideia do Vicente (12/11), com a avaliação
+**Fechamento, em 12/11:** 17,4 c medidos na transcrição. Pela leitura declarada, isso é cerca de 12% da semana
+no total e 23% da cota semanal do Fable.
+
+## 13. Simplificar a camada de metodologias — ideia do Vicente, confirmada em 12/11
 
 **A ideia.** Em vez de escrever cada metodologia dentro da ferramenta: achar a fonte oficial, apontá-la, gravar
 a data de leitura quando ela for usada e manter um mapa central, de uma página, para sugerir ao pesquisador a
@@ -551,10 +569,74 @@ leitura documentada com segunda leitura independente (B2, 05/11) e "implementar 
 (04/10). O trabalho feito nas sessões 1 a 2c não se perde: foi ele que mostrou que a cópia erra e quanto custa
 conferi-la.
 
-**Se ele confirmar:** a sessão H vira uma sessão de texto, de uma janela, sem decisão item a item; a M perde as
+**Confirmada em 12/11 (parte 10.1, decisão 7):** a sessão H vira uma sessão de texto, de uma janela, sem decisão item a item; a M perde as
 três perguntas; a parte 8.2 passa a dois passos. As linhas 0 a 7 da fila não mudam.
 
 **Sobre a dúvida dele — o que era necessário e o que não era.** Necessários, em qualquer desenho: os 18
 consertos de código e as 12 correções de texto. Não eram necessários para o rigor: as cinco triagens da mesma
 fila, a reescrita das 41 decisões, a M antes dos consertos e, se a ideia acima for confirmada, a conferência
 item a item das transcrições.
+
+## 14. Agentes, skills e a pasta da ferramenta — conferência de 12/11
+
+Conferência mecânica: frontmatter, nomes, tools e datas, cruzados por script. **Não li o corpo de cada agente e
+de cada skill.**
+
+### 14.1 Agentes (8)
+
+- Toda tool do servidor que um agente declara existe (44 tools no servidor). Nenhum agente aponta para tool
+  inexistente.
+- Só uma tool do servidor não está em agente nenhum: `record_researcher_decision`. É a do coordenador, usada
+  pela skill `conduct-review`.
+- Treze tools estão em dois agentes, sempre em papéis vizinhos: por exemplo, busca em `librarian` e `scout`, e
+  catálogo em `designer` e `maintainer`.
+- Os oito têm as mesmas tools nativas (Bash, Write, Edit, busca na web), seja qual for o papel. É o DEBT-060,
+  na linha 5 da fila.
+- Seis se descrevem pelas fases F0 a F8 do `prisma-sr`. É o DEBT-137, na linha 7.
+- Últimas alterações entre 29/10 e 08/11. Com a decisão 7, o único texto de agente que fica desatualizado é o
+  procedimento de assimilação do `maintainer.md`, já na linha 8.
+
+### 14.2 Skills (9)
+
+| skill | diz ser de | o agente a nomeia? | defeitos já na fila |
+|---|---|---|---|
+| `evidence-reading` | `reader` | não | 031 |
+| `extraction-form` | `extractor` | não | — |
+| `prisma-s-logging` | `librarian` | não | 056 |
+| `screening-rules` | `screener` | não | 021 · 025 · 026 |
+| `synthesis-manuscript` | `analyst` | não | 008 |
+| `system-audit` | `maintainer` | sim | — |
+| `conduct-review` | coordenador | sim (`designer`) | 137 |
+| `methodology-router` | coordenador | — | 137 |
+| `prisma-rigor-gates` | coordenador | — | 002 · 066 · 014 |
+
+- **A responsabilidade está coerente:** nenhuma skill de procedimento aponta para o agente errado, e as três de
+  orquestração são do coordenador.
+- **O ponto fraco:** em cinco casos o vínculo só existe do lado da skill. O agente tem a tool `Skill` e pode
+  carregá-la, mas nada no texto dele manda. Um modelo de menor poder pode não carregar. O conserto é uma frase
+  em cada agente (parte 10.2, item 2).
+- `evidence-reading` e `extraction-form` não mudam desde 02/07.
+
+### 14.3 Onde a ferramenta está
+
+Tudo está dentro de `C:\reviewbr`, que é a raiz do repositório. Dentro dela, a ferramenta ocupa dois lugares:
+
+| lugar | o que tem |
+|---|---|
+| `C:\reviewbr\.claude\` | agentes, skills, catálogo, normas, métodos e a manutenção |
+| `C:\reviewbr\reviewbr\reviewbr-mcp\` | o servidor MCP (as 44 tools); o `.mcp.json` da raiz aponta para ele |
+| `C:\reviewbr\reviewbr\projects\` | os projetos de pesquisa |
+| `C:\reviewbr\reviewbr\` (o resto) | código Go herdado do prismAId (`cmd`, `review`, `screening`, `conversion`) |
+
+A subpasta `reviewbr\` sozinha não contém a ferramenta toda: sem o `.claude\` da raiz não há agentes, skills
+nem métodos. O resto da raiz (`reviewbr-web`, `plugins`, `data`, `logs`, `old`, o plugin Bio Research e dois
+`.md` soltos) não foi avaliado.
+
+### 14.4 Está tudo bem com a ferramenta?
+
+- **Ela roda e está íntegra:** o servidor responde, a suíte passa em 474 de 474, o audit do backlog é válido e
+  o git está limpo.
+- **Ela não está pronta para uma pesquisa sem supervisão:** há 32 defeitos conhecidos, 8 deles de gravidade
+  BLOQUEIA. O primeiro da fila, o DEBT-089, pode apagar estudos incluídos de um projeto em andamento.
+- **O que falta é finito e está na `FILA.md`:** oito sessões de conserto, a descrição do método e a fase de
+  testes.

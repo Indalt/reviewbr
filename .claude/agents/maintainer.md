@@ -187,34 +187,21 @@ Você tem três fontes de atualização, e elas não são equivalentes:
 ## Ao ser acionado em sessão nova — comece sempre por aqui
 
 Você **não depende de nenhuma conversa anterior**. Todo o estado está em disco. Em qualquer
-sessão nova, nesta ordem:
+sessão nova, nesta ordem (decisão do administrador de 12/11/2026):
 
-> **A ordem abaixo é a única.** Vários documentos abrem com avisos dizendo "leia PRIMEIRO" —
-> são carimbos de datas diferentes, empilhados. Ignore a disputa: **leia nesta ordem.** Onde
-> dois documentos divergirem, vale o mais recente, e a data está no topo de cada um.
-
-0. **`.claude/maintenance/DIRECAO_ferramenta_que_veste_metodos.md`** (04/10/2026) — o RUMO.
-   O sistema deixa de ser aplicador de PRISMA e passa a vestir métodos, com assimilação
-   automatizada. Traz a fronteira do que é modular, a distinção entre **defeito** (o sistema
-   afirma o que não cumpre) e **ausência** (o que ainda não foi construído, que é escopo e
-   não vai para o backlog), e o CORTE do que entra antes da fase de testes.
-0a. **`.claude/maintenance/DECISOES_2026-10-03b_reverificacao.md`** — o que a reverificação
-   achou e corrigiu, e o que ficou aberto esperando decisão do pesquisador.
-0b. **`.claude/maintenance/DECISOES_2026-10-03.md`** — os seis furos (A–F) decididos.
-   Onde divergir do `03b`, vale o `03b`.
-0c. **`.claude/maintenance/DECISOES_2026-09-27.md`** — as 11 decisões do Vicente, transcritas
-   com SHA-256. Decisão registrada não se reinterpreta.
-0d. **`.claude/maintenance/EXECUCAO_checklist.md`** — o rastreador de estado da execução:
-   o que já foi feito, o que falta, e os furos que pararam a execução.
-0e. **`.claude/maintenance/PASSAGEM.md`** — os princípios que valem para toda ação, o que
-   NÃO fazer, e as fragilidades conhecidas dos próprios instrumentos.
-0f. **`.claude/maintenance/CONTINUAR.md`** — orçamento de tokens medido e política de esforço.
-   ⚠️ A régua **não conta subagente de workflow**: fan-out grande estoura o limite com a
-   régua marcando folga.
-1. **`audit_system_debt`** — devolve o panorama do backlog: quantos achados abertos, em
+1. **`.claude/maintenance/FILA.md`** — a página única: as regras de sessão, a fila do que falta
+   e o que não é fila. É a única leitura obrigatória. Os outros documentos de
+   `.claude/maintenance/` são registro histórico: leia um deles só quando a linha da sua sessão
+   na fila o citar.
+2. **`audit_system_debt`** — devolve o panorama do backlog: quantos achados abertos, em
    curso, resolvidos e recusados, e a lista dos que exigem atenção. Se reprovar, o próprio
    backlog está inconsistente: conserte isso antes de qualquer outra coisa.
-1a. **Obsolescência dos padrões assimilados** (`DEBT-010`, decidido em 09/10/2026: conferida
+   O `by_destino` que ele devolve é derivado do dado. O destino diz para onde vai o conserto; não
+   define escopo nem agenda: se algo é achado decide o teste da DIRECAO §9 (o sistema afirma, exige
+   ou entrega hoje o que não se sustenta), e no que se trabalha, a `FILA.md`.
+3. **Só quando o administrador pedir** — as duas conferências abaixo não fazem parte da abertura
+   de uma sessão de conserto:
+3a. **Obsolescência dos padrões assimilados** (`DEBT-010`, decidido em 09/10/2026: conferida
    *quando você roda*, não ao vivo — sem vigia, sem job de fundo). `check_standard_coverage`
    com `standardId: ""` lista cada padrão com versão, `version_source`, fonte oficial e os
    métodos que o declaram. Para cada um, vá à fonte (`WebFetch`; para guideline de relato, a
@@ -224,25 +211,15 @@ sessão nova, nesta ordem:
    ou exige hoje e a versão nova desmente, com padrão, versão, item afetado e a mentira de hoje;
    a versão nova em si é norma que o sistema ainda não tem, e assimilá-la é o procedimento acima,
    quando o administrador decidir. A fonte não abriu → declare; não presuma que nada mudou.
-1b. **Ferramentas de IA para pesquisa e infraestrutura brasileira** (`DEBT-144`, decidido em
+3b. **Ferramentas de IA para pesquisa e infraestrutura brasileira** (`DEBT-144`, decidido em
    17/10/2026). Olhe também o que muda no ambiente em que o pesquisador trabalha: ferramentas de
    IA para pesquisa e o que a CAPES disponibiliza no Portal de Periódicos. **Não é definidor** —
    a verdade do ReviewBR são normas e métodos; isto é contexto. O que importar entra no catálogo
    com `kind: "ferramenta_ia"` (a primeira foi o LeapSpace, da Elsevier, disponibilizado pela CAPES
    em 03/07/2026), dizendo em que linha do RAISE 3 o uso dela cai.
-2. **`.claude/maintenance/MANIFESTO_conformidade.md`** — o que cada trava verifica, contra
-   que padrão e com que verificador. É o mapa do sistema.
-3. **`.claude/maintenance/PROTOCOLO_revisao_reviewbr.md`** — se houver trabalho em curso
-   sob protocolo travado, o §7 registra onde parou e o que ficou fora de escopo.
-4. **`.claude/maintenance/ORDEM_correcoes.md`** — as dependências entre achados. **Leia antes
-   de corrigir qualquer coisa.** Corrigir na ordem errada gera retrabalho, e a tabela existe
-   para você não descobrir a dependência depois de já ter consertado o lado errado.
-5. **`.claude/maintenance/PLANO_usabilidade.md`** — o que entra agora, o que espera e por quê.
-6. **`.claude/maintenance/COBERTURA_achados.md`** — onde está o destino de cada achado aberto
-   (hoje derivado: `by_destino` do `audit_system_debt`). O destino diz para onde vai o conserto;
-   não define escopo nem agenda: se algo é achado decide o teste da DIRECAO §9, e no que se
-   trabalha, o plano (`PLANO_sessoes_2026-10-29.md`).
-7. **`.claude/maintenance/RETOMAR.md`** — resumo curto do estado, se preferir começar por ele.
+
+Se a sessão ou uma auditoria parar no meio, registre onde e por quê na linha da sessão na
+`FILA.md`; a skill `system-audit` usa um `RETOMAR.md`, na mesma pasta, para a auditoria.
 
 Só então decida o que fazer. **Nunca reconstrua o estado de memória ou por leitura de
 conversa** — se algo não está no disco, não está decidido.
@@ -346,7 +323,7 @@ pegar.
    | a | `record_system_finding` fecha o que foi corrigido, com `resolution` | sair da fila em silêncio é o esquecimento organizado |
    | b | `npm run build` e `npx vitest run` **verdes** | `dist` velho faz o sistema rodar código que não é o que está escrito (já aconteceu: 2 meses de atraso) |
    | c | `audit_system_debt` sem reprovar | aritmética fechando, nenhum aberto sem `destino` nem `gravidade` |
-   | d | atualize `EXECUCAO_checklist.md` — o estado de cada passo | é por ele que a próxima sessão retoma |
+   | d | marque a linha da sessão na `FILA.md`, com data e commit | é por ela que a próxima sessão retoma |
    | e | documento novo em `.claude/maintenance/` **citado** por um da rota | `tests/integracao.test.ts` reprova documento inalcançável |
    | f | se parou no meio, diga **onde** e **por quê** | trabalho pela metade registrado vale mais que trabalho inteiro perdido |
 
