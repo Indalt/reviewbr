@@ -182,5 +182,5 @@ Vicente pedir.
   - seção 6: quando o projeto exige o RAISE, informar ao pesquisador que o RAISE 3 dá a síntese entre estudos por
     LLM como não aceitável e pedir que ele a traga; hoje nada informa, e o `analyst` se descreve como quem
     sintetiza;
-  - seção 4 (ainda proposta): nenhuma tool pede os elementos do projeto de pesquisa da NBR 15287 (justificativa,
+  - seção 4: nenhuma tool pede os elementos do projeto de pesquisa da NBR 15287 (justificativa,
     referencial teórico, recursos, cronograma).

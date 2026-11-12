@@ -1,13 +1,12 @@
 # Método do ReviewBR
 
-> **Estado em 12/11/2026:** texto da linha 9 da `.claude/maintenance/FILA.md` (sessão M). O Vicente respondeu às
-> seis escolhas em 12/11/2026 e, no mesmo dia, em duas rodadas, aos textos propostos na conferência delas.
+> **Estado em 12/11/2026:** aprovado. É o texto da linha 9 da `.claude/maintenance/FILA.md` (sessão M). O Vicente
+> respondeu às seis escolhas, depois aos textos propostos, em duas rodadas, e por fim aprovou as etapas.
 > - **Decidido:** vale. Traz a data e a origem. Não se reabre.
-> - **[PROPOSTA]:** redação do agente. Não vale até o Vicente aprovar o texto que leu.
 > - **Hoje:** fato conferido no sistema em 12/11/2026. Não é decisão.
 >
 > As decisões de 12/11 foram dadas sobre o resumo levado a ele. A redação é do agente, com a frase dele como
-> origem, e ele a confere na leitura. O que falta está na seção 7.
+> origem. Onde o texto diz "do agente", a leitura vale até ele corrigir.
 
 **Duas camadas (A3, aprovada em 31/10/2026).** Este documento descreve (a) o método do ReviewBR, que é o da
 ferramenta e vale para toda pesquisa. Não descreve (b) a metodologia escolhida para o estudo, com a trilha e os
@@ -297,11 +296,11 @@ método assimilado é recusado e os dois métodos instalados exigem protocolo.
 
 ## 4. Etapas
 
-**[PROPOSTA — segunda versão, 12/11/2026].** A primeira versão foi montada pelo agente só com o que já estava
+**Decidido (12/11/2026, segunda versão).** A primeira versão foi montada pelo agente só com o que já estava
 decidido, e o Vicente não a aprovou: "nao sei se esse é um modo de agir legitimo de todo o pesquisador, sugeri por
 intuicao. Vamos buscar ter as etapas necessarios de toda a publicacao relevante ou o que se pede para ABNT ou
-regras internacionais". Esta versão parte do que as normas pedem de um projeto e de um relato. As normas dizem o
-que o projeto e o relato têm de conter; a ordem em etapas é leitura do agente.
+regras internacionais". Esta versão parte do que as normas pedem de um projeto e de um relato, e ele a aprovou:
+"aprovo" (12/11). As normas dizem o que o projeto e o relato têm de conter; a ordem em etapas é leitura do agente.
 
 | etapa | o que a norma pede | o que o ReviewBR faz |
 |---|---|---|
@@ -418,5 +417,5 @@ classificação pode mudar.
 
 ## 7. O que falta
 
-**Etapas (seção 4).** A segunda versão, apoiada na NBR 15287 e na recomendação do ICMJE, espera a leitura do
-Vicente: aprovar, corrigir ou pedir outras fontes. É o único texto deste documento que ainda é proposta.
+Nenhuma escolha pendente em 12/11/2026. O que estas decisões pedem ao sistema está no "Visto de passagem" da
+`.claude/maintenance/FILA.md`, sem avaliação, e acontece quando o Vicente pedir.
