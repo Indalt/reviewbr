@@ -124,8 +124,8 @@ backlog, 05/11/2026, no `PLANO_sessoes_2026-10-29.md`).
 
 Consequência prática: ao encontrar uma metodologia relevante que o sistema não cobre, **não
 implemente de passagem e não ignore** — confira o catálogo (`query_methodology_catalog`) e, se ela
-faltar, absorva-a com a fonte oficial (até o conserto do `DEBT-141`, só entrada nova:
-`atualizar=true` apaga campos). Assimilá-la é o procedimento descrito a seguir, rodado quando o
+faltar, absorva-a com a fonte oficial e a data em que você a leu (`read_at`; desde o conserto do
+`DEBT-141`, `atualizar=true` mescla e não apaga campos). Assimilá-la é o procedimento descrito a seguir, rodado quando o
 administrador decidir, sem achado nem sessão desenhada para ela. Vira achado só o que o sistema
 afirma ou exige hoje sobre ela e não cumpre — por exemplo, citá-la como se a aplicasse. O catálogo
 já traz o JBI (`jbi-*`), o GRADE e o CERQual (`grade`, `grade-cerqual`), o MECIR e o Cochrane
@@ -141,6 +141,15 @@ próprio (RV-11), a partir da fonte oficial, **completo** — e cada metodologia
 método que aplica partes de outros é um método único, com critérios próprios, não remendo de
 outro. O sistema nasceu da revisão sistemática e não precisa ficar preso à arquitetura de um só
 método; precisa de arquiteturas confiáveis e verificáveis.
+
+**Assimilar são dois passos (decisão de 12/11/2026: metodologia e norma se apontam, não se
+copiam):** (1) achar e ler a **fonte oficial**; (2) gravar a **entrada no catálogo** com
+`absorb_methodology` — `source_url` da fonte e `read_at`, a data em que você a leu. É isso que o
+mapa central do catálogo usa para sugerir ao pesquisador a metodologia mais adequada, e é a fonte e
+a data que o protocolo do projeto grava quando ele escolhe o método. Norma nova **não** se
+transcreve em `.claude/standards/` nem ganha mapeamento item a item, e a leitura documentada não é
+exigida para ela. As cinco normas já transcritas ficam como ajuda, sem crescer; o que vem abaixo
+sobre `.claude/standards/` e sobre o mapeamento vale só para elas.
 
 Use `query_methodology_catalog` para consultar esse panorama sem depender de memória: ele
 devolve status por método (implementada / padrão disponível / declarada / ausente), sempre
@@ -163,16 +172,17 @@ Você tem três fontes de atualização, e elas não são equivalentes:
    ou do `scout`. O que você lê são normas, manuais e registros de guideline.
 
    **O que a leitura externa autoriza, e o que não autoriza:**
-   - para o **catálogo** (o que existe): `source_url` http obrigatório — `absorb_methodology`
-     já recusa sem ele;
-   - para `.claude/standards/` (o que está assimilado): a **demonstração da validação** no
+   - para o **catálogo** (o que existe): `source_url` http e, em entrada nova, `read_at`
+     (AAAA-MM-DD) obrigatórios — `absorb_methodology` recusa sem eles;
+   - para `.claude/standards/` (só as cinco normas já transcritas): a **demonstração da validação** no
      `version_source`, como `prisma-2020` e `prisma-scr` fazem — citação da fonte lida, data
      da conferência, e o que **não** foi possível confirmar;
    - **nunca** preencher enunciado de item por inferência. Se a fonte não abriu, declare
      (RV-03). Título inventado é o defeito do `DEBT-045` e do `DEBT-128`, que nasceram de
      mapeamento escrito a partir da nossa trilha em vez da norma.
-   - para o **mapeamento** do método (`conformance/<padrão>.json`, o que liga a trilha à norma):
-     **leitura documentada** (decisão de 05/11/2026, B2; DEBT-149). Cada ponteiro traz em
+   - para o **mapeamento** de um método às normas já transcritas (`conformance/<padrão>.json`, o
+     que liga a trilha à norma), quando ele for mexido: **leitura documentada** (decisão de
+     05/11/2026, B2; DEBT-149). Norma nova não ganha mapeamento (decisão de 12/11/2026). Cada ponteiro traz em
      `trechos` o trecho literal do enunciado oficial do item que o justifica, e o
      `check_standard_coverage` recusa trecho que não seja literal e daquele item. Uma **segunda
      leitura independente** — por agente que não vê a primeira nem o mapeamento atual — é

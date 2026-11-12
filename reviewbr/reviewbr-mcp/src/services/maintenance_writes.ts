@@ -262,7 +262,10 @@ export class CatalogWriter {
 
         const p = MethodologyCatalogService.catalogPath(repoRoot);
         fs.mkdirSync(path.dirname(p), { recursive: true });
-        fs.writeFileSync(p, JSON.stringify(CatalogSchema.parse(cat), null, 2));
+        const gravado = CatalogSchema.parse(cat);
+        fs.writeFileSync(p, JSON.stringify(gravado, null, 2));
+        // O mapa de uma página é gerado do catálogo a cada escrita, nunca à mão (FILA linha 8, item 6).
+        fs.writeFileSync(MethodologyCatalogService.mapaPath(repoRoot), MethodologyCatalogService.renderMapa(gravado));
 
         // O status NÃO é escrito: continua derivado do disco a cada consulta (RV-02).
         const rel = MethodologyCatalogService.resolve(repoRoot, cat);

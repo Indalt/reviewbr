@@ -131,6 +131,42 @@ export class MethodologyCatalogService {
         return e ? { id: e.id, source_url: e.source_url, read_at: e.read_at } : null;
     }
 
+    static mapaPath(repoRoot: string): string {
+        return path.join(path.dirname(this.catalogPath(repoRoot)), "MAPA.md");
+    }
+
+    /**
+     * O mapa de uma página (FILA linha 8, item 6): uma linha por entrada do catálogo — nome, quando
+     * usar (a primeira frase), fonte e data de leitura. É GERADO do catálogo a cada escrita da
+     * `absorb_methodology` e não se escreve à mão: metodologia se aponta, não se copia, e o mapa é
+     * o que ajuda a sugerir ao pesquisador a metodologia mais adequada (decisão de 12/11/2026).
+     * Determinístico: a mesma entrada dá sempre o mesmo texto, para o teste conferir o arquivo.
+     */
+    static renderMapa(cat: Catalog): string {
+        const cel = (t: string) => (t ?? "").replace(/\s+/g, " ").trim().replace(/\|/g, "\\|");
+        const primeiraFrase = (t: string) => {
+            const x = cel(t);
+            const m = x.match(/^(.+?[.;])(?=\s|$)/);
+            const f = m ? m[1] : x;
+            return f.length > 240 ? f.slice(0, 239) + "…" : f;
+        };
+        const linhas = [
+            "# Mapa de metodologias do ReviewBR",
+            "",
+            "> Gerado de `.claude/catalog/methodologies.json` pela `absorb_methodology` — não edite à mão.",
+            "> Uma linha por entrada do catálogo: nome, quando usar (primeira frase), fonte oficial e a data em que ela foi lida.",
+            "> Metodologia se aponta, não se copia (decisão de 12/11/2026): o que vale é a fonte.",
+            "",
+            "| Metodologia | Quando usar | Fonte | Lida em |",
+            "|---|---|---|---|",
+        ];
+        for (const e of cat.entries) {
+            linhas.push(`| ${cel(e.name)} (\`${e.id}\`) | ${primeiraFrase(e.when_to_use) || "—"} | ` +
+                `${cel(e.source_url) || "[sem fonte]"} | ${e.read_at.trim() || "[sem data]"} |`);
+        }
+        return linhas.join("\n") + "\n";
+    }
+
     static read(repoRoot: string): Catalog | null {
         const p = this.catalogPath(repoRoot);
         if (!fs.existsSync(p)) return null;

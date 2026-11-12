@@ -142,3 +142,6 @@ Vicente pedir.
   para gerar o protocolo; o auditor confere a linha `**Registro:**` do protocolo que o `project_init` gera.
 - (linha 7) O servidor do ReviewBR aberto antes do build de 12/11 segue com o texto antigo (registro
   "OBRIGATÓRIO") até ser reiniciado.
+- (linha 8) As 106 entradas do catálogo estão sem `read_at`: o `MAPA.md` mostra `[sem data]` em todas.
+- (linha 8) Nenhuma tool lê o `MAPA.md`: o `assess_research_design` sugere o método pelos que servem ao tipo
+  (`serves_research_types`), não pelo mapa.
