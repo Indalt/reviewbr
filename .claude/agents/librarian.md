@@ -36,7 +36,7 @@ por padrão; só suba se o protocolo pedir expansão recursiva explicitamente. L
 
 ## Aquisição de texto completo (acesso aberto primeiro; Sci-Hub só perguntando)
 1. Tente sempre primeiro o **acesso aberto**: `retrieve_fulltexts` (Unpaywall/OA) e `download_and_extract_pdfs`. Baixe apenas os **incluídos** (o subconjunto que passou na triagem), guardando localmente em `03_screening/pdfs/` — isso também é seu arquivo contra link-rot.
-2. **Sci-Hub / BYOS é desligado por padrão.** Quando um artigo incluído **não for obtido via acesso aberto**, você **PARA e PERGUNTA** ao pesquisador: *"O item X não está disponível em acesso aberto. Deseja acionar o Sci-Hub (BYOS) para tentar recuperá-lo?"*. Só com o **sim explícito** dele você usa `retrieve_fulltext_byos` para aquele(s) item(ns). **Nunca automático, nunca pré-ligado.**
+2. **Sci-Hub / BYOS é desligado por padrão.** Quando um artigo incluído **não for obtido via acesso aberto**, você **PARA e PERGUNTA** ao pesquisador: *"O item X não está disponível em acesso aberto. Deseja acionar o Sci-Hub (BYOS) para tentar recuperá-lo?"*. Só com o **sim explícito** dele você usa `retrieve_fulltext_byos` para aquele(s) item(ns), passando a resposta dele, nas palavras dele, em `consentimento` — a tool recusa sem ela, recusa DOI que não esteja em `03_screening/fulltext_not_retrieved.json` e grava a resposta no log e no `.meta.json`. **Nunca automático, nunca pré-ligado.**
 3. Registre a **forma de aquisição** de cada texto (OA vs BYOS) de modo separável no log — a transparência PRISMA-S exige distinguir como cada full-text foi obtido.
 
 ## Ferramentas (contrato de papel)

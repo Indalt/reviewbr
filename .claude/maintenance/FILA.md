@@ -38,7 +38,7 @@
 | ordem | sessão | FAZER | DECLARAR | estado |
 |---|---|---|---|---|
 | 0 | Limpeza dos documentos e rota do `maintainer.md` | — | — | **feita em 12/11/2026** |
-| 1 | A — Texto completo e leitura | 089 (primeiro) · 062 · 031 | — | a fazer |
+| 1 | A — Texto completo e leitura | 089 (primeiro) · 062 · 031 | — | **feita em 12/11/2026** |
 | 2 | B — Registro da busca | 056 · 139 · 087 · 093 | 058 · 077 | a fazer |
 | 3 | C — Triagem, deduplicação e tools em lote | 021 · 025 · 112 · 030 | 026 | a fazer |
 | 4 | D — Funil e gates | 138 · 071 | 003 · 002 · 066 · os 21 subitens do 014 como `[NÃO COBERTO]` | a fazer |
@@ -91,3 +91,15 @@ Vicente pedir.
   `screening-rules`, `analyst` e `synthesis-manuscript`.
 - `reviewbr/projects/` tem cerca de 380 arquivos rastreados no repositório público.
 - `PASSAGEM.md` ficou na pasta da manutenção porque `tests/porta_do_backlog.test.ts` lê o texto dele.
+- (linha 1) `scihub_bridge.ts` monta o comando do python interpolando o DOI numa string de shell (`exec`,
+  `--doi "${doi}"`).
+- (linha 1) Nenhum código grava `03_screening/fulltext_not_retrieved.json`; o `retrieve_fulltexts` não registra
+  os que falharam. Desde a linha 1, o BYOS só aceita DOI que esteja nesse arquivo.
+- (linha 1) DOI recuperado pelo BYOS continua em `fulltext_not_retrieved.json`, que o funil conta como não
+  recuperado.
+- (linha 1) `download_and_extract_pdfs` pula o texto já gravado como `[NATIVE PDF EXTRACTED]`: texto extraído
+  antes de 12/11/2026 não ganha página quando a tool roda de novo.
+- (linha 1) `logToLocalProject` (`index.ts`) monta o caminho com `path.join(process.cwd(), projectPath)`, sem
+  tratar `projectPath` absoluto.
+- (linha 1) Pelo Git Bash com a unidade em minúscula (`c:/`), o `npx vitest run` acusa "No test suite found" em
+  todo arquivo; pelo PowerShell em `C:\` a suíte roda.

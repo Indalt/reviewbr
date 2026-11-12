@@ -12,12 +12,18 @@ import * as path from "node:path";
  * ranker vetorial, sem mudar o contrato das tools (`rag_index_corpus` / `rag_query`).
  */
 
+/** Marca de página no texto extraído (DEBT-031): a linha `[[p. N]]` abre o texto da página N.
+ *  Quem grava é a extração (pdf_extractor.ts, extrairTextoComPaginas); quem lê é o chunkText. */
+export const marcaPagina = (n: number): string => `[[p. ${n}]]`;
+export const MARCA_PAGINA_RE = /^\[\[p\. (\d+)\]\]$/;
+
 export interface RagChunk {
     id: string;
     studyId: string;
     source: string;   // fonte_repositorio (RV-08)
     url: string;       // url_hospedagem (RV-08)
     section: string;
+    page: number | null; // DEBT-031: página do PDF; null quando o texto não tem marca de página
     text: string;
 }
 
@@ -41,6 +47,9 @@ export interface RagQueryHit {
     fonte_repositorio: string;
     url_hospedagem: string;
     section: string;
+    /** DEBT-031: o X da citação [study_id, p.X]. null = o texto foi gravado sem marca de página
+     *  (extraído antes da marca, .md, HTML) — cite a seção e declare a página como não registrada. */
+    page: number | null;
     score: number;
 }
 
@@ -56,17 +65,25 @@ export function tokenize(text: string): string[] {
         .filter((t) => t.length > 2 && !STOP.has(t));
 }
 
-/** Divide um texto em chunks por parágrafos, agrupando até ~alvo de caracteres; rastreia a seção (heading markdown/ALL-CAPS). */
-export function chunkText(text: string, targetChars = 1200): { section: string; text: string }[] {
+/** Divide um texto em chunks por parágrafos, agrupando até ~alvo de caracteres; rastreia a seção (heading markdown/ALL-CAPS)
+ *  e a página (marca `[[p. N]]` da extração — DEBT-031). Nenhum chunk atravessa página: a marca fecha o chunk em curso. */
+export function chunkText(text: string, targetChars = 1200): { section: string; page: number | null; text: string }[] {
     const paras = text.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
-    const chunks: { section: string; text: string }[] = [];
+    const chunks: { section: string; page: number | null; text: string }[] = [];
     let section = "";
+    let page: number | null = null;
     let buf = "";
     const flush = () => {
-        if (buf.trim()) chunks.push({ section, text: buf.trim() });
+        if (buf.trim()) chunks.push({ section, page, text: buf.trim() });
         buf = "";
     };
     for (const p of paras) {
+        const marca = p.match(MARCA_PAGINA_RE);
+        if (marca) {
+            flush();
+            page = Number(marca[1]);
+            continue;
+        }
         const headingMatch = p.match(/^#{1,6}\s+(.*)$/);
         const isCapsHeading = p.length <= 80 && /^[\p{Lu}\p{N}\s.:–-]+$/u.test(p) && /\p{Lu}/u.test(p);
         if (headingMatch || isCapsHeading) {
@@ -125,7 +142,7 @@ function resolveProvenance(
 export function indexCorpus(
     projectDir: string,
     corpusRelDir?: string,
-): { indexed: number; studies: number; skippedPdfsOnly: number; indexPath: string; missingProvenance: string[]; skippedTranslations: string[] } {
+): { indexed: number; studies: number; skippedPdfsOnly: number; indexPath: string; missingProvenance: string[]; skippedTranslations: string[]; semPagina: string[] } {
     const candidates = corpusRelDir
         ? [corpusRelDir]
         : ["04_extraction/fulltext", "03_screening/fulltext", "03_screening/pdfs"];
@@ -153,6 +170,7 @@ export function indexCorpus(
     const df: Record<string, number> = {};
     const studies = new Set<string>();
     const missingProvenance: string[] = [];
+    const semPagina: string[] = [];
 
     for (const f of textFiles) {
         const fp = path.join(corpusDir, f);
@@ -161,6 +179,8 @@ export function indexCorpus(
         studies.add(prov.studyId);
         if (prov.source === "[TBD]" || prov.url === "[TBD]") missingProvenance.push(prov.studyId);
         const chunks = chunkText(raw);
+        // DEBT-031: texto sem nenhuma marca de página — os trechos dele saem com page null.
+        if (chunks.length && chunks.every((c) => c.page === null)) semPagina.push(prov.studyId);
         chunks.forEach((ch, i) => {
             const tokens = tokenize(ch.text);
             const tf: Record<string, number> = {};
@@ -172,6 +192,7 @@ export function indexCorpus(
                 source: prov.source,
                 url: prov.url,
                 section: ch.section,
+                page: ch.page,
                 text: ch.text,
                 len: tokens.length,
                 tf,
@@ -188,7 +209,7 @@ export function indexCorpus(
     const indexPath = path.join(ragDir, "index.json");
     fs.writeFileSync(indexPath, JSON.stringify(index));
 
-    return { indexed: N, studies: studies.size, skippedPdfsOnly, indexPath, missingProvenance, skippedTranslations };
+    return { indexed: N, studies: studies.size, skippedPdfsOnly, indexPath, missingProvenance, skippedTranslations, semPagina };
 }
 
 /** Consulta o índice por BM25 e retorna os top-k trechos com proveniência. */
@@ -224,6 +245,7 @@ export function queryCorpus(projectDir: string, question: string, topK = 8): Rag
             fonte_repositorio: s.d.source,
             url_hospedagem: s.d.url,
             section: s.d.section,
+            page: s.d.page ?? null, // índice gravado antes do DEBT-031 não tem o campo
             score: Math.round(s.score * 1000) / 1000,
         }));
 }

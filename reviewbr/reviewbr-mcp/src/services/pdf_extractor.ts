@@ -4,6 +4,43 @@ import { DownloadValidator } from "../utils/download_validator.js";
 import { fetchBuffer } from "../utils/http.js";
 import { logger } from "../utils/structured_logger.js";
 import pdfParse from "pdf-parse";
+import { marcaPagina } from "./rag_lexical.js";
+
+/**
+ * Extrai o texto de um PDF guardando a página — DEBT-031 (decisão de 29/10/2026: "a página é
+ * guardada na extração"). A skill de leitura exige citação `[study_id, p.X]`, e o texto que a
+ * extração gravava não tinha fronteira de página: o pdf-parse junta as páginas com a mesma
+ * quebra que separa parágrafos.
+ *
+ * O `pagerender` abaixo é o padrão do pdf-parse 1.1.4 (lib/pdf-parse.js, render_page) — mesmo
+ * texto por página — e só guarda cada página pelo número dela. Devolve `texto`, com as marcas,
+ * e `textoPlano`, o mesmo texto que o pdf-parse devolvia, para a guarda de qualidade (DEBT-102)
+ * medir o que mediu sempre.
+ */
+export async function extrairTextoComPaginas(buffer: Buffer): Promise<{ texto: string; textoPlano: string; numpages: number }> {
+    const paginas = new Map<number, string>();
+    let ordem = 0;
+    const pagerender = async (pageData: any): Promise<string> => {
+        ordem++;
+        const n = typeof pageData?.pageIndex === "number" ? pageData.pageIndex + 1 : ordem;
+        const content = await pageData.getTextContent({ normalizeWhitespace: false, disableCombineTextItems: false });
+        let lastY: any;
+        let text = "";
+        for (const item of content.items) {
+            if (lastY == item.transform[5] || !lastY) text += item.str;
+            else text += "\n" + item.str;
+            lastY = item.transform[5];
+        }
+        paginas.set(n, text);
+        return text;
+    };
+    // Cópia em Uint8Array própria: o pdf.js do pdf-parse falha ("bad XRef entry") com Buffer que
+    // não começa no zero do seu ArrayBuffer (pool do Node) e, sob o vitest, com qualquer Buffer.
+    const data = await pdfParse(new Uint8Array(buffer) as any, { pagerender } as any);
+    const texto = [...paginas.keys()].sort((a, b) => a - b)
+        .map((n) => `${marcaPagina(n)}\n\n${paginas.get(n)}`).join("\n\n");
+    return { texto, textoPlano: data.text, numpages: data.numpages };
+}
 
 export class PdfExtractorService {
 
@@ -193,7 +230,7 @@ export class PdfExtractorService {
     ): Promise<{ success: boolean; textPath?: string; error?: string }> {
         try {
             const dataBuffer = fs.readFileSync(pdfPath);
-            const data = await pdfParse(dataBuffer);
+            const data = await extrairTextoComPaginas(dataBuffer); // DEBT-031: texto com a página
             const sizeKB = Math.round(fs.statSync(pdfPath).size / 1024);
 
             // DEBT-102 — GUARDA DE QUALIDADE. `pdf-parse` extrai texto JÁ EMBUTIDO no
@@ -206,13 +243,13 @@ export class PdfExtractorService {
             // É falso negativo silencioso, a classe mais cara: não aparece em lugar nenhum.
             // A guarda não lê o PDF digitalizado — para isso é preciso OCR, que é outra
             // decisão. O que ela faz é o sistema PARAR DE FINGIR que leu.
-            const falha = PdfExtractorService.avaliarExtracao(data.text, data.numpages);
+            const falha = PdfExtractorService.avaliarExtracao(data.textoPlano, data.numpages);
             if (falha) {
                 logger.error("PDF_EXTRACTOR", `Extração sem texto útil: ${documentId}`, { motivo: falha });
                 return { success: false, error: falha };
             }
 
-            const extractedText = `[NATIVE PDF EXTRACTED]\nDocument ID: ${documentId}\nURL: ${url}\nPages: ${data.numpages}\nSize: ${sizeKB} KB\n\n${data.text}`;
+            const extractedText = `[NATIVE PDF EXTRACTED]\nDocument ID: ${documentId}\nURL: ${url}\nPages: ${data.numpages}\nSize: ${sizeKB} KB\n\n${data.texto}`;
             fs.writeFileSync(textPath, extractedText);
 
             logger.info("PDF_EXTRACTOR", `✅ PDF extraído: ${documentId} (${data.numpages} págs, ${sizeKB} KB)`);

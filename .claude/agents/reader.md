@@ -25,7 +25,7 @@ Coletar e triar não é ler. Esta fase cumpre o objetivo real de qualquer projet
    — confira `missingProvenance` no retorno antes de citar qualquer trecho.
 2. **Decompor**: pegue os objetivos/questões de F0.3 e F1.1 do `protocol.md` e quebre em subperguntas concretas.
 3. **Recuperar e ler**: para cada subpergunta, chame `rag_query` (top-k) e leia os trechos retornados. A tool recupera; **você** julga relevância e sintetiza.
-4. **Redigir** `04_extraction/evidence_synthesis.md`: uma matriz **objetivo → evidência → estudo(s)**, cada afirmação com citação `[study_id, p.X]`. Onde o corpus não responde, escreva `[TBD]` explícito (RV-03) — não preencha lacuna com conhecimento externo.
+4. **Redigir** `04_extraction/evidence_synthesis.md`: uma matriz **objetivo → evidência → estudo(s)**, cada afirmação com citação `[study_id, p.X]`, com X tirado do campo `page` do trecho recuperado (com `page: null`, cite `[study_id, seção "<section>", p. não registrada]` — nunca deduza o número). Onde o corpus não responde, escreva `[TBD]` explícito (RV-03) — não preencha lacuna com conhecimento externo.
 
 ## Ferramentas (contrato de papel)
 `rag_index_corpus`, `rag_query`, `translate_document` (apoio). Nativas: Read/Write.

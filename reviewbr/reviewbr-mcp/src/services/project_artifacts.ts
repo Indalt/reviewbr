@@ -182,6 +182,44 @@ export function composicaoTriagem(itens: any[]): { total: number; sim: number; m
     return { total: lista.length, sim: lista.length - maybe, maybe };
 }
 
+/** Grava JSON por arquivo temporário + rename: uma queda no meio da escrita não deixa o
+ *  arquivo pela metade (o rename substitui o destino de uma vez). */
+function gravarJsonAtomico(file: string, data: unknown): void {
+    const tmp = `${file}.tmp`;
+    fs.writeFileSync(tmp, JSON.stringify(data, null, 2));
+    fs.renameSync(tmp, file);
+}
+
+/**
+ * Percorre um dataset em lotes (retrieve_fulltexts, F4.3) e regrava o arquivo INTEIRO depois
+ * de cada lote — DEBT-089.
+ *
+ * Antes, o laço regravava o próprio arquivo de entrada só com os registros já processados
+ * (`{ ...data, included: results }`): depois do primeiro lote o arquivo tinha 10 incluídos, e
+ * uma queda no lote seguinte apagava o resto do corpus sem cópia nem log. Também transformava
+ * entrada em array cru num objeto com chaves numéricas e reordenava os registros (push em
+ * paralelo).
+ *
+ * Agora `processar` altera cada item no lugar (ex.: grava `pdfPath`) e o que se grava é a raiz
+ * lida — array ou objeto, com todas as chaves e na ordem original. A escrita é atômica.
+ */
+export async function processarDatasetEmLotes(
+    inputPath: string,
+    processar: (item: any) => Promise<void>,
+    tamanhoLote = 10,
+): Promise<{ total: number }> {
+    const data = JSON.parse(fs.readFileSync(inputPath, "utf-8"));
+    const registros: any[] | null = Array.isArray(data) ? data : Array.isArray(data?.included) ? data.included : null;
+    if (!registros) {
+        throw new Error(`Dataset sem lista de registros (array ou chave 'included'): ${inputPath}`);
+    }
+    for (let i = 0; i < registros.length; i += tamanhoLote) {
+        await Promise.all(registros.slice(i, i + tamanhoLote).map(processar));
+        gravarJsonAtomico(inputPath, data);
+    }
+    return { total: registros.length };
+}
+
 /** Grava os artefatos de triagem conforme o estágio (ta = título/resumo; fulltext = texto completo). */
 export function writeScreening(
     projectPath: string,

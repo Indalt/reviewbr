@@ -31,7 +31,7 @@ import { ProtocolGate } from "./services/protocol_gate.js";
 import { ProjectStateService } from "./services/project_state.js";
 import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
 import { apresentarMetodos } from "./services/methods_for_type.js";
-import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
+import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, processarDatasetEmLotes, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -42,7 +42,7 @@ import { TelemetryService } from "./services/telemetry.js";
 import { MethodologyAuditorService } from "./services/methodology_auditor.js";
 import { ProtocolDesignAuditor } from "./services/protocol_auditor.js";
 import { ScreeningMetricsService } from "./services/screening_metrics.js";
-import { ScihubBridgeService } from "./services/scihub_bridge.js";
+import { ScihubBridgeService, conferirPedidoByos } from "./services/scihub_bridge.js";
 import { RepositoryHealerService } from "./services/repository_healer.js";
 import { AgentOrchestrator } from "./registry/agent_orchestrator.js";
 import { config } from "./config.js";
@@ -1167,17 +1167,13 @@ server.tool(
             return { content: [{ type: "text", text: `Dataset não encontrado: ${inputPath}` }] };
         }
 
-        const dataContent = fs.readFileSync(inputPath, "utf-8");
-        const data = JSON.parse(dataContent);
-        const recordsToProcess = data.included || data;
-
         const stats = { found: 0, downloaded: 0, failed: 0 };
-        const results: any[] = [];
 
-        const batchSize = 10;
-        for (let i = 0; i < recordsToProcess.length; i += batchSize) {
-            const batch = recordsToProcess.slice(i, i + batchSize);
-            const promises = batch.map(async (item: any) => {
+        // DEBT-089: o laço de lotes e a regravação do dataset ficam em processarDatasetEmLotes,
+        // que grava o arquivo inteiro a cada lote (antes, só os já processados — truncava o corpus).
+        let total = 0;
+        try {
+            ({ total } = await processarDatasetEmLotes(inputPath, async (item: any) => {
                 const r = item.record || item;
                 const identifier = r.doi || r.identifier;
 
@@ -1222,16 +1218,20 @@ server.tool(
                         stats.failed++;
                     }
                 }
-                results.push(item);
-            });
-            await Promise.all(promises);
-            fs.writeFileSync(inputPath, JSON.stringify({ ...data, included: results }, null, 2));
+            }));
+        } catch (e: any) {
+            return {
+                content: [{
+                    type: "text",
+                    text: `Processamento F4.3 interrompido: ${e.message}\nO dataset ${inputPath} segue com todos os registros; os já processados levam pdfPath. Links: ${stats.found} · downloads: ${stats.downloaded} · falhas: ${stats.failed}.`
+                }]
+            };
         }
 
         return {
             content: [{
                 type: "text",
-                text: `Processamento F4.3 concluído:\n- Encontrados links: ${stats.found}\n- Downloads realizados: ${stats.downloaded}\n- Falhas: ${stats.failed}\nLocal: ${outputDir}`
+                text: `Processamento F4.3 concluído:\n- Registros: ${total}\n- Encontrados links: ${stats.found}\n- Downloads realizados: ${stats.downloaded}\n- Falhas: ${stats.failed}\nLocal: ${outputDir}`
             }]
         };
     }
@@ -1760,7 +1760,10 @@ server.tool(
             const tradWarn = r.skippedTranslations.length > 0
                 ? `\n\nℹ️ ${r.skippedTranslations.length} tradução(ões) NÃO indexada(s) (texto de apoio, não é fonte primária — DEBT-023): ${r.skippedTranslations.slice(0, 10).join(", ")}`
                 : "";
-            return { content: [{ type: "text", text: JSON.stringify(r, null, 2) + warn + provWarn + tradWarn }] };
+            const paginaWarn = r.semPagina.length > 0
+                ? `\n\n⚠️ ${r.semPagina.length} estudo(s) com texto sem marca de página (DEBT-031) — os trechos deles saem com page null; cite a seção e declare a página como não registrada: ${r.semPagina.slice(0, 10).join(", ")}`
+                : "";
+            return { content: [{ type: "text", text: JSON.stringify(r, null, 2) + warn + provWarn + tradWarn + paginaWarn }] };
         } catch (e: any) {
             return { content: [{ type: "text", text: `Erro ao indexar corpus: ${e.message}` }] };
         }
@@ -1769,7 +1772,7 @@ server.tool(
 
 server.tool(
     "rag_query",
-    "Recupera os trechos mais relevantes do corpus indexado para uma pergunta (F5.5), com proveniência rastreável. NÃO redige resposta nem sintetiza — só recupera (RV-06); a síntese/citação é do agente.",
+    "Recupera os trechos mais relevantes do corpus indexado para uma pergunta (F5.5), com proveniência rastreável e a página ('page', o X de [study_id, p.X]; null quando o texto foi gravado sem marca de página). NÃO redige resposta nem sintetiza — só recupera (RV-06); a síntese/citação é do agente.",
     {
         projectPath: z.string().describe("Caminho (absoluto ou relativo ao cwd) da raiz do projeto"),
         question: z.string().describe("A subpergunta a recuperar"),
@@ -1789,18 +1792,27 @@ server.tool(
 // ─── BYOS: recuperação via Sci-Hub (opt-in, nunca automático) ─
 server.tool(
     "retrieve_fulltext_byos",
-    "BYOS (opt-in): recupera o texto completo via Sci-Hub para um DOI quando o acesso aberto FALHOU. SÓ chame após 'sim' EXPLÍCITO do pesquisador — NUNCA automático. Salva o PDF em 03_screening/pdfs e o texto em 04_extraction/fulltext com proveniência 'Sci-Hub (BYOS)' registrada de forma separável. Requer python + plugins/scihub_extractor.py.",
+    "BYOS (opt-in): recupera o texto completo via Sci-Hub para um DOI quando o acesso aberto FALHOU. SÓ chame após 'sim' EXPLÍCITO do pesquisador — NUNCA automático. Exige 'consentimento' (a resposta dele, gravada no log e no .meta.json) e recusa DOI que não esteja em 03_screening/fulltext_not_retrieved.json. Salva o PDF em 03_screening/pdfs e o texto em 04_extraction/fulltext com proveniência 'Sci-Hub (BYOS)' registrada de forma separável. Requer python + plugins/scihub_extractor.py.",
     {
         doi: z.string().describe("DOI do artigo (ex: 10.1590/xyz)"),
         projectPath: z.string().describe("Raiz do projeto"),
+        consentimento: z.string().describe("A resposta do pesquisador autorizando o Sci-Hub para ESTE DOI, nas palavras dele (ex.: 'sim, pode usar o Sci-Hub para o artigo X'). Sem ela a tool recusa. Fica gravada no log e no .meta.json do texto."),
     },
     async (params) => {
         const guardrailError = await checkDesignGuardrail(undefined, params.projectPath);
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
-        const r = await scihubBridge.retrieveByDoi(params.doi, params.projectPath);
+        // DEBT-062 (com o DEBT-090): consentimento declarado e DOI que o acesso aberto não recuperou.
+        const recusa = conferirPedidoByos(resolveProjectDir(params.projectPath), params.doi, params.consentimento);
+        if (recusa) {
+            await logToLocalProject(params.projectPath, "retrieve_fulltext_byos", {
+                doi: params.doi, success: false, acquisition: "BYOS", recusado: recusa,
+            });
+            return { content: [{ type: "text", text: recusa }] };
+        }
+        const r = await scihubBridge.retrieveByDoi(params.doi, params.projectPath, params.consentimento);
         if (params.projectPath) {
             await logToLocalProject(params.projectPath, "retrieve_fulltext_byos", {
-                doi: params.doi, success: r.success, acquisition: "BYOS", error: r.error,
+                doi: params.doi, success: r.success, acquisition: "BYOS", consentimento: params.consentimento, error: r.error,
             });
         }
         return {
