@@ -225,7 +225,10 @@ divergências do PRISMA-S no acompanhamento, e a V as aplica.** As 36 divergênc
 três perguntas da 2c (decisões de 08/11). Depois da M e antes da V, o acompanhamento reescreve numa página só as
 sessões que faltam, uma função por sessão (decisão de 08/11, "Página única depois da M"). Em 10/11 o Vicente
 anotou uma sessão de leitura e organização com o Fable 5.1 (`BRIEFING_fable_2026-11-10.md`); a posição dela em
-relação à M, ele define nela.
+relação à M, ele define nela. Essa sessão começou em 11/11, com o Fable 5.2 em esforço high (correção dele no
+briefing), e grava em `ORGANIZACAO_2026-11-11.md`: o que foi feito, os 32 defeitos distintos que faltam (em oito
+sessões, uma função do ReviewBR em cada) e as propostas de limpeza. Nada ali está decidido: as propostas esperam
+o Vicente na parte 10 do arquivo.
 
 A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
 não bloqueiam a M:
