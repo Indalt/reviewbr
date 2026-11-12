@@ -56,6 +56,7 @@
 | 8 | H — Normas por ponteiro | ver abaixo | 045 · ver abaixo | **feita em 12/11/2026** (commits `fe53fb8`, `36e687a`, `c0cefbf`, `e61d713`) |
 | 9 | M — Descrição do método, com o Vicente | — | — | depois da H |
 | 10 | Fase de testes | — | — | depois da M |
+| 11 | N — Catálogo vivo e mapa com os passos (pedido do Vicente, 12/11/2026) | ver abaixo | — | a fazer, no fim da fila; começa pelas perguntas abaixo |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
 da outra; a ordem é a do dano a uma pesquisa em andamento.
@@ -84,6 +85,37 @@ na tool sobre `targets`).
 
 A linha 9 (M) redige o `METODO_ReviewBR.md` com o que já está decidido e leva ao Vicente só as escolhas dele. As
 três perguntas da sessão 2c deixaram de ser necessárias.
+
+### Linha 11 — o que a N faz (pedido do Vicente em 12/11/2026, depois da linha 8)
+
+O pedido, em três partes:
+
+1. **Catálogo atualizado a cada uso da `absorb_methodology`.** Toda vez que a tool é usada, o catálogo e o mapa
+   saem atualizados. Já feito na linha 8: cada escrita regenera o `MAPA.md`. O que falta depende da pergunta (a).
+2. **Conferir a metodologia antes de sugeri-la.** Antes de o sistema sugerir uma metodologia ao pesquisador,
+   confere na fonte oficial se ela mudou (versão nova, errata, atualização) desde a data de leitura (`read_at`).
+   Consequências: as 106 entradas sem `read_at` precisam da data; a conferência passa a valer na hora da
+   sugestão, o que muda a decisão de 09/10/2026 (DEBT-010: obsolescência conferida só quando o maintainer
+   roda, sem vigia nem job de fundo).
+3. **O mapa detalha os passos.** A `absorb_methodology` passa a gravar no catálogo, e o mapa a mostrar, os passos
+   de cada metodologia, para que a tool que sugere informe ao pesquisador ou ao projeto os passos a seguir. Hoje o
+   mapa tem só nome, quando usar, fonte e data, e nenhuma tool o lê (`assess_research_design` sugere pelo
+   `serves_research_types`).
+
+Origem, nas palavras dele: "absorb_methodology deve manter o catalogo atualizado sempre que for utilizado.
+verificar se a metodologia escolhida sofreu alteracoes ou atualizacoes antes de ser sugerida. Essa tool também
+deve ficar responsável por detalhar o mapa para que a tool seja capaz e informar apropriadamente os passos do
+pesquisador ou de um projeto de pesquisa."
+
+Perguntas ao Vicente antes de começar, uma linha cada:
+- (a) "Atualizado a cada uso" é só o mapa regenerado (já feito), ou a tool também confere a fonte de cada
+  entrada que toca?
+- (b) Quem confere a fonte antes da sugestão: uma tool, que consulta a web a cada sugestão, ou o agente
+  `designer`, com `WebFetch`? E, se a fonte não abrir, a metodologia é sugerida com o aviso ou fica de fora?
+- (c) Os passos no mapa são o resumo da fonte, com o ponteiro para ela, ou a lista completa? A lista completa
+  esbarra no princípio de 12/11 ("metodologia se aponta, não se copia").
+- (d) As datas de leitura das 106 entradas: relê-se cada fonte agora, ou a data entra quando cada entrada for
+  tocada?
 
 ## O que não é fila
 
