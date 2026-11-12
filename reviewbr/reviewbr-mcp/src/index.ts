@@ -28,6 +28,7 @@ import { BacklogWriter, CatalogWriter, MethodologyWriter } from "./services/main
 import { FlowComputer } from "./services/flow_computer.js";
 import { indexCorpus, queryCorpus } from "./services/rag_lexical.js";
 import { ProtocolGate } from "./services/protocol_gate.js";
+import { travarProtocolo } from "./utils/protocol_guard.js";
 import { ProjectStateService } from "./services/project_state.js";
 import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
 import { apresentarMetodos } from "./services/methods_for_type.js";
@@ -194,39 +195,14 @@ async function checkDesignGuardrail(projectId?: number, projectPath?: string): P
     // A mudança de semântica mais importante está lá: o gate passou a NEGAR POR PADRÃO.
     // Antes, projeto declarado e sem nenhum artefato de protocolo caía num `return null` e
     // seguia adiante — um projeto vazio era indistinguível de um aprovado.
-    const gate = ProtocolGate.check(projectPath);
-
-    // O estado ON-DISK decide (RV-01). O SQLite só é consultado quando o disco não tem o
-    // que dizer — projetos antigos, rastreados só no banco, anteriores ao estado estruturado.
-    if (gate.status !== "SEM_PROTOCOLO") {
-        return gate.message;
-    }
-
-    let id = projectId;
-    if (!id && projectPath) {
-        const project = await dbService.findProjectByPath(projectPath);
-        if (project) id = project.id;
-    }
-    if (id) {
-        const project = await dbService.getProjectById(id);
-        if (project) {
-            // LISTA DE PERMISSÃO, não de negação. Antes, só `DRAFT_DESIGN` bloqueava e todo o
-            // resto passava — inclusive qualquer status que viesse a ser acrescentado depois,
-            // que nasceria liberado sem ninguém decidir isso. É a mesma inversão que o ramo
-            // em disco recebeu: quem não está explicitamente autorizado, não passa.
-            const AUTORIZADOS = ["ACTIVE_MINING", "LOCKED_EXECUTION"];
-            if (AUTORIZADOS.includes(project.status)) return null;
-
-            if (project.status === "DRAFT_DESIGN") {
-                return `🚫 ACESSO NEGADO: O projeto "${project.project_name}" está bloqueado em DRAFT_DESIGN. Preencha o protocolo e solicite aprovação via 'submit_protocol_for_approval'.`;
-            }
-            return `🚫 ACESSO NEGADO: o projeto "${project.project_name}" está com status "${project.status}", que não autoriza busca nem aquisição. ` +
-                `Autorizados: ${AUTORIZADOS.join(", ")}. Status desconhecido não libera por omissão.`;
-        }
-    }
-
-    // Nada no disco e nada no banco: nega. É a correção do fall-through.
-    return gate.message;
+    //
+    // DEBT-018 — a trava vale só pelo project_state.json (decisão de 29/10/2026). Antes, havia
+    // mais duas fontes para a mesma pergunta: o marcador [LOCKED] no protocol.md (fallback do
+    // gate) e, sem nada no disco, o status da linha do SQLite. As duas podiam liberar a busca
+    // sem o auditor do protocolo; a primeira, por um atalho de agente com Write.
+    // `projectId` fica na assinatura por compatibilidade com os chamadores; não decide nada.
+    void projectId;
+    return ProtocolGate.check(projectPath).message;
 }
 
 // ─── PROJETISTA Helper Functions ──────────────────────────────
@@ -1709,13 +1685,6 @@ server.tool(
         const audit = protocolAuditor.auditFile(protocolPath);
 
         if (audit.valid) {
-            // Trava o protocolo NO ARQUIVO ([DRAFT] → [LOCKED])
-            let content = fs.readFileSync(protocolPath, "utf-8");
-            content = /\[DRAFT\]/.test(content)
-                ? content.replace(/\[DRAFT\]/g, "[LOCKED]")
-                : content.replace(/^# /, "**Status**: [LOCKED]\n\n# ");
-            fs.writeFileSync(protocolPath, content, "utf-8");
-
             // Estado on-disk = fonte da verdade. DEBT-100: a etapa que abre com o protocolo
             // travado é a que vem DEPOIS da última que o `protocol.md` encerra, na trilha do
             // método — o literal "F2" morava aqui.
@@ -1723,7 +1692,12 @@ server.tool(
             const trilhaProj = estadoAtual ? lerTrilha(RAIZ(), estadoAtual.method) : null;
             const fechadaPeloProtocolo = trilhaProj ? etapaDoArtefato(trilhaProj.etapas, "protocol.md") : null;
             const abre = trilhaProj && fechadaPeloProtocolo ? etapaSeguinte(trilhaProj.etapas, fechadaPeloProtocolo.id) : null;
-            ProjectStateService.patch(projectDir, abre ? { status: "LOCKED", phase: abre.id } : { status: "LOCKED" });
+            // DEBT-133: a trava é o estado, e vem primeiro; o marcador [LOCKED] no protocol.md é
+            // espelho, gravado depois. Sem estado, recusa sem tocar no arquivo.
+            const trava = travarProtocolo(projectDir, abre ? { phase: abre.id } : {});
+            if (!trava.ok) {
+                return { content: [{ type: "text", text: `❌ Protocolo aprovado na auditoria (${audit.score}/${audit.maxScore}), mas NÃO travado. ${trava.motivo}` }] };
+            }
             // Trilha ilegível não é trilha sem etapa seguinte: afirmar uma propriedade de uma
             // trilha que nem foi lida esconderia a causa real.
             const notaEtapa = abre

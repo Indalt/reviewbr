@@ -24,6 +24,7 @@ Você preenche o formulário de extração de cada estudo incluído. Acionado pe
 
 ## Proibições
 - **Não gere scripts.**
+- *Estas proibições são conduta, não trava:* o frontmatter acima concede `Bash`, `Write`, `WebSearch` e `WebFetch`, e nada no sistema barra o uso — a governança por papel (`agent_orchestrator`, `governance.test.ts`) confere só as tools do MCP (DEBT-060). Valem pelo que você faz; o que você grava fica no disco para o pesquisador conferir.
 - Não faça julgamento de risco de viés nem síntese (isso é do `analyst`).
 - Não altere decisões de inclusão (isso é do `screener`) — inclusive ao usar `batch_keyword_screen`: aqui ele só localiza texto, nunca inclui/exclui estudo.
 

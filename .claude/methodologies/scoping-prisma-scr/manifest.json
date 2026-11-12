@@ -161,7 +161,7 @@
       "phase": "F1",
       "rule": "RV-01",
       "tool": "submit_protocol_for_approval",
-      "blocks": "as tools de busca e aquisição (ProtocolGate) enquanto o protocolo não estiver [LOCKED]; o submit_protocol_for_approval não trava protocolo com campo obrigatório [TBD]"
+      "blocks": "as tools de busca e aquisição (ProtocolGate) enquanto o project_state.json não estiver LOCKED — a trava vale só pelo estado; o [LOCKED] no protocol.md é espelho (DEBT-018); o submit_protocol_for_approval não trava protocolo com campo obrigatório [TBD]"
     },
     {
       "phase": "F8",

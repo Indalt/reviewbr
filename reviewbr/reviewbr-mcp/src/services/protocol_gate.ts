@@ -38,6 +38,7 @@ export type GateStatus =
     | "SEM_PROJETO"        // chamada exploratória: passa, mas nada persiste
     | "NAO_TRAVADO"        // protocolo existe e está em rascunho
     | "SEM_PROTOCOLO"      // projeto declarado e nenhum artefato de protocolo
+    | "SEM_ESTADO"         // há protocol.md, mas não project_state.json: a trava vale só pelo estado (DEBT-018)
     | "ESTADO_CORROMPIDO"; // artefato existe e está ilegível — não é o mesmo que ausente
 
 export interface GateResult {
@@ -67,8 +68,11 @@ export class ProtocolGate {
     /**
      * Avalia a trava a partir do estado ON-DISK (RV-01: a fonte da verdade é o disco).
      *
-     * Ordem deliberada: `project_state.json` primeiro, `protocol.md` como fallback. O
-     * marcador `[LOCKED]` no Markdown é herança de projetos anteriores ao estado estruturado.
+     * DEBT-018 — a trava vale SÓ pelo `project_state.json` (decisão de 29/10/2026). O marcador
+     * `[LOCKED]` no Markdown era fallback para projetos anteriores ao estado estruturado, e era a
+     * segunda fonte para a mesma pergunta: trocar [DRAFT] por [LOCKED] no arquivo liberava a
+     * busca sem passar pelo auditor. Projeto sem estado fica sem busca oficial até declarar o
+     * método; o marcador hoje é só espelho, gravado depois do estado.
      */
     static check(projectPath?: string, cwd: string = process.cwd()): GateResult {
         if (!projectPath) {
@@ -114,15 +118,14 @@ export class ProtocolGate {
         }
 
         if (fs.existsSync(protoPath)) {
-            const conteudo = fs.readFileSync(protoPath, "utf-8");
-            if (!/\[LOCKED\]/.test(conteudo)) {
-                return {
-                    blocked: true, status: "NAO_TRAVADO", advisory: null,
-                    message: `🚫 ACESSO NEGADO: o protocol.md ainda não está [LOCKED]. ` +
-                        `Aprove via 'submit_protocol_for_approval'.`
-                };
-            }
-            return { blocked: false, status: "LIBERADO", message: null, advisory: null };
+            return {
+                blocked: true, status: "SEM_ESTADO", advisory: null,
+                message: `🚫 ACESSO NEGADO: o projeto em ${projectDir} tem protocol.md mas não tem 'project_state.json'. ` +
+                    `A trava do protocolo vale só pelo estado estruturado (decisão de 29/10/2026): o marcador [LOCKED] ` +
+                    `no protocol.md não libera busca. Sem estado não há busca oficial: o método do projeto precisa ser declarado ` +
+                    `pelo pesquisador (o estado nasce com plan_research_protocol, num caminho sem protocolo travado) e travado ` +
+                    `com 'submit_protocol_for_approval'.`
+            };
         }
 
         // FAIL-CLOSED. Antes, este caminho caía no `return null` e liberava.

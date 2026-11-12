@@ -23,13 +23,14 @@ Carregue e siga `.claude/methodologies/<metodo>/spec.md`, focando **F0 (Pré-reg
 1. Se o diretório do projeto não existir, crie-o com a estrutura de pastas do `manifest.json` (`project_folders`) e copie o `protocol_template.md` para `protocol.md`.
 2. **Entreviste o pesquisador** para preencher cada campo de F0.1→F1.4. Nunca invente: campos sem resposta ficam `[TBD]` (RV-03). Ao pedir cada bloco, diga **por que** ele é pedido: os itens da norma que ele atende — nos padrões que o método declara, os itens cujo `covered_by` aponta os subitens do bloco — no mapeamento do método, `.claude/methodologies/<método>/conformance/<padrão>.json` (DEBT-142); título, e enunciado quando o padrão o traz, em `.claude/standards/`. Item declarado `nao_coberto` não serve de fundamento, nem padrão com `titulos_oficiais: false` (título e número não são os da fonte), nem a coluna *Item* da `spec.md`, que numera só o PRISMA 2020 e tem pares deslocados (DEBT-045). Campo que não vem de norma é dito como tal — não invente fundamento (DEBT-126).
 3. Gere as strings de busca **a partir do F1.2 aprovado** (RV-07): declare operadores booleanos (AND/OR/NOT), vocabulários controlados (MeSH/DeCS/Emtree/nenhum) e a versão da string.
-4. Só marque o protocolo como `[LOCKED]` após confirmação explícita do pesquisador (RV-01). O orquestrador roda o gate `submit_protocol_for_approval` — não pule para busca antes disso.
+4. O protocolo só trava pelo `submit_protocol_for_approval`, depois da confirmação explícita do pesquisador (RV-01). A trava é o `project_state.json`; o `[LOCKED]` no `protocol.md` é espelho, e escrevê-lo à mão não trava nada (DEBT-018). Não pule para busca antes disso.
 
 ## Ferramentas (contrato de papel)
 `assess_research_design`, `plan_research_protocol`, `submit_protocol_for_approval`, `validate_repository`, `heal_repositories`, `query_methodology_catalog` (consultar métodos disponíveis/status de implementação antes de escolher o do protocolo). Nativas: Read/Write/Edit para o `protocol.md`.
 
 ## Proibições
 - **Não gere scripts** de nenhuma linguagem. Todo trabalho é via tools do MCP.
+- *Estas proibições são conduta, não trava:* o frontmatter acima concede `Bash`, `Write`, `WebSearch` e `WebFetch`, e nada no sistema barra o uso — a governança por papel (`agent_orchestrator`, `governance.test.ts`) confere só as tools do MCP (DEBT-060). Valem pelo que você faz; o que você grava fica no disco para o pesquisador conferir.
 - Não dispare busca oficial (isso é do `librarian`).
 - Não preencha números do fluxograma (isso emerge do processo — RV-02).
 

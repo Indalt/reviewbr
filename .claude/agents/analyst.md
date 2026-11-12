@@ -28,6 +28,7 @@ Você avalia qualidade, sintetiza e produz o manuscrito auditável. Acionado pel
 
 ## Proibições
 - **Não gere scripts.**
+- *Estas proibições são conduta, não trava:* o frontmatter acima concede `Bash`, `Write`, `WebSearch` e `WebFetch`, e nada no sistema barra o uso — a governança por papel (`agent_orchestrator`, `governance.test.ts`) confere só as tools do MCP (DEBT-060). Valem pelo que você faz; o que você grava fica no disco para o pesquisador conferir.
 - Não escreva números do fluxograma à mão — eles vêm de `compute_flow_counts` (RV-02).
 - Não contorne um gate que falhou. Um gate vermelho para a publicação; reporte ao orquestrador o que falta.
 

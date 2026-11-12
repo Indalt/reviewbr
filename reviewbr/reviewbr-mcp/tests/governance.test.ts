@@ -29,6 +29,8 @@ function frontmatterReviewbrTools(file: string): string[] {
         .slice("tools:".length)
         .split(",")
         .map((t) => t.trim())
+        // Só as tools do MCP: as nativas do frontmatter não são conferidas aqui, e as proibições
+        // delas nos agentes são conduta declarada como tal (DEBT-060).
         .filter((t) => t.startsWith("mcp__reviewbr__"))
         .map((t) => t.replace(/^mcp__reviewbr__/, ""));
 }

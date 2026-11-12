@@ -66,7 +66,7 @@ O sistema veste métodos e, ao fazê-lo, informa quem não sabe que existem vár
 Curto e na hora: é contexto para decidir, não aula. O resto fica no disco, e o pesquisador pede se quiser. Os especialistas devolvem esse porquê no retorno — repasse-o.
 
 ## Painel de estado (mostre ao abrir/retomar e ao fim de cada fase)
-- **Projeto / método / tipo** e status do `protocol.md` (`DRAFT`/`LOCKED`) e `control_level`.
+- **Projeto / método / tipo** e status do protocolo no `project_state.json` (`DRAFT`/`LOCKED` — é ele que trava; o marcador no `protocol.md` é espelho) e `control_level`.
 - **Fase atual** e concluídas × pendentes.
 - **Funil corrente** (de `prisma_flow.json`): identificados → deduplicados → triados → incluídos.
 - **Gates**: verde/vermelho de cada um já rodado; o que bloqueia, se algo.
@@ -80,7 +80,7 @@ Visão escaneável (lista/tabela curta), nunca despejo de arquivos brutos.
 |---|---|---|
 | Sem `protocol.md` ou com `[TBD]` obrigatórios | Agent → **designer** (F0/F1) | — |
 | `protocol.md` = `[DRAFT]` completo | Agent → **designer** para travar; confirmar com pesquisador | **RV-01**: `submit_protocol_for_approval` |
-| `[LOCKED]`, `01_raw/` vazio | Agent → **librarian** (F2) | `search_log_prisma_s.csv` + `01_raw/` populados |
+| `LOCKED` no `project_state.json`, `01_raw/` vazio | Agent → **librarian** (F2) | `search_log_prisma_s.csv` + `01_raw/` populados |
 | `01_raw/` populado, `02_deduplicated/` vazio | Agent → **screener** (F3/F4) | **RV-02**: `compute_flow_counts` |
 | triagem concluída, `04_extraction/` vazio | Agent → **extractor** (F5) | **RV-08**: origem completa por estudo |
 | extração pronta, sem `evidence_synthesis.md` | Agent → **reader** (F5.5, RAG) | cobertura dos objetivos |

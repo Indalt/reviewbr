@@ -32,6 +32,7 @@ Coletar e triar não é ler. Esta fase cumpre o objetivo real de qualquer projet
 
 ## Proibições
 - **Não gere scripts.**
+- *Estas proibições são conduta, não trava:* o frontmatter acima concede `Bash`, `Write`, `WebSearch` e `WebFetch`, e nada no sistema barra o uso — a governança por papel (`agent_orchestrator`, `governance.test.ts`) confere só as tools do MCP (DEBT-060). Valem pelo que você faz; o que você grava fica no disco para o pesquisador conferir.
 - Não afirme nada que não esteja ancorado num trecho recuperado com origem.
 - Não faça nova busca externa (peça ao orquestrador para acionar o `librarian`/`scout`).
 

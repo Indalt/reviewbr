@@ -17,6 +17,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { DatabaseService, BlindingType, ScreeningProcess } from "./database.js";
 import { ProjectStateService } from "./project_state.js";
+import { protocoloTravadoNoDisco } from "../utils/protocol_guard.js";
 import { escolherMetodo } from "./methods_for_type.js";
 import { lerTrilha, etapaInicial, Etapa } from "./method_trail.js";
 import { StandardsService } from "./standards.js";
@@ -206,6 +207,18 @@ export class ProjectInitService {
         if (!project) throw new Error(`Project ${projectId} not found.`);
         if (project.status === 'LOCKED_EXECUTION') {
             throw new Error(`Project ${project.project_name} está em estado LOCKED_EXECUTION. O protocolo de pesquisa já foi iniciado e não pode ser re-inicializado. Crie um novo projeto se precisar alterar o plano.`);
+        }
+        // DEBT-042 — a linha do SQLite acima é a que o plan_research_protocol acabou de criar: ela
+        // nunca está travada. Quem sabe se o caminho já tem protocolo travado é o DISCO. Sem esta
+        // conferência, replanejar no caminho de um projeto travado reescrevia o protocol.md e
+        // regravava o project_state.json como DRAFT, com as decisões zeradas.
+        const travado = protocoloTravadoNoDisco(basePath);
+        if (travado) {
+            throw new Error(
+                `O caminho ${basePath} já tem protocolo travado (${travado}). Re-inicializar reescreveria o ` +
+                "protocol.md e zeraria o project_state.json (status e decisões do pesquisador). Nada foi alterado. " +
+                "Crie um novo projeto, em outro caminho, se precisar de outro plano."
+            );
         }
 
         const config: ProjectConfig = {

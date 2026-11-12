@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach, afterAll } from "vitest";
 import * as fs from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
+import { fileURLToPath } from "node:url";
 import { ProtocolGate } from "../src/services/protocol_gate.js";
 
 let DIR: string;
@@ -65,17 +66,29 @@ describe("estado estruturado (project_state.json)", () => {
     });
 });
 
-describe("fallback pelo marcador [LOCKED] no protocol.md", () => {
-    it("LIBERA com o marcador presente", () => {
+describe("DEBT-018 — o marcador [LOCKED] no protocol.md não libera mais: a trava vale só pelo estado", () => {
+    it("BLOQUEIA com o marcador e sem project_state.json — forjar o marcador não destrava a busca", () => {
+        // Até 12/11/2026 isto LIBERAVA: trocar [DRAFT] por [LOCKED] no arquivo pulava o auditor.
         fs.writeFileSync(path.join(DIR, "protocol.md"), "# Protocolo\n**Estado:** [LOCKED]\n");
-        expect(ProtocolGate.check(DIR)).toMatchObject({ blocked: false, status: "LIBERADO" });
+        const g = ProtocolGate.check(DIR);
+        expect(g.blocked).toBe(true);
+        expect(g.status).toBe("SEM_ESTADO");
+        expect(g.message).toMatch(/project_state\.json/);
     });
 
     it("BLOQUEIA sem o marcador", () => {
         fs.writeFileSync(path.join(DIR, "protocol.md"), "# Protocolo\n**Estado:** [DRAFT]\n");
         const g = ProtocolGate.check(DIR);
         expect(g.blocked).toBe(true);
-        expect(g.status).toBe("NAO_TRAVADO");
+        expect(g.status).toBe("SEM_ESTADO");
+    });
+
+    it("o guardrail das tools não consulta mais o SQLite: o banco também não libera", () => {
+        const index = fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "src", "index.ts"), "utf-8").replace(/\r\n/g, "\n");
+        const i = index.indexOf("async function checkDesignGuardrail(");
+        const corpo = index.slice(i, index.indexOf("\n}\n", i));
+        expect(corpo).not.toMatch(/dbService\./);
+        expect(corpo).toContain("ProtocolGate.check(projectPath)");
     });
 
     it("o estado estruturado tem precedência sobre o marcador", () => {

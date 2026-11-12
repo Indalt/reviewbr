@@ -33,6 +33,11 @@ export interface AgentCapability {
  * Every registered MCP tool must appear here with the list of
  * roles authorized to invoke it. This ensures architectural integrity:
  * a tool without a mapping is a tool without governance.
+ *
+ * DEBT-060 — o mapa cobre SÓ as tools do MCP. As nativas (Bash, Write, Edit, WebSearch,
+ * WebFetch...) vêm do frontmatter de cada agente e nada aqui as confere: as proibições de
+ * "gerar scripts" e de "busca externa" nos agentes são conduta, não trava — e cada agente
+ * declara isso na própria seção de Proibições.
  */
 const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     // ─── Design de protocolo (PROJETISTA + COORDINATOR) ─────
