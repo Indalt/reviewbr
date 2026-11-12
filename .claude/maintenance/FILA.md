@@ -54,7 +54,7 @@
 | 6 | F — Ferramentas da manutenção | 141 | 016 · 153 (depois do 141) | **feita em 12/11/2026** (commit `c436b28`) |
 | 7 | G — Textos que prendem o sistema à revisão sistemática | 135 | 137 · 151 · 008 | **feita em 12/11/2026** (commit `6cf7ae8`) |
 | 8 | H — Normas por ponteiro | ver abaixo | 045 · ver abaixo | **feita em 12/11/2026** (commits `fe53fb8`, `36e687a`, `c0cefbf`, `e61d713`) |
-| 9 | M — Descrição do método, com o Vicente | — | — | **em curso:** rascunho em 12/11/2026 (`.claude/METODO_ReviewBR.md`); faltam as 6 escolhas do Vicente, na seção 7 dele |
+| 9 | M — Descrição do método, com o Vicente | — | — | **em curso:** as 6 escolhas respondidas e gravadas em 12/11/2026 (`.claude/METODO_ReviewBR.md`); falta o que está na seção 7 dele: os outros fundamentos, o texto das etapas e duas leituras a confirmar |
 | 10 | Fase de testes | — | — | depois da M |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
@@ -157,3 +157,23 @@ Vicente pedir.
   tool também deve ficar responsável por detalhar o mapa (…)"; "se nao teve duplicidade muda-se a decisao de 09/10".
 - (linha 9) Nenhuma tool do `registry/ai_use.ts` tem a categoria C5 ("não aceitável"); a síntese entre estudos (F7)
   está com o agente `analyst`, que o mapa de uso de IA não cobre.
+- (linha 9) Pedidos ao sistema que saem das respostas do Vicente de 12/11/2026, gravadas no
+  `.claude/METODO_ReviewBR.md`; nenhum foi feito:
+  - seção 2: os fundamentos do ReviewBR como camada de segurança nas tools que mapeiam as metodologias; a entrada
+    do catálogo dizer se a metodologia é legitimada e validada; o alerta ao pesquisador e a sugestão de outra. O
+    catálogo não tem campo de fundamentos nem de validação. Origem: "o reviewbr tem essa camada de segurança que
+    deve ser incorporada as tools responsaveis por mapear as metodologias";
+  - P9: o `maintainer.md` diz "nada entra no funil sem protocolo travado"; o texto aprovado diz "sem o protocolo
+    que a metodologia exige";
+  - P6: tirar do código o mapa de uso de IA (`registry/ai_use.ts`, as chamadas no `screen_candidates` e no
+    `batch_db_screen`, o `tests/ai_use.test.ts`, a citação na skill `system-audit`); a resolução do DEBT-117 se
+    apoia nele. Sem resposta dele: se a varredura do teste, que reprova rota de LLM sem tool mapeada, sai junto;
+  - P6: o registro do uso de IA quando a metodologia escolhida obriga, no que ela obriga; não há tool, skill ou
+    agente que monte o registro por etapa nem o texto da declaração no relato;
+  - seção 6: quando o projeto exige o RAISE, informar ao pesquisador que o RAISE 3 dá a síntese entre estudos por
+    LLM como não aceitável e pedir que ele a traga; hoje nada informa, e o `analyst` se descreve como quem
+    sintetiza;
+  - pergunta dele: "se a IA escolhe método isso precisa ser registrado?". Hoje o `assess_research_design` sugere
+    por palavra-chave, sem IA, e o protocolo grava a escolha; a sugestão, da tool ou do agente, não fica gravada;
+  - P10: a análise de como as melhores ferramentas de apoio à pesquisa tratam a IA no papel de avaliador teve só
+    uma primeira conferência, por resumo de busca na web.

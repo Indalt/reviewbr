@@ -1,14 +1,25 @@
 # Retomar — FILA linha 9 (M), 12/11/2026
 
-**Feito:** `.claude/METODO_ReviewBR.md` redigido (commit `898d79b`) com o já decidido, as propostas marcadas e a
-seção 7 com 6 perguntas. O Vicente respondeu às 6 em 12/11/2026 (abaixo, literal) e pediu uma sessão com Fable
-para a verificação holística.
+**Feito:** as 6 escolhas do Vicente e as respostas dele aos textos propostos estão gravadas no
+`.claude/METODO_ReviewBR.md`, com data e origem. As mudanças de decisão estão anotadas na D05, na D07 e na D16
+(`.claude/maintenance/revisao_decisoes_2026-10-31/lista_decisoes.md`). O que as respostas pedem ao sistema está no
+"Visto de passagem" da `.claude/maintenance/FILA.md`, sem avaliação. A conferência dos três pontos (item 1 × D05 e
+D16, item 5, item 6), com os fatos lidos no disco, está no commit `cc47fa1` deste arquivo.
 
-**Falta:** a sessão abaixo. Os três pontos que o prompt manda conferir (item 1 × D05 e D16; item 5; item 6) já
-foram conferidos em 12/11/2026: ver "Conferência dos três pontos", no fim. Faltam as respostas do Vicente aos
-textos propostos lá, a lista dos fundamentos (item 1) e os três princípios (item 4).
+**Falta, para marcar a linha 9 como feita** (seção 7 do METODO):
+1. os outros fundamentos canônicos: ele pediu para incluir; há três candidatas do agente, e a escolha é dele;
+2. o texto das etapas (seção 4), que segue como proposta;
+3. duas leituras a confirmar: no P6, se a declaração simples de uso de IA continua para todo projeto; no P10, se
+   "variação medida" passa a ser a concordância entre a IA e o pesquisador numa amostra do projeto.
 
-## Respostas do Vicente, 12/11/2026 (literais; são a origem, não o texto final)
+Fora do METODO, sem resposta dele: se a varredura que reprova rota de LLM sem tool mapeada sai junto com o mapa de
+uso de IA. Ele perguntou se esse teste era a camada de segurança dos fundamentos; não é (o teste olha o código do
+ReviewBR, e a camada dos fundamentos é a da seção 2 do METODO).
+
+**Próximo passo:** levar a ele os itens acima; com as respostas, tirar as marcas do METODO, esvaziar a seção 7,
+marcar a linha 9 na FILA com data e commit e apagar este arquivo.
+
+## Respostas do Vicente, 12/11/2026 — primeira rodada (literais; são a origem, não o texto final)
 
 1. "fundamentos metodologicos, epistemologias, não são metodologias em si. se a metodologia precisa ser vista de
    acordo com os seus fundamentos para que o reviewbr possa sugerir, os fundamentos são mantidos como estamos
@@ -33,171 +44,22 @@ textos propostos lá, a lista dos fundamentos (item 1) e os três princípios (i
    analyst nao compete com o pesquisador. o pesquisador pode aprovar o que o agente analyst propoe e isso é
    considerada uma decisao do pesquisador."
 
-## Prompt da sessão com Fable
+## Respostas do Vicente, 12/11/2026 — segunda rodada, aos textos propostos (literais)
 
-```
->>> APAGUE ESTA LINHA ANTES DE ENVIAR — seletor: Fable 5.2 · esforço high <<<
-FILA linha 9 (M) do ReviewBR, continuação: verificação holística das respostas do Vicente de 12/11/2026.
+A numeração é a da resposta que ele leu: 1 = item 1 × D05 e D16; 2 = item 5; 3.1 a 3.5 = os cinco pontos do item 6
+(o mapa nunca registrou; o registro continua; o que se perde com o mapa; o que já falta; RAISE); 4.1 = fundamentos;
+4.2 a 4.4 = os princípios P9, P10 e P11.
 
-Leia só: .claude/maintenance/FILA.md (as regras 1 a 8 valem aqui), .claude/METODO_ReviewBR.md (rascunho de 12/11,
-commit 898d79b) e o RETOMAR.md da raiz (respostas literais do Vicente). Abra outro documento só quando um item
-abaixo o nomear. Sem subagente nem workflow. Não pergunte a porcentagem de uso.
-
-O que esta sessão faz: o Vicente respondeu às 6 perguntas da seção 7 do METODO. Confira se as respostas fecham
-entre si, com as decisões que o METODO já registra e com o que o sistema faz hoje. Para cada item:
-(1) reescreva a resposta em forma precisa — o quê, alcance, consequência —, com a frase dele só como origem;
-(2) diga a ele qual decisão anterior ela muda, se mudar;
-(3) aponte contradição com o METODO ou com o sistema.
-Leve a ele o texto proposto. O que ele aprovar entra no METODO com data e origem; a aprovação vale para o texto
-que ele leu.
-
-Limites: esta linha não muda código, skill, agente nem manifest. O que as respostas pedem ao sistema vai ao
-"Visto de passagem" da FILA, com data e origem, sem avaliação e sem linha nova na fila. Decisão dada não se reabre.
-O Vicente já apontou excesso de pergunta (item 2): pergunte só o que o disco não resolve, em até 3 linhas,
-definindo os termos.
-
-Item 1 — Fundamentos (seção 2). Leitura a confirmar com ele:
- a) o método do ReviewBR tem fundamentos científicos próprios, "os canônicos", e pode incluir outros (a A2 continua);
- b) esses fundamentos são uma camada de segurança, incorporada às tools que mapeiam as metodologias;
- c) cada metodologia do catálogo declara os seus fundamentos, apontados como a própria metodologia (fonte oficial e
-    data de leitura, P4);
- d) metodologia que não declara fundamentos: a tool alerta o pesquisador — ela existe, não está legitimada e não tem
-    validação (conferir antes se não tem mesmo) — e sugere outra mais adequada, se a troca não descaracterizar o
-    projeto.
- Defina com ele: quais são "os canônicos" (proponha a lista com a fonte completa; as 4 candidatas da seção 7 do
- METODO são ponto de partida e foram citadas de memória); "legitimada" × "validada"; "descaracterizar o projeto".
- Confira contra a D04 (revisao_decisoes_2026-10-31/lista_decisoes.md: a âncora científica de cada metodologia;
- esta resposta parece fechar a leitura (a) dela) e contra a D05 e a D16 do mesmo arquivo ("só entra metodologia
- validada"), que podem colidir com um catálogo que guarda metodologia sem validação e alerta. As partes (b) e (d),
- nas tools, vão ao Visto de passagem, junto do pedido de 12/11 sobre a absorb_methodology.
-
-Item 2 — D01 (seção 1). Resposta: o ReviewBR serve à pesquisa com qualquer metodologia do catálogo, e o catálogo
- recebe metodologia nova pelas tools que já existem. A dúvida sobre "pesquisa protocolada" já está coberta pelo P2
- (08/11) e pelo P5 (12/11): tire a proposta e escreva só o decidido. Confira a soma com o item 1 (metodologia sem
- fundamentos declarados no catálogo, com alerta).
-
-Item 3 — D09 (P9). Resposta: o modo de agir é o método do ReviewBR; não se baseia no PRISMA, a não ser no projeto
- que escolhe o PRISMA; simplificar não é empobrecer. Confira o P1 (a A1 diz que o percurso F0–F8 nasceu do método
- do ReviewBR construído sobre o PRISMA) e o .claude/agents/maintainer.md, linhas 14 a 30 (o resíduo "nada entra no
- funil sem protocolo travado"). Mudança no maintainer.md vai ao Visto de passagem.
-
-Item 4 — Os três princípios vindos do backlog (P9, P10, P11). Ele pediu mais contexto. Para cada um, em até 6
- linhas: o que diz; de onde veio (DEBT-132, DEBT-101 e DEBT-134, lidos com FULL=1 node
- .claude/maintenance/sessao_2a/le_audit.mjs "DEBT-101,DEBT-132,DEBT-134"; os três foram recusados em 05/11 como
- "princípio, não defeito" e mandados à M); o que muda se ele aprova ou recusa; e o que os itens 2, 3 e 6 já
- decidem dele (P9 encosta no item 3, P10 no item 6, P11 no item 2). Só depois peça a decisão.
-
-Item 5 — Critério de credibilidade e "quem verifica o verificador?" (seção 5). Ele achou que estavam resolvidos e
- pergunta se o que foi decidido está conforme o ReviewBR. Pelo disco: o critério do D07 é redação do acompanhamento
- de 05/11, deixada para ele conferir na M; a resposta de 04/11 a "quem verifica o verificador?" nunca foi aprovada.
- Confira cada item contra o que o sistema faz hoje (que RV tem verificação por tool e qual é conduta declarada:
- skill prisma-rigor-gates) e contra o P11: o critério e a A8 dizem "protocolo travado antes da busca" sem a
- ressalva "quando a metodologia exige". Leve a ele o que confere, o que não confere e o texto ajustado.
-
-Item 6 — Mapa de uso de IA e agente analyst (seções 3 e 6). Resposta: o mapa de uso de IA (registry/ai_use.ts)
- parece não ser mais necessário e pode ser abandonado; o agente analyst não compete com o pesquisador: o que ele
- propõe e o pesquisador aprova é decisão do pesquisador. Isto muda o D07 de 05/11 ("1 sim": o mapa fica como
- política do sistema); diga isso no registro. Antes de gravar, confira:
- a) o que, além do mapa, dá o "registro de onde e como a IA foi usada, por etapa e por tool" que o P6 promete a
-    todo projeto (o P6 continua);
- b) quando a metodologia ou o periódico exigem o RAISE (P6), o RAISE 3 v4.0 dá como não aceitável a síntese de
-    resultados entre estudos por LLM e a síntese agêntica "with or without human input/refinement at each stage":
-    é consequência a informar ao pesquisador nos limites (seção 6), não pergunta;
- c) a soma com o P7 (o que agente produz é revisado) e com o RV-04.
- Reescreva a posição sobre o RAISE 3 da seção 6 com isto. Tirar o mapa do código vai ao Visto de passagem.
-
-Fechamento: METODO com as seções aprovadas, sem as marcas [PROPOSTA]/[PENDENTE] do que ele aprovou, e a seção 7
- só com o que ainda faltar; linha 9 da FILA marcada com data e commit quando as 6 estiverem fechadas, ou "em curso"
- com o que falta; RETOMAR.md atualizado ou apagado; audit válido; commit e push. Resposta a ele em até 5 linhas,
- com a decisão primeiro.
-```
-
-## Conferência dos três pontos — Fable, 12/11/2026
-
-Os fatos abaixo foram conferidos no disco. **Os textos propostos não valem até o Vicente aprovar.** Nada foi
-escrito no `METODO_ReviewBR.md`, na `FILA.md` nem no código.
-
-### Item 1 × D05 e D16
-
-Conferido:
-- D05 (08/10): "só entra metodologia validada e em cada uma tem de haver a demonstração da validação". Na mesma
-  fala: "para que eu ou qualquer pessoa possa usar uma metodologia nova ou não assimilada precisamos de algum tipo
-  de resumo dela e do local onde ela existe completa". "Entra" respondia à proposta de um grau PARCIAL de trilha
-  executável. A DIRECAO §4 gravou: o catálogo guarda o resumo e o local, "e isso não é metodologia pela metade, é
-  informação".
-- D16 (29/10): assimila-se só metodologia validada cientificamente. O critério de "validada" ficou [A CONFERIR].
-- A colisão só existe se "entra" for lido como "entra no catálogo". Desde o P4 (12/11), assimilar norma nova é
-  fonte oficial mais entrada no catálogo, e por isso as duas leituras passaram a se confundir.
-- Hoje o catálogo tem 106 entradas com o campo `confidence` (67 alta, 34 média, 5 baixa). Não tem campo de
-  validação nem de fundamentos. Não conferi o que `confidence` mede.
-
-Texto proposto:
-> O catálogo é um mapa: pode listar toda metodologia que existe e tem fonte oficial. Cada entrada diz, apontando a
-> fonte, se a metodologia declara os seus fundamentos (legitimada) e se tem validação externa demonstrada
-> (validada). Metodologia a que falta uma das duas fica no catálogo com o alerta ao pesquisador, e o ReviewBR
-> sugere outra mais adequada quando a troca não descaracteriza o projeto. Trilha executável, só para metodologia
-> validada. Consequência: a D05 e a D16 não mudam; ganham alcance escrito — "só entra" vale para a trilha
-> executável e para a sugestão sem alerta, não para a entrada no mapa.
-
-Termos a confirmar com ele:
-- **legitimada:** a metodologia declara os fundamentos em que se apoia, e a entrada do catálogo aponta onde;
-- **validada:** há demonstração externa, apontada na entrada — publicação do método com revisão por pares ou
-  adoção por organização reconhecida da área (Cochrane, JBI, EQUATOR e afins);
-- **descaracterizar o projeto:** a troca de metodologia muda a pergunta ou o objeto de pesquisa.
-
-### Item 5 — critério de credibilidade e "quem verifica o verificador?"
-
-Conferido (skill `prisma-rigor-gates`, tabela dos invariantes):
-- por tool: RV-01 (`submit_protocol_for_approval`), RV-02 (`compute_flow_counts`, `export_dataset`), RV-05
-  (`validate_prisma_flow`);
-- RV-04: a decisão é gravada por tool; a trava de avanço só vale sob o nível "estrito";
-- RV-08: conferido só na exportação; a síntese não é barrada;
-- RV-03: conduta dos agentes, sem tool;
-- aplicação da metodologia (A6): o `check_standard_coverage` relata o mapeamento do sistema, não conferido contra
-  a fonte; o pesquisador preenche o formulário oficial (FILA, linha 8, item 3);
-- a frase "onde o sistema ainda não confere isso por código, o backlog registra" deixou de valer: o backlog tem
-  0 achados abertos em 12/11, e o que não é conferido por código está declarado na skill;
-- o critério e a A8 dizem "protocolo travado antes da busca" sem ressalva. O P2 (08/11, decidido) já diz que o
-  obrigatório segue a metodologia. Hoje não há diferença prática: os dois métodos instalados exigem protocolo;
-- nem o critério nem a resposta sobre o verificador foram aprovados por ele como texto;
-- "duas leituras independentes que concordam valem mais que uma" (verificador, item 2): desde 12/11 a segunda
-  leitura de norma não é exigida (P4), e nenhuma tool roda a triagem duas vezes.
-
-Texto proposto (três ajustes; o resto fica como está no METODO, seção 5):
-1. no critério e na A8: "protocolo travado antes da busca, quando a metodologia o exige (RV-01, P2)";
-2. no fim do critério: "Onde o sistema não confere isso por código, a skill `prisma-rigor-gates` o declara";
-3. no verificador, item 2: fica "independência: quem confere não é quem produziu"; sai a oração das duas leituras.
-
-### Item 6 — mapa de uso de IA e agente `analyst`
-
-Conferido:
-- o mapa (`registry/ai_use.ts`) não registra uso: classifica 10 tools pelas categorias do RAISE 3 e devolve uma
-  mensagem. É chamado por duas tools (`screen_candidates` e `batch_db_screen`). Nunca bloqueou: nenhuma entrada
-  tem a categoria "não aceitável";
-- o registro do uso de IA existe sem o mapa: `03_screening/ia_audit/` (`screen_candidates`: modelo, versão,
-  temperatura, prompt e saída por decisão); `logs/lote/` e a tabela `audit_logs` (`batch_db_screen`,
-  `batch_llm_extract`, `translate_document`, `batch_keyword_screen`: parâmetros e resultado por item; não conferi
-  se guardam modelo e versão); as decisões do pesquisador (`record_researcher_decision`);
-- dependem do mapa: a mensagem do RAISE nas duas tools (o único lugar em que o sistema diz ao pesquisador "exige
-  validação dentro da revisão"); o `tests/ai_use.test.ts`, que inclui a varredura que reprova quando um serviço
-  aciona LLM sem tool mapeada; a resolução do DEBT-117 (04/10), que se apoia nele; a skill `system-audit`;
-- o P6 promete o registro "por etapa e por tool" e o texto da declaração no relato. Por busca de texto, não achei
-  tool, skill, agente ou spec que monte um ou outro, com mapa ou sem. O trabalho do próprio agente (por exemplo, a
-  síntese do `analyst`) não deixa registro de uso de IA: o mapa cobre tools;
-- RAISE 3, rascunho v4.0 de 23/09/2026, Tabela 2 (`.claude/standards/raise-3.json`, linhas T32, T35 e T44): dá
-  como não aceitável a síntese de resultados entre estudos por LLM e a síntese por agentes de ponta a ponta, "with
-  or without human input/refinement at each stage".
-
-Texto proposto:
-> O mapa de uso de IA (`registry/ai_use.ts`) é abandonado: o ReviewBR deixa de classificar as suas tools pelas
-> categorias do RAISE 3. Isto muda o item 1 da decisão de 05/11/2026 ("o mapa fica como política do sistema"). O
-> P6 continua: todo projeto declara onde e como a IA foi usada, e o registro vem dos logs de execução das tools e
-> das decisões registradas do pesquisador. O que o agente `analyst` propõe e o pesquisador aprova é decisão do
-> pesquisador: fica registrada (RV-04) e é declarada no relato como proposta por IA e aprovada por ele (P6, P7).
-> Limite: quando a metodologia, a norma de relato ou o periódico exigem o RAISE, o ReviewBR informa ao pesquisador
-> que o RAISE 3 dá como não aceitável a síntese de resultados entre estudos feita por LLM e a síntese por agentes
-> de ponta a ponta, com ou sem intervenção humana em cada etapa. Nesse projeto a aprovação dele não muda a
-> classificação, e a síntese entre estudos é feita pelo pesquisador ou por método estatístico.
-
-Escolha que o texto não resolve: ao tirar o mapa do código, a varredura que acusa rota de LLM sem registro sai
-junto ou fica. Vai ao "Visto de passagem" como ele responder.
+- "1 confirmo o que falta confirmar."
+- "2 ok"
+- "3.1 ok, mas se a IA escolhe método isso precisa ser registrado?"
+- "3.2 ok"
+- "3.3 O teste que reprova é os fundamentos de segurança que o proprio reviewbr tem para evitar que metodologias
+  entrem no mapa sem fundamentção propria? se sim, ok"
+- "3.4 tem de ter registro quando é obrigatorio por metodologia escolhida no que a metodologia obriga."
+- "3.5 se quando é exigido raise a sintese como nao aceitavel deve ser informado isso ao pesquisador e pedir que
+  ele traga."
+- "4.1 o que falta: aprovar e incluir outros fundamentos canonicos."
+- "4.2 aprovo modo de agir"
+- "4.3 aprovo com a ressalva de se analisar como as melhores ferramentas de apoio a pesquisa agem nesse caso"
+- "4.4 ok"

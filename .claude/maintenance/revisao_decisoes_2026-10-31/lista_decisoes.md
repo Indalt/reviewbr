@@ -69,6 +69,9 @@ fundamento: cada item espera o Vicente. Resultado bruto: `resultado_agentes.json
 - **Redação proposta:** Uma metodologia só entra como trilha executável se estiver validada externamente e completa (08/10). Validada: cada norma que declara está em .claude/standards/, no texto da fonte oficial, com a conferência demonstrada no version_source. Completa (DIRECAO §4): sem campo por preencher ([TBD], [PREENCHIMENTO OBRIGATÓRIO]), sem gate vazio, sem norma declarada e ausente. Não existe metodologia "em uso pela metade": foi assim que ele recusou o grau PARCIAL, que executaria o funil sem assinar conformidade. [A CONFERIR: se "completa" admite item de norma declarado [NÃO COBERTO], prática adotada a partir de 18/10.] A metodologia não assimilada fica no catálogo como resumo e local da fonte completa: "resumir para educar ou informar não é proibido", e é "acionado de outro modo". [A CONFERIR: se o resumo serve só para escolher ou pedir a assimilação, ou se o pesquisador pode conduzir com ele ("para que eu ou qualquer pessoa possa usar uma metodologia nova ou não assimilada").] Assimilação nova só sob demanda do administrador (08/10). Origem: 08/10, L8137, L8270, L8321 e L8443; a data 04/10 da DIRECAO e do DEBT-127 deve ser corrigida.
 - **Só o Vicente responde:** Um método com lacunas [NÃO COBERTO] declaradas é “completo e funcional” no sentido dele? Metodologia não assimilada pode ser usada num projeto, e com que limites? A data deve ser corrigida para 08/10?
 - **Conferência de fidelidade:** AJUSTAR — As falas são de 08/10, mas em linhas um pouco diferentes: L8137, não 8136, e L8321, não 8320. Faltam duas falas que fazem parte da regra. Em L8270 (08/10 13:56Z): "as ferramentas sao sempre completas e funcionais. resumir para educar ou para informar nao é proibido". Em L8443 (08/10 14:19Z): "nao deve haver metodologia assimilada sem estar validada externamente e completa". A DIRECAO data esta última de 04/10, o que está errado. No contexto, "completas" respondia à proposta do agente (L8134 e L8259) de um grau PARCIAL que "executa o funil" sem assinar conformidade. O agente então tornou binária a trava da spec com campo pendente. A DIRECAO define "completa" como "sem campo por preencher, sem gate vazio, sem padrão declarado e ausente". A proposta omite "sem gate vazio" e põe como condição (3) a prática de [NÃO COBERTO], que é de 18/10 e não dele.
+- **Alcance escrito em 12/11/2026:** a decisão não muda. "Só entra metodologia validada" vale para a trilha
+  executável e para a sugestão sem alerta, não para a entrada no catálogo, que é mapa: metodologia sem validação
+  ou sem fundamentos declarados fica nele com alerta ao pesquisador. Texto em `.claude/METODO_ReviewBR.md`, seção 2.
 
 ## D06 — RV-04 imposto pelo código (decisão do pesquisador em toda etapa) e a exceção dos “ensaios”
 
@@ -137,6 +140,14 @@ fundamento: cada item espera o Vicente. Resultado bruto: `resultado_agentes.json
   achados abertos dos invariantes.
   
   A redação é do acompanhamento. O Vicente a confere na descrição do método (sessão M).
+- **Alterado em 12/11/2026:** (1) o mapa de uso de IA (`registry/ai_use.ts`) é abandonado; deixa de valer o item 1
+  de 05/11 ("o mapa fica como política do próprio sistema"). Origem: "o mapa de uso de Ia parece nao ser mais
+  necessario porque ele nunca ficou bom e pdoe ser abandonado". (2) O sistema tem de ter o registro do uso de IA
+  quando a metodologia escolhida o torna obrigatório, e no que ela obriga; substitui "para todo projeto" na
+  consequência escrita em 05/11. Origem: "tem de ter registro quando é obrigatorio por metodologia escolhida no que
+  a metodologia obriga". (3) O critério de credibilidade foi aprovado com dois ajustes ("quando a metodologia o
+  exige"; a skill `prisma-rigor-gates`, e não o backlog, declara o que não é conferido por código). Texto em
+  `.claude/METODO_ReviewBR.md`, P6 e seções 5 e 6. A retirada do mapa do código não foi feita.
 
 ## D08 — Instalar método exigindo atualização do servidor MCP não é defeito (decisão 4 de 08/10)
 
@@ -256,6 +267,10 @@ fundamento: cada item espera o Vicente. Resultado bruto: `resultado_agentes.json
 - **Só o Vicente responde:** Qual é o critério de “validada cientificamente”? A assimilação é ativa ou sob demanda dele? GRADE e CERQual (instrumentos) entram? “Assimilar” inclui criar o método executável?
 - **Superada por:** Esta decisão provavelmente altera a regra “sob demanda do administrador” de 08/10 (DEBT-127). A confirmar.
 - **Conferência de fidelidade:** AJUSTAR — 9e138b39 L1726 (item 1), L1729, L1808 e L1815, e 9e138b39 L2439/L2442 (29/10), conferem. A frase principal da proposta, "cobre uma necessidade do sistema… em vez de criar regra própria", adota a leitura (b) como texto da decisão, e isso não está nas falas. O que foi confirmado em 17/10 foi a paráfrase do agente (L1808): "Assimilar toda metodologia que existe… cada tipo de pesquisa precisa do seu método, e o pesquisador recebe ajuda para escolher". Também o item 4: "tem de ter método para cada proposição e ajuda para escolher método". Em 29/10 ele disse "acredito que isso já tenha sido dito". A fala anterior é de 08/10: L8321, "só entra metodologia validada e em cada uma tem de haver a demonstração da validação", e L8443, "validada externamente e completa". O agente a atribuiu a 04/10 (L2474; maintainer.md:129). Esse antecedente dá um sentido candidato para "validada" que a lista de critérios da proposta não traz.
+- **Alcance escrito em 12/11/2026:** a decisão não muda. "Validada" quer dizer demonstração externa apontada na
+  entrada do catálogo: publicação do método com revisão por pares, ou adoção por organização reconhecida da área
+  (Cochrane, JBI, EQUATOR e afins). A restrição vale para a trilha executável e para a sugestão sem alerta, não para
+  a entrada no mapa. Texto em `.claude/METODO_ReviewBR.md`, seção 2.
 
 ## D17 — F0–F8 é a trilha do prisma-sr, não a estrutura da ferramenta (direção de 29/10)
 
