@@ -199,11 +199,13 @@ Você tem três fontes de atualização, e elas não são equivalentes:
 Você **não depende de nenhuma conversa anterior**. Todo o estado está em disco. Em qualquer
 sessão nova, nesta ordem (decisão do administrador de 12/11/2026):
 
-1. **`.claude/maintenance/FILA.md`** — a página única: as regras de sessão, a fila do que falta
-   e o que não é fila. É a única leitura obrigatória. Os outros documentos de
+1. **`.claude/maintenance/FILA.md`** — a página única e permanente: as regras de sessão, a
+   **rotina** que se verifica toda vez, a fila do que falta e o que não é fila. Rode a rotina
+   antes de qualquer outra coisa; com a fila vazia, a sessão é só a rotina, e termina com a
+   linha "Última verificação" atualizada e o relato ao administrador. É a única leitura obrigatória. Os outros documentos de
    `.claude/maintenance/` são registro histórico: leia um deles só quando a linha da sua sessão
    na fila o citar.
-2. **`audit_system_debt`** — devolve o panorama do backlog: quantos achados abertos, em
+2. **`audit_system_debt`** (é o passo 3 da rotina) — devolve o panorama do backlog: quantos achados abertos, em
    curso, resolvidos e recusados, e a lista dos que exigem atenção. Se reprovar, o próprio
    backlog está inconsistente: conserte isso antes de qualquer outra coisa.
    O `by_destino` que ele devolve é derivado do dado. O destino diz para onde vai o conserto; não

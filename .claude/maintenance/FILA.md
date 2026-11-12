@@ -1,9 +1,13 @@
 # Fila da manutenção do ReviewBR — página única
 
-> Aprovada pelo Vicente em 12/11/2026. **Substitui a tabela de sessões do `PLANO_sessoes_2026-10-29.md`** (M, V,
-> 3, 4, 5, 6 e 7+): os 32 achados abertos estão todos numa linha daqui, e nada mais é fila.
-> Uma sessão lê esta página e o que a linha dela aponta. A análise que a justifica está em
-> `ORGANIZACAO_2026-11-11.md` e não é leitura de sessão.
+> Aprovada pelo Vicente em 12/11/2026. É a página permanente da manutenção: **toda sessão do `maintainer` começa
+> por ela**, com fila ou sem fila. Tem três partes:
+> - **Rotina:** o que se verifica toda vez. Nunca fica vazia.
+> - **Fila:** os consertos que o Vicente decidiu. Pode estar vazia.
+> - **Visto de passagem:** o que apareceu e ele ainda não avaliou.
+>
+> Substituiu a tabela de sessões do `PLANO_sessoes_2026-10-29.md` (M, V, 3, 4, 5, 6 e 7+). A análise que a
+> justifica está em `ORGANIZACAO_2026-11-11.md` e não é leitura de sessão.
 
 ## Regras — valem para qualquer modelo
 
@@ -40,6 +44,30 @@
     dado nos inputs".
 - **O controle por código vale em todo o ReviewBR**, da busca exploratória à formulação do objeto de pesquisa e
   à publicação: contagem, trava, registro, deduplicação e persistência não se simplificam.
+
+## Rotina — o que se verifica toda vez
+
+Toda sessão do `maintainer` roda estes cinco passos antes de qualquer outra coisa, nesta ordem. Com a fila vazia,
+a sessão é só a rotina.
+
+| # | o que verificar | como | se não estiver certo |
+|---|---|---|---|
+| 1 | O repositório está limpo | `git status` | diga o que está sem commit. Não apague nem descarte nada |
+| 2 | O servidor monta e a suíte passa | em `reviewbr/reviewbr-mcp`, pelo PowerShell em `C:\`: `npm run build` e `npx vitest run` | diga qual teste falhou e pare. Não siga para uma linha da fila com a suíte vermelha |
+| 3 | O backlog é válido | tool `audit_system_debt` | inválido: conserte o backlog antes de tudo. Achado aberto que não está em linha nenhuma da fila: relate os ids ao Vicente |
+| 4 | Há linha a fazer ou em curso | a tabela "Fila", abaixo | se houver, é o trabalho da sessão, uma linha só. Se não houver, a sessão termina na rotina |
+| 5 | Quantos itens esperam decisão | conte os itens de "Visto de passagem" | relate o número. Não avalie nem conserte nenhum |
+
+**Só quando o Vicente pedir:** conferir a versão das normas e o ambiente de IA para pesquisa (passos 3a e 3b do
+`.claude/agents/maintainer.md`).
+
+**Ao terminar a rotina:**
+- troque a linha "Última verificação", abaixo, pela de hoje. É uma linha só; a anterior fica no histórico do git;
+- relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
+- commit e push.
+
+**Última verificação:** 12/11/2026 — repositório limpo; suíte 552 de 552; backlog válido, 0 abertos; fila: linha 10
+a fazer, ainda sem definição do que testar; 30 itens no "Visto de passagem".
 
 ## Fila
 
@@ -84,6 +112,15 @@ na tool sobre `targets`).
 
 A linha 9 (M) redige o `METODO_ReviewBR.md` com o que já está decidido e leva ao Vicente só as escolhas dele. As
 três perguntas da sessão 2c deixaram de ser necessárias.
+
+### Como uma linha entra na fila
+
+- Só o Vicente cria linha. A sessão não cria, nem a pedido de outro documento.
+- Uma linha nasce de um destes três lugares: um item do "Visto de passagem" que ele mandou fazer; um achado aberto
+  no backlog; um pedido dele.
+- A linha diz o que fazer e o que não fazer, como as de 1 a 8: FAZER é código com teste; DECLARAR é corrigir o
+  texto, sem construir.
+- Item do "Visto de passagem" que virou linha, ou que ele mandou descartar, sai de lá.
 
 ## O que não é fila
 
