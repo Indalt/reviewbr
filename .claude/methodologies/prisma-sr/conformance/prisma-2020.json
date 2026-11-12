@@ -193,7 +193,7 @@
         "F7.3.2",
         "F8.3.14"
       ],
-      "nao_coberto": "deslocado — os ponteiros (F7.3.1, F7.3.2, F8.3.14) são de certeza da evidência (GRADE/CERQual), não de avaliação de viés de relato. Mapeamento documentado como errado no DEBT-045; remapear é o conserto, e ao remapear esta declaração sai."
+      "nao_coberto": "deslocado — os ponteiros (F7.3.1, F7.3.2, F8.3.14) são de certeza da evidência (GRADE/CERQual), não de avaliação de viés de relato. Mapeamento documentado como errado no DEBT-045. A spec foi corrigida em 12/11/2026 (FILA linha 8), e o mapeamento não se refaz, pela decisão de 12/11/2026 (norma se aponta, não se copia): o item segue [NÃO COBERTO]."
     },
     {
       "id": "15",
@@ -207,7 +207,7 @@
         "F0.2.5",
         "F8.3.15"
       ],
-      "nao_coberto": "deslocado — os ponteiros (F0.1.4, F0.1.5, F0.2.1, F0.2.2, F0.2.3, F0.2.4, F0.2.5, F8.3.15) são de registro e protocolo, não de avaliação da certeza da evidência. Mapeamento documentado como errado no DEBT-045; remapear é o conserto, e ao remapear esta declaração sai."
+      "nao_coberto": "deslocado — os ponteiros (F0.1.4, F0.1.5, F0.2.1, F0.2.2, F0.2.3, F0.2.4, F0.2.5, F8.3.15) são de registro e protocolo, não de avaliação da certeza da evidência. Mapeamento documentado como errado no DEBT-045. A spec foi corrigida em 12/11/2026 (FILA linha 8), e o mapeamento não se refaz, pela decisão de 12/11/2026 (norma se aponta, não se copia): o item segue [NÃO COBERTO]."
     },
     {
       "id": "16",
@@ -386,7 +386,7 @@
         "F5.2.5.2",
         "F8.3.25"
       ],
-      "nao_coberto": "deslocado — os ponteiros (F0.1.9, F5.2.5.2, F8.3.25) são de conflito de interesses, não de financiamento ou apoio. Mapeamento documentado como errado no DEBT-045; remapear é o conserto, e ao remapear esta declaração sai."
+      "nao_coberto": "deslocado — os ponteiros (F0.1.9, F5.2.5.2, F8.3.25) são de conflito de interesses, não de financiamento ou apoio. Mapeamento documentado como errado no DEBT-045. A spec foi corrigida em 12/11/2026 (FILA linha 8), e o mapeamento não se refaz, pela decisão de 12/11/2026 (norma se aponta, não se copia): o item segue [NÃO COBERTO]."
     },
     {
       "id": "26",
@@ -397,14 +397,14 @@
         "F8.4.2",
         "F8.4.3"
       ],
-      "nao_coberto": "deslocado — os ponteiros (F5.2.5.3, F8.3.26, F8.4.1, F8.4.2, F8.4.3) são de disponibilidade de dados, não de conflito de interesses. Mapeamento documentado como errado no DEBT-045; remapear é o conserto, e ao remapear esta declaração sai."
+      "nao_coberto": "deslocado — os ponteiros (F5.2.5.3, F8.3.26, F8.4.1, F8.4.2, F8.4.3) são de disponibilidade de dados, não de conflito de interesses. Mapeamento documentado como errado no DEBT-045. A spec foi corrigida em 12/11/2026 (FILA linha 8), e o mapeamento não se refaz, pela decisão de 12/11/2026 (norma se aponta, não se copia): o item segue [NÃO COBERTO]."
     },
     {
       "id": "27",
       "covered_by": [
         "F8.3.27"
       ],
-      "nao_coberto": "deslocado — os ponteiros (F8.3.27) são de informações adicionais, não de disponibilidade de dados, código e materiais. Mapeamento documentado como errado no DEBT-045; remapear é o conserto, e ao remapear esta declaração sai."
+      "nao_coberto": "deslocado — os ponteiros (F8.3.27) são de informações adicionais, não de disponibilidade de dados, código e materiais. Mapeamento documentado como errado no DEBT-045. A spec foi corrigida em 12/11/2026 (FILA linha 8), e o mapeamento não se refaz, pela decisão de 12/11/2026 (norma se aponta, não se copia): o item segue [NÃO COBERTO]."
     }
   ]
 }

@@ -29,22 +29,22 @@ Executado antes de qualquer busca. Protocolo deve ser fechado e registrado antes
 | F0.1.1 | Título completo da revisão | Deve identificar como revisão sistemática ou scoping review | ✅ | Item 1 |
 | F0.1.2 | Título abreviado / slug | Gerado automaticamente pelo sistema | ✅ | — |
 | F0.1.3 | Tipo de revisão | Sistemática / Scoping / Meta-análise / Mista | ✅ | Item 1 |
-| F0.1.4 | Data de início do protocolo | YYYY-MM-DD | ✅ | Item 15 |
-| F0.1.5 | Versão do protocolo | Ex: v1.0 | ✅ | Item 15 |
-| F0.1.6 | Autores da revisão | Nome completo, instituição, ORCID | ✅ | Item 24 |
-| F0.1.7 | Instituição responsável | Nome completo + sigla | ✅ | Item 24 |
-| F0.1.8 | Financiamento | Agência, número do edital ou "sem financiamento" | ✅ | Item 24 |
-| F0.1.9 | Conflito de interesses | Declaração explícita de cada autor | ✅ | Item 25 |
+| F0.1.4 | Data de início do protocolo | YYYY-MM-DD | ✅ | Item 24 |
+| F0.1.5 | Versão do protocolo | Ex: v1.0 | ✅ | Item 24 |
+| F0.1.6 | Autores da revisão | Nome completo, instituição, ORCID | ✅ | sem item no PRISMA 2020 |
+| F0.1.7 | Instituição responsável | Nome completo + sigla | ✅ | sem item no PRISMA 2020 |
+| F0.1.8 | Financiamento | Agência, número do edital ou "sem financiamento" | ✅ | Item 25 |
+| F0.1.9 | Conflito de interesses | Declaração explícita de cada autor | ✅ | Item 26 |
 
 ### F0.2 — Registro do Protocolo
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA |
 |---|---|---|---|---|
-| F0.2.1 | Plataforma de registro | PROSPERO / OSF / INPLASY / Research Registry | se registrado | Item 15 |
-| F0.2.2 | Número de registro | CRD... / osf.io/... / INPLASY... | se registrado | Item 15 |
-| F0.2.3 | URL do registro | Link público do protocolo registrado | se registrado | Item 15 |
-| F0.2.4 | Data do registro | Deve ser anterior ao início da busca | se registrado | Item 15 |
-| F0.2.5 | Status | Registrado / Em processo / Não registrado. Declarar é o obrigatório; registrar não é (DEBT-135; decisão de 08/10/2026) | ✅ | Item 15 |
+| F0.2.1 | Plataforma de registro | PROSPERO / OSF / INPLASY / Research Registry | se registrado | Item 24 |
+| F0.2.2 | Número de registro | CRD... / osf.io/... / INPLASY... | se registrado | Item 24 |
+| F0.2.3 | URL do registro | Link público do protocolo registrado | se registrado | Item 24 |
+| F0.2.4 | Data do registro | Deve ser anterior ao início da busca | se registrado | Item 24 |
+| F0.2.5 | Status | Registrado / Em processo / Não registrado. Declarar é o obrigatório; registrar não é (DEBT-135; decisão de 08/10/2026) | ✅ | Item 24 |
 
 ### F0.3 — Justificativa e Contexto
 
@@ -296,9 +296,9 @@ Um formulário por estudo incluído. Pilotado antes do uso.
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA |
 |---|---|---|---|---|
-| F5.2.5.1 | Financiamento do estudo | | ✅ | Item 24 |
-| F5.2.5.2 | Conflito de interesses declarado | | ✅ | Item 25 |
-| F5.2.5.3 | Disponibilidade de dados | Abertos / Sob solicitação / Não disponível | ✅ | Item 26 |
+| F5.2.5.1 | Financiamento do estudo | | ✅ | Item 25 |
+| F5.2.5.2 | Conflito de interesses declarado | | ✅ | Item 26 |
+| F5.2.5.3 | Disponibilidade de dados | Abertos / Sob solicitação / Não disponível | ✅ | Item 27 |
 | F5.2.5.4 | Notas do revisor | Observações não capturadas acima | ⚠️ se necessário | — |
 
 ## F6 — AVALIAÇÃO DE QUALIDADE / RISCO DE VIÉS
@@ -350,8 +350,8 @@ Um formulário por estudo incluído. Pilotado antes do uso.
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA |
 |---|---|---|---|---|
-| F7.3.1 | Sistema utilizado | GRADE / CERQual / N/A + justificativa | ✅ | Item 14 |
-| F7.3.2 | Domínios avaliados | Lista dos domínios do sistema | ✅ | Item 14 |
+| F7.3.1 | Sistema utilizado | GRADE / CERQual / N/A + justificativa | ✅ | Item 15 |
+| F7.3.2 | Domínios avaliados | Lista dos domínios do sistema | ✅ | Item 15 |
 | F7.3.3 | Nível de certeza por desfecho | Alta / Moderada / Baixa / Muito baixa | ✅ | Item 22 |
 | F7.3.4 | Justificativa por nível | Fatores que elevaram ou rebaixaram a certeza | ✅ | Item 22 |
 
@@ -408,8 +408,8 @@ Colunas obrigatórias do study_characteristics_table.csv
 | F8.3.11 | Métodos — Risco de viés | Item 11 |
 | F8.3.12 | Métodos — Medidas de efeito | Item 12 |
 | F8.3.13 | Métodos — Síntese | Item 13 |
-| F8.3.14 | Métodos — Certeza da evidência | Item 14 |
-| F8.3.15 | Métodos — Registro e protocolo | Item 15 |
+| F8.3.14 | Métodos — Certeza da evidência | Item 15 |
+| F8.3.15 | Métodos — Registro e protocolo | Item 24 |
 | F8.3.16 | Resultados — Seleção | Item 16 / S15 |
 | F8.3.17 | Resultados — Características | Item 17 |
 | F8.3.18 | Resultados — Risco de viés | Item 18 |
@@ -418,18 +418,18 @@ Colunas obrigatórias do study_characteristics_table.csv
 | F8.3.21 | Resultados — Viés de relato | Item 21 |
 | F8.3.22 | Resultados — Certeza | Item 22 |
 | F8.3.23 | Discussão | Item 23 |
-| F8.3.24 | Financiamento | Item 24 |
-| F8.3.25 | Conflito de interesses | Item 25 |
-| F8.3.26 | Disponibilidade de dados | Item 26 |
-| F8.3.27 | Informações adicionais | Item 27 |
+| F8.3.24 | Financiamento | Item 25 |
+| F8.3.25 | Conflito de interesses | Item 26 |
+| F8.3.26 | Disponibilidade de dados | Item 27 |
+| F8.3.27 | Informações adicionais | sem item no PRISMA 2020 |
 
 ### F8.4 — Disponibilidade de Dados
 
 | Subitem | Campo | Descrição | Obrigatório | Item PRISMA |
 |---|---|---|---|---|
-| F8.4.1 | Dados da revisão disponíveis | Onde estão / Como acessar | ✅ | Item 26 |
-| F8.4.2 | Código analítico disponível | Script / software — se meta-análise | ⚠️ se aplicável | Item 26 |
-| F8.4.3 | Materiais suplementares | Lista de suplementos gerados | ✅ | Item 26 |
+| F8.4.1 | Dados da revisão disponíveis | Onde estão / Como acessar | ✅ | Item 27 |
+| F8.4.2 | Código analítico disponível | Script / software — se meta-análise | ⚠️ se aplicável | Item 27 |
+| F8.4.3 | Materiais suplementares | Lista de suplementos gerados | ✅ | Item 27 |
 
 ## SUPLEMENTOS OBRIGATÓRIOS
 
