@@ -1,16 +1,26 @@
 ---
 name: screening-rules
-description: Procedimento de deduplicação e triagem (fases F3/F4). Use ao deduplicar e decidir inclusão/exclusão de registros com critérios do protocolo, motivos de exclusão padronizados (EX-01..EX-11) e regra de saturação. Carregada pelo agente screener.
+description: Procedimento de deduplicação e triagem (fases F3/F4). Use ao deduplicar e decidir inclusão/exclusão de registros com critérios do protocolo, convenção de motivos de exclusão (EX-01..EX-11, atribuídos pelo pesquisador — nenhuma tool grava o código) e regra de saturação. Carregada pelo agente screener.
 ---
 
 # Screening Rules — deduplicação e triagem rigorosas
 
 ## F3 — Deduplicação (hierarquia)
-1. DOI/Handle idêntico → 2. Título normalizado idêntico → 3. Título+ano+1º autor → 4. Similaridade de título ≥90% + mesmo ano.
-Registre cada par (ID mantido, ID removido, critério, fontes) em `02_deduplicated/`. Conflitos não resolvidos automaticamente = decisão manual do pesquisador.
+O `deduplicate_dataset` aplica, nesta ordem:
+1. DOI ou Handle idêntico (sem o resolvedor `https://doi.org/`, sem `doi:`, sem caixa) → remove.
+2. Título normalizado idêntico (acento transliterado) **e mesmo ano** → remove.
+3. Título normalizado + sobrenome do 1º autor, **quando um dos dois registros não tem ano** → remove.
+4. Similaridade de título ≥ 0,90 (Dice sobre bigramas) + mesmo ano → **só sinaliza** o par; os dois ficam.
+
+Dois registros com DOIs diferentes nunca se juntam pelo título. O rastro de cada remoção (ID mantido, ID removido,
+critério, fontes) vai para `02_deduplicated/dedupe_pairs.json`; os pares sinalizados, para `pares_sinalizados` em
+`dedupe_report.json`. Cada par sinalizado é decisão do pesquisador (RV-04): apresente a lista, não resolva por ele.
 
 ## F4 — Triagem (duas fases)
-- **F4.1 Título/Resumo** e **F4.2 Texto completo**. Toda exclusão recebe um **motivo padronizado** derivado dos critérios F1.3:
+- **F4.1 Título/Resumo** e **F4.2 Texto completo**. O método pede para cada exclusão um **motivo padronizado** derivado dos
+  critérios F1.3 (tabela abaixo). **Nenhuma tool atribui, grava ou agrega esse código**: o `screen_candidates` guarda o
+  motivo em texto livre (`reasoning`). Atribuir o código e montar a tabela de frequências (F4.1.4, F4.2.4) é do
+  pesquisador, sem conferência do sistema — [NÃO COBERTO] (DEBT-026).
 
 | Código | Motivo | Origem |
 |---|---|---|
@@ -51,7 +61,8 @@ número dá para recontar do disco.
   resolva por ele.
 
 ## Saturação (stopping rule)
-Após cada batch de `screen_candidates`, chame `get_screening_report`. Se `saturationAlert:true` (últimos 3 batches <5% de novos relevantes), apresente os números e pergunte se encerra. **A decisão de parar é do pesquisador** (RV-04), nunca automática. Se cobertura de alguma fonte <50%, avise a lacuna.
+Após cada batch de `screen_candidates`, chame `get_screening_report` com `projectPath` (e `stage`): ele lê a triagem
+gravada em `03_screening/`, na ordem do insumo do estágio (DEBT-021). Se `saturationAlert:true` (últimos 3 batches <5% de novos relevantes), apresente os números e pergunte se encerra. **A decisão de parar é do pesquisador** (RV-04), nunca automática. Se cobertura de alguma fonte <50%, avise a lacuna.
 
 ## Artefatos canônicos que você DEVE gravar (para o funil emergir — RV-02)
 O `compute_flow_counts` conta estes arrays JSON. Grave-os com estes nomes exatos:

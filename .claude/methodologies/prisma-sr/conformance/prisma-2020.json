@@ -194,7 +194,8 @@
         "F8.1.9",
         "F8.1.10",
         "F8.3.16"
-      ]
+      ],
+      "nao_coberto": "parcial — F4.1.4 e F4.2.4 pedem a exclusão por motivo padronizado (tabela de frequências), e o 16b pede citar os excluídos com o motivo; nenhuma tool atribui, grava ou agrega o código EX-01..EX-11: a triagem guarda o motivo em texto livre (reasoning). Declarado em 12/11/2026 (DEBT-026). O 16 é cabeçalho: a contagem do check_standard_coverage é a do 16a e do 16b, que seguem sem mapeamento (DEBT-014)."
     },
     {
       "id": "17",

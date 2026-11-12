@@ -53,7 +53,7 @@ describe("DEBT-150 — avaliação crítica no escopo: os itens 12 e 16 do PRISM
     it("sem resposta: 12 e 16 contam como o método os declara — [NÃO COBERTO], no denominador — e o aviso pede a resposta", () => {
         const raiz = brinquedo();
         const r = StandardCoverageService.conferir(raiz, "prisma-scr", undefined, projeto("scoping-prisma-scr"));
-        expect(r.fracao).toBe("14/22");
+        expect(r.fracao).toBe("13/22"); // DEBT-026 (12/11/2026): o 14 passou a [NÃO COBERTO] parcial
         expect(r.nao_coberto.map((x) => x.id)).toEqual(expect.arrayContaining(["12", "16"]));
         expect(r.nao_se_aplica).toEqual([]);
         expect(r.avisos.join(" ")).toMatch(/sem resposta do projeto: 12 \(avaliacao_critica\), 16 \(avaliacao_critica\)/);
@@ -68,10 +68,10 @@ describe("DEBT-150 — avaliação crítica no escopo: os itens 12 e 16 do PRISM
         expect(ProjectStateService.read(p)!.decisions[0]).toMatchObject({ phase: "F1", por: "pesquisador", condicao: { id: "avaliacao_critica", resposta: "não" } });
 
         const r = StandardCoverageService.conferir(raiz, "prisma-scr", undefined, p);
-        expect(r.fracao).toBe("14/20");
+        expect(r.fracao).toBe("13/20"); // DEBT-026: o 14 passou a [NÃO COBERTO] parcial
         expect(r.nao_se_aplica.map((x) => x.id)).toEqual(["12", "16"]);
         for (const x of r.nao_se_aplica) expect(x.motivo).toMatch(/condição "avaliacao_critica" respondida "não" pelo pesquisador em .*: o método só aplica este item com sim/);
-        expect(r.nao_coberto.map((x) => x.id)).toEqual(["3", "6", "10", "11", "13", "22"]);
+        expect(r.nao_coberto.map((x) => x.id)).toEqual(["3", "6", "10", "11", "13", "14", "22"]);
         expect(r.conferencia_por_metodo[0].condicionais.map((c) => [c.item, c.aplica])).toEqual([["12", false], ["16", false]]);
         const checklist = StandardCoverageService.checklist(raiz, "prisma-scr", undefined, p);
         for (const item of ["12", "16"]) expect(linha(checklist, item)).toMatch(/\[NÃO SE APLICA\]\*\* condição "avaliacao_critica" respondida "não".*\| N\/A \|$/);
@@ -84,7 +84,7 @@ describe("DEBT-150 — avaliação crítica no escopo: os itens 12 e 16 do PRISM
         const p = projeto("scoping-prisma-scr");
         expect(responder(raiz, p, "sim", "Faremos avaliação crítica com o checklist JBI do desenho de cada fonte, para qualificar o mapa.").ok).toBe(true);
         const r = StandardCoverageService.conferir(raiz, "prisma-scr", undefined, p);
-        expect(r.fracao).toBe("14/22");
+        expect(r.fracao).toBe("13/22"); // DEBT-026 (12/11/2026): o 14 passou a [NÃO COBERTO] parcial
         expect(r.nao_se_aplica).toEqual([]);
         for (const item of ["12", "16"]) expect(r.nao_coberto.find((x) => x.id === item)!.motivo).toMatch(/DEBT-151/);
         expect(r.conferencia_por_metodo[0].condicionais.map((c) => [c.item, c.aplica])).toEqual([["12", true], ["16", true]]);

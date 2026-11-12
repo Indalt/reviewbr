@@ -1,6 +1,7 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { SearchResult } from "../types.js";
+import { ProjectStateService } from "./project_state.js";
 
 /**
  * project_artifacts — leitura/gravação dos ARTEFATOS CANÔNICOS on-disk de um projeto.
@@ -220,18 +221,76 @@ export async function processarDatasetEmLotes(
     return { total: registros.length };
 }
 
-/** Grava os artefatos de triagem conforme o estágio (ta = título/resumo; fulltext = texto completo). */
+function artefatosDaTriagem(stage: "ta" | "fulltext"): { includedRel: string; excludedRel: string } {
+    // Na fase TA, os incluídos são os "encaminhados para texto completo"; na fase fulltext, são os incluídos FINAIS.
+    return stage === "ta"
+        ? { includedRel: "03_screening/included_ta.json", excludedRel: "03_screening/excluded_ta.json" }
+        : { includedRel: "03_screening/included.json", excludedRel: "03_screening/excluded_fulltext.json" };
+}
+
+/** A triagem já gravada do estágio, ou `null` quando não há nenhuma decisão gravada (DEBT-112). */
+export function triagemGravada(projectPath: string, stage: "ta" | "fulltext"): { incluidos: number; excluidos: number } | null {
+    const dir = resolveDir(projectPath);
+    const { includedRel, excludedRel } = artefatosDaTriagem(stage);
+    const incluidos = readArray(path.join(dir, includedRel)).length;
+    const excluidos = readArray(path.join(dir, excludedRel)).length;
+    return incluidos + excluidos > 0 ? { incluidos, excluidos } : null;
+}
+
+/**
+ * Grava os artefatos de triagem conforme o estágio (ta = título/resumo; fulltext = texto completo).
+ *
+ * DEBT-112 — a segunda corrida apagava a primeira sem registro. Decisão do Vicente de 08/10/2026:
+ * sobrescrever pode, depois da análise do pesquisador; sem registro do que havia, do que passa a
+ * haver e de quem autorizou, não. Então, quando já há triagem gravada no estágio:
+ *  - sem `substituicao.autorizacao` (a decisão do pesquisador, nas palavras dele), recusa;
+ *  - com ela, copia os artefatos anteriores para 03_screening/substituidas/<quando>_<estágio>/,
+ *    grava ali substituicao.json (havia, passa a haver, autorização) e registra a autorização como
+ *    decisão do pesquisador no project_state — com fase própria, para não destravar a etapa (RV-04).
+ * Os nomes canônicos continuam os mesmos: o funil lê sempre a triagem vigente.
+ */
 export function writeScreening(
     projectPath: string,
     stage: "ta" | "fulltext",
     included: any[],
     excluded: any[],
-): { includedFile: string; excludedFile: string } {
+    substituicao?: { autorizacao?: string },
+): { includedFile: string; excludedFile: string; substituicao?: { pasta: string; havia: { incluidos: number; excluidos: number } } } {
     const dir = resolveDir(projectPath);
-    const excludedRel = stage === "ta" ? "03_screening/excluded_ta.json" : "03_screening/excluded_fulltext.json";
-    // Na fase TA, os incluídos são os "encaminhados para texto completo"; na fase fulltext, são os incluídos FINAIS.
-    const includedRel = stage === "ta" ? "03_screening/included_ta.json" : "03_screening/included.json";
+    const { includedRel, excludedRel } = artefatosDaTriagem(stage);
+
+    let registro: { pasta: string; havia: { incluidos: number; excluidos: number } } | undefined;
+    const havia = triagemGravada(projectPath, stage);
+    if (havia) {
+        const autorizacao = (substituicao?.autorizacao ?? "").trim();
+        if (!autorizacao) {
+            throw new Error(
+                `Já há triagem ${stage} gravada (${havia.incluidos} incluídos, ${havia.excluidos} excluídos). ` +
+                "Substituí-la exige a autorização do pesquisador, nas palavras dele ('substituicao'): sem ela a " +
+                "corrida anterior sumiria sem registro (DEBT-112)."
+            );
+        }
+        const quando = new Date().toISOString();
+        const pasta = `03_screening/substituidas/${quando.replace(/[:.]/g, "-")}_${stage}`;
+        fs.mkdirSync(path.join(dir, pasta), { recursive: true });
+        for (const rel of [includedRel, excludedRel]) {
+            const origem = path.join(dir, rel);
+            if (fs.existsSync(origem)) fs.copyFileSync(origem, path.join(dir, pasta, path.basename(rel)));
+        }
+        const passa = { incluidos: included.length, excluidos: excluded.length };
+        writeJson(dir, `${pasta}/substituicao.json`, { quando, estagio: stage, autorizacao, havia, passa_a_haver: passa, arquivos_anteriores: pasta });
+        ProjectStateService.logDecision(dir, {
+            phase: `substituicao_triagem_${stage}`,
+            agent: "screen_candidates",
+            decision: `Triagem ${stage} substituída: havia ${havia.incluidos} incluídos e ${havia.excluidos} excluídos; ` +
+                `passa a haver ${passa.incluidos} e ${passa.excluidos}. Anterior arquivada em ${pasta}.`,
+            por: "pesquisador",
+            contribuicao: autorizacao,
+        });
+        registro = { pasta, havia };
+    }
+
     const includedFile = writeJson(dir, includedRel, included);
     const excludedFile = writeJson(dir, excludedRel, excluded);
-    return { includedFile, excludedFile };
+    return { includedFile, excludedFile, ...(registro ? { substituicao: registro } : {}) };
 }

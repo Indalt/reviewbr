@@ -203,7 +203,7 @@ Todas as decisões registradas com agente (Sistema / IA / Pesquisador) e timesta
 | F4.1.1 | Total de registros triados | Após deduplicação | ✅ | Item 16 |
 | F4.1.2 | Processo de triagem | Individual / Duplo / Com desempate | ✅ | Item 8 |
 | F4.1.3 | Ferramenta utilizada | Sistema / Software / Planilha | ✅ | Item 8 |
-| F4.1.4 | Total excluído com motivo | Por motivo padronizado — tabela de frequências | ✅ | Item 16 |
+| F4.1.4 | Total excluído com motivo | Por motivo padronizado — tabela de frequências ([NÃO COBERTO]: ver nota abaixo) | ✅ | Item 16 |
 | F4.1.5 | Kappa ou índice de concordância | Se triagem dupla | ⚠️ se dupla | Item 8 |
 
 ### F4.2 — Triagem de Texto Completo
@@ -213,8 +213,13 @@ Todas as decisões registradas com agente (Sistema / IA / Pesquisador) e timesta
 | F4.2.1 | Total recuperado para leitura | Após triagem TA | ✅ | Item 16 |
 | F4.2.2 | Total não recuperado | Com motivo por registro | ✅ | Item 16 |
 | F4.2.3 | Total avaliado em texto completo | | ✅ | Item 16 |
-| F4.2.4 | Total excluído com motivo | Tabela por motivo padronizado | ✅ | Item 16 |
+| F4.2.4 | Total excluído com motivo | Tabela por motivo padronizado ([NÃO COBERTO]: ver nota abaixo) | ✅ | Item 16 |
 | F4.2.5 | Total final incluído | | ✅ | Item 16 |
+
+> **[NÃO COBERTO] (DEBT-026).** F4.1.4 e F4.2.4 pedem o total excluído por motivo padronizado, em tabela de
+> frequências. Nenhuma tool atribui, grava ou agrega o código EX-01..EX-11: o `screen_candidates` guarda o motivo de
+> cada exclusão em texto livre (`reasoning`). Atribuir o código e montar a tabela é trabalho do pesquisador, sem
+> conferência do sistema; o item 16 do PRISMA 2020 (e o 14 do PRISMA-ScR, no escopo) está declarado parcial por isso.
 
 ### F4.3 — Motivos de Exclusão Padronizados
 

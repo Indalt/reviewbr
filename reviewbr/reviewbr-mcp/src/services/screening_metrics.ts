@@ -2,20 +2,27 @@
  * Screening Metrics Service — Scientific Stopping Rule (R1)
  * 
  * Read-only service that computes screening saturation metrics
- * from the audit database. These metrics provide evidence-based
+ * from the screening RECORDED ON DISK. These metrics provide evidence-based
  * stopping criteria for systematic review screening phases.
- * 
+ *
  * Scientific basis:
  * - Saturation analysis: measures the rate of discovery of new relevant
  *   records across sequential batches. When the rate stabilizes near zero,
  *   continuing screening yields diminishing returns.
  * - Published in: van de Schoot et al. (2021) Nature Machine Intelligence.
- * 
- * This service NEVER modifies data. It only READS the existing
- * screening decisions from the database.
+ *
+ * This service NEVER modifies data.
+ *
+ * DEBT-021: lia `screening_decision` do banco, que nenhuma tool preenche — o screen_candidates
+ * grava em disco —, e por isso respondia sempre "nada triado". Decisão de 29/10/2026: a
+ * saturação lê a triagem gravada em disco. O universo é o insumo do estágio (TA:
+ * 02_deduplicated/dataset.json; texto completo: 03_screening/included_ta.json), na ordem dele —
+ * é a ordem em que o screen_candidates processa —, e as decisões vêm dos artefatos do estágio
+ * (TA: included_ta + excluded_ta; texto completo: included + excluded_fulltext).
  */
 
-import { DatabaseService } from "./database.js";
+import * as fs from "node:fs";
+import * as path from "node:path";
 
 // ─── Types ───────────────────────────────────────────────────
 
@@ -31,8 +38,39 @@ interface BatchMetrics {
     cumulativeRate: number;         // cumulative % of relevant
 }
 
+interface ItemTriagem {
+    screened: boolean;
+    decision?: string;
+    source: string;
+}
+
+const ARTEFATOS = {
+    ta: { insumo: "02_deduplicated/dataset.json", decisoes: ["03_screening/included_ta.json", "03_screening/excluded_ta.json"] },
+    fulltext: { insumo: "03_screening/included_ta.json", decisoes: ["03_screening/included.json", "03_screening/excluded_fulltext.json"] },
+} as const;
+
+function lerLista(file: string): any[] {
+    if (!fs.existsSync(file)) return [];
+    try {
+        const p = JSON.parse(fs.readFileSync(file, "utf-8"));
+        if (Array.isArray(p)) return p;
+        for (const k of ["records", "included", "excluded", "items", "results", "data"]) if (Array.isArray(p?.[k])) return p[k];
+    } catch { /* ilegível = vazio */ }
+    return [];
+}
+
+/** Identidade do registro para casar insumo e decisão (mesma ordem de preferência do funil). */
+function chave(r: any): string {
+    const doi = String(r?.doi ?? "").toLowerCase().replace(/^https?:\/\/(dx\.)?doi\.org\//, "").trim();
+    if (doi) return "doi:" + doi;
+    if (r?.identifier) return "id:" + String(r.identifier).toLowerCase();
+    if (r?.url) return "url:" + String(r.url).toLowerCase();
+    return "title:" + String(r?.title ?? "").toLowerCase().replace(/\s+/g, " ").trim();
+}
+
 interface ScreeningReport {
-    projectId: number;
+    projeto: string;
+    estagio: "ta" | "fulltext";
     totalRecords: number;
     totalScreened: number;
     totalUnscreened: number;
@@ -57,19 +95,48 @@ export class ScreeningMetricsService {
     private static SATURATION_THRESHOLD = 0.05;  // 5% — below this → saturation
     private static SATURATION_WINDOW = 3;   // Consecutive batches to confirm
 
+    /** Universo do estágio, na ordem do insumo, com a decisão gravada de cada registro (DEBT-021). */
+    private static lerTriagem(projectDir: string, estagio: "ta" | "fulltext"): ItemTriagem[] {
+        const a = ARTEFATOS[estagio];
+        const decisoes = new Map<string, string>();
+        const fonteDe = new Map<string, string>();
+        for (const rel of a.decisoes) {
+            for (const item of lerLista(path.join(projectDir, rel))) {
+                const rec = item?.record ?? item;
+                decisoes.set(chave(rec), String(item?.decision ?? (rel.includes("excluded") ? "NO" : "YES")));
+                fonteDe.set(chave(rec), rec?.repositoryName ?? rec?.source ?? "unknown");
+            }
+        }
+        const itens: ItemTriagem[] = [];
+        const vistos = new Set<string>();
+        for (const item of lerLista(path.join(projectDir, a.insumo))) {
+            const rec = item?.record ?? item;
+            const k = chave(rec);
+            if (vistos.has(k)) continue;
+            vistos.add(k);
+            itens.push({ screened: decisoes.has(k), decision: decisoes.get(k), source: rec?.repositoryName ?? rec?.source ?? "unknown" });
+        }
+        // Decisão sem registro correspondente no insumo (triagem feita sobre `candidates` passados à
+        // mão): conta como triada, no fim — a ordem em que foi triada não está no disco.
+        for (const [k, d] of decisoes) if (!vistos.has(k)) itens.push({ screened: true, decision: d, source: fonteDe.get(k) ?? "unknown" });
+        return itens;
+    }
+
     /**
-     * Generate a comprehensive screening report for a project.
-     * Pure read-only operation on the database.
+     * Generate a comprehensive screening report for a project, from the screening on disk.
+     * Pure read-only operation.
      */
     async generateReport(
-        dbService: DatabaseService,
-        projectId: number,
+        projectDir: string,
+        estagio: "ta" | "fulltext" = "ta",
         batchSize?: number
     ): Promise<ScreeningReport> {
         const effectiveBatchSize = batchSize || ScreeningMetricsService.BATCH_SIZE;
+        const projeto = path.basename(projectDir);
 
-        // 1. Get all records for the project
-        const allRecords = await dbService.getRecords(projectId);
+        // 1. Universo do estágio e decisões gravadas (DEBT-021: disco, não banco)
+        const allRecords = ScreeningMetricsService.lerTriagem(projectDir, estagio)
+            .map((i) => ({ stage: i.screened ? "screened" : "", screening_decision: i.decision, source: i.source }));
         const screenedRecords = allRecords.filter(r => r.stage === "screened");
         const unscreenedRecords = allRecords.filter(r => r.stage !== "screened");
 
@@ -139,7 +206,8 @@ export class ScreeningMetricsService {
 
         // 6. Build markdown report
         const markdownReport = this.buildMarkdownReport({
-            projectId,
+            projeto,
+            estagio,
             totalRecords: allRecords.length,
             totalScreened: screenedRecords.length,
             totalUnscreened: unscreenedRecords.length,
@@ -157,7 +225,8 @@ export class ScreeningMetricsService {
         });
 
         return {
-            projectId,
+            projeto,
+            estagio,
             totalRecords: allRecords.length,
             totalScreened: screenedRecords.length,
             totalUnscreened: unscreenedRecords.length,
@@ -233,7 +302,8 @@ export class ScreeningMetricsService {
      */
     private buildMarkdownReport(report: ScreeningReport): string {
         const lines: string[] = [
-            `# Relatório de Triagem — Projeto #${report.projectId}`,
+            `# Relatório de Triagem — ${report.projeto} (estágio ${report.estagio === "ta" ? "título/resumo" : "texto completo"})`,
+            `_Fonte: a triagem gravada em disco (03_screening/), na ordem do insumo do estágio._`,
             `_Gerado em: ${new Date().toISOString()}_`,
             "",
             "## Resumo",

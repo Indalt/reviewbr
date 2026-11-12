@@ -31,7 +31,7 @@ import { ProtocolGate } from "./services/protocol_gate.js";
 import { ProjectStateService } from "./services/project_state.js";
 import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
 import { apresentarMetodos } from "./services/methods_for_type.js";
-import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, processarDatasetEmLotes, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
+import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, processarDatasetEmLotes, triagemGravada, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -43,7 +43,7 @@ import { MethodologyAuditorService } from "./services/methodology_auditor.js";
 import { ProtocolDesignAuditor } from "./services/protocol_auditor.js";
 import { ScreeningMetricsService } from "./services/screening_metrics.js";
 import { ScihubBridgeService, conferirPedidoByos } from "./services/scihub_bridge.js";
-import { registrarBuscaPrismaS, registrarHistorico, type BuscaExecutada } from "./services/search_log.js";
+import { registrarBuscaPrismaS, registrarHistorico, gravarExecucaoEmLote, type BuscaExecutada } from "./services/search_log.js";
 import { RepositoryHealerService } from "./services/repository_healer.js";
 import { AgentOrchestrator } from "./registry/agent_orchestrator.js";
 import { config } from "./config.js";
@@ -685,10 +685,12 @@ server.tool(
         let avisoRV04Dedup = "";
         if (params.projectPath) {
             writeDeduped(params.projectPath, result.unique, {
-                method: "DOI > título+ano > url",
+                // DEBT-025: os quatro níveis da skill screening-rules (o 4º só sinaliza).
+                method: "DOI/Handle > título+ano > título+1º autor (um sem ano) > url; título ≥ 0,90 + mesmo ano só sinaliza",
                 total_before: result.stats.total,
                 duplicates_removed: result.stats.duplicates,
                 total_after: result.stats.unique,
+                pares_sinalizados: result.sinalizados,
                 generated: new Date().toISOString(),
             }, result.pairs);
 
@@ -706,6 +708,10 @@ server.tool(
             content: [{
                 type: "text",
                 text: `${consolidatedNote}Deduplicação: ${result.stats.total} → ${result.stats.unique} únicos (${result.stats.duplicates} duplicatas removidas).` +
+                    (result.sinalizados.length > 0
+                        ? `\n⚖️ ${result.sinalizados.length} par(es) com título ≥ 0,90 parecido no mesmo ano: NÃO removidos — a decisão é do pesquisador (RV-04).` +
+                          (params.projectPath ? " Lista em dedupe_report.json (pares_sinalizados)." : `\n${JSON.stringify(result.sinalizados, null, 2)}`)
+                        : "") +
                     (params.projectPath ? `\nGravado: 02_deduplicated/dataset.json + dedupe_report.json + dedupe_pairs.json (${result.pairs.length} par(es): mantido/removido/critério/fontes).` : `\n\n${JSON.stringify(result.stats, null, 2)}`) +
                     avisoRV04Dedup,
             }]
@@ -721,6 +727,7 @@ server.tool(
         criteria: z.string().describe("Critérios de inclusão/exclusão (derivados do protocolo)"),
         stage: z.enum(["ta", "fulltext"]).optional().describe("Fase da triagem (default: ta)"),
         projectPath: z.string().optional().describe("Raiz do projeto: lê o insumo e persiste os artefatos por estágio"),
+        substituicao: z.string().optional().describe("Só quando já há triagem deste estágio gravada: a decisão do pesquisador que autoriza substituí-la, nas palavras dele. Sem ela a tool recusa antes de rodar. A anterior é arquivada em 03_screening/substituidas/ e a substituição fica registrada (DEBT-112)."),
     },
     async (params) => {
         if (!config.hasLlmKey) {
@@ -728,6 +735,22 @@ server.tool(
         }
 
         const stage = params.stage ?? "ta";
+
+        // DEBT-112: substituir triagem gravada exige a autorização do pesquisador. Confere ANTES de
+        // rodar, para não gastar a corrida e depois não ter onde gravá-la.
+        if (params.projectPath && !(params.substituicao ?? "").trim()) {
+            const havia = triagemGravada(params.projectPath, stage);
+            if (havia) {
+                return {
+                    content: [{
+                        type: "text",
+                        text: `🚫 Já há triagem ${stage.toUpperCase()} gravada (${havia.incluidos} incluídos, ${havia.excluidos} excluídos). ` +
+                            `Rodar de novo a substitui. Isso só com a decisão do pesquisador: passe em 'substituicao' o que ele decidiu, ` +
+                            `nas palavras dele. A anterior será arquivada em 03_screening/substituidas/ e a substituição registrada. Nada foi rodado.`,
+                    }]
+                };
+            }
+        }
         let records: any[] = [];
         if (params.candidates) {
             try { records = JSON.parse(params.candidates); }
@@ -776,8 +799,13 @@ server.tool(
         }
 
         let avisoRV04 = "";
+        let notaSubstituicao = "";
         if (params.projectPath) {
-            writeScreening(params.projectPath, stage, result.included, result.excluded);
+            const gravado = writeScreening(params.projectPath, stage, result.included, result.excluded, { autorizacao: params.substituicao });
+            if (gravado.substituicao) {
+                notaSubstituicao = `\n♻️ Substituiu a triagem anterior (${gravado.substituicao.havia.incluidos} incluídos, ${gravado.substituicao.havia.excluidos} excluídos), ` +
+                    `arquivada em ${gravado.substituicao.pasta} com o registro da substituição e da sua autorização.`;
+            }
             const dir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
 
             // RV-04 COMO TRAVA (DEBT-037). A triagem produz a decisão metodológica mais
@@ -813,7 +841,8 @@ server.tool(
             : `
 ⚠️ ${maybes} dos ${result.included.length} incluídos FINAIS estão como MAYBE: indecisão `
             + `depois de ler o texto completo, que o funil contaria como decisão. Resolva cada um `
-            + `(incluir, ou excluir com motivo EX-01..EX-11) antes de fechar a F4 — a decisão é sua (RV-04).`);
+            + `(incluir, ou excluir com o motivo) antes de fechar a F4 — a decisão é sua (RV-04). O código EX-01..EX-11, `
+            + `se o protocolo pede a tabela por motivo, é atribuído por você: nenhuma tool o grava (DEBT-026).`);
         const errorNote = result.errors.length > 0
             ? `\n⚠️ ${result.errors.length} candidato(s) com erro na triagem (não decididos, não incluídos nem excluídos): ${[...new Set(result.errors)].slice(0, 3).join(" | ")}`
             : "";
@@ -823,7 +852,7 @@ server.tool(
                 text: `Triagem ${stage.toUpperCase()}: ${result.included.length} incluídos, ${result.excluded.length} excluídos.` +
                     notaMaybe +
                     (params.projectPath ? `\nGravado: 03_screening/${includedRel} + 03_screening/${excludedRel}.` : `\n\n${JSON.stringify(result, null, 2)}`) +
-                    errorNote + avisoRV04 + `\n${iaScreen.message}`,
+                    notaSubstituicao + errorNote + avisoRV04 + `\n${iaScreen.message}`,
             }]
         };
     }
@@ -2439,32 +2468,30 @@ server.tool(
 
 server.tool(
     "get_screening_report",
-    "Gera relatório de métricas de triagem com análise de saturação (Stopping Rule). Leitura pura — NUNCA modifica dados. Use após cada batch de triagem para avaliar se a triagem pode ser encerrada.",
+    "Gera relatório de métricas de triagem com análise de saturação (Stopping Rule), a partir da triagem GRAVADA EM DISCO (03_screening/ do estágio, na ordem do insumo). Leitura pura — NUNCA modifica dados. Use após cada batch de triagem para avaliar se a triagem pode ser encerrada.",
     {
-        projectId: z.number().describe("ID do projeto"),
+        projectPath: z.string().describe("Raiz do projeto: a triagem é lida de 03_screening/ e o relatório é gravado em 03_screening/screening_metrics_report.md"),
+        stage: z.enum(["ta", "fulltext"]).optional().describe("Estágio da triagem (default: ta)"),
         batchSize: z.number().optional().describe("Tamanho do batch para análise (default: 20)"),
-        projectPath: z.string().optional().describe("Caminho do projeto para salvar relatório"),
+        projectId: z.number().optional().describe("ID do projeto no banco, só para o registro de auditoria"),
     },
     async (params) => {
+        // DEBT-021: a saturação lê a triagem gravada em disco (decisão de 29/10/2026). O banco
+        // nunca recebia screening_decision, e o relatório respondia sempre "nada triado".
+        const projectDir = resolveProjectDir(params.projectPath);
         const report = await screeningMetricsService.generateReport(
-            dbService,
-            params.projectId,
+            projectDir,
+            params.stage ?? "ta",
             params.batchSize
         );
 
-        // Save report to disk if projectPath is provided
-        if (params.projectPath) {
-            try {
-                const reportDir = path.join(
-                    path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath),
-                    "03_screening"
-                );
-                if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir, { recursive: true });
-                const reportPath = path.join(reportDir, "screening_metrics_report.md");
-                fs.writeFileSync(reportPath, report.markdownReport, "utf-8");
-            } catch (e) {
-                console.error("Failed to save screening metrics report:", e);
-            }
+        try {
+            const reportDir = path.join(projectDir, "03_screening");
+            if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir, { recursive: true });
+            const reportPath = path.join(reportDir, "screening_metrics_report.md");
+            fs.writeFileSync(reportPath, report.markdownReport, "utf-8");
+        } catch (e) {
+            console.error("Failed to save screening metrics report:", e);
         }
 
         // Log the metrics check in audit
@@ -2472,7 +2499,7 @@ server.tool(
             project_id: params.projectId,
             tool_name: "get_screening_report",
             action_type: "metrics",
-            params: JSON.stringify({ projectId: params.projectId, batchSize: params.batchSize }),
+            params: JSON.stringify({ projectPath: params.projectPath, stage: params.stage ?? "ta", batchSize: params.batchSize }),
             result_summary: `Métricas: ${report.totalScreened}/${report.totalRecords} triados, ${report.included} incluídos, saturação: ${report.saturationAlert ? "SIM" : "NÃO"}`
         });
 
@@ -2518,6 +2545,40 @@ server.tool(
 
 const batchService = new BatchProcessorService();
 
+/**
+ * DEBT-030 — rastro das quatro tools em lote: sempre um evento no audit_logs do banco; com
+ * projectPath, também params e resultado por item em <projeto>/logs/lote/. Sem projectPath, o
+ * resultado por item vai no próprio evento do banco. Devolve a linha que a resposta mostra.
+ */
+async function registrarLote(tool: string, params: any, resumo: string, resultados: unknown, projectId?: number): Promise<string> {
+    let arquivo = "";
+    let falhaDisco = "";
+    if (params.projectPath) {
+        try { arquivo = gravarExecucaoEmLote(resolveProjectDir(params.projectPath), tool, params, resultados); }
+        catch (e: any) { falhaDisco = `⚠️ Resultado por item NÃO gravado em logs/lote/: ${e?.message ?? e}`; }
+    }
+    let falhaBanco = "";
+    try {
+        await dbService.logAuditEvent({
+            project_id: projectId,
+            tool_name: tool,
+            action_type: "batch",
+            params: JSON.stringify(params),
+            result_summary: arquivo ? `${resumo} Resultado por item: ${arquivo}` : `${resumo} Resultado por item: ${JSON.stringify(resultados)}`,
+        });
+    } catch (e: any) {
+        falhaBanco = `⚠️ Execução NÃO registrada no audit_logs do banco: ${e?.message ?? e}`;
+    }
+    const linhas = [
+        arquivo ? `Registro da execução (params e resultado por item): ${arquivo}` : "",
+        !params.projectPath ? "Sem projectPath: o registro da execução, com o resultado por item, ficou só no audit_logs do banco." : "",
+        falhaDisco, falhaBanco,
+    ].filter(Boolean);
+    return `\n\n${linhas.join("\n")}`;
+}
+
+const DESC_PROJECT_PATH_LOTE = "Projeto: com ele, os params e o resultado por item vão para <projeto>/logs/lote/ (DEBT-030). O registro no audit_logs do banco é feito sempre.";
+
 server.tool(
     "batch_keyword_screen",
     "Triagem em lote de PDFs por palavras-chave. Lê todos os PDFs em um diretório e filtra por keywords no modo AND ou OR. Retorna relatório com trechos relevantes.",
@@ -2525,6 +2586,7 @@ server.tool(
         pdfDir: z.string().describe("Caminho absoluto para o diretório de PDFs"),
         keywords: z.array(z.string()).describe("Lista de palavras-chave para buscar"),
         mode: z.enum(["AND", "OR"]).optional().describe("AND = todas devem aparecer; OR = qualquer uma basta (padrão: OR)"),
+        projectPath: z.string().optional().describe(DESC_PROJECT_PATH_LOTE),
     },
     async (params) => {
         try {
@@ -2533,7 +2595,8 @@ server.tool(
                 params.keywords,
                 params.mode ?? "OR",
             );
-            return { content: [{ type: "text", text: summary }] };
+            const rastro = await registrarLote("batch_keyword_screen", params, `${results.length} PDF(s), ${results.filter((r) => r.isRelevant).length} relevante(s).`, results);
+            return { content: [{ type: "text", text: summary + rastro }] };
         } catch (error: any) {
             return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
         }
@@ -2547,6 +2610,7 @@ server.tool(
         pdfDir: z.string().describe("Caminho absoluto para o diretório de PDFs"),
         prompt: z.string().describe("Instrução de extração (o que extrair de cada documento)"),
         maxPdfs: z.number().optional().describe("Número máximo de PDFs a processar (padrão: todos)"),
+        projectPath: z.string().optional().describe(DESC_PROJECT_PATH_LOTE),
     },
     async (params) => {
         try {
@@ -2555,7 +2619,8 @@ server.tool(
                 params.prompt,
                 params.maxPdfs,
             );
-            return { content: [{ type: "text", text: summary }] };
+            const rastro = await registrarLote("batch_llm_extract", params, `${results.length} PDF(s) processado(s), ${results.filter((r) => r.error).length} erro(s).`, results);
+            return { content: [{ type: "text", text: summary + rastro }] };
         } catch (error: any) {
             return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
         }
@@ -2570,6 +2635,7 @@ server.tool(
         criteria: z.string().describe("Critérios de triagem (keywords separadas por vírgula, ou texto livre para LLM)"),
         field: z.enum(["title", "abstract", "both"]).optional().describe("Campo a analisar (padrão: both)"),
         useLlm: z.boolean().optional().describe("Se true, usa LLM para classificação semântica (padrão: false = keywords)"),
+        projectPath: z.string().optional().describe(DESC_PROJECT_PATH_LOTE),
     },
     async (params) => {
         try {
@@ -2586,7 +2652,8 @@ server.tool(
                 params.field ?? "both",
                 params.useLlm ?? false,
             );
-            return { content: [{ type: "text", text: ia.message ? `${ia.message}\n\n${summary}` : summary }] };
+            const rastro = await registrarLote("batch_db_screen", params, `${results.length} registro(s), ${results.filter((r) => r.matched).length} relevante(s) (${params.useLlm ? "LLM" : "keywords"}).`, results, params.projectId);
+            return { content: [{ type: "text", text: (ia.message ? `${ia.message}\n\n${summary}` : summary) + rastro }] };
         } catch (error: any) {
             return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
         }
@@ -2599,6 +2666,7 @@ server.tool(
     {
         pdfPath: z.string().describe("Caminho absoluto para o arquivo PDF a ser traduzido"),
         targetLang: z.string().optional().describe("Idioma alvo (padrão: português). Ex: 'português', 'english', 'español'"),
+        projectPath: z.string().optional().describe(DESC_PROJECT_PATH_LOTE),
     },
     async (params) => {
         try {
@@ -2606,7 +2674,8 @@ server.tool(
                 params.pdfPath,
                 params.targetLang ?? "português",
             );
-            return { content: [{ type: "text", text: summary }] };
+            const rastro = await registrarLote("translate_document", params, `Tradução gravada em ${outputPath}.`, { outputPath });
+            return { content: [{ type: "text", text: summary + rastro }] };
         } catch (error: any) {
             return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
         }

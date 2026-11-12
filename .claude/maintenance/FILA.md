@@ -40,7 +40,7 @@
 | 0 | Limpeza dos documentos e rota do `maintainer.md` | — | — | **feita em 12/11/2026** |
 | 1 | A — Texto completo e leitura | 089 (primeiro) · 062 · 031 | — | **feita em 12/11/2026** (commit `71ce06b`) |
 | 2 | B — Registro da busca | 056 · 139 · 087 · 093 | 058 · 077 | **feita em 12/11/2026** (commit `bf9e156`) |
-| 3 | C — Triagem, deduplicação e tools em lote | 021 · 025 · 112 · 030 | 026 | a fazer |
+| 3 | C — Triagem, deduplicação e tools em lote | 021 · 025 · 112 · 030 | 026 | **feita em 12/11/2026** |
 | 4 | D — Funil e gates | 138 · 071 | 003 · 002 · 066 · os 21 subitens do 014 como `[NÃO COBERTO]` | a fazer |
 | 5 | E — Trava do protocolo | 018 · 133 (mesmo conserto) · 042 | 060 | a fazer |
 | 6 | F — Ferramentas da manutenção | 141 | 016 · 153 (depois do 141) | a fazer |
@@ -111,3 +111,13 @@ Vicente pedir.
   tools de busca já gravam em `01_raw`.
 - (linha 2) `data.ts:333` grava `provenanceSource: "Local File Import"` quando a origem do RIS vem vazia; o
   comentário de `data.ts:156` diz que a origem fica vazia nesse caso.
+- (linha 3) Decisão do Vicente em 12/11/2026, na sessão C, sobre a deduplicação: nível 2 = título normalizado + mesmo
+  ano; nível 3 = título + 1º autor quando um dos dois registros não tem ano. Gravada no DEBT-025 e na skill.
+- (linha 3) `reviewbr-web/src/app/api/chat/route.ts:365` declara o `get_screening_report` com `projectId`
+  obrigatório e sem `stage`; desde a linha 3 a tool exige `projectPath`.
+- (linha 3) `screen_candidates` com `candidates` em lotes e `projectPath`: cada lote substitui o anterior nos
+  artefatos canônicos, sem acumular; desde a linha 3, o segundo lote pede `substituicao`.
+- (linha 3) `screener.md` passo 3 manda salvar `03_screening/included.json` e `excluded.json`; o `screen_candidates`
+  grava `excluded_fulltext.json`.
+- (linha 3) `prisma-rigor-gates/SKILL.md:29` lista "F4.3 (motivos EX-01..EX-11 derivados de F1.3)" entre o que a
+  verificação de completude confere.

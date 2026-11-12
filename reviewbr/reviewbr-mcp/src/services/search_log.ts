@@ -104,6 +104,20 @@ export function registrarBuscaPrismaS(projectDir: string, b: BuscaExecutada): st
     return file;
 }
 
+/**
+ * DEBT-030 — registro de uma execução das tools em lote (batch_keyword_screen, batch_llm_extract,
+ * batch_db_screen, translate_document): os parâmetros e o resultado POR ITEM, num arquivo por
+ * execução em `<projeto>/logs/lote/`. Antes elas devolviam só o resumo e descartavam o resultado
+ * — duas decidem por LLM, e decisão sem rastro não se reconstrói nem se contesta.
+ */
+export function gravarExecucaoEmLote(projectDir: string, tool: string, params: Record<string, unknown>, resultados: unknown): string {
+    const quando = new Date().toISOString();
+    const file = path.join(projectDir, "logs", "lote", `${quando.replace(/[:.]/g, "-")}_${tool}.json`);
+    fs.mkdirSync(path.dirname(file), { recursive: true });
+    fs.writeFileSync(file, JSON.stringify({ quando, tool, params, resultados }, null, 2));
+    return file;
+}
+
 /** Anexa uma entrada a `<projeto>/logs/search_history.json` (registro bruto de cada chamada). */
 export function registrarHistorico(projectDir: string, tool: string, data: Record<string, unknown>): string {
     const file = path.join(projectDir, LOG_HISTORICO);

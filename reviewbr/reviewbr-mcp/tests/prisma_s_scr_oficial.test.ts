@@ -141,7 +141,8 @@ describe("PRISMA-ScR — os 22 itens contra a trilha do scoping (DEBT-055)", () 
     it("nenhuma omissão silenciosa: toda linha tem correspondência ou está declarada [NÃO COBERTO]", () => {
         expect(r.declarado_por).toEqual(["scoping-prisma-scr"]);
         expect(r.orphans).toEqual([]);
-        expect(r.nao_coberto.map((x) => x.id)).toEqual(["3", "6", "10", "11", "12", "13", "16", "22"]);
+        // DEBT-026 (12/11/2026): o 14 passou a [NÃO COBERTO] parcial — nenhuma tool grava o código EX.
+        expect(r.nao_coberto.map((x) => x.id)).toEqual(["3", "6", "10", "11", "12", "13", "14", "16", "22"]);
         expect(r.nao_se_aplica).toEqual([]);
     });
 
@@ -171,7 +172,7 @@ describe("PRISMA-ScR — os 22 itens contra a trilha do scoping (DEBT-055)", () 
         expect(itens.find((i) => i.id === "12")!.text).toMatch(/^If done, provide a rationale for conducting a critical appraisal/);
     });
 
-    it("a conferência por palavras acusa 4 pares que a leitura do enunciado confirma — e não reprova mais: 14/22, valid true (DEBT-149)", () => {
+    it("a conferência por palavras acusa 4 pares que a leitura do enunciado confirma — e não reprova mais: 13/22 (o 14 declarado parcial pelo DEBT-026), valid true (DEBT-149)", () => {
         // Até a 2c, os 4 falsos positivos reprovavam o padrão e contestavam 7 e 14 (12/22): os dois
         // projetos de escopo paravam na F8. Desde 05/11/2026 o suspeito é pedido de leitura.
         expect(c.conferencia_por_palavras.suspeitos.map((s) => `${s.subitem}→${s.item_declarado}:${s.item_sugerido}`))
@@ -179,10 +180,12 @@ describe("PRISMA-ScR — os 22 itens contra a trilha do scoping (DEBT-055)", () 
         expect(r.contestados).toEqual([]);
         expect(r.errors).toEqual([]);
         expect(r.valid).toBe(true);
-        expect(r.fracao).toBe("14/22");
+        expect(r.fracao).toBe("13/22"); // DEBT-026: o 14 passou a [NÃO COBERTO] parcial
         expect(r.avisos.join(" ")).toMatch(/\[scoping-prisma-scr\] 4 par\(es\) suspeito\(s\) pela conferência por palavras — pedido de leitura/);
-        // ... e o porquê da etapa volta a ter os itens 7 e 14.
-        expect(Object.values(c.itens_por_etapa).flat()).toEqual(expect.arrayContaining(["7", "14"]));
+        // ... e o porquê da etapa volta a ter o item 7. O 14 saiu dele em 12/11/2026: declarado
+        // [NÃO COBERTO] parcial (DEBT-026), ele deixa de ser contado como servido por etapa.
+        expect(Object.values(c.itens_por_etapa).flat()).toEqual(expect.arrayContaining(["7"]));
+        expect(Object.values(c.itens_por_etapa).flat()).not.toContain("14");
     });
 
     it("sem mexer no mapeamento: os pares são os mesmos que a medida de 31/10/2026 mediu", () => {
