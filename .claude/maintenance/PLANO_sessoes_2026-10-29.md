@@ -231,7 +231,9 @@ sessões, uma função do ReviewBR em cada) e as propostas de limpeza. Nada ali 
 o Vicente na parte 10 do arquivo. Em 12/11 ele decidiu que as sessões de conserto vêm antes da M e mandou gravar
 as 11 saídas do backlog (dez duplicatas fundidas e o DEBT-102 resolvido: os abertos passaram de 43 a 32). **A M
 não é mais a próxima sessão.** A ordem das sessões que faltam, a M reformulada e a página única estão propostas na
-parte 5 do `ORGANIZACAO_2026-11-11.md` e esperam a decisão dele (parte 10.2 do mesmo arquivo).
+parte 5 do `ORGANIZACAO_2026-11-11.md` e esperam a decisão dele (parte 10.2 do mesmo arquivo). Mais tarde, no mesmo dia, ele aprovou os vereditos por achado, a M
+reformulada, a página única e a fila: **a tabela de sessões acima (M, V, 3, 4, 5, 6 e 7+) está substituída pela
+`FILA.md`, que passa a ser a leitura de toda sessão.** Este plano fica como registro das decisões e das cartas.
 
 A M fica antes da 6, e as 15 saídas da triagem foram aplicadas (confirmações do Vicente de 05/11). Pendentes que
 não bloqueiam a M:

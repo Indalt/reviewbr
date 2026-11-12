@@ -4,8 +4,8 @@
 > `BRIEFING_fable_2026-11-10.md` (Fable 5.2, esforço high). Diz o que foi feito, o que falta de verdade e o que
 > sai da fila. É escrito bloco a bloco; cada bloco fecha com commit.
 >
-> **Estado (12/11): leitura, análise e limpeza do backlog feitas.** Duas decisões do Vicente estão gravadas na
-> parte 10.1. O resto é proposta e espera as seis decisões da parte 10.2.
+> **Estado (12/11): sessão encerrada.** As decisões do Vicente estão na parte 10.1, e a fila que elas
+> aprovaram virou a `FILA.md`, que é o que as próximas sessões leem. Esperam ele três decisões (parte 10.2).
 >
 > **Regras desta sessão.** Não cria achado, sessão nem frente. O número de achados abertos só pode cair. O que
 > aparecer de passagem vira uma linha na parte 11, sem avaliação.
@@ -21,9 +21,10 @@
   a sessão M e o balde "7+" (parte 4).
 - **Nenhum dos 32 defeitos depende da sessão M.** As definições que o mapeamento das normas pede cabem na
   abertura da sessão que as usa (parte 5.2).
-- **Decidido em 12/11:** os consertos vêm antes da M, e as 11 saídas do backlog foram gravadas (parte 10.1).
-- **Proposto, a decidir:** oito sessões de conserto, uma função do ReviewBR em cada; depois a M, reformulada; depois
-  a fase de testes (partes 5.4 e 10.2).
+- **Decidido em 12/11:** os consertos vêm antes da M; as 11 saídas do backlog foram gravadas; a fila de dez
+  linhas da parte 5.4 substitui as sessões programadas e está na `FILA.md` (parte 10.1).
+- **A decidir:** a simplificação da camada de metodologias (parte 13), a lista de limpeza dos documentos
+  (parte 6.3) e a rota para o Sci-Hub (parte 10.2).
 
 ## 2. A trajetória do briefing confere com o que está gravado
 
@@ -284,6 +285,36 @@ Exemplo de parte vencida: a DIRECAO §1 diz que há 3 normas assimiladas e que n
 são 5 normas, e desde a sessão 2a o mapeamento e as declarações são lidos do método. Documento vencido na rota
 de leitura é fonte de achado repetido.
 
+### 6.3 Lista fechada da limpeza — linha 0 da `FILA.md`, a confirmar pelo Vicente
+
+Pedido dele em 12/11: "tem muito lixo que precisa ser apagado", e o agente de manutenção tem de poder ser
+executado por um modelo de menor poder seguindo as regras. A classificação abaixo foi feita pela data, pelo que
+substituiu cada documento e por quem o cita. **Não li o conteúdo de cada um.** Tudo o que sair continua no
+histórico do git.
+
+1. **Registros de decisão do Vicente não se apagam: vão para `.claude/maintenance/historico/`** e deixam de ser
+   leitura de sessão. São `DECISOES_2026-09-27.md`, `DECISOES_2026-10-03.md`,
+   `DECISOES_2026-10-03b_reverificacao.md`, `DECISOES_2026-10-08.md` e `DECISOES_chat_a_conferir.md`.
+2. **Apagar — nenhum código, teste, agente ou skill os cita** (conferido em 11/11): `CONFORMIDADE_raise.md`,
+   `DIAGNOSTICO_frente_2.md`, `RECLASSIFICACAO_fila_2026-10-18.md` e `.json`, `TRANSICAO_PC_2026-10-02.md`,
+   `achados_2026-10-03_brutos.json`, `verificacao_abertos_2026-10-08.json`,
+   `verificacao_recusas_2026-10-04.json`, `confere_decisoes_chat.py`, `gera_decisoes.pl`,
+   `BRIEFING_fable_2026-11-10.md`.
+3. **Apagar depois de trocar a rota do `maintainer.md`** (hoje ele manda ler estes): `COBERTURA_achados.md`,
+   `CONTINUAR.md`, `EXECUCAO_checklist.md`, `ORDEM_correcoes.md`, `PASSAGEM.md`, `RETOMAR.md`. Teste que cite
+   um deles pelo nome é ajustado na mesma sessão.
+4. **A rota do `maintainer.md`** (seção "Ao ser acionado em sessão nova") passa a três passos: ler a
+   `FILA.md`; rodar `audit_system_debt`; quando o Vicente pedir, conferir a versão das normas assimiladas. No
+   fechamento, sai a atualização do `EXECUCAO_checklist.md` e entra "marcar a linha na `FILA.md`".
+5. **Ficam, sem avaliação nesta sessão:** `MANIFESTO_conformidade.md`, `ESPECIFICACAO_vestir_metodos.md`,
+   `PLANO_usabilidade.md`, `PROTOCOLO_revisao_reviewbr.md`, `DIRECAO_ferramenta_que_veste_metodos.md`,
+   `REVISAO_decisoes_2026-10-31.md` (traz o texto aprovado de A1 a A9, que a M usa), as pastas das sessões e
+   `origem/`. O `PLANO_sessoes_2026-10-29.md` fica como registro das decisões e das cartas.
+
+Pronto quando: a suíte está verde; a seção de abertura do `maintainer.md` cabe em 15 linhas; `ls` da raiz de
+`.claude/maintenance/` mostra só o que os itens 4 e 5 e a `FILA.md` nomeiam, mais `ORGANIZACAO_2026-11-11.md`,
+`system_debt.json` e `medir_esforco.py`.
+
 ## 7. As 41 decisões e as 36 divergências não são fila
 
 ### 7.1 D01 a D41
@@ -428,33 +459,33 @@ Fontes: [política do diretório](https://support.claude.com/en/articles/1314535
 
 ### 10.1 Tomadas em 12/11/2026
 
-1. **Os consertos vêm antes da sessão M.** As seis sessões de conserto que não dependem da descrição do método
-   (A a F: texto completo, registro da busca, triagem, funil, trava do protocolo e ferramentas da manutenção)
-   passam à frente da M. Consequência: a M deixa de ser a próxima sessão do plano. Origem, nas palavras dele:
-   "sim, consertos antes. com tantas mudanças veja se a própria sessão 'M' e as subsequentes programadas
-   precisam ser reformuladas".
-2. **As 11 saídas do backlog foram gravadas**: dez duplicatas fundidas e o DEBT-102 fechado como resolvido. Os
-   abertos passaram de 43 a 32 (parte 6.1). Origem: a opção "Sim, gravar agora".
-3. **Dois pedidos de análise, atendidos na parte 5.** Ver se a M e as sessões seguintes precisam ser
-   reformuladas (5.2); analisar as oito sessões pelos critérios desta sessão, incluindo a página única (5.1 e
-   5.3). Origem: a frase acima e "as 8 sessões precisam ser analisadas com os critérios definidos nesta sessão
-   incluindo a ideia de página única". Sobre dividir a M, ele respondeu "respondi na ordem da M".
+1. **Os consertos vêm antes da sessão M.** Origem: "sim, consertos antes. com tantas mudanças veja se a própria
+   sessão 'M' e as subsequentes programadas precisam ser reformuladas".
+2. **As 11 saídas do backlog foram gravadas**: dez duplicatas fundidas e o DEBT-102 resolvido. Os abertos
+   passaram de 43 a 32 (parte 6.1). Origem: a opção "Sim, gravar agora".
+3. **Os vereditos por achado valem** (parte 5.1): 18 FAZER, 12 DECLARAR, 2 MAPEAR, com o DEBT-030 na sessão C e
+   a declaração do DEBT-014 na sessão D. Origem: "5.1 ok em tudo".
+4. **A M e as sessões programadas ficam reformuladas** como na parte 5.2: a M é a última antes dos testes; a V
+   entra na H; as sessões 3, 4 e 5 viram D, B e C, A, E e F; a sessão 6 vira a G, só com os quatro textos, e a
+   arquitetura de agentes por papel sai da fila; o "7+" deixa de existir. Origem: "5.2 ok".
+5. **A página única vale como proposta** (parte 5.3): é a `FILA.md`, e o plano vira registro histórico. Origem:
+   "5.3 ok para proposta".
+6. **A fila de dez linhas substitui as sessões programadas.** Ele perguntou: "as sessões que estavam
+   programadas (debt) são substituídas pelas 10 propostas?". Sim: os 32 achados abertos estão, cada um, numa
+   linha de A a H, e nenhum ficou de fora. Origem: "5.4 ok".
+7. **Documentos antigos sem função se apagam, e o agente de manutenção tem de ser executável por um modelo de
+   menor poder.** Virou a linha 0 da fila; a lista está na parte 6.3 e espera a confirmação dele. Origem: "a
+   ideia dessa revisão era entender se estamos fazendo um trabalho limpo para que ao final tenhamos a
+   existência do agente de manutenção capaz de ser executado e que mesmo que um modelo de IA com menor poder
+   seja capaz de seguir as regras [...] Acho que tem muito lixo que precisa ser apagado".
+8. **O Fable para aqui; quem executa é o Opus, pela `FILA.md`.** Origem: "devemos parar de usar o fable e que
+   todas as decisões e avaliações sejam mapeadas para que o opus possa executar".
 
 ### 10.2 A decidir
 
-Cada item diz o que muda se a resposta for sim.
-
-1. **A fila da parte 5.4 vale como a ordem das sessões?** Inclui três coisas que a decisão de 12/11 não cobre:
-   a G antes da M, o DEBT-030 na sessão C e a declaração do DEBT-014 na sessão D.
-2. **A M reformulada** (5.2): última antes dos testes, numa janela, só com as escolhas do Vicente; as três
-   perguntas da 2c passam à abertura da sessão H.
-3. **A arquitetura da antiga sessão 6 sai da fila** e espera a primeira metodologia nova? Altera o alcance da
-   direção de 29/10 ("sair do esqueleto PRISMA"): os quatro textos se corrigem agora, e a reconstrução dos
-   agentes por papel, só quando houver uma terceira metodologia.
-4. **A página única** (5.3): um arquivo de uma tela com a tabela da 5.4; o `PLANO_sessoes_2026-10-29.md` vira
-   histórico; o balde "7+" deixa de existir.
-5. **A rota de leitura do `maintainer.md` cai para três passos** (parte 8.3), na sessão F?
-6. **A rota para o Sci-Hub fica no repositório público?** Só a pergunta; não há prazo (parte 9.3).
+1. **A simplificação da camada de metodologias** (parte 13). Decide o que a sessão H faz.
+2. **A lista de limpeza** (parte 6.3). Decide a linha 0.
+3. **A rota para o Sci-Hub fica no repositório público?** Sem prazo (parte 9.3).
 
 ## 11. Visto de passagem — não avaliado
 
@@ -474,3 +505,56 @@ inteira: 113 c (50% da semana).
 
 Sinal sobre a virada da semana: a última leitura declarada era 99% (10/11). Esta sessão já gastou o
 equivalente a 2% da semana sem corte, o que indica que a semana virou em 11/11 por volta das 23h30.
+
+**Leitura declarada pelo Vicente em 12/11**, com a sessão em 13,4 c: 52% da janela de 5 h, 9% da semana no total
+e 18% da cota semanal do Fable, que tem medidor próprio. A régua da tabela estava baixa. Valem: 0,67% da semana
+por c, janela de 5 h ≈ 26 c e cota semanal do Fable ≈ 74 c. O teto pedido, 50% da cota do Fable, é ≈ 37 c.
+
+## 13. Simplificar a camada de metodologias — ideia do Vicente (12/11), com a avaliação
+
+**A ideia.** Em vez de escrever cada metodologia dentro da ferramenta: achar a fonte oficial, apontá-la, gravar
+a data de leitura quando ela for usada e manter um mapa central, de uma página, para sugerir ao pesquisador a
+metodologia mais adequada. Ele perguntou se a solução vale para outros problemas e se é segura cientificamente.
+
+**Avaliação: é segura, e é mais rigorosa que a cópia, dentro de um limite.**
+
+- **Por que é segura.** A autoridade de uma metodologia é o texto publicado. Uma cópia dentro da ferramenta
+  envelhece e pode divergir sem que ninguém veja. Foi o que aconteceu: o DEBT-045 é uma cópia que ficou verde
+  com seis itens deslocados, e as duas leituras independentes do PRISMA-S discordaram em 36 pontos, num
+  mapeamento de 59 ponteiros. Apontar a fonte com a data de leitura é a prática da citação científica e não tem como mentir.
+- **O limite.** Vale para o que é **cópia de autoridade externa**: texto de norma, mapeamento item a item,
+  descrição de método. Não vale para o que é **conferência dos dados do próprio projeto**: contagem do funil,
+  trava do protocolo, log de busca, deduplicação, persistência. Isso não tem fonte para onde apontar; só o
+  código garante. São as linhas 1 a 5 da fila, e elas não mudam.
+- **De onde vem o controle de um projeto.** Do protocolo travado e dos gates, não do texto da norma dentro da
+  ferramenta. O protocolo diz que método o projeto segue, de que fonte e lida em que data; é ele que obriga.
+- **O que se perde.** A ferramenta deixa de afirmar "N de 27 itens cobertos" para norma nova. O pesquisador
+  preenche o formulário oficial da norma, e a ferramenta ajuda a localizar onde cada item está relatado. Essa
+  afirmação automática já não se sustentava: o mapeamento é juízo, e duas leituras divergem.
+
+**Onde a mesma lógica vale:**
+
+| problema | como fica |
+|---|---|
+| normas de relato novas | fonte, versão e data de leitura no projeto; sem transcrição |
+| as 5 normas já transcritas | ficam como ajuda, sem crescer e sem travar; o relatório diz que o mapeamento é do sistema e não foi conferido |
+| as 36 divergências do PRISMA-S | deixam de ser 21 decisões item a item |
+| as três perguntas da 2c ("o que é cobrir um item") | deixam de ser necessárias |
+| DEBT-014 e DEBT-045 | declaração e correção de seis números na spec; sem remapeamento |
+| catálogo de 107 entradas | já é o arquivo central, com fonte em todas; falta a data de leitura e uma vista de uma página |
+| instrumentos (GRADE, CERQual, risco de viés) | o protocolo declara o instrumento e a fonte; os textos do DEBT-008 passam a dizer isso |
+| procedimento de assimilação (parte 8.2) | dois passos: fonte oficial e linha no mapa; trilha executável só se o Vicente pedir |
+| documentos da manutenção | a mesma lógica: uma página e o histórico do git, em vez de cópias (parte 6.3) |
+
+**O que a ideia desfaz, e por isso é decisão dele:** "assimilada completa, ou não é" (DIRECAO §4, 04/10), a
+leitura documentada com segunda leitura independente (B2, 05/11) e "implementar o padrão, não apagar a menção"
+(04/10). O trabalho feito nas sessões 1 a 2c não se perde: foi ele que mostrou que a cópia erra e quanto custa
+conferi-la.
+
+**Se ele confirmar:** a sessão H vira uma sessão de texto, de uma janela, sem decisão item a item; a M perde as
+três perguntas; a parte 8.2 passa a dois passos. As linhas 0 a 7 da fila não mudam.
+
+**Sobre a dúvida dele — o que era necessário e o que não era.** Necessários, em qualquer desenho: os 18
+consertos de código e as 12 correções de texto. Não eram necessários para o rigor: as cinco triagens da mesma
+fila, a reescrita das 41 decisões, a M antes dos consertos e, se a ideia acima for confirmada, a conferência
+item a item das transcrições.
