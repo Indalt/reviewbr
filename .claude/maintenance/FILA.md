@@ -40,7 +40,7 @@
 | 0 | Limpeza dos documentos e rota do `maintainer.md` | — | — | **feita em 12/11/2026** |
 | 1 | A — Texto completo e leitura | 089 (primeiro) · 062 · 031 | — | **feita em 12/11/2026** (commit `71ce06b`) |
 | 2 | B — Registro da busca | 056 · 139 · 087 · 093 | 058 · 077 | **feita em 12/11/2026** (commit `bf9e156`) |
-| 3 | C — Triagem, deduplicação e tools em lote | 021 · 025 · 112 · 030 | 026 | **feita em 12/11/2026** |
+| 3 | C — Triagem, deduplicação e tools em lote | 021 · 025 · 112 · 030 | 026 | **feita em 12/11/2026** (commit `6456a4a`) |
 | 4 | D — Funil e gates | 138 · 071 | 003 · 002 · 066 · os 21 subitens do 014 como `[NÃO COBERTO]` | a fazer |
 | 5 | E — Trava do protocolo | 018 · 133 (mesmo conserto) · 042 | 060 | a fazer |
 | 6 | F — Ferramentas da manutenção | 141 | 016 · 153 (depois do 141) | a fazer |
