@@ -89,6 +89,27 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   escolher as fontes por relevância para a pergunta. A análise foi dada no chat em 15/11; a decisão é dele.
 - **15/11/2026, artigo 1, PENDENTE: segundo revisor humano.** O Vicente perguntou o que ele faria. Respondido no
   chat; a decisão é dele.
+- **15/11/2026, artigo 1, o produto: RESOLVIDO.** Frase dele: "só a cajuina". Só a cajuína entra na revisão. Troca
+  a decisão de 12/11 (bebidas do pedúnculo e pedúnculo in natura). Consequência: o resultado esperado é pouco ou
+  nada, e ele declarou "nao encontrar é um resultado". A literatura do caju só pode aparecer na discussão, como
+  contexto.
+- **15/11/2026, artigo 1, fontes: RESOLVIDO.** "fontes por relevancia ganha, pode retirar a baixas". Ficam Scopus,
+  Web of Science, FSTA, SciELO, BDTD, Embrapa, repositórios da UFC, UECE e UFPI, e OpenAlex. Saem PubMed, Europe
+  PMC, CORE, Semantic Scholar e Crossref.
+- **15/11/2026, artigo 1, revisores: RESOLVIDO em parte.** Até dois revisores humanos: o Vicente e um estagiário,
+  que entra como coautor (no protocolo, "estagiário" no lugar do nome). O que cada um revisa fica para o
+  travamento; ele levantou se as buscas feitas pela máquina precisam ser refeitas pelos humanos. Resposta dada:
+  não; o método pede o registro da busca, não a repetição.
+- **15/11/2026, artigo 1, triagem e extração.** Ideias dele: a triagem "sobre os boleanos que poderiam encontrar
+  roda de aroma da cajuina"; a extração como descrição de cada fonte; cabem comentários sobre o debate científico
+  do aroma e do sabor da cajuína. Viraram proposta no `DESENHO_artigo1.md`, seções 5, 6 e 8.
+- **15/11/2026, artigo 1, declaração.** O artigo declara que a parte mecânica da condução foi feita com o
+  ReviewBR. Com essa condição ele não vê objeção aos critérios ("sobre os criterios nao vejo objecao se for
+  declarado..."); o assistente leu isso como aceite de restringir pelo conteúdo e não pelo tipo de documento, a
+  confirmar no travamento.
+- **15/11/2026, condução daqui em diante.** Os agentes rodam em Opus ou em modelo mais barato, depois de revistos
+  os supostos problemas do ReviewBR. O Fable deixa de estar disponível; restam cerca de 10% dos tokens da semana.
+  Tudo o que falta está em `RETOMAR.md` (passos A a E) e em `DESENHO_artigo1.md`.
 - **15/11/2026, falhas do ReviewBR.** Ficam com a manutenção (já estão no "Visto de passagem").
 - **15/11/2026, artigo 2.** A pasta da coleta é `G:\Meu Drive\roda_de_aromas`, e o Vicente quer organizá-la. Há
   conversas gravadas, algumas já transcritas; as transcrições são feitas por uma ferramenta a que o bolsista tem

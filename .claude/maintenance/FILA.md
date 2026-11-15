@@ -254,3 +254,17 @@ Vicente pedir.
     dele como indisponível, e a validação dá OK;
   - P7 e P8 a validação mostra OAI-PMH 404 em UFC e UECE e aprova a Alice, cuja busca falha. É a mesma F7, vista
     pela `validate_repository`.
+- (projeto `roda_aromas_ceara`, 15/11/2026) Pontos de método que apareceram ao desenhar a revisão de escopo com o
+  Vicente. Anotados sem avaliação; nenhum foi testado:
+  - a trilha aceita uma revisão com zero estudos incluídos (funil, tabela de extração vazia, exportação,
+    manuscrito)? O projeto espera pouco ou nada, e "não encontrar é um resultado";
+  - o protocolo não tem campo para o motivo de cada fonte nem para o período que ela cobre (fontes escolhidas por
+    relevância);
+  - a busca feita à mão pelo pesquisador (Portal CAPES) e importada por `import_dataset_ris`: onde ficam o texto
+    exato, a base, a plataforma, a data e a contagem no registro da busca?
+  - triagem em duas camadas (por palavras, depois humana): como a camada por palavras fica registrada, e o que
+    acontece com o registro sem resumo;
+  - dois revisores humanos: onde se gravam as decisões do segundo e a concordância entre os dois;
+  - o pesquisador perguntou "porque nao se pode seguir estritamente o que o metodo pede": o sistema não diz, em
+    cada campo do protocolo, se a escolha é exigida pela norma de relato, recomendada por um manual de condução ou
+    livre.

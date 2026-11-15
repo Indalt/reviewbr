@@ -1,32 +1,63 @@
-# Retomar — roda_aromas_ceara
+# Retomar — roda_aromas_ceara (página única de entrada)
 
-Gravado em 15/11/2026, com o uso semanal do plano estimado em 90%.
+Atualizado em 15/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou mais barato): o Fable deixa de
+estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
 
-## Feito
+## Regras para qualquer sessão
 
-- Passo 1, busca exploratória: `exploratoria/01_o_que_existe.md` (parcial; 8 falhas de tool, F1 a F8).
-- Artigo 1 aberto como revisão de escopo (`scoping-prisma-scr`, controle estrito): `protocol.md` v0.1 em rascunho,
-  `project_state.json` (fase F0, DRAFT), condição `avaliacao_critica` = "não" gravada.
-- Falhas F1 a F8 e P1 a P8 no "Visto de passagem" de `.claude/maintenance/FILA.md`.
-- Artigo 2: entrada da sessão própria em `artigo2/ABRIR_SESSAO.md`, com a pasta da coleta.
-- Todas as decisões do Vicente até 15/11 em `REGISTRO.md`.
+1. Leia esta página e as "Decisões" do `REGISTRO.md`. Não leia outras pastas de `reviewbr/projects/`.
+2. Uma sessão faz **um** passo da tabela abaixo e para.
+3. Não reabra o que o `REGISTRO.md` ou o `DESENHO_artigo1.md` marcam como decidido. Não pergunte de novo sobre
+   Comitê de Ética, autoria (os campos ficam em branco) nem tipo de publicação (preprint; revista é desejável).
+4. Decisão nova do Vicente: grave no `REGISTRO.md` em forma precisa (o quê, alcance, consequência), com a frase
+   dele como origem. Decisão sobre etapa do método: também pela tool `record_researcher_decision`, com as palavras
+   dele. Nunca escreva a contribuição por ele.
+5. Tool do ReviewBR falhou ou devolveu algo incoerente: pare o passo, anote uma linha no "Visto de passagem" de
+   `.claude/maintenance/FILA.md` e avise. Não contorne com script, WebSearch nem outra ferramenta. Não edite o
+   código do ReviewBR a partir deste projeto.
+6. Antes de disparar agente, diga quantos são e quanto devem gastar. Medida de 12/11: cada agente desta pasta
+   custou cerca de 0,5% da semana (estimativa).
+7. Zero resultado só vale com controle positivo na mesma fonte.
+8. Termine com: `REGISTRO.md` e esta página atualizados, e commit.
 
-## Falta (na ordem)
+## Estado
 
-1. **Respostas do Vicente** às pendências de 15/11 (ver "Decisões" no `REGISTRO.md`):
-   - o produto: leitura (i), bebidas do pedúnculo continuam, ou (ii), só cajuína;
-   - tipo de documento: capítulos de livro e resumos de congresso;
-   - fontes: lista por relevância;
-   - segundo revisor humano: sim, por amostra, ou não.
-2. **Atualizar o `protocol.md`** de uma vez com essas respostas e com as já firmes de 15/11: autoria em branco;
-   exclusão de produtos com caju como ingrediente e de coprodutos; conceito = trata expressamente de aroma e
-   sabor. Linhas a mexer: 38, 141 a 144, 151 a 157, 287 e a lista final de [TBD].
-3. **O Vicente lê o protocolo** e aprova; gravar a decisão dele com `record_researcher_decision` (F1), nas palavras
-   dele; travar com `submit_protocol_for_approval`. Se o auditor falhar por causa da P1, parar e registrar.
-4. **Busca (F2)** só depois do conserto de F7 e F8 pela manutenção (decisão de 12/11).
-5. Passo 1 ainda sem aceite formal como "parcial".
+- Artigo 1: revisão de escopo (`scoping-prisma-scr`), controle estrito, fase F0, protocolo em rascunho
+  (`protocol.md` v0.1, anterior às decisões de 15/11). Condição `avaliacao_critica` = "não" gravada.
+- O desenho atual está em `DESENHO_artigo1.md`: só a cajuína; fontes por relevância; dois revisores humanos.
+- Artigo 2: sessão própria; entrada em `artigo2/ABRIR_SESSAO.md`.
 
-## Próximo comando
+## Passos, na ordem
 
-> Continue o projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e `REGISTRO.md`. Minhas respostas às
-> pendências de 15/11 são: ...
+| # | passo | quem | pronto quando | para se |
+|---|---|---|---|---|
+| A | Conferir os problemas que tocam este projeto: F7 e F8 (fontes), P1 (trava do protocolo), F3 (resumos), e se a trilha aceita uma revisão com zero estudos incluídos | sessão de **manutenção**, por ordem do Vicente (a sessão de projeto não cria linha na FILA) | cada um está confirmado ou descartado, e o que foi confirmado tem conserto ou decisão do Vicente | — |
+| B | Passar o `DESENHO_artigo1.md` para o `protocol.md` (v0.2), mantendo os títulos de seção que já estão lá; mostrar ao Vicente as 7 decisões da seção 9 do desenho; gravar as respostas; travar com `submit_protocol_for_approval` | sessão de projeto, sem agente (edição direta) | `project_state.json` com status LOCKED | a conferência da trava reprovar por causa do esqueleto (P1): parar e anotar |
+| C | Busca (F2): o agente `librarian` roda as fontes abertas com a string do produto e os controles positivos; o Vicente roda Scopus, Web of Science e FSTA no Portal CAPES e salva os arquivos RIS em `01_raw/manual/`; importar com `import_dataset_ris` | 1 agente + o Vicente | `01_raw/` e o registro da busca preenchidos, com o controle de cada fonte | fonte com falha não consertada: não buscar nela, anotar |
+| D | Deduplicação e triagem (F3/F4): camada mecânica por palavras, depois a leitura dos dois revisores humanos | agente `screener` + Vicente + estagiário | lista final de incluídos decidida pelo Vicente | — |
+| E | Extração, leitura e manuscrito (F5 a F8); conferir a lista do PRISMA-ScR; publicar o preprint | agentes `extractor`, `reader`, `analyst` + Vicente | manuscrito aprovado pelo Vicente | a exportação barrar as contas do funil |
+
+O passo B não depende do passo A: a conferência da trava só é testada tentando travar. O passo C depende do A (F7
+e F8) ou de uma decisão nova do Vicente sobre essas fontes.
+
+## Prompts prontos
+
+Passo A, no chat de manutenção:
+
+> Rotina de manutenção. Depois dela, confira só estes itens do "Visto de passagem" que tocam o projeto
+> `roda_aromas_ceara`: F7, F8, P1, F3, e a pergunta "a trilha do escopo aceita uma revisão com zero estudos
+> incluídos?". Para cada um: reproduza, diga se é real e o que o conserto exige. Não conserte sem me mostrar.
+
+Passo B, em chat novo:
+
+> Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md`, as "Decisões" do `REGISTRO.md` e o
+> `DESENHO_artigo1.md`. Faça o passo B: atualize o `protocol.md` para a v0.2 e me mostre as decisões do
+> travamento, uma por vez.
+
+Artigo 2: o prompt está no fim de `artigo2/ABRIR_SESSAO.md`.
+
+## Prazos
+
+- Artigo 2: coleta até o fim de novembro de 2026; dados tratados até meados de dezembro; preprint até 31/01/2027.
+- Artigo 1: pode sair antes. Para servir de introdução ao artigo 2, os passos B a D precisam estar feitos até
+  meados de dezembro.
