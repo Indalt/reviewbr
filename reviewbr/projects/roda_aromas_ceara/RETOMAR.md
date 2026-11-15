@@ -1,5 +1,7 @@
 # Retomar — roda_aromas_ceara (página única de entrada)
 
+**Não substitua esta página.** Sessão que precisar gravar onde parou atualiza a seção "Estado" e a tabela de passos.
+
 Atualizado em 15/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou mais barato): o Fable deixa de
 estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
 
@@ -15,7 +17,7 @@ estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
 5. Tool do ReviewBR falhou ou devolveu algo incoerente: pare o passo, anote uma linha no "Visto de passagem" de
    `.claude/maintenance/FILA.md` e avise. Não contorne com script, WebSearch nem outra ferramenta. Não edite o
    código do ReviewBR a partir deste projeto.
-6. Antes de disparar agente, diga quantos são e quanto devem gastar. Medida de 12/11: cada agente desta pasta
+6. Antes de disparar agente, diga quantos são e quanto devem gastar. Dispare sempre com o modelo declarado (`opus` ou mais barato): nenhum agente do ReviewBR fixa modelo, e sem isso ele herda o da sessão. Medida de 12/11: cada agente desta pasta
    custou cerca de 0,5% da semana (estimativa).
 7. Zero resultado só vale com controle positivo na mesma fonte.
 8. Termine com: `REGISTRO.md` e esta página atualizados, e commit.
