@@ -185,3 +185,16 @@ Aberto, à espera dele:
 - **Ponto novo, produtos que usam o nome "cajuína" sem ser o produto cultural** (ele citou o refrigerante São
   Geraldo). A busca por "cajuína" vai trazê-los. Proposta: ficam fora da revisão, contados e anotados como uso do
   termo, para a discussão.
+
+## 12. Fechamento das dúvidas (15/11/2026) — o protocolo v0.2 já traz tudo isto
+
+- **Suco de caju clarificado.** "suco clarificado sem cozimento e sem o uso do termo cajuina saem por criterio de
+  busca". A string passa a ser só `cajuína OR cajuina` (a da seção 5 não vale mais). O produto é definido pelo
+  termo. Limite declarado: fonte que não usa a palavra não é encontrada.
+- **O que os humanos decidem.** Há revisão humana ("então vai ter de ter revisao"): os dois revisores decidem os
+  registros que passam pela camada de palavras. Ele quer fazê-la fora do ReviewBR, com ferramenta aceita pelas
+  revistas. Proposta: Rayyan.
+- **Produtos que usam o nome "cajuína"** sem ser a bebida (refrigerante): fora, contados e anotados. "correto".
+- **Resumos de congresso:** entram, como literatura cinzenta. "entram".
+- Pergunta dele que **não** entra na trava: "o que podemos decidir quando a decisao aconteceu nos criterios de
+  busca?". Resposta dada no chat: a busca decide o que chega; resta decidir se o que chegou atende ao conceito.

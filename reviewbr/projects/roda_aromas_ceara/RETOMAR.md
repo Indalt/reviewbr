@@ -22,8 +22,8 @@ estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
 
 ## Estado
 
-- Artigo 1: revisão de escopo (`scoping-prisma-scr`), controle estrito, fase F0, protocolo em rascunho
-  (`protocol.md` v0.1, anterior às decisões de 15/11). Condição `avaliacao_critica` = "não" gravada.
+- Artigo 1: revisão de escopo (`scoping-prisma-scr`), controle estrito, fase F0. O `protocol.md` está na v0.2 (15/11/2026), já com o desenho; falta o Vicente ler, dar a frase dele e travar (resto do passo B).
+  Condição `avaliacao_critica` = "não" gravada.
 - O desenho atual está em `DESENHO_artigo1.md`: só a cajuína; fontes por relevância; dois revisores humanos.
 - Artigo 2: sessão própria; entrada em `artigo2/ABRIR_SESSAO.md`.
 

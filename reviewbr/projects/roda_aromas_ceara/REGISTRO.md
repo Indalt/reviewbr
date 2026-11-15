@@ -110,6 +110,24 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
 - **15/11/2026, condução daqui em diante.** Os agentes rodam em Opus ou em modelo mais barato, depois de revistos
   os supostos problemas do ReviewBR. O Fable deixa de estar disponível; restam cerca de 10% dos tokens da semana.
   Tudo o que falta está em `RETOMAR.md` (passos A a E) e em `DESENHO_artigo1.md`.
+- **15/11/2026, artigo 1, respostas ao travamento.** Compostos voláteis da cajuína entram, sem condição. Título e
+  questões secundárias aprovados. A busca exploratória fica como parcial e como motivação da revisão. A conferência
+  de 20% foi recusada. Os humanos não refazem as buscas, com a condição de provar que o ReviewBR usa o que um
+  humano usaria.
+- **15/11/2026, artigo 1, suco de caju clarificado.** "suco clarificado sem cozimento e sem o uso do termo cajuina
+  saem por criterio de busca". O assistente aplicou assim: a string é só `cajuína OR cajuina`; o produto é
+  definido pelo termo. Consequência: fonte que não usa a palavra "cajuína" não é encontrada; fica declarado como
+  limite no protocolo.
+- **15/11/2026, artigo 1, uso do nome.** Produtos que usam o nome "cajuína" sem ser a bebida (refrigerante) ficam
+  fora, contados e anotados para a discussão. Resumos de congresso entram, como literatura cinzenta.
+- **15/11/2026, artigo 1, revisão humana.** Haverá revisão pelos dois humanos dos registros que passarem pela
+  camada de palavras. Ele pediu que seja agilizada fora do ReviewBR, "com ferramentas que a ciencia legitima e que
+  as revistas mais importantes aceitam". Proposta do assistente no protocolo: Rayyan. Não decidido.
+- **15/11/2026, pergunta dele fora da trava.** "o que podemos decidir quando a decisao aconteceu nos criterios de
+  busca?" Respondida no chat; não entra no protocolo.
+- **15/11/2026, textos para o artigo.** Ficam como estão em `notas_para_o_artigo.md`.
+- **15/11/2026, protocolo v0.2.** Escrito pelo assistente a partir das decisões acima. Não travado: falta a
+  leitura e a frase dele.
 - **15/11/2026, falhas do ReviewBR.** Ficam com a manutenção (já estão no "Visto de passagem").
 - **15/11/2026, artigo 2.** A pasta da coleta é `G:\Meu Drive\roda_de_aromas`, e o Vicente quer organizá-la. Há
   conversas gravadas, algumas já transcritas; as transcrições são feitas por uma ferramenta a que o bolsista tem
