@@ -146,3 +146,42 @@ O PRISMA-ScR é uma lista do que o texto do artigo tem de conter: 22 itens, 20 n
 saíram com a resposta "não" à avaliação crítica). O "relato" é o próprio artigo. Os registros, os logs e as
 decisões gravadas são o material que preenche esses itens, e o ReviewBR os produz no caminho. O trabalho a mais é
 conferir a lista no fim; esse preenchimento é do Vicente, com apoio da ferramenta.
+
+## 11. Respostas do Vicente ao travamento (15/11/2026) — valem sobre as seções 3, 7 e 9 onde houver conflito
+
+Resolvido:
+- **Dúvida 1, compostos voláteis.** Entram os estudos de compostos voláteis da cajuína, sem condição. Motivo dele:
+  "para identificar o estado da arte em relacao a estudos sensoriais da cajuina".
+- **Dúvida 3, busca e triagem.** Aceita: a busca é só pelo produto, e os estudos que contêm as palavras de aroma e
+  sabor formam a primeira camada da triagem.
+- **Dúvida 5.** O título e as três questões secundárias ficam como na seção 2.
+- **Dúvida 7.** A busca exploratória de 12/11 fica registrada como parcial e como motivação da revisão de escopo.
+  Entra na justificativa (F0.3.1).
+- **Conferência de 20%** dos excluídos pela camada de palavras: recusada ("nao me parece razoavel"). Sai da seção 7.
+- **Os humanos não refazem as buscas**, com uma condição dele: "é necessario provar que o reviewbr usa exatamente o
+  que um humano usaria caso tivesse tempo para realizar as buscas de escopo".
+
+Como se prova a condição (PROPOSTA):
+- o registro de cada busca guarda o texto exato, a fonte, a data e a contagem, de modo que um humano pode colar o
+  mesmo texto no site da fonte e comparar;
+- no lugar dos 20%, o controle positivo: a busca tem de trazer registros que se sabe existirem, e a camada de
+  palavras tem de deixar passar fontes de aroma que se sabe existirem;
+- hoje a prova **não** pode ser dada para SciELO, UFC, UECE e Embrapa: nelas a ferramenta devolve menos do que um
+  humano acharia no site (falhas F7 e F8). É o que o passo A do `RETOMAR.md` tem de resolver.
+
+Aberto, à espera dele:
+- **Dúvida 2, suco de caju clarificado.** Posição dele: o insumo (suco clarificado, antes do cozimento) não é
+  cajuína; há produção que usa a expressão por força legal, embora o processo seja o da cajuína; os produtos
+  definidos como suco de caju clarificado não são desconsiderados neste trabalho. O termo fica na string de busca.
+  Falta a regra da triagem para a fonte que estuda o suco clarificado **sem** o processo da cajuína, e para a que
+  não descreve o processo.
+- **Dúvida 4, o que os humanos decidem.** A frase "nao há necessidade de refazer buscas ou decidir o que entra ou
+  nao de acordo com os criterios da triagem" tem duas leituras: (i) os humanos não redecidem o que a camada de
+  palavras excluiu; (ii) os humanos não decidem inclusão nenhuma. A (ii) o ReviewBR não aceita: a lista final de
+  incluídos é decisão do pesquisador (RV-04), em qualquer nível de controle.
+- **Dúvida 6, resumos de congresso.** Ele perguntou se entram como literatura cinzenta. Resposta: sim, resumos e
+  anais de congresso são literatura cinzenta, como teses e documentos técnicos. Proposta: entram com o tipo de
+  documento anotado na extração, sem contagem à parte. Falta o aceite.
+- **Ponto novo, produtos que usam o nome "cajuína" sem ser o produto cultural** (ele citou o refrigerante São
+  Geraldo). A busca por "cajuína" vai trazê-los. Proposta: ficam fora da revisão, contados e anotados como uso do
+  termo, para a discussão.
