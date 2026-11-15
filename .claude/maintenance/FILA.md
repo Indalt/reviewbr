@@ -221,3 +221,36 @@ Vicente pedir.
     sintetiza;
   - seção 4: nenhuma tool pede os elementos do projeto de pesquisa da NBR 15287 (justificativa,
     referencial teórico, recursos, cronograma).
+- (projeto `roda_aromas_ceara`, 12/11/2026) Falhas de tool vistas na busca exploratória do primeiro teste depois da
+  manutenção. Reprodução de cada uma em `reviewbr/projects/roda_aromas_ceara/exploratoria/01_falhas_reviewbr.md`.
+  O projeto espera o conserto de F7 e F8 antes da busca formal (decisão do Vicente):
+  - F1 `search_openalex`: o campo URL vem "undefined" em todos os itens; item sem DOI fica sem link;
+  - F2 `search_openalex`: mostra 10 resultados e diz que o resto foi salvo em JSON, mas sem `projectPath` nada é
+    gravado;
+  - F3 `search_openalex` e `search_repository`: nenhuma devolve resumo;
+  - F4 `search_repository` sem `repositories` (todos os ativos): 1800 s sem resposta, abortada;
+  - F5 `search_papers_optimized`: UFPI, Unifesp e UFCG devolvem registros sem relação com a string, e a contagem
+    soma esses registros; os da BDTD vêm sem data e sem resumo;
+  - F6 `search_repository` na BDTD: URLs de registros da USP vêm com espaço ("bdtd.ibict.br/vufind /Record/...");
+  - F7 `search_repository` na UFC (BR-FED-0004), UECE (BR-EST-0006), Alice (BR-RES-0001) e IFCE: zero até para
+    "caju", sem aviso, e a BDTD devolve handles desses repositórios sobre caju. No catálogo, UFC e UECE estão
+    `status: active` com `oaiPmh.available: false` e sem `searchEndpoints`. Reconferido pelo coordenador em
+    12/11/2026 (UFC + "caju" → 0);
+  - F8 `search_scielo`: zero para "queijo coalho" e "cashew apple aroma"; 15 registros quase sem relação para
+    "caju", enquanto o OpenAlex traz artigos SciELO (DOI 10.1590) sobre esses temas.
+- (projeto `roda_aromas_ceara`, 12/11/2026) No escopo, a avaliação crítica das fontes não tem onde ser registrada
+  na trilha: com a condição `avaliacao_critica` = "sim", os itens 12 e 16 do PRISMA-ScR ficam `[NÃO COBERTO]`
+  (o que ficou declarado ao resolver o DEBT-151). O projeto respondeu "não", mas o Vicente pediu o registro: "essa
+  limitacao de falta de lugar para registrar tem de ser registrada para o agente de manutencao".
+- (projeto `roda_aromas_ceara`, 12/11/2026) Incoerências vistas na F0/F1 do mesmo projeto, ao gerar o protocolo de
+  escopo. Reprodução em `reviewbr/projects/roda_aromas_ceara/protocolo_falhas_reviewbr.md` (P1 a P8):
+  - P1 `plan_research_protocol` gera um esqueleto genérico, e não o `protocol_template.md` do método; o
+    `protocol_auditor.ts` lê os títulos desse esqueleto;
+  - P2 o esqueleto já vem com valores que o pesquisador não deu ("Idiomas: Sem restrição", "Global", fontes PubMed
+    e BVS);
+  - P3 o esqueleto e o auditor citam itens do PRISMA 2020 (24a, 8) num método que declara PRISMA-ScR e PRISMA-S;
+  - P4 a entrada do PRISMA-ScR no catálogo não tem data de leitura;
+  - P5 e P6 `BR-AGG-0001` aparece como "IBICT — Oasisbr" (o projeto o usa como BDTD); o catálogo marca o OAI-PMH
+    dele como indisponível, e a validação dá OK;
+  - P7 e P8 a validação mostra OAI-PMH 404 em UFC e UECE e aprova a Alice, cuja busca falha. É a mesma F7, vista
+    pela `validate_repository`.

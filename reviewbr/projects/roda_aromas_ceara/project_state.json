@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "method": "scoping-prisma-scr",
+  "framework": "PCC",
+  "reviewType": "Revisão de Escopo",
+  "topic": "Que descritores sensoriais e compostos de aroma já foram relatados para a cajuína e para as bebidas do pedúnculo de caju, e com que métodos? (âmbito geral, Ceará destacado)",
+  "userId": "vicente",
+  "status": "DRAFT",
+  "control_level": "estrito",
+  "phase": "F0",
+  "createdAt": "2026-11-12T20:02:37.930Z",
+  "updatedAt": "2026-11-12T20:08:46.464Z",
+  "decisions": [
+    {
+      "phase": "F1",
+      "agent": "coordinator",
+      "decision": "A revisão vai fazer avaliação crítica das fontes de evidência incluídas (qualidade metodológica ou risco de viés de cada fonte)? — não",
+      "por": "pesquisador",
+      "contribuicao": "\"nao. mas essa limitacao de falta de lugar para registrar tem de ser registrada para o agente de manutencao.\" (Vicente, 12/11/2026, ao escolher entre fazer ou não a avaliação crítica das fontes, itens 12 e 16 do PRISMA-ScR)",
+      "condicao": {
+        "id": "avaliacao_critica",
+        "resposta": "não"
+      },
+      "ts": "2026-11-12T20:08:46.464Z"
+    }
+  ]
+}
