@@ -29,7 +29,8 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
 | # | data | etapa | pergunta escolhida | resultado (arquivo) | estado |
 |---|---|---|---|---|---|
 | 1 | 12/11/2026 | exploratória (agente `scout`) | O que já existe: há roda de aromas, léxico sensorial ou descrição de aroma publicados para algum produto cearense? | `exploratoria/01_o_que_existe.md` (log: `01_buscas_log.md`, 43 execuções) | feito, **parcial**: repositórios do CE só alcançados via BDTD; SciELO inutilizável; só títulos, sem resumo. Aguarda decisão do Vicente |
-| 2 | 12/11/2026 | artigo 1, F0/F1, protocolo (agente `designer`) | revisão de escopo (PCC): descritores sensoriais e compostos de aroma da cajuína e das bebidas do pedúnculo de caju, em geral, com o Ceará destacado | `protocol.md` v0.1 (DRAFT); `project_state.json` (projeto 3, estrito); `protocolo_falhas_reviewbr.md` (P1 a P8) | rascunho pronto, aguarda a leitura do Vicente e as respostas aos [TBD]; condição `avaliacao_critica` = "não" gravada no `project_state.json`; busca bloqueada até o conserto de F7 e F8 |
+| 2 | 12/11/2026 | artigo 1, F0/F1, protocolo (agente `designer`) | revisão de escopo (PCC): descritores sensoriais e compostos de aroma da cajuína e das bebidas do pedúnculo de caju, em geral, com o Ceará destacado | `protocol.md` v0.1 (DRAFT); `project_state.json` (projeto 3, estrito); `protocolo_falhas_reviewbr.md` (P1 a P8) | **feito: protocolo v1.0 travado em 15/11/2026**; condição `avaliacao_critica` = "não" gravada; busca bloqueada até o conserto de F7 e F8 |
+| 3 | — | artigo 1, F2, busca (agente `librarian` + Vicente na CAPES) | strings do `protocol.md` | `01_raw/` | a fazer; espera a manutenção (F7 e F8) |
 
 ## Decisões
 
@@ -126,8 +127,16 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
 - **15/11/2026, pergunta dele fora da trava.** "o que podemos decidir quando a decisao aconteceu nos criterios de
   busca?" Respondida no chat; não entra no protocolo.
 - **15/11/2026, textos para o artigo.** Ficam como estão em `notas_para_o_artigo.md`.
-- **15/11/2026, protocolo v0.2.** Escrito pelo assistente a partir das decisões acima. Não travado: falta a
-  leitura e a frase dele.
+- **15/11/2026, protocolo v0.2.** Escrito pelo assistente a partir das decisões acima.
+- **15/11/2026, PROTOCOLO TRAVADO (v1.0).** Frases dele: "como aplicou o ponto 1 tudo bem, mas vale deixar como
+  comentario a ciencia das bebidas clirificadas"; "se o desenho agiliza nao precisa de ferramenta alem do
+  reviewbr"; "basta descrever o criterio do que fica para os revisores humanos e seguir"; "aprovo os ponto
+  menores"; "li e aprovo o registro"; "li e aprovo o protocolo". Os três ajustes pedidos entraram antes da trava:
+  o comentário sobre as bebidas clarificadas; nenhuma ferramenta além do ReviewBR (o Rayyan saiu); o critério do
+  que fica para os revisores humanos (todo registro que passa pela camada de palavras e todo registro sem resumo,
+  com quatro perguntas). As decisões de F0 e F1 foram gravadas com `record_researcher_decision`, e a
+  `submit_protocol_for_approval` aprovou (3/3). Estado: LOCKED, fase F2. Consequência: mudar o protocolo exige
+  emenda registrada; a busca espera o conserto de F7 e F8.
 - **15/11/2026, falhas do ReviewBR.** Ficam com a manutenção (já estão no "Visto de passagem").
 - **15/11/2026, artigo 2.** A pasta da coleta é `G:\Meu Drive\roda_de_aromas`, e o Vicente quer organizá-la. Há
   conversas gravadas, algumas já transcritas; as transcrições são feitas por uma ferramenta a que o bolsista tem

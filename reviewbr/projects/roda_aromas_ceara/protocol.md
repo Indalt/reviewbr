@@ -1,12 +1,13 @@
 # Protocolo — roda_aromas_ceara
 
-**Status**: [DRAFT] <!-- muda para [LOCKED] só na aprovação (submit_protocol_for_approval); a trava é o project_state.json -->
+**Status**: [LOCKED] <!-- muda para [LOCKED] só na aprovação (submit_protocol_for_approval); a trava é o project_state.json -->
 
-> Versão 0.2, de 15/11/2026. Substitui a 0.1 (12/11/2026) depois das decisões do pesquisador de 15/11/2026,
-> gravadas em `REGISTRO.md` (seção "Decisões") e em `DESENHO_artigo1.md`. **DECIDIDO** = decisão do pesquisador,
-> com a data. **PROPOSTA** = sugestão do assistente, que só vale com a aprovação dele na trava. `[TBD]` = sem
-> resposta do pesquisador (RV-03). A busca (F2) só começa depois da trava e, por decisão do pesquisador
-> (12/11/2026), depois do conserto das falhas F7 e F8 do ReviewBR.
+> Versão 1.0, de 15/11/2026, lida e aprovada pelo pesquisador nessa data ("li e aprovo o protocolo"). Substitui
+> a 0.1 (12/11/2026) e a 0.2 (15/11/2026). As decisões estão em `REGISTRO.md` (seção "Decisões"). **DECIDIDO** =
+> decisão do pesquisador, com a data. **(aprovado, 15/11/2026)** = redação ou ponto sugerido pelo assistente e
+> aprovado pelo pesquisador ("aprovo os ponto menores"). `[TBD]` = campo deixado em branco por decisão dele
+> (RV-03). A busca (F2) só começa depois da trava e, por decisão do pesquisador (12/11/2026), depois do conserto
+> das falhas F7 e F8 do ReviewBR.
 
 **Tipo de pesquisa:** Revisão de Escopo
 **Método:** `scoping-prisma-scr` (estende `prisma-sr`) — padrões declarados: PRISMA-ScR 2018 (22 itens) + PRISMA-S 2021 (16 itens). O PRISMA 2020 não é padrão deste método.
@@ -32,7 +33,7 @@ apontado pelo item 22 (*Funding*), parcialmente não coberto. F0.1.4, F0.1.6, F0
 - **Título abreviado / slug** [F0.1.2]: `roda_aromas_ceara`
 - **Tipo de revisão** [F0.1.3]: Revisão de Escopo (Scoping Review), PRISMA-ScR, framework PCC (DECIDIDO, 12/11/2026)
 - **Data de início do protocolo** [F0.1.4]: 2026-11-12
-- **Versão do protocolo** [F0.1.5]: 0.2 (rascunho; passa a 1.0 na trava)
+- **Versão do protocolo** [F0.1.5]: 1.0
 - **Autores da revisão** [F0.1.6]: Vicente [sobrenome: TBD]; estagiário [nome: TBD]; demais coautores [TBD]. Por decisão do pesquisador (15/11/2026), os nomes ficam em branco agora e são preenchidos depois; não se sabe se haverá ORCID.
 - **Instituição responsável** [F0.1.7]: [TBD] (em branco por decisão do pesquisador, 15/11/2026)
 - **Financiamento** [F0.1.8]: [TBD] (em branco por decisão do pesquisador, 15/11/2026; inclui o papel do financiador, que o item 22 pede)
@@ -46,7 +47,7 @@ apontado pelo item 22 (*Funding*), parcialmente não coberto. F0.1.4, F0.1.6, F0
 - **Plataforma de registro** [F0.2.1]: não se aplica — não registrado.
 - **Número / URL / data do registro** [F0.2.2/F0.2.3/F0.2.4]: não se aplica — não registrado.
 - **Motivo:** decisão do pesquisador (12/11/2026): o registro (OSF) é opcional em revisão de escopo.
-- **Onde o protocolo pode ser acessado:** PROPOSTA — como material suplementar do preprint e do artigo.
+- **Onde o protocolo pode ser acessado:** como material suplementar do preprint e do artigo.
 
 ## Justificativa
 
@@ -55,7 +56,7 @@ parcialmente não coberto: a trilha não pede por que a pergunta se presta a uma
 "Por que escopo" preenche essa parte. O auditor do protocolo exige as quatro seções (Justificativa, Revisões
 Anteriores, Lacuna, Relevância).
 
-PROPOSTA de redação. A cajuína é uma bebida tradicional não alcoólica feita do pedúnculo do caju, produzida no
+A cajuína é uma bebida tradicional não alcoólica feita do pedúnculo do caju, produzida no
 Ceará, no Piauí e em outros estados do Nordeste. A roda de aromas é um instrumento técnico que organiza os
 descritores de aroma e sabor de uma categoria de bebida. O pesquisador quer saber se existe roda de aromas,
 léxico ou conjunto de descritores publicado para a cajuína.
@@ -68,7 +69,7 @@ através da BDTD, o SciELO não pôde ser usado e nenhum resumo foi lido. Ela n�
 É o que esta revisão faz, com busca registrada e reprodutível. **Não encontrar é um resultado** (DECIDIDO,
 15/11/2026).
 
-**Por que escopo (2ª parte do item 3).** PROPOSTA. A pergunta é de mapeamento (o que existe, onde, com que
+**Por que escopo (2ª parte do item 3).** A pergunta é de mapeamento (o que existe, onde, com que
 métodos), não de efeito. A evidência esperada é escassa e heterogênea (análise sensorial, química de voláteis,
 teses, documentos técnicos). O objetivo inclui identificar uma lacuna.
 
@@ -80,14 +81,14 @@ própria busca da F2, que traz tudo o que usa o termo "cajuína".
 
 ## Lacuna
 
-**F0.3.3.** PROPOSTA de redação. Não se sabe, de forma sistemática, se existe roda de aromas, léxico ou perfil
+**F0.3.3.** Não se sabe, de forma sistemática, se existe roda de aromas, léxico ou perfil
 descritivo publicado para a cajuína (do Ceará, do Piauí ou de outro estado produtor), que descritores de aroma e
 sabor e que compostos voláteis já foram relatados para ela, nem com que métodos.
 
 ## Relevância
 
 **F0.3.4 Objetivo do mapeamento** (neste método o F0.3.4 é o objetivo do mapeamento; a seção conserva o nome
-"Relevância" porque é o que o auditor do protocolo lê). PROPOSTA de redação. Mapear as rodas de aroma, os léxicos,
+"Relevância" porque é o que o auditor do protocolo lê). Mapear as rodas de aroma, os léxicos,
 os descritores de aroma e sabor e os compostos voláteis relatados para a cajuína, e os métodos usados, com o
 Ceará destacado, para estabelecer o estado da arte dos estudos sensoriais da cajuína e dizer se há base publicada
 para uma roda de aromas. Interessados: pesquisa sensorial de alimentos regionais, produtores de cajuína e
@@ -131,10 +132,10 @@ coberto (o item pede a justificativa dos critérios; por isso cada um traz a sua
 - **Produto** [F1.3.1.1]: fontes que estudam a cajuína e a chamam por esse nome (DECIDIDO, 15/11/2026). Justificativa: a revisão parte do produto ligado ao seu termo.
 - **Conceito** [F1.3.1.2]: a fonte trata expressamente de aroma ou sabor da cajuína — roda, léxico, perfil descritivo, descritores sensoriais — ou relata compostos voláteis da cajuína (DECIDIDO, 15/11/2026). Justificativa: é o objeto da pergunta; os voláteis mostram o estado da arte em torno dos estudos sensoriais.
 - **Contexto** [F1.3.1.3]: qualquer estado ou país (DECIDIDO, 12/11/2026). Justificativa: o âmbito é geral; o Ceará é destacado na análise, não no filtro.
-- **Tipo de documento** [F1.3.1.4]: artigos, teses, dissertações, documentos técnicos, capítulos de livro, trabalhos e resumos em anais de congresso. Os resumos de congresso entram como literatura cinzenta (DECIDIDO, 15/11/2026). Revisões de literatura que tratem do aroma ou do sabor da cajuína entram como fonte (PROPOSTA). Justificativa: numa revisão que pode concluir pela ausência, restringe-se pelo conteúdo, não pelo tipo de documento.
+- **Tipo de documento** [F1.3.1.4]: artigos, teses, dissertações, documentos técnicos, capítulos de livro, trabalhos e resumos em anais de congresso. Os resumos de congresso entram como literatura cinzenta (DECIDIDO, 15/11/2026). Revisões de literatura que tratem do aroma ou do sabor da cajuína entram como fonte (aprovado, 15/11/2026). Justificativa: numa revisão que pode concluir pela ausência, restringe-se pelo conteúdo, não pelo tipo de documento.
 - **Período** [F1.3.1.5]: sem limite; vale tudo o que cada fonte tiver até a data da busca, que fica registrada (DECIDIDO, 12/11/2026).
-- **Idiomas** [F1.3.1.6]: português, inglês e espanhol (DECIDIDO, 12/11/2026). Justificativa (PROPOSTA): são as línguas de leitura da equipe e as da produção sobre o caju.
-- **Acesso ao texto completo** [F1.3.1.7]: PROPOSTA — texto completo obtido, porque a extração dos descritores exige o texto.
+- **Idiomas** [F1.3.1.6]: português, inglês e espanhol (DECIDIDO, 12/11/2026). Justificativa (aprovado, 15/11/2026): são as línguas de leitura da equipe e as da produção sobre o caju.
+- **Acesso ao texto completo** [F1.3.1.7]: texto completo obtido, porque a extração dos descritores exige o texto.
 
 ### Critérios de Exclusão
 
@@ -143,12 +144,12 @@ coberto (o item pede a justificativa dos critérios; por isso cada um traz a sua
   - produtos em que a cajuína ou o caju é ingrediente de outro produto: cerveja, kombucha, néctar misto (DECIDIDO, 15/11/2026);
   - coprodutos do processamento: fibra, essências, *water phase* (DECIDIDO, 15/11/2026);
   - produtos que usam o nome "cajuína" sem ser a bebida do pedúnculo de caju, como refrigerantes: ficam fora, **contados e anotados** como uso do termo, para a discussão (DECIDIDO, 15/11/2026);
-  - fontes sobre a cajuína que não tratam de aroma nem de sabor (processo, físico-química, mercado, história) ou que relatam só aceitação e preferência, sem nenhum descritor (PROPOSTA).
+  - fontes sobre a cajuína que não tratam de aroma nem de sabor (processo, físico-química, mercado, história) ou que relatam só aceitação e preferência, sem nenhum descritor (aprovado, 15/11/2026).
 - **Tipo de documento** [F1.3.2.2]: patentes, notícias, páginas web e blogs, material de divulgação.
 - **Período** [F1.3.2.3]: não se aplica (sem limite de período).
 - **Idioma** [F1.3.2.4]: idiomas que não português, inglês ou espanhol.
-- **Duplicatas** [F1.3.2.5]: PROPOSTA — o mesmo registro vindo de várias fontes é removido na F3 (`deduplicate_dataset`), com relatório. Relatos diferentes do mesmo estudo (tese e artigo dela derivado) não são duplicatas: ficam ligados a um estudo, e a extração é feita uma vez por estudo.
-- **Texto completo indisponível** [F1.3.2.6]: PROPOSTA — excluído depois das tentativas de recuperação por acesso aberto (`retrieve_fulltexts`) e pelo acesso do pesquisador ao Portal CAPES. Sem contato com autores e sem uso do Sci-Hub.
+- **Duplicatas** [F1.3.2.5]: o mesmo registro vindo de várias fontes é removido na F3 (`deduplicate_dataset`), com relatório. Relatos diferentes do mesmo estudo (tese e artigo dela derivado) não são duplicatas: ficam ligados a um estudo, e a extração é feita uma vez por estudo.
+- **Texto completo indisponível** [F1.3.2.6]: excluído depois das tentativas de recuperação por acesso aberto (`retrieve_fulltexts`) e pelo acesso do pesquisador ao Portal CAPES. Sem contato com autores e sem uso do Sci-Hub.
 - **Qualidade mínima** [F1.3.2.7]: não se aplica. A condição `avaliacao_critica` foi respondida "não" pelo pesquisador (12/11/2026; gravada no `project_state.json`): não há avaliação crítica das fontes, e os itens 12 e 16 do PRISMA-ScR saem do denominador.
 - **EX-03 ("desfecho não reportado")**: não se aplica neste método.
 
@@ -180,22 +181,22 @@ total (PRISMA-S S1, S8, S9, S13, S15).
 
 ### Outros métodos
 
-PROPOSTA — conferência das listas de referências das fontes incluídas, registrada como "outros métodos" no
+conferência das listas de referências das fontes incluídas, registrada como "outros métodos" no
 fluxograma (PRISMA-S S5). Sem contato com autores e sem consulta a sites.
 
 ## Estratégia de Busca (Sintaxe)
 
 *Por que:* F1.4.1–F1.4.3 → PRISMA-ScR item 8 (*Search*). As strings derivam do F1.2 (RV-07).
 
-**Versão 0.2, de 15/11/2026. Nada aqui foi executado.** A busca é só pelo produto, e as palavras de aroma e sabor
+**Nada aqui foi executado.** A busca é só pelo produto, e as palavras de aroma e sabor
 formam a primeira camada da triagem (DECIDIDO, 15/11/2026). Os critérios de busca são determinísticos: o mesmo
 texto, na mesma fonte, na mesma data.
 
 - **Operadores booleanos** [F1.4.2]: só OR, entre as duas grafias. Sem AND e sem NOT.
 - **Vocabulários controlados** [F1.4.3]: nenhum; a busca é pelo termo.
 - **Limites** (PRISMA-S S9): nenhum limite de data, idioma ou tipo de documento. Idioma e tipo são aplicados na triagem.
-- **Versão da string** [F1.4.5]: 0.2.
-- **Aprovação do pesquisador** [F1.4.4]: [TBD — dada na trava].
+- **Versão da string** [F1.4.5]: 1.0.
+- **Aprovação do pesquisador** [F1.4.4]: aprovada em 15/11/2026 ("como aplicou o ponto 1 tudo bem"; "li e aprovo o protocolo").
 - **Total recuperado:** cada execução tem de recuperar todos os registros que a fonte informa; se não recuperar, o total informado e o número recuperado ficam no registro (S15).
 
 | Fonte | Texto exato |
@@ -213,6 +214,11 @@ com qualidade" (Abreu e Souza, 2004).
 
 **Limite declarado.** Uma fonte que estude a bebida sem usar a palavra "cajuína" no texto que a base indexa não é
 encontrada. É consequência da definição do produto pelo termo.
+
+**Comentário sobre as bebidas clarificadas** (pedido do pesquisador, 15/11/2026). O pesquisador está ciente de que
+existe literatura científica sobre o suco de caju clarificado e sobre bebidas clarificadas em geral. Ela fica fora
+desta revisão por critério de busca: o suco clarificado sem cozimento e sem o uso do termo cajuína não é tratado
+como cajuína. Essa literatura pode ser comentada na discussão do artigo, como contexto e nunca como resultado.
 
 ## Processo de Seleção
 
@@ -235,9 +241,9 @@ Trilha do método `scoping-prisma-scr`:
 **Declaração do processo de triagem:**
    - **F4.1.2 Processo de triagem:** Duplo — dois revisores humanos, o pesquisador e um estagiário, que entra como coautor (DECIDIDO, 15/11/2026). Em duas camadas:
      1. **Camada mecânica, por palavras** (ReviewBR). Depois da deduplicação, passam os registros cujo título, resumo ou palavras-chave trazem ao menos um destes termos: `aroma*`, `sabor*`, `gosto`, `flavor`, `flavour`, `taste`, `sensor*`, `descritor*`, `descriptor*`, `léxico`, `lexicon`, `roda`, `wheel`, `volát*`, `volatil*`, `odor*`, `olor`, `olfat*`, `olfact*`, `perfil`, `profile`. **Registro sem resumo não é excluído por falta de palavra: passa para a leitura humana.** Os humanos não redecidem o que esta camada excluiu, e não há conferência por amostra (DECIDIDO, 15/11/2026).
-     2. **Camada humana.** Os dois revisores leem e decidem, cada um sem ver a decisão do outro, todos os registros que passaram: primeiro pelo título e resumo, depois pelo texto completo.
-   - Os humanos **não refazem as buscas** (DECIDIDO, 15/11/2026). Condição do pesquisador: provar que o ReviewBR usa exatamente o que um humano usaria. Prova (PROPOSTA): o registro de cada busca guarda o texto exato, a fonte, a data e o total, de modo que qualquer pessoa pode repetir a busca no site da fonte e comparar; e cada fonte tem o seu controle positivo.
-   - **F4.1.3 Ferramenta utilizada:** ReviewBR para a parte mecânica — busca, importação, deduplicação (`deduplicate_dataset`), camada por palavras (`batch_keyword_screen`), contagem do funil e registro das decisões. O artigo declara que a parte mecânica da condução foi feita com o ReviewBR (DECIDIDO, 15/11/2026). A leitura dos dois revisores é feita fora do ReviewBR, numa ferramenta de triagem às cegas (PROPOSTA: Rayyan); as decisões voltam ao projeto e ficam gravadas com o nome de quem decidiu. Proposta de inclusão feita por IA, se for usada, é apoio: não decide e fica registrada como tal.
+     2. **Camada humana.** Fica para os dois revisores humanos (DECIDIDO, 15/11/2026: "basta descrever o criterio do que fica para os revisores humanos"): **todo registro que passou pela camada de palavras e todo registro sem resumo.** Cada revisor decide em separado, primeiro pelo título e resumo, depois pelo texto completo, respondendo a quatro perguntas: (a) o produto é a bebida cajuína, e não um refrigerante com esse nome nem um produto em que ela é ingrediente? (b) a fonte trata expressamente de aroma ou sabor, ou relata compostos voláteis? (c) o idioma e o tipo de documento atendem aos critérios? (d) no texto completo, a fonte traz de fato o que o resumo indicava? Entra a fonte com "sim" nas quatro.
+   - Os humanos **não refazem as buscas** (DECIDIDO, 15/11/2026). Condição do pesquisador: provar que o ReviewBR usa exatamente o que um humano usaria. Prova (aprovado, 15/11/2026): o registro de cada busca guarda o texto exato, a fonte, a data e o total, de modo que qualquer pessoa pode repetir a busca no site da fonte e comparar; e cada fonte tem o seu controle positivo.
+   - **F4.1.3 Ferramenta utilizada:** ReviewBR para a parte mecânica — busca, importação, deduplicação (`deduplicate_dataset`), camada por palavras (`batch_keyword_screen`), contagem do funil e registro das decisões. O artigo declara que a parte mecânica da condução foi feita com o ReviewBR (DECIDIDO, 15/11/2026). Nenhuma outra ferramenta é usada (DECIDIDO, 15/11/2026: "se o desenho agiliza nao precisa de ferramenta alem do reviewbr"): as decisões dos dois revisores são gravadas no próprio projeto, com o nome de quem decidiu. Proposta de inclusão feita por IA, se for usada, é apoio: não decide e fica registrada como tal.
    - **Resolução de discordâncias:** conversa entre os dois revisores até o consenso; o resultado e o motivo ficam registrados. Sem consenso, decide o pesquisador.
    - Fase 1: Triagem por título e resumo
    - Fase 2: Leitura de texto completo
@@ -245,7 +251,7 @@ Trilha do método `scoping-prisma-scr`:
 
 **Extração (charting), F5.** *Por que:* PRISMA-ScR itens 10 e 11, parcialmente não cobertos (faltam as dimensões
 próprias do escopo); por isso ficam listadas aqui. A extração é a descrição de cada fonte incluída (DECIDIDO,
-15/11/2026). Campos (PROPOSTA): referência e tipo de documento; estado e instituição; origem da cajuína estudada;
+15/11/2026). Campos (aprovado, 15/11/2026): referência e tipo de documento; estado e instituição; origem da cajuína estudada;
 termo que a fonte usa para o produto; método (painel treinado, consumidores, instrumental); descritores de aroma
 e sabor, com as palavras da fonte; compostos voláteis relatados; se organiza os descritores em roda ou léxico; se
 liga descritor a composto; onde a fonte está (base, repositório, endereço). A IA propõe a extração; os revisores
@@ -265,8 +271,7 @@ literatura de fora do recorte só aparece aí, citada como contexto, nunca como 
 Checklist PRISMA-ScR 2018 (22 itens; itens 12 e 16 fora do denominador pela condição `avaliacao_critica` = "não")
 + PRISMA-S 2021 (16 itens), preenchidos ao final do estudo.
 
-## Pendências antes da trava
+## Pendências
 
-1. Autoria, instituição, financiamento e conflito de interesses: em branco por decisão do pesquisador.
-2. Leitura do pesquisador e aprovação do que está marcado PROPOSTA: onde o protocolo será acessado; redação da justificativa, da lacuna e do objetivo; revisões como fonte; justificativa do idioma; texto completo, duplicatas e fontes sobre cajuína sem aroma; conferência das referências; prova da equivalência das buscas; Rayyan; campos da extração.
-3. A decisão do pesquisador sobre a F1, com as palavras dele (`record_researcher_decision`), e a trava (`submit_protocol_for_approval`).
+1. Autoria, instituição, financiamento e conflito de interesses: em branco por decisão do pesquisador (15/11/2026); preenchidos antes da submissão do artigo.
+2. Conserto das falhas F7 e F8 do ReviewBR antes da F2.

@@ -22,31 +22,41 @@ estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
 
 ## Estado
 
-- Artigo 1: revisão de escopo (`scoping-prisma-scr`), controle estrito, fase F0. O `protocol.md` está na v0.2 (15/11/2026), já com o desenho; falta o Vicente ler, dar a frase dele e travar (resto do passo B).
-  Condição `avaliacao_critica` = "não" gravada.
-- O desenho atual está em `DESENHO_artigo1.md`: só a cajuína; fontes por relevância; dois revisores humanos.
+- Artigo 1: revisão de escopo (`scoping-prisma-scr`), controle estrito. **Protocolo v1.0 TRAVADO em 15/11/2026**
+  (`project_state.json`: LOCKED, fase F2). Mudar o protocolo agora exige emenda registrada.
+- O que vale é o `protocol.md`. O `DESENHO_artigo1.md` é o histórico de como se chegou a ele; onde os dois
+  divergirem (a string, a conferência de 20%, o Rayyan), vale o protocolo.
+- Próximo passo: A (manutenção) e depois C (busca). A busca espera o conserto de F7 e F8.
 - Artigo 2: sessão própria; entrada em `artigo2/ABRIR_SESSAO.md`.
 
 ## Passos, na ordem
 
 | # | passo | quem | pronto quando | para se |
 |---|---|---|---|---|
-| A | Conferir os problemas que tocam este projeto: F7 e F8 (fontes), P1 (trava do protocolo), F3 (resumos), e se a trilha aceita uma revisão com zero estudos incluídos | sessão de **manutenção**, por ordem do Vicente (a sessão de projeto não cria linha na FILA) | cada um está confirmado ou descartado, e o que foi confirmado tem conserto ou decisão do Vicente | — |
-| B | Passar o `DESENHO_artigo1.md` para o `protocol.md` (v0.2), mantendo os títulos de seção que já estão lá; mostrar ao Vicente as 7 decisões da seção 9 do desenho; gravar as respostas; travar com `submit_protocol_for_approval` | sessão de projeto, sem agente (edição direta) | `project_state.json` com status LOCKED | a conferência da trava reprovar por causa do esqueleto (P1): parar e anotar |
-| C | Busca (F2): o agente `librarian` roda as fontes abertas com a string do produto e os controles positivos; o Vicente roda Scopus, Web of Science e FSTA no Portal CAPES e salva os arquivos RIS em `01_raw/manual/`; importar com `import_dataset_ris` | 1 agente + o Vicente | `01_raw/` e o registro da busca preenchidos, com o controle de cada fonte | fonte com falha não consertada: não buscar nela, anotar |
+| A | Conferir os problemas que tocam este projeto: F7 e F8 (fontes), F3 (resumos), Infoteca-e inativa e UFPI (F5), como se gravam as decisões de dois revisores humanos, e se a trilha aceita uma revisão com zero estudos incluídos | sessão de **manutenção**, por ordem do Vicente (a sessão de projeto não cria linha na FILA) | cada um está confirmado ou descartado, e o que foi confirmado tem conserto ou decisão do Vicente | — |
+| B | Protocolo escrito, lido e aprovado pelo Vicente, e travado | — | **feito em 15/11/2026** | — |
+| C | Busca (F2): o agente `librarian` roda as fontes abertas com as strings do `protocol.md` e os controles positivos; o Vicente roda Scopus, Web of Science e FSTA no Portal CAPES e salva os arquivos RIS em `01_raw/manual/`; importar com `import_dataset_ris` | 1 agente + o Vicente | `01_raw/` e o registro da busca preenchidos, com o controle de cada fonte | fonte com falha não consertada: não buscar nela, anotar |
 | D | Deduplicação e triagem (F3/F4): camada mecânica por palavras, depois a leitura dos dois revisores humanos | agente `screener` + Vicente + estagiário | lista final de incluídos decidida pelo Vicente | — |
 | E | Extração, leitura e manuscrito (F5 a F8); conferir a lista do PRISMA-ScR; publicar o preprint | agentes `extractor`, `reader`, `analyst` + Vicente | manuscrito aprovado pelo Vicente | a exportação barrar as contas do funil |
 
-O passo B não depende do passo A: a conferência da trava só é testada tentando travar. O passo C depende do A (F7
-e F8) ou de uma decisão nova do Vicente sobre essas fontes.
+O passo C depende do A (F7 e F8) ou de uma decisão nova do Vicente sobre essas fontes. A parte do Vicente no
+passo C (Scopus, Web of Science e FSTA pelo Portal CAPES) não depende de nada e pode ser feita já, com as strings
+do `protocol.md`, anotando base, plataforma, data, texto exato e total.
 
 ## Prompts prontos
 
 Passo A, no chat de manutenção:
 
 > Rotina de manutenção. Depois dela, confira só estes itens do "Visto de passagem" que tocam o projeto
-> `roda_aromas_ceara`: F7, F8, P1, F3, e a pergunta "a trilha do escopo aceita uma revisão com zero estudos
-> incluídos?". Para cada um: reproduza, diga se é real e o que o conserto exige. Não conserte sem me mostrar.
+> `roda_aromas_ceara`: F7, F8, F3, a Infoteca-e inativa, a UFPI (F5), onde se gravam as decisões de dois
+> revisores humanos, e a pergunta "a trilha do escopo aceita uma revisão com zero estudos incluídos?". Para cada
+> um: reproduza, diga se é real e o que o conserto exige. Não conserte sem me mostrar.
+
+Passo C, em chat novo, depois do passo A:
+
+> Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Faça o passo C:
+> a busca da F2 nas fontes abertas, com o controle positivo de cada uma. Os arquivos que exportei da CAPES estão
+> em `01_raw/manual/`.
 
 Passo B, em chat novo:
 

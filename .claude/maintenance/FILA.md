@@ -268,3 +268,7 @@ Vicente pedir.
   - o pesquisador perguntou "porque nao se pode seguir estritamente o que o metodo pede": o sistema não diz, em
     cada campo do protocolo, se a escolha é exigida pela norma de relato, recomendada por um manual de condução ou
     livre.
+- (projeto `roda_aromas_ceara`, 15/11/2026) A `submit_protocol_for_approval` aprovou (3/3) e travou um protocolo
+  com `[TBD]` em F0.1.6 a F0.1.9 (autores, instituição, financiamento, conflito de interesses), deixados em branco
+  por decisão do pesquisador. A P1 (esqueleto genérico) não impediu a trava: o protocolo manteve os títulos do
+  esqueleto e pôs dentro deles os campos do modelo do escopo.
