@@ -138,6 +138,10 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   `submit_protocol_for_approval` aprovou (3/3). Estado: LOCKED, fase F2. Consequência: mudar o protocolo exige
   emenda registrada; a busca espera o conserto de F7 e F8.
 - **15/11/2026, falhas do ReviewBR.** Ficam com a manutenção (já estão no "Visto de passagem").
+- **16/11/2026, só o Claude.** O Vicente perguntou se outro assistente (Gemini) poderia tocar parte do trabalho e
+  decidiu que não: "decidi continuar apenas com o claude". A seção do `RETOMAR.md` com as regras para assistente
+  fora do Claude Code foi retirada. Consequência: os passos A, C, D e E rodam no Claude Code, em Opus ou modelo
+  mais barato, quando os tokens renovarem.
 - **15/11/2026, artigo 2.** A pasta da coleta é `G:\Meu Drive\roda_de_aromas`, e o Vicente quer organizá-la. Há
   conversas gravadas, algumas já transcritas; as transcrições são feitas por uma ferramenta a que o bolsista tem
   acesso, não pelo assistente. O Comitê de Ética cobre o projeto, com numeração: **não perguntar mais sobre isso**.
