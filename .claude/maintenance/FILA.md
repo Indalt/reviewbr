@@ -290,6 +290,11 @@ Vicente pedir.
   - Visto na conferência, sem avaliação: para "cajuína", a BDTD devolve entre os 20 primeiros registros sem relação
     ("amor livre", biossurfactantes, assentamentos), que entram na contagem. E o `search.ts:26` põe na camada 2 todo
     repositório inativo, então o `search_papers_optimized` com a camada 2 também consulta os inativos.
+  - Origem (git blame, 19/11): as causas acima são anteriores à manutenção. A camada de acesso vem do commit
+    `28222ed` (03/03/2026); o mapeamento do OpenAlex, o filtro do SciELO e o "DSpace" do catálogo vêm do `9943f66`
+    (26/02/2026). Nenhuma tool da trilha saiu; a única removida desde julho, a `screen_with_asreview` (DEBT-022,
+    08/10/2026, com autorização do Vicente), não produzia decisão de triagem. A suíte passa porque não consulta as
+    fontes reais.
 - (projeto `roda_aromas_ceara`, 12/11/2026) No escopo, a avaliação crítica das fontes não tem onde ser registrada
   na trilha: com a condição `avaliacao_critica` = "sim", os itens 12 e 16 do PRISMA-ScR ficam `[NÃO COBERTO]`
   (o que ficou declarado ao resolver o DEBT-151). O projeto respondeu "não", mas o Vicente pediu o registro: "essa
