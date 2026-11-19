@@ -30,7 +30,7 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
 |---|---|---|---|---|---|
 | 1 | 12/11/2026 | exploratória (agente `scout`) | O que já existe: há roda de aromas, léxico sensorial ou descrição de aroma publicados para algum produto cearense? | `exploratoria/01_o_que_existe.md` (log: `01_buscas_log.md`, 43 execuções) | feito, **parcial**: repositórios do CE só alcançados via BDTD; SciELO inutilizável; só títulos, sem resumo. Aguarda decisão do Vicente |
 | 2 | 12/11/2026 | artigo 1, F0/F1, protocolo (agente `designer`) | revisão de escopo (PCC): descritores sensoriais e compostos de aroma da cajuína e das bebidas do pedúnculo de caju, em geral, com o Ceará destacado | `protocol.md` v0.1 (DRAFT); `project_state.json` (projeto 3, estrito); `protocolo_falhas_reviewbr.md` (P1 a P8) | **feito: protocolo v1.0 travado em 15/11/2026**; condição `avaliacao_critica` = "não" gravada; busca bloqueada até o conserto de F7 e F8 |
-| 3 | — | artigo 1, F2, busca (agente `librarian` + Vicente na CAPES) | strings do `protocol.md` | `01_raw/` | a fazer; espera a manutenção (F7 e F8) |
+| 3 | 19/11/2026 | artigo 1, F2, busca (agente `librarian` + Vicente na CAPES) | strings do `protocol.md` | `01_raw/manual/` (RIS e `ANOTACOES_busca_manual.md`, fora do git) | **parte manual feita em 19/11/2026**: Scopus 23, Web of Science 17, FSTA 14 (2 patentes), todos com resumo e controle positivo. O resto espera a linha 12 da FILA e a decisão sobre UECE, Alice e Infoteca-e |
 
 ## Decisões
 
@@ -138,6 +138,18 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   `submit_protocol_for_approval` aprovou (3/3). Estado: LOCKED, fase F2. Consequência: mudar o protocolo exige
   emenda registrada; a busca espera o conserto de F7 e F8.
 - **15/11/2026, falhas do ReviewBR.** Ficam com a manutenção (já estão no "Visto de passagem").
+- **19/11/2026, manutenção antes da busca.** Frase dele: "se precisa realizar a fila para a roda de aromas ser
+  feita apropriadamente vamos executar." Os consertos confirmados na conferência do passo A viraram as linhas 11 a
+  13 da FILA. As linhas 11 e 12 vêm antes do passo C; a 13, antes do passo D. A busca dele no Portal CAPES não
+  espera. Consequência: o projeto para até essas linhas.
+- **19/11/2026, linha 11 feita** (commit `4936c59`, sessão de manutenção). BDTD, UFC e UFPI buscam pela interface
+  da própria fonte e mostram o total que ela declara. UECE, Alice e Infoteca-e ficaram marcadas como não
+  pesquisáveis pela ferramenta (HTTP 403; o `robots.txt` proíbe busca por robô), e a tool diz isso em vez de dar
+  zero.
+- **19/11/2026, PENDENTE: UECE, Alice e Infoteca-e.** As três estão no protocolo travado como fontes buscadas pela
+  ferramenta. Mudar a forma de busca ou tirar a fonte é emenda ao protocolo. Opções levadas ao Vicente: (a) busca
+  manual no site, feita por ele como na CAPES; (b) fonte declarada como não alcançada, com a cobertura parcial que
+  a BDTD dá. Não decidido.
 - **16/11/2026, só o Claude.** O Vicente perguntou se outro assistente (Gemini) poderia tocar parte do trabalho e
   decidiu que não: "decidi continuar apenas com o claude". A seção do `RETOMAR.md` com as regras para assistente
   fora do Claude Code foi retirada. Consequência: os passos A, C, D e E rodam no Claude Code, em Opus ou modelo

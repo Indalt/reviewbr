@@ -28,11 +28,25 @@ estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
   (`project_state.json`: LOCKED, fase F2). Mudar o protocolo agora exige emenda registrada.
 - O que vale é o `protocol.md`. O `DESENHO_artigo1.md` é o histórico de como se chegou a ele; onde os dois
   divergirem (a string, a conferência de 20%, o Rayyan), vale o protocolo.
-- Próximo passo: as linhas 11 e 12 da `.claude/maintenance/FILA.md` (manutenção, decididas pelo Vicente em
-  19/11/2026), depois C (busca). A linha 13, que grava as decisões dos dois revisores, vem antes de D (triagem).
 - A parte do Vicente no passo C foi feita em 19/11/2026: Scopus 23, Web of Science 17 e FSTA 14 registros, todos com
   resumo e com controle positivo. Os RIS e as anotações (`ANOTACOES_busca_manual.md`) estão em `01_raw/manual/`,
   fora do git. A importação (`import_dataset_ris`) fica para o passo C.
+- **Ordem combinada (Vicente, 19/11/2026):** as linhas 11 e 12 da `.claude/maintenance/FILA.md` vêm antes do passo C;
+  a linha 13 vem antes do passo D.
+  - Linha 11 (repositórios): **feita em 19/11/2026**, commit `4936c59`. BDTD, UFC e UFPI buscam e mostram o total da
+    fonte. UECE, Alice e Infoteca-e ficaram marcadas como **não pesquisáveis pela ferramenta** (HTTP 403; o
+    `robots.txt` proíbe a busca por robô), e a tool diz isso em vez de dar zero.
+  - Linha 12 (OpenAlex e SciELO): a fazer, em chat de manutenção.
+  - Linha 13 (decisões dos dois revisores): a fazer, antes do passo D.
+- **Pendente, decisão do Vicente antes do passo C:** o que fazer com UECE, Alice e Infoteca-e, que estão no
+  protocolo travado como `search_repository`. Mudar a forma de busca ou tirar a fonte é emenda: vai para
+  `change_log.md` nesta pasta (o suplemento que a trilha prevê; não há tool que o grave), para o `REGISTRO.md` e
+  para a decisão dele na F2 (`record_researcher_decision`). Opções levadas a ele em 19/11: busca manual no site,
+  feita por ele como na CAPES; ou fonte declarada como não alcançada, com a cobertura parcial que a BDTD dá (teses e
+  dissertações da UECE e da Embrapa aparecem nela).
+- **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
+  manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
+  estiver mudando o servidor.
 - Artigo 2: sessão própria; entrada em `artigo2/ABRIR_SESSAO.md`.
 
 ## Passos, na ordem
@@ -45,9 +59,8 @@ estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
 | D | Deduplicação e triagem (F3/F4): camada mecânica por palavras, depois a leitura dos dois revisores humanos | agente `screener` + Vicente + estagiário | lista final de incluídos decidida pelo Vicente | — |
 | E | Extração, leitura e manuscrito (F5 a F8); conferir a lista do PRISMA-ScR; publicar o preprint | agentes `extractor`, `reader`, `analyst` + Vicente | manuscrito aprovado pelo Vicente | a exportação barrar as contas do funil |
 
-O passo C depende do A (F7 e F8) ou de uma decisão nova do Vicente sobre essas fontes. A parte do Vicente no
-passo C (Scopus, Web of Science e FSTA pelo Portal CAPES) não depende de nada e pode ser feita já, com as strings
-do `protocol.md`, anotando base, plataforma, data, texto exato e total.
+O passo C depende da linha 12 da FILA e da decisão do Vicente sobre UECE, Alice e Infoteca-e. A parte dele no
+passo C (Scopus, Web of Science e FSTA) já foi feita em 19/11/2026.
 
 ## Prompts prontos
 
@@ -58,11 +71,15 @@ Passo A, no chat de manutenção:
 > revisores humanos, e a pergunta "a trilha do escopo aceita uma revisão com zero estudos incluídos?". Para cada
 > um: reproduza, diga se é real e o que o conserto exige. Não conserte sem me mostrar.
 
-Passo C, em chat novo, depois do passo A:
+Linha 12, no chat de manutenção:
+
+> Rotina de manutenção e linha 12 da FILA (J — OpenAlex e SciELO).
+
+Passo C, em chat novo, depois da linha 12 e da decisão sobre UECE, Alice e Infoteca-e:
 
 > Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Faça o passo C:
-> a busca da F2 nas fontes abertas, com o controle positivo de cada uma. Os arquivos que exportei da CAPES estão
-> em `01_raw/manual/`.
+> importe os três RIS de `01_raw/manual/` (Scopus, Web of Science, FSTA) e rode a busca da F2 nas fontes abertas,
+> com o controle positivo de cada uma. Use um agente `librarian` com modelo `opus`.
 
 Passo B, em chat novo:
 

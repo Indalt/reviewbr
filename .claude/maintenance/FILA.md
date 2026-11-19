@@ -348,3 +348,10 @@ Vicente pedir.
   - no catálogo, a UECE (`BR-EST-0006`) está com `institution.type` "federal";
   - para "cajuína", o IFCE devolve 1 registro, cujo título não traz a palavra ("Construção de uma perspectiva de ensino
     interdisciplinar…"); é o que a busca do site devolve.
+- (projeto `roda_aromas_ceara`, 19/11/2026) Visto ao retomar o projeto, sem avaliação:
+  - o `project_state.json` guarda em `topic` a pergunta de 12/11 (cajuína e bebidas do pedúnculo); o protocolo
+    travado em 15/11 tem outra (só a cajuína). Nada atualiza o campo depois da `plan_research_protocol`;
+  - a spec (RV-01) diz que o protocolo travado só muda por emenda registrada no `change_log`, e a skill
+    `prisma-rigor-gates` lista `change_log.md` como suplemento, mas nenhuma tool cria ou confere a emenda. O
+    projeto pode precisar de uma: UECE, Alice e Infoteca-e estão no protocolo e a linha 11 as marcou como não
+    pesquisáveis.
