@@ -169,3 +169,9 @@ não abre ("it needs settings that Claude Code downloads from Anthropic").
 **Teste, se o Vicente quiser, com a extensão na 2.1.328 ou mais.** Uma sessão no terminal, com a variável só naquele
 shell e o Remote Control desligado só nela; uma tarefa de muitas chamadas; o custo da sessão comparado no medidor com
 o de uma sessão parecida no painel. O settings global não muda antes do resultado.
+
+> **Decidido pelo Vicente em 19/11/2026:** o Remote Control deixa de ligar ao abrir as sessões
+> (`remoteControlAtStartup: false` no `~/.claude/settings.json`), em todas as sessões desta máquina. Ele disse que
+> perder o Remote Control não é problema. A extensão já está na 2.1.328. A variável do Code Mode não entrou no
+> settings global: o teste a liga só no shell do terminal. Consequência: as sessões deixam de poder ser acompanhadas
+> de outro aparelho até alguém religar a chave. Origem: "nao tem problema desativar o modo remote control".
