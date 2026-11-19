@@ -1,12 +1,13 @@
 /**
  * Access strategy — orchestrates access layers with platform-specific routing.
- * Chooses the best method for each repository automatically:
+ * Busca (linha 11 da FILA): sempre pela interface de busca do repositório, nunca pela colheita.
  * - BDTD → VuFind API (from ApoenaX/bdtd-scraper pattern)
  * - SciELO → ArticleMeta/Search API (from scieloorg/articles_meta)
  * - USP → Custom result.php scraper
- * - DSpace 7 → REST API + /server/oai/request
- * - DSpace 5/6 → OAI-PMH + /oai/request
- * - Others → HTML scraper fallback
+ * - DSpace 7 → REST API (/server/api, ou o endereço do catálogo)
+ * - DSpace 5/6 e outros → página de busca do site (endereço do catálogo ou os caminhos comuns)
+ * - Catálogo com `searchable: false` → erro com o motivo
+ * OAI-PMH → só colheita e metadados de um registro.
  */
 
 import { OaiPmhClient } from "./oai-pmh.js";
@@ -15,6 +16,30 @@ import { HtmlScraper } from "./html-scraper.js";
 import { UniversalProvider } from "../services/universal_provider.js";
 import { BdtdAdapter, ScieloAdapter, UspAdapter, resolveOaiEndpoint } from "./platform-adapters.js";
 import type { RepositoryEntry, SearchResult, SearchOptions, OaiRecord, DublinCoreMetadata, DSpaceItem } from "../types.js";
+
+/** O que uma busca num repositório devolveu, e de onde veio a contagem (linha 11 da FILA). */
+export interface RelatorioBusca {
+    results: SearchResult[];
+    /** Total que a fonte declarou para a string; null quando o método não o informa. */
+    totalNaFonte: number | null;
+    /** Método e endereço usados, para o registro da busca. */
+    metodo: string;
+}
+
+/** Plataforma do catálogo comparada sem diferença de maiúscula ("DSpace" × "dspace", item 2). */
+function ehDspace(repo: RepositoryEntry): boolean {
+    return (repo.repository.platform ?? "").toLowerCase().startsWith("dspace");
+}
+
+/** Endereço da API REST: o do catálogo (`access.restApi.endpoint`) ou o do repositório. */
+function baseRest(repo: RepositoryEntry): string {
+    return repo.access.restApi?.endpoint || repo.repository.url;
+}
+
+/** Texto sem acento e em minúscula, para comparar palavras (item 5). */
+function semAcento(s: string): string {
+    return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+}
 
 interface CapabilityCache {
     oaiPmhWorks: boolean | null;
@@ -41,25 +66,54 @@ export class AccessStrategy {
         query: string,
         opts?: SearchOptions
     ): Promise<SearchResult[]> {
+        return (await this.searchDetailed(repo, query, opts)).results;
+    }
+
+    /**
+     * Busca pela interface de busca do próprio repositório, para que o total bata com o que uma
+     * pessoa vê no site (linha 11 da FILA, decidida pelo Vicente em 19/11/2026).
+     *
+     * O OAI-PMH NÃO serve de busca: ele colhia os primeiros `maxResults × 3` registros do acervo
+     * e filtrava só esses — o zero sem aviso na UECE, na Alice, no IFCE e na UFPI (commit 93c7997) vinha daí.
+     * O OAI fica para a colheita (`harvest_records`).
+     *
+     * Zero só quando a fonte disse zero. Repositório marcado no catálogo como não pesquisável, ou
+     * em que nenhum método funcionou, é ERRO com o motivo — antes era lista vazia calada.
+     */
+    async searchDetailed(
+        repo: RepositoryEntry,
+        query: string,
+        opts?: SearchOptions
+    ): Promise<RelatorioBusca> {
         const maxResults = opts?.maxResults ?? 50;
+        const falhas: string[] = [];
+
+        // DECLARAR (linha 11): o catálogo diz quando a tool não tem busca que consiga usar.
+        if (repo.access.searchable === false) {
+            throw new Error(
+                `não pesquisável pela tool: ${(repo.access.searchUnavailableReason ?? "sem motivo registrado no catálogo").replace(/\.\s*$/, "")}. ` +
+                `Zero aqui não quer dizer que a fonte não tem registros; anote a fonte como não alcançada ou busque no site.`,
+            );
+        }
 
         // ─── Platform-specific fast paths ────────────────────────
 
         // BDTD: use VuFind API (proven by ApoenaX/bdtd-scraper)
         if (repo.id === "BR-AGG-0001" || repo.repository.url.includes("bdtd.ibict.br")) {
             try {
-                return await this.bdtd.search(query, opts);
-            } catch {
-                // Fall through to generic methods
+                const r = await this.bdtd.searchDetailed(query, opts);
+                return { results: r.results, totalNaFonte: r.total, metodo: "BDTD, API do VuFind" };
+            } catch (e) {
+                falhas.push(`BDTD (API do VuFind): ${(e as Error).message}`);
             }
         }
 
         // SciELO: use ArticleMeta/Search API
         if (repo.id === "BR-AGG-0002" || repo.repository.url.includes("scielo.br")) {
             try {
-                return await this.scielo.search(query, opts);
-            } catch {
-                // Fall through
+                return { results: await this.scielo.search(query, opts), totalNaFonte: null, metodo: "SciELO ArticleMeta" };
+            } catch (e) {
+                falhas.push(`SciELO ArticleMeta: ${(e as Error).message}`);
             }
         }
 
@@ -67,9 +121,9 @@ export class AccessStrategy {
         if (repo.repository.url.includes("repositorio.usp.br")) {
             try {
                 const results = await this.usp.search(query, opts);
-                if (results.length > 0) return results;
-            } catch {
-                // Fall through
+                if (results.length > 0) return { results, totalNaFonte: null, metodo: "USP result.php" };
+            } catch (e) {
+                falhas.push(`USP result.php: ${(e as Error).message}`);
             }
         }
 
@@ -83,64 +137,52 @@ export class AccessStrategy {
                     mapping: (repo as any).access.mapping
                 };
                 const results = await this.universal.search(config, query, opts);
-                if (results.results.length > 0) return results.results;
-            } catch { /* Fall through */ }
-        }
-
-        // ─── Standard access layer cascade ───────────────────────
-
-        const cap = await this.detectCapabilities(repo);
-
-        // Strategy 1: OAI-PMH (most reliable, but search = full harvest + filter)
-        if (cap.oaiPmhWorks && cap.oaiPmhEndpoint) {
-            try {
-                const records = await this.oai.listAllRecords(cap.oaiPmhEndpoint, {
-                    from: opts?.dateFrom,
-                    until: opts?.dateUntil,
-                    set: opts?.set,
-                    maxRecords: maxResults * 3, // Over-fetch to filter
-                });
-
-                const results = records
-                    .filter((r) => this.matchesQuery(r, query))
-                    .map((r) => this.oaiRecordToSearchResult(r, repo))
-                    .slice(0, maxResults);
-
-                if (results.length > 0) return results;
-            } catch (error) {
-                // Fall through to next strategy
+                if (results.results.length > 0) return { results: results.results, totalNaFonte: null, metodo: "API mapeada no catálogo" };
+            } catch (e) {
+                falhas.push(`API mapeada: ${(e as Error).message}`);
             }
         }
 
-        // Strategy 2: DSpace REST API
-        if (cap.restApiWorks) {
-            try {
-                const result = await this.rest.search(repo.repository.url, query, {
-                    size: maxResults,
-                });
+        // ─── Busca do próprio repositório ────────────────────────
 
-                if (result.items.length > 0) {
-                    return result.items.map((item) =>
-                        this.dspaceItemToSearchResult(item, repo)
-                    );
+        // 1. API REST do DSpace 7 — a mesma que a interface do site consulta.
+        if (ehDspace(repo) || repo.access.restApi?.endpoint) {
+            const apiUrl = this.rest.resolveApiUrl(baseRest(repo));
+            try {
+                const items: SearchResult[] = [];
+                const vistos = new Set<string>();
+                let total = 0;
+                const size = Math.max(1, Math.min(maxResults, 100));
+                for (let page = 0; items.length < maxResults; page++) {
+                    const r = await this.rest.search(baseRest(repo), query, { size, page });
+                    total = r.totalElements;
+                    const novos = r.items.filter((it) => !vistos.has(it.uuid));
+                    for (const it of novos) vistos.add(it.uuid);
+                    items.push(...novos.map((item) => this.dspaceItemToSearchResult(item, repo)));
+                    if (novos.length === 0 || items.length >= total) break;
                 }
-            } catch {
-                // Fall through
+                return { results: items.slice(0, maxResults), totalNaFonte: total, metodo: `DSpace REST (${apiUrl})` };
+            } catch (e) {
+                falhas.push(`DSpace REST (${apiUrl}): ${(e as Error).message}`);
             }
         }
 
-        // Strategy 3: HTML Scraper (universal fallback)
+        // 2. Página de busca do site (DSpace 5/6 e outros): endereços do catálogo ou os comuns.
         try {
-            return await this.scraper.search(
+            const r = await this.scraper.searchDetailed(
                 repo.repository.url,
                 repo.id,
                 repo.repository.name,
                 query,
-                maxResults
+                maxResults,
+                repo.access.searchEndpoints,
             );
-        } catch {
-            return [];
+            return { results: r.results, totalNaFonte: r.total, metodo: `página de busca (${r.endpoint})` };
+        } catch (e) {
+            falhas.push((e as Error).message);
         }
+
+        throw new Error(`nenhum método de busca funcionou — ${falhas.join(" | ")}`);
     }
 
     /**
@@ -214,7 +256,7 @@ export class AccessStrategy {
             // UUID format
             try {
                 const bitstreams = await this.rest.getBitstreams(
-                    repo.repository.url,
+                    baseRest(repo),
                     identifier
                 );
                 const pdf = bitstreams.find((b) =>
@@ -306,8 +348,8 @@ export class AccessStrategy {
         }
 
         // Check DSpace REST
-        if (repo.repository.platform === "dspace") {
-            cap.restApiWorks = await this.rest.detect(repo.repository.url);
+        if (ehDspace(repo) || repo.access.restApi?.endpoint) {
+            cap.restApiWorks = await this.rest.detect(baseRest(repo));
         } else {
             cap.restApiWorks = false;
         }
@@ -317,56 +359,26 @@ export class AccessStrategy {
     }
 
     /**
-     * Check if an OAI record matches a search query (simple text matching).
+     * Confere se um registro OAI casa com a string: TODAS as palavras, sem diferença de acento
+     * (linha 11, item 5). Antes bastava uma palavra de três, e vinha registro sem relação com a string.
+     *
+     * Desde a linha 11 nenhuma busca filtra pelo OAI (item 1), então hoje nada chama este método;
+     * ficou corrigido como a fila manda.
      */
     private matchesQuery(record: OaiRecord, query: string): boolean {
-        const terms = query
-            .toLowerCase()
+        const terms = semAcento(query)
             .replace(/['"()]/g, "")
-            .split(/\s+(?:AND|OR)\s+/i)
+            .split(/\s+(?:and|or)\s+/i)
             .flatMap((t) => t.split(/\s+/))
-            .filter((t) => t.length > 2 && !t.startsWith("-"));
+            .filter((t) => t.length > 2 && !t.startsWith("-") && t !== "and" && t !== "or" && t !== "not");
 
-        const text = [
+        const text = semAcento([
             ...record.metadata.title,
             ...record.metadata.description,
             ...record.metadata.subject,
-        ]
-            .join(" ")
-            .toLowerCase();
+        ].join(" "));
 
-        return terms.some((term) => text.includes(term));
-    }
-
-    /**
-     * Convert OAI-PMH record to SearchResult.
-     */
-    private oaiRecordToSearchResult(
-        record: OaiRecord,
-        repo: RepositoryEntry
-    ): SearchResult {
-        // Try to find a URL in the identifiers
-        const urls = record.metadata.identifier.filter((id) => id.startsWith("http"));
-        const url = urls[0] ?? `${repo.repository.url}handle/${record.identifier.split(":").pop()}`;
-
-        return {
-            repositoryId: repo.id,
-            repositoryName: repo.repository.name,
-            identifier: record.identifier,
-            title: record.metadata.title[0] ?? "",
-            creators: record.metadata.creator,
-            description: record.metadata.description[0] ?? "",
-            date: record.metadata.date[0] ?? "",
-            type: record.metadata.type[0] ?? "",
-            url,
-            accessMethod: "oai-pmh",
-            audit: {
-                methodology: "CUSTOM" as any,
-                searchQueryUsed: "RECOVERY_FROM_OAI_HARVEST",
-                extractionDate: new Date().toISOString(),
-                provenanceSource: repo.access.oaiPmh.endpoint || repo.repository.url
-            }
-        };
+        return terms.length > 0 && terms.every((term) => text.includes(term));
     }
 
     /**

@@ -172,8 +172,8 @@
     },
     "repository": {
       "name": "Repositório Institucional da UECE",
-      "url": "https://siduece.uece.br/",
-      "platform": "DSpace",
+      "url": "https://siduece.uece.br/siduece/",
+      "platform": "SIDUECE (sistema próprio, JSF)",
       "contentType": "Misto"
     },
     "access": {
@@ -183,7 +183,11 @@
         "verified": false,
         "lastVerified": "2026-03-02"
       },
-      "searchEndpoints": []
+      "searchEndpoints": [
+        "https://siduece.uece.br/siduece/trabalhoAcademicoPublico.jsf"
+      ],
+      "searchable": false,
+      "searchUnavailableReason": "SIDUECE é sistema próprio (JSF), não DSpace: a busca é formulário com estado de sessão (POST com ViewState), sem endereço de busca por URL; em 2026-11-19 o servidor passou a responder HTTP 403 depois de poucas requisições (robots.txt também 403). A BDTD indexa registros da UECE."
     },
     "status": "active",
     "layer": "2"
@@ -908,11 +912,16 @@
     "access": {
       "oaiPmh": {
         "available": true,
-        "endpoint": "https://repositorio.ufpi.br/oai/request",
+        "endpoint": "https://repositorio.ufpi.br/srv-ufpi-s01/oai/request",
         "verified": true,
-        "lastVerified": "2026-07-03"
+        "lastVerified": "2026-11-19"
       },
-      "searchEndpoints": []
+      "searchEndpoints": [],
+      "restApi": {
+        "available": true,
+        "endpoint": "https://repositorio.ufpi.br/srv-ufpi-s01/api",
+        "version": 7
+      }
     },
     "status": "active",
     "layer": "3"
@@ -1263,7 +1272,12 @@
         "verified": true,
         "lastVerified": "2026-03-02"
       },
-      "searchEndpoints": []
+      "searchEndpoints": [],
+      "restApi": {
+        "available": true,
+        "endpoint": "https://repositorio.ifce.edu.br/server/api",
+        "version": 7
+      }
     },
     "status": "active",
     "layer": "2"
@@ -2305,7 +2319,7 @@
     },
     "repository": {
       "name": "ALICE - Repositório Embrapa",
-      "url": "https://www.alice.cnptia.embrapa.br/",
+      "url": "https://www.alice.cnptia.embrapa.br/alice/",
       "platform": "DSpace",
       "contentType": "Misto"
     },
@@ -2316,7 +2330,11 @@
         "verified": false,
         "lastVerified": "2026-02-19"
       },
-      "searchEndpoints": []
+      "searchEndpoints": [
+        "https://www.alice.cnptia.embrapa.br/alice/simple-search"
+      ],
+      "searchable": false,
+      "searchUnavailableReason": "a busca do site (/alice/simple-search) recusa acesso automatizado: HTTP 403 em 2026-11-19, e o robots.txt a proíbe (Disallow: /simple-search); o OpenSearch não tem modelo de consulta (HTTP 400). O OAI-PMH responde e serve à colheita (harvest_records). A BDTD indexa registros da Alice."
     },
     "status": "active",
     "layer": "2"
@@ -2359,7 +2377,7 @@
     },
     "repository": {
       "name": "Infoteca-e",
-      "url": "https://www.infoteca.cnptia.embrapa.br/",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/",
       "platform": "DSpace",
       "contentType": "Misto"
     },
@@ -2370,7 +2388,11 @@
         "verified": false,
         "lastVerified": "2026-02-19"
       },
-      "searchEndpoints": []
+      "searchEndpoints": [
+        "https://www.infoteca.cnptia.embrapa.br/infoteca/simple-search"
+      ],
+      "searchable": false,
+      "searchUnavailableReason": "a busca do site (/infoteca/simple-search) recusa acesso automatizado: HTTP 403 em 2026-11-19, e o robots.txt a proíbe (Disallow: /simple-search); o OpenSearch não tem modelo de consulta (HTTP 400). Segue inactive: o controle positivo da linha 11 da FILA não passou."
     },
     "status": "inactive",
     "layer": "3"

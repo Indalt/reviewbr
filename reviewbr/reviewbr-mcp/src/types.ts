@@ -28,6 +28,10 @@ const accessSchema = z.object({
         version: z.number().nullable().optional(),
     }).passthrough().optional(),
     searchEndpoints: z.array(z.string()).optional(),
+    // Linha 11 da FILA: false quando a tool não tem busca que consiga usar nesse repositório
+    // (a busca diz isso e o motivo, em vez de devolver zero).
+    searchable: z.boolean().optional(),
+    searchUnavailableReason: z.string().optional(),
     // International REST API Mapping Extensions
     baseUrl: z.string().optional(),
     endpoints: z.record(z.string(), z.string()).optional(),

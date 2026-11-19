@@ -247,17 +247,25 @@ export class ScieloAdapter {
 interface BdtdRecord {
     id: string;
     title: string;
-    authors: { primary?: Record<string, string[]>; secondary?: Record<string, string[]> };
+    authors?: { primary?: Record<string, string[]>; secondary?: Record<string, string[]> | unknown[] };
     publicationDates?: string[];
     urls?: Array<{ url: string; desc?: string }>;
     subjects?: string[][];
-    abstract?: string[];
+    /** Resumo. Na API do VuFind o campo é `summary` (swagger da BDTD, lido em 19/11/2026). */
+    summary?: string[];
     languages?: string[];
     formats?: string[];
     institutions?: string[];
-    degreePrograms?: string[];
-    degreeNames?: string[];
 }
+
+/**
+ * Campos pedidos à API. Sem `field[]`, o VuFind devolve só os padrão (authors, formats, id,
+ * languages, series, subjects, title, urls) — sem resumo nem data (linha 11, item 6).
+ */
+const BDTD_CAMPOS = ["id", "title", "authors", "publicationDates", "summary", "urls", "subjects", "languages", "formats", "institutions"];
+
+/** Total que a BDTD declarou na última busca deste adaptador (resultCount). */
+export interface BdtdBusca { results: SearchResult[]; total: number }
 
 interface BdtdSearchResponse {
     resultCount: number;
@@ -275,6 +283,12 @@ const DEGREE_TYPE_MAP: Record<string, string> = {
     "livre-docencia": "Livre-Docência",
 };
 
+/** A BDTD devolve `secondary` como objeto { nome: papéis } ou como lista vazia. */
+function nomesSecundarios(r: BdtdRecord): string[] {
+    const s = r.authors?.secondary;
+    return s && !Array.isArray(s) ? Object.keys(s) : [];
+}
+
 export class BdtdAdapter {
     private baseUrl = "https://bdtd.ibict.br/vufind";
 
@@ -282,6 +296,11 @@ export class BdtdAdapter {
      * Search BDTD via VuFind REST API with rich filters.
      */
     async search(query: string, opts?: SearchOptions): Promise<SearchResult[]> {
+        return (await this.searchDetailed(query, opts)).results;
+    }
+
+    /** Busca com o total que a BDTD declara (resultCount), página a página até maxResults. */
+    async searchDetailed(query: string, opts?: SearchOptions): Promise<BdtdBusca> {
         const limit = opts?.maxResults ?? 20;
         const type = opts?.title ? "Title" : opts?.author ? "Author" : "AllFields";
         const lookfor = opts?.title ?? opts?.author ?? query;
@@ -289,7 +308,8 @@ export class BdtdAdapter {
         const params = new URLSearchParams();
         params.set("lookfor", lookfor);
         params.set("type", type);
-        params.set("limit", String(limit));
+        params.set("limit", String(Math.min(limit, 100)));
+        for (const campo of BDTD_CAMPOS) params.append("field[]", campo);
 
         // VuFind facet filters
         if (opts?.degreeType) {
@@ -315,25 +335,35 @@ export class BdtdAdapter {
             params.append("filter[]", `subject_str:"${opts.subjectArea}"`);
         }
 
-        const url = `${this.baseUrl}/api/v1/search?${params}`;
+        const results: SearchResult[] = [];
+        let total = 0;
+        for (let page = 1; results.length < limit; page++) {
+            params.set("page", String(page));
+            const url = `${this.baseUrl}/api/v1/search?${params}`;
 
+            await rateLimiter.acquire(url);
+            const text = await fetchText(url, {
+                timeout: 30_000,
+                headers: { Accept: "application/json" },
+            });
 
-        await rateLimiter.acquire(url);
-        const text = await fetchText(url, {
-            timeout: 30_000,
-            headers: { Accept: "application/json" },
-        });
+            const data = JSON.parse(text) as BdtdSearchResponse;
+            if (typeof data.resultCount !== "number") throw new Error(`BDTD sem resultCount na resposta (${url})`);
+            total = data.resultCount;
+            const recs = (data.records ?? []).filter((r) => !results.some((x) => x.identifier === r.id));
+            results.push(...recs.map((r) => this.recordToSearchResult(r)));
+            if (recs.length === 0 || results.length >= total) break;
+        }
 
-        const data = JSON.parse(text) as BdtdSearchResponse;
-
-        return data.records.map((r) => this.recordToSearchResult(r));
+        return { results: results.slice(0, limit), total };
     }
 
     /**
      * Get record detail from BDTD.
      */
     async getRecord(id: string): Promise<Partial<DublinCoreMetadata>> {
-        const url = `${this.baseUrl} /api/v1 / record ? id = ${encodeURIComponent(id)} `;
+        const campos = BDTD_CAMPOS.map((c) => `&field[]=${c}`).join("");
+        const url = `${this.baseUrl}/api/v1/record?id=${encodeURIComponent(id)}${campos}`;
         await rateLimiter.acquire(url);
         const text = await fetchText(url, {
             timeout: 15_000,
@@ -348,11 +378,11 @@ export class BdtdAdapter {
             title: [r.title],
             creator: r.authors?.primary ? Object.keys(r.authors.primary) : [],
             date: r.publicationDates ?? [],
-            description: r.abstract ?? [],
+            description: r.summary ?? [],
             subject: r.subjects?.flat() ?? [],
             language: r.languages ?? [],
-            type: r.degreeNames ?? ["thesis/dissertation"],
-            contributor: r.authors?.secondary ? Object.keys(r.authors.secondary) : [],
+            type: r.formats ?? ["thesis/dissertation"],
+            contributor: nomesSecundarios(r),
         };
     }
 
@@ -361,13 +391,13 @@ export class BdtdAdapter {
      */
     private recordToSearchResult(r: BdtdRecord): SearchResult {
         const authors = r.authors?.primary ? Object.keys(r.authors.primary) : [];
-        const advisors = r.authors?.secondary ? Object.keys(r.authors.secondary) : [];
+        const advisors = nomesSecundarios(r);
 
-        // URL: first URL in record, or BDTD record page
-        const itemUrl = r.urls?.[0]?.url ?? `${this.baseUrl} /Record/${r.id} `;
+        // URL: first URL in record, or BDTD record page (sem espaço: linha 11, item 7)
+        const itemUrl = r.urls?.[0]?.url ?? `${this.baseUrl}/Record/${encodeURIComponent(r.id)}`;
 
         // Determine degree type
-        const degreeName = r.degreeNames?.[0] ?? r.formats?.[0] ?? "";
+        const degreeName = r.formats?.[0] ?? "";
 
         return {
             repositoryId: "BR-AGG-0001",
@@ -375,7 +405,7 @@ export class BdtdAdapter {
             identifier: r.id,
             title: r.title ?? "",
             creators: [...authors, ...advisors.map((a) => `${a} (orientador)`)],
-            description: r.abstract?.[0] ?? "",
+            description: r.summary?.[0] ?? "",
             date: r.publicationDates?.[0] ?? "",
             type: "thesis/dissertation",
             url: itemUrl,

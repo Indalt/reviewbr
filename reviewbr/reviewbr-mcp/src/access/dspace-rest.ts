@@ -47,7 +47,12 @@ export class DSpaceRestClient {
         });
 
         const data = JSON.parse(text);
-        const embedded = data?._embedded?.searchResult?._embedded?.objects ?? [];
+        // Linha 11: resposta sem searchResult não é "zero registros" — é busca que não aconteceu.
+        if (!data?._embedded?.searchResult) {
+            throw new Error(`resposta sem searchResult em ${searchUrl.toString()}`);
+        }
+        const embedded = data._embedded.searchResult._embedded?.objects ?? [];
+        const pagina = data._embedded.searchResult.page ?? data?.page;
 
         const items: DSpaceItem[] = embedded.map((obj: Record<string, unknown>) => {
             const indexObj = obj._embedded as Record<string, unknown> | undefined;
@@ -64,8 +69,8 @@ export class DSpaceRestClient {
         }).filter(Boolean) as DSpaceItem[];
 
         return {
-            totalElements: data?.page?.totalElements ?? items.length,
-            page: data?.page ?? { size: 20, totalElements: items.length, totalPages: 1, number: 0 },
+            totalElements: pagina?.totalElements ?? items.length,
+            page: pagina ?? { size: 20, totalElements: items.length, totalPages: 1, number: 0 },
             items,
         };
     }
@@ -113,11 +118,12 @@ export class DSpaceRestClient {
 
     /**
      * Resolve the REST API base URL from a repository base URL.
-     * DSpace 7 typically serves REST at /server/api
+     * DSpace 7 typically serves REST at /server/api. Um endereço do catálogo terminado em /api é a
+     * API (a UFPI a serve em /srv-ufpi-s01/api) e vale como está.
      */
-    private resolveApiUrl(baseUrl: string): string {
+    resolveApiUrl(baseUrl: string): string {
         const clean = baseUrl.replace(/\/+$/, "");
-        if (clean.endsWith("/server/api")) return clean;
+        if (clean.endsWith("/api")) return clean;
         if (clean.endsWith("/server")) return `${clean}/api`;
         return `${clean}/server/api`;
     }

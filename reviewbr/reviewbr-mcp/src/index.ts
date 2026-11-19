@@ -1292,7 +1292,7 @@ server.tool(
 
 server.tool(
     "search_repository",
-    "Busca artigos/teses em repositórios acadêmicos. Usa OAI-PMH, DSpace REST ou scraping conforme disponibilidade.",
+    "Busca artigos/teses em repositórios acadêmicos pela interface de busca do próprio repositório (API do VuFind na BDTD, API REST do DSpace 7 ou a página de busca do site), e mostra o total que cada fonte declarou. O OAI-PMH não serve de busca, só de colheita (harvest_records). Repositório que o catálogo marca como não pesquisável, ou em que nenhum método funcionou, aparece em Erros com o motivo — zero só quando a fonte disse zero.",
     {
         query: z.string().describe("Termo(s) de busca por tema (ex: '<tema da sua revisão>')"),
         repositories: z.array(z.string()).optional()
@@ -1338,10 +1338,13 @@ server.tool(
 
         const allResults = [];
         const errors: string[] = [];
+        // Linha 11: o total que cada fonte declarou e o método, para conferir com o site.
+        const porFonte: string[] = [];
+        let totalDeclarado: number | undefined = 0;
 
         for (const repo of repos) {
             try {
-                const results = await strategy.search(repo, params.query, {
+                const { results, totalNaFonte, metodo } = await strategy.searchDetailed(repo, params.query, {
                     title: params.title,
                     author: params.author,
                     dateFrom: params.dateFrom,
@@ -1354,8 +1357,11 @@ server.tool(
                     maxResults: params.maxResults,
                 });
                 allResults.push(...results);
+                porFonte.push(`- ${repo.id} (${repo.institution.acronym}): ${results.length} trazidos; total declarado pela fonte: ${totalNaFonte ?? "não informado"} — ${metodo}`);
+                totalDeclarado = totalNaFonte === null || totalDeclarado === undefined ? undefined : totalDeclarado + totalNaFonte;
             } catch (error) {
                 errors.push(`${repo.id} (${repo.institution.acronym}): ${(error as Error).message}`);
+                totalDeclarado = undefined;
             }
         }
 
@@ -1383,13 +1389,14 @@ server.tool(
         const avisoLog = await registrarBusca(params.projectPath, {
             tool: "search_repository", query: params.query,
             filtros: { ...params, repositoriosConsultados: repos.map((r) => r.id) },
-            hits: allResults.length, erros: errors,
+            hits: allResults.length, totalDeclarado, erros: errors,
         });
 
         const summary = [
             `## Resultados da Busca: "${params.query}"`,
             `**Repositórios consultados:** ${repos.length}`,
             `**Resultados encontrados:** ${allResults.length}`,
+            porFonte.length > 0 ? `**Por fonte:**\n${porFonte.join("\n")}` : "",
             raw01 ? `**Gravação:** ${raw01}` : "",
             avisoLog.trim(),
             errors.length > 0 ? `**Erros:** ${errors.length}\n${errors.map((e) => `- ${e}`).join("\n")}` : "",
@@ -1569,7 +1576,7 @@ server.tool(
             // REST API
             if (params.checks.includes("rest_api")) {
                 const start = Date.now();
-                const works = await rest.detect(repo.repository.url);
+                const works = await rest.detect(repo.access.restApi?.endpoint || repo.repository.url);
                 if (works) {
                     checks.push(`✅ REST API: DSpace 7 detectado (${Date.now() - start}ms)`);
                 } else {
@@ -1581,8 +1588,12 @@ server.tool(
             if (params.checks.includes("search")) {
                 const start = Date.now();
                 try {
-                    const searchResults = await strategy.search(repo, "teste", { maxResults: 1 });
-                    checks.push(`✅ Busca: ${searchResults.length > 0 ? "funcional" : "sem resultados"} (${Date.now() - start}ms)`);
+                    // Linha 11, item 4: ✅ só quando a busca trouxe registro. Resposta sem
+                    // resultado não prova que a busca funciona (P8: a Alice passava aqui e dava zero).
+                    const { results, totalNaFonte, metodo } = await strategy.searchDetailed(repo, "teste", { maxResults: 1 });
+                    checks.push(results.length > 0
+                        ? `✅ Busca: funcional — ${metodo}; total para "teste": ${totalNaFonte ?? "não informado"} (${Date.now() - start}ms)`
+                        : `⚠️ Busca: respondeu sem resultado para "teste" — não confirma que a busca encontra registros; ${metodo} (${Date.now() - start}ms)`);
                 } catch (e) {
                     checks.push(`❌ Busca: ${(e as Error).message}`);
                 }
