@@ -28,8 +28,8 @@ estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
   (`project_state.json`: LOCKED, fase F2). Mudar o protocolo agora exige emenda registrada.
 - O que vale é o `protocol.md`. O `DESENHO_artigo1.md` é o histórico de como se chegou a ele; onde os dois
   divergirem (a string, a conferência de 20%, o Rayyan), vale o protocolo.
-- Próximo passo: a decisão do Vicente sobre os consertos que o passo A confirmou (19/11/2026); depois, C (busca). A
-  busca espera o conserto de F7 e F8, ou uma decisão nova sobre essas fontes.
+- Próximo passo: as linhas 11 e 12 da `.claude/maintenance/FILA.md` (manutenção, decididas pelo Vicente em
+  19/11/2026), depois C (busca). A linha 13, que grava as decisões dos dois revisores, vem antes de D (triagem).
 - Artigo 2: sessão própria; entrada em `artigo2/ABRIR_SESSAO.md`.
 
 ## Passos, na ordem

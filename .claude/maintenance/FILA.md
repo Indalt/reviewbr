@@ -67,8 +67,7 @@ a sessão é só a rotina.
 - commit e push.
 
 **Última verificação:** 19/11/2026 — repositório limpo; build e suíte 552 de 552; backlog válido, 0 abertos; fila:
-linha 10 a fazer, ainda sem definição do que testar; 36 itens no "Visto de passagem", entre eles a conferência do
-passo A do `roda_aromas_ceara`.
+linha 10 em curso pelo `roda_aromas_ceara`, linhas 11 a 13 a fazer; 36 itens no "Visto de passagem".
 
 ## Fila
 
@@ -84,7 +83,10 @@ passo A do `roda_aromas_ceara`.
 | 7 | G — Textos que prendem o sistema à revisão sistemática | 135 | 137 · 151 · 008 | **feita em 12/11/2026** (commit `6cf7ae8`) |
 | 8 | H — Normas por ponteiro | ver abaixo | 045 · ver abaixo | **feita em 12/11/2026** (commits `fe53fb8`, `36e687a`, `c0cefbf`, `e61d713`) |
 | 9 | M — Descrição do método, com o Vicente | — | — | **feita em 12/11/2026** (`.claude/METODO_ReviewBR.md`; commits `898d79b`, `2a36336`, `216d13d`, `17af311`) |
-| 10 | Fase de testes | — | — | a fazer; é a única linha que resta |
+| 10 | Fase de testes | — | — | **em curso:** o teste é a pesquisa real `roda_aromas_ceara` (Vicente, 19/11/2026); as linhas 11 a 13 saíram dele |
+| 11 | I — Busca nos repositórios do `roda_aromas_ceara` | ver abaixo | ver abaixo | a fazer; antes da busca do projeto (passo C) |
+| 12 | J — OpenAlex e SciELO: resumo, endereço e a fonte do SciELO | ver abaixo | ver abaixo | a fazer; antes da busca do projeto (passo C) |
+| 13 | K — Decisões dos dois revisores humanos | ver abaixo | — | a fazer; antes da triagem do projeto (passo D) |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
 da outra; a ordem é a do dano a uma pesquisa em andamento.
@@ -113,6 +115,78 @@ na tool sobre `targets`).
 
 A linha 9 (M) redige o `METODO_ReviewBR.md` com o que já está decidido e leva ao Vicente só as escolhas dele. As
 três perguntas da sessão 2c deixaram de ser necessárias.
+
+### Linhas 11 a 13 — o que fazem, e só isto
+
+> **Decidido pelo Vicente em 19/11/2026:** os consertos que a conferência do passo A do `roda_aromas_ceara`
+> confirmou entram na fila, para que a pesquisa seja feita apropriadamente. As linhas 11 e 12 vêm antes da busca
+> do projeto (passo C), e a 13 antes da triagem (passo D). Consequência: o projeto espera essas linhas. A parte do
+> Vicente na busca, pelo Portal CAPES, não espera. Origem: "se precisa realizar a fila para a roda de aromas ser
+> feita apropriadamente vamos executar."
+
+Valem para as três:
+- cada conserto tem teste que falha antes e passa depois;
+- toda busca tem controle positivo com o termo do projeto, "cajuína";
+- a reprodução de cada falha está no commit `93c7997`;
+- nenhuma das três grava na pasta do projeto. O teste real é o passo C, feito depois pela sessão do projeto.
+
+As causas são de antes da manutenção: a camada de acesso vem do commit `28222ed` (03/03/2026); o OpenAlex, o SciELO
+e o "DSpace" do catálogo vêm do `9943f66` (26/02/2026). A suíte passava porque não consulta as fontes reais.
+
+**Linha 11 — I, busca nos repositórios** (F5 na UFPI, F6, F7, Infoteca-e, P7 e P8). Hoje UECE, Alice, IFCE, UFPI e
+Infoteca-e dão zero para "caju" e "cajuína", sem aviso. A BDTD devolve, para "cajuína", registros da UECE (siduece
+id=96019 e 84564) e da Alice (doc/1152668). A UFC voltou a funcionar e serve de comparação.
+1. `strategy.ts:94-113`: o OAI-PMH deixa de servir de busca. Hoje ele colhe os primeiros `maxResults × 3` registros
+   do acervo e filtra só esses. A busca passa a usar a interface de busca do próprio repositório, para o total bater
+   com o que uma pessoa vê no site (condição do protocolo do projeto, F4.1.2). O OAI fica para a colheita.
+2. `strategy.ts:309`: a plataforma passa a ser comparada sem diferença de maiúscula (o catálogo diz "DSpace"), para
+   a API REST do DSpace 7 rodar (IFCE).
+3. Catálogo: o endereço de busca certo da Alice (`/alice`), da Infoteca-e (`/infoteca`) e da UECE (sistema próprio,
+   `trabalhoAcademicoPublico.jsf`, não DSpace).
+4. Zero com aviso: quando nenhum método funciona, a tool diz qual falhou, em vez de lista vazia (`catch { return [] }`
+   em toda a cascata). O `validate_repository` só marca a busca com ✅ quando há resultado (`index.ts:1585`).
+5. `matchesQuery` (`strategy.ts:322-339`): exige todas as palavras, sem diferença de acento. Hoje basta uma palavra.
+6. Resumo nos resultados: o `html-scraper` grava `description: ""`, e o adaptador da BDTD não pede resumo nem data à
+   API. Conferir o nome do campo na documentação do VuFind.
+7. URL da BDTD sem espaço (`platform-adapters.ts`): a F6 e a URL de registro, que tem o mesmo defeito.
+8. Infoteca-e: volta a `active` depois do conserto, se o controle positivo passar. O `inactive` vem do `9943f66`,
+   sem motivo registrado, e hoje o servidor responde.
+9. UFPI: hoje o servidor não conecta ("fetch failed"). Conferir se é queda ou bloqueio. Se continuar, a tool avisa
+   (item 4), e a sessão do projeto anota a fonte como não alcançada.
+
+DECLARAR: repositório sem busca que a tool consiga usar fica marcado como não pesquisável no catálogo, e a tool diz
+isso em vez de dar zero. Não fazer: a busca em "todos os ativos" (F4).
+
+**Linha 12 — J, OpenAlex e SciELO** (F1, F3, F8).
+1. `snowball.ts:219-235`: montar o resumo a partir de `abstract_inverted_index` e gravar o endereço (página da
+   fonte ou DOI), que hoje sai "undefined". Hoje nem o JSON de `01_raw` tem resumo. Pelo protocolo do projeto,
+   registro sem resumo vai inteiro para a leitura humana.
+2. `search_scielo` (`index.ts:2052`): hoje consulta o OpenAlex filtrado por `publisher_lineage:P4310312277`, e as
+   revistas do SciELO têm editora própria. Passa a consultar a busca do próprio SciELO, para o total bater com o
+   site (mesma condição do protocolo). Se ela não tiver interface que a tool consiga ler, a sessão para e leva ao
+   Vicente, em até 3 linhas, a alternativa: o OpenAlex com o prefixo 10.1590, que só cobre o Brasil. O controle são
+   os dois artigos SciELO com "cajuína" no título: 10.1590/fst.25520 e 10.1590/s0100-40422007000500017.
+
+DECLARAR: a saída diz de onde vem cada contagem; um número do OpenAlex não aparece como "total da base" do SciELO.
+Não fazer: o `ScieloAdapter` (ArticleMeta) do `search_repository` e a F2.
+
+**Linha 13 — K, decisões dos dois revisores humanos.** O protocolo travado do projeto (F4.1.2, F4.1.3) exige gravar
+no próprio projeto, com o nome de quem decidiu:
+- a decisão de cada revisor, em separado, na triagem por título e resumo e no texto completo;
+- o consenso, com o motivo;
+- sem consenso, a decisão do pesquisador.
+
+Hoje nenhuma tool faz isso. A `record_researcher_decision` grava uma decisão por etapa, sem revisor nem registro, e
+o `screen_candidates` é triagem por IA. A linha faz:
+1. gravar a decisão por registro, revisor (nome) e estágio (`ta`, `fulltext`), com o motivo e, se o protocolo tiver
+   perguntas de elegibilidade, a resposta a cada uma;
+2. gravar o consenso de cada registro, com o motivo, e quem decidiu quando não houve consenso;
+3. gerar do consenso os artefatos do funil (`excluded_ta.json`, `excluded_fulltext.json`, `included.json`), para o
+   `compute_flow_counts` contar;
+4. relatar a concordância entre os dois revisores como informação, pela `compararCorridas`
+   (`screening_audit.ts:161`), que existe e nada chama. O protocolo não a exige.
+
+Não fazer: triagem por IA nem cegamento entre revisores (o sistema não separa usuários, o que já está declarado).
 
 ### Como uma linha entra na fila
 
@@ -224,83 +298,23 @@ Vicente pedir.
     referencial teórico, recursos, cronograma).
 - (projeto `roda_aromas_ceara`, 12/11/2026) Falhas de tool vistas na busca exploratória do primeiro teste depois da
   manutenção. Reprodução de cada uma em `reviewbr/projects/roda_aromas_ceara/exploratoria/01_falhas_reviewbr.md`.
-  O projeto espera o conserto de F7 e F8 antes da busca formal (decisão do Vicente):
-  - F1 `search_openalex`: o campo URL vem "undefined" em todos os itens; item sem DOI fica sem link;
+  F1, F3, F6, F7, F8 e a UFPI da F5 viraram as linhas 11 e 12 (19/11/2026). Restam:
   - F2 `search_openalex`: mostra 10 resultados e diz que o resto foi salvo em JSON, mas sem `projectPath` nada é
     gravado;
-  - F3 `search_openalex` e `search_repository`: nenhuma devolve resumo;
   - F4 `search_repository` sem `repositories` (todos os ativos): 1800 s sem resposta, abortada;
-  - F5 `search_papers_optimized`: UFPI, Unifesp e UFCG devolvem registros sem relação com a string, e a contagem
-    soma esses registros; os da BDTD vêm sem data e sem resumo;
-  - F6 `search_repository` na BDTD: URLs de registros da USP vêm com espaço ("bdtd.ibict.br/vufind /Record/...");
-  - F7 `search_repository` na UFC (BR-FED-0004), UECE (BR-EST-0006), Alice (BR-RES-0001) e IFCE: zero até para
-    "caju", sem aviso, e a BDTD devolve handles desses repositórios sobre caju. No catálogo, UFC e UECE estão
-    `status: active` com `oaiPmh.available: false` e sem `searchEndpoints`. Reconferido pelo coordenador em
-    12/11/2026 (UFC + "caju" → 0);
-  - F8 `search_scielo`: zero para "queijo coalho" e "cashew apple aroma"; 15 registros quase sem relação para
-    "caju", enquanto o OpenAlex traz artigos SciELO (DOI 10.1590) sobre esses temas.
-- (projeto `roda_aromas_ceara`, conferência de 19/11/2026, a pedido do Vicente, passo A do projeto; nada foi
-  consertado) Reprodução pelas tools do ReviewBR, com controle positivo dentro da própria ferramenta (BDTD e OpenAlex):
-  - F7 — continua real na UECE, na Alice e no IFCE: zero para "caju", sem aviso. A UFC deixou de falhar: 5
-    resultados para "cajuína" pelo `html-scraper`, os mesmos handles que a BDTD devolve (riufc/67712, 80267, 58951).
-    Controle: para "cajuína", a BDTD devolve registros da UECE (siduece id=96019 e 84564) e da Alice (doc/1152668); o
-    IFCE ainda não tem controle. Causas no código:
-    (a) `strategy.ts:94-113` usa o OAI-PMH como busca: colhe os primeiros `maxResults × 3` registros do acervo e
-    filtra só esses;
-    (b) `strategy.ts:309` compara `platform === "dspace"`, mas as 79 entradas DSpace do catálogo dizem "DSpace", então
-    a API REST do DSpace 7 nunca é tentada (o `validate_repository` a detecta no IFCE);
-    (c) o `html-scraper` tenta só caminhos do DSpace 5/6 na raiz do catálogo, mas Alice e Infoteca-e ficam em `/alice`
-    e `/infoteca`; a UECE nem é DSpace (`trabalhoAcademicoPublico.jsf`);
-    (d) toda falha vira lista vazia (`catch { return [] }`), e o `validate_repository` marca "✅ Busca: sem
-    resultados" (`index.ts:1585`).
-    O conserto exige: a busca sem a colheita parcial; a comparação sem diferença de maiúscula; o endereço de busca
-    certo de cada repositório no catálogo; aviso explícito quando nenhum método funcionou, e o ✅ só com resultado.
-    Cada um com teste de controle positivo.
-  - F8 — real: "cajuína" e "cajuina" dão 0 no `search_scielo`, mas o `search_openalex` traz dois artigos SciELO com
-    "cajuína" no título (10.1590/fst.25520; 10.1590/s0100-40422007000500017). Causa: o `search_scielo` não consulta o
-    SciELO. Ele consulta o OpenAlex filtrado por `publisher_lineage:P4310312277` (`index.ts:2052`), e as revistas do
-    SciELO têm editora própria. O "Total encontrado na base" é o do OpenAlex com esse filtro. O `ScieloAdapter`
-    (ArticleMeta) do `search_repository` também só filtra os primeiros registros. O conserto exige escolher a fonte
-    (a busca do próprio SciELO, ou o OpenAlex com um filtro que pegue as revistas do SciELO, como o prefixo 10.1590,
-    que cobre só o Brasil) e um teste com este controle.
-  - F3 — real: o mapeamento do OpenAlex (`snowball.ts:219-235`) não lê `abstract_inverted_index` nem o endereço (a F1
-    é o mesmo ponto), então nem o JSON gravado em `01_raw` tem resumo. O `html-scraper` grava `description: ""`
-    (`html-scraper.ts:171`). Pelo protocolo travado (F4.1.2), registro sem resumo vai para a leitura humana: iria
-    todo registro dessas fontes. O conserto exige montar o resumo a partir do índice invertido, e o endereço. No
-    scraper, exige ler a página de cada item (o `getItemMetadata` já lê `DC.description`), uma requisição por item.
-  - Infoteca-e — o `inactive` está velho: vem do commit `9943f66` (26/02/2026), sem motivo registrado, e hoje o
-    `validate_repository` dá conexão HTTP 200 e OAI-PMH respondendo. Nomeada em `repositories`, ela é consultada
-    mesmo inativa e dá 0 para "cajuína", pelas causas (a) e (c) da F7. O controle é só indireto: o OpenAlex traz
-    documentos da Embrapa intitulados "Cajuína" (2004 a 2009), mas sem endereço (F1). O conserto exige o da F7 e,
-    depois dele, a entrada `active`.
-  - UFPI (F5) — real: 0 para "cajuína" e "cajuina", sem aviso. O `validate_repository` dá "fetch failed" na conexão e
-    no OAI-PMH e mesmo assim marca a busca com ✅. O sintoma de 12/11 (registros sem relação com "perfil sensorial
-    caju") vem do `matchesQuery` (`strategy.ts:322-339`): basta uma palavra da string, aplicada sobre a colheita
-    parcial (a). Não há controle positivo do servidor da UFPI pelas tools, e a consulta direta ao site foi barrada
-    pelo modo automático. O conserto exige (a) e (d) da F7 e outra regra de casamento (todas as palavras; acento).
-  - Dois revisores humanos — real: nenhuma tool grava, por registro, a decisão de um revisor nomeado. A
-    `record_researcher_decision` grava uma decisão por etapa, sem revisor nem registro; o `screen_candidates` é
-    triagem por IA. A `compararCorridas` (`screening_audit.ts:161`) calcula concordância e kappa entre duas triagens,
-    mas nada a chama. O protocolo travado exige as decisões dos dois "gravadas no próprio projeto, com o nome de
-    quem decidiu", e o consenso com o motivo. Isso bloqueia o passo D do projeto, não o C. O conserto exige uma
-    capacidade nova: decisão por registro, revisor e estágio; consenso com motivo; o funil lendo o consenso.
-  - Zero incluídos — a trilha aceita. Num projeto de teste (5 registros, 0 incluídos), o `compute_flow_counts`
-    valida (`included` 0, conferência cruzada certa) e o `export_dataset` exporta 0 registros. Nenhuma regra dos
-    métodos exige um mínimo. A skill do manuscrito não fala desse caso. Nada a consertar no código.
-  - Visto na conferência, sem avaliação: para "cajuína", a BDTD devolve entre os 20 primeiros registros sem relação
-    ("amor livre", biossurfactantes, assentamentos), que entram na contagem. E o `search.ts:26` põe na camada 2 todo
-    repositório inativo, então o `search_papers_optimized` com a camada 2 também consulta os inativos.
-  - Origem (git blame, 19/11): as causas acima são anteriores à manutenção. A camada de acesso vem do commit
-    `28222ed` (03/03/2026); o mapeamento do OpenAlex, o filtro do SciELO e o "DSpace" do catálogo vêm do `9943f66`
-    (26/02/2026). Nenhuma tool da trilha saiu; a única removida desde julho, a `screen_with_asreview` (DEBT-022,
-    08/10/2026, com autorização do Vicente), não produzia decisão de triagem. A suíte passa porque não consulta as
-    fontes reais.
+  - F5 `search_papers_optimized`: Unifesp e UFCG devolvem registros sem relação com a string, e a contagem soma
+    esses registros. A causa geral (colheita parcial; basta uma palavra) é tratada na linha 11.
+- (projeto `roda_aromas_ceara`, 19/11/2026) Visto na conferência do passo A, sem avaliação: para "cajuína", a BDTD
+  devolve entre os 20 primeiros registros sem relação ("amor livre", biossurfactantes, assentamentos), que entram
+  na contagem. E o `search.ts:26` põe na camada 2 todo repositório inativo, então o `search_papers_optimized` com a
+  camada 2 também consulta os inativos.
 - (projeto `roda_aromas_ceara`, 12/11/2026) No escopo, a avaliação crítica das fontes não tem onde ser registrada
   na trilha: com a condição `avaliacao_critica` = "sim", os itens 12 e 16 do PRISMA-ScR ficam `[NÃO COBERTO]`
   (o que ficou declarado ao resolver o DEBT-151). O projeto respondeu "não", mas o Vicente pediu o registro: "essa
   limitacao de falta de lugar para registrar tem de ser registrada para o agente de manutencao".
 - (projeto `roda_aromas_ceara`, 12/11/2026) Incoerências vistas na F0/F1 do mesmo projeto, ao gerar o protocolo de
-  escopo. Reprodução em `reviewbr/projects/roda_aromas_ceara/protocolo_falhas_reviewbr.md` (P1 a P8):
+  escopo. Reprodução em `reviewbr/projects/roda_aromas_ceara/protocolo_falhas_reviewbr.md` (P1 a P8; P7 e P8, a F7
+  vista pela `validate_repository`, viraram a linha 11):
   - P1 `plan_research_protocol` gera um esqueleto genérico, e não o `protocol_template.md` do método; o
     `protocol_auditor.ts` lê os títulos desse esqueleto;
   - P2 o esqueleto já vem com valores que o pesquisador não deu ("Idiomas: Sem restrição", "Global", fontes PubMed
@@ -309,19 +323,16 @@ Vicente pedir.
   - P4 a entrada do PRISMA-ScR no catálogo não tem data de leitura;
   - P5 e P6 `BR-AGG-0001` aparece como "IBICT — Oasisbr" (o projeto o usa como BDTD); o catálogo marca o OAI-PMH
     dele como indisponível, e a validação dá OK;
-  - P7 e P8 a validação mostra OAI-PMH 404 em UFC e UECE e aprova a Alice, cuja busca falha. É a mesma F7, vista
-    pela `validate_repository`.
 - (projeto `roda_aromas_ceara`, 15/11/2026) Pontos de método que apareceram ao desenhar a revisão de escopo com o
   Vicente. Anotados sem avaliação; nenhum foi testado:
-  - a trilha aceita uma revisão com zero estudos incluídos (funil, tabela de extração vazia, exportação,
-    manuscrito)? O projeto espera pouco ou nada, e "não encontrar é um resultado";
+  - zero estudos incluídos: conferido em 19/11/2026, a trilha aceita. Num projeto de teste com 0 incluídos, o
+    `compute_flow_counts` valida e o `export_dataset` exporta 0 registros; a skill do manuscrito não fala do caso;
   - o protocolo não tem campo para o motivo de cada fonte nem para o período que ela cobre (fontes escolhidas por
     relevância);
   - a busca feita à mão pelo pesquisador (Portal CAPES) e importada por `import_dataset_ris`: onde ficam o texto
     exato, a base, a plataforma, a data e a contagem no registro da busca?
   - triagem em duas camadas (por palavras, depois humana): como a camada por palavras fica registrada, e o que
     acontece com o registro sem resumo;
-  - dois revisores humanos: onde se gravam as decisões do segundo e a concordância entre os dois;
   - o pesquisador perguntou "porque nao se pode seguir estritamente o que o metodo pede": o sistema não diz, em
     cada campo do protocolo, se a escolha é exigida pela norma de relato, recomendada por um manual de condução ou
     livre.
