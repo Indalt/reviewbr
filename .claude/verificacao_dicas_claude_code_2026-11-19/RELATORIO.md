@@ -193,3 +193,10 @@ Leitura: ~16% mais barato, quase todo pela leitura de cache, porque cada chamada
 menor. As duas sessões tiveram o mesmo número de chamadas, porque o painel também juntou o trabalho num script. Os
 limites: é uma amostra só, e a diferença mistura o Code Mode com a troca de painel por terminal. O painel também
 injeta contexto do editor.
+
+> **Decidido pelo Vicente em 19/11/2026, depois do teste:** segue sem o Code Mode, porque ele exige trabalhar no
+> terminal e o Claude não consegue conduzi-lo a partir do painel. O `remoteControlAtStartup` voltou a `true` no
+> `~/.claude/settings.json`. A documentação do Remote Control não cita custo em tokens. O que ele acrescenta ao
+> contexto é um aviso curto e a ferramenta de enviar arquivo, que ficam no prefixo em cache. Consequência: tudo
+> volta ao estado de antes do teste. O Code Mode se reavalia se chegar ao painel. Origem: "sim se isso nao aumentar
+> o consumo. Vamos seguir sem o code mode."
