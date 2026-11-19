@@ -30,6 +30,9 @@ estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
   divergirem (a string, a conferência de 20%, o Rayyan), vale o protocolo.
 - Próximo passo: as linhas 11 e 12 da `.claude/maintenance/FILA.md` (manutenção, decididas pelo Vicente em
   19/11/2026), depois C (busca). A linha 13, que grava as decisões dos dois revisores, vem antes de D (triagem).
+- A parte do Vicente no passo C foi feita em 19/11/2026: Scopus 23, Web of Science 17 e FSTA 14 registros, todos com
+  resumo e com controle positivo. Os RIS e as anotações (`ANOTACOES_busca_manual.md`) estão em `01_raw/manual/`,
+  fora do git. A importação (`import_dataset_ris`) fica para o passo C.
 - Artigo 2: sessão própria; entrada em `artigo2/ABRIR_SESSAO.md`.
 
 ## Passos, na ordem
