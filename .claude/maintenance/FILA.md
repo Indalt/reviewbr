@@ -355,3 +355,19 @@ Vicente pedir.
     `prisma-rigor-gates` lista `change_log.md` como suplemento, mas nenhuma tool cria ou confere a emenda. O
     projeto pode precisar de uma: UECE, Alice e Infoteca-e estão no protocolo e a linha 11 as marcou como não
     pesquisáveis.
+- (projeto `roda_aromas_ceara`, 19/11/2026, **ordem do Vicente** para a manutenção depois do reset da janela de 5 h)
+  UECE, Alice e Infoteca-e, que a linha 11 marcou como não pesquisáveis: "se tres fontes = sobre linha 11 - tentar
+  estrategias"; "ciencia aberta deve ser ciencia aberta e estrategias para a minha compreensao nao sao burlar
+  etica. ver isso em juridico antes de fazer algo. mas havia tb um healer. veja isso." Ordem: primeiro a
+  conferência jurídica e ética, com fonte; depois as estratégias. Lido no código em 19/11, sem avaliação:
+  - `src/utils/http.ts`, o cliente HTTP da camada de acesso aos repositórios (DSpace REST, página de busca, OAI-PMH,
+    adaptadores), do `pdf_extractor` e do `pubmed`: envia um User-Agent de navegador sorteado entre três (Chrome em
+    Windows, Linux e Mac), e não o nome do ReviewBR. O comentário do arquivo diz "polite user-agent". O CORE, o
+    Europe PMC e o Semantic Scholar se identificam como `ReviewBR-MCP/1.0`;
+  - o mesmo arquivo, com `acceptSelfSigned: true` por padrão, põe `NODE_TLS_REJECT_UNAUTHORIZED = "0"` no processo
+    inteiro durante o pedido: a verificação do certificado fica desligada também para pedidos simultâneos;
+  - `heal_repositories` (`services/repository_healer.ts`): examina só os repositórios marcados como inativos, lê a
+    página inicial da instituição com User-Agent de navegador para achar o endereço OAI-PMH e reescreve o catálogo.
+    Muda o sistema, então é ferramenta da manutenção, não do projeto;
+  - o motivo gravado no catálogo pela linha 11: Alice e Infoteca-e dão HTTP 403 na busca do site e o `robots.txt`
+    proíbe `/simple-search`; a UECE é formulário com estado de sessão, sem busca por endereço.

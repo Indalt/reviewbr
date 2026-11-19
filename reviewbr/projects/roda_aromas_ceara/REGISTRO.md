@@ -150,6 +150,16 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   ferramenta. Mudar a forma de busca ou tirar a fonte é emenda ao protocolo. Opções levadas ao Vicente: (a) busca
   manual no site, feita por ele como na CAPES; (b) fonte declarada como não alcançada, com a cobertura parcial que
   a BDTD dá. Não decidido.
+- **19/11/2026, UECE, Alice e Infoteca-e: resposta.** Nem (a) nem (b) por ora. Frases dele: "se tres fontes = sobre
+  linha 11 - tentar estrategias"; "ciencia aberta deve ser ciencia aberta e estrategias para a minha compreensao nao
+  sao burlar etica. ver isso em juridico antes de fazer algo. mas havia tb um healer. veja isso." Consequência: a
+  manutenção, depois do reset da janela de 5 h, confere primeiro o lado jurídico e ético e o `heal_repositories`, e
+  só então tenta estratégias de acesso para as três fontes. O protocolo não muda até lá.
+- **19/11/2026, sessão do projeto: só o que está travado.** Frase dele: "nao fazer diferente do que foi travado. se
+  travado= importar arquivos ok". A próxima sessão do projeto importa os três RIS da CAPES; não muda fonte, string
+  nem critério.
+- **19/11/2026, linha 13.** Ele não sabia se vinha antes das buscas. Resposta dada: não; ela grava as decisões dos
+  dois revisores, que só existem na triagem (passo D). A ordem de 19/11 fica: linha 13 antes do passo D.
 - **16/11/2026, só o Claude.** O Vicente perguntou se outro assistente (Gemini) poderia tocar parte do trabalho e
   decidiu que não: "decidi continuar apenas com o claude". A seção do `RETOMAR.md` com as regras para assistente
   fora do Claude Code foi retirada. Consequência: os passos A, C, D e E rodam no Claude Code, em Opus ou modelo

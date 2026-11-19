@@ -38,12 +38,13 @@ estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
     `robots.txt` proíbe a busca por robô), e a tool diz isso em vez de dar zero.
   - Linha 12 (OpenAlex e SciELO): a fazer, em chat de manutenção.
   - Linha 13 (decisões dos dois revisores): a fazer, antes do passo D.
-- **Pendente, decisão do Vicente antes do passo C:** o que fazer com UECE, Alice e Infoteca-e, que estão no
-  protocolo travado como `search_repository`. Mudar a forma de busca ou tirar a fonte é emenda: vai para
-  `change_log.md` nesta pasta (o suplemento que a trilha prevê; não há tool que o grave), para o `REGISTRO.md` e
-  para a decisão dele na F2 (`record_researcher_decision`). Opções levadas a ele em 19/11: busca manual no site,
-  feita por ele como na CAPES; ou fonte declarada como não alcançada, com a cobertura parcial que a BDTD dá (teses e
-  dissertações da UECE e da Embrapa aparecem nela).
+- **UECE, Alice e Infoteca-e (decisão do Vicente, 19/11/2026):** a manutenção, depois do reset da janela de 5 h,
+  confere o lado jurídico e ético e o `heal_repositories` antes de tentar estratégias de acesso a essas fontes
+  ("ver isso em juridico antes de fazer algo"). Está no "Visto de passagem" da FILA, como ordem dele. Se ao fim
+  alguma das três continuar fora, a mudança é emenda: `change_log.md` nesta pasta (não há tool que o grave),
+  `REGISTRO.md` e decisão dele na F2.
+- **Sessão do projeto:** só o que está travado ("nao fazer diferente do que foi travado. se travado= importar
+  arquivos ok"). A próxima importa os três RIS da CAPES e para.
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.
@@ -71,11 +72,19 @@ Passo A, no chat de manutenção:
 > revisores humanos, e a pergunta "a trilha do escopo aceita uma revisão com zero estudos incluídos?". Para cada
 > um: reproduza, diga se é real e o que o conserto exige. Não conserte sem me mostrar.
 
-Linha 12, no chat de manutenção:
+Manutenção, depois do reset da janela de 5 h:
 
-> Rotina de manutenção e linha 12 da FILA (J — OpenAlex e SciELO).
+> Rotina de manutenção. Depois: (1) o item do "Visto de passagem" de 19/11 sobre UECE, Alice e Infoteca-e, o
+> `heal_repositories` e o User-Agent de navegador, começando pela conferência jurídica e ética, com fonte, antes de
+> qualquer estratégia de acesso; (2) a linha 12 da FILA (J — OpenAlex e SciELO).
 
-Passo C, em chat novo, depois da linha 12 e da decisão sobre UECE, Alice e Infoteca-e:
+Passo C, primeira parte, em chat novo (pode rodar já depois do reset, não depende da manutenção):
+
+> Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Importe com
+> `import_dataset_ris` os três RIS de `01_raw/manual/` (Scopus, Web of Science, FSTA), conferindo os totais com
+> `ANOTACOES_busca_manual.md`, e pare. Não busque, não mude nada do protocolo.
+
+Passo C, segunda parte, em chat novo, depois da linha 12 e do item das três fontes:
 
 > Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Faça o passo C:
 > importe os três RIS de `01_raw/manual/` (Scopus, Web of Science, FSTA) e rode a busca da F2 nas fontes abertas,
