@@ -17,6 +17,14 @@ Practices", de Lydia Hallie (Anthropic), de 11/11/2026. A transcrição foi cola
 
 ## O que vale para este repositório
 
+> **Decidido pelo Vicente em 19/11/2026:** Opus 5.5, Opus 5, Sonnet 5.5 e Fable 5.2 passam a usar o esforço padrão
+> oficial, `medium`. As entradas `xhigh` de `modelSettings` saíram do `~/.claude/settings.json`. A mudança vale para
+> todos os projetos desta máquina; o Fable 5.1 continua em `high`. Consequência: a sessão que precisar de mais
+> profundidade sobe por `/effort` na própria sessão ou por `ultrathink` numa pergunta. O prompt de abertura deve
+> declarar o esforço sempre que não for `medium`. As regras deny (item 2) não foram escolhidas, e o
+> `/doctor prompt-audit` (item 3) continua opcional. Origem: a opção "Esforço padrão (medium)" na pergunta desta
+> sessão.
+
 **Decisões do Vicente:**
 
 1. **Esforço.** O `~/.claude/settings.json` fixa `xhigh` (em `modelSettings`) para Opus 5.5, Opus 5, Sonnet 5.5 e
