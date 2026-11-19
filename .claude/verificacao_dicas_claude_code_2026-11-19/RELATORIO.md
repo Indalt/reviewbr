@@ -108,3 +108,64 @@ blocos. Esses pontos vêm da outra LLM.
     agosto.
   - **D2**, de F para V: o próprio trecho citado pelo verificador confirma a afirmação.
 - Custo desta verificação: o workflow usou ~539 mil tokens de subagente.
+
+## Code Mode (pergunta do Vicente, 19/11/2026)
+
+Conferido na página oficial `code-mode` e no CHANGELOG oficial (lidos em 19/11/2026), nos `settings.json` global e do
+projeto, e no binário e no `extension.js` da extensão 2.1.327 instalada.
+
+**Resposta.** Está desligado e não roda no painel do Antigravity. Pode rodar numa sessão no terminal. Recomendação:
+não ligar na 2.1.327; reavaliar quando a extensão chegar à 2.1.328 ou mais, com um teste medido.
+
+**O que é.** Sem o Code Mode, o Claude pede cada ferramenta (Bash, Read, Edit) e lê cada resultado antes do passo
+seguinte. Com ele, o Claude escreve um trecho de JavaScript que faz várias chamadas, usa um resultado na chamada
+seguinte e devolve só a parte que precisa ler. O código roda pela ferramenta `REPL`. É experimental, vem desligado e
+"may change or be removed in any release". Entrou na 2.1.323.
+
+**Por que está desligado.**
+
+- `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE` não está no `~/.claude/settings.json`, nos settings do projeto nem no ambiente.
+- Esta sessão roda no painel (`CLAUDE_CODE_ENTRYPOINT=claude-vscode`). Para esse caso o binário responde "for now it
+  only works in the interactive terminal", e a documentação exclui o "VS Code panel".
+- A sessão não tem a ferramenta `REPL`.
+
+**O que faltaria para ligar.** Já atendido: versão 2.1.323 ou mais, Opus 5.5, assinatura, Git for Windows, nenhum
+`apiKeyHelper`, nenhuma exportação OpenTelemetry. Faltaria:
+
+1. pôr `"CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "1"` no `env` do `~/.claude/settings.json`, ou só no shell para um
+   teste. Os settings do projeto não valem para essa variável;
+2. abrir o Claude no terminal. No Antigravity, `claudeCode.useTerminal: true` faz a extensão abrir o Claude no
+   terminal integrado, e nesse modo ela não marca a sessão como painel. O comando `claude` não está no PATH;
+3. desligar o Remote Control nessa sessão. O settings global tem `remoteControlAtStartup: true`, e o binário recusa o
+   Code Mode "with Remote Control";
+4. confirmar na primeira vez ("Yes, turn on Code Mode"). A sessão reinicia.
+
+Se a telemetria do Antigravity for desligada, a extensão passa `DISABLE_TELEMETRY=1` ao Claude, e o Code Mode também
+não abre ("it needs settings that Claude Code downloads from Anthropic").
+
+**Consequências.**
+
+- **Custo.** A documentação não dá número. O mecanismo corta idas e vindas e resultado bruto no contexto, que pesam na
+  leitura e na escrita de cache (34% e 31% do gasto medido, em `ESTADO.md`). O ganho fica nas tarefas de muitas
+  chamadas relacionadas: a mesma mudança em muitos arquivos, busca cujo resultado precisa ser filtrado, comandos
+  independentes ao mesmo tempo. Em sessão de leitura e decisão quase nada muda.
+- **O que se perde.** O painel, porque a sessão fica no terminal. O Remote Control. A retomada fora do terminal: uma
+  sessão de Code Mode só se retoma no terminal e com ele ligado. Claude in Chrome e computer use.
+- **Permissões.** No modo automático o classificador lê o código, não cada chamada, e não vê valores calculados
+  durante a execução, como um caminho tirado de uma busca. As regras `deny` e `ask` e os hooks `PreToolUse`
+  continuam valendo para cada chamada. A documentação manda manter regras ou hooks para as chamadas que precisam de
+  controle; com isso, as regras deny do item 2 voltam a pesar.
+- **Hooks.** Um `PreToolUse` que estoura o tempo passa a recusar a chamada (o de `Agent|Task|Workflow` tem 30 s). Na
+  2.1.327 o `UserPromptSubmit` da linha de uso também roda na saída de cada script; a 2.1.328 tirou isso.
+- **Tempo.** Um script que o Claude espera para em 10 minutos. Em segundo plano, que o modo automático permite, vai
+  até 2 horas.
+- **Maturidade.** A 2.1.328 traz 22 entradas de Code Mode no CHANGELOG, e a extensão instalada está na 2.1.327. Três
+  pegam este ambiente:
+  - "Fixed Claude in Code Mode not being told to run workflows only when you ask, or the workflow size you set in
+    `/config`": na 2.1.327 há risco de fan-out sem o OK do Vicente;
+  - o `UserPromptSubmit` rodando na saída dos scripts;
+  - no Windows, o Claude não era avisado de que os comandos dos scripts rodam no Git Bash.
+
+**Teste, se o Vicente quiser, com a extensão na 2.1.328 ou mais.** Uma sessão no terminal, com a variável só naquele
+shell e o Remote Control desligado só nela; uma tarefa de muitas chamadas; o custo da sessão comparado no medidor com
+o de uma sessão parecida no painel. O settings global não muda antes do resultado.
