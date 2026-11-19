@@ -175,3 +175,21 @@ o de uma sessão parecida no painel. O settings global não muda antes do result
 > perder o Remote Control não é problema. A extensão já está na 2.1.328. A variável do Code Mode não entrou no
 > settings global: o teste a liga só no shell do terminal. Consequência: as sessões deixam de poder ser acompanhadas
 > de outro aparelho até alguém religar a chave. Origem: "nao tem problema desativar o modo remote control".
+
+**Teste de 19/11/2026 (2.1.328, Opus 5.5, esforço high, mesma tarefa, mesma pasta).** A tarefa: "Leia todos os
+arquivos .md dentro de .claude/ e liste os links para arquivos locais que não existem. Não altere nenhum arquivo."
+
+| | terminal com Code Mode (`14e2f5cf`) | painel sem Code Mode (`85cdee6f`) |
+|---|---|---|
+| resultado | 2 links quebrados, linhas 434 e 455 da DIRECAO | os mesmos 2 |
+| chamadas ao modelo | 4 | 4 |
+| contexto na 1ª chamada | 41,5 mil tokens | 56,6 mil tokens |
+| saída | 2.532 | 2.871 |
+| escrita de cache | 31.293 | 34.261 |
+| leitura de cache | 144.164 | 216.765 |
+| custo a preço de lista (US$ 5/25/6,25/0,50 por M) | ~US$ 0,33 | ~US$ 0,39 |
+
+Leitura: ~16% mais barato, quase todo pela leitura de cache, porque cada chamada parte de um contexto ~15 mil tokens
+menor. As duas sessões tiveram o mesmo número de chamadas, porque o painel também juntou o trabalho num script. Os
+limites: é uma amostra só, e a diferença mistura o Code Mode com a troca de painel por terminal. O painel também
+injeta contexto do editor.
