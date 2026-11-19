@@ -66,8 +66,9 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 19/11/2026 — repositório limpo; build e suíte 552 de 552; backlog válido, 0 abertos; fila:
-linha 10 em curso pelo `roda_aromas_ceara`, linhas 11 a 13 a fazer; 36 itens no "Visto de passagem".
+**Última verificação:** 19/11/2026, sessão da linha 11 — repositório limpo; build e suíte 552 de 552 (568 depois da
+linha 11); backlog válido, 0 abertos; fila: linha 10 em curso, linha 11 feita, 12 e 13 a fazer; 37 itens no "Visto de
+passagem".
 
 ## Fila
 
@@ -84,7 +85,7 @@ linha 10 em curso pelo `roda_aromas_ceara`, linhas 11 a 13 a fazer; 36 itens no 
 | 8 | H — Normas por ponteiro | ver abaixo | 045 · ver abaixo | **feita em 12/11/2026** (commits `fe53fb8`, `36e687a`, `c0cefbf`, `e61d713`) |
 | 9 | M — Descrição do método, com o Vicente | — | — | **feita em 12/11/2026** (`.claude/METODO_ReviewBR.md`; commits `898d79b`, `2a36336`, `216d13d`, `17af311`) |
 | 10 | Fase de testes | — | — | **em curso:** o teste é a pesquisa real `roda_aromas_ceara` (Vicente, 19/11/2026); as linhas 11 a 13 saíram dele |
-| 11 | I — Busca nos repositórios do `roda_aromas_ceara` | ver abaixo | ver abaixo | a fazer; antes da busca do projeto (passo C) |
+| 11 | I — Busca nos repositórios do `roda_aromas_ceara` | ver abaixo | ver abaixo | **feita em 19/11/2026** (commit `4936c59`): UFPI e IFCE buscam pela API REST; UECE, Alice e Infoteca-e marcadas como não pesquisáveis (HTTP 403), e a tool diz isso; Infoteca-e segue `inactive`; `matchesQuery` corrigido, sem chamador desde o item 1 |
 | 12 | J — OpenAlex e SciELO: resumo, endereço e a fonte do SciELO | ver abaixo | ver abaixo | a fazer; antes da busca do projeto (passo C) |
 | 13 | K — Decisões dos dois revisores humanos | ver abaixo | — | a fazer; antes da triagem do projeto (passo D) |
 
@@ -340,3 +341,10 @@ Vicente pedir.
   com `[TBD]` em F0.1.6 a F0.1.9 (autores, instituição, financiamento, conflito de interesses), deixados em branco
   por decisão do pesquisador. A P1 (esqueleto genérico) não impediu a trava: o protocolo manteve os títulos do
   esqueleto e pôs dentro deles os campos do modelo do escopo.
+- (linha 11, 19/11/2026) Visto ao fazer a linha, sem avaliação:
+  - repositório DSpace sem `restApi` no catálogo tenta antes a API em `/server/api`; quando o servidor não responde, as
+    novas tentativas do `fetchWithRetry` custam até cerca de 90 s antes da página de busca (a UFC levou 52 s);
+  - a UFC alternou entre responder e fechar a conexão (`ECONNRESET`, também pelo curl) na mesma hora;
+  - no catálogo, a UECE (`BR-EST-0006`) está com `institution.type` "federal";
+  - para "cajuína", o IFCE devolve 1 registro, cujo título não traz a palavra ("Construção de uma perspectiva de ensino
+    interdisciplinar…"); é o que a busca do site devolve.
