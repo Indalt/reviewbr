@@ -431,7 +431,7 @@ Três lentes independentes (pesquisador que publica, metodologista, cético que 
 fila) classificaram os 81 abertos; 27 divergiram e foram a arbitragem. Os candidatos a recusa
 passaram por um **verificador por achado, instruído a contestar a recusa** e a manter em caso de
 dúvida. O resultado item a item está em
-[`verificacao_recusas_2026-10-04.json`](verificacao_recusas_2026-10-04.json), com o caminho até
+[`verificacao_recusas_2026-10-04.json`](../../old/12.11.26/verificacao_recusas_2026-10-04.json), com o caminho até
 artefato publicado (ou a ausência dele) e o texto que foi para cada `resolution`.
 
 **A contestação valeu a pena: 5 dos 13 verificados voltaram como MANTER**, quatro deles com
@@ -452,7 +452,7 @@ adversarial é o que separa "encurtar a fila" de "esconder defeito".
 O pesquisador perguntou: *"estes últimos debts talvez tenham resolvido muitos debts anteriores.
 Que debts faltam para encerrar a revisão do agente de manutenção?"* A hipótese se confirmou, e a
 verificação item a item está em
-[`verificacao_abertos_2026-10-08.json`](verificacao_abertos_2026-10-08.json) — os 62 abertos
+[`verificacao_abertos_2026-10-08.json`](../../old/12.11.26/verificacao_abertos_2026-10-08.json) — os 62 abertos
 conferidos contra o código atual, em quatro lotes por gravidade, com a instrução de responder
 ABERTO na dúvida.
 
