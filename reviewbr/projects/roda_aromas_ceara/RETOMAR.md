@@ -28,14 +28,15 @@ estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
   (`project_state.json`: LOCKED, fase F2). Mudar o protocolo agora exige emenda registrada.
 - O que vale é o `protocol.md`. O `DESENHO_artigo1.md` é o histórico de como se chegou a ele; onde os dois
   divergirem (a string, a conferência de 20%, o Rayyan), vale o protocolo.
-- Próximo passo: A (manutenção) e depois C (busca). A busca espera o conserto de F7 e F8.
+- Próximo passo: a decisão do Vicente sobre os consertos que o passo A confirmou (19/11/2026); depois, C (busca). A
+  busca espera o conserto de F7 e F8, ou uma decisão nova sobre essas fontes.
 - Artigo 2: sessão própria; entrada em `artigo2/ABRIR_SESSAO.md`.
 
 ## Passos, na ordem
 
 | # | passo | quem | pronto quando | para se |
 |---|---|---|---|---|
-| A | Conferir os problemas que tocam este projeto: F7 e F8 (fontes), F3 (resumos), Infoteca-e inativa e UFPI (F5), como se gravam as decisões de dois revisores humanos, e se a trilha aceita uma revisão com zero estudos incluídos | sessão de **manutenção**, por ordem do Vicente (a sessão de projeto não cria linha na FILA) | cada um está confirmado ou descartado, e o que foi confirmado tem conserto ou decisão do Vicente | — |
+| A | Conferir os problemas que tocam este projeto: F7 e F8 (fontes), F3 (resumos), Infoteca-e inativa e UFPI (F5), como se gravam as decisões de dois revisores humanos, e se a trilha aceita uma revisão com zero estudos incluídos | sessão de **manutenção**, por ordem do Vicente (a sessão de projeto não cria linha na FILA) | cada um está confirmado ou descartado, e o que foi confirmado tem conserto ou decisão do Vicente | **conferido em 19/11/2026** (FILA, "Visto de passagem", bloco de 19/11): são reais F7 na UECE, na Alice e no IFCE (a UFC voltou a funcionar), F8, F3, a Infoteca-e e a UFPI, e falta onde gravar os dois revisores; zero incluídos funciona. Os consertos esperam decisão do Vicente |
 | B | Protocolo escrito, lido e aprovado pelo Vicente, e travado | — | **feito em 15/11/2026** | — |
 | C | Busca (F2): o agente `librarian` roda as fontes abertas com as strings do `protocol.md` e os controles positivos; o Vicente roda Scopus, Web of Science e FSTA no Portal CAPES e salva os arquivos RIS em `01_raw/manual/`; importar com `import_dataset_ris` | 1 agente + o Vicente | `01_raw/` e o registro da busca preenchidos, com o controle de cada fonte | fonte com falha não consertada: não buscar nela, anotar |
 | D | Deduplicação e triagem (F3/F4): camada mecânica por palavras, depois a leitura dos dois revisores humanos | agente `screener` + Vicente + estagiário | lista final de incluídos decidida pelo Vicente | — |
