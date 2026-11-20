@@ -91,7 +91,7 @@ diagnóstico, à espera do Vicente; 42 itens no "Visto de passagem" (eram 44; a 
 | 14 | L — Acesso por robô: conferência jurídica e ética (UECE, Alice, Infoteca-e) | User-Agent identificado | `CONFERENCIA_acesso_2026-11-19.md` | **feita em 19/11/2026**: robots.txt respeitado; UECE, Alice, Infoteca-e e UFC pela Oasisbr, declarando onde se viu |
 | 15 | F9 — importação de várias bases em `01_raw` | ver abaixo | — | **feita em 19/11/2026** |
 | 16 | F10 e F11 — importação de RIS: linha de continuação, CR sozinho e registros distintos da mesma base | ver abaixo | — | **feita em 20/11/2026** |
-| 17 | Protocolo travado na busca: a execução segue só o protocolo, e o que muda é emenda | ver abaixo | ver abaixo | **diagnóstico feito em 20/11/2026; o conserto espera o Vicente** |
+| 17 | Protocolo travado na busca: a execução segue só o protocolo, e o que muda é emenda | ver abaixo | ver abaixo | **diagnóstico feito em 20/11/2026; conserto aprovado, a fazer depois das 15h30 de 20/11** |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
 da outra; a ordem é a do dano a uma pesquisa em andamento.
@@ -339,7 +339,10 @@ o trabalho se desvia desse objetivo há tempo. Origem: "controles e regras nao v
 disponibiliza todos os protocolos possiveis e garante a sua execucao. nao faz sentido fazer manutencao em cima de
 manutencao se isso nao esta garantido. estamos desviando dos objetivos centrais faz tempo. essa é uma impressao".
 
-Em aberto, para o Vicente: aprovar este conserto.
+**Conserto aprovado pelo Vicente em 20/11/2026**, para rodar depois das 15h30 (depois do reset da janela de 5 h).
+Origem: "agende o conserto 15h30 e pode executar apos esse horario aqui mesmo nesta sessao".
+
+**Estado da execução** (atualizar a cada item feito, com o commit): nenhum item feito.
 
 ### Como uma linha entra na fila
 
