@@ -419,7 +419,8 @@ Vicente pedir.
   digita, texto exato, filtros e expansores, total mostrado, formato e campos da exportação, data. Hoje nenhuma skill,
   agente ou tool fala de busca manual (conferido em 20/11 em `.claude/skills`, `.claude/agents` e
   `reviewbr-mcp/src`), e o `import_dataset_ris` grava a Query como "Indefinido". O que se viu: a anotação de 19/11 do
-  projeto, escrita pelo Claude a partir das telas, ficou sem as edições do Web of Science. Liga-se ao item de
+  projeto, escrita pelo Claude a partir das telas, ficou sem o período que cada base cobre, que o protocolo do
+  projeto pede ("lido na própria fonte no dia da busca"), e sem as edições do Web of Science. Liga-se ao item de
   15/11/2026 sobre onde ficam o texto exato, a base e a plataforma da busca feita à mão. Origem: "Orientar tudo o que
   for necessario de ser realizado para as buscas manuais quando for indicada. Esse detalhe deve se adaptar para as
   buscas conhecidas que devem ser feitas manualmente com o apoio do reviewbr."

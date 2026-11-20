@@ -72,12 +72,15 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   voltou inteiro. O `01_raw/database_records.json` antigo foi apagado e as três bases importadas de novo:
   **Scopus 23, Web of Science 17, FSTA 14; total 54, nenhum sem resumo**. Detalhe e conferência no `REGISTRO.md`
   ("Importação dos RIS, 20/11/2026"). Próximo: passo C, segunda parte (fontes abertas), em chat novo.
-- **Pendente do Vicente (20/11/2026), para o relato da busca:** (1) as edições da Coleção principal do Web of Science
-  não foram anotadas em 19/11 (a tela dizia "Todos"); ele abre o campo "Edições" na Pesquisa Avançada pelo Portal
-  CAPES e manda os nomes e os anos de cada uma, sem refazer a busca; (2) onde guardar as anotações da busca, hoje fora
-  do git: (a) cópia versionada na pasta do projeto, sem os RIS, ou (b) ficam onde estão e ele guarda uma cópia.
-  Scopus não tem edições; os 14 registros da FSTA trazem `DB - FSTA`, então só ela entrou. O pedido de o ReviewBR
-  orientar a busca feita à mão foi para o "Visto de passagem" da FILA.
+- **Pendente do Vicente (20/11/2026), para o relato da busca:** (1) o protocolo pede o período que cada fonte cobre,
+  "lido na própria fonte no dia da busca" (seção "Fontes de Busca"), e em 19/11 ele não foi anotado em nenhuma das
+  três bases. Ele decide: ler agora, declarando a data da leitura, ou o relato declara que o período não foi
+  anotado. Os nomes das edições do Web of Science não são pedidos pelo protocolo nem pelo PRISMA-S (S1 e S2 lidos no
+  texto oficial em 20/11); no Web of Science, porém, o período aparece ao lado de cada edição, no campo "Edições" da
+  Pesquisa Avançada. (2) Onde guardar as anotações da busca, hoje fora do git: (a) cópia versionada na pasta do
+  projeto, sem os RIS, ou (b) ficam onde estão e ele guarda uma cópia. Os 14 registros da FSTA trazem
+  `DB - FSTA`, então só ela entrou. O pedido de o ReviewBR orientar a busca feita à mão foi para o "Visto de
+  passagem" da FILA.
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.
