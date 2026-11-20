@@ -2,7 +2,7 @@
 
 **Não substitua esta página.** Sessão que precisar gravar onde parou atualiza a seção "Estado" e a tabela de passos.
 
-Atualizado em 19/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou mais barato).
+Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou mais barato).
 
 ## Regras para qualquer sessão
 
@@ -68,6 +68,10 @@ Atualizado em 19/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   é descartado, não substituído. **Decidido pelo Vicente (20/11/2026, `REGISTRO.md`):** apagar o
   `01_raw/database_records.json` de hoje (só os 40 importados) e importar as três de novo. Em chat novo: o servidor
   deste chat ainda era o anterior ao conserto (conferido: devolveu o resumo cortado). Prompt pronto abaixo.
+- **Passo C, primeira parte, feita em 20/11/2026.** Teste sem `projectPath`: o resumo de Porto-Luz et al. 2020
+  voltou inteiro. O `01_raw/database_records.json` antigo foi apagado e as três bases importadas de novo:
+  **Scopus 23, Web of Science 17, FSTA 14; total 54, nenhum sem resumo**. Detalhe e conferência no `REGISTRO.md`
+  ("Importação dos RIS, 20/11/2026"). Próximo: passo C, segunda parte (fontes abertas), em chat novo.
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.
@@ -112,7 +116,8 @@ estiver trabalhando). Prompt original, de 19/11:
 > excluir nem deduplicar nada, conferindo os totais com `ANOTACOES_busca_manual.md`, e pare. Não precisa de agente.
 > Não busque, não mude nada do protocolo.
 
-Passo C, primeira parte, refeita (decisão de 20/11), em chat novo aberto depois do build da linha 16:
+Passo C, primeira parte, refeita (decisão de 20/11), em chat novo aberto depois do build da linha 16 — **feito em
+20/11/2026** (54 registros):
 
 > Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Confira com uma
 > importação de teste, sem `projectPath`, que o `import_dataset_ris` junta a linha de continuação do resumo; se não

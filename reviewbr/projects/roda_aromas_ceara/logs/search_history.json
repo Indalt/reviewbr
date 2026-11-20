@@ -14,5 +14,29 @@
     "params": {
       "sourceName": "Web of Science"
     }
+  },
+  {
+    "timestamp": "2026-11-20T06:37:19.821Z",
+    "tool": "import_dataset_ris",
+    "found": 23,
+    "params": {
+      "sourceName": "Scopus"
+    }
+  },
+  {
+    "timestamp": "2026-11-20T06:38:46.155Z",
+    "tool": "import_dataset_ris",
+    "found": 17,
+    "params": {
+      "sourceName": "Web of Science"
+    }
+  },
+  {
+    "timestamp": "2026-11-20T06:40:44.747Z",
+    "tool": "import_dataset_ris",
+    "found": 14,
+    "params": {
+      "sourceName": "FSTA"
+    }
   }
 ]

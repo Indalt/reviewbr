@@ -30,7 +30,28 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
 |---|---|---|---|---|---|
 | 1 | 12/11/2026 | exploratória (agente `scout`) | O que já existe: há roda de aromas, léxico sensorial ou descrição de aroma publicados para algum produto cearense? | `exploratoria/01_o_que_existe.md` (log: `01_buscas_log.md`, 43 execuções) | feito, **parcial**: repositórios do CE só alcançados via BDTD; SciELO inutilizável; só títulos, sem resumo. Aguarda decisão do Vicente |
 | 2 | 12/11/2026 | artigo 1, F0/F1, protocolo (agente `designer`) | revisão de escopo (PCC): descritores sensoriais e compostos de aroma da cajuína e das bebidas do pedúnculo de caju, em geral, com o Ceará destacado | `protocol.md` v0.1 (DRAFT); `project_state.json` (projeto 3, estrito); `protocolo_falhas_reviewbr.md` (P1 a P8) | **feito: protocolo v1.0 travado em 15/11/2026**; condição `avaliacao_critica` = "não" gravada; busca bloqueada até o conserto de F7 e F8 |
-| 3 | 19/11/2026 | artigo 1, F2, busca (agente `librarian` + Vicente na CAPES) | strings do `protocol.md` | `01_raw/manual/` (RIS e `ANOTACOES_busca_manual.md`, fora do git) | **parte manual feita em 19/11/2026**: Scopus 23, Web of Science 17, FSTA 14 (2 patentes), todos com resumo e controle positivo. O resto espera a linha 12 da FILA e a decisão sobre UECE, Alice e Infoteca-e. **Importação parada em 19/11/2026, antes de rodar:** a tool deduplicaria entre as bases (falha F9) |
+| 3 | 19/11/2026 | artigo 1, F2, busca (agente `librarian` + Vicente na CAPES) | strings do `protocol.md` | `01_raw/manual/` (RIS e `ANOTACOES_busca_manual.md`, fora do git) | **parte manual feita em 19/11/2026**: Scopus 23, Web of Science 17, FSTA 14 (2 patentes), todos com resumo e controle positivo. O resto espera a linha 12 da FILA e a decisão sobre UECE, Alice e Infoteca-e. **Importação parada em 19/11/2026, antes de rodar:** a tool deduplicaria entre as bases (falha F9). **Importação refeita em 20/11/2026, depois do conserto de F9, F10 e F11:** `01_raw/database_records.json` com 54 registros (Scopus 23, Web of Science 17, FSTA 14), nenhum sem resumo nem sem título; ver "Importação dos RIS, 20/11/2026" abaixo |
+
+### Importação dos RIS, 20/11/2026 (passo C, primeira parte, refeita)
+
+- **Teste antes:** `import_dataset_ris` sem `projectPath`, só com o registro de Porto-Luz et al. 2020 do Web of
+  Science: o resumo voltou com as 5 partes (falha F10 consertada). Nada foi gravado no projeto nem no registro da
+  busca.
+- **Apagado** o `01_raw/database_records.json` de 20/11 (40 registros: Scopus 23 e WoS 17, feitos com a tool
+  defeituosa), conforme a decisão do Vicente de 20/11.
+- **Importado** com `projectPath` e `sourceName` ("Scopus", "Web of Science", "FSTA"), uma chamada por base:
+  23 de 23, 17 de 17 e 14 de 14; total 54, sem exclusão nem deduplicação. A FSTA entrou com os dois registros do DOI
+  10.1016/j.fbio.2025.107482 (F11 consertada). O registro da busca (`logs/search_log_prisma_s.csv`) tem as três
+  linhas novas (06:37, 06:38 e 06:40 UTC) além das duas de 20/11 feitas com a tool defeituosa, que ficam como
+  histórico; o relato da F2 usa as três novas.
+- **Como o texto foi passado à tool:** a tool recebe o conteúdo do RIS, não o caminho do arquivo. Os fins de linha
+  foram normalizados (o WoS usa CR sozinho) e foram passadas só as linhas das tags que o `importRis` lê (TY, TI, AU,
+  PY/Y1, UR, DO, AB, T2/JO, KW, DB, ER, com as linhas de continuação delas); as demais (AD, N1, SN, PB etc.) a tool
+  descarta, e os registros gravados são os mesmos. Os RIS completos continuam em `01_raw/manual/`.
+- **Conferência** dos 54 registros gravados contra os três RIS originais (título, resumo e DOI, lidos por fora com
+  as mesmas regras): iguais, salvo dois resumos em que o espaço não separável (U+00A0) entre número e unidade virou
+  espaço comum na transcrição (Scopus, Solon-Júnior et al. 2025; FSTA, segundo registro de Fonteles et al. 2025).
+  Nenhuma palavra muda. Sem DOI, como no RIS: 5 registros (1 da Scopus e 4 da FSTA, entre eles as 2 patentes).
 
 ## Decisões
 
