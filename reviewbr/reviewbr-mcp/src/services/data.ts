@@ -162,11 +162,27 @@ export class DataService {
         let current: Partial<SearchResult> = {};
         // O export do Web of Science começa com BOM: sem retirá-lo, a primeira linha não é lida
         // como `TY` e o primeiro registro entra sem `accessMethod` (falha F9, 19/11/2026).
-        const lines = risContent.replace(/^﻿/, "").split(/\r?\n/);
+        // O mesmo export usa CR sozinho como fim de linha em parte do arquivo (falha F10,
+        // 20/11/2026): partir só por \r?\n fundia essas linhas.
+        const lines = risContent.replace(/^﻿/, "").split(/\r\n|\n|\r/);
+        // Campo RIS: duas letras (ou letra e dígito), dois espaços, hífen. Linha fora desse
+        // formato é continuação do campo anterior (o WoS quebra o resumo em parágrafos). Antes,
+        // a tag era lida nos dois primeiros caracteres de qualquer linha: a continuação sumia
+        // (falha F10: o resumo de Porto-Luz et al. 2020 entrou só com a primeira linha), e uma
+        // continuação começada por "TI…" ou "AB…" sobrescreveria o campo.
+        const CAMPO = /^([A-Z][A-Z0-9])  -(?: (.*))?$/;
+        let ultimo = "";
 
         for (const line of lines) {
-            const tag = line.substring(0, 2);
-            const value = line.substring(6).trim();
+            const m = CAMPO.exec(line);
+            if (!m) {
+                const resto = line.trim();
+                if (resto) this.continuarCampo(current, ultimo, resto);
+                continue;
+            }
+            const tag = m[1]!;
+            const value = (m[2] ?? "").trim();
+            ultimo = tag;
 
             if (tag === 'TY') {
                 if (Object.keys(current).length > 0) entries.push(this.finalizeEntry(current, origemDe(current)));
@@ -200,6 +216,21 @@ export class DataService {
             }
         }
         return entries;
+    }
+
+    /** Junta a linha de continuação ao campo RIS lido por último. Resumo guarda a quebra de
+     *  parágrafo; título, autor, palavra-chave e periódico continuam na mesma linha. Campo que
+     *  a importação não lê (AD, N1…) leva a continuação junto. */
+    private continuarCampo(current: Partial<SearchResult>, tag: string, resto: string): void {
+        const junta = (a: string | undefined, sep: string) => (a ? a + sep + resto : resto);
+        const ultimoDe = (arr: string[] | undefined) => {
+            if (arr && arr.length) arr[arr.length - 1] = junta(arr[arr.length - 1], " ");
+        };
+        if (tag === 'AB' || tag === 'N2') current.description = junta(current.description, "\n");
+        else if (tag === 'TI' || tag === 'T1') current.title = junta(current.title, " ");
+        else if (tag === 'JO' || tag === 'JF' || tag === 'T2') current.journal = junta(current.journal, " ");
+        else if (tag === 'AU' || tag === 'A1') ultimoDe(current.creators);
+        else if (tag === 'KW') ultimoDe(current.subjectAreas);
     }
 
     /**

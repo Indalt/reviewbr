@@ -98,11 +98,21 @@ function chaveNaFonte(r: any): string {
     return origemDoRegistro(r) + "|" + recordKey(r);
 }
 
-/** Faz merge de novos registros no arquivo canônico, sem repetir o registro da mesma fonte. Retorna contagens. */
+/**
+ * Faz merge de novos registros no arquivo canônico, sem repetir o registro da mesma fonte. Retorna contagens.
+ *
+ * `manterTodosDoLote` (importação de export): o arquivo exportado pela base é gravado inteiro.
+ * Dois registros do mesmo arquivo com o mesmo DOI são dois registros da base — a FSTA indexou
+ * o mesmo artigo duas vezes, com números de registro distintos (falha F11, 20/11/2026: entraria
+ * com 13 de 14). Só se descarta o que já estava no arquivo canônico vindo da mesma base, para que
+ * repetir a importação não conte duas vezes. A remoção da duplicata é da F3, com relatório.
+ * Sem a opção (busca), o repetido dentro do lote continua descartado.
+ */
 export function appendRawRecords(
     projectPath: string,
     records: SearchResult[],
     kind: "database" | "other" = "database",
+    opcoes: { manterTodosDoLote?: boolean } = {},
 ): { total: number; added: number; file: string } {
     const dir = resolveDir(projectPath);
     const rel = kind === "other" ? "01_raw/other_records.json" : "01_raw/database_records.json";
@@ -111,7 +121,10 @@ export function appendRawRecords(
     let added = 0;
     for (const r of records) {
         const k = chaveNaFonte(r);
-        if (!seen.has(k)) { seen.add(k); existing.push(r); added++; }
+        if (seen.has(k)) continue;
+        if (!opcoes.manterTodosDoLote) seen.add(k);
+        existing.push(r);
+        added++;
     }
     const file = writeJson(dir, rel, existing);
     return { total: existing.length, added, file };
@@ -129,14 +142,21 @@ export function consolidateRaw(projectPath: string): { database: any[]; other: a
         for (const f of fs.readdirSync(rawDir)) {
             if (!f.endsWith(".json")) continue;
             const isOther = /snowball|other/i.test(f);
+            // Por fonte: database_records.json já contém os registros dos arquivos por fonte
+            // depois da primeira consolidação; a chave por fonte evita contá-los duas vezes sem
+            // apagar a duplicata ENTRE bases, que é da F3. O descarte é só entre ARQUIVOS: dentro
+            // de um arquivo, o repetido foi gravado de propósito (export inteiro, falha F11) ou
+            // já tinha sido descartado ao gravar.
+            const seen = isOther ? seenOther : seenDb;
+            const destino = isOther ? other : database;
+            const doArquivo = new Set<string>();
             for (const r of readArray(path.join(rawDir, f))) {
-                // Por fonte: database_records.json já contém os registros dos arquivos por
-                // fonte depois da primeira consolidação; a chave por fonte evita contá-los duas
-                // vezes sem apagar a duplicata ENTRE bases, que é da F3.
                 const k = chaveNaFonte(r);
-                if (isOther) { if (!seenOther.has(k)) { seenOther.add(k); other.push(r); } }
-                else { if (!seenDb.has(k)) { seenDb.add(k); database.push(r); } }
+                if (seen.has(k)) continue;
+                doArquivo.add(k);
+                destino.push(r);
             }
+            for (const k of doArquivo) seen.add(k);
         }
     }
     // Persiste os consolidados canônicos

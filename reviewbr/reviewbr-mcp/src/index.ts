@@ -1029,7 +1029,8 @@ server.tool(
         let rawWriteNote = "";
         if (params.projectPath) {
             try {
-                const raw = appendRawRecords(params.projectPath, results, "database");
+                // Falha F11 (20/11/2026): o export é gravado inteiro; a duplicata é da F3.
+                const raw = appendRawRecords(params.projectPath, results, "database", { manterTodosDoLote: true });
                 rawWriteNote = `\n\n01_raw/database_records.json: ${raw.added} novo(s) de ${results.length} (total no arquivo: ${raw.total}).`;
             } catch (e: any) {
                 rawWriteNote = `\n\n⚠️ Registros importados mas NÃO gravados em 01_raw (${e?.message ?? e}). O funil PRISMA não vai contá-los até isso ser corrigido.`;

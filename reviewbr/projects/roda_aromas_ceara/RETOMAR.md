@@ -62,8 +62,12 @@ Atualizado em 19/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   nome da base; `01_raw/database_records.json` com 40; o registro da busca em `logs/search_log_prisma_s.csv`).
   **A FSTA não foi importada:** a tool descartaria um dos dois registros da FSTA com o mesmo DOI (falha F11) e
   entraria com 13 de 14. No WoS, um resumo entrou cortado (falha F10, Porto-Luz et al. 2020). As duas estão no
-  "Visto de passagem" da FILA. Depois do conserto e do build: importar a FSTA (14) e reimportar o WoS para
-  recompor o resumo cortado (ver se a tool substitui o registro já gravado ou o descarta como repetido).
+  "Visto de passagem" da FILA.
+- **F10 e F11 consertadas em 20/11/2026** (linha 16 da FILA). Conferido com os três RIS, fora do projeto: 23 + 17 +
+  14 = 54, nenhum sem resumo. Reimportar o WoS **não** recompõe o resumo cortado: o registro já gravado da mesma base
+  é descartado, não substituído. **Espera decisão do Vicente:** (a) só importar a FSTA e deixar o resumo cortado,
+  anotado; ou (b) tirar o `01_raw/database_records.json` de hoje (só os 40 importados) e importar as três de novo
+  (o registro da busca passa a ter as duas importações de hoje e as três novas). Em chat novo, aberto depois deste build.
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.

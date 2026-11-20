@@ -64,3 +64,81 @@ describe("F9 — 01_raw guarda cada base inteira; a duplicata entre bases fica p
         expect(out[0]!.title).toBe("A");
     });
 });
+
+/**
+ * Falhas F10 e F11 do projeto roda_aromas_ceara (20/11/2026, linha 16 da FILA).
+ * F10: o resumo de Porto-Luz et al. 2020 no RIS do Web of Science, em 5 linhas, entrava só com a
+ * primeira; e o mesmo arquivo usa CR sozinho como fim de linha. F11: a FSTA tem dois registros
+ * distintos com o mesmo DOI, e a importação gravava só um (13 de 14).
+ */
+describe("F10 — importRis lê o RIS como a base o exporta", () => {
+    it("a linha de continuação entra no campo anterior", () => {
+        const ds = new DataService();
+        const out = ds.importRis(
+            "TY  - JOUR\nTI  - Identification of antioxidant compounds\n   in cajuina\n" +
+            "AU  - Porto-Luz, RGL\nKW  - vitamin C\nKW  - antioxidant\n   activity\n" +
+            "AB  - Background: Cajuina is obtained.\n   Objective: identify phenolic compounds.\n   Conclusion: functional food.\n" +
+            "ER  - \n", "Web of Science");
+        expect(out).toHaveLength(1);
+        expect(out[0]!.title).toBe("Identification of antioxidant compounds in cajuina");
+        expect(out[0]!.description).toBe(
+            "Background: Cajuina is obtained.\nObjective: identify phenolic compounds.\nConclusion: functional food.");
+        expect(out[0]!.subjectAreas).toEqual(["vitamin C", "antioxidant activity"]);
+    });
+
+    it("CR sozinho é fim de linha", () => {
+        const ds = new DataService();
+        const out = ds.importRis("TY  - JOUR\rTI  - A\rDO  - 10.1/a\rER  - \rTY  - JOUR\r\nTI  - B\nER  - \n", "Web of Science");
+        expect(out).toHaveLength(2);
+        expect(out[0]!.title).toBe("A");
+        expect(out[0]!.doi).toBe("10.1/a");
+        expect(out[1]!.title).toBe("B");
+    });
+
+    it("linha de continuação que começa com letras de uma tag não vira campo", () => {
+        const ds = new DataService();
+        const out = ds.importRis("TY  - JOUR\nTI  - Titulo\nAB  - Primeira parte\nTIME and temperature\nER  - \n", "Scopus");
+        expect(out[0]!.title).toBe("Titulo");
+        expect(out[0]!.description).toBe("Primeira parte\nTIME and temperature");
+    });
+});
+
+describe("F11 — o export é gravado inteiro; a duplicata é da F3", () => {
+    const dirs: string[] = [];
+    afterEach(() => { for (const d of dirs.splice(0)) fs.rmSync(d, { recursive: true, force: true }); });
+    const mk = () => { const p = fs.mkdtempSync(path.join(os.tmpdir(), "f11-")); dirs.push(p); return p; };
+    const fsta =
+        "TY  - JOUR\nAB  - Abstract: Fruit-based prebiotic beverages.\nAN  - 2026-06-0700081\nDO  - 10.1016/j.fbio.2025.107482\nTI  - Human gut microbiota responses\nER  - \n\n" +
+        "TY  - JOUR\nAB  - Fruit-based prebiotic beverages.\nAN  - 2026-02-Hr0946\nDO  - 10.1016/j.fbio.2025.107482\nTI  - Human gut microbiota responses.\nER  - \n";
+
+    it("dois registros distintos da mesma base com o mesmo DOI entram os dois", () => {
+        const p = mk();
+        const ds = new DataService();
+        const r = appendRawRecords(p, ds.importRis(fsta, "FSTA"), "database", { manterTodosDoLote: true });
+        expect(r.added).toBe(2);
+        expect(r.total).toBe(2);
+    });
+
+    it("repetir a importação do mesmo arquivo não duplica", () => {
+        const p = mk();
+        const ds = new DataService();
+        appendRawRecords(p, ds.importRis(fsta, "FSTA"), "database", { manterTodosDoLote: true });
+        const r = appendRawRecords(p, ds.importRis(fsta, "FSTA"), "database", { manterTodosDoLote: true });
+        expect(r.added).toBe(0);
+        expect(r.total).toBe(2);
+    });
+
+    it("consolidateRaw não junta os dois registros do mesmo arquivo", () => {
+        const p = mk();
+        const ds = new DataService();
+        appendRawRecords(p, ds.importRis(fsta, "FSTA"), "database", { manterTodosDoLote: true });
+        expect(consolidateRaw(p).database).toHaveLength(2);
+        expect(consolidateRaw(p).database).toHaveLength(2);
+    });
+
+    it("sem a opção (busca), o registro repetido no lote continua descartado", () => {
+        const p = mk();
+        const rec = { repositoryId: "openalex", identifier: "W1", doi: "10.1/a", title: "A" };
+        expect(appendRawRecords(p, [rec, { ...rec }] as any).added).toBe(1);
+    });
+});

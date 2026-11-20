@@ -66,9 +66,8 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 19/11/2026, sessão das linhas 12, 14 e 15 — repositório limpo; build e suíte 568 de 568 (585
-depois); backlog válido, 0 abertos; fila: linha 10 em curso, 12, 14 e 15 feitas, 13 a fazer; 41 itens no "Visto de
-passagem".
+**Última verificação:** 20/11/2026, sessão da linha 16 — repositório limpo; build e suíte 585 de 585 (592 depois);
+backlog válido, 0 abertos; fila: linha 10 em curso, 16 feita, 13 a fazer; 42 itens no "Visto de passagem".
 
 ## Fila
 
@@ -90,6 +89,7 @@ passagem".
 | 13 | K — Decisões dos dois revisores humanos | ver abaixo | — | a fazer; antes da triagem do projeto (passo D) |
 | 14 | L — Acesso por robô: conferência jurídica e ética (UECE, Alice, Infoteca-e) | User-Agent identificado | `CONFERENCIA_acesso_2026-11-19.md` | **feita em 19/11/2026**: robots.txt respeitado; UECE, Alice, Infoteca-e e UFC pela Oasisbr, declarando onde se viu |
 | 15 | F9 — importação de várias bases em `01_raw` | ver abaixo | — | **feita em 19/11/2026** |
+| 16 | F10 e F11 — importação de RIS: linha de continuação, CR sozinho e registros distintos da mesma base | ver abaixo | — | **feita em 20/11/2026** |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
 da outra; a ordem é a do dano a uma pesquisa em andamento.
@@ -221,6 +221,21 @@ fica nas duas, e a remoção entre bases é da F3, com relatório. O `importRis`
 `repositoryName` e o DOI como endereço quando falta `UR`, onde o gate da RV-08 os procura (sem isso, a exportação
 bloquearia todo registro importado). O passo C, primeira parte, do projeto pode rodar de novo, com o mesmo prompt,
 em chat aberto depois deste build.
+
+**Linha 16 — F10 e F11, importação de RIS** (ordem do Vicente, 20/11/2026: "realizar a manutencao entao", depois de a
+sessão do projeto parar a importação da FSTA e levar as duas falhas ao "Visto de passagem"). Feito:
+- F10: o `importRis` reconhece CR sozinho como fim de linha, só lê como campo a linha no formato `XX  - ` e junta a
+  linha de continuação ao campo anterior (resumo com quebra de parágrafo; título, autor, palavra-chave e periódico
+  com espaço). Antes, uma continuação começada por "TI…" ou "AB…" sobrescreveria o campo;
+- F11: `import_dataset_ris` grava o export inteiro (`appendRawRecords` com `manterTodosDoLote`): dois registros da
+  mesma base com o mesmo DOI entram os dois, e só se descarta o que já estava em `01_raw` vindo da mesma base, de
+  modo que repetir a importação não duplica. `consolidateRaw` só descarta o repetido entre arquivos, não dentro de um.
+  A busca não muda: o repetido dentro do lote de uma busca continua descartado.
+
+Conferido com os três RIS do projeto, fora dele: Scopus 23, Web of Science 17 e FSTA 14 (total 54), nenhum sem
+resumo; a FSTA importada de novo grava 0; o resumo de Porto-Luz et al. 2020 entra com as 5 linhas. **O que o conserto
+não faz:** reimportar o Web of Science não recompõe o resumo cortado em `01_raw` do projeto, porque o registro já
+gravado da mesma base é descartado, não substituído. Recompor é decisão do projeto.
 
 ### Como uma linha entra na fila
 
@@ -395,13 +410,5 @@ Vicente pedir.
   do projeto.
 - (linha 15, 19/11/2026) O `importRis` grava `provenanceSource: "Local File Import"` quando não há base declarada nem
   tag `DB` (já anotado na linha 2); o `repositoryName` continua vazio nesse caso, e o gate reprova.
-- (projeto `roda_aromas_ceara`, 20/11/2026) Passo C, primeira parte, **parado antes da FSTA** (Scopus 23 de 23 e Web
-  of Science 17 de 17 importados; `01_raw/database_records.json` com 40):
-  - F10: o `importRis` (`data.ts:165`) parte as linhas só por `\r?\n` e ignora a linha de continuação (sem tag). No
-    Web of Science, o resumo de Porto-Luz et al. 2020 (10.2174/1573401315666190206124545), em 5 linhas, entrou só
-    com a primeira ("Background: …"). O arquivo do WoS ainda usa CR sozinho como fim de linha em 34 lugares (antes
-    de `AD` e `AN`): lido como está, essas linhas se fundiriam; nesta importação o texto foi passado com as quebras
-    normalizadas;
-  - F11: o `appendRawRecords` (`project_artifacts.ts:97`) descarta o segundo registro da mesma fonte com o mesmo
-    DOI. O RIS da FSTA tem dois registros distintos (AN `2026-06-0700081` e `2026-02-Hr0946`) com o DOI
-    10.1016/j.fbio.2025.107482: a FSTA entraria com 13 de 14, contra a ordem de importar tudo sem deduplicar.
+- (linha 16, 20/11/2026) O `import_bvs_export` grava pelo mesmo `appendRawRecords` sem `manterTodosDoLote`: dois
+  registros distintos do mesmo export BVS com o mesmo DOI continuam virando um.
