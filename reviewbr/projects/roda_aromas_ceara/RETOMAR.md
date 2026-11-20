@@ -35,13 +35,20 @@ Atualizado em 19/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   - Linha 11 (repositórios): **feita em 19/11/2026**, commit `4936c59`. BDTD, UFC e UFPI buscam e mostram o total da
     fonte. UECE, Alice e Infoteca-e ficaram marcadas como **não pesquisáveis pela ferramenta** (HTTP 403; o
     `robots.txt` proíbe a busca por robô), e a tool diz isso em vez de dar zero.
-  - Linha 12 (OpenAlex e SciELO): a fazer, em chat de manutenção.
+  - Linha 12 (OpenAlex e SciELO): **feita em 19/11/2026**, commits `f290ac9` e `ba21610`. O OpenAlex traz resumo e
+    endereço; o SciELO é alcançado pelo OpenAlex com o prefixo de DOI 10.1590 (SciELO Brasil), por decisão do
+    Vicente, e o registro da busca declara isso.
   - Linha 13 (decisões dos dois revisores): a fazer, antes do passo D.
-- **UECE, Alice e Infoteca-e (decisão do Vicente, 19/11/2026):** a manutenção, depois do reset da janela de 5 h,
-  confere o lado jurídico e ético e o `heal_repositories` antes de tentar estratégias de acesso a essas fontes
-  ("ver isso em juridico antes de fazer algo"). Está no "Visto de passagem" da FILA, como ordem dele. Se ao fim
-  alguma das três continuar fora, a mudança é emenda: `change_log.md` nesta pasta (não há tool que o grave),
-  `REGISTRO.md` e decisão dele na F2.
+  - Linha 14 (acesso por robô, conferência jurídica e ética): **feita em 19/11/2026**, mesmos commits; conferência em
+    `.claude/maintenance/CONFERENCIA_acesso_2026-11-19.md`. O ReviewBR se identifica (User-Agent) e respeita o
+    `robots.txt`. Decisão do Vicente (19/11/2026): fonte que o ReviewBR não alcança diretamente é alcançada pela
+    plataforma de ciência aberta que a agrega, **sempre declarando onde se viu**; o total relatado é o da
+    plataforma. **UECE, Alice, Infoteca-e e UFC agora são alcançadas pela Oasisbr; o SciELO, pelo OpenAlex com o
+    prefixo 10.1590.** Se a tabela de fontes do protocolo precisar dizer isso, é emenda (`change_log.md` nesta
+    pasta, `REGISTRO.md` e decisão dele na F2); esta sessão não a fez.
+  - Linha 15 (falha F9): **feita em 19/11/2026**, mesmos commits. O `import_dataset_ris` só descarta o registro
+    repetido da mesma fonte; o mesmo DOI de duas bases fica nas duas, e a remoção entre bases é da F3, com
+    relatório. A importação grava a base declarada (`sourceName`) e usa o DOI como endereço quando falta `UR`.
 - **Sessão do projeto:** só o que está travado ("nao fazer diferente do que foi travado. se travado= importar
   arquivos ok"). A próxima importa os três RIS da CAPES e para.
 - **Ordem depois do reset de 19/11:** primeiro a importação dos RIS (passo C, primeira parte, curta), depois o chat de
@@ -50,8 +57,13 @@ Atualizado em 19/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
 - **Importação dos RIS parada em 19/11/2026, antes de rodar (falha F9 no `REGISTRO.md`).** O `import_dataset_ris`
   com `projectPath` descarta o registro cujo DOI já está em `01_raw/database_records.json`; importar as três bases
   seria deduplicar entre elas sem relatório (o Web of Science entraria com 0 de 17; o arquivo ficaria com cerca de
-  29 de 54). Nada foi importado; `01_raw/` só tem `manual/`. Está no "Visto de passagem" da FILA e entra no item 3
-  da manutenção. O passo C, primeira parte, roda de novo, com o mesmo prompt, depois do conserto e do build.
+  29 de 54). Nada foi importado. Consertado pela linha 15 da FILA (19/11/2026).
+- **Importação dos RIS em 20/11/2026: Scopus 23 de 23 e Web of Science 17 de 17 importados** (`sourceName` com o
+  nome da base; `01_raw/database_records.json` com 40; o registro da busca em `logs/search_log_prisma_s.csv`).
+  **A FSTA não foi importada:** a tool descartaria um dos dois registros da FSTA com o mesmo DOI (falha F11) e
+  entraria com 13 de 14. No WoS, um resumo entrou cortado (falha F10, Porto-Luz et al. 2020). As duas estão no
+  "Visto de passagem" da FILA. Depois do conserto e do build: importar a FSTA (14) e reimportar o WoS para
+  recompor o resumo cortado (ver se a tool substitui o registro já gravado ou o descarta como repetido).
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.
@@ -87,8 +99,9 @@ Manutenção, depois do reset da janela de 5 h:
 > qualquer estratégia de acesso; (2) a linha 12 da FILA (J — OpenAlex e SciELO); (3) se a importação dos RIS do
 > projeto `roda_aromas_ceara` deixou falha no "Visto de passagem", ela também.
 
-Passo C, primeira parte, em chat novo — **parada em 19/11/2026 pela falha F9; roda de novo depois do conserto e do
-build da manutenção** (não rode enquanto um chat de manutenção estiver trabalhando):
+Passo C, primeira parte, em chat novo — **Scopus e WoS importados em 20/11/2026; parada antes da FSTA pelas falhas
+F10 e F11; o resto roda depois do conserto e do build da manutenção** (não rode enquanto um chat de manutenção
+estiver trabalhando). Prompt original, de 19/11:
 
 > Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Importe com
 > `import_dataset_ris` os três RIS de `01_raw/manual/` (Scopus, Web of Science, FSTA), todos os registros, sem

@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2026-11-20T06:05:01.893Z",
+    "tool": "import_dataset_ris",
+    "found": 23,
+    "params": {
+      "sourceName": "Scopus"
+    }
+  },
+  {
+    "timestamp": "2026-11-20T06:08:03.237Z",
+    "tool": "import_dataset_ris",
+    "found": 17,
+    "params": {
+      "sourceName": "Web of Science"
+    }
+  }
+]

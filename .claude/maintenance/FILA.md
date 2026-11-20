@@ -395,3 +395,13 @@ Vicente pedir.
   do projeto.
 - (linha 15, 19/11/2026) O `importRis` grava `provenanceSource: "Local File Import"` quando não há base declarada nem
   tag `DB` (já anotado na linha 2); o `repositoryName` continua vazio nesse caso, e o gate reprova.
+- (projeto `roda_aromas_ceara`, 20/11/2026) Passo C, primeira parte, **parado antes da FSTA** (Scopus 23 de 23 e Web
+  of Science 17 de 17 importados; `01_raw/database_records.json` com 40):
+  - F10: o `importRis` (`data.ts:165`) parte as linhas só por `\r?\n` e ignora a linha de continuação (sem tag). No
+    Web of Science, o resumo de Porto-Luz et al. 2020 (10.2174/1573401315666190206124545), em 5 linhas, entrou só
+    com a primeira ("Background: …"). O arquivo do WoS ainda usa CR sozinho como fim de linha em 34 lugares (antes
+    de `AD` e `AN`): lido como está, essas linhas se fundiriam; nesta importação o texto foi passado com as quebras
+    normalizadas;
+  - F11: o `appendRawRecords` (`project_artifacts.ts:97`) descarta o segundo registro da mesma fonte com o mesmo
+    DOI. O RIS da FSTA tem dois registros distintos (AN `2026-06-0700081` e `2026-02-Hr0946`) com o DOI
+    10.1016/j.fbio.2025.107482: a FSTA entraria com 13 de 14, contra a ordem de importar tudo sem deduplicar.
