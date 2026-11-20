@@ -329,9 +329,17 @@ projeto quando o catálogo muda); decidir a emenda 1 e o desvio 1 do projeto.
 Consequência para o `roda_aromas_ceara`: travado antes do conserto, não tem plano e não busca até o Vicente aprovar,
 pela tool do item 3, o plano com as rotas de hoje (é a emenda 1) e decidir o desvio 1.
 
-Em aberto, para o Vicente: (a) aprovar este conserto; (b) o roteiro por base (onde cada interface mostra o que o
-protocolo pede anotar, como o período de cobertura na Scopus, no Web of Science e no EBSCOhost) entra agora, lido na
-documentação oficial com a data, ou o roteiro fica só com o que o protocolo pede.
+**Decidido pelo Vicente em 20/11/2026, ao ler o diagnóstico:** os controles e as regras desta linha valem para todo
+protocolo e para toda fonte que um protocolo nomear, não para os exemplos do caso (Scopus, Web of Science,
+EBSCOhost). Consequência: não há roteiro nem regra por base; o roteiro e as conferências saem do plano de cada
+protocolo. O objetivo do ReviewBR é oferecer os protocolos possíveis e garantir a execução de cada um; enquanto essa
+garantia não existir, não faz sentido seguir com manutenção em cima de manutenção. Ele registrou, como impressão, que
+o trabalho se desvia desse objetivo há tempo. Origem: "controles e regras nao valem apenas para os exemplos citados.
+(Scopus, Web of Science, EBSCOhost) tem de valer para todos os protocolos. o reviewbr deve ser uma ferramenta que
+disponibiliza todos os protocolos possiveis e garante a sua execucao. nao faz sentido fazer manutencao em cima de
+manutencao se isso nao esta garantido. estamos desviando dos objetivos centrais faz tempo. essa é uma impressao".
+
+Em aberto, para o Vicente: aprovar este conserto.
 
 ### Como uma linha entra na fila
 
