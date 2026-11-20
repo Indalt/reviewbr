@@ -345,6 +345,11 @@ const RECUSA_CARIMBO =
     "🚫 RV-04 — carimbo não é decisão. A contribuição precisa dizer, nas palavras do pesquisador, " +
     "o que ele avaliou e o que decidiu; \"ok\" ou \"pode seguir\" não sustentam que houve supervisão humana.";
 
+/** Fala vazia ou carimbo ("ok", "pode seguir"): não é decisão (RV-04). Usada também pela emenda (linha 17). */
+export function ehCarimbo(t: string): boolean {
+    return !t.trim() || CARIMBO.test(normalizarFala(t));
+}
+
 function normalizarFala(t: string): string {
     return t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
 }

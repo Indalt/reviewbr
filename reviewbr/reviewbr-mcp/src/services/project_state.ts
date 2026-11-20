@@ -56,6 +56,10 @@ export interface ProjectState {
      * Ausente em projeto travado antes de 20/11/2026: ele não busca até o plano entrar por emenda.
      */
     trava_busca?: import("./plano_busca.js").TravaBusca;
+    /** Linha 17 da FILA — emendas ao protocolo travado (só valem aprovadas pelo pesquisador). */
+    emendas?: import("./emendas.js").Emenda[];
+    /** Linha 17 da FILA — o que a execução fez diferente do protocolo, sem mudá-lo. */
+    desvios?: import("./emendas.js").Desvio[];
 }
 
 function statePath(projectDir: string): string {

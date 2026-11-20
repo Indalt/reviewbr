@@ -30,6 +30,7 @@ import { indexCorpus, queryCorpus } from "./services/rag_lexical.js";
 import { ProtocolGate } from "./services/protocol_gate.js";
 import { travarProtocolo } from "./utils/protocol_guard.js";
 import { lerPlanoDoArquivo, validarPlano, congelarPlano, resumoDoPlano, conferirExecucao, registrarExecucao } from "./services/plano_busca.js";
+import { proporEmenda, decidirEmenda, registrarDesvio } from "./services/emendas.js";
 import { ProjectStateService } from "./services/project_state.js";
 import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
 import { apresentarMetodos } from "./services/methods_for_type.js";
@@ -1703,6 +1704,33 @@ server.tool(
         // DEBT-143 — a trava do RV-04 existia sem escritor legítimo: logDecision não tinha
         // chamador, e sob 'estrito' a fase só avançava com edição à mão do project_state.json.
         const r = registrarDecisaoDoPesquisador(RAIZ(), resolveProjectDir(params.projectPath), params);
+        return { content: [{ type: "text", text: r.mensagem }] };
+    }
+);
+
+server.tool(
+    "record_protocol_amendment",
+    "EMENDA e DESVIO do protocolo travado (RV-01; linha 17 da FILA). O protocol.md travado não se edita: o que muda nele é EMENDA — nasce PROPOSTA (acao 'propor': o_que, antes, depois, porque e, se muda a busca, o plano de busca novo em JSON) e só vale com a decisão do pesquisador nas palavras dele (acao 'aprovar' ou 'recusar', com id e contribuicao; carimbo é recusado). Aprovada, sobe a versão do protocolo e congela de novo o plano de busca com as rotas de hoje — é também como um projeto travado sem plano (antes de 20/11/2026) passa a ter um. O que a execução fez diferente, sem mudar o protocolo, é DESVIO (tipo 'desvio': o_que, porque, fonte do plano se houver; a decisão do pesquisador sobre ele, se houver, em contribuicao). Tudo é anexado ao change_log.md do projeto e guardado no project_state.json. NÃO escreva a contribuição pelo pesquisador.",
+    {
+        projectPath: z.string().describe("Raiz do projeto (onde estão o protocol.md e o project_state.json)"),
+        tipo: z.enum(["emenda", "desvio"]),
+        acao: z.enum(["propor", "aprovar", "recusar"]).optional().describe("Emenda: 'propor' (padrão), 'aprovar' ou 'recusar' (com id e contribuicao). Desvio: ignorado."),
+        id: z.string().optional().describe("Com 'aprovar'/'recusar': o id da emenda (ex.: 'emenda-1')"),
+        o_que: z.string().optional().describe("Emenda: o que muda no protocolo. Desvio: o que a execução fez diferente."),
+        antes: z.string().optional().describe("Emenda: o que o protocolo diz hoje"),
+        depois: z.string().optional().describe("Emenda: o que passa a dizer"),
+        porque: z.string().optional().describe("Por que muda (emenda) ou por que a execução se afastou (desvio)"),
+        plano: z.string().optional().describe("Emenda que muda a busca: o plano de busca novo inteiro, em JSON (a forma do plano_busca.json)"),
+        fonte: z.string().optional().describe("Desvio: o id da fonte do plano a que ele se refere"),
+        contribuicao: z.string().optional().describe("A decisão do pesquisador, nas palavras dele (obrigatória para aprovar ou recusar)"),
+    },
+    async (params) => {
+        const dir = resolveProjectDir(params.projectPath);
+        const r = params.tipo === "desvio"
+            ? registrarDesvio(dir, { o_que: params.o_que ?? "", porque: params.porque ?? "", fonte: params.fonte, contribuicao: params.contribuicao })
+            : (params.acao ?? "propor") === "propor"
+                ? proporEmenda(dir, { o_que: params.o_que ?? "", antes: params.antes, depois: params.depois, porque: params.porque ?? "", plano: params.plano }, registry)
+                : decidirEmenda(dir, { id: params.id ?? "", acao: params.acao as "aprovar" | "recusar", contribuicao: params.contribuicao ?? "" }, registry);
         return { content: [{ type: "text", text: r.mensagem }] };
     }
 );

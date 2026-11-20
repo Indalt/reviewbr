@@ -47,6 +47,9 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     // RV-04 (DEBT-143): quem fala com o pesquisador e registra a decisão dele é o coordenador.
     // Nenhum especialista registra decisão do pesquisador por conta própria.
     record_researcher_decision: [AgentRole.COORDINATOR],
+    // Linha 17 (RV-01): emenda e desvio do protocolo travado — de quem cuida do protocolo e de quem
+    // fala com o pesquisador. A aprovação exige as palavras dele; o especialista da busca não emenda.
+    record_protocol_amendment: [AgentRole.PROJETISTA, AgentRole.COORDINATOR],
     // designer.md lista validate_repository/heal_repositories no seu contrato de papel → PROJETISTA autorizado
     validate_repository: [AgentRole.PROJETISTA, AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
     heal_repositories: [AgentRole.PROJETISTA, AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
