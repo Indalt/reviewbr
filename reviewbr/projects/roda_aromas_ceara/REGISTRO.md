@@ -30,7 +30,7 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
 |---|---|---|---|---|---|
 | 1 | 12/11/2026 | exploratória (agente `scout`) | O que já existe: há roda de aromas, léxico sensorial ou descrição de aroma publicados para algum produto cearense? | `exploratoria/01_o_que_existe.md` (log: `01_buscas_log.md`, 43 execuções) | feito, **parcial**: repositórios do CE só alcançados via BDTD; SciELO inutilizável; só títulos, sem resumo. Aguarda decisão do Vicente |
 | 2 | 12/11/2026 | artigo 1, F0/F1, protocolo (agente `designer`) | revisão de escopo (PCC): descritores sensoriais e compostos de aroma da cajuína e das bebidas do pedúnculo de caju, em geral, com o Ceará destacado | `protocol.md` v0.1 (DRAFT); `project_state.json` (projeto 3, estrito); `protocolo_falhas_reviewbr.md` (P1 a P8) | **feito: protocolo v1.0 travado em 15/11/2026**; condição `avaliacao_critica` = "não" gravada; busca bloqueada até o conserto de F7 e F8 |
-| 3 | 19/11/2026 | artigo 1, F2, busca (agente `librarian` + Vicente na CAPES) | strings do `protocol.md` | `01_raw/manual/` (RIS e `ANOTACOES_busca_manual.md`, fora do git) | **parte manual feita em 19/11/2026**: Scopus 23, Web of Science 17, FSTA 14 (2 patentes), todos com resumo e controle positivo. O resto espera a linha 12 da FILA e a decisão sobre UECE, Alice e Infoteca-e |
+| 3 | 19/11/2026 | artigo 1, F2, busca (agente `librarian` + Vicente na CAPES) | strings do `protocol.md` | `01_raw/manual/` (RIS e `ANOTACOES_busca_manual.md`, fora do git) | **parte manual feita em 19/11/2026**: Scopus 23, Web of Science 17, FSTA 14 (2 patentes), todos com resumo e controle positivo. O resto espera a linha 12 da FILA e a decisão sobre UECE, Alice e Infoteca-e. **Importação parada em 19/11/2026, antes de rodar:** a tool deduplicaria entre as bases (falha F9) |
 
 ## Decisões
 
@@ -184,3 +184,4 @@ Detalhe e reprodução de cada uma em `exploratoria/01_falhas_reviewbr.md`. Nenh
 | F6 | search_repository (BDTD) | URLs da USP com espaço no meio | — |
 | F7 | search_repository (UFC, UECE, Alice, IFCE) | zero até para "caju", sem aviso; a BDTD mostra que existem | **sim**, 12/11/2026: UFC (BR-FED-0004) + "caju" → 0 |
 | F8 | search_scielo | zero para "queijo coalho"; 15 registros quase todos sem relação para "caju" | — |
+| F9 | import_dataset_ris | com `projectPath`, descarta o registro cujo DOI (ou URL, ou título) já está em `01_raw/database_records.json`: deduplica entre bases na importação, sem relatório. Nos três RIS, o Web of Science entraria com 0 de 17 e o arquivo ficaria com cerca de 29 de 54. Lido no código (`project_artifacts.ts:82`), não executado. Levada ao "Visto de passagem" em 19/11/2026 | **sim**, 19/11/2026, pela leitura do código e pela contagem dos DOIs nos RIS |

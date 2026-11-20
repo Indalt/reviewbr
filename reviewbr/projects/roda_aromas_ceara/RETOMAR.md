@@ -47,6 +47,11 @@ Atualizado em 19/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
 - **Ordem depois do reset de 19/11:** primeiro a importação dos RIS (passo C, primeira parte, curta), depois o chat de
   manutenção; nunca os dois ao mesmo tempo. Se a importação falhar, a falha vai ao "Visto de passagem" e entra nessa
   mesma manutenção (item 3 do prompt dela).
+- **Importação dos RIS parada em 19/11/2026, antes de rodar (falha F9 no `REGISTRO.md`).** O `import_dataset_ris`
+  com `projectPath` descarta o registro cujo DOI já está em `01_raw/database_records.json`; importar as três bases
+  seria deduplicar entre elas sem relatório (o Web of Science entraria com 0 de 17; o arquivo ficaria com cerca de
+  29 de 54). Nada foi importado; `01_raw/` só tem `manual/`. Está no "Visto de passagem" da FILA e entra no item 3
+  da manutenção. O passo C, primeira parte, roda de novo, com o mesmo prompt, depois do conserto e do build.
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.
@@ -82,8 +87,8 @@ Manutenção, depois do reset da janela de 5 h:
 > qualquer estratégia de acesso; (2) a linha 12 da FILA (J — OpenAlex e SciELO); (3) se a importação dos RIS do
 > projeto `roda_aromas_ceara` deixou falha no "Visto de passagem", ela também.
 
-Passo C, primeira parte, em chat novo — **é o próximo** (não depende da manutenção; não rode enquanto um chat de
-manutenção estiver trabalhando):
+Passo C, primeira parte, em chat novo — **parada em 19/11/2026 pela falha F9; roda de novo depois do conserto e do
+build da manutenção** (não rode enquanto um chat de manutenção estiver trabalhando):
 
 > Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Importe com
 > `import_dataset_ris` os três RIS de `01_raw/manual/` (Scopus, Web of Science, FSTA), todos os registros, sem

@@ -371,3 +371,13 @@ Vicente pedir.
     Muda o sistema, então é ferramenta da manutenção, não do projeto;
   - o motivo gravado no catálogo pela linha 11: Alice e Infoteca-e dão HTTP 403 na busca do site e o `robots.txt`
     proíbe `/simple-search`; a UECE é formulário com estado de sessão, sem busca por endereço.
+- (projeto `roda_aromas_ceara`, 19/11/2026, passo C, primeira parte — **importação parada antes de rodar**) O
+  `import_dataset_ris` com `projectPath` grava em `01_raw/database_records.json` pelo `appendRawRecords`
+  (`project_artifacts.ts:82`), que descarta o registro cuja chave (DOI, senão identificador, URL ou título) já está
+  no arquivo. Importar várias bases é, então, deduplicar entre elas na importação, sem relatório, antes da F3. Nos
+  três RIS do projeto (Scopus 23, Web of Science 17, FSTA 14 = 54), os 17 DOIs do Web of Science estão todos no
+  Scopus e 8 da FSTA também: pela leitura do código, o arquivo ficaria com cerca de 29 registros, o Web of Science
+  com 0 acrescentados, e o log PRISMA-S diria 17. O protocolo travado (F1.3.2.5) põe a remoção de duplicatas na F3,
+  com relatório. O `consolidateRaw` (`project_artifacts.ts:101`) faz a mesma dedup leve entre os arquivos de
+  `01_raw`. Visto também: o RIS do Web of Science começa com BOM, e a primeira linha não é lida como `TY` (o
+  registro entra pelo `ER`, sem `accessMethod`). Nenhuma importação foi feita.
