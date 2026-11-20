@@ -347,7 +347,12 @@ Origem: "agende o conserto 15h30 e pode executar apos esse horario aqui mesmo ne
   `rotaPrimaria` no `strategy.ts`; o `submit_protocol_for_approval` recusa sem `plano_busca.json` válido e congela o
   plano em `project_state.json` (`trava_busca`); `designer.md` passo 4. Teste: `tests/plano_busca_trava.test.ts`, com o
   caso real em `tests/fixtures/roda_aromas_ceara/`.
-- Falta: FAZER 2 a 5; DECLARAR 1 a 4.
+- FAZER 2 feito em 20/11/2026: `conferirExecucao` no `plano_busca.ts`, chamada pelo `checkDesignGuardrail` nas 13 tools
+  de busca e de importação (`TOOLS_DE_BUSCA`); a recusa entra no log; `registroDaBusca` nas 13 e `textoExato` nas duas
+  de importação; `somentePrimaria` no `strategy.ts` (sem cascata nem agregador de reserva); a fonte do plano e a rota
+  vão ao log, e a execução fica em `trava_busca.execucoes`. Teste: `tests/plano_busca_execucao.test.ts` (10 de 10
+  falhavam antes).
+- Falta: FAZER 3 a 5; DECLARAR 1 a 4.
 
 ### Como uma linha entra na fila
 

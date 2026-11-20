@@ -231,6 +231,172 @@ export function congelarPlano(
     return trava;
 }
 
+// ─── FAZER 2: a busca confere o plano ─────────────────────────────────────────
+
+/** Parâmetros que não são filtro: o texto, o projeto, o tamanho do lote, o conteúdo, a fonte e o registro. */
+const NAO_FILTRO = new Set([
+    "query", "projectPath", "projectId", "maxResults", "maxRecords", "maxCandidates", "metadataPrefix",
+    "content", "dataset", "sourceName", "repositories", "repositoryId", "registroDaBusca", "textoExato",
+    "fontePlano", "rota", "filePath",
+]);
+
+const normalizar = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
+
+/** JSON com as chaves em ordem, para comparar filtros sem depender da ordem em que vieram. */
+function canonico(v: unknown): string {
+    if (Array.isArray(v)) return `[${v.map(canonico).join(",")}]`;
+    if (v && typeof v === "object") return `{${Object.keys(v as object).sort().map((k) => `${JSON.stringify(k)}:${canonico((v as any)[k])}`).join(",")}}`;
+    return JSON.stringify(v);
+}
+
+function filtrosDaChamada(params: Record<string, unknown>): Record<string, unknown> {
+    const f: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(params)) {
+        if (NAO_FILTRO.has(k) || v === undefined || v === null || v === "") continue;
+        if (Array.isArray(v) && v.length === 0) continue;
+        f[k] = v;
+    }
+    return f;
+}
+
+export type ConferenciaDoPlano =
+    | { aplica: false }
+    | { aplica: true; ok: false; motivo: string }
+    | { aplica: true; ok: true; fontes: FontePlano[]; rota: string };
+
+const RECUSA = "🚫 FORA DO PROTOCOLO TRAVADO (linha 17 da FILA) —";
+const PEDE_EMENDA = "O protocolo travado só muda por emenda aprovada pelo pesquisador (`record_protocol_amendment`).";
+
+/**
+ * Confere uma chamada de busca ou de importação contra o plano congelado. Só se aplica a projeto
+ * LOCKED e às tools que gravam a identificação; o resto passa como antes. Recusa dizendo o quê:
+ * sem plano; protocolo editado depois da trava; fonte, tool ou id fora do plano; texto diferente
+ * do texto exato; filtro fora do plano; rota de hoje diferente da congelada; e o que o plano manda
+ * registrar e não veio em `registroDaBusca`.
+ */
+export function conferirExecucao(
+    projectDir: string,
+    tool: string,
+    params: Record<string, any>,
+    catalogo: CatalogoDeRepositorios,
+): ConferenciaDoPlano {
+    if (!TOOLS_DE_BUSCA.has(tool)) return { aplica: false };
+    const state = ProjectStateService.read(projectDir);
+    if (!state || state.status !== "LOCKED") return { aplica: false };
+    const trava = state.trava_busca;
+    if (!trava) {
+        return {
+            aplica: true, ok: false,
+            motivo: `${RECUSA} o projeto está travado sem plano de busca congelado (travado antes de 20/11/2026, quando a trava ` +
+                "passou a guardar o plano). A busca não tem como saber o que o protocolo pede. O plano entra por emenda " +
+                "aprovada pelo pesquisador (`record_protocol_amendment`, com o plano); nada se busca até lá.",
+        };
+    }
+    if (hashProtocolo(projectDir) !== trava.protocolo_sha256) {
+        return {
+            aplica: true, ok: false,
+            motivo: `${RECUSA} o protocol.md mudou depois da trava (o hash não é o de ${trava.desde}). O protocolo travado ` +
+                `não se edita: restaure o arquivo travado. ${PEDE_EMENDA}`,
+        };
+    }
+    const doPlano = trava.plano.fontes;
+    let candidatas = doPlano.filter((f) => f.tool === tool);
+    const listar = (fs: FontePlano[]) => fs.map((f) => `${f.nome} (${f.tool}${f.repositorio ? ` ${f.repositorio}` : ""})`).join("; ");
+    if (!candidatas.length) {
+        return { aplica: true, ok: false, motivo: `${RECUSA} a tool ${tool} não está no plano de busca travado. Fontes do plano: ${listar(doPlano)}. ${PEDE_EMENDA}` };
+    }
+
+    // Que fonte(s) do plano esta chamada executa.
+    let fontes: FontePlano[];
+    if (TOOLS_COM_REPOSITORIO.has(tool)) {
+        const pedidos: string[] = tool === "harvest_records" ? [params.repositoryId].filter(Boolean) : (params.repositories ?? []);
+        if (!pedidos.length) {
+            return { aplica: true, ok: false, motivo: `${RECUSA} sob o plano, diga os repositórios em \`repositories\`: ${listar(candidatas)}. Buscar "em todos os ativos" não está no plano.` };
+        }
+        fontes = [];
+        for (const id of pedidos) {
+            const f = candidatas.find((c) => c.repositorio === id);
+            if (!f) return { aplica: true, ok: false, motivo: `${RECUSA} o repositório ${id} não está no plano para ${tool}. Fontes do plano: ${listar(candidatas)}. ${PEDE_EMENDA}` };
+            fontes.push(f);
+        }
+    } else if (TOOLS_DE_IMPORTACAO.has(tool)) {
+        const base = typeof params.sourceName === "string" ? normalizar(params.sourceName) : "";
+        const f = base ? candidatas.filter((c) => normalizar(c.nome) === base || normalizar(c.id) === base) : candidatas.length === 1 ? candidatas : [];
+        if (f.length !== 1) {
+            return { aplica: true, ok: false, motivo: `${RECUSA} diga em \`sourceName\` a base do export, com o nome do plano: ${candidatas.map((c) => c.nome).join("; ")}.` };
+        }
+        fontes = f;
+    } else {
+        fontes = candidatas;
+    }
+
+    // RV-07: o texto executado é um dos textos exatos que o plano dá à fonte.
+    if (!TOOLS_SEM_TEXTO.has(tool)) {
+        const campo = TOOLS_DE_IMPORTACAO.has(tool) ? "textoExato" : "query";
+        const texto = typeof params[campo] === "string" ? params[campo].trim() : "";
+        if (!texto) {
+            return { aplica: true, ok: false, motivo: `${RECUSA} falta \`${campo}\`${campo === "textoExato" ? ", o texto digitado na interface da base" : ""}. Textos do plano: ${fontes.map((f) => `${f.nome}: ${f.textos.join(" · ")}`).join("; ")}.` };
+        }
+        const comTexto = fontes.filter((f) => f.textos.some((t) => t.trim() === texto));
+        if (comTexto.length !== fontes.length || !comTexto.length) {
+            const sem = fontes.filter((f) => !comTexto.includes(f));
+            return {
+                aplica: true, ok: false,
+                motivo: `${RECUSA} o texto "${texto}" não é texto exato do plano para ${sem.map((f) => `${f.nome} (${f.textos.map((t) => `"${t}"`).join(" · ")})`).join("; ")}. Texto diferente é emenda. ${PEDE_EMENDA}`,
+            };
+        }
+    }
+
+    // Filtros: os que o plano dá, nem mais nem menos.
+    const chamados = filtrosDaChamada(params);
+    for (const f of fontes) {
+        const doPlanoF = f.filtros ?? {};
+        if (canonico(chamados) !== canonico(doPlanoF)) {
+            return {
+                aplica: true, ok: false,
+                motivo: `${RECUSA} filtros fora do plano em ${f.nome}: a chamada traz ${canonico(chamados)}, o plano dá ${canonico(doPlanoF)}. ${PEDE_EMENDA}`,
+            };
+        }
+    }
+
+    // A rota de hoje é a congelada.
+    for (const f of fontes) {
+        const hoje = rotaDaFonte(f, catalogo);
+        if (hoje !== f.rota) {
+            return {
+                aplica: true, ok: false,
+                motivo: `${RECUSA} a rota de ${f.nome} mudou depois da trava: era "${f.rota}", hoje é "${hoje}". A manutenção mudou o ` +
+                    `catálogo ou a tool, e o projeto travado não muda junto. ${PEDE_EMENDA}`,
+            };
+        }
+    }
+
+    // O que o plano manda registrar e a tool não produz.
+    const dado = (params.registroDaBusca && typeof params.registroDaBusca === "object") ? params.registroDaBusca as Record<string, unknown> : {};
+    const chaves = new Map(Object.entries(dado).map(([k, v]) => [normalizar(k), v]));
+    for (const f of fontes) {
+        const faltam = (f.registrar ?? []).filter((r) => !ehTexto(chaves.get(normalizar(r))));
+        if (faltam.length) {
+            return {
+                aplica: true, ok: false,
+                motivo: `${RECUSA} o plano manda registrar nesta busca de ${f.nome}: ${faltam.join("; ")}. Passe em \`registroDaBusca\` ` +
+                    `cada um, com o valor e onde foi lido, ou "não obtido: <motivo>".`,
+            };
+        }
+    }
+
+    return { aplica: true, ok: true, fontes, rota: fontes.map((f) => `${f.id}: ${f.rota}`).join(" | ") };
+}
+
+/** Grava no estado que a fonte do plano foi executada (hits null = não alcançada). */
+export function registrarExecucao(projectDir: string, fontesIds: string[], tool: string, hits: number | null): void {
+    const state = ProjectStateService.read(projectDir);
+    if (!state?.trava_busca) return;
+    const em = new Date().toISOString();
+    state.trava_busca.execucoes = [...(state.trava_busca.execucoes ?? []), ...fontesIds.map((fonte) => ({ fonte, tool, em, hits }))];
+    ProjectStateService.write(projectDir, state);
+}
+
 /** O plano como o pesquisador o lê, uma linha por fonte. */
 export function resumoDoPlano(trava: TravaBusca): string {
     return trava.plano.fontes.map((f) => {

@@ -203,6 +203,8 @@ export interface SearchOptions {
     contentType?: string[];
     maxResults?: number;
     set?: string;
+    /** Linha 17: sob projeto travado, só a rota do plano — sem cascata nem agregador de reserva. */
+    somentePrimaria?: boolean;
 }
 
 // ─── DSpace REST Types ────────────────────────────────────────

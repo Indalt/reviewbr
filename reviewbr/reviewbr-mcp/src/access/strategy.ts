@@ -115,6 +115,12 @@ export class AccessStrategy {
     ): Promise<RelatorioBusca> {
         const maxResults = opts?.maxResults ?? 50;
         const falhas: string[] = [];
+        // Linha 17: sob projeto travado, só a rota do plano (a primeira desta ordem, `rotaPrimaria`).
+        // Se ela falhar, a fonte fica não alcançada: sem cascata nem agregador de reserva.
+        const unica = Boolean(opts?.somentePrimaria);
+        const naoAlcancada = (msg: string): never => {
+            throw new Error(`a rota do plano (${rotaPrimaria(repo)}) falhou: ${msg}. Projeto travado: sem cascata nem agregador de reserva — a fonte fica não alcançada, e o pesquisador decide (emenda ou desvio).`);
+        };
 
         // DECLARAR (linha 11): o catálogo diz quando a tool não tem busca que consiga usar.
         // Decisão do Vicente (19/11/2026): nesse caso, a plataforma de ciência aberta que agrega o
@@ -135,6 +141,7 @@ export class AccessStrategy {
                 const r = await this.bdtd.searchDetailed(query, opts);
                 return { results: r.results, totalNaFonte: r.total, metodo: "BDTD, API do VuFind" };
             } catch (e) {
+                if (unica) naoAlcancada((e as Error).message);
                 falhas.push(`BDTD (API do VuFind): ${(e as Error).message}`);
             }
         }
@@ -144,6 +151,7 @@ export class AccessStrategy {
             try {
                 return { results: await this.scielo.search(query, opts), totalNaFonte: null, metodo: "SciELO ArticleMeta" };
             } catch (e) {
+                if (unica) naoAlcancada((e as Error).message);
                 falhas.push(`SciELO ArticleMeta: ${(e as Error).message}`);
             }
         }
@@ -152,8 +160,9 @@ export class AccessStrategy {
         if (repo.repository.url.includes("repositorio.usp.br")) {
             try {
                 const results = await this.usp.search(query, opts);
-                if (results.length > 0) return { results, totalNaFonte: null, metodo: "USP result.php" };
+                if (results.length > 0 || unica) return { results, totalNaFonte: null, metodo: "USP result.php" };
             } catch (e) {
+                if (unica) naoAlcancada((e as Error).message);
                 falhas.push(`USP result.php: ${(e as Error).message}`);
             }
         }
@@ -168,8 +177,9 @@ export class AccessStrategy {
                     mapping: (repo as any).access.mapping
                 };
                 const results = await this.universal.search(config, query, opts);
-                if (results.results.length > 0) return { results: results.results, totalNaFonte: null, metodo: "API mapeada no catálogo" };
+                if (results.results.length > 0 || unica) return { results: results.results, totalNaFonte: null, metodo: "API mapeada no catálogo" };
             } catch (e) {
+                if (unica) naoAlcancada((e as Error).message);
                 falhas.push(`API mapeada: ${(e as Error).message}`);
             }
         }
@@ -196,6 +206,7 @@ export class AccessStrategy {
                 }
                 return { results: items.slice(0, maxResults), totalNaFonte: total, metodo: `DSpace REST (${apiUrl})` };
             } catch (e) {
+                if (unica) naoAlcancada((e as Error).message);
                 falhas.push(`DSpace REST (${apiUrl}): ${(e as Error).message}`);
             }
         }
@@ -212,6 +223,7 @@ export class AccessStrategy {
             );
             return { results: r.results, totalNaFonte: r.total, metodo: `página de busca (${r.endpoint})` };
         } catch (e) {
+            if (unica) naoAlcancada((e as Error).message);
             falhas.push((e as Error).message);
         }
 

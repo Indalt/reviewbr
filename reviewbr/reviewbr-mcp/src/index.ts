@@ -29,7 +29,7 @@ import { FlowComputer } from "./services/flow_computer.js";
 import { indexCorpus, queryCorpus } from "./services/rag_lexical.js";
 import { ProtocolGate } from "./services/protocol_gate.js";
 import { travarProtocolo } from "./utils/protocol_guard.js";
-import { lerPlanoDoArquivo, validarPlano, congelarPlano, resumoDoPlano } from "./services/plano_busca.js";
+import { lerPlanoDoArquivo, validarPlano, congelarPlano, resumoDoPlano, conferirExecucao, registrarExecucao } from "./services/plano_busca.js";
 import { ProjectStateService } from "./services/project_state.js";
 import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
 import { apresentarMetodos } from "./services/methods_for_type.js";
@@ -127,6 +127,9 @@ async function registrarBusca(projectPath: string | undefined, b: BuscaExecutada
         const dir = resolveProjectDir(projectPath);
         registrarHistorico(dir, b.tool, { query: b.query, found: b.hits, totalFound: b.totalDeclarado, errors: b.erros, params: b.filtros });
         registrarBuscaPrismaS(dir, b);
+        // Linha 17: execução de fonte do plano (marcada pelo checkDesignGuardrail) fica no estado.
+        const fontePlano = b.filtros?.fontePlano;
+        if (typeof fontePlano === "string" && fontePlano) registrarExecucao(dir, fontePlano.split(","), b.tool, b.hits);
         return "";
     } catch (e: any) {
         console.error("Search log error:", e);
@@ -191,7 +194,7 @@ function declararModo(projectPath: string | undefined, resposta: any): any {
     return { ...resposta, content: [{ ...bloco, text: `${aviso}\n\n---\n\n${bloco.text}` }] };
 }
 
-async function checkDesignGuardrail(projectId?: number, projectPath?: string): Promise<string | null> {
+async function checkDesignGuardrail(projectId?: number, projectPath?: string, tool?: string, params?: Record<string, any>): Promise<string | null> {
     // A decisão vive em `ProtocolGate` (src/services/protocol_gate.ts), como serviço testável.
     // A mudança de semântica mais importante está lá: o gate passou a NEGAR POR PADRÃO.
     // Antes, projeto declarado e sem nenhum artefato de protocolo caía num `return null` e
@@ -203,8 +206,30 @@ async function checkDesignGuardrail(projectId?: number, projectPath?: string): P
     // sem o auditor do protocolo; a primeira, por um atalho de agente com Write.
     // `projectId` fica na assinatura por compatibilidade com os chamadores; não decide nada.
     void projectId;
-    return ProtocolGate.check(projectPath).message;
+    const trava = ProtocolGate.check(projectPath).message;
+    if (trava || !tool || !projectPath || !params) return trava;
+    // Linha 17 da FILA: sob projeto LOCKED, a busca e a importação seguem só o plano congelado.
+    const c = conferirExecucao(resolveProjectDir(projectPath), tool, params, registry);
+    if (!c.aplica) return null;
+    if (!c.ok) {
+        // A recusa entra no log de busca, como tentativa: busca recusada que não deixa linha some do relato.
+        await registrarBusca(projectPath, {
+            tool, query: params.query ?? params.textoExato, filtros: params, hits: null, erros: c.motivo,
+        });
+        return c.motivo;
+    }
+    // A fonte do plano e a rota vão para o log (coluna Filter) e marcam a execução no estado.
+    params.fontePlano = c.fontes.map((f) => f.id).join(",");
+    params.rota = c.rota;
+    return null;
 }
+
+/** Campo das tools de busca e de importação para o que o plano manda registrar e a tool não produz. */
+const CAMPO_REGISTRO = z.record(z.string(), z.string()).optional()
+    .describe("Sob projeto travado: o que o plano de busca manda registrar nesta busca e a tool não produz (ex.: o período de cobertura da fonte, se o protocolo o pede). Campo → valor, com onde foi lido; ou 'não obtido: <motivo>'. A busca recusa se faltar um campo do plano.");
+/** O texto digitado na interface da base, na busca feita à mão. */
+const CAMPO_TEXTO_EXATO = z.string().optional()
+    .describe("Sob projeto travado: o texto exato digitado na interface da base, na busca feita à mão. Tem de ser um dos textos que o plano de busca dá a essa base; vai para a coluna Query do log.");
 
 // ─── PROJETISTA Helper Functions ──────────────────────────────
 
@@ -577,17 +602,19 @@ server.tool(
             .describe("Camadas: 1=Agregadores (Oasisbr/SciELO), 2=Instituições, 3=Prioridade, 4=Especializados, 5=Literatura Cinzenta"),
         dateFrom: z.string().optional(),
         dateUntil: z.string().optional(),
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
     async (params) => {
-        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "search_papers_optimized", params);
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
 
         telemetryService.logSearch("optimized_search", params.query, params.layers.join(','), undefined);
         const { results, errors } = await searchService.searchPapers(params.query, params.layers, {
             dateFrom: params.dateFrom,
-            dateUntil: params.dateUntil
+            dateUntil: params.dateUntil,
+            somentePrimaria: Boolean((params as any).fontePlano),
         });
 
         // Resolve project for audit
@@ -870,6 +897,7 @@ server.tool(
     "Expande a busca via Snowballing SÓ PARA A FRENTE: busca no OpenAlex quem cita as sementes; as referências das sementes (para trás) NÃO são buscadas (stats.direcao declara isso). Com projectPath, os candidatos aceitos vão para 01_raw/other_records.json e a execução vai ao log PRISMA-S. Tem as 4 salvaguardas obrigatórias da skill do librarian: profundidade limitada (padrão 1, sem recursão), filtro por descritores do protocolo, dedup contra o dataset já existente do projeto e teto de candidatos com relatório de parada.",
     {
         dataset: z.string().describe("JSON string com sementes (SearchResult[])"),
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional().describe("Projeto sob o qual a operação é feita. Com ele, os candidatos aceitos são gravados em 01_raw/other_records.json ('outros métodos' do funil PRISMA), a execução entra em logs/search_log_prisma_s.csv e o dataset já existente é lido para o dedup. Sem ele é exploratório e nada persiste (RV-01)."),
         depth: z.number().optional().describe("Níveis de expansão. Padrão 1 (só citações das sementes, sem recursar)."),
@@ -877,7 +905,7 @@ server.tool(
         maxCandidates: z.number().optional().describe("Teto de candidatos aceitos. Padrão 200."),
     },
     async (params) => {
-        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "expand_search_snowball", params);
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         let seeds;
         try {
@@ -902,7 +930,7 @@ server.tool(
         const avisoLog = await registrarBusca(params.projectPath, {
             tool: "expand_search_snowball",
             query: `cites: ${sementes.join("; ")}`,
-            filtros: { direcao: result.stats.direcao, depth: params.depth, filterKeywords: params.filterKeywords, maxCandidates: params.maxCandidates },
+            filtros: { direcao: result.stats.direcao, depth: params.depth, filterKeywords: params.filterKeywords, maxCandidates: params.maxCandidates, fontePlano: (params as any).fontePlano, rota: (params as any).rota, registroDaBusca: (params as any).registroDaBusca },
             hits: result.newCandidates.length,
             erros: result.stats.capped ? result.stats.stop_reason : undefined,
         });
@@ -1002,11 +1030,13 @@ server.tool(
     {
         content: z.string().describe("Conteúdo do arquivo .ris"),
         sourceName: z.string().optional().describe("Base de onde o export saiu (ex.: Scopus, Web of Science). Omitido: usa a tag DB do próprio RIS; sem nenhuma das duas, os registros ficam SEM origem e o export é bloqueado pela RV-08 — a importação não fabrica procedência."),
+        textoExato: CAMPO_TEXTO_EXATO,
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
     async (params) => {
-        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "import_dataset_ris", params);
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         // A origem vem de quem importa ou do próprio RIS. Antes, o handler nunca passava
         // `sourceName` e o default "Manual Import" carimbava procedência falsa em tudo — que
@@ -1044,7 +1074,8 @@ server.tool(
         const avisoLog = await registrarBusca(params.projectPath, {
             tool: "import_dataset_ris",
             database: `Export RIS importado: ${params.sourceName?.trim() || origens.join(" | ") || "origem Indefinida"}`,
-            filtros: { sourceName: params.sourceName },
+            query: params.textoExato,
+            filtros: { sourceName: params.sourceName, fontePlano: (params as any).fontePlano, rota: (params as any).rota, registroDaBusca: params.registroDaBusca },
             hits: results.length,
         });
 
@@ -1062,11 +1093,13 @@ server.tool(
     "Importa resultados exportados do portal BVS/LILACS (CSV).",
     {
         filePath: z.string().describe("Caminho absoluto para o arquivo CSV exportado da BVS"),
+        textoExato: CAMPO_TEXTO_EXATO,
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
     async (params) => {
-        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "import_bvs_export", params);
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         if (!fs.existsSync(params.filePath)) {
             return { content: [{ type: "text", text: `Arquivo não encontrado: ${params.filePath}` }] };
@@ -1108,7 +1141,9 @@ server.tool(
 
         // DEBT-056: a importação também entra no log PRISMA-S; a string da BVS não passa por aqui.
         const avisoLog = await registrarBusca(params.projectPath, {
-            tool: "import_bvs_export", filtros: { filePath: params.filePath }, hits: results.length,
+            tool: "import_bvs_export", query: params.textoExato,
+            filtros: { filePath: params.filePath, fontePlano: (params as any).fontePlano, rota: (params as any).rota, registroDaBusca: params.registroDaBusca },
+            hits: results.length,
         });
 
         return {
@@ -1126,11 +1161,12 @@ server.tool(
     {
         query: z.string().describe("Termo de busca (ex: '<conceito> AND <desfecho>')"),
         maxResults: z.number().default(20).describe("Máximo de resultados"),
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
     async (params) => {
-        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "search_pubmed", params);
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
 
         const { results, error } = await pubmedService.search(params.query, {
@@ -1312,11 +1348,12 @@ server.tool(
         dateFrom: z.string().optional(),
         dateUntil: z.string().optional(),
         maxResults: z.number().default(50).describe("Máximo de resultados por repositório"),
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
     async (params) => {
-        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "search_repository", params);
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
 
         let repos = registry.getActive();
@@ -1357,6 +1394,7 @@ server.tool(
                     subjectArea: params.subjectArea,
                     issn: params.issn,
                     maxResults: params.maxResults,
+                    somentePrimaria: Boolean((params as any).fontePlano),
                 });
                 allResults.push(...results);
                 porFonte.push(`- ${repo.id} (${repo.institution.acronym}): ${results.length} trazidos; total declarado pela fonte: ${totalNaFonte ?? "não informado"} — ${metodo}`);
@@ -1463,6 +1501,7 @@ server.tool(
         dateUntil: z.string().optional(),
         maxRecords: z.number().default(100).describe("Máximo de registros a coletar"),
         metadataPrefix: z.string().default("oai_dc").describe("Formato de metadados"),
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional().describe("Projeto sob o qual a coleta é feita. Sem ele, a coleta é exploratória e nada é persistido (RV-01)."),
     },
@@ -1471,7 +1510,7 @@ server.tool(
         // projectPath no schema, então a trava era sintaticamente presente e semanticamente
         // morta. Duas varreduras independentes acharam isto; foi o único caso em que a guarda
         // estava no código e não podia bloquear coisa alguma.
-        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "harvest_records", params);
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
 
         const repo = registry.getById(params.repositoryId);
@@ -1929,7 +1968,7 @@ server.tool(
 );
 
 const openAlexHandler = async (params: any) => {
-    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "search_openalex", params);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
     let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
@@ -2001,7 +2040,7 @@ const openAlexHandler = async (params: any) => {
 };
 
 const crossrefHandler = async (params: any) => {
-    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "search_crossref", params);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
     let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
@@ -2067,7 +2106,7 @@ const crossrefHandler = async (params: any) => {
 };
 
 const scieloHandler = async (params: any) => {
-    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "search_scielo", params);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
     let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
@@ -2142,7 +2181,7 @@ const scieloHandler = async (params: any) => {
 };
 
 const semanticScholarHandler = async (params: any) => {
-    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "search_semanticscholar", params);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
     let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
@@ -2207,7 +2246,7 @@ const semanticScholarHandler = async (params: any) => {
 };
 
 const coreHandler = async (params: any) => {
-    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "search_core", params);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
     let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
@@ -2272,7 +2311,7 @@ const coreHandler = async (params: any) => {
 };
 
 const europePmcHandler = async (params: any) => {
-    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+    const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath, "search_europe_pmc", params);
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
     let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
@@ -2343,6 +2382,7 @@ server.tool(
     {
         query: z.string().describe("Termo de busca (ex: 'dengue OR zika')"),
         maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
@@ -2355,6 +2395,7 @@ server.tool(
     {
         query: z.string().describe("Termo de busca (ex: 'quantum OR computadores')"),
         maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
@@ -2367,6 +2408,7 @@ server.tool(
     {
         query: z.string().describe("Termo de busca (ex: '<termo> OR <sinônimo>')"),
         maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
@@ -2379,6 +2421,7 @@ server.tool(
     {
         query: z.string().describe("Termo de busca"),
         maxResults: z.number().default(200).describe("Máximo de resultados"),
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
@@ -2391,6 +2434,7 @@ server.tool(
     {
         query: z.string().describe("Termo de busca para o SciELO (ex: 'dengue OR zika')"),
         maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
@@ -2403,6 +2447,7 @@ server.tool(
     {
         query: z.string().describe("Termo de busca para o Semantic Scholar"),
         maxResults: z.number().default(200).describe("Máximo de resultados (default: 200, limite físico: 100 por chamada)"),
+        registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
         projectPath: z.string().optional(),
     },
