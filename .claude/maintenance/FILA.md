@@ -356,7 +356,11 @@ Origem: "agende o conserto 15h30 e pode executar apos esse horario aqui mesmo ne
   COORDINATOR (`designer.md` com a tool). Emenda proposta → aprovada ou recusada com as palavras do pesquisador; aprovada,
   sobe a versão e congela o plano de novo; desvio registrado. Tudo anexado ao `change_log.md` e guardado no estado.
   Teste: `tests/emendas.test.ts`.
-- Falta: FAZER 4 e 5; DECLARAR 1 a 4.
+- FAZER 4 feito em 20/11/2026: tool `get_search_plan` (roteiro de cada fonte, só do plano; papel PROJETISTA, LIBRARIAN e
+  COORDINATOR, nos dois agentes); as importações gravam o texto exato na coluna Query, com a fonte do plano e o
+  `registroDaBusca`; campo "não obtido: <motivo>" vira desvio do sistema (`desviosDeCamposNaoObtidos`). Teste:
+  `tests/busca_a_mao.test.ts` (5 de 5 falhavam antes).
+- Falta: FAZER 5; DECLARAR 1 a 4.
 
 ### Como uma linha entra na fila
 

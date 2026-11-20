@@ -50,6 +50,8 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     // Linha 17 (RV-01): emenda e desvio do protocolo travado — de quem cuida do protocolo e de quem
     // fala com o pesquisador. A aprovação exige as palavras dele; o especialista da busca não emenda.
     record_protocol_amendment: [AgentRole.PROJETISTA, AgentRole.COORDINATOR],
+    // O plano e o roteiro de cada fonte: quem o escreve, quem busca por ele e quem conduz.
+    get_search_plan: [AgentRole.PROJETISTA, AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
     // designer.md lista validate_repository/heal_repositories no seu contrato de papel → PROJETISTA autorizado
     validate_repository: [AgentRole.PROJETISTA, AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
     heal_repositories: [AgentRole.PROJETISTA, AgentRole.LIBRARIAN, AgentRole.COORDINATOR],

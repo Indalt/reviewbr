@@ -397,6 +397,59 @@ export function registrarExecucao(projectDir: string, fontesIds: string[], tool:
     ProjectStateService.write(projectDir, state);
 }
 
+// ─── FAZER 4: o roteiro, antes da busca ───────────────────────────────────────
+
+/**
+ * O roteiro de cada fonte, tirado só do plano congelado: o que digitar, os filtros e o que anotar.
+ * Para a busca feita à mão, é o que o pesquisador faz e anota na interface da base, e o que a
+ * importação vai exigir; para a busca por tool, o que o agente passa à tool. Nada além do plano:
+ * o que ele não pede, o roteiro não pede (decisão do Vicente, 20/11/2026).
+ */
+export function roteiroDoPlano(projectDir: string, fonteId?: string): string {
+    const st = ProjectStateService.read(projectDir);
+    const trava = st?.trava_busca;
+    let fontes: FontePlano[];
+    let aviso = "";
+    if (trava) {
+        fontes = trava.plano.fontes;
+        aviso = `Plano congelado (versão ${trava.versao_protocolo} do protocolo, desde ${trava.desde.slice(0, 10)}). A busca segue só isto; o que mudar é emenda (\`record_protocol_amendment\`).`;
+    } else {
+        const { plano } = lerPlanoDoArquivo(projectDir);
+        if (!plano?.fontes?.length) {
+            return st?.status === "LOCKED"
+                ? "Projeto travado sem plano de busca congelado: o plano entra por emenda aprovada pelo pesquisador (`record_protocol_amendment`, com o plano). Nada se busca até lá."
+                : `Sem plano de busca: o designer escreve ${ARQUIVO_PLANO} a partir do protocolo, e a trava o congela.`;
+        }
+        fontes = plano.fontes;
+        aviso = `RASCUNHO (${ARQUIVO_PLANO}): ainda não congelado. Vale o que a trava congelar.`;
+    }
+    if (fonteId) {
+        fontes = fontes.filter((f) => f.id === fonteId);
+        if (!fontes.length) return `A fonte "${fonteId}" não está no plano.`;
+    }
+    const blocos = fontes.map((f) => {
+        const filtros = f.filtros && Object.keys(f.filtros).length ? JSON.stringify(f.filtros) : "nenhum";
+        const anotar = f.registrar?.length ? f.registrar : [];
+        if (f.modo === "manual") {
+            return [
+                `### ${f.nome} (${f.id}) — busca à mão na interface da base`,
+                `1. Digite exatamente um destes textos: ${f.textos.map((t) => `\`${t}\``).join(" · ")}.`,
+                `2. Filtros: ${filtros}. Nenhum outro.`,
+                `3. Anote, no dia da busca: ${anotar.length ? anotar.join("; ") : "nada além do que a importação grava"}. Campo que não puder ser obtido: anote "não obtido: <motivo>" — vira desvio declarado.`,
+                `4. Importe o export com \`${f.tool}\`: sourceName = "${f.nome}", textoExato = o texto digitado${anotar.length ? ", registroDaBusca = o que foi anotado (campo → valor, com onde foi lido)" : ""}.`,
+            ].join("\n");
+        }
+        return [
+            `### ${f.nome} (${f.id}) — por tool: \`${f.tool}\`${f.repositorio ? ` (repositories: ["${f.repositorio}"])` : ""}`,
+            `- rota${trava ? " congelada" : " de hoje"}: ${f.rota ?? "a congelar na trava"}`,
+            `- query: um destes textos, exatamente: ${f.textos.length ? f.textos.map((t) => `\`${t}\``).join(" · ") : "a tool não recebe texto"}`,
+            `- filtros: ${filtros}`,
+            anotar.length ? `- registroDaBusca: ${anotar.join("; ")} (campo → valor, com onde foi lido; ou "não obtido: <motivo>", que vira desvio declarado)` : "",
+        ].filter(Boolean).join("\n");
+    });
+    return [aviso, "", ...blocos].join("\n\n");
+}
+
 /** O plano como o pesquisador o lê, uma linha por fonte. */
 export function resumoDoPlano(trava: TravaBusca): string {
     return trava.plano.fontes.map((f) => {

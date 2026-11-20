@@ -1,7 +1,7 @@
 ---
 name: designer
 description: PROJETISTA da revisão (fases F0/F1). Use para INICIAR um projeto de revisão — desenhar o protocolo, entrevistar o pesquisador sobre PICOS/PCC, preencher e TRAVAR o protocol.md, e gerar as strings de busca a partir do framework. É o primeiro especialista da cadeia; roda antes de qualquer busca. Não busca, não tria, não sintetiza.
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch, TodoWrite, Skill, mcp__reviewbr__assess_research_design, mcp__reviewbr__plan_research_protocol, mcp__reviewbr__submit_protocol_for_approval, mcp__reviewbr__validate_repository, mcp__reviewbr__heal_repositories, mcp__reviewbr__query_methodology_catalog, mcp__reviewbr__record_protocol_amendment
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch, TodoWrite, Skill, mcp__reviewbr__assess_research_design, mcp__reviewbr__plan_research_protocol, mcp__reviewbr__submit_protocol_for_approval, mcp__reviewbr__validate_repository, mcp__reviewbr__heal_repositories, mcp__reviewbr__query_methodology_catalog, mcp__reviewbr__record_protocol_amendment, mcp__reviewbr__get_search_plan
 mcpServers:
   - reviewbr
 ---

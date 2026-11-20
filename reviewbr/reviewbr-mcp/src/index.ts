@@ -29,8 +29,8 @@ import { FlowComputer } from "./services/flow_computer.js";
 import { indexCorpus, queryCorpus } from "./services/rag_lexical.js";
 import { ProtocolGate } from "./services/protocol_gate.js";
 import { travarProtocolo } from "./utils/protocol_guard.js";
-import { lerPlanoDoArquivo, validarPlano, congelarPlano, resumoDoPlano, conferirExecucao, registrarExecucao } from "./services/plano_busca.js";
-import { proporEmenda, decidirEmenda, registrarDesvio } from "./services/emendas.js";
+import { lerPlanoDoArquivo, validarPlano, congelarPlano, resumoDoPlano, conferirExecucao, registrarExecucao, roteiroDoPlano } from "./services/plano_busca.js";
+import { proporEmenda, decidirEmenda, registrarDesvio, desviosDeCamposNaoObtidos } from "./services/emendas.js";
 import { ProjectStateService } from "./services/project_state.js";
 import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
 import { apresentarMetodos } from "./services/methods_for_type.js";
@@ -222,6 +222,8 @@ async function checkDesignGuardrail(projectId?: number, projectPath?: string, to
     // A fonte do plano e a rota vão para o log (coluna Filter) e marcam a execução no estado.
     params.fontePlano = c.fontes.map((f) => f.id).join(",");
     params.rota = c.rota;
+    // Campo do plano declarado "não obtido: <motivo>" vira desvio declarado (FAZER 4).
+    desviosDeCamposNaoObtidos(resolveProjectDir(projectPath), c.fontes, params.registroDaBusca, tool);
     return null;
 }
 
@@ -1706,6 +1708,16 @@ server.tool(
         const r = registrarDecisaoDoPesquisador(RAIZ(), resolveProjectDir(params.projectPath), params);
         return { content: [{ type: "text", text: r.mensagem }] };
     }
+);
+
+server.tool(
+    "get_search_plan",
+    "O PLANO DE BUSCA do projeto e o ROTEIRO de cada fonte, tirados só do plano congelado na trava (linha 17 da FILA): o texto exato, os filtros e o que anotar. Para a busca feita à mão, é o que o pesquisador faz e anota na interface da base ANTES da busca, e o que a importação vai exigir; para a busca por tool, o que o agente passa à tool. Nada além do que o plano pede. Sem plano congelado, diz como ele entra (trava ou emenda).",
+    {
+        projectPath: z.string().describe("Raiz do projeto"),
+        fonte: z.string().optional().describe("Id de uma fonte do plano; omitido = todas"),
+    },
+    async (params) => ({ content: [{ type: "text", text: roteiroDoPlano(resolveProjectDir(params.projectPath), params.fonte) }] })
 );
 
 server.tool(

@@ -187,3 +187,31 @@ export function registrarDesvio(
     ].join("\n"));
     return { ok: true, id: d.id, mensagem: `✅ ${d.id} registrado no change_log.md e no estado. O relato o declara.` };
 }
+
+/**
+ * Campo que o plano manda registrar e veio como "não obtido: <motivo>" (linha 17, FAZER 4): entra
+ * declarado, como desvio, registrado pelo sistema — omissão declarada é método, silenciosa é falha.
+ */
+export function desviosDeCamposNaoObtidos(
+    projectDir: string,
+    fontes: { id: string; nome: string; registrar?: string[] }[],
+    registro: Record<string, unknown> | undefined,
+    tool: string,
+): string[] {
+    if (!registro) return [];
+    const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    const ids: string[] = [];
+    for (const f of fontes) {
+        for (const campo of f.registrar ?? []) {
+            const valor = Object.entries(registro).find(([k]) => norm(k) === norm(campo))?.[1];
+            if (typeof valor === "string" && norm(valor).startsWith("nao obtido")) {
+                const r = registrarDesvio(projectDir, {
+                    o_que: `"${campo}", que o plano manda registrar, não foi obtido na busca de ${f.nome} (${tool})`,
+                    porque: valor.trim(), fonte: f.id, por: "sistema",
+                });
+                if (r.id) ids.push(r.id);
+            }
+        }
+    }
+    return ids;
+}
