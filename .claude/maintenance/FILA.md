@@ -66,8 +66,9 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 20/11/2026, sessão da linha 16 — repositório limpo; build e suíte 585 de 585 (592 depois);
-backlog válido, 0 abertos; fila: linha 10 em curso, 16 feita, 13 a fazer; 42 itens no "Visto de passagem".
+**Última verificação:** 20/11/2026, sessão da linha 17 — repositório limpo, com 8 commits sem push (o da linha 16 e
+os do projeto); build e suíte 592 de 592; backlog válido, 0 abertos; fila: linha 10 em curso, 13 a fazer, 17 com
+diagnóstico, à espera do Vicente; 42 itens no "Visto de passagem" (eram 44; a linha 17 tirou três, um deles subitem).
 
 ## Fila
 
@@ -90,6 +91,7 @@ backlog válido, 0 abertos; fila: linha 10 em curso, 16 feita, 13 a fazer; 42 it
 | 14 | L — Acesso por robô: conferência jurídica e ética (UECE, Alice, Infoteca-e) | User-Agent identificado | `CONFERENCIA_acesso_2026-11-19.md` | **feita em 19/11/2026**: robots.txt respeitado; UECE, Alice, Infoteca-e e UFC pela Oasisbr, declarando onde se viu |
 | 15 | F9 — importação de várias bases em `01_raw` | ver abaixo | — | **feita em 19/11/2026** |
 | 16 | F10 e F11 — importação de RIS: linha de continuação, CR sozinho e registros distintos da mesma base | ver abaixo | — | **feita em 20/11/2026** |
+| 17 | Protocolo travado na busca: a execução segue só o protocolo, e o que muda é emenda | ver abaixo | ver abaixo | **diagnóstico feito em 20/11/2026; o conserto espera o Vicente** |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
 da outra; a ordem é a do dano a uma pesquisa em andamento.
@@ -236,6 +238,100 @@ Conferido com os três RIS do projeto, fora dele: Scopus 23, Web of Science 17 e
 resumo; a FSTA importada de novo grava 0; o resumo de Porto-Luz et al. 2020 entra com as 5 linhas. **O que o conserto
 não faz:** reimportar o Web of Science não recompõe o resumo cortado em `01_raw` do projeto, porque o registro já
 gravado da mesma base é descartado, não substituído. Recompor é decisão do projeto.
+
+### Linha 17 — protocolo travado na busca (diagnóstico de 20/11/2026; o conserto espera o Vicente)
+
+> **Mandado fazer pelo Vicente em 20/11/2026, antes da pesquisa.** A execução da F2 segue só o que o protocolo
+> travado pede, e o que mudar nele passa por emenda aprovada pelo pesquisador. Consequência: o `roda_aromas_ceara`
+> fica parado até o conserto. A linha junta três itens que estavam no "Visto de passagem":
+> - (19/11) a spec diz que o protocolo travado só muda por emenda registrada no `change_log` (RV-01), e nenhuma tool
+>   cria ou confere a emenda;
+> - (20/11) a F2 do projeto se afastou do protocolo de dois modos: o período de cobertura pedido não foi anotado nas
+>   três bases da CAPES, e cinco fontes (SciELO, Alice, Infoteca-e, UFC e UECE) mudaram de caminho em 19/11 sem
+>   emenda. Caso real em `reviewbr/projects/roda_aromas_ceara/change_log.md` (emenda 1 proposta, desvio 1);
+> - (20/11) o roteiro da busca feita à mão, entregue antes da busca e adaptado a cada base conhecida.
+>
+> Origem: "isso nao deveria ter acontecido com o protocolo travado. isso é mais importante que a pesquisa neste
+> momento. depois de resolver voltamos para a pesquisa de acordo com o protocolo"; "Orientar tudo o que for
+> necessario de ser realizado para as buscas manuais quando for indicada. Esse detalhe deve se adaptar para as buscas
+> conhecidas que devem ser feitas manualmente com o apoio do reviewbr."
+
+**Diagnóstico 1 — por que a execução se afastou sem o sistema parar.** A trava protege o momento, não o conteúdo:
+nada se busca antes de travar, mas depois da trava nada no código lê o protocolo, nada guarda o que ele usava no dia
+da trava, e a emenda existe só como frase da spec (`prisma-sr/spec.md:60` e `:454`).
+
+| quem, na F2 | o que lê do protocolo travado |
+|---|---|
+| `ProtocolGate` (`protocol_gate.ts:77`), em toda tool de busca e de importação | só o `status` do `project_state.json`. Com LOCKED, passa qualquer fonte, texto, filtro e rota |
+| `submit_protocol_for_approval` (`index.ts:1670`) | os títulos das seções, na hora de travar. Não guarda o hash do `protocol.md` nem a rota de cada fonte: depois da trava, o arquivo pode ser editado sem que nada perceba |
+| `search_repository` | nada; fonte e texto vêm do agente. A rota sai do catálogo na hora (`strategy.ts:99`; e `strategy.ts:195` vai ao agregador quando a busca direta falha). O log grava "Repositórios" e o id, sem a rota (`index.ts:1390`) |
+| `search_scielo`, `search_openalex` e as outras `search_*`; `search_papers_optimized` | nada; o `search_papers_optimized` busca por camada, que o protocolo não usa |
+| `import_dataset_ris` (busca à mão) | nada; recebe o RIS e o nome da base, e o log grava o texto como "Indefinido" (`index.ts:1043`). Ninguém pede, antes ou na importação, o que o protocolo manda anotar |
+| `heal_repositories` (está com o `librarian`) | nada; reescreve o catálogo do sistema (`repository_healer.ts:94`) no meio de um projeto |
+| `record_researcher_decision` · `audit_methodology` | nada; a primeira grava decisão por etapa, sem tipo "emenda"; a segunda roda depois do projeto feito |
+| agente `librarian` | só as strings (passo 1). Não lê a tabela de fontes ("Como se busca"), o período de cobertura nem os controles; o passo 5 manda perguntar a camada de escopo, que o protocolo já respondeu com a lista de fontes |
+| skill `prisma-s-logging` | nada; diz que a importação grava o texto como "Indefinido" |
+| skill `conduct-review` | o status. "Ao menor sinal de fuga, pare e pergunte" é conduta (linha 57); o gate da F2 é "log e `01_raw/` preenchidos" (linha 83) |
+| skill `prisma-rigor-gates` | RV-01 = só a trava antes da busca (linha 14); RV-07 `[NÃO COBERTO]` (linha 20); os subitens da F2 ficam com o agente (linha 29); o `change_log.md` é suplemento do fim (linha 55) |
+| skill `methodology-router` | nada; lê o `manifest.json` e a `spec.md` |
+
+O que a manutenção pode mudar e um protocolo travado usa, sem que o projeto saiba (nada no projeto grava contra que
+versão do sistema ele travou):
+- o catálogo de repositórios (`reviewbr-mcp/data/sources/*.json`): estado, endereços, API, `searchable`,
+  `viaAgregador`. O protocolo nomeia a fonte pelo id (`BR-RES-0001`), e o caminho atrás do id muda. Foi o caso: os
+  commits `4936c59` e `ba21610` (19/11) mudaram Alice, Infoteca-e, UFC e UECE depois da trava (15/11);
+- o código das tools: a rota (o `search_scielo` passou ao OpenAlex com o prefixo 10.1590 em 19/11), a cascata e a
+  reserva pelo agregador, o `robots.txt`, a regra de casamento, o que a importação grava;
+- a spec, o manifest, o mapeamento e o modelo de protocolo do método; os textos dos agentes e das skills; o catálogo
+  de metodologias (fonte e data de leitura que o protocolo cita).
+
+**Proposta 2 — conserto mínimo.** A parte de busca do protocolo vira dado, aprovado pelo pesquisador e congelado na
+trava; cada execução, por tool ou à mão, é conferida contra esse dado na hora; o que diverge para, e só volta por
+emenda ou desvio gravado por tool, com a aprovação do pesquisador.
+
+FAZER (cada item com teste que falha antes e passa depois; o caso do `roda_aromas_ceara` copiado para o teste, sem
+gravar na pasta do projeto):
+1. **Plano de busca na trava.** O `designer` escreve, a partir do protocolo, o plano de busca como dado: por fonte, o
+   modo (tool ou à mão), a tool, o id do catálogo, a rota que o sistema dá hoje, os textos exatos, os filtros e o que o
+   protocolo manda registrar em cada busca. O `submit_protocol_for_approval` não trava sem o plano, mostra-o ao
+   pesquisador e congela no `project_state.json` o plano e o hash do `protocol.md`.
+2. **A busca confere o plano.** Sob projeto LOCKED, as tools de busca e de importação recusam, dizendo o quê:
+   `protocol.md` diferente do da trava; fonte, tool ou id fora do plano; texto diferente do texto exato da fonte (a
+   RV-07 deixa de ser `[NÃO COBERTO]`); filtro fora do plano; rota de hoje diferente da do plano (catálogo, código ou
+   `heal_repositories`). Usa só a rota do plano, sem cascata nem agregador de reserva: se ela falhar, a fonte fica não
+   alcançada, com o motivo. O que o plano manda registrar e a tool não produz (o período de cobertura) entra como
+   parâmetro, com o lugar onde foi lido, ou declarado como não obtido. A recusa e a rota entram no log de busca.
+3. **Emenda e desvio por tool.** Uma tool grava no `change_log.md` e no estado a emenda (o que muda no protocolo,
+   antes e depois, por quê) e o desvio (o que a execução fez diferente, sem mudar o protocolo). A emenda nasce
+   proposta e só vale com a aprovação do pesquisador nas palavras dele (recusa carimbo, como a
+   `record_researcher_decision`); aprovada, renova o plano e sobe a versão (1.0 → 1.1). O `protocol.md` travado não se
+   edita.
+4. **Busca à mão.** Antes da busca, uma tool devolve, do plano, o roteiro de cada base feita à mão: o texto exato, os
+   filtros e o que anotar. Sob projeto LOCKED, `import_dataset_ris` e `import_bvs_export` exigem o que o plano manda
+   anotar e conferem o texto exato; campo não anotado entra declarado, com o motivo, como desvio. O log grava o texto
+   exato (deixa de ser "Indefinido"), a plataforma, a data da busca e o total mostrado.
+5. **A F2 só fecha** (`podeAvancar`) com cada fonte do plano executada ou com desvio registrado.
+
+DECLARAR:
+1. `librarian.md`: o passo 1 lê o plano travado, não só as strings; o passo 5 (camada de escopo) não vale em projeto
+   travado.
+2. `maintainer.md`: a manutenção pode mudar a rota no catálogo ou numa tool; o projeto travado não muda junto: para
+   na próxima busca e pede emenda.
+3. RV-01 e RV-07 (`prisma-rigor-gates`, `manifest.json` dos dois métodos), `prisma-s-logging` e o gate da F2 no
+   `conduct-review` passam a dizer o que o sistema confere depois do conserto.
+4. Limite: a busca à mão acontece fora do sistema; a importação grava o que o pesquisador declara, e o sistema não
+   confere a tela. Busca sem `projectPath` segue exploratória, sem conferência (já declarado em `protocol_gate.ts:31`).
+
+Não fazer: ler a prosa do protocolo por código (o plano é dado, escrito pelo `designer` e aprovado pelo
+pesquisador); tirar o `heal_repositories` do `librarian` (é outro item do "Visto de passagem"; o item 2 já para o
+projeto quando o catálogo muda); decidir a emenda 1 e o desvio 1 do projeto.
+
+Consequência para o `roda_aromas_ceara`: travado antes do conserto, não tem plano e não busca até o Vicente aprovar,
+pela tool do item 3, o plano com as rotas de hoje (é a emenda 1) e decidir o desvio 1.
+
+Em aberto, para o Vicente: (a) aprovar este conserto; (b) o roteiro por base (onde cada interface mostra o que o
+protocolo pede anotar, como o período de cobertura na Scopus, no Web of Science e no EBSCOhost) entra agora, lido na
+documentação oficial com a data, ou o roteiro fica só com o que o protocolo pede.
 
 ### Como uma linha entra na fila
 
@@ -398,11 +494,7 @@ Vicente pedir.
     interdisciplinar…"); é o que a busca do site devolve.
 - (projeto `roda_aromas_ceara`, 19/11/2026) Visto ao retomar o projeto, sem avaliação:
   - o `project_state.json` guarda em `topic` a pergunta de 12/11 (cajuína e bebidas do pedúnculo); o protocolo
-    travado em 15/11 tem outra (só a cajuína). Nada atualiza o campo depois da `plan_research_protocol`;
-  - a spec (RV-01) diz que o protocolo travado só muda por emenda registrada no `change_log`, e a skill
-    `prisma-rigor-gates` lista `change_log.md` como suplemento, mas nenhuma tool cria ou confere a emenda. O
-    projeto pode precisar de uma: UECE, Alice e Infoteca-e estão no protocolo e a linha 11 as marcou como não
-    pesquisáveis.
+    travado em 15/11 tem outra (só a cajuína). Nada atualiza o campo depois da `plan_research_protocol`.
 - (projeto `roda_aromas_ceara`, 19/11/2026) `src/utils/http.ts`, com `acceptSelfSigned: true` por padrão, põe
   `NODE_TLS_REJECT_UNAUTHORIZED = "0"` no processo inteiro durante o pedido: a verificação do certificado fica
   desligada também para pedidos simultâneos.
@@ -412,27 +504,3 @@ Vicente pedir.
   tag `DB` (já anotado na linha 2); o `repositoryName` continua vazio nesse caso, e o gate reprova.
 - (linha 16, 20/11/2026) O `import_bvs_export` grava pelo mesmo `appendRawRecords` sem `manterTodosDoLote`: dois
   registros distintos do mesmo export BVS com o mesmo DOI continuam virando um.
-- (projeto `roda_aromas_ceara`, 20/11/2026) Pedido do Vicente, sem avaliação: quando o protocolo indicar uma busca que
-  o pesquisador faz à mão na interface da base (Portal CAPES), o ReviewBR lhe entrega, antes da busca, o roteiro do que
-  fazer e anotar naquela base, adaptado a cada base já conhecida. Exemplos: no Web of Science, as edições da Coleção
-  principal e os anos de cada uma; no EBSCOhost, as bases marcadas juntas; em todas, plataforma e acesso, onde se
-  digita, texto exato, filtros e expansores, total mostrado, formato e campos da exportação, data. Hoje nenhuma skill,
-  agente ou tool fala de busca manual (conferido em 20/11 em `.claude/skills`, `.claude/agents` e
-  `reviewbr-mcp/src`), e o `import_dataset_ris` grava a Query como "Indefinido". O que se viu: a anotação de 19/11 do
-  projeto, escrita pelo Claude a partir das telas, ficou sem o período que cada base cobre, que o protocolo do
-  projeto pede ("lido na própria fonte no dia da busca"), e sem as edições do Web of Science. Liga-se ao item de
-  15/11/2026 sobre onde ficam o texto exato, a base e a plataforma da busca feita à mão. Origem: "Orientar tudo o que
-  for necessario de ser realizado para as buscas manuais quando for indicada. Esse detalhe deve se adaptar para as
-  buscas conhecidas que devem ser feitas manualmente com o apoio do reviewbr."
-- (projeto `roda_aromas_ceara`, 20/11/2026) Observação do Vicente, sem avaliação: com o protocolo travado, a
-  execução não deveria ter se afastado dele, e se afastou. Na F2 isso aconteceu de dois modos: o período de cobertura
-  pedido pelo protocolo não foi anotado nas três bases da CAPES, e cinco fontes (SciELO, Alice, Infoteca-e, UFC e
-  UECE) mudaram de caminho em 19/11 sem emenda. A emenda foi proposta em 20/11, no `change_log.md` do projeto. Nenhuma
-  tool confere, antes ou durante a busca, o que o protocolo travado pede para cada fonte; o `audit_methodology` roda
-  depois do projeto feito. Liga-se aos itens de 19/11 (RV-01 sem tool que crie ou confira a emenda) e de 20/11
-  (roteiro da busca feita à mão). Origem: "nao deveria ter acontecido isso com protocolo travado. o problema é mais
-  embaixo."
-  **Mandado fazer pelo Vicente em 20/11/2026, antes da pesquisa:** "isso nao deveria ter acontecido com o protocolo
-  travado. isso é mais importante que a pesquisa neste momento. depois de resolver voltamos para a pesquisa de acordo
-  com o protocolo". A ordem cobre três itens do "Visto de passagem": este, o de 20/11 sobre o roteiro da busca feita à mão e o de
-  19/11 sobre a RV-01. O prompt da sessão está no `RETOMAR.md` do projeto, em "Prompts prontos".
