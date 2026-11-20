@@ -72,6 +72,12 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   voltou inteiro. O `01_raw/database_records.json` antigo foi apagado e as três bases importadas de novo:
   **Scopus 23, Web of Science 17, FSTA 14; total 54, nenhum sem resumo**. Detalhe e conferência no `REGISTRO.md`
   ("Importação dos RIS, 20/11/2026"). Próximo: passo C, segunda parte (fontes abertas), em chat novo.
+- **Pendente do Vicente (20/11/2026), para o relato da busca:** (1) as edições da Coleção principal do Web of Science
+  não foram anotadas em 19/11 (a tela dizia "Todos"); ele abre o campo "Edições" na Pesquisa Avançada pelo Portal
+  CAPES e manda os nomes e os anos de cada uma, sem refazer a busca; (2) onde guardar as anotações da busca, hoje fora
+  do git: (a) cópia versionada na pasta do projeto, sem os RIS, ou (b) ficam onde estão e ele guarda uma cópia.
+  Scopus não tem edições; os 14 registros da FSTA trazem `DB - FSTA`, então só ela entrou. O pedido de o ReviewBR
+  orientar a busca feita à mão foi para o "Visto de passagem" da FILA.
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.

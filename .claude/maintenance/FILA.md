@@ -412,3 +412,14 @@ Vicente pedir.
   tag `DB` (já anotado na linha 2); o `repositoryName` continua vazio nesse caso, e o gate reprova.
 - (linha 16, 20/11/2026) O `import_bvs_export` grava pelo mesmo `appendRawRecords` sem `manterTodosDoLote`: dois
   registros distintos do mesmo export BVS com o mesmo DOI continuam virando um.
+- (projeto `roda_aromas_ceara`, 20/11/2026) Pedido do Vicente, sem avaliação: quando o protocolo indicar uma busca que
+  o pesquisador faz à mão na interface da base (Portal CAPES), o ReviewBR lhe entrega, antes da busca, o roteiro do que
+  fazer e anotar naquela base, adaptado a cada base já conhecida. Exemplos: no Web of Science, as edições da Coleção
+  principal e os anos de cada uma; no EBSCOhost, as bases marcadas juntas; em todas, plataforma e acesso, onde se
+  digita, texto exato, filtros e expansores, total mostrado, formato e campos da exportação, data. Hoje nenhuma skill,
+  agente ou tool fala de busca manual (conferido em 20/11 em `.claude/skills`, `.claude/agents` e
+  `reviewbr-mcp/src`), e o `import_dataset_ris` grava a Query como "Indefinido". O que se viu: a anotação de 19/11 do
+  projeto, escrita pelo Claude a partir das telas, ficou sem as edições do Web of Science. Liga-se ao item de
+  15/11/2026 sobre onde ficam o texto exato, a base e a plataforma da busca feita à mão. Origem: "Orientar tudo o que
+  for necessario de ser realizado para as buscas manuais quando for indicada. Esse detalhe deve se adaptar para as
+  buscas conhecidas que devem ser feitas manualmente com o apoio do reviewbr."
