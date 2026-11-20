@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "method": "scoping-prisma-scr",
+  "framework": "PCC",
+  "reviewType": "Revisão de Escopo",
+  "topic": "Que descritores sensoriais e compostos de aroma já foram relatados para a cajuína e para as bebidas do pedúnculo de caju, e com que métodos? (âmbito geral, Ceará destacado)",
+  "userId": "vicente",
+  "status": "LOCKED",
+  "control_level": "estrito",
+  "phase": "F2",
+  "createdAt": "2026-11-12T20:02:37.930Z",
+  "updatedAt": "2026-11-15T16:46:06.003Z",
+  "decisions": [
+    {
+      "phase": "F1",
+      "agent": "coordinator",
+      "decision": "A revisão vai fazer avaliação crítica das fontes de evidência incluídas (qualidade metodológica ou risco de viés de cada fonte)? — não",
+      "por": "pesquisador",
+      "contribuicao": "\"nao. mas essa limitacao de falta de lugar para registrar tem de ser registrada para o agente de manutencao.\" (Vicente, 12/11/2026, ao escolher entre fazer ou não a avaliação crítica das fontes, itens 12 e 16 do PRISMA-ScR)",
+      "condicao": {
+        "id": "avaliacao_critica",
+        "resposta": "não"
+      },
+      "ts": "2026-11-12T20:08:46.464Z"
+    },
+    {
+      "phase": "F0",
+      "agent": "coordinator",
+      "decision": "Leu e aprovou o protocolo, com três ajustes pedidos por ele: comentário sobre as bebidas clarificadas, nenhuma ferramenta além do ReviewBR, critério do que fica para os revisores humanos.",
+      "por": "pesquisador",
+      "contribuicao": "\"como aplicou o ponto 1 tudo bem, mas vale deixar como comentario a ciencia das bebidas clirificadas. se o desenho agiliza nao precisa de ferramenta alem do reviewbr (anotacoes sobre as buscas ja existem no reviewbr. entao basta descrever o criterio do que fica para os revisores humanos e seguir. aprovo os ponto menores. li e aprovo o registro. li e aprovo o protocolo\" (Vicente, 15/11/2026, depois de ler o protocol.md v0.2 e o REGISTRO.md; antes disso ele decidiu: só a cajuína; sem registro no OSF; autoria em branco; busca exploratória como parcial e motivação)",
+      "ts": "2026-11-15T16:46:02.389Z"
+    },
+    {
+      "phase": "F1",
+      "agent": "coordinator",
+      "decision": "Aprovou a questão, o PCC (só a cajuína, definida pelo termo), os critérios, as fontes por relevância, a string `cajuína OR cajuina` e a triagem em duas camadas com dois revisores humanos dentro do ReviewBR.",
+      "por": "pesquisador",
+      "contribuicao": "\"só a cajuina\"; \"entram os estudos sobre compostos volateis para identificar o estado da arte em relacao a estudos sensoriais da cajuina\"; \"suco clarificado sem cozimento e sem o uso do termo cajuina saem por criterio de busca\"; \"fontes por relevancia ganha, pode retirar a baixas\"; \"o titulo parece bom e as 3 questoes secundarias ficam como estao\"; \"como aplicou o ponto 1 tudo bem, mas vale deixar como comentario a ciencia das bebidas clirificadas\"; \"se o desenho agiliza nao precisa de ferramenta alem do reviewbr\"; \"basta descrever o criterio do que fica para os revisores humanos e seguir\"; \"aprovo os ponto menores\"; \"li e aprovo o protocolo\" (Vicente, 15/11/2026)",
+      "ts": "2026-11-15T16:46:02.424Z"
+    }
+  ]
+}

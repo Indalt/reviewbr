@@ -50,6 +50,12 @@ export interface ProjectState {
     createdAt: string;
     updatedAt: string;
     decisions: ProjectDecision[];
+    /**
+     * Linha 17 da FILA — o plano de busca congelado na trava (ou na última emenda aprovada): o que
+     * o protocolo travado usa, com a rota que o sistema dava a cada fonte e o hash do protocol.md.
+     * Ausente em projeto travado antes de 20/11/2026: ele não busca até o plano entrar por emenda.
+     */
+    trava_busca?: import("./plano_busca.js").TravaBusca;
 }
 
 function statePath(projectDir: string): string {

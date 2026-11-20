@@ -29,6 +29,7 @@ import { FlowComputer } from "./services/flow_computer.js";
 import { indexCorpus, queryCorpus } from "./services/rag_lexical.js";
 import { ProtocolGate } from "./services/protocol_gate.js";
 import { travarProtocolo } from "./utils/protocol_guard.js";
+import { lerPlanoDoArquivo, validarPlano, congelarPlano, resumoDoPlano } from "./services/plano_busca.js";
 import { ProjectStateService } from "./services/project_state.js";
 import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
 import { apresentarMetodos } from "./services/methods_for_type.js";
@@ -1690,6 +1691,20 @@ server.tool(
 
         const audit = protocolAuditor.auditFile(protocolPath);
 
+        // Linha 17 da FILA: sem plano de busca não há trava — a trava passa a guardar o que o
+        // protocolo usa, não só o momento. Conferido ANTES de travar: recusa sem tocar em nada.
+        const { plano, erros: errosLeitura } = lerPlanoDoArquivo(projectDir);
+        const errosPlano = errosLeitura.length ? errosLeitura : validarPlano(plano, registry);
+        if (audit.valid && errosPlano.length) {
+            return {
+                content: [{
+                    type: "text",
+                    text: `❌ Protocolo aprovado na auditoria (${audit.score}/${audit.maxScore}), mas NÃO travado: o plano de busca não está pronto.\n` +
+                        errosPlano.map((e) => `- ${e}`).join("\n"),
+                }],
+            };
+        }
+
         if (audit.valid) {
             // Estado on-disk = fonte da verdade. DEBT-100: a etapa que abre com o protocolo
             // travado é a que vem DEPOIS da última que o `protocol.md` encerra, na trilha do
@@ -1704,6 +1719,11 @@ server.tool(
             if (!trava.ok) {
                 return { content: [{ type: "text", text: `❌ Protocolo aprovado na auditoria (${audit.score}/${audit.maxScore}), mas NÃO travado. ${trava.motivo}` }] };
             }
+            // Depois do marcador [LOCKED] no arquivo: o hash é o do protocolo como ficou travado.
+            const travaBusca = congelarPlano(projectDir, plano!, abre?.id ?? "", registry);
+            const notaPlano = `\n\n**Plano de busca congelado** (versão ${travaBusca.versao_protocolo} do protocolo; ` +
+                `confira com o pesquisador que ele diz o que o protocolo pede — a busca vai segui-lo, e o que mudar é emenda):\n` +
+                resumoDoPlano(travaBusca);
             // Trilha ilegível não é trilha sem etapa seguinte: afirmar uma propriedade de uma
             // trilha que nem foi lida esconderia a causa real.
             const notaEtapa = abre
@@ -1727,7 +1747,7 @@ server.tool(
             return {
                 content: [{
                     type: "text",
-                    text: `✅ SUCESSO! Protocolo aprovado (${audit.score}/${audit.maxScore}) e TRAVADO ([LOCKED]). As buscas oficiais estão liberadas.${notaEtapa}`
+                    text: `✅ SUCESSO! Protocolo aprovado (${audit.score}/${audit.maxScore}) e TRAVADO ([LOCKED]). As buscas oficiais estão liberadas, só pelo plano abaixo.${notaEtapa}${notaPlano}`
                 }]
             };
         } else {

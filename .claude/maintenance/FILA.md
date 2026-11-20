@@ -342,7 +342,12 @@ manutencao se isso nao esta garantido. estamos desviando dos objetivos centrais 
 **Conserto aprovado pelo Vicente em 20/11/2026**, para rodar depois das 15h30 (depois do reset da janela de 5 h).
 Origem: "agende o conserto 15h30 e pode executar apos esse horario aqui mesmo nesta sessao".
 
-**Estado da execução** (atualizar a cada item feito, com o commit): nenhum item feito.
+**Estado da execução** (atualizar a cada item feito, com o commit):
+- FAZER 1 feito em 20/11/2026: `src/services/plano_busca.ts` (forma, validação, rota de hoje por fonte, hash);
+  `rotaPrimaria` no `strategy.ts`; o `submit_protocol_for_approval` recusa sem `plano_busca.json` válido e congela o
+  plano em `project_state.json` (`trava_busca`); `designer.md` passo 4. Teste: `tests/plano_busca_trava.test.ts`, com o
+  caso real em `tests/fixtures/roda_aromas_ceara/`.
+- Falta: FAZER 2 a 5; DECLARAR 1 a 4.
 
 ### Como uma linha entra na fila
 

@@ -39,6 +39,29 @@ function baseRest(repo: RepositoryEntry): string {
     return repo.access.restApi?.endpoint || repo.repository.url;
 }
 
+const restDaRota = new DSpaceRestClient();
+
+/**
+ * A rota que a busca neste repositório usa HOJE, lida só do catálogo, sem rede: o primeiro método
+ * que `searchDetailed` tenta, na mesma ordem dele (linha 17 da FILA). A trava do protocolo congela
+ * esta descrição no plano de busca; se a manutenção mudar o catálogo ou a ordem, a descrição muda e
+ * o projeto travado para na próxima busca, pedindo emenda. Manter a ordem igual à de `searchDetailed`.
+ */
+export function rotaPrimaria(repo: RepositoryEntry): string {
+    const via = repo.access.viaAgregador;
+    if (repo.access.searchable === false) {
+        return via
+            ? `${via.plataforma} (${via.id}), API do VuFind, filtro ${via.filtro}`
+            : `não pesquisável pela tool: ${repo.access.searchUnavailableReason ?? "sem motivo registrado"}`;
+    }
+    if (repo.id === "BR-AGG-0001" || repo.repository.url.includes("bdtd.ibict.br")) return "BDTD, API do VuFind";
+    if (repo.id === "BR-AGG-0002" || repo.repository.url.includes("scielo.br")) return "SciELO ArticleMeta";
+    if (repo.repository.url.includes("repositorio.usp.br")) return "USP result.php";
+    if ((repo as any).access?.mapping) return `API mapeada no catálogo (${(repo.access as any).baseUrl ?? repo.repository.url})`;
+    if (ehDspace(repo) || repo.access.restApi?.endpoint) return `DSpace REST (${restDaRota.resolveApiUrl(baseRest(repo))})`;
+    return `página de busca (${repo.access.searchEndpoints?.length ? repo.access.searchEndpoints.join(" | ") : repo.repository.url})`;
+}
+
 /** Texto sem acento e em minúscula, para comparar palavras (item 5). */
 function semAcento(s: string): string {
     return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
