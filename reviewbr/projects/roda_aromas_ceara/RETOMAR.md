@@ -72,15 +72,19 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   voltou inteiro. O `01_raw/database_records.json` antigo foi apagado e as três bases importadas de novo:
   **Scopus 23, Web of Science 17, FSTA 14; total 54, nenhum sem resumo**. Detalhe e conferência no `REGISTRO.md`
   ("Importação dos RIS, 20/11/2026"). Próximo: passo C, segunda parte (fontes abertas), em chat novo.
-- **Pendente do Vicente (20/11/2026), para o relato da busca:** (1) o protocolo pede o período que cada fonte cobre,
-  "lido na própria fonte no dia da busca" (seção "Fontes de Busca"), e em 19/11 ele não foi anotado em nenhuma das
-  três bases. Ele decide: ler agora, declarando a data da leitura, ou o relato declara que o período não foi
-  anotado. Os nomes das edições do Web of Science não são pedidos pelo protocolo nem pelo PRISMA-S (S1 e S2 lidos no
-  texto oficial em 20/11); no Web of Science, porém, o período aparece ao lado de cada edição, no campo "Edições" da
-  Pesquisa Avançada. (2) Onde guardar as anotações da busca, hoje fora do git: (a) cópia versionada na pasta do
-  projeto, sem os RIS, ou (b) ficam onde estão e ele guarda uma cópia. Os 14 registros da FSTA trazem
-  `DB - FSTA`, então só ela entrou. O pedido de o ReviewBR orientar a busca feita à mão foi para o "Visto de
-  passagem" da FILA.
+- **De volta ao protocolo (Vicente, 20/11/2026: "voltemos ao protocolo e vamos seguir com a revisão de escopo").**
+  Conferida a F2 contra o `protocol.md` travado, item por item:
+  - a busca de 19/11 cumpre o que o protocolo pede da busca feita à mão, menos o período de cobertura;
+  - cinco fontes (SciELO, Alice, Infoteca-e, UFC e UECE) mudaram de caminho em 19/11 sem emenda.
+
+  As duas coisas estão no **`change_log.md`**: a emenda 1 (proposta) e o desvio 1. **Pendente do Vicente:**
+  - aprovar ou não a emenda 1;
+  - escolher (a) ou (b) no desvio 1;
+  - dizer onde ficam as anotações da busca, hoje fora do git: (a) cópia versionada na pasta do projeto, sem os RIS,
+    ou (b) ficam onde estão e ele guarda uma cópia.
+
+  Os nomes das edições do Web of Science não são pedidos, nem pelo protocolo nem pelo PRISMA-S (S1 e S2 lidos no
+  texto oficial). **A segunda parte do passo C só roda depois da decisão sobre a emenda 1.**
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.
@@ -134,12 +138,17 @@ Passo C, primeira parte, refeita (decisão de 20/11), em chat novo aberto depois
 > (Scopus, Web of Science, FSTA), todos os registros, sem excluir nem deduplicar; confira 23, 17 e 14 (total 54) e
 > que nenhum ficou sem resumo. Atualize `RETOMAR.md` e `REGISTRO.md`, commit, e pare. Não busque.
 
-Passo C, segunda parte, em chat novo, depois da linha 12 e do item das três fontes:
+Passo C, segunda parte, em chat novo, **depois da decisão do Vicente sobre a emenda 1 do `change_log.md`**
+(reescrito em 20/11/2026 para seguir o protocolo item por item):
 
-> Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Faça a segunda
-> parte do passo C: confira que os três RIS da CAPES já foram importados (se não foram, pare) e rode a busca da F2
-> nas fontes abertas, com as strings do protocolo e o controle positivo de cada fonte. Fonte que a manutenção
-> deixou fora: não busque, anote. Use um agente `librarian` com modelo `opus`.
+> Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md`, o `protocol.md` (travado) e o `change_log.md`.
+> Se a emenda 1 não tiver decisão, pare. Confira que os três RIS da CAPES já foram importados (se não foram, pare).
+> Rode a busca da F2 nas fontes abertas da tabela "Fontes de Busca", com o caminho que o protocolo e o
+> `change_log.md` dão a cada uma. Antes de buscar, faça com o protocolo a lista de conferência de cada fonte e
+> preencha-a: texto exato, data, total informado e total recuperado, **período que a fonte cobre, lido na própria
+> fonte no dia da busca**, controle positivo, e onde o registro foi visto. Item do protocolo que não puder ser
+> cumprido: não contorne; anote como desvio no `change_log.md` e avise. Fonte que a manutenção deixou fora: não
+> busque, anote. Use um agente `librarian` com modelo `opus`, e passe a ele essa lista de conferência.
 
 Passo B, em chat novo:
 

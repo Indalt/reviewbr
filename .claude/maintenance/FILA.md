@@ -424,3 +424,11 @@ Vicente pedir.
   15/11/2026 sobre onde ficam o texto exato, a base e a plataforma da busca feita à mão. Origem: "Orientar tudo o que
   for necessario de ser realizado para as buscas manuais quando for indicada. Esse detalhe deve se adaptar para as
   buscas conhecidas que devem ser feitas manualmente com o apoio do reviewbr."
+- (projeto `roda_aromas_ceara`, 20/11/2026) Observação do Vicente, sem avaliação: com o protocolo travado, a
+  execução não deveria ter se afastado dele, e se afastou. Na F2 isso aconteceu de dois modos: o período de cobertura
+  pedido pelo protocolo não foi anotado nas três bases da CAPES, e cinco fontes (SciELO, Alice, Infoteca-e, UFC e
+  UECE) mudaram de caminho em 19/11 sem emenda. A emenda foi proposta em 20/11, no `change_log.md` do projeto. Nenhuma
+  tool confere, antes ou durante a busca, o que o protocolo travado pede para cada fonte; o `audit_methodology` roda
+  depois do projeto feito. Liga-se aos itens de 19/11 (RV-01 sem tool que crie ou confira a emenda) e de 20/11
+  (roteiro da busca feita à mão). Origem: "nao deveria ter acontecido isso com protocolo travado. o problema é mais
+  embaixo."

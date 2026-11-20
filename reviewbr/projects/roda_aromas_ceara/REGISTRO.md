@@ -185,6 +185,15 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   ("pode apagar e importar tudo novamente"). Alcance: só `01_raw/database_records.json`; os RIS em `01_raw/manual/`
   ficam. Consequência: o registro da busca (`logs/search_log_prisma_s.csv`) mantém as duas importações de 20/11
   feitas com a tool defeituosa e ganha as três novas; o relato da F2 usa as três novas.
+- **20/11/2026, PENDENTE: de volta ao protocolo.** Frases dele: "nao deveria ter acontecido isso com protocolo
+  travado. o problema é mais embaixo. voltemos ao protocolo e vamos seguir com a revisao de escopo." A F2 foi
+  conferida contra o `protocol.md`. O que ficou fora dele está no `change_log.md`:
+  - emenda 1 (proposta): o caminho de busca de SciELO, Alice, Infoteca-e, UFC e UECE, pela decisão de 19/11 da
+    linha 14;
+  - desvio 1: o período de cobertura das três bases da CAPES, não anotado em 19/11.
+
+  Consequência: a segunda parte do passo C espera a decisão sobre a emenda 1. Nas três bases da CAPES, o pedido dos
+  nomes das edições do Web of Science foi retirado, porque nem o protocolo nem o PRISMA-S o fazem.
 - **19/11/2026, linha 13.** Ele não sabia se vinha antes das buscas. Resposta dada: não; ela grava as decisões dos
   dois revisores, que só existem na triagem (passo D). A ordem de 19/11 fica: linha 13 antes do passo D.
 - **16/11/2026, só o Claude.** O Vicente perguntou se outro assistente (Gemini) poderia tocar parte do trabalho e
