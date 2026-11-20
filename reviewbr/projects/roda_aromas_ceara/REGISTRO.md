@@ -210,10 +210,12 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   também plataforma, data, filtros e total. Gravada por `record_protocol_amendment`. Alcance: toda a F2; o que o
   plano não traz, a busca recusa. Consequência: emenda nova só se for impossível seguir sem ela. Origem: "sobre
   emenda1 ok e espero que nao seja necessarias novas, apenas se impossivel continuar sem emendas".
-- **20/11/2026, desvio 1: PENDENTE.** Os anos dos registros recuperados nas três bases da CAPES (todos de 2003 a
-  2026) foram lidos por ele e estão em `logs/anos_dos_registros_CAPES_2026-11-20.md`; não são o período que a base
-  cobre. Frase dele: "ja falei que nao fizemos recorte de data". A opção do desvio 1 ainda não foi escolhida; o
-  desvio não foi gravado pela tool.
+- **20/11/2026, desvio 1: DECIDIDO.** Nas três bases da CAPES o relato declara o que foi visto: todas as datas
+  marcadas (sem recorte) e registros de 2003 a 2026 (`logs/anos_dos_registros_CAPES_2026-11-20.md`), no lugar do
+  período que a base cobre, que não foi lido. Gravado como desvio-1 por `record_protocol_amendment`. Alcance: Scopus,
+  Web of Science e FSTA. Consequência: o que a plataforma disponibiliza é anotado, não perguntado ao Vicente. Origem:
+  "em todas as buscas foi marcado todas as datas. (…) isso nao precisaria ser perguntado. apenas anotado. (…)
+  declarar o que foi visto me parece o suficiente."
 - **19/11/2026, linha 13.** Ele não sabia se vinha antes das buscas. Resposta dada: não; ela grava as decisões dos
   dois revisores, que só existem na triagem (passo D). A ordem de 19/11 fica: linha 13 antes do passo D.
 - **16/11/2026, só o Claude.** O Vicente perguntou se outro assistente (Gemini) poderia tocar parte do trabalho e

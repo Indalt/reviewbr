@@ -73,3 +73,11 @@ anotado (`01_raw/manual/ANOTACOES_busca_manual.md`). Falta a decisão do Vicente
 ### emenda-1 — APROVADA em 2026-11-20
 
 Decisão do pesquisador: ""sobre emenda1 ok e espero que nao seja necessarias novas, apenas se impossivel continuar sem emendas" (Vicente, 20/11/2026, depois de ver o plano de busca com a rota de hoje de cada fonte e a explicação do que a emenda 1 muda)". Versão do protocolo: 1.0 → 1.1. O plano de busca da emenda foi congelado, com as rotas de hoje.
+
+## desvio-1 — registrado em 2026-11-20 por agente (tool `record_protocol_amendment`)
+
+**O quê.** Na busca à mão de 19/11/2026 na Scopus, no Web of Science e na FSTA (fontes do plano scopus, wos, fsta), o período que cada base cobre não foi lido nem anotado, como pede o protocolo em "Fontes de Busca". Foi anotado o que se viu: em todas as buscas foram marcadas todas as datas (sem recorte, como o protocolo decide), e os registros recuperados vão de 2003 a 2026 nas três bases (Scopus 23, Web of Science 17, FSTA 14; anos por base em logs/anos_dos_registros_CAPES_2026-11-20.md, lidos em 20/11/2026). O relato declara isso no lugar do período de cobertura da base.
+
+**Por quê.** A busca foi feita antes de existir o roteiro da busca à mão (linha 17 da FILA) e o item não estava na anotação da busca. Para o pesquisador, a disponibilidade de cada plataforma é dela; basta declarar o que foi visto.
+
+**Decisão do pesquisador:** ""em todas as buscas foi marcado todas as datas. se voce ve problema as plataformas escolhem datas isso nao precisaria ser perguntado. apenas anotado. as plataformas nao disponibilizam todos os artigos por essa e aquela razao que a plataforma deve ter disponivel. declarar o que foi visto me parece o suficiente." (Vicente, 20/11/2026, ao decidir o desvio 1)"
