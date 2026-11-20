@@ -194,6 +194,15 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
 
   Consequência: a segunda parte do passo C espera a decisão sobre a emenda 1. Nas três bases da CAPES, o pedido dos
   nomes das edições do Web of Science foi retirado, porque nem o protocolo nem o PRISMA-S o fazem.
+- **20/11/2026, o sistema antes da pesquisa.** O projeto para até a manutenção do ReviewBR resolver por que a
+  execução da F2 se afastou do protocolo travado sem que o sistema parasse. O alcance é a pesquisa inteira, a
+  partir da segunda parte do passo C. A emenda 1 e o desvio 1 do `change_log.md` ficam pendentes até essa sessão.
+  Consequências:
+  - a próxima sessão é de manutenção, em chat novo, com o prompt do `RETOMAR.md`;
+  - depois dela a pesquisa volta pelo protocolo.
+
+  Origem: "isso nao deveria ter acontecido com o protocolo travado. isso é mais importante que a pesquisa neste
+  momento. depois de resolver voltamos para a pesquisa de acordo com o protocolo".
 - **19/11/2026, linha 13.** Ele não sabia se vinha antes das buscas. Resposta dada: não; ela grava as decisões dos
   dois revisores, que só existem na triagem (passo D). A ordem de 19/11 fica: linha 13 antes do passo D.
 - **16/11/2026, só o Claude.** O Vicente perguntou se outro assistente (Gemini) poderia tocar parte do trabalho e

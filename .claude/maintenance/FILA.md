@@ -432,3 +432,7 @@ Vicente pedir.
   depois do projeto feito. Liga-se aos itens de 19/11 (RV-01 sem tool que crie ou confira a emenda) e de 20/11
   (roteiro da busca feita à mão). Origem: "nao deveria ter acontecido isso com protocolo travado. o problema é mais
   embaixo."
+  **Mandado fazer pelo Vicente em 20/11/2026, antes da pesquisa:** "isso nao deveria ter acontecido com o protocolo
+  travado. isso é mais importante que a pesquisa neste momento. depois de resolver voltamos para a pesquisa de acordo
+  com o protocolo". A ordem cobre três itens do "Visto de passagem": este, o de 20/11 sobre o roteiro da busca feita à mão e o de
+  19/11 sobre a RV-01. O prompt da sessão está no `RETOMAR.md` do projeto, em "Prompts prontos".

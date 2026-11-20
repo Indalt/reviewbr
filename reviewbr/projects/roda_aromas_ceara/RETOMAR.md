@@ -85,6 +85,12 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
 
   Os nomes das edições do Web of Science não são pedidos, nem pelo protocolo nem pelo PRISMA-S (S1 e S2 lidos no
   texto oficial). **A segunda parte do passo C só roda depois da decisão sobre a emenda 1.**
+- **PROJETO PARADO (Vicente, 20/11/2026) até a manutenção resolver por que a execução se afastou do protocolo
+  travado sem o sistema parar.** Frase dele: "isso é mais importante que a pesquisa neste momento. depois de resolver
+  voltamos para a pesquisa de acordo com o protocolo". A próxima sessão é de manutenção, em chat novo, depois do
+  reset da janela de 5 h (prompt em "Prompts prontos"). A emenda 1 e o desvio 1 do `change_log.md` esperam essa
+  sessão: o conserto pode mudar o modo de registrar e aprovar a emenda. Depois, a pesquisa volta pelo protocolo:
+  primeiro a decisão sobre a emenda 1 e o desvio 1, depois a segunda parte do passo C.
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.
@@ -105,6 +111,27 @@ depende da linha 12 da FILA e do item de UECE, Alice e Infoteca-e. A parte do Vi
 FSTA) já foi feita em 19/11/2026.
 
 ## Prompts prontos
+
+**Manutenção — protocolo travado (pedido do Vicente de 20/11/2026), em chat novo, depois do reset da janela de 5 h.**
+A primeira linha é para o seletor; apague-a antes de enviar.
+
+> Fable 5.2 · high
+>
+> Modelo e esforço desta sessão: Fable 5.2, high. Rotina de manutenção. Depois, faça o pedido do Vicente de
+> 20/11/2026, que vem antes da pesquisa: "isso nao deveria ter acontecido com o protocolo travado. isso é mais
+> importante que a pesquisa neste momento". O pedido junta três itens do "Visto de passagem": o de 19/11 sobre a
+> RV-01 (nenhuma tool cria ou confere a emenda) e os dois de 20/11 (a execução da F2 do `roda_aromas_ceara` se
+> afastou do protocolo travado; o roteiro da busca feita à mão). Faça deles a linha 17 da FILA e tire os três do
+> "Visto de passagem". O caso real está em `reviewbr/projects/roda_aromas_ceara/change_log.md`.
+>
+> Primeiro diagnostique, sem consertar:
+> (1) Por que a trilha deixou a execução se afastar do protocolo travado sem parar. Diga o que cada tool, skill e
+> agente da F2 lê do protocolo, e o que a manutenção pode mudar que um protocolo travado usa, como o caminho de busca
+> no catálogo.
+> (2) O conserto mínimo, dito como FAZER ou DECLARAR, para que a busca, à mão ou por tool, siga só o que o protocolo
+> travado pede, e para que o que mudar passe por emenda aprovada pelo pesquisador.
+>
+> Mostre-me antes de consertar. Nenhum subagente nem workflow.
 
 Passo A, no chat de manutenção:
 
