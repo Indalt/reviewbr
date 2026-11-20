@@ -2100,8 +2100,8 @@ const scieloHandler = async (params: any) => {
     }
 
     const summary = [
-        `## Resultados SciELO: "${params.query}"`,
-        `**Total encontrado na base:** ${totalFound}`,
+        `## Resultados "SciELO (via OpenAlex)": "${params.query}"`,
+        `**Total no OpenAlex com o filtro de editora SciELO (P4310312277):** ${totalFound}. Não é o total da base SciELO: a busca foi feita no OpenAlex, e as revistas do SciELO com editora própria no OpenAlex ficam de fora.`,
         `**Retornados nesta página:** ${results.length}`,
         "",
         ...results.slice(0, 10).map((r: any, i: number) => [
@@ -2365,7 +2365,7 @@ server.tool(
 
 server.tool(
     "search_scielo",
-    "Busca artigos no SciELO (Scientific Electronic Library Online). Foco exclusivo na América Latina (Open Science).",
+    "NÃO consulta o SciELO: busca no OpenAlex os trabalhos cuja editora, na linhagem do OpenAlex, é o SciELO (publisher_lineage P4310312277). As revistas do SciELO costumam ter editora própria no OpenAlex, então a maior parte delas fica de fora, e o total devolvido é do OpenAlex com esse filtro, nunca o total da base SciELO. A busca do site do SciELO (search.scielo.org) proíbe robôs no robots.txt e não é usada.",
     {
         query: z.string().describe("Termo de busca para o SciELO (ex: 'dengue OR zika')"),
         maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),

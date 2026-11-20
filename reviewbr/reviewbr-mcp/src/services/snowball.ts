@@ -26,6 +26,21 @@ export interface SnowballExpandOptions {
     maxCandidates?: number;
 }
 
+/**
+ * O OpenAlex entrega o resumo como índice invertido (palavra → posições no texto). Remonta o
+ * texto na ordem das posições. Sem índice, devolve "" (o OpenAlex não tem o resumo do registro).
+ */
+export function resumoDoIndiceInvertido(indice: Record<string, number[]> | null | undefined): string {
+    if (!indice || typeof indice !== "object") return "";
+    const palavras: string[] = [];
+    for (const [palavra, posicoes] of Object.entries(indice)) {
+        for (const p of Array.isArray(posicoes) ? posicoes : []) {
+            if (Number.isInteger(p) && p >= 0) palavras[p] = palavra;
+        }
+    }
+    return palavras.filter((w) => w !== undefined).join(" ");
+}
+
 export class SnowballService {
     private mailto: string = "vicente@prismaid.com";
 
@@ -155,8 +170,12 @@ export class SnowballService {
             identifier: r.id,
             title: r.display_name,
             creators: r.authorships?.map((a: any) => a.author.display_name) || [],
+            // Linha 12 da FILA: sem resumo, o registro ia inteiro para a leitura humana (protocolo do
+            // roda_aromas_ceara), e o endereço saía "undefined".
+            description: resumoDoIndiceInvertido(r.abstract_inverted_index),
             date: r.publication_date,
             doi: r.doi,
+            url: r.primary_location?.landing_page_url || r.doi || r.id || "",
             type: r.type,
             accessMethod: "api",
             audit: {
@@ -222,8 +241,12 @@ export class SnowballService {
             identifier: r.id,
             title: r.display_name,
             creators: r.authorships?.map((a: any) => a.author.display_name) || [],
+            // Linha 12 da FILA: sem resumo, o registro ia inteiro para a leitura humana (protocolo do
+            // roda_aromas_ceara), e o endereço saía "undefined".
+            description: resumoDoIndiceInvertido(r.abstract_inverted_index),
             date: r.publication_date,
             doi: r.doi,
+            url: r.primary_location?.landing_page_url || r.doi || r.id || "",
             type: r.type,
             accessMethod: "api",
             audit: {

@@ -1,13 +1,14 @@
 /**
- * HTTP client utility with retry, timeout, and polite user-agent.
- * Shared across all access layers.
+ * HTTP client utility with retry and timeout. Shared across all access layers.
+ *
+ * O ReviewBR se identifica: User-Agent com o nome e o endereço do projeto, como já faziam o
+ * CORE, o Europe PMC e o Semantic Scholar. Até 19/11/2026 este cliente sorteava um User-Agent
+ * de navegador, o que faz um robô passar por pessoa e anula o robots.txt e os bloqueios que o
+ * repositório aplica a robôs. Conferência jurídica e ética de 19/11/2026:
+ * `.claude/maintenance/CONFERENCIA_acesso_2026-11-19.md`.
  */
 
-const USER_AGENTS = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-];
+export const REVIEWBR_USER_AGENT = "ReviewBR-MCP/1.0 (+https://github.com/Indalt/reviewbr)";
 
 export interface HttpOptions {
     timeout?: number;
@@ -22,10 +23,6 @@ const DEFAULT_OPTIONS: Required<HttpOptions> = {
     headers: {},
     acceptSelfSigned: true,
 };
-
-function getRandomUserAgent(): string {
-    return USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)]!;
-}
 
 async function sleep(ms: number): Promise<void> {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -57,7 +54,7 @@ export async function fetchWithRetry(
             const response = await fetch(url, {
                 method: options?.method ?? "GET",
                 headers: {
-                    "User-Agent": getRandomUserAgent(),
+                    "User-Agent": REVIEWBR_USER_AGENT,
                     Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
                     "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
                     ...opts.headers,

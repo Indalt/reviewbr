@@ -78,7 +78,27 @@ function recordKey(r: any): string {
     return "title:" + String(r?.title || "").toLowerCase().replace(/\s+/g, " ").trim();
 }
 
-/** Faz merge de novos registros no arquivo canônico (dedup leve por chave). Retorna contagens. */
+/**
+ * A fonte de onde o registro veio: a tool de busca (`repositoryId`) ou a base declarada na
+ * importação (`audit.provenanceSource`, ex.: "Scopus").
+ */
+function origemDoRegistro(r: any): string {
+    return String(r?.repositoryId || r?.audit?.provenanceSource || r?.repositoryName || "").trim().toLowerCase();
+}
+
+/**
+ * Chave de identidade DENTRO de uma fonte. O mesmo DOI vindo de duas bases são dois registros
+ * identificados: a remoção de duplicatas entre bases é da F3 (`deduplicate_dataset`), com
+ * relatório. Descartar aqui o registro de uma base porque outra já o trouxe apagava a contagem
+ * por base do PRISMA-S e a duplicata do relatório da F3 (falha F9 do `roda_aromas_ceara`,
+ * 19/11/2026: o Web of Science entraria com 0 de 17). O descarte dentro da mesma fonte segue,
+ * para que repetir a mesma importação ou a mesma busca não conte o registro duas vezes.
+ */
+function chaveNaFonte(r: any): string {
+    return origemDoRegistro(r) + "|" + recordKey(r);
+}
+
+/** Faz merge de novos registros no arquivo canônico, sem repetir o registro da mesma fonte. Retorna contagens. */
 export function appendRawRecords(
     projectPath: string,
     records: SearchResult[],
@@ -87,17 +107,17 @@ export function appendRawRecords(
     const dir = resolveDir(projectPath);
     const rel = kind === "other" ? "01_raw/other_records.json" : "01_raw/database_records.json";
     const existing = readArray(path.join(dir, rel));
-    const seen = new Set(existing.map(recordKey));
+    const seen = new Set(existing.map(chaveNaFonte));
     let added = 0;
     for (const r of records) {
-        const k = recordKey(r);
+        const k = chaveNaFonte(r);
         if (!seen.has(k)) { seen.add(k); existing.push(r); added++; }
     }
     const file = writeJson(dir, rel, existing);
     return { total: existing.length, added, file };
 }
 
-/** Lê e consolida TODOS os brutos de 01_raw/*.json (per-fonte + database_records) num único conjunto. */
+/** Lê e consolida TODOS os brutos de 01_raw/*.json (per-fonte + database_records) num único conjunto, sem deduplicar entre fontes. */
 export function consolidateRaw(projectPath: string): { database: any[]; other: any[] } {
     const dir = resolveDir(projectPath);
     const rawDir = path.join(dir, "01_raw");
@@ -110,7 +130,10 @@ export function consolidateRaw(projectPath: string): { database: any[]; other: a
             if (!f.endsWith(".json")) continue;
             const isOther = /snowball|other/i.test(f);
             for (const r of readArray(path.join(rawDir, f))) {
-                const k = recordKey(r);
+                // Por fonte: database_records.json já contém os registros dos arquivos por
+                // fonte depois da primeira consolidação; a chave por fonte evita contá-los duas
+                // vezes sem apagar a duplicata ENTRE bases, que é da F3.
+                const k = chaveNaFonte(r);
                 if (isOther) { if (!seenOther.has(k)) { seenOther.add(k); other.push(r); } }
                 else { if (!seenDb.has(k)) { seenDb.add(k); database.push(r); } }
             }

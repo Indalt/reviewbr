@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { REVIEWBR_USER_AGENT } from '../utils/http.js';
 
 export class RepositoryHealerService {
     // Resolvido relativo ao próprio módulo (não process.cwd(), que varia conforme
@@ -42,7 +43,7 @@ export class RepositoryHealerService {
                 // Fetch the HTML of the homepage
                 const response = await fetch(baseUrl, {
                     signal: controller.signal,
-                    headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36' }
+                    headers: { 'User-Agent': REVIEWBR_USER_AGENT } // identifica-se (conferência de 19/11/2026)
                 });
                 clearTimeout(timeoutId);
 

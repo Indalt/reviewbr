@@ -66,9 +66,9 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 19/11/2026, sessão da linha 11 — repositório limpo; build e suíte 552 de 552 (568 depois da
-linha 11); backlog válido, 0 abertos; fila: linha 10 em curso, linha 11 feita, 12 e 13 a fazer; 37 itens no "Visto de
-passagem".
+**Última verificação:** 19/11/2026, sessão das linhas 12, 14 e 15 — repositório limpo; build e suíte 568 de 568 (577
+depois); backlog válido, 0 abertos; fila: linha 10 em curso, 12 feita em parte (item 2 parado), 13 a fazer, 14 e 15
+feitas; 41 itens no "Visto de passagem".
 
 ## Fila
 
@@ -86,8 +86,10 @@ passagem".
 | 9 | M — Descrição do método, com o Vicente | — | — | **feita em 12/11/2026** (`.claude/METODO_ReviewBR.md`; commits `898d79b`, `2a36336`, `216d13d`, `17af311`) |
 | 10 | Fase de testes | — | — | **em curso:** o teste é a pesquisa real `roda_aromas_ceara` (Vicente, 19/11/2026); as linhas 11 a 13 saíram dele |
 | 11 | I — Busca nos repositórios do `roda_aromas_ceara` | ver abaixo | ver abaixo | **feita em 19/11/2026** (commit `4936c59`): UFPI e IFCE buscam pela API REST; UECE, Alice e Infoteca-e marcadas como não pesquisáveis (HTTP 403), e a tool diz isso; Infoteca-e segue `inactive`; `matchesQuery` corrigido, sem chamador desde o item 1 |
-| 12 | J — OpenAlex e SciELO: resumo, endereço e a fonte do SciELO | ver abaixo | ver abaixo | a fazer; antes da busca do projeto (passo C) |
+| 12 | J — OpenAlex e SciELO: resumo, endereço e a fonte do SciELO | ver abaixo | ver abaixo | **feita em parte em 19/11/2026**: item 1 e DECLARAR feitos; **item 2 parado** — a busca do site do SciELO proíbe robôs no `robots.txt` (linha 14); a alternativa espera o Vicente |
 | 13 | K — Decisões dos dois revisores humanos | ver abaixo | — | a fazer; antes da triagem do projeto (passo D) |
+| 14 | L — Acesso por robô: conferência jurídica e ética (UECE, Alice, Infoteca-e) | User-Agent identificado | `CONFERENCIA_acesso_2026-11-19.md` | **conferência feita em 19/11/2026**; as estratégias para as três fontes esperam o Vicente |
+| 15 | F9 — importação de várias bases em `01_raw` | ver abaixo | — | **feita em 19/11/2026** |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
 da outra; a ordem é a do dano a uma pesquisa em andamento.
@@ -171,6 +173,12 @@ isso em vez de dar zero. Não fazer: a busca em "todos os ativos" (F4).
 DECLARAR: a saída diz de onde vem cada contagem; um número do OpenAlex não aparece como "total da base" do SciELO.
 Não fazer: o `ScieloAdapter` (ArticleMeta) do `search_repository` e a F2.
 
+**Linha 12, resultado (19/11/2026).** Item 1: o `search` e as citações do snowball gravam o resumo e o endereço
+(página da fonte, senão DOI). DECLARAR: a descrição e a saída do `search_scielo` dizem que a busca é no OpenAlex com
+o filtro de editora e que o total não é o da base SciELO. Item 2 parado: o `robots.txt` de `search.scielo.org`
+proíbe robôs, e a conferência da linha 14 não permite contornar. Em 19/11 o filtro de editora não devolve nenhum dos
+dois controles, e o OpenAlex sem filtro devolve os dois.
+
 **Linha 13 — K, decisões dos dois revisores humanos.** O protocolo travado do projeto (F4.1.2, F4.1.3) exige gravar
 no próprio projeto, com o nome de quem decidiu:
 - a decisão de cada revisor, em separado, na triagem por título e resumo e no texto completo;
@@ -188,6 +196,20 @@ o `screen_candidates` é triagem por IA. A linha faz:
    (`screening_audit.ts:161`), que existe e nada chama. O protocolo não a exige.
 
 Não fazer: triagem por IA nem cegamento entre revisores (o sistema não separa usuários, o que já está declarado).
+
+**Linha 14 — L, acesso por robô** (ordem do Vicente, 19/11/2026: "ciencia aberta deve ser ciencia aberta e
+estrategias para a minha compreensao nao sao burlar etica. ver isso em juridico antes de fazer algo. mas havia tb um
+healer. veja isso."). A conferência, com as fontes, está em `CONFERENCIA_acesso_2026-11-19.md`. Decide: o ReviewBR se
+identifica e não busca por robô onde o `robots.txt` proíbe ou o servidor recusa. Feito: User-Agent identificado no
+`src/utils/http.ts` e no `heal_repositories`. Não feito: nenhuma estratégia para UECE, Alice e Infoteca-e; as
+legítimas, e o que a regra atinge na UFC e no SciELO, estão no fim da conferência, para o Vicente decidir.
+
+**Linha 15 — F9, importação de várias bases** (ordem do Vicente, 19/11/2026, item 3 do prompt da sessão). Feito:
+`appendRawRecords` e `consolidateRaw` só descartam o registro repetido da mesma fonte; o mesmo DOI de duas bases
+fica nas duas, e a remoção entre bases é da F3, com relatório. O `importRis` retira o BOM e grava a base declarada em
+`repositoryName` e o DOI como endereço quando falta `UR`, onde o gate da RV-08 os procura (sem isso, a exportação
+bloquearia todo registro importado). O passo C, primeira parte, do projeto pode rodar de novo, com o mesmo prompt,
+em chat aberto depois deste build.
 
 ### Como uma linha entra na fila
 
@@ -355,29 +377,10 @@ Vicente pedir.
     `prisma-rigor-gates` lista `change_log.md` como suplemento, mas nenhuma tool cria ou confere a emenda. O
     projeto pode precisar de uma: UECE, Alice e Infoteca-e estão no protocolo e a linha 11 as marcou como não
     pesquisáveis.
-- (projeto `roda_aromas_ceara`, 19/11/2026, **ordem do Vicente** para a manutenção depois do reset da janela de 5 h)
-  UECE, Alice e Infoteca-e, que a linha 11 marcou como não pesquisáveis: "se tres fontes = sobre linha 11 - tentar
-  estrategias"; "ciencia aberta deve ser ciencia aberta e estrategias para a minha compreensao nao sao burlar
-  etica. ver isso em juridico antes de fazer algo. mas havia tb um healer. veja isso." Ordem: primeiro a
-  conferência jurídica e ética, com fonte; depois as estratégias. Lido no código em 19/11, sem avaliação:
-  - `src/utils/http.ts`, o cliente HTTP da camada de acesso aos repositórios (DSpace REST, página de busca, OAI-PMH,
-    adaptadores), do `pdf_extractor` e do `pubmed`: envia um User-Agent de navegador sorteado entre três (Chrome em
-    Windows, Linux e Mac), e não o nome do ReviewBR. O comentário do arquivo diz "polite user-agent". O CORE, o
-    Europe PMC e o Semantic Scholar se identificam como `ReviewBR-MCP/1.0`;
-  - o mesmo arquivo, com `acceptSelfSigned: true` por padrão, põe `NODE_TLS_REJECT_UNAUTHORIZED = "0"` no processo
-    inteiro durante o pedido: a verificação do certificado fica desligada também para pedidos simultâneos;
-  - `heal_repositories` (`services/repository_healer.ts`): examina só os repositórios marcados como inativos, lê a
-    página inicial da instituição com User-Agent de navegador para achar o endereço OAI-PMH e reescreve o catálogo.
-    Muda o sistema, então é ferramenta da manutenção, não do projeto;
-  - o motivo gravado no catálogo pela linha 11: Alice e Infoteca-e dão HTTP 403 na busca do site e o `robots.txt`
-    proíbe `/simple-search`; a UECE é formulário com estado de sessão, sem busca por endereço.
-- (projeto `roda_aromas_ceara`, 19/11/2026, passo C, primeira parte — **importação parada antes de rodar**) O
-  `import_dataset_ris` com `projectPath` grava em `01_raw/database_records.json` pelo `appendRawRecords`
-  (`project_artifacts.ts:82`), que descarta o registro cuja chave (DOI, senão identificador, URL ou título) já está
-  no arquivo. Importar várias bases é, então, deduplicar entre elas na importação, sem relatório, antes da F3. Nos
-  três RIS do projeto (Scopus 23, Web of Science 17, FSTA 14 = 54), os 17 DOIs do Web of Science estão todos no
-  Scopus e 8 da FSTA também: pela leitura do código, o arquivo ficaria com cerca de 29 registros, o Web of Science
-  com 0 acrescentados, e o log PRISMA-S diria 17. O protocolo travado (F1.3.2.5) põe a remoção de duplicatas na F3,
-  com relatório. O `consolidateRaw` (`project_artifacts.ts:101`) faz a mesma dedup leve entre os arquivos de
-  `01_raw`. Visto também: o RIS do Web of Science começa com BOM, e a primeira linha não é lida como `TY` (o
-  registro entra pelo `ER`, sem `accessMethod`). Nenhuma importação foi feita.
+- (projeto `roda_aromas_ceara`, 19/11/2026) `src/utils/http.ts`, com `acceptSelfSigned: true` por padrão, põe
+  `NODE_TLS_REJECT_UNAUTHORIZED = "0"` no processo inteiro durante o pedido: a verificação do certificado fica
+  desligada também para pedidos simultâneos.
+- (linha 14, 19/11/2026) O `heal_repositories` muda o catálogo do sistema e está entre as tools do `librarian`, agente
+  do projeto.
+- (linha 15, 19/11/2026) O `importRis` grava `provenanceSource: "Local File Import"` quando não há base declarada nem
+  tag `DB` (já anotado na linha 2); o `repositoryName` continua vazio nesse caso, e o gate reprova.

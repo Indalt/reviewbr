@@ -160,7 +160,9 @@ export class DataService {
 
         const entries: SearchResult[] = [];
         let current: Partial<SearchResult> = {};
-        const lines = risContent.split('\n');
+        // O export do Web of Science começa com BOM: sem retirá-lo, a primeira linha não é lida
+        // como `TY` e o primeiro registro entra sem `accessMethod` (falha F9, 19/11/2026).
+        const lines = risContent.replace(/^﻿/, "").split(/\r?\n/);
 
         for (const line of lines) {
             const tag = line.substring(0, 2);
@@ -332,6 +334,15 @@ export class DataService {
             extractionDate: new Date().toISOString(),
             provenanceSource: sourceName || "Local File Import"
         };
+
+        // O gate da RV-08 (checkProvenance) procura a origem em repositoryName/repositoryId e o
+        // endereço em url. Com a base declarada só em audit.provenanceSource, todo registro
+        // importado era bloqueado na exportação (visto na falha F9, 19/11/2026). Sem base
+        // declarada, continua vazio, para o gate reprovar.
+        if (sourceName && !String(entry.repositoryName ?? "").trim()) entry.repositoryName = sourceName;
+        if (!String(entry.url ?? "").trim() && entry.doi) {
+            entry.url = "https://doi.org/" + String(entry.doi).trim().replace(/^https?:\/\/(dx\.)?doi\.org\//i, "");
+        }
 
         return entry as SearchResult;
     }
