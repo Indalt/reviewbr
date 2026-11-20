@@ -47,3 +47,29 @@ anotado (`01_raw/manual/ANOTACOES_busca_manual.md`). Falta a decisão do Vicente
 - (b) declarar no relato que o período não foi anotado.
 
 **Decisão:** —
+
+## emenda-1 — PROPOSTA em 2026-11-20 (registrada pela tool `record_protocol_amendment`)
+**O quê.** Entra no protocolo travado o plano de busca (plano_busca.json), escrito a partir das tabelas "Fontes de Busca" e "Estratégia de Busca (Sintaxe)" do protocol.md v1.0: as 11 fontes, a tool e o id do catálogo de cada uma, os textos exatos, nenhum filtro e o que o protocolo manda registrar em cada busca. Aprovado, o plano é congelado com a rota de hoje de cada fonte; cinco delas (SciELO, Embrapa — Alice, Embrapa — Infoteca-e, UFC e UECE) têm hoje rota diferente da que o protocolo descreve. A UFPI, sem id no protocolo, entra com BR-FED-0014 (Repositório Institucional da UFPI). Não entra nem sai fonte; não mudam strings, critérios nem controles positivos.
+
+**Antes.** Protocolo travado em 15/11/2026 sem plano de busca congelado. Na tabela "Fontes de Busca", SciELO por search_scielo na base SciELO; Alice (BR-RES-0001), Infoteca-e (BR-RES-0004), UFC (BR-FED-0004) e UECE (BR-EST-0006) por search_repository na busca do próprio site; UFPI por search_repository, sem id.
+
+**Depois.** Plano de busca congelado (11 fontes). SciELO: search_scielo, que busca no OpenAlex com o filtro doi_starts_with:10.1590 (SciELO Brasil); o total relatado é o do OpenAlex com esse filtro. Alice, Infoteca-e, UFC e UECE: search_repository, que as alcança pela Oasisbr (IBICT), API do VuFind, filtrada pela rede de cada uma (EMBR, EMBRAPA-9, UFC-7, UECE-0); o total relatado é o da Oasisbr. UFPI: BR-FED-0014, DSpace REST. Registrar em todas: período de cobertura e controle positivo; nas feitas à mão (Scopus, Web of Science, FSTA), também plataforma, data, filtros e total. Consequências no texto do protocolo: a prova de que "os humanos não refazem as buscas" passa a ser repetir a busca onde foi vista (Oasisbr com o filtro da rede, ou OpenAlex com o prefixo 10.1590); limite novo declarado (o que a fonte tem e a plataforma não agrega não é encontrado; no SciELO, também o registro sem DOI ou com outro prefixo); a pendência 2 (conserto de F7 e F8) se resolve por esta troca de caminho, não por conserto na fonte.
+**Por quê.** O projeto foi travado antes de 20/11/2026, quando a trava passou a congelar o plano de busca; sem plano, nenhuma busca roda (linha 17 da FILA). As cinco rotas mudaram em 19/11/2026 sem emenda: o robots.txt da busca do SciELO proíbe robôs; Alice, Infoteca-e e UECE recusam acesso automatizado (HTTP 403) e o robots.txt delas proíbe a busca; o robots.txt da UFC proíbe a página de busca (.claude/maintenance/CONFERENCIA_acesso_2026-11-19.md). Regra aplicada: decisão do Vicente de 19/11/2026 (FILA, linha 14), fonte que o ReviewBR não alcança diretamente é alcançada pela plataforma de ciência aberta que a agrega, declarando onde se viu; origem: "sem busca a mao para o que deve ser automatizado. (…) bastando declarar o que foi visto e onde se conseguiu". Substitui a emenda 1 escrita à mão no change_log.md em 20/11/2026.
+
+**Plano de busca da emenda** (é o que a busca vai seguir, se aprovada):
+- Scopus (scopus): à mão, import_dataset_ris; textos `TITLE-ABS-KEY ( cajuína OR cajuina )`
+- Web of Science (wos): à mão, import_dataset_ris; textos `TS=(cajuína OR cajuina)`
+- FSTA (fsta): à mão, import_dataset_ris; textos `TI ( cajuína OR cajuina ) OR AB ( cajuína OR cajuina ) OR SU ( cajuína OR cajuina )` · `TS=(cajuína OR cajuina)`
+- SciELO (scielo): por tool, search_scielo; textos `cajuína OR cajuina`
+- BDTD (IBICT) (bdtd): por tool, search_repository BR-AGG-0001; textos `cajuína` · `cajuina`
+- Embrapa — Alice (alice): por tool, search_repository BR-RES-0001; textos `cajuína` · `cajuina`
+- Embrapa — Infoteca-e (infoteca): por tool, search_repository BR-RES-0004; textos `cajuína` · `cajuina`
+- Repositório da UFC (ufc): por tool, search_repository BR-FED-0004; textos `cajuína` · `cajuina`
+- Repositório da UECE (uece): por tool, search_repository BR-EST-0006; textos `cajuína` · `cajuina`
+- Repositório da UFPI (ufpi): por tool, search_repository BR-FED-0014; textos `cajuína` · `cajuina`
+- OpenAlex (openalex): por tool, search_openalex; textos `cajuína OR cajuina`
+**Aprovação:** — (só com a decisão do pesquisador, nas palavras dele)
+
+### emenda-1 — APROVADA em 2026-11-20
+
+Decisão do pesquisador: ""sobre emenda1 ok e espero que nao seja necessarias novas, apenas se impossivel continuar sem emendas" (Vicente, 20/11/2026, depois de ver o plano de busca com a rota de hoje de cada fonte e a explicação do que a emenda 1 muda)". Versão do protocolo: 1.0 → 1.1. O plano de busca da emenda foi congelado, com as rotas de hoje.

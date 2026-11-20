@@ -9,7 +9,7 @@
   "control_level": "estrito",
   "phase": "F2",
   "createdAt": "2026-11-12T20:02:37.930Z",
-  "updatedAt": "2026-11-15T16:46:06.003Z",
+  "updatedAt": "2026-11-20T19:53:11.943Z",
   "decisions": [
     {
       "phase": "F1",
@@ -39,5 +39,386 @@
       "contribuicao": "\"só a cajuina\"; \"entram os estudos sobre compostos volateis para identificar o estado da arte em relacao a estudos sensoriais da cajuina\"; \"suco clarificado sem cozimento e sem o uso do termo cajuina saem por criterio de busca\"; \"fontes por relevancia ganha, pode retirar a baixas\"; \"o titulo parece bom e as 3 questoes secundarias ficam como estao\"; \"como aplicou o ponto 1 tudo bem, mas vale deixar como comentario a ciencia das bebidas clirificadas\"; \"se o desenho agiliza nao precisa de ferramenta alem do reviewbr\"; \"basta descrever o criterio do que fica para os revisores humanos e seguir\"; \"aprovo os ponto menores\"; \"li e aprovo o protocolo\" (Vicente, 15/11/2026)",
       "ts": "2026-11-15T16:46:02.424Z"
     }
-  ]
+  ],
+  "emendas": [
+    {
+      "id": "emenda-1",
+      "status": "APROVADA",
+      "o_que": "Entra no protocolo travado o plano de busca (plano_busca.json), escrito a partir das tabelas \"Fontes de Busca\" e \"Estratégia de Busca (Sintaxe)\" do protocol.md v1.0: as 11 fontes, a tool e o id do catálogo de cada uma, os textos exatos, nenhum filtro e o que o protocolo manda registrar em cada busca. Aprovado, o plano é congelado com a rota de hoje de cada fonte; cinco delas (SciELO, Embrapa — Alice, Embrapa — Infoteca-e, UFC e UECE) têm hoje rota diferente da que o protocolo descreve. A UFPI, sem id no protocolo, entra com BR-FED-0014 (Repositório Institucional da UFPI). Não entra nem sai fonte; não mudam strings, critérios nem controles positivos.",
+      "antes": "Protocolo travado em 15/11/2026 sem plano de busca congelado. Na tabela \"Fontes de Busca\", SciELO por search_scielo na base SciELO; Alice (BR-RES-0001), Infoteca-e (BR-RES-0004), UFC (BR-FED-0004) e UECE (BR-EST-0006) por search_repository na busca do próprio site; UFPI por search_repository, sem id.",
+      "depois": "Plano de busca congelado (11 fontes). SciELO: search_scielo, que busca no OpenAlex com o filtro doi_starts_with:10.1590 (SciELO Brasil); o total relatado é o do OpenAlex com esse filtro. Alice, Infoteca-e, UFC e UECE: search_repository, que as alcança pela Oasisbr (IBICT), API do VuFind, filtrada pela rede de cada uma (EMBR, EMBRAPA-9, UFC-7, UECE-0); o total relatado é o da Oasisbr. UFPI: BR-FED-0014, DSpace REST. Registrar em todas: período de cobertura e controle positivo; nas feitas à mão (Scopus, Web of Science, FSTA), também plataforma, data, filtros e total. Consequências no texto do protocolo: a prova de que \"os humanos não refazem as buscas\" passa a ser repetir a busca onde foi vista (Oasisbr com o filtro da rede, ou OpenAlex com o prefixo 10.1590); limite novo declarado (o que a fonte tem e a plataforma não agrega não é encontrado; no SciELO, também o registro sem DOI ou com outro prefixo); a pendência 2 (conserto de F7 e F8) se resolve por esta troca de caminho, não por conserto na fonte.",
+      "porque": "O projeto foi travado antes de 20/11/2026, quando a trava passou a congelar o plano de busca; sem plano, nenhuma busca roda (linha 17 da FILA). As cinco rotas mudaram em 19/11/2026 sem emenda: o robots.txt da busca do SciELO proíbe robôs; Alice, Infoteca-e e UECE recusam acesso automatizado (HTTP 403) e o robots.txt delas proíbe a busca; o robots.txt da UFC proíbe a página de busca (.claude/maintenance/CONFERENCIA_acesso_2026-11-19.md). Regra aplicada: decisão do Vicente de 19/11/2026 (FILA, linha 14), fonte que o ReviewBR não alcança diretamente é alcançada pela plataforma de ciência aberta que a agrega, declarando onde se viu; origem: \"sem busca a mao para o que deve ser automatizado. (…) bastando declarar o que foi visto e onde se conseguiu\". Substitui a emenda 1 escrita à mão no change_log.md em 20/11/2026.",
+      "plano": {
+        "versao_protocolo": "1.0",
+        "fontes": [
+          {
+            "id": "scopus",
+            "nome": "Scopus",
+            "modo": "manual",
+            "tool": "import_dataset_ris",
+            "textos": [
+              "TITLE-ABS-KEY ( cajuína OR cajuina )"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "plataforma",
+              "data",
+              "filtros",
+              "total",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "wos",
+            "nome": "Web of Science",
+            "modo": "manual",
+            "tool": "import_dataset_ris",
+            "textos": [
+              "TS=(cajuína OR cajuina)"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "plataforma",
+              "data",
+              "filtros",
+              "total",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "fsta",
+            "nome": "FSTA",
+            "modo": "manual",
+            "tool": "import_dataset_ris",
+            "textos": [
+              "TI ( cajuína OR cajuina ) OR AB ( cajuína OR cajuina ) OR SU ( cajuína OR cajuina )",
+              "TS=(cajuína OR cajuina)"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "plataforma",
+              "data",
+              "filtros",
+              "total",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "scielo",
+            "nome": "SciELO",
+            "modo": "tool",
+            "tool": "search_scielo",
+            "textos": [
+              "cajuína OR cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "bdtd",
+            "nome": "BDTD (IBICT)",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-AGG-0001",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "alice",
+            "nome": "Embrapa — Alice",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-RES-0001",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "infoteca",
+            "nome": "Embrapa — Infoteca-e",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-RES-0004",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "ufc",
+            "nome": "Repositório da UFC",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-FED-0004",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "uece",
+            "nome": "Repositório da UECE",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-EST-0006",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "ufpi",
+            "nome": "Repositório da UFPI",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-FED-0014",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "openalex",
+            "nome": "OpenAlex",
+            "modo": "tool",
+            "tool": "search_openalex",
+            "textos": [
+              "cajuína OR cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          }
+        ]
+      },
+      "proposta_em": "2026-11-20T19:11:01.940Z",
+      "decisao": {
+        "por": "pesquisador",
+        "contribuicao": "\"sobre emenda1 ok e espero que nao seja necessarias novas, apenas se impossivel continuar sem emendas\" (Vicente, 20/11/2026, depois de ver o plano de busca com a rota de hoje de cada fonte e a explicação do que a emenda 1 muda)",
+        "em": "2026-11-20T19:53:11.732Z",
+        "versao_protocolo": "1.1"
+      }
+    }
+  ],
+  "trava_busca": {
+    "versao_protocolo": "1.1",
+    "etapa": "F2",
+    "protocolo_sha256": "39cab278aa3f11195a34ef682d9e943643278f92bc712a798a41e52be43ba4aa",
+    "plano": {
+      "versao_protocolo": "1.0",
+      "fontes": [
+        {
+          "id": "scopus",
+          "nome": "Scopus",
+          "modo": "manual",
+          "tool": "import_dataset_ris",
+          "textos": [
+            "TITLE-ABS-KEY ( cajuína OR cajuina )"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "plataforma",
+            "data",
+            "filtros",
+            "total",
+            "controle positivo"
+          ],
+          "rota": "busca à mão na interface da base; importação do export (import_dataset_ris)"
+        },
+        {
+          "id": "wos",
+          "nome": "Web of Science",
+          "modo": "manual",
+          "tool": "import_dataset_ris",
+          "textos": [
+            "TS=(cajuína OR cajuina)"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "plataforma",
+            "data",
+            "filtros",
+            "total",
+            "controle positivo"
+          ],
+          "rota": "busca à mão na interface da base; importação do export (import_dataset_ris)"
+        },
+        {
+          "id": "fsta",
+          "nome": "FSTA",
+          "modo": "manual",
+          "tool": "import_dataset_ris",
+          "textos": [
+            "TI ( cajuína OR cajuina ) OR AB ( cajuína OR cajuina ) OR SU ( cajuína OR cajuina )",
+            "TS=(cajuína OR cajuina)"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "plataforma",
+            "data",
+            "filtros",
+            "total",
+            "controle positivo"
+          ],
+          "rota": "busca à mão na interface da base; importação do export (import_dataset_ris)"
+        },
+        {
+          "id": "scielo",
+          "nome": "SciELO",
+          "modo": "tool",
+          "tool": "search_scielo",
+          "textos": [
+            "cajuína OR cajuina"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "controle positivo"
+          ],
+          "rota": "OpenAlex, https://api.openalex.org/works?search=, filtro doi_starts_with:10.1590"
+        },
+        {
+          "id": "bdtd",
+          "nome": "BDTD (IBICT)",
+          "modo": "tool",
+          "tool": "search_repository",
+          "repositorio": "BR-AGG-0001",
+          "textos": [
+            "cajuína",
+            "cajuina"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "controle positivo"
+          ],
+          "rota": "BDTD, API do VuFind"
+        },
+        {
+          "id": "alice",
+          "nome": "Embrapa — Alice",
+          "modo": "tool",
+          "tool": "search_repository",
+          "repositorio": "BR-RES-0001",
+          "textos": [
+            "cajuína",
+            "cajuina"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "controle positivo"
+          ],
+          "rota": "Oasisbr (IBICT) (BR-AGG-0001), API do VuFind, filtro network_acronym_str:\"EMBR\""
+        },
+        {
+          "id": "infoteca",
+          "nome": "Embrapa — Infoteca-e",
+          "modo": "tool",
+          "tool": "search_repository",
+          "repositorio": "BR-RES-0004",
+          "textos": [
+            "cajuína",
+            "cajuina"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "controle positivo"
+          ],
+          "rota": "Oasisbr (IBICT) (BR-AGG-0001), API do VuFind, filtro network_acronym_str:\"EMBRAPA-9\""
+        },
+        {
+          "id": "ufc",
+          "nome": "Repositório da UFC",
+          "modo": "tool",
+          "tool": "search_repository",
+          "repositorio": "BR-FED-0004",
+          "textos": [
+            "cajuína",
+            "cajuina"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "controle positivo"
+          ],
+          "rota": "Oasisbr (IBICT) (BR-AGG-0001), API do VuFind, filtro network_acronym_str:\"UFC-7\""
+        },
+        {
+          "id": "uece",
+          "nome": "Repositório da UECE",
+          "modo": "tool",
+          "tool": "search_repository",
+          "repositorio": "BR-EST-0006",
+          "textos": [
+            "cajuína",
+            "cajuina"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "controle positivo"
+          ],
+          "rota": "Oasisbr (IBICT) (BR-AGG-0001), API do VuFind, filtro network_acronym_str:\"UECE-0\""
+        },
+        {
+          "id": "ufpi",
+          "nome": "Repositório da UFPI",
+          "modo": "tool",
+          "tool": "search_repository",
+          "repositorio": "BR-FED-0014",
+          "textos": [
+            "cajuína",
+            "cajuina"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "controle positivo"
+          ],
+          "rota": "DSpace REST (https://repositorio.ufpi.br/srv-ufpi-s01/api)"
+        },
+        {
+          "id": "openalex",
+          "nome": "OpenAlex",
+          "modo": "tool",
+          "tool": "search_openalex",
+          "textos": [
+            "cajuína OR cajuina"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "controle positivo"
+          ],
+          "rota": "OpenAlex, https://api.openalex.org/works?search="
+        }
+      ]
+    },
+    "desde": "2026-11-20T19:53:11.928Z",
+    "execucoes": []
+  }
 }

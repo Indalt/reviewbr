@@ -203,6 +203,17 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
 
   Origem: "isso nao deveria ter acontecido com o protocolo travado. isso é mais importante que a pesquisa neste
   momento. depois de resolver voltamos para a pesquisa de acordo com o protocolo".
+- **20/11/2026, emenda 1 APROVADA (protocolo 1.0 → 1.1).** Entra o plano de busca (`plano_busca.json`, 11 fontes,
+  tirado das tabelas "Fontes de Busca" e de sintaxe do `protocol.md`), congelado no `project_state.json` com a rota de
+  hoje de cada fonte. SciELO pelo OpenAlex (DOI 10.1590); Alice, Infoteca-e, UFC e UECE pela Oasisbr, filtradas pela
+  rede; UFPI = `BR-FED-0014`. Toda busca registra o período de cobertura e o controle positivo; as feitas à mão,
+  também plataforma, data, filtros e total. Gravada por `record_protocol_amendment`. Alcance: toda a F2; o que o
+  plano não traz, a busca recusa. Consequência: emenda nova só se for impossível seguir sem ela. Origem: "sobre
+  emenda1 ok e espero que nao seja necessarias novas, apenas se impossivel continuar sem emendas".
+- **20/11/2026, desvio 1: PENDENTE.** Os anos dos registros recuperados nas três bases da CAPES (todos de 2003 a
+  2026) foram lidos por ele e estão em `logs/anos_dos_registros_CAPES_2026-11-20.md`; não são o período que a base
+  cobre. Frase dele: "ja falei que nao fizemos recorte de data". A opção do desvio 1 ainda não foi escolhida; o
+  desvio não foi gravado pela tool.
 - **19/11/2026, linha 13.** Ele não sabia se vinha antes das buscas. Resposta dada: não; ela grava as decisões dos
   dois revisores, que só existem na triagem (passo D). A ordem de 19/11 fica: linha 13 antes do passo D.
 - **16/11/2026, só o Claude.** O Vicente perguntou se outro assistente (Gemini) poderia tocar parte do trabalho e

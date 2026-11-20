@@ -95,6 +95,11 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   e o que muda é emenda aprovada pelo pesquisador. A pesquisa volta pela emenda 1 e pelo desvio 1 do `change_log.md`,
   agora gravados pela tool nova `record_protocol_amendment`: travado antes do conserto, o projeto não busca até o Vicente
   aprovar a emenda que traz o plano de busca. Em chat novo, para carregar o servidor novo.
+- **Emenda 1 APROVADA em 20/11/2026** (protocolo 1.1): o plano de busca está congelado no `project_state.json`
+  (`get_search_plan` mostra o roteiro de cada fonte). Emenda nova só se for impossível seguir sem ela (Vicente).
+  **Pendente:** a opção do desvio 1 (período de cobertura das bases da CAPES); os anos dos registros estão em
+  `logs/anos_dos_registros_CAPES_2026-11-20.md`. Gravar o desvio 1 com `record_protocol_amendment` (tipo desvio,
+  fontes `scopus`, `wos`, `fsta`) com a decisão dele. Depois, a segunda parte do passo C, pelo `get_search_plan`.
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.
