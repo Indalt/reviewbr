@@ -2,8 +2,7 @@
 
 **Não substitua esta página.** Sessão que precisar gravar onde parou atualiza a seção "Estado" e a tabela de passos.
 
-Atualizado em 15/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou mais barato): o Fable deixa de
-estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
+Atualizado em 19/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou mais barato).
 
 ## Regras para qualquer sessão
 
@@ -45,6 +44,9 @@ estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
   `REGISTRO.md` e decisão dele na F2.
 - **Sessão do projeto:** só o que está travado ("nao fazer diferente do que foi travado. se travado= importar
   arquivos ok"). A próxima importa os três RIS da CAPES e para.
+- **Ordem depois do reset de 19/11:** primeiro a importação dos RIS (passo C, primeira parte, curta), depois o chat de
+  manutenção; nunca os dois ao mesmo tempo. Se a importação falhar, a falha vai ao "Visto de passagem" e entra nessa
+  mesma manutenção (item 3 do prompt dela).
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.
@@ -60,8 +62,9 @@ estar disponível, e o Vicente tem cerca de 10% dos tokens da semana.
 | D | Deduplicação e triagem (F3/F4): camada mecânica por palavras, depois a leitura dos dois revisores humanos | agente `screener` + Vicente + estagiário | lista final de incluídos decidida pelo Vicente | — |
 | E | Extração, leitura e manuscrito (F5 a F8); conferir a lista do PRISMA-ScR; publicar o preprint | agentes `extractor`, `reader`, `analyst` + Vicente | manuscrito aprovado pelo Vicente | a exportação barrar as contas do funil |
 
-O passo C depende da linha 12 da FILA e da decisão do Vicente sobre UECE, Alice e Infoteca-e. A parte dele no
-passo C (Scopus, Web of Science e FSTA) já foi feita em 19/11/2026.
+O passo C tem duas partes. A primeira (importar os RIS da CAPES) não depende de nada. A segunda (fontes abertas)
+depende da linha 12 da FILA e do item de UECE, Alice e Infoteca-e. A parte do Vicente (Scopus, Web of Science e
+FSTA) já foi feita em 19/11/2026.
 
 ## Prompts prontos
 
@@ -76,19 +79,23 @@ Manutenção, depois do reset da janela de 5 h:
 
 > Rotina de manutenção. Depois: (1) o item do "Visto de passagem" de 19/11 sobre UECE, Alice e Infoteca-e, o
 > `heal_repositories` e o User-Agent de navegador, começando pela conferência jurídica e ética, com fonte, antes de
-> qualquer estratégia de acesso; (2) a linha 12 da FILA (J — OpenAlex e SciELO).
+> qualquer estratégia de acesso; (2) a linha 12 da FILA (J — OpenAlex e SciELO); (3) se a importação dos RIS do
+> projeto `roda_aromas_ceara` deixou falha no "Visto de passagem", ela também.
 
-Passo C, primeira parte, em chat novo (pode rodar já depois do reset, não depende da manutenção):
+Passo C, primeira parte, em chat novo — **é o próximo** (não depende da manutenção; não rode enquanto um chat de
+manutenção estiver trabalhando):
 
 > Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Importe com
-> `import_dataset_ris` os três RIS de `01_raw/manual/` (Scopus, Web of Science, FSTA), conferindo os totais com
-> `ANOTACOES_busca_manual.md`, e pare. Não busque, não mude nada do protocolo.
+> `import_dataset_ris` os três RIS de `01_raw/manual/` (Scopus, Web of Science, FSTA), todos os registros, sem
+> excluir nem deduplicar nada, conferindo os totais com `ANOTACOES_busca_manual.md`, e pare. Não precisa de agente.
+> Não busque, não mude nada do protocolo.
 
 Passo C, segunda parte, em chat novo, depois da linha 12 e do item das três fontes:
 
-> Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Faça o passo C:
-> importe os três RIS de `01_raw/manual/` (Scopus, Web of Science, FSTA) e rode a busca da F2 nas fontes abertas,
-> com o controle positivo de cada uma. Use um agente `librarian` com modelo `opus`.
+> Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Faça a segunda
+> parte do passo C: confira que os três RIS da CAPES já foram importados (se não foram, pare) e rode a busca da F2
+> nas fontes abertas, com as strings do protocolo e o controle positivo de cada fonte. Fonte que a manutenção
+> deixou fora: não busque, anote. Use um agente `librarian` com modelo `opus`.
 
 Passo B, em chat novo:
 
