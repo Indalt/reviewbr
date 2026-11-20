@@ -158,6 +158,12 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
 - **19/11/2026, sessão do projeto: só o que está travado.** Frase dele: "nao fazer diferente do que foi travado. se
   travado= importar arquivos ok". A próxima sessão do projeto importa os três RIS da CAPES; não muda fonte, string
   nem critério.
+- **20/11/2026, passo C, reimportação dos RIS.** Opções: (a) importar só a FSTA e deixar cortado, anotado, o resumo
+  de Porto-Luz et al. 2020 no Web of Science (falha F10); (b) apagar o `01_raw/database_records.json` de 20/11 (só os
+  40 registros da Scopus e do WoS) e importar as três bases de novo com a tool consertada. Escolhida: **(b)**
+  ("pode apagar e importar tudo novamente"). Alcance: só `01_raw/database_records.json`; os RIS em `01_raw/manual/`
+  ficam. Consequência: o registro da busca (`logs/search_log_prisma_s.csv`) mantém as duas importações de 20/11
+  feitas com a tool defeituosa e ganha as três novas; o relato da F2 usa as três novas.
 - **19/11/2026, linha 13.** Ele não sabia se vinha antes das buscas. Resposta dada: não; ela grava as decisões dos
   dois revisores, que só existem na triagem (passo D). A ordem de 19/11 fica: linha 13 antes do passo D.
 - **16/11/2026, só o Claude.** O Vicente perguntou se outro assistente (Gemini) poderia tocar parte do trabalho e

@@ -65,9 +65,9 @@ Atualizado em 19/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   "Visto de passagem" da FILA.
 - **F10 e F11 consertadas em 20/11/2026** (linha 16 da FILA). Conferido com os três RIS, fora do projeto: 23 + 17 +
   14 = 54, nenhum sem resumo. Reimportar o WoS **não** recompõe o resumo cortado: o registro já gravado da mesma base
-  é descartado, não substituído. **Espera decisão do Vicente:** (a) só importar a FSTA e deixar o resumo cortado,
-  anotado; ou (b) tirar o `01_raw/database_records.json` de hoje (só os 40 importados) e importar as três de novo
-  (o registro da busca passa a ter as duas importações de hoje e as três novas). Em chat novo, aberto depois deste build.
+  é descartado, não substituído. **Decidido pelo Vicente (20/11/2026, `REGISTRO.md`):** apagar o
+  `01_raw/database_records.json` de hoje (só os 40 importados) e importar as três de novo. Em chat novo: o servidor
+  deste chat ainda era o anterior ao conserto (conferido: devolveu o resumo cortado). Prompt pronto abaixo.
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.
@@ -111,6 +111,14 @@ estiver trabalhando). Prompt original, de 19/11:
 > `import_dataset_ris` os três RIS de `01_raw/manual/` (Scopus, Web of Science, FSTA), todos os registros, sem
 > excluir nem deduplicar nada, conferindo os totais com `ANOTACOES_busca_manual.md`, e pare. Não precisa de agente.
 > Não busque, não mude nada do protocolo.
+
+Passo C, primeira parte, refeita (decisão de 20/11), em chat novo aberto depois do build da linha 16:
+
+> Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md` e o `protocol.md` (travado). Confira com uma
+> importação de teste, sem `projectPath`, que o `import_dataset_ris` junta a linha de continuação do resumo; se não
+> juntar, pare. Apague `01_raw/database_records.json` e importe os três RIS de `01_raw/manual/` com `sourceName`
+> (Scopus, Web of Science, FSTA), todos os registros, sem excluir nem deduplicar; confira 23, 17 e 14 (total 54) e
+> que nenhum ficou sem resumo. Atualize `RETOMAR.md` e `REGISTRO.md`, commit, e pare. Não busque.
 
 Passo C, segunda parte, em chat novo, depois da linha 12 e do item das três fontes:
 
