@@ -9,6 +9,7 @@
  * - DSpace 7: OAI-PMH at /server/oai/request (not /oai/request)
  */
 
+import { robotsPermite } from "../utils/robots.js";
 import * as cheerio from "cheerio";
 import { fetchText } from "../utils/http.js";
 import { rateLimiter } from "../utils/rate-limiter.js";
@@ -290,7 +291,11 @@ function nomesSecundarios(r: BdtdRecord): string[] {
 }
 
 export class BdtdAdapter {
-    private baseUrl = "https://bdtd.ibict.br/vufind";
+    /** A mesma API do VuFind serve a BDTD e a Oasisbr (IBICT), que agrega repositórios brasileiros. */
+    constructor(
+        private baseUrl = "https://bdtd.ibict.br/vufind",
+        private nome = { id: "BR-AGG-0001", rotulo: "BDTD (IBICT)" },
+    ) {}
 
     /**
      * Search BDTD via VuFind REST API with rich filters.
@@ -300,7 +305,7 @@ export class BdtdAdapter {
     }
 
     /** Busca com o total que a BDTD declara (resultCount), página a página até maxResults. */
-    async searchDetailed(query: string, opts?: SearchOptions): Promise<BdtdBusca> {
+    async searchDetailed(query: string, opts?: SearchOptions, filtrosExtras: string[] = []): Promise<BdtdBusca> {
         const limit = opts?.maxResults ?? 20;
         const type = opts?.title ? "Title" : opts?.author ? "Author" : "AllFields";
         const lookfor = opts?.title ?? opts?.author ?? query;
@@ -334,12 +339,17 @@ export class BdtdAdapter {
         if (opts?.subjectArea) {
             params.append("filter[]", `subject_str:"${opts.subjectArea}"`);
         }
+        for (const f of filtrosExtras) params.append("filter[]", f);
 
         const results: SearchResult[] = [];
         let total = 0;
         for (let page = 1; results.length < limit; page++) {
             params.set("page", String(page));
             const url = `${this.baseUrl}/api/v1/search?${params}`;
+            if (page === 1) {
+                const robots = await robotsPermite(url);
+                if (!robots.permitido) throw new Error(robots.motivo);
+            }
 
             await rateLimiter.acquire(url);
             const text = await fetchText(url, {
@@ -400,8 +410,8 @@ export class BdtdAdapter {
         const degreeName = r.formats?.[0] ?? "";
 
         return {
-            repositoryId: "BR-AGG-0001",
-            repositoryName: "BDTD (IBICT)",
+            repositoryId: this.nome.id,
+            repositoryName: this.nome.rotulo,
             identifier: r.id,
             title: r.title ?? "",
             creators: [...authors, ...advisors.map((a) => `${a} (orientador)`)],

@@ -12,7 +12,7 @@ import { AccessStrategy } from "./access/strategy.js";
 import { SearchService } from "./services/search.js";
 import { DeduplicationService } from "./services/dedupe.js";
 import { ScreeningService } from "./services/screen.js";
-import { SnowballService } from "./services/snowball.js";
+import { SnowballService, SCIELO_VIA_OPENALEX } from "./services/snowball.js";
 import { DataService } from "./services/data.js";
 import { PubMedService } from "./services/pubmed.js";
 import { CrossrefService } from "./services/crossref.js";
@@ -1292,7 +1292,7 @@ server.tool(
 
 server.tool(
     "search_repository",
-    "Busca artigos/teses em repositórios acadêmicos pela interface de busca do próprio repositório (API do VuFind na BDTD, API REST do DSpace 7 ou a página de busca do site), e mostra o total que cada fonte declarou. O OAI-PMH não serve de busca, só de colheita (harvest_records). Repositório que o catálogo marca como não pesquisável, ou em que nenhum método funcionou, aparece em Erros com o motivo — zero só quando a fonte disse zero.",
+    "Busca artigos/teses em repositórios acadêmicos pela interface de busca do próprio repositório (API do VuFind na BDTD, API REST do DSpace 7 ou a página de busca do site), e mostra o total que cada fonte declarou. O OAI-PMH não serve de busca, só de colheita (harvest_records). A tool se identifica como ReviewBR e não usa caminho que o robots.txt do site proíbe. Repositório que ela não alcança diretamente é buscado na plataforma de ciência aberta que o agrega (Oasisbr, do IBICT, filtrada pela rede do repositório), e cada registro diz onde foi visto; o total é o da plataforma. Sem agregador no catálogo, o repositório aparece em Erros com o motivo — zero só quando a fonte disse zero.",
     {
         query: z.string().describe("Termo(s) de busca por tema (ex: '<tema da sua revisão>')"),
         repositories: z.array(z.string()).optional()
@@ -2057,21 +2057,22 @@ const scieloHandler = async (params: any) => {
         if (project) projectId = project.id;
     }
 
-    // P4310312277 is the OpenAlex Publisher ID for SciELO
+    // Linha 12: o filtro de editora (publisher_lineage P4310312277) não trazia os controles; a
+    // busca do site do SciELO proíbe robôs. Vale o prefixo de DOI do SciELO Brasil no OpenAlex.
     const { results, totalFound, error } = await snowballService.search(params.query, {
         maxResults: params.maxResults || 200,
-        filter: "primary_location.source.publisher_lineage:P4310312277"
+        filter: SCIELO_VIA_OPENALEX.filtro
     });
 
     if (error) {
         // DEBT-056: busca que falhou também deixa linha no log (Hits Indefinido, erro em Errors).
         const avisoErro = await registrarBusca(params.projectPath, { tool: "search_scielo", query: params.query, filtros: params, hits: null, erros: error });
-        return { content: [{ type: "text", text: `⚠️ **SciELO (via OpenAlex) — lacuna de cobertura:** ${error}${avisoErro}` }] };
+        return { content: [{ type: "text", text: `⚠️ **SciELO Brasil (via OpenAlex) — lacuna de cobertura:** ${error}${avisoErro}` }] };
     }
 
     results.forEach(r => {
         r.repositoryId = "scielo";
-        r.repositoryName = "SciELO (via OpenAlex)";
+        r.repositoryName = SCIELO_VIA_OPENALEX.rotulo;
     });
 
     await dbService.logAuditEvent({
@@ -2100,8 +2101,8 @@ const scieloHandler = async (params: any) => {
     }
 
     const summary = [
-        `## Resultados "SciELO (via OpenAlex)": "${params.query}"`,
-        `**Total no OpenAlex com o filtro de editora SciELO (P4310312277):** ${totalFound}. Não é o total da base SciELO: a busca foi feita no OpenAlex, e as revistas do SciELO com editora própria no OpenAlex ficam de fora.`,
+        `## Resultados ${SCIELO_VIA_OPENALEX.rotulo}: "${params.query}"`,
+        `**Total no OpenAlex para DOI com prefixo 10.1590:** ${totalFound}. Visto no OpenAlex, não no site do SciELO (que proíbe robôs); cobre o SciELO Brasil, não as coleções de outros países.`,
         `**Retornados nesta página:** ${results.length}`,
         "",
         ...results.slice(0, 10).map((r: any, i: number) => [
@@ -2365,7 +2366,7 @@ server.tool(
 
 server.tool(
     "search_scielo",
-    "NÃO consulta o SciELO: busca no OpenAlex os trabalhos cuja editora, na linhagem do OpenAlex, é o SciELO (publisher_lineage P4310312277). As revistas do SciELO costumam ter editora própria no OpenAlex, então a maior parte delas fica de fora, e o total devolvido é do OpenAlex com esse filtro, nunca o total da base SciELO. A busca do site do SciELO (search.scielo.org) proíbe robôs no robots.txt e não é usada.",
+    "SciELO Brasil pelo OpenAlex: busca no OpenAlex os trabalhos com DOI do prefixo 10.1590 (o do SciELO Brasil). Não consulta o site do SciELO, que proíbe robôs no robots.txt; o total é o do OpenAlex com esse filtro, e as coleções de outros países, com outro prefixo, ficam de fora. Cada registro diz onde foi visto.",
     {
         query: z.string().describe("Termo de busca para o SciELO (ex: 'dengue OR zika')"),
         maxResults: z.number().default(200).describe("Máximo de resultados (default: 200)"),

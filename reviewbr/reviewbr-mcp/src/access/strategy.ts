@@ -6,7 +6,9 @@
  * - USP → Custom result.php scraper
  * - DSpace 7 → REST API (/server/api, ou o endereço do catálogo)
  * - DSpace 5/6 e outros → página de busca do site (endereço do catálogo ou os caminhos comuns)
- * - Catálogo com `searchable: false` → erro com o motivo
+ * - Catálogo com `searchable: false` → a plataforma de ciência aberta que o agrega (`viaAgregador`),
+ *   com a declaração de onde o registro foi visto; sem agregador, erro com o motivo
+ * - robots.txt que proíbe o caminho → o método não é usado (conferência de 19/11/2026)
  * OAI-PMH → só colheita e metadados de um registro.
  */
 
@@ -15,6 +17,7 @@ import { DSpaceRestClient } from "./dspace-rest.js";
 import { HtmlScraper } from "./html-scraper.js";
 import { UniversalProvider } from "../services/universal_provider.js";
 import { BdtdAdapter, ScieloAdapter, UspAdapter, resolveOaiEndpoint } from "./platform-adapters.js";
+import { robotsPermite } from "../utils/robots.js";
 import type { RepositoryEntry, SearchResult, SearchOptions, OaiRecord, DublinCoreMetadata, DSpaceItem } from "../types.js";
 
 /** O que uma busca num repositório devolveu, e de onde veio a contagem (linha 11 da FILA). */
@@ -53,6 +56,8 @@ export class AccessStrategy {
     private rest = new DSpaceRestClient();
     private scraper = new HtmlScraper();
     private bdtd = new BdtdAdapter();
+    /** Oasisbr (IBICT): agrega repositórios brasileiros; mesma API do VuFind da BDTD. */
+    private oasisbr = new BdtdAdapter("https://oasisbr.ibict.br/vufind", { id: "BR-AGG-0001", rotulo: "Oasisbr (IBICT)" });
     private scielo = new ScieloAdapter();
     private universal = new UniversalProvider();
     private usp = new UspAdapter();
@@ -89,7 +94,10 @@ export class AccessStrategy {
         const falhas: string[] = [];
 
         // DECLARAR (linha 11): o catálogo diz quando a tool não tem busca que consiga usar.
+        // Decisão do Vicente (19/11/2026): nesse caso, a plataforma de ciência aberta que agrega o
+        // repositório, declarando onde se viu.
         if (repo.access.searchable === false) {
+            if (repo.access.viaAgregador) return this.buscarPeloAgregador(repo, query, opts);
             throw new Error(
                 `não pesquisável pela tool: ${(repo.access.searchUnavailableReason ?? "sem motivo registrado no catálogo").replace(/\.\s*$/, "")}. ` +
                 `Zero aqui não quer dizer que a fonte não tem registros; anote a fonte como não alcançada ou busque no site.`,
@@ -149,6 +157,8 @@ export class AccessStrategy {
         if (ehDspace(repo) || repo.access.restApi?.endpoint) {
             const apiUrl = this.rest.resolveApiUrl(baseRest(repo));
             try {
+                const robots = await robotsPermite(`${apiUrl}/discover/search/objects?query=${encodeURIComponent(query)}`);
+                if (!robots.permitido) throw new Error(robots.motivo);
                 const items: SearchResult[] = [];
                 const vistos = new Set<string>();
                 let total = 0;
@@ -182,7 +192,33 @@ export class AccessStrategy {
             falhas.push((e as Error).message);
         }
 
+        if (repo.access.viaAgregador) {
+            const r = await this.buscarPeloAgregador(repo, query, opts);
+            return { ...r, metodo: `${r.metodo}; a busca direta não foi possível — ${falhas.join(" | ")}` };
+        }
         throw new Error(`nenhum método de busca funcionou — ${falhas.join(" | ")}`);
+    }
+
+    /**
+     * Busca o repositório na plataforma de ciência aberta que o agrega (hoje a Oasisbr, do IBICT),
+     * filtrada pela rede do repositório. Cada registro diz onde foi visto; o total é o que a
+     * plataforma declara para esse filtro, não o do site do repositório.
+     */
+    private async buscarPeloAgregador(repo: RepositoryEntry, query: string, opts?: SearchOptions): Promise<RelatorioBusca> {
+        const via = repo.access.viaAgregador!;
+        if (via.id !== "BR-AGG-0001") throw new Error(`agregador ${via.id} sem adaptador na tool`);
+        const r = await this.oasisbr.searchDetailed(query, { ...opts, maxResults: opts?.maxResults ?? 50 }, [via.filtro]);
+        const onde = `visto na ${via.plataforma}, filtro ${via.filtro}`;
+        const results = r.results.map((x) => ({
+            ...x,
+            repositoryId: repo.id,
+            repositoryName: `${repo.repository.name} (${onde})`,
+            institution: x.institution ?? repo.institution.acronym,
+            accessMethod: "oasisbr-vufind" as const,
+            audit: { ...x.audit!, provenanceSource: `${via.plataforma} — https://oasisbr.ibict.br/vufind/api/v1/search, filtro ${via.filtro}` },
+        }));
+        const motivo = repo.access.searchUnavailableReason ? ` (busca direta: ${repo.access.searchUnavailableReason.replace(/\.\s*$/, "")})` : "";
+        return { results, totalNaFonte: r.total, metodo: `${via.plataforma}, API do VuFind, filtro ${via.filtro}; total da plataforma, não do site do repositório${motivo}` };
     }
 
     /**

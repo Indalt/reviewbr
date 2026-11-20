@@ -30,6 +30,16 @@ export interface SnowballExpandOptions {
  * O OpenAlex entrega o resumo como índice invertido (palavra → posições no texto). Remonta o
  * texto na ordem das posições. Sem índice, devolve "" (o OpenAlex não tem o resumo do registro).
  */
+/**
+ * O SciELO pela plataforma de ciência aberta (decisão do Vicente, 19/11/2026): a busca do site do
+ * SciELO proíbe robôs; o OpenAlex indexa os artigos com DOI do prefixo 10.1590, o do SciELO Brasil.
+ * Cobre o Brasil; coleções de outros países com outro prefixo ficam de fora, e a saída declara isso.
+ */
+export const SCIELO_VIA_OPENALEX = {
+    filtro: "doi_starts_with:10.1590",
+    rotulo: "SciELO Brasil (visto no OpenAlex, DOI 10.1590)",
+} as const;
+
 export function resumoDoIndiceInvertido(indice: Record<string, number[]> | null | undefined): string {
     if (!indice || typeof indice !== "object") return "";
     const palavras: string[] = [];

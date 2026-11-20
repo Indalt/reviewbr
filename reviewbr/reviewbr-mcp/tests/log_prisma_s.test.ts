@@ -52,7 +52,7 @@ describe("DEBT-056 — o código grava logs/search_log_prisma_s.csv", () => {
 
     it("busca que falhou deixa linha: Hits Indefinido e o erro em Errors", () => {
         const c = linhaPrismaS({ tool: "search_scielo", query: "x", hits: null, erros: "HTTP 503" });
-        expect(c.slice(1)).toEqual(["SciELO (via OpenAlex) (search_scielo)", "", "x", "Indefinido", "HTTP 503"]);
+        expect(c.slice(1)).toEqual(["SciELO Brasil (visto no OpenAlex, DOI 10.1590) (search_scielo)", "", "x", "Indefinido", "HTTP 503"]);
     });
 
     it("truncamento vai para Errors; importação sem string sai com Query Indefinido", () => {

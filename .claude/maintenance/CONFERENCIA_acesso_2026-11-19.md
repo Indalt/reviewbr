@@ -19,7 +19,7 @@ Pode se apresentar como navegador para ser atendido?
 | 3 | Lei 12.527/2011 (LAI), arts. 1º, 7º e 8º, texto consolidado da Câmara (`…/lei-12527-18-novembro-2011-611802-normaatualizada-pl.html`) | empresa pública e autarquia estão sujeitas (art. 1º, par. único, II); os sítios de transparência devem "possibilitar o acesso automatizado por sistemas externos em formatos abertos, estruturados e legíveis por máquina" (art. 8º, § 3º, III); o cidadão pode pedir a informação (art. 10) |
 | 4 | Lei 13.709/2018 (LGPD), art. 7º, IV e § 4º, texto consolidado da Câmara | tratamento para estudo por órgão de pesquisa; dispensa de consentimento para dado tornado manifestamente público |
 | 5 | RFC 9309 (IETF, 2022), *Robots Exclusion Protocol*, seção 1: `rfc-editor.org/rfc/rfc9309` | "These rules are not a form of access authorization": o `robots.txt` pede, não tranca |
-| 6 | `robots.txt` lidos em 19/11/2026 | Alice e Infoteca-e: `Disallow: /simple-search`, `/discover`, `/browse`; o `/oai` não é proibido. UFC: `Disallow: /simple-search`. UFPI e IFCE: `Disallow: /search` (a interface), a API REST não é proibida. BDTD: `Disallow: /vufind/Search/`, a API (`/vufind/api/v1/search`) não é proibida. SciELO (`search.scielo.org`): só os buscadores (Google, Bing e outros) podem; `User-agent: *` → `Disallow: /`. UECE: o `robots.txt` não existe (página de erro) |
+| 6 | `robots.txt` lidos em 19/11/2026 | Alice e Infoteca-e: `Disallow: /simple-search`, `/discover`, `/browse`, escritos para o DSpace na raiz; a busca delas fica em `/alice/simple-search` e `/infoteca/simple-search`, que a regra, lida ao pé da letra, não alcança, e o servidor recusa com 403; o `/oai` não é proibido. UFC: `Disallow: /simple-search`. UFPI e IFCE: `Disallow: /search` (a interface), a API REST não é proibida. BDTD: `Disallow: /vufind/Search/`, a API (`/vufind/api/v1/search`) não é proibida. SciELO (`search.scielo.org`): só os buscadores (Google, Bing e outros) podem; `User-agent: *` → `Disallow: /`. UECE: o `robots.txt` não existe (página de erro) |
 | 7 | OAI-PMH `Identify` de Alice e Infoteca-e, lidos em 19/11/2026 | respondem; contato `cg-riaa@embrapa.br`; 149.622 e 59.751 registros (`completeListSize`). UECE: o OAI do catálogo dá 404 |
 | 8 | Krotov, Johnson e Silva (2020), *Tutorial: Legality and Ethics of Web Scraping*, CAIS 47, doi:10.17705/1CAIS.04724 (lido o resumo) | quem raspa a web tem de responder, antes, às questões legais e éticas do site; ignorá-las leva a controvérsia ética e a processo |
 
@@ -45,24 +45,38 @@ Pode se apresentar como navegador para ser atendido?
   identificar como `ReviewBR-MCP/1.0 (+https://github.com/Indalt/reviewbr)`, como já faziam o CORE, o Europe PMC e o
   Semantic Scholar. Antes, sorteavam um User-Agent de navegador. Conferido em 19/11/2026, com o User-Agent
   identificado, as APIs da BDTD (25 para "cajuina"), da UFPI (41) e do IFCE (1) respondem como antes.
-- **Permitido:** API ou OAI-PMH que o repositório oferece; agregador com API (BDTD, OpenAlex); busca feita à mão pelo
-  pesquisador, no navegador (o `robots.txt` vale para robô), depois importada; pedido à instituição.
+- **Permitido:** API ou OAI-PMH que o repositório oferece; plataforma de ciência aberta com API que o agrega
+  (Oasisbr, BDTD, OpenAlex), declarando onde se viu; pedido à instituição. A busca à mão não é saída para o que
+  deve ser automatizado (decisão abaixo).
 - **Não permitido:** User-Agent de navegador; busca por robô em caminho que o `robots.txt` proíbe ou que o servidor
   recusa.
 - **`heal_repositories`:** não é estratégia de busca. Só procura endereço OAI-PMH de repositório cujo OAI está marcado
   como indisponível ou sem endereço (`repository_healer.ts:18`, não pelo `status` "inactive"), e reescreve o catálogo.
   Alice e Infoteca-e têm OAI que responde, e ele não as examina. Muda o sistema e está entre as tools do `librarian`.
 
-## O que isso decide, e o que espera o Vicente
+## Decisão do Vicente (19/11/2026) e o que foi feito
 
-Para as três fontes, as estratégias legítimas são: (a) o Vicente busca à mão no site, como fez no Portal CAPES, e a
-busca é importada; (b) Alice e Infoteca-e por OAI-PMH, colhendo tudo (cerca de 210 mil registros) e filtrando no
-ReviewBR — o total não será o que o site mostra; (c) pedir à Embrapa (`cg-riaa@embrapa.br`) e à UECE um acesso por
-máquina. Qualquer uma muda o "Como se busca" do protocolo travado: é emenda.
+**Decisão.** O que deve ser automatizado não vai para busca à mão. A fonte que o ReviewBR não alcança diretamente
+não se força nem se discute: a tool declara o que foi visto e onde, e a alcança por uma plataforma de ciência aberta
+que a agrega. Alcance: toda busca do `search_repository` e do `search_scielo`. Consequência: o total relatado é o da
+plataforma, não o do site do repositório, e o registro da busca diz isso. Origem: "sem busca a mao para o que deve
+ser automatizado. (…) seguir com o que nao é possivel e nem falar, bastando declarar o que foi visto e onde se
+conseguiu. existem muitos repositorios que podem ser acessados por plataformas de ciencia aberta".
 
-Duas coisas a regra atinge além das três: a **UFC**, cuja busca a linha 11 faz pela página `/simple-search`, que o
-`robots.txt` da UFC proíbe; e o **SciELO** (linha 12, item 2), cuja busca no site proíbe robôs.
+**Feito, com controle positivo em 19/11/2026** (as duas grafias dão o mesmo total):
+
+| fonte | onde se viu | total "cajuína" | controle |
+|---|---|---|---|
+| UECE | Oasisbr (IBICT), rede `UECE-0` | 3 | siduece 96019 e 84564 |
+| Alice | Oasisbr, rede `EMBR` | 11 | doc/1152668 |
+| Infoteca-e | Oasisbr, rede `EMBRAPA-9` (volta a `active`) | 6 | doc/110278 |
+| UFC | Oasisbr, rede `UFC-7` (o `robots.txt` proíbe a busca do site) | 11, o mesmo do site em 19/11 | riufc/78207 e 67712 |
+| SciELO | OpenAlex, DOI com prefixo 10.1590 (SciELO Brasil) | 78 | 10.1590/fst.25520 e 10.1590/s0100-40422007000500017 |
+| UFPI, IFCE, BDTD | API do próprio repositório, como antes | 41, 1, 25 | — |
+
+No código: `src/utils/robots.ts` (RFC 9309) antes da página de busca, da API REST do DSpace e da API do VuFind;
+`viaAgregador` no catálogo; adaptador da Oasisbr (mesma API do VuFind da BDTD); `search_scielo` pelo prefixo 10.1590.
+A Oasisbr não traz resumo de parte dos registros da UECE e da Alice; o registro vai sem resumo, como veio.
 
 Nota de conduta: esta conferência fez um pedido à `/alice/simple-search` (para confirmar o 403 com o User-Agent
-identificado) e um à `/simple-search` da UFC (antes de ler o `robots.txt` dela), caminhos que o `robots.txt` proíbe.
-Um pedido em cada; não se repete.
+identificado) e um à `/simple-search` da UFC (antes de ler o `robots.txt` dela). Um pedido em cada; não se repete.

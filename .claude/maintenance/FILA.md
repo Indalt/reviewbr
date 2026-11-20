@@ -66,9 +66,9 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 19/11/2026, sessão das linhas 12, 14 e 15 — repositório limpo; build e suíte 568 de 568 (577
-depois); backlog válido, 0 abertos; fila: linha 10 em curso, 12 feita em parte (item 2 parado), 13 a fazer, 14 e 15
-feitas; 41 itens no "Visto de passagem".
+**Última verificação:** 19/11/2026, sessão das linhas 12, 14 e 15 — repositório limpo; build e suíte 568 de 568 (585
+depois); backlog válido, 0 abertos; fila: linha 10 em curso, 12, 14 e 15 feitas, 13 a fazer; 41 itens no "Visto de
+passagem".
 
 ## Fila
 
@@ -86,9 +86,9 @@ feitas; 41 itens no "Visto de passagem".
 | 9 | M — Descrição do método, com o Vicente | — | — | **feita em 12/11/2026** (`.claude/METODO_ReviewBR.md`; commits `898d79b`, `2a36336`, `216d13d`, `17af311`) |
 | 10 | Fase de testes | — | — | **em curso:** o teste é a pesquisa real `roda_aromas_ceara` (Vicente, 19/11/2026); as linhas 11 a 13 saíram dele |
 | 11 | I — Busca nos repositórios do `roda_aromas_ceara` | ver abaixo | ver abaixo | **feita em 19/11/2026** (commit `4936c59`): UFPI e IFCE buscam pela API REST; UECE, Alice e Infoteca-e marcadas como não pesquisáveis (HTTP 403), e a tool diz isso; Infoteca-e segue `inactive`; `matchesQuery` corrigido, sem chamador desde o item 1 |
-| 12 | J — OpenAlex e SciELO: resumo, endereço e a fonte do SciELO | ver abaixo | ver abaixo | **feita em parte em 19/11/2026**: item 1 e DECLARAR feitos; **item 2 parado** — a busca do site do SciELO proíbe robôs no `robots.txt` (linha 14); a alternativa espera o Vicente |
+| 12 | J — OpenAlex e SciELO: resumo, endereço e a fonte do SciELO | ver abaixo | ver abaixo | **feita em 19/11/2026** (commits `f290ac9` e o seguinte): item 2 pelo OpenAlex com o prefixo 10.1590, por decisão do Vicente |
 | 13 | K — Decisões dos dois revisores humanos | ver abaixo | — | a fazer; antes da triagem do projeto (passo D) |
-| 14 | L — Acesso por robô: conferência jurídica e ética (UECE, Alice, Infoteca-e) | User-Agent identificado | `CONFERENCIA_acesso_2026-11-19.md` | **conferência feita em 19/11/2026**; as estratégias para as três fontes esperam o Vicente |
+| 14 | L — Acesso por robô: conferência jurídica e ética (UECE, Alice, Infoteca-e) | User-Agent identificado | `CONFERENCIA_acesso_2026-11-19.md` | **feita em 19/11/2026**: robots.txt respeitado; UECE, Alice, Infoteca-e e UFC pela Oasisbr, declarando onde se viu |
 | 15 | F9 — importação de várias bases em `01_raw` | ver abaixo | — | **feita em 19/11/2026** |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
@@ -175,9 +175,10 @@ Não fazer: o `ScieloAdapter` (ArticleMeta) do `search_repository` e a F2.
 
 **Linha 12, resultado (19/11/2026).** Item 1: o `search` e as citações do snowball gravam o resumo e o endereço
 (página da fonte, senão DOI). DECLARAR: a descrição e a saída do `search_scielo` dizem que a busca é no OpenAlex com
-o filtro de editora e que o total não é o da base SciELO. Item 2 parado: o `robots.txt` de `search.scielo.org`
-proíbe robôs, e a conferência da linha 14 não permite contornar. Em 19/11 o filtro de editora não devolve nenhum dos
-dois controles, e o OpenAlex sem filtro devolve os dois.
+o filtro de editora e que o total não é o da base SciELO. Item 2: o `robots.txt` de `search.scielo.org`
+proíbe robôs; pela decisão do Vicente na linha 14, o `search_scielo` busca no OpenAlex com o prefixo de DOI 10.1590
+(SciELO Brasil) e declara isso. Controle em 19/11/2026: 78 registros, com os dois DOIs de controle; o filtro de
+editora antigo não trazia nenhum.
 
 **Linha 13 — K, decisões dos dois revisores humanos.** O protocolo travado do projeto (F4.1.2, F4.1.3) exige gravar
 no próprio projeto, com o nome de quem decidiu:
@@ -201,8 +202,18 @@ Não fazer: triagem por IA nem cegamento entre revisores (o sistema não separa 
 estrategias para a minha compreensao nao sao burlar etica. ver isso em juridico antes de fazer algo. mas havia tb um
 healer. veja isso."). A conferência, com as fontes, está em `CONFERENCIA_acesso_2026-11-19.md`. Decide: o ReviewBR se
 identifica e não busca por robô onde o `robots.txt` proíbe ou o servidor recusa. Feito: User-Agent identificado no
-`src/utils/http.ts` e no `heal_repositories`. Não feito: nenhuma estratégia para UECE, Alice e Infoteca-e; as
-legítimas, e o que a regra atinge na UFC e no SciELO, estão no fim da conferência, para o Vicente decidir.
+`src/utils/http.ts` e no `heal_repositories`.
+
+> **Decidido pelo Vicente em 19/11/2026:** o que deve ser automatizado não vai para busca à mão. A fonte que o
+> ReviewBR não alcança diretamente não se força nem se discute: a tool declara o que foi visto e onde, e a alcança
+> por uma plataforma de ciência aberta que a agrega. Consequência: o total relatado é o da plataforma, e o registro
+> da busca diz isso. Origem: "sem busca a mao para o que deve ser automatizado. (…) seguir com o que nao é possivel
+> e nem falar, bastando declarar o que foi visto e onde se conseguiu. existem muitos repositorios que podem ser
+> acessados por plataformas de ciencia aberta".
+
+Feito depois da decisão: `src/utils/robots.ts` (RFC 9309) antes de toda busca da camada de acesso; `viaAgregador`
+no catálogo; UECE, Alice, Infoteca-e (de volta a `active`) e UFC pela Oasisbr, cada uma pela sua rede, com controle
+positivo; o SciELO pela linha 12. A tabela dos totais está no fim da conferência.
 
 **Linha 15 — F9, importação de várias bases** (ordem do Vicente, 19/11/2026, item 3 do prompt da sessão). Feito:
 `appendRawRecords` e `consolidateRaw` só descartam o registro repetido da mesma fonte; o mesmo DOI de duas bases

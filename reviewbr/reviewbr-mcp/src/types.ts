@@ -32,6 +32,13 @@ const accessSchema = z.object({
     // (a busca diz isso e o motivo, em vez de devolver zero).
     searchable: z.boolean().optional(),
     searchUnavailableReason: z.string().optional(),
+    // Decisão do Vicente, 19/11/2026: o repositório que a tool não alcança diretamente é buscado
+    // numa plataforma de ciência aberta que o agrega, e a saída declara onde o registro foi visto.
+    viaAgregador: z.object({
+        id: z.string(),
+        plataforma: z.string(),
+        filtro: z.string(),
+    }).optional(),
     // International REST API Mapping Extensions
     baseUrl: z.string().optional(),
     endpoints: z.record(z.string(), z.string()).optional(),
@@ -169,7 +176,7 @@ export interface SearchResult {
     tldr?: string;
     /** País de origem do artigo (afiliação, journal, etc.). 'desconhecida' se não disponível. */
     originCountry?: string;
-    accessMethod: "oai-pmh" | "dspace-rest" | "html-scraper" | "bdtd-vufind" | "scielo-articlemeta" | "usp-custom" | "manual_import" | "bvs_import" | "api";
+    accessMethod: "oai-pmh" | "dspace-rest" | "html-scraper" | "bdtd-vufind" | "oasisbr-vufind" | "scielo-articlemeta" | "usp-custom" | "manual_import" | "bvs_import" | "api";
     /** Timestamp of when the record was first imported into the systemic review system. */
     importedAt?: string;
     /** Detailed status of full-text retrieval (success, error message, etc). */

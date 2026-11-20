@@ -30,7 +30,7 @@ export const COLUNAS_PRISMA_S = ["Datetime", "Database", "Filter", "Query", "Hit
 const FONTE_POR_TOOL: Record<string, string> = {
     search_openalex: "OpenAlex",
     search_crossref: "Crossref",
-    search_scielo: "SciELO (via OpenAlex)",
+    search_scielo: "SciELO Brasil (visto no OpenAlex, DOI 10.1590)",
     search_semanticscholar: "Semantic Scholar",
     search_core: "CORE",
     search_europe_pmc: "Europe PMC",

@@ -210,8 +210,14 @@ describe("linha 11, itens 3, 8 e 9 e DECLARAR — o catálogo diz o que a tool c
             expect(r.access.searchUnavailableReason).toMatch(/403/);
         }
     });
-    it("Infoteca-e: o controle positivo não passou, segue inativa, agora com o motivo", () => {
-        expect(porId("BR-RES-0004").status).toBe("inactive");
+    it("Infoteca-e: ativa, alcançada pela Oasisbr (controle positivo de 19/11/2026, depois da linha 11)", () => {
+        expect(porId("BR-RES-0004").status).toBe("active");
+        expect(porId("BR-RES-0004").access.viaAgregador.filtro).toBe('network_acronym_str:"EMBRAPA-9"');
+    });
+    it("UECE, Alice, Infoteca-e e UFC: sem busca direta, cada uma com o filtro da sua rede na Oasisbr", () => {
+        const filtros = ["BR-EST-0006", "BR-RES-0001", "BR-RES-0004", "BR-FED-0004"].map((id) => porId(id).access.viaAgregador?.filtro);
+        expect(filtros).toEqual(['network_acronym_str:"UECE-0"', 'network_acronym_str:"EMBR"', 'network_acronym_str:"EMBRAPA-9"', 'network_acronym_str:"UFC-7"']);
+        expect(porId("BR-FED-0004").access.searchable).toBe(false);
     });
     it("UFPI e IFCE: a API REST do DSpace no endereço que responde", () => {
         expect(porId("BR-FED-0014").access.restApi.endpoint).toBe("https://repositorio.ufpi.br/srv-ufpi-s01/api");

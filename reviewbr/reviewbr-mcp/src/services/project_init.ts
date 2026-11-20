@@ -455,7 +455,7 @@ Checklist ${prismaStandard} será preenchido ao final do estudo.
             `→ search_semanticscholar (Semantic Scholar)`,
             `→ search_core (CORE Open Access)`,
             `→ search_europe_pmc (Europe PMC)`,
-            `→ search_scielo (OpenAlex filtrado pela editora SciELO; não é a busca do SciELO)`,
+            `→ search_scielo (SciELO Brasil visto no OpenAlex, DOI 10.1590)`,
             `→ search_papers_optimized (BVS/LILACS/OasisBR)`,
             `→ search_repository (repositórios institucionais)`,
             `→ deduplicate_dataset`,

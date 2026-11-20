@@ -4,6 +4,7 @@
  * Equivalent of direct_search.go but in TypeScript.
  */
 
+import { robotsPermite } from "../utils/robots.js";
 import * as cheerio from "cheerio";
 import { fetchText } from "../utils/http.js";
 import { rateLimiter } from "../utils/rate-limiter.js";
@@ -70,6 +71,10 @@ export class HtmlScraper {
                     searchUrl.searchParams.set("rpp", String(rpp));
                     if (start > 0) searchUrl.searchParams.set("start", String(start));
 
+                    if (start === 0) {
+                        const robots = await robotsPermite(searchUrl.toString());
+                        if (!robots.permitido) throw new Error(robots.motivo);
+                    }
                     await rateLimiter.acquire(searchUrl.toString());
                     const html = await fetchText(searchUrl.toString(), { timeout: 30_000, maxRetries: 2 });
 
