@@ -189,6 +189,23 @@ export class ProjectStateService {
         if (!state) {
             return { ok: false, motivo: "Sem project_state.json: não há onde registrar decisão nem o que verificar." };
         }
+        // Linha 17 da FILA (RV-01): a etapa da busca só fecha com cada fonte do plano congelado
+        // executada (a execução terminou) ou com desvio registrado para ela. Vale em qualquer nível de
+        // controle: pular fonte do protocolo não é avanço automático, é afastar-se dele.
+        const trava = state.trava_busca;
+        if (trava && trava.etapa === faseQueEncerra) {
+            const feitas = new Set((trava.execucoes ?? []).filter((e) => e.hits !== null).map((e) => e.fonte));
+            const comDesvio = new Set((state.desvios ?? []).map((d) => d.fonte).filter(Boolean));
+            const pendentes = trava.plano.fontes.filter((f) => !feitas.has(f.id) && !comDesvio.has(f.id));
+            if (pendentes.length) {
+                return {
+                    ok: false,
+                    motivo: `🚫 RV-01 — a etapa ${faseQueEncerra} (busca) não fecha: ${pendentes.length} fonte(s) do plano sem execução ` +
+                        `terminada nem desvio registrado: ${pendentes.map((f) => `${f.nome} (${f.id})`).join("; ")}. Busque pelo plano ` +
+                        "(`get_search_plan`) ou registre o desvio (`record_protocol_amendment`, tipo 'desvio', com a fonte).",
+                };
+            }
+        }
         if (state.control_level === "fluido") {
             return { ok: true, motivo: `control_level 'fluido' declarado: avanço automático em ${faseQueEncerra}, sem decisão registrada.` };
         }

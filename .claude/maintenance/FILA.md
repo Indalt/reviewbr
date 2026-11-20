@@ -360,7 +360,10 @@ Origem: "agende o conserto 15h30 e pode executar apos esse horario aqui mesmo ne
   COORDINATOR, nos dois agentes); as importações gravam o texto exato na coluna Query, com a fonte do plano e o
   `registroDaBusca`; campo "não obtido: <motivo>" vira desvio do sistema (`desviosDeCamposNaoObtidos`). Teste:
   `tests/busca_a_mao.test.ts` (5 de 5 falhavam antes).
-- Falta: FAZER 5; DECLARAR 1 a 4.
+- FAZER 5 feito em 20/11/2026: `podeAvancar` não fecha a etapa do plano com fonte sem execução terminada nem desvio, em
+  qualquer nível de controle. Projeto travado sem plano não tem essa conferência, mas também não busca até o plano
+  entrar por emenda. Teste: `tests/plano_busca_fecha.test.ts` (3 de 3 falhavam antes).
+- Falta: DECLARAR 1 a 4.
 
 ### Como uma linha entra na fila
 
