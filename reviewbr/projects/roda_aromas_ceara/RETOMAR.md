@@ -116,6 +116,21 @@ FSTA) já foi feita em 19/11/2026.
 
 ## Prompts prontos
 
+**Volta à pesquisa depois da linha 17 (20/11/2026): plano de busca e emenda 1, em chat novo** (o servidor novo só carrega
+em chat novo). A primeira linha é para o seletor; apague-a antes de enviar.
+
+> Opus 5.5 · medium
+>
+> Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md`, as "Decisões" do `REGISTRO.md`, o `protocol.md`
+> (travado) e o `change_log.md`. O projeto foi travado antes da linha 17 da FILA e não tem plano de busca. (1) Escreva
+> `plano_busca.json` a partir do protocolo travado, item por item: as fontes da tabela "Fontes de Busca", a tool e o id
+> do catálogo de cada uma, os textos exatos da tabela de sintaxe, os filtros (o protocolo não dá nenhum) e o que o
+> protocolo manda registrar em cada busca (o período de cobertura em todas; nas feitas à mão, também plataforma, data,
+> filtros e total; o controle positivo). A UFPI não tem id no protocolo: diga qual id do catálogo o plano usa. Nada que o
+> protocolo não peça. (2) Proponha a emenda 1 com `record_protocol_amendment` (tipo emenda, com o plano). (3) Mostre-me o
+> plano, com a rota de hoje de cada fonte, e pare para a minha decisão. Não busque. Depois da minha decisão, grave-a pela
+> mesma tool, com as minhas palavras, e registre o desvio 1 com a opção que eu escolher.
+
 **Manutenção — protocolo travado (pedido do Vicente de 20/11/2026), em chat novo, depois do reset da janela de 5 h.**
 A primeira linha é para o seletor; apague-a antes de enviar.
 
