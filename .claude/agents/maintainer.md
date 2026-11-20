@@ -236,6 +236,15 @@ Se a sessão ou uma auditoria parar no meio, registre onde e por quê na linha d
 Só então decida o que fazer. **Nunca reconstrua o estado de memória ou por leitura de
 conversa** — se algo não está no disco, não está decidido.
 
+## Projeto travado não muda com a manutenção (linha 17 da FILA, 20/11/2026)
+
+A manutenção pode mudar a rota de uma fonte — no catálogo de repositórios (`searchable`, `viaAgregador`, endereços,
+API) ou no código de uma tool. O projeto travado não muda junto: o plano de busca congelou a rota de cada fonte, e na
+próxima busca a tool compara e recusa, pedindo emenda aprovada pelo pesquisador. Por isso: quem mudar a rota de uma
+tool muda a descrição dela em `ROTA_POR_TOOL` (`src/services/plano_busca.ts`); quem mudar a ordem da busca em
+`searchDetailed` (`src/access/strategy.ts`) muda junto a `rotaPrimaria`. Rota que muda sem a descrição mudar é a
+mesma falha de 19/11/2026: o projeto seguiria um caminho que o pesquisador não aprovou.
+
 ## Como um achado vira correção
 
 Encontrar um problema no meio de outro trabalho é rotina. O que não pode é nem corrigir na

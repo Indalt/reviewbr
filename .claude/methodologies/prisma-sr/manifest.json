@@ -175,7 +175,7 @@
       "phase": "F1",
       "rule": "RV-01",
       "tool": "submit_protocol_for_approval",
-      "blocks": "as tools de busca e aquisição (ProtocolGate) enquanto o project_state.json não estiver LOCKED — a trava vale só pelo estado; o [LOCKED] no protocol.md é espelho (DEBT-018); o submit_protocol_for_approval não trava protocolo com campo obrigatório [TBD]"
+      "blocks": "as tools de busca e aquisição (ProtocolGate) enquanto o project_state.json não estiver LOCKED — a trava vale só pelo estado; o [LOCKED] no protocol.md é espelho (DEBT-018); o submit_protocol_for_approval não trava protocolo com campo obrigatório [TBD] nem sem plano de busca (plano_busca.json), que ele congela no estado com a rota de cada fonte e o hash do protocol.md. Sob o protocolo travado (linha 17 da FILA): toda tool de busca e de importação recusa o que sai do plano congelado — protocolo editado, fonte, tool ou id, filtro, rota mudada pela manutenção, campo que o plano manda registrar — e usa só a rota do plano; a etapa da busca não fecha com fonte do plano sem execução nem desvio (podeAvancar); emenda e desvio só pela record_protocol_amendment, a emenda valendo só aprovada pelo pesquisador"
     },
     {
       "phase": "F8",
@@ -199,12 +199,16 @@
       "rule": "RV-08",
       "tool": "export_dataset",
       "blocks": "o export se algum registro não tiver origem rastreável (fonte e URL); a síntese não é barrada — o audit_methodology só diagnostica"
+    },
+    {
+      "phase": "F2",
+      "rule": "RV-07",
+      "blocks": "sob o protocolo travado, toda tool de busca e de importação (conferirExecucao, linha 17 da FILA) recusa o texto que não é um dos textos exatos que o plano de busca congelado dá à fonte — na busca feita à mão, o textoExato digitado na interface da base. Confere contra o plano, que o designer escreve a partir da F1.4 e o pesquisador vê na trava; a correspondência do plano com a prosa do protocolo é dele conferir. Sem projectPath, a busca é exploratória e não é conferida"
     }
   ],
   "invariants_sem_gate": {
     "RV-03": "[NÃO COBERTO] conduta dos agentes: nenhuma tool confere que campo ausente virou [TBD] em vez de valor inventado. Há conferências parciais em pontos específicos (o auditor do protocolo reprova [TBD] obrigatório; o export reprova registro sem origem), não do invariante.",
-    "RV-06": "[NÃO COBERTO] conduta: o agent_orchestrator confere só que toda tool tem um papel dono; nada confere que a tool executa em vez de decidir.",
-    "RV-07": "[NÃO COBERTO] conduta: nenhuma tool confere a string executada contra a F1.4 do protocolo. O log PRISMA-S (logs/search_log_prisma_s.csv) grava a string exata de cada busca, para a conferência humana."
+    "RV-06": "[NÃO COBERTO] conduta: o agent_orchestrator confere só que toda tool tem um papel dono; nada confere que a tool executa em vez de decidir."
   },
   "required_supplements": [
     "prisma_checklist_filled.md",

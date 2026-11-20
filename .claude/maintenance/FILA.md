@@ -66,9 +66,8 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 20/11/2026, sessão da linha 17 — repositório limpo, com 8 commits sem push (o da linha 16 e
-os do projeto); build e suíte 592 de 592; backlog válido, 0 abertos; fila: linha 10 em curso, 13 a fazer, 17 com
-diagnóstico, à espera do Vicente; 42 itens no "Visto de passagem" (eram 44; a linha 17 tirou três, um deles subitem).
+**Última verificação:** 20/11/2026, execução da linha 17 — repositório limpo; build e suíte 622 de 622; backlog
+válido, 0 abertos; fila: linha 10 em curso, 13 a fazer, 17 feita; 42 itens no "Visto de passagem".
 
 ## Fila
 
@@ -91,7 +90,7 @@ diagnóstico, à espera do Vicente; 42 itens no "Visto de passagem" (eram 44; a 
 | 14 | L — Acesso por robô: conferência jurídica e ética (UECE, Alice, Infoteca-e) | User-Agent identificado | `CONFERENCIA_acesso_2026-11-19.md` | **feita em 19/11/2026**: robots.txt respeitado; UECE, Alice, Infoteca-e e UFC pela Oasisbr, declarando onde se viu |
 | 15 | F9 — importação de várias bases em `01_raw` | ver abaixo | — | **feita em 19/11/2026** |
 | 16 | F10 e F11 — importação de RIS: linha de continuação, CR sozinho e registros distintos da mesma base | ver abaixo | — | **feita em 20/11/2026** |
-| 17 | Protocolo travado na busca: a execução segue só o protocolo, e o que muda é emenda | ver abaixo | ver abaixo | **diagnóstico feito em 20/11/2026; conserto aprovado, a fazer depois das 15h30 de 20/11** |
+| 17 | Protocolo travado na busca: a execução segue só o protocolo, e o que muda é emenda | ver abaixo | ver abaixo | **feita em 20/11/2026** (commits `9c4cff2`, `3a25e69`, `7dc2d85`, `73f6380`, `b5496a1` e o do DECLARAR) |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
 da outra; a ordem é a do dano a uma pesquisa em andamento.
@@ -363,7 +362,13 @@ Origem: "agende o conserto 15h30 e pode executar apos esse horario aqui mesmo ne
 - FAZER 5 feito em 20/11/2026: `podeAvancar` não fecha a etapa do plano com fonte sem execução terminada nem desvio, em
   qualquer nível de controle. Projeto travado sem plano não tem essa conferência, mas também não busca até o plano
   entrar por emenda. Teste: `tests/plano_busca_fecha.test.ts` (3 de 3 falhavam antes).
-- Falta: DECLARAR 1 a 4.
+- DECLARAR 1 a 4 feitos em 20/11/2026: `librarian.md` (passos 1, 3 e 5), `maintainer.md` (seção "Projeto travado não
+  muda com a manutenção"), RV-01 e RV-07 na `prisma-rigor-gates` e nos dois `manifest.json` (a RV-07 ganhou gate e saiu
+  de `invariants_sem_gate`), `prisma-s-logging` e `conduct-review` (gate da F2 e guardrail 4); o limite da busca à mão
+  está no `librarian.md` e na `prisma-s-logging`.
+- **Linha feita.** Suíte 622 de 622 (592 antes; 30 testes novos em cinco arquivos), build e audit válidos. Para o
+  `roda_aromas_ceara`: em chat novo (servidor novo), o projeto propõe a emenda 1 com o plano de busca pela
+  `record_protocol_amendment`, o Vicente a aprova ou recusa nas palavras dele, e o desvio 1 entra pela mesma tool.
 
 ### Como uma linha entra na fila
 

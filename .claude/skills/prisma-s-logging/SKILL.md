@@ -15,7 +15,8 @@ Colunas: `Datetime` (ISO8601), `Database` (fonte, com a tool entre parênteses),
 menos a string e o projeto), `Query` (string **exata**), `Hits`, `Errors`.
 - `Hits` = registros que a execução devolveu. Busca que não terminou: `Indefinido`, com o motivo em `Errors`.
 - Truncamento vai em `Errors`: a fonte declarou mais do que veio, ou a coleta parou no teto.
-- `Query` = `Indefinido` na importação de export (RIS, BVS): a string usada na interface da base não passa pela tool.
+- Na importação de export (RIS, BVS) sob projeto travado, `Query` = o `textoExato` digitado na interface da base, que tem de ser um texto do plano de busca congelado; o que o plano manda anotar (ex.: plataforma, data, total mostrado, período de cobertura) vai em `registroDaBusca` e sai em `Filter`. Sem projeto travado, `Query` = `Indefinido`. Limite: a busca à mão acontece fora do sistema — a importação grava o que o pesquisador declara, e o sistema não confere a tela.
+- Sob projeto travado, `Filter` traz também a fonte do plano (`fontePlano`) e a rota usada (`rota`); a busca recusada por sair do plano também deixa linha, com o motivo em `Errors`.
 - `logs/search_history.json` segue como registro bruto de cada chamada; o que a norma pede é o CSV.
 
 ## Metadados de origem por registro (RV-08)

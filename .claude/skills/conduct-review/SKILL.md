@@ -54,7 +54,7 @@ Grave com a tool `record_researcher_decision` — a etapa sobre a qual ele decid
 1. Dê a cada subagente **apenas a fase corrente**. Instrua-o a **parar ao concluí-la** — nunca "adiantar" a próxima.
 2. **Não preencher lacuna com conhecimento próprio**: campo sem dado = `[TBD]` (RV-03). Vale inclusive na leitura/RAG (só afirmar o que tem trecho com origem).
 3. **A IA propõe, a tool valida**: os gates determinísticos aprovam/reprovam; nenhum agente se autocertifica (RV-06).
-4. Ao menor sinal de que a próxima ação foge do protocolo travado, **pare e pergunte** — abrir uma pergunta é sempre preferível a improvisar.
+4. Ao menor sinal de que a próxima ação foge do protocolo travado, **pare e pergunte** — abrir uma pergunta é sempre preferível a improvisar. Na busca isso é trava (linha 17 da FILA): a tool recusa o que sai do plano congelado. O que precisar mudar é emenda, proposta e só valendo com a decisão do pesquisador nas palavras dele (`record_protocol_amendment`); o que a execução fez diferente é desvio, registrado pela mesma tool.
 
 ## Explique o porquê de cada etapa — executar sem explicar é meia execução
 O sistema veste métodos e, ao fazê-lo, informa quem não sabe que existem vários modos de pesquisar (DEBT-126). Ao **abrir** cada etapa — e ao retomar —, diga ao pesquisador, em duas ou três linhas:
@@ -80,7 +80,7 @@ Visão escaneável (lista/tabela curta), nunca despejo de arquivos brutos.
 |---|---|---|
 | Sem `protocol.md` ou com `[TBD]` obrigatórios | Agent → **designer** (F0/F1) | — |
 | `protocol.md` = `[DRAFT]` completo | Agent → **designer** para travar; confirmar com pesquisador | **RV-01**: `submit_protocol_for_approval` |
-| `LOCKED` no `project_state.json`, `01_raw/` vazio | Agent → **librarian** (F2) | `search_log_prisma_s.csv` + `01_raw/` populados |
+| `LOCKED` no `project_state.json`, `01_raw/` vazio | Agent → **librarian** (F2), com o plano congelado (`get_search_plan`); busca à mão: entregue ao pesquisador, antes, o roteiro da base | cada fonte do plano executada ou com desvio registrado — a etapa não fecha sem isso (`podeAvancar`); `search_log_prisma_s.csv` + `01_raw/` populados |
 | `01_raw/` populado, `02_deduplicated/` vazio | Agent → **screener** (F3/F4) | **RV-02**: `compute_flow_counts` |
 | triagem concluída, `04_extraction/` vazio | Agent → **extractor** (F5) | **RV-08**: origem completa por estudo |
 | extração pronta, sem `evidence_synthesis.md` | Agent → **reader** (F5.5, RAG) | cobertura dos objetivos |

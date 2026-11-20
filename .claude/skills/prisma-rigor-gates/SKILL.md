@@ -11,13 +11,13 @@ Rigor não é autocertificação do agente — e esta skill diz **onde há verif
 
 | Regra | O que garante | Verificação | Reprovação bloqueia |
 |---|---|---|---|
-| **RV-01** | Protocolo fechado antes da busca | `submit_protocol_for_approval` (score 0–3; sem `[TBD]` obrigatório) | acionar o `librarian` |
+| **RV-01** | Protocolo fechado antes da busca, e a busca segue só ele | `submit_protocol_for_approval` (score 0–3; sem `[TBD]` obrigatório; sem plano de busca não trava, e congela o plano com a rota de cada fonte e o hash do protocolo); sob o protocolo travado, toda tool de busca e de importação confere a chamada contra o plano (`conferirExecucao`); emenda e desvio só pela `record_protocol_amendment` | acionar o `librarian`; a busca ou importação fora do plano (protocolo editado, fonte, texto, filtro, rota mudada); fechar a etapa da busca com fonte do plano sem execução nem desvio |
 | **RV-02** | Números emergem do processo, não digitados | `compute_flow_counts` deriva o funil dos artefatos e reprova quando eles não fecham; `export_dataset` recalcula e compara com o `prisma_flow.json` | o export, se o `prisma_flow.json` divergir do recalculado ou os artefatos não fecharem |
 | **RV-03** | Campos ausentes = `[TBD]`, nunca inventados | `[NÃO COBERTO]` — conduta de todos os agentes; nenhuma tool confere o invariante | — |
 | **RV-04** | Toda decisão do pesquisador fica registrada | `record_researcher_decision` grava; `podeAvancar` confere | sob `estrito`, avançar de etapa sem decisão registrada do pesquisador sobre a que se encerra |
 | **RV-05** | Aritmética do fluxograma fecha | `validate_prisma_flow` (e o mesmo validador dentro do `export_dataset`) | o export do dataset; o manuscrito não é barrado por tool |
 | **RV-06** | MCP executa, não decide | `[NÃO COBERTO]` — conduta: o orquestrador confere só que toda tool tem papel dono | — |
-| **RV-07** | Strings derivam do protocolo aprovado | `[NÃO COBERTO]` — conduta: nenhuma tool confere a string contra a F1.4; o log PRISMA-S guarda a string exata de cada busca | — |
+| **RV-07** | Strings derivam do protocolo aprovado | sob o protocolo travado, toda tool de busca e de importação recusa texto que não é texto exato do plano congelado (o plano vem da F1.4, escrito pelo `designer` e visto pelo pesquisador na trava); o log PRISMA-S guarda a string exata | a busca ou importação com outro texto |
 | **RV-08** | Origem rastreável (repositório+instituição+URL) | validação em `export_dataset`; `audit_methodology` só diagnostica | o export; a síntese não é barrada |
 
 Os manifests dizem o mesmo: `gates` para o que uma tool barra, `invariants_sem_gate` para o que é conduta.
@@ -52,7 +52,7 @@ alguma tool produz o artefato da etapa ou só o agente; **(d)** toda linha está
   contando subitens a/b/c). Os 21 subitens que a trilha não mapeia estão declarados `[NÃO COBERTO]`
   no mapeamento do `prisma-sr` (DEBT-014): vão ao checklist como não cobertos, e não param a F8.
 - **SUP.2 — PRISMA-S**: `check_standard_coverage("prisma-s")` — 16 itens (S1–S16).
-- Demais suplementos do `manifest.json` (`supplement_search_prisma_s.md`, `dedupe_report.md`, `screening_report.md`, `change_log.md`, `audit_summary.md`, ...).
+- Demais suplementos do `manifest.json` (`supplement_search_prisma_s.md`, `dedupe_report.md`, `screening_report.md`, `change_log.md`, `audit_summary.md`, ...). O `change_log.md` é gravado pela `record_protocol_amendment` ao longo da revisão, cada emenda e cada desvio na hora; o relato declara os dois.
 
 **Leia o veredito com o limite que vem junto** (`limite`): a tool confere o que é mecânico, não se o
 mapeamento está certo — isso se confere ao assimilar a metodologia, lendo a norma. O suspeito da

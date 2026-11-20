@@ -91,6 +91,10 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   reset da janela de 5 h (prompt em "Prompts prontos"). A emenda 1 e o desvio 1 do `change_log.md` esperam essa
   sessão: o conserto pode mudar o modo de registrar e aprovar a emenda. Depois, a pesquisa volta pelo protocolo:
   primeiro a decisão sobre a emenda 1 e o desvio 1, depois a segunda parte do passo C.
+- **Manutenção da linha 17 feita em 20/11/2026** (FILA): a busca, por tool ou à mão, segue só o plano de busca congelado,
+  e o que muda é emenda aprovada pelo pesquisador. A pesquisa volta pela emenda 1 e pelo desvio 1 do `change_log.md`,
+  agora gravados pela tool nova `record_protocol_amendment`: travado antes do conserto, o projeto não busca até o Vicente
+  aprovar a emenda que traz o plano de busca. Em chat novo, para carregar o servidor novo.
 - **Servidor novo:** a linha 11 mudou o código. O passo C roda em chat novo, aberto depois do último build da
   manutenção, para carregar o servidor atualizado. Não rodar passo do projeto enquanto uma sessão de manutenção
   estiver mudando o servidor.
