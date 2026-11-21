@@ -223,6 +223,10 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   tiver o termo cajuina ele vai vir. faça a emenda aqui mesmo para nao baguncar a sessao da pesquisa". Alcance: a
   busca da F2 passa a ter 12 fontes; strings, critérios e controles não mudam. Consequência: a cobertura nacional
   vem da Oasisbr; a do exterior, das bases internacionais do protocolo (OpenAlex, Scopus, Web of Science, FSTA).
+- **21/11/2026, a busca espera o IBICT.** O domínio `ibict.br` não responde desde algum momento entre 19/11 e
+  21/11/2026 (servidores de endereço do IBICT mudos; sem aviso no gov.br). Decisão: a busca da F2 só começa com a
+  BDTD e a Oasisbr no ar; nenhuma fonte é buscada antes. Frase dele: "nao acho que disparar a pesquisa sem estes
+  pode ser considerada uma nusca de scopu".
 - **19/11/2026, linha 13.** Ele não sabia se vinha antes das buscas. Resposta dada: não; ela grava as decisões dos
   dois revisores, que só existem na triagem (passo D). A ordem de 19/11 fica: linha 13 antes do passo D.
 - **16/11/2026, só o Claude.** O Vicente perguntou se outro assistente (Gemini) poderia tocar parte do trabalho e

@@ -30,7 +30,11 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   rede, consultas `cajuína` e `cajuina`, com controle positivo): agora são 12 fontes. Motivo: o catálogo chamava a
   BDTD de "Oasisbr" e a Oasisbr inteira nunca foi buscável; a manutenção separou as duas no mesmo dia. A BDTD segue
   como `BR-AGG-0001`. Ver `change_log.md` (emenda-2) e `REGISTRO.md`. Em 21/11/2026 o DNS do `ibict.br` não
-  respondia (BDTD e Oasisbr fora do ar); se seguir assim na busca, anote, sem contornar.
+  respondia (BDTD e Oasisbr fora do ar).
+- **A busca da F2 (passo C, segunda parte) só começa com a BDTD e a Oasisbr respondendo (Vicente, 21/11/2026).**
+  Alcance: nenhuma fonte do plano é buscada antes disso, para as 12 rodarem juntas. Consequência: com o IBICT fora,
+  a sessão confere se `bdtd.ibict.br` e `oasisbr.ibict.br` respondem e, se não, para sem buscar. Origem: "nao acho
+  que disparar a pesquisa sem estes pode ser considerada uma busca de scopo".
 - O que vale é o `protocol.md`. O `DESENHO_artigo1.md` é o histórico de como se chegou a ele; onde os dois
   divergirem (a string, a conferência de 20%, o Rayyan), vale o protocolo.
 - A parte do Vicente no passo C foi feita em 19/11/2026: Scopus 23, Web of Science 17 e FSTA 14 registros, todos com
