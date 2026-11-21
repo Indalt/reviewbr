@@ -67,7 +67,7 @@ a sessão é só a rotina.
 - commit e push.
 
 **Última verificação:** 20/11/2026, execução da linha 17 — repositório limpo; build e suíte 622 de 622; backlog
-válido, 0 abertos; fila: linha 10 em curso, 13 a fazer, 17 feita; 42 itens no "Visto de passagem".
+válido, 0 abertos; fila: linha 10 em curso, 13 a fazer, 17 feita; 43 itens no "Visto de passagem".
 
 ## Fila
 
@@ -541,3 +541,8 @@ Vicente pedir.
   tag `DB` (já anotado na linha 2); o `repositoryName` continua vazio nesse caso, e o gate reprova.
 - (linha 16, 20/11/2026) O `import_bvs_export` grava pelo mesmo `appendRawRecords` sem `manterTodosDoLote`: dois
   registros distintos do mesmo export BVS com o mesmo DOI continuam virando um.
+- (pergunta do Vicente, 21/11/2026) O catálogo chama o `BR-AGG-0001` de "Oasisbr" (`oasisbr.ibict.br`), mas o
+  `search_repository` o manda à API da BDTD (`strategy.ts:57` e `:139`, assim desde fev/2026). A Oasisbr inteira (os
+  repositórios brasileiros numa busca) nunca foi buscável pela tool, e o protocolo do `roda_aromas_ceara` (15/11)
+  tratou BDTD e Oasisbr como a mesma fonte. As opções de fontes dadas ao Vicente em 12/11 e 15/11 não traziam um
+  agregador nacional; desde a linha 14 a Oasisbr só é usada filtrada por rede.
