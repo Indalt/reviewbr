@@ -66,8 +66,8 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 20/11/2026, execução da linha 17 — repositório limpo; build e suíte 622 de 622; backlog
-válido, 0 abertos; fila: linha 10 em curso, 13 a fazer, 17 feita; 43 itens no "Visto de passagem".
+**Última verificação:** 21/11/2026, execução da linha 18 — build e suíte 626 de 626; gate `validate_system_change`
+CORRECAO válido; fila: linha 10 em curso, 13 a fazer, 18 feita; 42 itens no "Visto de passagem".
 
 ## Fila
 
@@ -91,6 +91,7 @@ válido, 0 abertos; fila: linha 10 em curso, 13 a fazer, 17 feita; 43 itens no "
 | 15 | F9 — importação de várias bases em `01_raw` | ver abaixo | — | **feita em 19/11/2026** |
 | 16 | F10 e F11 — importação de RIS: linha de continuação, CR sozinho e registros distintos da mesma base | ver abaixo | — | **feita em 20/11/2026** |
 | 17 | Protocolo travado na busca: a execução segue só o protocolo, e o que muda é emenda | ver abaixo | ver abaixo | **feita em 20/11/2026** (commits `9c4cff2`, `3a25e69`, `7dc2d85`, `73f6380`, `b5496a1`, `7dfb6e1`) |
+| 18 | BDTD e Oasisbr separadas; a Oasisbr inteira buscável | — | — | **feita em 21/11/2026** (pergunta e decisão do Vicente no mesmo dia; item tirado do "Visto de passagem"): `BR-AGG-0001` é a BDTD, como a busca sempre fez; a Oasisbr é `BR-AGG-0006`, buscada sem filtro de rede; os quatro `viaAgregador` apontam para ela. Emenda 2 do `roda_aromas_ceara` aprovada (protocolo 1.2, 12 fontes). Em 21/11 o DNS do `ibict.br` falhava (8.8.8.8 e 1.1.1.1): controle positivo da Oasisbr inteira fica para a busca |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
 da outra; a ordem é a do dano a uma pesquisa em andamento.
@@ -541,8 +542,3 @@ Vicente pedir.
   tag `DB` (já anotado na linha 2); o `repositoryName` continua vazio nesse caso, e o gate reprova.
 - (linha 16, 20/11/2026) O `import_bvs_export` grava pelo mesmo `appendRawRecords` sem `manterTodosDoLote`: dois
   registros distintos do mesmo export BVS com o mesmo DOI continuam virando um.
-- (pergunta do Vicente, 21/11/2026) O catálogo chama o `BR-AGG-0001` de "Oasisbr" (`oasisbr.ibict.br`), mas o
-  `search_repository` o manda à API da BDTD (`strategy.ts:57` e `:139`, assim desde fev/2026). A Oasisbr inteira (os
-  repositórios brasileiros numa busca) nunca foi buscável pela tool, e o protocolo do `roda_aromas_ceara` (15/11)
-  tratou BDTD e Oasisbr como a mesma fonte. As opções de fontes dadas ao Vicente em 12/11 e 15/11 não traziam um
-  agregador nacional; desde a linha 14 a Oasisbr só é usada filtrada por rede.

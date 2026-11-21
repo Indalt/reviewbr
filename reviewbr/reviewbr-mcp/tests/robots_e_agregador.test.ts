@@ -56,7 +56,7 @@ describe("repositório alcançado pela plataforma que o agrega", () => {
         access: {
             oaiPmh: { available: false, verified: false }, searchEndpoints: [], searchable: false,
             searchUnavailableReason: "formulário com estado de sessão; HTTP 403.",
-            ...(via ? { viaAgregador: { id: "BR-AGG-0001", plataforma: "Oasisbr (IBICT)", filtro: 'network_acronym_str:"UECE-0"' } } : {}),
+            ...(via ? { viaAgregador: { id: "BR-AGG-0006", plataforma: "Oasisbr (IBICT)", filtro: 'network_acronym_str:"UECE-0"' } } : {}),
         },
         status: "active", layer: "2",
     });

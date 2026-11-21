@@ -9,10 +9,10 @@
       "city": "Brasília"
     },
     "repository": {
-      "name": "Oasisbr",
-      "url": "https://oasisbr.ibict.br/",
-      "platform": "Primo",
-      "contentType": "Misto"
+      "name": "BDTD — Biblioteca Digital Brasileira de Teses e Dissertações",
+      "url": "https://bdtd.ibict.br/vufind/",
+      "platform": "VuFind",
+      "contentType": "Teses e dissertações"
     },
     "access": {
       "oaiPmh": {
@@ -20,6 +20,31 @@
         "endpoint": "http://harvester.ibict.br:8092/request",
         "verified": false,
         "lastVerified": "2026-03-02"
+      },
+      "searchEndpoints": []
+    },
+    "status": "active",
+    "layer": "1"
+  },
+  {
+    "id": "BR-AGG-0006",
+    "institution": {
+      "name": "Instituto Brasileiro de Informação em Ciência e Tecnologia",
+      "acronym": "IBICT",
+      "type": "other",
+      "state": "DF",
+      "city": "Brasília"
+    },
+    "repository": {
+      "name": "Oasisbr — Portal Brasileiro de Publicações e Dados Científicos em Acesso Aberto",
+      "url": "https://oasisbr.ibict.br/vufind/",
+      "platform": "VuFind",
+      "contentType": "Misto"
+    },
+    "access": {
+      "oaiPmh": {
+        "available": false,
+        "verified": false
       },
       "searchEndpoints": []
     },
@@ -189,7 +214,7 @@
       "searchable": false,
       "searchUnavailableReason": "SIDUECE é sistema próprio (JSF), não DSpace: a busca é formulário com estado de sessão (POST com ViewState), sem endereço de busca por URL; em 2026-11-19 o servidor passou a responder HTTP 403 depois de poucas requisições (robots.txt também 403). A Oasisbr agrega o repositório.",
       "viaAgregador": {
-        "id": "BR-AGG-0001",
+        "id": "BR-AGG-0006",
         "plataforma": "Oasisbr (IBICT)",
         "filtro": "network_acronym_str:\"UECE-0\""
       }
@@ -655,7 +680,7 @@
       "searchable": false,
       "searchUnavailableReason": "o robots.txt da UFC proíbe a página de busca (Disallow: /simple-search, lido em 2026-11-19), e o catálogo não tem API REST da UFC. A Oasisbr agrega o repositório.",
       "viaAgregador": {
-        "id": "BR-AGG-0001",
+        "id": "BR-AGG-0006",
         "plataforma": "Oasisbr (IBICT)",
         "filtro": "network_acronym_str:\"UFC-7\""
       }
@@ -2348,7 +2373,7 @@
       "searchable": false,
       "searchUnavailableReason": "a busca do site (/alice/simple-search) recusa acesso automatizado: HTTP 403 em 2026-11-19, e o robots.txt a proíbe (Disallow: /simple-search); o OpenSearch não tem modelo de consulta (HTTP 400). O OAI-PMH responde e serve à colheita (harvest_records). A Oasisbr agrega o repositório.",
       "viaAgregador": {
-        "id": "BR-AGG-0001",
+        "id": "BR-AGG-0006",
         "plataforma": "Oasisbr (IBICT)",
         "filtro": "network_acronym_str:\"EMBR\""
       }
@@ -2411,7 +2436,7 @@
       "searchable": false,
       "searchUnavailableReason": "a busca do site (/infoteca/simple-search) recusa acesso automatizado: HTTP 403 em 2026-11-19, e o robots.txt a proíbe (Disallow: /simple-search); o OpenSearch não tem modelo de consulta (HTTP 400). A Oasisbr agrega a Infoteca-e (controle positivo em 2026-11-19: handle doc/110278, \"Cajuína.\").",
       "viaAgregador": {
-        "id": "BR-AGG-0001",
+        "id": "BR-AGG-0006",
         "plataforma": "Oasisbr (IBICT)",
         "filtro": "network_acronym_str:\"EMBRAPA-9\""
       }

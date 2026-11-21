@@ -81,3 +81,30 @@ Decisão do pesquisador: ""sobre emenda1 ok e espero que nao seja necessarias no
 **Por quê.** A busca foi feita antes de existir o roteiro da busca à mão (linha 17 da FILA) e o item não estava na anotação da busca. Para o pesquisador, a disponibilidade de cada plataforma é dela; basta declarar o que foi visto.
 
 **Decisão do pesquisador:** ""em todas as buscas foi marcado todas as datas. se voce ve problema as plataformas escolhem datas isso nao precisaria ser perguntado. apenas anotado. as plataformas nao disponibilizam todos os artigos por essa e aquela razao que a plataforma deve ter disponivel. declarar o que foi visto me parece o suficiente." (Vicente, 20/11/2026, ao decidir o desvio 1)"
+
+## emenda-2 — PROPOSTA em 2026-11-21 (registrada pela tool `record_protocol_amendment`)
+**O quê.** Entra uma fonte na tabela "Fontes de Busca": a Oasisbr (IBICT) inteira, por search_repository (BR-AGG-0006), sem filtro de rede, com as duas consultas simples `cajuína` e `cajuina` e o controle positivo, como os outros repositórios. A Oasisbr agrega os repositórios brasileiros de acesso aberto; com ela, a busca nacional deixa de depender de escolher instituição por instituição. As outras 11 fontes ficam; não mudam strings, critérios nem controles positivos. A BDTD (BR-AGG-0001) continua como fonte própria. As rotas de Alice, Infoteca-e, UFC e UECE seguem pela Oasisbr filtrada pela rede de cada uma; muda só o id do agregador no catálogo (BR-AGG-0001 → BR-AGG-0006), e o plano é congelado de novo com as rotas de hoje.
+
+**Antes.** Protocolo 1.1: 11 fontes. Os repositórios brasileiros são buscados um a um (BDTD, Alice, Infoteca-e, UFC, UECE, UFPI). O protocolo diz que o catálogo do ReviewBR chama a BDTD de "Oasisbr": o BR-AGG-0001 tinha o nome Oasisbr e buscava na BDTD, e a Oasisbr inteira não era buscável.
+
+**Depois.** Protocolo 1.2: 12 fontes. Entra "Oasisbr (IBICT), inteira" (id do plano `oasisbr`, BR-AGG-0006, rota "Oasisbr (IBICT), API do VuFind, sem filtro de rede"). O total relatado é o que a Oasisbr declara. Registros que ela traz e que outras fontes também trazem são duplicatas, removidas na F3 com relatório. Limite declarado: a Oasisbr cobre o que os repositórios brasileiros de acesso aberto enviam a ela; a produção do exterior que use o termo "cajuína" vem pelas bases internacionais do protocolo (OpenAlex, Scopus, Web of Science, FSTA).
+**Por quê.** Pergunta do Vicente em 21/11/2026: o ReviewBR tinha dezenas de fontes e a pesquisa ficou com poucas. Visto na manutenção (FILA, Visto de passagem, commit 1573fc8): o catálogo chamava a BDTD de Oasisbr, a Oasisbr inteira nunca foi buscável, e as opções de fontes de 12/11 e 15/11 não traziam um agregador nacional. A manutenção separou as duas fontes no mesmo dia (gate validate_system_change: CORRECAO). Sem a Oasisbr inteira, a revisão de escopo não cobre a produção nacional.
+
+**Plano de busca da emenda** (é o que a busca vai seguir, se aprovada):
+- Scopus (scopus): à mão, import_dataset_ris; textos `TITLE-ABS-KEY ( cajuína OR cajuina )`
+- Web of Science (wos): à mão, import_dataset_ris; textos `TS=(cajuína OR cajuina)`
+- FSTA (fsta): à mão, import_dataset_ris; textos `TI ( cajuína OR cajuina ) OR AB ( cajuína OR cajuina ) OR SU ( cajuína OR cajuina )` · `TS=(cajuína OR cajuina)`
+- SciELO (scielo): por tool, search_scielo; textos `cajuína OR cajuina`
+- BDTD (IBICT) (bdtd): por tool, search_repository BR-AGG-0001; textos `cajuína` · `cajuina`
+- Oasisbr (IBICT), inteira (oasisbr): por tool, search_repository BR-AGG-0006; textos `cajuína` · `cajuina`
+- Embrapa — Alice (alice): por tool, search_repository BR-RES-0001; textos `cajuína` · `cajuina`
+- Embrapa — Infoteca-e (infoteca): por tool, search_repository BR-RES-0004; textos `cajuína` · `cajuina`
+- Repositório da UFC (ufc): por tool, search_repository BR-FED-0004; textos `cajuína` · `cajuina`
+- Repositório da UECE (uece): por tool, search_repository BR-EST-0006; textos `cajuína` · `cajuina`
+- Repositório da UFPI (ufpi): por tool, search_repository BR-FED-0014; textos `cajuína` · `cajuina`
+- OpenAlex (openalex): por tool, search_openalex; textos `cajuína OR cajuina`
+**Aprovação:** — (só com a decisão do pesquisador, nas palavras dele)
+
+### emenda-2 — APROVADA em 2026-11-21
+
+Decisão do pesquisador: ""separar bdtd e oasisbr e colocar a oasisbr inteira para nao sair uma pesquisa de escopo que nao faz um scopo. especialmente um nacional, mas como existe producao de cajuina em outros paises, talvez nao com esse nome, mas se em um artigo do exterior tiver o termo cajuina ele vai vir. faça a emenda aqui mesmo para nao baguncar a sessao da pesquisa" (Vicente, 21/11/2026, depois de saber que o catálogo chamava a BDTD de Oasisbr e que a Oasisbr inteira nunca foi buscável)". Versão do protocolo: 1.1 → 1.2. O plano de busca da emenda foi congelado, com as rotas de hoje.

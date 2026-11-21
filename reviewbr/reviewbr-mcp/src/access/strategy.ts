@@ -17,6 +17,10 @@ import { DSpaceRestClient } from "./dspace-rest.js";
 import { HtmlScraper } from "./html-scraper.js";
 import { UniversalProvider } from "../services/universal_provider.js";
 import { BdtdAdapter, ScieloAdapter, UspAdapter, resolveOaiEndpoint } from "./platform-adapters.js";
+
+/** Oasisbr (IBICT) no catálogo. Até 21/11/2026 o BR-AGG-0001 se chamava "Oasisbr" e buscava na BDTD;
+ *  agora o BR-AGG-0001 é a BDTD e a Oasisbr é esta, buscável inteira ou como agregador de outro repositório. */
+export const OASISBR_ID = "BR-AGG-0006";
 import { robotsPermite } from "../utils/robots.js";
 import type { RepositoryEntry, SearchResult, SearchOptions, OaiRecord, DublinCoreMetadata, DSpaceItem } from "../types.js";
 
@@ -55,6 +59,7 @@ export function rotaPrimaria(repo: RepositoryEntry): string {
             : `não pesquisável pela tool: ${repo.access.searchUnavailableReason ?? "sem motivo registrado"}`;
     }
     if (repo.id === "BR-AGG-0001" || repo.repository.url.includes("bdtd.ibict.br")) return "BDTD, API do VuFind";
+    if (repo.id === OASISBR_ID || repo.repository.url.includes("oasisbr.ibict.br")) return "Oasisbr (IBICT), API do VuFind, sem filtro de rede";
     if (repo.id === "BR-AGG-0002" || repo.repository.url.includes("scielo.br")) return "SciELO ArticleMeta";
     if (repo.repository.url.includes("repositorio.usp.br")) return "USP result.php";
     if ((repo as any).access?.mapping) return `API mapeada no catálogo (${(repo.access as any).baseUrl ?? repo.repository.url})`;
@@ -79,8 +84,8 @@ export class AccessStrategy {
     private rest = new DSpaceRestClient();
     private scraper = new HtmlScraper();
     private bdtd = new BdtdAdapter();
-    /** Oasisbr (IBICT): agrega repositórios brasileiros; mesma API do VuFind da BDTD. */
-    private oasisbr = new BdtdAdapter("https://oasisbr.ibict.br/vufind", { id: "BR-AGG-0001", rotulo: "Oasisbr (IBICT)" });
+    /** Oasisbr (IBICT): agrega repositórios brasileiros; mesma API do VuFind da BDTD, outra base. */
+    private oasisbr = new BdtdAdapter("https://oasisbr.ibict.br/vufind", { id: OASISBR_ID, rotulo: "Oasisbr (IBICT)" });
     private scielo = new ScieloAdapter();
     private universal = new UniversalProvider();
     private usp = new UspAdapter();
@@ -143,6 +148,17 @@ export class AccessStrategy {
             } catch (e) {
                 if (unica) naoAlcancada((e as Error).message);
                 falhas.push(`BDTD (API do VuFind): ${(e as Error).message}`);
+            }
+        }
+
+        // Oasisbr inteira (21/11/2026): todos os repositórios que ela agrega, sem filtro de rede.
+        if (repo.id === OASISBR_ID || repo.repository.url.includes("oasisbr.ibict.br")) {
+            try {
+                const r = await this.oasisbr.searchDetailed(query, opts);
+                return { results: r.results, totalNaFonte: r.total, metodo: "Oasisbr (IBICT), API do VuFind, sem filtro de rede" };
+            } catch (e) {
+                if (unica) naoAlcancada((e as Error).message);
+                falhas.push(`Oasisbr (API do VuFind): ${(e as Error).message}`);
             }
         }
 
@@ -241,7 +257,7 @@ export class AccessStrategy {
      */
     private async buscarPeloAgregador(repo: RepositoryEntry, query: string, opts?: SearchOptions): Promise<RelatorioBusca> {
         const via = repo.access.viaAgregador!;
-        if (via.id !== "BR-AGG-0001") throw new Error(`agregador ${via.id} sem adaptador na tool`);
+        if (via.id !== OASISBR_ID) throw new Error(`agregador ${via.id} sem adaptador na tool`);
         const r = await this.oasisbr.searchDetailed(query, { ...opts, maxResults: opts?.maxResults ?? 50 }, [via.filtro]);
         const onde = `visto na ${via.plataforma}, filtro ${via.filtro}`;
         const results = r.results.map((x) => ({
@@ -267,6 +283,12 @@ export class AccessStrategy {
         if (repo.id === "BR-AGG-0001" || repo.repository.url.includes("bdtd.ibict.br")) {
             try {
                 return await this.bdtd.getRecord(identifier);
+            } catch { /* fall through */ }
+        }
+
+        if (repo.id === OASISBR_ID || repo.repository.url.includes("oasisbr.ibict.br")) {
+            try {
+                return await this.oasisbr.getRecord(identifier);
             } catch { /* fall through */ }
         }
 

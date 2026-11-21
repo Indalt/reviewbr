@@ -9,7 +9,7 @@
   "control_level": "estrito",
   "phase": "F2",
   "createdAt": "2026-11-12T20:02:37.930Z",
-  "updatedAt": "2026-11-20T19:59:49.785Z",
+  "updatedAt": "2026-11-21T05:50:01.469Z",
   "decisions": [
     {
       "phase": "F1",
@@ -228,14 +228,217 @@
         "em": "2026-11-20T19:53:11.732Z",
         "versao_protocolo": "1.1"
       }
+    },
+    {
+      "id": "emenda-2",
+      "status": "APROVADA",
+      "o_que": "Entra uma fonte na tabela \"Fontes de Busca\": a Oasisbr (IBICT) inteira, por search_repository (BR-AGG-0006), sem filtro de rede, com as duas consultas simples `cajuína` e `cajuina` e o controle positivo, como os outros repositórios. A Oasisbr agrega os repositórios brasileiros de acesso aberto; com ela, a busca nacional deixa de depender de escolher instituição por instituição. As outras 11 fontes ficam; não mudam strings, critérios nem controles positivos. A BDTD (BR-AGG-0001) continua como fonte própria. As rotas de Alice, Infoteca-e, UFC e UECE seguem pela Oasisbr filtrada pela rede de cada uma; muda só o id do agregador no catálogo (BR-AGG-0001 → BR-AGG-0006), e o plano é congelado de novo com as rotas de hoje.",
+      "antes": "Protocolo 1.1: 11 fontes. Os repositórios brasileiros são buscados um a um (BDTD, Alice, Infoteca-e, UFC, UECE, UFPI). O protocolo diz que o catálogo do ReviewBR chama a BDTD de \"Oasisbr\": o BR-AGG-0001 tinha o nome Oasisbr e buscava na BDTD, e a Oasisbr inteira não era buscável.",
+      "depois": "Protocolo 1.2: 12 fontes. Entra \"Oasisbr (IBICT), inteira\" (id do plano `oasisbr`, BR-AGG-0006, rota \"Oasisbr (IBICT), API do VuFind, sem filtro de rede\"). O total relatado é o que a Oasisbr declara. Registros que ela traz e que outras fontes também trazem são duplicatas, removidas na F3 com relatório. Limite declarado: a Oasisbr cobre o que os repositórios brasileiros de acesso aberto enviam a ela; a produção do exterior que use o termo \"cajuína\" vem pelas bases internacionais do protocolo (OpenAlex, Scopus, Web of Science, FSTA).",
+      "porque": "Pergunta do Vicente em 21/11/2026: o ReviewBR tinha dezenas de fontes e a pesquisa ficou com poucas. Visto na manutenção (FILA, Visto de passagem, commit 1573fc8): o catálogo chamava a BDTD de Oasisbr, a Oasisbr inteira nunca foi buscável, e as opções de fontes de 12/11 e 15/11 não traziam um agregador nacional. A manutenção separou as duas fontes no mesmo dia (gate validate_system_change: CORRECAO). Sem a Oasisbr inteira, a revisão de escopo não cobre a produção nacional.",
+      "plano": {
+        "versao_protocolo": "1.2",
+        "fontes": [
+          {
+            "id": "scopus",
+            "nome": "Scopus",
+            "modo": "manual",
+            "tool": "import_dataset_ris",
+            "textos": [
+              "TITLE-ABS-KEY ( cajuína OR cajuina )"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "plataforma",
+              "data",
+              "filtros",
+              "total",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "wos",
+            "nome": "Web of Science",
+            "modo": "manual",
+            "tool": "import_dataset_ris",
+            "textos": [
+              "TS=(cajuína OR cajuina)"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "plataforma",
+              "data",
+              "filtros",
+              "total",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "fsta",
+            "nome": "FSTA",
+            "modo": "manual",
+            "tool": "import_dataset_ris",
+            "textos": [
+              "TI ( cajuína OR cajuina ) OR AB ( cajuína OR cajuina ) OR SU ( cajuína OR cajuina )",
+              "TS=(cajuína OR cajuina)"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "plataforma",
+              "data",
+              "filtros",
+              "total",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "scielo",
+            "nome": "SciELO",
+            "modo": "tool",
+            "tool": "search_scielo",
+            "textos": [
+              "cajuína OR cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "bdtd",
+            "nome": "BDTD (IBICT)",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-AGG-0001",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "oasisbr",
+            "nome": "Oasisbr (IBICT), inteira",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-AGG-0006",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "alice",
+            "nome": "Embrapa — Alice",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-RES-0001",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "infoteca",
+            "nome": "Embrapa — Infoteca-e",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-RES-0004",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "ufc",
+            "nome": "Repositório da UFC",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-FED-0004",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "uece",
+            "nome": "Repositório da UECE",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-EST-0006",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "ufpi",
+            "nome": "Repositório da UFPI",
+            "modo": "tool",
+            "tool": "search_repository",
+            "repositorio": "BR-FED-0014",
+            "textos": [
+              "cajuína",
+              "cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          },
+          {
+            "id": "openalex",
+            "nome": "OpenAlex",
+            "modo": "tool",
+            "tool": "search_openalex",
+            "textos": [
+              "cajuína OR cajuina"
+            ],
+            "registrar": [
+              "período de cobertura",
+              "controle positivo"
+            ]
+          }
+        ]
+      },
+      "proposta_em": "2026-11-21T05:50:01.455Z",
+      "decisao": {
+        "por": "pesquisador",
+        "contribuicao": "\"separar bdtd e oasisbr e colocar a oasisbr inteira para nao sair uma pesquisa de escopo que nao faz um scopo. especialmente um nacional, mas como existe producao de cajuina em outros paises, talvez nao com esse nome, mas se em um artigo do exterior tiver o termo cajuina ele vai vir. faça a emenda aqui mesmo para nao baguncar a sessao da pesquisa\" (Vicente, 21/11/2026, depois de saber que o catálogo chamava a BDTD de Oasisbr e que a Oasisbr inteira nunca foi buscável)",
+        "em": "2026-11-21T05:50:01.465Z",
+        "versao_protocolo": "1.2"
+      }
     }
   ],
   "trava_busca": {
-    "versao_protocolo": "1.1",
+    "versao_protocolo": "1.2",
     "etapa": "F2",
     "protocolo_sha256": "39cab278aa3f11195a34ef682d9e943643278f92bc712a798a41e52be43ba4aa",
     "plano": {
-      "versao_protocolo": "1.0",
+      "versao_protocolo": "1.2",
       "fontes": [
         {
           "id": "scopus",
@@ -323,6 +526,22 @@
           "rota": "BDTD, API do VuFind"
         },
         {
+          "id": "oasisbr",
+          "nome": "Oasisbr (IBICT), inteira",
+          "modo": "tool",
+          "tool": "search_repository",
+          "repositorio": "BR-AGG-0006",
+          "textos": [
+            "cajuína",
+            "cajuina"
+          ],
+          "registrar": [
+            "período de cobertura",
+            "controle positivo"
+          ],
+          "rota": "Oasisbr (IBICT), API do VuFind, sem filtro de rede"
+        },
+        {
           "id": "alice",
           "nome": "Embrapa — Alice",
           "modo": "tool",
@@ -336,7 +555,7 @@
             "período de cobertura",
             "controle positivo"
           ],
-          "rota": "Oasisbr (IBICT) (BR-AGG-0001), API do VuFind, filtro network_acronym_str:\"EMBR\""
+          "rota": "Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"EMBR\""
         },
         {
           "id": "infoteca",
@@ -352,7 +571,7 @@
             "período de cobertura",
             "controle positivo"
           ],
-          "rota": "Oasisbr (IBICT) (BR-AGG-0001), API do VuFind, filtro network_acronym_str:\"EMBRAPA-9\""
+          "rota": "Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"EMBRAPA-9\""
         },
         {
           "id": "ufc",
@@ -368,7 +587,7 @@
             "período de cobertura",
             "controle positivo"
           ],
-          "rota": "Oasisbr (IBICT) (BR-AGG-0001), API do VuFind, filtro network_acronym_str:\"UFC-7\""
+          "rota": "Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"UFC-7\""
         },
         {
           "id": "uece",
@@ -384,7 +603,7 @@
             "período de cobertura",
             "controle positivo"
           ],
-          "rota": "Oasisbr (IBICT) (BR-AGG-0001), API do VuFind, filtro network_acronym_str:\"UECE-0\""
+          "rota": "Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"UECE-0\""
         },
         {
           "id": "ufpi",
@@ -418,7 +637,7 @@
         }
       ]
     },
-    "desde": "2026-11-20T19:53:11.928Z",
+    "desde": "2026-11-21T05:50:01.468Z",
     "execucoes": []
   },
   "desvios": [

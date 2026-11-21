@@ -25,6 +25,12 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
 
 - Artigo 1: revisão de escopo (`scoping-prisma-scr`), controle estrito. **Protocolo v1.0 TRAVADO em 15/11/2026**
   (`project_state.json`: LOCKED, fase F2). Mudar o protocolo agora exige emenda registrada.
+- **Emenda 2 APROVADA em 21/11/2026 (protocolo 1.1 → 1.2), feita na sessão de manutenção a pedido do Vicente.**
+  Entra a **Oasisbr (IBICT) inteira** (fonte `oasisbr` do plano, `search_repository` `BR-AGG-0006`, sem filtro de
+  rede, consultas `cajuína` e `cajuina`, com controle positivo): agora são 12 fontes. Motivo: o catálogo chamava a
+  BDTD de "Oasisbr" e a Oasisbr inteira nunca foi buscável; a manutenção separou as duas no mesmo dia. A BDTD segue
+  como `BR-AGG-0001`. Ver `change_log.md` (emenda-2) e `REGISTRO.md`. Em 21/11/2026 o DNS do `ibict.br` não
+  respondia (BDTD e Oasisbr fora do ar); se seguir assim na busca, anote, sem contornar.
 - O que vale é o `protocol.md`. O `DESENHO_artigo1.md` é o histórico de como se chegou a ele; onde os dois
   divergirem (a string, a conferência de 20%, o Rayyan), vale o protocolo.
 - A parte do Vicente no passo C foi feita em 19/11/2026: Scopus 23, Web of Science 17 e FSTA 14 registros, todos com

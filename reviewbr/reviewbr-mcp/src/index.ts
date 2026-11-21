@@ -1333,7 +1333,7 @@ server.tool(
 
 server.tool(
     "search_repository",
-    "Busca artigos/teses em repositórios acadêmicos pela interface de busca do próprio repositório (API do VuFind na BDTD, API REST do DSpace 7 ou a página de busca do site), e mostra o total que cada fonte declarou. O OAI-PMH não serve de busca, só de colheita (harvest_records). A tool se identifica como ReviewBR e não usa caminho que o robots.txt do site proíbe. Repositório que ela não alcança diretamente é buscado na plataforma de ciência aberta que o agrega (Oasisbr, do IBICT, filtrada pela rede do repositório), e cada registro diz onde foi visto; o total é o da plataforma. Sem agregador no catálogo, o repositório aparece em Erros com o motivo — zero só quando a fonte disse zero.",
+    "Busca artigos/teses em repositórios acadêmicos pela interface de busca do próprio repositório (API do VuFind na BDTD, API REST do DSpace 7 ou a página de busca do site), e mostra o total que cada fonte declarou. O OAI-PMH não serve de busca, só de colheita (harvest_records). A tool se identifica como ReviewBR e não usa caminho que o robots.txt do site proíbe. A BDTD (BR-AGG-0001) e a Oasisbr inteira (BR-AGG-0006, todos os repositórios brasileiros que ela agrega, sem filtro) são fontes separadas. Repositório que ela não alcança diretamente é buscado na plataforma de ciência aberta que o agrega (Oasisbr, do IBICT, filtrada pela rede do repositório), e cada registro diz onde foi visto; o total é o da plataforma. Sem agregador no catálogo, o repositório aparece em Erros com o motivo — zero só quando a fonte disse zero.",
     {
         query: z.string().describe("Termo(s) de busca por tema (ex: '<tema da sua revisão>')"),
         repositories: z.array(z.string()).optional()

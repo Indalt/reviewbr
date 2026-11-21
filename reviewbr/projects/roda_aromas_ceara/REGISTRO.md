@@ -216,6 +216,13 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   Web of Science e FSTA. Consequência: o que a plataforma disponibiliza é anotado, não perguntado ao Vicente. Origem:
   "em todas as buscas foi marcado todas as datas. (…) isso nao precisaria ser perguntado. apenas anotado. (…)
   declarar o que foi visto me parece o suficiente."
+- **21/11/2026, emenda 2 APROVADA (protocolo 1.1 → 1.2).** Entra a Oasisbr (IBICT) inteira como fonte própria
+  (`BR-AGG-0006`, sem filtro de rede); a BDTD segue como `BR-AGG-0001`. Frase dele: "separar bdtd e oasisbr e
+  colocar a oasisbr inteira para nao sair uma pesquisa de escopo que nao faz um scopo. especialmente um nacional,
+  mas como existe producao de cajuina em outros paises, talvez nao com esse nome, mas se em um artigo do exterior
+  tiver o termo cajuina ele vai vir. faça a emenda aqui mesmo para nao baguncar a sessao da pesquisa". Alcance: a
+  busca da F2 passa a ter 12 fontes; strings, critérios e controles não mudam. Consequência: a cobertura nacional
+  vem da Oasisbr; a do exterior, das bases internacionais do protocolo (OpenAlex, Scopus, Web of Science, FSTA).
 - **19/11/2026, linha 13.** Ele não sabia se vinha antes das buscas. Resposta dada: não; ela grava as decisões dos
   dois revisores, que só existem na triagem (passo D). A ordem de 19/11 fica: linha 13 antes do passo D.
 - **16/11/2026, só o Claude.** O Vicente perguntou se outro assistente (Gemini) poderia tocar parte do trabalho e
