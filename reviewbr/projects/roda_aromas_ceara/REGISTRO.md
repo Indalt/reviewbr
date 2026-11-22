@@ -53,6 +53,20 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   espaço comum na transcrição (Scopus, Solon-Júnior et al. 2025; FSTA, segundo registro de Fonteles et al. 2025).
   Nenhuma palavra muda. Sem DOI, como no RIS: 5 registros (1 da Scopus e 4 da FSTA, entre eles as 2 patentes).
 
+### Passo C, segunda parte: parada em 22/11/2026, antes de buscar (BDTD sem busca)
+
+- Conferência pedida pela decisão de 21/11 (as 12 fontes rodam juntas, só com a BDTD e a Oasisbr respondendo),
+  22/11/2026, ~18:40 (horário de Brasília):
+  - a página de entrada das duas responde (HTTP 200; o DNS do `ibict.br` voltou);
+  - **a busca da BDTD não responde:** a API do VuFind (`bdtd.ibict.br/vufind/api/v1/search`, a rota congelada) devolve
+    HTTP 400, "Problem connecting to Solr.", para qualquer consulta (testado com `*` e `agua`, quatro vezes entre
+    ~18:30 e ~18:43);
+  - a Oasisbr busca normalmente (API do VuFind, HTTP 200).
+- **Nada foi buscado.** Nenhuma consulta com `cajuína` ou `cajuina`, nenhuma tool de busca chamada; o
+  `logs/search_log_prisma_s.csv` e o `01_raw/` não mudaram. As consultas de teste acima foram feitas por fora das
+  tools, só para conferir a disponibilidade, e não são busca da revisão.
+- Próximo: repetir a conferência em outro dia; com a busca da BDTD respondendo, rodar as 9 fontes abertas.
+
 ## Decisões
 
 - **12/11/2026, passo 1, pergunta.** Opções apresentadas: (a) o que já existe; (b) que produto escolher; (c) como se

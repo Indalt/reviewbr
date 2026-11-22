@@ -35,6 +35,11 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   Alcance: nenhuma fonte do plano é buscada antes disso, para as 12 rodarem juntas. Consequência: com o IBICT fora,
   a sessão confere se `bdtd.ibict.br` e `oasisbr.ibict.br` respondem e, se não, para sem buscar. Origem: "nao acho
   que disparar a pesquisa sem estes pode ser considerada uma busca de scopo".
+- **22/11/2026: conferido de novo, parado sem buscar.** As páginas da BDTD e da Oasisbr respondem, mas a **busca da
+  BDTD não**: a API devolve HTTP 400, "Problem connecting to Solr.", para qualquer consulta. A Oasisbr busca
+  normalmente. Nada foi buscado (detalhe no `REGISTRO.md`, "Passo C, segunda parte: parada em 22/11/2026"). A
+  conferência tem de testar uma **consulta na API** (`/vufind/api/v1/search?lookfor=agua&limit=0` devolvendo
+  `"status":"OK"`), não só a página de entrada.
 - O que vale é o `protocol.md`. O `DESENHO_artigo1.md` é o histórico de como se chegou a ele; onde os dois
   divergirem (a string, a conferência de 20%, o Rayyan), vale o protocolo.
 - A parte do Vicente no passo C foi feita em 19/11/2026: Scopus 23, Web of Science 17 e FSTA 14 registros, todos com
