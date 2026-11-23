@@ -66,9 +66,9 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 23/11/2026, depois do conserto da camada por palavras — build e suíte 644 de 644; audit
-válido, 0 achados abertos; fila: linha 10 em curso, 13 a fazer (espera a resposta do Vicente); 46 itens no "Visto de
-passagem".
+**Última verificação:** 23/11/2026, sessão da linha 13 — build e suíte 644 de 644; audit válido, 0 achados abertos;
+fila: linha 10 em curso, 13 com diagnóstico e plano (a construção espera o Vicente); 47 itens no "Visto de passagem";
+sem commit no projeto: `roda_aromas_ceara/03_screening/` e `logs/lote/` (da camada por palavras).
 
 ## Fila
 
@@ -87,7 +87,7 @@ passagem".
 | 10 | Fase de testes | — | — | **em curso:** o teste é a pesquisa real `roda_aromas_ceara` (Vicente, 19/11/2026); as linhas 11 a 13 saíram dele |
 | 11 | I — Busca nos repositórios do `roda_aromas_ceara` | ver abaixo | ver abaixo | **feita em 19/11/2026** (commit `4936c59`): UFPI e IFCE buscam pela API REST; UECE, Alice e Infoteca-e marcadas como não pesquisáveis (HTTP 403), e a tool diz isso; Infoteca-e segue `inactive`; `matchesQuery` corrigido, sem chamador desde o item 1 |
 | 12 | J — OpenAlex e SciELO: resumo, endereço e a fonte do SciELO | ver abaixo | ver abaixo | **feita em 19/11/2026** (commits `f290ac9` e o seguinte): item 2 pelo OpenAlex com o prefixo 10.1590, por decisão do Vicente |
-| 13 | K — Decisões dos dois revisores humanos | ver abaixo | — | a fazer; antes da triagem do projeto (passo D). Diagnóstico de 23/11/2026 na seção "Pedido do Vicente de 23/11/2026"; o conserto espera ele |
+| 13 | K — Decisões dos dois revisores humanos | ver abaixo | — | a fazer; antes da triagem do projeto (passo D). Diagnóstico, fonte oficial e plano de 23/11/2026 na seção "Pedido do Vicente de 23/11/2026", (2); a construção espera ele |
 | 14 | L — Acesso por robô: conferência jurídica e ética (UECE, Alice, Infoteca-e) | User-Agent identificado | `CONFERENCIA_acesso_2026-11-19.md` | **feita em 19/11/2026**: robots.txt respeitado; UECE, Alice, Infoteca-e e UFC pela Oasisbr, declarando onde se viu |
 | 15 | F9 — importação de várias bases em `01_raw` | ver abaixo | — | **feita em 19/11/2026** |
 | 16 | F10 e F11 — importação de RIS: linha de continuação, CR sozinho e registros distintos da mesma base | ver abaixo | — | **feita em 20/11/2026** |
@@ -581,6 +581,102 @@ planilha só preenche o arquivo do ReviewBR. (b) Uma decisão por vez, ditada no
 > usar ia para substituir a triagem"; "ainda cabe a duvida sobre todos os artigos nao serem mockup de ia e de os links
 > levarem a artigos que nao sao os que se diz"; "ok, vamos gravar e incluir os campos para marcar sim ou nao"; sobre a
 > identificação e a observação na dúvida: "concordo. gravar como decisoes minhas."
+
+**(2) Linha 13 — fonte oficial, diagnóstico e plano (23/11/2026, sessão da linha 13; nada construído).** Pedido:
+"Antes de construir, confira com a fonte oficial a minha pergunta gravada ali (…) e mostre-me o diagnóstico e o plano."
+
+*Fonte oficial, lida em 23/11/2026* (pergunta dele: "situacoes assim sao comuns em outras pesquisas?"):
+- PRISMA 2020, declaração (Page et al., BMJ 2021; texto em PMC8008539), item 8: relatar "how many reviewers screened
+  each record and each report retrieved, whether they worked independently". Explicação e elaboração (PMC8005925),
+  item 8: também o modo de resolver divergências ("referral to a third reviewer or by consensus"); independente quer
+  dizer "unaware of each other's decisions". Item 16a: contar, entre outros, os "potentially eligible reports that were
+  not retrievable" e os motivos principais de exclusão no texto completo.
+- PRISMA-ScR, checklist oficial (prisma-statement.org, versão de 11/09/2019): item 9, o processo de seleção (triagem e
+  elegibilidade); item 14, os números triados, avaliados e incluídos, "with reasons for exclusions at each stage".
+- JBI Manual for Evidence Synthesis 2024, 10.2.6: "source selection (both at title/abstract screening and full-text
+  screening) is performed by two or more reviewers, independently. Any disagreements are solved by consensus or by the
+  decision of a third reviewer"; o fluxograma inclui a recuperação do texto completo; os motivos de exclusão são ditos.
+- Cochrane Handbook 6.5.1, cap. 4: 4.6.4 e MECIR C39 (obrigatório nas revisões Cochrane), dois revisores independentes e
+  o modo de resolver divergências definido antes; no título e resumo, "authors should generally be over-inclusive"; as
+  decisões e os motivos podem ficar em "a simple document or spreadsheet".
+
+*Resposta:* sim. Triagem dupla independente nas duas fases, divergência por consenso ou terceiro, a dúvida que segue
+para o texto completo, a planilha e a caixa dos não recuperados estão nas quatro fontes; a tool é geral (qualquer número
+de revisores e de perguntas). O que as fontes trazem e o desenho não muda: a conferência de procedência dos links não é
+passo descrito nelas (o mais próximo é a Cochrane 4.4.6, retratação e estudo fraudulento): é decisão dele, a mais, e não
+exclui ninguém; a independência do PRISMA 2020 (não saber da decisão do outro) o sistema não garante, e o relato declara
+como foi feita. Só informação: o JBI recomenda piloto antes da triagem (25 títulos e resumos; começar com 75% ou mais de
+concordância) e a Cochrane, piloto dos critérios; o protocolo travado não tem piloto.
+
+*Diagnóstico*, além do de (2) acima (código e insumo lidos; nada gravado no projeto):
+- O servidor não tem biblioteca de planilha (`package.json`: só `csv-parse`). O `.xlsx` com lista de opções, colunas
+  travadas e aba oculta precisa de uma.
+- `writeScreening` grava dois arquivos por estágio; nada grava `fulltext_not_retrieved.json`, que o funil já conta
+  (`flow_computer.ts:87`).
+- O funil calcula os encaminhados ao texto completo como triados − excluídos (`flow_computer.ts:106`): registro fora dos
+  dois arquivos conta como encaminhado. Por isso a falha de procedência pendente impede o fechamento do estágio.
+- Insumo do projeto: 743 em `passed_keywords.json` (`{record, camada, motivo, sem_resumo, casamentos}`; os termos que
+  casaram vêm de `casamentos`; as palavras-chave, do registro e de `02_deduplicated/palavras_chave.json`); 220 sem
+  resumo. Endereço: 329 com DOI; 414 só com a página (321 em `v3.cadernoscajuina.pro.br`, 16 na Infoteca-e, 7 no
+  Sucupira, 2 na EBSCO, que pede login, e outros). Sem idioma declarado: 401; sem tipo: 6. Revista: só 6 a têm (Scopus e
+  FSTA). Pares sinalizados na F3: 36; os dois do par estão no insumo em 3, um só em 2.
+- `doi.org` devolve, por negociação de conteúdo, os metadados registrados do DOI (com o título; 404 para DOI
+  inexistente), e o `robots.txt` dele não proíbe.
+
+*Plano.* Gate `validate_system_change` CORRECAO (falha: nenhuma tool grava a decisão por revisor que o F4.1.3 do
+protocolo atribui ao ReviewBR). Cada item com teste que falha antes e passa depois, sobre registros do
+`roda_aromas_ceara` copiados para `tests/fixtures/`, com a rede simulada. FAZER:
+1. Dependência `exceljs` 4.4.0 (MIT), para escrever e ler a planilha.
+2. Tool `verify_record_links` (LIBRARIAN e COORDINATOR: abre endereços na rede, como o `complete_record_keywords`). Com
+   DOI, compara o título que o DOI registra em `doi.org`; sem DOI, abre a página (`robots.txt` respeitado, User-Agent do
+   ReviewBR) e lê o título que ela declara (`citation_title`, `DC.title`, `og:title`, `<title>`). Regra declarada:
+   títulos sem acento, maiúscula, pontuação nem espaço repetido; confere se iguais ou se um é o começo do outro (título
+   sem subtítulo). Marca `confere`, `não confere` ou `fora do ar`, com o motivo (DOI não registrado, HTTP, pede login,
+   `robots.txt`, página sem título). Grava `03_screening/procedencia.json` (link, título lido, situação, motivo, data) e
+   o relatório (data e contagens, para o relato); as falhas vão para `03_screening/revisores/falhas_procedencia.json`,
+   que a sessão do projeto leva ao "Visto de passagem". Com `somente_pendentes`, refaz só as falhas, depois do conserto.
+3. Tool `record_screening_decisions` (SCREENER e COORDINATOR):
+   - `formulario`: recusa sem a conferência do insumo. Uma planilha por revisor (rótulos do pesquisador; cada uma com o
+     insumo inteiro, menos as falhas de procedência), `03_screening/revisores/<estagio>_<rotulo>.xlsx`, e o manifesto do
+     estágio (insumo e hash, ids, revisores, perguntas, hash do `protocol.md`). As perguntas entram como parâmetro, com o
+     estágio de cada uma, e cada texto tem de estar escrito no `protocol.md`. No topo: nome, papel (lista), datas de
+     início e de fim (só estes abertos), a instrução objetiva e as perguntas como estão no protocolo; no texto completo,
+     também o critério do protocolo para texto indisponível. Travadas: nº, id, título, resumo inteiro, palavras-chave,
+     termos que casaram, ano, tipo, idioma, fonte e revista, link (DOI; sem DOI, a página; a da Scopus só como origem),
+     conferência do link, aviso de par da F3. Abertas, com lista: uma coluna por pergunta (`sim`/`não`/`dúvida` no título
+     e resumo; `sim`/`não` no texto completo), "o link abriu o documento certo?" (`sim`/`não`), no texto completo
+     "conseguiu ler o texto completo?" (`sim`/`não`) antes das perguntas, e observação livre. Ao lado da pergunta que o
+     pesquisador indicar (no projeto, a (c)), travado, o idioma e o tipo que a fonte declara, para o revisor confirmar ou
+     corrigir. Ordem: por revista; sem revista (737 dos 743), pelo site do link; os dois do par da F3 juntos. Aba oculta
+     com estágio, revisor, hash do insumo e ids. Com `pendentes`, só os registros que voltaram da manutenção.
+   - `importar`: recusa, dizendo a linha: identificação incompleta; id ausente, a mais ou repetido; planilha de outro
+     estágio ou insumo; resposta em branco (no texto completo, as perguntas só ficam em branco com "conseguiu ler?" =
+     `não`); `dúvida` sem observação; `dúvida` no texto completo. Decisão de cada linha, sem escolha à mão: link `não` →
+     falha de procedência (vai à lista, não é decidida); título e resumo: um `não` exclui (motivo: as perguntas com
+     `não`), senão segue (marcado "com dúvida" se houver); texto completo: "conseguiu ler?" `não` → não recuperado, um
+     `não` exclui, `sim` em todas inclui. Grava `03_screening/revisores/decisoes_<estagio>.json` (por registro e revisor:
+     nome, papel, respostas, observação, decisão, motivo) e a importação (arquivo, hash, data, datas declaradas), e guarda
+     a planilha recebida. Reimportar o mesmo revisor exige autorização e arquiva a anterior. Lê também a do consenso.
+   - `consenso`: gera `03_screening/revisores/<estagio>_consenso.xlsx` só com os registros em que as decisões divergem,
+     as respostas e observações de cada revisor lado a lado (travadas); abertas: resultado (lista do estágio), motivo e
+     "decidido por" (`consenso` ou `pesquisador`); no topo, quem participou e o nome do pesquisador. Onde concordam, o
+     resultado é o deles, com o motivo de cada um.
+   - `gerar`: recusa enquanto faltar revisor, houver divergência sem consenso ou falha de procedência pendente (lista os
+     ids). Grava pelo `writeScreening`: título e resumo → `included_ta.json` e `excluded_ta.json`; texto completo →
+     `included.json`, `excluded_fulltext.json` e `fulltext_not_retrieved.json`; cada item `{record, decision, motivo,
+     decisoes, consenso}`. Relatório do estágio (revisores, papéis, datas, contagens, divergências e como se resolveram,
+     motivos de exclusão por pergunta, conferência dos links). Passa pela trava da RV-04, como o `screen_candidates`.
+4. `writeScreening` e `triagemGravada`: o estágio do texto completo ganha o terceiro arquivo; o funil já o conta.
+
+DECLARAR: `screener.md` e `screening-rules` (decisões dos revisores humanos pela `record_screening_decisions`);
+`librarian.md` (a conferência pelo `verify_record_links`); limites: o sistema não garante a independência entre os
+revisores; a trava das colunas evita edição acidental, e a importação confere pelo id e pelo hash do insumo.
+
+Teste real, depois da suíte, numa cópia do `roda_aromas_ceara` fora do projeto: a conferência dos 743 links pela rede, as
+duas planilhas geradas e relidas, e planilhas de teste preenchidas para importar, consensuar, gerar e contar o funil.
+
+Não fazer: o item 4 (concordância), triagem por IA, cegamento, piloto, o conserto de cada falha de procedência (é da
+manutenção, caso a caso) e o registro das falhas do `retrieve_fulltexts` (fica no "Visto de passagem").
 
 ### Como uma linha entra na fila
 
