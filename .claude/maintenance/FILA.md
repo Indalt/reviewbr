@@ -547,3 +547,9 @@ Vicente pedir.
   não vem do parâmetro e não é dito na resposta; o log marca "truncada"). O protocolo pede recuperar tudo o que a
   fonte informa. Passo parado depois dessa fonte. Visto também: entre os 1000 há registros sem relação aparente com
   o termo (ex.: nº 51, "O Comitê Gestor do IBS"); não conferido se a consulta casa com texto completo.
+  **Consertado em 23/11/2026** a pedido do Vicente ("a busca é de escopo, nao deve ter teto!"), gate
+  `validate_system_change`: CORRECAO. Causa: a API do VuFind não pagina além da página 10 (a 11 repete a 10). O
+  `searchDetailed` cobre o que passa de 1000 em fatias (ano por bisseção, sem ano, rede, prefixo do id `REDE_<hash>`);
+  o `search_openalex`/`search_scielo` também tinham teto (só a 1ª página, 200) e agora paginam por cursor. Conferido
+  no `dist`: Oasisbr `cajuína` 2997 de 2997; OpenAlex 2639 de 2639; SciELO 79 de 79. A suíte (`npm test`) não roda
+  neste PC: "No test suite found" nos 64 arquivos, igual sem a mudança.

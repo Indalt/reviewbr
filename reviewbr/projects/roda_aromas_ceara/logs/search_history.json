@@ -138,5 +138,316 @@
         "BR-AGG-0006"
       ]
     }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:23.782Z",
+    "tool": "search_repository",
+    "query": "cajuína",
+    "found": 11,
+    "totalFound": 11,
+    "errors": [],
+    "params": {
+      "query": "cajuína",
+      "repositories": [
+        "BR-RES-0001"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr filtrada pela rede EMBR (lookfor=*, ordenado por ano) em 23/11/2026: 136.242 registros, datas de 1938 a 2026; sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "alice",
+      "rota": "alice: Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"EMBR\"",
+      "repositoriosConsultados": [
+        "BR-RES-0001"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:27.424Z",
+    "tool": "search_repository",
+    "query": "cajuina",
+    "found": 11,
+    "totalFound": 11,
+    "errors": [],
+    "params": {
+      "query": "cajuina",
+      "repositories": [
+        "BR-RES-0001"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr filtrada pela rede EMBR (lookfor=*, ordenado por ano) em 23/11/2026: 136.242 registros, datas de 1938 a 2026; sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "alice",
+      "rota": "alice: Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"EMBR\"",
+      "repositoriosConsultados": [
+        "BR-RES-0001"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:29.667Z",
+    "tool": "search_repository",
+    "query": "cajuína",
+    "found": 6,
+    "totalFound": 6,
+    "errors": [],
+    "params": {
+      "query": "cajuína",
+      "repositories": [
+        "BR-RES-0004"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr filtrada pela rede EMBRAPA-9 (lookfor=*, ordenado por ano) em 23/11/2026: 13.922 registros, datas de 1940 a 2026; sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "infoteca",
+      "rota": "infoteca: Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"EMBRAPA-9\"",
+      "repositoriosConsultados": [
+        "BR-RES-0004"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:31.731Z",
+    "tool": "search_repository",
+    "query": "cajuina",
+    "found": 6,
+    "totalFound": 6,
+    "errors": [],
+    "params": {
+      "query": "cajuina",
+      "repositories": [
+        "BR-RES-0004"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr filtrada pela rede EMBRAPA-9 (lookfor=*, ordenado por ano) em 23/11/2026: 13.922 registros, datas de 1940 a 2026; sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "infoteca",
+      "rota": "infoteca: Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"EMBRAPA-9\"",
+      "repositoriosConsultados": [
+        "BR-RES-0004"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:35.463Z",
+    "tool": "search_repository",
+    "query": "cajuína",
+    "found": 11,
+    "totalFound": 11,
+    "errors": [],
+    "params": {
+      "query": "cajuína",
+      "repositories": [
+        "BR-FED-0004"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr filtrada pela rede UFC-7 (lookfor=*, ordenado por ano) em 23/11/2026: 82.492 registros, datas de 1905 a 2026; sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero (e se traz riufc/78207 e riufc/67712); conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "ufc",
+      "rota": "ufc: Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"UFC-7\"",
+      "repositoriosConsultados": [
+        "BR-FED-0004"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:37.793Z",
+    "tool": "search_repository",
+    "query": "cajuina",
+    "found": 11,
+    "totalFound": 11,
+    "errors": [],
+    "params": {
+      "query": "cajuina",
+      "repositories": [
+        "BR-FED-0004"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr filtrada pela rede UFC-7 (lookfor=*, ordenado por ano) em 23/11/2026: 82.492 registros, datas de 1905 a 2026; sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero (e se traz riufc/78207 e riufc/67712); conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "ufc",
+      "rota": "ufc: Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"UFC-7\"",
+      "repositoriosConsultados": [
+        "BR-FED-0004"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:40.206Z",
+    "tool": "search_repository",
+    "query": "cajuína",
+    "found": 3,
+    "totalFound": 3,
+    "errors": [],
+    "params": {
+      "query": "cajuína",
+      "repositories": [
+        "BR-EST-0006"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr filtrada pela rede UECE-0 (lookfor=*, ordenado por ano) em 23/11/2026: 62.521 registros, datas de 0983 a 2025 (0983 é data inválida de catalogação); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "uece",
+      "rota": "uece: Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"UECE-0\"",
+      "repositoriosConsultados": [
+        "BR-EST-0006"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:42.559Z",
+    "tool": "search_repository",
+    "query": "cajuina",
+    "found": 3,
+    "totalFound": 3,
+    "errors": [],
+    "params": {
+      "query": "cajuina",
+      "repositories": [
+        "BR-EST-0006"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr filtrada pela rede UECE-0 (lookfor=*, ordenado por ano) em 23/11/2026: 62.521 registros, datas de 0983 a 2025 (0983 é data inválida de catalogação); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "uece",
+      "rota": "uece: Oasisbr (IBICT) (BR-AGG-0006), API do VuFind, filtro network_acronym_str:\"UECE-0\"",
+      "repositoriosConsultados": [
+        "BR-EST-0006"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:48.289Z",
+    "tool": "search_repository",
+    "query": "cajuína",
+    "found": 41,
+    "totalFound": 41,
+    "errors": [],
+    "params": {
+      "query": "cajuína",
+      "repositories": [
+        "BR-FED-0014"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API REST do DSpace da UFPI (repositorio.ufpi.br/srv-ufpi-s01/api/discover/search/objects, itens ordenados por dc.date.issued) em 23/11/2026: 4.220 itens, datas de 2014-11-25 a 2026-11-18; sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "ufpi",
+      "rota": "ufpi: DSpace REST (https://repositorio.ufpi.br/srv-ufpi-s01/api)",
+      "repositoriosConsultados": [
+        "BR-FED-0014"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:49.788Z",
+    "tool": "search_repository",
+    "query": "cajuina",
+    "found": 41,
+    "totalFound": 41,
+    "errors": [],
+    "params": {
+      "query": "cajuina",
+      "repositories": [
+        "BR-FED-0014"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API REST do DSpace da UFPI (repositorio.ufpi.br/srv-ufpi-s01/api/discover/search/objects, itens ordenados por dc.date.issued) em 23/11/2026: 4.220 itens, datas de 2014-11-25 a 2026-11-18; sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "ufpi",
+      "rota": "ufpi: DSpace REST (https://repositorio.ufpi.br/srv-ufpi-s01/api)",
+      "repositoriosConsultados": [
+        "BR-FED-0014"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:53.899Z",
+    "tool": "search_openalex",
+    "query": "cajuína OR cajuina",
+    "found": 200,
+    "totalFound": 2639,
+    "params": {
+      "query": "cajuína OR cajuina",
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do OpenAlex (api.openalex.org/works?group_by=publication_year) em 23/11/2026: 295.331.757 trabalhos; anos de 1827 a 2026 entre os 200 anos com mais registros (o agrupamento da API mostra no máximo 200); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero e traz \"Cajuína: como produzir com qualidade\" (Abreu e Souza, 2004); conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "openalex",
+      "rota": "openalex: OpenAlex, https://api.openalex.org/works?search="
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:21:55.815Z",
+    "tool": "search_scielo",
+    "query": "cajuína OR cajuina",
+    "found": 79,
+    "totalFound": 79,
+    "params": {
+      "query": "cajuína OR cajuina",
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do OpenAlex com o filtro doi_starts_with:10.1590 (group_by=publication_year) em 23/11/2026: 510.714 trabalhos, anos de 1900 a 2027; sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "scielo",
+      "rota": "scielo: OpenAlex, https://api.openalex.org/works?search=, filtro doi_starts_with:10.1590"
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:22:21.129Z",
+    "tool": "search_repository",
+    "query": "cajuina",
+    "found": 1000,
+    "totalFound": 2997,
+    "errors": [],
+    "params": {
+      "query": "cajuina",
+      "repositories": [
+        "BR-AGG-0006"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr (oasisbr.ibict.br/vufind/api/v1/search, lookfor=*, ordenado por ano) em 23/11/2026: acervo de 6.635.673 registros; as datas de publicação indexadas vão de 0000 a 3016 (os extremos são datas inválidas de catalogação); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução (e se traz riufc/78207 e riufc/67712) e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "oasisbr",
+      "rota": "oasisbr: Oasisbr (IBICT), API do VuFind, sem filtro de rede",
+      "repositoriosConsultados": [
+        "BR-AGG-0006"
+      ]
+    }
   }
 ]

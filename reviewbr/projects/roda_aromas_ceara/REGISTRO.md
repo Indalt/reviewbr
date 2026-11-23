@@ -94,14 +94,31 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   | Oasisbr | `cajuína` | 2997 | **1000** | 1000 | > 0; traz riufc/78207 e riufc/67712 |
   | Oasisbr | `cajuína` (repetida, `maxResults` 5000) | 2997 | **1000** | 0 | idem |
 
-- **Parado aqui (regra 5).** A Oasisbr declara 2997 e a tool traz no máximo 1000, mesmo com `maxResults` 5000; a
+- **Parado aqui (regra 5); retomado no mesmo dia por ordem do Vicente** ("siga sem comentar ou perguntar. a busca é de escopo, nao deve ter teto!"). A Oasisbr declara 2997 e a tool traz no máximo 1000, mesmo com `maxResults` 5000; a
   resposta não diz que há teto (o log marca "truncada"). O protocolo pede recuperar tudo o que a fonte informa.
   Anotado no "Visto de passagem" da FILA (23/11/2026). Visto também: entre os 1000 há registros sem relação aparente
   com o termo (ex.: nº 51, "O Comitê Gestor do IBS"); não avaliado.
 - **Não buscadas:** Oasisbr `cajuina`, Alice, Infoteca-e, UFC, UECE, UFPI, OpenAlex, SciELO.
 - `01_raw/database_records.json`: 1079 registros (54 da CAPES + 25 BDTD + 1000 Oasisbr).
-- Próximo: manutenção do teto; depois, refazer a Oasisbr e seguir as outras fontes. Decisão do Vicente que falta:
-  se as duas fontes já feitas (BDTD e Oasisbr truncada) ficam ou se a busca toda se refaz junta no mesmo dia.
+- **Continuação, 23/11/2026** (mesmas leituras de cobertura da tabela acima; `maxResults` 5000):
+
+  | fonte | texto | declarado | recuperado | novos no arquivo | controle positivo |
+  |---|---|---|---|---|---|
+  | Oasisbr | `cajuina` | 2997 | **1000** (teto) | 0 | > 0 |
+  | Alice (Oasisbr, EMBR) | `cajuína` / `cajuina` | 11 / 11 | 11 / 11 | 11 / 0 | passou (> 0) |
+  | Infoteca-e (Oasisbr, EMBRAPA-9) | `cajuína` / `cajuina` | 6 / 6 | 6 / 6 | 6 / 0 | passou (> 0; traz doc/110278, "Cajuína.") |
+  | UFC (Oasisbr, UFC-7) | `cajuína` / `cajuina` | 11 / 11 | 11 / 11 | 11 / 0 | passou (> 0; traz riufc/78207 e riufc/67712) |
+  | UECE (Oasisbr, UECE-0) | `cajuína` / `cajuina` | 3 / 3 | 3 / 3 | 3 / 0 | passou (> 0) |
+  | UFPI (DSpace REST) | `cajuína` / `cajuina` | 41 / 41 | 41 / 41 | 41 / 0 | passou (> 0) |
+  | OpenAlex | `cajuína OR cajuina` | 2639 | **200** (teto) | arquivo próprio `01_raw/dataset_openalex_*.json` | passou (traz Abreu e Souza 2004) |
+  | SciELO (OpenAlex, 10.1590) | `cajuína OR cajuina` | 79 | 79 | arquivo próprio | passou (> 0) |
+
+- **Teto consertado no ReviewBR no mesmo dia** (ordem do Vicente; FILA, "Visto de passagem", 23/11; gate
+  CORRECAO): a API do VuFind não pagina além de 1000 e o OpenAlex só trazia a primeira página. Conferido no código
+  novo, fora do projeto: Oasisbr `cajuína` 2997 de 2997, OpenAlex 2639 de 2639.
+- **Falta:** refazer com o servidor novo a Oasisbr (`cajuína` e `cajuina`) e o OpenAlex. O servidor desta sessão
+  ainda é o antigo, e parar o processo do servidor foi negado pela permissão; o servidor novo carrega em chat novo
+  (ou reconectando o servidor `reviewbr` pelo `/mcp`).
 
 ## Decisões
 

@@ -40,6 +40,10 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   normalmente. Nada foi buscado (detalhe no `REGISTRO.md`, "Passo C, segunda parte: parada em 22/11/2026"). A
   conferência tem de testar uma **consulta na API** (`/vufind/api/v1/search?lookfor=agua&limit=0` devolvendo
   `"status":"OK"`), não só a página de entrada.
+- **23/11/2026, depois: busca seguida e teto consertado.** Feitas as 9 fontes abertas; com teto só a Oasisbr (1000
+  de 2997) e o OpenAlex (200 de 2639). Teto consertado no ReviewBR (gate CORRECAO). **Próximo, em chat novo (ou
+  depois de reconectar `reviewbr` no `/mcp`): refazer Oasisbr `cajuína`, Oasisbr `cajuina` e OpenAlex, com o
+  mesmo `registroDaBusca` do `REGISTRO.md`, conferir declarado = recuperado, e fechar a F2.**
 - **23/11/2026: busca começada e parada na Oasisbr.** BDTD feita (25, controle positivo passou). Oasisbr `cajuína`:
   declara 2997, a tool traz no máximo 1000 (teto não dito na resposta) → regra 5, parado, item no "Visto de
   passagem" da FILA. As outras fontes não foram buscadas. Detalhe, cobertura lida de cada fonte e tabela no

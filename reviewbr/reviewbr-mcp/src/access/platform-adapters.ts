@@ -265,6 +265,9 @@ interface BdtdRecord {
  */
 const BDTD_CAMPOS = ["id", "title", "authors", "publicationDates", "summary", "urls", "subjects", "languages", "formats", "institutions"];
 
+/** A API do VuFind não pagina além da página 10 (lido na Oasisbr em 23/11/2026: a 11 repete a 10). */
+const VUFIND_PAGINAS = 10;
+
 /** Total que a BDTD declarou na última busca deste adaptador (resultCount). */
 export interface BdtdBusca { results: SearchResult[]; total: number }
 
@@ -341,31 +344,104 @@ export class BdtdAdapter {
         }
         for (const f of filtrosExtras) params.append("filter[]", f);
 
-        const results: SearchResult[] = [];
-        let total = 0;
-        for (let page = 1; results.length < limit; page++) {
-            params.set("page", String(page));
-            const url = `${this.baseUrl}/api/v1/search?${params}`;
-            if (page === 1) {
-                const robots = await robotsPermite(url);
-                if (!robots.permitido) throw new Error(robots.motivo);
-            }
-
+        const vistos = new Map<string, SearchResult>();
+        const pedir = async (p: URLSearchParams): Promise<BdtdSearchResponse> => {
+            const url = `${this.baseUrl}/api/v1/search?${p}`;
             await rateLimiter.acquire(url);
-            const text = await fetchText(url, {
-                timeout: 30_000,
-                headers: { Accept: "application/json" },
-            });
-
+            const text = await fetchText(url, { timeout: 60_000, headers: { Accept: "application/json" } });
             const data = JSON.parse(text) as BdtdSearchResponse;
             if (typeof data.resultCount !== "number") throw new Error(`BDTD sem resultCount na resposta (${url})`);
-            total = data.resultCount;
-            const recs = (data.records ?? []).filter((r) => !results.some((x) => x.identifier === r.id));
-            results.push(...recs.map((r) => this.recordToSearchResult(r)));
-            if (recs.length === 0 || results.length >= total) break;
-        }
+            return data;
+        };
+        const comFiltros = (filtros: string[]): URLSearchParams => {
+            const p = new URLSearchParams(params);
+            for (const f of filtros) p.append("filter[]", f);
+            return p;
+        };
+        /** Páginas de uma fatia; o VuFind não passa da página 10 (100 × 10 = 1000 registros). */
+        const paginar = async (filtros: string[]): Promise<number> => {
+            const p = comFiltros(filtros);
+            let total = 0;
+            for (let page = 1; page <= VUFIND_PAGINAS && vistos.size < limit; page++) {
+                p.set("page", String(page));
+                const data = await pedir(p);
+                total = data.resultCount;
+                const recs = data.records ?? [];
+                for (const r of recs) if (!vistos.has(r.id)) vistos.set(r.id, this.recordToSearchResult(r));
+                if (recs.length < 100 || page * 100 >= total) break;
+            }
+            return total;
+        };
+        const contar = async (filtros: string[]): Promise<number> => {
+            const p = comFiltros(filtros);
+            p.set("limit", "0");
+            return (await pedir(p)).resultCount;
+        };
+        const facetas = async (filtros: string[], campo: string): Promise<string[]> => {
+            const p = comFiltros(filtros);
+            p.set("limit", "0");
+            p.append("facet[]", campo);
+            p.set("facetLimit", "1000");
+            return ((await pedir(p)).facets?.[campo] ?? []).map((x) => String(x.value));
+        };
+        const CABE = VUFIND_PAGINAS * 100;
+        const aspas = (v: string) => `"${v.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
+        /**
+         * Busca de mais de 1000 registros, coberta em fatias que caibam em 1000 (linha do "Visto de passagem"
+         * de 23/11/2026: busca de escopo não tem teto). Ordem: ano (faixas, bisseção), registros sem ano,
+         * rede do repositório (faceta), e dentro de uma rede o prefixo do id (`REDE_<hash>`, 16 fatias por
+         * nível). O resto de cada divisão entra numa fatia que exclui as partes, para nada ficar de fora.
+         * Fatia que nada disso divide é paginada até 1000, e o total declarado mostra a diferença.
+         */
+        const porId = async (filtros: string[], prefixo: string, qtd: number): Promise<void> => {
+            if (vistos.size >= limit) return;
+            if (qtd <= CABE || prefixo.length > 80) { await paginar(filtros); return; }
+            const partes = "0123456789abcdef".split("").map((c) => `${prefixo}${c}`);
+            for (const p of partes) {
+                const f = [...filtros, `id:${p}*`];
+                const n = await contar(f);
+                if (n > 0) await porId(f, p, n);
+            }
+            const fora = [...filtros, ...partes.map((p) => `-id:${p}*`)];
+            const sobra = await contar(fora);
+            if (sobra > 0 && sobra < qtd) await paginar(fora);
+        };
+        const porRede = async (filtros: string[], qtd: number): Promise<void> => {
+            const redes = (await facetas(filtros, "network_acronym_str")).slice(0, 60);
+            if (redes.length === 0) { await paginar(filtros); return; }
+            for (const r of redes) {
+                const f = [...filtros, `network_acronym_str:${aspas(r)}`];
+                const n = await contar(f);
+                if (n > 0) await porId(f, `${r}_`, n);
+            }
+            const fora = [...filtros, ...redes.map((r) => `-network_acronym_str:${aspas(r)}`)];
+            const sobra = await contar(fora);
+            if (sobra > 0 && sobra < qtd) await porRede(fora, sobra);
+        };
+        const porAno = async (filtros: string[], de: number, ate: number, qtd: number): Promise<void> => {
+            if (vistos.size >= limit || qtd === 0) return;
+            if (qtd <= CABE) { await paginar([...filtros, `publishDate:[${de} TO ${ate}]`]); return; }
+            if (de === ate) { await porRede([...filtros, `publishDate:[${de} TO ${ate}]`], qtd); return; }
+            const meio = Math.floor((de + ate) / 2);
+            for (const [a, b] of [[de, meio], [meio + 1, ate]]) {
+                await porAno(filtros, a, b, await contar([...filtros, `publishDate:[${a} TO ${b}]`]));
+            }
+        };
+        const cobrir = async (): Promise<void> => {
+            await porAno([], 0, 9999, await contar(["publishDate:[0 TO 9999]"]));
+            const semAno = ["-publishDate:[* TO *]"];
+            const n = await contar(semAno);
+            if (n > 0) await (n <= CABE ? paginar(semAno) : porRede(semAno, n));
+        };
 
-        return { results: results.slice(0, limit), total };
+        const primeira = new URLSearchParams(params);
+        primeira.set("page", "1");
+        const robots = await robotsPermite(`${this.baseUrl}/api/v1/search?${primeira}`);
+        if (!robots.permitido) throw new Error(robots.motivo);
+        const total = await paginar([]);
+        if (total > vistos.size && vistos.size < limit) await cobrir();
+
+        return { results: [...vistos.values()].slice(0, limit), total };
     }
 
     /**

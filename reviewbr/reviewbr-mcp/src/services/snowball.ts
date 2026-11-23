@@ -187,7 +187,7 @@ export class SnowballService {
             doi: r.doi,
             url: r.primary_location?.landing_page_url || r.doi || r.id || "",
             type: r.type,
-            accessMethod: "api",
+            accessMethod: "api" as const,
             audit: {
                 methodology: "CUSTOM" as any,
                 searchQueryUsed: `Snowball citations for: ${workId}`,
@@ -230,22 +230,34 @@ export class SnowballService {
 
     async search(query: string, options: { maxResults?: number, filter?: string } = {}): Promise<{ results: SearchResult[]; totalFound: number; error?: string }> {
         const maxResults = options.maxResults || 200;
-        let url = `https://api.openalex.org/works?search=${encodeURIComponent(query)}&per_page=${Math.min(maxResults, 200)}&mailto=${this.mailto}`;
+        let base = `https://api.openalex.org/works?search=${encodeURIComponent(query)}&per_page=${Math.min(maxResults, 200)}&mailto=${this.mailto}`;
 
         if (options.filter) {
-            url += `&filter=${options.filter}`;
+            base += `&filter=${options.filter}`;
         }
 
-        const res = await this.fetchJson(url);
-        if (res && res.__error) {
-            const hint = (res.status === 503 || res.status === 429)
-                ? " Busca anônima do OpenAlex está sob rate-limit. Configure OPENALEX_API_KEY (chave grátis em openalex.org/rest-api) no seu ~/.reviewbr/.env ou em reviewbr-mcp/.env."
-                : "";
-            return { results: [], totalFound: 0, error: `OpenAlex indisponível (HTTP ${res.status}).${hint}` };
+        // Paginação por cursor: sem ela vinha só a primeira página (200), qualquer que fosse o total.
+        const brutos: any[] = [];
+        let cursor: string | null = "*";
+        let count = 0;
+        while (cursor && brutos.length < maxResults) {
+            const res = await this.fetchJson(`${base}&cursor=${encodeURIComponent(cursor)}`);
+            if (res && res.__error) {
+                const hint = (res.status === 503 || res.status === 429)
+                    ? " Busca anônima do OpenAlex está sob rate-limit. Configure OPENALEX_API_KEY (chave grátis em openalex.org/rest-api) no seu ~/.reviewbr/.env ou em reviewbr-mcp/.env."
+                    : "";
+                const parcial = brutos.length ? ` Parada depois de ${brutos.length} registros.` : "";
+                return { results: [], totalFound: count, error: `OpenAlex indisponível (HTTP ${res.status}).${hint}${parcial}` };
+            }
+            if (!res || !res.results) break;
+            count = res.meta?.count ?? count;
+            brutos.push(...res.results);
+            if (res.results.length === 0) break;
+            cursor = res.meta?.next_cursor ?? null;
         }
-        if (!res || !res.results) return { results: [], totalFound: 0 };
+        if (brutos.length === 0 && count === 0) return { results: [], totalFound: 0 };
 
-        const results = res.results.map((r: any) => ({
+        const results = brutos.slice(0, maxResults).map((r: any) => ({
             repositoryId: "openalex",
             repositoryName: "OpenAlex",
             identifier: r.id,
@@ -258,7 +270,7 @@ export class SnowballService {
             doi: r.doi,
             url: r.primary_location?.landing_page_url || r.doi || r.id || "",
             type: r.type,
-            accessMethod: "api",
+            accessMethod: "api" as const,
             audit: {
                 methodology: "CUSTOM" as any,
                 searchQueryUsed: query,
@@ -269,7 +281,7 @@ export class SnowballService {
 
         return {
             results,
-            totalFound: res.meta?.count || results.length
+            totalFound: count || results.length
         };
     }
 }

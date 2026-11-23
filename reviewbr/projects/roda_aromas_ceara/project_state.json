@@ -9,7 +9,7 @@
   "control_level": "estrito",
   "phase": "F2",
   "createdAt": "2026-11-12T20:02:37.930Z",
-  "updatedAt": "2026-11-23T15:18:08.068Z",
+  "updatedAt": "2026-11-23T15:22:21.131Z",
   "decisions": [
     {
       "phase": "F1",
@@ -661,6 +661,84 @@
         "fonte": "oasisbr",
         "tool": "search_repository",
         "em": "2026-11-23T15:18:08.068Z",
+        "hits": 1000
+      },
+      {
+        "fonte": "alice",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:21:23.784Z",
+        "hits": 11
+      },
+      {
+        "fonte": "alice",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:21:27.426Z",
+        "hits": 11
+      },
+      {
+        "fonte": "infoteca",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:21:29.669Z",
+        "hits": 6
+      },
+      {
+        "fonte": "infoteca",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:21:31.733Z",
+        "hits": 6
+      },
+      {
+        "fonte": "ufc",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:21:35.466Z",
+        "hits": 11
+      },
+      {
+        "fonte": "ufc",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:21:37.795Z",
+        "hits": 11
+      },
+      {
+        "fonte": "uece",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:21:40.209Z",
+        "hits": 3
+      },
+      {
+        "fonte": "uece",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:21:42.561Z",
+        "hits": 3
+      },
+      {
+        "fonte": "ufpi",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:21:48.291Z",
+        "hits": 41
+      },
+      {
+        "fonte": "ufpi",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:21:49.791Z",
+        "hits": 41
+      },
+      {
+        "fonte": "openalex",
+        "tool": "search_openalex",
+        "em": "2026-11-23T15:21:53.902Z",
+        "hits": 200
+      },
+      {
+        "fonte": "scielo",
+        "tool": "search_scielo",
+        "em": "2026-11-23T15:21:55.817Z",
+        "hits": 79
+      },
+      {
+        "fonte": "oasisbr",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:22:21.131Z",
         "hits": 1000
       }
     ]
