@@ -761,3 +761,12 @@ Vicente pedir.
   **Consertado em 23/11/2026** a pedido do Vicente (commits `8f3466b` e `9a679aa`): o `batch_keyword_screen` roda a
   camada sobre os registros do projeto, e o `complete_record_keywords` completa as palavras-chave pela fonte. Detalhe
   na seção "Pedido do Vicente de 23/11/2026", acima.
+- (pedido do Vicente, 23/11/2026, ao fechar o desenho da planilha dos revisores do `roda_aromas_ceara`) Avaliar o
+  ReviewBR para o pesquisador que não tem uma IA poderosa ligada a ele. Mesmo com o protocolo travado, decisões que
+  pareciam simples (a camada por palavras, o que fazer com a dúvida, a planilha dos revisores, a procedência dos links)
+  pediram muitas intervenções no chat com a IA. Pergunta dele: como um sistema assim facilita a vida de um pesquisador
+  sem essa possibilidade? **Antes de avaliar, conferir se isso já foi pensado e resolvido** (DIRECAO, METODO, decisões
+  de organização, débitos e catálogo). Origem: "precisamos avaliar se dadas as necessidades de tantas intervencoes no
+  chat com ia para decisoes que pareciam simples quando há protocolo travado, como que um sistema assim facilitaria a
+  vida de um pesquisador sem que ele tenha a possibilidade de plugar o reviewbr em uma IA poderosa como as que eu tenho
+  acesso. vale colocar isso como insumo da manutencao com aviso de avaliar se isso ja nao foi pensado e solucionado."
