@@ -522,6 +522,39 @@ passagem", linha 1). A leitura por título e resumo não depende disso; o texto 
 planilha ou num editor e importado de volta (proposta). O protocolo diz que nenhuma outra ferramenta é usada; a
 planilha só preenche o arquivo do ReviewBR. (b) Uma decisão por vez, ditada no chat.
 
+> **Decidido pelo Vicente em 23/11/2026, depois da camada por palavras do `roda_aromas_ceara` (743 passaram), sobre a
+> planilha da linha 13.** O que muda na proposta (2) acima:
+> - **Pergunta (2) respondida: há "dúvida".** Na leitura por título e resumo, cada pergunta do estágio admite `sim`,
+>   `não` ou `dúvida`. Decisão que sai das respostas: um "não" exclui (motivo: as perguntas com "não"); sem "não" e com
+>   alguma "dúvida", o registro segue para o texto completo; "sim" em todas, segue também. No texto completo não há
+>   "dúvida": `sim` ou `não`.
+> - **Triagem dupla, sem emenda:** os dois revisores leem todo o insumo (no projeto, os 743), cada um no seu arquivo.
+>   Não se divide o insumo entre eles. Nenhuma IA na planilha: nem proposta, nem decisão.
+> - **Conferência de procedência, determinística, antes de gerar a planilha:** a tool abre o endereço de cada registro e
+>   compara o título da página de destino com o do registro; marca `confere`, `não confere` ou `fora do ar`, e lista à
+>   parte os dois últimos para o pesquisador ver antes da leitura. O relato pode declarar a data e as contagens.
+>   Motivo dele: a dúvida de que algum registro seja inventado ou de que o link leve a outro documento minaria a
+>   confiança do estagiário e do leitor.
+> - **Endereço aberto a qualquer leitor:** o link da planilha é o DOI quando houver; a página da Scopus (pede login)
+>   fica só como origem.
+> - **Colunas só de leitura** (travadas): número de ordem, id, título, resumo inteiro na célula, palavras-chave, termos
+>   do protocolo que casaram, ano, tipo, idioma, fonte e revista, link e situação da conferência, aviso de par
+>   sinalizado na F3 (os dois do par lidos juntos).
+> - **Colunas que o revisor preenche** (lista de opções, só elas abertas): uma por pergunta do estágio; "o link abriu o
+>   documento certo?" (`sim` ou `não`); observação, livre. A pergunta (c) do protocolo vem pré-preenchida com o idioma e
+>   o tipo que a fonte declara, para o revisor confirmar ou corrigir.
+> - **Nas primeiras linhas:** as perguntas do protocolo como estão escritas nele e a instrução objetiva do que marcar.
+> - Ajuda à leitura permitida: agrupar os registros da mesma revista. Não permitido: excluir de antemão por revista,
+>   idioma ou ausência de um termo (seria critério que o protocolo não tem).
+> - Na volta, a planilha das divergências para o consenso (ação `consenso`). O item 4 (concordância) segue fora.
+> - **Em aberto, a perguntar antes de construir:** os campos de identificação do revisor no topo da planilha (proposta
+>   levada a ele no mesmo dia: nome, papel e datas de início e de fim da leitura; observação obrigatória ou não na
+>   "dúvida").
+>
+> Origem: "ok, entao deve ter a coluna de duvida para preencher"; "tudo bem ser triagem dupla sem emenadas"; "nao vamos
+> usar ia para substituir a triagem"; "ainda cabe a duvida sobre todos os artigos nao serem mockup de ia e de os links
+> levarem a artigos que nao sao os que se diz"; "ok, vamos gravar e incluir os campos para marcar sim ou nao".
+
 ### Como uma linha entra na fila
 
 - Só o Vicente cria linha. A sessão não cria, nem a pedido de outro documento.

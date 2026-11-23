@@ -426,6 +426,28 @@ de `02_deduplicated/dataset.json`. Sem leitura humana e sem triagem por IA. Nenh
     deles se refere ao tema do artigo 1. se o protocolo permitir, seguimos e pode anotar a decisao".
   - **Gravada também** por `record_researcher_decision` (etapa F3), com as palavras dele; o `project_state.json`
     passou para a fase F3.
+- **23/11/2026, F4, leitura humana: como será feita.**
+  - **O quê:**
+    - a triagem segue dupla, como o protocolo manda: os dois revisores leem os 743 registros que passaram pela camada
+      por palavras, cada um no seu arquivo;
+    - na leitura por título e resumo, cada pergunta admite "sim", "não" ou "dúvida". Um "não" exclui. Sem "não" e com
+      alguma "dúvida", o registro segue para o texto completo;
+    - nenhuma IA propõe nem decide;
+    - antes da leitura, a ferramenta confere que o link de cada registro leva ao documento com aquele título;
+    - o link da planilha é o DOI, aberto a qualquer leitor.
+  - **Alcance:** as duas fases da camada humana (F4.1.2, camada 2). Detalhe da planilha na FILA da manutenção, seção
+    "Pedido do Vicente de 23/11/2026", decisão sobre a planilha da linha 13.
+  - **Por que cabe no protocolo:** a triagem dupla e as quatro perguntas são as do protocolo. Ele não diz o que fazer
+    quando o resumo não permite responder; a "dúvida" preenche essa lacuna sem excluir ninguém. Sem emenda.
+  - **Consequência:**
+    - a manutenção da linha 13 constrói a planilha com essas colunas;
+    - o relato declara a conferência dos links (data e contagens) e que a decisão foi só humana.
+  - **Em aberto:** os campos de identificação do revisor no topo da planilha.
+  - **Origem:** "ok, entao deve ter a coluna de duvida para preencher"; "tudo bem ser triagem dupla sem emenadas"; "nao
+    vamos usar ia para substituir a triagem"; "ainda cabe a duvida sobre todos os artigos nao serem mockup de ia e de os
+    links levarem a artigos que nao sao os que se diz".
+  - **Não gravada por `record_researcher_decision`:** a tool é a aprovação que destrava a etapa no controle estrito. A
+    F4 não está pronta para isso.
 
 ## Falhas do ReviewBR encontradas
 
