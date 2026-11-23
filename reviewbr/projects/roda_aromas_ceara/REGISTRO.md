@@ -191,6 +191,40 @@ se fez para que a execução cortada do OpenAlex não entrasse. **A tool será c
   (`cadernoscajuina.pro.br`), o que explica parte dos resultados sem relação aparente com a bebida. Fica para a
   triagem.
 
+### Passo D, F4, camada mecânica por palavras: 23/11/2026
+
+Log da pesquisa. Feita como manda o "Processo de Seleção" do protocolo (F4.1.2, camada 1), sobre os 5446 registros
+de `02_deduplicated/dataset.json`. Sem leitura humana e sem triagem por IA. Nenhum contorno.
+
+- **1. `complete_record_keywords`** (23/11/2026, 20:38 UTC). Completa as palavras-chave pela fonte; o
+  `dataset.json` não mudou (sha256 `4853c529…8e77`, data de gravação 13:52, a da F3). Relatório em
+  `02_deduplicated/palavras_chave_relatorio.json`:
+  - já tinham palavras-chave: 50 (BDTD 23, Scopus 22, FSTA 5);
+  - Oasisbr e os repositórios vistos por ela (Alice, Infoteca-e, UFC): 2941 consultados, 2807 com palavras-chave,
+    134 sem na fonte, nenhuma falha;
+  - UFPI (DSpace): 41 consultados, 40 com, 1 sem, nenhuma falha;
+  - sem consulta: 2413 do OpenAlex (não traz as palavras-chave do autor) e 1 da Scopus (o registro do RIS veio sem
+    elas: "Cashew (Anacardium occidentale L.) breeding: A global perspective");
+  - soma: 50 + 2941 + 41 + 2413 + 1 = 5446.
+- **2. `batch_keyword_screen`** com `projectPath`, sem `pdfDir` (23/11/2026, 20:40 UTC). Termos copiados do
+  protocolo, sem mudança: `aroma*`, `sabor*`, `gosto`, `flavor`, `flavour`, `taste`, `sensor*`, `descritor*`,
+  `descriptor*`, `léxico`, `lexicon`, `roda`, `wheel`, `volát*`, `volatil*`, `odor*`, `olor`, `olfat*`, `olfact*`,
+  `perfil`, `profile`. Regra da tool: título, resumo ou palavras-chave; sem diferença de maiúscula nem de acento
+  (decisão do Vicente, 23/11/2026); `*` aceita qualquer terminação; termo sem `*` é a palavra inteira; registro sem
+  resumo passa sempre.
+  - **Passam para a leitura humana: 743** (533 por termo, entre eles 10 sem resumo; 210 só por não ter resumo).
+  - **Excluídos: 4703** (2143 deles sem palavras-chave para ler, quase todos do OpenAlex).
+  - **Conferência: 743 + 4703 = 5446.** ✅
+  - Por fonte (entrada / passam / excluídos): Scopus 23/4/19; FSTA 5/2/3; BDTD 23/9/14; Oasisbr 2928/339/2589; Alice
+    7/1/6; Infoteca-e 4/1/3; UFC 2/1/1; UFPI 41/7/34; OpenAlex 2413/379/2034.
+  - Gravados `03_screening/passed_keywords.json`, `excluded_keywords.json` e `keywords_report.json`; registro da
+    execução em `logs/lote/2026-11-23T20-40-45-716Z_batch_keyword_screen.json`.
+- **Conferência fora da tool, só leitura:** a regra aplicada de novo, à parte, sobre o `dataset.json` e o
+  `palavras_chave.json` deu os mesmos 743, registro por registro (0 divergências); nenhum registro está nos dois
+  arquivos; a união é 5446; os 220 registros sem resumo estão todos entre os que passam.
+- **Próximo:** a camada humana (dois revisores, 743 registros) espera a manutenção da linha 13 (planilha dos
+  revisores). Depois da triagem, nova deduplicação dos pares sinalizados (decisão de 23/11/2026).
+
 ## Decisões
 
 - **12/11/2026, passo 1, pergunta.** Opções apresentadas: (a) o que já existe; (b) que produto escolher; (c) como se
