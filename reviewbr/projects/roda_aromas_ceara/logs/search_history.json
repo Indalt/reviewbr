@@ -449,5 +449,99 @@
         "BR-AGG-0006"
       ]
     }
+  },
+  {
+    "timestamp": "2026-11-23T16:03:18.627Z",
+    "tool": "search_openalex",
+    "query": "cajuína OR cajuina",
+    "found": 2639,
+    "totalFound": 2639,
+    "params": {
+      "query": "cajuína OR cajuina",
+      "maxResults": 100000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do OpenAlex (api.openalex.org/works?group_by=publication_year) em 23/11/2026: 295.331.757 trabalhos; anos de 1827 a 2026 entre os 200 anos com mais registros (o agrupamento da API mostra no máximo 200); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero e traz \"Cajuína: como produzir com qualidade\" (Abreu e Souza, 2004); conferido no resultado desta execução e anotado no REGISTRO.md. Execução completa que substitui a de 23/11/2026 cortada em 200 pelo teto da tool (consertado no mesmo dia)"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "openalex",
+      "rota": "openalex: OpenAlex, https://api.openalex.org/works?search="
+    }
+  },
+  {
+    "timestamp": "2026-11-23T16:05:30.936Z",
+    "tool": "search_repository",
+    "query": "cajuína",
+    "found": 2997,
+    "totalFound": 2997,
+    "errors": [],
+    "params": {
+      "query": "cajuína",
+      "repositories": [
+        "BR-AGG-0006"
+      ],
+      "maxResults": 100000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr (oasisbr.ibict.br/vufind/api/v1/search, lookfor=*, ordenado por ano) em 23/11/2026: acervo de 6.635.673 registros; as datas de publicação indexadas vão de 0000 a 3016 (os extremos são datas inválidas de catalogação); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero (e se traz riufc/78207 e riufc/67712); conferido no resultado desta execução e anotado no REGISTRO.md. Execução completa que substitui as de 23/11/2026 cortadas em 1000 pelo teto da tool (consertado no mesmo dia)"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "oasisbr",
+      "rota": "oasisbr: Oasisbr (IBICT), API do VuFind, sem filtro de rede",
+      "repositoriosConsultados": [
+        "BR-AGG-0006"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T16:07:01.303Z",
+    "tool": "search_repository",
+    "query": "cajuina",
+    "found": 0,
+    "errors": [
+      "BR-AGG-0006 (IBICT): a rota do plano (Oasisbr (IBICT), API do VuFind, sem filtro de rede) falhou: HTTP 503 for https://oasisbr.ibict.br/vufind/api/v1/search?lookfor=cajuina&type=AllFields&limit=0&field%5B%5D=id&field%5B%5D=title&field%5B%5D=authors&field%5B%5D=publicationDates&field%5B%5D=summary&field%5B%5D=urls&field%5B%5D=subjects&field%5B%5D=languages&field%5B%5D=formats&field%5B%5D=institutions&filter%5B%5D=publishDate%3A%5B2026+TO+2026%5D&filter%5B%5D=network_acronym_str%3A%22INDEP-6%22&filter%5B%5D=id%3AINDEP-6_b*. Projeto travado: sem cascata nem agregador de reserva — a fonte fica não alcançada, e o pesquisador decide (emenda ou desvio)."
+    ],
+    "params": {
+      "query": "cajuina",
+      "repositories": [
+        "BR-AGG-0006"
+      ],
+      "maxResults": 100000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr (oasisbr.ibict.br/vufind/api/v1/search, lookfor=*, ordenado por ano) em 23/11/2026: acervo de 6.635.673 registros; as datas de publicação indexadas vão de 0000 a 3016 (os extremos são datas inválidas de catalogação); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero (e se traz riufc/78207 e riufc/67712); conferido no resultado desta execução e anotado no REGISTRO.md. Execução completa que substitui a de 23/11/2026 cortada em 1000 pelo teto da tool (consertado no mesmo dia)"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "oasisbr",
+      "rota": "oasisbr: Oasisbr (IBICT), API do VuFind, sem filtro de rede",
+      "repositoriosConsultados": [
+        "BR-AGG-0006"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T16:09:20.944Z",
+    "tool": "search_repository",
+    "query": "cajuina",
+    "found": 2997,
+    "totalFound": 2997,
+    "errors": [],
+    "params": {
+      "query": "cajuina",
+      "repositories": [
+        "BR-AGG-0006"
+      ],
+      "maxResults": 100000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr (oasisbr.ibict.br/vufind/api/v1/search, lookfor=*, ordenado por ano) em 23/11/2026: acervo de 6.635.673 registros; as datas de publicação indexadas vão de 0000 a 3016 (os extremos são datas inválidas de catalogação); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero (e se traz riufc/78207 e riufc/67712); conferido no resultado desta execução e anotado no REGISTRO.md. Execução completa que substitui a de 23/11/2026 cortada em 1000 e a das 16:07 UTC, interrompida por HTTP 503 da Oasisbr"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "oasisbr",
+      "rota": "oasisbr: Oasisbr (IBICT), API do VuFind, sem filtro de rede",
+      "repositoriosConsultados": [
+        "BR-AGG-0006"
+      ]
+    }
   }
 ]

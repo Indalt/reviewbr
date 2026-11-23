@@ -116,9 +116,20 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
 - **Teto consertado no ReviewBR no mesmo dia** (ordem do Vicente; FILA, "Visto de passagem", 23/11; gate
   CORRECAO): a API do VuFind não pagina além de 1000 e o OpenAlex só trazia a primeira página. Conferido no código
   novo, fora do projeto: Oasisbr `cajuína` 2997 de 2997, OpenAlex 2639 de 2639.
-- **Falta:** refazer com o servidor novo a Oasisbr (`cajuína` e `cajuina`) e o OpenAlex. O servidor desta sessão
-  ainda é o antigo, e parar o processo do servidor foi negado pela permissão; o servidor novo carrega em chat novo
-  (ou reconectando o servidor `reviewbr` pelo `/mcp`).
+- **Refeitas com o servidor novo, 23/11/2026** (depois de o Vicente reconectar o `reviewbr`; mesmo texto, sem filtro):
+
+  | fonte | texto | declarado | recuperado | controle positivo | linha do log (UTC) |
+  |---|---|---|---|---|---|
+  | OpenAlex | `cajuína OR cajuina` | 2639 | 2639 | passou (traz Abreu e Souza 2004) | 16:03:18 |
+  | Oasisbr | `cajuína` | 2997 | 2997 | passou (traz riufc/78207 e riufc/67712) | 16:05:30 |
+  | Oasisbr | `cajuina` | 2997 | 2997 | passou (os mesmos) | a seguinte à de 16:07:01 |
+
+  A execução de 16:07:01 (Oasisbr `cajuina`) parou por HTTP 503 da Oasisbr no meio da cobertura e ficou no log com
+  o erro; repetida logo depois, completa. **No log ficam todas as execuções** (PRISMA-S); o relato da F2 usa as
+  completas, e as cortadas (1000 e 200) e a interrompida ficam como histórico, com o motivo na coluna `Errors`.
+- `01_raw/database_records.json`: 3148 registros (CAPES 54 + repositórios); OpenAlex e SciELO gravam em arquivo
+  próprio (`01_raw/dataset_openalex_*.json`, `dataset_scielo_*.json`), que a F3 junta. **F2 das fontes abertas
+  completa.**
 
 ## Decisões
 

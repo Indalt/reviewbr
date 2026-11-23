@@ -40,6 +40,8 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   normalmente. Nada foi buscado (detalhe no `REGISTRO.md`, "Passo C, segunda parte: parada em 22/11/2026"). A
   conferência tem de testar uma **consulta na API** (`/vufind/api/v1/search?lookfor=agua&limit=0` devolvendo
   `"status":"OK"`), não só a página de entrada.
+- **23/11/2026: F2 completa.** Oasisbr (2997 + 2997) e OpenAlex (2639) refeitos com o servidor novo, tudo o que
+  a fonte declarou. Próximo: linha 13 da FILA (decisões dos dois revisores) e depois o passo D (F3/F4).
 - **23/11/2026, depois: busca seguida e teto consertado.** Feitas as 9 fontes abertas; com teto só a Oasisbr (1000
   de 2997) e o OpenAlex (200 de 2639). Teto consertado no ReviewBR (gate CORRECAO). **Próximo, em chat novo (ou
   depois de reconectar `reviewbr` no `/mcp`): refazer Oasisbr `cajuína`, Oasisbr `cajuina` e OpenAlex, com o

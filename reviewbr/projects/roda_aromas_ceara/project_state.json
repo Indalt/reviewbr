@@ -9,7 +9,7 @@
   "control_level": "estrito",
   "phase": "F2",
   "createdAt": "2026-11-12T20:02:37.930Z",
-  "updatedAt": "2026-11-23T15:22:21.131Z",
+  "updatedAt": "2026-11-23T16:09:20.946Z",
   "decisions": [
     {
       "phase": "F1",
@@ -740,6 +740,30 @@
         "tool": "search_repository",
         "em": "2026-11-23T15:22:21.131Z",
         "hits": 1000
+      },
+      {
+        "fonte": "openalex",
+        "tool": "search_openalex",
+        "em": "2026-11-23T16:03:18.634Z",
+        "hits": 2639
+      },
+      {
+        "fonte": "oasisbr",
+        "tool": "search_repository",
+        "em": "2026-11-23T16:05:30.939Z",
+        "hits": 2997
+      },
+      {
+        "fonte": "oasisbr",
+        "tool": "search_repository",
+        "em": "2026-11-23T16:07:01.312Z",
+        "hits": 0
+      },
+      {
+        "fonte": "oasisbr",
+        "tool": "search_repository",
+        "em": "2026-11-23T16:09:20.946Z",
+        "hits": 2997
       }
     ]
   },

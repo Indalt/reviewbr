@@ -553,3 +553,5 @@ Vicente pedir.
   o `search_openalex`/`search_scielo` também tinham teto (só a 1ª página, 200) e agora paginam por cursor. Conferido
   no `dist`: Oasisbr `cajuína` 2997 de 2997; OpenAlex 2639 de 2639; SciELO 79 de 79. A suíte (`npm test`) não roda
   neste PC: "No test suite found" nos 64 arquivos, igual sem a mudança.
+- (projeto `roda_aromas_ceara`, 23/11/2026) Com a cobertura sem teto, a Oasisbr recebe ~100+ pedidos por busca grande;
+  um HTTP 503 no meio derruba a execução inteira (sem nova tentativa no `fetchText` para 503). Repetida, completou.
