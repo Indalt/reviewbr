@@ -453,6 +453,25 @@ registros; a descrição da tool diz a regra de casamento.
 - Para o projeto, em chat novo (servidor novo): `complete_record_keywords` e depois `batch_keyword_screen` com os
   termos do protocolo.
 
+**(1) Conferido contra o protocolo em 23/11/2026, a pedido do Vicente** ("tudo dentro do protocolo? quais as palavras
+chave? deterministicamente?"). Seguem o protocolo: os 21 termos copiados e conferidos no `protocol.md`; título, resumo
+ou palavras-chave; registro sem resumo passa; sem amostra nem nova decisão humana sobre os excluídos; a camada contada
+dentro da triagem; a tool que o F4.1.3 nomeia. É determinística: sem IA nem sorteio, os mesmos arquivos e termos dão
+sempre o mesmo resultado, na mesma ordem. As palavras-chave completadas ficam gravadas com a data e não são lidas de
+novo sem `refazer`. O protocolo não diz, e a tool fez assim:
+- sem diferença de acento. Hoje, 4 registros com resumo passam só por isso; as fontes também buscaram assim (Oasisbr:
+  2997 para `cajuína` e 2997 para `cajuina`);
+- "palavras-chave" é o campo de assunto que cada fonte grava. No Scopus ele junta as do autor e os termos de indexação;
+  na FSTA são descritores do tesauro; na UFPI entra a área do CNPq. O arquivo do Scopus e o da FSTA não separam as do
+  autor;
+- "sem resumo" é o campo vazio: os 56 com texto curto ("xx", "Poesia") contam como com resumo;
+- completar as palavras-chave pela fonte depois da F3 é um passo que o protocolo não descreve; não muda a busca nem os
+  totais.
+
+**Perguntas ao Vicente (23/11/2026):** (1) manter a camada sem diferença de acento? (2) Na leitura por título e
+resumo, quando o registro não permite responder às perguntas (os 220 sem resumo, por exemplo): segue para o texto
+completo ou conta como "não"? O protocolo não diz. (3) A pergunta da linha 13, no fim desta seção.
+
 **(2) Linha 13 — diagnóstico.** Nenhuma tool grava decisão por registro e por revisor. A `record_researcher_decision`
 (`index.ts:1694`) grava uma contribuição por etapa no `project_state.json`. O `screen_candidates` (`index.ts:723`) é
 triagem por IA e grava os artefatos do estágio pelo `writeScreening` (`project_artifacts.ts:295`). O funil e o relatório
@@ -465,8 +484,11 @@ decisões: uma chamada de tool por decisão não serve.
 serve a qualquer protocolo: qualquer número de revisores e as perguntas de elegibilidade que o protocolo tiver.
 1. `formulario`: gera do insumo do estágio um formulário por revisor, `03_screening/revisores/<estagio>_<nome>.csv`.
    O insumo de `ta` é o `passed_keywords.json` ou, sem ele, o `dataset.json`; o de `fulltext` é o `included_ta.json`.
-   O formulário traz id, título, resumo, palavras-chave e endereço. A preencher: decisão (`incluir` ou `excluir`),
-   motivo e uma coluna por pergunta.
+   O formulário traz id, título, resumo, palavras-chave e endereço. A preencher: uma coluna por pergunta do estágio
+   (`sim` ou `não`) e observação. Se o protocolo não tiver perguntas, uma coluna de decisão (`incluir` ou `excluir`) e
+   o motivo. Com perguntas, a decisão e o motivo saem das respostas, sem escolha à mão: entra só com "sim" em todas,
+   e o motivo da exclusão são as perguntas com "não". Assim o motivo de cada estágio, que o PRISMA-ScR pede no item 14,
+   sai padronizado.
 2. `importar`: lê o formulário preenchido e grava, por registro, o nome do revisor, o estágio, a decisão, o motivo e as
    respostas, com a data e o hash do arquivo, em `03_screening/revisores/decisoes_<estagio>.json`. Recusa linha sem
    decisão, id fora do insumo e formulário de outro estágio. Reimportar o mesmo revisor exige autorização; a versão
