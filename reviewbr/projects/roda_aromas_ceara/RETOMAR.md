@@ -50,9 +50,11 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   - Detalhe no `REGISTRO.md`, "Passo D, F3".
 
   **Decisão do Vicente sobre a F3 gravada (23/11/2026):** os 36 pares sinalizados ficam e são resolvidos por
-  nova deduplicação depois da triagem (`REGISTRO.md`, "Decisões"; `F3_pares_em_duvida.md`). **Próximo: F4,
-  camada mecânica por palavras** (`batch_keyword_screen`, termos do protocolo, "Processo de Seleção"). Antes da
-  camada humana, a linha 13 da FILA (onde se gravam as decisões dos dois revisores).
+  nova deduplicação depois da triagem (`REGISTRO.md`, "Decisões"; `F3_pares_em_duvida.md`). **A F4 espera a
+  manutenção:** nenhuma tool faz a camada por palavras como o protocolo manda (o `batch_keyword_screen` lê PDFs; o
+  `batch_db_screen` lê o banco, sem curinga nem a regra do registro sem resumo). Item no "Visto de passagem" da
+  FILA, 23/11/2026. A linha 13 (decisões dos revisores) teve o alcance decidido pelo Vicente em 23/11/2026: itens 1
+  a 3; o item 4 sai. **Próximo: a sessão de manutenção, depois a F4 (prompts abaixo).**
 - **23/11/2026: F2 completa.** Oasisbr (2997 + 2997) e OpenAlex (2639) refeitos com o servidor novo, tudo o que
   a fonte declarou. Próximo: linha 13 da FILA (decisões dos dois revisores) e depois o passo D (F3/F4).
 - **23/11/2026, depois: busca seguida e teto consertado.** Feitas as 9 fontes abertas; com teto só a Oasisbr (1000
@@ -159,6 +161,33 @@ depende da linha 12 da FILA e do item de UECE, Alice e Infoteca-e. A parte do Vi
 FSTA) já foi feita em 19/11/2026.
 
 ## Prompts prontos
+
+**Manutenção para a F4 (23/11/2026), em chat de manutenção, depois da virada da semana.** A primeira linha é para
+o seletor; apague-a antes de enviar.
+
+> Fable 5.2 · high
+>
+> Rotina de manutenção. Depois, só o que trava a F4 do projeto `roda_aromas_ceara`, nesta ordem:
+> (1) o item do "Visto de passagem" de 23/11/2026 sobre a camada mecânica da triagem: uma tool que leia
+> `02_deduplicated/dataset.json`, passe o registro cujo título, resumo ou palavras-chave tragam ao menos um dos
+> termos do protocolo (com curinga), passe todo registro sem resumo e grave o resultado e os excluídos como
+> artefatos do funil;
+> (2) a linha 13 da FILA, com o alcance decidido pelo Vicente em 23/11/2026 (itens 1 a 3; o item 4 sai).
+> Diagnostique e mostre-me antes de consertar. Nenhum subagente nem workflow.
+
+**F4 — triagem, camada por palavras (23/11/2026), em chat novo, depois do build da manutenção acima.** A primeira
+linha é para o seletor; apague-a antes de enviar.
+
+> Opus 5.5 · medium
+>
+> Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md`, o `protocol.md` (travado, versão 1.2) e, no
+> `REGISTRO.md`, as "Decisões" e a seção "Passo D, F3". A F3 está fechada (5446 registros em
+> `02_deduplicated/dataset.json`; os 36 pares sinalizados ficam para nova deduplicação depois da triagem). Faça só a
+> camada mecânica da F4, como o "Processo de Seleção" do protocolo manda: com a tool que a manutenção deixou para
+> isso, passe os registros cujo título, resumo ou palavras-chave trazem ao menos um dos termos do protocolo, copiados
+> dele sem mudar nada, e passe todo registro sem resumo. Confira que passados + excluídos = 5446. Não faça a leitura
+> humana nem triagem por IA. Se a tool não existir ou devolver algo incoerente, pare e anote no "Visto de passagem"
+> da FILA. Termine com `REGISTRO.md` e `RETOMAR.md` atualizados e commit.
 
 **F3 — deduplicação (23/11/2026), em chat novo.** A primeira linha é para o seletor; apague-a antes de enviar.
 

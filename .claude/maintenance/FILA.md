@@ -200,6 +200,12 @@ o `screen_candidates` é triagem por IA. A linha faz:
 
 Não fazer: triagem por IA nem cegamento entre revisores (o sistema não separa usuários, o que já está declarado).
 
+> **Decidido pelo Vicente em 23/11/2026:** a linha 13 grava só as decisões da pesquisa que o protocolo manda e que
+> o artigo relata, isto é, os itens 1 a 3. **O item 4 sai** (a concordância entre os revisores; o protocolo não a
+> pede). Consequência: a linha fica pronta quando grava por registro a decisão de cada revisor, o consenso e a
+> decisão do pesquisador sem consenso, e gera os artefatos do funil. Origem: "acho que podem apenas relativas a
+> pesquisa e que precisam estar no artigo porque o protocolo manda".
+
 **Linha 14 — L, acesso por robô** (ordem do Vicente, 19/11/2026: "ciencia aberta deve ser ciencia aberta e
 estrategias para a minha compreensao nao sao burlar etica. ver isso em juridico antes de fazer algo. mas havia tb um
 healer. veja isso."). A conferência, com as fontes, está em `CONFERENCIA_acesso_2026-11-19.md`. Decide: o ReviewBR se
@@ -564,3 +570,9 @@ Vicente pedir.
   do git, única cópia dos 3148 da CAPES e dos repositórios) com os 5866. Sem `projectPath`, a tool pede o JSON inteiro
   como texto e não grava relatório. Passo F3 parado antes de rodar.
   **Contornado no projeto no mesmo dia** (anotado no log da pesquisa; não impede a execução): o arquivo cortado foi para `01_raw/fora_da_f3/`, e a F3 rodou (5866 → 5446). O conserto segue a fazer.
+- (projeto `roda_aromas_ceara`, F4, 23/11/2026) A camada mecânica da triagem não tem tool que a faça como o protocolo
+  manda: passar os registros de `02_deduplicated/dataset.json` (5446) cujo título, resumo ou palavras-chave trazem
+  ao menos um dos termos, com curinga (`aroma*`, `volát*`…), e passar também todo registro sem resumo. O
+  `batch_keyword_screen`, que o protocolo nomeia (F4.1.3), lê PDFs de uma pasta. O `batch_db_screen` lê o banco por
+  `projectId`, não o arquivo; não trata curinga nem palavras-chave nem registro sem resumo, e não grava os artefatos
+  do funil. A F4 não começa; nada foi rodado.
