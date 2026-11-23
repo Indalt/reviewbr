@@ -147,6 +147,20 @@ FSTA) já foi feita em 19/11/2026.
 
 ## Prompts prontos
 
+**F3 — deduplicação (23/11/2026), em chat novo.** A primeira linha é para o seletor; apague-a antes de enviar.
+
+> Opus 5.5 · medium
+>
+> Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md`, o `protocol.md` (travado, versão 1.2 pela
+> emenda 2) e, no `REGISTRO.md`, as "Decisões" e a seção "Passo C, segunda parte: 23/11/2026". A F2 está completa.
+> Faça só a F3 do protocolo: deduplique com `deduplicate_dataset` todos os registros da F2, com relatório. As
+> entradas são `01_raw/database_records.json` (CAPES e repositórios, 3148), `01_raw/dataset_openalex_2026-11-23_16-03-18-636Z.json`
+> (OpenAlex completo, 2639) e `01_raw/dataset_scielo_2026-11-23_15-21-55-819Z.json` (SciELO, 79). O
+> `dataset_openalex_2026-11-23_15-21-53-903Z.json` é a execução cortada em 200 e não entra. Relatos diferentes do
+> mesmo estudo (tese e artigo dela) não são duplicatas. Antes de rodar, confira na tool como ela recebe as entradas;
+> se não aceitar as três, ou devolver algo incoerente, pare e anote no "Visto de passagem" da FILA. Não faça a
+> triagem. Termine com `REGISTRO.md` e `RETOMAR.md` atualizados e commit.
+
 **Volta à pesquisa depois da linha 17 (20/11/2026): plano de busca e emenda 1, em chat novo** (o servidor novo só carrega
 em chat novo). A primeira linha é para o seletor; apague-a antes de enviar.
 
