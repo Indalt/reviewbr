@@ -472,6 +472,17 @@ novo sem `refazer`. O protocolo não diz, e a tool fez assim:
 resumo, quando o registro não permite responder às perguntas (os 220 sem resumo, por exemplo): segue para o texto
 completo ou conta como "não"? O protocolo não diz. (3) A pergunta da linha 13, no fim desta seção.
 
+> **Decidido pelo Vicente em 23/11/2026, ao ler as perguntas:** a camada por palavras segue como foi feita, sem
+> diferença de acento (pergunta 1). As decisões dos revisores entram por **planilha** (pergunta 3, opção a). O
+> ReviewBR gera, do insumo do estágio, a lista dos registros numa planilha por revisor. A planilha traz os campos que
+> o revisor preenche e, nas primeiras linhas, o que ele tem de fazer, dito de forma objetiva. O Vicente envia a
+> planilha a cada revisor, recebe de volta o arquivo preenchido e o entrega ao ReviewBR, que o importa.
+> Consequência: na linha 13, o `formulario` gera planilha, não CSV de texto, e o `importar` lê a planilha
+> devolvida. A pergunta (2) segue aberta e é feita antes de construir a linha 13. Origem: "ok. seguir assim, mas com
+> a ressalva de que vou mandar a lista do artigos em uma planilha e nessa planilha tem de haver os campos onde os
+> revisores vao preencher. assim posso enviar as planilhas e receber o arquivo digital com as decisoes dos revisores.
+> as primeira linhas da planilha podem dizer objetivamente o que fazer para cada revisor."
+
 **(2) Linha 13 — diagnóstico.** Nenhuma tool grava decisão por registro e por revisor. A `record_researcher_decision`
 (`index.ts:1694`) grava uma contribuição por etapa no `project_state.json`. O `screen_candidates` (`index.ts:723`) é
 triagem por IA e grava os artefatos do estágio pelo `writeScreening` (`project_artifacts.ts:295`). O funil e o relatório

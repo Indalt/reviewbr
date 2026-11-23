@@ -58,9 +58,10 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
 - **23/11/2026: manutenção da camada por palavras feita** (FILA, seção "Pedido do Vicente de 23/11/2026"). O
   `batch_keyword_screen` roda a camada sobre os registros do projeto; antes dela, o `complete_record_keywords`
   completa as palavras-chave pela fonte (só 50 dos 5446 registros as tinham; a Oasisbr as guarda num campo que a busca
-  não lia). A linha 13 (decisões dos revisores) espera a resposta do Vicente sobre como os revisores entregam as
-  decisões; ela só é necessária quando eles forem gravar a leitura por título e resumo. **Próximo: a F4, camada por
-  palavras, em chat novo (prompt abaixo).**
+  não lia). Decidido pelo Vicente no mesmo dia: a camada segue sem diferença de acento, e as decisões dos revisores
+  entram por planilha que o ReviewBR gera e importa (FILA, seção "Pedido do Vicente de 23/11/2026"). **Próximo: (1) a
+  F4, camada por palavras, em chat novo; (2) depois, a manutenção da linha 13 (planilha dos revisores), em outro chat
+  novo. Os dois prompts estão abaixo, nessa ordem; não rodar os dois ao mesmo tempo.**
 - **23/11/2026: F2 completa.** Oasisbr (2997 + 2997) e OpenAlex (2639) refeitos com o servidor novo, tudo o que
   a fonte declarou. Próximo: linha 13 da FILA (decisões dos dois revisores) e depois o passo D (F3/F4).
 - **23/11/2026, depois: busca seguida e teto consertado.** Feitas as 9 fontes abertas; com teto só a Oasisbr (1000
@@ -195,6 +196,18 @@ linha é para o seletor; apague-a antes de enviar.
 > copiados dele sem mudar nada, e passe todo registro sem resumo. Confira que passados + excluídos = 5446. Não faça a leitura
 > humana nem triagem por IA. Se a tool não existir ou devolver algo incoerente, pare e anote no "Visto de passagem"
 > da FILA. Termine com `REGISTRO.md` e `RETOMAR.md` atualizados e commit.
+
+**Manutenção da linha 13 — planilha dos revisores (23/11/2026), em chat de manutenção, depois da F4 acima.** A
+primeira linha é para o seletor; apague-a antes de enviar.
+
+> Fable 5.2 · high
+>
+> Rotina de manutenção. Depois, só a linha 13 da FILA (decisões dos revisores), com o alcance decidido em 23/11/2026
+> (itens 1 a 3) e a proposta da seção "Pedido do Vicente de 23/11/2026", com a decisão do mesmo dia: o ReviewBR gera
+> uma planilha por revisor com os campos que ele preenche e, nas primeiras linhas, o que fazer, de forma objetiva; eu
+> envio, recebo o arquivo preenchido e o entrego para a tool importar. Antes de construir, faça-me a pergunta (2)
+> daquela seção, se ainda estiver aberta. Teste com uma cópia dos dados do `roda_aromas_ceara`, sem gravar na pasta do
+> projeto. Nenhum subagente nem workflow.
 
 **F3 — deduplicação (23/11/2026), em chat novo.** A primeira linha é para o seletor; apague-a antes de enviar.
 
