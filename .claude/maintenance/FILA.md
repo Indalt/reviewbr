@@ -547,6 +547,17 @@ planilha só preenche o arquivo do ReviewBR. (b) Uma decisão por vez, ditada no
 > - Ajuda à leitura permitida: agrupar os registros da mesma revista. Não permitido: excluir de antemão por revista,
 >   idioma ou ausência de um termo (seria critério que o protocolo não tem).
 > - Na volta, a planilha das divergências para o consenso (ação `consenso`). O item 4 (concordância) segue fora.
+> - **Link que não confere ou não abre (decidido no mesmo dia):** o registro cujo link leva a documento com outro
+>   título ("não confere") ou não abre ("fora do ar" na conferência, ou "não abriu" marcado pelo revisor) é gravado
+>   como falha do sistema e vai para a manutenção resolver; não é excluído nem decidido pelos revisores enquanto isso.
+>   Depois do conserto, volta para a revisão. Motivo dele: o registro sem procedência confirmada perde a legitimidade.
+>   Origem: "quando nao confere entra como registro de falha da IA e isso fica pra manutencao resolver para depois
+>   voltar a ser revisado porque perde a legitimidade"; "se o link nao abrir nada marca que nao abriu e isso tb volta
+>   pra manutencao".
+> - **Sem download (decidido no mesmo dia):** os revisores leem pelo link DOI, na internet; a planilha não traz nem
+>   pede texto baixado. Origem: "nao precisa ter o texto completo, tanto o estagiario quanto o pesquisador tenha acesso
+>   a internet e podem clicar no link doi".
+> - Formato: `.xlsx`.
 > - **Identificação do revisor, decidida no mesmo dia:** no topo de cada planilha, uma vez, o revisor preenche nome,
 >   papel (pesquisador ou estagiário), data de início e data de fim da leitura. Sem instituição (é dado da autoria,
 >   deixada em branco no protocolo) e sem data por linha (a tool grava a data e o hash do arquivo na importação). O

@@ -449,6 +449,14 @@ de `02_deduplicated/dataset.json`. Sem leitura humana e sem triagem por IA. Nenh
   - **Observação na "dúvida" (decidida no mesmo dia):** obrigatória; a linha com "dúvida" e sem observação não é
     importada. Nas outras linhas a observação é livre. Motivo: na leitura do texto completo, saber o que gerou a
     dúvida.
+  - **Link que não confere ou não abre (decidido no mesmo dia):** o registro vira registro de falha do sistema e vai
+    para a manutenção; não é excluído nem decidido pelos revisores enquanto isso; depois do conserto, volta para a
+    revisão. Motivo: sem procedência confirmada, perde a legitimidade. Origem: "quando nao confere entra como registro
+    de falha da IA e isso fica pra manutencao resolver para depois voltar a ser revisado porque perde a legitimidade";
+    "se o link nao abrir nada marca que nao abriu e isso tb volta pra manutencao".
+  - **Sem download (decidido no mesmo dia):** os revisores leem pelo link DOI, na internet. Planilha em `.xlsx`.
+    Origem: "nao precisa ter o texto completo, tanto o estagiario quanto o pesquisador tenha acesso a internet e podem
+    clicar no link doi".
   - **Origem:** "ok, entao deve ter a coluna de duvida para preencher"; "tudo bem ser triagem dupla sem emenadas"; "nao
     vamos usar ia para substituir a triagem"; "ainda cabe a duvida sobre todos os artigos nao serem mockup de ia e de os
     links levarem a artigos que nao sao os que se diz"; sobre a identificação e a observação: "concordo. gravar como
