@@ -542,3 +542,8 @@ Vicente pedir.
   tag `DB` (já anotado na linha 2); o `repositoryName` continua vazio nesse caso, e o gate reprova.
 - (linha 16, 20/11/2026) O `import_bvs_export` grava pelo mesmo `appendRawRecords` sem `manterTodosDoLote`: dois
   registros distintos do mesmo export BVS com o mesmo DOI continuam virando um.
+- (projeto `roda_aromas_ceara`, passo C, 23/11/2026) O `search_repository` na Oasisbr inteira (`BR-AGG-0006`),
+  consulta `cajuína`: a fonte declara 2997 e vêm só 1000, com `maxResults` 1000 e também com 5000 (o teto de 1000
+  não vem do parâmetro e não é dito na resposta; o log marca "truncada"). O protocolo pede recuperar tudo o que a
+  fonte informa. Passo parado depois dessa fonte. Visto também: entre os 1000 há registros sem relação aparente com
+  o termo (ex.: nº 51, "O Comitê Gestor do IBS"); não conferido se a consulta casa com texto completo.

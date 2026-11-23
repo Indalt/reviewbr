@@ -67,6 +67,42 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   tools, só para conferir a disponibilidade, e não são busca da revisão.
 - Próximo: repetir a conferência em outro dia; com a busca da BDTD respondendo, rodar as 9 fontes abertas.
 
+### Passo C, segunda parte: 23/11/2026, parado na Oasisbr (teto de 1000 registros)
+
+- **Conferência:** 23/11/2026, 12:06 (Brasília). As APIs da BDTD e da Oasisbr devolvem `"status":"OK"` a uma
+  consulta (`agua`: 93.513 e 261.508), duas vezes cada.
+- **Período de cobertura**, lido na API de cada fonte (consulta `*`, ordenada por ano), em 23/11/2026, antes das buscas:
+
+  | fonte | acervo | datas indexadas (mais antiga → mais recente) |
+  |---|---|---|
+  | BDTD | 1.165.561 | 0000 → 2121 (extremos inválidos) |
+  | Oasisbr | 6.635.673 | 0000 → 3016 (extremos inválidos) |
+  | Alice (Oasisbr, rede EMBR) | 136.242 | 1938 → 2026 |
+  | Infoteca-e (Oasisbr, rede EMBRAPA-9) | 13.922 | 1940 → 2026 |
+  | UFC (Oasisbr, rede UFC-7) | 82.492 | 1905 → 2026 |
+  | UECE (Oasisbr, rede UECE-0) | 62.521 | 0983 → 2025 (extremo inválido) |
+  | UFPI (DSpace REST) | 4.220 itens | 2014-11-25 → 2026-11-18 (`dc.date.issued`) |
+  | OpenAlex | 295.331.757 | 1827 → 2026 (o agrupamento da API mostra só os 200 anos com mais registros) |
+  | SciELO (OpenAlex, DOI 10.1590) | 510.714 | 1900 → 2027 |
+
+- **Buscas feitas** (tool com `projectPath`; linhas no `logs/search_log_prisma_s.csv`):
+
+  | fonte | texto | declarado | recuperado | novos no arquivo | controle positivo |
+  |---|---|---|---|---|---|
+  | BDTD | `cajuína` | 25 | 25 | 25 | **passou**: > 0; traz riufc/78207 (nº 4) e riufc/67712 (nº 5) |
+  | BDTD | `cajuina` | 25 | 25 | 0 (os mesmos 25) | **passou**: os mesmos dois |
+  | Oasisbr | `cajuína` | 2997 | **1000** | 1000 | > 0; traz riufc/78207 e riufc/67712 |
+  | Oasisbr | `cajuína` (repetida, `maxResults` 5000) | 2997 | **1000** | 0 | idem |
+
+- **Parado aqui (regra 5).** A Oasisbr declara 2997 e a tool traz no máximo 1000, mesmo com `maxResults` 5000; a
+  resposta não diz que há teto (o log marca "truncada"). O protocolo pede recuperar tudo o que a fonte informa.
+  Anotado no "Visto de passagem" da FILA (23/11/2026). Visto também: entre os 1000 há registros sem relação aparente
+  com o termo (ex.: nº 51, "O Comitê Gestor do IBS"); não avaliado.
+- **Não buscadas:** Oasisbr `cajuina`, Alice, Infoteca-e, UFC, UECE, UFPI, OpenAlex, SciELO.
+- `01_raw/database_records.json`: 1079 registros (54 da CAPES + 25 BDTD + 1000 Oasisbr).
+- Próximo: manutenção do teto; depois, refazer a Oasisbr e seguir as outras fontes. Decisão do Vicente que falta:
+  se as duas fontes já feitas (BDTD e Oasisbr truncada) ficam ou se a busca toda se refaz junta no mesmo dia.
+
 ## Decisões
 
 - **12/11/2026, passo 1, pergunta.** Opções apresentadas: (a) o que já existe; (b) que produto escolher; (c) como se

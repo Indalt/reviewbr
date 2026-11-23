@@ -38,5 +38,105 @@
     "params": {
       "sourceName": "FSTA"
     }
+  },
+  {
+    "timestamp": "2026-11-23T15:17:22.644Z",
+    "tool": "search_repository",
+    "query": "cajuína",
+    "found": 25,
+    "totalFound": 25,
+    "errors": [],
+    "params": {
+      "query": "cajuína",
+      "repositories": [
+        "BR-AGG-0001"
+      ],
+      "maxResults": 1000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da BDTD (bdtd.ibict.br/vufind/api/v1/search, lookfor=*, ordenado por ano) em 23/11/2026: acervo de 1.165.561 registros; as datas de publicação indexadas vão de 0000 a 2121 (os extremos são datas inválidas de catalogação); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero e traz as dissertações riufc/78207 e riufc/67712 (vistas em 12/11/2026); conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "bdtd",
+      "rota": "bdtd: BDTD, API do VuFind",
+      "repositoriosConsultados": [
+        "BR-AGG-0001"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:17:28.293Z",
+    "tool": "search_repository",
+    "query": "cajuina",
+    "found": 25,
+    "totalFound": 25,
+    "errors": [],
+    "params": {
+      "query": "cajuina",
+      "repositories": [
+        "BR-AGG-0001"
+      ],
+      "maxResults": 1000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da BDTD (bdtd.ibict.br/vufind/api/v1/search, lookfor=*, ordenado por ano) em 23/11/2026: acervo de 1.165.561 registros; as datas de publicação indexadas vão de 0000 a 2121 (os extremos são datas inválidas de catalogação); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero e traz as dissertações riufc/78207 e riufc/67712 (vistas em 12/11/2026); conferido no resultado desta execução e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "bdtd",
+      "rota": "bdtd: BDTD, API do VuFind",
+      "repositoriosConsultados": [
+        "BR-AGG-0001"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:17:44.688Z",
+    "tool": "search_repository",
+    "query": "cajuína",
+    "found": 1000,
+    "totalFound": 2997,
+    "errors": [],
+    "params": {
+      "query": "cajuína",
+      "repositories": [
+        "BR-AGG-0006"
+      ],
+      "maxResults": 1000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr (oasisbr.ibict.br/vufind/api/v1/search, lookfor=*, ordenado por ano) em 23/11/2026: acervo de 6.635.673 registros; as datas de publicação indexadas vão de 0000 a 3016 (os extremos são datas inválidas de catalogação); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução (e se traz riufc/78207 e riufc/67712) e anotado no REGISTRO.md"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "oasisbr",
+      "rota": "oasisbr: Oasisbr (IBICT), API do VuFind, sem filtro de rede",
+      "repositoriosConsultados": [
+        "BR-AGG-0006"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-11-23T15:18:08.066Z",
+    "tool": "search_repository",
+    "query": "cajuína",
+    "found": 1000,
+    "totalFound": 2997,
+    "errors": [],
+    "params": {
+      "query": "cajuína",
+      "repositories": [
+        "BR-AGG-0006"
+      ],
+      "maxResults": 5000,
+      "registroDaBusca": {
+        "período de cobertura": "lido na API do VuFind da Oasisbr (oasisbr.ibict.br/vufind/api/v1/search, lookfor=*, ordenado por ano) em 23/11/2026: acervo de 6.635.673 registros; as datas de publicação indexadas vão de 0000 a 3016 (os extremos são datas inválidas de catalogação); sem recorte de data na busca",
+        "controle positivo": "critério do protocolo: a busca devolve mais que zero; conferido no resultado desta execução (e se traz riufc/78207 e riufc/67712) e anotado no REGISTRO.md. Execução repetida porque a anterior (15:17:44 UTC) parou no teto maxResults=1000 com 2997 declarados"
+      },
+      "projectPath": "reviewbr/projects/roda_aromas_ceara",
+      "fontePlano": "oasisbr",
+      "rota": "oasisbr: Oasisbr (IBICT), API do VuFind, sem filtro de rede",
+      "repositoriosConsultados": [
+        "BR-AGG-0006"
+      ]
+    }
   }
 ]

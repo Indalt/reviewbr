@@ -40,6 +40,10 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   normalmente. Nada foi buscado (detalhe no `REGISTRO.md`, "Passo C, segunda parte: parada em 22/11/2026"). A
   conferência tem de testar uma **consulta na API** (`/vufind/api/v1/search?lookfor=agua&limit=0` devolvendo
   `"status":"OK"`), não só a página de entrada.
+- **23/11/2026: busca começada e parada na Oasisbr.** BDTD feita (25, controle positivo passou). Oasisbr `cajuína`:
+  declara 2997, a tool traz no máximo 1000 (teto não dito na resposta) → regra 5, parado, item no "Visto de
+  passagem" da FILA. As outras fontes não foram buscadas. Detalhe, cobertura lida de cada fonte e tabela no
+  `REGISTRO.md` ("Passo C, segunda parte: 23/11/2026"). Próximo: manutenção do teto, em chat de manutenção.
 - O que vale é o `protocol.md`. O `DESENHO_artigo1.md` é o histórico de como se chegou a ele; onde os dois
   divergirem (a string, a conferência de 20%, o Rayyan), vale o protocolo.
 - A parte do Vicente no passo C foi feita em 19/11/2026: Scopus 23, Web of Science 17 e FSTA 14 registros, todos com

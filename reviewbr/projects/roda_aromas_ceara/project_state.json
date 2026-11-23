@@ -9,7 +9,7 @@
   "control_level": "estrito",
   "phase": "F2",
   "createdAt": "2026-11-12T20:02:37.930Z",
-  "updatedAt": "2026-11-21T05:50:01.469Z",
+  "updatedAt": "2026-11-23T15:18:08.068Z",
   "decisions": [
     {
       "phase": "F1",
@@ -638,7 +638,32 @@
       ]
     },
     "desde": "2026-11-21T05:50:01.468Z",
-    "execucoes": []
+    "execucoes": [
+      {
+        "fonte": "bdtd",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:17:22.649Z",
+        "hits": 25
+      },
+      {
+        "fonte": "bdtd",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:17:28.295Z",
+        "hits": 25
+      },
+      {
+        "fonte": "oasisbr",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:17:44.690Z",
+        "hits": 1000
+      },
+      {
+        "fonte": "oasisbr",
+        "tool": "search_repository",
+        "em": "2026-11-23T15:18:08.068Z",
+        "hits": 1000
+      }
+    ]
   },
   "desvios": [
     {
