@@ -38,6 +38,15 @@ critério, fontes) vai para `02_deduplicated/dedupe_pairs.json`; os pares sinali
 
 Full-text não recuperado (F4.2.2): registre por registro com motivo — entra em `fulltext_not_retrieved` no funil.
 
+**Camada por palavras antes da leitura humana** (quando o protocolo a declara): é o `batch_keyword_screen` sobre os
+registros do projeto (com `projectPath`, sem `pdfDir`). Os termos são os do protocolo, sem mudar nada, e a tool confere
+cada um no `protocol.md`. Passa o registro com ao menos um termo no título, no resumo ou nas palavras-chave — as do
+registro e as que o `complete_record_keywords` completou pela fonte em `02_deduplicated/palavras_chave.json` —, e todo
+registro com o resumo vazio. Curinga `*` só no fim; termo sem `*` é a palavra inteira; sem diferença de maiúscula nem de
+acento. Grava `03_screening/passed_keywords.json` (insumo da leitura por título e resumo), `excluded_keywords.json` (o
+`compute_flow_counts` os soma aos excluídos na triagem, com as duas parcelas) e `keywords_report.json` (termos, regra,
+contagens por fonte e a conferência passados + excluídos = entrada). Regravar exige a autorização do pesquisador.
+
 ## Processo de triagem — método, não menu de ferramenta
 A triagem depende do **método declarado no protocolo**, não do software. Antes de triar, leia do `protocol.md` e **obedeça**:
 

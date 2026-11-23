@@ -45,6 +45,15 @@ function baseRest(repo: RepositoryEntry): string {
 
 const restDaRota = new DSpaceRestClient();
 
+/** Palavras-chave de um item DSpace: todo campo `dc.subject` e seus qualificadores (dc.subject.cnpq…). */
+export function assuntosDoDspace(metadata: Record<string, Array<{ value: string }>> | undefined): string[] {
+    const out: string[] = [];
+    for (const [k, vs] of Object.entries(metadata ?? {})) {
+        if (k === "dc.subject" || k.startsWith("dc.subject.")) for (const v of vs ?? []) if (v?.value?.trim()) out.push(v.value.trim());
+    }
+    return [...new Set(out)];
+}
+
 /**
  * A rota que a busca neste repositório usa HOJE, lida só do catálogo, sem rede: o primeiro método
  * que `searchDetailed` tenta, na mesma ordem dele (linha 17 da FILA). A trava do protocolo congela
@@ -85,7 +94,8 @@ export class AccessStrategy {
     private scraper = new HtmlScraper();
     private bdtd = new BdtdAdapter();
     /** Oasisbr (IBICT): agrega repositórios brasileiros; mesma API do VuFind da BDTD, outra base. */
-    private oasisbr = new BdtdAdapter("https://oasisbr.ibict.br/vufind", { id: OASISBR_ID, rotulo: "Oasisbr (IBICT)" });
+    // rawData: a Oasisbr guarda a lista inteira de palavras-chave só no registro bruto (23/11/2026).
+    private oasisbr = new BdtdAdapter("https://oasisbr.ibict.br/vufind", { id: OASISBR_ID, rotulo: "Oasisbr (IBICT)" }, { rawData: true });
     private scielo = new ScieloAdapter();
     private universal = new UniversalProvider();
     private usp = new UspAdapter();
@@ -474,6 +484,36 @@ export class AccessStrategy {
         return terms.length > 0 && terms.every((term) => text.includes(term));
     }
 
+    /** Palavras-chave de registros da Oasisbr (ou vistos por ela), pelo id na Oasisbr (complete_record_keywords). */
+    async palavrasChaveNaOasisbr(ids: string[]) {
+        return this.oasisbr.palavrasChavePorId(ids);
+    }
+
+    /**
+     * Palavras-chave de itens de um DSpace 7, pelo uuid (complete_record_keywords). Respeita o robots.txt.
+     * Item que falha fica em `falhas`.
+     */
+    async palavrasChaveNoDspace(repo: RepositoryEntry, uuids: string[]): Promise<{ palavras: Map<string, string[]>; naoEncontrados: string[]; falhas: string[]; endereco: string }> {
+        const apiUrl = this.rest.resolveApiUrl(baseRest(repo));
+        const endereco = `${apiUrl}/core/items/<uuid>`;
+        const palavras = new Map<string, string[]>();
+        const falhas: string[] = [];
+        const unicos = [...new Set(uuids.filter(Boolean))];
+        if (unicos.length) {
+            const robots = await robotsPermite(`${apiUrl}/core/items/${unicos[0]}`);
+            if (!robots.permitido) throw new Error(robots.motivo);
+        }
+        for (const uuid of unicos) {
+            try {
+                const item = await this.rest.getItem(baseRest(repo), uuid);
+                palavras.set(uuid, assuntosDoDspace(item.metadata as Record<string, Array<{ value: string }>>));
+            } catch (e) {
+                falhas.push(`${uuid}: ${(e as Error).message}`);
+            }
+        }
+        return { palavras, naoEncontrados: [], falhas, endereco };
+    }
+
     /**
      * Convert DSpace REST item to SearchResult.
      */
@@ -501,6 +541,7 @@ export class AccessStrategy {
             date: getFirst("dc.date.issued"),
             type: getFirst("dc.type"),
             url,
+            subjectAreas: assuntosDoDspace(metadata),
             accessMethod: "dspace-rest",
             audit: {
                 methodology: "CUSTOM" as any,

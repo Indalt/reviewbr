@@ -36,6 +36,7 @@ import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registra
 import { apresentarMetodos } from "./services/methods_for_type.js";
 import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, processarDatasetEmLotes, triagemGravada, insumoDoEstagio, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
 import { gravarCamadaPorPalavras, REGRA_DE_CASAMENTO } from "./services/camada_palavras.js";
+import { completarPalavrasChave } from "./services/palavras_chave.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -2707,6 +2708,37 @@ server.tool(
             );
             const rastro = await registrarLote("batch_keyword_screen", params, `${results.length} PDF(s), ${results.filter((r) => r.isRelevant).length} relevante(s).`, results);
             return { content: [{ type: "text", text: summary + rastro }] };
+        } catch (error: any) {
+            return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
+        }
+    }
+);
+
+server.tool(
+    "complete_record_keywords",
+    "Completa, pela fonte, as palavras-chave dos registros já deduplicados que vieram sem elas, para a camada por palavras da triagem (batch_keyword_screen) ler título, resumo E palavras-chave, como o protocolo manda. " +
+    "Consulta pelo id de cada registro: Oasisbr (e os repositórios vistos por ela) em /api/v1/record com rawData, em lotes de 50; DSpace REST em core/items. Respeita o robots.txt. " +
+    "Grava em 02_deduplicated/palavras_chave.json (fonte e data por registro) e 02_deduplicated/palavras_chave_relatorio.json; NÃO muda o dataset.json nem os totais. " +
+    "Fonte sem consulta por id fica declarada no relatório com o motivo (ex.: OpenAlex, que não traz as palavras-chave do autor). Só com projeto travado.",
+    {
+        projectPath: z.string().describe("Raiz do projeto (protocolo travado), com 02_deduplicated/dataset.json"),
+        refazer: z.boolean().optional().describe("Se true, consulta de novo também os registros já gravados em palavras_chave.json (padrão: só os que faltam)"),
+    },
+    async (params) => {
+        const trava = await checkDesignGuardrail(undefined, params.projectPath);
+        if (trava) return { content: [{ type: "text", text: trava }] };
+        try {
+            const r = await completarPalavrasChave(params.projectPath, {
+                oasisbr: (ids) => strategy.palavrasChaveNaOasisbr(ids),
+                dspace: async (repoId, uuids) => {
+                    const repo = registry.getById(repoId);
+                    if (!repo) throw new Error(`repositório ${repoId} fora do catálogo`);
+                    return strategy.palavrasChaveNoDspace(repo, uuids);
+                },
+            }, { refazer: params.refazer });
+            const consultados = (r.relatorio.consultas as Array<{ consultados: number }>).reduce((s, c) => s + c.consultados, 0);
+            const rastro = await registrarLote("complete_record_keywords", params, `Palavras-chave: ${consultados} registro(s) consultado(s) na fonte.`, r.relatorio);
+            return { content: [{ type: "text", text: r.resumo + rastro }] };
         } catch (error: any) {
             return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
         }

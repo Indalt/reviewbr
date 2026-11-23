@@ -257,6 +257,9 @@ interface BdtdRecord {
     languages?: string[];
     formats?: string[];
     institutions?: string[];
+    /** Oasisbr: a API devolve só a primeira palavra-chave em `topic` (texto); a lista inteira está no `rawData`. */
+    topic?: string | string[];
+    rawData?: { topic?: string | string[] };
 }
 
 /**
@@ -264,6 +267,27 @@ interface BdtdRecord {
  * languages, series, subjects, title, urls) — sem resumo nem data (linha 11, item 6).
  */
 const BDTD_CAMPOS = ["id", "title", "authors", "publicationDates", "summary", "urls", "subjects", "languages", "formats", "institutions"];
+
+function listaDeTexto(v: unknown): string[] {
+    if (Array.isArray(v)) return v.flat().map((x) => String(x ?? "").trim()).filter(Boolean);
+    return typeof v === "string" && v.trim() ? [v.trim()] : [];
+}
+
+/**
+ * Palavras-chave de um registro do VuFind. A BDTD as dá em `subjects`; a Oasisbr devolve `subjects`
+ * vazio e as guarda em `topic`, cuja lista inteira só vem no `rawData` (lido em 23/11/2026, registro
+ * SBQ-3_c22ff270ac33e616a82b767965c1cd0c: `topic` da API = só o primeiro termo; `rawData.topic` = os três).
+ */
+export function palavrasChaveDoVufind(r: BdtdRecord): string[] {
+    const subjects = listaDeTexto(r.subjects);
+    if (subjects.length) return subjects;
+    const doRaw = listaDeTexto(r.rawData?.topic);
+    if (doRaw.length) return [...new Set(doRaw)];
+    return listaDeTexto(r.topic);
+}
+
+/** Quantos ids o VuFind recebe por pedido em /api/v1/record (id[]). */
+const VUFIND_IDS_POR_PEDIDO = 50;
 
 /** A API do VuFind não pagina além da página 10 (lido na Oasisbr em 23/11/2026: a 11 repete a 10). */
 const VUFIND_PAGINAS = 10;
@@ -298,7 +322,50 @@ export class BdtdAdapter {
     constructor(
         private baseUrl = "https://bdtd.ibict.br/vufind",
         private nome = { id: "BR-AGG-0001", rotulo: "BDTD (IBICT)" },
+        /** `rawData`: pedir o registro bruto, onde a Oasisbr guarda a lista inteira de palavras-chave. */
+        private opcoes: { rawData?: boolean } = {},
     ) {}
+
+    private get campos(): string[] {
+        return this.opcoes.rawData ? [...BDTD_CAMPOS, "rawData"] : BDTD_CAMPOS;
+    }
+
+    /**
+     * Palavras-chave de registros já gravados, pelo id na fonte, em lotes de 50 ids por pedido
+     * (complete_record_keywords, 23/11/2026). Respeita o robots.txt. Id que a fonte não devolve fica em
+     * `naoEncontrados`; pedido que falha fica em `falhas`, com os ids dele.
+     */
+    async palavrasChavePorId(ids: string[]): Promise<{ palavras: Map<string, string[]>; naoEncontrados: string[]; falhas: string[]; endereco: string }> {
+        const endereco = `${this.baseUrl}/api/v1/record`;
+        const palavras = new Map<string, string[]>();
+        const falhas: string[] = [];
+        const vistos = new Set<string>();
+        const unicos = [...new Set(ids.filter(Boolean))];
+        if (unicos.length) {
+            const robots = await robotsPermite(`${endereco}?id=${encodeURIComponent(unicos[0])}`);
+            if (!robots.permitido) throw new Error(robots.motivo);
+        }
+        for (let i = 0; i < unicos.length; i += VUFIND_IDS_POR_PEDIDO) {
+            const lote = unicos.slice(i, i + VUFIND_IDS_POR_PEDIDO);
+            const p = new URLSearchParams();
+            for (const id of lote) p.append("id[]", id);
+            for (const c of ["id", "subjects", "topic", ...(this.opcoes.rawData ? ["rawData"] : [])]) p.append("field[]", c);
+            const url = `${endereco}?${p}`;
+            try {
+                await rateLimiter.acquire(url);
+                const data = JSON.parse(await fetchText(url, { timeout: 60_000, headers: { Accept: "application/json" } })) as { records?: BdtdRecord[] };
+                for (const r of data.records ?? []) {
+                    vistos.add(r.id);
+                    palavras.set(r.id, palavrasChaveDoVufind(r));
+                }
+            } catch (e) {
+                falhas.push(`ids ${i + 1} a ${i + lote.length}: ${(e as Error).message}`);
+                for (const id of lote) vistos.add(id);
+            }
+        }
+        const naoEncontrados = unicos.filter((id) => !vistos.has(id));
+        return { palavras, naoEncontrados, falhas, endereco };
+    }
 
     /**
      * Search BDTD via VuFind REST API with rich filters.
@@ -317,7 +384,7 @@ export class BdtdAdapter {
         params.set("lookfor", lookfor);
         params.set("type", type);
         params.set("limit", String(Math.min(limit, 100)));
-        for (const campo of BDTD_CAMPOS) params.append("field[]", campo);
+        for (const campo of this.campos) params.append("field[]", campo);
 
         // VuFind facet filters
         if (opts?.degreeType) {
@@ -448,7 +515,7 @@ export class BdtdAdapter {
      * Get record detail from BDTD.
      */
     async getRecord(id: string): Promise<Partial<DublinCoreMetadata>> {
-        const campos = BDTD_CAMPOS.map((c) => `&field[]=${c}`).join("");
+        const campos = this.campos.map((c) => `&field[]=${c}`).join("");
         const url = `${this.baseUrl}/api/v1/record?id=${encodeURIComponent(id)}${campos}`;
         await rateLimiter.acquire(url);
         const text = await fetchText(url, {
@@ -465,7 +532,7 @@ export class BdtdAdapter {
             creator: r.authors?.primary ? Object.keys(r.authors.primary) : [],
             date: r.publicationDates ?? [],
             description: r.summary ?? [],
-            subject: r.subjects?.flat() ?? [],
+            subject: palavrasChaveDoVufind(r),
             language: r.languages ?? [],
             type: r.formats ?? ["thesis/dissertation"],
             contributor: nomesSecundarios(r),
@@ -497,7 +564,7 @@ export class BdtdAdapter {
             url: itemUrl,
             degreeType: degreeName,
             institution: r.institutions?.[0],
-            subjectAreas: r.subjects?.flat(),
+            subjectAreas: palavrasChaveDoVufind(r),
             language: r.languages?.[0],
             accessMethod: "bdtd-vufind",
             audit: {

@@ -81,6 +81,7 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     search_repository: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR, AgentRole.SCOUT],
     harvest_records: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
     get_record_metadata: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
+    complete_record_keywords: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
 
     // ─── Import & Normalization (LIBRARIAN + COORDINATOR) ───
     import_dataset_ris: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
