@@ -16,13 +16,15 @@
  * DEBT-021: lia `screening_decision` do banco, que nenhuma tool preenche — o screen_candidates
  * grava em disco —, e por isso respondia sempre "nada triado". Decisão de 29/10/2026: a
  * saturação lê a triagem gravada em disco. O universo é o insumo do estágio (TA:
- * 02_deduplicated/dataset.json; texto completo: 03_screening/included_ta.json), na ordem dele —
+ * 03_screening/passed_keywords.json, se a camada por palavras rodou, senão 02_deduplicated/dataset.json;
+ * texto completo: 03_screening/included_ta.json), na ordem dele —
  * é a ordem em que o screen_candidates processa —, e as decisões vêm dos artefatos do estágio
  * (TA: included_ta + excluded_ta; texto completo: included + excluded_fulltext).
  */
 
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { insumoDoEstagio } from "./project_artifacts.js";
 
 // ─── Types ───────────────────────────────────────────────────
 
@@ -44,9 +46,10 @@ interface ItemTriagem {
     source: string;
 }
 
+// O insumo da TA é o que a camada por palavras passou, quando ela rodou (insumoDoEstagio, 23/11/2026).
 const ARTEFATOS = {
-    ta: { insumo: "02_deduplicated/dataset.json", decisoes: ["03_screening/included_ta.json", "03_screening/excluded_ta.json"] },
-    fulltext: { insumo: "03_screening/included_ta.json", decisoes: ["03_screening/included.json", "03_screening/excluded_fulltext.json"] },
+    ta: { decisoes: ["03_screening/included_ta.json", "03_screening/excluded_ta.json"] },
+    fulltext: { decisoes: ["03_screening/included.json", "03_screening/excluded_fulltext.json"] },
 } as const;
 
 function lerLista(file: string): any[] {
@@ -109,7 +112,7 @@ export class ScreeningMetricsService {
         }
         const itens: ItemTriagem[] = [];
         const vistos = new Set<string>();
-        for (const item of lerLista(path.join(projectDir, a.insumo))) {
+        for (const item of lerLista(path.join(projectDir, insumoDoEstagio(projectDir, estagio)))) {
             const rec = item?.record ?? item;
             const k = chave(rec);
             if (vistos.has(k)) continue;

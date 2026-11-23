@@ -34,7 +34,8 @@ import { proporEmenda, decidirEmenda, registrarDesvio, desviosDeCamposNaoObtidos
 import { ProjectStateService } from "./services/project_state.js";
 import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
 import { apresentarMetodos } from "./services/methods_for_type.js";
-import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, processarDatasetEmLotes, triagemGravada, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
+import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, processarDatasetEmLotes, triagemGravada, insumoDoEstagio, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
+import { gravarCamadaPorPalavras, REGRA_DE_CASAMENTO } from "./services/camada_palavras.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -722,7 +723,7 @@ server.tool(
 
 server.tool(
     "screen_candidates",
-    "Triagem por IA (Gemini). stage='ta' (título/resumo) ou 'fulltext' (texto completo). Com projectPath e sem 'candidates', lê o insumo do funil automaticamente (ta ← 02_deduplicated/dataset.json; fulltext ← 03_screening/included_ta.json) e grava included/excluded por estágio (RV-02). A triagem TA deve ser DECISIVA usando os critérios+booleanos — não empurre tudo para 'maybe'.",
+    "Triagem por IA (Gemini). stage='ta' (título/resumo) ou 'fulltext' (texto completo). Com projectPath e sem 'candidates', lê o insumo do funil automaticamente (ta ← 03_screening/passed_keywords.json, se a camada por palavras rodou, senão 02_deduplicated/dataset.json; fulltext ← 03_screening/included_ta.json) e grava included/excluded por estágio (RV-02). A triagem TA deve ser DECISIVA usando os critérios+booleanos — não empurre tudo para 'maybe'.",
     {
         candidates: z.string().optional().describe("JSON com array de candidatos (opcional se projectPath+stage forem dados)"),
         criteria: z.string().describe("Critérios de inclusão/exclusão (derivados do protocolo)"),
@@ -758,7 +759,7 @@ server.tool(
             catch { return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] }; }
         } else if (params.projectPath) {
             const dir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
-            const inputRel = stage === "ta" ? "02_deduplicated/dataset.json" : "03_screening/included_ta.json";
+            const inputRel = insumoDoEstagio(dir, stage);
             const inputPath = path.join(dir, inputRel);
             if (!fs.existsSync(inputPath)) {
                 return { content: [{ type: "text", text: `Insumo da triagem ${stage} não encontrado: ${inputRel}. Rode a fase anterior primeiro.` }] };
@@ -2675,15 +2676,30 @@ const DESC_PROJECT_PATH_LOTE = "Projeto: com ele, os params e o resultado por it
 
 server.tool(
     "batch_keyword_screen",
-    "Triagem em lote de PDFs por palavras-chave. Lê todos os PDFs em um diretório e filtra por keywords no modo AND ou OR. Retorna relatório com trechos relevantes.",
+    "Triagem por palavras, em dois modos. (1) REGISTROS DO PROJETO — a camada mecânica da triagem (F4), antes da leitura humana: com projectPath e sem pdfDir, lê 02_deduplicated/dataset.json e grava 03_screening/passed_keywords.json (o que passa para a leitura humana por título e resumo), 03_screening/excluded_keywords.json (o funil os soma aos excluídos na triagem) e 03_screening/keywords_report.json. " +
+    REGRA_DE_CASAMENTO + " As palavras-chave lidas são as do registro e as de 02_deduplicated/palavras_chave.json (complete_record_keywords), quando existe. Cada termo tem de estar escrito no protocol.md do projeto; regravar a camada exige a autorização do pesquisador ('substituicao'). " +
+    "(2) PDFs: com pdfDir, lê os PDFs da pasta e casa por trecho de texto (sem curinga), no modo AND ou OR; não grava artefato do funil.",
     {
-        pdfDir: z.string().describe("Caminho absoluto para o diretório de PDFs"),
-        keywords: z.array(z.string()).describe("Lista de palavras-chave para buscar"),
-        mode: z.enum(["AND", "OR"]).optional().describe("AND = todas devem aparecer; OR = qualquer uma basta (padrão: OR)"),
+        pdfDir: z.string().optional().describe("Modo PDF: caminho absoluto da pasta de PDFs. Sem ele, com projectPath, o modo é o dos registros do projeto."),
+        keywords: z.array(z.string()).describe("Termos. No modo dos registros, copiados do protocolo sem mudar nada (a tool confere cada um no protocol.md); terminado em * aceita qualquer terminação"),
+        mode: z.enum(["AND", "OR"]).optional().describe("Só no modo PDF: AND = todas devem aparecer; OR = qualquer uma basta (padrão: OR). No modo dos registros vale sempre 'ao menos um termo'."),
         projectPath: z.string().optional().describe(DESC_PROJECT_PATH_LOTE),
+        substituicao: z.string().optional().describe("Só no modo dos registros, quando a camada já foi gravada: a decisão do pesquisador que autoriza regravá-la, nas palavras dele. A anterior é arquivada em 03_screening/substituidas/ e a substituição registrada (DEBT-112)."),
     },
     async (params) => {
         try {
+            if (!params.pdfDir) {
+                if (!params.projectPath) {
+                    return { content: [{ type: "text", text: "Informe pdfDir (modo PDF) ou projectPath (modo dos registros do projeto, a camada por palavras da triagem)." }] };
+                }
+                if (params.mode === "AND") {
+                    return { content: [{ type: "text", text: "No modo dos registros vale 'ao menos um termo' (OR), como a camada por palavras pede. Nada foi gravado." }] };
+                }
+                const camada = gravarCamadaPorPalavras(params.projectPath, params.keywords, { substituicao: params.substituicao });
+                const k = camada.relatorio.contagens as { entrada: number; passados: number; excluidos: number };
+                const rastro = await registrarLote("batch_keyword_screen", params, `Camada por palavras: ${k.entrada} registros, ${k.passados} passam, ${k.excluidos} excluídos.`, camada.relatorio);
+                return { content: [{ type: "text", text: camada.resumo + rastro }] };
+            }
             const { results, summary } = await batchService.screenByKeywords(
                 params.pdfDir,
                 params.keywords,

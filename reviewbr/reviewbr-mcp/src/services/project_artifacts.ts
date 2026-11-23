@@ -50,7 +50,7 @@ export function resolveDir(projectPath: string): string {
     return path.isAbsolute(projectPath) ? projectPath : path.join(process.cwd(), projectPath);
 }
 
-function readArray(file: string): any[] {
+export function readArray(file: string): any[] {
     if (!fs.existsSync(file)) return [];
     try {
         const parsed = JSON.parse(fs.readFileSync(file, "utf-8"));
@@ -264,15 +264,39 @@ export async function processarDatasetEmLotes(
     return { total: registros.length };
 }
 
-function artefatosDaTriagem(stage: "ta" | "fulltext"): { includedRel: string; excludedRel: string } {
+/**
+ * Camada mecânica da triagem por palavras (pedido do Vicente de 23/11/2026, F4.1.2 do protocolo do
+ * `roda_aromas_ceara`): vem antes da leitura humana por título e resumo e faz parte da triagem. O que
+ * ela passa é o insumo da leitura humana; o que ela exclui o funil soma aos excluídos na triagem.
+ */
+export const PASSADOS_PALAVRAS = "03_screening/passed_keywords.json";
+export const EXCLUIDOS_PALAVRAS = "03_screening/excluded_keywords.json";
+export const RELATORIO_PALAVRAS = "03_screening/keywords_report.json";
+/** Palavras-chave completadas pela fonte depois da F3, sem tocar no dataset.json (complete_record_keywords). */
+export const PALAVRAS_CHAVE_COMPLETADAS = "02_deduplicated/palavras_chave.json";
+
+export type EstagioTriagem = "ta" | "fulltext" | "palavras";
+
+function artefatosDaTriagem(stage: EstagioTriagem): { includedRel: string; excludedRel: string } {
     // Na fase TA, os incluídos são os "encaminhados para texto completo"; na fase fulltext, são os incluídos FINAIS.
+    // Na camada por palavras, os "incluídos" são os que passam para a leitura humana.
+    if (stage === "palavras") return { includedRel: PASSADOS_PALAVRAS, excludedRel: EXCLUIDOS_PALAVRAS };
     return stage === "ta"
         ? { includedRel: "03_screening/included_ta.json", excludedRel: "03_screening/excluded_ta.json" }
         : { includedRel: "03_screening/included.json", excludedRel: "03_screening/excluded_fulltext.json" };
 }
 
+/**
+ * O insumo de cada estágio da triagem humana ou por IA. O da leitura por título e resumo é o que a
+ * camada por palavras passou, quando ela rodou; sem ela, o dataset deduplicado.
+ */
+export function insumoDoEstagio(projectDir: string, stage: "ta" | "fulltext"): string {
+    if (stage === "fulltext") return "03_screening/included_ta.json";
+    return fs.existsSync(path.join(projectDir, PASSADOS_PALAVRAS)) ? PASSADOS_PALAVRAS : "02_deduplicated/dataset.json";
+}
+
 /** A triagem já gravada do estágio, ou `null` quando não há nenhuma decisão gravada (DEBT-112). */
-export function triagemGravada(projectPath: string, stage: "ta" | "fulltext"): { incluidos: number; excluidos: number } | null {
+export function triagemGravada(projectPath: string, stage: EstagioTriagem): { incluidos: number; excluidos: number } | null {
     const dir = resolveDir(projectPath);
     const { includedRel, excludedRel } = artefatosDaTriagem(stage);
     const incluidos = readArray(path.join(dir, includedRel)).length;
@@ -294,10 +318,11 @@ export function triagemGravada(projectPath: string, stage: "ta" | "fulltext"): {
  */
 export function writeScreening(
     projectPath: string,
-    stage: "ta" | "fulltext",
+    stage: EstagioTriagem,
     included: any[],
     excluded: any[],
     substituicao?: { autorizacao?: string },
+    agente = "screen_candidates",
 ): { includedFile: string; excludedFile: string; substituicao?: { pasta: string; havia: { incluidos: number; excluidos: number } } } {
     const dir = resolveDir(projectPath);
     const { includedRel, excludedRel } = artefatosDaTriagem(stage);
@@ -324,7 +349,7 @@ export function writeScreening(
         writeJson(dir, `${pasta}/substituicao.json`, { quando, estagio: stage, autorizacao, havia, passa_a_haver: passa, arquivos_anteriores: pasta });
         ProjectStateService.logDecision(dir, {
             phase: `substituicao_triagem_${stage}`,
-            agent: "screen_candidates",
+            agent: agente,
             decision: `Triagem ${stage} substituída: havia ${havia.incluidos} incluídos e ${havia.excluidos} excluídos; ` +
                 `passa a haver ${passa.incluidos} e ${passa.excluidos}. Anterior arquivada em ${pasta}.`,
             por: "pesquisador",

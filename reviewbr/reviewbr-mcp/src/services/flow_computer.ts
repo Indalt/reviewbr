@@ -1,6 +1,7 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { PrismaFlowValidator, PrismaFlowData } from "./prisma_validator.js";
+import { EXCLUIDOS_PALAVRAS } from "./project_artifacts.js";
 
 /**
  * FlowComputer — deriva o Fluxograma PRISMA (F8.1) a partir dos ARTEFATOS reais
@@ -15,6 +16,7 @@ import { PrismaFlowValidator, PrismaFlowData } from "./prisma_validator.js";
  *   01_raw/database_records.json          -> identified_db      (array de registros)
  *   01_raw/other_records.json             -> identified_other   (opcional; snowball/cinzenta)
  *   02_deduplicated/dataset.json          -> após dedup         (=> duplicates_removed, screened)
+ *   03_screening/excluded_keywords.json   -> + title_abstract_excluded (camada por palavras, opcional)
  *   03_screening/excluded_ta.json         -> title_abstract_excluded
  *   03_screening/fulltext_not_retrieved.json -> fulltext_not_retrieved (opcional)
  *   03_screening/excluded_fulltext.json   -> fulltext_excluded
@@ -72,7 +74,16 @@ export class FlowComputer {
         const identified_db = countOrZero("01_raw/database_records.json", "identified_db");
         const identified_other = countOrZero("01_raw/other_records.json", "identified_other");
         const afterDedup = countArray(path.join(projectDir, "02_deduplicated/dataset.json"));
-        const title_abstract_excluded = countOrZero("03_screening/excluded_ta.json", "title_abstract_excluded");
+        // Camada por palavras (23/11/2026): faz parte da triagem (F4.1.2 do protocolo que a usa), então o que
+        // ela exclui soma aos excluídos na leitura por título e resumo, com as duas parcelas na origem do número.
+        const excluidosPalavras = countArray(path.join(projectDir, EXCLUIDOS_PALAVRAS));
+        const excluidosLeitura = countOrZero("03_screening/excluded_ta.json", "title_abstract_excluded");
+        const title_abstract_excluded = excluidosLeitura + (excluidosPalavras ?? 0);
+        if (excluidosPalavras !== null) {
+            provenance.title_abstract_excluded =
+                `soma: ${EXCLUIDOS_PALAVRAS} (${excluidosPalavras}, camada por palavras) + leitura por título e resumo: ` +
+                `${provenance.title_abstract_excluded} = ${title_abstract_excluded}`;
+        }
         const fulltext_not_retrieved = countOrZero("03_screening/fulltext_not_retrieved.json", "fulltext_not_retrieved");
         const fulltext_excluded = countOrZero("03_screening/excluded_fulltext.json", "fulltext_excluded");
 
