@@ -211,12 +211,15 @@ primeira linha é para o seletor; apague-a antes de enviar.
 
 > Fable 5.2 · high
 >
-> Rotina de manutenção. Depois, só a linha 13 da FILA (decisões dos revisores), com o alcance decidido em 23/11/2026
-> (itens 1 a 3) e a proposta da seção "Pedido do Vicente de 23/11/2026", com a decisão do mesmo dia: o ReviewBR gera
-> uma planilha por revisor com os campos que ele preenche e, nas primeiras linhas, o que fazer, de forma objetiva; eu
-> envio, recebo o arquivo preenchido e o entrego para a tool importar. Antes de construir, faça-me a pergunta (2)
-> daquela seção, se ainda estiver aberta. Teste com uma cópia dos dados do `roda_aromas_ceara`, sem gravar na pasta do
-> projeto. Nenhum subagente nem workflow.
+> Rotina de manutenção. Depois, só a linha 13 da FILA (decisões dos revisores), pela proposta (2) da seção "Pedido do
+> Vicente de 23/11/2026" e pelas minhas decisões gravadas no fim dela (alcance itens 1 a 3; uma planilha `.xlsx` por
+> revisor, os dois com todo o insumo; "sim / não / dúvida" com observação obrigatória na dúvida; identificação no topo;
+> conferência de procedência dos links por título antes de gerar, com DOI no lugar da página da Scopus; link que não
+> confere ou não abre vira falha do sistema e volta à revisão depois do conserto; planilha do texto completo com
+> "conseguiu ler o texto completo?" e o registro dos não recuperados no funil). Não há pergunta aberta: não me pergunte
+> de novo o que está decidido. Antes de construir, confira com a fonte oficial a minha pergunta gravada ali ("situacoes
+> assim sao comuns em outras pesquisas?") e mostre-me o diagnóstico e o plano. Teste com uma cópia dos dados do
+> `roda_aromas_ceara`, sem gravar na pasta do projeto. Nenhum subagente nem workflow.
 
 **F3 — deduplicação (23/11/2026), em chat novo.** A primeira linha é para o seletor; apague-a antes de enviar.
 
