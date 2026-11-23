@@ -7,9 +7,9 @@
   "userId": "vicente",
   "status": "LOCKED",
   "control_level": "estrito",
-  "phase": "F2",
+  "phase": "F3",
   "createdAt": "2026-11-12T20:02:37.930Z",
-  "updatedAt": "2026-11-23T16:09:20.946Z",
+  "updatedAt": "2026-11-23T17:37:09.555Z",
   "decisions": [
     {
       "phase": "F1",
@@ -38,6 +38,14 @@
       "por": "pesquisador",
       "contribuicao": "\"só a cajuina\"; \"entram os estudos sobre compostos volateis para identificar o estado da arte em relacao a estudos sensoriais da cajuina\"; \"suco clarificado sem cozimento e sem o uso do termo cajuina saem por criterio de busca\"; \"fontes por relevancia ganha, pode retirar a baixas\"; \"o titulo parece bom e as 3 questoes secundarias ficam como estao\"; \"como aplicou o ponto 1 tudo bem, mas vale deixar como comentario a ciencia das bebidas clirificadas\"; \"se o desenho agiliza nao precisa de ferramenta alem do reviewbr\"; \"basta descrever o criterio do que fica para os revisores humanos e seguir\"; \"aprovo os ponto menores\"; \"li e aprovo o protocolo\" (Vicente, 15/11/2026)",
       "ts": "2026-11-15T16:46:02.424Z"
+    },
+    {
+      "phase": "F3",
+      "agent": "coordinator",
+      "decision": "Os 36 pares sinalizados na F3 (02_deduplicated/F3_pares_em_duvida.md) ficam como estão, sem remoção; a duplicata entre eles é resolvida numa nova deduplicação depois da triagem, só entre os registros que passarem. A F3 fica com 5446 registros e a F4 começa.",
+      "por": "pesquisador",
+      "contribuicao": "abri os 10 primeiros estudos e entendi que é melhor deduplicar novamente apos a triagem. nenhum deles se refere ao tema do artigo 1. se o protocolo permitir, seguimos e pode anotar a decisao",
+      "ts": "2026-11-23T17:37:09.548Z"
     }
   ],
   "emendas": [

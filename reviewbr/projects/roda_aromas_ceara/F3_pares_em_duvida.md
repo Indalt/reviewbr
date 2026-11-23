@@ -10,10 +10,10 @@ Leitura proposta, dentro dessa regra, aplicada na ordem: (1) DOIs diferentes →
 
 Se aprovar a leitura, basta dizer "aprovo a leitura" e indicar as linhas em que discorda. Nada aqui é triagem: não se julga se o registro é sobre cajuína nem sobre aroma.
 
-## Como a decisão é aplicada
+## Decisão (23/11/2026)
 
-Hoje o ReviewBR não tem tool que aplique a decisão sobre um par: remover um registro sinalizado ou devolver um
-removido. Sem isso a F3 não fecha pelo protocolo, então é conserto de manutenção, antes da F4.
+Os pares ficam no conjunto; uma nova deduplicação, depois da triagem, os resolve entre os registros que passarem.
+Ver `REGISTRO.md`, "Decisões", 23/11/2026.
 
 ## Parte 1 — os 36 pares sinalizados (não removidos pela tool)
 

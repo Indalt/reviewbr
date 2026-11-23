@@ -49,9 +49,10 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
     par tese × artigo. Um par artigo × capítulo ficou em dúvida.
   - Detalhe no `REGISTRO.md`, "Passo D, F3".
 
-  **Próximo: a decisão do Vicente sobre a F3** (os 36 pares sinalizados e o par em dúvida), gravada por
-  `record_researcher_decision` com as palavras dele; sem ela a F4 não abre (RV-04). Depois, a linha 13 da FILA
-  (decisões dos dois revisores), antes da triagem (F4).
+  **Decisão do Vicente sobre a F3 gravada (23/11/2026):** os 36 pares sinalizados ficam e são resolvidos por
+  nova deduplicação depois da triagem (`REGISTRO.md`, "Decisões"; `F3_pares_em_duvida.md`). **Próximo: F4,
+  camada mecânica por palavras** (`batch_keyword_screen`, termos do protocolo, "Processo de Seleção"). Antes da
+  camada humana, a linha 13 da FILA (onde se gravam as decisões dos dois revisores).
 - **23/11/2026: F2 completa.** Oasisbr (2997 + 2997) e OpenAlex (2639) refeitos com o servidor novo, tudo o que
   a fonte declarou. Próximo: linha 13 da FILA (decisões dos dois revisores) e depois o passo D (F3/F4).
 - **23/11/2026, depois: busca seguida e teto consertado.** Feitas as 9 fontes abertas; com teto só a Oasisbr (1000

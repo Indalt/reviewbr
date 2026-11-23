@@ -375,6 +375,23 @@ se fez para que a execução cortada do OpenAlex não entrasse. **A tool será c
   conversas gravadas, algumas já transcritas; as transcrições são feitas por uma ferramenta a que o bolsista tem
   acesso, não pelo assistente. O Comitê de Ética cobre o projeto, com numeração: **não perguntar mais sobre isso**.
   Houve um trabalho exploratório anterior ao edital, sem protocolo nem metodologia; importa pouco.
+- **23/11/2026, F3: pares sinalizados resolvidos depois da triagem.**
+  - **O quê:** os 36 pares que a tool sinalizou (título ≥ 0,90 parecido, mesmo ano; lista e links em
+    `F3_pares_em_duvida.md`) ficam no conjunto, sem remoção. Uma nova deduplicação, depois da triagem, resolve
+    os pares entre os registros que passarem.
+  - **Alcance:** a F3 fecha com 5446 registros, e a triagem (F4) começa sobre eles.
+  - **Por que cabe no protocolo:** a F1.3.2.5 manda remover na F3 o mesmo registro de várias fontes. O par
+    sinalizado não foi dado como duplicata pela tool, e a decisão sobre ele é do pesquisador (RV-04).
+  - **Consequências para o relato:**
+    - o fluxograma declara quantas duplicatas saíram na F3 (420) e quantas saíram depois da triagem;
+    - o par Cruz 2026 (artigo × capítulo, removido pela tool) fica como a tool decidiu: o artigo segue para a
+      triagem;
+    - a extração segue sendo uma por estudo.
+  - **Base da decisão:** o Vicente abriu os 10 primeiros pares, e nenhum trata do tema do artigo 1.
+  - **Origem:** "abri os 10 primeiros estudos e entendi que é melhor deduplicar novamente apos a triagem. nenhum
+    deles se refere ao tema do artigo 1. se o protocolo permitir, seguimos e pode anotar a decisao".
+  - **Gravada também** por `record_researcher_decision` (etapa F3), com as palavras dele; o `project_state.json`
+    passou para a fase F3.
 
 ## Falhas do ReviewBR encontradas
 
