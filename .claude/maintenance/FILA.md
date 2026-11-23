@@ -555,3 +555,11 @@ Vicente pedir.
   neste PC: "No test suite found" nos 64 arquivos, igual sem a mudança.
 - (projeto `roda_aromas_ceara`, 23/11/2026) Com a cobertura sem teto, a Oasisbr recebe ~100+ pedidos por busca grande;
   um HTTP 503 no meio derruba a execução inteira (sem nova tentativa no `fetchText` para 503). Repetida, completou.
+- (projeto `roda_aromas_ceara`, F3, 23/11/2026) O `deduplicate_dataset` não deixa escolher as entradas: com
+  `projectPath`, o `consolidateRaw` soma todo `01_raw/*.json`, e ali está também a execução do OpenAlex cortada em 200
+  (`dataset_openalex_2026-11-23_15-21-53-903Z.json`), que fica como histórico e não entra na F3. Lidos em ordem
+  alfabética, os 200 entram pelo arquivo cortado e o arquivo completo (2639) contribui só 2439: o total fecha (3148 +
+  2639 + 79 = 5866, conferido fora da tool, sem gravar), mas 200 registros ficam com o `audit` da execução cortada
+  (`extractionDate` 15:21:53), não da completa. A consolidação também reescreve `01_raw/database_records.json` (fora
+  do git, única cópia dos 3148 da CAPES e dos repositórios) com os 5866. Sem `projectPath`, a tool pede o JSON inteiro
+  como texto e não grava relatório. Passo F3 parado antes de rodar; nada gravado.

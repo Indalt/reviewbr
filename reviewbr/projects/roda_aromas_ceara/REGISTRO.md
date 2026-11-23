@@ -131,6 +131,25 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   próprio (`01_raw/dataset_openalex_*.json`, `dataset_scielo_*.json`), que a F3 junta. **F2 das fontes abertas
   completa.**
 
+### Passo D, F3 (deduplicação): parada em 23/11/2026, antes de rodar
+
+- **Entradas pedidas:** `01_raw/database_records.json` (3148), `01_raw/dataset_openalex_2026-11-23_16-03-18-636Z.json`
+  (2639) e `01_raw/dataset_scielo_2026-11-23_15-21-55-819Z.json` (79). Não entra a execução cortada
+  `dataset_openalex_2026-11-23_15-21-53-903Z.json` (200).
+- **Como a tool recebe as entradas** (lido no código, `deduplicate_dataset` e `consolidateRaw`): com `projectPath`,
+  soma **todo** `01_raw/*.json`, sem escolha de arquivo; entre arquivos, descarta o registro já visto da mesma fonte
+  com a mesma chave (DOI, identificador, endereço ou título); depois reescreve `01_raw/database_records.json` com o
+  consolidado. Sem `projectPath`, pede o conjunto inteiro como texto JSON e não grava relatório.
+- **Conferido fora da tool, só leitura, simulando a consolidação:** 3148 + 200 (arquivo cortado) + 2439 (arquivo
+  completo) + 79 = 5866. O total é o das três entradas (3148 + 2639 + 79), porque os 200 estão todos no arquivo
+  completo; mas esses 200 entrariam pela execução cortada, com o `audit` dela (`extractionDate` 15:21:53), e não pela
+  completa. Isso contraria "não entra". Visto também: o OpenAlex completo tem duas chaves repetidas dentro do arquivo
+  (DOI `10.59289/0n920b43` e `10.11606/d.27.2020.tde-04032021-223440`), e a CAPES uma (FSTA, já sabida). Dentro do
+  arquivo a consolidação mantém o repetido; a remoção é da F3.
+- **Parado (regra 5).** A tool não aceita só as três entradas. Nada rodou, nada gravado em `01_raw/` nem em
+  `02_deduplicated/`. Item no "Visto de passagem" da FILA (23/11/2026). Tirar o arquivo cortado de `01_raw/` seria
+  contornar a tool no projeto; não feito.
+
 ## Decisões
 
 - **12/11/2026, passo 1, pergunta.** Opções apresentadas: (a) o que já existe; (b) que produto escolher; (c) como se
