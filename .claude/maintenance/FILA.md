@@ -66,8 +66,8 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 21/11/2026, execução da linha 18 — build e suíte 626 de 626; gate `validate_system_change`
-CORRECAO válido; fila: linha 10 em curso, 13 a fazer, 18 feita; 42 itens no "Visto de passagem".
+**Última verificação:** 23/11/2026, antes do diagnóstico do que trava a F4 — repositório limpo; build e suíte 626 de
+626; audit válido, 0 achados abertos; fila: linha 10 em curso, 13 a fazer; 46 itens no "Visto de passagem".
 
 ## Fila
 
@@ -86,7 +86,7 @@ CORRECAO válido; fila: linha 10 em curso, 13 a fazer, 18 feita; 42 itens no "Vi
 | 10 | Fase de testes | — | — | **em curso:** o teste é a pesquisa real `roda_aromas_ceara` (Vicente, 19/11/2026); as linhas 11 a 13 saíram dele |
 | 11 | I — Busca nos repositórios do `roda_aromas_ceara` | ver abaixo | ver abaixo | **feita em 19/11/2026** (commit `4936c59`): UFPI e IFCE buscam pela API REST; UECE, Alice e Infoteca-e marcadas como não pesquisáveis (HTTP 403), e a tool diz isso; Infoteca-e segue `inactive`; `matchesQuery` corrigido, sem chamador desde o item 1 |
 | 12 | J — OpenAlex e SciELO: resumo, endereço e a fonte do SciELO | ver abaixo | ver abaixo | **feita em 19/11/2026** (commits `f290ac9` e o seguinte): item 2 pelo OpenAlex com o prefixo 10.1590, por decisão do Vicente |
-| 13 | K — Decisões dos dois revisores humanos | ver abaixo | — | a fazer; antes da triagem do projeto (passo D) |
+| 13 | K — Decisões dos dois revisores humanos | ver abaixo | — | a fazer; antes da triagem do projeto (passo D). Diagnóstico de 23/11/2026 na seção "Pedido do Vicente de 23/11/2026"; o conserto espera ele |
 | 14 | L — Acesso por robô: conferência jurídica e ética (UECE, Alice, Infoteca-e) | User-Agent identificado | `CONFERENCIA_acesso_2026-11-19.md` | **feita em 19/11/2026**: robots.txt respeitado; UECE, Alice, Infoteca-e e UFC pela Oasisbr, declarando onde se viu |
 | 15 | F9 — importação de várias bases em `01_raw` | ver abaixo | — | **feita em 19/11/2026** |
 | 16 | F10 e F11 — importação de RIS: linha de continuação, CR sozinho e registros distintos da mesma base | ver abaixo | — | **feita em 20/11/2026** |
@@ -377,6 +377,95 @@ Origem: "agende o conserto 15h30 e pode executar apos esse horario aqui mesmo ne
   `roda_aromas_ceara`: em chat novo (servidor novo), o projeto propõe a emenda 1 com o plano de busca pela
   `record_protocol_amendment`, o Vicente a aprova ou recusa nas palavras dele, e o desvio 1 entra pela mesma tool.
 
+### Pedido do Vicente de 23/11/2026 — o que trava a F4 do `roda_aromas_ceara` (diagnóstico; o conserto espera o Vicente)
+
+> Pedido: "Rotina de manutenção. Depois, só o que trava a F4 do projeto roda_aromas_ceara, nesta ordem: (1) o item do
+> 'Visto de passagem' de 23/11/2026 sobre a camada mecânica da triagem (…); (2) a linha 13 da FILA, com o alcance
+> decidido pelo Vicente em 23/11/2026 (itens 1 a 3; o item 4 sai). Diagnostique e mostre-me antes de consertar."
+> Nada foi consertado. Os números abaixo vêm de leitura do `02_deduplicated/dataset.json` (5446), sem gravar no projeto.
+
+**(1) Camada por palavras — diagnóstico.**
+- Nenhuma tool a faz. O `batch_keyword_screen` (`index.ts:2676`, `batch_processor.ts:59`) lê PDFs de uma pasta e casa
+  por trecho (`includes`), sem curinga. O `batch_db_screen` (`index.ts:2724`) lê o banco por `projectId`, sem curinga,
+  sem palavras-chave e sem a regra do registro sem resumo. Nenhum dos dois grava artefato do funil.
+- O funil não tem lugar para a camada. O `compute_flow_counts` conta como excluído na triagem só
+  `03_screening/excluded_ta.json` (`flow_computer.ts:75`), o mesmo arquivo que a leitura humana grava (linha 13), e o
+  `writeScreening` recusa a segunda gravação sem autorização (DEBT-112). O insumo da triagem humana é o
+  `02_deduplicated/dataset.json` (`index.ts:761`, `screening_metrics.ts:48`), não o que passou pelas palavras.
+- **As palavras-chave quase não estão no dataset: 50 de 5446** (Scopus 22 de 23, FSTA 5 de 5, BDTD 23 de 23).
+  - Oasisbr (2941, contando Alice, Infoteca-e e UFC vistas por ela): devolve `subjects` vazio e guarda as
+    palavras-chave em `topic`. O campo `topic` da API traz só a primeira; a lista inteira está no `rawData` do
+    registro (conferido hoje no registro `SBQ-3_c22ff270…`: "cashew juice", "cajuina", "vitamin C"). O adaptador do
+    VuFind pede só `subjects` (`platform-adapters.ts:266` e `:500`). Na BDTD, `subjects` vem preenchido.
+  - UFPI (41, DSpace REST): o registro gravado não tem o campo. Não conferido se a fonte o dá.
+  - OpenAlex (2413): o registro gravado não tem o campo; o OpenAlex não traz as palavras-chave do autor (as `keywords`
+    dele são atribuídas por ele).
+- Sem resumo (campo vazio): 220 (Oasisbr 78, OpenAlex 142). Outros 56 têm "resumo" com menos de 60 caracteres
+  ("xx", "Poesia", "539 p. ; 2 v.").
+- Ordem de grandeza, pela regra do protocolo aplicada fora do projeto: 220 passam por não ter resumo, 517 por título ou
+  resumo, 4709 sairiam. Dos 4709, 4674 não têm palavras-chave gravadas. Nos 50 que as têm, nenhum passaria só por elas.
+
+**(1) Proposta.** FAZER, cada item com teste que falha antes e passa depois:
+1. O `batch_keyword_screen`, nome que o protocolo dá (F4.1.3), ganha o modo dos registros do projeto; assim não há
+   emenda. Com `projectPath` e sem `pdfDir`, lê `02_deduplicated/dataset.json` e passa o registro com ao menos um termo
+   no título, no resumo ou nas palavras-chave. A regra de casamento:
+   - `*` no fim aceita qualquer terminação; termo sem `*` é palavra inteira (`perfil` não pega "perfis");
+   - sem diferença de maiúscula nem de acento, como a busca (linha 11, item 5);
+   - passa todo registro com o resumo vazio.
+
+   Os termos entram como parâmetro, e a tool confere que cada um está escrito no `protocol.md` travado. Grava
+   `03_screening/passed_keywords.json`, com o termo e o campo que passaram cada registro, ou "sem resumo". Grava
+   também `03_screening/excluded_keywords.json` (motivo: nenhum termo) e o relatório: termos, regra, data, contagens e
+   passados + excluídos = entrada. Regravar exige a autorização do pesquisador (regra do DEBT-112). O modo PDF não
+   muda.
+2. Funil: o `compute_flow_counts` soma `excluded_keywords.json` aos excluídos na triagem, porque o protocolo põe a
+   camada dentro dela (F4.1.2); as duas parcelas aparecem na origem do número. Quando o `passed_keywords.json` existe,
+   ele passa a ser o insumo da triagem humana (linha 13), do `screen_candidates` e do `get_screening_report`.
+3. Palavras-chave da Oasisbr: o adaptador do VuFind lê a lista inteira de `topic`; o da UFPI grava o assunto, se a
+   fonte o der. Nos 5446 já deduplicados, uma tool da busca (papel do `librarian`; o `screener` não baixa) completa as
+   palavras-chave pelo id de cada registro, em lote, num arquivo à parte (`02_deduplicated/palavras_chave.json`, com
+   fonte e data). O `dataset.json` e os totais não mudam, e a camada lê esse arquivo. O OpenAlex fica declarado como
+   fonte sem palavras-chave do autor. O que não se completar fica dito no relatório da camada.
+
+DECLARAR: o `screener.md` e a `screening-rules` dizem que a camada por palavras é o `batch_keyword_screen` sobre os
+registros; a descrição da tool diz a regra de casamento.
+
+**(2) Linha 13 — diagnóstico.** Nenhuma tool grava decisão por registro e por revisor. A `record_researcher_decision`
+(`index.ts:1694`) grava uma contribuição por etapa no `project_state.json`. O `screen_candidates` (`index.ts:723`) é
+triagem por IA e grava os artefatos do estágio pelo `writeScreening` (`project_artifacts.ts:295`). O funil e o relatório
+de triagem leem esses artefatos (`flow_computer.ts:75-77`, `screening_metrics.ts:48`). Os itens de `included*.json` têm
+a forma `{record, decision, …}`, que o texto completo e a leitura esperam (`index.ts:770`, `rag_lexical.ts:104`). Pela
+estimativa de (1), a leitura por título e resumo terá cerca de 740 registros para cada revisor, cerca de 1480
+decisões: uma chamada de tool por decisão não serve.
+
+**(2) Proposta.** FAZER, numa tool nova da triagem, `record_screening_decisions` (papéis SCREENER e COORDINATOR). Ela
+serve a qualquer protocolo: qualquer número de revisores e as perguntas de elegibilidade que o protocolo tiver.
+1. `formulario`: gera do insumo do estágio um formulário por revisor, `03_screening/revisores/<estagio>_<nome>.csv`.
+   O insumo de `ta` é o `passed_keywords.json` ou, sem ele, o `dataset.json`; o de `fulltext` é o `included_ta.json`.
+   O formulário traz id, título, resumo, palavras-chave e endereço. A preencher: decisão (`incluir` ou `excluir`),
+   motivo e uma coluna por pergunta.
+2. `importar`: lê o formulário preenchido e grava, por registro, o nome do revisor, o estágio, a decisão, o motivo e as
+   respostas, com a data e o hash do arquivo, em `03_screening/revisores/decisoes_<estagio>.json`. Recusa linha sem
+   decisão, id fora do insumo e formulário de outro estágio. Reimportar o mesmo revisor exige autorização; a versão
+   anterior fica guardada.
+3. `consenso`: onde os revisores divergem, grava o resultado, o motivo e quem decidiu (`consenso` ou o nome do
+   pesquisador, quando não houve consenso). Onde todos concordam, o resultado é o deles, marcado como concordância,
+   com o motivo de cada um.
+4. `gerar`: só quando todo registro do insumo tem a decisão de cada revisor declarado e toda divergência está
+   resolvida. Grava pelo `writeScreening` os artefatos do funil do estágio, cada registro com as decisões, o consenso e
+   o motivo, e passa pela trava da RV-04, como o `screen_candidates`.
+
+Teste de cada ação com o caso do `roda_aromas_ceara` copiado para o teste, sem gravar na pasta do projeto. DECLARAR: o
+`screener.md` e a `screening-rules` nomeiam a tool para as decisões dos revisores humanos. Não fazer: o item 4
+(concordância), triagem por IA, cegamento entre revisores.
+
+Fora do alcance, e trava mais adiante: nenhum código grava `03_screening/fulltext_not_retrieved.json` ("Visto de
+passagem", linha 1). A leitura por título e resumo não depende disso; o texto completo, sim.
+
+**Pergunta ao Vicente:** como os revisores entregam as decisões? (a) No formulário que o ReviewBR gera, preenchido numa
+planilha ou num editor e importado de volta (proposta). O protocolo diz que nenhuma outra ferramenta é usada; a
+planilha só preenche o arquivo do ReviewBR. (b) Uma decisão por vez, ditada no chat.
+
 ### Como uma linha entra na fila
 
 - Só o Vicente cria linha. A sessão não cria, nem a pedido de outro documento.
@@ -576,3 +665,5 @@ Vicente pedir.
   `batch_keyword_screen`, que o protocolo nomeia (F4.1.3), lê PDFs de uma pasta. O `batch_db_screen` lê o banco por
   `projectId`, não o arquivo; não trata curinga nem palavras-chave nem registro sem resumo, e não grava os artefatos
   do funil. A F4 não começa; nada foi rodado.
+  **Diagnosticado em 23/11/2026** a pedido do Vicente: seção "Pedido do Vicente de 23/11/2026", acima. O conserto
+  espera a decisão dele.
