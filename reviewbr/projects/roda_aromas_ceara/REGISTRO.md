@@ -131,10 +131,12 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   próprio (`01_raw/dataset_openalex_*.json`, `dataset_scielo_*.json`), que a F3 junta. **F2 das fontes abertas
   completa.**
 
-### Passo D, F3 (deduplicação): 23/11/2026, feita com contorno anotado
+### Passo D, F3 (deduplicação): 23/11/2026
 
-Log da pesquisa: o problema da tool, o contorno decidido pelo Vicente e o resultado. **A tool será consertada na
-manutenção** (item no "Visto de passagem" da FILA, 23/11/2026); o contorno vale só para esta execução.
+Log da pesquisa. A F3 seguiu o protocolo (F1.3.2.5: deduplicação com `deduplicate_dataset`, com relatório, sobre os
+registros da F2). A tool tem um problema que não impede a execução nem muda o resultado; ele está abaixo, com o que
+se fez para que a execução cortada do OpenAlex não entrasse. **A tool será consertada na manutenção** (item no
+"Visto de passagem" da FILA, 23/11/2026).
 
 - **Entradas pedidas:** `01_raw/database_records.json` (3148), `01_raw/dataset_openalex_2026-11-23_16-03-18-636Z.json`
   (2639) e `01_raw/dataset_scielo_2026-11-23_15-21-55-819Z.json` (79). Não entra a execução cortada
@@ -149,8 +151,8 @@ manutenção** (item no "Visto de passagem" da FILA, 23/11/2026); o contorno val
   completa. Isso contraria "não entra". Visto também: o OpenAlex completo tem duas chaves repetidas dentro do arquivo
   (DOI `10.59289/0n920b43` e `10.11606/d.27.2020.tde-04032021-223440`), e a CAPES uma (FSTA, já sabida). Dentro do
   arquivo a consolidação mantém o repetido; a remoção é da F3.
-- **Primeiro, parado (regra 5)**, sem rodar; item no "Visto de passagem" da FILA. Depois, decisão do Vicente
-  (abaixo, em "Decisões"): anotar o problema e o contorno no log e seguir o protocolo.
+- Primeiro, parado sem rodar, e o item foi para o "Visto de passagem" da FILA. Depois, retomado no mesmo dia:
+  o problema não impede a execução.
 - **Contorno, 23/11/2026, 13:49:** criada `01_raw/fora_da_f3/`, que a tool não lê (só lê os `.json` de `01_raw/`).
   - **Movido** para lá o arquivo da execução cortada, `dataset_openalex_2026-11-23_15-21-53-903Z.json` (200;
     sha256 `09f65e2c…8299`). Ele segue guardado como histórico da F2, e a linha dele segue no log da busca.
@@ -373,12 +375,6 @@ manutenção** (item no "Visto de passagem" da FILA, 23/11/2026); o contorno val
   conversas gravadas, algumas já transcritas; as transcrições são feitas por uma ferramenta a que o bolsista tem
   acesso, não pelo assistente. O Comitê de Ética cobre o projeto, com numeração: **não perguntar mais sobre isso**.
   Houve um trabalho exploratório anterior ao edital, sem protocolo nem metodologia; importa pouco.
-- **23/11/2026, F3: contorno anotado em vez de esperar o conserto.** A F3 roda agora, com o `deduplicate_dataset`
-  como o protocolo manda. O arquivo da execução cortada do OpenAlex sai de `01_raw/` para `01_raw/fora_da_f3/`,
-  para não entrar. Alcance: só esta execução da F3. O problema, o contorno e a promessa de conserto ficam no log da
-  pesquisa ("Passo D, F3"). Consequência: o projeto não espera a manutenção; a tool será consertada lá, e o item
-  segue no "Visto de passagem" da FILA. Origem: "penso que podemos apenas anotar o problema como log da pesquisa e
-  como contornamos para voltar a seguir o protocolo seguir. informando tb que isso será consertado".
 
 ## Falhas do ReviewBR encontradas
 

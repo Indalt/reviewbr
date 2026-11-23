@@ -42,7 +42,7 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   `"status":"OK"`), não só a página de entrada.
 - **23/11/2026: F3 feita, com contorno anotado.**
   - O problema: o `deduplicate_dataset` soma todo `01_raw/*.json` e levaria junto a execução cortada do OpenAlex.
-  - O contorno, por decisão do Vicente: esse arquivo foi para `01_raw/fora_da_f3/`, com uma cópia dos 3148 da F2.
+  - O que se fez: esse arquivo foi para `01_raw/fora_da_f3/`, com uma cópia dos 3148 da F2.
     O problema e o contorno estão no log da pesquisa, e a tool será consertada na manutenção (item no "Visto de
     passagem" da FILA).
   - O resultado: **5866 → 5446 únicos, 420 duplicatas removidas, 36 pares sinalizados e não removidos.** Não há
