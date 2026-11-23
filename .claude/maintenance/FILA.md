@@ -562,4 +562,6 @@ Vicente pedir.
   2639 + 79 = 5866, conferido fora da tool, sem gravar), mas 200 registros ficam com o `audit` da execução cortada
   (`extractionDate` 15:21:53), não da completa. A consolidação também reescreve `01_raw/database_records.json` (fora
   do git, única cópia dos 3148 da CAPES e dos repositórios) com os 5866. Sem `projectPath`, a tool pede o JSON inteiro
-  como texto e não grava relatório. Passo F3 parado antes de rodar; nada gravado.
+  como texto e não grava relatório. Passo F3 parado antes de rodar.
+  **Contornado no projeto no mesmo dia, por decisão do Vicente** (anotar no log da pesquisa e seguir, com o conserto
+  na manutenção): o arquivo cortado foi para `01_raw/fora_da_f3/`, e a F3 rodou (5866 → 5446). O conserto segue a fazer.

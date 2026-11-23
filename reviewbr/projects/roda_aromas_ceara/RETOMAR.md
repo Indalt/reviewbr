@@ -40,13 +40,18 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   normalmente. Nada foi buscado (detalhe no `REGISTRO.md`, "Passo C, segunda parte: parada em 22/11/2026"). A
   conferência tem de testar uma **consulta na API** (`/vufind/api/v1/search?lookfor=agua&limit=0` devolvendo
   `"status":"OK"`), não só a página de entrada.
-- **23/11/2026: F3 parada antes de rodar.** O `deduplicate_dataset` com `projectPath` soma todo `01_raw/*.json`,
-  sem escolha de arquivo: a execução cortada do OpenAlex (200) entraria, e os 200 ficariam com o registro de origem
-  dela, não da completa (o total fecha em 5866 = 3148 + 2639 + 79). A tool também reescreve
-  `01_raw/database_records.json` (fora do git) com o consolidado. Regra 5: nada rodou nem foi gravado; item no
-  "Visto de passagem" da FILA. Detalhe no `REGISTRO.md` ("Passo D, F3: parada em 23/11/2026"). **Próximo:
-  manutenção desse item, em chat de manutenção; depois, a F3 de novo, em chat novo, com o prompt "F3 —
-  deduplicação" abaixo.** A linha 13 da FILA (decisões dos dois revisores) segue antes da triagem (F4).
+- **23/11/2026: F3 feita, com contorno anotado.**
+  - O problema: o `deduplicate_dataset` soma todo `01_raw/*.json` e levaria junto a execução cortada do OpenAlex.
+  - O contorno, por decisão do Vicente: esse arquivo foi para `01_raw/fora_da_f3/`, com uma cópia dos 3148 da F2.
+    O problema e o contorno estão no log da pesquisa, e a tool será consertada na manutenção (item no "Visto de
+    passagem" da FILA).
+  - O resultado: **5866 → 5446 únicos, 420 duplicatas removidas, 36 pares sinalizados e não removidos.** Não há
+    par tese × artigo. Um par artigo × capítulo ficou em dúvida.
+  - Detalhe no `REGISTRO.md`, "Passo D, F3".
+
+  **Próximo: a decisão do Vicente sobre a F3** (os 36 pares sinalizados e o par em dúvida), gravada por
+  `record_researcher_decision` com as palavras dele; sem ela a F4 não abre (RV-04). Depois, a linha 13 da FILA
+  (decisões dos dois revisores), antes da triagem (F4).
 - **23/11/2026: F2 completa.** Oasisbr (2997 + 2997) e OpenAlex (2639) refeitos com o servidor novo, tudo o que
   a fonte declarou. Próximo: linha 13 da FILA (decisões dos dois revisores) e depois o passo D (F3/F4).
 - **23/11/2026, depois: busca seguida e teto consertado.** Feitas as 9 fontes abertas; com teto só a Oasisbr (1000

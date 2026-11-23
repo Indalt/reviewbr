@@ -131,7 +131,10 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   próprio (`01_raw/dataset_openalex_*.json`, `dataset_scielo_*.json`), que a F3 junta. **F2 das fontes abertas
   completa.**
 
-### Passo D, F3 (deduplicação): parada em 23/11/2026, antes de rodar
+### Passo D, F3 (deduplicação): 23/11/2026, feita com contorno anotado
+
+Log da pesquisa: o problema da tool, o contorno decidido pelo Vicente e o resultado. **A tool será consertada na
+manutenção** (item no "Visto de passagem" da FILA, 23/11/2026); o contorno vale só para esta execução.
 
 - **Entradas pedidas:** `01_raw/database_records.json` (3148), `01_raw/dataset_openalex_2026-11-23_16-03-18-636Z.json`
   (2639) e `01_raw/dataset_scielo_2026-11-23_15-21-55-819Z.json` (79). Não entra a execução cortada
@@ -146,9 +149,45 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   completa. Isso contraria "não entra". Visto também: o OpenAlex completo tem duas chaves repetidas dentro do arquivo
   (DOI `10.59289/0n920b43` e `10.11606/d.27.2020.tde-04032021-223440`), e a CAPES uma (FSTA, já sabida). Dentro do
   arquivo a consolidação mantém o repetido; a remoção é da F3.
-- **Parado (regra 5).** A tool não aceita só as três entradas. Nada rodou, nada gravado em `01_raw/` nem em
-  `02_deduplicated/`. Item no "Visto de passagem" da FILA (23/11/2026). Tirar o arquivo cortado de `01_raw/` seria
-  contornar a tool no projeto; não feito.
+- **Primeiro, parado (regra 5)**, sem rodar; item no "Visto de passagem" da FILA. Depois, decisão do Vicente
+  (abaixo, em "Decisões"): anotar o problema e o contorno no log e seguir o protocolo.
+- **Contorno, 23/11/2026, 13:49:** criada `01_raw/fora_da_f3/`, que a tool não lê (só lê os `.json` de `01_raw/`).
+  - **Movido** para lá o arquivo da execução cortada, `dataset_openalex_2026-11-23_15-21-53-903Z.json` (200;
+    sha256 `09f65e2c…8299`). Ele segue guardado como histórico da F2, e a linha dele segue no log da busca.
+  - **Copiado** para lá o `01_raw/database_records.json` da F2, como
+    `database_records_F2_3148_2026-11-23.json` (3148; sha256 `b8d5a0de…3182`, igual ao original). A cópia existe
+    porque a tool reescreve esse arquivo com o consolidado e ele está fora do git.
+- **Execução:** `deduplicate_dataset` com `projectPath`, 23/11/2026, 16:52 UTC. Resposta da tool:
+  - consolidados de `01_raw`: **5866** (3148 + 2639 + 79, conferido);
+  - **5866 → 5446 únicos, 420 duplicatas removidas**;
+  - **36 pares sinalizados** (título ≥ 0,90 parecido, mesmo ano), **não removidos**: a decisão é do Vicente
+    (RV-04);
+  - gravados `02_deduplicated/dataset.json` (5446, conferido), `dedupe_report.json` e `dedupe_pairs.json` (420
+    pares, cada um com o mantido, o removido, o critério e as fontes);
+  - `01_raw/database_records.json` passou a ter os 5866;
+  - aviso RV-04: a F4 só abre com a decisão do Vicente sobre a F3. Não gravada por esta sessão.
+- **Critérios dos 420 pares:** DOI 124, título + ano 295, handle 1. Nenhum par por título + 1º autor nem por
+  endereço.
+- **Pares por fontes, os maiores:** Oasisbr × OpenAlex 188; OpenAlex × SciELO 68; BDTD × Oasisbr 27; Scopus ×
+  OpenAlex 22; Oasisbr × Oasisbr 18; Scopus × Web of Science 17; Alice × Oasisbr 12; Scopus × FSTA 9. A lista
+  completa está em `dedupe_pairs.json`.
+- **Conferência "relatos diferentes do mesmo estudo não são duplicatas"**, feita fora da tool, só leitura: tipo de
+  documento do mantido e do removido em cada par. Na Oasisbr e na BDTD o tipo está em `degreeType`; o `type` vem
+  sempre como "thesis/dissertation".
+  - **Não há par tese × artigo.**
+  - Há seis pares com tipos diferentes, todos com o mesmo título, o mesmo ano e o mesmo autor:
+    - dois são artigo × editorial: "NOVA ERA: reflexões…" (2023) e "Apresentação" (Battestin, 2022);
+    - um é livro × artigo: "Doce de umbu." (2020, os dois no OpenAlex);
+    - um é conferência × artigo, pelo mesmo DOI ("Vinho de caju", 2026);
+    - um é dissertação × artigo, pelo mesmo DOI e o mesmo endereço da USP ("A muitas vozes", 2020): é o mesmo
+      documento duas vezes no OpenAlex;
+    - um é artigo × capítulo: "A transição escolar no ensino fundamental…" (Cruz, 2026), artigo na Oasisbr e
+      capítulo no OpenAlex. **Não sei se é o mesmo relato.** Fica para o Vicente.
+  - Três pares UFC × Alice são mestrado × doutorado ("Efeito da adição de suco clarificado de caju…", Freitas,
+    2022): mesmo título, ano e autora. Parece a mesma dissertação depositada na Alice com outro rótulo; não decidi.
+- **Visto, sem avaliar:** muitos registros da Oasisbr vêm da revista *Cadernos Cajuína*
+  (`cadernoscajuina.pro.br`), o que explica parte dos resultados sem relação aparente com a bebida. Fica para a
+  triagem.
 
 ## Decisões
 
@@ -334,6 +373,12 @@ Aberto em 12/11/2026. Primeiro teste do ReviewBR depois da manutenção.
   conversas gravadas, algumas já transcritas; as transcrições são feitas por uma ferramenta a que o bolsista tem
   acesso, não pelo assistente. O Comitê de Ética cobre o projeto, com numeração: **não perguntar mais sobre isso**.
   Houve um trabalho exploratório anterior ao edital, sem protocolo nem metodologia; importa pouco.
+- **23/11/2026, F3: contorno anotado em vez de esperar o conserto.** A F3 roda agora, com o `deduplicate_dataset`
+  como o protocolo manda. O arquivo da execução cortada do OpenAlex sai de `01_raw/` para `01_raw/fora_da_f3/`,
+  para não entrar. Alcance: só esta execução da F3. O problema, o contorno e a promessa de conserto ficam no log da
+  pesquisa ("Passo D, F3"). Consequência: o projeto não espera a manutenção; a tool será consertada lá, e o item
+  segue no "Visto de passagem" da FILA. Origem: "penso que podemos apenas anotar o problema como log da pesquisa e
+  como contornamos para voltar a seguir o protocolo seguir. informando tb que isso será consertado".
 
 ## Falhas do ReviewBR encontradas
 
