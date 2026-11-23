@@ -29,8 +29,9 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   conferido também fora da tool. Detalhe no `REGISTRO.md`, "Passo D, F4, camada mecânica por palavras". **Próximo: a
   manutenção da linha 13 (planilha dos revisores), em chat de manutenção (prompt abaixo); depois, a camada humana
   sobre os 743.** Decidido em seguida (`REGISTRO.md`, "Decisões", 23/11/2026): triagem dupla sem emenda, coluna de
-  "dúvida" (segue para o texto completo), nenhuma IA, conferência dos links por título antes da leitura. Falta
-  decidir os campos de identificação do revisor no topo da planilha.
+  "dúvida" (segue para o texto completo), nenhuma IA, conferência dos links por título antes da leitura;
+  no topo da planilha, nome, papel e datas de início e de fim; observação obrigatória na "dúvida". A planilha está
+  toda decidida: o próximo passo é a manutenção da linha 13.
 - Artigo 1: revisão de escopo (`scoping-prisma-scr`), controle estrito. **Protocolo v1.0 TRAVADO em 15/11/2026**
   (`project_state.json`: LOCKED, fase F2). Mudar o protocolo agora exige emenda registrada.
 - **Emenda 2 APROVADA em 21/11/2026 (protocolo 1.1 → 1.2), feita na sessão de manutenção a pedido do Vicente.**

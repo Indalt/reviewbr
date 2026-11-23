@@ -442,10 +442,17 @@ de `02_deduplicated/dataset.json`. Sem leitura humana e sem triagem por IA. Nenh
   - **Consequência:**
     - a manutenção da linha 13 constrói a planilha com essas colunas;
     - o relato declara a conferência dos links (data e contagens) e que a decisão foi só humana.
-  - **Em aberto:** os campos de identificação do revisor no topo da planilha.
+  - **Identificação do revisor (decidida no mesmo dia):** no topo de cada planilha, nome, papel (pesquisador ou
+    estagiário), data de início e data de fim da leitura. Sem instituição (é dado da autoria, em branco no protocolo)
+    e sem data por linha (a ferramenta grava a data e o hash do arquivo quando ele volta). A planilha sem esses campos
+    não é importada.
+  - **Observação na "dúvida" (decidida no mesmo dia):** obrigatória; a linha com "dúvida" e sem observação não é
+    importada. Nas outras linhas a observação é livre. Motivo: na leitura do texto completo, saber o que gerou a
+    dúvida.
   - **Origem:** "ok, entao deve ter a coluna de duvida para preencher"; "tudo bem ser triagem dupla sem emenadas"; "nao
     vamos usar ia para substituir a triagem"; "ainda cabe a duvida sobre todos os artigos nao serem mockup de ia e de os
-    links levarem a artigos que nao sao os que se diz".
+    links levarem a artigos que nao sao os que se diz"; sobre a identificação e a observação: "concordo. gravar como
+    decisoes minhas."
   - **Não gravada por `record_researcher_decision`:** a tool é a aprovação que destrava a etapa no controle estrito. A
     F4 não está pronta para isso.
 

@@ -547,13 +547,17 @@ planilha só preenche o arquivo do ReviewBR. (b) Uma decisão por vez, ditada no
 > - Ajuda à leitura permitida: agrupar os registros da mesma revista. Não permitido: excluir de antemão por revista,
 >   idioma ou ausência de um termo (seria critério que o protocolo não tem).
 > - Na volta, a planilha das divergências para o consenso (ação `consenso`). O item 4 (concordância) segue fora.
-> - **Em aberto, a perguntar antes de construir:** os campos de identificação do revisor no topo da planilha (proposta
->   levada a ele no mesmo dia: nome, papel e datas de início e de fim da leitura; observação obrigatória ou não na
->   "dúvida").
+> - **Identificação do revisor, decidida no mesmo dia:** no topo de cada planilha, uma vez, o revisor preenche nome,
+>   papel (pesquisador ou estagiário), data de início e data de fim da leitura. Sem instituição (é dado da autoria,
+>   deixada em branco no protocolo) e sem data por linha (a tool grava a data e o hash do arquivo na importação). O
+>   `importar` recusa planilha sem nome, papel ou datas.
+> - **Observação obrigatória na "dúvida":** linha com alguma pergunta marcada "dúvida" e observação vazia é recusada
+>   pelo `importar`. Nas outras linhas, a observação segue livre.
 >
 > Origem: "ok, entao deve ter a coluna de duvida para preencher"; "tudo bem ser triagem dupla sem emenadas"; "nao vamos
 > usar ia para substituir a triagem"; "ainda cabe a duvida sobre todos os artigos nao serem mockup de ia e de os links
-> levarem a artigos que nao sao os que se diz"; "ok, vamos gravar e incluir os campos para marcar sim ou nao".
+> levarem a artigos que nao sao os que se diz"; "ok, vamos gravar e incluir os campos para marcar sim ou nao"; sobre a
+> identificação e a observação na dúvida: "concordo. gravar como decisoes minhas."
 
 ### Como uma linha entra na fila
 
