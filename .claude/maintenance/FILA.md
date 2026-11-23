@@ -558,6 +558,18 @@ planilha só preenche o arquivo do ReviewBR. (b) Uma decisão por vez, ditada no
 >   pede texto baixado. Origem: "nao precisa ter o texto completo, tanto o estagiario quanto o pesquisador tenha acesso
 >   a internet e podem clicar no link doi".
 > - Formato: `.xlsx`.
+> - **Planilha do texto completo (decidido no mesmo dia):** traz a pergunta "conseguiu ler o texto completo? sim /
+>   não". Caso que ele deu: o título e o resumo não indicam painel sensorial, mas o texto completo pode ter. Pelo
+>   protocolo (F1.3.2.6), o texto indisponível depois das tentativas, incluindo o acesso dele ao Portal CAPES, é
+>   excluído como não recuperado e conta nessa caixa do fluxograma. Cada planilha volta para a tool quando o revisor
+>   termina de preencher. Origem: "pode conter sim a pergunta quando no titulo e resumo nao há indicios de que pode
+>   haver painel dentro do artigo completo. a planilha voltaria para a ferramento quando os revisores terminarem de
+>   preencher."
+> - **Pergunta dele para a manutenção:** "situacoes assim sao comuns em outras pesquisas? se sim o reviewbr deve ter as
+>   tools necessarias". Resposta dada no chat: sim (triagem dupla independente por planilha, divergências por
+>   consenso, texto completo não recuperado como caixa do fluxograma do PRISMA 2020 e do PRISMA-ScR); por isso a
+>   proposta (2) já é geral, para qualquer protocolo. A manutenção confere com a fonte oficial e inclui o registro dos
+>   não recuperados ("Visto de passagem", item do `fulltext_not_retrieved.json`) no mesmo desenho.
 > - **Identificação do revisor, decidida no mesmo dia:** no topo de cada planilha, uma vez, o revisor preenche nome,
 >   papel (pesquisador ou estagiário), data de início e data de fim da leitura. Sem instituição (é dado da autoria,
 >   deixada em branco no protocolo) e sem data por linha (a tool grava a data e o hash do arquivo na importação). O
