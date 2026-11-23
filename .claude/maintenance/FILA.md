@@ -66,8 +66,9 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 23/11/2026, antes do diagnóstico do que trava a F4 — repositório limpo; build e suíte 626 de
-626; audit válido, 0 achados abertos; fila: linha 10 em curso, 13 a fazer; 46 itens no "Visto de passagem".
+**Última verificação:** 23/11/2026, depois do conserto da camada por palavras — build e suíte 644 de 644; audit
+válido, 0 achados abertos; fila: linha 10 em curso, 13 a fazer (espera a resposta do Vicente); 46 itens no "Visto de
+passagem".
 
 ## Fila
 
@@ -430,6 +431,28 @@ Origem: "agende o conserto 15h30 e pode executar apos esse horario aqui mesmo ne
 DECLARAR: o `screener.md` e a `screening-rules` dizem que a camada por palavras é o `batch_keyword_screen` sobre os
 registros; a descrição da tool diz a regra de casamento.
 
+> **Decidido pelo Vicente em 23/11/2026, ao ler o diagnóstico:** as decisões dos revisores vêm depois da camada por
+> palavras, e a ordem proposta segue: primeiro o item (1). Consequência: o item (1) foi consertado nesta sessão; a
+> linha 13 espera a resposta à pergunta do fim desta seção, antes de os revisores gravarem a leitura por título e
+> resumo. Origem: "as decisoes sao para apos a triagem, nao? o que o protocolo manda?"; depois, "dos revisores",
+> precisado na escolha "as decisões são dos revisores" (vêm depois da camada por palavras; item 1 primeiro).
+
+**(1) Feito em 23/11/2026** (gate `validate_system_change` CORRECAO; commits `8f3466b` e `9a679aa`; suíte 644 de 644,
+18 testes novos em `tests/camada_palavras.test.ts` e `tests/palavras_chave.test.ts`):
+- FAZER 1 e 2: `src/services/camada_palavras.ts`; o `batch_keyword_screen` sem `pdfDir` roda a camada e grava
+  `passed_keywords.json`, `excluded_keywords.json` e `keywords_report.json`; `writeScreening` aceita o estágio
+  `palavras` (regravar exige autorização); o `compute_flow_counts` soma as duas parcelas; `insumoDoEstagio` dá à
+  leitura por título e resumo (`screen_candidates`, `get_screening_report`) o que a camada passou.
+- FAZER 3: o adaptador do VuFind pede o `rawData` na Oasisbr e lê a lista de `topic` (`palavrasChaveDoVufind`); o do
+  DSpace grava todo `dc.subject`; a tool nova `complete_record_keywords` (papel do `librarian`) completa, pelo id na
+  fonte, as palavras-chave dos registros já deduplicados em `02_deduplicated/palavras_chave.json`, sem mudar o
+  `dataset.json` nem os totais, e declara no relatório a fonte sem consulta (OpenAlex, com o motivo). Controle
+  positivo em 23/11/2026, fora do projeto: 5 ids da Oasisbr (2 da Alice vistos por ela) e 2 uuids da UFPI devolvem as
+  palavras-chave.
+- DECLARAR: `screener.md`, `screening-rules` e `librarian.md`.
+- Para o projeto, em chat novo (servidor novo): `complete_record_keywords` e depois `batch_keyword_screen` com os
+  termos do protocolo.
+
 **(2) Linha 13 — diagnóstico.** Nenhuma tool grava decisão por registro e por revisor. A `record_researcher_decision`
 (`index.ts:1694`) grava uma contribuição por etapa no `project_state.json`. O `screen_candidates` (`index.ts:723`) é
 triagem por IA e grava os artefatos do estágio pelo `writeScreening` (`project_artifacts.ts:295`). O funil e o relatório
@@ -665,5 +688,6 @@ Vicente pedir.
   `batch_keyword_screen`, que o protocolo nomeia (F4.1.3), lê PDFs de uma pasta. O `batch_db_screen` lê o banco por
   `projectId`, não o arquivo; não trata curinga nem palavras-chave nem registro sem resumo, e não grava os artefatos
   do funil. A F4 não começa; nada foi rodado.
-  **Diagnosticado em 23/11/2026** a pedido do Vicente: seção "Pedido do Vicente de 23/11/2026", acima. O conserto
-  espera a decisão dele.
+  **Consertado em 23/11/2026** a pedido do Vicente (commits `8f3466b` e `9a679aa`): o `batch_keyword_screen` roda a
+  camada sobre os registros do projeto, e o `complete_record_keywords` completa as palavras-chave pela fonte. Detalhe
+  na seção "Pedido do Vicente de 23/11/2026", acima.

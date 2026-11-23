@@ -55,6 +55,12 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
   `batch_db_screen` lê o banco, sem curinga nem a regra do registro sem resumo). Item no "Visto de passagem" da
   FILA, 23/11/2026. A linha 13 (decisões dos revisores) teve o alcance decidido pelo Vicente em 23/11/2026: itens 1
   a 3; o item 4 sai. **Próximo: a sessão de manutenção, depois a F4 (prompts abaixo).**
+- **23/11/2026: manutenção da camada por palavras feita** (FILA, seção "Pedido do Vicente de 23/11/2026"). O
+  `batch_keyword_screen` roda a camada sobre os registros do projeto; antes dela, o `complete_record_keywords`
+  completa as palavras-chave pela fonte (só 50 dos 5446 registros as tinham; a Oasisbr as guarda num campo que a busca
+  não lia). A linha 13 (decisões dos revisores) espera a resposta do Vicente sobre como os revisores entregam as
+  decisões; ela só é necessária quando eles forem gravar a leitura por título e resumo. **Próximo: a F4, camada por
+  palavras, em chat novo (prompt abaixo).**
 - **23/11/2026: F2 completa.** Oasisbr (2997 + 2997) e OpenAlex (2639) refeitos com o servidor novo, tudo o que
   a fonte declarou. Próximo: linha 13 da FILA (decisões dos dois revisores) e depois o passo D (F3/F4).
 - **23/11/2026, depois: busca seguida e teto consertado.** Feitas as 9 fontes abertas; com teto só a Oasisbr (1000
@@ -183,9 +189,10 @@ linha é para o seletor; apague-a antes de enviar.
 > Projeto `reviewbr/projects/roda_aromas_ceara`. Leia `RETOMAR.md`, o `protocol.md` (travado, versão 1.2) e, no
 > `REGISTRO.md`, as "Decisões" e a seção "Passo D, F3". A F3 está fechada (5446 registros em
 > `02_deduplicated/dataset.json`; os 36 pares sinalizados ficam para nova deduplicação depois da triagem). Faça só a
-> camada mecânica da F4, como o "Processo de Seleção" do protocolo manda: com a tool que a manutenção deixou para
-> isso, passe os registros cujo título, resumo ou palavras-chave trazem ao menos um dos termos do protocolo, copiados
-> dele sem mudar nada, e passe todo registro sem resumo. Confira que passados + excluídos = 5446. Não faça a leitura
+> camada mecânica da F4, como o "Processo de Seleção" do protocolo manda. Primeiro, `complete_record_keywords` (completa
+> as palavras-chave pela fonte, sem mudar o dataset; leia o relatório). Depois, `batch_keyword_screen` com `projectPath`
+> e sem `pdfDir`: passe os registros cujo título, resumo ou palavras-chave trazem ao menos um dos termos do protocolo,
+> copiados dele sem mudar nada, e passe todo registro sem resumo. Confira que passados + excluídos = 5446. Não faça a leitura
 > humana nem triagem por IA. Se a tool não existir ou devolver algo incoerente, pare e anote no "Visto de passagem"
 > da FILA. Termine com `REGISTRO.md` e `RETOMAR.md` atualizados e commit.
 
