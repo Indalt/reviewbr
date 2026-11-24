@@ -707,7 +707,15 @@ manutenção, caso a caso) e o registro das falhas do `retrieve_fulltexts` (fica
   `recebidos/`, sha256, data, nome, papel e datas declaradas); recusa tudo, dizendo a linha, quando há um problema;
   aceita resposta sem acento ou com maiúscula ("Nao" = "não"); link "não" vai para a lista de falhas, com a origem
   "revisor". Teste: `tests/revisores_importar.test.ts` (7; todos falhavam antes, sem a função).
-- Parte 5, `consenso` e `gerar`: a fazer.
+- Parte 5, `consenso` e `gerar`: **feita em 23/11/2026**. `consenso` gera `<estagio>_consenso_<n>.xlsx` só com as
+  divergências que não têm consenso, guarda o retrato das decisões de cada uma e recusa a importação se elas mudaram
+  depois; a importação pede motivo e, quando decide o pesquisador, o nome dele. `gerar` recusa enquanto houver falha de
+  procedência, registro fora de planilha, revisor faltando ou divergência sem consenso; grava pelo `writeScreening`
+  (com a autorização para regravar) os itens `{record, decision, decisao, motivo, origem, decisoes, consenso}`
+  (`decision` no vocabulário do relatório de triagem: YES, MAYBE quando seguiu com dúvida, NO, NAO_RECUPERADO) e
+  `03_screening/revisores/relatorio_<estagio>.json` (revisores, datas, contagens, origem da decisão, motivos por
+  pergunta); passa pela trava da RV-04. Teste: `tests/revisores_consenso_gerar.test.ts` (5; o funil fecha de ponta a
+  ponta: 11 → 3 excluídos na TA → 8 → 1 não recuperado, 1 excluído → 6 incluídos).
 - Parte 6, DECLARAR, teste real na cópia e fechamento da linha: a fazer.
 
 ### Como uma linha entra na fila

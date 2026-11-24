@@ -38,7 +38,7 @@ import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDed
 import { gravarCamadaPorPalavras, REGRA_DE_CASAMENTO } from "./services/camada_palavras.js";
 import { completarPalavrasChave } from "./services/palavras_chave.js";
 import { conferirProcedencia, REGRA_DE_CONFERENCIA } from "./services/procedencia.js";
-import { gerarFormularios, importarPlanilha } from "./services/decisoes_revisores.js";
+import { gerarFormularios, importarPlanilha, gerarPlanilhaDeConsenso, gerarArtefatosDoFunil } from "./services/decisoes_revisores.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -2791,11 +2791,11 @@ server.tool(
     "acao='importar': lê a planilha devolvida pelo revisor ('arquivo') e grava, por registro e revisor, nome, papel, respostas, observação, decisão e motivo em 03_screening/revisores/decisoes_<estagio>.json, com a data, o hash e a cópia do arquivo. A decisão sai das respostas, por regra fixa: link 'não' → falha de procedência (vai para a manutenção); título e resumo: um 'não' exclui, senão segue (com dúvida, se houver); texto completo: 'conseguiu ler?' 'não' → não recuperado, um 'não' exclui, 'sim' em todas inclui. " +
     "Recusa, dizendo a linha: identificação incompleta, id faltando, a mais ou repetido, planilha de outro estágio ou insumo, resposta em branco ou fora da lista, 'dúvida' sem observação. Reimportar o mesmo revisor exige 'substituicao'. Só com projeto travado.",
     {
-        acao: z.enum(["formulario", "importar"]).describe("formulario: gera as planilhas dos revisores; importar: lê uma planilha devolvida"),
+        acao: z.enum(["formulario", "importar", "consenso", "gerar"]).describe("formulario: gera as planilhas dos revisores; importar: lê uma planilha devolvida (de revisor ou de consenso); consenso: gera a planilha das divergências; gerar: grava os artefatos do funil do estágio"),
         projectPath: z.string().describe("Raiz do projeto (protocolo travado)"),
-        estagio: z.enum(["ta", "fulltext"]).optional().describe("Obrigatório no formulario: ta = título e resumo; fulltext = texto completo. No importar, vem da planilha"),
+        estagio: z.enum(["ta", "fulltext"]).optional().describe("Obrigatório no formulario, no consenso e no gerar: ta = título e resumo; fulltext = texto completo. No importar, vem da planilha"),
         arquivo: z.string().optional().describe("importar: caminho da planilha devolvida (.xlsx), absoluto ou relativo ao projeto"),
-        substituicao: z.string().optional().describe("importar: só quando a planilha deste revisor e lote já foi importada — a decisão do pesquisador que autoriza substituí-la, nas palavras dele. A anterior fica arquivada"),
+        substituicao: z.string().optional().describe("importar: só quando a planilha deste revisor e lote (ou esta rodada de consenso) já foi importada; gerar: só quando a triagem do estágio já foi gravada — a decisão do pesquisador que autoriza substituir, nas palavras dele. A anterior fica arquivada"),
         revisores: z.array(z.string()).optional().describe("Rótulos dos revisores, um por planilha (ex.: ['pesquisador', 'estagiario']). O nome de cada um ele mesmo preenche no topo da planilha"),
         perguntas: z.array(PERGUNTA_SCHEMA).optional().describe("As perguntas de elegibilidade do protocolo, com o estágio de cada uma"),
         criterioNaoRecuperado: z.string().optional().describe("Só no texto completo: o critério do protocolo para o texto indisponível, copiado dele sem mudar nada; vai no topo da planilha"),
@@ -2813,7 +2813,22 @@ server.tool(
                 const rastro = await registrarLote("record_screening_decisions", params, `Importação ${r.estagio}, revisor ${r.rotulo}, lote ${r.lote}: ${JSON.stringify(r.contagens)}.`, r);
                 return { content: [{ type: "text", text: r.resumo + rastro }] };
             }
-            if (!params.estagio) return { content: [{ type: "text", text: "formulario: informe 'estagio' (ta ou fulltext). Nada foi gravado." }] };
+            if (!params.estagio) return { content: [{ type: "text", text: `${params.acao}: informe 'estagio' (ta ou fulltext). Nada foi gravado.` }] };
+            if (params.acao === "consenso") {
+                const r = await gerarPlanilhaDeConsenso(params.projectPath, { estagio: params.estagio });
+                const rastro = await registrarLote("record_screening_decisions", params, `Consenso ${params.estagio}: ${r.ids.length} divergência(s).`, r);
+                return { content: [{ type: "text", text: r.resumo + rastro }] };
+            }
+            if (params.acao === "gerar") {
+                const r = gerarArtefatosDoFunil(params.projectPath, { estagio: params.estagio, substituicao: params.substituicao });
+                // RV-04 como trava, como no screen_candidates: a fase seguinte só abre com a contribuição do pesquisador.
+                const artefato = params.estagio === "ta" ? "03_screening/included_ta.json" : "03_screening/included.json";
+                const aviso = avancarPorArtefato(RAIZ(), resolveProjectDir(params.projectPath), artefato).aviso;
+                const rastro = await registrarLote("record_screening_decisions", params, `Gerar ${params.estagio}: ${JSON.stringify(r.relatorio.contagens)}.`, r.relatorio);
+                return { content: [{ type: "text", text: `${r.resumo}
+
+${aviso}${rastro}` }] };
+            }
             const r = await gerarFormularios(params.projectPath, {
                 estagio: params.estagio, revisores: params.revisores ?? [], perguntas: params.perguntas ?? [],
                 criterioNaoRecuperado: params.criterioNaoRecuperado, perguntaIdiomaTipo: params.perguntaIdiomaTipo,

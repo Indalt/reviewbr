@@ -2,7 +2,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import * as crypto from "node:crypto";
 import ExcelJS from "exceljs";
-import { resolveDir, readArray, insumoDoEstagio, PASSADOS_PALAVRAS } from "./project_artifacts.js";
+import { resolveDir, readArray, insumoDoEstagio, writeScreening, PASSADOS_PALAVRAS } from "./project_artifacts.js";
 import { lerPalavrasChaveCompletadas, chaveNaFonteDoRegistro } from "./camada_palavras.js";
 import { lerConferencias, lerFalhas, linkDoRegistro, idDoRegistro, doiDoRegistro, registrarFalhasDoRevisor, type Falha } from "./procedencia.js";
 
@@ -629,8 +629,8 @@ export interface ArquivoDeDecisoes {
     estagio: Estagio;
     importacoes: Importacao[];
     registros: Record<string, Record<string, DecisaoDoRevisor>>;
-    consenso?: Record<string, any>;
-    consensos?: any[];
+    consenso?: Record<string, ResultadoDeConsenso>;
+    consensos?: Rodada[];
 }
 
 export function lerDecisoes(dir: string, e: Estagio): ArquivoDeDecisoes {
@@ -672,9 +672,8 @@ export async function importarPlanilha(projectPath: string, o: OpcoesImportar): 
     const agora = o.agora ?? (() => new Date().toISOString());
     const arquivo = path.isAbsolute(o.arquivo) ? o.arquivo : path.join(dir, o.arquivo);
     const { ws, controle } = await lerControle(arquivo);
-    if (controle.tipo !== "formulario") {
-        throw new Error(`Esta é uma planilha de ${controle.tipo}, não a de um revisor. Nada foi gravado.`);
-    }
+    if (controle.tipo === "consenso") return importarConsenso(dir, projectPath, arquivo, ws, controle, o);
+    if (controle.tipo !== "formulario") throw new Error(`Planilha de tipo desconhecido (${controle.tipo}). Nada foi gravado.`);
     const estagio = controle.estagio;
     const m = lerManifesto(dir, estagio);
     if (!m) throw new Error(`Não há planilhas geradas no estágio ${NOME_ESTAGIO[estagio]} deste projeto: a planilha é de outro projeto ou estágio. Nada foi gravado.`);
@@ -808,7 +807,359 @@ export async function importarPlanilha(projectPath: string, o: OpcoesImportar): 
         falhas.length ? `- **Link que não abriu, marcado pelo revisor:** ${falhas.length} — foram para 03_screening/revisores/falhas_procedencia.json; leve-os ao "Visto de passagem" da manutenção` : "",
         substituiu ? `- Substituiu a importação anterior (arquivada em ${substituiu.arquivada}), com a autorização: "${substituiu.autorizacao}"` : "",
         `- Gravado: ${decisoesRel(estagio)}; cópia do arquivo recebido em ${copia} (sha256 ${sha256(bruto).slice(0, 12)}…)`,
-        faltam.length ? `- **Falta importar, neste lote:** ${faltam.join(", ")}` : "- Todos os revisores deste lote importados.",
+        faltam.length ? `- **Falta importar, neste lote:** ${faltam.join(", ")}` : "- Todos os revisores deste lote importados: próximo passo, a ação 'consenso' (divergências) e depois 'gerar'.",
     ].filter(Boolean).join("\n");
     return { estagio, rotulo: controle.rotulo, lote: controle.lote, contagens, falhas: falhas.map((f) => f.id), faltam, resumo };
+}
+
+// ─── consenso ──────────────────────────────────────────────────────────────
+
+export const RESULTADOS: Record<Estagio, Decisao[]> = { ta: ["segue", "excluir"], fulltext: ["incluir", "excluir", "não recuperado"] };
+export const DECIDIDO_POR = ["consenso", "pesquisador"];
+export const consensoRel = (e: Estagio, n: number) => `${PASTA_REVISORES}/${e}_consenso_${n}.xlsx`;
+
+export interface ResultadoDeConsenso {
+    resultado: Decisao;
+    motivo: string;
+    decidido_por: "consenso" | "pesquisador";
+    pesquisador?: string;
+    presentes: string;
+    data: string;
+    rodada: number;
+    decisoes_no_consenso: string; // retrato das decisões dos revisores que o consenso resolveu
+}
+
+export interface Rodada { n: number; quando: string; arquivo: string; ids: string[]; retratos: Record<string, string>; importada?: string; copia?: string; hash?: string; substituicao?: string }
+
+/** Retrato das decisões dos revisores sobre um registro: muda se alguma decisão mudar. */
+function retratoDe(porRevisor: Record<string, DecisaoDoRevisor>, revisores: string[]): string {
+    return revisores.map((r) => `${r}=${porRevisor?.[r]?.decisao ?? "-"}`).join("|");
+}
+
+/** Situação de cada registro do insumo no estágio: quem falta, se é falha, se concordam, se precisa de consenso. */
+function situacaoDosRegistros(dir: string, m: Manifesto, d: ArquivoDeDecisoes, ids: string[]) {
+    const falhas = new Set(lerFalhas(dir).map((f) => f.id));
+    const emLote = new Set(m.lotes.flatMap((l) => l.ids));
+    const out = { semPlanilha: [] as string[], procedencia: [] as string[], faltaRevisor: [] as string[], concordam: [] as string[], divergem: [] as string[] };
+    for (const id of ids) {
+        const por = d.registros[id] ?? {};
+        if (falhas.has(id) || m.revisores.some((r) => por[r]?.decisao === "falha de procedência")) { out.procedencia.push(id); continue; }
+        if (!emLote.has(id)) { out.semPlanilha.push(id); continue; }
+        if (m.revisores.some((r) => !por[r])) { out.faltaRevisor.push(id); continue; }
+        const decs = new Set(m.revisores.map((r) => por[r].decisao));
+        (decs.size === 1 ? out.concordam : out.divergem).push(id);
+    }
+    return out;
+}
+
+function respostasEmTexto(x: DecisaoDoRevisor | undefined): string {
+    if (!x) return "";
+    const partes = [`link: ${x.link_abriu}`, ...(x.leu ? [`leu: ${x.leu}`] : []), ...Object.entries(x.respostas).map(([k, v]) => `(${k}) ${v}`)];
+    return partes.join(" · ");
+}
+
+export interface OpcoesConsenso { estagio: Estagio; agora?: () => string }
+
+export async function gerarPlanilhaDeConsenso(projectPath: string, o: OpcoesConsenso): Promise<{ arquivo: string | null; ids: string[]; resumo: string }> {
+    const dir = resolveDir(projectPath);
+    const agora = o.agora ?? (() => new Date().toISOString());
+    const e = o.estagio;
+    const m = lerManifesto(dir, e);
+    if (!m) throw new Error(`Não há planilhas geradas no estágio ${NOME_ESTAGIO[e]}. Nada foi gravado.`);
+    const d = lerDecisoes(dir, e);
+    const ins = lerInsumo(dir, e);
+    if (ins.hash !== m.insumo_hash) throw new Error(`O insumo (${m.insumo}) mudou depois que as planilhas foram geradas. Nada foi gravado.`);
+    const s = situacaoDosRegistros(dir, m, d, ins.registros.map(idDoRegistro));
+    const pendentes = s.divergem.filter((id) => {
+        const c = d.consenso?.[id] as ResultadoDeConsenso | undefined;
+        return !c || c.decisoes_no_consenso !== retratoDe(d.registros[id], m.revisores);
+    });
+    if (pendentes.length === 0) {
+        return { arquivo: null, ids: [], resumo: `Nenhuma divergência sem consenso no estágio ${NOME_ESTAGIO[e]}` +
+            (s.faltaRevisor.length ? ` (ainda faltam decisões de algum revisor em ${s.faltaRevisor.length} registro(s))` : "") + "." };
+    }
+
+    const porId = new Map(ins.registros.map((r) => [idDoRegistro(r), r]));
+    const rodadas: Rodada[] = d.consensos ?? [];
+    const n = rodadas.length + 1;
+    const rel = consensoRel(e, n);
+
+    const wb = new ExcelJS.Workbook();
+    wb.creator = "ReviewBR";
+    const ws = wb.addWorksheet("Consenso");
+    type Col = { key: string; header: string; width: number; lista?: string[]; abre?: boolean };
+    const cols: Col[] = [
+        { key: "n", header: "nº", width: 6 }, { key: "id", header: "id", width: 22 }, { key: "titulo", header: "título", width: 45 },
+        { key: "resumo", header: "resumo", width: 60 }, { key: "link", header: "link", width: 32 },
+    ];
+    for (const r of m.revisores) {
+        cols.push({ key: `dec:${r}`, header: `${r}: decisão`, width: 14 }, { key: `resp:${r}`, header: `${r}: respostas`, width: 28 },
+            { key: `obs:${r}`, header: `${r}: observação e motivo`, width: 36 });
+    }
+    cols.push({ key: "resultado", header: "resultado", width: 16, lista: RESULTADOS[e], abre: true },
+        { key: "motivo", header: "motivo do resultado", width: 40, abre: true },
+        { key: "decidido_por", header: "decidido por", width: 14, lista: DECIDIDO_POR, abre: true });
+    cols.forEach((c, i) => { ws.getColumn(i + 1).width = c.width; });
+
+    let r = 1;
+    const cheia = (t: string, negrito = false) => {
+        ws.mergeCells(r, 1, r, Math.min(cols.length, 12));
+        const c = ws.getCell(r, 1); c.value = t; c.font = { bold: negrito }; c.alignment = { wrapText: true, vertical: "top" };
+        if (t.length > 180) ws.getRow(r).height = 15 * Math.ceil(t.length / 180);
+        r++;
+    };
+    cheia(`ReviewBR — consenso da triagem por ${NOME_ESTAGIO[e]} — rodada ${n}`, true);
+    const linhaControle = r++;
+    r++;
+    const ident: Record<string, string> = {};
+    for (const [k, rot] of [["presentes", "Revisores que participaram do consenso"], ["pesquisador", "Pesquisador que decidiu onde não houve consenso"], ["data", "Data do consenso"]] as const) {
+        ws.getCell(r, 1).value = rot; ws.mergeCells(r, 1, r, 2);
+        const c = ws.getCell(r, 3); c.fill = AMARELO_FORTE; c.protection = { locked: false };
+        if (k === "data") c.note = "dia/mês/ano";
+        ident[k] = c.address; r++;
+    }
+    r++;
+    cheia("O que fazer", true);
+    [
+        "Cada linha é um registro em que as decisões dos revisores divergem. Conversem sobre ele até o consenso (protocolo: resolução de discordâncias).",
+        `Em "resultado", escolha na lista (${RESULTADOS[e].join(", ")}); em "motivo do resultado", escreva o porquê (obrigatório).`,
+        "Em \"decidido por\": \"consenso\" quando os revisores chegaram a acordo; \"pesquisador\" quando não houve consenso e o pesquisador decidiu. Nesse caso, o nome dele no topo é obrigatório.",
+        "Só as células em amarelo se preenchem. Ao terminar, salve em .xlsx e importe com a ação 'importar'.",
+    ].forEach((t, i) => cheia(`${i + 1}. ${t}`));
+    r++;
+    const cab = r;
+    cols.forEach((c, i) => {
+        const cell = ws.getCell(cab, i + 1); cell.value = c.header; cell.font = { bold: true };
+        cell.alignment = { wrapText: true, vertical: "top" }; cell.fill = c.abre ? AMARELO_FORTE : CINZA;
+    });
+    const primeira = cab + 1;
+    pendentes.forEach((id, i) => {
+        const rec = porId.get(id);
+        const por = d.registros[id];
+        const linha = ws.getRow(primeira + i);
+        cols.forEach((c, j) => {
+            const cell = linha.getCell(j + 1);
+            cell.alignment = { wrapText: true, vertical: "top" };
+            if (c.abre) { cell.protection = { locked: false }; cell.fill = AMARELO; if (c.lista) cell.dataValidation = validacaoLista(c.lista); return; }
+            const [tipo, rot] = c.key.split(":");
+            if (c.key === "n") cell.value = i + 1;
+            else if (c.key === "id") cell.value = id;
+            else if (c.key === "titulo") cell.value = String(rec?.title ?? "");
+            else if (c.key === "resumo") cell.value = (String(rec?.description ?? "").trim() || "(sem resumo)").slice(0, 32000);
+            else if (c.key === "link") { const l = linkDoRegistro(rec); cell.value = l ? { text: l, hyperlink: l } : ""; }
+            else if (tipo === "dec") cell.value = por[rot]?.decisao ?? "";
+            else if (tipo === "resp") cell.value = respostasEmTexto(por[rot]);
+            else if (tipo === "obs") cell.value = [por[rot]?.observacao, por[rot]?.motivo].filter(Boolean).join(" — ");
+        });
+    });
+    const controle: Controle = {
+        tool: "record_screening_decisions", tipo: "consenso", estagio: e, rotulo: "consenso", lote: n, insumo_hash: m.insumo_hash,
+        cabecalho: cab, primeira, ultima: primeira + pendentes.length - 1,
+        colunas: Object.fromEntries(cols.map((c, i) => [c.key, i + 1])), ident,
+    };
+    const cc = ws.getCell(linhaControle, 1);
+    cc.value = PREFIXO_CONTROLE + JSON.stringify(controle);
+    cc.font = { size: 8, color: { argb: "FF808080" } };
+    ws.views = [{ state: "frozen", xSplit: 3, ySplit: cab }];
+    await ws.protect("", { selectLockedCells: true, selectUnlockedCells: true, formatColumns: true, formatRows: true });
+    fs.mkdirSync(path.dirname(path.join(dir, rel)), { recursive: true });
+    await wb.xlsx.writeFile(path.join(dir, rel));
+
+    d.consensos = [...rodadas, { n, quando: agora(), arquivo: rel, ids: pendentes, retratos: Object.fromEntries(pendentes.map((id) => [id, retratoDe(d.registros[id], m.revisores)])) }];
+    gravarJson(dir, decisoesRel(e), d);
+    const resumo = [
+        `## Planilha de consenso — ${NOME_ESTAGIO[e]}, rodada ${n}`,
+        `- **Divergências sem consenso:** ${pendentes.length} (concordam: ${s.concordam.length}; esperando procedência: ${s.procedencia.length}; faltando revisor: ${s.faltaRevisor.length})`,
+        `- Gravado: ${rel}. Preenchida na reunião de consenso, importe-a com a ação 'importar'.`,
+    ].join("\n");
+    return { arquivo: rel, ids: pendentes, resumo };
+}
+
+export async function importarConsenso(dir: string, projectPath: string, arquivo: string, ws: ExcelJS.Worksheet, controle: Controle, o: OpcoesImportar): Promise<ResultadoImportar> {
+    const e = controle.estagio;
+    const agora = o.agora ?? (() => new Date().toISOString());
+    const m = lerManifesto(dir, e);
+    if (!m || m.insumo_hash !== controle.insumo_hash) throw new Error("Planilha de consenso de outro projeto, estágio ou insumo. Nada foi gravado.");
+    const d = lerDecisoes(dir, e);
+    const rodada = (d.consensos ?? []).find((x) => x.n === controle.lote);
+    if (!rodada) throw new Error(`Rodada de consenso ${controle.lote} não está registrada neste estágio. Nada foi gravado.`);
+    if (rodada.importada && !(o.substituicao ?? "").trim()) {
+        throw new Error(`A rodada de consenso ${rodada.n} já foi importada em ${rodada.importada.slice(0, 10)}. Importá-la de novo exige a autorização do pesquisador ('substituicao'). Nada foi gravado.`);
+    }
+    const erros: string[] = [];
+    const presentes = textoDaCelula(ws.getCell(controle.ident.presentes).value);
+    const pesquisador = textoDaCelula(ws.getCell(controle.ident.pesquisador).value);
+    const data = dataDaCelula(ws.getCell(controle.ident.data).value);
+    if (!presentes) erros.push("identificação: os revisores que participaram do consenso estão em branco");
+    if (!data) erros.push("identificação: data do consenso em branco ou ilegível (use dia/mês/ano)");
+    const c = controle.colunas;
+    const lidos = new Map<string, ResultadoDeConsenso>();
+    for (let i = controle.primeira; i <= controle.ultima; i++) {
+        const id = textoDaCelula(ws.getCell(i, c.id).value);
+        const onde = `linha ${i} (id ${id || "em branco"})`;
+        if (!id || !rodada.ids.includes(id)) { erros.push(`${onde}: id que não é desta rodada`); continue; }
+        if (lidos.has(id)) { erros.push(`${onde}: id repetido`); continue; }
+        const resBruto = textoDaCelula(ws.getCell(i, c.resultado).value);
+        const resultado = respostaDe(resBruto, RESULTADOS[e]) as Decisao | null;
+        const motivo = textoDaCelula(ws.getCell(i, c.motivo).value);
+        const porBruto = textoDaCelula(ws.getCell(i, c.decidido_por).value);
+        const por = respostaDe(porBruto, DECIDIDO_POR) as "consenso" | "pesquisador" | null;
+        if (!resultado) erros.push(`${onde}: resultado ${resBruto ? `"${resBruto}" fora da lista` : "em branco"}`);
+        if (!motivo) erros.push(`${onde}: motivo do resultado em branco (obrigatório)`);
+        if (!por) erros.push(`${onde}: "decidido por" ${porBruto ? `"${porBruto}" fora da lista` : "em branco"}`);
+        if (por === "pesquisador" && !pesquisador) erros.push(`${onde}: decidido pelo pesquisador, e o nome dele no topo está em branco`);
+        const atual = retratoDe(d.registros[id], m.revisores);
+        if (atual !== rodada.retratos[id]) erros.push(`${onde}: as decisões dos revisores mudaram depois que esta planilha de consenso foi gerada; gere outra`);
+        if (resultado && motivo && por) {
+            lidos.set(id, { resultado, motivo, decidido_por: por, ...(por === "pesquisador" ? { pesquisador } : {}), presentes, data: data ?? "", rodada: rodada.n, decisoes_no_consenso: atual });
+        }
+    }
+    const faltando = rodada.ids.filter((id) => !lidos.has(id) && !erros.some((x) => x.includes(`id ${id})`)));
+    if (faltando.length) erros.push(`faltam ${faltando.length} registro(s) da rodada: ${faltando.slice(0, 10).join(", ")}`);
+    if (erros.length) {
+        throw new Error(`Planilha de consenso (rodada ${rodada.n}) recusada, ${erros.length} problema(s):\n` + erros.slice(0, 40).map((x) => `- ${x}`).join("\n") +
+            "\nCorrija na planilha e importe de novo. Nada foi gravado.");
+    }
+    const quando = agora();
+    if (rodada.importada) gravarJson(dir, `${PASTA_REVISORES}/substituidas/${quando.replace(/[:.]/g, "-")}_decisoes_${e}.json`, d);
+    const bruto = fs.readFileSync(arquivo);
+    const copia = `${PASTA_REVISORES}/recebidos/${e}_consenso_${rodada.n}_${quando.replace(/[:.]/g, "-")}.xlsx`;
+    fs.mkdirSync(path.dirname(path.join(dir, copia)), { recursive: true });
+    fs.writeFileSync(path.join(dir, copia), bruto);
+    d.consenso = { ...(d.consenso ?? {}), ...Object.fromEntries(lidos) };
+    rodada.importada = quando;
+    rodada.copia = copia;
+    rodada.hash = sha256(bruto);
+    if (o.substituicao) rodada.substituicao = o.substituicao;
+    gravarJson(dir, decisoesRel(e), d);
+    const contagens: Record<string, number> = {};
+    for (const v of lidos.values()) contagens[`${v.resultado} (${v.decidido_por})`] = (contagens[`${v.resultado} (${v.decidido_por})`] ?? 0) + 1;
+    return {
+        estagio: e, rotulo: "consenso", lote: rodada.n, contagens, falhas: [], faltam: [],
+        resumo: [
+            `## Consenso importado — ${NOME_ESTAGIO[e]}, rodada ${rodada.n}`,
+            `- **Participaram:** ${presentes}; data ${data}${pesquisador ? `; pesquisador que decidiu sem consenso: ${pesquisador}` : ""}`,
+            `- **Resultados:** ${Object.entries(contagens).map(([k, v]) => `${k}: ${v}`).join(" · ")}`,
+            `- Gravado em ${decisoesRel(e)}; cópia em ${copia}. Próximo passo: a ação 'gerar'.`,
+        ].join("\n"),
+    };
+}
+
+// ─── gerar: os artefatos do funil ──────────────────────────────────────────
+
+const PARA_O_FUNIL: Record<Decisao, string> = { segue: "YES", incluir: "YES", excluir: "NO", "não recuperado": "NAO_RECUPERADO", "falha de procedência": "" };
+
+export interface OpcoesGerar { estagio: Estagio; substituicao?: string; agora?: () => string }
+
+export function gerarArtefatosDoFunil(projectPath: string, o: OpcoesGerar): { relatorio: Record<string, any>; resumo: string } {
+    const dir = resolveDir(projectPath);
+    const e = o.estagio;
+    const agora = o.agora ?? (() => new Date().toISOString());
+    const m = lerManifesto(dir, e);
+    if (!m) throw new Error(`Não há planilhas geradas no estágio ${NOME_ESTAGIO[e]}. Nada foi gravado.`);
+    const ins = lerInsumo(dir, e);
+    if (ins.hash !== m.insumo_hash) throw new Error(`O insumo (${m.insumo}) mudou depois que as planilhas foram geradas. Nada foi gravado.`);
+    const d = lerDecisoes(dir, e);
+    const ids = ins.registros.map(idDoRegistro);
+    const s = situacaoDosRegistros(dir, m, d, ids);
+    const semConsenso = s.divergem.filter((id) => {
+        const c = d.consenso?.[id] as ResultadoDeConsenso | undefined;
+        return !c || c.decisoes_no_consenso !== retratoDe(d.registros[id], m.revisores);
+    });
+    const problemas: string[] = [];
+    if (s.procedencia.length) problemas.push(`${s.procedencia.length} registro(s) com falha de procedência esperando a manutenção (voltam à leitura depois do conserto): ${s.procedencia.slice(0, 15).join(", ")}${s.procedencia.length > 15 ? "…" : ""}`);
+    if (s.semPlanilha.length) problemas.push(`${s.semPlanilha.length} registro(s) do insumo em nenhuma planilha (gere o lote com 'pendentes'): ${s.semPlanilha.slice(0, 15).join(", ")}`);
+    if (s.faltaRevisor.length) {
+        const quem = m.revisores.filter((r) => s.faltaRevisor.some((id) => !d.registros[id]?.[r]));
+        problemas.push(`${s.faltaRevisor.length} registro(s) sem a decisão de: ${quem.join(", ")} (importe a planilha)`);
+    }
+    if (semConsenso.length) problemas.push(`${semConsenso.length} divergência(s) sem consenso (ação 'consenso'): ${semConsenso.slice(0, 15).join(", ")}${semConsenso.length > 15 ? "…" : ""}`);
+    if (problemas.length) {
+        throw new Error(`O estágio ${NOME_ESTAGIO[e]} ainda não fecha:\n${problemas.map((x) => `- ${x}`).join("\n")}\nNada foi gravado.`);
+    }
+
+    const porId = new Map(ins.registros.map((r) => [idDoRegistro(r), r]));
+    const included: any[] = [], excluded: any[] = [], naoRec: any[] = [];
+    const contagem = { concordancia: 0, consenso: 0, pesquisador: 0 };
+    const motivosExclusao: Record<string, number> = {};
+    for (const id of ids) {
+        const por = d.registros[id];
+        const decisoesDoRegistro = Object.fromEntries(m.revisores.map((r) => [r, (({ historico: _h, ...resto }) => resto)(por[r])]));
+        let final: Decisao, motivo: string, origem: "concordância" | "consenso" | "pesquisador";
+        let consenso: ResultadoDeConsenso | undefined;
+        if (s.concordam.includes(id)) {
+            final = por[m.revisores[0]].decisao;
+            origem = "concordância";
+            motivo = m.revisores.map((r) => `${r}: ${por[r].motivo}`).join(" | ");
+            contagem.concordancia++;
+        } else {
+            consenso = d.consenso![id] as ResultadoDeConsenso;
+            final = consenso.resultado;
+            origem = consenso.decidido_por;
+            motivo = consenso.motivo;
+            contagem[consenso.decidido_por]++;
+        }
+        const comDuvida = m.revisores.some((r) => por[r].com_duvida?.length);
+        const item = {
+            record: porId.get(id),
+            decision: e === "ta" && final === "segue" && comDuvida ? "MAYBE" : PARA_O_FUNIL[final],
+            decisao: final, motivo, origem, estagio: e, decisoes: decisoesDoRegistro, ...(consenso ? { consenso } : {}),
+        };
+        if (final === "segue" || final === "incluir") included.push(item);
+        else if (final === "não recuperado") naoRec.push(item);
+        else {
+            excluded.push(item);
+            // motivo por pergunta (PRISMA-ScR item 14): as perguntas com "não" de quem excluiu
+            const perguntasNao = new Set<string>();
+            for (const r of m.revisores) if (por[r].decisao === "excluir") for (const [k, v] of Object.entries(por[r].respostas)) if (v === "não") perguntasNao.add(k);
+            const chave = perguntasNao.size ? [...perguntasNao].sort().map((k) => `(${k})`).join(" ") : "motivo do consenso";
+            motivosExclusao[chave] = (motivosExclusao[chave] ?? 0) + 1;
+        }
+    }
+    const fecha = included.length + excluded.length + naoRec.length === ids.length;
+    if (!fecha) throw new Error(`Incluídos + excluídos + não recuperados ≠ insumo (${ids.length}). Nada foi gravado.`);
+
+    const gravado = e === "ta"
+        ? writeScreening(projectPath, "ta", included, excluded, { autorizacao: o.substituicao }, "record_screening_decisions")
+        : writeScreening(projectPath, "fulltext", included, excluded, { autorizacao: o.substituicao }, "record_screening_decisions", naoRec);
+
+    const relatorio = {
+        quando: agora(),
+        ferramenta: "record_screening_decisions (gerar)",
+        estagio: e,
+        insumo: m.insumo,
+        revisores: d.importacoes.map((x) => ({ rotulo: x.rotulo, lote: x.lote, nome: x.nome, papel: x.papel, inicio: x.inicio, fim: x.fim, arquivo_sha256: x.hash })),
+        perguntas: m.perguntas,
+        regra: e === "ta"
+            ? "um \"não\" exclui; sem \"não\", segue para o texto completo (com \"dúvida\", marcado como MAYBE); link que não abriu = falha de procedência, fora até o conserto"
+            : "\"conseguiu ler o texto completo?\" = não → não recuperado; um \"não\" exclui; \"sim\" em todas inclui",
+        contagens: {
+            insumo: ids.length,
+            ...(e === "ta" ? { seguem: included.length, com_duvida: included.filter((x) => x.decision === "MAYBE").length } : { incluidos: included.length, nao_recuperados: naoRec.length }),
+            excluidos: excluded.length,
+            por_concordancia: contagem.concordancia, por_consenso: contagem.consenso, decididos_pelo_pesquisador: contagem.pesquisador,
+            fora_por_procedencia_no_inicio: m.fora_por_procedencia.length,
+        },
+        motivos_de_exclusao_por_pergunta: motivosExclusao,
+        consensos: (d.consensos ?? []).map((x) => ({ rodada: x.n, registros: x.ids.length, importada: x.importada ?? null })),
+        lotes: m.lotes.map((l) => ({ lote: l.n, registros: l.ids.length, quando: l.quando })),
+        conferencia: { soma: included.length + excluded.length + naoRec.length, insumo: ids.length, fecha },
+        arquivos: { incluidos: gravado.includedFile, excluidos: gravado.excludedFile, ...(gravado.naoRecuperadosFile ? { nao_recuperados: gravado.naoRecuperadosFile } : {}) },
+        ...(gravado.substituicao ? { substituiu: gravado.substituicao } : {}),
+    };
+    gravarJson(dir, `${PASTA_REVISORES}/relatorio_${e}.json`, relatorio);
+    const k = relatorio.contagens as Record<string, number>;
+    const resumo = [
+        `## Triagem humana por ${NOME_ESTAGIO[e]} — artefatos do funil gravados`,
+        `- **Insumo:** ${m.insumo}, ${k.insumo} registros`,
+        e === "ta"
+            ? `- **Seguem para o texto completo:** ${k.seguem} (com dúvida: ${k.com_duvida}) · **excluídos:** ${k.excluidos}`
+            : `- **Incluídos:** ${k.incluidos} · **excluídos:** ${k.excluidos} · **não recuperados:** ${k.nao_recuperados}`,
+        `- **Como se decidiu:** concordância ${k.por_concordancia}; consenso ${k.por_consenso}; pesquisador ${k.decididos_pelo_pesquisador}`,
+        `- **Motivos de exclusão (perguntas com "não"):** ${Object.entries(motivosExclusao).map(([q, v]) => `${q}: ${v}`).join(" · ") || "nenhum"}`,
+        `- **Conferência:** ${relatorio.conferencia.soma} = ${k.insumo}`,
+        `- Gravado: ${Object.values(relatorio.arquivos).map((a) => path.relative(dir, String(a)).replace(/\\/g, "/")).join(", ")} e ${PASTA_REVISORES}/relatorio_${e}.json`,
+        gravado.substituicao ? `- Substituiu a triagem anterior, arquivada em ${gravado.substituicao.pasta}` : "",
+    ].filter(Boolean).join("\n");
+    return { relatorio, resumo };
 }
