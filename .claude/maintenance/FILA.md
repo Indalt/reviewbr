@@ -743,8 +743,9 @@ Vicente pedir.
 - `PASSAGEM.md` ficou na pasta da manutenção porque `tests/porta_do_backlog.test.ts` lê o texto dele.
 - (linha 1) `scihub_bridge.ts` monta o comando do python interpolando o DOI numa string de shell (`exec`,
   `--doi "${doi}"`).
-- (linha 1) Nenhum código grava `03_screening/fulltext_not_retrieved.json`; o `retrieve_fulltexts` não registra
-  os que falharam. Desde a linha 1, o BYOS só aceita DOI que esteja nesse arquivo.
+- (linha 1) O `retrieve_fulltexts` não registra os que falharam. Desde a linha 1, o BYOS só aceita DOI que esteja em
+  `03_screening/fulltext_not_retrieved.json`; desde a linha 13 (23/11/2026), quem grava esse arquivo é o `gerar` do
+  texto completo da `record_screening_decisions`, a partir das planilhas dos revisores.
 - (linha 1) DOI recuperado pelo BYOS continua em `fulltext_not_retrieved.json`, que o funil conta como não
   recuperado.
 - (linha 1) `download_and_extract_pdfs` pula o texto já gravado como `[NATIVE PDF EXTRACTED]`: texto extraído

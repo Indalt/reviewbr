@@ -36,7 +36,9 @@ critério, fontes) vai para `02_deduplicated/dedupe_pairs.json`; os pares sinali
 | EX-10 | Qualidade insuficiente | F1.3.2.7 |
 | EX-11 | Outro (descrição obrigatória) | — |
 
-Full-text não recuperado (F4.2.2): registre por registro com motivo — entra em `fulltext_not_retrieved` no funil.
+Full-text não recuperado (F4.2.2): registre por registro com motivo — entra em `fulltext_not_retrieved` no funil. Com
+revisores humanos, quem grava `03_screening/fulltext_not_retrieved.json` é o `record_screening_decisions` (`gerar` do
+texto completo), a partir do "conseguiu ler o texto completo?"; o `screen_candidates` não o grava.
 
 **Camada por palavras antes da leitura humana** (quando o protocolo a declara): é o `batch_keyword_screen` sobre os
 registros do projeto (com `projectPath`, sem `pdfDir`). Os termos são os do protocolo, sem mudar nada, e a tool confere
@@ -55,6 +57,25 @@ A triagem depende do **método declarado no protocolo**, não do software. Antes
 - **Resolução de discordâncias** — como as divergências se resolvem (ou "não se aplica").
 
 O gate do protocolo (`submit_protocol_for_approval`) **reprova** se os três não estiverem preenchidos: um protocolo travado sem eles permitiria escolher o método depois de ver os registros. Se o protocolo divergir do que você for executar, **pare e avise** — o protocolo manda (RV-01).
+
+**Revisores humanos — `record_screening_decisions`** (quando o protocolo manda que pessoas decidam; padrão das fontes
+oficiais lidas em 23/11/2026: PRISMA 2020 itens 8 e 16a, PRISMA-ScR itens 9 e 14, JBI 2024 10.2.6, Cochrane 6.5.1 4.6.4):
+1. Antes, o `librarian` confere a procedência dos links (`verify_record_links`): o link que não confere ou não abre é
+   falha do sistema, vai para `03_screening/revisores/falhas_procedencia.json` e para a manutenção, e não entra na
+   planilha até o conserto.
+2. `formulario`: uma planilha `.xlsx` por revisor, todas com o insumo inteiro do estágio; as perguntas copiadas do
+   protocolo (a tool confere). No título e resumo, cada pergunta admite sim, não ou dúvida (dúvida exige observação);
+   no texto completo, sim ou não, depois de "conseguiu ler o texto completo?".
+3. `importar`: grava, por registro e revisor, as respostas e a decisão que sai delas por regra fixa — um "não" exclui;
+   sem "não", segue (no título e resumo) ou inclui (no texto completo); "conseguiu ler?" não = não recuperado; link que
+   não abriu = falha de procedência.
+4. `consenso`: a planilha só das divergências; o resultado, o motivo e quem decidiu (consenso ou o pesquisador).
+5. `gerar`: os artefatos do funil (no texto completo, também `fulltext_not_retrieved.json`) e o relatório; recusa
+   enquanto houver falha de procedência, revisor faltando ou divergência sem consenso.
+
+Limites declarados: o sistema não garante a independência entre os revisores (não separa usuários; o relato diz como
+foi feita); a trava das colunas da planilha evita edição acidental, e a importação confere pelo id, pelo hash do insumo
+e pela linha de controle, não pelo que uma célula travada mostra. Nenhuma IA propõe nem decide nessas planilhas.
 
 
 ## MAYBE — dúvida declarada, não inclusão
