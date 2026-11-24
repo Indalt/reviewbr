@@ -953,3 +953,9 @@ Vicente pedir.
   "SidUece", com o acento estragado (a página não é lida na codificação dela); 4 com o título do registro em inglês e o
   da página em português (3 dos Cadernos Cajuína, 1 da UFCG); 2 registros que não são o documento ("Template for
   Authors"; "In Other Journals", com o DOI de outro artigo).
+  **Ordem do Vicente (23/11/2026), ao ler este item:** estas falhas não parecem ser do ReviewBR. Antes de tratá-las como
+  falha do sistema, verificar cada uma: abrir o link como uma pessoa abriria e dizer se o defeito existe e se a causa é
+  do ReviewBR (a conferência, o registro gravado) ou da fonte (bloqueio a robô, página fora do ar, metadado da fonte).
+  Não contar como achado o que não se confirmar. Consequência: nenhuma destas 51 vira achado nem conserto sem essa
+  verificação. Origem: "estes erros nao parecem ser da ferramenta reviewbr. mandar verificar se sao e nao apenas
+  inventar erros para justificar os achados."
