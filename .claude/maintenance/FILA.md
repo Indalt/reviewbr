@@ -702,7 +702,11 @@ manutenção, caso a caso) e o registro das falhas do `retrieve_fulltexts` (fica
   `<estagio>_formularios.json` (manifesto, com os lotes). A linha de controle (estágio, revisor, lote, hash do insumo,
   posição das colunas) fica no topo da planilha, visível e travada, para a importação. Teste:
   `tests/revisores_formulario.test.ts` (7; apoio em `tests/apoio/revisores.ts`; todos falhavam antes, sem o módulo).
-- Parte 4, `importar`: a fazer.
+- Parte 4, `importar`: **feita em 23/11/2026**. Lê a planilha devolvida pela linha de controle; grava
+  `03_screening/revisores/decisoes_<estagio>.json` (por registro e revisor; importações com arquivo, cópia em
+  `recebidos/`, sha256, data, nome, papel e datas declaradas); recusa tudo, dizendo a linha, quando há um problema;
+  aceita resposta sem acento ou com maiúscula ("Nao" = "não"); link "não" vai para a lista de falhas, com a origem
+  "revisor". Teste: `tests/revisores_importar.test.ts` (7; todos falhavam antes, sem a função).
 - Parte 5, `consenso` e `gerar`: a fazer.
 - Parte 6, DECLARAR, teste real na cópia e fechamento da linha: a fazer.
 

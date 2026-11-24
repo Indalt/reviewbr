@@ -61,3 +61,28 @@ export async function abrir(arquivo: string) {
     return { wb, ws, controle };
 }
 
+
+export interface Preenchimento {
+    nome?: string; papel?: string; inicio?: unknown; fim?: unknown;
+    /** Por id do registro: as respostas (link_abriu, leu, p:<id>, observacao). Linha sem resposta fica em branco. */
+    linha: (id: string, i: number) => Record<string, string | undefined>;
+}
+
+/** Simula o revisor: abre a planilha gerada, preenche a identificação e as respostas e salva onde ele salvaria. */
+export async function preencher(gerada: string, devolvida: string, p: Preenchimento): Promise<string> {
+    const { wb, ws, controle } = await abrir(gerada);
+    const ident: Record<string, unknown> = { nome: p.nome ?? "Fulana de Tal", papel: p.papel ?? "estagiário", inicio: p.inicio ?? "24/11/2026", fim: p.fim ?? "30/11/2026" };
+    for (const k of ["nome", "papel", "inicio", "fim"]) ws.getCell(controle.ident[k]).value = ident[k] as any;
+    for (let i = controle.primeira; i <= controle.ultima; i++) {
+        const id = String(ws.getCell(i, controle.colunas.id).value);
+        for (const [k, v] of Object.entries(p.linha(id, i - controle.primeira))) {
+            if (v !== undefined) ws.getCell(i, controle.colunas[k]).value = v;
+        }
+    }
+    fs.mkdirSync(path.dirname(devolvida), { recursive: true });
+    await wb.xlsx.writeFile(devolvida);
+    return devolvida;
+}
+
+/** Respostas completas e válidas no título e resumo: "sim" em tudo. */
+export const tudoSim = () => ({ link_abriu: "sim", "p:a": "sim", "p:b": "sim", "p:c": "sim" });

@@ -38,7 +38,7 @@ import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDed
 import { gravarCamadaPorPalavras, REGRA_DE_CASAMENTO } from "./services/camada_palavras.js";
 import { completarPalavrasChave } from "./services/palavras_chave.js";
 import { conferirProcedencia, REGRA_DE_CONFERENCIA } from "./services/procedencia.js";
-import { gerarFormularios } from "./services/decisoes_revisores.js";
+import { gerarFormularios, importarPlanilha } from "./services/decisoes_revisores.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -2787,11 +2787,15 @@ server.tool(
     "Decisões dos revisores HUMANOS da triagem (título e resumo, depois texto completo), por planilha .xlsx, sem IA. " +
     "acao='formulario': gera do insumo do estágio (ta ← passed_keywords.json ou dataset.json; fulltext ← included_ta.json) uma planilha por revisor, todas com o insumo inteiro, menos os registros cujo link não conferiu ou não abriu (verify_record_links, obrigatório antes): 03_screening/revisores/<estagio>_<rotulo>.xlsx e o manifesto do estágio. " +
     "No topo, a identificação do revisor (nome, papel, datas de início e de fim), a instrução e as perguntas do protocolo; colunas de leitura travadas (nº, id, título, resumo, palavras-chave, termos que casaram, ano, tipo, idioma, fonte, revista ou site, link — o DOI quando há —, conferência do link, par da F3); colunas abertas com lista: uma por pergunta (sim/não/dúvida no título e resumo; sim/não no texto completo), 'o link abriu o documento certo?', no texto completo 'conseguiu ler o texto completo?', e observação. " +
-    "Ordem: por revista; sem revista, pelo site do endereço; os dois de um par da F3 juntos. Cada pergunta tem de estar escrita no protocol.md. 'pendentes': só os registros que voltaram da manutenção, num lote novo. Só com projeto travado.",
+    "Ordem: por revista; sem revista, pelo site do endereço; os dois de um par da F3 juntos. Cada pergunta tem de estar escrita no protocol.md. 'pendentes': só os registros que voltaram da manutenção, num lote novo. " +
+    "acao='importar': lê a planilha devolvida pelo revisor ('arquivo') e grava, por registro e revisor, nome, papel, respostas, observação, decisão e motivo em 03_screening/revisores/decisoes_<estagio>.json, com a data, o hash e a cópia do arquivo. A decisão sai das respostas, por regra fixa: link 'não' → falha de procedência (vai para a manutenção); título e resumo: um 'não' exclui, senão segue (com dúvida, se houver); texto completo: 'conseguiu ler?' 'não' → não recuperado, um 'não' exclui, 'sim' em todas inclui. " +
+    "Recusa, dizendo a linha: identificação incompleta, id faltando, a mais ou repetido, planilha de outro estágio ou insumo, resposta em branco ou fora da lista, 'dúvida' sem observação. Reimportar o mesmo revisor exige 'substituicao'. Só com projeto travado.",
     {
-        acao: z.enum(["formulario"]).describe("formulario: gera as planilhas dos revisores"),
+        acao: z.enum(["formulario", "importar"]).describe("formulario: gera as planilhas dos revisores; importar: lê uma planilha devolvida"),
         projectPath: z.string().describe("Raiz do projeto (protocolo travado)"),
-        estagio: z.enum(["ta", "fulltext"]).describe("ta = título e resumo; fulltext = texto completo"),
+        estagio: z.enum(["ta", "fulltext"]).optional().describe("Obrigatório no formulario: ta = título e resumo; fulltext = texto completo. No importar, vem da planilha"),
+        arquivo: z.string().optional().describe("importar: caminho da planilha devolvida (.xlsx), absoluto ou relativo ao projeto"),
+        substituicao: z.string().optional().describe("importar: só quando a planilha deste revisor e lote já foi importada — a decisão do pesquisador que autoriza substituí-la, nas palavras dele. A anterior fica arquivada"),
         revisores: z.array(z.string()).optional().describe("Rótulos dos revisores, um por planilha (ex.: ['pesquisador', 'estagiario']). O nome de cada um ele mesmo preenche no topo da planilha"),
         perguntas: z.array(PERGUNTA_SCHEMA).optional().describe("As perguntas de elegibilidade do protocolo, com o estágio de cada uma"),
         criterioNaoRecuperado: z.string().optional().describe("Só no texto completo: o critério do protocolo para o texto indisponível, copiado dele sem mudar nada; vai no topo da planilha"),
@@ -2803,6 +2807,13 @@ server.tool(
         const trava = await checkDesignGuardrail(undefined, params.projectPath);
         if (trava) return { content: [{ type: "text", text: trava }] };
         try {
+            if (params.acao === "importar") {
+                if (!params.arquivo) return { content: [{ type: "text", text: "importar: informe 'arquivo', a planilha devolvida pelo revisor. Nada foi gravado." }] };
+                const r = await importarPlanilha(params.projectPath, { arquivo: params.arquivo, substituicao: params.substituicao });
+                const rastro = await registrarLote("record_screening_decisions", params, `Importação ${r.estagio}, revisor ${r.rotulo}, lote ${r.lote}: ${JSON.stringify(r.contagens)}.`, r);
+                return { content: [{ type: "text", text: r.resumo + rastro }] };
+            }
+            if (!params.estagio) return { content: [{ type: "text", text: "formulario: informe 'estagio' (ta ou fulltext). Nada foi gravado." }] };
             const r = await gerarFormularios(params.projectPath, {
                 estagio: params.estagio, revisores: params.revisores ?? [], perguntas: params.perguntas ?? [],
                 criterioNaoRecuperado: params.criterioNaoRecuperado, perguntaIdiomaTipo: params.perguntaIdiomaTipo,

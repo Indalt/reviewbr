@@ -4,7 +4,7 @@ import * as crypto from "node:crypto";
 import ExcelJS from "exceljs";
 import { resolveDir, readArray, insumoDoEstagio, PASSADOS_PALAVRAS } from "./project_artifacts.js";
 import { lerPalavrasChaveCompletadas, chaveNaFonteDoRegistro } from "./camada_palavras.js";
-import { lerConferencias, lerFalhas, linkDoRegistro, idDoRegistro, doiDoRegistro } from "./procedencia.js";
+import { lerConferencias, lerFalhas, linkDoRegistro, idDoRegistro, doiDoRegistro, registrarFalhasDoRevisor, type Falha } from "./procedencia.js";
 
 /**
  * Decisões dos revisores humanos, por planilha (linha 13 da FILA; plano aprovado pelo Vicente em 23/11/2026).
@@ -532,4 +532,283 @@ export async function gerarFormularios(projectPath: string, o: OpcoesFormulario)
         `- Manifesto: ${manifestoRel(estagio)}. Envie cada planilha ao seu revisor; quando voltar preenchida, importe com a ação 'importar'.`,
     ].join("\n");
     return { manifesto, lote, fora, resumo };
+}
+
+// ─── leitura de uma planilha devolvida ─────────────────────────────────────
+
+/** O texto de uma célula, qualquer que seja a forma em que a planilha o guardou. */
+export function textoDaCelula(v: unknown): string {
+    if (v === null || v === undefined) return "";
+    if (v instanceof Date) return v.toISOString();
+    if (typeof v === "object") {
+        const o = v as any;
+        if (Array.isArray(o.richText)) return o.richText.map((t: any) => String(t?.text ?? "")).join("").trim();
+        if ("result" in o) return textoDaCelula(o.result);
+        if ("text" in o) return textoDaCelula(o.text);
+        return "";
+    }
+    return String(v).trim();
+}
+
+/** Data de uma célula: data do Excel, dd/mm/aaaa ou aaaa-mm-dd. Devolve aaaa-mm-dd ou null. */
+export function dataDaCelula(v: unknown): string | null {
+    if (v instanceof Date && !isNaN(v.getTime())) return v.toISOString().slice(0, 10);
+    const s = textoDaCelula(v);
+    let m = s.match(/^(\d{1,2})[/.-](\d{1,2})[/.-](\d{4})$/);
+    if (m) {
+        const [d, mes, a] = [Number(m[1]), Number(m[2]), Number(m[3])];
+        const dt = new Date(Date.UTC(a, mes - 1, d));
+        return dt.getUTCDate() === d && dt.getUTCMonth() === mes - 1 ? dt.toISOString().slice(0, 10) : null;
+    }
+    m = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (m) {
+        const dt = new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3])));
+        return isNaN(dt.getTime()) ? null : dt.toISOString().slice(0, 10);
+    }
+    return null;
+}
+
+/** Resposta normalizada para uma das opções (sem diferença de acento nem de maiúscula), ou null se não for nenhuma. */
+export function respostaDe(bruto: string, opcoes: string[]): string | null {
+    const n = (s: string) => s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().trim();
+    const alvo = n(bruto);
+    return opcoes.find((o) => n(o) === alvo) ?? null;
+}
+
+export async function lerControle(arquivo: string): Promise<{ wb: ExcelJS.Workbook; ws: ExcelJS.Worksheet; controle: Controle }> {
+    if (!fs.existsSync(arquivo)) throw new Error(`Arquivo não encontrado: ${arquivo}. Nada foi gravado.`);
+    const wb = new ExcelJS.Workbook();
+    try { await wb.xlsx.readFile(arquivo); }
+    catch (e: any) { throw new Error(`Não foi possível ler ${path.basename(arquivo)} como .xlsx (${e?.message ?? e}). Salve a planilha em .xlsx. Nada foi gravado.`); }
+    for (const ws of wb.worksheets) {
+        for (let i = 1; i <= Math.min(ws.rowCount, 12); i++) {
+            const v = textoDaCelula(ws.getCell(i, 1).value);
+            if (v.startsWith(PREFIXO_CONTROLE)) {
+                try { return { wb, ws, controle: JSON.parse(v.slice(PREFIXO_CONTROLE.length)) as Controle }; }
+                catch { throw new Error("A linha de controle do ReviewBR na planilha foi alterada. Use o arquivo gerado pela tool. Nada foi gravado."); }
+            }
+        }
+    }
+    throw new Error("A planilha não tem a linha de controle do ReviewBR: não é uma planilha gerada pela record_screening_decisions. Nada foi gravado.");
+}
+
+// ─── decisões gravadas ─────────────────────────────────────────────────────
+
+export type Decisao = "segue" | "excluir" | "incluir" | "não recuperado" | "falha de procedência";
+
+export interface DecisaoDoRevisor {
+    nome: string;
+    papel: string;
+    lote: number;
+    link_abriu: string;
+    leu?: string;
+    respostas: Record<string, string>;
+    observacao: string;
+    decisao: Decisao;
+    motivo: string;
+    com_duvida?: string[];
+    historico?: Omit<DecisaoDoRevisor, "historico">[];
+}
+
+export interface Importacao {
+    rotulo: string;
+    lote: number;
+    arquivo: string;
+    copia: string;
+    hash: string;
+    quando: string;
+    nome: string;
+    papel: string;
+    inicio: string;
+    fim: string;
+    linhas: number;
+    substituiu?: { autorizacao: string; arquivada: string };
+}
+
+export interface ArquivoDeDecisoes {
+    estagio: Estagio;
+    importacoes: Importacao[];
+    registros: Record<string, Record<string, DecisaoDoRevisor>>;
+    consenso?: Record<string, any>;
+    consensos?: any[];
+}
+
+export function lerDecisoes(dir: string, e: Estagio): ArquivoDeDecisoes {
+    return lerJson<ArquivoDeDecisoes>(path.join(dir, decisoesRel(e))) ?? { estagio: e, importacoes: [], registros: {} };
+}
+
+/** A decisão de uma linha, pela regra fixa (decisões do Vicente de 23/11/2026). Sem escolha à mão. */
+export function decidir(estagio: Estagio, perguntas: Pergunta[], linkAbriu: string, leu: string | undefined, respostas: Record<string, string>):
+    { decisao: Decisao; motivo: string; com_duvida?: string[] } {
+    if (linkAbriu === "não") return { decisao: "falha de procedência", motivo: "o revisor marcou que o link não abriu o documento certo" };
+    if (estagio === "fulltext" && leu === "não") return { decisao: "não recuperado", motivo: "o revisor não conseguiu ler o texto completo" };
+    const nao = perguntas.filter((p) => respostas[p.id] === "não");
+    if (nao.length) return { decisao: "excluir", motivo: nao.map((p) => `(${p.id}) ${p.texto}`).join("; ") };
+    if (estagio === "ta") {
+        const duvida = perguntas.filter((p) => respostas[p.id] === "dúvida").map((p) => p.id);
+        return duvida.length
+            ? { decisao: "segue", motivo: `sem "não"; dúvida em ${duvida.map((d) => `(${d})`).join(" ")}`, com_duvida: duvida }
+            : { decisao: "segue", motivo: "\"sim\" em todas as perguntas" };
+    }
+    return { decisao: "incluir", motivo: "\"sim\" em todas as perguntas" };
+}
+
+// ─── ação importar (planilha de revisor) ───────────────────────────────────
+
+export interface OpcoesImportar { arquivo: string; substituicao?: string; agora?: () => string }
+
+export interface ResultadoImportar {
+    estagio: Estagio;
+    rotulo: string;
+    lote: number;
+    contagens: Record<string, number>;
+    falhas: string[];
+    faltam: string[];
+    resumo: string;
+}
+
+export async function importarPlanilha(projectPath: string, o: OpcoesImportar): Promise<ResultadoImportar> {
+    const dir = resolveDir(projectPath);
+    const agora = o.agora ?? (() => new Date().toISOString());
+    const arquivo = path.isAbsolute(o.arquivo) ? o.arquivo : path.join(dir, o.arquivo);
+    const { ws, controle } = await lerControle(arquivo);
+    if (controle.tipo !== "formulario") {
+        throw new Error(`Esta é uma planilha de ${controle.tipo}, não a de um revisor. Nada foi gravado.`);
+    }
+    const estagio = controle.estagio;
+    const m = lerManifesto(dir, estagio);
+    if (!m) throw new Error(`Não há planilhas geradas no estágio ${NOME_ESTAGIO[estagio]} deste projeto: a planilha é de outro projeto ou estágio. Nada foi gravado.`);
+    if (controle.insumo_hash !== m.insumo_hash) throw new Error("A planilha foi gerada de outro insumo (hash diferente do manifesto): é de outro projeto ou de uma geração anterior. Nada foi gravado.");
+    const insumoAtual = sha256(fs.readFileSync(path.join(dir, m.insumo), "utf-8"));
+    if (insumoAtual !== m.insumo_hash) throw new Error(`O insumo (${m.insumo}) mudou depois que as planilhas foram geradas. Nada foi gravado.`);
+    if (!m.revisores.includes(controle.rotulo)) throw new Error(`Revisor "${controle.rotulo}" não está no manifesto do estágio. Nada foi gravado.`);
+    const lote = m.lotes.find((l) => l.n === controle.lote);
+    if (!lote) throw new Error(`Lote ${controle.lote} não está no manifesto do estágio. Nada foi gravado.`);
+
+    const erros: string[] = [];
+    // Identificação.
+    const nome = textoDaCelula(ws.getCell(controle.ident.nome).value);
+    const papelBruto = textoDaCelula(ws.getCell(controle.ident.papel).value);
+    const papel = respostaDe(papelBruto, m.papeis);
+    const inicio = dataDaCelula(ws.getCell(controle.ident.inicio).value);
+    const fim = dataDaCelula(ws.getCell(controle.ident.fim).value);
+    if (!nome) erros.push("identificação: o nome do revisor está em branco");
+    if (!papel) erros.push(`identificação: papel ${papelBruto ? `"${papelBruto}" fora da lista` : "em branco"} (${m.papeis.join(", ")})`);
+    if (!inicio) erros.push("identificação: data de início em branco ou ilegível (use dia/mês/ano)");
+    if (!fim) erros.push("identificação: data de fim em branco ou ilegível (use dia/mês/ano)");
+    if (inicio && fim && fim < inicio) erros.push("identificação: a data de fim é anterior à de início");
+
+    // Linhas.
+    const c = controle.colunas;
+    const opcoes = RESPOSTAS[estagio];
+    const vistos = new Map<string, number>();
+    const linhas: Array<{ id: string; d: DecisaoDoRevisor }> = [];
+    for (let i = controle.primeira; i <= controle.ultima; i++) {
+        const id = textoDaCelula(ws.getCell(i, c.id).value);
+        const nOrdem = textoDaCelula(ws.getCell(i, c.n).value);
+        const onde = `linha ${i} (nº ${nOrdem}, id ${id || "em branco"})`;
+        if (!id) { erros.push(`${onde}: sem id`); continue; }
+        if (vistos.has(id)) { erros.push(`${onde}: id repetido (também na linha ${vistos.get(id)})`); continue; }
+        vistos.set(id, i);
+        const val = (k: string) => textoDaCelula(ws.getCell(i, c[k]).value);
+        const linkBruto = val("link_abriu");
+        const link = respostaDe(linkBruto, SIM_NAO);
+        if (!link) { erros.push(`${onde}: "${PERGUNTA_LINK}" ${linkBruto ? `com "${linkBruto}", fora da lista` : "em branco"}`); continue; }
+        const observacao = val("observacao");
+        const respostas: Record<string, string> = {};
+        let leu: string | undefined;
+        if (link === "sim") {
+            if (estagio === "fulltext") {
+                const leuBruto = val("leu");
+                leu = respostaDe(leuBruto, SIM_NAO) ?? undefined;
+                if (!leu) { erros.push(`${onde}: "${PERGUNTA_LEU}" ${leuBruto ? `com "${leuBruto}", fora da lista` : "em branco"}`); continue; }
+            }
+            if (!(estagio === "fulltext" && leu === "não")) {
+                for (const p of m.perguntas) {
+                    const bruto = val(`p:${p.id}`);
+                    const r = respostaDe(bruto, opcoes);
+                    if (!r) {
+                        const dica = estagio === "fulltext" && respostaDe(bruto, ["dúvida"]) ? " (no texto completo não há \"dúvida\")" : "";
+                        erros.push(`${onde}: pergunta (${p.id}) ${bruto ? `com "${bruto}", fora da lista${dica}` : "em branco"}`);
+                    } else respostas[p.id] = r;
+                }
+                if (Object.values(respostas).includes("dúvida") && !observacao) {
+                    erros.push(`${onde}: há "dúvida" e a observação está em branco (obrigatória na dúvida)`);
+                }
+            }
+        }
+        const d = decidir(estagio, m.perguntas, link, leu, respostas);
+        linhas.push({ id, d: { nome, papel: papel ?? papelBruto, lote: controle.lote, link_abriu: link, ...(leu ? { leu } : {}), respostas, observacao, ...d } });
+    }
+    const esperados = new Set(lote.ids);
+    const faltando = lote.ids.filter((id) => !vistos.has(id));
+    const sobrando = [...vistos.keys()].filter((id) => !esperados.has(id));
+    if (faltando.length) erros.push(`faltam ${faltando.length} registro(s) do lote: ${faltando.slice(0, 10).join(", ")}${faltando.length > 10 ? "…" : ""}`);
+    if (sobrando.length) erros.push(`${sobrando.length} id(s) que não são do lote: ${sobrando.slice(0, 10).join(", ")}${sobrando.length > 10 ? "…" : ""}`);
+    if (erros.length) {
+        throw new Error(`Planilha de "${controle.rotulo}" (${NOME_ESTAGIO[estagio]}, lote ${controle.lote}) recusada, ${erros.length} problema(s):\n` +
+            erros.slice(0, 40).map((e) => `- ${e}`).join("\n") + (erros.length > 40 ? `\n… e mais ${erros.length - 40}` : "") +
+            "\nCorrija na planilha e importe de novo. Nada foi gravado.");
+    }
+
+    // Gravação.
+    const decisoes = lerDecisoes(dir, estagio);
+    const quando = agora();
+    const bruto = fs.readFileSync(arquivo);
+    const anterior = decisoes.importacoes.find((x) => x.rotulo === controle.rotulo && x.lote === controle.lote);
+    let substituiu: Importacao["substituiu"];
+    if (anterior) {
+        const autorizacao = (o.substituicao ?? "").trim();
+        if (!autorizacao) {
+            throw new Error(`A planilha de "${controle.rotulo}" (lote ${controle.lote}) já foi importada em ${anterior.quando.slice(0, 10)}. ` +
+                "Importá-la de novo substitui as decisões dela: exige a autorização do pesquisador, nas palavras dele ('substituicao'). Nada foi gravado.");
+        }
+        const arquivada = `${PASTA_REVISORES}/substituidas/${quando.replace(/[:.]/g, "-")}_decisoes_${estagio}.json`;
+        gravarJson(dir, arquivada, decisoes);
+        substituiu = { autorizacao, arquivada };
+    }
+    const copia = `${PASTA_REVISORES}/recebidos/${estagio}_${controle.rotulo}_lote${controle.lote}_${quando.replace(/[:.]/g, "-")}.xlsx`;
+    fs.mkdirSync(path.dirname(path.join(dir, copia)), { recursive: true });
+    fs.writeFileSync(path.join(dir, copia), bruto);
+
+    for (const { id, d } of linhas) {
+        const porRevisor = (decisoes.registros[id] ??= {});
+        const antes = porRevisor[controle.rotulo];
+        const historico = antes ? [...(antes.historico ?? []), (({ historico: _h, ...resto }) => resto)(antes)] : [];
+        porRevisor[controle.rotulo] = historico.length ? { ...d, historico } : d;
+    }
+    decisoes.importacoes = [
+        ...decisoes.importacoes.filter((x) => x !== anterior),
+        {
+            rotulo: controle.rotulo, lote: controle.lote, arquivo: path.basename(arquivo), copia, hash: sha256(bruto), quando,
+            nome, papel: papel!, inicio: inicio!, fim: fim!, linhas: linhas.length, ...(substituiu ? { substituiu } : {}),
+        },
+    ];
+    gravarJson(dir, decisoesRel(estagio), decisoes);
+
+    const falhas: Falha[] = linhas.filter((l) => l.d.decisao === "falha de procedência").map((l) => ({
+        id: l.id, titulo: "", link: "", situacao: "não abriu (revisor)", motivo: "o revisor marcou que o link não abriu o documento certo",
+        origem: `revisor ${controle.rotulo} (${nome})`, quando,
+    }));
+    if (falhas.length) {
+        const conf = lerConferencias(dir);
+        for (const f of falhas) { const x = conf.get(f.id); if (x) { f.titulo = x.titulo_registro; f.link = x.link; } }
+        registrarFalhasDoRevisor(projectPath, falhas);
+    }
+
+    const contagens: Record<string, number> = {};
+    for (const l of linhas) contagens[l.d.decisao] = (contagens[l.d.decisao] ?? 0) + 1;
+    const comDuvida = linhas.filter((l) => l.d.com_duvida?.length).length;
+    const importados = new Set(decisoes.importacoes.filter((x) => x.lote === controle.lote).map((x) => x.rotulo));
+    const faltam = m.revisores.filter((r) => !importados.has(r));
+    const resumo = [
+        `## Planilha importada — "${controle.rotulo}" (${nome}, ${papel}), ${NOME_ESTAGIO[estagio]}, lote ${controle.lote}`,
+        `- **Leitura declarada:** ${inicio} a ${fim}; ${linhas.length} registros`,
+        `- **Decisões (pela regra fixa das respostas):** ${Object.entries(contagens).map(([k, v]) => `${k}: ${v}`).join(" · ")}${comDuvida ? ` (com dúvida: ${comDuvida})` : ""}`,
+        falhas.length ? `- **Link que não abriu, marcado pelo revisor:** ${falhas.length} — foram para 03_screening/revisores/falhas_procedencia.json; leve-os ao "Visto de passagem" da manutenção` : "",
+        substituiu ? `- Substituiu a importação anterior (arquivada em ${substituiu.arquivada}), com a autorização: "${substituiu.autorizacao}"` : "",
+        `- Gravado: ${decisoesRel(estagio)}; cópia do arquivo recebido em ${copia} (sha256 ${sha256(bruto).slice(0, 12)}…)`,
+        faltam.length ? `- **Falta importar, neste lote:** ${faltam.join(", ")}` : "- Todos os revisores deste lote importados.",
+    ].filter(Boolean).join("\n");
+    return { estagio, rotulo: controle.rotulo, lote: controle.lote, contagens, falhas: falhas.map((f) => f.id), faltam, resumo };
 }
