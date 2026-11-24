@@ -70,8 +70,27 @@ const buscadorPadrao: Buscador = async (url, headers) => {
 
 // ─── comparação ────────────────────────────────────────────────────────────
 
+const ENTIDADES: Record<string, string> = { amp: "&", lt: "<", gt: ">", quot: "\"", apos: "'", nbsp: " " };
+
+/** Desfaz as entidades HTML, também as codificadas duas vezes ("&amp;lt;i&amp;gt;"), como o DOI às vezes registra. */
+export function desfazerEntidades(s: string): string {
+    let atual = s;
+    for (let i = 0; i < 3; i++) {
+        const prox = atual.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e: string) => {
+            if (e[0] === "#") {
+                const n = e[1].toLowerCase() === "x" ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10);
+                return Number.isFinite(n) ? String.fromCodePoint(n) : m;
+            }
+            return ENTIDADES[e.toLowerCase()] ?? m;
+        });
+        if (prox === atual) break;
+        atual = prox;
+    }
+    return atual;
+}
+
 export function normalizarTitulo(s: unknown): string {
-    return String(s ?? "")
+    return desfazerEntidades(String(s ?? ""))
         .replace(/<[^>]+>/g, " ")
         .normalize("NFD").replace(/\p{M}/gu, "")
         .toLowerCase()

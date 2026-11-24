@@ -3,7 +3,7 @@ import fs from "fs";
 import os from "os";
 import path from "path";
 import { fileURLToPath } from "url";
-import { gerarFormularios, manifestoRel, type Pergunta } from "../src/services/decisoes_revisores.js";
+import { gerarFormularios, manifestoRel, grupoDeLeitura, type Pergunta } from "../src/services/decisoes_revisores.js";
 import { FIX, INSUMO, REG, PERGUNTAS, CRITERIO, EBSCO, montarProjeto, conferir, abrir } from "./apoio/revisores.js";
 
 // Linha 13 da FILA (23/11/2026), parte 3: a planilha de cada revisor (ação 'formulario'), como o Vicente decidiu.
@@ -76,6 +76,13 @@ describe("linha 13 — formulario: a planilha de cada revisor", () => {
         const n = r.lote.ids.indexOf(scopus.identifier);
         const link: any = ws.getCell(controle.primeira + n, c.link).value;
         expect(link.hyperlink).toBe(`https://doi.org/${scopus.doi}`);
+    });
+
+    it("grupo de leitura: a revista; sem ela, o site; endereço que é o próprio DOI agrupa pelo prefixo (achado no teste real)", () => {
+        expect(grupoDeLeitura({ journal: "Food Science and Technology (Brazil)", url: "https://doi.org/10.1590/x" })).toBe("Food Science and Technology (Brazil)");
+        expect(grupoDeLeitura({ url: "https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1" })).toBe("infoteca.cnptia.embrapa.br");
+        expect(grupoDeLeitura({ url: "https://doi.org/10.7476/9788523212025.0021", doi: "10.7476/9788523212025.0021" })).toBe("DOI 10.7476 (quem registrou o DOI)");
+        expect(grupoDeLeitura({ url: "http://dx.doi.org/10.1590/abc", doi: "10.1590/abc" })).toBe("DOI 10.1590 (quem registrou o DOI)");
     });
 
     it("o par sinalizado na F3 fica junto, com o aviso nos dois", async () => {

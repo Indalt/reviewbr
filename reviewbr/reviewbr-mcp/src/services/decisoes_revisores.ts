@@ -156,6 +156,19 @@ function chavesDoRegistro(r: any): string[] {
 }
 
 /**
+ * O grupo de leitura de um registro: a revista; sem ela, o site do endereço do registro. Quando o endereço é o próprio
+ * DOI (doi.org), o site não diz nada: o grupo é o prefixo do DOI, que identifica quem o registrou (a editora).
+ */
+export function grupoDeLeitura(r: any): string {
+    const revista = String(r?.journal ?? "").trim();
+    if (revista) return revista;
+    const host = hostDe(r?.url);
+    const doi = doiDoRegistro(r);
+    if ((!host || /^(dx\.)?doi\.org$/.test(host)) && doi) return `DOI ${doi.split("/")[0]} (quem registrou o DOI)`;
+    return host || "(sem revista nem site)";
+}
+
+/**
  * Ordem de leitura (ajuda permitida pelo Vicente, 23/11/2026): agrupados pela revista; sem revista, pelo site do
  * endereço do registro; dentro do grupo, pelo título. Os dois registros de um par sinalizado na F3 ficam juntos.
  * Nenhum registro sai nem é marcado por revista, idioma ou termo.
@@ -165,7 +178,7 @@ export function montarLinhas(dir: string, registros: any[], itensDaCamada: Map<s
     const conferencias = lerConferencias(dir);
     const base = registros.map((r) => {
         const id = idDoRegistro(r);
-        const grupo = String(r?.journal ?? "").trim() || hostDe(r?.url) || "(sem revista nem site)";
+        const grupo = grupoDeLeitura(r);
         const palavras = [...new Set([...lista(r?.subjectAreas), ...lista(r?.keywords), ...(completadas.get(chaveNaFonteDoRegistro(r)) ?? [])])];
         const c = conferencias.get(id);
         const tipo = [String(r?.type ?? "").trim(), String(r?.degreeType ?? "").trim()].filter(Boolean);

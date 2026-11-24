@@ -66,9 +66,9 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 23/11/2026, sessão da linha 13 — build e suíte 644 de 644; audit válido, 0 achados abertos;
-fila: linha 10 em curso, 13 com diagnóstico e plano (a construção espera o Vicente); 47 itens no "Visto de passagem";
-sem commit no projeto: `roda_aromas_ceara/03_screening/` e `logs/lote/` (da camada por palavras).
+**Última verificação:** 23/11/2026, fim da linha 13 — build e suíte 682 de 682; audit válido, 0 achados abertos;
+fila: linha 10 em curso, nenhuma a fazer; 48 itens no "Visto de passagem"; sem commit no projeto:
+`roda_aromas_ceara/03_screening/` e `logs/lote/` (da camada por palavras).
 
 ## Fila
 
@@ -87,7 +87,7 @@ sem commit no projeto: `roda_aromas_ceara/03_screening/` e `logs/lote/` (da cama
 | 10 | Fase de testes | — | — | **em curso:** o teste é a pesquisa real `roda_aromas_ceara` (Vicente, 19/11/2026); as linhas 11 a 13 saíram dele |
 | 11 | I — Busca nos repositórios do `roda_aromas_ceara` | ver abaixo | ver abaixo | **feita em 19/11/2026** (commit `4936c59`): UFPI e IFCE buscam pela API REST; UECE, Alice e Infoteca-e marcadas como não pesquisáveis (HTTP 403), e a tool diz isso; Infoteca-e segue `inactive`; `matchesQuery` corrigido, sem chamador desde o item 1 |
 | 12 | J — OpenAlex e SciELO: resumo, endereço e a fonte do SciELO | ver abaixo | ver abaixo | **feita em 19/11/2026** (commits `f290ac9` e o seguinte): item 2 pelo OpenAlex com o prefixo 10.1590, por decisão do Vicente |
-| 13 | K — Decisões dos dois revisores humanos | ver abaixo | — | a fazer; antes da triagem do projeto (passo D). Diagnóstico, fonte oficial e plano de 23/11/2026 na seção "Pedido do Vicente de 23/11/2026", (2); a construção espera ele |
+| 13 | K — Decisões dos dois revisores humanos | ver abaixo | — | **feita em 23/11/2026** (commits `aa25eed`, `d01def1`, `3637cc1`, `4bc0ae3`, `7cf56d7`, `2a8297e` e o do fechamento): `verify_record_links` e `record_screening_decisions` (formulario, importar, consenso, gerar); detalhe na seção "Pedido do Vicente de 23/11/2026", (2) |
 | 14 | L — Acesso por robô: conferência jurídica e ética (UECE, Alice, Infoteca-e) | User-Agent identificado | `CONFERENCIA_acesso_2026-11-19.md` | **feita em 19/11/2026**: robots.txt respeitado; UECE, Alice, Infoteca-e e UFC pela Oasisbr, declarando onde se viu |
 | 15 | F9 — importação de várias bases em `01_raw` | ver abaixo | — | **feita em 19/11/2026** |
 | 16 | F10 e F11 — importação de RIS: linha de continuação, CR sozinho e registros distintos da mesma base | ver abaixo | — | **feita em 20/11/2026** |
@@ -716,7 +716,20 @@ manutenção, caso a caso) e o registro das falhas do `retrieve_fulltexts` (fica
   `03_screening/revisores/relatorio_<estagio>.json` (revisores, datas, contagens, origem da decisão, motivos por
   pergunta); passa pela trava da RV-04. Teste: `tests/revisores_consenso_gerar.test.ts` (5; o funil fecha de ponta a
   ponta: 11 → 3 excluídos na TA → 8 → 1 não recuperado, 1 excluído → 6 incluídos).
-- Parte 6, DECLARAR, teste real na cópia e fechamento da linha: a fazer.
+- Parte 6, DECLARAR, teste real na cópia e fechamento da linha: **feita em 23/11/2026**. DECLARAR: `screener.md`,
+  `librarian.md` e `screening-rules` (com os limites). Teste real numa cópia do `roda_aromas_ceara` no scratchpad, nada
+  gravado no projeto: a conferência dos 743 links levou 7 min 19 s; deu 683 conferem, 25 não conferem e 35 fora do ar.
+  Dela saíram dois consertos, cada um com teste que falhava antes: (1) o título que o DOI registra vem com entidades
+  HTML ("&lt;b&gt;", "&amp;lt;i&amp;gt;"), e 7 registros não conferiam por isso: a comparação as desfaz; (2) 315
+  registros do OpenAlex têm o próprio DOI como endereço, e o agrupamento pelo site os juntava em "doi.org": sem revista e
+  com o endereço no DOI, o grupo é o prefixo do DOI (quem o registrou). Conferidas de novo só as falhas: **692 conferem,
+  18 não conferem, 33 fora do ar (51 esperam a manutenção)**. As duas planilhas (692 linhas, 411 KB cada) foram geradas
+  e relidas; planilhas de teste preenchidas foram importadas (cerca de 1 s as duas), o consenso gerou a planilha das
+  divergências, e o `gerar` recusou, como deve, com as 51 falhas e mais 1 marcada pelo revisor de teste.
+- **Linha feita.** Suíte 682 de 682 (644 antes; 38 testes novos em cinco arquivos), build e audit válidos.
+  Para o `roda_aromas_ceara`, em chat novo (servidor novo): `verify_record_links`; as falhas vão ao "Visto de
+  passagem"; depois `record_screening_decisions` com `acao=formulario`, `estagio=ta`, os dois rótulos, as quatro
+  perguntas copiadas do protocolo (a (d) só no texto completo) e `perguntaIdiomaTipo=c`.
 
 ### Como uma linha entra na fila
 
@@ -930,3 +943,13 @@ Vicente pedir.
   chat com ia para decisoes que pareciam simples quando há protocolo travado, como que um sistema assim facilitaria a
   vida de um pesquisador sem que ele tenha a possibilidade de plugar o reviewbr em uma IA poderosa como as que eu tenho
   acesso. vale colocar isso como insumo da manutencao com aviso de avaliar se isso ja nao foi pensado e solucionado."
+- (linha 13, teste real numa cópia do `roda_aromas_ceara`, 23/11/2026) Visto na conferência de procedência, sem
+  avaliação; a sessão do projeto, ao rodá-la, leva a lista dela para cá (decisão de 23/11). Dos 51 que não conferiram
+  ou não abriram: 9 cujo `robots.txt` proíbe (Sucupira 7, EBSCO 2); 8 em 4 sites com `robots.txt` inalcançável, que a
+  RFC 9309 manda tratar como proibido (teses da UFC, DSpace da UFCG, revistas da UFPI, TCC da USP); 8 com HTTP 403 ou
+  404; 3 páginas sem título declarado; 5 DOI sem título registrado (3) ou sem registro (2); 9 páginas de verificação
+  contra robô ou que só declaram o nome do sistema ("Verificando conexão" na Oasisbr, "Certificando de que você não é um
+  bot!", Biblat, UIS, "DSpace" na UFRN, "Sophia Biblioteca"), que contam como "não confere"; 3 na UECE, cuja página dá só
+  "SidUece", com o acento estragado (a página não é lida na codificação dela); 4 com o título do registro em inglês e o
+  da página em português (3 dos Cadernos Cajuína, 1 da UFCG); 2 registros que não são o documento ("Template for
+  Authors"; "In Other Journals", com o DOI de outro artigo).

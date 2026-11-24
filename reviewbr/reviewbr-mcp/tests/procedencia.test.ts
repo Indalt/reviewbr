@@ -27,6 +27,13 @@ describe("linha 13 — comparação de títulos (regra declarada)", () => {
         expect(titulosConferem("Cajuína.", "Cajuína do Piauí: patrimônio cultural")).toBe(false);
         expect(titulosConferem("Cajuína.", "Cajuína")).toBe(true);
     });
+    it("entidades e marcação que o DOI registra no título não impedem conferir (achado no teste real, 23/11/2026)", () => {
+        expect(titulosConferem("VINHO DE CAJU", "&lt;b&gt;VINHO DE CAJU&lt;/b&gt;")).toBe(true);
+        expect(titulosConferem("TÊNUES FIOS DE INTERAÇÃO ENTRE EDUCAÇÃO & LINGUAGEM", "TÊNUES FIOS DE INTERAÇÃO ENTRE EDUCAÇÃO &amp; LINGUAGEM")).toBe(true);
+        expect(titulosConferem("Antimicrobial and Antioxidant Activity of Anacardium occidentale L. Flowers",
+            "Antimicrobial and Antioxidant Activity of &amp;lt;i&amp;gt;Anacardium occidentale&amp;lt;/i&amp;gt; L. Flowers")).toBe(true);
+        expect(titulosConferem("Avaliação sensorial", "Avalia&#231;&#xE3;o sensorial")).toBe(true);
+    });
     it("títulos diferentes não conferem; vazio não confere", () => {
         expect(titulosConferem("Perfil sensorial da cajuína", "O Comitê Gestor do IBS")).toBe(false);
         expect(titulosConferem("", "x")).toBe(false);
