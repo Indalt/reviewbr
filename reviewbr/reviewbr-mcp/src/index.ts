@@ -38,6 +38,7 @@ import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDed
 import { gravarCamadaPorPalavras, REGRA_DE_CASAMENTO } from "./services/camada_palavras.js";
 import { completarPalavrasChave } from "./services/palavras_chave.js";
 import { conferirProcedencia, REGRA_DE_CONFERENCIA } from "./services/procedencia.js";
+import { gerarFormularios } from "./services/decisoes_revisores.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -2768,6 +2769,46 @@ server.tool(
             });
             const k = r.relatorio.contagens;
             const rastro = await registrarLote("verify_record_links", params, `Procedência: ${k.confere} conferem, ${k.nao_confere} não conferem, ${k.fora_do_ar} fora do ar.`, r.relatorio);
+            return { content: [{ type: "text", text: r.resumo + rastro }] };
+        } catch (error: any) {
+            return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
+        }
+    }
+);
+
+const PERGUNTA_SCHEMA = z.object({
+    id: z.string().describe("Rótulo curto da pergunta, como o protocolo a numera (ex.: a, b, c)"),
+    texto: z.string().describe("O texto da pergunta copiado do protocol.md sem mudar nada (a tool confere)"),
+    estagios: z.array(z.enum(["ta", "fulltext"])).optional().describe("Estágios em que a pergunta vale (padrão: os dois)"),
+});
+
+server.tool(
+    "record_screening_decisions",
+    "Decisões dos revisores HUMANOS da triagem (título e resumo, depois texto completo), por planilha .xlsx, sem IA. " +
+    "acao='formulario': gera do insumo do estágio (ta ← passed_keywords.json ou dataset.json; fulltext ← included_ta.json) uma planilha por revisor, todas com o insumo inteiro, menos os registros cujo link não conferiu ou não abriu (verify_record_links, obrigatório antes): 03_screening/revisores/<estagio>_<rotulo>.xlsx e o manifesto do estágio. " +
+    "No topo, a identificação do revisor (nome, papel, datas de início e de fim), a instrução e as perguntas do protocolo; colunas de leitura travadas (nº, id, título, resumo, palavras-chave, termos que casaram, ano, tipo, idioma, fonte, revista ou site, link — o DOI quando há —, conferência do link, par da F3); colunas abertas com lista: uma por pergunta (sim/não/dúvida no título e resumo; sim/não no texto completo), 'o link abriu o documento certo?', no texto completo 'conseguiu ler o texto completo?', e observação. " +
+    "Ordem: por revista; sem revista, pelo site do endereço; os dois de um par da F3 juntos. Cada pergunta tem de estar escrita no protocol.md. 'pendentes': só os registros que voltaram da manutenção, num lote novo. Só com projeto travado.",
+    {
+        acao: z.enum(["formulario"]).describe("formulario: gera as planilhas dos revisores"),
+        projectPath: z.string().describe("Raiz do projeto (protocolo travado)"),
+        estagio: z.enum(["ta", "fulltext"]).describe("ta = título e resumo; fulltext = texto completo"),
+        revisores: z.array(z.string()).optional().describe("Rótulos dos revisores, um por planilha (ex.: ['pesquisador', 'estagiario']). O nome de cada um ele mesmo preenche no topo da planilha"),
+        perguntas: z.array(PERGUNTA_SCHEMA).optional().describe("As perguntas de elegibilidade do protocolo, com o estágio de cada uma"),
+        criterioNaoRecuperado: z.string().optional().describe("Só no texto completo: o critério do protocolo para o texto indisponível, copiado dele sem mudar nada; vai no topo da planilha"),
+        perguntaIdiomaTipo: z.string().optional().describe("Id da pergunta ao lado da qual a planilha mostra, travado, o idioma e o tipo que a fonte declara"),
+        papeis: z.array(z.string()).optional().describe("Lista do campo 'papel' no topo (padrão: pesquisador, estagiário)"),
+        pendentes: z.boolean().optional().describe("Gera um lote só com os registros que voltaram da manutenção (procedência consertada)"),
+    },
+    async (params) => {
+        const trava = await checkDesignGuardrail(undefined, params.projectPath);
+        if (trava) return { content: [{ type: "text", text: trava }] };
+        try {
+            const r = await gerarFormularios(params.projectPath, {
+                estagio: params.estagio, revisores: params.revisores ?? [], perguntas: params.perguntas ?? [],
+                criterioNaoRecuperado: params.criterioNaoRecuperado, perguntaIdiomaTipo: params.perguntaIdiomaTipo,
+                papeis: params.papeis, pendentes: params.pendentes,
+            });
+            const rastro = await registrarLote("record_screening_decisions", params, `Formulário ${params.estagio}, lote ${r.lote.n}: ${r.lote.ids.length} registros, ${Object.keys(r.lote.arquivos).length} planilha(s).`, { lote: r.lote, fora: r.fora });
             return { content: [{ type: "text", text: r.resumo + rastro }] };
         } catch (error: any) {
             return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };

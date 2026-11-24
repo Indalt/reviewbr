@@ -92,6 +92,8 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
 
     // ─── Screening (SCREENER) ───────────────────────────────
     screen_candidates: [AgentRole.SCREENER],
+    // Decisões dos revisores humanos por planilha (linha 13 da FILA, 23/11/2026).
+    record_screening_decisions: [AgentRole.SCREENER, AgentRole.COORDINATOR],
     deduplicate_dataset: [AgentRole.SCREENER, AgentRole.COORDINATOR],
 
     // ─── Screening Metrics (SCREENER + COORDINATOR + ANALYST) ─────────

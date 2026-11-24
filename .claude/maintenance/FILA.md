@@ -696,7 +696,12 @@ manutenção, caso a caso) e o registro das falhas do `retrieve_fulltexts` (fica
   `tests/fixtures/roda_aromas_ceara/linha13/`; rede simulada; todos falhavam antes, sem o módulo). Controle pela rede,
   fora do projeto, nos 11: 8 conferem (4 pelo DOI), 2 fora do ar (`robots.txt` da EBSCO e do Sucupira proíbem) e 1 não
   confere (a página da UFRN devolve só o título "DSpace").
-- Parte 3, `formulario`: a fazer.
+- Parte 3, `formulario`: **feita em 23/11/2026**. `src/services/decisoes_revisores.ts` e a tool
+  `record_screening_decisions` com a ação `formulario` (SCREENER e COORDINATOR; `screener.md` com a tool; as outras
+  ações entram nas partes 4 e 5). Grava `03_screening/revisores/<estagio>_<rotulo>.xlsx` e
+  `<estagio>_formularios.json` (manifesto, com os lotes). A linha de controle (estágio, revisor, lote, hash do insumo,
+  posição das colunas) fica no topo da planilha, visível e travada, para a importação. Teste:
+  `tests/revisores_formulario.test.ts` (7; apoio em `tests/apoio/revisores.ts`; todos falhavam antes, sem o módulo).
 - Parte 4, `importar`: a fazer.
 - Parte 5, `consenso` e `gerar`: a fazer.
 - Parte 6, DECLARAR, teste real na cópia e fechamento da linha: a fazer.
