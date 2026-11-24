@@ -225,6 +225,23 @@ de `02_deduplicated/dataset.json`. Sem leitura humana e sem triagem por IA. Nenh
 - **Próximo:** a camada humana (dois revisores, 743 registros) espera a manutenção da linha 13 (planilha dos
   revisores). Depois da triagem, nova deduplicação dos pares sinalizados (decisão de 23/11/2026).
 
+### Passo D, F4, planilhas da leitura humana (título e resumo): 24/11/2026
+
+Log da pesquisa. Feitas a conferência de procedência dos links e a geração das planilhas oficiais dos dois revisores
+sobre os 743 registros de `03_screening/passed_keywords.json`, pelo servidor MCP `reviewbr` conectado nativamente no
+Antigravity (autorizado pelo Vicente em 24/11/2026). Nenhum contorno.
+
+- **1. `verify_record_links`** (`estagio: "ta"`, concluída em 24/11/2026, 13:41 UTC; a 1ª chamada bateu no teto de 3 min da interface aos 720 registros e a 2ª retomou e concluiu os 23 restantes). Relatório em `03_screening/procedencia_relatorio.json`:
+  - insumo: 743 registros conferidos (329 pelo DOI, 414 pela página);
+  - **confere: 679** · **não confere: 18** · **fora do ar: 46** (**64 pendentes** em `03_screening/revisores/falhas_procedencia.json`; `679 + 64 = 743`);
+  - gravados `03_screening/procedencia.json`, `03_screening/procedencia_relatorio.json`, `03_screening/revisores/falhas_procedencia.json` e o registro da execução em `logs/lote/2026-11-24T13-41-38-985Z_verify_record_links.json`;
+  - lista das 64 entradas levada ao "Visto de passagem" de `.claude/maintenance/FILA.md` (vale a ordem do Vicente de 23/11/2026: verificar cada uma antes de tratá-la como falha do ReviewBR).
+- **2. `record_screening_decisions`** (`acao: "formulario"`, `estagio: "ta"`, `revisores: ["pesquisador", "estagiario"]`, as quatro perguntas copiadas letra por letra do `protocol.md` — `(a)`, `(b)` e `(c)` nos dois estágios, `(d)` em `fulltext` — e `perguntaIdiomaTipo: "c"`, 24/11/2026, 14:00 UTC):
+  - **na planilha (lote 1): 679 registros**; fora por procedência pendente: 64;
+  - geradas `03_screening/revisores/ta_pesquisador.xlsx` e `03_screening/revisores/ta_estagiario.xlsx` (mesmos 679 registros, ordenados por revista/site e com os pares sinalizados na F3 juntos) e o manifesto `03_screening/revisores/ta_formularios.json`;
+  - registro da execução em `logs/lote/2026-11-24T14-00-14-591Z_record_screening_decisions.json`.
+- **Próximo:** leitura independente pelos dois revisores nas planilhas `.xlsx` e importação com `record_screening_decisions` (`acao: "importar"`), além da verificação na manutenção das 64 entradas de `falhas_procedencia.json` (o que passar a conferir entra em lote novo com `pendentes: true`).
+
 ## Decisões
 
 - **12/11/2026, passo 1, pergunta.** Opções apresentadas: (a) o que já existe; (b) que produto escolher; (c) como se
@@ -463,6 +480,11 @@ de `02_deduplicated/dataset.json`. Sem leitura humana e sem triagem por IA. Nenh
     decisoes minhas."
   - **Não gravada por `record_researcher_decision`:** a tool é a aprovação que destrava a etapa no controle estrito. A
     F4 não está pronta para isso.
+- **24/11/2026, execução pelo Antigravity com o MCP nativo do ReviewBR.**
+  - **O quê:** conectar o servidor `reviewbr` (`reviewbr/reviewbr-mcp/dist/index.js`) como MCP nativo no Antigravity e rodar por ele as duas tools da linha 13 no projeto (`verify_record_links` e `record_screening_decisions` com `acao: "formulario"`, `estagio: "ta"`).
+  - **Alcance:** altera a decisão de 16/11/2026 ("só o Claude") para permitir a condução das etapas pelo Antigravity usando o mesmo servidor MCP oficial do ReviewBR, mantendo todas as regras do `RETOMAR.md` e do protocolo travado.
+  - **Consequência:** o servidor fica configurado em `~/.gemini/config/mcp_config.json` com `cwd: "c:/reviewbr"`, gravando nos mesmos artefatos do projeto, `logs/lote/` e `data/system.db`.
+  - **Origem:** "conectar o mcp nativo no antigravity"; "reconectar o mcp. autorizo as duas rodas".
 
 ## Falhas do ReviewBR encontradas
 

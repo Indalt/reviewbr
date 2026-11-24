@@ -959,3 +959,4 @@ Vicente pedir.
   Não contar como achado o que não se confirmar. Consequência: nenhuma destas 51 vira achado nem conserto sem essa
   verificação. Origem: "estes erros nao parecem ser da ferramenta reviewbr. mandar verificar se sao e nao apenas
   inventar erros para justificar os achados."
+- (projeto `roda_aromas_ceara`, F4, 24/11/2026) Conferência oficial de procedência (`verify_record_links`, estágio `ta`, sobre os 743 de `03_screening/passed_keywords.json`): 679 conferem e 64 ficaram em `reviewbr/projects/roda_aromas_ceara/03_screening/revisores/falhas_procedencia.json` (18 "não confere", 46 "fora do ar"); planilhas do lote 1 geradas com os 679. Vale a ordem do Vicente de 23/11 acima antes de tratar qualquer uma das 64 como falha do ReviewBR.

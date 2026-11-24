@@ -2,7 +2,7 @@
 
 **Não substitua esta página.** Sessão que precisar gravar onde parou atualiza a seção "Estado" e a tabela de passos.
 
-Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou mais barato).
+Atualizado em 24/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou mais barato).
 
 ## Regras para qualquer sessão
 
@@ -23,6 +23,18 @@ Atualizado em 20/11/2026. Escrito para ser seguido por qualquer modelo (Opus ou 
 
 ## Estado
 
+- **24/11/2026: F4, planilhas oficiais da leitura humana (título e resumo) geradas.** Executado pelo servidor MCP
+  `reviewbr` conectado nativamente no Antigravity (decisão do Vicente de 24/11/2026): (1) `verify_record_links`
+  (`estagio: "ta"`) conferiu os 743 registros de `03_screening/passed_keywords.json` — **679 conferem**, **18 não
+  conferem** e **46 fora do ar** (**64 pendentes** em `03_screening/revisores/falhas_procedencia.json`, levadas ao
+  "Visto de passagem" da FILA com a ordem de 23/11 de verificar antes de tratar como falha do ReviewBR); (2)
+  `record_screening_decisions` (`acao: "formulario"`, `estagio: "ta"`, `revisores: ["pesquisador", "estagiario"]`,
+  as 4 perguntas copiadas do protocolo e `perguntaIdiomaTipo: "c"`) gerou
+  `03_screening/revisores/ta_pesquisador.xlsx` e `03_screening/revisores/ta_estagiario.xlsx` (**679 registros** em
+  cada, lote 1) e `03_screening/revisores/ta_formularios.json`. Detalhe no `REGISTRO.md`. **Próximo:** (a) leitura
+  independente dos dois revisores nas planilhas `.xlsx` e devolução para `acao: "importar"` (seguida de `consenso`
+  se houver divergência e `gerar`); (b) em chat de manutenção, verificar as 64 entradas de `falhas_procedencia.json`
+  conforme a ordem de 23/11 (o que voltar a conferir gera o lote 2 com `pendentes: true`).
 - **23/11/2026: F4, camada mecânica por palavras, feita.** `complete_record_keywords` completou as palavras-chave
   de 2847 registros pela fonte (dataset sem mudança); `batch_keyword_screen` com os 21 termos do protocolo:
   **743 passam para a leitura humana (533 por termo, 210 só por não ter resumo), 4703 excluídos; 743 + 4703 = 5446**,
