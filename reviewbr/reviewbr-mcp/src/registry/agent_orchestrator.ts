@@ -82,6 +82,9 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     harvest_records: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
     get_record_metadata: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
     complete_record_keywords: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
+    // Abre os links dos registros na rede para conferir o título (linha 13 da FILA, 23/11/2026): é do librarian,
+    // como o complete_record_keywords — o screener não baixa.
+    verify_record_links: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
 
     // ─── Import & Normalization (LIBRARIAN + COORDINATOR) ───
     import_dataset_ris: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],

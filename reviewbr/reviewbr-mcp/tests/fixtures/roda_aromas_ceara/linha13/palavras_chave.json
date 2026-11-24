@@ -1,0 +1,71 @@
+[
+ {
+  "repositoryId": "BR-AGG-0006",
+  "identifier": "INDEP-6_b132af16c298617ec3a8dead0c2f552e",
+  "palavras": [],
+  "fonte": "https://oasisbr.ibict.br/vufind/api/v1/record",
+  "lido_em": "2026-11-23T20:38:37.537Z"
+ },
+ {
+  "repositoryId": "BR-AGG-0006",
+  "identifier": "BRCRIS_acb66d448cce6d848e43cb96e952c465",
+  "palavras": [
+   "Cajuína."
+  ],
+  "fonte": "https://oasisbr.ibict.br/vufind/api/v1/record",
+  "lido_em": "2026-11-23T20:38:37.537Z"
+ },
+ {
+  "repositoryId": "BR-RES-0004",
+  "identifier": "EMBRAPA-9_301978a6920f76f59929666642ca0023",
+  "palavras": [
+   "Fibra de caju",
+   "Plant-based",
+   "Anacardium Occidentale",
+   "Pedúnculo",
+   "Suco de Fruta",
+   "Peduncle",
+   "Fruit juices",
+   "Anacardium"
+  ],
+  "fonte": "https://oasisbr.ibict.br/vufind/api/v1/record",
+  "lido_em": "2026-11-23T20:38:37.537Z"
+ },
+ {
+  "repositoryId": "BR-RES-0001",
+  "identifier": "EMBR_b4c61326f19c410bfdac912bfca75e19",
+  "palavras": [
+   "Traditional product",
+   "Consumer",
+   "Survey",
+   "Motivational factors",
+   "Sensory analysis",
+   "Caju",
+   "Anacardium Occidentale",
+   "Cashew fruit",
+   "Plant-based foods"
+  ],
+  "fonte": "https://oasisbr.ibict.br/vufind/api/v1/record",
+  "lido_em": "2026-11-23T20:38:37.537Z"
+ },
+ {
+  "repositoryId": "BR-FED-0014",
+  "identifier": "85ce5111-34f7-47b1-b813-b27e9714a565",
+  "palavras": [
+   "Análise sensorial",
+   "Bebida esportiva",
+   "Características físico-químicas",
+   "Planejamento experimental",
+   "Suco de caju clarificado",
+   "Vida de prateleira",
+   "Sensory analysis",
+   "Sports drink",
+   "Physical-chemical characteristics",
+   "Experimental planning",
+   "Clarified cashew juice",
+   "Shelf life"
+  ],
+  "fonte": "https://repositorio.ufpi.br/srv-ufpi-s01/api/core/items/<uuid>",
+  "lido_em": "2026-11-23T20:38:37.537Z"
+ }
+]

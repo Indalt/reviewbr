@@ -37,6 +37,7 @@ import { apresentarMetodos } from "./services/methods_for_type.js";
 import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, processarDatasetEmLotes, triagemGravada, insumoDoEstagio, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
 import { gravarCamadaPorPalavras, REGRA_DE_CASAMENTO } from "./services/camada_palavras.js";
 import { completarPalavrasChave } from "./services/palavras_chave.js";
+import { conferirProcedencia, REGRA_DE_CONFERENCIA } from "./services/procedencia.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
 import { SemanticScholarService } from "./services/semantic_scholar.js";
@@ -2738,6 +2739,35 @@ server.tool(
             }, { refazer: params.refazer });
             const consultados = (r.relatorio.consultas as Array<{ consultados: number }>).reduce((s, c) => s + c.consultados, 0);
             const rastro = await registrarLote("complete_record_keywords", params, `Palavras-chave: ${consultados} registro(s) consultado(s) na fonte.`, r.relatorio);
+            return { content: [{ type: "text", text: r.resumo + rastro }] };
+        } catch (error: any) {
+            return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
+        }
+    }
+);
+
+server.tool(
+    "verify_record_links",
+    "Conferência de procedência dos links, antes da leitura humana (planilhas da record_screening_decisions): para cada registro do insumo do estágio, abre o link que a planilha vai mostrar e compara o título. " +
+    REGRA_DE_CONFERENCIA + " Respeita o robots.txt; pedidos ao mesmo site espaçados. " +
+    "Grava 03_screening/procedencia.json (por registro: link, título lido, situação, motivo, data), 03_screening/procedencia_relatorio.json (data e contagens, para o relato) e 03_screening/revisores/falhas_procedencia.json: o registro que não confere ou não abre é falha do sistema, vai para a manutenção e não entra na planilha até o conserto. " +
+    "Retomável: sem 'refazer', confere só o que falta. Depois do conserto, 'somenteFalhas' confere de novo só as falhas. Só com projeto travado.",
+    {
+        projectPath: z.string().describe("Raiz do projeto (protocolo travado)"),
+        estagio: z.enum(["ta", "fulltext"]).optional().describe("Estágio cujo insumo se confere (padrão: ta, o que a camada por palavras passou ou o dataset deduplicado)"),
+        refazer: z.boolean().optional().describe("Confere de novo todos os registros (padrão: só os que faltam ou cujo link mudou)"),
+        somenteFalhas: z.boolean().optional().describe("Confere de novo só as falhas pendentes, depois do conserto da manutenção"),
+        consertadas: z.record(z.string(), z.string()).optional().describe("Só com somenteFalhas: falhas marcadas por um revisor ('o link abriu o documento certo?' = não) que a manutenção declara consertadas, id → o que foi consertado. Sem isto, a falha marcada por revisor não sai da lista"),
+    },
+    async (params) => {
+        const trava = await checkDesignGuardrail(undefined, params.projectPath);
+        if (trava) return { content: [{ type: "text", text: trava }] };
+        try {
+            const r = await conferirProcedencia(params.projectPath, {
+                estagio: params.estagio, refazer: params.refazer, somenteFalhas: params.somenteFalhas, consertadas: params.consertadas,
+            });
+            const k = r.relatorio.contagens;
+            const rastro = await registrarLote("verify_record_links", params, `Procedência: ${k.confere} conferem, ${k.nao_confere} não conferem, ${k.fora_do_ar} fora do ar.`, r.relatorio);
             return { content: [{ type: "text", text: r.resumo + rastro }] };
         } catch (error: any) {
             return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };

@@ -689,7 +689,13 @@ manutenção, caso a caso) e o registro das falhas do `retrieve_fulltexts` (fica
   quando se passa `buf` às versões v3/v5/v6; a `exceljs` usa a v4 sem `buf`). `writeScreening` grava
   `fulltext_not_retrieved.json` (parâmetro `naoRecuperados`, só no texto completo); `triagemGravada` o conta; a
   substituição o arquiva. Teste: `tests/nao_recuperados.test.ts` (5 de 5 falhavam antes).
-- Parte 2, `verify_record_links`: a fazer.
+- Parte 2, `verify_record_links`: **feita em 23/11/2026**. `src/services/procedencia.ts` e a tool (LIBRARIAN e
+  COORDINATOR; `librarian.md` com a tool). Retomável (grava a cada 20); pedidos ao mesmo site espaçados (500 ms), até 4
+  sites em paralelo; a falha marcada por revisor só sai com o conserto declarado (`consertadas`) e a conferência de
+  novo dando "confere". Teste: `tests/procedencia.test.ts` (12, sobre 11 registros do projeto copiados para
+  `tests/fixtures/roda_aromas_ceara/linha13/`; rede simulada; todos falhavam antes, sem o módulo). Controle pela rede,
+  fora do projeto, nos 11: 8 conferem (4 pelo DOI), 2 fora do ar (`robots.txt` da EBSCO e do Sucupira proíbem) e 1 não
+  confere (a página da UFRN devolve só o título "DSpace").
 - Parte 3, `formulario`: a fazer.
 - Parte 4, `importar`: a fazer.
 - Parte 5, `consenso` e `gerar`: a fazer.

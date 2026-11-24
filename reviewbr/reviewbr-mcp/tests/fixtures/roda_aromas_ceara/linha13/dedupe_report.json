@@ -1,0 +1,19 @@
+{
+ "method": "DOI/Handle > título+ano > título+1º autor (um sem ano) > url; título ≥ 0,90 + mesmo ano só sinaliza",
+ "total_before": 5866,
+ "duplicates_removed": 420,
+ "total_after": 5446,
+ "pares_sinalizados": [
+  {
+   "a": "https://openalex.org/W4313506613",
+   "b": "https://openalex.org/W4318821669",
+   "similaridade": 0.991,
+   "ano": "2022",
+   "titulos": [
+    "AGROINDÚSTRIAS RURAIS, POLÍTICAS PÚBLICAS E DESENVOLVIMENTO REGIONAL: UM PERFIL DA AGROINDUSTRIALIZAÇÃO BRASILEIRA COM BASE NOS DADOS DO CENSO AGROPECUÁRIO DE 2017",
+    "Agroindústrias rurais, políticas públicas e desenvolvimento regional: um perfil da agroindustrialização brasileira com base nos dados do Censo Agropecuário 2017"
+   ]
+  }
+ ],
+ "generated": "2026-11-23T16:52:24.037Z"
+}
