@@ -30,6 +30,7 @@
     "commander": "^14.0.3",
     "csv-parse": "^6.1.0",
     "dotenv": "^17.3.1",
+    "exceljs": "^4.4.0",
     "fast-xml-parser": "^5.3.6",
     "openalex-sdk": "^1.1.6",
     "pdf-parse": "^1.1.4",

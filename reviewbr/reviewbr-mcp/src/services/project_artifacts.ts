@@ -295,12 +295,25 @@ export function insumoDoEstagio(projectDir: string, stage: "ta" | "fulltext"): s
     return fs.existsSync(path.join(projectDir, PASSADOS_PALAVRAS)) ? PASSADOS_PALAVRAS : "02_deduplicated/dataset.json";
 }
 
+/**
+ * Os não recuperados do texto completo (F1.3.2.6 do protocolo que os define): o terceiro arquivo do estágio
+ * `fulltext`, que o funil já contava (`flow_computer.ts`) e nenhum código gravava até a linha 13 da FILA
+ * (23/11/2026). Quem o grava é o `gerar` das decisões dos revisores, pelo `writeScreening`.
+ */
+export const NAO_RECUPERADOS = "03_screening/fulltext_not_retrieved.json";
+
 /** A triagem já gravada do estágio, ou `null` quando não há nenhuma decisão gravada (DEBT-112). */
-export function triagemGravada(projectPath: string, stage: EstagioTriagem): { incluidos: number; excluidos: number } | null {
+export function triagemGravada(projectPath: string, stage: EstagioTriagem): { incluidos: number; excluidos: number; naoRecuperados?: number } | null {
     const dir = resolveDir(projectPath);
     const { includedRel, excludedRel } = artefatosDaTriagem(stage);
     const incluidos = readArray(path.join(dir, includedRel)).length;
     const excluidos = readArray(path.join(dir, excludedRel)).length;
+    if (stage === "fulltext") {
+        // Um estágio em que todos ficaram sem texto também é triagem gravada: sem isto, a segunda
+        // gravação passaria sem autorização (DEBT-112).
+        const naoRecuperados = readArray(path.join(dir, NAO_RECUPERADOS)).length;
+        return incluidos + excluidos + naoRecuperados > 0 ? { incluidos, excluidos, naoRecuperados } : null;
+    }
     return incluidos + excluidos > 0 ? { incluidos, excluidos } : null;
 }
 
@@ -315,6 +328,9 @@ export function triagemGravada(projectPath: string, stage: EstagioTriagem): { in
  *    grava ali substituicao.json (havia, passa a haver, autorização) e registra a autorização como
  *    decisão do pesquisador no project_state — com fase própria, para não destravar a etapa (RV-04).
  * Os nomes canônicos continuam os mesmos: o funil lê sempre a triagem vigente.
+ *
+ * `naoRecuperados` (só no estágio `fulltext`): os registros cujo texto completo não se conseguiu ler, gravados em
+ * `fulltext_not_retrieved.json`. Sem ele, o arquivo não é tocado (o `screen_candidates` não decide isso).
  */
 export function writeScreening(
     projectPath: string,
@@ -323,11 +339,16 @@ export function writeScreening(
     excluded: any[],
     substituicao?: { autorizacao?: string },
     agente = "screen_candidates",
-): { includedFile: string; excludedFile: string; substituicao?: { pasta: string; havia: { incluidos: number; excluidos: number } } } {
+    naoRecuperados?: any[],
+): { includedFile: string; excludedFile: string; naoRecuperadosFile?: string; substituicao?: { pasta: string; havia: { incluidos: number; excluidos: number; naoRecuperados?: number } } } {
+    if (naoRecuperados !== undefined && stage !== "fulltext") {
+        throw new Error(`Não recuperados só existem no estágio do texto completo; o estágio pedido foi '${stage}'. Nada foi gravado.`);
+    }
     const dir = resolveDir(projectPath);
     const { includedRel, excludedRel } = artefatosDaTriagem(stage);
+    const arquivosDoEstagio = stage === "fulltext" ? [includedRel, excludedRel, NAO_RECUPERADOS] : [includedRel, excludedRel];
 
-    let registro: { pasta: string; havia: { incluidos: number; excluidos: number } } | undefined;
+    let registro: { pasta: string; havia: { incluidos: number; excluidos: number; naoRecuperados?: number } } | undefined;
     const havia = triagemGravada(projectPath, stage);
     if (havia) {
         const autorizacao = (substituicao?.autorizacao ?? "").trim();
@@ -341,11 +362,14 @@ export function writeScreening(
         const quando = new Date().toISOString();
         const pasta = `03_screening/substituidas/${quando.replace(/[:.]/g, "-")}_${stage}`;
         fs.mkdirSync(path.join(dir, pasta), { recursive: true });
-        for (const rel of [includedRel, excludedRel]) {
+        for (const rel of arquivosDoEstagio) {
             const origem = path.join(dir, rel);
             if (fs.existsSync(origem)) fs.copyFileSync(origem, path.join(dir, pasta, path.basename(rel)));
         }
-        const passa = { incluidos: included.length, excluidos: excluded.length };
+        const passa = {
+            incluidos: included.length, excluidos: excluded.length,
+            ...(naoRecuperados !== undefined ? { naoRecuperados: naoRecuperados.length } : {}),
+        };
         writeJson(dir, `${pasta}/substituicao.json`, { quando, estagio: stage, autorizacao, havia, passa_a_haver: passa, arquivos_anteriores: pasta });
         ProjectStateService.logDecision(dir, {
             phase: `substituicao_triagem_${stage}`,
@@ -360,5 +384,6 @@ export function writeScreening(
 
     const includedFile = writeJson(dir, includedRel, included);
     const excludedFile = writeJson(dir, excludedRel, excluded);
-    return { includedFile, excludedFile, ...(registro ? { substituicao: registro } : {}) };
+    const naoRecuperadosFile = naoRecuperados !== undefined ? writeJson(dir, NAO_RECUPERADOS, naoRecuperados) : undefined;
+    return { includedFile, excludedFile, ...(naoRecuperadosFile ? { naoRecuperadosFile } : {}), ...(registro ? { substituicao: registro } : {}) };
 }

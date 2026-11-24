@@ -678,6 +678,23 @@ duas planilhas geradas e relidas, e planilhas de teste preenchidas para importar
 Não fazer: o item 4 (concordância), triagem por IA, cegamento, piloto, o conserto de cada falha de procedência (é da
 manutenção, caso a caso) e o registro das falhas do `retrieve_fulltexts` (fica no "Visto de passagem").
 
+> **Aprovado pelo Vicente em 23/11/2026, ao ler o plano:** construir o plano acima como está, em partes, com commit a
+> cada parte. Consequência: nenhum dos pontos apontados para veto (a `exceljs`, as duas tools, o agrupamento pelo site
+> do link, o idioma e o tipo ao lado da (c), o estágio que não fecha com link pendente) muda. Origem: "siga em partes".
+> Gate `validate_system_change`: CORRECAO, válido.
+
+**Estado da execução** (atualizar a cada parte, com o commit):
+- Parte 1, `exceljs` e o terceiro arquivo do texto completo (item 4 do plano): **feita em 23/11/2026**. `exceljs`
+  4.4.0 no `package.json` (o `npm audit` aponta, moderado, o `uuid` < 11.1.1 que ela traz: falta de checagem de limite
+  quando se passa `buf` às versões v3/v5/v6; a `exceljs` usa a v4 sem `buf`). `writeScreening` grava
+  `fulltext_not_retrieved.json` (parâmetro `naoRecuperados`, só no texto completo); `triagemGravada` o conta; a
+  substituição o arquiva. Teste: `tests/nao_recuperados.test.ts` (5 de 5 falhavam antes).
+- Parte 2, `verify_record_links`: a fazer.
+- Parte 3, `formulario`: a fazer.
+- Parte 4, `importar`: a fazer.
+- Parte 5, `consenso` e `gerar`: a fazer.
+- Parte 6, DECLARAR, teste real na cópia e fechamento da linha: a fazer.
+
 ### Como uma linha entra na fila
 
 - Só o Vicente cria linha. A sessão não cria, nem a pedido de outro documento.
