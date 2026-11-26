@@ -71,22 +71,19 @@ describe("linha 13 — importar a planilha do revisor", () => {
         expect(fs.existsSync(path.join(p, decisoesRel("ta")))).toBe(false);
     });
 
-    it("link que não abriu: falha de procedência, sem decisão, na lista da manutenção; volta no lote 2 depois do conserto", async () => {
+    it("link que não abriu: fica registrado na lista de procedência (limitação), e a decisão sai das respostas — em branco, segue com dúvida (linha 23)", async () => {
         const { p, f, gerada, devolvida } = await preparar();
-        const alvo = f.lote.ids[4];
+        const alvo = f.lote.ids.filter((id) => id !== EBSCO.identifier)[4];
         const arq = await preencher(gerada("estagiario"), devolvida("e.xlsx"), {
             linha: (id) => id === alvo ? { link_abriu: "não" } : tudoSim(),
         });
         const r = await importarPlanilha(p, { arquivo: arq });
         expect(r.falhas).toEqual([alvo]);
-        expect(lerDecisoes(p, "ta").registros[alvo].estagiario.decisao).toBe("falha de procedência");
+        expect(lerDecisoes(p, "ta").registros[alvo].estagiario).toMatchObject({ link_abriu: "não", decisao: "segue", com_duvida: ["a", "b", "c"] });
         const falha = lerFalhas(p).find((x) => x.id === alvo)!;
         expect(falha).toMatchObject({ situacao: "não abriu (revisor)", origem: "revisor estagiario (Fulana de Tal)" });
         expect(falha.link).toMatch(/^https?:\/\//);
-        // a manutenção declara o conserto; a conferência confirma; o registro volta num lote novo (com a EBSCO, que também voltou)
-        await conferir(p, false, { somenteFalhas: true, consertadas: { [alvo]: "teste: endereço corrigido" } });
-        const lote2 = await gerarFormularios(p, { ...base, pendentes: true });
-        expect(lote2.lote.ids.sort()).toEqual([alvo, EBSCO.identifier].sort());
+        expect(r.resumo).toMatch(/a leitura segue/);
     });
 
     it("recusa planilha de insumo que mudou e reimportação sem autorização; com ela, arquiva a anterior", async () => {

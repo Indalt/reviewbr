@@ -26,13 +26,13 @@ describe("linha 13 — formulario: a planilha de cada revisor", () => {
         await expect(gerarFormularios(p, { ...base, perguntas: mudada })).rejects.toThrow(/não estão escritas no protocol\.md/);
     });
 
-    it("uma planilha por revisor, com o insumo inteiro menos o link que não abriu", async () => {
+    it("uma planilha por revisor, com o insumo inteiro, também o link que não abriu (linha 23: limitação registrada)", async () => {
         const p = montarProjeto(dirs);
         await conferir(p);
         const r = await gerarFormularios(p, base);
         expect(Object.keys(r.lote.arquivos)).toEqual(["pesquisador", "estagiario"]);
-        expect(r.fora).toEqual([EBSCO.identifier]);
-        expect(r.lote.ids).toHaveLength(REG.length - 1);
+        expect(r.semProcedencia).toEqual([EBSCO.identifier]);
+        expect(r.lote.ids).toHaveLength(REG.length);
         const m = JSON.parse(fs.readFileSync(path.join(p, manifestoRel("ta")), "utf-8"));
         expect(m.perguntas.map((q: Pergunta) => q.id)).toEqual(["a", "b", "c"]); // a (d) é só do texto completo
         for (const rel of Object.values(r.lote.arquivos)) {
@@ -96,16 +96,12 @@ describe("linha 13 — formulario: a planilha de cada revisor", () => {
         expect(String(ws.getCell(controle.primeira + ia, controle.colunas.par).value)).toMatch(new RegExp(`par sinalizado na F3 com o nº ${ib + 1}`));
     });
 
-    it("o que voltou da manutenção sai num lote novo, só com ele", async () => {
+    it("'pendentes' recusa quando todo o insumo já está em planilha (o lote novo é só do que ficou de fora)", async () => {
         const p = montarProjeto(dirs);
         await conferir(p);
         await gerarFormularios(p, base);
-        await expect(gerarFormularios(p, { ...base, pendentes: true })).rejects.toThrow(/Nenhum registro voltou/);
-        await conferir(p, false, { somenteFalhas: true });
-        const r2 = await gerarFormularios(p, { ...base, pendentes: true });
-        expect(r2.lote.n).toBe(2);
-        expect(r2.lote.ids).toEqual([EBSCO.identifier]);
-        expect(r2.lote.arquivos.pesquisador).toMatch(/ta_pesquisador_lote2\.xlsx$/);
+        await expect(gerarFormularios(p, { ...base, pendentes: true })).rejects.toThrow(/já estão em alguma planilha/);
+        // o lote 2 dos que ficaram de fora está em procedencia_limitacao.test.ts (o estado das planilhas de antes de 26/11)
     });
 
     it("texto completo: 'conseguiu ler?' antes das perguntas, sem 'dúvida', com o critério do protocolo no topo", async () => {

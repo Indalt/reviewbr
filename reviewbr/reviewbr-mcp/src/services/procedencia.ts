@@ -18,9 +18,10 @@ import { robotsPermite } from "../utils/robots.js";
  *  - Sem DOI: abre a página (respeitando o `robots.txt`, com o User-Agent do ReviewBR) e lê o título que ela
  *    declara: `citation_title`, `DC.title`, `og:title` e `<title>`.
  *
- * O link que não confere ou não abre é falha do sistema: vai para `falhas_procedencia.json`, que a sessão do
- * projeto leva à manutenção, e o registro não é lido pelos revisores enquanto isso. Depois do conserto,
- * `somenteFalhas` confere de novo só esses, e o que passar a conferir volta para a leitura.
+ * O link que não confere ou não abre vai para `falhas_procedencia.json`: é limitação registrada, e o registro vai à
+ * planilha dos revisores com a situação à vista (linha 23 da FILA, decisão do Vicente de 26/11/2026; antes, ficava
+ * fora da leitura até um conserto). `somenteFalhas` confere de novo só os da lista, por exemplo depois de um conserto
+ * no ReviewBR, e o que passar a conferir sai dela.
  */
 
 export const PROCEDENCIA = "03_screening/procedencia.json";
@@ -266,7 +267,7 @@ function gravar(dir: string, rel: string, dado: unknown): void {
     fs.writeFileSync(p, JSON.stringify(dado, null, 2));
 }
 
-/** As falhas de procedência que esperam a manutenção (lista vigente). */
+/** A lista vigente dos registros cuja procedência não se confirmou (limitação registrada). */
 export function lerFalhas(dir: string): Falha[] {
     return readArray(path.join(dir, FALHAS_PROCEDENCIA)) as Falha[];
 }
@@ -390,10 +391,10 @@ export async function conferirProcedencia(projectPath: string, opcoes: OpcoesCon
         `- **Confere:** ${k.confere} · **não confere:** ${k.nao_confere} · **fora do ar:** ${k.fora_do_ar} (pelo DOI: ${k.por_doi}; pela página: ${k.pela_pagina})`,
         k.conferidos < k.insumo ? `- ⚠️ ${k.insumo - k.conferidos} registro(s) ainda sem conferência: chame de novo.` : "",
         `- **Regra:** ${REGRA_DE_CONFERENCIA}`,
-        voltaram.length ? `- **Voltaram da manutenção (agora conferem):** ${voltaram.join(", ")}` : "",
+        voltaram.length ? `- **Saíram da lista (agora conferem):** ${voltaram.join(", ")}` : "",
         falhas.length
-            ? `\n### Falhas que esperam a manutenção (${falhas.length})\nNão vão para a planilha dos revisores; voltam depois do conserto (decisão do Vicente, 23/11/2026). Leve-as ao "Visto de passagem" da FILA da manutenção.\n\n| id | situação | motivo | link |\n|---|---|---|---|\n${linhasFalha.join("\n")}${falhas.length > 40 ? `\n… e mais ${falhas.length - 40} em ${FALHAS_PROCEDENCIA}` : ""}`
-            : "- Nenhuma falha pendente.",
+            ? `\n### Procedência não confirmada (${falhas.length}) — limitação registrada\nO registro vai à planilha dos revisores como os outros, com a situação à vista, e as contagens entram no relatório do estágio (decisão do Vicente, 26/11/2026). Não impede a pesquisa.\n\n| id | situação | motivo | link |\n|---|---|---|---|\n${linhasFalha.join("\n")}${falhas.length > 40 ? `\n… e mais ${falhas.length - 40} em ${FALHAS_PROCEDENCIA}` : ""}`
+            : "- Todos os registros com a procedência confirmada.",
         `\nGravado: ${PROCEDENCIA}, ${PROCEDENCIA_RELATORIO} e ${FALHAS_PROCEDENCIA}.`,
     ].filter(Boolean).join("\n");
 

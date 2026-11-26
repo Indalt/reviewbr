@@ -60,18 +60,20 @@ O gate do protocolo (`submit_protocol_for_approval`) **reprova** se os três nã
 
 **Revisores humanos — `record_screening_decisions`** (quando o protocolo manda que pessoas decidam; padrão das fontes
 oficiais lidas em 23/11/2026: PRISMA 2020 itens 8 e 16a, PRISMA-ScR itens 9 e 14, JBI 2024 10.2.6, Cochrane 6.5.1 4.6.4):
-1. Antes, o `librarian` confere a procedência dos links (`verify_record_links`): o link que não confere ou não abre é
-   falha do sistema, vai para `03_screening/revisores/falhas_procedencia.json` e para a manutenção, e não entra na
-   planilha até o conserto.
+1. Antes, o `librarian` confere a procedência dos links (`verify_record_links`). O link que não confere ou não abre vai
+   para `03_screening/revisores/falhas_procedencia.json` como limitação registrada (decisão do Vicente de 26/11/2026):
+   o registro entra na planilha como os outros, com a situação à vista, e as contagens vão ao relatório do estágio.
 2. `formulario`: uma planilha `.xlsx` por revisor, todas com o insumo inteiro do estágio; as perguntas copiadas do
    protocolo (a tool confere). No título e resumo, cada pergunta admite sim, não ou dúvida (dúvida exige observação);
    no texto completo, sim ou não, depois de "conseguiu ler o texto completo?".
 3. `importar`: grava, por registro e revisor, as respostas e a decisão que sai delas por regra fixa — um "não" exclui;
-   sem "não", segue (no título e resumo) ou inclui (no texto completo); "conseguiu ler?" não = não recuperado; link que
-   não abriu = falha de procedência.
+   sem "não", segue (no título e resumo) ou inclui (no texto completo); "conseguiu ler?" não = não recuperado. O "não" no
+   link fica registrado e não decide nada: com ele, a pergunta em branco conta como dúvida no título e resumo; no texto
+   completo, sem "conseguiu ler?", o registro é não recuperado.
 4. `consenso`: a planilha só das divergências; o resultado, o motivo e quem decidiu (consenso ou o pesquisador).
-5. `gerar`: os artefatos do funil (no texto completo, também `fulltext_not_retrieved.json`) e o relatório; recusa
-   enquanto houver falha de procedência, revisor faltando ou divergência sem consenso.
+5. `gerar`: os artefatos do funil (no texto completo, também `fulltext_not_retrieved.json`) e o relatório, com a
+   limitação de procedência para o relato; recusa enquanto houver revisor faltando, registro fora de planilha ou
+   divergência sem consenso.
 
 Limites declarados: o sistema não garante a independência entre os revisores (não separa usuários; o relato diz como
 foi feita); a trava das colunas da planilha evita edição acidental, e a importação confere pelo id, pelo hash do insumo

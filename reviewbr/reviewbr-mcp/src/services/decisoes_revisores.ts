@@ -4,7 +4,7 @@ import * as crypto from "node:crypto";
 import ExcelJS from "exceljs";
 import { resolveDir, readArray, insumoDoEstagio, writeScreening, PASSADOS_PALAVRAS } from "./project_artifacts.js";
 import { lerPalavrasChaveCompletadas, chaveNaFonteDoRegistro } from "./camada_palavras.js";
-import { lerConferencias, lerFalhas, linkDoRegistro, idDoRegistro, doiDoRegistro, registrarFalhasDoRevisor, type Falha } from "./procedencia.js";
+import { lerConferencias, linkDoRegistro, idDoRegistro, doiDoRegistro, registrarFalhasDoRevisor, type Falha } from "./procedencia.js";
 
 /**
  * Decisões dos revisores humanos, por planilha (linha 13 da FILA; plano aprovado pelo Vicente em 23/11/2026).
@@ -19,6 +19,12 @@ import { lerConferencias, lerFalhas, linkDoRegistro, idDoRegistro, doiDoRegistro
  *
  * As perguntas entram como parâmetro e cada texto tem de estar escrito, letra por letra, no `protocol.md` (o código
  * não lê a prosa do protocolo — linha 17 da FILA).
+ *
+ * Procedência (linha 23 da FILA, decisão do Vicente de 26/11/2026): o registro cuja procedência a conferência
+ * (`verify_record_links`) não confirmou vai à planilha como os outros, com a situação à vista; o "não" do revisor em
+ * "o link abriu o documento certo?" fica registrado e não tira o registro da leitura. A limitação entra no relatório
+ * do estágio e não impede gerá-lo. Antes (23/11), o registro ficava fora até um conserto que, com fonte que recusa
+ * robô, nunca vinha, e o estágio não fechava.
  */
 
 export type Estagio = "ta" | "fulltext";
@@ -266,7 +272,10 @@ function instrucoes(estagio: Estagio, temIdiomaTipo: string | null): string[] {
     const comum = [
         "Decida em separado: não veja as respostas do outro revisor antes de devolver esta planilha.",
         "Leia cada linha. O link abre o documento na internet (o DOI, quando há); use-o sempre que o título e o resumo não bastarem.",
-        `Coluna "${PERGUNTA_LINK}": marque "não" se o link não abrir ou levar a outro documento. Esse registro vai para a manutenção do ReviewBR e volta para a leitura depois do conserto; deixe as perguntas dele em branco.`,
+        `Coluna "${PERGUNTA_LINK}": marque "sim" ou "não". Se o link não abrir ou levar a outro documento, marque "não": fica registrado e não tira o registro da leitura. ` +
+            (estagio === "ta"
+                ? "Responda às perguntas pelo título e pelo resumo desta planilha."
+                : `Procure o texto por outro caminho e responda "${PERGUNTA_LEU}".`),
     ];
     const ta = [
         "Para cada pergunta, escolha na lista: sim, não ou dúvida.",
@@ -445,7 +454,8 @@ export function lerInsumo(dir: string, estagio: Estagio): { rel: string; hash: s
     return { rel, hash: sha256(bruto), registros, itensDaCamada };
 }
 
-export interface ResultadoFormulario { manifesto: Manifesto; lote: Lote; fora: string[]; resumo: string }
+/** `semProcedencia`: os registros do lote cuja procedência a conferência não confirmou (limitação registrada). */
+export interface ResultadoFormulario { manifesto: Manifesto; lote: Lote; semProcedencia: string[]; resumo: string }
 
 export async function gerarFormularios(projectPath: string, o: OpcoesFormulario): Promise<ResultadoFormulario> {
     const dir = resolveDir(projectPath);
@@ -476,12 +486,8 @@ export async function gerarFormularios(projectPath: string, o: OpcoesFormulario)
         throw new Error(`${semConferencia.length} registro(s) do insumo sem a conferência de procedência dos links (ex.: ${semConferencia.slice(0, 5).join(", ")}). ` +
             "Rode antes o verify_record_links. Nada foi gravado.");
     }
-    const idsComFalha = new Set(lerFalhas(dir).map((f) => f.id));
-    const elegivel = (r: any) => {
-        const id = idDoRegistro(r);
-        return !idsComFalha.has(id) && conferencias.get(id)?.situacao === "confere";
-    };
-    const fora = insumo.registros.filter((r) => !elegivel(r)).map(idDoRegistro);
+    // Linha 23 (26/11/2026): a procedência que a conferência não confirmou não tira o registro da planilha.
+    const confirmada = (id: string) => conferencias.get(id)?.situacao === "confere";
 
     const existente = lerManifesto(dir, estagio);
     const decisoes = lerJson<any>(path.join(dir, decisoesRel(estagio)));
@@ -492,31 +498,29 @@ export async function gerarFormularios(projectPath: string, o: OpcoesFormulario)
     if (o.pendentes) {
         if (!existente) throw new Error("Não há planilhas geradas neste estágio: 'pendentes' só vale depois do primeiro lote. Nada foi gravado.");
         if (existente.insumo_hash !== insumo.hash) throw new Error(`O insumo (${insumo.rel}) mudou desde as planilhas de ${existente.criado.slice(0, 10)}. Nada foi gravado.`);
+        // Os registros do insumo que não estão em planilha nenhuma: por exemplo, os que as planilhas de antes de
+        // 26/11/2026 deixavam fora por procedência (o manifesto os lista em `fora_por_procedencia`).
         const jaEmLote = new Set(existente.lotes.flatMap((l) => l.ids));
-        const comFalhaDeRevisor = new Set<string>(
-            Object.entries(decisoes?.registros ?? {}).filter(([, porRevisor]: [string, any]) =>
-                Object.values(porRevisor ?? {}).some((d: any) => d?.decisao === "falha de procedência")).map(([id]) => id));
-        idsDoLote = insumo.registros.filter((r) => elegivel(r) && (!jaEmLote.has(idDoRegistro(r)) || comFalhaDeRevisor.has(idDoRegistro(r)))).map(idDoRegistro);
-        if (idsDoLote.length === 0) throw new Error("Nenhum registro voltou da manutenção para a leitura (confira com o verify_record_links e somenteFalhas). Nada foi gravado.");
+        idsDoLote = insumo.registros.map(idDoRegistro).filter((id) => !jaEmLote.has(id));
+        if (idsDoLote.length === 0) throw new Error("Todos os registros do insumo já estão em alguma planilha deste estágio: não há lote a gerar. Nada foi gravado.");
         manifesto = existente;
         n = existente.lotes.length + 1;
     } else {
         if (existente && temImportacao) {
-            throw new Error("Já há planilhas deste estágio importadas. Para os registros que voltaram da manutenção, use 'pendentes'. Nada foi gravado.");
+            throw new Error("Já há planilhas deste estágio importadas. Para os registros do insumo que não estão em planilha nenhuma, use 'pendentes'. Nada foi gravado.");
         }
-        idsDoLote = insumo.registros.filter(elegivel).map(idDoRegistro);
-        if (idsDoLote.length === 0) throw new Error("Nenhum registro do insumo tem a procedência confirmada. Nada foi gravado.");
+        idsDoLote = insumo.registros.map(idDoRegistro);
         n = 1;
         manifesto = {
             estagio, criado: agora(), insumo: insumo.rel, insumo_hash: insumo.hash, protocolo_hash: sha256(protocolo),
             perguntas, criterio_nao_recuperado: criterio, pergunta_idioma_tipo: perguntaIdiomaTipo, papeis, revisores,
-            lotes: [], fora_por_procedencia: fora,
+            lotes: [], fora_por_procedencia: [],
         };
     }
     if (o.pendentes) {
         // O lote novo usa as perguntas e os revisores do primeiro: o mesmo estágio não muda de regra no meio.
         const mesmo = JSON.stringify(manifesto.perguntas) === JSON.stringify(perguntas) && JSON.stringify(manifesto.revisores) === JSON.stringify(revisores);
-        if (!mesmo) throw new Error("O lote dos que voltaram da manutenção usa as mesmas perguntas e os mesmos revisores das planilhas anteriores. Nada foi gravado.");
+        if (!mesmo) throw new Error("O lote novo usa as mesmas perguntas e os mesmos revisores das planilhas anteriores. Nada foi gravado.");
     }
 
     const porId = new Map(insumo.registros.map((r) => [idDoRegistro(r), r]));
@@ -532,19 +536,21 @@ export async function gerarFormularios(projectPath: string, o: OpcoesFormulario)
     }
     const lote: Lote = { n, quando: agora(), ids: linhas.map((l) => l.id), arquivos };
     manifesto.lotes = [...manifesto.lotes.filter((l) => l.n !== n), lote];
-    if (!o.pendentes) manifesto.fora_por_procedencia = fora;
     gravarJson(dir, manifestoRel(estagio), manifesto);
+    const semProcedencia = lote.ids.filter((id) => !confirmada(id));
 
     const resumo = [
         `## Planilhas dos revisores — ${NOME_ESTAGIO[estagio]}${n > 1 ? `, lote ${n}` : ""}`,
         `- **Insumo:** ${insumo.rel}, ${insumo.registros.length} registros; **na planilha:** ${lote.ids.length}`,
-        fora.length ? `- **Fora, esperando a manutenção (procedência):** ${fora.length} — voltam depois do conserto (lista em 03_screening/revisores/falhas_procedencia.json)` : "- Todos os registros com a procedência confirmada.",
+        semProcedencia.length
+            ? `- **Procedência não confirmada pela conferência (limitação registrada):** ${semProcedencia.length} — estão na planilha, com o motivo na coluna "conferência do link"; lista em 03_screening/revisores/falhas_procedencia.json, e as contagens vão ao relatório do estágio`
+            : "- Todos os registros desta planilha com a procedência confirmada pela conferência.",
         `- **Perguntas:** ${manifesto.perguntas.map((p) => `(${p.id})`).join(" ")} — respostas ${RESPOSTAS[estagio].join(" / ")}${estagio === "fulltext" ? `; antes, "${PERGUNTA_LEU}"` : ""}`,
         `- **Uma planilha por revisor, todas com os mesmos registros:**`,
         ...Object.entries(arquivos).map(([rot, rel]) => `  - ${rot}: ${rel}`),
         `- Manifesto: ${manifestoRel(estagio)}. Envie cada planilha ao seu revisor; quando voltar preenchida, importe com a ação 'importar'.`,
     ].join("\n");
-    return { manifesto, lote, fora, resumo };
+    return { manifesto, lote, semProcedencia, resumo };
 }
 
 // ─── leitura de uma planilha devolvida ─────────────────────────────────────
@@ -607,7 +613,7 @@ export async function lerControle(arquivo: string): Promise<{ wb: ExcelJS.Workbo
 
 // ─── decisões gravadas ─────────────────────────────────────────────────────
 
-export type Decisao = "segue" | "excluir" | "incluir" | "não recuperado" | "falha de procedência";
+export type Decisao = "segue" | "excluir" | "incluir" | "não recuperado";
 
 export interface DecisaoDoRevisor {
     nome: string;
@@ -650,20 +656,33 @@ export function lerDecisoes(dir: string, e: Estagio): ArquivoDeDecisoes {
     return lerJson<ArquivoDeDecisoes>(path.join(dir, decisoesRel(e))) ?? { estagio: e, importacoes: [], registros: {} };
 }
 
-/** A decisão de uma linha, pela regra fixa (decisões do Vicente de 23/11/2026). Sem escolha à mão. */
+/**
+ * A decisão de uma linha, pela regra fixa (decisões do Vicente de 23/11/2026). Sem escolha à mão.
+ *
+ * O "não" em "o link abriu o documento certo?" fica registrado e não decide nada (linha 23, 26/11/2026). No título e
+ * resumo, a pergunta deixada em branco por causa dele conta como dúvida, e o registro segue para o texto completo, como
+ * na regra da dúvida. No texto completo, sem "conseguiu ler?" declarado, o registro é não recuperado.
+ */
 export function decidir(estagio: Estagio, perguntas: Pergunta[], linkAbriu: string, leu: string | undefined, respostas: Record<string, string>):
     { decisao: Decisao; motivo: string; com_duvida?: string[] } {
-    if (linkAbriu === "não") return { decisao: "falha de procedência", motivo: "o revisor marcou que o link não abriu o documento certo" };
-    if (estagio === "fulltext" && leu === "não") return { decisao: "não recuperado", motivo: "o revisor não conseguiu ler o texto completo" };
+    const nota = linkAbriu === "não" ? "; o revisor marcou que o link não abriu o documento certo (limitação registrada)" : "";
+    if (estagio === "fulltext" && leu !== "sim") {
+        return { decisao: "não recuperado", motivo: (leu === "não" ? "o revisor não conseguiu ler o texto completo" : "sem leitura declarada") + nota };
+    }
     const nao = perguntas.filter((p) => respostas[p.id] === "não");
-    if (nao.length) return { decisao: "excluir", motivo: nao.map((p) => `(${p.id}) ${p.texto}`).join("; ") };
+    if (nao.length) return { decisao: "excluir", motivo: nao.map((p) => `(${p.id}) ${p.texto}`).join("; ") + nota };
     if (estagio === "ta") {
         const duvida = perguntas.filter((p) => respostas[p.id] === "dúvida").map((p) => p.id);
-        return duvida.length
-            ? { decisao: "segue", motivo: `sem "não"; dúvida em ${duvida.map((d) => `(${d})`).join(" ")}`, com_duvida: duvida }
-            : { decisao: "segue", motivo: "\"sim\" em todas as perguntas" };
+        const embranco = perguntas.filter((p) => !respostas[p.id]).map((p) => p.id);
+        const incertas = [...duvida, ...embranco];
+        if (!incertas.length) return { decisao: "segue", motivo: "\"sim\" em todas as perguntas" + nota };
+        const partes = [
+            ...(duvida.length ? [`dúvida em ${duvida.map((d) => `(${d})`).join(" ")}`] : []),
+            ...(embranco.length ? [`sem resposta em ${embranco.map((d) => `(${d})`).join(" ")}`] : []),
+        ];
+        return { decisao: "segue", motivo: `sem "não"; ${partes.join("; ")}` + nota, com_duvida: incertas };
     }
-    return { decisao: "incluir", motivo: "\"sim\" em todas as perguntas" };
+    return { decisao: "incluir", motivo: "\"sim\" em todas as perguntas" + nota };
 }
 
 // ─── ação importar (planilha de revisor) ───────────────────────────────────
@@ -729,24 +748,27 @@ export async function importarPlanilha(projectPath: string, o: OpcoesImportar): 
         const observacao = val("observacao");
         const respostas: Record<string, string> = {};
         let leu: string | undefined;
-        if (link === "sim") {
-            if (estagio === "fulltext") {
-                const leuBruto = val("leu");
-                leu = respostaDe(leuBruto, SIM_NAO) ?? undefined;
-                if (!leu) { erros.push(`${onde}: "${PERGUNTA_LEU}" ${leuBruto ? `com "${leuBruto}", fora da lista` : "em branco"}`); continue; }
+        // Com o link "não", o que ficar em branco é aceito: as planilhas de antes de 26/11/2026 mandavam deixar as
+        // perguntas em branco (linha 23). O que vier preenchido é conferido do mesmo jeito.
+        const exigir = link === "sim";
+        if (estagio === "fulltext") {
+            const leuBruto = val("leu");
+            leu = respostaDe(leuBruto, SIM_NAO) ?? undefined;
+            if (!leu && (exigir || leuBruto)) { erros.push(`${onde}: "${PERGUNTA_LEU}" ${leuBruto ? `com "${leuBruto}", fora da lista` : "em branco"}`); continue; }
+        }
+        if (estagio === "ta" || leu === "sim") {
+            const exigirPerguntas = exigir || leu === "sim";
+            for (const p of m.perguntas) {
+                const bruto = val(`p:${p.id}`);
+                if (!bruto && !exigirPerguntas) continue;
+                const r = respostaDe(bruto, opcoes);
+                if (!r) {
+                    const dica = estagio === "fulltext" && respostaDe(bruto, ["dúvida"]) ? " (no texto completo não há \"dúvida\")" : "";
+                    erros.push(`${onde}: pergunta (${p.id}) ${bruto ? `com "${bruto}", fora da lista${dica}` : "em branco"}`);
+                } else respostas[p.id] = r;
             }
-            if (!(estagio === "fulltext" && leu === "não")) {
-                for (const p of m.perguntas) {
-                    const bruto = val(`p:${p.id}`);
-                    const r = respostaDe(bruto, opcoes);
-                    if (!r) {
-                        const dica = estagio === "fulltext" && respostaDe(bruto, ["dúvida"]) ? " (no texto completo não há \"dúvida\")" : "";
-                        erros.push(`${onde}: pergunta (${p.id}) ${bruto ? `com "${bruto}", fora da lista${dica}` : "em branco"}`);
-                    } else respostas[p.id] = r;
-                }
-                if (Object.values(respostas).includes("dúvida") && !observacao) {
-                    erros.push(`${onde}: há "dúvida" e a observação está em branco (obrigatória na dúvida)`);
-                }
+            if (Object.values(respostas).includes("dúvida") && !observacao) {
+                erros.push(`${onde}: há "dúvida" e a observação está em branco (obrigatória na dúvida)`);
             }
         }
         const d = decidir(estagio, m.perguntas, link, leu, respostas);
@@ -798,7 +820,8 @@ export async function importarPlanilha(projectPath: string, o: OpcoesImportar): 
     ];
     gravarJson(dir, decisoesRel(estagio), decisoes);
 
-    const falhas: Falha[] = linhas.filter((l) => l.d.decisao === "falha de procedência").map((l) => ({
+    // O "não" do revisor no link vai à lista de procedência (limitação registrada); o registro segue na leitura.
+    const falhas: Falha[] = linhas.filter((l) => l.d.link_abriu === "não").map((l) => ({
         id: l.id, titulo: "", link: "", situacao: "não abriu (revisor)", motivo: "o revisor marcou que o link não abriu o documento certo",
         origem: `revisor ${controle.rotulo} (${nome})`, quando,
     }));
@@ -817,7 +840,7 @@ export async function importarPlanilha(projectPath: string, o: OpcoesImportar): 
         `## Planilha importada — "${controle.rotulo}" (${nome}, ${papel}), ${NOME_ESTAGIO[estagio]}, lote ${controle.lote}`,
         `- **Leitura declarada:** ${inicio} a ${fim}; ${linhas.length} registros`,
         `- **Decisões (pela regra fixa das respostas):** ${Object.entries(contagens).map(([k, v]) => `${k}: ${v}`).join(" · ")}${comDuvida ? ` (com dúvida: ${comDuvida})` : ""}`,
-        falhas.length ? `- **Link que não abriu, marcado pelo revisor:** ${falhas.length} — foram para 03_screening/revisores/falhas_procedencia.json; leve-os ao "Visto de passagem" da manutenção` : "",
+        falhas.length ? `- **Link que não abriu o documento certo, marcado pelo revisor:** ${falhas.length} — registrados em 03_screening/revisores/falhas_procedencia.json, como limitação; a decisão saiu das respostas, e a leitura segue` : "",
         substituiu ? `- Substituiu a importação anterior (arquivada em ${substituiu.arquivada}), com a autorização: "${substituiu.autorizacao}"` : "",
         `- Gravado: ${decisoesRel(estagio)}; cópia do arquivo recebido em ${copia} (sha256 ${sha256(bruto).slice(0, 12)}…)`,
         faltam.length ? `- **Falta importar, neste lote:** ${faltam.join(", ")}` : "- Todos os revisores deste lote importados: próximo passo, a ação 'consenso' (divergências) e depois 'gerar'.",
@@ -849,14 +872,15 @@ function retratoDe(porRevisor: Record<string, DecisaoDoRevisor>, revisores: stri
     return revisores.map((r) => `${r}=${porRevisor?.[r]?.decisao ?? "-"}`).join("|");
 }
 
-/** Situação de cada registro do insumo no estágio: quem falta, se é falha, se concordam, se precisa de consenso. */
-function situacaoDosRegistros(dir: string, m: Manifesto, d: ArquivoDeDecisoes, ids: string[]) {
-    const falhas = new Set(lerFalhas(dir).map((f) => f.id));
+/**
+ * Situação de cada registro do insumo no estágio: em planilha ou não, quem falta, se concordam, se precisa de consenso.
+ * A procedência não entra aqui: é limitação registrada e não impede o estágio (linha 23, 26/11/2026).
+ */
+function situacaoDosRegistros(m: Manifesto, d: ArquivoDeDecisoes, ids: string[]) {
     const emLote = new Set(m.lotes.flatMap((l) => l.ids));
-    const out = { semPlanilha: [] as string[], procedencia: [] as string[], faltaRevisor: [] as string[], concordam: [] as string[], divergem: [] as string[] };
+    const out = { semPlanilha: [] as string[], faltaRevisor: [] as string[], concordam: [] as string[], divergem: [] as string[] };
     for (const id of ids) {
         const por = d.registros[id] ?? {};
-        if (falhas.has(id) || m.revisores.some((r) => por[r]?.decisao === "falha de procedência")) { out.procedencia.push(id); continue; }
         if (!emLote.has(id)) { out.semPlanilha.push(id); continue; }
         if (m.revisores.some((r) => !por[r])) { out.faltaRevisor.push(id); continue; }
         const decs = new Set(m.revisores.map((r) => por[r].decisao));
@@ -882,7 +906,7 @@ export async function gerarPlanilhaDeConsenso(projectPath: string, o: OpcoesCons
     const d = lerDecisoes(dir, e);
     const ins = lerInsumo(dir, e);
     if (ins.hash !== m.insumo_hash) throw new Error(`O insumo (${m.insumo}) mudou depois que as planilhas foram geradas. Nada foi gravado.`);
-    const s = situacaoDosRegistros(dir, m, d, ins.registros.map(idDoRegistro));
+    const s = situacaoDosRegistros(m, d, ins.registros.map(idDoRegistro));
     const pendentes = s.divergem.filter((id) => {
         const c = d.consenso?.[id] as ResultadoDeConsenso | undefined;
         return !c || c.decisoes_no_consenso !== retratoDe(d.registros[id], m.revisores);
@@ -982,7 +1006,7 @@ export async function gerarPlanilhaDeConsenso(projectPath: string, o: OpcoesCons
     gravarJson(dir, decisoesRel(e), d);
     const resumo = [
         `## Planilha de consenso — ${NOME_ESTAGIO[e]}, rodada ${n}`,
-        `- **Divergências sem consenso:** ${pendentes.length} (concordam: ${s.concordam.length}; esperando procedência: ${s.procedencia.length}; faltando revisor: ${s.faltaRevisor.length})`,
+        `- **Divergências sem consenso:** ${pendentes.length} (concordam: ${s.concordam.length}; faltando revisor: ${s.faltaRevisor.length})`,
         `- Gravado: ${rel}. Preenchida na reunião de consenso, importe-a com a ação 'importar'.`,
     ].join("\n");
     return { arquivo: rel, ids: pendentes, resumo };
@@ -1060,7 +1084,31 @@ export async function importarConsenso(dir: string, projectPath: string, arquivo
 
 // ─── gerar: os artefatos do funil ──────────────────────────────────────────
 
-const PARA_O_FUNIL: Record<Decisao, string> = { segue: "YES", incluir: "YES", excluir: "NO", "não recuperado": "NAO_RECUPERADO", "falha de procedência": "" };
+const PARA_O_FUNIL: Record<Decisao, string> = { segue: "YES", incluir: "YES", excluir: "NO", "não recuperado": "NAO_RECUPERADO" };
+
+/**
+ * A limitação de procedência do estágio, para o relato (linha 23, 26/11/2026): os registros cuja procedência a
+ * conferência não confirmou, por situação e motivo, e os que algum revisor marcou com o link que não abriu.
+ */
+function limitacaoDeProcedencia(dir: string, ids: string[], d: ArquivoDeDecisoes, revisores: string[]) {
+    const conf = lerConferencias(dir);
+    const naoConfirmados = ids.filter((id) => conf.get(id)?.situacao !== "confere");
+    const porMotivo: Record<string, number> = {};
+    for (const id of naoConfirmados) {
+        const c = conf.get(id);
+        const chave = !c ? "sem conferência" : c.situacao === "não confere" ? "não confere: o título lido é outro" : `${c.situacao}: ${c.motivo}`;
+        porMotivo[chave] = (porMotivo[chave] ?? 0) + 1;
+    }
+    const linkNaoAbriu = ids.filter((id) => revisores.some((r) => d.registros[id]?.[r]?.link_abriu === "não"));
+    return {
+        regra: "Limitação registrada, que não impede o estágio (decisão do Vicente de 26/11/2026): o registro cuja procedência a conferência não confirmou foi lido como os outros, com a situação à vista na planilha; o \"não\" do revisor no link ficou registrado e não decidiu nada.",
+        nao_confirmada_pela_conferencia: naoConfirmados.length,
+        por_motivo: porMotivo,
+        link_nao_abriu_para_revisor: linkNaoAbriu.length,
+        ids_nao_confirmados: naoConfirmados,
+        ids_link_nao_abriu: linkNaoAbriu,
+    };
+}
 
 export interface OpcoesGerar { estagio: Estagio; substituicao?: string; agora?: () => string }
 
@@ -1074,13 +1122,12 @@ export function gerarArtefatosDoFunil(projectPath: string, o: OpcoesGerar): { re
     if (ins.hash !== m.insumo_hash) throw new Error(`O insumo (${m.insumo}) mudou depois que as planilhas foram geradas. Nada foi gravado.`);
     const d = lerDecisoes(dir, e);
     const ids = ins.registros.map(idDoRegistro);
-    const s = situacaoDosRegistros(dir, m, d, ids);
+    const s = situacaoDosRegistros(m, d, ids);
     const semConsenso = s.divergem.filter((id) => {
         const c = d.consenso?.[id] as ResultadoDeConsenso | undefined;
         return !c || c.decisoes_no_consenso !== retratoDe(d.registros[id], m.revisores);
     });
     const problemas: string[] = [];
-    if (s.procedencia.length) problemas.push(`${s.procedencia.length} registro(s) com falha de procedência esperando a manutenção (voltam à leitura depois do conserto): ${s.procedencia.slice(0, 15).join(", ")}${s.procedencia.length > 15 ? "…" : ""}`);
     if (s.semPlanilha.length) problemas.push(`${s.semPlanilha.length} registro(s) do insumo em nenhuma planilha (gere o lote com 'pendentes'): ${s.semPlanilha.slice(0, 15).join(", ")}`);
     if (s.faltaRevisor.length) {
         const quem = m.revisores.filter((r) => s.faltaRevisor.some((id) => !d.registros[id]?.[r]));
@@ -1144,8 +1191,8 @@ export function gerarArtefatosDoFunil(projectPath: string, o: OpcoesGerar): { re
         revisores: d.importacoes.map((x) => ({ rotulo: x.rotulo, lote: x.lote, nome: x.nome, papel: x.papel, inicio: x.inicio, fim: x.fim, arquivo_sha256: x.hash })),
         perguntas: m.perguntas,
         regra: e === "ta"
-            ? "um \"não\" exclui; sem \"não\", segue para o texto completo (com \"dúvida\", marcado como MAYBE); link que não abriu = falha de procedência, fora até o conserto"
-            : "\"conseguiu ler o texto completo?\" = não → não recuperado; um \"não\" exclui; \"sim\" em todas inclui",
+            ? "um \"não\" exclui; sem \"não\", segue para o texto completo (com \"dúvida\", ou pergunta em branco ao lado do link que não abriu, marcado como MAYBE); o \"não\" no link fica registrado e não decide nada"
+            : "\"conseguiu ler o texto completo?\" = não, ou sem resposta ao lado do link que não abriu → não recuperado; um \"não\" exclui; \"sim\" em todas inclui; o \"não\" no link fica registrado e não decide nada",
         contagens: {
             insumo: ids.length,
             ...(e === "ta" ? { seguem: included.length, com_duvida: included.filter((x) => x.decision === "MAYBE").length } : { incluidos: included.length, nao_recuperados: naoRec.length }),
@@ -1154,6 +1201,7 @@ export function gerarArtefatosDoFunil(projectPath: string, o: OpcoesGerar): { re
             fora_por_procedencia_no_inicio: m.fora_por_procedencia.length,
         },
         motivos_de_exclusao_por_pergunta: motivosExclusao,
+        procedencia: limitacaoDeProcedencia(dir, ids, d, m.revisores),
         consensos: (d.consensos ?? []).map((x) => ({ rodada: x.n, registros: x.ids.length, importada: x.importada ?? null })),
         lotes: m.lotes.map((l) => ({ lote: l.n, registros: l.ids.length, quando: l.quando })),
         conferencia: { soma: included.length + excluded.length + naoRec.length, insumo: ids.length, fecha },
@@ -1171,6 +1219,9 @@ export function gerarArtefatosDoFunil(projectPath: string, o: OpcoesGerar): { re
         `- **Como se decidiu:** concordância ${k.por_concordancia}; consenso ${k.por_consenso}; pesquisador ${k.decididos_pelo_pesquisador}`,
         `- **Motivos de exclusão (perguntas com "não"):** ${Object.entries(motivosExclusao).map(([q, v]) => `${q}: ${v}`).join(" · ") || "nenhum"}`,
         `- **Conferência:** ${relatorio.conferencia.soma} = ${k.insumo}`,
+        relatorio.procedencia.nao_confirmada_pela_conferencia || relatorio.procedencia.link_nao_abriu_para_revisor
+            ? `- **Procedência (limitação registrada, não impede o estágio):** ${relatorio.procedencia.nao_confirmada_pela_conferencia} sem procedência confirmada pela conferência (${Object.entries(relatorio.procedencia.por_motivo).map(([q, v]) => `${q}: ${v}`).join(" · ")}); ${relatorio.procedencia.link_nao_abriu_para_revisor} com o link que não abriu para algum revisor`
+            : "- **Procedência:** todos os registros com a procedência confirmada pela conferência.",
         `- Gravado: ${Object.values(relatorio.arquivos).map((a) => path.relative(dir, String(a)).replace(/\\/g, "/")).join(", ")} e ${PASTA_REVISORES}/relatorio_${e}.json`,
         gravado.substituicao ? `- Substituiu a triagem anterior, arquivada em ${gravado.substituicao.pasta}` : "",
     ].filter(Boolean).join("\n");

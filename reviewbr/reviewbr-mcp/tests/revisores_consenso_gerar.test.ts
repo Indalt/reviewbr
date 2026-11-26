@@ -41,7 +41,8 @@ describe("linha 13 — consenso e gerar", () => {
         dirs.push(fora);
         await conferir(p);
         const f = await gerarFormularios(p, base);
-        const [um, dois, tres] = f.lote.ids;
+        // desde a linha 23 a EBSCO (fora do ar na conferência) está no lote; os três casos ficam fora dela
+        const [um, dois, tres] = f.lote.ids.filter((id) => id !== EBSCO.identifier);
         await importarPlanilha(p, { arquivo: await preencher(path.join(p, f.lote.arquivos.pesquisador), path.join(fora, "p1.xlsx"), {
             nome: "Pesquisador P", papel: "pesquisador",
             linha: (id) => id === um ? { ...tudoSim(), "p:b": "não" } : tudoSim(),
@@ -55,12 +56,11 @@ describe("linha 13 — consenso e gerar", () => {
         return { p, f, fora, um, dois, tres };
     }
 
-    it("gerar recusa enquanto há falha de procedência, divergência sem consenso ou revisor faltando", async () => {
+    it("gerar recusa enquanto há divergência sem consenso; a procedência não confirmada não impede (linha 23)", async () => {
         const { p, dois } = await triagemTA();
         const erro = await Promise.resolve().then(() => gerarArtefatosDoFunil(p, { estagio: "ta" })).catch((e) => e.message);
-        expect(erro).toMatch(/1 registro\(s\) com falha de procedência/);
-        expect(erro).toContain(EBSCO.identifier);
         expect(erro).toMatch(new RegExp(`1 divergência\\(s\\) sem consenso.*${dois}`));
+        expect(erro).not.toMatch(/procedência/);
         expect(fs.existsSync(path.join(p, "03_screening/included_ta.json"))).toBe(false);
     });
 
@@ -96,12 +96,7 @@ describe("linha 13 — consenso e gerar", () => {
 
     it("título e resumo, de ponta a ponta: grava included_ta e excluded_ta com as decisões, o consenso e os motivos", async () => {
         const { p, f, fora, um, dois, tres } = await triagemTA();
-        // a EBSCO volta da manutenção e é lida pelos dois no lote 2
-        await conferir(p, false, { somenteFalhas: true });
-        const l2 = await gerarFormularios(p, { ...base, pendentes: true });
-        for (const rot of ["pesquisador", "estagiario"]) {
-            await importarPlanilha(p, { arquivo: await preencher(path.join(p, l2.lote.arquivos[rot]), path.join(fora, `${rot}-l2.xlsx`), { nome: rot, papel: rot === "pesquisador" ? "pesquisador" : "estagiário", linha: tudoSim }) });
-        }
+        // a EBSCO, fora do ar na conferência, foi lida pelos dois no lote 1 (linha 23)
         const c = await gerarPlanilhaDeConsenso(p, { estagio: "ta" });
         await importarPlanilha(p, { arquivo: await preencherConsenso(path.join(p, c.arquivo!), path.join(fora, "c.xlsx"), { presentes: "P e E", data: "01/12/2026" },
             () => ({ resultado: "excluir", motivo: "refrigerante", decidido_por: "consenso" })) });
@@ -114,7 +109,8 @@ describe("linha 13 — consenso e gerar", () => {
         expect(exc.find((x: any) => x.record.identifier === um).decisoes.pesquisador.respostas.b).toBe("não");
         const inc = ler(p, "03_screening/included_ta.json");
         expect(inc.find((x: any) => x.record.identifier === tres).decision).toBe("MAYBE");
-        expect(inc.find((x: any) => x.record.identifier === EBSCO.identifier).decisoes.estagiario.lote).toBe(2);
+        expect(inc.find((x: any) => x.record.identifier === EBSCO.identifier).decisoes.estagiario.lote).toBe(1);
+        expect(r.relatorio.procedencia).toMatchObject({ nao_confirmada_pela_conferencia: 1, link_nao_abriu_para_revisor: 0 });
         expect(r.relatorio.motivos_de_exclusao_por_pergunta).toEqual({ "(a) (b)": 1, "(c)": 1 });
         expect(r.relatorio.revisores.map((x: any) => x.nome)).toContain("Estagiária E");
         // regravar exige autorização (DEBT-112)

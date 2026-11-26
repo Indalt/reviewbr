@@ -2751,13 +2751,13 @@ server.tool(
     "verify_record_links",
     "Conferência de procedência dos links, antes da leitura humana (planilhas da record_screening_decisions): para cada registro do insumo do estágio, abre o link que a planilha vai mostrar e compara o título. " +
     REGRA_DE_CONFERENCIA + " Respeita o robots.txt; pedidos ao mesmo site espaçados. " +
-    "Grava 03_screening/procedencia.json (por registro: link, título lido, situação, motivo, data), 03_screening/procedencia_relatorio.json (data e contagens, para o relato) e 03_screening/revisores/falhas_procedencia.json: o registro que não confere ou não abre é falha do sistema, vai para a manutenção e não entra na planilha até o conserto. " +
-    "Retomável: sem 'refazer', confere só o que falta. Depois do conserto, 'somenteFalhas' confere de novo só as falhas. Só com projeto travado.",
+    "Grava 03_screening/procedencia.json (por registro: link, título lido, situação, motivo, data), 03_screening/procedencia_relatorio.json (data e contagens, para o relato) e 03_screening/revisores/falhas_procedencia.json, a lista dos que não conferem ou não abrem: é limitação registrada (decisão do Vicente de 26/11/2026), e o registro vai à planilha dos revisores com a situação à vista; as contagens entram no relatório do estágio. " +
+    "Retomável: sem 'refazer', confere só o que falta. 'somenteFalhas' confere de novo só os da lista (por exemplo, depois de um conserto no ReviewBR). Só com projeto travado.",
     {
         projectPath: z.string().describe("Raiz do projeto (protocolo travado)"),
         estagio: z.enum(["ta", "fulltext"]).optional().describe("Estágio cujo insumo se confere (padrão: ta, o que a camada por palavras passou ou o dataset deduplicado)"),
         refazer: z.boolean().optional().describe("Confere de novo todos os registros (padrão: só os que faltam ou cujo link mudou)"),
-        somenteFalhas: z.boolean().optional().describe("Confere de novo só as falhas pendentes, depois do conserto da manutenção"),
+        somenteFalhas: z.boolean().optional().describe("Confere de novo só os registros da lista de falhas (por exemplo, depois de um conserto no ReviewBR)"),
         consertadas: z.record(z.string(), z.string()).optional().describe("Só com somenteFalhas: falhas marcadas por um revisor ('o link abriu o documento certo?' = não) que a manutenção declara consertadas, id → o que foi consertado. Sem isto, a falha marcada por revisor não sai da lista"),
     },
     async (params) => {
@@ -2785,11 +2785,11 @@ const PERGUNTA_SCHEMA = z.object({
 server.tool(
     "record_screening_decisions",
     "Decisões dos revisores HUMANOS da triagem (título e resumo, depois texto completo), por planilha .xlsx, sem IA. " +
-    "acao='formulario': gera do insumo do estágio (ta ← passed_keywords.json ou dataset.json; fulltext ← included_ta.json) uma planilha por revisor, todas com o insumo inteiro, menos os registros cujo link não conferiu ou não abriu (verify_record_links, obrigatório antes): 03_screening/revisores/<estagio>_<rotulo>.xlsx e o manifesto do estágio. " +
+    "acao='formulario': gera do insumo do estágio (ta ← passed_keywords.json ou dataset.json; fulltext ← included_ta.json) uma planilha por revisor, todas com o insumo inteiro (verify_record_links, obrigatório antes; o registro cuja procedência não se confirmou entra com a situação à vista, como limitação registrada):03_screening/revisores/<estagio>_<rotulo>.xlsx e o manifesto do estágio. " +
     "No topo, a identificação do revisor (nome, papel, datas de início e de fim), a instrução e as perguntas do protocolo; colunas de leitura travadas (nº, id, título, resumo, palavras-chave, termos que casaram, ano, tipo, idioma, fonte, revista ou site, link — o DOI quando há —, conferência do link, par da F3); colunas abertas com lista: uma por pergunta (sim/não/dúvida no título e resumo; sim/não no texto completo), 'o link abriu o documento certo?', no texto completo 'conseguiu ler o texto completo?', e observação. " +
-    "Ordem: por revista; sem revista, pelo site do endereço; os dois de um par da F3 juntos. Cada pergunta tem de estar escrita no protocol.md. 'pendentes': só os registros que voltaram da manutenção, num lote novo. " +
-    "acao='importar': lê a planilha devolvida pelo revisor ('arquivo') e grava, por registro e revisor, nome, papel, respostas, observação, decisão e motivo em 03_screening/revisores/decisoes_<estagio>.json, com a data, o hash e a cópia do arquivo. A decisão sai das respostas, por regra fixa: link 'não' → falha de procedência (vai para a manutenção); título e resumo: um 'não' exclui, senão segue (com dúvida, se houver); texto completo: 'conseguiu ler?' 'não' → não recuperado, um 'não' exclui, 'sim' em todas inclui. " +
-    "Recusa, dizendo a linha: identificação incompleta, id faltando, a mais ou repetido, planilha de outro estágio ou insumo, resposta em branco ou fora da lista, 'dúvida' sem observação. Reimportar o mesmo revisor exige 'substituicao'. Só com projeto travado.",
+    "Ordem: por revista; sem revista, pelo site do endereço; os dois de um par da F3 juntos. Cada pergunta tem de estar escrita no protocol.md. 'pendentes': só os registros do insumo que não estão em planilha nenhuma (por exemplo, os que as planilhas de antes de 26/11/2026 deixavam fora por procedência), num lote novo. " +
+    "acao='importar': lê a planilha devolvida pelo revisor ('arquivo') e grava, por registro e revisor, nome, papel, respostas, observação, decisão e motivo em 03_screening/revisores/decisoes_<estagio>.json, com a data, o hash e a cópia do arquivo. A decisão sai das respostas, por regra fixa: o 'não' no link fica registrado e não decide nada (com ele, pergunta em branco é aceita: no título e resumo conta como dúvida; no texto completo, sem 'conseguiu ler?', o registro é não recuperado); título e resumo: um 'não' exclui, senão segue (com dúvida, se houver); texto completo: 'conseguiu ler?' 'não' → não recuperado, um 'não' exclui, 'sim' em todas inclui. " +
+    "Recusa, dizendo a linha: identificação incompleta, id faltando, a mais ou repetido, planilha de outro estágio ou insumo, resposta em branco (com o link 'sim') ou fora da lista, 'dúvida' sem observação. Reimportar o mesmo revisor exige 'substituicao'. Só com projeto travado.",
     {
         acao: z.enum(["formulario", "importar", "consenso", "gerar"]).describe("formulario: gera as planilhas dos revisores; importar: lê uma planilha devolvida (de revisor ou de consenso); consenso: gera a planilha das divergências; gerar: grava os artefatos do funil do estágio"),
         projectPath: z.string().describe("Raiz do projeto (protocolo travado)"),
@@ -2801,7 +2801,7 @@ server.tool(
         criterioNaoRecuperado: z.string().optional().describe("Só no texto completo: o critério do protocolo para o texto indisponível, copiado dele sem mudar nada; vai no topo da planilha"),
         perguntaIdiomaTipo: z.string().optional().describe("Id da pergunta ao lado da qual a planilha mostra, travado, o idioma e o tipo que a fonte declara"),
         papeis: z.array(z.string()).optional().describe("Lista do campo 'papel' no topo (padrão: pesquisador, estagiário)"),
-        pendentes: z.boolean().optional().describe("Gera um lote só com os registros que voltaram da manutenção (procedência consertada)"),
+        pendentes: z.boolean().optional().describe("Gera um lote novo só com os registros do insumo que não estão em planilha nenhuma"),
     },
     async (params) => {
         const trava = await checkDesignGuardrail(undefined, params.projectPath);
@@ -2834,7 +2834,7 @@ ${aviso}${rastro}` }] };
                 criterioNaoRecuperado: params.criterioNaoRecuperado, perguntaIdiomaTipo: params.perguntaIdiomaTipo,
                 papeis: params.papeis, pendentes: params.pendentes,
             });
-            const rastro = await registrarLote("record_screening_decisions", params, `Formulário ${params.estagio}, lote ${r.lote.n}: ${r.lote.ids.length} registros, ${Object.keys(r.lote.arquivos).length} planilha(s).`, { lote: r.lote, fora: r.fora });
+            const rastro = await registrarLote("record_screening_decisions", params, `Formulário ${params.estagio}, lote ${r.lote.n}: ${r.lote.ids.length} registros, ${Object.keys(r.lote.arquivos).length} planilha(s).`, { lote: r.lote, semProcedencia: r.semProcedencia });
             return { content: [{ type: "text", text: r.resumo + rastro }] };
         } catch (error: any) {
             return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
