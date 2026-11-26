@@ -116,6 +116,14 @@ do `C:\reviewbr`.
 | 20 | Legado Go do prismAId e sobras para `old/` | — | ponto 5 e o bloco de 26/11 da mesma seção: o que vai, e um arquivo rastreado que lista o que foi para `old/` e o último commit de cada coisa | **a fazer** (aprovada em 26/11/2026); a licença espera o Vicente |
 | 21 | `METODO_ReviewBR.md` e `maintainer.md` | — | pontos 7.1, 7.2 e 6.5 da mesma seção | **a fazer** (aprovada em 26/11/2026). Não muda o servidor |
 | 22 | Investigação: DataCite, OpenAIRE Graph, OSF, ASReview v2 e a camada do 4.4 | — | — | **a fazer** (aprovada em 26/11/2026): só leitura, na fonte oficial; nem todos são fontes de busca de artigo |
+| 23 | Procedência que o sistema não confere: registra a limitação, e a pesquisa segue | ponto 3 da segunda resposta de 26/11, na seção "Pedido do Vicente de 25/11/2026" | os textos do `verify_record_links`, da `record_screening_decisions`, da skill `screening-rules` e do `screener` | **em curso** (decidida em 26/11/2026) |
+| 24 | Travas em código por etapa: decisão antes da etapa, ordem e insumo, sistema e sessão presos ao projeto | pontos 6.2 e 6.3, reescritos em 26/11, com as condições da segunda resposta | — | **a fazer** (aprovada em 26/11/2026); o desenho da trava 3 volta ao Vicente antes de ser construído |
+| 25 | Hipótese A: os agentes de etapa num coordenador, com o `maintainer` à parte | ponto 6.4 | — | **a fazer** (aprovada em 26/11/2026), depois da 24 |
+| 26 | Ressalvas das tools: rede e repositórios | ponto 8, grupo 1 da lista de 26/11 | — | **a fazer**: começa conferindo cada item no código |
+| 27 | Ressalvas das tools: coleta e importação | ponto 8, grupo 2 | — | **a fazer**: começa conferindo cada item no código |
+| 28 | Ressalvas das tools: protocolo e estado | ponto 8, grupo 3 | — | **a fazer**: começa conferindo cada item no código |
+| 29 | Ressalvas das tools: texto completo | ponto 8, grupo 4 | — | **a fazer**: começa conferindo cada item no código |
+| 30 | Ressalvas das tools: método e IA | ponto 8, grupo 5 | — | **a fazer**: começa conferindo cada item no código; depois da 24 e da 25 |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
 da outra; a ordem é a do dano a uma pesquisa em andamento.
@@ -576,7 +584,8 @@ planilha só preenche o arquivo do ReviewBR. (b) Uma decisão por vez, ditada no
 >   Depois do conserto, volta para a revisão. Motivo dele: o registro sem procedência confirmada perde a legitimidade.
 >   Origem: "quando nao confere entra como registro de falha da IA e isso fica pra manutencao resolver para depois
 >   voltar a ser revisado porque perde a legitimidade"; "se o link nao abrir nada marca que nao abriu e isso tb volta
->   pra manutencao".
+>   pra manutencao". **Substituído pelo Vicente em 26/11/2026 (linha 23):** a procedência que o sistema não consegue
+>   conferir fica registrada como limitação e não impede a pesquisa; o registro vai à leitura com a situação à vista.
 > - **Sem download (decidido no mesmo dia):** os revisores leem pelo link DOI, na internet; a planilha não traz nem
 >   pede texto baixado. Origem: "nao precisa ter o texto completo, tanto o estagiario quanto o pesquisador tenha acesso
 >   a internet e podem clicar no link doi".
@@ -816,6 +825,45 @@ manutenção, caso a caso) e o registro das falhas do `retrieve_fulltexts` (fica
 >
 > A linha do ponto 3, quando ele a aprovar, vem antes da 19. Saíram do "Visto de passagem", por virarem linha: o
 > `index.ts.tmp` (linha 20) e o subitem P9 dos pedidos de 12/11 (linha 21).
+
+> **Segunda resposta do Vicente, 26/11/2026, ao "Levado de novo".**
+> - **2, feito.** A pasta saiu e está em `C:\roda_aromas_ceara`, fora do `C:\reviewbr` (conferido no mesmo dia: os 17
+>   arquivos rastreados dela aparecem apagados no `git status`, e nenhum commit grava isso). Origem: "ficou no c:\ fora
+>   da pasta reviewbr"; "acabei de tirar a pasta da pesquisa".
+> - **3, decidido; é a linha 23.** Quando o ReviewBR não consegue conferir a procedência de um registro (a fonte recusa
+>   robô, a página não abre, o DOI não tem registro, o título lido não confere), ele registra a limitação — o registro,
+>   o motivo e a data — e a pesquisa segue: o registro vai aos revisores como os outros, com a situação da conferência
+>   à vista; o "não" do revisor em "o link abriu o documento certo?" também fica registrado e não tira o registro da
+>   leitura; nada disso impede gerar o estágio, e o relatório do estágio traz as contagens da limitação, para o relato.
+>   Vale para qualquer pesquisa. Substitui a regra de 23/11 ("Link que não confere ou não abre": a falha ia à manutenção
+>   e voltava depois do conserto). A proposta (i)/(ii) de 26/11 não se constrói. Origem: "na minha interpretacao é caso
+>   de se registrar a limitacao do sistema quando ele nao consegue algo e isso seria o suficiente. o que eu pedi foi para
+>   tentar consertar o reviewbr enquanto fazemos uma pesquisa real e isso nao deveria impedir a pesquisa"; "vamos seguir
+>   nos 3 juntos da melhor forma possivel". Direção dele para a manutenção: "concentrar no que fazer para o sistema
+>   funcionar sem aumentar problemas menores que podem ser resolvidos facilmente".
+> - **5, licença:** AGPL-3.0 para tudo; o `package.json` do servidor passa de MIT a `AGPL-3.0-only`, na linha 20.
+>   Origem: "5 ok para agpl".
+> - **6.1, pergunta dele:** "achei que protocolo ja seria uma parte do metodo, de qualquer metodo, nao é?" Respondida no
+>   mesmo dia: nas revisões, sim (o JBI exige protocolo a priori em todas as suas metodologias: catálogo, entrada
+>   `jbi-manual`); então o método se escolhe antes da busca formal, e antes dela só há a busca exploratória, gravada
+>   para qualquer método. Espera só objeção dele.
+> - **6.2 e 6.3, aprovados; é a linha 24.** As três travas em código. (1) Decisão antes da etapa, perguntada na trava "a
+>   partir de informações claras e contextualizadas": cada pergunta diz o que se decide, as opções e a consequência de
+>   cada uma. (2) Ordem e insumo. (3) Sistema e sessão presos ao projeto: "parece ok", então o desenho dela volta a ele
+>   antes de ser construído. Toda recusa informa o que foi recusado e a regra do projeto que a causou e, quando a ação
+>   mudaria o projeto de pesquisa, diz que não pode e qual é o caminho (a emenda). Origem: "1 decisao a partir de
+>   informacoes claras e contextualizadas. 2 ok 3 parece ok nao apenas impede, informa e diz que nao pode se isso mudar
+>   o projeto de pesquisa."
+> - **6.4:** a linha 25 (Hipótese A) vem depois da 24.
+> - **8, aprovado; são as linhas 26 a 30**, uma por grupo da lista de 26/11, nesta ordem, cada uma começando por conferir
+>   cada item no código: 26 rede e repositórios; 27 coleta e importação; 28 protocolo e estado; 29 texto completo; 30
+>   método e IA, depois da 24 e da 25. Origem: "8 aprovo".
+> - **9:** "ok" (linha 22).
+> - **As interpretações de 4, 5, 6.5 e 7 estão confirmadas:** "4 ok 5 ok 6.5 ok 7 ok". As marcas "(interpretação)" do
+>   bloco anterior valem como decididas.
+> - **10:** sem resposta ("tiro?"); o "Visto de passagem" fica como está.
+>
+> Ordem de execução: 23 (aberta no mesmo dia) → 19 → 20 → 21 → 24 → 25 → 26 a 30; a 22 a qualquer momento (só leitura).
 
 **Como ler.** Primeiro a lista do que proponho, e a ordem. Depois, ponto a ponto, três partes nesta ordem:
 **Proposta**; **Hoje** (só fato, conferido em 26/11/2026, com a fonte); **Por quê**. Comente pelo número.
