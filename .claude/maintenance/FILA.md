@@ -80,14 +80,13 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 26/11/2026, respostas do Vicente à revisão do plano (nenhuma linha da fila rodou) — suíte 682
-de 682 às 09h09 (`npx vitest run`; sem build, para não trocar o `dist/` da pesquisa; o código não mudou depois); audit
-válido, 0 achados abertos; fila: linha 10 em curso, linhas 19 a 22 a fazer (aprovadas hoje); 49 itens no "Visto de
-passagem"; sem commit no projeto: `roda_aromas_ceara/03_screening/` e `logs/lote/`. Decisões novas: bloco
-"Respondido pelo Vicente em 26/11/2026" na seção "Pedido do Vicente de 25/11/2026". **Próximo passo:** a resposta do
-Vicente ao "Levado de novo ao Vicente em 26/11/2026", no fim da mesma seção. Assume: o Claude, na manutenção.
-Intocados: a pasta do `roda_aromas_ceara` e o `dist/`; linha que muda o servidor só depois de o Vicente tirar a pasta
-do `C:\reviewbr`.
+**Última verificação:** 26/11/2026, linha 23 feita (commit `6125977`) — build e suíte 687 de 687; audit válido, 0
+achados abertos; gate CORRECAO válido; fila: linha 10 em curso, linhas 19 a 22 e 24 a 30 a fazer; 49 itens no "Visto de
+passagem". `git status`: só os 17 arquivos rastreados do `roda_aromas_ceara` como apagados, porque a pasta está em
+`C:\roda_aromas_ceara` por decisão do Vicente (nenhum commit grava essa deleção). Decisões novas: os dois blocos de
+26/11 na seção "Pedido do Vicente de 25/11/2026". **Próximo passo:** a linha 19. Assume: o Claude, na manutenção.
+Intocado: a pasta `C:\roda_aromas_ceara` (a manutenção só lê). A pesquisa, quando o Vicente quiser e sem sessão de
+manutenção junto, gera o lote 2 com `pendentes` ("Linha 23", "Para a pesquisa").
 
 ## Fila
 
@@ -116,7 +115,7 @@ do `C:\reviewbr`.
 | 20 | Legado Go do prismAId e sobras para `old/` | — | ponto 5 e o bloco de 26/11 da mesma seção: o que vai, e um arquivo rastreado que lista o que foi para `old/` e o último commit de cada coisa | **a fazer** (aprovada em 26/11/2026); a licença espera o Vicente |
 | 21 | `METODO_ReviewBR.md` e `maintainer.md` | — | pontos 7.1, 7.2 e 6.5 da mesma seção | **a fazer** (aprovada em 26/11/2026). Não muda o servidor |
 | 22 | Investigação: DataCite, OpenAIRE Graph, OSF, ASReview v2 e a camada do 4.4 | — | — | **a fazer** (aprovada em 26/11/2026): só leitura, na fonte oficial; nem todos são fontes de busca de artigo |
-| 23 | Procedência que o sistema não confere: registra a limitação, e a pesquisa segue | ponto 3 da segunda resposta de 26/11, na seção "Pedido do Vicente de 25/11/2026" | os textos do `verify_record_links`, da `record_screening_decisions`, da skill `screening-rules` e do `screener` | **em curso** (decidida em 26/11/2026) |
+| 23 | Procedência que o sistema não confere: registra a limitação, e a pesquisa segue | ponto 3 da segunda resposta de 26/11, na seção "Pedido do Vicente de 25/11/2026" | os textos do `verify_record_links`, da `record_screening_decisions`, da skill `screening-rules` e do `screener` | **feita em 26/11/2026** (commit `6125977`): detalhe em "Linha 23", logo antes de "Como uma linha entra na fila" |
 | 24 | Travas em código por etapa: decisão antes da etapa, ordem e insumo, sistema e sessão presos ao projeto | pontos 6.2 e 6.3, reescritos em 26/11, com as condições da segunda resposta | — | **a fazer** (aprovada em 26/11/2026); o desenho da trava 3 volta ao Vicente antes de ser construído |
 | 25 | Hipótese A: os agentes de etapa num coordenador, com o `maintainer` à parte | ponto 6.4 | — | **a fazer** (aprovada em 26/11/2026), depois da 24 |
 | 26 | Ressalvas das tools: rede e repositórios | ponto 8, grupo 1 da lista de 26/11 | — | **a fazer**: começa conferindo cada item no código |
@@ -1329,6 +1328,35 @@ espera decisão:
 
 Pergunta: tiro?
 
+### Linha 23 — procedência que a conferência não confirma: limitação registrada (feita em 26/11/2026)
+
+Decisão do Vicente: segunda resposta de 26/11, ponto 3, na seção "Pedido do Vicente de 25/11/2026". Commit `6125977`.
+- **FAZER, com teste.** `formulario`: todo o insumo vai à planilha; o registro cuja procedência a conferência não
+  confirmou entra com a situação na coluna "conferência do link", e o resumo o conta como limitação registrada.
+  `pendentes`: um lote com o que não está em planilha nenhuma (as planilhas de antes de 26/11 deixavam fora por
+  procedência). `importar`: o "não" do revisor no link vai à lista de procedência, como antes, e não decide nada; com
+  ele, pergunta em branco é aceita (a instrução de antes de 26/11 mandava deixar em branco). `gerar`: não recusa por
+  procedência; o relatório do estágio traz `procedencia` (os não confirmados pela conferência, por motivo, e os que
+  algum revisor marcou com o link que não abriu), para o relato.
+- **Escolha minha, mostrada ao Vicente em 26/11:** no título e resumo, a pergunta em branco ao lado do link que não
+  abriu conta como dúvida, e o registro segue para o texto completo (MAYBE), como na regra da dúvida de 23/11; no texto
+  completo, sem "conseguiu ler?", o registro é não recuperado.
+- **DECLARAR:** as descrições do `verify_record_links` e da `record_screening_decisions`, o `procedencia.ts`, a
+  instrução da planilha, a skill `screening-rules` e o agente `screener` dizem a regra nova.
+- **Conferência:** `tests/procedencia_limitacao.test.ts` (5 testes, que falham no código anterior); 4 testes antigos
+  reescritos para a regra nova; suíte 687 de 687; build; gate `validate_system_change` CORRECAO válido.
+- **Controle no caso real**, numa cópia temporária de `C:\roda_aromas_ceara` (apagada depois; a pasta real não foi
+  tocada): `pendentes` gerou o lote 2 com exatamente os 64 que o manifesto de 24/11 deixou fora; com respostas
+  sintéticas (lote 1: "sim" em tudo; lote 2: link "não" e perguntas em branco), `importar`, `consenso` e `gerar`
+  fecharam o estágio, 743 = 743, com a limitação: 64 não confirmados (21 com `robots.txt` inalcançável; 18 não
+  conferem; 7 da Sucupira e 2 da EBSCO com `robots.txt` que proíbe; 5 HTTP 404; 3 HTTP 403; 3 DOI sem título; 3
+  páginas sem título; 2 DOI sem registro).
+- **Para a pesquisa** (passo da sessão dela, não da manutenção): gerar o lote 2 com `pendentes` e mandá-lo aos
+  revisores; as planilhas do lote 1 seguem como estão, e a importação aceita a instrução antiga.
+- **Não fez:** o 3.2, conferir uma a uma se o ReviewBR lê errado alguma das 64 (o acento da UECE, a página anti-robô
+  contada como "não confere", o título em outro idioma). Fica no "Visto de passagem", como problema menor, pela direção
+  dele de 26/11.
+
 ### Como uma linha entra na fila
 
 - Só o Vicente cria linha. A sessão não cria, nem a pedido de outro documento.
@@ -1554,7 +1582,7 @@ Vicente pedir.
   Não contar como achado o que não se confirmar. Consequência: nenhuma destas 51 vira achado nem conserto sem essa
   verificação. Origem: "estes erros nao parecem ser da ferramenta reviewbr. mandar verificar se sao e nao apenas
   inventar erros para justificar os achados."
-- (projeto `roda_aromas_ceara`, F4, 24/11/2026) Conferência oficial de procedência (`verify_record_links`, estágio `ta`, sobre os 743 de `03_screening/passed_keywords.json`): 679 conferem e 64 ficaram em `reviewbr/projects/roda_aromas_ceara/03_screening/revisores/falhas_procedencia.json` (18 "não confere", 46 "fora do ar"); planilhas do lote 1 geradas com os 679. Vale a ordem do Vicente de 23/11 acima antes de tratar qualquer uma das 64 como falha do ReviewBR.
+- (projeto `roda_aromas_ceara`, F4, 24/11/2026) Conferência oficial de procedência (`verify_record_links`, estágio `ta`, sobre os 743 de `03_screening/passed_keywords.json`): 679 conferem e 64 ficaram em `reviewbr/projects/roda_aromas_ceara/03_screening/revisores/falhas_procedencia.json` (18 "não confere", 46 "fora do ar"); planilhas do lote 1 geradas com os 679. Vale a ordem do Vicente de 23/11 acima antes de tratar qualquer uma das 64 como falha do ReviewBR. **Desde a linha 23 (26/11/2026)**, as 64 são limitação registrada e não impedem a pesquisa; conferir se alguma é defeito do ReviewBR fica como problema menor.
 - (26/11/2026, ao gravar as respostas do Vicente à revisão do plano) O `.agents/skills.json` aponta para
   `C:/REVIEWBRGEMINI/skills`, que não existe neste PC: numa sessão do Gemini, os agentes e as skills do ReviewBR não são
   lidos (ponto 1 da seção de 25/11, "Hoje"; o inventário do Gemini, R-22, propõe apontar para `.claude/skills`). A
