@@ -66,9 +66,11 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 23/11/2026, fim da linha 13 — build e suíte 682 de 682; audit válido, 0 achados abertos;
-fila: linha 10 em curso, nenhuma a fazer; 48 itens no "Visto de passagem"; sem commit no projeto:
-`roda_aromas_ceara/03_screening/` e `logs/lote/` (da camada por palavras).
+**Última verificação:** 26/11/2026, revisão do plano pedida pelo Vicente em 25/11 (nenhuma linha da fila) — suíte
+682 de 682 (`npx vitest run`; o build não rodou, para não trocar o `dist/` que a pesquisa usa); audit válido, 0 achados
+abertos; fila: linha 10 em curso, nenhuma a fazer; 49 itens no "Visto de passagem"; sem commit no projeto:
+`roda_aromas_ceara/03_screening/` e `logs/lote/`. **Espera o Vicente:** o acordo com o Gemini e a proposta de plano
+único, na seção "Pedido do Vicente de 25/11/2026", logo antes de "Como uma linha entra na fila".
 
 ## Fila
 
@@ -730,6 +732,396 @@ manutenção, caso a caso) e o registro das falhas do `retrieve_fulltexts` (fica
   Para o `roda_aromas_ceara`, em chat novo (servidor novo): `verify_record_links`; as falhas vão ao "Visto de
   passagem"; depois `record_screening_decisions` com `acao=formulario`, `estagio=ta`, os dois rótulos, as quatro
   perguntas copiadas do protocolo (a (d) só no texto completo) e `perguntaIdiomaTipo=c`.
+
+### Pedido do Vicente de 25/11/2026 — acordo com o Gemini e plano único (proposta de 26/11/2026; espera o Vicente)
+
+> Pedido, na conversa do Gemini de 25/11/2026 passada ao Claude: "esse é o momento tb de entrar em acordo sobre como
+> vao conduzir juntos"; e, para a resposta: "primeiro o que se pode fazer para melhorar e depois as explicações do
+> porque em cada ponto (…) considere que farei a leitura de cima para baixo e talvez sejam feitos comentarios enquanto
+> se vai lendo". Insumos: a passagem do Gemini e o inventário dele, em
+> `C:\Users\alqui\.gemini\antigravity\brain\730630b2-0aef-4810-a728-4e47d68560db\` (fora do repositório). As frases
+> do Vicente citadas aqui foram conferidas, em 26/11, na transcrição dessa conversa
+> (`.system_generated/logs/transcript.jsonl`). Nada desta seção vale antes da decisão dele, e nenhuma linha entra na
+> tabela "Fila" sem ele.
+
+**Como ler.** Primeiro a lista do que proponho, e a ordem. Depois, ponto a ponto, três partes nesta ordem:
+**Proposta**; **Hoje** (só fato, conferido em 26/11/2026, com a fonte); **Por quê**. Comente pelo número.
+
+#### O que proponho
+
+1. Fechar o acordo de condução Gemini ↔ Claude com o texto do ponto 1, que passa a ser regra desta página.
+2. Montar o isolamento antes de qualquer mudança estrutural: cópia da pasta do projeto fora do repositório, e a mudança
+   estrutural numa cópia de trabalho separada do git (worktree).
+3. Próximo passo durante a F4: as 64 falhas de procedência em três tempos, com um caminho novo para a falha que é da
+   fonte. Sem esse caminho, a etapa de título e resumo do `roda_aromas_ceara` não fecha.
+4. Uma linha para retratação e fonte inexistente, usável desde a busca exploratória.
+5. Mover o legado Go para `old/`, como decidido, e decidir junto o arquivo de licença.
+6. Decidir a arquitetura pelas respostas do ponto 6 (plugabilidade, plano por etapa, quatro desvios, Hipótese A,
+   `maintainer.md`). É decisão, sem código.
+7. Limpar o `METODO_ReviewBR.md`: tirar do texto normativo os retratos "Hoje", as atas e os doze canônicos.
+8. Ressalvas das tools: uma linha por área, cada uma começando por conferir se o item é real hoje.
+9. Fontes novas (DataCite, OpenAIRE Graph, OSF) depois da linha da rede; ASReview v2 como investigação.
+10. Não manter as listas R-01..R-28 e V-01..V-49 do Gemini; tirar do "Visto de passagem" 8 itens e 6 subitens já
+    feitos ou só de registro.
+
+**Ordem proposta** (cada uma vira linha quando ele aprovar): 2 → 3 → 4 → 5 → 7 → 6.2 → 6.4 → 8 → 9. Os pontos 1, 6 e
+10 se resolvem na leitura desta página. Por quê: primeiro a segurança da pesquisa (2) e o que a trava (3); depois o
+pedido de 25/11 sobre fonte inventada e retratação (4) e o que é curto e já tem decisão (5, 7); a garantia de execução antes de mais
+consertos (6.2, depois 6.4), porque "nao faz sentido fazer manutencao em cima de manutencao se isso nao esta
+garantido" (20/11, linha 17); por fim os consertos (8) e as fontes novas (9), que dependem da linha da rede.
+
+#### 1. Acordo de condução Gemini ↔ Claude
+
+**Proposta** — o texto que passa a valer:
+1. **Uma fila.** A `FILA.md` é a única fila do ReviewBR, e o `RETOMAR.md` é a única entrada de cada projeto. Documento
+   do Antigravity (`brain/…`) é insumo: não é fila, e a numeração dele (V-xx, R-xx, S-x, ondas, blocos) não se usa aqui.
+2. **Uma sessão por vez.** Só uma sessão escreve em `C:\reviewbr` por vez, de qualquer modelo. Sessão de pesquisa e
+   sessão de manutenção nunca ao mesmo tempo.
+3. **Quem faz o quê.** O Claude conduz a manutenção e esta revisão. O passo de pesquisa segue o `RETOMAR.md` do projeto,
+   com o modelo que o prompt declara. O Gemini trabalha quando o Vicente passa o bastão, numa tarefa que já está nesta
+   página ou no `RETOMAR.md`, sob as mesmas regras; não cria tarefa nem frente. Agente que dirige navegador, de qualquer
+   modelo, não abre página cujo `robots.txt` proíbe robô ou cujo servidor recusa robô (linha 14).
+4. **Sem execução em paralelo.** A regra 7 fica. As ondas 1 a 3 do inventário do Gemini não se executam como estão.
+5. **Passagem de bastão gravada no repositório**, com: último commit e `git status`; decisões novas do Vicente, com a
+   data e a frase dele; o único próximo passo; quem assume e o que fica intocado. Na manutenção, na linha "Última
+   verificação"; na pesquisa, no `RETOMAR.md`.
+
+**Hoje**
+- Em 25/11 o Gemini não alterou `C:\reviewbr`: HEAD `7a84e68` (24/11), e só `roda_aromas_ceara/03_screening/` e
+  `logs/lote/` sem commit. O `7a84e68` não estava no GitHub (o ramo estava um commit à frente).
+- Em 24/11 um passo da pesquisa (a conferência de procedência e as planilhas) rodou no Antigravity, com o servidor do
+  ReviewBR (`RETOMAR.md`, "Estado", 24/11). O acordo proposto pelo Gemini não fala de sessão de pesquisa.
+- Numa sessão do Gemini, os agentes e as skills do ReviewBR não são lidos: o `.agents/skills.json` aponta para
+  `C:/REVIEWBRGEMINI/skills`, que não existe neste PC. O que guia a trilha ali é o código e o `RETOMAR.md`.
+- As frases do Vicente na seção 3 da passagem conferem com a transcrição. A coluna "consequência" é redação do Gemini, e
+  ainda diz "após a pesquisa liberar" e "pós-pesquisa".
+- A conferência de 19/11 não permite "User-Agent de navegador" nem "busca por robô em caminho que o `robots.txt` proíbe
+  ou que o servidor recusa" (`CONFERENCIA_acesso_2026-11-19.md:51`).
+- O inventário do Gemini (7.6, item 5) pede suspender a regra 7 para as ondas: agentes em paralelo, e um "integrador"
+  para `index.ts`, `FILA.md` e `system_debt.json`.
+
+**Por quê**
+- 1.1: duas numerações das mesmas coisas são duas filas na prática, o que ele pediu para evitar: "Cuidado para não
+  construir tarefas para o gemini em paralelo com as tarefas já existentes do claude. Vocês precisam chegar em um
+  acordo."
+- 1.3: o passo de pesquisa já rodou no Antigravity, então o acordo tem de dizer quem o roda. E o papel de "navegação
+  real no Chrome" para as 64 URLs, como o Gemini o escreveu, choca com a decisão de 19/11 em 30 delas (9 com
+  `robots.txt` que proíbe; 21 com `robots.txt` inalcançável, que a RFC 9309 manda tratar como proibição): agente que
+  dirige navegador é robô que se apresenta como navegador.
+- 1.4: as ondas mexem ao mesmo tempo nos arquivos que toda linha toca, e a fase é de fechar frentes.
+- 1.5: a pasta do Antigravity fica fora do repositório, e nenhuma sessão a lê sem que o prompt aponte; "se algo não
+  está no disco, não está decidido" (`maintainer.md:236-237`).
+
+#### 2. Isolamento para a mudança estrutural
+
+**Proposta**
+1. Agora, antes de qualquer mudança: copiar a pasta `reviewbr/projects/roda_aromas_ceara/` inteira (com `01_raw/`,
+   `02_deduplicated/` e `03_screening/`) para fora do repositório. Repetir ao fim de cada passo da pesquisa.
+2. A mudança estrutural se faz numa cópia de trabalho separada do git (worktree; por exemplo `C:\reviewbr-estrutural`,
+   ramo próprio), com servidor, agentes e skills dela. O `C:\reviewbr`, de onde a pesquisa roda, não é rebuildado por
+   ela.
+3. No `C:\reviewbr` só entra, durante a pesquisa, conserto que a pesquisa precisa (como as linhas 11 a 18 e o ponto 3),
+   entre dois passos dela, como hoje.
+4. A mudança estrutural entra no `C:\reviewbr` com a decisão do Vicente, numa pausa da pesquisa, depois de rodar numa
+   cópia da pesquisa e de mostrar o que muda para ela. Se mudar etapa que ainda falta à pesquisa, espera o fim dela.
+5. No `C:\reviewbr`, nenhum comando que apague o que não está no git (`git clean`, `git stash -u`, `git reset --hard`,
+   `git checkout --force`) enquanto a pesquisa tiver dados fora dele.
+
+**Hoje**
+- O Claude Code (`.mcp.json`) e o Antigravity (`~/.gemini/config/mcp_config.json`) sobem o mesmo arquivo,
+  `c:/reviewbr/reviewbr/reviewbr-mcp/dist/index.js`, com a pasta de trabalho `c:/reviewbr`.
+- O `dist/` está fora do git (`.gitignore:7`), e o `npm run build` o reescreve no lugar: a sessão seguinte, de pesquisa
+  ou não, sobe o servidor novo.
+- O servidor lê `.claude/` e o catálogo de repositórios a partir da pasta dele (`index.ts:3128`, `registry/loader.ts:27`,
+  `services/project_init.ts:35`), e lê e grava os projetos, `data/system.db` e `logs/` a partir da pasta de trabalho
+  (`project_artifacts.ts:50`, `database.ts:61`, `structured_logger.ts:31`). Um worktree com build próprio não troca o
+  servidor da pesquisa.
+- Os dados da pesquisa estão só neste disco: `01_raw/` e `02_deduplicated/` são ignorados pelo git; `03_screening/`
+  (15 MB: camada por palavras, procedência e as duas planilhas) e `logs/lote/` estão sem commit. O backup em `D:` é de
+  02/10.
+- As planilhas guardam o hash do insumo: `importar` e `gerar` recusam se o `03_screening/passed_keywords.json` mudar
+  (`decisoes_revisores.ts:1074`).
+- A linha 17 congela o plano de busca e o hash do protocolo; o resto do sistema não fica congelado para as etapas
+  seguintes ("nada no projeto grava contra que versão do sistema ele travou", diagnóstico da linha 17).
+
+**Por quê**
+- É a condição que ele pôs: "podemos fazer as mudanças estruturais de fato apos termos uma seguranca de que nao sera
+  alterada a pesquisa em andamento para finalmente finalizar a construcao da manutenção/atualizacao do reviewbr"
+  (25/11, 17h34). Com o worktree, a mudança estrutural anda sem esperar o fim da pesquisa e sem trocar o servidor dela.
+- Ele corrigiu o rótulo "pós-pesquisa" do Gemini: "estamos falando sobre o reviewbr. (…) não estamos falando dela"
+  (25/11, 17h29). O isolamento separa as duas coisas sem parar nenhuma.
+- A cópia do projeto custa minutos e é a única proteção dos dados da F2 à F4 contra perda.
+
+#### 3. As 64 falhas de procedência — o próximo passo durante a F4
+
+**Proposta**
+1. Sessão do projeto, curta, sem código: `verify_record_links` com `somenteFalhas`. A falha passageira sai, e o que
+   voltar a conferir vai ao lote de pendentes.
+2. Linha da manutenção, para as que restarem, pela ordem de 23/11: dizer, uma a uma, se o defeito existe e se a causa é
+   do ReviewBR ou da fonte. A manutenção confere o que o robô pode abrir (título lido errado, codificação, idioma,
+   metadado do DOI); o que a fonte recusa a robô (`robots.txt`, página de verificação anti-robô, HTTP 403) uma pessoa
+   abre — o Vicente ou o estagiário. Causa do ReviewBR (por exemplo, a página da UECE lida fora da codificação dela):
+   conserto geral, com teste. Causa da fonte: não é achado.
+3. FAZER, na mesma linha: o registro cuja falha é da fonte entra no lote de pendentes com "o link abriu o documento
+   certo?" obrigatória; o "sim" confirma a procedência e grava quem e quando; o "não" mantém a falha, com o motivo.
+   Vale para qualquer pesquisa.
+
+Decisões dele: (a) aprovar o item 3, e quem confirma (os dois revisores, na planilha, como proposto; ou só o
+pesquisador, antes); (b) o registro cuja procedência ninguém confirma (o link leva a outro documento, ou não abre para
+ninguém) sai do funil com que motivo? O protocolo não diz.
+
+**Hoje**
+- 64 falhas em `03_screening/revisores/falhas_procedencia.json` (24/11): 46 "fora do ar" (`robots.txt` inalcançável 21;
+  `robots.txt` que proíbe 9, Sucupira 7 e EBSCO 2; HTTP 404 5; HTTP 403 3; DOI sem título 3; página sem título 3; DOI
+  sem registro 2) e 18 "não confere".
+- No teste de 23/11, numa cópia, foram 51. A diferença de 13 está toda em "`robots.txt` inalcançável" (8 em 23/11, 21
+  em 24/11); as outras classes têm os mesmos números.
+- A falha da conferência só sai quando uma conferência nova dá "confere" (`procedencia.ts:333-352`); o lote de
+  pendentes só leva registro com a procedência confirmada (`decisoes_revisores.ts:495-499`); o `gerar` recusa enquanto
+  houver falha (`decisoes_revisores.ts:1083`). Página que proíbe robô, HTTP 404 e DOI sem registro não passam a
+  "confere" enquanto a fonte não mudar: hoje a etapa de título e resumo não fecha.
+- Lote 1: 679 registros em cada planilha; os revisores leem fora do sistema.
+
+**Por quê**
+- Pergunta dele: "(as solucoes para uma pesquisa em particular deveriam resolver os problemas dela e ajudar a construir
+  o sistema para novas pesquisas) isso está de acordo com o que estamos planejando?" Sim, e é regra desde 20/11
+  ("controles e regras (…) tem de valer para todos os protocolos"): as linhas 11 a 18 saíram desta pesquisa e valem
+  para qualquer projeto. Aqui, o item 2 resolve o problema desta pesquisa, e o item 3 deixa no sistema o caminho para
+  qualquer pesquisa que encontre fonte que recusa robô.
+- Sem o item 3, a verificação pedida em 23/11 ("mandar verificar se sao e nao apenas inventar erros") pode concluir que
+  a causa é da fonte, e a etapa continua sem fechar.
+- Os revisores estão lendo agora: o ponto 3 tem de estar pronto antes de eles devolverem as planilhas.
+
+#### 4. Retratação e fonte inexistente
+
+**Proposta** — uma linha, geral:
+1. Existência: conferir se a referência existe (DOI registrado em `doi.org`, título que confere) também sem projeto (na
+   busca exploratória) e nas referências que o protocolo cita.
+2. Retratação, correção e manifestação de preocupação, pelos metadados do Crossref, que reúne os dados do Retraction
+   Watch (a conferir na fonte oficial, na própria linha).
+3. O resultado é gravado e mostrado; sozinho, não exclui ninguém. O que fazer com a retratada é do protocolo ou do
+   pesquisador.
+4. A "camada a mais" inspirada no PaperQA2 (Future-House) espera ele dizer o que ela deve fazer; uso de IA nela é
+   declarado (P6).
+
+Decisão dele: o que a "camada a mais" faz — por exemplo, conferir se o que um texto cita existe e diz o que se afirma,
+ou outra coisa.
+
+**Hoje**
+- O `verify_record_links` confere o título pelo DOI em `doi.org` (Crossref e DataCite) ou pela página, só sobre o
+  insumo de uma etapa do projeto, com `projectPath` (`procedencia.ts:285-299`).
+- Nenhum código lê retratação: nada em `crossref.ts` nem em `procedencia.ts`.
+- O contato que o ReviewBR manda ao Crossref e ao Unpaywall é `vicente@prismaid.com` e `reviewbr@prismaid.com`
+  (`crossref.ts:5`, `index.ts:1280`).
+
+**Por quê**
+- "penso que uma tools de verificacao de retratacao que use o que ja existe e que vai surgir possa ser muito util para
+  o reviewbr para que alguem nao comece uma pesquisa com fontes inventadas" (25/11, 17h34); e, antes, "explicar ao
+  inves de concordar" por que a retratação ficara para depois (17h24).
+- O que existe faz metade, a existência; falta usá-la antes do projeto e somar a retratação.
+- Na leitura das fontes oficiais de 23/11 (linha 13), a Cochrane trata retratação e estudo fraudulento (4.4.6). A
+  conferência de procedência foi decisão dele, a mais, e não exclui ninguém; a retratação segue o mesmo desenho.
+
+#### 5. Legado Go para `old/`
+
+**Proposta** — linha curta: mover o código Go do prismAId que está em `reviewbr/` (56 arquivos `.go` rastreados fora
+de `projects/`, `go.mod`, `go.sum` e as pastas que só têm Go, a conferir na linha) para `C:\reviewbr\old\` (fora do
+git), mantendo o crédito ao prismAId no `CITATION.cff` e no `README.md`. Os três `.go` de
+`reviewbr/projects/data_mining/scripts/` são do projeto e ficam.
+
+Decisão dele, junto: o `reviewbr/LICENSE` (AGPL-3.0) sai com o Go, fica, ou o repositório passa a declarar a licença
+do que fica?
+
+**Hoje**
+- `reviewbr/` é a árvore do prismAId: `LICENSE` (GNU AGPL 3.0), `CITATION.cff`, `go.mod`, `prismAId.go`, `cmd/`,
+  `conversion/` e outras. O `prismaid.exe` está no disco, ignorado pelo git (`reviewbr/.gitignore:26`).
+- O servidor está em `reviewbr/reviewbr-mcp/` (`package.json`: MIT) e não chama código Go: buscando "prismaid" no
+  `src/`, só aparecem os dois endereços de contato do ponto 4.
+
+**Por quê**
+- Decidido: "2.1.1 e 21.2 ok, pode mover pra legado" (25/11; também em 24/11).
+- O motivo que se sustenta é técnico: nenhuma tool usa o Go. O motivo jurídico do inventário ("contaminação" pela AGPL
+  por estar na mesma pasta) não se sustenta como foi dito: a AGPL diz que a inclusão num agregado não estende a licença
+  às outras partes (`reviewbr/LICENSE:223-231`, §5). Importaria o código TypeScript ser derivado do Go, o que não
+  conferi. E mover não tira o Go do histórico público do git.
+- Sem o Go, o `LICENSE` da pasta descreve o que não está mais lá; por isso a decisão vai junto.
+
+#### 6. Arquitetura — o que decidir, sem código
+
+**6.1 Plugabilidade** ("A plugabilidade pode ser a adequação as exigencias previamente (…) mas pode ser uma isenção
+para todos para se adequar ao momento em que se exige um método. a segunda me parece muito mais difícil, e acho até que
+impossível, mas imagino que seria a ideal.")
+- Proposta: adotar a segunda forma até onde ela é possível. O núcleo registra tudo desde a busca exploratória, e o
+  ReviewBR diz, para cada método candidato, que passo ele exige fixado antes; esse passo é o último momento de escolher
+  o método. O primeiro passo concreto já está decidido desde 12/11: registrar a busca exploratória por padrão.
+- Hoje: a busca sem projeto não grava nada no registro da busca (`index.ts:129-130`); o pedido de 12/11 está no "Visto
+  de passagem" (linha 9). O controle por código (P5) já serve a qualquer protocolo: plano de busca, procedência e
+  decisões dos revisores.
+- Por quê: a isenção é impossível só no que o método exige antes da coleta (protocolo, critérios e plano fixados antes
+  da busca), que não se cumpre depois. Tudo o que é registro (origem, contagem, decisão, log) se cumpre depois, se foi
+  gravado desde o início. A segunda forma não é impossível: é possível até o primeiro passo que o método fixa antes.
+
+**6.2 O plano por etapa** ("1.2 pode ser uma solução, mas seria a melhor?")
+- Proposta: sozinho, não. A combinação: (a) o plano de cada etapa como dado, aprovado e congelado na trava, estendendo
+  às outras etapas o que a linha 17 fez para a busca; (b) o código sabe a ordem das etapas e recusa a chamada fora
+  dela; (c) na trava, a lista do que cada etapa precisa ter decidido, perguntada ao pesquisador, para o protocolo não
+  chegar mudo à etapa; (d) só depois, um executor sem modelo para as etapas mecânicas.
+- Hoje: a busca já funciona assim (plano congelado no `project_state.json`, cada execução conferida, emenda e desvio por
+  tool, `podeAvancar`; linha 17). Da F3 em diante, não: a camada por palavras, a "dúvida", o registro sem resumo e a
+  planilha foram decididos no chat depois da trava (seção "Pedido do Vicente de 23/11/2026").
+- Por quê: o `plano_execucao.json` do Gemini resolve o que o protocolo já decidiu, mas as intervenções de 23/11 vieram
+  do que o protocolo não dizia; sem (c), o plano congela o silêncio. (b) é o que protege contra o modelo fraco (6.3,
+  desvio 3). (d) ajuda o pesquisador sem IA poderosa ("Visto de passagem", pedido de 23/11).
+
+**6.3 Os quatro desvios** ("a ia criar sempre perguntas ao final de uma atividade, (…) o pesquisar querer fazer
+alteracoes para burlar metodologia, (…) IAs de menor poder de processamento (…) não conseguirem seguir uma trilha,
+outras possibilidades de uma pesquisa sair da trilha")
+- Proposta, por desvio:
+  1. Pergunta da IA no fim da atividade: o próximo passo sai do estado do projeto, por tool, e a sessão fecha dizendo só
+     ele. Ideia fora do plano vai ao registro (`REGISTRO.md` ou "Visto de passagem"), não vira pergunta.
+  2. Tentativa de burlar: toda recusa de trava fica gravada no projeto (quem, quando, o quê) e aparece no relato. É a
+     decisão de 12/11 (P6), ainda não feita.
+  3. Modelo fraco: a ordem e as conferências de cada etapa vão para o código (6.2 b). Teste de aceitação: um modelo
+     menor roda um projeto de teste de ponta a ponta.
+  4. Outras fugas: manutenção mudando o sistema debaixo da pesquisa (ponto 2); duas sessões ao mesmo tempo (ponto 1);
+     tool quebrada contornada e decisão tomada no chat sem registro (já são as regras 5 e 4 do `RETOMAR.md`).
+- Hoje: só a busca tem conferência por código depois da trava (linha 17), e a recusa dela já vai ao log. "Ao menor
+  sinal de fuga, pare e pergunte" é conduta (skill `conduct-review`). A gravação da tentativa de burla foi decidida em
+  12/11 e não existe ("Visto de passagem", linha 9). Numa sessão do Gemini, os agentes e as skills não são lidos
+  (ponto 1, "Hoje").
+- Por quê: o que funcionou na pesquisa foi trava em código, não texto de agente. A F2 se afastou do protocolo quando a
+  trava era só texto, e parou de se afastar com a linha 17. Texto controla só o modelo que o lê; código controla
+  qualquer modelo.
+
+**6.4 Hipótese A** ("de acordo preferindo a hipotese A se isso nao implicar nos desvios comuns de IA")
+- Proposta: a Hipótese A vem depois do 6.2 (b), não antes. Primeiro cada etapa ganha a conferência em código; depois os
+  agentes de "troca de chapéu" se fundem num coordenador, e o `maintainer` fica separado.
+- Hoje: fora da busca, o que separa as etapas é a lista de tools de cada agente (`tools:` no cabeçalho), que o Claude
+  Code respeita e o Gemini não lê. "A arquitetura de agentes por papel" está em "O que não é fila" até ele pedir.
+- Por quê: com um coordenador só, que tem todas as tools, a única barreira é o código. Onde a conferência ainda não está
+  no código, tirar os agentes tira uma barreira, e isso é o desvio 3. Com o 6.2 (b) feito, a fusão quase só limpa texto.
+
+**6.5 `maintainer.md`** ("nao lembro se o vi mencionado nesse inventario exautivo que pode tb ter sido superado (…) a
+ver")
+- Proposta: o agente fica, porque é a fronteira entre mexer no sistema e fazer pesquisa, com as tools de escrita da
+  manutenção. DECLARAR: corrigir a L28 (P9: "sem o protocolo que a metodologia exige"); tirar a classificação pelo RAISE
+  3 das L35-40 e da L231; dizer que as L183-193 valem só para o mapeamento de norma já transcrita; decidir as L380-385
+  junto com os canônicos (7.2).
+- Hoje: 385 linhas e 8 tools de manutenção no cabeçalho. A L28 diz "nada entra no funil sem protocolo travado"; as
+  L35-40 e a L231 tratam o RAISE 3 como classificação em uso; as L183-193 descrevem a leitura documentada, que a linha 8
+  deixou só para mapeamento de norma já transcrita; as L380-385 dizem "Não dê ao sistema uma tese própria (…) a isenção
+  da ferramenta vem justamente de ela não ter epistemologia própria".
+- Por quê: esses trechos dizem o que o sistema decidiu deixar de fazer (P9 e P6, 12/11). E as L380-385 contradizem a
+  seção 2 do `METODO_ReviewBR.md` ("O ReviewBR tem os seus fundamentos científicos, os canônicos"), o que só se resolve
+  com a decisão do 7.2.
+
+#### 7. `METODO_ReviewBR.md`
+
+**7.1 Atas e retratos** ("mas isso foi pontual e corrigido, não? de toda forma deve-se limpar traços disso.")
+- Proposta: DECLARAR. O texto normativo fica com as regras (objetivo, princípios, etapas, critérios, limites), sem os
+  blocos "Hoje" e sem as marcas de decisão no corpo. A origem de cada regra (A1..A9, D01..D41, datas, frases dele) vai
+  para um anexo no fim. Nenhuma regra muda de sentido.
+- Hoje: não foi pontual. O documento foi aprovado em 12/11 com dois tipos de texto, de propósito: "Decidido" (vale, com
+  data e origem) e "Hoje" (fato do sistema em 12/11) — legenda em `METODO_ReviewBR.md:3-9`. São 9 blocos "Hoje" (linhas
+  54, 100, 215, 251, 262, 294, 330, 366 e 411). A maioria ainda é verdade e já está no "Visto de passagem" (linha 9);
+  parte envelheceu: o da linha 366 não conta a conferência por código da busca, que a linha 17 criou em 20/11.
+- Por quê: retrato do sistema envelhece a cada linha da fila e passa a dizer o falso dentro do texto do método; o lugar
+  do retrato é esta página.
+
+**7.2 Os doze canônicos** ("Essa imaginação pode ser criticada e abandonada, não tentar encaixar se não comprir com
+essas pretensões.")
+- Proposta: tirar a lista do texto normativo. Onde uma regra tem origem real num autor (por exemplo, o protocolo fixado
+  antes da busca, ou o controle positivo), fica uma linha de origem na própria regra, depois de conferida na obra. Se
+  ele quiser a lista como leitura, ela vai para um anexo marcado "resumo do agente; obra não lida".
+- Hoje: dos doze, os quatro primeiros foram aprovados um a um; os oito seguintes foram escolhidos e redigidos pelo
+  agente, e "nenhuma obra foi lida nesta sessão: o resumo de cada uma é do agente" (`METODO_ReviewBR.md:103-106` e
+  `:155`). Nenhum código, trilha ou tool lê a lista, que ocupa cerca de 60 linhas. Em 04/10 ele decidiu a isenção: "não
+  acho que precisamos que o sistema assuma uma cultura para além do que exige o método" (`DIRECAO`, 5b), que é o que o
+  `maintainer.md:380-385` ainda diz.
+- Por quê, pelas três pretensões dele: "trilhas de pesquisa fidegnicas" — a fidelidade da trilha vem do controle por
+  código (P5), não da lista; "educativo" — só educa resumo conferido na obra, e oito dos doze são resumo escrito antes
+  de qualquer leitura; "cosmeticamente interessante" — é o ganho que fica, e não pede lugar no texto normativo.
+
+#### 8. Ressalvas das tools ("4 resolver as ressalvas para tornar funcionais")
+
+**Proposta** — "ressalva" é item do "Visto de passagem" ligado a uma tool. Uma linha por área, em série; cada uma
+começa conferindo se o item é real hoje, e o que não se confirmar sai do "Visto" sem conserto:
+- 8a, rede e repositórios: verificação de certificado desligada no processo inteiro (`http.ts`); HTTP 503 que derruba a
+  busca grande; `search_repository` sem repositórios (1800 s); camada 2 com repositórios inativos; espera de ~90 s no
+  DSpace sem API; UECE como "federal" no catálogo;
+- 8b, importação e coleta: `harvest_records` sem gravar em `01_raw`; citações do snowball só na primeira página;
+  `import_bvs_export` juntando registros distintos; `importRis` sem base declarada; aviso do `search_openalex` sem
+  `projectPath`;
+- 8c, projeto e estado: `initializeWorkspace` em DRAFT; SQLite gravado antes da validação; `topic` desatualizado;
+  `projectPath` absoluto no log;
+- 8d, os pedidos de 12/11 ao código (linha 9 do "Visto"), depois do ponto 6: tirar o mapa do RAISE 3 mantendo a guarda
+  contra IA não declarada e gravando a tentativa, e os demais.
+
+O que tocar etapa que ainda falta à pesquisa (a deduplicação depois da triagem, o texto completo) segue o ponto 2.
+
+**Hoje**
+- 49 tools registradas (`index.ts`: 49 chamadas `server.tool`; o guardião de governança contou 49 ao subir o servidor em
+  26/11, `logs/reviewbr_2026-11-26.jsonl`). A divisão "30 íntegras e 19 com ressalvas" é do inventário do Gemini e não
+  foi conferida.
+- Os itens de cada área estão no "Visto de passagem", anotados sem avaliação. Conferido hoje só um: `http.ts:42-43` põe
+  `NODE_TLS_REJECT_UNAUTHORIZED = "0"` durante o pedido, com `acceptSelfSigned: true` por padrão (`http.ts:24`).
+
+**Por quê**
+- Em 23/11 ele mandou verificar antes de tratar como defeito: "mandar verificar se sao e nao apenas inventar erros para
+  justificar os achados". E só é achado o que o sistema afirma e não cumpre (`DIRECAO`, §9).
+- Em série, para não editar em paralelo os mesmos arquivos; por área, para caber numa janela de 5 h. A rede vem antes
+  das fontes novas, que herdariam os mesmos defeitos.
+
+#### 9. Fontes novas e ASReview
+
+**Proposta**
+- DataCite, OpenAIRE Graph e OSF entram como fontes depois da 8a: cada uma com a tool ou o adaptador, a entrada no
+  catálogo e o controle positivo, como as fontes de hoje.
+- ASReview v2: investigação só de leitura, na fonte oficial: o que a versão atual oferece (API, MCP, formato de troca) e
+  se cabe como parceiro externo e opcional. Triagem com aprendizado de máquina é escolha do protocolo de cada projeto, e
+  é declarada (P6).
+
+**Hoje**
+- Não há serviço de DataCite, OpenAIRE nem OSF em `src/services/`. O DOI da DataCite já é conferido pela procedência,
+  via `doi.org`.
+- O ReviewBR exporta CSV para o ASReview LAB (`export_dataset`, formato `asreview`: `index.ts:958`, `data.ts:94`).
+- O `roda_aromas_ceara` decidiu triagem sem IA (23/11).
+
+**Por quê**
+- "2.2.2 vamos incluir como fonte"; "asreview tb foi uma fonte de inspiracao. nao sei se ainda há isso como legado, mas
+  vale investigar mais (…) talvez acoplar se tiver um mcp ou criar uma ferramenta para usar como parceiro" (25/11).
+- Depois da 8a porque usam a mesma camada de rede. O ASReview como investigação porque hoje não se sabe o que a versão 2
+  oferece.
+
+#### 10. As listas do Gemini e o "Visto de passagem"
+
+**Proposta**
+- As listas R-01..R-28 e V-01..V-49 do inventário não viram índice desta página. Das R: a R-27 é o ponto 5; a R-24 (Bio
+  Research) fica, como ele decidiu em 24/11; a R-03 vai à 8d. As R-01, R-02, R-22, R-23, R-25 e R-26 (mover para `old/`
+  o `index.ts.tmp`, os `run_search_*.ts`, o `reviewbr-web/`, o `.zip` de 150 MB da raiz e o export de conversas do
+  Antigravity; apontar o `.agents/skills.json`) entram no ponto 5 se ele disser. As demais, o próprio Gemini propôs
+  conservar.
+- Saem do "Visto de passagem", se ele mandar:
+  - 2 que o próprio texto dá como consertados: o teto da Oasisbr, do OpenAlex e do SciELO; a camada mecânica por
+    palavras;
+  - 5 que são só registro: o `PASSAGEM.md` que o teste lê; o Git Bash com `c:/` (a rotina já manda usar o PowerShell);
+    a decisão da deduplicação gravada no DEBT-025; o `data_mining/caju_beverages`; o servidor aberto antes do build de
+    12/11;
+  - 1 substituído: o das 51 falhas do teste de 23/11 (fica o de 24/11, com as 64 oficiais);
+  - 6 subitens: no bloco de 15/11, "zero estudos incluídos" (conferido em 19/11), a busca à mão (linha 17) e a triagem
+    em duas camadas (23/11); no bloco P1 a P6, o P5 (o catálogo chama hoje o `BR-AGG-0001` de BDTD, linha 18); no bloco
+    da linha 11, a UFC que alternava e o IFCE com 1 registro (comportamento da fonte).
+
+  Ficam 41 itens.
+
+**Hoje**
+- O "Visto de passagem" tem 49 itens. O inventário do Gemini dá 19 itens e subitens como resolvidos; pelo texto desta
+  página, 13 deles estão; os outros vão com a linha da área deles, para conferir no código.
+
+**Por quê**
+- "5 talvez mude com os comentarios deste input"; "7 na proxima resposta tornar o quadro mais limpo e objetivo" (25/11).
+- Duas listas das mesmas coisas são o risco do ponto 1.1; tirar o que já foi feito deixa no "Visto" só o que espera
+  decisão.
 
 ### Como uma linha entra na fila
 
