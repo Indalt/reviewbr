@@ -28,6 +28,20 @@
 7. **Sem subagente nem workflow.** Alteração do sistema passa pelo gate `validate_system_change`, com o tipo
    declarado.
 8. **Resposta ao Vicente em até 5 linhas, com a decisão primeiro.**
+9. **Acordo de condução Gemini ↔ Claude** (aprovado pelo Vicente em 26/11/2026; a proposta está no ponto 1 da seção
+   "Pedido do Vicente de 25/11/2026"):
+   - uma fila, esta página; em cada projeto, o `RETOMAR.md`. Documento do Antigravity (`brain/…`) é insumo, não fila,
+     e a numeração dele (V-xx, R-xx, S-x, ondas, blocos) não se usa aqui;
+   - uma sessão por vez escreve em `C:\reviewbr`, de qualquer modelo; sessão de pesquisa e de manutenção nunca ao
+     mesmo tempo;
+   - o Claude conduz a manutenção; o passo de pesquisa segue o `RETOMAR.md`, com o modelo que o prompt declara; o
+     Gemini trabalha quando o Vicente passa o bastão, numa tarefa que já está aqui ou no `RETOMAR.md`, e não cria
+     tarefa nem frente; agente que dirige navegador, de qualquer modelo, não abre página cujo `robots.txt` proíbe robô
+     ou cujo servidor recusa robô (linha 14);
+   - a regra 7 vale para todos: as ondas 1 a 3 do inventário do Gemini não se executam como estão;
+   - a passagem de bastão fica no repositório (na manutenção, em "Última verificação"; na pesquisa, no `RETOMAR.md`):
+     último commit e `git status`; decisões novas do Vicente, com a data e a frase dele; o único próximo passo; quem
+     assume e o que fica intocado.
 
 ## Dois princípios decididos em 12/11/2026
 
@@ -66,11 +80,14 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 26/11/2026, revisão do plano pedida pelo Vicente em 25/11 (nenhuma linha da fila) — suíte
-682 de 682 (`npx vitest run`; o build não rodou, para não trocar o `dist/` que a pesquisa usa); audit válido, 0 achados
-abertos; fila: linha 10 em curso, nenhuma a fazer; 49 itens no "Visto de passagem"; sem commit no projeto:
-`roda_aromas_ceara/03_screening/` e `logs/lote/`. **Espera o Vicente:** o acordo com o Gemini e a proposta de plano
-único, na seção "Pedido do Vicente de 25/11/2026", logo antes de "Como uma linha entra na fila".
+**Última verificação:** 26/11/2026, respostas do Vicente à revisão do plano (nenhuma linha da fila rodou) — suíte 682
+de 682 às 09h09 (`npx vitest run`; sem build, para não trocar o `dist/` da pesquisa; o código não mudou depois); audit
+válido, 0 achados abertos; fila: linha 10 em curso, linhas 19 a 22 a fazer (aprovadas hoje); 49 itens no "Visto de
+passagem"; sem commit no projeto: `roda_aromas_ceara/03_screening/` e `logs/lote/`. Decisões novas: bloco
+"Respondido pelo Vicente em 26/11/2026" na seção "Pedido do Vicente de 25/11/2026". **Próximo passo:** a resposta do
+Vicente ao "Levado de novo ao Vicente em 26/11/2026", no fim da mesma seção. Assume: o Claude, na manutenção.
+Intocados: a pasta do `roda_aromas_ceara` e o `dist/`; linha que muda o servidor só depois de o Vicente tirar a pasta
+do `C:\reviewbr`.
 
 ## Fila
 
@@ -95,6 +112,10 @@ abertos; fila: linha 10 em curso, nenhuma a fazer; 49 itens no "Visto de passage
 | 16 | F10 e F11 — importação de RIS: linha de continuação, CR sozinho e registros distintos da mesma base | ver abaixo | — | **feita em 20/11/2026** |
 | 17 | Protocolo travado na busca: a execução segue só o protocolo, e o que muda é emenda | ver abaixo | ver abaixo | **feita em 20/11/2026** (commits `9c4cff2`, `3a25e69`, `7dc2d85`, `73f6380`, `b5496a1`, `7dfb6e1`) |
 | 18 | BDTD e Oasisbr separadas; a Oasisbr inteira buscável | — | — | **feita em 21/11/2026** (pergunta e decisão do Vicente no mesmo dia; item tirado do "Visto de passagem"): `BR-AGG-0001` é a BDTD, como a busca sempre fez; a Oasisbr é `BR-AGG-0006`, buscada sem filtro de rede; os quatro `viaAgregador` apontam para ela. Emenda 2 do `roda_aromas_ceara` aprovada (protocolo 1.2, 12 fontes). Em 21/11 o DNS do `ibict.br` falhava (8.8.8.8 e 1.1.1.1): controle positivo da Oasisbr inteira fica para a busca |
+| 19 | Fonte inventada e retratação, desde a busca exploratória | ponto 4 da seção "Pedido do Vicente de 25/11/2026" (4.1 a 4.3) | — | **a fazer** (aprovada em 26/11/2026). Muda o servidor: só com a pasta do `roda_aromas_ceara` fora do `C:\reviewbr` |
+| 20 | Legado Go do prismAId e sobras para `old/` | — | ponto 5 e o bloco de 26/11 da mesma seção: o que vai, e um arquivo rastreado que lista o que foi para `old/` e o último commit de cada coisa | **a fazer** (aprovada em 26/11/2026); a licença espera o Vicente |
+| 21 | `METODO_ReviewBR.md` e `maintainer.md` | — | pontos 7.1, 7.2 e 6.5 da mesma seção | **a fazer** (aprovada em 26/11/2026). Não muda o servidor |
+| 22 | Investigação: DataCite, OpenAIRE Graph, OSF, ASReview v2 e a camada do 4.4 | — | — | **a fazer** (aprovada em 26/11/2026): só leitura, na fonte oficial; nem todos são fontes de busca de artigo |
 
 Os números são ids `DEBT-NNN`. Cada linha de 1 a 8 cabe numa janela de 5 h. As linhas 1 a 7 não dependem uma
 da outra; a ordem é a do dano a uma pesquisa em andamento.
@@ -733,7 +754,7 @@ manutenção, caso a caso) e o registro das falhas do `retrieve_fulltexts` (fica
   passagem"; depois `record_screening_decisions` com `acao=formulario`, `estagio=ta`, os dois rótulos, as quatro
   perguntas copiadas do protocolo (a (d) só no texto completo) e `perguntaIdiomaTipo=c`.
 
-### Pedido do Vicente de 25/11/2026 — acordo com o Gemini e plano único (proposta de 26/11/2026; espera o Vicente)
+### Pedido do Vicente de 25/11/2026 — acordo com o Gemini e plano único (proposta de 26/11/2026; respondida em parte no mesmo dia)
 
 > Pedido, na conversa do Gemini de 25/11/2026 passada ao Claude: "esse é o momento tb de entrar em acordo sobre como
 > vao conduzir juntos"; e, para a resposta: "primeiro o que se pode fazer para melhorar e depois as explicações do
@@ -743,6 +764,58 @@ manutenção, caso a caso) e o registro das falhas do `retrieve_fulltexts` (fica
 > do Vicente citadas aqui foram conferidas, em 26/11, na transcrição dessa conversa
 > (`.system_generated/logs/transcript.jsonl`). Nada desta seção vale antes da decisão dele, e nenhuma linha entra na
 > tabela "Fila" sem ele.
+
+> **Respondido pelo Vicente em 26/11/2026, ponto a ponto.** O texto de cada decisão está reescrito em forma precisa, e
+> a frase dele vai como origem. O que é interpretação minha está marcado e foi mostrado a ele no mesmo dia.
+> - **1, aprovado.** O acordo é a regra 9 desta página. Origem: "1-aprovo".
+> - **2, trocado pelo dele.** Durante os consertos, a pasta `reviewbr/projects/roda_aromas_ceara/` fica fora do
+>   `C:\reviewbr`: o Vicente a tira inteira, no estado em que está, e ela volta quando os consertos terminarem. Isso
+>   substitui o worktree e a regra de só mexer entre dois passos da pesquisa (2.2 a 2.4); a manutenção trabalha no
+>   próprio `C:\reviewbr`. Consequências: a pesquisa não roda até a volta (os revisores seguem lendo fora do sistema, e
+>   a importação das planilhas espera); com a pasta fora, os 17 arquivos dela rastreados aparecem apagados no
+>   `git status`, e nenhum commit grava essa deleção (commit só por caminho explícito); linha que muda o servidor só
+>   roda com a pasta fora. Levado a ele no mesmo dia: fechar as planilhas antes; destino fora do `C:\reviewbr` (não
+>   `old/`, que fica dentro dele); dizer onde ficou, para a manutenção ler, sem gravar, a lista das 64 falhas; a volta
+>   depois de o sistema consertado importar as duas planilhas numa cópia da pasta. Origem: "posso mover a pasta da
+>   pesquisa no estado em que ela se encontra e depois voltar quando os concertos terminarem."
+> - **3, não respondido.** Ele o leu como passo da pesquisa: "Se trata-se apenas da pesquisa roda de aroma já tenho as
+>   planilhas e elas estao sendo conferidas pelos revisores. nosso trabalho aqui é sobre o reviewbr como um todo." É
+>   do ReviewBR; reformulado em "Levado de novo ao Vicente em 26/11/2026", no fim desta seção. O 3.1 (rodar o
+>   `verify_record_links` com `somenteFalhas` no projeto) é passo da pesquisa e fica para a sessão dela, depois da
+>   volta da pasta.
+> - **4, respondido.** A linha 4 (4.1 a 4.3: existência e retratação) entra na fila, como linha 19: é o pedido dele de
+>   25/11, e ele respondeu à única pergunta do ponto. A "camada a mais" (4.4) não se constrói agora e vai para a
+>   investigação da linha 22, que diz se ela é necessária (interpretação). Origem: "a camada a mais seria usar as tools
+>   como parceira e criar uma tool nossa para a triagem. talvez nao seja necessario."
+> - **5, aprovado, linha 20; a licença foi levada de novo.** Vão para `C:\reviewbr\old\` o código Go do prismAId (ponto
+>   5) e as sobras do ponto 10: `src/index.ts.tmp`, os `run_search_*.ts`, `reviewbr-web/`, o `.zip` de 150 MB da raiz
+>   e `antigravity_conversas_export/` (interpretação: a pergunta do resumo trazia as sobras junto). "Sem esquecer que
+>   existem": como `old/` está fora do git (`.gitignore:28`), um arquivo rastreado lista o que foi para lá, de onde,
+>   quando e o último commit em que cada coisa estava no git; o crédito ao prismAId fica no `README.md` e no
+>   `CITATION.cff`. Origem: "pode mover para old mas sem esquecer que existem."
+> - **6.1, pediu contexto:** "até o primeiro passo que o metdo exige antes de que? contextualize." Levado de novo.
+> - **6.2, não decidível com o texto:** "nao é possivel decidir com esse texto. o plano por etapa sozinho nao
+>   basta..." Reescrito com o 6.3 e levado de novo.
+> - **6.3, corrigido por ele:** contra os quatro desvios, o ReviewBR busca meios de impedir; registrar é complemento.
+>   Origem: "nao apenas registra. estamos buscando criar meios de impedir." Reescrito com o 6.2.
+> - **6.4, aprovado:** a Hipótese A (os agentes de cada etapa fundidos num coordenador, com o `maintainer` à parte) vem
+>   depois da recusa em código da ordem das etapas. Origem: "6.4 ok".
+> - **6.5, aprovado, na linha 21:** o `maintainer` fica, com o DECLARAR do 6.5 (L28; o RAISE 3 nas L35-40 e na L231;
+>   as L183-193 só para norma já transcrita). As L380-385 ficam como estão: com os canônicos fora do texto normativo
+>   (7.2), deixam de contradizer o `METODO_ReviewBR.md` (interpretação). Origem: "6.5 sim, agente mainteiner fica."
+> - **7, aprovado, na linha 21:** 7.1 e 7.2 como propostos; a lista dos doze vai para um anexo marcado "resumo do
+>   agente; obra não lida" (interpretação: o "sim" respondeu às duas perguntas do resumo). Origem: "7 sim, aprovo."
+> - **8, pediu as tools:** "que tools?" Levado de novo, com a lista. O ponto 8 abaixo deixou de fora o grupo do texto
+>   completo e o `deduplicate_dataset`; a lista de 26/11 os inclui.
+> - **9, aprovado como investigação, linha 22:** nem todos são fontes de busca de artigo (DataCite e OSF registram
+>   dados, teses, projetos e protocolos; o OpenAIRE Graph agrega vários tipos, artigos entre eles). A linha investiga,
+>   só lendo a fonte oficial, o papel de cada um, junto com o ASReview v2 e a camada do 4.4. Não depende da linha da
+>   rede. Origem: "sim, mas alguns nomes nao sao exatamente fontes de busca de artigo, ok? entra como investigacao."
+> - **10, pediu contexto:** "pouco contexto para decidir." Levado de novo; a parte das listas R/V se resolveu pelo 1
+>   (regra 9).
+>
+> A linha do ponto 3, quando ele a aprovar, vem antes da 19. Saíram do "Visto de passagem", por virarem linha: o
+> `index.ts.tmp` (linha 20) e o subitem P9 dos pedidos de 12/11 (linha 21).
 
 **Como ler.** Primeiro a lista do que proponho, e a ordem. Depois, ponto a ponto, três partes nesta ordem:
 **Proposta**; **Hoje** (só fato, conferido em 26/11/2026, com a fonte); **Por quê**. Comente pelo número.
@@ -1123,6 +1196,91 @@ O que tocar etapa que ainda falta à pesquisa (a deduplicação depois da triage
 - Duas listas das mesmas coisas são o risco do ponto 1.1; tirar o que já foi feito deixa no "Visto" só o que espera
   decisão.
 
+#### Levado de novo ao Vicente em 26/11/2026 — o que ele não pôde responder
+
+**3 — é do ReviewBR.** Pela regra de 23/11 ("Link que não confere ou não abre", na seção "Pedido do Vicente de
+23/11/2026"), o registro com falha de procedência vai à manutenção e volta à revisão depois do conserto. Quando a causa
+é da fonte (`robots.txt` que proíbe robô, HTTP 404, DOI sem registro), não há conserto no ReviewBR: a falha só sai com
+uma conferência nova que dê "confere" (`procedencia.ts:333-352`), o lote de pendentes só leva registro conferido
+(`decisoes_revisores.ts:495-499`) e o `gerar` recusa enquanto houver falha (`decisoes_revisores.ts:1083`). Em qualquer
+pesquisa com fonte assim, a etapa de título e resumo não fecha. As 64 do `roda_aromas_ceara` só o mostraram; as
+planilhas dos revisores têm os 679 que conferiram. Parte das 64 pode ser defeito do ReviewBR (a página da UECE lida
+fora da codificação dela; página de verificação anti-robô contada como "não confere"; título do registro em inglês e o
+da página em português): é o 3.2, conserto geral, com teste.
+Proposta (FAZER, para qualquer pesquisa): (i) falha cuja causa é a fonte: o registro vai ao lote de pendentes com "o
+link abriu o documento certo?" obrigatória; o "sim" confirma a procedência e grava quem e quando; (ii) se ninguém
+confirma (o link leva a outro documento, ou não abre para ninguém), o registro sai do funil antes da leitura, com o
+motivo "procedência não confirmada", contado à parte no fluxograma. Pergunta: aprova (i) e (ii)? Quem confirma: os
+revisores, na planilha (recomendado: já têm a coluna), ou o pesquisador, antes?
+
+**5 — a licença.** O repositório declara duas: AGPL-3.0 (`reviewbr/LICENSE`, `reviewbr/README.md:289`,
+`reviewbr/CITATION.cff:26`) e MIT (`reviewbr/reviewbr-mcp/package.json:25`). Se o TypeScript deriva do código Go do
+prismAId, que é AGPL, ele só pode ser AGPL; isso não foi conferido. Recomendação: AGPL para tudo, e o `package.json`
+passa a dizer `AGPL-3.0-only` (DECLARAR, na linha 20). Trocar para MIT só depois de conferir que o TypeScript não
+deriva do Go. Pergunta: de acordo?
+
+**6.1 — antes de quê.** Antes da busca formal, a que conta para a revisão (etapa 4, "Execução", do
+`METODO_ReviewBR.md`). Revisão sistemática e de escopo exigem o protocolo (pergunta, critérios, fontes, strings)
+fixado antes dela, e isso não se recupera depois (P11, aprovado em 12/11: auditoria e trava antes da busca, quando a
+metodologia as exige). Então: o ReviewBR grava tudo desde a busca exploratória sem pedir método; o método pode ser
+escolhido a qualquer momento até a busca formal; depois dela, trocar de método vira desvio a declarar ou busca nova.
+Metodologia que não exige protocolo prévio não tem esse limite. No `roda_aromas_ceara`: exploratória em 12/11,
+protocolo travado em 15/11, busca formal de 19 a 23/11; o método de escopo tinha de estar escolhido até 15/11. Falta no
+código: gravar a busca exploratória (pedido de 12/11, "Visto de passagem", linha 9). Pergunta: de acordo?
+
+**6.2 e 6.3 — reescritos para impedir.** O problema (pedido de 23/11, "Visto de passagem"): mesmo com o protocolo
+travado, decisões foram tomadas no chat (a camada por palavras, a "dúvida", o registro sem resumo, a planilha), e um
+modelo fraco pode pular etapa. O plano por etapa do Gemini (inventário, 1.2: na trava, um `plano_execucao.json` com as
+regras de todas as etapas) é dado: só impede se o código recusar o que foge dele, e só cobre o que o protocolo disse.
+Proposta: três travas em código, que recusam:
+1. **Decisão antes da etapa:** na trava, o ReviewBR pergunta o que cada etapa do método vai precisar decidir (registro
+   sem resumo, "dúvida", número de revisores, como entregam). Etapa com decisão faltando não roda; a decisão só entra
+   por emenda gravada (`record_protocol_amendment`), nunca no chat. Contra os desvios 1 e 2: a pergunta da IA que vira
+   decisão no chat; a mudança sem registro.
+2. **Ordem e insumo:** cada tool de etapa recusa rodar fora da ordem e recusa insumo que não saiu da etapa anterior
+   (conferido por hash). Contra os desvios 3 e 2: o modelo fraco que pula etapa; o arquivo editado à mão.
+3. **Sistema e sessão presos ao projeto:** o projeto grava a versão do ReviewBR com que travou (outra versão só roda
+   com migração declarada) e aceita uma sessão por vez. Contra o desvio 4: o sistema mudado debaixo da pesquisa; duas
+   sessões ao mesmo tempo.
+
+Hoje, a 1 e a 2 existem só para a busca (linha 17: plano congelado, cada execução conferida, emenda por tool,
+`podeAvancar`) e para as planilhas (hash do insumo, `decisoes_revisores.ts:1074`); a 3 não existe. Limite: o servidor
+não impede a IA de perguntar no chat nem alguém de editar o código ou apagar o projeto; impede que isso mude o projeto.
+O `plano_execucao.json` vira o formato dos dados da 1 e da 2. Depois, se ele quiser, um executor sem modelo para as
+etapas mecânicas (6.2 d). Pergunta: aprova as três?
+
+**8 — as tools.** São as 19 que o inventário do Gemini (seção 4) marca com ressalva; cada uma tem item neste "Visto de
+passagem", e nenhuma foi conferida no código (ordem de 23/11). Uma linha por grupo, nesta ordem:
+- rede e repositórios: toda tool que acessa a rede (`http.ts`: certificado sem verificação no processo inteiro);
+  `search_repository` (sem `repositories`, 1800 s; HTTP 503 derruba a busca grande; ~90 s no DSpace sem API);
+  `search_papers_optimized` (a camada 2 consulta inativos); `heal_repositories` (muda o catálogo do sistema e está
+  entre as tools do `librarian`);
+- coleta e importação: `search_openalex` (sem `projectPath`, diz que salvou e não salva); `harvest_records` (não grava
+  em `01_raw`); `expand_search_snowball` (só a 1ª página de citações; erro vira lista vazia); `import_dataset_ris` (sem
+  base declarada, o gate reprova); `import_bvs_export` (junta registros distintos com o mesmo DOI);
+  `deduplicate_dataset` (não deixa escolher as entradas; reescreve o `database_records.json`);
+- protocolo e estado: `plan_research_protocol` (esqueleto genérico com valores que ninguém deu; reescreve rascunho;
+  grava no banco antes de validar; `topic` velho); `submit_protocol_for_approval` (auditor com itens do PRISMA 2020 em
+  método de escopo; travou com `[TBD]`); toda tool que grava log com `projectPath` absoluto (`logToLocalProject`);
+- texto completo: `retrieve_fulltexts` (não registra falhas); `retrieve_fulltext_byos` (DOI dentro de comando de shell;
+  o recuperado segue contado como não recuperado); `download_and_extract_pdfs` (texto de antes de 12/11 sem página);
+- método e IA, depois do ponto 6: `assess_research_design`, `query_methodology_catalog`, `absorb_methodology` (pedidos
+  de 12/11) e `screen_candidates`, `batch_db_screen` (o RAISE 3).
+
+Pergunta: aprova uma linha por grupo, nessa ordem, cada uma começando por conferir?
+
+**10 — contexto.** Com a regra 9, a numeração R/V do Gemini não se usa. Resta tirar do "Visto de passagem" o que não
+espera decisão:
+- consertados: o teto de 1000 resultados da Oasisbr, do OpenAlex e do SciELO (23/11); a camada mecânica por palavras
+  (23/11);
+- só registro: o `PASSAGEM.md` que o teste lê; o Git Bash com `c:/` (a rotina já manda o PowerShell); a decisão da
+  deduplicação (no DEBT-025 e na skill); o `data_mining/caju_beverages`; o servidor aberto antes do build de 12/11;
+- substituído: as 51 falhas do teste de 23/11 (ficam as 64 de 24/11);
+- subitens resolvidos: zero estudos incluídos (19/11); a busca à mão (linha 17); a triagem em duas camadas (23/11); o
+  P5 (linha 18); a UFC que alternava e o IFCE com 1 registro (comportamento da fonte).
+
+Pergunta: tiro?
+
 ### Como uma linha entra na fila
 
 - Só o Vicente cria linha. A sessão não cria, nem a pedido de outro documento.
@@ -1140,7 +1298,6 @@ Vicente pedir.
 
 ## Visto de passagem — não avaliado
 
-- `reviewbr/reviewbr-mcp/src/index.ts.tmp` segue no disco.
 - Cinco skills dizem a que agente pertencem, e nenhum desses cinco agentes nomeia a sua skill: `reader` e
   `evidence-reading`, `extractor` e `extraction-form`, `librarian` e `prisma-s-logging`, `screener` e
   `screening-rules`, `analyst` e `synthesis-manuscript`.
@@ -1216,8 +1373,6 @@ Vicente pedir.
     sem projeto, fica só como informação. Hoje a busca sem projeto não grava nada no log de busca;
   - seção 1 e seção 4: a sugestão de metodologia de acordo com o projeto, o objeto e a publicação; hoje o
     `assess_research_design` sugere por palavra-chave, e a sugestão não fica gravada;
-  - P9: o `maintainer.md` diz "nada entra no funil sem protocolo travado"; o texto aprovado diz "sem o protocolo
-    que a metodologia exige";
   - P6: tirar do código a classificação pelo RAISE 3 (`registry/ai_use.ts`, as chamadas no `screen_candidates` e
     no `batch_db_screen`, a citação na skill `system-audit`); a resolução do DEBT-117 se apoia nela. Fica o teste
     que reprova a tool que aciona IA sem declará-la, e a tentativa passa a ser registrada; hoje nada a grava.
@@ -1352,3 +1507,7 @@ Vicente pedir.
   verificação. Origem: "estes erros nao parecem ser da ferramenta reviewbr. mandar verificar se sao e nao apenas
   inventar erros para justificar os achados."
 - (projeto `roda_aromas_ceara`, F4, 24/11/2026) Conferência oficial de procedência (`verify_record_links`, estágio `ta`, sobre os 743 de `03_screening/passed_keywords.json`): 679 conferem e 64 ficaram em `reviewbr/projects/roda_aromas_ceara/03_screening/revisores/falhas_procedencia.json` (18 "não confere", 46 "fora do ar"); planilhas do lote 1 geradas com os 679. Vale a ordem do Vicente de 23/11 acima antes de tratar qualquer uma das 64 como falha do ReviewBR.
+- (26/11/2026, ao gravar as respostas do Vicente à revisão do plano) O `.agents/skills.json` aponta para
+  `C:/REVIEWBRGEMINI/skills`, que não existe neste PC: numa sessão do Gemini, os agentes e as skills do ReviewBR não são
+  lidos (ponto 1 da seção de 25/11, "Hoje"; o inventário do Gemini, R-22, propõe apontar para `.claude/skills`). A
+  resposta dele ao ponto 5 (mover para `old/`) não alcança este item.
