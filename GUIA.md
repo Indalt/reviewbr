@@ -29,9 +29,9 @@ O que ele faz hoje, e o que não faz:
 **Use no Claude Code, dentro do VS Code.** É o único lugar em que as duas partes funcionam juntas: os agentes e os
 procedimentos da pasta `.claude/` só são lidos pelo Claude Code.
 
-**Não use o `reviewbr-web`.** A página da pasta `reviewbr-web/` não acompanhou as mudanças: a última alteração de
-função é de março de 2026, ela declara à mão 25 das 44 ferramentas, e pelo menos uma com parâmetros que o servidor
-já não aceita. Ela não tem os agentes nem as travas.
+**Não há interface web.** A antiga página `reviewbr-web/` não acompanhou as mudanças (a última alteração de função
+era de março de 2026, e ela declarava à mão parte das ferramentas, sem os agentes nem as travas) e foi para `old/` em
+27/11/2026; o que foi para lá está em `LEGADO_em_old.md`.
 
 Em outro assistente (Claude Desktop, Cursor e semelhantes) só o servidor funciona. Veja a seção 7.
 

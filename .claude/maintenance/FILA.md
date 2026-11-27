@@ -80,13 +80,13 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 27/11/2026, linha 19 feita (tool `verify_references`; commit no fechamento desta linha) —
-build e suíte 702 de 702; audit válido, 0 achados abertos; gate CORRECAO válido; fila: linha 10 em curso, linhas 20 a 22
-e 24 a 30 a fazer; 50 itens no "Visto de passagem". `git status`: só os 17 arquivos rastreados do `roda_aromas_ceara`
-como apagados, porque a pasta está em `C:\roda_aromas_ceara` por decisão do Vicente (nenhum commit grava essa deleção).
-Decisões novas: nenhuma. **Próximo passo:** a linha 20. Assume: o Claude, na manutenção. Intocado: a pasta
-`C:\roda_aromas_ceara` (esta sessão não a leu nem gravou). A pesquisa, quando o Vicente quiser e sem sessão de manutenção
-junto, gera o lote 2 com `pendentes` ("Linha 23", "Para a pesquisa").
+**Última verificação:** 27/11/2026, linha 20 feita (legado em `old/legado_2026-11-27/`, lista em `LEGADO_em_old.md`;
+commit no fechamento desta linha) — build e suíte 704 de 704; audit válido, 0 achados abertos; gate CORRECAO válido;
+fila: linha 10 em curso, linhas 21, 22 e 24 a 30 a fazer; 53 itens no "Visto de passagem". `git status`: só os 17
+arquivos rastreados do `roda_aromas_ceara` como apagados, porque a pasta está em `C:\roda_aromas_ceara` por decisão do
+Vicente (nenhum commit grava essa deleção). Decisões novas: nenhuma. **Próximo passo:** a linha 21. Assume: o Claude, na
+manutenção. Intocado: a pasta `C:\roda_aromas_ceara` (esta sessão não a leu nem gravou). A pesquisa, quando o Vicente
+quiser e sem sessão de manutenção junto, gera o lote 2 com `pendentes` ("Linha 23", "Para a pesquisa").
 
 ## Fila
 
@@ -112,7 +112,7 @@ junto, gera o lote 2 com `pendentes` ("Linha 23", "Para a pesquisa").
 | 17 | Protocolo travado na busca: a execução segue só o protocolo, e o que muda é emenda | ver abaixo | ver abaixo | **feita em 20/11/2026** (commits `9c4cff2`, `3a25e69`, `7dc2d85`, `73f6380`, `b5496a1`, `7dfb6e1`) |
 | 18 | BDTD e Oasisbr separadas; a Oasisbr inteira buscável | — | — | **feita em 21/11/2026** (pergunta e decisão do Vicente no mesmo dia; item tirado do "Visto de passagem"): `BR-AGG-0001` é a BDTD, como a busca sempre fez; a Oasisbr é `BR-AGG-0006`, buscada sem filtro de rede; os quatro `viaAgregador` apontam para ela. Emenda 2 do `roda_aromas_ceara` aprovada (protocolo 1.2, 12 fontes). Em 21/11 o DNS do `ibict.br` falhava (8.8.8.8 e 1.1.1.1): controle positivo da Oasisbr inteira fica para a busca |
 | 19 | Fonte inventada e retratação, desde a busca exploratória | ponto 4 da seção "Pedido do Vicente de 25/11/2026" (4.1 a 4.3) | — | **feita em 27/11/2026**: tool `verify_references`; detalhe em "Linha 19", logo antes de "Linha 23" |
-| 20 | Legado Go do prismAId e sobras para `old/` | — | ponto 5 e o bloco de 26/11 da mesma seção: o que vai, e um arquivo rastreado que lista o que foi para `old/` e o último commit de cada coisa | **a fazer** (aprovada em 26/11/2026); a licença espera o Vicente |
+| 20 | Legado Go do prismAId e sobras para `old/` | — | ponto 5 e o bloco de 26/11 da mesma seção: o que vai, e um arquivo rastreado que lista o que foi para `old/` e o último commit de cada coisa | **feita em 27/11/2026**: 56 `.go`, `go.mod`, `go.sum`, `src/index.ts.tmp`, os dois `src/run_search_*.ts` (com os compilados), `reviewbr-web/`, o `.zip` e `antigravity_conversas_export/` em `old/legado_2026-11-27/`; lista rastreada em `LEGADO_em_old.md` (84 caminhos com o último commit); os dois `package.json` em `AGPL-3.0-only` ("5 ok para agpl", 26/11); `README.md`, `GUIA.md` e `DICIONARIO_modos_de_acao.md` deixam de apontar para o `reviewbr-web`; exceção do DEBT-103 tirada do teste de integração; `tests/licenca_legado.test.ts` (2, falham antes) |
 | 21 | `METODO_ReviewBR.md` e `maintainer.md` | — | pontos 7.1, 7.2 e 6.5 da mesma seção | **a fazer** (aprovada em 26/11/2026). Não muda o servidor |
 | 22 | Investigação: DataCite, OpenAIRE Graph, OSF, ASReview v2 e a camada do 4.4 | — | — | **a fazer** (aprovada em 26/11/2026): só leitura, na fonte oficial; nem todos são fontes de busca de artigo |
 | 23 | Procedência que o sistema não confere: registra a limitação, e a pesquisa segue | ponto 3 da segunda resposta de 26/11, na seção "Pedido do Vicente de 25/11/2026" | os textos do `verify_record_links`, da `record_screening_decisions`, da skill `screening-rules` e do `screener` | **feita em 26/11/2026** (commit `6125977`): detalhe em "Linha 23", logo antes de "Como uma linha entra na fila" |
@@ -1625,3 +1625,12 @@ Vicente pedir.
 - (linha 19, 27/11/2026) `librarian.md:43` ainda diz que o registro cuja procedência não confere "só volta à leitura
   depois do conserto (`somenteFalhas`)"; desde a linha 23 ele vai à planilha com a situação à vista. A linha 23
   declarou a regra nova na skill `screening-rules` e no `screener`, não no `librarian`.
+- (linha 20, 27/11/2026) Ficaram em `reviewbr/` restos do prismAId que não são Go e que a decisão não alcança: `docs/`
+  (o site do prismAId), `figures/`, `.github/` (workflows que compilam o Go que saiu; numa subpasta, o GitHub não os
+  roda), `test.sh`, `tika-service.sh`, `CHANGELOG.md`, `changelog260226.md`, `deleted_files.txt`, `missing_scripts.txt`
+  e, fora do git, o `prismaid.exe`.
+- (linha 20, 27/11/2026) `PLANO_TECNICO_aquisicao_premissa.md` (raiz, linhas 238 e 258) ainda planeja mudanças no
+  `reviewbr-web/`, que foi para `old/`.
+- (linha 20, 27/11/2026) Os scripts de `reviewbr/projects/data_mining/` (`caju_beverages/scripts/*.js`,
+  `web_ui/server.js`) chamam `src/scripts/run_search_cli.ts`, que já não existia antes desta linha; só sobrava o
+  compilado em `dist/scripts/`, fora do git.

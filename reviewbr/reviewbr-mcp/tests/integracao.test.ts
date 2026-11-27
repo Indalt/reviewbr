@@ -144,15 +144,9 @@ describe("integração 3 — agnosticidade de DOMÍNIO: nenhum tema no código d
     const TEMAS = /\b(caju|cajuína|cajuina|cashew|anacardium|cajueiro)\b/i;
 
     /** Exceções declaradas, com motivo. Lista sem justificativa é o mesmo vício. */
-    const PERMITIDO_TEMA = new Set<string>([
-        // DEBT-103: dois scripts com projectPath e query HARD-CODED num único tema. Não são
-        // exemplo: são executáveis, e vão para o `dist`. Ninguém os importa. Removê-los é
-        // decisão do pesquisador (pode haver uso manual que nenhum import revela), não
-        // conserto de rotina — por isso estão aqui em vez de a suíte ficar vermelha.
-        // Remover desta lista é o que fecha o DEBT-103.
-        "src/run_search_pubmed.ts",
-        "src/run_search_repository.ts",
-    ]);
+    // Vazia desde 27/11/2026: os dois scripts do DEBT-103 (src/run_search_*.ts) foram para
+    // `old/` na linha 20 da FILA, por decisão do Vicente (LEGADO_em_old.md).
+    const PERMITIDO_TEMA = new Set<string>([]);
 
     it("nenhum arquivo de src/ cita termo de domínio específico", () => {
         const sujos: string[] = [];

@@ -59,18 +59,18 @@ O ReviewBR é uma ferramenta local — seus dados, chaves e projetos **nunca sae
 
 ```bash
 git clone https://github.com/Indalt/reviewbr.git
-cd reviewbr/reviewbr-web
+cd reviewbr/reviewbr/reviewbr-mcp
 npm install
-npm run dev
+npm run build
 ```
 
-Acesse `http://localhost:3000`, informe seu nome e (opcionalmente) a sua API key. Pronto.
+O ReviewBR se usa no Claude Code, dentro do VS Code: o passo a passo está no `GUIA.md` da raiz (seção 3). A antiga
+interface web (`reviewbr-web/`) não acompanhou o servidor e foi para `old/` em 27/11/2026 (`LEGADO_em_old.md`).
 
 ### Onde ficam os seus dados?
 
 | O que | Onde fica | Vai no repositório? |
 |-------|-----------|-------------------|
-| Código da aplicação | `reviewbr-web/` | ✅ Sim |
 | Código do MCP | `reviewbr/reviewbr-mcp/` | ✅ Sim |
 | Suas API keys | `~/.reviewbr/.env` | ❌ Nunca |
 | Seus projetos/dados | `~/.reviewbr/{usuario}/` | ❌ Nunca |

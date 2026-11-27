@@ -76,7 +76,7 @@ A palavra serve para duas coisas. O contexto quase sempre resolve qual:
 | Código aberto, MCP, tools, skills, DEBT, manutenção | **o SISTEMA** (ReviewBR) | `reviewbr/reviewbr-mcp/`, `.claude/` |
 | Um tema de pesquisa, um evento, dados, fases F0–F8 | **a PESQUISA** em questão (ex.: `roda_de_aromas`) | `reviewbr/projects/<nome>/` |
 | "esta pasta", "o repositório", GitHub | **a RAIZ** inteira | `c:\reviewbr` |
-| Site, interface | **a WEB** | `reviewbr-web/` |
+| Site, interface | **a WEB** (legado: foi para `old/` em 27/11/2026) | `LEGADO_em_old.md` |
 
 Outras referências: `old/` e o `skills/` da raiz são **legado**. Servem como histórico, não como
 modelo a seguir.
