@@ -1355,9 +1355,13 @@ Decisão do Vicente: ponto 4 (4.1 a 4.3) da seção "Pedido do Vicente de 25/11/
   retratado (editor e Retraction Watch); 10.1371/journal.pone.0085625 com manifestação de preocupação; DOI inventado
   "DOI sem registro"; 10.5061/dryad.8515 (DataCite) existe e "não consultada"; um título só, achado pela busca
   bibliográfica (10.1538/expanim.54.1, retratado); um título inventado "não encontrada no Crossref".
-- **Não fez:** a "camada a mais" (4.4), que vai à investigação da linha 22; a coluna de retratação nas planilhas dos
-  revisores e no relatório do estágio (a linha não pede; o resultado fica no registro da execução); referência do
-  protocolo sem DOI só entra pela lista, com o título (ler a bibliografia do `protocol.md` sem IA não é confiável).
+- **Não fez:** a "camada a mais" (4.4), que vai à investigação da linha 22; referência do protocolo sem DOI só entra
+  pela lista, com o título (ler a bibliografia do `protocol.md` sem IA não é confiável).
+- **Decisão do Vicente, 27/11/2026:** as planilhas dos revisores não terão coluna de retratação. O resultado do
+  `verify_references` fica só no registro da execução (`logs/lote/` e `audit_logs`) e não muda planilha, insumo nem
+  relatório do estágio. Motivo: o protocolo está travado, e a falta da coluna não torna impossível seguir a pesquisa
+  (a mesma regra de 20/11: emenda só se for impossível seguir). Origem: "nao terá essa coluna de retratacao na
+  planilha. protocolo esta fechado e isso não torna impossivel seguir."
 
 ### Linha 23 — procedência que a conferência não confirma: limitação registrada (feita em 26/11/2026)
 
