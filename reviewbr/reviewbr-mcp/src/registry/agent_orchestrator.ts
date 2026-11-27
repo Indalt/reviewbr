@@ -85,6 +85,9 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     // Abre os links dos registros na rede para conferir o título (linha 13 da FILA, 23/11/2026): é do librarian,
     // como o complete_record_keywords — o screener não baixa.
     verify_record_links: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
+    // Existência e retratação das referências (linha 19 da FILA, 26/11/2026): do scout na busca exploratória, do
+    // designer nas referências do protocolo e do librarian no insumo dos estágios.
+    verify_references: [AgentRole.SCOUT, AgentRole.PROJETISTA, AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
 
     // ─── Import & Normalization (LIBRARIAN + COORDINATOR) ───
     import_dataset_ris: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],

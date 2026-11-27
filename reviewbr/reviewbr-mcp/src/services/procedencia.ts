@@ -64,7 +64,7 @@ export interface Resposta { status: number; url: string; contentType: string; bo
 export type Buscador = (url: string, headers: Record<string, string>) => Promise<Resposta>;
 export type Robots = (url: string) => Promise<{ permitido: boolean; motivo: string }>;
 
-const buscadorPadrao: Buscador = async (url, headers) => {
+export const buscadorPadrao: Buscador = async (url, headers) => {
     const r = await fetchWithRetry(url, { timeout: 20_000, maxRetries: 2, headers });
     return { status: r.status, url: r.url || url, contentType: r.headers.get("content-type") ?? "", body: await r.text() };
 };
@@ -99,9 +99,16 @@ export function normalizarTitulo(s: unknown): string {
         .trim();
 }
 
+/**
+ * O editor pode pôr a marca da retratação no começo do título registrado depois do fato ("RETRACTED: ...", visto no
+ * Crossref em 27/11/2026, linha 19 da FILA); o registro colhido antes traz o título original. A marca não conta na
+ * comparação: é o mesmo documento.
+ */
+const MARCA_DE_RETRATACAO = /^(retracted|withdrawn)( article)? /;
+
 export function titulosConferem(doRegistro: unknown, lido: unknown): boolean {
-    const a = normalizarTitulo(doRegistro);
-    const b = normalizarTitulo(lido);
+    const a = normalizarTitulo(doRegistro).replace(MARCA_DE_RETRATACAO, "");
+    const b = normalizarTitulo(lido).replace(MARCA_DE_RETRATACAO, "");
     if (!a || !b) return false;
     if (a === b) return true;
     const [curto, longo] = a.length <= b.length ? [a, b] : [b, a];

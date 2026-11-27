@@ -80,13 +80,13 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 26/11/2026, linha 23 feita (commit `6125977`) — build e suíte 687 de 687; audit válido, 0
-achados abertos; gate CORRECAO válido; fila: linha 10 em curso, linhas 19 a 22 e 24 a 30 a fazer; 49 itens no "Visto de
-passagem". `git status`: só os 17 arquivos rastreados do `roda_aromas_ceara` como apagados, porque a pasta está em
-`C:\roda_aromas_ceara` por decisão do Vicente (nenhum commit grava essa deleção). Decisões novas: os dois blocos de
-26/11 na seção "Pedido do Vicente de 25/11/2026". **Próximo passo:** a linha 19. Assume: o Claude, na manutenção.
-Intocado: a pasta `C:\roda_aromas_ceara` (a manutenção só lê). A pesquisa, quando o Vicente quiser e sem sessão de
-manutenção junto, gera o lote 2 com `pendentes` ("Linha 23", "Para a pesquisa").
+**Última verificação:** 27/11/2026, linha 19 feita (tool `verify_references`; commit no fechamento desta linha) —
+build e suíte 702 de 702; audit válido, 0 achados abertos; gate CORRECAO válido; fila: linha 10 em curso, linhas 20 a 22
+e 24 a 30 a fazer; 50 itens no "Visto de passagem". `git status`: só os 17 arquivos rastreados do `roda_aromas_ceara`
+como apagados, porque a pasta está em `C:\roda_aromas_ceara` por decisão do Vicente (nenhum commit grava essa deleção).
+Decisões novas: nenhuma. **Próximo passo:** a linha 20. Assume: o Claude, na manutenção. Intocado: a pasta
+`C:\roda_aromas_ceara` (esta sessão não a leu nem gravou). A pesquisa, quando o Vicente quiser e sem sessão de manutenção
+junto, gera o lote 2 com `pendentes` ("Linha 23", "Para a pesquisa").
 
 ## Fila
 
@@ -111,7 +111,7 @@ manutenção junto, gera o lote 2 com `pendentes` ("Linha 23", "Para a pesquisa"
 | 16 | F10 e F11 — importação de RIS: linha de continuação, CR sozinho e registros distintos da mesma base | ver abaixo | — | **feita em 20/11/2026** |
 | 17 | Protocolo travado na busca: a execução segue só o protocolo, e o que muda é emenda | ver abaixo | ver abaixo | **feita em 20/11/2026** (commits `9c4cff2`, `3a25e69`, `7dc2d85`, `73f6380`, `b5496a1`, `7dfb6e1`) |
 | 18 | BDTD e Oasisbr separadas; a Oasisbr inteira buscável | — | — | **feita em 21/11/2026** (pergunta e decisão do Vicente no mesmo dia; item tirado do "Visto de passagem"): `BR-AGG-0001` é a BDTD, como a busca sempre fez; a Oasisbr é `BR-AGG-0006`, buscada sem filtro de rede; os quatro `viaAgregador` apontam para ela. Emenda 2 do `roda_aromas_ceara` aprovada (protocolo 1.2, 12 fontes). Em 21/11 o DNS do `ibict.br` falhava (8.8.8.8 e 1.1.1.1): controle positivo da Oasisbr inteira fica para a busca |
-| 19 | Fonte inventada e retratação, desde a busca exploratória | ponto 4 da seção "Pedido do Vicente de 25/11/2026" (4.1 a 4.3) | — | **a fazer** (aprovada em 26/11/2026). Muda o servidor: só com a pasta do `roda_aromas_ceara` fora do `C:\reviewbr` |
+| 19 | Fonte inventada e retratação, desde a busca exploratória | ponto 4 da seção "Pedido do Vicente de 25/11/2026" (4.1 a 4.3) | — | **feita em 27/11/2026**: tool `verify_references`; detalhe em "Linha 19", logo antes de "Linha 23" |
 | 20 | Legado Go do prismAId e sobras para `old/` | — | ponto 5 e o bloco de 26/11 da mesma seção: o que vai, e um arquivo rastreado que lista o que foi para `old/` e o último commit de cada coisa | **a fazer** (aprovada em 26/11/2026); a licença espera o Vicente |
 | 21 | `METODO_ReviewBR.md` e `maintainer.md` | — | pontos 7.1, 7.2 e 6.5 da mesma seção | **a fazer** (aprovada em 26/11/2026). Não muda o servidor |
 | 22 | Investigação: DataCite, OpenAIRE Graph, OSF, ASReview v2 e a camada do 4.4 | — | — | **a fazer** (aprovada em 26/11/2026): só leitura, na fonte oficial; nem todos são fontes de busca de artigo |
@@ -1328,6 +1328,37 @@ espera decisão:
 
 Pergunta: tiro?
 
+### Linha 19 — fonte inventada e retratação, desde a busca exploratória (feita em 27/11/2026)
+
+Decisão do Vicente: ponto 4 (4.1 a 4.3) da seção "Pedido do Vicente de 25/11/2026", respondido em 26/11.
+- **Fonte oficial, lida antes de construir (27/11/2026).** Crossref, "Retraction Watch" (documentação atualizada em
+  19/01/2025): o Crossref adquiriu a base Retraction Watch em 09/2023 e a atualiza a cada dia útil; na REST API, o
+  aviso traz `update-to`, e cada atualização tem `source` = `publisher` (o editor) ou `retraction-watch`; correções e
+  manifestações de preocupação da Retraction Watch não são tão completas quanto as retratações. "Participating in
+  Crossmark" (atualizada em 12/08/2026): 12 tipos de atualização no esquema (addendum, clarification, correction,
+  corrigendum, erratum, expression_of_concern, new_edition, new_version, partial_retraction, removal, retraction,
+  withdrawal). Conferido na API no mesmo dia: a obra atualizada traz `updated-by` (a documentação não o cita); a API
+  devolve também `expression-of-concern`, com hífen; o editor pode pôr "RETRACTED:" no título registrado.
+- **FAZER, com teste.** Tool `verify_references` (`services/referencias.ts`). Existência: com DOI, registro em doi.org
+  e título que confere (a regra do `verify_record_links`); sem DOI, com endereço, o título da página; só com título, a
+  busca bibliográfica do Crossref (não achar ali não prova que não existe, e a situação diz isso). Atualizações: o
+  `updated-by` do Crossref, por aviso (tipo, rótulo, fonte, DOI do aviso, data, id da Retraction Watch), e o
+  `update-to` quando a referência é ela mesma um aviso; DOI fora do Crossref (DataCite) sai como "não consultada", com o
+  motivo. Três origens: lista, sem projeto (busca exploratória); os DOIs do `protocol.md`; o insumo do estágio, que
+  reaproveita a conferência gravada do `verify_record_links`. O resultado vai a `logs/lote/` (com projeto) e ao
+  `audit_logs` (sempre) e é mostrado; não exclui ninguém e não grava nos dados do projeto. Junto: a marca
+  "RETRACTED:"/"WITHDRAWN:" no começo do título registrado deixa de impedir a conferência de título (vale também para o
+  `verify_record_links`).
+- **DECLARAR:** `scout`, `designer` e `librarian` dizem quando usar a tool; papéis no `agent_orchestrator`.
+- **Conferência:** `tests/referencias_retratacao.test.ts` (15 testes; falham no código anterior); suíte 702 de 702;
+  build; gate `validate_system_change` CORRECAO válido. Controle na rede real, 27/11: 10.1177/1758835919874651
+  retratado (editor e Retraction Watch); 10.1371/journal.pone.0085625 com manifestação de preocupação; DOI inventado
+  "DOI sem registro"; 10.5061/dryad.8515 (DataCite) existe e "não consultada"; um título só, achado pela busca
+  bibliográfica (10.1538/expanim.54.1, retratado); um título inventado "não encontrada no Crossref".
+- **Não fez:** a "camada a mais" (4.4), que vai à investigação da linha 22; a coluna de retratação nas planilhas dos
+  revisores e no relatório do estágio (a linha não pede; o resultado fica no registro da execução); referência do
+  protocolo sem DOI só entra pela lista, com o título (ler a bibliografia do `protocol.md` sem IA não é confiável).
+
 ### Linha 23 — procedência que a conferência não confirma: limitação registrada (feita em 26/11/2026)
 
 Decisão do Vicente: segunda resposta de 26/11, ponto 3, na seção "Pedido do Vicente de 25/11/2026". Commit `6125977`.
@@ -1587,3 +1618,6 @@ Vicente pedir.
   `C:/REVIEWBRGEMINI/skills`, que não existe neste PC: numa sessão do Gemini, os agentes e as skills do ReviewBR não são
   lidos (ponto 1 da seção de 25/11, "Hoje"; o inventário do Gemini, R-22, propõe apontar para `.claude/skills`). A
   resposta dele ao ponto 5 (mover para `old/`) não alcança este item.
+- (linha 19, 27/11/2026) `librarian.md:43` ainda diz que o registro cuja procedência não confere "só volta à leitura
+  depois do conserto (`somenteFalhas`)"; desde a linha 23 ele vai à planilha com a situação à vista. A linha 23
+  declarou a regra nova na skill `screening-rules` e no `screener`, não no `librarian`.

@@ -1,7 +1,7 @@
 ---
 name: designer
 description: PROJETISTA da revisão (fases F0/F1). Use para INICIAR um projeto de revisão — desenhar o protocolo, entrevistar o pesquisador sobre PICOS/PCC, preencher e TRAVAR o protocol.md, e gerar as strings de busca a partir do framework. É o primeiro especialista da cadeia; roda antes de qualquer busca. Não busca, não tria, não sintetiza.
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch, TodoWrite, Skill, mcp__reviewbr__assess_research_design, mcp__reviewbr__plan_research_protocol, mcp__reviewbr__submit_protocol_for_approval, mcp__reviewbr__validate_repository, mcp__reviewbr__heal_repositories, mcp__reviewbr__query_methodology_catalog, mcp__reviewbr__record_protocol_amendment, mcp__reviewbr__get_search_plan
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch, TodoWrite, Skill, mcp__reviewbr__assess_research_design, mcp__reviewbr__plan_research_protocol, mcp__reviewbr__submit_protocol_for_approval, mcp__reviewbr__validate_repository, mcp__reviewbr__heal_repositories, mcp__reviewbr__query_methodology_catalog, mcp__reviewbr__record_protocol_amendment, mcp__reviewbr__get_search_plan, mcp__reviewbr__verify_references
 mcpServers:
   - reviewbr
 ---
@@ -27,7 +27,7 @@ Carregue e siga `.claude/methodologies/<metodo>/spec.md`, focando **F0 (Pré-reg
 5. O protocolo só trava pelo `submit_protocol_for_approval`, depois da confirmação explícita do pesquisador (RV-01). A trava é o `project_state.json`; o `[LOCKED]` no `protocol.md` é espelho, e escrevê-lo à mão não trava nada (DEBT-018). Não pule para busca antes disso.
 
 ## Ferramentas (contrato de papel)
-`assess_research_design`, `plan_research_protocol`, `submit_protocol_for_approval`, `record_protocol_amendment` (emenda e desvio do protocolo travado: a emenda só vale com a decisão do pesquisador nas palavras dele), `validate_repository`, `heal_repositories`, `query_methodology_catalog` (consultar métodos disponíveis/status de implementação antes de escolher o do protocolo). Nativas: Read/Write/Edit para o `protocol.md`.
+`assess_research_design`, `plan_research_protocol`, `submit_protocol_for_approval`, `record_protocol_amendment` (emenda e desvio do protocolo travado: a emenda só vale com a decisão do pesquisador nas palavras dele), `validate_repository`, `heal_repositories`, `query_methodology_catalog` (consultar métodos disponíveis/status de implementação antes de escolher o do protocolo), `verify_references` (antes de submeter o protocolo: existência e retratação das referências que ele cita — `origem: "protocolo"` lê os DOIs do `protocol.md`; as sem DOI vão por `referencias`, com o título; o resultado se mostra ao pesquisador e não exclui nada sozinho). Nativas: Read/Write/Edit para o `protocol.md`.
 
 ## Proibições
 - **Não gere scripts** de nenhuma linguagem. Todo trabalho é via tools do MCP.

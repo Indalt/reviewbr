@@ -38,6 +38,7 @@ import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDed
 import { gravarCamadaPorPalavras, REGRA_DE_CASAMENTO } from "./services/camada_palavras.js";
 import { completarPalavrasChave } from "./services/palavras_chave.js";
 import { conferirProcedencia, REGRA_DE_CONFERENCIA } from "./services/procedencia.js";
+import { verificarReferencias, type Origem } from "./services/referencias.js";
 import { gerarFormularios, importarPlanilha, gerarPlanilhaDeConsenso, gerarArtefatosDoFunil } from "./services/decisoes_revisores.js";
 import { BvsService } from "./services/bvs.js";
 import { ProjectInitService } from "./services/project_init.js";
@@ -2769,6 +2770,49 @@ server.tool(
             });
             const k = r.relatorio.contagens;
             const rastro = await registrarLote("verify_record_links", params, `Procedência: ${k.confere} conferem, ${k.nao_confere} não conferem, ${k.fora_do_ar} fora do ar.`, r.relatorio);
+            return { content: [{ type: "text", text: r.resumo + rastro }] };
+        } catch (error: any) {
+            return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
+        }
+    }
+);
+
+server.tool(
+    "verify_references",
+    "Fonte inventada e retratação, desde a busca exploratória (linha 19 da FILA, decisão do Vicente de 26/11/2026). Para cada referência: " +
+    "EXISTÊNCIA — com DOI, o DOI tem registro em doi.org e o título registrado confere com o informado (a regra do verify_record_links; a marca 'RETRACTED:' no título não conta); sem DOI, com endereço, o título da página; só com título, a busca bibliográfica do Crossref (não achar ali não prova que não existe). " +
+    "ATUALIZAÇÕES — retratação, retratação parcial, correção, manifestação de preocupação e os outros tipos do esquema do Crossref, pelos avisos que a obra tem no Crossref ('updated-by'), do editor e da base Retraction Watch; DOI fora do Crossref não se consulta, e o resultado diz isso. " +
+    "O resultado é gravado (com projectPath, em <projeto>/logs/lote/; sempre no audit_logs do banco) e mostrado; sozinho, não exclui ninguém: o que fazer com a referência retratada é do protocolo ou do pesquisador. " +
+    "Origens: 'referencias' (lista, sem projeto: busca exploratória ou qualquer lista); 'protocolo' (os DOIs que o protocol.md do projeto cita); 'estagio' (o insumo do estágio de um projeto; a existência que o verify_record_links gravou se reaproveita). Não pede projeto travado e não grava nada nos dados do projeto.",
+    {
+        referencias: z.array(z.object({
+            id: z.string().optional().describe("Rótulo da referência (padrão: ref-1, ref-2...)"),
+            titulo: z.string().optional(),
+            doi: z.string().optional(),
+            url: z.string().optional(),
+        })).optional().describe("Lista de referências a verificar, sem projeto (busca exploratória ou qualquer lista)"),
+        projectPath: z.string().optional().describe("Raiz do projeto, para 'origem' protocolo ou estagio; com ele, o registro da execução vai também para <projeto>/logs/lote/"),
+        origem: z.enum(["protocolo", "estagio"]).optional().describe("Com projectPath: 'protocolo' (os DOIs que o protocol.md cita) ou 'estagio' (o insumo do estágio)"),
+        estagio: z.enum(["ta", "fulltext"]).optional().describe("Com origem 'estagio' (padrão: ta)"),
+    },
+    async (params) => {
+        try {
+            let origem: Origem;
+            if (params.referencias?.length) {
+                if (params.origem) return { content: [{ type: "text", text: "ERRO: dê 'referencias' ou 'origem', não os dois. Nada foi verificado." }] };
+                origem = { tipo: "lista", referencias: params.referencias };
+            } else if (params.origem && params.projectPath) {
+                origem = params.origem === "protocolo"
+                    ? { tipo: "protocolo", projectPath: params.projectPath }
+                    : { tipo: "estagio", projectPath: params.projectPath, estagio: params.estagio ?? "ta" };
+            } else {
+                return { content: [{ type: "text", text: "ERRO: dê 'referencias' (lista, sem projeto) ou 'projectPath' com 'origem' (protocolo ou estagio). Nada foi verificado." }] };
+            }
+            const r = await verificarReferencias(origem);
+            const k = r.relatorio.contagens;
+            const rastro = await registrarLote("verify_references", params,
+                `Referências: ${k.referencias}; existência ${JSON.stringify(k.existencia)}; com aviso no Crossref ${k.com_algum_aviso}.`,
+                { relatorio: r.relatorio, verificacoes: r.verificacoes });
             return { content: [{ type: "text", text: r.resumo + rastro }] };
         } catch (error: any) {
             return { content: [{ type: "text", text: `ERRO: ${error.message}` }] };
