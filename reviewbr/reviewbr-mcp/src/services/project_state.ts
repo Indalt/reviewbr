@@ -60,6 +60,14 @@ export interface ProjectState {
     emendas?: import("./emendas.js").Emenda[];
     /** Linha 17 da FILA — o que a execução fez diferente do protocolo, sem mudá-lo. */
     desvios?: import("./emendas.js").Desvio[];
+    /**
+     * Linha 24 da FILA, trava 1 — as respostas do projeto às decisões que o método exige antes de cada
+     * etapa, congeladas na trava (ou entradas por emenda aprovada). Ausente em projeto travado antes de
+     * 27/11/2026: as etapas depois da fase em que ele está esperam as decisões por emenda.
+     */
+    trava_etapas?: import("./travas_etapa.js").TravaEtapas;
+    /** Linha 24 da FILA, trava 2 — cada etapa fechada, com o hash do artefato que a encerra. */
+    etapas_fechadas?: import("./fechamentos.js").Fechamento[];
 }
 
 function statePath(projectDir: string): string {

@@ -33,6 +33,7 @@ import { lerPlanoDoArquivo, validarPlano, congelarPlano, resumoDoPlano, conferir
 import { proporEmenda, decidirEmenda, registrarDesvio, desviosDeCamposNaoObtidos } from "./services/emendas.js";
 import { ProjectStateService } from "./services/project_state.js";
 import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
+import { conferirEtapa, lerDecisoesDoMetodo, lerRespostasDoArquivo, congelarDecisoes, resumoDasDecisoes, type ContextoDaTool } from "./services/travas_etapa.js";
 import { apresentarMetodos } from "./services/methods_for_type.js";
 import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, processarDatasetEmLotes, triagemGravada, insumoDoEstagio, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
 import { gravarCamadaPorPalavras, REGRA_DE_CASAMENTO } from "./services/camada_palavras.js";
@@ -200,6 +201,20 @@ function declararModo(projectPath: string | undefined, resposta: any): any {
     return { ...resposta, content: [{ ...bloco, text: `${aviso}\n\n---\n\n${bloco.text}` }] };
 }
 
+/**
+ * Linha 24 da FILA — travas 1 e 2 da etapa a que a tool pertence, conferidas ANTES de ela rodar:
+ * decisão do projeto que a etapa exige, ordem da trilha e hash do insumo. Sem projectPath, ou com o
+ * projeto em rascunho, não se aplica (quem para antes da trava é o ProtocolGate). Devolve a recusa,
+ * ou null; o aviso de etapa anterior que fechou agora vai em `avisos`, para a tool anexá-lo.
+ */
+function travaDaEtapa(projectPath: string | undefined, tool: string, ctx: ContextoDaTool = {}, avisos?: string[]): string | null {
+    if (!projectPath) return null;
+    const c = conferirEtapa(RAIZ(), resolveProjectDir(projectPath), tool, ctx);
+    if (!c.ok) return c.motivo;
+    if (c.aviso && avisos) avisos.push(c.aviso);
+    return null;
+}
+
 async function checkDesignGuardrail(projectId?: number, projectPath?: string, tool?: string, params?: Record<string, any>): Promise<string | null> {
     // A decisão vive em `ProtocolGate` (src/services/protocol_gate.ts), como serviço testável.
     // A mudança de semântica mais importante está lá: o gate passou a NEGAR POR PADRÃO.
@@ -213,7 +228,11 @@ async function checkDesignGuardrail(projectId?: number, projectPath?: string, to
     // `projectId` fica na assinatura por compatibilidade com os chamadores; não decide nada.
     void projectId;
     const trava = ProtocolGate.check(projectPath).message;
-    if (trava || !tool || !projectPath || !params) return trava;
+    if (trava || !tool || !projectPath) return trava;
+    // Linha 24: a busca é uma etapa da trilha como as outras (ordem e decisões de etapa).
+    const etapa = travaDaEtapa(projectPath, tool, { parametros: params });
+    if (etapa) return etapa;
+    if (!params) return null;
     // Linha 17 da FILA: sob projeto LOCKED, a busca e a importação seguem só o plano congelado.
     const c = conferirExecucao(resolveProjectDir(projectPath), tool, params, registry);
     if (!c.aplica) return null;
@@ -675,10 +694,16 @@ server.tool(
         let records: any[] = [];
         let consolidatedNote = "";
 
+        // Linha 24: ordem da trilha, decisões da etapa e hash do insumo (o que fechou a busca).
+        const avisosEtapa: string[] = [];
+        const recusaEtapa = travaDaEtapa(params.projectPath, "deduplicate_dataset", {}, avisosEtapa);
+        if (recusaEtapa) return { content: [{ type: "text", text: recusaEtapa }] };
+        if (avisosEtapa.length) consolidatedNote = `${avisosEtapa.join("\n")}\n`;
+
         if (params.projectPath) {
             const { database, other } = consolidateRaw(params.projectPath);
             records = [...database, ...other];
-            consolidatedNote = `Consolidados de 01_raw: ${database.length} (bases) + ${other.length} (outras fontes).\n`;
+            consolidatedNote += `Consolidados de 01_raw: ${database.length} (bases) + ${other.length} (outras fontes).\n`;
         } else if (params.dataset) {
             try { records = JSON.parse(params.dataset); }
             catch { return { content: [{ type: "text", text: "Erro ao fazer parse do JSON." }] }; }
@@ -741,6 +766,12 @@ server.tool(
         }
 
         const stage = params.stage ?? "ta";
+
+        // Linha 24: ordem da trilha, decisões da etapa e hash do insumo, antes de gastar a corrida.
+        const avisosEtapa: string[] = [];
+        const recusaEtapa = travaDaEtapa(params.projectPath, "screen_candidates",
+            { insumoDoChamador: params.candidates ? "passado em 'candidates'" : undefined }, avisosEtapa);
+        if (recusaEtapa) return { content: [{ type: "text", text: recusaEtapa }] };
 
         // DEBT-112: substituir triagem gravada exige a autorização do pesquisador. Confere ANTES de
         // rodar, para não gastar a corrida e depois não ter onde gravá-la.
@@ -858,7 +889,7 @@ server.tool(
                 text: `Triagem ${stage.toUpperCase()}: ${result.included.length} incluídos, ${result.excluded.length} excluídos.` +
                     notaMaybe +
                     (params.projectPath ? `\nGravado: 03_screening/${includedRel} + 03_screening/${excludedRel}.` : `\n\n${JSON.stringify(result, null, 2)}`) +
-                    notaSubstituicao + errorNote + avisoRV04 + `\n${iaScreen.message}`,
+                    notaSubstituicao + errorNote + (avisosEtapa.length ? `\n${avisosEtapa.join("\n")}` : "") + avisoRV04 + `\n${iaScreen.message}`,
             }]
         };
     }
@@ -1727,7 +1758,7 @@ server.tool(
 
 server.tool(
     "record_protocol_amendment",
-    "EMENDA e DESVIO do protocolo travado (RV-01; linha 17 da FILA). O protocol.md travado não se edita: o que muda nele é EMENDA — nasce PROPOSTA (acao 'propor': o_que, antes, depois, porque e, se muda a busca, o plano de busca novo em JSON) e só vale com a decisão do pesquisador nas palavras dele (acao 'aprovar' ou 'recusar', com id e contribuicao; carimbo é recusado). Aprovada, sobe a versão do protocolo e congela de novo o plano de busca com as rotas de hoje — é também como um projeto travado sem plano (antes de 20/11/2026) passa a ter um. O que a execução fez diferente, sem mudar o protocolo, é DESVIO (tipo 'desvio': o_que, porque, fonte do plano se houver; a decisão do pesquisador sobre ele, se houver, em contribuicao). Tudo é anexado ao change_log.md do projeto e guardado no project_state.json. NÃO escreva a contribuição pelo pesquisador.",
+    "EMENDA e DESVIO do protocolo travado (RV-01; linha 17 da FILA). O protocol.md travado não se edita: o que muda nele é EMENDA — nasce PROPOSTA (acao 'propor': o_que, antes, depois, porque e, se muda a busca, o plano de busca novo em JSON) e só vale com a decisão do pesquisador nas palavras dele (acao 'aprovar' ou 'recusar', com id e contribuicao; carimbo é recusado). Aprovada, sobe a versão do protocolo e congela de novo o plano de busca com as rotas de hoje — é também como um projeto travado sem plano (antes de 20/11/2026) passa a ter um. A emenda também é o ÚNICO caminho das decisões que o método exige antes de cada etapa ('decisoes', linha 24) e da reabertura de etapa já fechada ('reabrir'). O que a execução fez diferente, sem mudar o protocolo, é DESVIO (tipo 'desvio': o_que, porque, fonte do plano se houver; a decisão do pesquisador sobre ele, se houver, em contribuicao). Tudo é anexado ao change_log.md do projeto e guardado no project_state.json. NÃO escreva a contribuição pelo pesquisador.",
     {
         projectPath: z.string().describe("Raiz do projeto (onde estão o protocol.md e o project_state.json)"),
         tipo: z.enum(["emenda", "desvio"]),
@@ -1739,6 +1770,8 @@ server.tool(
         porque: z.string().optional().describe("Por que muda (emenda) ou por que a execução se afastou (desvio)"),
         plano: z.string().optional().describe("Emenda que muda a busca: o plano de busca novo inteiro, em JSON (a forma do plano_busca.json)"),
         fonte: z.string().optional().describe("Desvio: o id da fonte do plano a que ele se refere"),
+        decisoes: z.string().optional().describe("Emenda que decide o que uma etapa exige (linha 24, trava 1): JSON { id da decisão que o método declara: opção escolhida pelo pesquisador, ou null para voltar a 'a decidir' }"),
+        reabrir: z.string().optional().describe("Emenda que manda refazer uma etapa já fechada (linha 24, trava 2): o id da etapa; aprovada, ela e as seguintes reabrem e correm de novo em ordem"),
         contribuicao: z.string().optional().describe("A decisão do pesquisador, nas palavras dele (obrigatória para aprovar ou recusar)"),
     },
     async (params) => {
@@ -1746,8 +1779,8 @@ server.tool(
         const r = params.tipo === "desvio"
             ? registrarDesvio(dir, { o_que: params.o_que ?? "", porque: params.porque ?? "", fonte: params.fonte, contribuicao: params.contribuicao })
             : (params.acao ?? "propor") === "propor"
-                ? proporEmenda(dir, { o_que: params.o_que ?? "", antes: params.antes, depois: params.depois, porque: params.porque ?? "", plano: params.plano }, registry)
-                : decidirEmenda(dir, { id: params.id ?? "", acao: params.acao as "aprovar" | "recusar", contribuicao: params.contribuicao ?? "" }, registry);
+                ? proporEmenda(dir, { o_que: params.o_que ?? "", antes: params.antes, depois: params.depois, porque: params.porque ?? "", plano: params.plano, decisoes: params.decisoes, reabrir: params.reabrir }, registry, RAIZ())
+                : decidirEmenda(dir, { id: params.id ?? "", acao: params.acao as "aprovar" | "recusar", contribuicao: params.contribuicao ?? "" }, registry, RAIZ());
         return { content: [{ type: "text", text: r.mensagem }] };
     }
 );
@@ -1779,6 +1812,21 @@ server.tool(
         // protocolo usa, não só o momento. Conferido ANTES de travar: recusa sem tocar em nada.
         const { plano, erros: errosLeitura } = lerPlanoDoArquivo(projectDir);
         const errosPlano = errosLeitura.length ? errosLeitura : validarPlano(plano, registry);
+        // Linha 24, trava 1: na trava, o pesquisador responde o que cada etapa do método vai precisar
+        // decidir (decisoes_etapas.json). Resposta null fica "a decidir": a etapa não roda até a emenda.
+        const metodoProj = ProjectStateService.read(projectDir)?.method ?? "";
+        const decMetodo = lerDecisoesDoMetodo(RAIZ(), metodoProj);
+        const decProj = decMetodo.decisoes.length ? lerRespostasDoArquivo(projectDir, decMetodo.decisoes) : { respostas: {}, erros: [] };
+        const errosDecisoes = [...decMetodo.erros.map((e) => `decisões do método: ${e}`), ...decProj.erros];
+        if (audit.valid && errosDecisoes.length) {
+            return {
+                content: [{
+                    type: "text",
+                    text: `❌ Protocolo aprovado na auditoria (${audit.score}/${audit.maxScore}), mas NÃO travado: faltam as decisões de etapa.\n` +
+                        errosDecisoes.map((e) => `- ${e}`).join("\n"),
+                }],
+            };
+        }
         if (audit.valid && errosPlano.length) {
             return {
                 content: [{
@@ -1805,6 +1853,11 @@ server.tool(
             }
             // Depois do marcador [LOCKED] no arquivo: o hash é o do protocolo como ficou travado.
             const travaBusca = congelarPlano(projectDir, plano!, abre?.id ?? "", registry);
+            let notaDecisoes = "";
+            if (decMetodo.decisoes.length) {
+                congelarDecisoes(projectDir, metodoProj, decProj.respostas, abre?.id ?? ProjectStateService.read(projectDir)!.phase);
+                notaDecisoes = `\n\n**Decisões de etapa congeladas** (o que estiver "a decidir" impede a etapa de rodar até a emenda):\n${resumoDasDecisoes(RAIZ(), projectDir)}`;
+            }
             const notaPlano = `\n\n**Plano de busca congelado** (versão ${travaBusca.versao_protocolo} do protocolo; ` +
                 `confira com o pesquisador que ele diz o que o protocolo pede — a busca vai segui-lo, e o que mudar é emenda):\n` +
                 resumoDoPlano(travaBusca);
@@ -1831,7 +1884,7 @@ server.tool(
             return {
                 content: [{
                     type: "text",
-                    text: `✅ SUCESSO! Protocolo aprovado (${audit.score}/${audit.maxScore}) e TRAVADO ([LOCKED]). As buscas oficiais estão liberadas, só pelo plano abaixo.${notaEtapa}${notaPlano}`
+                    text: `✅ SUCESSO! Protocolo aprovado (${audit.score}/${audit.maxScore}) e TRAVADO ([LOCKED]). As buscas oficiais estão liberadas, só pelo plano abaixo.${notaEtapa}${notaPlano}${notaDecisoes}`
                 }]
             };
         } else {
@@ -1935,6 +1988,9 @@ server.tool(
     },
     async (params) => {
         const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
+        // Linha 24: a leitura é etapa da trilha; obedece à ordem e às decisões dela.
+        const recusaEtapa = travaDaEtapa(params.projectPath, "rag_index_corpus", { parametros: params });
+        if (recusaEtapa) return { content: [{ type: "text", text: recusaEtapa }] };
         try {
             const r = indexCorpus(projectDir, params.corpusDir);
             const warn = r.indexed === 0
@@ -2699,6 +2755,9 @@ server.tool(
                 if (params.mode === "AND") {
                     return { content: [{ type: "text", text: "No modo dos registros vale 'ao menos um termo' (OR), como a camada por palavras pede. Nada foi gravado." }] };
                 }
+                // Linha 24: a camada por palavras é da etapa de triagem; obedece à ordem e às decisões dela.
+                const recusaEtapa = travaDaEtapa(params.projectPath, "batch_keyword_screen", { parametros: params });
+                if (recusaEtapa) return { content: [{ type: "text", text: recusaEtapa }] };
                 const camada = gravarCamadaPorPalavras(params.projectPath, params.keywords, { substituicao: params.substituicao });
                 const k = camada.relatorio.contagens as { entrada: number; passados: number; excluidos: number };
                 const rastro = await registrarLote("batch_keyword_screen", params, `Camada por palavras: ${k.entrada} registros, ${k.passados} passam, ${k.excluidos} excluídos.`, camada.relatorio);
@@ -2848,7 +2907,8 @@ server.tool(
         pendentes: z.boolean().optional().describe("Gera um lote novo só com os registros do insumo que não estão em planilha nenhuma"),
     },
     async (params) => {
-        const trava = await checkDesignGuardrail(undefined, params.projectPath);
+        const trava = await checkDesignGuardrail(undefined, params.projectPath)
+            ?? travaDaEtapa(params.projectPath, "record_screening_decisions", { parametros: params });
         if (trava) return { content: [{ type: "text", text: trava }] };
         try {
             if (params.acao === "importar") {
@@ -2897,6 +2957,9 @@ server.tool(
     },
     async (params) => {
         try {
+            // Linha 24: com projeto, a extração é da etapa dela; obedece à ordem e às decisões.
+            const recusaEtapa = travaDaEtapa(params.projectPath, "batch_llm_extract", { parametros: params });
+            if (recusaEtapa) return { content: [{ type: "text", text: recusaEtapa }] };
             const { results, summary } = await batchService.llmExtract(
                 params.pdfDir,
                 params.prompt,
@@ -2926,6 +2989,9 @@ server.tool(
             // só a tool sabe. Com LLM, a tarefa é "screening for relevance" (Tabela 2, T21) e
             // cai em C3: exige validação dentro da revisão. Sem LLM, é filtro por keyword e
             // não aciona o gate.
+            // Linha 24: com projeto travado, o insumo vem do SQLite, não do artefato da etapa anterior.
+            const recusaEtapa = travaDaEtapa(params.projectPath, "batch_db_screen", { insumoDoChamador: "lido do banco (projectId)", parametros: params });
+            if (recusaEtapa) return { content: [{ type: "text", text: recusaEtapa }] };
             const ia = checarUsoDeIA("batch_db_screen", params.useLlm ?? false);
             if (ia.blocked) return { content: [{ type: "text", text: ia.message }] };
 

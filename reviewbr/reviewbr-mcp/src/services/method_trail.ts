@@ -1,6 +1,7 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { ProjectStateService } from "./project_state.js";
+import { registrarFechamento } from "./fechamentos.js";
 
 /**
  * method_trail — a TRILHA do método como dado (DEBT-100).
@@ -41,6 +42,12 @@ export interface Etapa {
     produces: string[];
     /** Tools do MCP que gravam o artefato de encerramento. Vazio = quem grava é o agente, sem código. */
     producer_tools: string[];
+    /**
+     * Linha 24 da FILA — outras tools que trabalham DENTRO da etapa sem gravar o artefato que a encerra
+     * (a camada por palavras, as planilhas dos revisores). Com `producer_tools`, dizem a que etapa uma
+     * tool pertence, e por isso a que ordem e a que decisões ela obedece.
+     */
+    step_tools: string[];
     /** `false` = a etapa não se aplica a este método, e `note` diz por quê. */
     active: boolean;
     note: string;
@@ -127,6 +134,7 @@ export function errosDaTrilha(phases: unknown, agentesDir?: string): string[] {
             erros.push(`${rot}: sem 'producer_tools' — lista das tools que gravam o artefato (vazia = o agente grava, sem código)`);
         }
         if (e.produces !== undefined && !Array.isArray(e.produces)) erros.push(`${rot}: 'produces' precisa ser lista`);
+        if (e.step_tools !== undefined && !Array.isArray(e.step_tools)) erros.push(`${rot}: 'step_tools' precisa ser lista`);
     });
     return erros;
 }
@@ -231,6 +239,7 @@ export function lerTrilha(repoRoot: string, methodId: string): Trilha {
         closes_with: normalizar(texto(e.closes_with)),
         produces: Array.isArray(e.produces) ? e.produces.map((p: unknown) => normalizar(String(p))) : [],
         producer_tools: Array.isArray(e.producer_tools) ? e.producer_tools.map(String) : [],
+        step_tools: Array.isArray(e.step_tools) ? e.step_tools.map(String) : [],
         active: e.active !== false,
         note: texto(e.note),
     }));
@@ -242,6 +251,12 @@ function declara(e: Etapa, artefato: string): boolean {
     if (e.closes_with === a || e.produces.includes(a)) return true;
     // Pasta: "01_raw/" é encerrada por qualquer arquivo gravado dentro dela.
     return e.closes_with.endsWith("/") && a.startsWith(e.closes_with);
+}
+
+/** O artefato é o que ENCERRA a etapa (ou está dentro da pasta que a encerra), e não um intermediário. */
+export function encerra(e: Etapa, artefato: string): boolean {
+    const a = normalizar(artefato);
+    return e.closes_with === a || (e.closes_with.endsWith("/") && a.startsWith(e.closes_with));
 }
 
 /**
@@ -331,7 +346,11 @@ export function avancarPorArtefato(repoRoot: string, projectDir: string, artefat
         };
     }
     const gate = ProjectStateService.podeAvancar(projectDir, etapa.id);
-    if (gate.ok) ProjectStateService.setPhase(projectDir, etapa.id);
+    if (gate.ok) {
+        ProjectStateService.setPhase(projectDir, etapa.id);
+        // Linha 24, trava 2: a etapa fecha com o hash do artefato que a ENCERRA (não de um intermediário).
+        if (encerra(etapa, artefato)) registrarFechamento(projectDir, etapa.id, etapa.closes_with);
+    }
     return { ok: gate.ok, etapa: etapa.id, aviso: `${gate.ok ? "✅" : "🚧"} ${gate.motivo}` };
 }
 
@@ -423,7 +442,10 @@ export function registrarDecisaoDoPesquisador(
     const atrasada = ordem(etapa.id) < ordem(state.phase);
     if (artefatoExiste(projectDir, etapa.closes_with) && !atrasada) {
         const gate = ProjectStateService.podeAvancar(projectDir, etapa.id);
-        if (gate.ok) ProjectStateService.setPhase(projectDir, etapa.id);
+        if (gate.ok) {
+            ProjectStateService.setPhase(projectDir, etapa.id);
+            registrarFechamento(projectDir, etapa.id, etapa.closes_with);
+        }
         return { ok: true, mensagem: `✅ Decisão do pesquisador registrada na etapa ${etapa.id} — ${etapa.name}. O artefato da etapa já existe: a fase avançou para ${etapa.id}.` };
     }
     if (atrasada) {

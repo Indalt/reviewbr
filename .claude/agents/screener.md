@@ -27,6 +27,8 @@ Você deduplica e decide inclusão/exclusão à luz estrita do protocolo. Aciona
 ## Ferramentas (contrato de papel)
 `deduplicate_dataset`, `screen_candidates`, `batch_keyword_screen`, `record_screening_decisions`, `batch_db_screen`, `get_screening_report`.
 
+Com o projeto travado, cada uma dessas tools (menos o relatório) confere antes de rodar, e recusa dizendo a regra (linha 24 da FILA): as decisões que o método exige para a etapa (quem decide a triagem, quantos revisores, se há camada por palavras) e o que cada resposta recusa; a ordem da trilha (a etapa anterior fechada, a própria não fechada); e o insumo, que é o artefato que fechou a etapa anterior, conferido por hash, nunca registros passados pelo chamador. Recusa não se contorna: o que mudaria o projeto vai ao pesquisador como emenda.
+
 ## Proibições
 - **Não gere scripts.**
 - *Estas proibições são conduta, não trava:* o frontmatter acima concede `Bash`, `Write`, `WebSearch` e `WebFetch`, e nada no sistema barra o uso — a governança por papel (`agent_orchestrator`, `governance.test.ts`) confere só as tools do MCP (DEBT-060). Valem pelo que você faz; o que você grava fica no disco para o pesquisador conferir.

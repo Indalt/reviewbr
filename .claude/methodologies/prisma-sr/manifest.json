@@ -31,6 +31,83 @@
       "note": "Decidida a priori, no protocolo (RV-01), como pede o item 17 do PRISMA-P 2015 ('Describe how the strength of the body of evidence will be assessed (e.g., GRADE)'). NÃO tira item algum do denominador — lida a fonte em 31/10/2026: os itens 15 e 22 do PRISMA 2020 valem para toda revisão sistemática (E&E, Page et al., BMJ 2021;372:n160: elemento essencial que não começa por 'If…' se relata em todas) e o item 17 do PRISMA-P manda declarar a ausência com o motivo ('If no such assessments are planned, the authors should state this with a rationale for why not'; Shamseer et al., BMJ 2015;349:g7647). Por isso nenhuma linha do mapeamento depende desta condição. Com 'nenhuma', o protocolo e o manuscrito dizem que não haverá avaliação, e por quê. A avaliação em si é [NÃO COBERTO] por tool (spec, F7.3): GRADE e CERQual estão citados, não assimilados (DEBT-008) — o agente propõe, o pesquisador decide. Leitura com os trechos: .claude/maintenance/sessao_2b/fontes_certeza.md."
     }
   ],
+  "decisoes": [
+    {
+      "id": "quem_decide_triagem",
+      "etapa": "F4",
+      "pergunta": "Quem decide, registro a registro, a triagem por título e resumo e por texto completo?",
+      "o_que_se_decide": "O caminho da etapa de triagem no ReviewBR: planilhas preenchidas por revisores humanos, sem IA, ou triagem por modelo de linguagem.",
+      "opcoes": [
+        {
+          "valor": "revisores humanos, por planilha",
+          "consequencia": "a triagem corre pela record_screening_decisions (uma planilha por revisor, importação, consenso e gerar), e a screen_candidates e a batch_db_screen, que triam por IA ou pelo banco, são recusadas neste projeto.",
+          "recusa_tools": [
+            "screen_candidates",
+            "batch_db_screen"
+          ]
+        },
+        {
+          "valor": "modelo de linguagem",
+          "consequencia": "a triagem corre pela screen_candidates, que usa IA generativa (o uso fica declarado em cada resposta e o relato o declara), e as planilhas dos revisores (record_screening_decisions) são recusadas neste projeto.",
+          "recusa_tools": [
+            "record_screening_decisions"
+          ]
+        }
+      ],
+      "note": "Linha 24 da FILA (trava 1). As duas opções são os dois caminhos que o ReviewBR executa hoje; o que a fonte oficial exige para cada um está na record_screening_decisions (cabeçalho de decisoes_revisores.ts) e no gate de IA da screen_candidates."
+    },
+    {
+      "id": "revisores_por_registro",
+      "etapa": "F4",
+      "pergunta": "Quantos revisores decidem cada registro, cada um sem ver a decisão do outro?",
+      "o_que_se_decide": "Quantas planilhas a record_screening_decisions gera por estágio da triagem; com dois ou mais, as divergências vão a uma planilha de consenso.",
+      "opcoes": [
+        {
+          "valor": "dois ou mais",
+          "consequencia": "o formulário recusa menos de dois revisores, e as divergências vão à planilha de consenso (acao 'consenso') antes do 'gerar'.",
+          "parametros": {
+            "record_screening_decisions": {
+              "revisores": {
+                "min_itens": 2
+              }
+            }
+          }
+        },
+        {
+          "valor": "um",
+          "consequencia": "o formulário recusa mais de um revisor, não há consenso, e o relato declara que um só revisor decidiu cada registro.",
+          "parametros": {
+            "record_screening_decisions": {
+              "revisores": {
+                "max_itens": 1
+              }
+            }
+          }
+        }
+      ],
+      "note": "Linha 24 da FILA (trava 1). Com a triagem por modelo de linguagem, a resposta não tem efeito em código: a screen_candidates não tem revisores."
+    },
+    {
+      "id": "camada_por_palavras",
+      "etapa": "F4",
+      "pergunta": "Antes da leitura de título e resumo, os registros passam pela camada mecânica por palavras, com os termos escritos no protocolo?",
+      "o_que_se_decide": "Se a batch_keyword_screen roda: o registro sem nenhum termo do protocolo sai antes da leitura humana, contado à parte no funil.",
+      "opcoes": [
+        {
+          "valor": "sim",
+          "consequencia": "a batch_keyword_screen roda com os termos escritos no protocol.md; a triagem por título e resumo passa a ler 03_screening/passed_keywords.json, e os excluídos pela camada o funil soma aos excluídos na triagem."
+        },
+        {
+          "valor": "não",
+          "consequencia": "a batch_keyword_screen é recusada neste projeto (no modo dos registros), e a triagem por título e resumo lê 02_deduplicated/dataset.json inteiro.",
+          "recusa_tools": [
+            "batch_keyword_screen"
+          ]
+        }
+      ],
+      "note": "Linha 24 da FILA (trava 1). Foi uma das decisões tomadas no chat depois da trava no roda_aromas_ceara (pedido do Vicente de 23/11/2026)."
+    }
+  ],
   "question_frameworks": [
     "PICOS",
     "PECO",
@@ -102,6 +179,11 @@
       "producer_tools": [
         "screen_candidates"
       ],
+      "step_tools": [
+        "batch_keyword_screen",
+        "batch_db_screen",
+        "record_screening_decisions"
+      ],
       "active": true
     },
     {
@@ -110,6 +192,9 @@
       "role": "extractor",
       "closes_with": "04_extraction/study_characteristics_table.csv",
       "producer_tools": [],
+      "step_tools": [
+        "batch_llm_extract"
+      ],
       "active": true
     },
     {
@@ -121,6 +206,9 @@
         "rag/index.json"
       ],
       "producer_tools": [],
+      "step_tools": [
+        "rag_index_corpus"
+      ],
       "active": true
     },
     {

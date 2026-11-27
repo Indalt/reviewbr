@@ -3,6 +3,8 @@ import * as path from "node:path";
 import { ProjectStateService } from "./project_state.js";
 import { ehCarimbo } from "./method_trail.js";
 import { validarPlano, congelarPlano, resumoDoPlano, type PlanoBusca, type CatalogoDeRepositorios } from "./plano_busca.js";
+import { lerDecisoesDoMetodo, conferirRespostas, aplicarRespostasDeEmenda, reabrirEtapa, resumoDasDecisoes, textoDaPergunta } from "./travas_etapa.js";
+import { lerTrilha } from "./method_trail.js";
 
 /**
  * Emenda e desvio do protocolo travado, gravados por tool (linha 17 da FILA, FAZER 3).
@@ -30,6 +32,10 @@ export interface Emenda {
     depois?: string;
     porque: string;
     plano?: PlanoBusca;
+    /** Linha 24, trava 1: respostas às decisões de etapa que o método declara (id → opção; null = volta a "a decidir"). */
+    decisoes?: Record<string, string | null>;
+    /** Linha 24, trava 2: etapa que a emenda reabre (ela e as seguintes correm de novo, em ordem). */
+    reabrir?: string;
     proposta_em: string;
     decisao?: { por: "pesquisador"; contribuicao: string; em: string; versao_protocolo?: string };
 }
@@ -72,8 +78,9 @@ function travado(projectDir: string): { ok: true } | { ok: false; mensagem: stri
 
 export function proporEmenda(
     projectDir: string,
-    entrada: { o_que: string; antes?: string; depois?: string; porque: string; plano?: string },
+    entrada: { o_que: string; antes?: string; depois?: string; porque: string; plano?: string; decisoes?: string; reabrir?: string },
     catalogo: CatalogoDeRepositorios,
+    repoRoot?: string,
 ): { ok: boolean; mensagem: string } {
     const t = travado(projectDir);
     if (!t.ok) return { ok: false, mensagem: t.mensagem };
@@ -91,11 +98,34 @@ export function proporEmenda(
         if (erros.length) return { ok: false, mensagem: `O plano de busca da emenda não está pronto:\n${erros.map((e) => `- ${e}`).join("\n")}` };
     }
     const st = ProjectStateService.read(projectDir)!;
+    // Linha 24: decisões de etapa e reabertura de etapa, conferidas contra o método do projeto.
+    let decisoes: Record<string, string | null> | undefined;
+    if (texto(entrada.decisoes)) {
+        if (!repoRoot) return { ok: false, mensagem: "Sem a raiz do ReviewBR não há como ler as decisões que o método declara." };
+        let dado: unknown;
+        try { dado = JSON.parse(entrada.decisoes!); }
+        catch (e: any) { return { ok: false, mensagem: `As decisões da emenda não são JSON legível: ${e?.message ?? e}` }; }
+        const { decisoes: doMetodo, erros: errosMetodo } = lerDecisoesDoMetodo(repoRoot, st.method);
+        if (errosMetodo.length) return { ok: false, mensagem: `As decisões do método "${st.method}" não puderam ser lidas: ${errosMetodo.join("; ")}` };
+        const r = conferirRespostas(doMetodo, dado, false);
+        if (r.erros.length) {
+            return { ok: false, mensagem: `As decisões da emenda não conferem com o método:\n${r.erros.map((x) => `- ${x}`).join("\n")}\n\nAs perguntas:\n${doMetodo.map(textoDaPergunta).join("\n")}` };
+        }
+        decisoes = r.respostas;
+    }
+    const reabrir = texto(entrada.reabrir) || undefined;
+    if (reabrir) {
+        if (!repoRoot) return { ok: false, mensagem: "Sem a raiz do ReviewBR não há como ler a trilha do método." };
+        const etapas = lerTrilha(repoRoot, st.method).etapas;
+        if (!etapas.some((x) => x.id === reabrir && x.active)) {
+            return { ok: false, mensagem: `"${reabrir}" não é etapa ativa da trilha do método "${st.method}" (${etapas.filter((x) => x.active).map((x) => x.id).join(", ")}).` };
+        }
+    }
     const emendas = st.emendas ?? [];
     const e: Emenda = {
         id: `emenda-${emendas.length + 1}`, status: "PROPOSTA",
         o_que: texto(entrada.o_que), antes: texto(entrada.antes) || undefined, depois: texto(entrada.depois) || undefined,
-        porque: texto(entrada.porque), plano, proposta_em: hoje(),
+        porque: texto(entrada.porque), plano, decisoes, reabrir, proposta_em: hoje(),
     };
     ProjectStateService.patch(projectDir, { emendas: [...emendas, e] });
     anexarAoChangeLog(projectDir, [
@@ -103,6 +133,8 @@ export function proporEmenda(
         "", `**O quê.** ${e.o_que}`,
         e.antes ? `\n**Antes.** ${e.antes}` : "", e.depois ? `\n**Depois.** ${e.depois}` : "",
         "", `**Por quê.** ${e.porque}`,
+        decisoes ? `\n**Decisões de etapa da emenda:** ${Object.entries(decisoes).map(([k, v]) => `${k} = ${v === null ? "a decidir" : `"${v}"`}`).join("; ")}` : "",
+        reabrir ? `\n**Reabre a etapa** ${reabrir} (ela e as seguintes correm de novo, em ordem).` : "",
         plano ? `\n**Plano de busca da emenda** (é o que a busca vai seguir, se aprovada):\n${plano.fontes.map((f) => `- ${f.nome} (${f.id}): ${f.modo === "manual" ? "à mão" : "por tool"}, ${f.tool}${f.repositorio ? ` ${f.repositorio}` : ""}; textos ${f.textos.map((x) => `\`${x}\``).join(" · ") || "nenhum"}`).join("\n")}` : "",
         "", "**Aprovação:** — (só com a decisão do pesquisador, nas palavras dele)",
     ].filter((l) => l !== "").join("\n"));
@@ -117,6 +149,7 @@ export function decidirEmenda(
     projectDir: string,
     entrada: { id: string; acao: "aprovar" | "recusar"; contribuicao: string },
     catalogo: CatalogoDeRepositorios,
+    repoRoot?: string,
 ): { ok: boolean; mensagem: string } {
     const t = travado(projectDir);
     if (!t.ok) return { ok: false, mensagem: t.mensagem };
@@ -149,9 +182,19 @@ export function decidirEmenda(
     } else if (st.trava_busca) {
         ProjectStateService.patch(projectDir, { trava_busca: { ...ProjectStateService.read(projectDir)!.trava_busca!, versao_protocolo: versao } });
     }
+    let notaEtapas = "";
+    if (e.decisoes && repoRoot) {
+        aplicarRespostasDeEmenda(repoRoot, projectDir, e.decisoes, e.id);
+        notaEtapas += `\nDecisões de etapa do projeto agora:\n${resumoDasDecisoes(repoRoot, projectDir)}`;
+    }
+    if (e.reabrir && repoRoot) {
+        const reabertas = reabrirEtapa(repoRoot, projectDir, e.reabrir);
+        notaEtapas += `\nReabertas, para correr de novo em ordem: ${reabertas.join(", ")}.`;
+    }
     anexarAoChangeLog(projectDir, `### ${e.id} — APROVADA em ${em.slice(0, 10)}\n\nDecisão do pesquisador: "${contribuicao}". ` +
-        `Versão do protocolo: ${anterior} → ${versao}. ${e.plano ? "O plano de busca da emenda foi congelado, com as rotas de hoje." : "O plano de busca não muda."}`);
-    return { ok: true, mensagem: `✅ ${e.id} APROVADA (protocolo ${anterior} → ${versao}) e anexada ao change_log.md. ${notaPlano}` };
+        `Versão do protocolo: ${anterior} → ${versao}. ${e.plano ? "O plano de busca da emenda foi congelado, com as rotas de hoje." : "O plano de busca não muda."}` +
+        (e.decisoes ? " As decisões de etapa da emenda passam a valer." : "") + (e.reabrir ? ` A etapa ${e.reabrir} e as seguintes reabrem.` : ""));
+    return { ok: true, mensagem: `✅ ${e.id} APROVADA (protocolo ${anterior} → ${versao}) e anexada ao change_log.md. ${notaPlano}${notaEtapas}` };
 }
 
 export function registrarDesvio(

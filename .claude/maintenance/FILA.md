@@ -80,12 +80,13 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 27/11/2026, linha 21 feita (`METODO_ReviewBR.md` só com regras, anexos A e B; `maintainer.md`
-pelo 6.5; commit no fechamento desta linha) — build e suíte 704 de 704; audit válido, 0 achados abertos; gate CORRECAO
-válido; fila: linha 10 em curso, linhas 22 e 24 a 30 a fazer; 53 itens no "Visto de passagem". `git status`: só os 17
-arquivos rastreados do `roda_aromas_ceara` como apagados, porque a pasta está em `C:oda_aromas_ceara` por decisão do
-Vicente (nenhum commit grava essa deleção). Decisões novas: nenhuma. **Próximo passo:** a linha 24. Assume: o Claude, na
-manutenção. Intocado: a pasta `C:oda_aromas_ceara` (esta sessão não a leu nem gravou).
+**Última verificação:** 27/11/2026, linha 24 em curso: travas 1 e 2 feitas (commit no fechamento desta sessão), a 3
+espera o Vicente aprovar o desenho (seção "Linha 24") — build e suíte 729 de 729; audit válido, 0 achados abertos; gate
+CORRECAO válido; fila: linhas 10 e 24 em curso, 22 e 25 a 30 a fazer; 53 itens no "Visto de passagem". `git status`:
+só os 17 arquivos rastreados do `roda_aromas_ceara` como apagados (a pasta está em `C:\roda_aromas_ceara` por decisão
+do Vicente; nenhum commit grava essa deleção). Decisões novas: nenhuma. **Próximo passo:** a resposta do Vicente ao
+desenho da trava 3; depois, a linha 25. Assume: o Claude, na manutenção. Intocado: a pasta `C:\roda_aromas_ceara`
+(esta sessão não a leu nem gravou).
 
 ## Fila
 
@@ -115,7 +116,7 @@ manutenção. Intocado: a pasta `C:oda_aromas_ceara` (esta sessão não a leu n
 | 21 | `METODO_ReviewBR.md` e `maintainer.md` | — | pontos 7.1, 7.2 e 6.5 da mesma seção | **feita em 27/11/2026**: o `METODO_ReviewBR.md` ficou só com as regras, numeradas (1.1 a 6.2, P1 a P11); os nove blocos "Hoje" saíram (a última versão com eles é a do commit `17af311`); a origem de cada regra foi para o anexo A, e os doze canônicos para o anexo B, "resumo do agente; obra não lida"; nenhuma linha de origem num autor entrou numa regra, porque nenhuma obra foi conferida. `maintainer.md`: L28 com o texto do P9; o RAISE 3 deixa de ser classificação em uso (L35-40 reescritas, L231); a leitura documentada vale só para o mapeamento das cinco normas já transcritas; L380-385 como estavam. Gate CORRECAO; suíte 704 de 704. Não mudou o servidor |
 | 22 | Investigação: DataCite, OpenAIRE Graph, OSF, ASReview v2 e a camada do 4.4 | — | — | **a fazer** (aprovada em 26/11/2026): só leitura, na fonte oficial; nem todos são fontes de busca de artigo |
 | 23 | Procedência que o sistema não confere: registra a limitação, e a pesquisa segue | ponto 3 da segunda resposta de 26/11, na seção "Pedido do Vicente de 25/11/2026" | os textos do `verify_record_links`, da `record_screening_decisions`, da skill `screening-rules` e do `screener` | **feita em 26/11/2026** (commit `6125977`): detalhe em "Linha 23", logo antes de "Como uma linha entra na fila" |
-| 24 | Travas em código por etapa: decisão antes da etapa, ordem e insumo, sistema e sessão presos ao projeto | pontos 6.2 e 6.3, reescritos em 26/11, com as condições da segunda resposta | — | **a fazer** (aprovada em 26/11/2026); o desenho da trava 3 volta ao Vicente antes de ser construído |
+| 24 | Travas em código por etapa: decisão antes da etapa, ordem e insumo, sistema e sessão presos ao projeto | pontos 6.2 e 6.3, reescritos em 26/11, com as condições da segunda resposta | — | **em curso:** travas 1 e 2 feitas em 27/11/2026 (detalhe em "Linha 24", logo antes de "Linha 19"); a trava 3 espera o Vicente aprovar o desenho, que está lá |
 | 25 | Hipótese A: os agentes de etapa num coordenador, com o `maintainer` à parte | ponto 6.4 | — | **a fazer** (aprovada em 26/11/2026), depois da 24 |
 | 26 | Ressalvas das tools: rede e repositórios | ponto 8, grupo 1 da lista de 26/11 | — | **a fazer**: começa conferindo cada item no código |
 | 27 | Ressalvas das tools: coleta e importação | ponto 8, grupo 2 | — | **a fazer**: começa conferindo cada item no código |
@@ -1326,6 +1327,53 @@ espera decisão:
   P5 (linha 18); a UFC que alternava e o IFCE com 1 registro (comportamento da fonte).
 
 Pergunta: tiro?
+
+### Linha 24 — travas em código por etapa (travas 1 e 2 feitas em 27/11/2026; a 3 espera o Vicente)
+
+Decisão do Vicente: pontos 6.2 e 6.3 ("Levado de novo ao Vicente em 26/11/2026") e a segunda resposta de 26/11, na
+seção "Pedido do Vicente de 25/11/2026". Estende o que a linha 17 fez para a busca e o hash do insumo das planilhas.
+
+**Feito (FAZER, com teste).** `tests/travas_etapa.test.ts`, 25 testes, falham antes (os módulos não existiam); suíte
+729 de 729; gate CORRECAO.
+- **Trava 1, decisão antes da etapa.** O método declara no `manifest.json` (`decisoes`) o que cada etapa vai precisar
+  ter decidido: a pergunta, o que se decide, as opções e a consequência de cada uma. No `prisma-sr` e no
+  `scoping-prisma-scr`, três, da F4: quem decide a triagem (revisores humanos por planilha, ou modelo de linguagem),
+  quantos revisores por registro (dois ou mais, ou um) e a camada por palavras (sim ou não). Na trava, o
+  `submit_protocol_for_approval` não trava sem `decisoes_etapas.json` (a resposta pode ficar `null`, a decidir) e
+  congela as respostas no `project_state.json` (`trava_etapas`). Etapa com decisão faltando não roda; a decisão só
+  entra pela `record_protocol_amendment` (`decisoes`), aprovada nas palavras do pesquisador. A resposta vale em
+  código: a opção recusa tools (`recusa_tools`) e limita parâmetros (o número de revisores do formulário).
+- **Trava 2, ordem e insumo.** A etapa de cada tool vem da trilha (`producer_tools` e o campo novo `step_tools`). A
+  tool recusa se a etapa dela, ou uma posterior, já fechou; se a anterior não fechou (ela fecha quando a seguinte
+  começa, pela regra dela: artefato gravado e, sob "estrito", a decisão do pesquisador); se o artefato que fechou a
+  anterior mudou (hash gravado em `etapas_fechadas`; a pasta `01_raw/` pelo conjunto dos registros, que a
+  consolidação da deduplicação não muda); e se recebe o insumo do chamador (`candidates`, o banco). Etapa fechada só
+  reabre por emenda aprovada (`reabrir`).
+- **Toda recusa** diz o que foi recusado, a regra do projeto e, quando a ação mudaria o projeto, que não pode e que o
+  caminho é a emenda.
+- Tools ligadas: as 13 de busca (pelo `checkDesignGuardrail`), `deduplicate_dataset`, `screen_candidates`,
+  `batch_keyword_screen` (modo dos registros), `batch_db_screen`, `record_screening_decisions`, `batch_llm_extract` e
+  `rag_index_corpus`. Textos: `designer.md` (passo 4) e `screener.md`.
+- **Projeto travado antes de 27/11** (o `roda_aromas_ceara`): as travas valem das etapas depois da fase em que ele
+  está no `project_state.json`; as decisões delas entram por emenda. Esta sessão não leu a pasta dele.
+
+**Não declarado como decisão, e por quê:** o registro sem resumo e a "dúvida" no título e resumo. O código executa um
+só comportamento para cada um (vai às planilhas como os outros; a dúvida segue para o texto completo), e opção que o
+sistema não executa seria mentira. Entram como decisão quando houver o segundo caminho em código.
+
+**Limite:** o servidor não impede a IA de perguntar no chat nem alguém de editar o `project_state.json` ou o código;
+impede que uma tool de etapa rode contra o que o projeto decidiu. As etapas sem tool (extração escrita pelo agente,
+síntese, manuscrito) só têm a trava quando uma tool da etapa é chamada.
+
+**Trava 3, desenho levado ao Vicente em 27/11/2026 (não construída):**
+1. Na trava, o projeto grava a versão do sistema que usa: o hash do `manifest.json` e da spec do método, do catálogo
+   de repositórios e a versão do servidor.
+2. Cada tool de etapa compara com a de hoje; diferente, recusa dizendo o que mudou, até uma emenda de migração (o que
+   mudou no sistema e a decisão do pesquisador) congelar a versão nova.
+3. Sessão: a primeira tool que grava abre a posse do projeto (arquivo com quem e quando), renovada a cada chamada;
+   outra sessão é recusada enquanto a posse estiver viva; posse parada há mais de 2 h é retomada, com registro.
+4. Limite: não vê quem edita os arquivos fora das tools. Pergunta: aprova, e a versão é só o que o projeto usa
+   (recomendado) ou o commit inteiro (toda manutenção pararia a pesquisa)?
 
 ### Linha 19 — fonte inventada e retratação, desde a busca exploratória (feita em 27/11/2026)
 
