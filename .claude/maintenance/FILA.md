@@ -80,13 +80,12 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 27/11/2026, linha 20 feita (legado em `old/legado_2026-11-27/`, lista em `LEGADO_em_old.md`;
-commit no fechamento desta linha) — build e suíte 704 de 704; audit válido, 0 achados abertos; gate CORRECAO válido;
-fila: linha 10 em curso, linhas 21, 22 e 24 a 30 a fazer; 53 itens no "Visto de passagem". `git status`: só os 17
-arquivos rastreados do `roda_aromas_ceara` como apagados, porque a pasta está em `C:\roda_aromas_ceara` por decisão do
-Vicente (nenhum commit grava essa deleção). Decisões novas: nenhuma. **Próximo passo:** a linha 21. Assume: o Claude, na
-manutenção. Intocado: a pasta `C:\roda_aromas_ceara` (esta sessão não a leu nem gravou). A pesquisa, quando o Vicente
-quiser e sem sessão de manutenção junto, gera o lote 2 com `pendentes` ("Linha 23", "Para a pesquisa").
+**Última verificação:** 27/11/2026, linha 21 feita (`METODO_ReviewBR.md` só com regras, anexos A e B; `maintainer.md`
+pelo 6.5; commit no fechamento desta linha) — build e suíte 704 de 704; audit válido, 0 achados abertos; gate CORRECAO
+válido; fila: linha 10 em curso, linhas 22 e 24 a 30 a fazer; 53 itens no "Visto de passagem". `git status`: só os 17
+arquivos rastreados do `roda_aromas_ceara` como apagados, porque a pasta está em `C:oda_aromas_ceara` por decisão do
+Vicente (nenhum commit grava essa deleção). Decisões novas: nenhuma. **Próximo passo:** a linha 24. Assume: o Claude, na
+manutenção. Intocado: a pasta `C:oda_aromas_ceara` (esta sessão não a leu nem gravou).
 
 ## Fila
 
@@ -113,7 +112,7 @@ quiser e sem sessão de manutenção junto, gera o lote 2 com `pendentes` ("Linh
 | 18 | BDTD e Oasisbr separadas; a Oasisbr inteira buscável | — | — | **feita em 21/11/2026** (pergunta e decisão do Vicente no mesmo dia; item tirado do "Visto de passagem"): `BR-AGG-0001` é a BDTD, como a busca sempre fez; a Oasisbr é `BR-AGG-0006`, buscada sem filtro de rede; os quatro `viaAgregador` apontam para ela. Emenda 2 do `roda_aromas_ceara` aprovada (protocolo 1.2, 12 fontes). Em 21/11 o DNS do `ibict.br` falhava (8.8.8.8 e 1.1.1.1): controle positivo da Oasisbr inteira fica para a busca |
 | 19 | Fonte inventada e retratação, desde a busca exploratória | ponto 4 da seção "Pedido do Vicente de 25/11/2026" (4.1 a 4.3) | — | **feita em 27/11/2026**: tool `verify_references`; detalhe em "Linha 19", logo antes de "Linha 23" |
 | 20 | Legado Go do prismAId e sobras para `old/` | — | ponto 5 e o bloco de 26/11 da mesma seção: o que vai, e um arquivo rastreado que lista o que foi para `old/` e o último commit de cada coisa | **feita em 27/11/2026**: 56 `.go`, `go.mod`, `go.sum`, `src/index.ts.tmp`, os dois `src/run_search_*.ts` (com os compilados), `reviewbr-web/`, o `.zip` e `antigravity_conversas_export/` em `old/legado_2026-11-27/`; lista rastreada em `LEGADO_em_old.md` (84 caminhos com o último commit); os dois `package.json` em `AGPL-3.0-only` ("5 ok para agpl", 26/11); `README.md`, `GUIA.md` e `DICIONARIO_modos_de_acao.md` deixam de apontar para o `reviewbr-web`; exceção do DEBT-103 tirada do teste de integração; `tests/licenca_legado.test.ts` (2, falham antes) |
-| 21 | `METODO_ReviewBR.md` e `maintainer.md` | — | pontos 7.1, 7.2 e 6.5 da mesma seção | **a fazer** (aprovada em 26/11/2026). Não muda o servidor |
+| 21 | `METODO_ReviewBR.md` e `maintainer.md` | — | pontos 7.1, 7.2 e 6.5 da mesma seção | **feita em 27/11/2026**: o `METODO_ReviewBR.md` ficou só com as regras, numeradas (1.1 a 6.2, P1 a P11); os nove blocos "Hoje" saíram (a última versão com eles é a do commit `17af311`); a origem de cada regra foi para o anexo A, e os doze canônicos para o anexo B, "resumo do agente; obra não lida"; nenhuma linha de origem num autor entrou numa regra, porque nenhuma obra foi conferida. `maintainer.md`: L28 com o texto do P9; o RAISE 3 deixa de ser classificação em uso (L35-40 reescritas, L231); a leitura documentada vale só para o mapeamento das cinco normas já transcritas; L380-385 como estavam. Gate CORRECAO; suíte 704 de 704. Não mudou o servidor |
 | 22 | Investigação: DataCite, OpenAIRE Graph, OSF, ASReview v2 e a camada do 4.4 | — | — | **a fazer** (aprovada em 26/11/2026): só leitura, na fonte oficial; nem todos são fontes de busca de artigo |
 | 23 | Procedência que o sistema não confere: registra a limitação, e a pesquisa segue | ponto 3 da segunda resposta de 26/11, na seção "Pedido do Vicente de 25/11/2026" | os textos do `verify_record_links`, da `record_screening_decisions`, da skill `screening-rules` e do `screener` | **feita em 26/11/2026** (commit `6125977`): detalhe em "Linha 23", logo antes de "Como uma linha entra na fila" |
 | 24 | Travas em código por etapa: decisão antes da etapa, ordem e insumo, sistema e sessão presos ao projeto | pontos 6.2 e 6.3, reescritos em 26/11, com as condições da segunda resposta | — | **a fazer** (aprovada em 26/11/2026); o desenho da trava 3 volta ao Vicente antes de ser construído |

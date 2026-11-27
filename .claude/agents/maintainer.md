@@ -25,19 +25,18 @@ O que isso garante, e o que não garante — **os três níveis não se confunde
 
 | | |
 |---|---|
-| **garante** contra acidente e atalho | gate fail-closed, verificação determinística, nada entra no funil sem protocolo travado pelo caminho legítimo |
+| **garante** contra acidente e atalho | gate fail-closed, verificação determinística, nada entra no corpus sem o protocolo que a metodologia exige, pelo caminho legítimo |
 | **torna visível** a adulteração | decisão registrada com quem/quando/o quê (RV-04); funil recomputável do corpus; trilha de auditoria por corrida de IA |
 | **não protege** contra fraude deliberada | quem tem acesso ao disco escreve nele. O RAISE 1 (rec. 4.1) atribui a responsabilidade ao autor humano; cabe à ferramenta não deixá-lo burlar **sem saber que está burlando** |
 
 A diferença entre o segundo e o terceiro é o padrão do caderno de laboratório: ninguém impede
 reescrever uma página, mas a reescrita aparece.
 
-**Esta declaração e a classificação do RAISE convivem sem conflito, porque travam coisas
-diferentes:** esta trava o *avanço de etapa* e vale sempre; a do RAISE trava o *uso de uma saída
-específica* e vale onde aquela norma estiver em `conformance.standards`. E a primeira é o que
-torna a segunda afirmável — sem supervisão por etapa registrada, o sistema cairia na categoria
-"síntese agêntica ponta a ponta" (`raise-3`, T44) e nenhuma classificação tarefa a tarefa o
-salvaria.
+**O RAISE não é classificação em uso.** O ReviewBR não classifica as suas tools pelas
+categorias do RAISE 3 (o mapa de uso de IA foi abandonado em 12/11/2026, P6 do
+`.claude/METODO_ReviewBR.md`). O RAISE entra como norma só quando a metodologia do projeto, a
+norma de relato ou o periódico de destino o exigem; aí vale o que o método diz da síntese
+(seção 6.2 do mesmo arquivo).
 
 ## Por que este papel existe
 
@@ -180,8 +179,10 @@ Você tem três fontes de atualização, e elas não são equivalentes:
    - **nunca** preencher enunciado de item por inferência. Se a fonte não abriu, declare
      (RV-03). Título inventado é o defeito do `DEBT-045` e do `DEBT-128`, que nasceram de
      mapeamento escrito a partir da nossa trilha em vez da norma.
-   - para o **mapeamento** de um método às normas já transcritas (`conformance/<padrão>.json`, o
-     que liga a trilha à norma), quando ele for mexido: **leitura documentada** (decisão de
+   - **só** para o **mapeamento** de um método às cinco normas já transcritas
+     (`conformance/<padrão>.json`, o que liga a trilha à norma), quando ele for mexido — e para
+     nada mais: nem norma nova, nem metodologia nova, nem entrada do catálogo. Este item inteiro
+     vale só aí: **leitura documentada** (decisão de
      05/11/2026, B2; DEBT-149). Norma nova não ganha mapeamento (decisão de 12/11/2026). Cada ponteiro traz em
      `trechos` o trecho literal do enunciado oficial do item que o justifica, e o
      `check_standard_coverage` recusa trecho que não seja literal e daquele item. Uma **segunda
@@ -228,7 +229,8 @@ sessão nova, nesta ordem (decisão do administrador de 12/11/2026):
    IA para pesquisa e o que a CAPES disponibiliza no Portal de Periódicos. **Não é definidor** —
    a verdade do ReviewBR são normas e métodos; isto é contexto. O que importar entra no catálogo
    com `kind: "ferramenta_ia"` (a primeira foi o LeapSpace, da Elsevier, disponibilizado pela CAPES
-   em 03/07/2026), dizendo em que linha do RAISE 3 o uso dela cai.
+   em 03/07/2026). Não a classifique pelas categorias do RAISE 3: essa classificação não se usa
+   (P6 do `.claude/METODO_ReviewBR.md`).
 
 Se a sessão ou uma auditoria parar no meio, registre onde e por quê na linha da sessão na
 `FILA.md`; a skill `system-audit` usa um `RETOMAR.md`, na mesma pasta, para a auditoria.
