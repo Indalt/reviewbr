@@ -80,15 +80,14 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 28/11/2026, linha 25 feita (Hipótese A): os seis agentes de etapa se fundiram no
-coordenador, depois de as sete tools que só uma lista `tools:` prendia entrarem na trilha — build e suíte 744 de 744;
-audit válido, 0 achados abertos; gate CORRECAO válido nas duas partes; fila: linha 10 em curso, 22 e 26 a 30 a fazer;
-53 itens no "Visto de passagem". `git status`: só os 17 arquivos rastreados do `roda_aromas_ceara` como apagados
-(nenhum commit grava essa deleção). Decisões novas do Vicente: nenhuma. **Atenção para a pesquisa:** os dois
-`manifest.json` mudaram (etapa das sete tools e `role`), e a trava 3 faz as tools de etapa de um projeto travado
-recusarem até a emenda de migração (`record_protocol_amendment`, `migracao: true`), aprovada pelo pesquisador.
-**Próximo passo:** a linha 22 ou a 26, à escolha do Vicente. Assume: o Claude, na manutenção. Intocado: a pasta
-`C:\roda_aromas_ceara` (esta sessão não a leu nem gravou).
+**Última verificação:** 28/11/2026, linha 25 feita e, a pedido do Vicente no mesmo dia, a trava 3 passou a exigir só o
+que alcança o que falta da pesquisa (seção "Linha 25", no fim) — build e suíte 751 de 751; audit válido, 0 achados
+abertos; gate CORRECAO válido; fila: linha 10 em curso, 22 e 26 a 30 a fazer; 53 itens no "Visto de passagem". `git
+status`: só os 17 arquivos rastreados do `roda_aromas_ceara` como apagados (nenhum commit grava essa deleção).
+Decisão nova do Vicente: a da trava 3 por etapa (28/11, "faça o recomendado"). **Para a pesquisa:** a linha 25 só se
+exige do projeto se ele ainda tiver a F4 por correr (as cinco tools de texto completo); nesse caso, a emenda de
+migração traz a frase e a conferência vai a `logs/`. **Próximo passo:** a linha 22 ou a 26, à escolha do Vicente.
+Assume: o Claude, na manutenção. Intocado: a pasta `C:oda_aromas_ceara` (esta sessão não a leu nem gravou).
 
 ## Fila
 
@@ -1387,8 +1386,36 @@ Está escrito assim na `conduct-review` e nas skills de etapa.
   mensagens do servidor. Os seis agentes em `old/agentes_2026-11-28/`, listados no `LEGADO_em_old.md` com o último
   commit de cada um.
 
-**Limite:** os dois `manifest.json` mudaram; pela trava 3, projeto travado recusa as tools de etapa até a emenda de
-migração aprovada pelo pesquisador (é o alcance decidido em 28/11). Esta sessão não leu a pasta do `roda_aromas_ceara`.
+**Limite:** os dois `manifest.json` mudaram. Pela trava 3 como ficou depois do pedido abaixo, só a mudança das cinco
+tools da F4 se exige, e só de projeto que ainda tem a F4 por correr. Esta sessão não leu a pasta do `roda_aromas_ceara`.
+
+**Pedido do Vicente, 28/11/2026, depois da linha** (origem: "as mudancas que implicam na pesquisa em andamento nao
+deveriam ser exigidas para ele. porem, se for necessario, a emenda deveria explicar isso. 'Durante a execução desta
+pesquisa o sistema passou por atualizações que implicam em (explicar no que implicam de forma breve e clara) e por isso
+a emenda é necessária.' (...) demostrar como a atualização não implica em mudanças que coloque o projeto em suspeita,
+mas não em nenhum lugar da apresentação da pesquisa. Apenas em local da coneferencia sobre a pesquisa."; escolheu a
+opção recomendada: "faça o recomendado").
+- **Decisão, em forma precisa.** A trava 3 exige a emenda de migração só quando a mudança do sistema altera o que falta
+  da pesquisa: a ordem das etapas; numa etapa ainda aberta, as tools, o artefato que a fecha, as decisões e opções e o
+  texto normativo dela na `spec.md`; o texto normativo geral; as regras gerais do manifest (gates, condições,
+  suplementos, invariantes); os catálogos; a versão do servidor. Não se exigem: texto e nomes (nome e procedimento da
+  etapa, notas, descrições, texto dos gates e das perguntas) e mudança em etapa que já correu. Quando se exige, a
+  emenda traz a frase dele com o que a atualização implica; a conferência de que nada já feito muda fica num registro
+  de conferência, fora do relato. Alternativa não escolhida: o projeto guardar uma cópia do método e seguir nela.
+- **FAZER, com teste.** `versao_sistema.ts`: a versão passa a ser por etapa (`formato: 2`; componentes por etapa e
+  por seção `## Fx` da spec, com o retrato de cada etapa para dizer no que a mudança implica); só contam as etapas
+  abertas (a partir da `desde_etapa` e não fechadas). Mudança que não conta: a versão gravada é atualizada, com aviso e
+  registro de conferência. Versão gravada no formato antigo: o conteúdo daquele dia é achado no histórico do git e
+  convertido; não achado, vale a comparação antiga. `emendas.ts`: a emenda de migração escreve a frase em `porque`
+  (`o_que` e `porque` do chamador ficam opcionais), tira do `change_log.md` a lista técnica e grava a conferência em
+  `logs/conferencia_atualizacoes_do_sistema.md` (o que mudou e conta, o que não conta, cada etapa fechada com o hash do
+  artefato hoje e no fechamento, as decisões gravadas), na proposta e na aprovação. `tests/trava3_alcance.test.ts`
+  (7, falham antes; dois deles com um projeto que gravou a versão em `e25af55`, como o `roda_aromas_ceara` pode ter
+  gravado: já depois da triagem, nada se exige; ainda na triagem, só a F4); 3 testes da trava 3 ajustados à forma
+  nova; suíte 751 de 751; gate CORRECAO.
+- **Limite:** o `logs/` não é suplemento do método; nada no sistema o leva ao relato, mas quem monta o relato à mão
+  pode copiá-lo. "Contar" é decidido pelo código pela lista acima; mudança de código do servidor sem subir a versão
+  continua não vista (alcance de 28/11).
 
 ### Linha 24 — travas em código por etapa (travas 1 e 2 feitas em 27/11/2026; a 3 em 28/11/2026)
 

@@ -3,7 +3,7 @@ import * as path from "node:path";
 import { ProjectStateService } from "./project_state.js";
 import { ehCarimbo } from "./method_trail.js";
 import { validarPlano, congelarPlano, resumoDoPlano, type PlanoBusca, type CatalogoDeRepositorios } from "./plano_busca.js";
-import { congelarVersao, versaoAtual, diferencas } from "./versao_sistema.js";
+import { congelarVersao, analisarMudancas, fraseDaMigracao, registrarConferencia } from "./versao_sistema.js";
 import { lerDecisoesDoMetodo, conferirRespostas, aplicarRespostasDeEmenda, reabrirEtapa, resumoDasDecisoes, textoDaPergunta } from "./travas_etapa.js";
 import { lerTrilha } from "./method_trail.js";
 
@@ -38,7 +38,8 @@ export interface Emenda {
     /** Linha 24, trava 2: etapa que a emenda reabre (ela e as seguintes correm de novo, em ordem). */
     reabrir?: string;
     /** Linha 24, trava 3: emenda de migração — aprovada, a versão de hoje do sistema passa a ser a do projeto. */
-    migracao?: { mudancas: string[] };
+    /** mudancas: no que a atualização implica; conferencia: o arquivo em logs/ com a conferência (fora do relato). */
+    migracao?: { mudancas: string[]; conferencia?: string };
     proposta_em: string;
     decisao?: { por: "pesquisador"; contribuicao: string; em: string; versao_protocolo?: string };
 }
@@ -87,7 +88,9 @@ export function proporEmenda(
 ): { ok: boolean; mensagem: string } {
     const t = travado(projectDir);
     if (!t.ok) return { ok: false, mensagem: t.mensagem };
-    if (!texto(entrada.o_que) || !texto(entrada.porque)) {
+    // Migração (decisão do Vicente, 28/11/2026): a tool escreve no que a atualização implica; o_que e porque
+    // do chamador são opcionais.
+    if (!entrada.migracao && (!texto(entrada.o_que) || !texto(entrada.porque))) {
         return { ok: false, mensagem: "A emenda diz o que muda no protocolo (`o_que`) e por quê (`porque`)." };
     }
     let plano: PlanoBusca | undefined;
@@ -127,9 +130,18 @@ export function proporEmenda(
     let migracao: Emenda["migracao"];
     if (entrada.migracao) {
         if (!repoRoot) return { ok: false, mensagem: "Sem a raiz do ReviewBR não há como ler a versão do sistema." };
-        const mudancas = st.versao_sistema ? diferencas(st.versao_sistema.componentes, versaoAtual(repoRoot, st.method)) : [];
-        if (!mudancas.length) return { ok: false, mensagem: "Não há migração a fazer: a versão do sistema que o projeto usa é a de hoje." };
-        migracao = { mudancas };
+        const a = analisarMudancas(repoRoot, projectDir);
+        if (!a || !a.contam.length) {
+            return { ok: false, mensagem: "Não há migração a fazer: nada do que mudou no sistema alcança o que falta da pesquisa (texto, nomes e etapas já feitas não se exigem do projeto)." };
+        }
+        migracao = { mudancas: a.contam.map((m) => m.implica) };
+        const frase = fraseDaMigracao(a.contam);
+        entrada = {
+            ...entrada,
+            o_que: texto(entrada.o_que) || "O projeto passa a usar a versão atual do sistema nas etapas que ainda vão correr.",
+            porque: texto(entrada.porque) ? `${frase} ${texto(entrada.porque)}` : frase,
+        };
+        migracao.conferencia = registrarConferencia(projectDir, `emenda-${(st.emendas ?? []).length + 1} (migração), proposta`, a);
     }
     const emendas = st.emendas ?? [];
     const e: Emenda = {
@@ -145,7 +157,6 @@ export function proporEmenda(
         "", `**Por quê.** ${e.porque}`,
         decisoes ? `\n**Decisões de etapa da emenda:** ${Object.entries(decisoes).map(([k, v]) => `${k} = ${v === null ? "a decidir" : `"${v}"`}`).join("; ")}` : "",
         reabrir ? `\n**Reabre a etapa** ${reabrir} (ela e as seguintes correm de novo, em ordem).` : "",
-        migracao ? `\n**Migração de versão do sistema** (o que mudou desde a versão do projeto):\n${migracao.mudancas.map((m) => `- ${m}`).join("\n")}` : "",
         plano ? `\n**Plano de busca da emenda** (é o que a busca vai seguir, se aprovada):\n${plano.fontes.map((f) => `- ${f.nome} (${f.id}): ${f.modo === "manual" ? "à mão" : "por tool"}, ${f.tool}${f.repositorio ? ` ${f.repositorio}` : ""}; textos ${f.textos.map((x) => `\`${x}\``).join(" · ") || "nenhum"}`).join("\n")}` : "",
         "", "**Aprovação:** — (só com a decisão do pesquisador, nas palavras dele)",
     ].filter((l) => l !== "").join("\n"));
@@ -203,6 +214,8 @@ export function decidirEmenda(
         notaEtapas += `\nReabertas, para correr de novo em ordem: ${reabertas.join(", ")}.`;
     }
     if (e.migracao && repoRoot) {
+        const a = analisarMudancas(repoRoot, projectDir);
+        if (a) registrarConferencia(projectDir, `${e.id} (migração), aprovada — conferência no momento da aprovação`, a);
         congelarVersao(repoRoot, projectDir, e.id);
         notaEtapas += "\nA versão de hoje do sistema passa a ser a do projeto.";
     }

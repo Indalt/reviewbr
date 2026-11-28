@@ -50,13 +50,19 @@ function projeto(over: Partial<ProjectState> = {}): string {
 const recusa = (r: { ok: boolean; motivo?: string }) => (r.ok ? "" : r.motivo ?? "");
 
 describe("trava 3 — a versão do sistema que o projeto usa", () => {
-    it("é só o que o projeto usa: manifest e spec do método (seguindo extends), os dois catálogos e a versão do servidor", () => {
+    it("é só o que o projeto usa: o método por etapa (seguindo extends), os dois catálogos e a versão do servidor", () => {
+        // Desde 28/11/2026 (pedido do Vicente) a versão é por etapa: o que cada etapa faz e o texto normativo dela.
         const v = versaoAtual(REPO, "scoping-prisma-scr");
-        expect(Object.keys(v)).toEqual([
-            "método scoping-prisma-scr: manifest.json", "método scoping-prisma-scr: spec.md",
-            "método prisma-sr: manifest.json", "método prisma-sr: spec.md",
-            "catálogo: repositories_catalog.json", "catálogo: bases_internacionais.json", "servidor: versão",
-        ]);
+        const k = Object.keys(v);
+        for (const m of ["scoping-prisma-scr", "prisma-sr"]) {
+            expect(k).toContain(`método ${m}: ordem das etapas`);
+            expect(k).toContain(`método ${m}: etapa F4`);
+            expect(k).toContain(`método ${m}: regras gerais do manifest`);
+            expect(k).toContain(`método ${m}: spec fora das etapas`);
+        }
+        expect(k).toContain("método prisma-sr: spec F4");
+        expect(k.slice(-3)).toEqual(["catálogo: repositories_catalog.json", "catálogo: bases_internacionais.json", "servidor: versão"]);
+        expect(k.some((x) => x.endsWith("manifest.json"))).toBe(false);
         for (const x of Object.values(v)) expect(x).not.toBe("ausente");
     });
 
@@ -69,8 +75,7 @@ describe("trava 3 — a versão do sistema que o projeto usa", () => {
         fs.appendFileSync(path.join(repo, ".claude", "methodologies", "prisma-sr", "spec.md"), "\nregra nova\n");
         const m = recusa(conferirEtapa(repo, dir, "deduplicate_dataset"));
         expect(m).toContain("🚫 RECUSADO: `deduplicate_dataset`");
-        expect(m).toContain("método prisma-sr: spec.md");
-        expect(m).not.toContain("manifest.json:");
+        expect(m).toContain("texto normativo geral do método prisma-sr");
         expect(m).toContain("Regra do projeto: trava 3");
         expect(m).toContain("migracao: true");
     });
@@ -85,7 +90,7 @@ describe("trava 3 — a versão do sistema que o projeto usa", () => {
         expect(conferirEtapa(repo, dir, "deduplicate_dataset").ok).toBe(false);
         const p = proporEmenda(dir, { o_que: "migrar o projeto para o servidor 9.9.9", porque: "conserto de manutenção", migracao: true }, registry, repo);
         expect(p.ok).toBe(true);
-        expect(ProjectStateService.read(dir)!.emendas![0].migracao!.mudancas[0]).toContain("servidor: versão");
+        expect(ProjectStateService.read(dir)!.emendas![0].migracao!.mudancas[0]).toContain("o servidor do ReviewBR passou da versão");
         expect(fs.readFileSync(path.join(dir, "change_log.md"), "utf-8")).toContain("9.9.9");
         expect(conferirEtapa(repo, dir, "deduplicate_dataset").ok).toBe(false); // proposta não vale
         expect(decidirEmenda(dir, { id: "emenda-1", acao: "aprovar", contribuicao: "li o que mudou no servidor e aceito migrar, nada muda no método" }, registry, repo).ok).toBe(true);

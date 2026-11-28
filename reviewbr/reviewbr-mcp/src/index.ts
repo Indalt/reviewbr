@@ -1796,7 +1796,7 @@ server.tool(
         fonte: z.string().optional().describe("Desvio: o id da fonte do plano a que ele se refere"),
         decisoes: z.string().optional().describe("Emenda que decide o que uma etapa exige (linha 24, trava 1): JSON { id da decisão que o método declara: opção escolhida pelo pesquisador, ou null para voltar a 'a decidir' }"),
         reabrir: z.string().optional().describe("Emenda que manda refazer uma etapa já fechada (linha 24, trava 2): o id da etapa; aprovada, ela e as seguintes reabrem e correm de novo em ordem"),
-        migracao: z.boolean().optional().describe("Emenda de migração (linha 24, trava 3): o sistema que o projeto usa (método, catálogos, servidor) mudou e as tools de etapa recusam; a emenda registra o que mudou e, aprovada pelo pesquisador, a versão de hoje passa a ser a do projeto"),
+        migracao: z.boolean().optional().describe("Emenda de migração (linha 24, trava 3): mudou no sistema o que alcança o que falta da pesquisa (ordem, tools, decisões ou texto normativo das etapas abertas, regras gerais, catálogos, servidor) e as tools de etapa recusam. Texto, nomes e etapas já feitas não se exigem. A tool escreve em 'porque' a frase 'Durante a execução desta pesquisa o sistema passou por atualizações que implicam em (…) e por isso a emenda é necessária.' (o_que e porque do chamador são opcionais) e grava a conferência de que nada já feito muda em logs/conferencia_atualizacoes_do_sistema.md, fora do change_log.md e do relato. Aprovada pelo pesquisador, a versão de hoje passa a ser a do projeto"),
         contribuicao: z.string().optional().describe("A decisão do pesquisador, nas palavras dele (obrigatória para aprovar ou recusar)"),
     },
     async (params) => {
