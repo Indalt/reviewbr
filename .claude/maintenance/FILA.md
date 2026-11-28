@@ -84,10 +84,12 @@ a sessão é só a rotina.
 que alcança o que falta da pesquisa (seção "Linha 25", no fim) — build e suíte 751 de 751; audit válido, 0 achados
 abertos; gate CORRECAO válido; fila: linha 10 em curso, 22 e 26 a 30 a fazer; 53 itens no "Visto de passagem". `git
 status`: só os 17 arquivos rastreados do `roda_aromas_ceara` como apagados (nenhum commit grava essa deleção).
-Decisão nova do Vicente: a da trava 3 por etapa (28/11, "faça o recomendado"). **Para a pesquisa:** a linha 25 só se
-exige do projeto se ele ainda tiver a F4 por correr (as cinco tools de texto completo); nesse caso, a emenda de
-migração traz a frase e a conferência vai a `logs/`. **Próximo passo:** a linha 22 ou a 26, à escolha do Vicente.
-Assume: o Claude, na manutenção. Intocado: a pasta `C:oda_aromas_ceara` (esta sessão não a leu nem gravou).
+Decisões novas do Vicente: a trava 3 por etapa (28/11, "faça o recomendado") e a correção dela no mesmo dia (mudança
+só do sistema não é emenda; a emenda fala do método, para quem avalia). **Para a pesquisa:** a linha 25 não muda o
+método; se o projeto ainda tiver a F4 por correr, a tool pede só o registro da decisão do pesquisador de seguir na
+versão nova, que fica em `logs/` e não vai ao `change_log.md`. **Próximo passo:** a linha 22 ou a 26, à escolha do Vicente.
+Assume: o Claude, na manutenção. Intocado: a pasta `C:
+oda_aromas_ceara` (esta sessão não a leu nem gravou).
 
 ## Fila
 
@@ -1413,8 +1415,25 @@ opção recomendada: "faça o recomendado").
   (7, falham antes; dois deles com um projeto que gravou a versão em `e25af55`, como o `roda_aromas_ceara` pode ter
   gravado: já depois da triagem, nada se exige; ainda na triagem, só a F4); 3 testes da trava 3 ajustados à forma
   nova; suíte 751 de 751; gate CORRECAO.
+- **Correção do Vicente, 28/11/2026, depois de ver o resultado** (origem: "quem avalia nao sou eu. nao tem nada que
+  explicar sobre tools do sistema. nao tem de escrever algo que so serve para uma pesquisa no sistema de emendas.
+  reflita melhor sobre isso mas sem retroceder se nao houve problemas como essse"). Forma precisa: o `change_log.md`
+  (as emendas) é lido por quem avalia a pesquisa e só diz o que muda no método, em termos do método; nada sobre tools
+  nem sobre o funcionamento do sistema. Consequências: (1) a mudança só do sistema — as operações cuja ordem ele
+  confere em cada etapa, os catálogos, a versão do servidor — não é emenda: a trava 3 continua parando, e o caminho é
+  a decisão do pesquisador de seguir na versão nova (`record_protocol_amendment`, `migracao: true`, `contribuicao`),
+  gravada em `atualizacoes_sistema` e na conferência, sem `change_log.md` e sem subir a versão do protocolo; (2) a
+  mudança do método é emenda, e a implicação da frase é escrita em termos do método por quem propõe — a tool recusa
+  texto que cite tool, MCP, servidor ou ReviewBR e só monta a frase; (3) o mesmo problema, corrigido onde já existia
+  no `change_log.md`: sem "(registrada pela tool `record_protocol_amendment`)" no título de emenda e de desvio, sem o
+  nome da tool nem "por tool" no plano de busca da emenda (fica "busca automatizada" ou "busca na interface da base,
+  pelo pesquisador"), sem "rotas de hoje", e a decisão de etapa pela pergunta que o pesquisador leu, não pelo id.
+  Não se retrocedeu no resto: a trava 3 continua parando nas duas espécies de mudança; texto, nomes e etapas já feitas
+  continuam não se exigindo; a conferência continua em `logs/`. Testes: `trava3_alcance` (8; os da emenda e do
+  registro só do sistema falham antes), `trava3_versao_posse`, `emendas` e `travas_etapa` ajustados; suíte 752 de 752.
 - **Limite:** o `logs/` não é suplemento do método; nada no sistema o leva ao relato, mas quem monta o relato à mão
-  pode copiá-lo. "Contar" é decidido pelo código pela lista acima; mudança de código do servidor sem subir a versão
+  pode copiá-lo. A recusa de palavras do sistema na implicação confere nomes, não sentido: texto que descreva o
+  sistema sem os nomes passa. "Contar" é decidido pelo código pela lista acima; mudança de código do servidor sem subir a versão
   continua não vista (alcance de 28/11).
 
 ### Linha 24 — travas em código por etapa (travas 1 e 2 feitas em 27/11/2026; a 3 em 28/11/2026)

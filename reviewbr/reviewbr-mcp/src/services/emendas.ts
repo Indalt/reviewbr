@@ -4,6 +4,7 @@ import { ProjectStateService } from "./project_state.js";
 import { ehCarimbo } from "./method_trail.js";
 import { validarPlano, congelarPlano, resumoDoPlano, type PlanoBusca, type CatalogoDeRepositorios } from "./plano_busca.js";
 import { congelarVersao, analisarMudancas, fraseDaMigracao, registrarConferencia } from "./versao_sistema.js";
+import { AgentOrchestrator } from "../registry/agent_orchestrator.js";
 import { lerDecisoesDoMetodo, conferirRespostas, aplicarRespostasDeEmenda, reabrirEtapa, resumoDasDecisoes, textoDaPergunta } from "./travas_etapa.js";
 import { lerTrilha } from "./method_trail.js";
 
@@ -58,6 +59,12 @@ export interface Desvio {
 const texto = (v: unknown) => (typeof v === "string" ? v.trim() : "");
 const hoje = () => new Date().toISOString();
 
+/** A pergunta da decisão de etapa, como o pesquisador a leu (o id é do sistema). */
+function perguntaDe(repoRoot: string | undefined, metodo: string, id: string): string {
+    if (!repoRoot) return id;
+    return lerDecisoesDoMetodo(repoRoot, metodo).decisoes.find((d) => d.id === id)?.pergunta ?? id;
+}
+
 export function anexarAoChangeLog(projectDir: string, bloco: string): void {
     const p = path.join(projectDir, "change_log.md");
     const cabecalho = fs.existsSync(p) ? "" :
@@ -82,7 +89,7 @@ function travado(projectDir: string): { ok: true } | { ok: false; mensagem: stri
 
 export function proporEmenda(
     projectDir: string,
-    entrada: { o_que: string; antes?: string; depois?: string; porque: string; plano?: string; decisoes?: string; reabrir?: string; migracao?: boolean },
+    entrada: { o_que: string; antes?: string; depois?: string; porque: string; plano?: string; decisoes?: string; reabrir?: string; migracao?: boolean; contribuicao?: string },
     catalogo: CatalogoDeRepositorios,
     repoRoot?: string,
 ): { ok: boolean; mensagem: string } {
@@ -134,12 +141,52 @@ export function proporEmenda(
         if (!a || !a.contam.length) {
             return { ok: false, mensagem: "Não há migração a fazer: nada do que mudou no sistema alcança o que falta da pesquisa (texto, nomes e etapas já feitas não se exigem do projeto)." };
         }
+        const doMetodo = a.contam.filter((m) => m.tipo === "metodo");
+        if (!doMetodo.length) {
+            // Só o sistema mudou (como o ReviewBR executa e confere): não é emenda do protocolo, não vai ao
+            // change_log.md e não sobe a versão do protocolo. Fica a decisão do pesquisador de seguir na versão
+            // nova, na conferência (pedido do Vicente, 28/11/2026).
+            const contribuicao = texto(entrada.contribuicao);
+            if (!contribuicao || ehCarimbo(contribuicao)) {
+                return {
+                    ok: false,
+                    mensagem: "Só o sistema mudou, não o método: não é emenda. Registre a decisão do pesquisador de seguir na versão nova, " +
+                        "nas palavras dele, em `contribuicao` (carimbo é recusado). O que mudou:\n" + a.contam.map((m) => `- ${m.implica}`).join("\n"),
+                };
+            }
+            const arq = registrarConferencia(projectDir, "Atualização só do sistema, registrada com a decisão do pesquisador", a);
+            const em = hoje();
+            ProjectStateService.patch(projectDir, {
+                atualizacoes_sistema: [...(st.atualizacoes_sistema ?? []), { em, mudancas: a.contam.map((m) => m.implica), contribuicao, conferencia: arq }],
+            });
+            congelarVersao(repoRoot, projectDir, `atualização só do sistema registrada em ${em.slice(0, 10)}`);
+            fs.appendFileSync(path.join(projectDir, arq), `Decisão do pesquisador: "${contribuicao}". A versão de hoje passa a ser a do projeto.\n\n`);
+            return {
+                ok: true,
+                mensagem: `✅ Atualização só do sistema registrada (não é emenda: o método não muda, e nada vai ao change_log.md). ` +
+                    `A versão de hoje passa a ser a do projeto. Conferência em ${arq}.`,
+            };
+        }
+        // Muda o método: emenda. Quem a lê é quem avalia a pesquisa, então a implicação vem em termos do
+        // método, escrita por quem propõe — nunca sobre tools ou o sistema.
+        const implica = texto(entrada.porque);
+        const proibidas = [...AgentOrchestrator.getGovernedTools(), "tool", "tools", "MCP", "servidor", "ReviewBR"];
+        const palavras = new Set(implica.toLowerCase().split(/[^\p{L}\p{N}_]+/u));
+        const achadas = proibidas.filter((t) => palavras.has(t.toLowerCase()));
+        if (!implica || achadas.length) {
+            return {
+                ok: false,
+                mensagem: (implica ? `A implicação fala do sistema (${achadas.join(", ")}). ` : "") +
+                    "Em `porque`, diga em termos do método, para quem avalia a pesquisa, no que a atualização implica; a tool monta a frase " +
+                    "\"Durante a execução desta pesquisa o sistema passou por atualizações que implicam em (…) e por isso a emenda é necessária.\" " +
+                    "O que mudou no método:\n" + doMetodo.map((m) => `- ${m.implica}`).join("\n"),
+            };
+        }
         migracao = { mudancas: a.contam.map((m) => m.implica) };
-        const frase = fraseDaMigracao(a.contam);
         entrada = {
             ...entrada,
-            o_que: texto(entrada.o_que) || "O projeto passa a usar a versão atual do sistema nas etapas que ainda vão correr.",
-            porque: texto(entrada.porque) ? `${frase} ${texto(entrada.porque)}` : frase,
+            o_que: texto(entrada.o_que) || "O método das etapas que ainda vão correr passa a ser o da versão atual.",
+            porque: fraseDaMigracao(implica),
         };
         migracao.conferencia = registrarConferencia(projectDir, `emenda-${(st.emendas ?? []).length + 1} (migração), proposta`, a);
     }
@@ -151,13 +198,13 @@ export function proporEmenda(
     };
     ProjectStateService.patch(projectDir, { emendas: [...emendas, e] });
     anexarAoChangeLog(projectDir, [
-        `## ${e.id} — PROPOSTA em ${e.proposta_em.slice(0, 10)} (registrada pela tool \`record_protocol_amendment\`)`,
+        `## ${e.id} — PROPOSTA em ${e.proposta_em.slice(0, 10)}`,
         "", `**O quê.** ${e.o_que}`,
         e.antes ? `\n**Antes.** ${e.antes}` : "", e.depois ? `\n**Depois.** ${e.depois}` : "",
         "", `**Por quê.** ${e.porque}`,
-        decisoes ? `\n**Decisões de etapa da emenda:** ${Object.entries(decisoes).map(([k, v]) => `${k} = ${v === null ? "a decidir" : `"${v}"`}`).join("; ")}` : "",
+        decisoes ? `\n**Decisões de etapa da emenda:** ${Object.entries(decisoes).map(([k, v]) => `${perguntaDe(repoRoot, st.method, k)} — ${v === null ? "a decidir" : `"${v}"`}`).join("; ")}` : "",
         reabrir ? `\n**Reabre a etapa** ${reabrir} (ela e as seguintes correm de novo, em ordem).` : "",
-        plano ? `\n**Plano de busca da emenda** (é o que a busca vai seguir, se aprovada):\n${plano.fontes.map((f) => `- ${f.nome} (${f.id}): ${f.modo === "manual" ? "à mão" : "por tool"}, ${f.tool}${f.repositorio ? ` ${f.repositorio}` : ""}; textos ${f.textos.map((x) => `\`${x}\``).join(" · ") || "nenhum"}`).join("\n")}` : "",
+        plano ? `\n**Plano de busca da emenda** (é o que a busca vai seguir, se aprovada):\n${plano.fontes.map((f) => `- ${f.nome}: ${f.modo === "manual" ? "busca na interface da base, pelo pesquisador" : "busca automatizada"}; textos ${f.textos.map((x) => `\`${x}\``).join(" · ") || "nenhum"}`).join("\n")}` : "",
         "", "**Aprovação:** — (só com a decisão do pesquisador, nas palavras dele)",
     ].filter((l) => l !== "").join("\n"));
     return {
@@ -220,9 +267,9 @@ export function decidirEmenda(
         notaEtapas += "\nA versão de hoje do sistema passa a ser a do projeto.";
     }
     anexarAoChangeLog(projectDir, `### ${e.id} — APROVADA em ${em.slice(0, 10)}\n\nDecisão do pesquisador: "${contribuicao}". ` +
-        `Versão do protocolo: ${anterior} → ${versao}. ${e.plano ? "O plano de busca da emenda foi congelado, com as rotas de hoje." : "O plano de busca não muda."}` +
+        `Versão do protocolo: ${anterior} → ${versao}. ${e.plano ? "O plano de busca da emenda passa a valer." : "O plano de busca não muda."}` +
         (e.decisoes ? " As decisões de etapa da emenda passam a valer." : "") + (e.reabrir ? ` A etapa ${e.reabrir} e as seguintes reabrem.` : "") +
-        (e.migracao ? " A versão de hoje do sistema passa a ser a do projeto." : ""));
+        (e.migracao ? " O método da versão atual passa a valer nas etapas que ainda vão correr." : ""));
     return { ok: true, mensagem: `✅ ${e.id} APROVADA (protocolo ${anterior} → ${versao}) e anexada ao change_log.md. ${notaPlano}${notaEtapas}` };
 }
 
@@ -252,7 +299,7 @@ export function registrarDesvio(
     };
     ProjectStateService.patch(projectDir, { desvios: [...desvios, d] });
     anexarAoChangeLog(projectDir, [
-        `## ${d.id} — registrado em ${d.registrado_em.slice(0, 10)} por ${d.por} (tool \`record_protocol_amendment\`)`,
+        `## ${d.id} — registrado em ${d.registrado_em.slice(0, 10)} por ${d.por}`,
         "", `**O quê.** ${d.o_que}${d.fonte ? ` (fonte do plano: ${d.fonte})` : ""}`,
         "", `**Por quê.** ${d.porque}`,
         "", `**Decisão do pesquisador:** ${d.decisao ? `"${d.decisao.contribuicao}"` : "—"}`,

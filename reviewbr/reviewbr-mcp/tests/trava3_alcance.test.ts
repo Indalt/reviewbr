@@ -98,38 +98,64 @@ describe("trava 3 — só o que alcança o que falta da pesquisa se exige do pro
         expect(fs.readFileSync(path.join(dir, ARQUIVO_CONFERENCIA), "utf-8")).toMatch(/a etapa F2 já correu, e a mudança não a alcança/);
     });
 
-    it("mudança numa etapa que ainda vai correr se exige: recusa dizendo no que implica", () => {
+    it("só o sistema mudou numa etapa que ainda vai correr (as operações cuja ordem ele confere): recusa, mas não é emenda", () => {
         const repo = repoDeTeste();
         const dir = naTriagem(repo);
         mudaManifest(repo, (m) => { etapa(m, "F4").step_tools.push("get_record_metadata"); etapa(m, "F4").name = "Triagem"; });
         const r = conferirVersao(repo, dir, "verify_record_links");
         expect(r.ok).toBe(false);
         const m = r.ok ? "" : r.motivo;
-        expect(m).toMatch(/mudança na etapa F4 \(Triagem\): as tools get_record_metadata passam a pertencer a ela e só rodam na ordem da trilha/);
-        expect(m).toContain("migracao: true");
+        expect(m).toMatch(/Muda só o sistema \(não é emenda\):\n- na etapa F4 \(Triagem\), o sistema passa a conferir a ordem de get_record_metadata/);
+        expect(m).not.toMatch(/Muda o método/);
+        expect(m).toMatch(/Não é emenda: o método não muda/);
     });
 
-    it("a emenda de migração traz a frase; a conferência fica em logs/, fora do change_log.md", () => {
+    it("atualização só do sistema: a decisão do pesquisador fica na conferência; nada vai ao change_log.md nem vira emenda", () => {
         const repo = repoDeTeste();
         const dir = naTriagem(repo);
         mudaManifest(repo, (m) => { etapa(m, "F4").step_tools.push("get_record_metadata"); });
-        const p = proporEmenda(dir, { o_que: "", porque: "", migracao: true }, registry, repo);
+        const sem = proporEmenda(dir, { o_que: "", porque: "", migracao: true }, registry, repo);
+        expect(sem.ok).toBe(false);
+        expect(sem.mensagem).toMatch(/não é emenda/);
+        const p = proporEmenda(dir, { o_que: "", porque: "", migracao: true, contribuicao: "entendi que só muda como o sistema confere a ordem; sigo na versão nova" }, registry, repo);
+        expect(p.ok).toBe(true);
+        const st = ProjectStateService.read(dir)!;
+        expect(st.emendas ?? []).toEqual([]);
+        expect(st.atualizacoes_sistema![0].contribuicao).toMatch(/sigo na versão nova/);
+        expect(fs.existsSync(path.join(dir, "change_log.md"))).toBe(false);
+        const conf = fs.readFileSync(path.join(dir, ARQUIVO_CONFERENCIA), "utf-8");
+        expect(conf).toMatch(/O que mudou só no sistema/);
+        expect(conf).toMatch(/F2: 01_raw\/, fechada em .* inalterado/);
+        expect(conf).toMatch(/Decisão do pesquisador: "entendi que só muda/);
+        expect(conferirVersao(repo, dir, "verify_record_links").ok).toBe(true);
+    });
+
+    it("mudou o método numa etapa que ainda vai correr: é emenda, com a frase em termos do método e sem falar do sistema", () => {
+        const repo = repoDeTeste();
+        const dir = naTriagem(repo);
+        mudaManifest(repo, (m) => {
+            m.decisoes.find((d: any) => d.id === "camada_por_palavras").opcoes.push({ valor: "só no texto completo", consequencia: "a camada por palavras corre só sobre o texto completo, depois da leitura por título e resumo" });
+        });
+        const r = conferirVersao(repo, dir, "verify_record_links");
+        expect(r.ok ? "" : r.motivo).toMatch(/Muda o método \(é emenda\):\n- mudança na etapa F4 \(.*\): mudam as decisões que o método exige antes dela/);
+        const falaDoSistema = proporEmenda(dir, { o_que: "", porque: "a verify_record_links passar a aceitar outra opção", migracao: true }, registry, repo);
+        expect(falaDoSistema.ok).toBe(false);
+        expect(falaDoSistema.mensagem).toMatch(/fala do sistema \(verify_record_links\)/);
+        const p = proporEmenda(dir, { o_que: "", porque: "uma nova opção para a camada por palavras na triagem, aplicada só ao texto completo", migracao: true }, registry, repo);
         expect(p.ok).toBe(true);
         const e = ProjectStateService.read(dir)!.emendas![0];
-        expect(e.porque).toMatch(FRASE);
-        expect(e.migracao!.conferencia).toBe(ARQUIVO_CONFERENCIA);
+        expect(e.porque).toBe("Durante a execução desta pesquisa o sistema passou por atualizações que implicam em uma nova opção para a camada por palavras na triagem, aplicada só ao texto completo e por isso a emenda é necessária.");
         const log = fs.readFileSync(path.join(dir, "change_log.md"), "utf-8");
         expect(log).toMatch(FRASE);
-        expect(log).not.toMatch(/inalterado|conferência|hash|sha256|[0-9a-f]{12}…/i);
+        expect(log).not.toMatch(/\btools?\b|record_protocol_amendment|inalterado|conferência|hash|sha256|[0-9a-f]{12}…|servidor|catálogo/i);
         const conf = fs.readFileSync(path.join(dir, ARQUIVO_CONFERENCIA), "utf-8");
-        expect(conf).toMatch(/F2: 01_raw\/, fechada em .* inalterado/);
         expect(conf).toMatch(/F3: 02_deduplicated\/dataset\.json, fechada em .* inalterado/);
         expect(conf).toMatch(/camada_por_palavras: "sim" \(trava\)/);
         expect(conf).toMatch(/A atualização vale só a partir daqui, nas etapas que ainda vão correr/);
         expect(conferirVersao(repo, dir, "verify_record_links").ok).toBe(false); // proposta não vale
-        expect(decidirEmenda(dir, { id: "emenda-1", acao: "aprovar", contribuicao: "li no que a atualização implica e aceito usar a versão nova na triagem" }, registry, repo).ok).toBe(true);
+        expect(decidirEmenda(dir, { id: "emenda-1", acao: "aprovar", contribuicao: "li no que a atualização implica e aceito a nova opção na triagem" }, registry, repo).ok).toBe(true);
         expect(conferirVersao(repo, dir, "verify_record_links").ok).toBe(true);
-        expect(fs.readFileSync(path.join(dir, ARQUIVO_CONFERENCIA), "utf-8")).toMatch(/emenda-1 \(migração\), aprovada/);
+        expect(fs.readFileSync(path.join(dir, "change_log.md"), "utf-8")).not.toMatch(/\btools?\b|versão de hoje do sistema/i);
     });
 
     it("sem mudança que alcance a pesquisa, a emenda de migração é recusada", () => {
@@ -172,12 +198,12 @@ describe("trava 3 — versão gravada no formato antigo (o arquivo inteiro), con
         expect(ProjectStateService.read(dir)!.versao_sistema!.formato).toBe(2);
     });
 
-    it("projeto ainda na triagem: só a F4 se exige, e o nome do procedimento não aparece como mudança", () => {
+    it("projeto ainda na triagem: só a F4 se exige, como atualização do sistema (não é emenda), e o nome do procedimento não aparece", () => {
         const dir = legado("F3");
         const r = conferirVersao(REPO, dir, "verify_record_links");
         expect(r.ok).toBe(false);
         const m = r.ok ? "" : r.motivo;
-        expect(m).toMatch(/mudança na etapa F4 .*: as tools complete_record_keywords, verify_record_links, retrieve_fulltexts, download_and_extract_pdfs, retrieve_fulltext_byos passam a pertencer a ela/);
-        expect(m).not.toMatch(/etapa F2|role|screening-rules/);
+        expect(m).toMatch(/Muda só o sistema \(não é emenda\):\n- na etapa F4 .*o sistema passa a conferir a ordem de complete_record_keywords, download_and_extract_pdfs, retrieve_fulltext_byos, retrieve_fulltexts, verify_record_links/);
+        expect(m).not.toMatch(/Muda o método|etapa F2|role|screening-rules/);
     });
 });

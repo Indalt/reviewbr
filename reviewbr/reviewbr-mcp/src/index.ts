@@ -1796,7 +1796,7 @@ server.tool(
         fonte: z.string().optional().describe("Desvio: o id da fonte do plano a que ele se refere"),
         decisoes: z.string().optional().describe("Emenda que decide o que uma etapa exige (linha 24, trava 1): JSON { id da decisão que o método declara: opção escolhida pelo pesquisador, ou null para voltar a 'a decidir' }"),
         reabrir: z.string().optional().describe("Emenda que manda refazer uma etapa já fechada (linha 24, trava 2): o id da etapa; aprovada, ela e as seguintes reabrem e correm de novo em ordem"),
-        migracao: z.boolean().optional().describe("Emenda de migração (linha 24, trava 3): mudou no sistema o que alcança o que falta da pesquisa (ordem, tools, decisões ou texto normativo das etapas abertas, regras gerais, catálogos, servidor) e as tools de etapa recusam. Texto, nomes e etapas já feitas não se exigem. A tool escreve em 'porque' a frase 'Durante a execução desta pesquisa o sistema passou por atualizações que implicam em (…) e por isso a emenda é necessária.' (o_que e porque do chamador são opcionais) e grava a conferência de que nada já feito muda em logs/conferencia_atualizacoes_do_sistema.md, fora do change_log.md e do relato. Aprovada pelo pesquisador, a versão de hoje passa a ser a do projeto"),
+        migracao: z.boolean().optional().describe("Migração (linha 24, trava 3): mudou no sistema o que alcança o que falta da pesquisa e as tools de etapa recusam (texto, nomes e etapas já feitas não se exigem). Se mudou o MÉTODO (ordem, definição, decisões ou texto normativo das etapas abertas, regras gerais), é emenda: em 'porque', diga em termos do método, para quem avalia a pesquisa, no que a atualização implica, sem falar de tools nem do sistema; a tool monta a frase 'Durante a execução desta pesquisa o sistema passou por atualizações que implicam em (…) e por isso a emenda é necessária.' e a emenda segue para a aprovação. Se mudou SÓ o sistema (as operações cuja ordem ele confere, catálogos, servidor), não é emenda: passe 'contribuicao' com a decisão do pesquisador de seguir na versão nova; nada vai ao change_log.md. Nos dois casos, a conferência de que nada já feito muda fica em logs/conferencia_atualizacoes_do_sistema.md, fora do relato"),
         contribuicao: z.string().optional().describe("A decisão do pesquisador, nas palavras dele (obrigatória para aprovar ou recusar)"),
     },
     async (params) => {
@@ -1807,7 +1807,7 @@ server.tool(
         const r = params.tipo === "desvio"
             ? registrarDesvio(dir, { o_que: params.o_que ?? "", porque: params.porque ?? "", fonte: params.fonte, contribuicao: params.contribuicao })
             : (params.acao ?? "propor") === "propor"
-                ? proporEmenda(dir, { o_que: params.o_que ?? "", antes: params.antes, depois: params.depois, porque: params.porque ?? "", plano: params.plano, decisoes: params.decisoes, reabrir: params.reabrir, migracao: params.migracao }, registry, RAIZ())
+                ? proporEmenda(dir, { o_que: params.o_que ?? "", antes: params.antes, depois: params.depois, porque: params.porque ?? "", plano: params.plano, decisoes: params.decisoes, reabrir: params.reabrir, migracao: params.migracao, contribuicao: params.contribuicao }, registry, RAIZ())
                 : decidirEmenda(dir, { id: params.id ?? "", acao: params.acao as "aprovar" | "recusar", contribuicao: params.contribuicao ?? "" }, registry, RAIZ());
         return { content: [{ type: "text", text: [...avisosPosse, r.mensagem].join("\n\n") }] };
     }

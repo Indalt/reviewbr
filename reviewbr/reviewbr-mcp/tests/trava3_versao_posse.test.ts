@@ -88,13 +88,12 @@ describe("trava 3 — a versão do sistema que o projeto usa", () => {
         const pkg = path.join(repo, "reviewbr", "reviewbr-mcp", "package.json");
         fs.writeFileSync(pkg, JSON.stringify({ ...JSON.parse(fs.readFileSync(pkg, "utf-8")), version: "9.9.9" }));
         expect(conferirEtapa(repo, dir, "deduplicate_dataset").ok).toBe(false);
-        const p = proporEmenda(dir, { o_que: "migrar o projeto para o servidor 9.9.9", porque: "conserto de manutenção", migracao: true }, registry, repo);
+        // Só o servidor mudou: não é emenda (28/11/2026); a decisão do pesquisador fica na conferência.
+        const p = proporEmenda(dir, { o_que: "", porque: "", migracao: true, contribuicao: "li o que mudou no servidor e sigo na versão nova, nada muda no método" }, registry, repo);
         expect(p.ok).toBe(true);
-        expect(ProjectStateService.read(dir)!.emendas![0].migracao!.mudancas[0]).toContain("o servidor do ReviewBR passou da versão");
-        expect(fs.readFileSync(path.join(dir, "change_log.md"), "utf-8")).toContain("9.9.9");
-        expect(conferirEtapa(repo, dir, "deduplicate_dataset").ok).toBe(false); // proposta não vale
-        expect(decidirEmenda(dir, { id: "emenda-1", acao: "aprovar", contribuicao: "li o que mudou no servidor e aceito migrar, nada muda no método" }, registry, repo).ok).toBe(true);
-        expect(ProjectStateService.read(dir)!.versao_sistema!.origem).toBe("emenda-1");
+        expect(ProjectStateService.read(dir)!.atualizacoes_sistema![0].mudancas[0]).toContain("o servidor do ReviewBR passou da versão");
+        expect(fs.existsSync(path.join(dir, "change_log.md"))).toBe(false);
+        expect(ProjectStateService.read(dir)!.versao_sistema!.origem).toMatch(/atualização só do sistema registrada/);
         expect(conferirEtapa(repo, dir, "deduplicate_dataset").ok).toBe(true);
     });
 

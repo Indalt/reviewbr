@@ -33,7 +33,9 @@ describe("linha 17, FAZER 3 — emenda e desvio por tool", () => {
         expect(r.ok).toBe(true);
         expect(ProjectStateService.read(dir)!.emendas).toMatchObject([{ id: "emenda-1", status: "PROPOSTA" }]);
         expect(log(dir)).toMatch(/^# Emendas e desvios — escrito à mão/);
-        expect(log(dir)).toMatch(/## emenda-1 — PROPOSTA em .*record_protocol_amendment/);
+        expect(log(dir)).toMatch(/## emenda-1 — PROPOSTA em \d{4}-\d{2}-\d{2}\n/);
+        // Quem lê o change_log.md é quem avalia a pesquisa: nada de tool nem de sistema (28/11/2026).
+        expect(log(dir)).not.toMatch(/record_protocol_amendment|por tool|rotas de hoje/);
         expect(conferirExecucao(dir, "search_openalex", { query: "cajuína OR cajuina", registroDaBusca: PERIODO }, registry))
             .toMatchObject({ aplica: true, ok: false });
     });

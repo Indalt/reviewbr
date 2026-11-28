@@ -120,7 +120,7 @@ describe("linha 24, trava 1 — na trava, o pesquisador responde; o que falta n�
         expect(ap.ok).toBe(true);
         expect(ProjectStateService.read(dir)!.trava_etapas!.respostas.camada_por_palavras).toMatchObject({ resposta: "não", origem: "emenda-1" });
         expect(conferirEtapa(REPO, dir, "record_screening_decisions").ok).toBe(true);
-        expect(fs.readFileSync(path.join(dir, "change_log.md"), "utf-8")).toMatch(/camada_por_palavras = "não"/);
+        expect(fs.readFileSync(path.join(dir, "change_log.md"), "utf-8")).toMatch(/camada mecânica por palavras, com os termos escritos no protocolo. — "não"/);
     });
 
     it("a resposta vale em código: a opção recusa tools e limita parâmetros", () => {
@@ -225,6 +225,6 @@ describe("linha 24 — as tools de etapa chamam a conferência antes de rodar", 
     it("a trava do protocolo pede as decisões e as congela; a emenda as recebe", () => {
         expect(INDEX).toContain("lerRespostasDoArquivo(projectDir, decMetodo.decisoes)");
         expect(INDEX).toContain("congelarDecisoes(projectDir, metodoProj, decProj.respostas");
-        expect(INDEX).toContain("decisoes: params.decisoes, reabrir: params.reabrir, migracao: params.migracao }, registry, RAIZ())");
+        expect(INDEX).toContain("decisoes: params.decisoes, reabrir: params.reabrir, migracao: params.migracao, contribuicao: params.contribuicao }, registry, RAIZ())");
     });
 });

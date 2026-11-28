@@ -102,9 +102,14 @@ function partesDoMetodo(m: string, man: Buffer | null, spec: Buffer | null, p: P
         const decisoes: any[] = Array.isArray(j.decisoes) ? j.decisoes : [];
         p.componentes[`método ${m}: ordem das etapas`] = sha(JSON.stringify(fases.map((e) => [e?.id, e?.active !== false])));
         for (const e of fases) {
-            const retrato = semantico({ ...e, decisoes: decisoes.filter((d) => d?.etapa === e?.id) });
+            // As tools da etapa são do SISTEMA (como ele confere a ordem), não do método: a mudança delas não
+            // é emenda (pedido do Vicente, 28/11/2026: "nao tem nada que explicar sobre tools do sistema").
+            const { producer_tools, step_tools, ...doMetodo } = e ?? {};
+            const retrato = semantico({ ...doMetodo, decisoes: decisoes.filter((d) => d?.etapa === e?.id) });
+            const tools = [...listaTools(producer_tools), ...listaTools(step_tools)].sort();
             p.componentes[`método ${m}: etapa ${e?.id}`] = sha(JSON.stringify(retrato));
-            p.trilha[`${m}:${e?.id}`] = { nome: e?.name, ...(retrato as object) };
+            p.componentes[`sistema: tools da etapa ${e?.id} (${m})`] = sha(JSON.stringify(tools));
+            p.trilha[`${m}:${e?.id}`] = { nome: e?.name, ...(retrato as object), tools };
         }
         const { phases: _f, decisoes: _d, ...resto } = j;
         p.componentes[`método ${m}: regras gerais do manifest`] = sha(JSON.stringify(semantico(resto)));
@@ -204,7 +209,13 @@ function converterFormatoAntigo(repoRoot: string, st: any): VersaoSistema | null
 
 // ─── o que conta: só o que muda o que falta da pesquisa ────────────────────
 
-export interface Mudanca { componente: string; antes: string; hoje: string; implica: string }
+/**
+ * `metodo`: o que o método da pesquisa diz (ordem e definição das etapas, decisões, texto normativo, regras):
+ * é emenda, e o pesquisador a explica em termos do método. `sistema`: como o ReviewBR executa e confere
+ * (tools de cada etapa, catálogos, servidor): não é emenda; o pesquisador registra que o projeto segue na
+ * versão nova, e o registro fica só na conferência.
+ */
+export interface Mudanca { componente: string; antes: string; hoje: string; implica: string; tipo: "metodo" | "sistema" }
 
 export interface Analise {
     /** Mudanças que alteram o que falta da pesquisa: exigem a emenda de migração. */
@@ -239,17 +250,24 @@ function implicacao(c: string, antes: string, hoje: string, gravada: VersaoSiste
         if (antes === undefined || antes === "não usado") return `${nome} passa a existir no método`;
         if (hoje === undefined || hoje === "não usado") return `${nome} deixa de existir no método`;
         const partes: string[] = [];
-        const ta = new Set([...listaTools(a.producer_tools), ...listaTools(a.step_tools)]);
-        const th = new Set([...listaTools(h.producer_tools), ...listaTools(h.step_tools)]);
-        const mais = [...th].filter((t) => !ta.has(t));
-        const menos = [...ta].filter((t) => !th.has(t));
-        if (mais.length) partes.push(`as tools ${mais.join(", ")} passam a pertencer a ela e só rodam na ordem da trilha`);
-        if (menos.length) partes.push(`as tools ${menos.join(", ")} deixam de pertencer a ela`);
         if (a.closes_with !== h.closes_with) partes.push(`o artefato que a encerra passa de ${a.closes_with} a ${h.closes_with}`);
         if (a.active !== h.active) partes.push(h.active === false ? "ela deixa de se aplicar ao método" : "ela passa a se aplicar ao método");
         if (JSON.stringify(a.decisoes) !== JSON.stringify(h.decisoes)) partes.push("mudam as decisões que o método exige antes dela");
         if (JSON.stringify(a.produces) !== JSON.stringify(h.produces)) partes.push("mudam os artefatos que ela grava");
         return `mudança n${nome}: ${partes.join("; ") || "muda a definição dela no método"}`;
+    }
+    if ((m = /^sistema: tools da etapa (\S+) \((\S+)\)$/.exec(c))) {
+        const a: any = gravada.trilha?.[`${m[2]}:${m[1]}`] ?? {};
+        const h: any = atual.trilha?.[`${m[2]}:${m[1]}`] ?? {};
+        const ta = new Set(listaTools(a.tools ?? [...listaTools(a.producer_tools), ...listaTools(a.step_tools)]));
+        const th = new Set(listaTools(h.tools));
+        const mais = [...th].filter((t) => !ta.has(t));
+        const menos = [...ta].filter((t) => !th.has(t));
+        const partes = [
+            mais.length ? `passa a conferir a ordem de ${mais.join(", ")}` : "",
+            menos.length ? `deixa de conferir a ordem de ${menos.join(", ")}` : "",
+        ].filter(Boolean);
+        return `na etapa ${m[1]}${h.nome ? ` (${h.nome})` : ""}, o sistema ${partes.join(" e ") || "muda as operações cuja ordem confere"}`;
     }
     if ((m = /^método (\S+): spec (F\S+)$/.exec(c))) return `mudança no texto normativo da etapa ${m[2]} (spec.md do método ${m[1]}), que diz o que a etapa faz`;
     if ((m = /^método (\S+): spec fora das etapas$/.exec(c))) return `mudança no texto normativo geral do método ${m[1]} (spec.md)`;
@@ -283,8 +301,9 @@ export function analisarMudancas(repoRoot: string, projectDir: string): Analise 
     const h = semConversao ? { ...foraDoMetodo, ...versaoAntigaDeHoje(repoRoot, st.method) } : p.componentes;
     for (const c of [...new Set([...Object.keys(g), ...Object.keys(h)])]) {
         if (g[c] === h[c]) continue;
-        const mu: Mudanca = { componente: c, antes: g[c] ?? "não usado", hoje: h[c] ?? "não usado", implica: implicacao(c, g[c], h[c], gravada, hoje) };
-        const etapa = /: (?:etapa|spec) (F\S+)$/.exec(c)?.[1];
+        const tipo: Mudanca["tipo"] = c.startsWith("método ") ? "metodo" : "sistema";
+        const mu: Mudanca = { componente: c, antes: g[c] ?? "não usado", hoje: h[c] ?? "não usado", implica: implicacao(c, g[c], h[c], gravada, hoje), tipo };
+        const etapa = /(?:: (?:etapa|spec) |tools da etapa )(F[^\s)]+)/.exec(c)?.[1];
         if (etapa && !abertas.has(etapa)) naoContam.push({ ...mu, implica: `${mu.implica} — a etapa ${etapa} já correu, e a mudança não a alcança` });
         else contam.push(mu);
     }
@@ -292,7 +311,7 @@ export function analisarMudancas(repoRoot: string, projectDir: string): Analise 
         for (const c of Object.keys(p.texto)) {
             if (gravada.texto?.[c] === undefined || gravada.texto[c] === p.texto[c]) continue;
             const semEfeito = !contam.some((x) => x.componente.startsWith(c.split(":")[0] + ":"));
-            if (semEfeito) naoContam.push({ componente: c, antes: gravada.texto[c], hoje: p.texto[c], implica: `mudança só de texto ou de nome em ${c} (procedimento, notas, descrições); nada muda no que a pesquisa faz` });
+            if (semEfeito) naoContam.push({ componente: c, antes: gravada.texto[c], hoje: p.texto[c], implica: `mudança só de texto ou de nome em ${c} (procedimento, notas, descrições); nada muda no que a pesquisa faz`, tipo: "metodo" });
         }
     }
     return { contam, naoContam, abertas: [...abertas], gravada, hoje, semConversao };
@@ -318,8 +337,8 @@ function versaoAntigaDeHoje(repoRoot: string, methodId: string): Record<string, 
 }
 
 /** A frase da emenda de migração (decisão do Vicente, 28/11/2026), com o que a atualização implica. */
-export function fraseDaMigracao(contam: Mudanca[]): string {
-    return `Durante a execução desta pesquisa o sistema passou por atualizações que implicam em ${contam.map((m) => m.implica).join("; ")} ` +
+export function fraseDaMigracao(implica: string): string {
+    return `Durante a execução desta pesquisa o sistema passou por atualizações que implicam em ${implica.trim().replace(/[.;\s]+$/, "")} ` +
         "e por isso a emenda é necessária.";
 }
 
@@ -347,7 +366,9 @@ export function registrarConferencia(projectDir: string, titulo: string, a: Anal
         a.semConversao ? "A versão gravada é do formato antigo e não foi achada no histórico do git: a comparação é do arquivo inteiro." : "",
         `Etapas que ainda vão correr: ${a.abertas.join(", ") || "nenhuma"}.`,
         "",
-        "**O que mudou e alcança o que falta da pesquisa:**", lista(a.contam),
+        "**O que mudou no método e alcança o que falta da pesquisa:**", lista(a.contam.filter((m) => m.tipo === "metodo")),
+        "",
+        "**O que mudou só no sistema** (como o ReviewBR executa e confere; o método não muda):", lista(a.contam.filter((m) => m.tipo === "sistema")),
         "",
         "**O que mudou e não alcança a pesquisa** (texto, nomes, ou etapas que já correram):", lista(a.naoContam),
         "",
@@ -408,16 +429,23 @@ export function conferirVersao(repoRoot: string, projectDir: string, tool: strin
                 : "",
         };
     }
+    const doMetodo = a.contam.filter((m) => m.tipo === "metodo");
+    const doSistema = a.contam.filter((m) => m.tipo === "sistema");
     return {
         ok: false,
         motivo: [
-            `🚫 RECUSADO: \`${tool}\` não roda: o sistema que este projeto usa mudou desde ${st.versao_sistema.desde.slice(0, 10)} (${st.versao_sistema.origem}), e a mudança alcança o que falta da pesquisa:`,
-            ...a.contam.map((m) => `- ${m.implica}`),
+            `🚫 RECUSADO: \`${tool}\` não roda: o sistema que este projeto usa mudou desde ${st.versao_sistema.desde.slice(0, 10)} (${st.versao_sistema.origem}), e a mudança alcança o que falta da pesquisa.`,
+            doMetodo.length ? `Muda o método (é emenda):\n${doMetodo.map((m) => `- ${m.implica}`).join("\n")}` : "",
+            doSistema.length ? `Muda só o sistema (não é emenda):\n${doSistema.map((m) => `- ${m.implica}`).join("\n")}` : "",
             a.naoContam.length ? `(${a.naoContam.length} outra(s) mudança(s), de texto, nome ou etapa já feita, não se exigem do projeto.)` : "",
-            "Regra do projeto: trava 3 da linha 24 — o projeto corre na versão do sistema gravada na trava; mudar de versão no meio da pesquisa mudaria o método sem decisão do pesquisador.",
-            "Isso mudaria o projeto de pesquisa e não pode ser feito aqui nem pelo chat: o caminho é a emenda de migração " +
-                "(`record_protocol_amendment`, tipo 'emenda', com `migracao: true`); a tool escreve na emenda no que a atualização implica, e a conferência " +
-                `de que nada já feito muda vai a ${ARQUIVO_CONFERENCIA}. Aprovada pelo pesquisador, a versão de hoje passa a ser a do projeto.`,
+            "Regra do projeto: trava 3 da linha 24 — o projeto corre na versão do sistema gravada na trava; mudar de versão no meio da pesquisa sem decisão do pesquisador mudaria o que falta dela.",
+            doMetodo.length
+                ? "Isso mudaria o método da pesquisa e não pode ser feito aqui nem pelo chat: o caminho é a emenda de migração " +
+                    "(`record_protocol_amendment`, tipo 'emenda', `migracao: true`), com `porque` dizendo, em termos do método e para quem avalia a pesquisa, " +
+                    "no que a atualização implica — sem falar de tools nem do sistema. A tool monta a frase da emenda; aprovada pelo pesquisador, a versão de hoje passa a ser a do projeto."
+                : "Não é emenda: o método não muda. O caminho é registrar a decisão do pesquisador de seguir na versão nova " +
+                    "(`record_protocol_amendment`, tipo 'emenda', `migracao: true`, com `contribuicao` nas palavras dele); o registro fica só na conferência, fora do change_log.md.",
+            `A conferência de que nada já feito muda vai a ${ARQUIVO_CONFERENCIA}.`,
         ].filter(Boolean).join("\n"),
     };
 }

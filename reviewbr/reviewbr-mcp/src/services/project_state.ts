@@ -75,6 +75,8 @@ export interface ProjectState {
     versao_sistema?: import("./versao_sistema.js").VersaoSistema;
     /** Linha 24 da FILA, trava 3 — cada posse de sessão retomada (parada há mais de 2 h ou de processo morto). */
     posses_retomadas?: import("./versao_sistema.js").Retomada[];
+    /** Atualizações só do sistema (não do método) aceitas pelo pesquisador: não são emenda (28/11/2026). */
+    atualizacoes_sistema?: { em: string; mudancas: string[]; contribuicao: string; conferencia: string }[];
 }
 
 function statePath(projectDir: string): string {
