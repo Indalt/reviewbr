@@ -80,12 +80,13 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 28/11/2026, linha 26 feita (seção "Linha 26", no fim) — build e suíte 764 de 764; audit
-válido, 0 achados abertos; gate CORRECAO válido; fila: linha 10 em curso, 22 e 27 a 30 a fazer; 56 itens no "Visto de
-passagem" (3 novos). `git status`: só os 17 arquivos rastreados do `roda_aromas_ceara` como apagados (nenhum commit
-grava essa deleção). Decisões novas do Vicente: nenhuma. **Para a pesquisa:** mudança só do sistema; a versão do
-servidor não mudou, a trava 3 não para o projeto, nada vai ao `change_log.md`. **Próximo passo:** a linha 22 ou a 27, à
-escolha do Vicente. Assume: o Claude, na manutenção. Intocado: a pasta `C:oda_aromas_ceara` (esta sessão não a leu
+**Última verificação:** 28/11/2026, linha 27 em curso (seção "Linha 27", no fim): cinco de seis itens consertados —
+build e suíte 777 de 777; audit válido, 0 achados abertos; gate CORRECAO válido; fila: linhas 10 e 27 em curso, 22 e 28
+a 30 a fazer; 58 itens no "Visto de passagem" (2 novos). `git status`: só os 17 arquivos rastreados do
+`roda_aromas_ceara` como apagados (nenhum commit grava essa deleção). Decisões novas do Vicente: nenhuma. **Para a
+pesquisa:** mudança só do sistema; a versão do servidor não mudou, a trava 3 não para o projeto, nada vai ao
+`change_log.md`. **Próximo passo:** a resposta do Vicente às duas perguntas do item 6 (deduplicação); depois, fechar a
+linha 27. Assume: o Claude, na manutenção. Intocado: a pasta `C:oda_aromas_ceara` (esta sessão não a leu
 nem gravou).
 
 ## Fila
@@ -119,7 +120,7 @@ nem gravou).
 | 24 | Travas em código por etapa: decisão antes da etapa, ordem e insumo, sistema e sessão presos ao projeto | pontos 6.2 e 6.3, reescritos em 26/11, com as condições da segunda resposta | — | **feita em 28/11/2026**: travas 1 e 2 em 27/11, trava 3 em 28/11 depois da aprovação do Vicente (detalhe em "Linha 24", logo antes de "Linha 19") |
 | 25 | Hipótese A: os agentes de etapa num coordenador, com o `maintainer` à parte | ponto 6.4 | — | **feita em 28/11/2026** (commits `2d83e43` e o seguinte): sete tools entraram na trilha antes da fusão; os seis agentes de etapa em `old/agentes_2026-11-28/`; detalhe em "Linha 25", logo antes de "Linha 24" |
 | 26 | Ressalvas das tools: rede e repositórios | ponto 8, grupo 1 da lista de 26/11 | — | **feita em 28/11/2026**: cinco das seis ressalvas eram verdade e foram consertadas; a da camada 2 não era; detalhe em "Linha 26", logo antes de "Linha 25" |
-| 27 | Ressalvas das tools: coleta e importação | ponto 8, grupo 2 | — | **a fazer**: começa conferindo cada item no código |
+| 27 | Ressalvas das tools: coleta e importação | ponto 8, grupo 2 | — | **em curso desde 28/11/2026**: os seis itens eram verdade; cinco consertados; o da deduplicação espera a decisão do Vicente (duas perguntas); detalhe em "Linha 27", logo antes de "Linha 26" |
 | 28 | Ressalvas das tools: protocolo e estado | ponto 8, grupo 3 | — | **a fazer**: começa conferindo cada item no código |
 | 29 | Ressalvas das tools: texto completo | ponto 8, grupo 4 | — | **a fazer**: começa conferindo cada item no código |
 | 30 | Ressalvas das tools: método e IA | ponto 8, grupo 5 | — | **a fazer**: começa conferindo cada item no código; depois da 24 e da 25 |
@@ -1328,6 +1329,41 @@ espera decisão:
 
 Pergunta: tiro?
 
+### Linha 27 — Ressalvas das tools: coleta e importação (em curso desde 28/11/2026)
+
+Definição: ponto 8, grupo 2, da lista levada ao Vicente em 26/11. Cada item conferido no código antes de mexer (linhas
+de antes do conserto):
+
+| item | era verdade? | onde | o que se fez |
+|---|---|---|---|
+| `search_openalex` sem `projectPath` diz que salvou | sim: o rodapé dizia "salvos no arquivo JSON" sempre; a gravação só roda com `projectPath` | `index.ts:2171` e `:2140-2156` | FAZER: o rodapé diz o arquivo gravado, ou que nada foi gravado (`services/coleta.ts`, `rodapeDosResultados`) |
+| `harvest_records` não grava em `01_raw` | sim: com `projectPath` só entrava no log PRISMA-S | `index.ts:1557-1627` | FAZER: os registros colhidos vão para `01_raw/database_records.json` (`registrosDaColetaOai` + `gravarBrutos`); a descrição do `projectPath` diz isso |
+| `expand_search_snowball`: só a 1ª página; erro vira lista vazia | sim: `filter=cites:` sem `per_page` nem cursor (25 por semente); `{__error}` lido como lista vazia; erro da semente só no `console.error` | `snowball.ts:172`, `:175`, `:112` | FAZER: todas as páginas (200 por página, cursor); erro ao achar a semente ou nas citações vai a `stats.falhas` (com quantas foram lidas), ao log e ao topo da resposta; semente que o OpenAlex não tem vai a `stats.sementes_sem_registro_no_openalex`. DECLARAR: skill `prisma-s-logging` e descrição da tool |
+| `import_dataset_ris` sem base declarada: o gate reprova | sim, num caso que o plano resolve: sob o plano congelado, sem `sourceName`, a trava aceita quando o plano tem uma só fonte para a tool, mas a importação ignorava essa fonte, e os registros ficavam sem `repositoryName`, que o gate de procedência reprova na exportação. O log lia `audit.provenanceSource` ("Local File Import") e nunca dizia "origem Indefinida" | `index.ts:1102`, `plano_busca.ts:324`, `index.ts:1132`, `data.ts:366` | FAZER: a base é a da fonte do plano (`params.basePlano`, `baseDaImportacao`); sem base nenhuma, a importação avisa na hora (`avisoSemBase`) e o log diz "origem Indefinida" (`rotuloDaBase`). A recusa continua no export; "Local File Import" fica, porque o SQLite exige o campo |
+| `import_bvs_export` junta registros distintos com o mesmo DOI | sim: gravava sem `manterTodosDoLote` | `index.ts:1194` | FAZER: o export é gravado inteiro, como o RIS desde a F11; repetir a importação não conta duas vezes |
+| `deduplicate_dataset` não deixa escolher as entradas e reescreve o `database_records.json` | sim: com `projectPath`, `consolidateRaw` soma todo `01_raw/*.json` e regrava `01_raw/database_records.json` | `index.ts:724`, `project_artifacts.ts:134-165` (grava na `:163`) | **parado**: decisão nova, que o ponto 8 não cobre (abaixo) |
+
+**Para a pesquisa:** os cinco consertos mudam só o sistema; nenhum muda método, manifest, spec ou catálogo, e a versão do
+servidor segue 1.0.2: a trava 3 não para o projeto, e nada vai ao relato. Nada já gravado muda: o que o projeto
+importou da BVS, se importou, fica como está; só uma importação nova grava o export inteiro.
+
+**Controle positivo** (rede real, nada gravado em projeto de pesquisa): OpenAlex, `filter=cites:W2035680527` — antes
+25 de 344 (1ª página), depois 344 de 344, sem falha. Colheita OAI-PMH na UNEB (`BR-EST-0009`): 5 colhidos, 5 gravados
+num `01_raw` temporário, com o endereço do handle. A UFPI e a Unesp deram 0 sem erro (ao "Visto de passagem").
+
+Gate CORRECAO; `tests/coleta_importacao.test.ts` (13; 9 falham antes, 4 são controle das funções novas e da trava);
+suíte 777 de 777.
+
+**Falta — item 6, decisão do Vicente (levada em 28/11/2026):**
+1. *Entradas da deduplicação.* Recomendação: a execução repetida da mesma fonte do plano substitui a anterior, que vai
+   para `01_raw/substituidas/` só com a decisão do pesquisador, nas palavras dele (como a triagem substituída, DEBT-112);
+   fica fora da F3 e do hash do insumo; sem lista livre de arquivos. Caso real: o OpenAlex cortado em 200, de 23/11.
+2. *O arquivo que já existe.* Recomendação: a F3 deixa de regravar `01_raw/` (a pasta só recebe acréscimos); a
+   consolidação é lida em memória pela F3 e pelo funil, e o consolidado vai para `02_deduplicated/`. Com o mesmo
+   `01_raw`, o funil dá o mesmo número: mudança só do sistema.
+
+Depois da resposta: FAZER com teste que falha antes, fechar a linha.
+
 ### Linha 26 — Ressalvas das tools: rede e repositórios (feita em 28/11/2026)
 
 Definição: ponto 8, grupo 1, da lista levada ao Vicente em 26/11. Cada item conferido no código antes de mexer:
@@ -1847,3 +1883,8 @@ Vicente pedir.
   linha 25 fundiu no coordenador.
 - (linha 26, 28/11/2026) `data/sources/bases_internacionais.json` tem 0 entradas; o carregador o lê como a parte
   internacional do catálogo.
+- (linha 27, 28/11/2026) A frase "e mais N resultados salvos no arquivo JSON", que a linha 27 tirou do
+  `search_openalex`, continua em cinco handlers que também só gravam com `projectPath`: `crossrefHandler`,
+  `scieloHandler`, `semanticScholarHandler`, `coreHandler` e `europePmcHandler` (`index.ts`, rodapé de cada um).
+- (linha 27, 28/11/2026) No controle positivo da colheita, `listAllRecords` devolveu 0 registros, sem erro, na UFPI
+  (`BR-FED-0014`) e na Unesp (`BR-EST-0002`); não conferido se é a fonte ou a leitura da resposta.

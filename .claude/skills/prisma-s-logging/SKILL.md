@@ -69,6 +69,8 @@ começou), recusam; refazer a busca é emenda com `reabrir: "F2"`. Regras:
 - `projectPath` sempre (dedup real contra o que o projeto já tem) e `filterKeywords` com os descritores do protocolo
   (sem eles nenhuma poda ocorre, e a tool declara `stats.filter_applied: false` — não invente critério).
 - Leia `stats.stop_reason`, `stats.capped` e `stats.per_level` e mostre ao pesquisador: é o relatório de parada.
+- Leia `stats.falhas` (semente cujas citações o OpenAlex não entregou por inteiro, com quantas foram lidas; vai também
+  ao log) e `stats.sementes_sem_registro_no_openalex`: expansão com falha está incompleta, não deu zero.
 - Na revisão sistemática entra como passo **suplementar limitado** (F2.2.4/S5), nunca como busca primária.
 
 ### Nesta etapa, não

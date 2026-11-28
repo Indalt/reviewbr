@@ -80,6 +80,11 @@ export class SnowballService {
         let alreadyKnown = 0;
         let filteredOutByKeyword = 0;
         let capped = false;
+        // Linha 27 da FILA: erro do OpenAlex virava lista vazia (só console.error); agora vai à saída.
+        const falhas: { semente: string; nivel: number; erro: string }[] = [];
+        const semRegistro: string[] = [];
+        const rotulo = (s: SearchResult): string =>
+            String(s?.doi || "").replace(/^https?:\/\/(dx\.)?doi\.org\//i, "") || s?.identifier || s?.title || "(semente sem identificador)";
 
         let currentLevelSeeds = seeds;
         for (let level = 1; level <= depth && !capped && currentLevelSeeds.length > 0; level++) {
@@ -90,12 +95,13 @@ export class SnowballService {
                 if (capped) break;
                 try {
                     const work = await this.resolveWork(seed);
-                    if (!work) continue;
+                    if (!work || !work.id) { semRegistro.push(rotulo(seed)); continue; }
 
                     // Backward snowballing (referências) NÃO existe: só forward/citações.
                     // A saída declara isso em stats.direcao (DEBT-058).
-                    const citations = await this.fetchCitations(work.id);
+                    const { results: citations, erro } = await this.fetchCitations(work.id);
                     fetchedThisLevel += citations.length;
+                    if (erro) falhas.push({ semente: rotulo(seed), nivel: level, erro });
 
                     for (const cit of citations) {
                         const id = this.normalizeId(cit);
@@ -109,7 +115,7 @@ export class SnowballService {
                         if (newCandidates.length >= maxCandidates) { capped = true; break; }
                     }
                 } catch (e) {
-                    console.error(`Error processing seed ${seed.title}:`, e);
+                    falhas.push({ semente: rotulo(seed), nivel: level, erro: (e as Error)?.message ?? String(e) });
                 }
             }
 
@@ -140,6 +146,9 @@ export class SnowballService {
                 filtered_out_by_keyword: filteredOutByKeyword,
                 per_level: perLevel,
                 stop_reason: stopReason,
+                // Linha 27: o que não pôde ser lido fica dito, em vez de virar zero.
+                falhas,
+                sementes_sem_registro_no_openalex: semRegistro,
             }
         };
     }
@@ -154,27 +163,54 @@ export class SnowballService {
         if (seed.doi) {
             const doi = seed.doi.replace("https://doi.org/", "").replace("http://doi.org/", "");
             const url = `https://api.openalex.org/works/https://doi.org/${doi}?mailto=${this.mailto}`;
-            return await this.fetchJson(url);
+            const res = await this.fetchJson(url);
+            if (res && res.__error) {
+                if (res.status === 404) return null; // o OpenAlex não tem o DOI: semente sem registro, não erro
+                throw new Error(`OpenAlex HTTP ${res.status} ao procurar a semente pelo DOI ${doi}`);
+            }
+            return res;
         }
 
         // Try Title Search
         if (seed.title) {
             const url = `https://api.openalex.org/works?filter=display_name.search:${encodeURIComponent(seed.title)}&mailto=${this.mailto}`;
             const res = await this.fetchJson(url);
+            if (res && res.__error) throw new Error(`OpenAlex HTTP ${res.status} ao procurar a semente pelo título`);
             if (res.results && res.results.length > 0) return res.results[0];
         }
 
         return null;
     }
 
-    private async fetchCitations(workId: string): Promise<SearchResult[]> {
+    /**
+     * Quem cita o trabalho, todas as páginas (cursor, 200 por página). Antes vinha só a primeira
+     * página do OpenAlex (25 por padrão), e a resposta de erro virava lista vazia (linha 27 da FILA).
+     * Com erro no meio, devolve o que já leu e o erro, com quanto faltou.
+     */
+    private async fetchCitations(workId: string): Promise<{ results: SearchResult[]; erro?: string }> {
         const shortId = workId.split("/").pop();
-        const url = `https://api.openalex.org/works?filter=cites:${shortId}&mailto=${this.mailto}`;
-        const res = await this.fetchJson(url);
+        const base = `https://api.openalex.org/works?filter=cites:${shortId}&per_page=200&mailto=${this.mailto}`;
+        const brutos: any[] = [];
+        let total: number | null = null;
+        let cursor: string | null = "*";
+        let erro: string | undefined;
+        while (cursor) {
+            const res = await this.fetchJson(`${base}&cursor=${encodeURIComponent(cursor)}`);
+            if (res && res.__error) {
+                erro = `OpenAlex HTTP ${res.status} nas citações de ${shortId}: ${brutos.length} de ${total ?? "?"} lidos`;
+                break;
+            }
+            if (!res || !Array.isArray(res.results)) break;
+            total = res.meta?.count ?? total;
+            brutos.push(...res.results);
+            if (res.results.length === 0) break;
+            cursor = res.meta?.next_cursor ?? null;
+        }
+        return { results: this.citacoesComoRegistros(brutos, workId), erro };
+    }
 
-        if (!res.results) return [];
-
-        return res.results.map((r: any) => ({
+    private citacoesComoRegistros(brutos: any[], workId: string): SearchResult[] {
+        return brutos.map((r: any) => ({
             repositoryId: "openalex",
             repositoryName: "OpenAlex (Snowball)",
             identifier: r.id,

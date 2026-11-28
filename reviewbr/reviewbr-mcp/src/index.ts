@@ -30,13 +30,14 @@ import { FlowComputer } from "./services/flow_computer.js";
 import { indexCorpus, queryCorpus } from "./services/rag_lexical.js";
 import { ProtocolGate } from "./services/protocol_gate.js";
 import { travarProtocolo } from "./utils/protocol_guard.js";
-import { lerPlanoDoArquivo, validarPlano, congelarPlano, resumoDoPlano, conferirExecucao, registrarExecucao, roteiroDoPlano } from "./services/plano_busca.js";
+import { lerPlanoDoArquivo, validarPlano, congelarPlano, resumoDoPlano, conferirExecucao, registrarExecucao, roteiroDoPlano, TOOLS_DE_IMPORTACAO } from "./services/plano_busca.js";
 import { proporEmenda, decidirEmenda, registrarDesvio, desviosDeCamposNaoObtidos } from "./services/emendas.js";
 import { ProjectStateService } from "./services/project_state.js";
 import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
 import { conferirPosse, congelarVersao } from "./services/versao_sistema.js";
 import { conferirEtapa, lerDecisoesDoMetodo, lerRespostasDoArquivo, congelarDecisoes, resumoDasDecisoes, type ContextoDaTool } from "./services/travas_etapa.js";
 import { apresentarMetodos } from "./services/methods_for_type.js";
+import { rodapeDosResultados, registrosDaColetaOai, baseDaImportacao, avisoSemBase, rotuloDaBase } from "./services/coleta.js";
 import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, processarDatasetEmLotes, triagemGravada, insumoDoEstagio, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
 import { gravarCamadaPorPalavras, REGRA_DE_CASAMENTO } from "./services/camada_palavras.js";
 import { completarPalavrasChave } from "./services/palavras_chave.js";
@@ -265,6 +266,8 @@ async function checkDesignGuardrail(projectId?: number, projectPath?: string, to
     // A fonte do plano e a rota vão para o log (coluna Filter) e marcam a execução no estado.
     params.fontePlano = c.fontes.map((f) => f.id).join(",");
     params.rota = c.rota;
+    // Linha 27: a importação sem `sourceName` usa a base que a trava escolheu no plano.
+    if (TOOLS_DE_IMPORTACAO.has(tool)) params.basePlano = c.fontes.map((f) => f.nome);
     // Campo do plano declarado "não obtido: <motivo>" vira desvio declarado (FAZER 4).
     desviosDeCamposNaoObtidos(resolveProjectDir(projectPath), c.fontes, params.registroDaBusca, tool);
     return null;
@@ -953,7 +956,7 @@ server.tool(
 
 server.tool(
     "expand_search_snowball",
-    "Expande a busca via Snowballing SÓ PARA A FRENTE: busca no OpenAlex quem cita as sementes; as referências das sementes (para trás) NÃO são buscadas (stats.direcao declara isso). Com projectPath, os candidatos aceitos vão para 01_raw/other_records.json e a execução vai ao log PRISMA-S. Tem as 4 salvaguardas obrigatórias da skill do librarian: profundidade limitada (padrão 1, sem recursão), filtro por descritores do protocolo, dedup contra o dataset já existente do projeto e teto de candidatos com relatório de parada.",
+    "Expande a busca via Snowballing SÓ PARA A FRENTE: busca no OpenAlex quem cita as sementes, todas as páginas; o que o OpenAlex não entregou (erro, com quantas citações foram lidas) vai a stats.falhas e ao log, não vira zero; as referências das sementes (para trás) NÃO são buscadas (stats.direcao declara isso). Com projectPath, os candidatos aceitos vão para 01_raw/other_records.json e a execução vai ao log PRISMA-S. Tem as 4 salvaguardas obrigatórias da skill do librarian: profundidade limitada (padrão 1, sem recursão), filtro por descritores do protocolo, dedup contra o dataset já existente do projeto e teto de candidatos com relatório de parada.",
     {
         dataset: z.string().describe("JSON string com sementes (SearchResult[])"),
         registroDaBusca: CAMPO_REGISTRO,
@@ -991,12 +994,19 @@ server.tool(
             query: `cites: ${sementes.join("; ")}`,
             filtros: { direcao: result.stats.direcao, depth: params.depth, filterKeywords: params.filterKeywords, maxCandidates: params.maxCandidates, fontePlano: (params as any).fontePlano, rota: (params as any).rota, registroDaBusca: (params as any).registroDaBusca },
             hits: result.newCandidates.length,
-            erros: result.stats.capped ? result.stats.stop_reason : undefined,
+            // Linha 27: erro do OpenAlex numa semente virava lista vazia; agora vai à coluna Errors.
+            erros: [
+                result.stats.capped ? result.stats.stop_reason : "",
+                ...result.stats.falhas.map((f: { semente: string; erro: string }) => `semente ${f.semente}: ${f.erro}`),
+            ].filter(Boolean).join(" | ") || undefined,
         });
+        const avisoFalhas = result.stats.falhas.length
+            ? `⚠️ ${result.stats.falhas.length} semente(s) com citações não lidas por inteiro (stats.falhas): a expansão está incompleta, não é zero.\n\n`
+            : "";
         return {
             content: [{
                 type: "text",
-                text: JSON.stringify(raw01 ? { ...result, raw01 } : result, null, 2) + avisoLog
+                text: avisoFalhas + JSON.stringify(raw01 ? { ...result, raw01 } : result, null, 2) + avisoLog
             }]
         };
     }
@@ -1088,7 +1098,7 @@ server.tool(
     "Importa dados de arquivo RIS (ex: Zotero/EndNote).",
     {
         content: z.string().describe("Conteúdo do arquivo .ris"),
-        sourceName: z.string().optional().describe("Base de onde o export saiu (ex.: Scopus, Web of Science). Omitido: usa a tag DB do próprio RIS; sem nenhuma das duas, os registros ficam SEM origem e o export é bloqueado pela RV-08 — a importação não fabrica procedência."),
+        sourceName: z.string().optional().describe("Base de onde o export saiu (ex.: Scopus, Web of Science). Omitido: sob o plano de busca congelado, a base da fonte do plano para esta tool, quando o plano tem uma só; fora disso, a tag DB do próprio RIS. Sem nenhuma, os registros ficam SEM origem, a importação avisa na hora e o export os bloqueia pela RV-08 — a importação não fabrica procedência."),
         textoExato: CAMPO_TEXTO_EXATO,
         registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
@@ -1100,7 +1110,10 @@ server.tool(
         // A origem vem de quem importa ou do próprio RIS. Antes, o handler nunca passava
         // `sourceName` e o default "Manual Import" carimbava procedência falsa em tudo — que
         // ainda por cima PASSAVA no gate da RV-08, porque é texto não-vazio.
-        const results = dataService.importRis(params.content, params.sourceName);
+        // Linha 27: sob o plano congelado, sem `sourceName`, a trava aceita quando o plano tem uma só
+        // fonte para a tool — e a base é essa fonte. Antes ela era ignorada, e o gate reprovava no export.
+        const base = baseDaImportacao(params.sourceName, (params as any).basePlano);
+        const results = dataService.importRis(params.content, base);
 
         // Resolve project for audit
         let projectId = params.projectId;
@@ -1129,10 +1142,11 @@ server.tool(
 
         // DEBT-056 (com o DEBT-091): a importação também é execução de busca e entra no log.
         // A string usada na interface da base não passa por aqui: Query fica Indefinido.
-        const origens = [...new Set(results.map((r: any) => r?.audit?.provenanceSource).filter(Boolean))];
+        // Linha 27: o rótulo lia audit.provenanceSource, que sem base vale "Local File Import" — o log
+        // nunca dizia "origem Indefinida". Agora lê a base declarada (do chamador, do plano ou do RIS).
         const avisoLog = await registrarBusca(params.projectPath, {
             tool: "import_dataset_ris",
-            database: `Export RIS importado: ${params.sourceName?.trim() || origens.join(" | ") || "origem Indefinida"}`,
+            database: `Export RIS importado: ${rotuloDaBase(results, base)}`,
             query: params.textoExato,
             filtros: { sourceName: params.sourceName, fontePlano: (params as any).fontePlano, rota: (params as any).rota, registroDaBusca: params.registroDaBusca },
             hits: results.length,
@@ -1141,7 +1155,7 @@ server.tool(
         return {
             content: [{
                 type: "text",
-                text: JSON.stringify(results, null, 2) + rawWriteNote + avisoLog
+                text: JSON.stringify(results, null, 2) + avisoSemBase(results) + rawWriteNote + avisoLog
             }]
         };
     }
@@ -1191,7 +1205,9 @@ server.tool(
         let rawWriteNote = "";
         if (params.projectPath) {
             try {
-                const raw = appendRawRecords(params.projectPath, results, "database");
+                // Linha 27 (como a F11 do RIS): o export é gravado inteiro; dois registros distintos do
+                // mesmo export com o mesmo DOI viravam um. A duplicata é da F3, com relatório.
+                const raw = appendRawRecords(params.projectPath, results, "database", { manterTodosDoLote: true });
                 rawWriteNote = ` 01_raw/database_records.json: ${raw.added} novo(s) (total no arquivo: ${raw.total}).`;
             } catch (e: any) {
                 rawWriteNote = ` ⚠️ NÃO gravados em 01_raw (${e?.message ?? e}). O funil PRISMA não vai contá-los até isso ser corrigido.`;
@@ -1565,7 +1581,7 @@ server.tool(
         metadataPrefix: z.string().default("oai_dc").describe("Formato de metadados"),
         registroDaBusca: CAMPO_REGISTRO,
         projectId: z.number().optional(),
-        projectPath: z.string().optional().describe("Projeto sob o qual a coleta é feita. Sem ele, a coleta é exploratória e nada é persistido (RV-01)."),
+        projectPath: z.string().optional().describe("Projeto sob o qual a coleta é feita. Com ele, os registros colhidos são gravados em 01_raw/database_records.json (o funil PRISMA os conta) e a coleta entra no log PRISMA-S. Sem ele, a coleta é exploratória e nada é persistido (RV-01)."),
     },
     async (params) => {
         // Antes: checkDesignGuardrail(undefined, undefined) — a tool nem expunha projectId ou
@@ -1604,10 +1620,15 @@ server.tool(
             ...linhaLog, hits: records.length,
             erros: records.length >= params.maxRecords ? `parou no teto maxRecords=${params.maxRecords}; pode haver mais registros` : undefined,
         });
+        // Linha 27: com projectPath a coleta entrava no log e não em 01_raw — o funil não a contava.
+        const raw01 = gravarBrutos(params.projectPath, registrosDaColetaOai(repo, records, {
+            endpoint: repo.access.oaiPmh.endpoint, set: params.set, dateFrom: params.dateFrom, dateUntil: params.dateUntil, metadataPrefix: params.metadataPrefix,
+        }), "database");
 
         const summary = [
             `## Harvest: ${repo.repository.name}`,
             `**Registros coletados:** ${records.length}`,
+            raw01,
             avisoLog.trim(),
             "",
             ...records.slice(0, 20).map((r, i) => [
@@ -2109,6 +2130,7 @@ const openAlexHandler = async (params: any) => {
     if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
     let rawSaveError: string | null = null; // DEBT-084: falha de gravação deixa de ser só console.error
     let avisoLog = ""; // DEBT-056: falha ao gravar o log PRISMA-S
+    let arquivoGravado: string | null = null; // linha 27: o rodapé diz onde gravou, ou que não gravou
 
     // Resolve project for audit
     let projectId = params.projectId;
@@ -2149,6 +2171,7 @@ const openAlexHandler = async (params: any) => {
             const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace("T", "_");
             const outputPath = path.join(rawDir, `dataset_openalex_${timestamp}.json`);
             fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
+            arquivoGravado = `01_raw/${path.basename(outputPath)}`;
         } catch (saveError: any) {
             console.error("Failed to auto-save OpenAlex results:", saveError);
             rawSaveError = `⚠️ Resultados encontrados mas NÃO gravados em 01_raw (${saveError?.message ?? saveError}). O funil PRISMA não vai contá-los até isso ser corrigido.`;
@@ -2168,7 +2191,8 @@ const openAlexHandler = async (params: any) => {
             `**URL:** ${r.url}`,
             "",
         ].filter(Boolean).join("\n")),
-        results.length > 10 ? `\n... e mais ${results.length - 10} resultados salvos no arquivo JSON.` : "",
+        // Linha 27: sem projectPath (ou com a gravação falhando) dizia "salvos no arquivo JSON", e nada era gravado.
+        rodapeDosResultados(results.length, Math.min(results.length, 10), arquivoGravado),
         rawSaveError ?? "",
         avisoLog.trim(),
     ].join("\n");
