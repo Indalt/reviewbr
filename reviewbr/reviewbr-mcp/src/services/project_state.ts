@@ -68,6 +68,13 @@ export interface ProjectState {
     trava_etapas?: import("./travas_etapa.js").TravaEtapas;
     /** Linha 24 da FILA, trava 2 — cada etapa fechada, com o hash do artefato que a encerra. */
     etapas_fechadas?: import("./fechamentos.js").Fechamento[];
+    /**
+     * Linha 24 da FILA, trava 3 — a versão do sistema que o projeto usa (método, catálogos, servidor),
+     * gravada na trava ou pela última emenda de migração aprovada.
+     */
+    versao_sistema?: import("./versao_sistema.js").VersaoSistema;
+    /** Linha 24 da FILA, trava 3 — cada posse de sessão retomada (parada há mais de 2 h ou de processo morto). */
+    posses_retomadas?: import("./versao_sistema.js").Retomada[];
 }
 
 function statePath(projectDir: string): string {

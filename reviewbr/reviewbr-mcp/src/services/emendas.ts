@@ -3,6 +3,7 @@ import * as path from "node:path";
 import { ProjectStateService } from "./project_state.js";
 import { ehCarimbo } from "./method_trail.js";
 import { validarPlano, congelarPlano, resumoDoPlano, type PlanoBusca, type CatalogoDeRepositorios } from "./plano_busca.js";
+import { congelarVersao, versaoAtual, diferencas } from "./versao_sistema.js";
 import { lerDecisoesDoMetodo, conferirRespostas, aplicarRespostasDeEmenda, reabrirEtapa, resumoDasDecisoes, textoDaPergunta } from "./travas_etapa.js";
 import { lerTrilha } from "./method_trail.js";
 
@@ -36,6 +37,8 @@ export interface Emenda {
     decisoes?: Record<string, string | null>;
     /** Linha 24, trava 2: etapa que a emenda reabre (ela e as seguintes correm de novo, em ordem). */
     reabrir?: string;
+    /** Linha 24, trava 3: emenda de migração — aprovada, a versão de hoje do sistema passa a ser a do projeto. */
+    migracao?: { mudancas: string[] };
     proposta_em: string;
     decisao?: { por: "pesquisador"; contribuicao: string; em: string; versao_protocolo?: string };
 }
@@ -78,7 +81,7 @@ function travado(projectDir: string): { ok: true } | { ok: false; mensagem: stri
 
 export function proporEmenda(
     projectDir: string,
-    entrada: { o_que: string; antes?: string; depois?: string; porque: string; plano?: string; decisoes?: string; reabrir?: string },
+    entrada: { o_que: string; antes?: string; depois?: string; porque: string; plano?: string; decisoes?: string; reabrir?: string; migracao?: boolean },
     catalogo: CatalogoDeRepositorios,
     repoRoot?: string,
 ): { ok: boolean; mensagem: string } {
@@ -121,11 +124,18 @@ export function proporEmenda(
             return { ok: false, mensagem: `"${reabrir}" não é etapa ativa da trilha do método "${st.method}" (${etapas.filter((x) => x.active).map((x) => x.id).join(", ")}).` };
         }
     }
+    let migracao: Emenda["migracao"];
+    if (entrada.migracao) {
+        if (!repoRoot) return { ok: false, mensagem: "Sem a raiz do ReviewBR não há como ler a versão do sistema." };
+        const mudancas = st.versao_sistema ? diferencas(st.versao_sistema.componentes, versaoAtual(repoRoot, st.method)) : [];
+        if (!mudancas.length) return { ok: false, mensagem: "Não há migração a fazer: a versão do sistema que o projeto usa é a de hoje." };
+        migracao = { mudancas };
+    }
     const emendas = st.emendas ?? [];
     const e: Emenda = {
         id: `emenda-${emendas.length + 1}`, status: "PROPOSTA",
         o_que: texto(entrada.o_que), antes: texto(entrada.antes) || undefined, depois: texto(entrada.depois) || undefined,
-        porque: texto(entrada.porque), plano, decisoes, reabrir, proposta_em: hoje(),
+        porque: texto(entrada.porque), plano, decisoes, reabrir, migracao, proposta_em: hoje(),
     };
     ProjectStateService.patch(projectDir, { emendas: [...emendas, e] });
     anexarAoChangeLog(projectDir, [
@@ -135,6 +145,7 @@ export function proporEmenda(
         "", `**Por quê.** ${e.porque}`,
         decisoes ? `\n**Decisões de etapa da emenda:** ${Object.entries(decisoes).map(([k, v]) => `${k} = ${v === null ? "a decidir" : `"${v}"`}`).join("; ")}` : "",
         reabrir ? `\n**Reabre a etapa** ${reabrir} (ela e as seguintes correm de novo, em ordem).` : "",
+        migracao ? `\n**Migração de versão do sistema** (o que mudou desde a versão do projeto):\n${migracao.mudancas.map((m) => `- ${m}`).join("\n")}` : "",
         plano ? `\n**Plano de busca da emenda** (é o que a busca vai seguir, se aprovada):\n${plano.fontes.map((f) => `- ${f.nome} (${f.id}): ${f.modo === "manual" ? "à mão" : "por tool"}, ${f.tool}${f.repositorio ? ` ${f.repositorio}` : ""}; textos ${f.textos.map((x) => `\`${x}\``).join(" · ") || "nenhum"}`).join("\n")}` : "",
         "", "**Aprovação:** — (só com a decisão do pesquisador, nas palavras dele)",
     ].filter((l) => l !== "").join("\n"));
@@ -191,9 +202,14 @@ export function decidirEmenda(
         const reabertas = reabrirEtapa(repoRoot, projectDir, e.reabrir);
         notaEtapas += `\nReabertas, para correr de novo em ordem: ${reabertas.join(", ")}.`;
     }
+    if (e.migracao && repoRoot) {
+        congelarVersao(repoRoot, projectDir, e.id);
+        notaEtapas += "\nA versão de hoje do sistema passa a ser a do projeto.";
+    }
     anexarAoChangeLog(projectDir, `### ${e.id} — APROVADA em ${em.slice(0, 10)}\n\nDecisão do pesquisador: "${contribuicao}". ` +
         `Versão do protocolo: ${anterior} → ${versao}. ${e.plano ? "O plano de busca da emenda foi congelado, com as rotas de hoje." : "O plano de busca não muda."}` +
-        (e.decisoes ? " As decisões de etapa da emenda passam a valer." : "") + (e.reabrir ? ` A etapa ${e.reabrir} e as seguintes reabrem.` : ""));
+        (e.decisoes ? " As decisões de etapa da emenda passam a valer." : "") + (e.reabrir ? ` A etapa ${e.reabrir} e as seguintes reabrem.` : "") +
+        (e.migracao ? " A versão de hoje do sistema passa a ser a do projeto." : ""));
     return { ok: true, mensagem: `✅ ${e.id} APROVADA (protocolo ${anterior} → ${versao}) e anexada ao change_log.md. ${notaPlano}${notaEtapas}` };
 }
 

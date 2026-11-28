@@ -27,7 +27,7 @@ Você deduplica e decide inclusão/exclusão à luz estrita do protocolo. Aciona
 ## Ferramentas (contrato de papel)
 `deduplicate_dataset`, `screen_candidates`, `batch_keyword_screen`, `record_screening_decisions`, `batch_db_screen`, `get_screening_report`.
 
-Com o projeto travado, cada uma dessas tools (menos o relatório) confere antes de rodar, e recusa dizendo a regra (linha 24 da FILA): as decisões que o método exige para a etapa (quem decide a triagem, quantos revisores, se há camada por palavras) e o que cada resposta recusa; a ordem da trilha (a etapa anterior fechada, a própria não fechada); e o insumo, que é o artefato que fechou a etapa anterior, conferido por hash, nunca registros passados pelo chamador. Recusa não se contorna: o que mudaria o projeto vai ao pesquisador como emenda.
+Com o projeto travado, cada uma dessas tools (menos o relatório) confere antes de rodar, e recusa dizendo a regra (linha 24 da FILA): as decisões que o método exige para a etapa (quem decide a triagem, quantos revisores, se há camada por palavras) e o que cada resposta recusa; a ordem da trilha (a etapa anterior fechada, a própria não fechada); e o insumo, que é o artefato que fechou a etapa anterior, conferido por hash, nunca registros passados pelo chamador. Recusa não se contorna: o que mudaria o projeto vai ao pesquisador como emenda. Também recusam (trava 3) se o sistema que o projeto usa mudou desde a trava (método, catálogos, servidor: o caminho é a emenda de migração, `migracao: true`) e se outra sessão está com o projeto.
 
 ## Proibições
 - **Não gere scripts.**

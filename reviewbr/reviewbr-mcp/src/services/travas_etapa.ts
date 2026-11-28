@@ -3,6 +3,7 @@ import * as path from "node:path";
 import { ProjectStateService } from "./project_state.js";
 import { lerTrilha, etapaDoArtefato, etapaSeguinte, type Etapa } from "./method_trail.js";
 import { hashDoArtefato, fechamentoDe, registrarFechamento } from "./fechamentos.js";
+import { conferirVersao } from "./versao_sistema.js";
 
 /**
  * Travas em código por etapa (linha 24 da FILA; pontos 6.2 e 6.3 do pedido do Vicente de 25/11/2026,
@@ -277,6 +278,16 @@ export function conferirEtapa(repoRoot: string, projectDir: string, tool: string
     const etapas = lerTrilha(repoRoot, st.method).etapas;
     const etapa = etapaDaTool(etapas, tool);
     if (!etapa) return { ok: true, aviso: "" };
+    // ── Trava 3: a versão do sistema que o projeto usa (vale em toda etapa do projeto travado) ──
+    const v = conferirVersao(repoRoot, projectDir, tool);
+    if (!v.ok) return v;
+    const r = conferirTravas12(repoRoot, projectDir, tool, ctx, etapas, etapa);
+    if (!r.ok || !v.aviso) return r;
+    return { ok: true, aviso: [v.aviso, r.aviso].filter(Boolean).join("\n") };
+}
+
+function conferirTravas12(repoRoot: string, projectDir: string, tool: string, ctx: ContextoDaTool, etapas: Etapa[], etapa: Etapa): ConferenciaDaEtapa {
+    const st = ProjectStateService.read(projectDir)!;
     const idx = (id: string) => etapas.findIndex((e) => e.id === id);
     const desde = st.trava_etapas?.desde_etapa ?? desdeEtapaLegado(repoRoot, projectDir);
     if (idx(etapa.id) < idx(desde)) return { ok: true, aviso: "" };

@@ -33,6 +33,7 @@ import { lerPlanoDoArquivo, validarPlano, congelarPlano, resumoDoPlano, conferir
 import { proporEmenda, decidirEmenda, registrarDesvio, desviosDeCamposNaoObtidos } from "./services/emendas.js";
 import { ProjectStateService } from "./services/project_state.js";
 import { avancarPorArtefato, lerTrilha, etapaDoArtefato, etapaSeguinte, registrarDecisaoDoPesquisador } from "./services/method_trail.js";
+import { conferirPosse, congelarVersao } from "./services/versao_sistema.js";
 import { conferirEtapa, lerDecisoesDoMetodo, lerRespostasDoArquivo, congelarDecisoes, resumoDasDecisoes, type ContextoDaTool } from "./services/travas_etapa.js";
 import { apresentarMetodos } from "./services/methods_for_type.js";
 import { consolidateRaw, writeDeduped, appendRawRecords, writeScreening, readDedupePairs, readExistingDataset, composicaoTriagem, processarDatasetEmLotes, triagemGravada, insumoDoEstagio, resolveDir as resolveProjectDir } from "./services/project_artifacts.js";
@@ -209,7 +210,22 @@ function declararModo(projectPath: string | undefined, resposta: any): any {
  */
 function travaDaEtapa(projectPath: string | undefined, tool: string, ctx: ContextoDaTool = {}, avisos?: string[]): string | null {
     if (!projectPath) return null;
+    const p = posseDoProjeto(projectPath, tool, avisos);
+    if (p) return p;
     const c = conferirEtapa(RAIZ(), resolveProjectDir(projectPath), tool, ctx);
+    if (!c.ok) return c.motivo;
+    if (c.aviso && avisos) avisos.push(c.aviso);
+    return null;
+}
+
+/**
+ * Linha 24 da FILA, trava 3 — a posse do projeto pela sessão: a tool que grava abre ou renova a posse;
+ * outra sessão viva é recusada. Devolve a recusa, ou null (o aviso de retomada vai em `avisos`).
+ * A versão do sistema é conferida dentro de `conferirEtapa`, só nas tools de etapa.
+ */
+function posseDoProjeto(projectPath: string | undefined, tool: string, avisos?: string[]): string | null {
+    if (!projectPath) return null;
+    const c = conferirPosse(resolveProjectDir(projectPath), tool);
     if (!c.ok) return c.motivo;
     if (c.aviso && avisos) avisos.push(c.aviso);
     return null;
@@ -1741,8 +1757,11 @@ server.tool(
     async (params) => {
         // DEBT-143 — a trava do RV-04 existia sem escritor legítimo: logDecision não tinha
         // chamador, e sob 'estrito' a fase só avançava com edição à mão do project_state.json.
+        const avisosPosse: string[] = [];
+        const semPosse = posseDoProjeto(params.projectPath, "record_researcher_decision", avisosPosse);
+        if (semPosse) return { content: [{ type: "text", text: semPosse }] };
         const r = registrarDecisaoDoPesquisador(RAIZ(), resolveProjectDir(params.projectPath), params);
-        return { content: [{ type: "text", text: r.mensagem }] };
+        return { content: [{ type: "text", text: [...avisosPosse, r.mensagem].join("\n\n") }] };
     }
 );
 
@@ -1772,16 +1791,20 @@ server.tool(
         fonte: z.string().optional().describe("Desvio: o id da fonte do plano a que ele se refere"),
         decisoes: z.string().optional().describe("Emenda que decide o que uma etapa exige (linha 24, trava 1): JSON { id da decisão que o método declara: opção escolhida pelo pesquisador, ou null para voltar a 'a decidir' }"),
         reabrir: z.string().optional().describe("Emenda que manda refazer uma etapa já fechada (linha 24, trava 2): o id da etapa; aprovada, ela e as seguintes reabrem e correm de novo em ordem"),
+        migracao: z.boolean().optional().describe("Emenda de migração (linha 24, trava 3): o sistema que o projeto usa (método, catálogos, servidor) mudou e as tools de etapa recusam; a emenda registra o que mudou e, aprovada pelo pesquisador, a versão de hoje passa a ser a do projeto"),
         contribuicao: z.string().optional().describe("A decisão do pesquisador, nas palavras dele (obrigatória para aprovar ou recusar)"),
     },
     async (params) => {
         const dir = resolveProjectDir(params.projectPath);
+        const avisosPosse: string[] = [];
+        const semPosse = posseDoProjeto(params.projectPath, "record_protocol_amendment", avisosPosse);
+        if (semPosse) return { content: [{ type: "text", text: semPosse }] };
         const r = params.tipo === "desvio"
             ? registrarDesvio(dir, { o_que: params.o_que ?? "", porque: params.porque ?? "", fonte: params.fonte, contribuicao: params.contribuicao })
             : (params.acao ?? "propor") === "propor"
-                ? proporEmenda(dir, { o_que: params.o_que ?? "", antes: params.antes, depois: params.depois, porque: params.porque ?? "", plano: params.plano, decisoes: params.decisoes, reabrir: params.reabrir }, registry, RAIZ())
+                ? proporEmenda(dir, { o_que: params.o_que ?? "", antes: params.antes, depois: params.depois, porque: params.porque ?? "", plano: params.plano, decisoes: params.decisoes, reabrir: params.reabrir, migracao: params.migracao }, registry, RAIZ())
                 : decidirEmenda(dir, { id: params.id ?? "", acao: params.acao as "aprovar" | "recusar", contribuicao: params.contribuicao ?? "" }, registry, RAIZ());
-        return { content: [{ type: "text", text: r.mensagem }] };
+        return { content: [{ type: "text", text: [...avisosPosse, r.mensagem].join("\n\n") }] };
     }
 );
 
@@ -1805,6 +1828,9 @@ server.tool(
         if (!fs.existsSync(protocolPath)) {
             return { content: [{ type: "text", text: `Erro: protocol.md não encontrado em ${projectDir}. Crie o projeto com plan_research_protocol primeiro.` }] };
         }
+
+        const semPosse = posseDoProjeto(params.projectPath, "submit_protocol_for_approval");
+        if (semPosse) return { content: [{ type: "text", text: semPosse }] };
 
         const audit = protocolAuditor.auditFile(protocolPath);
 
@@ -1853,10 +1879,13 @@ server.tool(
             }
             // Depois do marcador [LOCKED] no arquivo: o hash é o do protocolo como ficou travado.
             const travaBusca = congelarPlano(projectDir, plano!, abre?.id ?? "", registry);
-            let notaDecisoes = "";
+            // Linha 24, trava 3: a versão do sistema que o projeto passa a usar (método, catálogos, servidor).
+            const versaoSistema = congelarVersao(RAIZ(), projectDir, "trava");
+            let notaDecisoes = `\n\n**Versão do sistema gravada** (${Object.keys(versaoSistema.componentes).length} componentes: método, catálogos, servidor): ` +
+                "se mudar, as tools de etapa recusam até a emenda de migração.";
             if (decMetodo.decisoes.length) {
                 congelarDecisoes(projectDir, metodoProj, decProj.respostas, abre?.id ?? ProjectStateService.read(projectDir)!.phase);
-                notaDecisoes = `\n\n**Decisões de etapa congeladas** (o que estiver "a decidir" impede a etapa de rodar até a emenda):\n${resumoDasDecisoes(RAIZ(), projectDir)}`;
+                notaDecisoes += `\n\n**Decisões de etapa congeladas** (o que estiver "a decidir" impede a etapa de rodar até a emenda):\n${resumoDasDecisoes(RAIZ(), projectDir)}`;
             }
             const notaPlano = `\n\n**Plano de busca congelado** (versão ${travaBusca.versao_protocolo} do protocolo; ` +
                 `confira com o pesquisador que ele diz o que o protocolo pede — a busca vai segui-lo, e o que mudar é emenda):\n` +

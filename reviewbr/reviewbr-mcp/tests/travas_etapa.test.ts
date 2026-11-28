@@ -223,6 +223,6 @@ describe("linha 24 — as tools de etapa chamam a conferência antes de rodar", 
     it("a trava do protocolo pede as decisões e as congela; a emenda as recebe", () => {
         expect(INDEX).toContain("lerRespostasDoArquivo(projectDir, decMetodo.decisoes)");
         expect(INDEX).toContain("congelarDecisoes(projectDir, metodoProj, decProj.respostas");
-        expect(INDEX).toContain("decisoes: params.decisoes, reabrir: params.reabrir }, registry, RAIZ())");
+        expect(INDEX).toContain("decisoes: params.decisoes, reabrir: params.reabrir, migracao: params.migracao }, registry, RAIZ())");
     });
 });
