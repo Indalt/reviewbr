@@ -4,7 +4,7 @@ import * as os from "node:os";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
 import { ProjectStateService, type ProjectState } from "../src/services/project_state.js";
-import { lerTrilha, avancarPorArtefato } from "../src/services/method_trail.js";
+import { lerTrilha, avancarPorArtefato, errosDaTrilha } from "../src/services/method_trail.js";
 import { congelarDecisoes, conferirEtapa, etapaDaTool } from "../src/services/travas_etapa.js";
 
 /**
@@ -98,5 +98,23 @@ describe("linha 25 — a barreira que só a lista do agente dava passa a ser da 
 
     it("retrieve_fulltexts com datasetPath do chamador: o insumo vai à trava como do chamador", () => {
         expect(INDEX).toMatch(/travaDaEtapa\(params\.projectPath, "retrieve_fulltexts", \{[^}]*insumoDoChamador: params\.datasetPath/);
+    });
+});
+
+describe("linha 25 — a etapa é executada pelo coordenador, com a skill do procedimento dela", () => {
+    it("o role de cada etapa dos dois métodos é uma skill que existe; os agentes de etapa saíram", () => {
+        for (const m of ["prisma-sr", "scoping-prisma-scr"]) {
+            const man = JSON.parse(fs.readFileSync(path.join(REPO, ".claude", "methodologies", m, "manifest.json"), "utf-8"));
+            expect(errosDaTrilha(man.phases, path.join(REPO, ".claude", "skills")), m).toEqual([]);
+            expect(lerTrilha(REPO, m).erros, m).toEqual([]);
+        }
+        const agentes = fs.readdirSync(path.join(REPO, ".claude", "agents")).filter((f) => f.endsWith(".md")).sort();
+        expect(agentes).toEqual(["maintainer.md", "scout.md"]);
+    });
+
+    it("role que não é skill reprova a trilha (era o nome de um agente)", () => {
+        const erros = errosDaTrilha([{ id: "A", name: "a", role: "librarian", closes_with: "x.md", producer_tools: [], active: true }],
+            path.join(REPO, ".claude", "skills"));
+        expect(erros.join(" ")).toMatch(/o procedimento "librarian" não existe em \.claude\/skills\//);
     });
 });

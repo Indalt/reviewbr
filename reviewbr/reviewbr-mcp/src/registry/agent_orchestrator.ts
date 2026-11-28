@@ -8,13 +8,10 @@
  */
 
 export enum AgentRole {
-    PROJETISTA = 'PROJETISTA',   // F0/F1: Protocol design
-    COORDINATOR = 'COORDINATOR', // Orquestrador (skill conduct-review)
-    LIBRARIAN = 'LIBRARIAN',     // F2: Search/Download
-    SCREENER = 'SCREENER',       // F3/F4: Screening
-    EXTRACTOR = 'EXTRACTOR',     // F5: Data Extraction
-    READER = 'READER',           // F5.5: Leitura/RAG do corpus curado
-    ANALYST = 'ANALYST',         // F6-F8: Synthesis/Stats/Manuscript
+    // Linha 25 da FILA (Hipótese A, 28/11/2026): os seis papéis de etapa (PROJETISTA, LIBRARIAN,
+    // SCREENER, EXTRACTOR, READER, ANALYST) se fundiram no COORDINATOR, que executa cada etapa com a
+    // skill do procedimento dela. O que separa as etapas é a trava de etapa no código (linhas 24 e 25).
+    COORDINATOR = 'COORDINATOR', // Coordenador (skill conduct-review): executa a trilha F0–F8
     SCOUT = 'SCOUT',             // Exploratório fora-da-trilha PRISMA (busca ágil, não-protocolar)
     MAINTAINER = 'MAINTAINER'    // Manutenção metodológica do PRÓPRIO ReviewBR (fora da trilha de revisão) — RV-11
 }
@@ -41,80 +38,80 @@ export interface AgentCapability {
  */
 const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     // ─── Design de protocolo (PROJETISTA + COORDINATOR) ─────
-    assess_research_design: [AgentRole.PROJETISTA, AgentRole.COORDINATOR],
-    plan_research_protocol: [AgentRole.PROJETISTA, AgentRole.COORDINATOR],
-    submit_protocol_for_approval: [AgentRole.PROJETISTA, AgentRole.COORDINATOR],
+    assess_research_design: [AgentRole.COORDINATOR],
+    plan_research_protocol: [AgentRole.COORDINATOR],
+    submit_protocol_for_approval: [AgentRole.COORDINATOR],
     // RV-04 (DEBT-143): quem fala com o pesquisador e registra a decisão dele é o coordenador.
     // Nenhum especialista registra decisão do pesquisador por conta própria.
     record_researcher_decision: [AgentRole.COORDINATOR],
     // Linha 17 (RV-01): emenda e desvio do protocolo travado — de quem cuida do protocolo e de quem
     // fala com o pesquisador. A aprovação exige as palavras dele; o especialista da busca não emenda.
-    record_protocol_amendment: [AgentRole.PROJETISTA, AgentRole.COORDINATOR],
+    record_protocol_amendment: [AgentRole.COORDINATOR],
     // O plano e o roteiro de cada fonte: quem o escreve, quem busca por ele e quem conduz.
-    get_search_plan: [AgentRole.PROJETISTA, AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
+    get_search_plan: [AgentRole.COORDINATOR],
     // designer.md lista validate_repository/heal_repositories no seu contrato de papel → PROJETISTA autorizado
-    validate_repository: [AgentRole.PROJETISTA, AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
-    heal_repositories: [AgentRole.PROJETISTA, AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
+    validate_repository: [AgentRole.COORDINATOR],
+    heal_repositories: [AgentRole.COORDINATOR],
 
     // ─── Leitura/RAG (READER + ANALYST) ─────────────────────
-    rag_index_corpus: [AgentRole.READER],
-    rag_query: [AgentRole.READER, AgentRole.ANALYST],
+    rag_index_corpus: [AgentRole.COORDINATOR],
+    rag_query: [AgentRole.COORDINATOR],
 
     // ─── Extração (EXTRACTOR) ───────────────────────────────
-    batch_llm_extract: [AgentRole.EXTRACTOR],
-    translate_document: [AgentRole.EXTRACTOR, AgentRole.READER],
-    batch_keyword_screen: [AgentRole.SCREENER, AgentRole.EXTRACTOR],
-    batch_db_screen: [AgentRole.SCREENER],
+    batch_llm_extract: [AgentRole.COORDINATOR],
+    translate_document: [AgentRole.COORDINATOR],
+    batch_keyword_screen: [AgentRole.COORDINATOR],
+    batch_db_screen: [AgentRole.COORDINATOR],
 
     // ─── Cálculo do funil (COORDINATOR + ANALYST) ───────────
-    compute_flow_counts: [AgentRole.COORDINATOR, AgentRole.ANALYST],
+    compute_flow_counts: [AgentRole.COORDINATOR],
 
     // ─── Search (LIBRARIAN + COORDINATOR; SCOUT nas 4 tools do seu contrato) ───
-    search_openalex: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR, AgentRole.SCOUT],
-    search_pubmed: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR, AgentRole.SCOUT],
-    search_crossref: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
-    search_core: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
-    search_europe_pmc: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
-    search_scielo: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
-    search_semanticscholar: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
-    search_papers_optimized: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR, AgentRole.SCOUT],
-    search_repository: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR, AgentRole.SCOUT],
-    harvest_records: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
-    get_record_metadata: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
-    complete_record_keywords: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
+    search_openalex: [AgentRole.COORDINATOR, AgentRole.SCOUT],
+    search_pubmed: [AgentRole.COORDINATOR, AgentRole.SCOUT],
+    search_crossref: [AgentRole.COORDINATOR],
+    search_core: [AgentRole.COORDINATOR],
+    search_europe_pmc: [AgentRole.COORDINATOR],
+    search_scielo: [AgentRole.COORDINATOR],
+    search_semanticscholar: [AgentRole.COORDINATOR],
+    search_papers_optimized: [AgentRole.COORDINATOR, AgentRole.SCOUT],
+    search_repository: [AgentRole.COORDINATOR, AgentRole.SCOUT],
+    harvest_records: [AgentRole.COORDINATOR],
+    get_record_metadata: [AgentRole.COORDINATOR],
+    complete_record_keywords: [AgentRole.COORDINATOR],
     // Abre os links dos registros na rede para conferir o título (linha 13 da FILA, 23/11/2026): é do librarian,
     // como o complete_record_keywords — o screener não baixa.
-    verify_record_links: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
+    verify_record_links: [AgentRole.COORDINATOR],
     // Existência e retratação das referências (linha 19 da FILA, 26/11/2026): do scout na busca exploratória, do
     // designer nas referências do protocolo e do librarian no insumo dos estágios.
-    verify_references: [AgentRole.SCOUT, AgentRole.PROJETISTA, AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
+    verify_references: [AgentRole.COORDINATOR, AgentRole.SCOUT],
 
     // ─── Import & Normalization (LIBRARIAN + COORDINATOR) ───
-    import_dataset_ris: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
-    import_bvs_export: [AgentRole.LIBRARIAN, AgentRole.COORDINATOR],
+    import_dataset_ris: [AgentRole.COORDINATOR],
+    import_bvs_export: [AgentRole.COORDINATOR],
 
     // ─── Screening (SCREENER) ───────────────────────────────
-    screen_candidates: [AgentRole.SCREENER],
+    screen_candidates: [AgentRole.COORDINATOR],
     // Decisões dos revisores humanos por planilha (linha 13 da FILA, 23/11/2026).
-    record_screening_decisions: [AgentRole.SCREENER, AgentRole.COORDINATOR],
-    deduplicate_dataset: [AgentRole.SCREENER, AgentRole.COORDINATOR],
+    record_screening_decisions: [AgentRole.COORDINATOR],
+    deduplicate_dataset: [AgentRole.COORDINATOR],
 
     // ─── Screening Metrics (SCREENER + COORDINATOR + ANALYST) ─────────
     // analyst.md lista get_screening_report no seu contrato de papel → ANALYST autorizado
-    get_screening_report: [AgentRole.SCREENER, AgentRole.COORDINATOR, AgentRole.ANALYST],
+    get_screening_report: [AgentRole.COORDINATOR],
 
     // ─── Text Extraction / Aquisição (LIBRARIAN) ────────────
-    download_and_extract_pdfs: [AgentRole.LIBRARIAN],
-    retrieve_fulltexts: [AgentRole.LIBRARIAN],
-    retrieve_fulltext_byos: [AgentRole.LIBRARIAN], // Sci-Hub/BYOS opt-in — só librarian, só após "sim" humano (RV governança)
-    expand_search_snowball: [AgentRole.LIBRARIAN], // nome real da tool registrada (antes mapeado errado como snowball_search)
+    download_and_extract_pdfs: [AgentRole.COORDINATOR],
+    retrieve_fulltexts: [AgentRole.COORDINATOR],
+    retrieve_fulltext_byos: [AgentRole.COORDINATOR], // Sci-Hub/BYOS opt-in — só após "sim" humano, que a tool exige em `consentimento`
+    expand_search_snowball: [AgentRole.COORDINATOR], // nome real da tool registrada (antes mapeado errado como snowball_search)
 
     // ─── Data Export (EXTRACTOR + ANALYST + COORDINATOR) ────
-    export_dataset: [AgentRole.EXTRACTOR, AgentRole.ANALYST, AgentRole.COORDINATOR],
+    export_dataset: [AgentRole.COORDINATOR],
 
     // ─── Audit (COORDINATOR + ANALYST) ──────────────────────
-    audit_methodology: [AgentRole.COORDINATOR, AgentRole.ANALYST],
-    validate_prisma_flow: [AgentRole.COORDINATOR, AgentRole.ANALYST],
+    audit_methodology: [AgentRole.COORDINATOR],
+    validate_prisma_flow: [AgentRole.COORDINATOR],
 
     // ─── Manutenção do próprio sistema (MAINTAINER) — RV-11 ──
     // Exclusiva do MAINTAINER de propósito: nenhum agente de execução de revisão altera o
@@ -124,10 +121,10 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     audit_system_debt: [AgentRole.MAINTAINER],
     // Consulta de padrão: o MAINTAINER audita cobertura; o ANALYST gera o checklist de
     // conformidade na F8 (é suplemento obrigatório do manuscrito).
-    check_standard_coverage: [AgentRole.MAINTAINER, AgentRole.ANALYST],
+    check_standard_coverage: [AgentRole.COORDINATOR, AgentRole.MAINTAINER],
     // O catálogo é o mapa do território metodológico. PROJETISTA consulta ao desenhar o
     // protocolo (que método cabe nesta pergunta?); MAINTAINER mantém e audita.
-    query_methodology_catalog: [AgentRole.MAINTAINER, AgentRole.PROJETISTA],
+    query_methodology_catalog: [AgentRole.COORDINATOR, AgentRole.MAINTAINER],
     // Lado de ESCRITA do mantenedor — exclusivo dele. Quem executa revisao nao altera o
     // sistema que a governa, e criar metodologia por fora do RV-11 seria o caminho facil
     // de contornar o gate.
@@ -143,53 +140,11 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
  */
 export class AgentOrchestrator {
     private static REGISTRY: Record<AgentRole, AgentCapability> = {
-        [AgentRole.PROJETISTA]: {
-            canWriteProtocol: true,
-            canDownload: false,
-            canAccessLLM: true,
-            canDeleteFiles: false,
-            canReadMetrics: false,
-        },
         [AgentRole.COORDINATOR]: {
             canWriteProtocol: true,
             canDownload: true,
             canAccessLLM: true,
             canDeleteFiles: true,
-            canReadMetrics: true,
-        },
-        [AgentRole.LIBRARIAN]: {
-            canWriteProtocol: false,
-            canDownload: true,
-            canAccessLLM: false,
-            canDeleteFiles: false,
-            canReadMetrics: false,
-        },
-        [AgentRole.SCREENER]: {
-            canWriteProtocol: false,
-            canDownload: false,
-            canAccessLLM: true,
-            canDeleteFiles: false,
-            canReadMetrics: true,
-        },
-        [AgentRole.EXTRACTOR]: {
-            canWriteProtocol: false,
-            canDownload: false,
-            canAccessLLM: true,
-            canDeleteFiles: false,
-            canReadMetrics: false,
-        },
-        [AgentRole.READER]: {
-            canWriteProtocol: false,
-            canDownload: false,
-            canAccessLLM: true,
-            canDeleteFiles: false,
-            canReadMetrics: false,
-        },
-        [AgentRole.ANALYST]: {
-            canWriteProtocol: false,
-            canDownload: false,
-            canAccessLLM: true,
-            canDeleteFiles: false,
             canReadMetrics: true,
         },
         [AgentRole.SCOUT]: {

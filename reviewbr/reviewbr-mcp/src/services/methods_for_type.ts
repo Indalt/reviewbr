@@ -53,8 +53,8 @@ function dirMetodologias(repoRoot: string): string {
  * positivo — a mesma classe de erro que o controle positivo existe para pegar.
  */
 function pendencias(dir: string, manifest: any): string[] {
-    const agentes = path.join(dir, "..", "..", "agents");
-    const faltas: string[] = errosDaTrilha(manifest?.phases, agentes);
+    const skills = path.join(dir, "..", "..", "skills");
+    const faltas: string[] = errosDaTrilha(manifest?.phases, skills);
 
     const spec = manifest?.spec;
     if (!spec || !fs.existsSync(path.join(dir, String(spec)))) faltas.push("spec.md ausente");

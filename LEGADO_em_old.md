@@ -117,3 +117,25 @@ não tira nada do histórico público do repositório.
 | `reviewbr-web/src/app/page.tsx` | `7f4177c` (2026-03-01) |
 | `reviewbr-web/src/lib/llm-providers.ts` | `7f4177c` (2026-03-01) |
 | `reviewbr-web/tsconfig.json` | `7f4177c` (2026-03-01) |
+
+## Agentes de etapa (linha 25, 28/11/2026)
+
+Origem: linha 25 da `.claude/maintenance/FILA.md`, ponto 6.4 (Hipótese A), aprovado pelo Vicente em 26/11/2026 ("6.4
+ok"; "preferindo a hipotese A se isso nao implicar nos desvios comuns de IA"). Movidos em 28/11/2026 para
+`C:\reviewbr\old\agentes_2026-11-28\`, com o mesmo caminho relativo à raiz.
+
+**Por que saíram:** os seis agentes de etapa se fundiram no coordenador (skill `conduct-review`). O procedimento de
+cada um foi para a skill da etapa, que o `manifest.json` nomeia em `role`: `designer` → `protocol-design` (skill nova,
+com o corpo do agente); `librarian` → `prisma-s-logging` (a aquisição de texto completo foi para a `screening-rules`,
+F4.3); `screener` → `screening-rules`; `extractor` → `extraction-form`; `reader` → `evidence-reading`; `analyst` →
+`synthesis-manuscript`. Antes de saírem, as sete tools que só a lista `tools:` de um deles prendia entraram na trilha
+(commit `2d83e43`). Ficaram em `.claude/agents/`: `scout` (fora da trilha) e `maintainer` (o próprio sistema).
+
+| caminho | último commit que o alterou |
+|---|---|
+| `.claude/agents/designer.md` | `e25af55` (2026-11-28) |
+| `.claude/agents/librarian.md` | `a5a077c` (2026-11-27) |
+| `.claude/agents/screener.md` | `e25af55` (2026-11-28) |
+| `.claude/agents/extractor.md` | `4a2c082` (2026-11-12) |
+| `.claude/agents/reader.md` | `4a2c082` (2026-11-12) |
+| `.claude/agents/analyst.md` | `4a2c082` (2026-11-12) |

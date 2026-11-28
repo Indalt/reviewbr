@@ -409,7 +409,7 @@ export class MethodologyWriter {
 
         // DEBT-100 — a trilha é dado que o runtime LÊ: etapa malformada não é estética, é
         // projeto que nasce numa etapa que ninguém declarou ou fase que nunca avança.
-        for (const e of errosDaTrilha(man.phases, path.join(repoRoot, ".claude", "agents"))) {
+        for (const e of errosDaTrilha(man.phases, path.join(repoRoot, ".claude", "skills"))) {
             errors.push(`Trilha: ${e}.`);
         }
         const etapas: any[] = Array.isArray(man.phases) ? man.phases : [];

@@ -126,7 +126,7 @@ export class ProtocolDesignAuditor {
             const hasParentheses = /[()]/.test(syntaxSection);
 
             if (this.temTBD(syntaxSection)) {
-                errors.push("🚫 A estratégia de busca contém [TBD]. Uma string com [TBD] não é executável: o librarian buscaria o literal.");
+                errors.push("🚫 A estratégia de busca contém [TBD]. Uma string com [TBD] não é executável: a busca usaria o literal.");
             } else if (hasBooleans || hasParentheses) {
                 validSyntaxParams = true;
                 score++;

@@ -375,7 +375,7 @@ function conferirTravas12(repoRoot: string, projectDir: string, tool: string, ct
                 motivo: recusa(tool, etapa,
                     `não roda: a etapa anterior, ${anterior.id} (${anterior.name}), não fechou — o artefato que a encerra (${anterior.closes_with}) não existe.`,
                     "trava 2 da linha 24 — as etapas correm na ordem da trilha do método.", false,
-                    `Faça antes a etapa ${anterior.id} (executa: ${anterior.role}).`),
+                    `Faça antes a etapa ${anterior.id} (procedimento: skill \`${anterior.role}\`).`),
             };
         }
         const gate = ProjectStateService.podeAvancar(projectDir, anterior.id);

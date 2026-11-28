@@ -29,8 +29,11 @@ afterEach(() => { for (const d of temporarios.splice(0)) fs.rmSync(d, { recursiv
 function repoComMetodoDeCampo(): string {
     const raiz = fs.mkdtempSync(path.join(os.tmpdir(), "trilha-"));
     temporarios.push(raiz);
-    fs.mkdirSync(path.join(raiz, ".claude", "agents"), { recursive: true });
-    for (const a of ["designer", "librarian"]) fs.writeFileSync(path.join(raiz, ".claude", "agents", `${a}.md`), `# ${a}\n`);
+    // Linha 25: `role` é a skill do procedimento da etapa (.claude/skills/<role>/SKILL.md), não um agente.
+    for (const a of ["designer", "librarian"]) {
+        fs.mkdirSync(path.join(raiz, ".claude", "skills", a), { recursive: true });
+        fs.writeFileSync(path.join(raiz, ".claude", "skills", a, "SKILL.md"), `# ${a}\n`);
+    }
     const dir = path.join(raiz, ".claude", "methodologies", "campo-x");
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, "spec.md"), "# campo\n");

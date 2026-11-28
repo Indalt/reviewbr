@@ -74,10 +74,13 @@ function normalizar(rel: string): string {
 /**
  * Erros ESTRUTURAIS da trilha declarada em `phases`. Lista vazia = trilha legível.
  *
- * Com `agentesDir`, confere também que o papel de cada etapa existe como agente: etapa
- * entregue a um papel que não existe é etapa que ninguém executa.
+ * Com `skillsDir`, confere também que o procedimento de cada etapa existe: `role` é o nome da
+ * skill que o coordenador carrega para executá-la (`.claude/skills/<role>/SKILL.md`). Etapa
+ * entregue a um procedimento que não existe é etapa que ninguém sabe executar.
+ * Linha 25 da FILA (Hipótese A, 28/11/2026): os agentes de etapa se fundiram no coordenador, e
+ * `role` deixou de nomear um agente de `.claude/agents/`.
  */
-export function errosDaTrilha(phases: unknown, agentesDir?: string): string[] {
+export function errosDaTrilha(phases: unknown, skillsDir?: string): string[] {
     if (!Array.isArray(phases)) {
         if (phases && typeof phases === "object") {
             const chaves = Object.keys(phases);
@@ -121,9 +124,9 @@ export function errosDaTrilha(phases: unknown, agentesDir?: string): string[] {
         }
 
         const role = texto(e.role);
-        if (!role) erros.push(`${rot}: sem 'role' — que papel executa a etapa`);
-        else if (agentesDir && !fs.existsSync(path.join(agentesDir, `${role}.md`))) {
-            erros.push(`${rot}: papel "${role}" não existe em .claude/agents/`);
+        if (!role) erros.push(`${rot}: sem 'role' — a skill com o procedimento da etapa`);
+        else if (skillsDir && !fs.existsSync(path.join(skillsDir, role, "SKILL.md"))) {
+            erros.push(`${rot}: o procedimento "${role}" não existe em .claude/skills/ (role é a skill da etapa)`);
         }
         if (!texto(e.closes_with)) {
             erros.push(`${rot}: sem 'closes_with' — que artefato encerra a etapa (lacuna se declara com "${ARTEFATO_NAO_DEFINIDO}] motivo")`);
@@ -229,7 +232,7 @@ export function lerTrilha(repoRoot: string, methodId: string): Trilha {
     } catch (e: any) {
         return { methodId, etapas: [], erros: [`manifest.json de "${methodId}" ilegível: ${e.message}`] };
     }
-    const erros = errosDaTrilha(man?.phases, path.join(repoRoot, ".claude", "agents"));
+    const erros = errosDaTrilha(man?.phases, path.join(repoRoot, ".claude", "skills"));
     if (erros.length) return { methodId, etapas: [], erros };
 
     const etapas: Etapa[] = (man.phases as any[]).map((e) => ({

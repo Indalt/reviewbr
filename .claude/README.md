@@ -13,10 +13,14 @@ O estado vive em arquivos (`protocol.md`, `project_state.json`, `prisma_flow.jso
 
 ## Estrutura
 
-- **`agents/`** — 7 subagentes especialistas (julgamento, contexto isolado):
-  `designer` (F0/F1) · `librarian` (F2) · `screener` (F3/F4) · `extractor` (F5) · `reader` (F5.5 leitura/RAG) · `analyst` (F6/F7/F8) · `scout` (exploratório, fora da trilha PRISMA).
+- **`agents/`** — 2 subagentes fora da trilha: `scout` (exploratório, fora da trilha PRISMA) · `maintainer` (o próprio
+  sistema). Os seis agentes de etapa (`designer`, `librarian`, `screener`, `extractor`, `reader`, `analyst`) se
+  fundiram no coordenador em 28/11/2026 (linha 25 da FILA; lista em `LEGADO_em_old.md`).
 - **`skills/`** — procedimento/conhecimento carregável:
-  `conduct-review` (orquestrador+interface) · `methodology-router` · `prisma-rigor-gates` · `prisma-s-logging` · `screening-rules` · `extraction-form` · `evidence-reading` · `synthesis-manuscript`.
+  `conduct-review` (coordenador+interface, executa a trilha) · `methodology-router` · `prisma-rigor-gates` · uma skill
+  por etapa, nomeada no `role` da trilha: `protocol-design` (F0/F1) · `prisma-s-logging` (F2) · `screening-rules`
+  (F3/F4) · `extraction-form` (F5) · `evidence-reading` (F5.5) · `synthesis-manuscript` (F6/F7/F8) · `system-audit`
+  (do `maintainer`).
 - **`methodologies/`** — metodologia **plugável** (dado, não código). `prisma-sr/` = revisão sistemática (PRISMA 2020 + PRISMA-S). Cada método tem `spec.md` (fases F0–F8 + invariantes RV), `manifest.json` (fases ativas/gates/framework) e templates.
 
 ## Fronteiras (regra que evita recair no problema antigo)

@@ -80,13 +80,15 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 28/11/2026, linha 24 feita: trava 3 construída depois da aprovação do Vicente ("aprovo a
-trava 3"; versão = só o que o projeto usa, a opção recomendada) — build e suíte 740 de 740; audit válido, 0 achados
-abertos; gate CORRECAO válido; fila: linha 10 em curso, 22 e 25 a 30 a fazer; 53 itens no "Visto de passagem". `git
-status`: só os 17 arquivos rastreados do `roda_aromas_ceara` como apagados (a pasta está em `C:\roda_aromas_ceara` por
-decisão do Vicente; nenhum commit grava essa deleção). Decisões novas: a da trava 3 (seção "Linha 24"). **Próximo
-passo:** a linha 25. Assume: o Claude, na manutenção. Intocado: a pasta `C:\roda_aromas_ceara` (esta sessão não a leu
-nem gravou).
+**Última verificação:** 28/11/2026, linha 25 feita (Hipótese A): os seis agentes de etapa se fundiram no
+coordenador, depois de as sete tools que só uma lista `tools:` prendia entrarem na trilha — build e suíte 744 de 744;
+audit válido, 0 achados abertos; gate CORRECAO válido nas duas partes; fila: linha 10 em curso, 22 e 26 a 30 a fazer;
+53 itens no "Visto de passagem". `git status`: só os 17 arquivos rastreados do `roda_aromas_ceara` como apagados
+(nenhum commit grava essa deleção). Decisões novas do Vicente: nenhuma. **Atenção para a pesquisa:** os dois
+`manifest.json` mudaram (etapa das sete tools e `role`), e a trava 3 faz as tools de etapa de um projeto travado
+recusarem até a emenda de migração (`record_protocol_amendment`, `migracao: true`), aprovada pelo pesquisador.
+**Próximo passo:** a linha 22 ou a 26, à escolha do Vicente. Assume: o Claude, na manutenção. Intocado: a pasta
+`C:\roda_aromas_ceara` (esta sessão não a leu nem gravou).
 
 ## Fila
 
@@ -117,7 +119,7 @@ nem gravou).
 | 22 | Investigação: DataCite, OpenAIRE Graph, OSF, ASReview v2 e a camada do 4.4 | — | — | **a fazer** (aprovada em 26/11/2026): só leitura, na fonte oficial; nem todos são fontes de busca de artigo |
 | 23 | Procedência que o sistema não confere: registra a limitação, e a pesquisa segue | ponto 3 da segunda resposta de 26/11, na seção "Pedido do Vicente de 25/11/2026" | os textos do `verify_record_links`, da `record_screening_decisions`, da skill `screening-rules` e do `screener` | **feita em 26/11/2026** (commit `6125977`): detalhe em "Linha 23", logo antes de "Como uma linha entra na fila" |
 | 24 | Travas em código por etapa: decisão antes da etapa, ordem e insumo, sistema e sessão presos ao projeto | pontos 6.2 e 6.3, reescritos em 26/11, com as condições da segunda resposta | — | **feita em 28/11/2026**: travas 1 e 2 em 27/11, trava 3 em 28/11 depois da aprovação do Vicente (detalhe em "Linha 24", logo antes de "Linha 19") |
-| 25 | Hipótese A: os agentes de etapa num coordenador, com o `maintainer` à parte | ponto 6.4 | — | **a fazer** (aprovada em 26/11/2026), depois da 24 |
+| 25 | Hipótese A: os agentes de etapa num coordenador, com o `maintainer` à parte | ponto 6.4 | — | **feita em 28/11/2026** (commits `2d83e43` e o seguinte): sete tools entraram na trilha antes da fusão; os seis agentes de etapa em `old/agentes_2026-11-28/`; detalhe em "Linha 25", logo antes de "Linha 24" |
 | 26 | Ressalvas das tools: rede e repositórios | ponto 8, grupo 1 da lista de 26/11 | — | **a fazer**: começa conferindo cada item no código |
 | 27 | Ressalvas das tools: coleta e importação | ponto 8, grupo 2 | — | **a fazer**: começa conferindo cada item no código |
 | 28 | Ressalvas das tools: protocolo e estado | ponto 8, grupo 3 | — | **a fazer**: começa conferindo cada item no código |
@@ -1327,6 +1329,66 @@ espera decisão:
   P5 (linha 18); a UFC que alternava e o IFCE com 1 registro (comportamento da fonte).
 
 Pergunta: tiro?
+
+### Linha 25 — Hipótese A: os agentes de etapa no coordenador (feita em 28/11/2026)
+
+Decisão do Vicente: ponto 6.4 da seção "Pedido do Vicente de 25/11/2026", "6.4 ok" em 26/11, com a condição "preferindo
+a hipotese A se isso nao implicar nos desvios comuns de IA". A condição veio primeiro: nenhuma barreira que a lista
+`tools:` dava sumiu sem virar trava em código.
+
+**Inventário — o que cada lista `tools:` barrava, e se o código já barrava** (antes da fusão):
+- **Já em código (linha 24):** as 11 de busca e importação da F2; `deduplicate_dataset` (F3); `screen_candidates`,
+  `batch_keyword_screen` (modo dos registros), `batch_db_screen` e `record_screening_decisions` (F4);
+  `batch_llm_extract` (F5); `rag_index_corpus` (F5.5). Antes da trava, toda tool de busca, importação e texto completo
+  recusa (`ProtocolGate`): o `designer` não buscava, e a tool também não deixa. O screener não buscar, o librarian não
+  triar, o screener não extrair: a trava 2 recusa fora da ordem.
+- **Só na lista — viraram trava (FAZER, commit `2d83e43`):** `expand_search_snowball` e `harvest_records` (só do
+  librarian; tinham o nome passado à trava, mas nenhuma etapa os listava, e a `etapaDaTool` devolvia nada) → F2;
+  `complete_record_keywords`, `verify_record_links`, `retrieve_fulltexts`, `download_and_extract_pdfs` e
+  `retrieve_fulltext_byos` (só do librarian; "o screener não baixa"; o librarian "baixa só os incluídos") → F4 (F4.3),
+  e o `retrieve_fulltexts` com `datasetPath` do chamador recusa o insumo. Consequência: texto completo antes de a F3
+  fechar e colheita depois de a F2 fechar são recusados; o que faltar depois é emenda com `reabrir`.
+- **Sem barreira a perder:** `record_researcher_decision`, a aprovação da `record_protocol_amendment` e a
+  `submit_protocol_for_approval` já eram do coordenador, que é a sessão principal e não tem lista: quem grava as
+  palavras do pesquisador não muda. Limite, que já existia: o código recusa o carimbo e não sabe quem escreveu.
+  `heal_repositories` muda o catálogo, e a trava 3 já faz o projeto travado recusar até a emenda de migração. As de
+  leitura e os gates (`get_screening_report`, `compute_flow_counts`, `validate_prisma_flow`, `audit_methodology`,
+  `check_standard_coverage`, `rag_query`, `get_search_plan`, `query_methodology_catalog`, `assess_research_design`,
+  `validate_repository`, `get_record_metadata`, `export_dataset`, `translate_document`, `batch_keyword_screen` no modo
+  PDF) não gravam artefato do funil.
+- **Nunca foi barreira:** as nativas (Read, Write, Edit, Bash, WebFetch) estavam em todo agente de etapa; "o screener
+  não baixa" nunca impediu `curl` nem `Write` em `01_raw/`. O arquivo de etapa editado à mão é pego pelo hash quando a
+  etapa seguinte roda (linha 24). No Gemini, os agentes não são lidos: lá a lista nunca valeu.
+
+**Etapas sem tool, o que a fusão muda nelas:** nada em código, e não há trava a prometer. A extração escrita pelo
+agente sem `batch_llm_extract`, o `evidence_synthesis.md`, o risco de viés, a síntese e o manuscrito só têm trava
+quando uma tool da etapa é chamada; F6, F7 e F8 não têm tool de etapa. O que muda é o contexto: antes, o subagente
+recebia só a fase corrente; agora o coordenador tem todas. O que segura a ordem é a trava 2 (a tool da etapa seguinte
+recusa enquanto a corrente não fecha; sob `estrito`, só fecha com a decisão do pesquisador). Nas etapas sem tool, o
+que confere são os gates da F8 (`export_dataset`, `validate_prisma_flow`, `check_standard_coverage`) e o pesquisador.
+Está escrito assim na `conduct-review` e nas skills de etapa.
+
+**Feito.**
+- **FAZER, parte 1 (commit `2d83e43`):** as sete tools nos dois `manifest.json` (`step_tools` da F2 e da F4) e o nome
+  delas na trava (`index.ts`). `tests/fusao_barreiras.test.ts`, 7 testes, falham antes; suíte 747 de 747.
+- **FAZER, parte 2:** `role` da trilha passa a ser a skill do procedimento da etapa (`.claude/skills/<role>/SKILL.md`),
+  não um agente: `errosDaTrilha` (e quem a chama: `lerTrilha`, `MethodologyWriter.validar`, `pendencias`) confere a
+  skill; as mensagens dizem "procedimento: skill X". Nos dois manifests: F0/F1 `protocol-design`, F2
+  `prisma-s-logging`, F3/F4 `screening-rules`, F5 `extraction-form`, F5.5 `evidence-reading`, F6–F8
+  `synthesis-manuscript`. `agent_orchestrator`: os seis papéis de etapa saem; o COORDINATOR tem toda tool de projeto e
+  nenhuma de escrita da manutenção. Testes: 2 novos no `fusao_barreiras`, o DEBT-100 do `maintenance_writes` com a
+  mensagem nova (falham antes); `governance`, `escolha_com_contexto`, `porta_do_backlog` reescritos para o
+  coordenador; 7 fixtures criam a skill em vez do agente. Suíte 744 de 744.
+- **DECLARAR:** skill nova `protocol-design` com o corpo do `designer`; o corpo dos outros cinco foi para a skill da
+  etapa (a aquisição de texto completo do `librarian` foi para a `screening-rules`, F4.3); `conduct-review` executa
+  cada etapa com a skill dela e diz o que separa as etapas e o que não tem trava; `methodology-router`,
+  `prisma-rigor-gates`, `scout.md`, `maintainer.md` (L170, L365), `.claude/README.md`, `TOOL_CONTRACTS.md`,
+  `SYSTEM_PROMPT.md`, `METODO_ReviewBR.md` (6.2, só o sujeito: "o agente que propõe a síntese"), comentários e
+  mensagens do servidor. Os seis agentes em `old/agentes_2026-11-28/`, listados no `LEGADO_em_old.md` com o último
+  commit de cada um.
+
+**Limite:** os dois `manifest.json` mudaram; pela trava 3, projeto travado recusa as tools de etapa até a emenda de
+migração aprovada pelo pesquisador (é o alcance decidido em 28/11). Esta sessão não leu a pasta do `roda_aromas_ceara`.
 
 ### Linha 24 — travas em código por etapa (travas 1 e 2 feitas em 27/11/2026; a 3 em 28/11/2026)
 

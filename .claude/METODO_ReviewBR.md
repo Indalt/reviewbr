@@ -204,7 +204,7 @@ declara.
 - O ReviewBR não protege contra fraude deliberada de quem tem acesso ao disco (P9, terceiro nível).
 
 **6.2 A síntese proposta por agente e o RAISE 3.**
-- O agente `analyst` não compete com o pesquisador. O que ele propõe e o pesquisador aprova é decisão do
+- O agente que propõe a síntese (o coordenador, na F7) não compete com o pesquisador. O que ele propõe e o pesquisador aprova é decisão do
   pesquisador: fica registrada (RV-04) e é revisada por ele (P7).
 - Quando a metodologia, a norma de relato ou o periódico exigem o RAISE, o ReviewBR informa ao pesquisador que o
   RAISE 3 dá como não aceitável (a) a síntese de resultados entre estudos feita por LLM e (b) a síntese por

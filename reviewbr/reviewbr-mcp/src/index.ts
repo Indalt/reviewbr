@@ -101,7 +101,9 @@ const repositoryHealerService = new RepositoryHealerService();
  * O modelo antigo mantinha UM papel mutável no servidor ("um chapéu por vez") e
  * bloqueava toda tool fora dele — o que travava um cliente novo (default PROJETISTA)
  * de buscar ou triar até chamar switch_agent. No cockpit multi-subagente do Claude Code,
- * a fronteira de papéis é o allow-list de cada subagente em `.claude/agents/`, e o
+ * a fronteira de papéis era o allow-list de cada subagente em `.claude/agents/`. Desde
+ * a linha 25 da FILA (28/11/2026), os agentes de etapa se fundiram no coordenador, e o que
+ * separa as etapas é a trava de etapa no código (travas_etapa.ts). O
  * guardião DECLARATIVO (consultável) vive em `registry/agent_orchestrator.ts`
  * (defense-in-depth). Por isso `guardedHandler` vira PASS-THROUGH — mantém os
  * call-sites existentes sem bloquear em runtime.
@@ -433,8 +435,9 @@ const server = new McpServer({
 });
 
 // ─── Guardião de completude (RV-06) ───────────────────────────
-// A fronteira de papéis POR CHAMADOR é imposta pelo harness do Claude Code
-// (campos `tools:`/`mcpServers:` de cada subagente em `.claude/agents/`), pois o
+// A fronteira de papéis POR CHAMADOR, onde existe (scout e maintainer), é imposta pelo harness
+// do Claude Code (campos `tools:`/`mcpServers:` em `.claude/agents/`); entre as etapas da
+// trilha, desde a linha 25, é a trava de etapa (travas_etapa.ts), pois o
 // servidor único compartilhado não sabe qual subagente chamou. O guardião no
 // runtime do servidor garante a INTEGRIDADE do mapa de governança: registramos
 // o nome de toda tool exposta e, no boot (main()), exigimos que cada uma tenha
@@ -477,8 +480,8 @@ server.resource(
 
 // ─── Agent Orchestrator Tools REMOVIDAS ───────────────────────
 // `get_current_agent` e `switch_agent` foram aposentadas com o modelo de papel
-// mutável. No cockpit multi-subagente, cada subagente (.claude/agents/) já é um
-// papel isolado com seu próprio allow-list — não há chapéu para trocar em runtime.
+// mutável. Desde a linha 25 (28/11/2026) um coordenador executa as etapas, e a ordem
+// entre elas é conferida em código pelas tools de etapa — não há chapéu para trocar em runtime.
 
 // ─── PROJETISTA Knowledge Resource ────────────────────────────
 
@@ -624,8 +627,8 @@ server.tool(
         // Next steps
         sections.push(`\n### ➡️ Próximos Passos\n`);
         sections.push(`1. Pesquisador confirma o tipo e o método, sabendo o que cada um exige`);
-        sections.push(`2. O subagente **designer** chama \`plan_research_protocol\` e trava o protocolo`);
-        sections.push(`3. O coordenador (skill conduct-review) aciona o subagente **librarian** para as buscas`);
+        sections.push(`2. O coordenador (skill conduct-review), com a skill \`protocol-design\`, chama \`plan_research_protocol\` e trava o protocolo`);
+        sections.push(`3. O coordenador executa as buscas do plano congelado, com a skill \`prisma-s-logging\``);
 
         return {
             content: [{ type: "text", text: sections.join("\n") }],
@@ -1752,7 +1755,7 @@ server.tool(
         etapa: z.string().optional().describe("Id da etapa na trilha do método do projeto (ex.: 'F3') — a etapa sobre a qual ele decidiu. Com 'condicao', dispensável: a etapa é a da condição."),
         contribuicao: z.string().describe("O que o pesquisador avaliou e o que decidiu, nas palavras dele"),
         decisao: z.string().optional().describe("Resumo curto da decisão, se diferente da contribuição"),
-        agente: z.string().optional().describe("Quem levou a decisão ao registro (ex.: 'coordinator', 'screener')"),
+        agente: z.string().optional().describe("Quem levou a decisão ao registro (ex.: 'coordinator')"),
         condicao: z.string().optional().describe("Id de uma condição declarada no manifest do método do projeto (ex.: 'avaliacao_critica') — para gravar a resposta do pesquisador a ela"),
         resposta: z.string().optional().describe("Com 'condicao': a opção que o pesquisador escolheu, uma das declaradas pelo método"),
     },
@@ -1895,7 +1898,7 @@ server.tool(
             // Trilha ilegível não é trilha sem etapa seguinte: afirmar uma propriedade de uma
             // trilha que nem foi lida esconderia a causa real.
             const notaEtapa = abre
-                ? `\nEtapa seguinte na trilha do método: ${abre.id} — ${abre.name} (executa: ${abre.role}).`
+                ? `\nEtapa seguinte na trilha do método: ${abre.id} — ${abre.name} (procedimento: skill \`${abre.role}\`).`
                 : trilhaProj && trilhaProj.erros.length
                     ? `\n🚧 A trilha do método não pôde ser lida (${trilhaProj.erros.join("; ")}): a fase do projeto NÃO mudou.`
                     : `\n🚧 A trilha do método não declara etapa depois do protocolo: a fase do projeto NÃO mudou.`;

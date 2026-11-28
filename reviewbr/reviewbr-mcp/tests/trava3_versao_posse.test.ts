@@ -27,7 +27,7 @@ const TODAS = { quem_decide_triagem: "revisores humanos, por planilha", revisore
 function repoDeTeste(): string {
     const r = fs.mkdtempSync(path.join(os.tmpdir(), "trava3-repo-"));
     fs.cpSync(path.join(REPO, ".claude", "methodologies", "prisma-sr"), path.join(r, ".claude", "methodologies", "prisma-sr"), { recursive: true });
-    fs.cpSync(path.join(REPO, ".claude", "agents"), path.join(r, ".claude", "agents"), { recursive: true });
+    fs.cpSync(path.join(REPO, ".claude", "skills"), path.join(r, ".claude", "skills"), { recursive: true });
     fs.cpSync(path.join(MCP, "data", "sources"), path.join(r, "reviewbr", "reviewbr-mcp", "data", "sources"), { recursive: true });
     fs.copyFileSync(path.join(MCP, "package.json"), path.join(r, "reviewbr", "reviewbr-mcp", "package.json"));
     return r;

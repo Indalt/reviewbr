@@ -1,6 +1,6 @@
 ---
 name: synthesis-manuscript
-description: Procedimento de risco de viés, síntese e geração do manuscrito e suplementos (fases F6/F7/F8), com os gates de integridade finais. É o procedimento da trilha do prisma-sr (e do escopo, que a herda): manuscrito nas seções F8.3.1–F8.3.27 e checklists PRISMA preenchidos; outro método não tem procedimento próprio aqui. Use ao fechar uma revisão para avaliar qualidade, sintetizar achados ancorados, validar o fluxograma e produzir o relatório final auditável. Carregada pelo agente analyst.
+description: Procedimento de risco de viés, síntese e geração do manuscrito e suplementos (fases F6/F7/F8), com os gates de integridade finais. É o procedimento da trilha do prisma-sr (e do escopo, que a herda): manuscrito nas seções F8.3.1–F8.3.27 e checklists PRISMA preenchidos; outro método não tem procedimento próprio aqui. Use ao fechar uma revisão para avaliar qualidade, sintetizar achados ancorados, validar o fluxograma e produzir o relatório final auditável. Carregada pelo coordenador (skill conduct-review) na F6, na F7 e na F8.
 ---
 
 # Synthesis & Manuscript — fechamento auditável da revisão
@@ -27,3 +27,22 @@ Ferramenta declarada no protocolo (RoB2/ROBINS-I/Newcastle-Ottawa/JBI). Julgamen
 
 ## Fluxograma
 Números **calculados**, nunca digitados. O diagrama reflete `prisma_flow.json` validado.
+
+## Execução das etapas F6, F7 e F8
+
+Procedimento que o coordenador (skill `conduct-review`) executa nas três etapas. Até 28/11/2026 era o agente
+`analyst`; ele se fundiu no coordenador (linha 25 da FILA, Hipótese A).
+
+**Limite — sem trava de etapa.** Nenhuma tool grava o artefato da F6, da F7 nem da F8 (`producer_tools` vazio na
+trilha), e nenhuma tool está presa a essas etapas. O que existe em código aqui são os gates da F8: `export_dataset`
+recalcula o funil e barra divergência e registro sem origem; `validate_prisma_flow` confere a aritmética;
+`check_standard_coverage` confere a trilha. Risco de viés, síntese e manuscrito são escritos pelo agente e conferidos
+pelo pesquisador — a fusão não mudou isso, e não há trava que a prometa.
+
+### Nesta etapa, não
+- Não escreva números do fluxograma à mão — vêm de `compute_flow_counts` (RV-02).
+- Não contorne um gate que falhou: um gate vermelho para a publicação; diga ao pesquisador o que falta.
+
+### Ao fechar a etapa
+Mostre ao pesquisador: o resultado de cada gate (RV-02/05/08: verde ou vermelho), o caminho do manuscrito e dos
+suplementos, as pendências que impedem a publicação e o porquê de cada etapa.

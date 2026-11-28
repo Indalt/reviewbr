@@ -27,8 +27,9 @@ function repo(titulosOficiais = true): string {
     const raiz = fs.mkdtempSync(path.join(os.tmpdir(), "cobertura-"));
     temporarios.push(raiz);
     const c = (p: string) => path.join(raiz, ".claude", p);
-    for (const d of ["agents", "standards", "methodologies/m1/conformance"]) fs.mkdirSync(c(d), { recursive: true });
-    for (const a of ["designer", "analyst"]) fs.writeFileSync(c(`agents/${a}.md`), `# ${a}\n`);
+    for (const d of ["standards", "methodologies/m1/conformance"]) fs.mkdirSync(c(d), { recursive: true });
+    // Linha 25: `role` é a skill do procedimento da etapa (.claude/skills/<role>/SKILL.md), não um agente.
+    for (const a of ["designer", "analyst"]) { fs.mkdirSync(c(`skills/${a}`), { recursive: true }); fs.writeFileSync(c(`skills/${a}/SKILL.md`), `# ${a}\n`); }
     const item = (id: string, title: string) => ({ id, section: "", title });
     fs.writeFileSync(c("standards/teste.json"), JSON.stringify({
         schemaVersion: 1, id: "TESTE", name: "Padrão Teste", version: "1", titulos_oficiais: titulosOficiais,

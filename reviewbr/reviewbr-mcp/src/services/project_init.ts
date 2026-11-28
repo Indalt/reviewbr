@@ -343,7 +343,7 @@ ${config.pico.intervention ? `| **Intervenção (I)** | ${config.pico.interventi
         // método aparece riscada e com o motivo — declarada, não omitida.
         const trilhaTexto = etapas.length
             ? etapas.map((e, i) => e.active
-                ? `${i + 1}. **${e.id} — ${e.name}** (executa: \`${e.role}\`)`
+                ? `${i + 1}. **${e.id} — ${e.name}** (procedimento: skill \`${e.role}\`)`
                 : `${i + 1}. ~~${e.id} — ${e.name}~~ — não se aplica a este método: ${e.note}`).join("\n")
             : "[SEM TRILHA DECLARADA]";
 

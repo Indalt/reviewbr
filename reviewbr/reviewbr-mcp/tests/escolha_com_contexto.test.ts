@@ -121,14 +121,20 @@ describe("DEBT-010 — a obsolescência tem lista de trabalho, e a rotina a conf
 });
 
 describe("DEBT-126 — quem executa a etapa devolve o porquê dela", () => {
-    it("os seis papéis da trilha e o coordenador têm a instrução, ancorada no item da norma", () => {
+    // Linha 25 (28/11/2026): os seis agentes de etapa se fundiram no coordenador; quem executa a etapa é
+    // ele, com a skill do procedimento (role da trilha). A instrução inteira fica no coordenador e na skill
+    // da F0/F1, que pede cada bloco do protocolo; cada skill de etapa manda mostrar o porquê ao fechá-la.
+    it("o coordenador e a skill de cada etapa da trilha têm a instrução, ancorada no item da norma", () => {
         const faltando: string[] = [];
-        for (const a of ["designer", "librarian", "screener", "extractor", "reader", "analyst"]) {
-            const md = fs.readFileSync(path.join(CLAUDE, "agents", `${a}.md`), "utf-8");
-            if (!/DEBT-126/.test(md) || !/não invente fundamento/.test(md)) faltando.push(a);
-        }
         const coord = fs.readFileSync(path.join(CLAUDE, "skills", "conduct-review", "SKILL.md"), "utf-8");
-        if (!/Explique o porquê de cada etapa/.test(coord)) faltando.push("conduct-review");
+        if (!/Explique o porquê de cada etapa/.test(coord) || !/DEBT-126/.test(coord)) faltando.push("conduct-review");
+        const desenho = fs.readFileSync(path.join(CLAUDE, "skills", "protocol-design", "SKILL.md"), "utf-8");
+        if (!/DEBT-126/.test(desenho) || !/não invente fundamento/.test(desenho)) faltando.push("protocol-design");
+        const man = JSON.parse(fs.readFileSync(path.join(CLAUDE, "methodologies", "prisma-sr", "manifest.json"), "utf-8"));
+        for (const role of new Set<string>(man.phases.map((e: any) => e.role))) {
+            const md = fs.readFileSync(path.join(CLAUDE, "skills", role, "SKILL.md"), "utf-8");
+            if (!/porquê/.test(md)) faltando.push(role);
+        }
         expect(faltando).toEqual([]);
     });
 });

@@ -8,14 +8,9 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 // tests/ -> reviewbr-mcp -> reviewbr -> <repo root c:\reviewbr> -> .claude/agents
 const AGENTS_DIR = path.resolve(here, "../../../.claude/agents");
 
-// Mapa arquivo-de-agente → papel (fonte-da-verdade dos frontmatters espelha a tabela canônica).
+// Mapa arquivo-de-agente → papel. Linha 25 da FILA (28/11/2026): os seis agentes de etapa se fundiram no
+// coordenador (skill conduct-review, sessão principal, sem lista `tools:`); ficam o scout e o maintainer.
 const AGENT_ROLE: Record<string, AgentRole> = {
-    "designer.md": AgentRole.PROJETISTA,
-    "librarian.md": AgentRole.LIBRARIAN,
-    "screener.md": AgentRole.SCREENER,
-    "extractor.md": AgentRole.EXTRACTOR,
-    "reader.md": AgentRole.READER,
-    "analyst.md": AgentRole.ANALYST,
     "scout.md": AgentRole.SCOUT,
     "maintainer.md": AgentRole.MAINTAINER,
 };
@@ -37,23 +32,28 @@ function frontmatterReviewbrTools(file: string): string[] {
 
 describe("guardião — validateToolAccess (recusa por papel)", () => {
     it("permite tool autorizada para o papel", () => {
-        expect(() => AgentOrchestrator.validateToolAccess(AgentRole.LIBRARIAN, "search_pubmed")).not.toThrow();
+        expect(() => AgentOrchestrator.validateToolAccess(AgentRole.COORDINATOR, "search_pubmed")).not.toThrow();
         expect(() => AgentOrchestrator.validateToolAccess(AgentRole.SCOUT, "search_openalex")).not.toThrow();
     });
 
-    it("RECUSA tool fora do papel (ex.: scout tentando baixar PDF)", () => {
+    it("RECUSA tool fora do papel (ex.: scout tentando baixar PDF; coordenador mudando o sistema)", () => {
         expect(() => AgentOrchestrator.validateToolAccess(AgentRole.SCOUT, "download_and_extract_pdfs"))
             .toThrow(/ACCESS DENIED/);
-        // screener não pode buscar; librarian não pode extrair dados
-        expect(() => AgentOrchestrator.validateToolAccess(AgentRole.SCREENER, "search_pubmed"))
+        expect(() => AgentOrchestrator.validateToolAccess(AgentRole.COORDINATOR, "validate_system_change"))
             .toThrow(/ACCESS DENIED/);
-        expect(() => AgentOrchestrator.validateToolAccess(AgentRole.LIBRARIAN, "batch_llm_extract"))
+        expect(() => AgentOrchestrator.validateToolAccess(AgentRole.MAINTAINER, "search_pubmed"))
             .toThrow(/ACCESS DENIED/);
     });
 
     it("RECUSA tool sem mapeamento (violação de governança)", () => {
-        expect(() => AgentOrchestrator.validateToolAccess(AgentRole.LIBRARIAN, "tool_inexistente"))
+        expect(() => AgentOrchestrator.validateToolAccess(AgentRole.COORDINATOR, "tool_inexistente"))
             .toThrow(/GOVERNANCE ERROR/);
+    });
+
+    it("linha 25: o coordenador tem toda tool de projeto, e nenhuma de escrita da manutenção", () => {
+        const so = ["validate_system_change", "audit_system_debt", "record_system_finding", "absorb_methodology", "scaffold_methodology", "validate_methodology"];
+        const coord = new Set(AgentOrchestrator.getAuthorizedTools(AgentRole.COORDINATOR));
+        for (const t of AgentOrchestrator.getGovernedTools()) expect(coord.has(t), t).toBe(!so.includes(t));
     });
 });
 
@@ -78,7 +78,7 @@ describe("guardião — assertGovernanceCompleteness (guarda de completude bidir
     });
 });
 
-describe("consistência — frontmatter dos 8 agentes == tabela canônica", () => {
+describe("consistência — frontmatter dos agentes (scout e maintainer) == tabela canônica", () => {
     for (const [file, role] of Object.entries(AGENT_ROLE)) {
         it(`${file}: tools reviewbr do frontmatter == getAuthorizedTools(${role})`, () => {
             const mirror = new Set(frontmatterReviewbrTools(path.join(AGENTS_DIR, file)));

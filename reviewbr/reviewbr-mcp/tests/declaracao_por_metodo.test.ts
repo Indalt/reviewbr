@@ -32,7 +32,8 @@ const escrever = (p: string, conteudo: unknown) => {
 function repo(): string {
     const raiz = tmp("por-metodo-");
     const c = (p: string) => path.join(raiz, ".claude", p);
-    for (const a of ["designer", "librarian"]) escrever(c(`agents/${a}.md`), `# ${a}\n`);
+    // Linha 25: `role` é a skill do procedimento da etapa (.claude/skills/<role>/SKILL.md), não um agente.
+    for (const a of ["designer", "librarian"]) escrever(c(`skills/${a}/SKILL.md`), `# ${a}\n`);
     escrever(c("standards/busca.json"), {
         schemaVersion: 1, id: "BUSCA", name: "Padrão de Busca", version: "1", titulos_oficiais: true,
         items: [

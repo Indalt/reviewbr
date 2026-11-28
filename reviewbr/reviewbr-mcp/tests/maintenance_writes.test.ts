@@ -281,8 +281,9 @@ describe("metodologia — validar é a verificação que faltava para ALTERAÇÕ
     function manifesto(o: Record<string, unknown>, mapeamento: unknown = { schemaVersion: 1, standard: "padrao-x", items: [] }) {
         const dir = path.join(RAIZ, ".claude", "methodologies", "alvo");
         fs.mkdirSync(path.join(dir, "conformance"), { recursive: true });
-        fs.mkdirSync(path.join(RAIZ, ".claude", "agents"), { recursive: true });
-        fs.writeFileSync(path.join(RAIZ, ".claude", "agents", "designer.md"), "# designer\n");
+        // Linha 25: `role` é a skill do procedimento da etapa (.claude/skills/<role>/SKILL.md), não um agente.
+        fs.mkdirSync(path.join(RAIZ, ".claude", "skills", "designer"), { recursive: true });
+        fs.writeFileSync(path.join(RAIZ, ".claude", "skills", "designer", "SKILL.md"), "# designer\n");
         fs.writeFileSync(path.join(dir, "spec.md"), "# spec\n");
         fs.writeFileSync(path.join(dir, "manifest.json"), JSON.stringify({
             id: "alvo", spec: "spec.md", conformance: { standards: ["padrao-x"] }, phases: TRILHA,
@@ -326,7 +327,7 @@ describe("metodologia — validar é a verificação que faltava para ALTERAÇÕ
         manifesto({ phases: [{ ...TRILHA[0], role: "etnografo" }] });
         const r = MethodologyWriter.validar(RAIZ, "alvo");
         expect(r.ok).toBe(false);
-        expect(r.errors.join(" ")).toMatch(/papel "etnografo" não existe/);
+        expect(r.errors.join(" ")).toMatch(/o procedimento "etnografo" não existe em \.claude\/skills\//);
     });
 
     it("DEBT-100: reprova tool produtora inexistente — seria afirmar código que não há", () => {

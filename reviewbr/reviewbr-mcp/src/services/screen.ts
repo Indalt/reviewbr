@@ -294,7 +294,7 @@ export class ScreeningService {
         // DEBT-020: só tenta anexar texto completo quando o estágio É fulltext. Em 'ta'
         // (default), NUNCA — mesmo que o arquivo exista — porque a triagem de título/resumo
         // não deve enviesar-se com o texto integral (é a fase seguinte, deliberadamente
-        // mais restrita). Locais na mesma prioridade de rag_lexical.ts (RAG do reader):
+        // mais restrita). Locais na mesma prioridade de rag_lexical.ts (RAG da F5.5):
         // 04_extraction/fulltext primeiro (canônico, escrito por download_and_extract_pdfs),
         // 03_screening/fulltext como fallback. '02_fulltext' NUNCA existiu no sistema.
         let fulltextContent = "";

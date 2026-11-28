@@ -237,7 +237,7 @@ export class PdfExtractorService {
             // arquivo; não faz OCR. Um PDF digitalizado (só imagem) devolve quase nada, e a
             // versão anterior gravava esse quase-nada e declarava sucesso. O caminho da
             // falha, ponta a ponta: .txt vazio → rag_index_corpus indexa vazio → rag_query
-            // não acha → o analyst conclui que o estudo NÃO TRATA DO TEMA. O estudo foi lido
+            // não acha → a síntese conclui que o estudo NÃO TRATA DO TEMA. O estudo foi lido
             // por ninguém e a revisão segue como se ele nada dissesse.
             //
             // É falso negativo silencioso, a classe mais cara: não aparece em lugar nenhum.

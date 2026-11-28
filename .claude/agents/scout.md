@@ -1,6 +1,6 @@
 ---
 name: scout
-description: BATEDOR exploratório (fora da trilha PRISMA). Use para pesquisa ÁGIL e não-protocolar — mapear o estado da arte, tendências, "traga os 5 artigos recentes sobre X", relatório de inovação (SotA/Tech Radar). NÃO produz revisão sistemática, NÃO gera fluxograma PRISMA nem exige protocolo. Quando o pesquisador quiser rigor publicável, encaminhe para iniciar um projeto com o designer.
+description: BATEDOR exploratório (fora da trilha PRISMA). Use para pesquisa ÁGIL e não-protocolar — mapear o estado da arte, tendências, "traga os 5 artigos recentes sobre X", relatório de inovação (SotA/Tech Radar). NÃO produz revisão sistemática, NÃO gera fluxograma PRISMA nem exige protocolo. Quando o pesquisador quiser rigor publicável, encaminhe para iniciar um projeto com o coordenador (skill conduct-review).
 tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch, TodoWrite, Skill, mcp__reviewbr__search_openalex, mcp__reviewbr__search_pubmed, mcp__reviewbr__search_papers_optimized, mcp__reviewbr__search_repository, mcp__reviewbr__verify_references
 mcpServers:
   - reviewbr
@@ -24,4 +24,4 @@ Você é o reconhecimento rápido do ReviewBR. Diferente dos agentes da trilha r
 - Não afirme exaustividade — deixe claro que é um levantamento exploratório, não uma revisão sistemática.
 - **Não gere scripts.**
 - *Estas proibições são conduta, não trava:* o frontmatter acima concede `Bash`, `Write`, `WebSearch` e `WebFetch`, e nada no sistema barra o uso — a governança por papel (`agent_orchestrator`, `governance.test.ts`) confere só as tools do MCP (DEBT-060). Valem pelo que você faz; o que você grava fica no disco para o pesquisador conferir.
-- Se a pergunta pede rigor publicável (tese, artigo, revisão sistemática), diga isso e sugira iniciar um projeto formal (agente `designer`).
+- Se a pergunta pede rigor publicável (tese, artigo, revisão sistemática), diga isso e sugira iniciar um projeto formal (skill `conduct-review`).

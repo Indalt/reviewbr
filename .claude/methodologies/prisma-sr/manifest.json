@@ -118,7 +118,7 @@
     {
       "id": "F0",
       "name": "Pré-registro",
-      "role": "designer",
+      "role": "protocol-design",
       "closes_with": "protocol.md",
       "producer_tools": [
         "plan_research_protocol"
@@ -129,7 +129,7 @@
     {
       "id": "F1",
       "name": "Protocolo da questão",
-      "role": "designer",
+      "role": "protocol-design",
       "closes_with": "protocol.md",
       "producer_tools": [
         "submit_protocol_for_approval"
@@ -139,7 +139,7 @@
     {
       "id": "F2",
       "name": "Busca (PRISMA-S)",
-      "role": "librarian",
+      "role": "prisma-s-logging",
       "closes_with": "01_raw/",
       "producer_tools": [
         "search_openalex",
@@ -163,7 +163,7 @@
     {
       "id": "F3",
       "name": "Deduplicação",
-      "role": "screener",
+      "role": "screening-rules",
       "closes_with": "02_deduplicated/dataset.json",
       "producer_tools": [
         "deduplicate_dataset"
@@ -173,7 +173,7 @@
     {
       "id": "F4",
       "name": "Triagem TA + full-text",
-      "role": "screener",
+      "role": "screening-rules",
       "closes_with": "03_screening/included.json",
       "produces": [
         "03_screening/included_ta.json",
@@ -198,7 +198,7 @@
     {
       "id": "F5",
       "name": "Extração de dados",
-      "role": "extractor",
+      "role": "extraction-form",
       "closes_with": "04_extraction/study_characteristics_table.csv",
       "producer_tools": [],
       "step_tools": [
@@ -209,7 +209,7 @@
     {
       "id": "F5_5",
       "name": "Leitura/RAG orientada a objetivo",
-      "role": "reader",
+      "role": "evidence-reading",
       "closes_with": "04_extraction/evidence_synthesis.md",
       "produces": [
         "rag/index.json"
@@ -223,7 +223,7 @@
     {
       "id": "F6",
       "name": "Risco de viés",
-      "role": "analyst",
+      "role": "synthesis-manuscript",
       "closes_with": "[NÃO DEFINIDO] a trilha não nomeia o arquivo que guarda o julgamento de risco de viés",
       "producer_tools": [],
       "active": true,
@@ -237,7 +237,7 @@
     {
       "id": "F7",
       "name": "Síntese",
-      "role": "analyst",
+      "role": "synthesis-manuscript",
       "closes_with": "[NÃO DEFINIDO] a trilha não nomeia o arquivo da síntese; ela entra no manuscrito (F8)",
       "producer_tools": [],
       "active": true,
@@ -250,7 +250,7 @@
     {
       "id": "F8",
       "name": "Resultados e manuscrito",
-      "role": "analyst",
+      "role": "synthesis-manuscript",
       "closes_with": "05_synthesis/manuscript.md",
       "producer_tools": [],
       "active": true
@@ -300,7 +300,7 @@
     {
       "phase": "F2",
       "rule": "RV-07",
-      "blocks": "sob o protocolo travado, toda tool de busca e de importação (conferirExecucao, linha 17 da FILA) recusa o texto que não é um dos textos exatos que o plano de busca congelado dá à fonte — na busca feita à mão, o textoExato digitado na interface da base. Confere contra o plano, que o designer escreve a partir da F1.4 e o pesquisador vê na trava; a correspondência do plano com a prosa do protocolo é dele conferir. Sem projectPath, a busca é exploratória e não é conferida"
+      "blocks": "sob o protocolo travado, toda tool de busca e de importação (conferirExecucao, linha 17 da FILA) recusa o texto que não é um dos textos exatos que o plano de busca congelado dá à fonte — na busca feita à mão, o textoExato digitado na interface da base. Confere contra o plano, que o coordenador escreve a partir da F1.4 (skill protocol-design) e o pesquisador vê na trava; a correspondência do plano com a prosa do protocolo é dele conferir. Sem projectPath, a busca é exploratória e não é conferida"
     }
   ],
   "invariants_sem_gate": {

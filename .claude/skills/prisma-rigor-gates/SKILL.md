@@ -5,19 +5,19 @@ description: Conferência das regras e subregras de rigor de uma revisão — os
 
 # Gates de Rigor — todas as regras e subregras
 
-Rigor não é autocertificação do agente — e esta skill diz **onde há verificação determinística (por tool) e onde não há**. Onde há, o agente produz o insumo, a tool aprova ou reprova e o orquestrador só avança com verde. Onde não há, está escrito `[NÃO COBERTO]`: a conferência é do agente e a decisão é do pesquisador, sem fingir que uma tool conferiu. A conferência tem **três camadas**, todas obrigatórias.
+Rigor não é autocertificação do agente — e esta skill diz **onde há verificação determinística (por tool) e onde não há**. Onde há, o agente produz o insumo, a tool aprova ou reprova e o coordenador só avança com verde. Onde não há, está escrito `[NÃO COBERTO]`: a conferência é do agente e a decisão é do pesquisador, sem fingir que uma tool conferiu. A conferência tem **três camadas**, todas obrigatórias.
 
 ## Camada 1 — Invariantes anti-viés (RV-01..RV-08) — NUNCA desligáveis
 
 | Regra | O que garante | Verificação | Reprovação bloqueia |
 |---|---|---|---|
-| **RV-01** | Protocolo fechado antes da busca, e a busca segue só ele | `submit_protocol_for_approval` (score 0–3; sem `[TBD]` obrigatório; sem plano de busca não trava, e congela o plano com a rota de cada fonte e o hash do protocolo); sob o protocolo travado, toda tool de busca e de importação confere a chamada contra o plano (`conferirExecucao`); emenda e desvio só pela `record_protocol_amendment` | acionar o `librarian`; a busca ou importação fora do plano (protocolo editado, fonte, texto, filtro, rota mudada); fechar a etapa da busca com fonte do plano sem execução nem desvio |
+| **RV-01** | Protocolo fechado antes da busca, e a busca segue só ele | `submit_protocol_for_approval` (score 0–3; sem `[TBD]` obrigatório; sem plano de busca não trava, e congela o plano com a rota de cada fonte e o hash do protocolo); sob o protocolo travado, toda tool de busca e de importação confere a chamada contra o plano (`conferirExecucao`); emenda e desvio só pela `record_protocol_amendment` | a busca ou importação fora do plano (protocolo editado, fonte, texto, filtro, rota mudada); fechar a etapa da busca com fonte do plano sem execução nem desvio |
 | **RV-02** | Números emergem do processo, não digitados | `compute_flow_counts` deriva o funil dos artefatos e reprova quando eles não fecham; `export_dataset` recalcula e compara com o `prisma_flow.json` | o export, se o `prisma_flow.json` divergir do recalculado ou os artefatos não fecharem |
 | **RV-03** | Campos ausentes = `[TBD]`, nunca inventados | `[NÃO COBERTO]` — conduta de todos os agentes; nenhuma tool confere o invariante | — |
 | **RV-04** | Toda decisão do pesquisador fica registrada | `record_researcher_decision` grava; `podeAvancar` confere | sob `estrito`, avançar de etapa sem decisão registrada do pesquisador sobre a que se encerra |
 | **RV-05** | Aritmética do fluxograma fecha | `validate_prisma_flow` (e o mesmo validador dentro do `export_dataset`) | o export do dataset; o manuscrito não é barrado por tool |
-| **RV-06** | MCP executa, não decide | `[NÃO COBERTO]` — conduta: o orquestrador confere só que toda tool tem papel dono | — |
-| **RV-07** | Strings derivam do protocolo aprovado | sob o protocolo travado, toda tool de busca e de importação recusa texto que não é texto exato do plano congelado (o plano vem da F1.4, escrito pelo `designer` e visto pelo pesquisador na trava); o log PRISMA-S guarda a string exata | a busca ou importação com outro texto |
+| **RV-06** | MCP executa, não decide | `[NÃO COBERTO]` — conduta: a governança confere só que toda tool tem papel dono | — |
+| **RV-07** | Strings derivam do protocolo aprovado | sob o protocolo travado, toda tool de busca e de importação recusa texto que não é texto exato do plano congelado (o plano vem da F1.4, escrito na skill `protocol-design` e visto pelo pesquisador na trava); o log PRISMA-S guarda a string exata | a busca ou importação com outro texto |
 | **RV-08** | Origem rastreável (repositório+instituição+URL) | validação em `export_dataset`; `audit_methodology` só diagnostica | o export; a síntese não é barrada |
 
 Os manifests dizem o mesmo: `gates` para o que uma tool barra, `invariants_sem_gate` para o que é conduta.

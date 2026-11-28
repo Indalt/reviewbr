@@ -34,8 +34,9 @@ function brinquedo(opcoes: { medida?: unknown; titulos?: boolean } = {}): string
     const raiz = fs.mkdtempSync(path.join(os.tmpdir(), "palavras-"));
     temporarios.push(raiz);
     const c = (p: string) => path.join(raiz, ".claude", p);
-    fs.mkdirSync(c("agents"), { recursive: true });
-    fs.writeFileSync(c("agents/designer.md"), "# designer\n");
+    // Linha 25: `role` é a skill do procedimento da etapa (.claude/skills/<role>/SKILL.md), não um agente.
+    fs.mkdirSync(c("skills/designer"), { recursive: true });
+    fs.writeFileSync(c("skills/designer/SKILL.md"), "# designer\n");
     escrever(c("standards/teste.json"), {
         schemaVersion: 1, id: "TESTE", name: "Padrão Teste", version: "1", titulos_oficiais: opcoes.titulos ?? true,
         items: [{ id: "1", title: "Registration" }, { id: "2", title: "Support" }, { id: "3", title: "Peer review" }],

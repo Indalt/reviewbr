@@ -379,10 +379,12 @@ describe("os textos que fabricavam o problema — alinhados à regra do backlog"
         expect(SystemDebtService.read(REPO)!.findings.find((x) => x.id === "DEBT-110")!.status).toBe("RECUSADO");
     });
 
-    it("nenhum outro agente manda registrar achado no backlog", () => {
-        for (const a of ["analyst", "designer", "extractor", "librarian", "reader", "scout", "screener"]) {
-            const t = ler("agents", `${a}.md`);
-            expect(t, a).not.toMatch(/record_system_finding|system_debt|METODOLOGIA_NOVA/);
+    it("nenhum outro agente, nem o coordenador ou as skills de etapa, manda registrar achado no backlog", () => {
+        // Linha 25: os seis agentes de etapa se fundiram no coordenador (skill conduct-review), que executa cada
+        // etapa com a skill do procedimento dela.
+        expect(ler("agents", "scout.md"), "scout").not.toMatch(/record_system_finding|system_debt|METODOLOGIA_NOVA/);
+        for (const s of ["conduct-review", "protocol-design", "prisma-s-logging", "screening-rules", "extraction-form", "evidence-reading", "synthesis-manuscript"]) {
+            expect(ler("skills", s, "SKILL.md"), s).not.toMatch(/record_system_finding|system_debt|METODOLOGIA_NOVA/);
         }
     });
 });

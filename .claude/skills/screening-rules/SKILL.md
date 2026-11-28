@@ -1,6 +1,6 @@
 ---
 name: screening-rules
-description: Procedimento de deduplicação e triagem (fases F3/F4). Use ao deduplicar e decidir inclusão/exclusão de registros com critérios do protocolo, convenção de motivos de exclusão (EX-01..EX-11, atribuídos pelo pesquisador — nenhuma tool grava o código) e regra de saturação. Carregada pelo agente screener.
+description: Procedimento de deduplicação e triagem (fases F3/F4). Use ao deduplicar e decidir inclusão/exclusão de registros com critérios do protocolo, convenção de motivos de exclusão (EX-01..EX-11, atribuídos pelo pesquisador — nenhuma tool grava o código) e regra de saturação. Carregada pelo coordenador (skill conduct-review) na F3 e na F4.
 ---
 
 # Screening Rules — deduplicação e triagem rigorosas
@@ -60,7 +60,7 @@ O gate do protocolo (`submit_protocol_for_approval`) **reprova** se os três nã
 
 **Revisores humanos — `record_screening_decisions`** (quando o protocolo manda que pessoas decidam; padrão das fontes
 oficiais lidas em 23/11/2026: PRISMA 2020 itens 8 e 16a, PRISMA-ScR itens 9 e 14, JBI 2024 10.2.6, Cochrane 6.5.1 4.6.4):
-1. Antes, o `librarian` confere a procedência dos links (`verify_record_links`). O link que não confere ou não abre vai
+1. Antes, a procedência dos links é conferida (`verify_record_links`). O link que não confere ou não abre vai
    para `03_screening/revisores/falhas_procedencia.json` como limitação registrada (decisão do Vicente de 26/11/2026):
    o registro entra na planilha como os outros, com a situação à vista, e as contagens vão ao relatório do estágio.
 2. `formulario`: uma planilha `.xlsx` por revisor, todas com o insumo inteiro do estágio; as perguntas copiadas do
@@ -106,3 +106,46 @@ O `compute_flow_counts` conta estes arrays JSON. Grave-os com estes nomes exatos
 
 ## Justificativa por decisão
 Registro aceito/rejeitado carrega a **justificativa textual real** (não só "SIM/NÃO") e o modelo LLM usado, quando triagem automatizada (auditoria).
+
+## Execução das etapas F3 e F4
+
+Procedimento que o coordenador (skill `conduct-review`) executa na F3 e na F4. Até 28/11/2026 era o agente `screener`; ele se fundiu no coordenador (linha 25 da FILA, Hipótese A). O que separa esta etapa das outras é a trava de etapa no código (linhas 24 e 25): as tools da etapa recusam fora da ordem da trilha, com decisão de etapa faltando, com insumo mudado ou passado pelo chamador.
+
+1. **F3** com `deduplicate_dataset` (hierarquia acima). Grava `02_deduplicated/dataset.json` e o relatório de pares.
+2. **F4.1 Título/Resumo**, **conforme o processo declarado no protocolo** — leia de lá o **F4.1.2** (Individual |
+   Duplo independente | Duplo com desempate), o **F4.1.3** (ferramenta) e a resolução de discordâncias — e conforme as
+   decisões de etapa gravadas na trava (quem decide a triagem, quantos revisores, camada por palavras): a tool recusa
+   o que a decisão gravada recusa. Não pergunte "qual tool?" — se o protocolo estiver omisso, pergunte qual processo
+   ele declara, e pare se não declarar nenhum (RV-01).
+   - **Palavras-chave que faltam** aos registros deduplicados: `complete_record_keywords`, antes da camada por
+     palavras (consulta a fonte pelo id e grava à parte, sem mudar o dataset nem os totais).
+   - **Camada por palavras** (quando o protocolo a declara): `batch_keyword_screen` com `projectPath` e sem `pdfDir`,
+     com os termos copiados do protocolo sem mudar nada.
+   - **Procedência dos links**, antes da leitura humana: `verify_record_links`; o que não confere ou não abre é
+     limitação registrada e vai à planilha com a situação à vista. Existência e retratação dos registros do insumo:
+     `verify_references` com `origem: "estagio"` (mostra e grava, não exclui ninguém).
+   - **Revisores humanos**: `record_screening_decisions` (`formulario`, `pendentes`, `importar`, `consenso`,
+     `gerar`), como descrito acima. Nenhuma IA propõe nem decide.
+3. **F4.3 Texto completo** dos que passaram no título e resumo (era do agente `librarian`): acesso aberto primeiro,
+   `retrieve_fulltexts` (Unpaywall/OA) e `download_and_extract_pdfs`, guardando em `03_screening/pdfs/` (e o texto em
+   `04_extraction/fulltext/`, que a leitura da F5.5 indexa). **Sci-Hub / BYOS é desligado por padrão**: quando um
+   artigo não vier por acesso aberto, **pare e pergunte** ao pesquisador se aciona o Sci-Hub para aquele item; só com o
+   sim explícito dele use `retrieve_fulltext_byos`, passando a resposta nas palavras dele em `consentimento` (a tool
+   recusa sem ela e recusa DOI fora de `03_screening/fulltext_not_retrieved.json`). Registre a forma de aquisição de
+   cada texto (OA ou BYOS), separável no log. As cinco tools da F4 que eram do `librarian` (`complete_record_keywords`,
+   `verify_record_links`, `retrieve_fulltexts`, `download_and_extract_pdfs`, `retrieve_fulltext_byos`) pertencem à
+   etapa na trilha (linha 25): recusam antes de a F3 fechar e depois que a F5 começa — texto que faltar depois disso é
+   emenda com `reabrir: "F4"`.
+4. **F4.2 Texto completo**: sobre os recuperados. Registre os não recuperados com motivo (F4.2.2). O artefato que
+   fecha a etapa é `03_screening/included.json`.
+5. **MAYBE** é dúvida declarada, não inclusão; o que sobra na F4.2 vai ao pesquisador para incluir ou excluir com
+   motivo (RV-04). **Saturação**: depois de cada lote, `get_screening_report` com `projectPath`; com
+   `saturationAlert: true`, mostre os números ao pesquisador — parar é decisão dele.
+
+### Nesta etapa, não
+- Não faça busca nova: a F2 já fechou e as tools dela recusam; o caminho é a emenda com `reabrir: "F2"`.
+- Não invente contagens de fluxo: elas vêm de `compute_flow_counts` (RV-02).
+
+### Ao fechar a etapa
+Mostre ao pesquisador: total deduplicado, excluídos no título e resumo por motivo, incluídos para o texto completo,
+recuperados e não recuperados (OA × BYOS), incluídos finais, saturação e o porquê da etapa.

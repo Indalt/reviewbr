@@ -20,7 +20,7 @@ import type { RepositoryEntry } from "../types.js";
  *
  * O QUE ELE É
  * -----------
- * O `designer` escreve, a partir do protocolo, `plano_busca.json` na raiz do projeto: por fonte, o
+ * O coordenador (skill `protocol-design`) escreve, a partir do protocolo, `plano_busca.json` na raiz do projeto: por fonte, o
  * modo (tool ou à mão), a tool, o id do catálogo, os textos exatos, os filtros e o que o protocolo
  * manda registrar em cada busca. O `submit_protocol_for_approval` não trava sem ele, mostra-o ao
  * pesquisador e congela no `project_state.json` o plano — com a rota que o sistema dá hoje a cada
@@ -119,7 +119,7 @@ export function lerPlanoDoArquivo(projectDir: string): { plano: PlanoBusca | nul
     if (!fs.existsSync(p)) {
         return {
             plano: null,
-            erros: [`Falta o plano de busca (${ARQUIVO_PLANO} na raiz do projeto). O designer o escreve a partir do ` +
+            erros: [`Falta o plano de busca (${ARQUIVO_PLANO} na raiz do projeto). O coordenador o escreve a partir do ` +
                 "protocolo: por fonte, o modo (tool ou à mão), a tool, o id do catálogo, os textos exatos, os filtros " +
                 "e o que o protocolo manda registrar em cada busca."],
         };
@@ -418,7 +418,7 @@ export function roteiroDoPlano(projectDir: string, fonteId?: string): string {
         if (!plano?.fontes?.length) {
             return st?.status === "LOCKED"
                 ? "Projeto travado sem plano de busca congelado: o plano entra por emenda aprovada pelo pesquisador (`record_protocol_amendment`, com o plano). Nada se busca até lá."
-                : `Sem plano de busca: o designer escreve ${ARQUIVO_PLANO} a partir do protocolo, e a trava o congela.`;
+                : `Sem plano de busca: o coordenador escreve ${ARQUIVO_PLANO} a partir do protocolo, e a trava o congela.`;
         }
         fontes = plano.fontes;
         aviso = `RASCUNHO (${ARQUIVO_PLANO}): ainda não congelado. Vale o que a trava congelar.`;

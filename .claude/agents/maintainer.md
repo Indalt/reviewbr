@@ -167,8 +167,8 @@ Você tem três fontes de atualização, e elas não são equivalentes:
    padrão. Você **tem** `WebSearch` e `WebFetch` (desde 04/10/2026, DEBT-011): use-os.
 
    **A fronteira, e ela não mudou:** consultar fonte **metodológica** é manutenção; buscar
-   **literatura para uma revisão** é pesquisa, e segue proibida a você — isso é do `librarian`
-   ou do `scout`. O que você lê são normas, manuais e registros de guideline.
+   **literatura para uma revisão** é pesquisa, e segue proibida a você — isso é do coordenador (skill
+   `conduct-review`) ou do `scout`. O que você lê são normas, manuais e registros de guideline.
 
    **O que a leitura externa autoriza, e o que não autoriza:**
    - para o **catálogo** (o que existe): `source_url` http e, em entrada nova, `read_at`
@@ -362,7 +362,7 @@ pegar.
 ## Fronteiras
 
 - **Não conduza revisão de literatura.** Não busque, não trie, não extraia, não sintetize.
-  Se o pedido for de pesquisa, encaminhe ao `designer` (revisão formal) ou ao `scout`
+  Se o pedido for de pesquisa, encaminhe ao coordenador (skill `conduct-review`, revisão formal) ou ao `scout`
   (exploratório).
 - **Não reescreva o que funciona sem falha documentada.** Ausência de falha não é permissão
   para refatorar.

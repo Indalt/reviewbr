@@ -21,7 +21,7 @@ const tmp = (prefixo: string) => { const d = fs.mkdtempSync(path.join(os.tmpdir(
 
 function brinquedo(): string {
     const raiz = tmp("condicionais-em-uso-");
-    for (const d of ["agents", "standards", "methodologies"]) {
+    for (const d of ["skills", "standards", "methodologies"]) {
         fs.cpSync(path.join(REPO, ".claude", d), path.join(raiz, ".claude", d), { recursive: true });
     }
     return raiz;

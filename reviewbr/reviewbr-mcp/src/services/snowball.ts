@@ -10,7 +10,7 @@ interface OpenAlexWork {
     referenced_works: string[];
 }
 
-/** DEBT-059 — as 4 salvaguardas que librarian.md:24-27 declara obrigatórias. */
+/** DEBT-059 — as 4 salvaguardas que a skill prisma-s-logging (antes o librarian.md) declara obrigatórias. */
 export interface SnowballExpandOptions {
     /** Níveis de expansão. Padrão 1 (só as citações das sementes, sem recursar). */
     depth?: number;
