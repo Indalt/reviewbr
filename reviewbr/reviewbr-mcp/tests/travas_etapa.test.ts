@@ -69,7 +69,9 @@ describe("linha 24 — o método declara as decisões de etapa e as tools de cad
             expect(decisoes.map((d) => d.id)).toEqual(["quem_decide_triagem", "revisores_por_registro", "camada_por_palavras"]);
             for (const d of decisoes) for (const o of d.opcoes) expect(o.consequencia.length).toBeGreaterThan(20);
             const f4 = lerTrilha(REPO, m).etapas.find((e) => e.id === "F4")!;
-            expect(f4.step_tools).toEqual(["batch_keyword_screen", "batch_db_screen", "record_screening_decisions"]);
+            // Linha 25: mais cinco tools da F4, que antes só a lista do agente prendia (tests/fusao_barreiras.test.ts).
+            expect(f4.step_tools).toEqual(["batch_keyword_screen", "batch_db_screen", "record_screening_decisions",
+                "complete_record_keywords", "verify_record_links", "retrieve_fulltexts", "download_and_extract_pdfs", "retrieve_fulltext_byos"]);
         });
     }
 });

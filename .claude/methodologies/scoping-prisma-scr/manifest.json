@@ -151,6 +151,10 @@
         "import_dataset_ris",
         "import_bvs_export"
       ],
+      "step_tools": [
+        "expand_search_snowball",
+        "harvest_records"
+      ],
       "active": true
     },
     {
@@ -179,7 +183,12 @@
       "step_tools": [
         "batch_keyword_screen",
         "batch_db_screen",
-        "record_screening_decisions"
+        "record_screening_decisions",
+        "complete_record_keywords",
+        "verify_record_links",
+        "retrieve_fulltexts",
+        "download_and_extract_pdfs",
+        "retrieve_fulltext_byos"
       ],
       "active": true
     },

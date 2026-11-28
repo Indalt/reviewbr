@@ -924,7 +924,7 @@ server.tool(
         projectPath: z.string().describe("Caminho do projeto (ex: projects/meu_projeto)"),
     },
     async (params) => {
-        const guardrailError = await checkDesignGuardrail(undefined, params.projectPath);
+        const guardrailError = await checkDesignGuardrail(undefined, params.projectPath, "download_and_extract_pdfs", params);
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         const results = [];
         for (const item of params.urlsAndIds) {
@@ -1300,7 +1300,9 @@ server.tool(
         datasetPath: z.string().optional(),
     },
     async (params) => {
-        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath);
+        // Linha 25: a recuperação do texto completo é da triagem (F4.3); obedece à ordem e ao insumo dela.
+        const guardrailError = await checkDesignGuardrail(params.projectId, params.projectPath)
+            ?? travaDaEtapa(params.projectPath, "retrieve_fulltexts", { insumoDoChamador: params.datasetPath ? `de datasetPath (${params.datasetPath})` : undefined, parametros: params });
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         const projectDir = path.isAbsolute(params.projectPath) ? params.projectPath : path.join(process.cwd(), params.projectPath);
         const outputDir = path.join(projectDir, "03_screening/pdfs");
@@ -2070,7 +2072,7 @@ server.tool(
         consentimento: z.string().describe("A resposta do pesquisador autorizando o Sci-Hub para ESTE DOI, nas palavras dele (ex.: 'sim, pode usar o Sci-Hub para o artigo X'). Sem ela a tool recusa. Fica gravada no log e no .meta.json do texto."),
     },
     async (params) => {
-        const guardrailError = await checkDesignGuardrail(undefined, params.projectPath);
+        const guardrailError = await checkDesignGuardrail(undefined, params.projectPath, "retrieve_fulltext_byos", params);
         if (guardrailError) return { content: [{ type: "text", text: guardrailError }] };
         // DEBT-062 (com o DEBT-090): consentimento declarado e DOI que o acesso aberto não recuperou.
         const recusa = conferirPedidoByos(resolveProjectDir(params.projectPath), params.doi, params.consentimento);
@@ -2816,7 +2818,7 @@ server.tool(
         refazer: z.boolean().optional().describe("Se true, consulta de novo também os registros já gravados em palavras_chave.json (padrão: só os que faltam)"),
     },
     async (params) => {
-        const trava = await checkDesignGuardrail(undefined, params.projectPath);
+        const trava = await checkDesignGuardrail(undefined, params.projectPath, "complete_record_keywords", params);
         if (trava) return { content: [{ type: "text", text: trava }] };
         try {
             const r = await completarPalavrasChave(params.projectPath, {
@@ -2850,7 +2852,7 @@ server.tool(
         consertadas: z.record(z.string(), z.string()).optional().describe("Só com somenteFalhas: falhas marcadas por um revisor ('o link abriu o documento certo?' = não) que a manutenção declara consertadas, id → o que foi consertado. Sem isto, a falha marcada por revisor não sai da lista"),
     },
     async (params) => {
-        const trava = await checkDesignGuardrail(undefined, params.projectPath);
+        const trava = await checkDesignGuardrail(undefined, params.projectPath, "verify_record_links", params);
         if (trava) return { content: [{ type: "text", text: trava }] };
         try {
             const r = await conferirProcedencia(params.projectPath, {
