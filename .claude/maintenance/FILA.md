@@ -80,16 +80,13 @@ a sessão é só a rotina.
 - relate ao Vicente em até 5 linhas: o que passou, o que não passou e o que espera decisão dele;
 - commit e push.
 
-**Última verificação:** 28/11/2026, linha 25 feita e, a pedido do Vicente no mesmo dia, a trava 3 passou a exigir só o
-que alcança o que falta da pesquisa (seção "Linha 25", no fim) — build e suíte 751 de 751; audit válido, 0 achados
-abertos; gate CORRECAO válido; fila: linha 10 em curso, 22 e 26 a 30 a fazer; 53 itens no "Visto de passagem". `git
-status`: só os 17 arquivos rastreados do `roda_aromas_ceara` como apagados (nenhum commit grava essa deleção).
-Decisões novas do Vicente: a trava 3 por etapa (28/11, "faça o recomendado") e a correção dela no mesmo dia (mudança
-só do sistema não é emenda; a emenda fala do método, para quem avalia). **Para a pesquisa:** a linha 25 não muda o
-método; se o projeto ainda tiver a F4 por correr, a tool pede só o registro da decisão do pesquisador de seguir na
-versão nova, que fica em `logs/` e não vai ao `change_log.md`. **Próximo passo:** a linha 22 ou a 26, à escolha do Vicente.
-Assume: o Claude, na manutenção. Intocado: a pasta `C:
-oda_aromas_ceara` (esta sessão não a leu nem gravou).
+**Última verificação:** 28/11/2026, linha 26 feita (seção "Linha 26", no fim) — build e suíte 764 de 764; audit
+válido, 0 achados abertos; gate CORRECAO válido; fila: linha 10 em curso, 22 e 27 a 30 a fazer; 56 itens no "Visto de
+passagem" (3 novos). `git status`: só os 17 arquivos rastreados do `roda_aromas_ceara` como apagados (nenhum commit
+grava essa deleção). Decisões novas do Vicente: nenhuma. **Para a pesquisa:** mudança só do sistema; a versão do
+servidor não mudou, a trava 3 não para o projeto, nada vai ao `change_log.md`. **Próximo passo:** a linha 22 ou a 27, à
+escolha do Vicente. Assume: o Claude, na manutenção. Intocado: a pasta `C:oda_aromas_ceara` (esta sessão não a leu
+nem gravou).
 
 ## Fila
 
@@ -121,7 +118,7 @@ oda_aromas_ceara` (esta sessão não a leu nem gravou).
 | 23 | Procedência que o sistema não confere: registra a limitação, e a pesquisa segue | ponto 3 da segunda resposta de 26/11, na seção "Pedido do Vicente de 25/11/2026" | os textos do `verify_record_links`, da `record_screening_decisions`, da skill `screening-rules` e do `screener` | **feita em 26/11/2026** (commit `6125977`): detalhe em "Linha 23", logo antes de "Como uma linha entra na fila" |
 | 24 | Travas em código por etapa: decisão antes da etapa, ordem e insumo, sistema e sessão presos ao projeto | pontos 6.2 e 6.3, reescritos em 26/11, com as condições da segunda resposta | — | **feita em 28/11/2026**: travas 1 e 2 em 27/11, trava 3 em 28/11 depois da aprovação do Vicente (detalhe em "Linha 24", logo antes de "Linha 19") |
 | 25 | Hipótese A: os agentes de etapa num coordenador, com o `maintainer` à parte | ponto 6.4 | — | **feita em 28/11/2026** (commits `2d83e43` e o seguinte): sete tools entraram na trilha antes da fusão; os seis agentes de etapa em `old/agentes_2026-11-28/`; detalhe em "Linha 25", logo antes de "Linha 24" |
-| 26 | Ressalvas das tools: rede e repositórios | ponto 8, grupo 1 da lista de 26/11 | — | **a fazer**: começa conferindo cada item no código |
+| 26 | Ressalvas das tools: rede e repositórios | ponto 8, grupo 1 da lista de 26/11 | — | **feita em 28/11/2026**: cinco das seis ressalvas eram verdade e foram consertadas; a da camada 2 não era; detalhe em "Linha 26", logo antes de "Linha 25" |
 | 27 | Ressalvas das tools: coleta e importação | ponto 8, grupo 2 | — | **a fazer**: começa conferindo cada item no código |
 | 28 | Ressalvas das tools: protocolo e estado | ponto 8, grupo 3 | — | **a fazer**: começa conferindo cada item no código |
 | 29 | Ressalvas das tools: texto completo | ponto 8, grupo 4 | — | **a fazer**: começa conferindo cada item no código |
@@ -1331,6 +1328,32 @@ espera decisão:
 
 Pergunta: tiro?
 
+### Linha 26 — Ressalvas das tools: rede e repositórios (feita em 28/11/2026)
+
+Definição: ponto 8, grupo 1, da lista levada ao Vicente em 26/11. Cada item conferido no código antes de mexer:
+
+| item | era verdade? | onde | o que se fez |
+|---|---|---|---|
+| certificado sem verificação no processo inteiro | sim, e pior: no caminho de sucesso a variável nunca era desfeita, então depois do primeiro pedido nenhum pedido do servidor verificava certificado | `http.ts:42-43` e `:80-83` (antes) | FAZER: o pedido que aceita certificado próprio leva um dispatcher só dele (`undici`, agora declarado no `package.json`); os outros verificam |
+| HTTP 503 derruba a busca grande | sim: `fetchWithRetry` só repetia erro de rede; o `fetchText` lançava no primeiro 503 | `http.ts:54-68` (antes) | FAZER: nova tentativa em 429, 502, 503 e 504, com o Retry-After até 60 s; 404 e os demais voltam na hora |
+| `search_repository` sem `repositories`: 1800 s | sim: os 94 ativos do catálogo, um atrás do outro | `index.ts`, laço da tool | FAZER: grupos de 5 em paralelo (`services/busca_repositorios.ts`), como a `search_papers_optimized` já fazia; o limite por servidor continua. Não garante caber em 1800 s; tira a soma em série e, com o item seguinte, o custo de cada DSpace mudo |
+| ~90 s no DSpace sem API | sim: três tentativas de 30 s na busca pela API antes da página de busca | `strategy.ts` + `dspace-rest.ts:44` | FAZER: sem `restApi` no catálogo, uma sondagem de um pedido (10 s) antes; na busca do plano congelado (`somentePrimaria`) não há sondagem, a rota é a mesma de antes |
+| camada 2 consulta inativos | **não**: `search.ts:24` filtra os ativos antes da camada desde o primeiro commit; o `status === 'active'` da linha 26 é redundante | `search.ts:24-27` | nada |
+| `heal_repositories` muda o catálogo e é do agente do projeto | sim: grava `repositories_catalog.json` (`repository_healer.ts:94`) e estava com o COORDINATOR (`agent_orchestrator.ts:54`), contra a linha 25 | — | FAZER: só o MAINTAINER no mapa; na lista de tools do `maintainer.md`. DECLARAR: tirada das skills `prisma-s-logging` e `protocol-design`; descrição da tool e `README.md` dizem que grava o catálogo do sistema; a exceção falsa do teste de integração ("acionada pelo validate_repository") saiu |
+
+Limite: o mapa de papéis é declarativo; numa sessão sem agente, nada recusa a `heal_repositories`. A defesa do projeto
+travado é a trava 3: catálogo mudado, a etapa seguinte para até o pesquisador decidir.
+
+**Trava 3:** mudança só do sistema. Não muda método, manifest, spec nem catálogo, e a versão do servidor segue 1.0.2:
+o projeto travado não para. Nada disto vai ao relato da pesquisa.
+
+**Controle positivo** (sem busca de pesquisa): servidor HTTPS local com certificado autoassinado. Antes: depois do
+primeiro pedido que aceita, todo pedido que verifica também abre, inclusive o simultâneo e o `fetch` do processo, e a
+variável fica `"0"`. Depois: só o pedido que aceita abre; a variável fica indefinida. Os hosts de teste públicos
+(`badssl.com`) não respondem desta máquina (curl 000), por isso o servidor local.
+
+Gate CORRECAO; `tests/rede_e_repositorios.test.ts` (12; 8 falham antes, os outros 4 são controle); suíte 764 de 764.
+
 ### Linha 25 — Hipótese A: os agentes de etapa no coordenador (feita em 28/11/2026)
 
 Decisão do Vicente: ponto 6.4 da seção "Pedido do Vicente de 25/11/2026", "6.4 ok" em 26/11, com a condição "preferindo
@@ -1684,13 +1707,14 @@ Vicente pedir.
   F1, F3, F6, F7, F8 e a UFPI da F5 viraram as linhas 11 e 12 (19/11/2026). Restam:
   - F2 `search_openalex`: mostra 10 resultados e diz que o resto foi salvo em JSON, mas sem `projectPath` nada é
     gravado;
-  - F4 `search_repository` sem `repositories` (todos os ativos): 1800 s sem resposta, abortada;
+  - F4 `search_repository` sem `repositories` (todos os ativos): 1800 s sem resposta, abortada; **linha 26
+    (28/11/2026): em paralelo, de 5 em 5**;
   - F5 `search_papers_optimized`: Unifesp e UFCG devolvem registros sem relação com a string, e a contagem soma
     esses registros. A causa geral (colheita parcial; basta uma palavra) é tratada na linha 11.
 - (projeto `roda_aromas_ceara`, 19/11/2026) Visto na conferência do passo A, sem avaliação: para "cajuína", a BDTD
   devolve entre os 20 primeiros registros sem relação ("amor livre", biossurfactantes, assentamentos), que entram
   na contagem. E o `search.ts:26` põe na camada 2 todo repositório inativo, então o `search_papers_optimized` com a
-  camada 2 também consulta os inativos.
+  camada 2 também consulta os inativos. **Linha 26 (28/11/2026): não se confirma** — `search.ts:24` só pega ativos.
 - (projeto `roda_aromas_ceara`, 12/11/2026) No escopo, a avaliação crítica das fontes não tem onde ser registrada
   na trilha: com a condição `avaliacao_critica` = "sim", os itens 12 e 16 do PRISMA-ScR ficam `[NÃO COBERTO]`
   (o que ficou declarado ao resolver o DEBT-151). O projeto respondeu "não", mas o Vicente pediu o registro: "essa
@@ -1726,6 +1750,7 @@ Vicente pedir.
 - (linha 11, 19/11/2026) Visto ao fazer a linha, sem avaliação:
   - repositório DSpace sem `restApi` no catálogo tenta antes a API em `/server/api`; quando o servidor não responde, as
     novas tentativas do `fetchWithRetry` custam até cerca de 90 s antes da página de busca (a UFC levou 52 s);
+    **consertado na linha 26 (28/11/2026)**;
   - a UFC alternou entre responder e fechar a conexão (`ECONNRESET`, também pelo curl) na mesma hora;
   - no catálogo, a UECE (`BR-EST-0006`) está com `institution.type` "federal";
   - para "cajuína", o IFCE devolve 1 registro, cujo título não traz a palavra ("Construção de uma perspectiva de ensino
@@ -1735,9 +1760,9 @@ Vicente pedir.
     travado em 15/11 tem outra (só a cajuína). Nada atualiza o campo depois da `plan_research_protocol`.
 - (projeto `roda_aromas_ceara`, 19/11/2026) `src/utils/http.ts`, com `acceptSelfSigned: true` por padrão, põe
   `NODE_TLS_REJECT_UNAUTHORIZED = "0"` no processo inteiro durante o pedido: a verificação do certificado fica
-  desligada também para pedidos simultâneos.
+  desligada também para pedidos simultâneos. **Consertado na linha 26 (28/11/2026).**
 - (linha 14, 19/11/2026) O `heal_repositories` muda o catálogo do sistema e está entre as tools do `librarian`, agente
-  do projeto.
+  do projeto. **Consertado na linha 26 (28/11/2026): só do `maintainer`.**
 - (linha 15, 19/11/2026) O `importRis` grava `provenanceSource: "Local File Import"` quando não há base declarada nem
   tag `DB` (já anotado na linha 2); o `repositoryName` continua vazio nesse caso, e o gate reprova.
 - (linha 16, 20/11/2026) O `import_bvs_export` grava pelo mesmo `appendRawRecords` sem `manterTodosDoLote`: dois
@@ -1755,6 +1780,7 @@ Vicente pedir.
   neste PC: "No test suite found" nos 64 arquivos, igual sem a mudança.
 - (projeto `roda_aromas_ceara`, 23/11/2026) Com a cobertura sem teto, a Oasisbr recebe ~100+ pedidos por busca grande;
   um HTTP 503 no meio derruba a execução inteira (sem nova tentativa no `fetchText` para 503). Repetida, completou.
+  **Consertado na linha 26 (28/11/2026).**
 - (projeto `roda_aromas_ceara`, F3, 23/11/2026) O `deduplicate_dataset` não deixa escolher as entradas: com
   `projectPath`, o `consolidateRaw` soma todo `01_raw/*.json`, e ali está também a execução do OpenAlex cortada em 200
   (`dataset_openalex_2026-11-23_15-21-53-903Z.json`), que fica como histórico e não entra na F3. Lidos em ordem
@@ -1815,3 +1841,9 @@ Vicente pedir.
 - (linha 20, 27/11/2026) Os scripts de `reviewbr/projects/data_mining/` (`caju_beverages/scripts/*.js`,
   `web_ui/server.js`) chamam `src/scripts/run_search_cli.ts`, que já não existia antes desta linha; só sobrava o
   compilado em `dist/scripts/`, fora do git.
+- (linha 26, 28/11/2026) A `heal_repositories` não consulta o `robots.txt` antes de ler a página inicial e os endereços
+  OAI-PMH que testa (`repository_healer.ts:44`), ao contrário da busca (`robotsPermite`).
+- (linha 26, 28/11/2026) `reviewbr/README.md:193` em diante ainda descreve os agentes de etapa (PROJETISTA etc.) que a
+  linha 25 fundiu no coordenador.
+- (linha 26, 28/11/2026) `data/sources/bases_internacionais.json` tem 0 entradas; o carregador o lê como a parte
+  internacional do catálogo.

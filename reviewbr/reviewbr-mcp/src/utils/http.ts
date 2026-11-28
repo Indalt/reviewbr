@@ -8,6 +8,8 @@
  * `.claude/maintenance/CONFERENCIA_acesso_2026-11-19.md`.
  */
 
+import { Agent } from "undici";
+
 export const REVIEWBR_USER_AGENT = "ReviewBR-MCP/1.0 (+https://github.com/Indalt/reviewbr)";
 
 export interface HttpOptions {
@@ -24,24 +26,34 @@ const DEFAULT_OPTIONS: Required<HttpOptions> = {
     acceptSelfSigned: true,
 };
 
+/**
+ * Linha 26 da FILA (28/11/2026): o certificado sem verificação vale só para o pedido que o aceita.
+ * Até então o cliente punha `NODE_TLS_REJECT_UNAUTHORIZED = "0"` no processo inteiro — e, no caminho
+ * de sucesso, nunca o tirava: depois do primeiro pedido, nenhum pedido do servidor verificava
+ * certificado. Agora o pedido que aceita certificado próprio (repositório brasileiro com cadeia
+ * incompleta) leva um dispatcher só dele; os demais verificam.
+ */
+const SEM_VERIFICAR_CERTIFICADO = new Agent({ connect: { rejectUnauthorized: false } });
+
+/** Status de sobrecarga momentânea: a fonte pede para tentar de novo (linha 26, item 3). */
+const STATUS_DE_NOVA_TENTATIVA = new Set([429, 502, 503, 504]);
+/** Teto do Retry-After que a fonte pede, em segundos. */
+const TETO_RETRY_AFTER_S = 60;
+
 async function sleep(ms: number): Promise<void> {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 /**
- * Fetch with retry (exponential backoff) and configurable timeout.
- * Uses NODE_TLS_REJECT_UNAUTHORIZED for self-signed cert support.
+ * Fetch with retry (exponential backoff) and configurable timeout. Tenta de novo em erro de rede e
+ * nos status de sobrecarga (429, 502, 503, 504), respeitando o Retry-After até 60 s; outros status
+ * voltam na hora, para quem chamou decidir.
  */
 export async function fetchWithRetry(
     url: string,
     options?: HttpOptions & { method?: string; body?: string }
 ): Promise<Response> {
     const opts = { ...DEFAULT_OPTIONS, ...options };
-
-    // Allow self-signed certificates for Brazilian repos
-    if (opts.acceptSelfSigned) {
-        process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-    }
 
     let lastError: Error | null = null;
 
@@ -62,9 +74,20 @@ export async function fetchWithRetry(
                 signal: controller.signal,
                 body: options?.body,
                 redirect: "follow",
-            });
+                ...(opts.acceptSelfSigned ? { dispatcher: SEM_VERIFICAR_CERTIFICADO } : {}),
+            } as RequestInit);
 
             clearTimeout(timeoutId);
+            if (STATUS_DE_NOVA_TENTATIVA.has(response.status) && attempt < opts.maxRetries - 1) {
+                const pedido = Number(response.headers.get("retry-after"));
+                const esperaMs = Number.isFinite(pedido) && pedido > 0
+                    ? Math.min(pedido, TETO_RETRY_AFTER_S) * 1000
+                    : Math.pow(2, attempt) * 1000;
+                await response.body?.cancel().catch(() => undefined);
+                lastError = new Error(`HTTP ${response.status}`);
+                await sleep(esperaMs);
+                continue;
+            }
             return response;
         } catch (error) {
             clearTimeout(timeoutId);
@@ -75,11 +98,6 @@ export async function fetchWithRetry(
                 await sleep(backoffMs);
             }
         }
-    }
-
-    // Restore TLS setting
-    if (opts.acceptSelfSigned) {
-        delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
     }
 
     throw new Error(

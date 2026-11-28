@@ -102,9 +102,9 @@ describe("integração 2 — tool registrada que nenhuma instrução invoca", ()
      * Uma tool no mapa de papéis e no frontmatter, que nenhum corpo de agente nem skill
      * manda usar, é `validate_prisma_flow` de novo: existe e ninguém chama no momento certo.
      */
-    const SEM_PROSA_OK = new Set([
-        // Chamadas internamente por outras tools ou pelo boot; não há instrução de agente.
-        "heal_repositories",        // acionada pelo próprio validate_repository quando falha
+    const SEM_PROSA_OK = new Set<string>([
+        // heal_repositories saiu daqui na linha 26 (28/11/2026): o validate_repository nunca a chamou;
+        // ela é citada no maintainer.md, dono dela.
     ]);
 
     it("toda tool exposta é citada em algum corpo de agente ou skill", () => {

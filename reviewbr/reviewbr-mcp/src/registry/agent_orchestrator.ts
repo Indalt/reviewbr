@@ -49,9 +49,7 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     record_protocol_amendment: [AgentRole.COORDINATOR],
     // O plano e o roteiro de cada fonte: quem o escreve, quem busca por ele e quem conduz.
     get_search_plan: [AgentRole.COORDINATOR],
-    // designer.md lista validate_repository/heal_repositories no seu contrato de papel → PROJETISTA autorizado
     validate_repository: [AgentRole.COORDINATOR],
-    heal_repositories: [AgentRole.COORDINATOR],
 
     // ─── Leitura/RAG (READER + ANALYST) ─────────────────────
     rag_index_corpus: [AgentRole.COORDINATOR],
@@ -132,6 +130,12 @@ const TOOL_PERMISSIONS: Record<string, AgentRole[]> = {
     absorb_methodology: [AgentRole.MAINTAINER],
     scaffold_methodology: [AgentRole.MAINTAINER],
     validate_methodology: [AgentRole.MAINTAINER],
+    // Linha 26 da FILA, item 6 (28/11/2026): grava o catálogo de repositórios do sistema
+    // (repository_healer.ts), que a trava 3 confere em todo projeto travado. Escrita da manutenção,
+    // não do projeto (linha 25: o COORDINATOR não tem nenhuma). O mapa é declarativo: quem barra
+    // na prática é a lista de tools de cada agente; numa sessão sem agente, a trava 3 é a defesa
+    // do projeto (o catálogo mudado para a etapa seguinte até a decisão do pesquisador).
+    heal_repositories: [AgentRole.MAINTAINER],
 };
 
 /**

@@ -63,7 +63,7 @@ pergunta (PICOS / PCC / SPIDER) vem do `manifest.json` do método — não assum
 ## Tools da etapa
 `assess_research_design`, `plan_research_protocol`, `submit_protocol_for_approval`, `record_protocol_amendment`
 (emenda e desvio do protocolo travado: a emenda só vale com a decisão do pesquisador nas palavras dele),
-`validate_repository`, `heal_repositories`, `query_methodology_catalog`, `get_search_plan`, `verify_references`.
+`validate_repository`, `query_methodology_catalog`, `get_search_plan`, `verify_references`.
 
 ## Nesta etapa, não
 - Não dispare busca oficial nem importação: é a F2, e a tool recusa antes da trava.

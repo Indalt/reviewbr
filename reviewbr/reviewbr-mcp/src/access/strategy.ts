@@ -216,6 +216,13 @@ export class AccessStrategy {
         if (ehDspace(repo) || repo.access.restApi?.endpoint) {
             const apiUrl = this.rest.resolveApiUrl(baseRest(repo));
             try {
+                // Linha 26 da FILA, item 4 (28/11/2026): sem API REST no catálogo, o endereço /server/api é
+                // um palpite. Uma sondagem de um pedido só (10 s) antes da busca; sem ela, um servidor que
+                // não responde custava as três tentativas da busca (até ~90 s) antes da página de busca.
+                // Na busca do plano (`unica`) não há página de busca depois: a rota é só a API, sem sondagem.
+                if (!repo.access.restApi?.endpoint && !unica && !(await this.rest.detect(baseRest(repo)))) {
+                    throw new Error("a sondagem de /server/api (um pedido, 10 s) não encontrou a API REST do DSpace 7");
+                }
                 const robots = await robotsPermite(`${apiUrl}/discover/search/objects?query=${encodeURIComponent(query)}`);
                 if (!robots.permitido) throw new Error(robots.motivo);
                 const items: SearchResult[] = [];

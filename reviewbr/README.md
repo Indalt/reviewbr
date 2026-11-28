@@ -153,7 +153,7 @@ O sistema conta hoje com **32 ferramentas auditadas em TypeScript (Node.js)** di
 * `harvest_records`: Coleta em massa via OAI-PMH.
 * `get_record_metadata`: Obtém metadados Dublin Core completos de registros individuais.
 * `validate_repository`: Verifica saúde e capacidades de repositórios (conectividade, OAI-PMH, REST).
-* `heal_repositories`: Motor de auto-cura (Auto-Healer). Lê o HTML da raiz das instituições com falha e varre ativamente em busca de links OAI-PMH ocultos, restaurando a conexão no catálogo mestre.
+* `heal_repositories`: procura o endereço OAI-PMH na página inicial dos repositórios marcados sem OAI-PMH no catálogo e grava o que achar no catálogo de repositórios. Muda o sistema: é tool da manutenção (`maintainer`), não da condução de uma revisão.
 
 #### Triagem e Mineração Profunda
 
@@ -190,7 +190,7 @@ O ReviewBR não entrega todo o poder do sistema de uma vez. Ele implementa um **
 
 **Fluxo padrão:** PROJETISTA → COORDINATOR → LIBRARIAN → SCREENER → EXTRACTOR → ANALYST
 
-1. **PROJETISTA (Designer de Pesquisa):** Primeiro agente ativado. Cria projetos, define protocolos e configura o ambiente. Ferramentas: `plan_research_protocol`, `validate_prisma_flow`, `validate_repository`, `heal_repositories`.
+1. **PROJETISTA (Designer de Pesquisa):** Primeiro agente ativado. Cria projetos, define protocolos e configura o ambiente. Ferramentas: `plan_research_protocol`, `validate_prisma_flow`, `validate_repository`.
 2. **COORDINATOR (Coordenador Metodológico):** Único agente que pode trocar de papel via `switch_agent`. Supervisiona, audita e exporta. Herda permissões do PROJETISTA.
 3. **LIBRARIAN (Bibliotecário):** Busca e download exclusivos. Mapeia bases (OpenAlex, PubMed, OasisBR). **Não julga** conteúdo, evitando viés prematuro.
 4. **SCREENER (Triador):** Triagem algorítmica e por IA. Aceita ou rejeita artigos conforme o protocolo PICO. **Proibido de fazer downloads.**

@@ -51,7 +51,7 @@ describe("guardião — validateToolAccess (recusa por papel)", () => {
     });
 
     it("linha 25: o coordenador tem toda tool de projeto, e nenhuma de escrita da manutenção", () => {
-        const so = ["validate_system_change", "audit_system_debt", "record_system_finding", "absorb_methodology", "scaffold_methodology", "validate_methodology"];
+        const so = ["validate_system_change", "audit_system_debt", "record_system_finding", "absorb_methodology", "scaffold_methodology", "validate_methodology", "heal_repositories"]; // heal_repositories: linha 26, grava o catálogo do sistema
         const coord = new Set(AgentOrchestrator.getAuthorizedTools(AgentRole.COORDINATOR));
         for (const t of AgentOrchestrator.getGovernedTools()) expect(coord.has(t), t).toBe(!so.includes(t));
     });

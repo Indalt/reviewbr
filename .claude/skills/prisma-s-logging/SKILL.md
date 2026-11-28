@@ -56,8 +56,8 @@ Busca: `search_papers_optimized`, `search_openalex`, `search_pubmed`, `search_sc
 `search_crossref`, `search_europe_pmc`, `search_semanticscholar`, `search_repository`, `harvest_records` (as do plano
 congelado); `get_record_metadata` (metadados de um registro, sem gravar). Importação: `import_dataset_ris`,
 `import_bvs_export`. Expansão: `expand_search_snowball`. Repositórios: `validate_repository` (conectividade antes de
-buscar num repositório novo ou suspeito), `heal_repositories` (muda o catálogo de repositórios, que a trava 3 confere:
-com projeto travado, a etapa seguinte recusa até a emenda de migração). Plano: `get_search_plan`.
+buscar num repositório novo ou suspeito). Repositório quebrado no catálogo vai à manutenção: mudar o catálogo é do
+`maintainer`, não da etapa. Plano: `get_search_plan`.
 
 ### Snowballing (busca por citação — PRISMA-S S5) — sempre limitado, e só na F2
 A `expand_search_snowball` busca **só para a frente**: quem cita as sementes (OpenAlex). As **referências** das

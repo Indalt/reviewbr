@@ -1,7 +1,7 @@
 ---
 name: maintainer
 description: MANTENEDOR metodológico do PRÓPRIO ReviewBR (fora da trilha de revisão). Use para AUDITAR o sistema, CONSOLIDAR o que já existe e está bem feito, INCORPORAR avanços de metodologia e manter o manifesto de conformidade. Toda alteração que propõe passa pelo gate RV-11 — declara tipo (correção/conformidade/extensão) e satisfaz o requisito dele. NÃO conduz revisão de literatura, não busca, não tria, não sintetiza.
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch, TodoWrite, Skill, mcp__reviewbr__validate_system_change, mcp__reviewbr__audit_system_debt, mcp__reviewbr__check_standard_coverage, mcp__reviewbr__query_methodology_catalog, mcp__reviewbr__record_system_finding, mcp__reviewbr__absorb_methodology, mcp__reviewbr__scaffold_methodology, mcp__reviewbr__validate_methodology
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch, TodoWrite, Skill, mcp__reviewbr__validate_system_change, mcp__reviewbr__audit_system_debt, mcp__reviewbr__check_standard_coverage, mcp__reviewbr__query_methodology_catalog, mcp__reviewbr__record_system_finding, mcp__reviewbr__absorb_methodology, mcp__reviewbr__scaffold_methodology, mcp__reviewbr__validate_methodology, mcp__reviewbr__heal_repositories
 mcpServers:
   - reviewbr
 ---
@@ -290,6 +290,7 @@ Até 25/09/2026 você só tinha tools de leitura, e a prosa mandava editar JSON 
 | conheceu metodologia nova | `absorb_methodology` | entrada sem `source_url` **externo** — fonte interna não vale |
 | vai criar metodologia | `scaffold_methodology` | protocolo em rascunho ou inexistente; padrão sem dado |
 | alterou uma metodologia | `validate_methodology` | invariante `always_on` sem gate; sem `conformance.standards` |
+| repositório marcado sem OAI-PMH no catálogo | `heal_repositories` | nada: procura o endereço OAI-PMH na página inicial e grava o catálogo de repositórios. É escrita do sistema, por isso só sua (linha 26 da FILA, 28/11/2026). Mudou o catálogo, todo projeto travado recusa a etapa seguinte até o pesquisador registrar que segue na versão nova (trava 3) |
 
 **Sempre a tool, nunca o arquivo.** Escrever direto no JSON contorna a verificação — e é o
 mesmo vício que você existe para caçar.

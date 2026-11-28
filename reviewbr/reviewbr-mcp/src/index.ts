@@ -10,6 +10,7 @@ import { z } from "zod";
 import { Registry } from "./registry/loader.js";
 import { AccessStrategy } from "./access/strategy.js";
 import { SearchService } from "./services/search.js";
+import { buscarEmRepositorios } from "./services/busca_repositorios.js";
 import { DeduplicationService } from "./services/dedupe.js";
 import { ScreeningService } from "./services/screen.js";
 import { SnowballService, SCIELO_VIA_OPENALEX } from "./services/snowball.js";
@@ -1441,9 +1442,7 @@ server.tool(
         const porFonte: string[] = [];
         let totalDeclarado: number | undefined = 0;
 
-        for (const repo of repos) {
-            try {
-                const { results, totalNaFonte, metodo } = await strategy.searchDetailed(repo, params.query, {
+        const porRepositorio = await buscarEmRepositorios(repos, (repo) => strategy.searchDetailed(repo, params.query, {
                     title: params.title,
                     author: params.author,
                     dateFrom: params.dateFrom,
@@ -1455,12 +1454,15 @@ server.tool(
                     issn: params.issn,
                     maxResults: params.maxResults,
                     somentePrimaria: Boolean((params as any).fontePlano),
-                });
+                }));
+        for (const { item: repo, valor, erro } of porRepositorio) {
+            if (valor) {
+                const { results, totalNaFonte, metodo } = valor;
                 allResults.push(...results);
                 porFonte.push(`- ${repo.id} (${repo.institution.acronym}): ${results.length} trazidos; total declarado pela fonte: ${totalNaFonte ?? "não informado"} — ${metodo}`);
                 totalDeclarado = totalNaFonte === null || totalDeclarado === undefined ? undefined : totalDeclarado + totalNaFonte;
-            } catch (error) {
-                errors.push(`${repo.id} (${repo.institution.acronym}): ${(error as Error).message}`);
+            } else {
+                errors.push(`${repo.id} (${repo.institution.acronym}): ${erro}`);
                 totalDeclarado = undefined;
             }
         }
@@ -2717,7 +2719,7 @@ server.tool(
 
 server.tool(
     "heal_repositories",
-    "Realiza auto-cura do catálogo de repositórios (OAI-PMH). Lê o HTML da raiz das instituições desativadas para descobrir e reabilitar endpoints quebrados de Ciência Aberta.",
+    "Tool da MANUTENÇÃO do ReviewBR, não da condução de uma revisão: grava o catálogo de repositórios do sistema. Para os repositórios marcados sem OAI-PMH no catálogo, lê a página inicial, procura o endereço OAI-PMH e grava o que responder. Com o catálogo mudado, todo projeto travado recusa a etapa seguinte até o pesquisador registrar que segue na versão nova (trava 3).",
     {},
     async () => {
         const report = await repositoryHealerService.healRepositories();
